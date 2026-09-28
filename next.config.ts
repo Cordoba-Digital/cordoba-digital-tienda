@@ -28,6 +28,15 @@ const nextConfig: NextConfig = {
     return [{ source: "/sitemap-:id.xml", destination: "/sitemap/:id" }];
   },
   images: {
+    // El optimizador de imágenes de Vercel responde
+    // `OPTIMIZED_EXTERNAL_IMAGE_REQUEST_UNAUTHORIZED` en este proyecto
+    // (equipo JAC, plan Hobby) y las fotos no cargan en el deploy. Con
+    // `unoptimized` los <Image> conservan lazy-loading y el layout, pero
+    // sirven el archivo original del servidor viejo.
+    //
+    // Para reactivarlo: borrar esta línea (wp-content ya está permitido abajo)
+    // y comprobar que /_next/image devuelva 200 con content-type de imagen.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
