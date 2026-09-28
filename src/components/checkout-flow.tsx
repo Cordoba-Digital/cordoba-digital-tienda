@@ -1,10 +1,10 @@
 ﻿"use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
+import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Spinner } from "@/components/ui";
 import { readCoupon, writeCoupon } from "@/lib/coupon-storage";
@@ -757,7 +757,15 @@ export function CheckoutFlow() {
             <div className="max-h-56 space-y-3 overflow-y-auto pr-1">
               {items.map((item) => (
                 <div key={item.slug} className="flex items-center gap-3">
-                  <Image src={item.image} alt="" width={48} height={48} className="h-12 w-12 rounded-lg object-cover" />
+                  <ProductImg
+                    src={item.image}
+                    srcSet={item.imageSrcSet ?? []}
+                    alt=""
+                    sizes="48px"
+                    width={48}
+                    height={48}
+                    className="h-12 w-12 rounded-lg object-cover"
+                  />
                   <div className="min-w-0 flex-1">
                     <p className="line-clamp-1 text-xs font-semibold text-ink-800">{item.name}</p>
                     <div className="mt-0.5 flex items-center gap-2 text-[11px] text-ink-400">

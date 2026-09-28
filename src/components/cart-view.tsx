@@ -1,11 +1,11 @@
 ﻿"use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { FreeShippingBar, QuantityStepper } from "@/components/cart-drawer";
 import { ProductCard } from "@/components/product-card";
+import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { money, transferPrice } from "@/lib/format";
 import { readCoupon, writeCoupon } from "@/lib/coupon-storage";
@@ -99,9 +99,11 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
             {items.map((item) => (
               <div key={item.slug} className="flex gap-4 p-4">
                 <Link href={`/producto/${item.slug}`} className="shrink-0">
-                  <Image
+                  <ProductImg
                     src={item.image}
+                    srcSet={item.imageSrcSet ?? []}
                     alt={item.name}
+                    sizes="96px"
                     width={96}
                     height={96}
                     className="h-24 w-24 rounded-xl object-cover"

@@ -1,9 +1,9 @@
 ﻿"use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { money } from "@/lib/format";
 import { ORDER_STATUS_FLOW, statusIndex } from "@/lib/pricing";
@@ -197,7 +197,14 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
             <div className="space-y-3">
               {order.items.map((item) => (
                 <div key={item.productSlug} className="flex items-center gap-3">
-                  <Image src={item.image} alt="" width={56} height={56} className="h-14 w-14 rounded-lg object-cover" />
+                  <ProductImg
+                    src={item.image}
+                    alt=""
+                    sizes="56px"
+                    width={56}
+                    height={56}
+                    className="h-14 w-14 rounded-lg object-cover"
+                  />
                   <div className="min-w-0 flex-1">
                     <Link href={`/producto/${item.productSlug}`} className="line-clamp-1 text-sm font-semibold text-ink-800 hover:text-brand-700">
                       {item.name}

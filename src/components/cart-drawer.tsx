@@ -1,8 +1,8 @@
 ﻿"use client";
 
-import Image from "next/image";
 import Link from "next/link";
 
+import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { FREE_SHIPPING_THRESHOLD, money, transferPrice } from "@/lib/format";
 
@@ -116,7 +116,15 @@ export function CartDrawer() {
               {items.map((item) => (
                 <div key={item.slug} className="flex gap-3 rounded-xl border border-ink-100 p-3">
                   <Link href={`/producto/${item.slug}`} onClick={closeCart} className="shrink-0">
-                    <Image src={item.image} alt={item.name} width={64} height={64} className="h-16 w-16 rounded-lg object-cover" />
+                    <ProductImg
+                      src={item.image}
+                      srcSet={item.imageSrcSet ?? []}
+                      alt={item.name}
+                      sizes="64px"
+                      width={64}
+                      height={64}
+                      className="h-16 w-16 rounded-lg object-cover"
+                    />
                   </Link>
                   <div className="min-w-0 flex-1">
                     <Link

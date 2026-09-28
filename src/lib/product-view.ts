@@ -14,6 +14,7 @@ export type ProductView = {
   soldCount: number;
   image: string;
   images: string[];
+  imageSrcSet: string[];
   badge: string | null;
   freeShipping: boolean;
   highlights: string[];
@@ -34,6 +35,7 @@ export function toView(product: Product): ProductView {
     soldCount: product.soldCount,
     image: product.images?.[0] ?? "",
     images: product.images ?? [],
+    imageSrcSet: product.imageSrcSet ?? [],
     badge: product.badge ?? null,
     freeShipping: product.freeShipping,
     highlights: product.highlights ?? [],

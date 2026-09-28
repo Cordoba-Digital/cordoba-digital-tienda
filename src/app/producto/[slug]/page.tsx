@@ -160,7 +160,12 @@ export default async function ProductPage({ params }: { params: Params }) {
             </div>
           </div>
 
-          <ProductGallery images={product.images} name={product.name} badge={product.badge} />
+          <ProductGallery
+            images={product.images}
+            srcSet={product.imageSrcSet}
+            name={product.name}
+            badge={product.badge}
+          />
 
           {product.highlights.length ? (
             <div className="card-surface p-5">

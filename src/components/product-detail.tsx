@@ -1,16 +1,26 @@
 "use client";
 
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { QuantityStepper } from "@/components/cart-drawer";
+import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Spinner, Stars } from "@/components/ui";
 import { INSTALLMENT_PLANS, discountPercent, installmentValue, money, transferPrice } from "@/lib/format";
 import type { ShippingOption } from "@/lib/shipping";
 
-export function ProductGallery({ images, name, badge }: { images: string[]; name: string; badge?: string | null }) {
+export function ProductGallery({
+  images,
+  srcSet = [],
+  name,
+  badge,
+}: {
+  images: string[];
+  srcSet?: string[];
+  name: string;
+  badge?: string | null;
+}) {
   const [active, setActive] = useState(0);
   const [zoom, setZoom] = useState(false);
   const [origin, setOrigin] = useState("50% 50%");
@@ -29,7 +39,15 @@ export function ProductGallery({ images, name, badge }: { images: string[]; name
               index === active ? "border-brand-500" : "border-ink-100 hover:border-ink-300"
             }`}
           >
-            <Image src={image} alt="" width={128} height={128} className="h-full w-full object-cover" />
+            <ProductImg
+              src={image}
+              srcSet={srcSet}
+              alt=""
+              sizes="64px"
+              width={128}
+              height={128}
+              className="h-full w-full object-cover"
+            />
           </button>
         ))}
       </div>
@@ -50,13 +68,16 @@ export function ProductGallery({ images, name, badge }: { images: string[]; name
             {badge}
           </span>
         ) : null}
-        <Image
+        <ProductImg
           src={list[active]}
+          srcSet={srcSet}
           alt={name}
+          sizes="(max-width: 1024px) 100vw, 700px"
           width={800}
           height={800}
-          sizes="(max-width: 1024px) 100vw, 700px"
+          priority
           className="aspect-square w-full object-cover transition-transform duration-300"
+          // El zoom es una transformación CSS sobre la imagen elegida.
           style={{ transform: zoom ? "scale(1.7)" : "scale(1)", transformOrigin: origin }}
         />
         <span className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-semibold text-ink-500">

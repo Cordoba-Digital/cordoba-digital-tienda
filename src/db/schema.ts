@@ -55,6 +55,10 @@ export const products = pgTable(
     reviewCount: integer("review_count").notNull().default(0),
     soldCount: integer("sold_count").notNull().default(0),
     images: jsonb("images").$type<string[]>().notNull().default([]),
+    // `srcset` de WooCommerce: el navegador elige la variante según el ancho
+    // real de pantalla. Necesario porque el optimizador de Vercel está
+    // bloqueado en este proyecto y se sirven los archivos originales.
+    imageSrcSet: jsonb("image_srcset").$type<string[]>().notNull().default([]),
     highlights: jsonb("highlights").$type<string[]>().notNull().default([]),
     specs: jsonb("specs").$type<Spec[]>().notNull().default([]),
     tags: jsonb("tags").$type<string[]>().notNull().default([]),

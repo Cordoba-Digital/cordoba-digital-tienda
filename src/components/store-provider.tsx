@@ -15,6 +15,12 @@ export type CartItem = {
   name: string;
   brand: string;
   image: string;
+  /**
+   * Variantes de WooCommerce para que el navegador elija según el ancho.
+   * Opcional: los ítems guardados en localStorage antes de este cambio no lo
+   * tienen, y `/api/cart/validate` lo repone al recargar.
+   */
+  imageSrcSet?: string[];
   price: number;
   compareAtPrice: number | null;
   stock: number;

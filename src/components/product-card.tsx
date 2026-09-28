@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Pill, Stars } from "@/components/ui";
 import { discountPercent, installmentValue, money, transferPrice } from "@/lib/format";
@@ -25,12 +25,13 @@ export function ProductCard({ product, compact = false }: { product: ProductView
       <div className="relative">
         <Link href={`/producto/${product.slug}`} className="block aspect-square overflow-hidden bg-ink-50">
           {product.image ? (
-            <Image
+            <ProductImg
               src={product.image}
+              srcSet={product.imageSrcSet}
               alt={product.name}
+              sizes="(max-width: 640px) 50vw, (max-width: 1280px) 33vw, 25vw"
               width={400}
               height={400}
-              sizes="(max-width: 640px) 50vw, (max-width: 1280px) 33vw, 25vw"
               className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
             />
           ) : (
