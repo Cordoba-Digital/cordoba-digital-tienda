@@ -198,7 +198,13 @@ export async function POST(request: Request) {
       db
         .update(products)
         .set({
-          stock: sql`greatest(${products.stock} - ${item.quantity}, 0)`,
+          // OJO: el catálogo migrado guarda `stock` como disponibilidad
+          // (1 = hay stock, 0 = no hay) porque la API pública de WooCommerce no
+          // expone cantidades. Si descontáramos siempre, la primera venta dejaría
+          // el producto agotado para siempre. Solo bajamos el stock cuando
+          // representa una cantidad real (> 1), que es lo que tendremos cuando
+          // el cliente pase las claves de WooCommerce.
+          stock: sql`case when ${products.stock} > 1 then greatest(${products.stock} - ${item.quantity}, 0) else ${products.stock} end`,
           soldCount: sql`${products.soldCount} + ${item.quantity}`,
         })
         .where(eq(products.slug, item.slug)),
