@@ -165,6 +165,24 @@ async function main() {
   for (const b of brokenImages.slice(0, 8)) console.log(`  ${b.status} ${b.src}`);
   console.log(`Imágenes > 600 KB (muestra): ${heavy.length}${heavy.length ? ` · máx ${kb(heavy.at(-1)!.size)}` : ""}`);
 
+  // El `srcset` es lo que evita descargar los originales de ~1,3 MB: si React
+  // lo emite como `srcSet` (mayúsculas) el navegador lo ignora.
+  const remoteImages = results.flatMap((r) =>
+    r.images.filter((src) => src.includes("cordobadigital.net")).map((src) => src),
+  );
+  console.log(`\nImágenes remotas en ${results.length} páginas: ${remoteImages.length}`);
+  for (const kind of ["categoria", "producto"]) {
+    const html = await fetchText(toBase(routes.find((r) => r.kind === kind)?.url ?? `${BASE}/`)).catch(() => null);
+    if (!html) continue;
+    const lower = (html.text.match(/srcset="/g) ?? []).length;
+    const camel = (html.text.match(/srcSet="/g) ?? []).length;
+    console.log(
+      `  ${kind}: srcset minúsculas ${lower} · srcSet camelCase ${camel}` +
+        (camel > 0 ? "  ← el navegador las ignora" : ""),
+    );
+    if (camel > 0) process.exitCode = 2;
+  }
+
   // 5. Enlaces internos rotos.
   const internalLinks = [...new Set(results.flatMap((r) => r.internal))].filter((u) => !u.includes("/carrito") && !u.includes("/checkout"));
   const linkSample = pick(internalLinks, 60);

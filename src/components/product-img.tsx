@@ -37,11 +37,16 @@ export function ProductImg({
 }: Props) {
   /* eslint-disable @next/next/no-img-element -- `next/image` no sirve: con el
      optimizador bloqueado en Vercel habría que subir 1,3 MB por foto, y no
-     soporta el `srcset` que publica WooCommerce. */
+     soporta el `srcset` que publica WooCommerce.
+
+     Ojo: el atributo va en minúsculas a propósito y con un cast de tipos. Con
+     `srcSet` (la forma que typescript conoce) React lo emite tal cual en el
+     HTML y el navegador nunca llega a activar el srcset. */
+  const srcsetProp = { srcset: srcSet.length ? srcSet.join(", ") : undefined } as Record<string, unknown>;
+
   return (
     <img
       src={src}
-      srcSet={srcSet.length ? srcSet.join(", ") : undefined}
       sizes={srcSet.length ? sizes : undefined}
       alt={alt}
       width={width}
@@ -50,6 +55,7 @@ export function ProductImg({
       decoding="async"
       className={className}
       style={style}
+      {...srcsetProp}
     />
   );
 }
