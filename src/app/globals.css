@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink-50: #f5f7fb;
+  --color-ink-100: #e8ecf6;
+  --color-ink-200: #cbd5e9;
+  --color-ink-300: #9fb0d0;
+  --color-ink-400: #6b7fa6;
+  --color-ink-500: #465a82;
+  --color-ink-600: #2f4166;
+  --color-ink-700: #1d2c4c;
+  --color-ink-800: #121e38;
+  --color-ink-900: #0a1226;
+  --color-ink-950: #050a18;
+
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #d9e6ff;
+  --color-brand-200: #bcd3ff;
+  --color-brand-300: #8eb5ff;
+  --color-brand-400: #598cff;
+  --color-brand-500: #3363ff;
+  --color-brand-600: #1b41f5;
+  --color-brand-700: #162fd8;
+  --color-brand-800: #1729ae;
+  --color-brand-900: #182a89;
+
+  --color-neon-400: #35e7ff;
+  --color-neon-500: #06cfee;
+  --color-neon-600: #04a6c4;
+
+  --font-sans: var(--font-geist, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif);
+
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-float-slow: float-slow 9s ease-in-out infinite;
+  --animate-rise: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-pop: pop 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-shimmer: shimmer 2.2s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(1.5deg);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -200% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ink-50);
+  color: var(--color-ink-900);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-brand-600);
+  color: white;
+}
+
+/* Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ink-200) transparent;
+}
+
+@utility container-xl {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 84rem;
+  padding-inline: 1rem;
+  @media (min-width: 768px) {
+    padding-inline: 1.5rem;
+  }
+}
+
+@utility card-surface {
+  background-color: white;
+  border-radius: 1rem;
+  border: 1px solid var(--color-ink-100);
+  box-shadow: 0 1px 2px rgba(10, 18, 38, 0.04);
+}
+
+@utility mesh-dark {
+  background-color: var(--color-ink-950);
+  background-image:
+    radial-gradient(60rem 30rem at 12% -10%, rgba(51, 99, 255, 0.35), transparent 60%),
+    radial-gradient(45rem 26rem at 95% 0%, rgba(6, 207, 238, 0.24), transparent 65%),
+    radial-gradient(40rem 24rem at 60% 120%, rgba(27, 65, 245, 0.28), transparent 60%);
+}
+
+@utility text-balance-pretty {
+  text-wrap: balance;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

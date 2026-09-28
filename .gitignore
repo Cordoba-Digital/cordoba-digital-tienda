@@ -1,0 +1,20 @@
+# deps
+node_modules/
+.next/
+out/
+
+# env
+.env
+.env.local
+.env.*.local
+.mp-integrate-progress.md
+
+# vercel
+.vercel/
+
+# db
+*.db
+*.sqlite
+
+.vercel
+.env*

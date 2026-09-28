@@ -1,0 +1,15 @@
+export default function LoadingCatalog() {
+  return (
+    <div className="container-xl py-8">
+      <div className="mb-6 h-8 w-64 animate-pulse rounded-lg bg-white" />
+      <div className="grid gap-6 lg:grid-cols-[17rem_1fr]">
+        <div className="hidden h-[32rem] animate-pulse rounded-2xl bg-white lg:block" />
+        <div className="grid grid-cols-2 gap-4 xl:grid-cols-3">
+          {Array.from({ length: 9 }, (_, i) => (
+            <div key={i} className="h-[22rem] animate-pulse rounded-2xl bg-white" />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
