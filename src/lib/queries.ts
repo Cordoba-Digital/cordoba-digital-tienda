@@ -264,6 +264,13 @@ export async function getDealProducts(limit = 8) {
     .limit(limit);
 }
 
+/** Total de productos del catálogo, cacheado 5 min. */
+export const getProductCount = ttlCache("product-count", 5 * 60_000, async () => {
+  await ensureSeeded();
+  const [row] = await db.select({ count: sql<number>`count(*)::int` }).from(products);
+  return row?.count ?? 0;
+});
+
 export async function getBestSellers(limit = 8) {
   await ensureSeeded();
   // `soldCount` viene en 0 desde WooCommerce: usamos los más cotizados como

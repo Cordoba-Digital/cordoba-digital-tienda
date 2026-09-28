@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -18,24 +18,24 @@ const PROVINCES = [
   "Catamarca",
   "Chaco",
   "Chubut",
-  "CÃ³rdoba",
+  "Córdoba",
   "Corrientes",
-  "Entre RÃ­os",
+  "Entre Ríos",
   "Formosa",
   "Jujuy",
   "La Pampa",
   "La Rioja",
   "Mendoza",
   "Misiones",
-  "NeuquÃ©n",
-  "RÃ­o Negro",
+  "Neuquén",
+  "Río Negro",
   "Salta",
   "San Juan",
   "San Luis",
   "Santa Cruz",
   "Santa Fe",
   "Santiago del Estero",
-  "TucumÃ¡n",
+  "Tucumán",
 ];
 
 type FormState = {
@@ -64,7 +64,7 @@ const EMPTY_FORM: FormState = {
   number: "",
   extra: "",
   city: "",
-  province: "CÃ³rdoba",
+  province: "Córdoba",
   notes: "",
 };
 
@@ -182,8 +182,8 @@ export function CheckoutFlow() {
       return {
         id: "pickup" as DeliveryMethod,
         label: "Retiro en el local",
-        description: "27 de Abril 259, CÃ³rdoba Capital",
-        eta: "Listo en 2 horas hÃ¡biles",
+        description: "27 de Abril 259, Córdoba Capital",
+        eta: "Listo en 2 horas hábiles",
         cost: 0,
         free: true,
       } satisfies ShippingOption;
@@ -200,7 +200,7 @@ export function CheckoutFlow() {
     installments,
   });
 
-  // Sincroniza mÃ©todo de pago con entrega: efectivo solo vÃ¡lido con retiro.
+  // Sincroniza método de pago con entrega: efectivo solo válido con retiro.
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     if (deliveryMethod !== "pickup" && payment === "efectivo") setPayment("transferencia");
@@ -218,10 +218,10 @@ export function CheckoutFlow() {
 
   const validateStep1 = () => {
     const next: Record<string, string> = {};
-    if (form.firstName.trim().length < 2) next.firstName = "IngresÃ¡ tu nombre.";
-    if (form.lastName.trim().length < 2) next.lastName = "IngresÃ¡ tu apellido.";
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email.trim())) next.email = "IngresÃ¡ un email vÃ¡lido.";
-    if (form.phone.replace(/\D/g, "").length < 8) next.phone = "IngresÃ¡ tu telÃ©fono (con caracterÃ­stica).";
+    if (form.firstName.trim().length < 2) next.firstName = "Ingresá tu nombre.";
+    if (form.lastName.trim().length < 2) next.lastName = "Ingresá tu apellido.";
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email.trim())) next.email = "Ingresá un email válido.";
+    if (form.phone.replace(/\D/g, "").length < 8) next.phone = "Ingresá tu teléfono (con característica).";
     if (form.docId.replace(/\D/g, "").length < 7) next.docId = "Necesitamos tu DNI o CUIT para facturar.";
     setErrors(next);
     return Object.keys(next).length === 0;
@@ -230,11 +230,11 @@ export function CheckoutFlow() {
   const validateStep2 = () => {
     const next: Record<string, string> = {};
     if (deliveryMethod !== "pickup") {
-      if (form.zip.replace(/\D/g, "").length !== 4) next.zip = "CÃ³digo postal de 4 dÃ­gitos.";
-      if (form.street.trim().length < 3) next.street = "IngresÃ¡ la calle.";
+      if (form.zip.replace(/\D/g, "").length !== 4) next.zip = "Código postal de 4 dígitos.";
+      if (form.street.trim().length < 3) next.street = "Ingresá la calle.";
       if (form.number.trim().length < 1) next.number = "Altura.";
-      if (form.city.trim().length < 2) next.city = "IngresÃ¡ la localidad.";
-      if (!selectedOption) next.delivery = "ElegÃ­ una forma de envÃ­o.";
+      if (form.city.trim().length < 2) next.city = "Ingresá la localidad.";
+      if (!selectedOption) next.delivery = "Elegí una forma de envío.";
     }
     setErrors(next);
     return Object.keys(next).length === 0;
@@ -250,7 +250,7 @@ export function CheckoutFlow() {
     });
     const data = await res.json();
     if (!res.ok || !data.ok) {
-      setCouponError(data.error ?? "CupÃ³n invÃ¡lido");
+      setCouponError(data.error ?? "Cupón inválido");
       return;
     }
     setCoupon(data.coupon);
@@ -268,7 +268,7 @@ export function CheckoutFlow() {
       return;
     }
     if (!terms) {
-      setErrors({ terms: "TenÃ©s que aceptar los tÃ©rminos para continuar." });
+      setErrors({ terms: "Tenés que aceptar los términos para continuar." });
       return;
     }
     setSubmitting(true);
@@ -306,7 +306,7 @@ export function CheckoutFlow() {
           setErrors(data.errors as Record<string, string>);
           setStep(Object.keys(data.errors)[0] in { firstName: 1, lastName: 1, email: 1, phone: 1, docId: 1 } ? 1 : 2);
         }
-        setServerError(data.error ?? "RevisÃ¡ los datos marcados en rojo.");
+        setServerError(data.error ?? "Revisá los datos marcados en rojo.");
         return;
       }
       clearCart();
@@ -325,7 +325,7 @@ export function CheckoutFlow() {
           }
           setServerError(
             prefData.error ??
-              "Creamos tu pedido pero no pudimos abrir Mercado Pago. EntrÃ¡ a Seguimiento para reintentar.",
+              "Creamos tu pedido pero no pudimos abrir Mercado Pago. Entrá a Seguimiento para reintentar.",
           );
           router.push(`/pedido/${data.code}?nuevo=1&mp=pendiente`);
           return;
@@ -336,7 +336,7 @@ export function CheckoutFlow() {
       }
       router.push(`/pedido/${data.code}?nuevo=1`);
     } catch {
-      setServerError("No pudimos procesar el pedido. ProbÃ¡ de nuevo en unos segundos.");
+      setServerError("No pudimos procesar el pedido. Probá de nuevo en unos segundos.");
     } finally {
       setSubmitting(false);
     }
@@ -348,9 +348,9 @@ export function CheckoutFlow() {
         <div className="card-surface mx-auto flex max-w-lg flex-col items-center gap-3 px-8 py-14 text-center">
           <span className="text-5xl">ðŸ§¾</span>
           <h1 className="text-xl font-extrabold text-ink-900">No hay productos para pagar</h1>
-          <p className="text-sm text-ink-500">AgregÃ¡ productos al carrito y volvÃ© para finalizar tu compra.</p>
+          <p className="text-sm text-ink-500">Agregá productos al carrito y volvé para finalizar tu compra.</p>
           <Link href="/productos" className="mt-2 rounded-xl bg-ink-900 px-5 py-3 text-sm font-bold text-white">
-            Ir al catÃ¡logo
+            Ir al catálogo
           </Link>
         </div>
       </div>
@@ -367,8 +367,8 @@ export function CheckoutFlow() {
     <div className="container-xl py-8">
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-extrabold tracking-tight text-ink-900 md:text-3xl">FinalizÃ¡ tu compra</h1>
-          <p className="text-sm text-ink-500">Compra protegida Â· ðŸ”’ datos cifrados Â· sin necesidad de crear cuenta</p>
+          <h1 className="text-2xl font-extrabold tracking-tight text-ink-900 md:text-3xl">Finalizá tu compra</h1>
+          <p className="text-sm text-ink-500">Compra protegida · ðŸ”’ datos cifrados · sin necesidad de crear cuenta</p>
         </div>
         <Link href="/carrito" className="text-sm font-semibold text-ink-500 hover:text-brand-700">
           â† Volver al carrito
@@ -423,14 +423,14 @@ export function CheckoutFlow() {
                     <input className={inputClass} value={form.firstName} onChange={set("firstName")} placeholder="Juan" />
                   </Field>
                   <Field label="Apellido" error={errors.lastName}>
-                    <input className={inputClass} value={form.lastName} onChange={set("lastName")} placeholder="PÃ©rez" />
+                    <input className={inputClass} value={form.lastName} onChange={set("lastName")} placeholder="Pérez" />
                   </Field>
                 </div>
-                <Field label="Email" error={errors.email} hint="Te enviamos la confirmaciÃ³n y el seguimiento acÃ¡.">
+                <Field label="Email" error={errors.email} hint="Te enviamos la confirmación y el seguimiento acá.">
                   <input className={inputClass} type="email" value={form.email} onChange={set("email")} placeholder="juan@email.com" />
                 </Field>
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <Field label="TelÃ©fono / WhatsApp" error={errors.phone}>
+                  <Field label="Teléfono / WhatsApp" error={errors.phone}>
                     <input className={inputClass} value={form.phone} onChange={set("phone")} placeholder="351 555 5555" />
                   </Field>
                   <Field label="DNI o CUIT" error={errors.docId} hint="Necesario para la factura.">
@@ -447,7 +447,7 @@ export function CheckoutFlow() {
               </div>
             ) : (
               <p className="text-sm text-ink-600">
-                {form.firstName} {form.lastName} Â· {form.email} Â· {form.phone}
+                {form.firstName} {form.lastName} · {form.email} · {form.phone}
               </p>
             )}
           </section>
@@ -473,8 +473,8 @@ export function CheckoutFlow() {
                       deliveryMethod !== "pickup" ? "border-brand-500 bg-brand-50/50" : "border-ink-100 hover:border-ink-300"
                     }`}
                   >
-                    <p className="text-sm font-extrabold text-ink-900">ðŸšš EnvÃ­o a domicilio</p>
-                    <p className="mt-1 text-xs text-ink-500">A todo el paÃ­s con seguimiento online</p>
+                    <p className="text-sm font-extrabold text-ink-900">ðŸšš Envío a domicilio</p>
+                    <p className="mt-1 text-xs text-ink-500">A todo el país con seguimiento online</p>
                   </button>
                   <button
                     type="button"
@@ -484,22 +484,22 @@ export function CheckoutFlow() {
                     }`}
                   >
                     <p className="text-sm font-extrabold text-ink-900">ðŸ¬ Retiro en el local</p>
-                    <p className="mt-1 text-xs text-emerald-600">Gratis Â· listo en 2 horas</p>
+                    <p className="mt-1 text-xs text-emerald-600">Gratis · listo en 2 horas</p>
                   </button>
                 </div>
 
                 {deliveryMethod === "pickup" ? (
                   <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-600">
-                    <p className="font-bold text-ink-900">27 de Abril 259, CÃ³rdoba Capital</p>
-                    <p className="mt-1 text-xs">Lunes a viernes de 14:00 a 18:30 Â· SÃ¡bados de 11:00 a 14:00</p>
+                    <p className="font-bold text-ink-900">27 de Abril 259, Córdoba Capital</p>
+                    <p className="mt-1 text-xs">Lunes a viernes de 14:00 a 18:30 · Sábados de 11:00 a 14:00</p>
                     <p className="mt-2 text-xs">
-                      Te avisamos por WhatsApp cuando estÃ© listo. LlevÃ¡ tu DNI y el nÃºmero de pedido.
+                      Te avisamos por WhatsApp cuando esté listo. Llevá tu DNI y el número de pedido.
                     </p>
                   </div>
                 ) : (
                   <>
                     <div className="grid gap-4 sm:grid-cols-[10rem_1fr]">
-                      <Field label="CÃ³digo postal" error={errors.zip}>
+                      <Field label="Código postal" error={errors.zip}>
                         <input
                           className={inputClass}
                           value={form.zip}
@@ -512,12 +512,12 @@ export function CheckoutFlow() {
                       <div className="flex items-end pb-1 text-xs text-ink-500">
                         {zipLoading ? (
                           <span className="flex items-center gap-2">
-                            <Spinner className="h-4 w-4" /> Calculando envÃ­os...
+                            <Spinner className="h-4 w-4" /> Calculando envíos...
                           </span>
                         ) : zone ? (
                           <span className="font-semibold text-emerald-600">ðŸ“ Zona: {zone}</span>
                         ) : (
-                          <span>IngresÃ¡ tu CP para ver costos y plazos.</span>
+                          <span>Ingresá tu CP para ver costos y plazos.</span>
                         )}
                       </div>
                     </div>
@@ -552,7 +552,7 @@ export function CheckoutFlow() {
 
                     <div className="grid gap-4 sm:grid-cols-[1fr_8rem]">
                       <Field label="Calle" error={errors.street}>
-                        <input className={inputClass} value={form.street} onChange={set("street")} placeholder="Av. ColÃ³n" />
+                        <input className={inputClass} value={form.street} onChange={set("street")} placeholder="Av. Colón" />
                       </Field>
                       <Field label="Altura" error={errors.number}>
                         <input className={inputClass} value={form.number} onChange={set("number")} placeholder="1234" />
@@ -560,10 +560,10 @@ export function CheckoutFlow() {
                     </div>
                     <div className="grid gap-4 sm:grid-cols-3">
                       <Field label="Piso / Depto (opcional)">
-                        <input className={inputClass} value={form.extra} onChange={set("extra")} placeholder="3Â° B" />
+                        <input className={inputClass} value={form.extra} onChange={set("extra")} placeholder="3° B" />
                       </Field>
                       <Field label="Localidad" error={errors.city}>
-                        <input className={inputClass} value={form.city} onChange={set("city")} placeholder="CÃ³rdoba" />
+                        <input className={inputClass} value={form.city} onChange={set("city")} placeholder="Córdoba" />
                       </Field>
                       <Field label="Provincia">
                         <select className={inputClass} value={form.province} onChange={set("province")}>
@@ -584,7 +584,7 @@ export function CheckoutFlow() {
                     onClick={() => setStep(1)}
                     className="rounded-xl border border-ink-200 px-5 py-3 text-sm font-bold text-ink-600"
                   >
-                    AtrÃ¡s
+                    Atrás
                   </button>
                   <button
                     type="button"
@@ -598,11 +598,11 @@ export function CheckoutFlow() {
             ) : step > 2 ? (
               <p className="text-sm text-ink-600">
                 {deliveryMethod === "pickup"
-                  ? "Retiro en 27 de Abril 259, CÃ³rdoba Capital"
-                  : `${form.street} ${form.number}, ${form.city} (CP ${form.zip}) Â· ${selectedOption?.label ?? ""}`}
+                  ? "Retiro en 27 de Abril 259, Córdoba Capital"
+                  : `${form.street} ${form.number}, ${form.city} (CP ${form.zip}) · ${selectedOption?.label ?? ""}`}
               </p>
             ) : (
-              <p className="text-sm text-ink-400">CompletÃ¡ tus datos para elegir la entrega.</p>
+              <p className="text-sm text-ink-400">Completá tus datos para elegir la entrega.</p>
             )}
           </section>
 
@@ -644,7 +644,7 @@ export function CheckoutFlow() {
 
                 {payment === "tarjeta" ? (
                   <div className="rounded-xl border border-ink-100 p-4">
-                    <p className="mb-2 text-xs font-bold uppercase tracking-wide text-ink-500">ElegÃ­ tu plan de cuotas</p>
+                    <p className="mb-2 text-xs font-bold uppercase tracking-wide text-ink-500">Elegí tu plan de cuotas</p>
                     <div className="grid gap-2 sm:grid-cols-3">
                       {INSTALLMENT_PLANS.map((plan) => {
                         const planTotals = computeTotals({
@@ -669,7 +669,7 @@ export function CheckoutFlow() {
                               {plan.count}x {money(planTotals.installmentAmount)}
                             </p>
                             <p className="text-[11px] text-ink-500">
-                              {plan.coefficient === 1 ? "Sin interÃ©s" : `Total ${money(planTotals.total)}`}
+                              {plan.coefficient === 1 ? "Sin interés" : `Total ${money(planTotals.total)}`}
                             </p>
                           </button>
                         );
@@ -683,9 +683,9 @@ export function CheckoutFlow() {
 
                 {payment === "transferencia" ? (
                   <div className="rounded-xl bg-emerald-50 p-4 text-sm text-emerald-800">
-                    <p className="font-bold">Â¡Buena elecciÃ³n! Te ahorrÃ¡s {money(Math.abs(totals.paymentAdjustment))}.</p>
+                    <p className="font-bold">¡Buena elección! Te ahorrás {money(Math.abs(totals.paymentAdjustment))}.</p>
                     <p className="mt-1 text-xs">
-                      Al confirmar te mostramos el CBU / alias y la wallet USDT. TenÃ©s 48 hs para transferir y el stock
+                      Al confirmar te mostramos el CBU / alias y la wallet USDT. Tenés 48 hs para transferir y el stock
                       queda reservado.
                     </p>
                   </div>
@@ -693,8 +693,8 @@ export function CheckoutFlow() {
 
                 {payment === "efectivo" ? (
                   <div className="rounded-xl bg-emerald-50 p-4 text-sm text-emerald-800">
-                    <p className="font-bold">PagÃ¡s al retirar en el local.</p>
-                    <p className="mt-1 text-xs">Reservamos el producto por 48 horas hÃ¡biles a tu nombre.</p>
+                    <p className="font-bold">Pagás al retirar en el local.</p>
+                    <p className="mt-1 text-xs">Reservamos el producto por 48 horas hábiles a tu nombre.</p>
                   </div>
                 ) : null}
 
@@ -703,7 +703,7 @@ export function CheckoutFlow() {
                     value={form.notes}
                     onChange={set("notes")}
                     rows={2}
-                    placeholder="Ej: entregar despuÃ©s de las 14 hs, dejar en porterÃ­a..."
+                    placeholder="Ej: entregar después de las 14 hs, dejar en portería..."
                     className="w-full rounded-xl border border-ink-200 p-3 text-sm outline-none focus:border-brand-400"
                   />
                 </Field>
@@ -716,8 +716,8 @@ export function CheckoutFlow() {
                     className="mt-0.5 h-4 w-4 accent-brand-600"
                   />
                   <span>
-                    Acepto los <Link href="/ayuda" className="font-semibold text-brand-700 underline">tÃ©rminos y condiciones</Link> y
-                    la polÃ­tica de privacidad de CÃ³rdoba Digital.
+                    Acepto los <Link href="/ayuda" className="font-semibold text-brand-700 underline">términos y condiciones</Link> y
+                    la política de privacidad de Córdoba Digital.
                   </span>
                 </label>
                 {errors.terms ? <p className="text-xs font-semibold text-rose-600">{errors.terms}</p> : null}
@@ -731,7 +731,7 @@ export function CheckoutFlow() {
                     onClick={() => setStep(2)}
                     className="rounded-xl border border-ink-200 px-5 py-3 text-sm font-bold text-ink-600"
                   >
-                    AtrÃ¡s
+                    Atrás
                   </button>
                   <button
                     type="button"
@@ -740,12 +740,12 @@ export function CheckoutFlow() {
                     className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-3.5 text-sm font-extrabold text-white shadow-lg shadow-brand-600/25 transition hover:from-brand-700 hover:to-brand-600 disabled:opacity-60"
                   >
                     {submitting ? <Spinner className="h-4 w-4" /> : null}
-                    Confirmar pedido Â· {money(totals.total)}
+                    Confirmar pedido · {money(totals.total)}
                   </button>
                 </div>
               </div>
             ) : (
-              <p className="text-sm text-ink-400">ElegÃ­ cÃ³mo querÃ©s pagar en el Ãºltimo paso.</p>
+              <p className="text-sm text-ink-400">Elegí cómo querés pagar en el último paso.</p>
             )}
           </section>
         </div>
@@ -810,7 +810,7 @@ export function CheckoutFlow() {
                 <input
                   value={couponCode}
                   onChange={(e) => setCouponCode(e.target.value.toUpperCase())}
-                  placeholder="CupÃ³n de descuento"
+                  placeholder="Cupón de descuento"
                   className="h-9 flex-1 rounded-lg border border-ink-200 px-2.5 text-xs uppercase outline-none focus:border-brand-400"
                 />
                 <button type="submit" className="rounded-lg bg-ink-900 px-3 text-xs font-bold text-white">
@@ -827,13 +827,13 @@ export function CheckoutFlow() {
               </div>
               {totals.couponDiscount > 0 ? (
                 <div className="flex justify-between text-emerald-600">
-                  <dt>CupÃ³n {coupon?.code}</dt>
+                  <dt>Cupón {coupon?.code}</dt>
                   <dd>-{money(totals.couponDiscount)}</dd>
                 </div>
               ) : null}
               {totals.paymentAdjustment !== 0 ? (
                 <div className={`flex justify-between ${totals.paymentAdjustment < 0 ? "text-emerald-600" : "text-ink-600"}`}>
-                  <dt>{totals.paymentAdjustment < 0 ? "Descuento por medio de pago" : "InterÃ©s de financiaciÃ³n"}</dt>
+                  <dt>{totals.paymentAdjustment < 0 ? "Descuento por medio de pago" : "Interés de financiación"}</dt>
                   <dd>
                     {totals.paymentAdjustment < 0 ? "-" : "+"}
                     {money(Math.abs(totals.paymentAdjustment))}
@@ -841,7 +841,7 @@ export function CheckoutFlow() {
                 </div>
               ) : null}
               <div className="flex justify-between text-ink-600">
-                <dt>EnvÃ­o</dt>
+                <dt>Envío</dt>
                 <dd className={selectedOption?.free ? "font-semibold text-emerald-600" : ""}>
                   {selectedOption ? (selectedOption.free ? "Gratis" : money(selectedOption.cost)) : "A calcular"}
                 </dd>
@@ -862,14 +862,14 @@ export function CheckoutFlow() {
 
             {totals.savings > 0 ? (
               <p className="rounded-lg bg-emerald-50 px-3 py-2 text-xs font-bold text-emerald-700">
-                ðŸŽ‰ EstÃ¡s ahorrando {money(totals.savings)}
+                ðŸŽ‰ Estás ahorrando {money(totals.savings)}
               </p>
             ) : null}
 
             <ul className="space-y-1.5 border-t border-ink-100 pt-3 text-[11px] text-ink-500">
-              <li>ðŸ”’ Pago seguro Â· datos cifrados</li>
-              <li>ðŸ›¡ï¸ GarantÃ­a oficial y factura</li>
-              <li>ðŸ”„ 10 dÃ­as para cambios</li>
+              <li>ðŸ”’ Pago seguro · datos cifrados</li>
+              <li>ðŸ›¡ï¸ Garantía oficial y factura</li>
+              <li>ðŸ”„ 10 días para cambios</li>
             </ul>
           </div>
         </aside>

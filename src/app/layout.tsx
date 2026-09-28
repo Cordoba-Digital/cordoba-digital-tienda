@@ -77,6 +77,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
           <main className="min-h-[60vh]">{children}</main>
           <SiteFooter
             categories={categories.map((c) => ({ name: c.name, path: c.path, count: c.count }))}
+            cuit={process.env.STORE_CUIT?.trim() ?? ""}
           />
           <CartDrawer />
           <Toaster />

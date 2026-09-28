@@ -6,8 +6,11 @@ const CATEGORY_LINKS: { name: string; path: string; count: number }[] = [];
 
 export function SiteFooter({
   categories = CATEGORY_LINKS,
+  cuit = "",
 }: {
   categories?: { name: string; path: string; count: number }[];
+  /** CUIT real del cliente. Si viene vacío no se imprime ninguno. */
+  cuit?: string;
 }) {
   return (
     <footer className="mt-20 mesh-dark text-ink-200">
@@ -129,7 +132,10 @@ export function SiteFooter({
 
       <div className="border-t border-white/10">
         <div className="container-xl flex flex-col items-center justify-between gap-4 py-6 text-xs text-ink-400 md:flex-row">
-          <p>© {new Date().getFullYear()} Córdoba Digital · CUIT 30-71234567-9 · Todos los derechos reservados.</p>
+          <p>
+            © {new Date().getFullYear()} Córdoba Digital
+            {cuit ? ` · CUIT ${cuit}` : ""} · Todos los derechos reservados.
+          </p>
           <div className="flex flex-wrap items-center justify-center gap-2">
             {["Visa", "Mastercard", "Amex", "Naranja X", "Cabal", "Mercado Pago", "Transferencia", "USDT"].map((m) => (
               <span key={m} className="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-[10px] font-semibold text-ink-200">

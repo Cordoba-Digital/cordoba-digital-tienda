@@ -14,27 +14,16 @@ export type GoogleReviewsResult = {
   placeUrl: string;
 };
 
-const FALLBACK: GoogleReview[] = [
-  {
-    author: "Rocío Fernández",
-    rating: 5,
-    text: "Compré una notebook un martes a la tarde y el miércoles al mediodía la tenía en casa. Me mandaron el seguimiento por WhatsApp sin que lo pida.",
-    source: "google",
-  },
-  {
-    author: "Gonzalo Vera",
-    rating: 5,
-    text: "Pagué con transferencia y el descuento del 15% se aplicó al instante. Producto original, con factura y caja sellada.",
-    source: "google",
-  },
-  {
-    author: "Mariana López",
-    rating: 5,
-    text: "Tenía dudas por comprar en otra provincia, pero la atención fue impecable. Me asesoraron para elegir el celular correcto.",
-    source: "google",
-  },
-];
-
+/**
+ * Sin `GOOGLE_PLACES_API_KEY` no hay reseñas: se devuelve `reviews: []` y
+ * `fallback: true`.
+ *
+ * Deliberadamente NO inventamos testimonios. La versión anterior-usaba
+ * nombres y textos ficticios ("Rocío Fernández", 4,8★, 458 reseñas) y el
+ * cliente los iba a ver en su propia web: si alguno de esos clientes no
+ * existe, se pierde la confianza del primer vistazo. Sin la API, la home
+ * muestra los datos verificables del negocio en su lugar.
+ */
 let cache: { at: number; data: GoogleReviewsResult } | null = null;
 const TTL_MS = 24 * 60 * 60 * 1000;
 
@@ -47,7 +36,7 @@ export async function getGoogleReviews(): Promise<GoogleReviewsResult> {
 
   if (cache && Date.now() - cache.at < TTL_MS) return cache.data;
   if (!placeId || !apiKey) {
-    return { rating: 4.8, count: 458, reviews: FALLBACK, fallback: true, placeUrl };
+    return { rating: null, count: null, reviews: [], fallback: true, placeUrl };
   }
 
   try {
@@ -76,16 +65,16 @@ export async function getGoogleReviews(): Promise<GoogleReviewsResult> {
       source: "google" as const,
     }));
     const result: GoogleReviewsResult = {
-      rating: data.rating ?? 4.8,
+      rating: data.rating ?? null,
       count: data.userRatingCount ?? null,
-      reviews: reviews.length ? reviews : FALLBACK,
+      reviews,
       fallback: reviews.length === 0,
       placeUrl: data.googleMapsUri ?? placeUrl,
     };
     cache = { at: Date.now(), data: result };
     return result;
   } catch (error) {
-    console.warn("[google-reviews] fallback local:", error);
-    return { rating: 4.8, count: 458, reviews: FALLBACK, fallback: true, placeUrl };
+    console.warn("[google-reviews] sin reseñas:", error);
+    return { rating: null, count: null, reviews: [], fallback: true, placeUrl };
   }
 }

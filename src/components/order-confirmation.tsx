@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -48,7 +48,7 @@ function CopyButton({ value, label }: { value: string; label?: string }) {
       }}
       className="rounded-lg border border-ink-200 bg-white px-2.5 py-1 text-[11px] font-bold text-ink-600 transition hover:border-brand-300 hover:text-brand-700"
     >
-      {copied ? "Â¡Copiado!" : (label ?? "Copiar")}
+      {copied ? "¡Copiado!" : (label ?? "Copiar")}
     </button>
   );
 }
@@ -70,9 +70,9 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
           <div className="flex flex-wrap items-center gap-4">
             <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white/20 text-3xl">âœ“</span>
             <div>
-              <h1 className="text-2xl font-black md:text-3xl">Â¡Gracias {order.customerName.split(" ")[0]}! Tu pedido estÃ¡ confirmado</h1>
+              <h1 className="text-2xl font-black md:text-3xl">¡Gracias {order.customerName.split(" ")[0]}! Tu pedido está confirmado</h1>
               <p className="mt-1 text-sm text-emerald-50">
-                Te enviamos el detalle a <strong>{order.email}</strong>. TambiÃ©n podÃ©s seguirlo desde acÃ¡ cuando quieras.
+                Te enviamos el detalle a <strong>{order.email}</strong>. También podés seguirlo desde acá cuando quieras.
               </p>
             </div>
           </div>
@@ -84,12 +84,12 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
           <section className="card-surface p-5">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
-                <p className="text-xs font-bold uppercase tracking-wide text-ink-400">NÃºmero de pedido</p>
+                <p className="text-xs font-bold uppercase tracking-wide text-ink-400">Número de pedido</p>
                 <p className="text-2xl font-black tracking-tight text-ink-900">{order.code}</p>
                 <p className="text-xs text-ink-400">Realizado el {order.createdAt}</p>
               </div>
               <div className="flex gap-2">
-                <CopyButton value={order.code} label="Copiar cÃ³digo" />
+                <CopyButton value={order.code} label="Copiar código" />
                 <Link
                   href={`/seguimiento?codigo=${order.code}`}
                   className="rounded-lg bg-ink-900 px-3 py-1.5 text-[11px] font-bold text-white"
@@ -136,9 +136,9 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
 
           {needsPayment ? (
             <section className="card-surface border-2 border-amber-200 bg-amber-50/40 p-5">
-              <h2 className="text-lg font-extrabold text-ink-900">ðŸ’¸ CÃ³mo completar tu pago</h2>
+              <h2 className="text-lg font-extrabold text-ink-900">ðŸ’¸ Cómo completar tu pago</h2>
               <p className="mt-1 text-sm text-ink-600">
-                TransferÃ­ <strong>{money(order.total)}</strong> a cualquiera de estas cuentas. Reservamos tu stock por 48 hs.
+                Transferí <strong>{money(order.total)}</strong> a cualquiera de estas cuentas. Reservamos tu stock por 48 hs.
               </p>
               <div className="mt-4 grid gap-3 md:grid-cols-2">
                 <div className="rounded-xl border border-ink-100 bg-white p-4">
@@ -160,7 +160,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                     </div>
                     <div className="flex justify-between">
                       <dt className="text-ink-500">Titular</dt>
-                      <dd className="font-semibold text-ink-900">CÃ³rdoba Digital SRL</dd>
+                      <dd className="font-semibold text-ink-900">Córdoba Digital SRL</dd>
                     </div>
                     <div className="flex justify-between">
                       <dt className="text-ink-500">CUIT</dt>
@@ -175,13 +175,13 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                     <CopyButton value="TQn9Y2khDD95J42FQtQTdwVVR93o7cCbPo" label="Copiar wallet" />
                   </div>
                   <p className="mt-3 text-[11px] text-ink-400">
-                    CotizaciÃ³n del dÃ­a informada por WhatsApp al momento de la transferencia.
+                    Cotización del día informada por WhatsApp al momento de la transferencia.
                   </p>
                 </div>
               </div>
               <a
                 href={`https://wa.me/5493516777774?text=${encodeURIComponent(
-                  `Hola! EnvÃ­o el comprobante del pedido ${order.code}`,
+                  `Hola! Envío el comprobante del pedido ${order.code}`,
                 )}`}
                 target="_blank"
                 rel="noreferrer"
@@ -231,7 +231,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                   {order.address.city}, {order.address.province} (CP {order.address.zip})
                 </p>
               ) : (
-                <p className="mt-2 text-sm text-ink-600">27 de Abril 259, CÃ³rdoba Capital</p>
+                <p className="mt-2 text-sm text-ink-600">27 de Abril 259, Córdoba Capital</p>
               )}
               {order.notes ? <p className="mt-2 text-xs italic text-ink-400">â€œ{order.notes}â€</p> : null}
             </div>
@@ -258,13 +258,13 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
               </div>
               {order.discount > 0 ? (
                 <div className="flex justify-between text-emerald-600">
-                  <dt>CupÃ³n {order.couponCode}</dt>
+                  <dt>Cupón {order.couponCode}</dt>
                   <dd>-{money(order.discount)}</dd>
                 </div>
               ) : null}
               {order.paymentAdjustment !== 0 ? (
                 <div className={`flex justify-between ${order.paymentAdjustment < 0 ? "text-emerald-600" : "text-ink-600"}`}>
-                  <dt>{order.paymentAdjustment < 0 ? "Descuento medio de pago" : "FinanciaciÃ³n"}</dt>
+                  <dt>{order.paymentAdjustment < 0 ? "Descuento medio de pago" : "Financiación"}</dt>
                   <dd>
                     {order.paymentAdjustment < 0 ? "-" : "+"}
                     {money(Math.abs(order.paymentAdjustment))}
@@ -272,7 +272,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                 </div>
               ) : null}
               <div className="flex justify-between text-ink-600">
-                <dt>EnvÃ­o</dt>
+                <dt>Envío</dt>
                 <dd>{order.shippingCost === 0 ? "Gratis" : money(order.shippingCost)}</dd>
               </div>
             </dl>
@@ -292,10 +292,10 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
               rel="noreferrer"
               className="block w-full rounded-xl border border-ink-200 px-4 py-2.5 text-center text-xs font-bold text-ink-700 transition hover:border-emerald-300 hover:text-emerald-700"
             >
-              Â¿NecesitÃ¡s ayuda? Escribinos
+              ¿Necesitás ayuda? Escribinos
             </a>
             <p className="text-center text-[11px] text-ink-400">
-              GuardÃ¡ el cÃ³digo <strong>{order.code}</strong> para consultar el estado cuando quieras.
+              Guardá el código <strong>{order.code}</strong> para consultar el estado cuando quieras.
             </p>
           </div>
         </aside>

@@ -8,7 +8,7 @@ import { Pill, SectionHeading, Stars } from "@/components/ui";
 import { FREE_SHIPPING_THRESHOLD, money } from "@/lib/format";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { toView } from "@/lib/product-view";
-import { getBestSellers, getCategoryTree, getDealProducts, getFeaturedProducts } from "@/lib/queries";
+import { getBestSellers, getCategoryTree, getDealProducts, getFeaturedProducts, getProductCount } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -39,19 +39,23 @@ const FAQ = [
 ];
 
 export default async function HomePage() {
-  const [featured, deals, bestSellers, categories, googleReviews] = await Promise.all([
+  const [featured, deals, bestSellers, categories, googleReviews, productCount] = await Promise.all([
     getFeaturedProducts(8),
     getDealProducts(8),
     getBestSellers(8),
     getCategoryTree(),
     getGoogleReviews(),
+    getProductCount(),
   ]);
 
   // Las 10 categorías raíz con más stock mandan la grilla de la home.
   const topCategories = categories.slice(0, 10);
 
-  const ratingValue = (googleReviews.rating ?? 4.8).toFixed(1);
-  const reviewCount = googleReviews.count ?? 458;
+  const ratingValue = googleReviews.rating?.toFixed(1) ?? null;
+  const reviewCount = googleReviews.count;
+  // El CUIT real lo pasa el cliente. Mientras tanto no se imprime ninguno: un
+  // CUIT inventado en el footer y en la factura es un problema legal.
+  const cuit = process.env.STORE_CUIT?.trim() ?? "";
 
   const heroProduct = featured[0] ? toView(featured[0]) : null;
   // Foto del hero: una imagen real del catálogo. Antes apuntaba a un archivo
@@ -79,7 +83,12 @@ export default async function HomePage() {
               postalCode: "5000",
               addressCountry: "AR",
             },
-            aggregateRating: { "@type": "AggregateRating", ratingValue, reviewCount: String(reviewCount) },
+            // `aggregateRating` solo se emite con reseñas reales: Google
+            // penaliza un rating sin opinions y un 4,8★ de mentira figura
+            // como dato estructurado falso.
+            ...(ratingValue && reviewCount
+              ? { aggregateRating: { "@type": "AggregateRating", ratingValue, reviewCount: String(reviewCount) } }
+              : {}),
           }),
         }}
       />
@@ -118,10 +127,14 @@ export default async function HomePage() {
 
             <dl className="mt-9 grid max-w-xl grid-cols-2 gap-4 sm:grid-cols-4">
               {[
-                { k: "+18", v: "años vendiendo" },
-                { k: "12.400", v: "clientes felices" },
-                { k: `${ratingValue}★`, v: `${reviewCount} reseñas en Google` },
+                // Cifras reales: el catálogo viene de WooCommerce y el resto son
+                // datos del negocio. No inventamos "clientes felices" ni años.
+                { k: new Intl.NumberFormat("es-AR").format(productCount), v: "productos en catálogo" },
+                { k: "12 meses", v: "de garantía oficial" },
                 { k: "24-72 h", v: "de entrega" },
+                ...(ratingValue && reviewCount
+                  ? [{ k: `${ratingValue}★`, v: `${reviewCount} reseñas en Google` }]
+                  : []),
               ].map((stat) => (
                 <div key={stat.v} className="rounded-xl border border-white/10 bg-white/5 px-3 py-3 backdrop-blur">
                   <dt className="text-lg font-black text-white">{stat.k}</dt>
@@ -376,21 +389,47 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIOS — reseñas de Google */}
+      {/* RESEÑAS DE GOOGLE — solo si hay API key configurada */}
       <section className="container-xl py-14">
-        <div className="mb-8 flex flex-wrap items-center gap-4">
-          <div className="flex items-center gap-3 rounded-2xl border border-ink-100 bg-white px-5 py-3">
-            <span className="text-3xl font-black text-ink-900">{ratingValue}</span>
-            <div>
-              <Stars rating={Math.round((googleReviews.rating ?? 4.8) * 10)} size="md" />
-              <p className="text-xs text-ink-500">{reviewCount} opiniones en Google</p>
-            </div>
+        {googleReviews.fallback ? (
+          <div className="grid gap-4 md:grid-cols-3">
+            {[
+              {
+                icon: "🛡️",
+                title: "Garantía oficial",
+                text: "Todos los productos con garantía del fabricante y post-venta propio en Córdoba.",
+              },
+              {
+                icon: "🚚",
+                title: "Envíos a todo el país",
+                text: `Despachamos a todas las provincias con seguimiento online. Gratis desde ${money(FREE_SHIPPING_THRESHOLD)}.`,
+              },
+              {
+                icon: "🏬",
+                title: "Local a la calle",
+                text: "27 de Abril 259, Córdoba Capital. Retirá en el día o consultá antes de venir.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="card-surface flex flex-col gap-2 p-5">
+                <span className="text-2xl" aria-hidden>
+                  {item.icon}
+                </span>
+                <p className="text-sm font-bold text-ink-900">{item.title}</p>
+                <p className="text-sm leading-relaxed text-ink-600">{item.text}</p>
+              </div>
+            ))}
           </div>
-          <p className="text-sm text-ink-500">
-            {googleReviews.fallback ? (
-              <>Opiniones destacadas de nuestros clientes.</>
-            ) : (
-              <>
+        ) : (
+          <>
+            <div className="mb-8 flex flex-wrap items-center gap-4">
+              <div className="flex items-center gap-3 rounded-2xl border border-ink-100 bg-white px-5 py-3">
+                <span className="text-3xl font-black text-ink-900">{ratingValue}</span>
+                <div>
+                  <Stars rating={Math.round((googleReviews.rating ?? 0) * 10)} size="md" />
+                  <p className="text-xs text-ink-500">{reviewCount} opiniones en Google</p>
+                </div>
+              </div>
+              <p className="text-sm text-ink-500">
                 Opiniones reales de nuestra ficha de Google.{" "}
                 <a
                   href={googleReviews.placeUrl}
@@ -400,23 +439,26 @@ export default async function HomePage() {
                 >
                   Ver todas en Google Maps
                 </a>
-              </>
-            )}
-          </p>
-        </div>
-        <div className="grid gap-4 md:grid-cols-3">
-          {googleReviews.reviews.map((t) => (
-            <figure key={`${t.author}-${t.text.slice(0, 24)}`} className="card-surface flex h-full flex-col gap-3 p-5">
-              <Stars rating={t.rating * 10} />
-              <blockquote className="text-sm leading-relaxed text-ink-700">“{t.text}”</blockquote>
-              <figcaption className="mt-auto text-xs font-semibold text-ink-900">
-                {t.author}
-                <span className="block font-normal text-ink-400">Reseña de Google</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-        <p className="mt-4 text-[11px] text-ink-400">Fuente: Google Maps · se actualizan cada 24 h.</p>
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              {googleReviews.reviews.map((t) => (
+                <figure
+                  key={`${t.author}-${t.text.slice(0, 24)}`}
+                  className="card-surface flex h-full flex-col gap-3 p-5"
+                >
+                  <Stars rating={t.rating * 10} />
+                  <blockquote className="text-sm leading-relaxed text-ink-700">“{t.text}”</blockquote>
+                  <figcaption className="mt-auto text-xs font-semibold text-ink-900">
+                    {t.author}
+                    <span className="block font-normal text-ink-400">Reseña de Google</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+            <p className="mt-4 text-[11px] text-ink-400">Fuente: Google Maps · se actualizan cada 24 h.</p>
+          </>
+        )}
       </section>
 
       {/* FAQ + NEWSLETTER */}
