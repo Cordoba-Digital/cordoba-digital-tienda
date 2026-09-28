@@ -12,6 +12,7 @@
     "audit:wp": "tsx scripts/audit-wp.ts",
     "migrate:wp": "tsx scripts/migrate-wp.ts",
     "verify:wp": "tsx scripts/verify-catalog.ts",
+    "audit:site": "tsx scripts/audit-site.ts",
     "sync:catalog": "tsx scripts/sync-catalog.ts"
   },
   "dependencies": {

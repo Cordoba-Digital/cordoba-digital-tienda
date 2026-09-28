@@ -53,6 +53,10 @@ export default async function HomePage() {
   const reviewCount = googleReviews.count ?? 458;
 
   const heroProduct = featured[0] ? toView(featured[0]) : null;
+  // Foto del hero: una imagen real del catálogo. Antes apuntaba a un archivo
+  // que no existía en /public (404).
+  const heroImage = deals[0]?.images?.[0] ?? featured[0]?.images?.[0] ?? heroProduct?.image ?? "";
+  const storeImage = "https://www.cordobadigital.net/images/logo.png";
 
   return (
     <>
@@ -63,7 +67,7 @@ export default async function HomePage() {
             "@context": "https://schema.org",
             "@type": "Store",
             name: "Córdoba Digital",
-            image: "https://www.cordobadigital.net/images/hero-tech.jpg",
+            image: storeImage,
             telephone: "+543516777774",
             email: "consultas@cordobadigital.net",
             priceRange: "$$",
@@ -128,12 +132,20 @@ export default async function HomePage() {
 
           <div className="relative">
             <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/hero-tech.jpg"
-                alt="Productos de tecnología disponibles en Córdoba Digital"
-                className="h-full w-full object-cover"
-              />
+              {heroImage ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={heroImage}
+                  alt={`${deals[0]?.name ?? "Productos de tecnología"} en Córdoba Digital`}
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <div className="mesh-dark grid h-full min-h-[22rem] place-items-center text-center text-white">
+                  <p className="px-6 text-sm text-ink-300">
+                    Actualizando el catálogo con los productos de Córdoba Digital…
+                  </p>
+                </div>
+              )}
             </div>
 
             {heroProduct ? (
@@ -270,12 +282,29 @@ export default async function HomePage() {
       <section className="container-xl py-14">
         <div className="grid items-center gap-8 overflow-hidden rounded-3xl border border-ink-100 bg-white lg:grid-cols-2">
           <div className="relative h-full min-h-[18rem]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/local-cordoba.jpg"
-              alt="Local de Córdoba Digital en el centro de la ciudad"
-              className="h-full w-full object-cover"
-            />
+            {/* No hay foto del local en el repo: se muestra un panel con los
+                datos reales en vez de una imagen rota. Cuando el cliente pase
+                una foto, se reemplaza por <img src="/images/local-cordoba.jpg">. */}
+            <div className="mesh-dark flex h-full flex-col justify-end gap-3 p-6 text-white">
+              <div>
+                <p className="text-3xl font-black tracking-tight">Córdoba Digital</p>
+                <p className="mt-1 text-sm text-ink-300">Tecnología con garantía desde 2006</p>
+              </div>
+              <dl className="grid gap-2 text-sm text-ink-200">
+                <div className="flex items-center gap-2">
+                  <span aria-hidden>📍</span>
+                  <span>27 de Abril 259, Córdoba Capital</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span aria-hidden>🕑</span>
+                  <span>Lun a Vie 14:00 a 18:30 · Sáb 11:00 a 14:00</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span aria-hidden>📞</span>
+                  <span>+54 351 677-7774</span>
+                </div>
+              </dl>
+            </div>
             <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1.5 text-xs font-bold text-ink-800 shadow">
               📍 27 de Abril 259, Córdoba Capital
             </span>
