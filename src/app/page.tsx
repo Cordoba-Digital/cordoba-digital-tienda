@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { Countdown } from "@/components/countdown";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { ProductCard, ProductRow } from "@/components/product-card";
+import { ProductImg } from "@/components/product-img";
 import { Pill, SectionHeading, Stars } from "@/components/ui";
 import { FREE_SHIPPING_THRESHOLD, money } from "@/lib/format";
 import { getGoogleReviews } from "@/lib/google-reviews";
@@ -283,39 +283,39 @@ export default async function HomePage() {
       <section className="container-xl py-14">
         <div className="grid items-center gap-8 overflow-hidden rounded-3xl border border-ink-100 bg-white lg:grid-cols-2">
           <div className="relative h-full min-h-[18rem]">
-            <div className="mesh-dark flex h-full flex-col justify-center gap-4 p-6 text-white">
-              {/* La foto del local viene de Google Places y mide 300×225: la
-                  mostramos a su tamaño real para no estirarla. Conviene pedir
-                  una versión de al menos 1200px. */}
-              <Image
-                src="/images/local-cordoba.jpg"
+            <div className="relative h-full min-h-[18rem] overflow-hidden">
+              <ProductImg
+                src="/images/local-cordoba-1400.jpg"
+                srcSet={[
+                  "/images/local-cordoba-700.jpg 700w",
+                  "/images/local-cordoba-1400.jpg 1400w",
+                ]}
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 alt="Fachada del local de Córdoba Digital en 27 de Abril 259, Córdoba Capital"
-                width={300}
-                height={225}
-                className="w-[300px] max-w-full rounded-xl border border-white/10 object-cover"
+                width={1400}
+                height={882}
+                className="h-full w-full object-cover"
               />
-              <div>
+              <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/25 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-6 text-white">
                 <p className="text-2xl font-black tracking-tight">Córdoba Digital</p>
-                <p className="mt-1 text-sm text-ink-300">Tecnología con garantía desde 2006</p>
+                <p className="mt-1 text-sm text-ink-200">Tecnología con garantía desde 2006</p>
+                <dl className="mt-3 grid gap-1.5 text-sm text-ink-100">
+                  <div className="flex items-center gap-2">
+                    <span aria-hidden>📍</span>
+                    <span>27 de Abril 259, Córdoba Capital</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span aria-hidden>🕑</span>
+                    <span>Lun a Vie 14:00 a 18:30 · Sáb 11:00 a 14:00</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span aria-hidden>📞</span>
+                    <span>+54 351 677-7774</span>
+                  </div>
+                </dl>
               </div>
-              <dl className="grid gap-2 text-sm text-ink-200">
-                <div className="flex items-center gap-2">
-                  <span aria-hidden>📍</span>
-                  <span>27 de Abril 259, Córdoba Capital</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span aria-hidden>🕑</span>
-                  <span>Lun a Vie 14:00 a 18:30 · Sáb 11:00 a 14:00</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span aria-hidden>📞</span>
-                  <span>+54 351 677-7774</span>
-                </div>
-              </dl>
             </div>
-            <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1.5 text-xs font-bold text-ink-800 shadow">
-              📍 27 de Abril 259, Córdoba Capital
-            </span>
           </div>
           <div className="p-7 lg:p-10">
             <Pill tone="brand">Online + local a la calle</Pill>
