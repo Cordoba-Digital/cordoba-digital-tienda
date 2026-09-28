@@ -327,6 +327,9 @@ export function CheckoutFlow() {
             prefData.error ??
               "Creamos tu pedido pero no pudimos abrir Mercado Pago. Entrá a Seguimiento para reintentar.",
           );
+          if (prefData.missingCredentials) {
+            console.warn("[checkout] Mercado Pago no habilitado:", prefData.detail);
+          }
           router.push(`/pedido/${data.code}?nuevo=1&mp=pendiente`);
           return;
         } catch {

@@ -21,11 +21,17 @@ export async function POST(request: Request) {
 
   const client = mpClient();
   if (!client) {
+    // El mensaje va al cliente final: nunca el nombre de una variable de
+    // entorno. El detalle técnico queda en `detail` para los logs.
+    console.warn("[mp] falta MP_ACCESS_TOKEN: el pago con Mercado Pago no está habilitado.");
     return Response.json(
       {
         ok: false,
-        error: "Mercado Pago no configurado. Definí MP_ACCESS_TOKEN (pestaña Prueba) en el servidor.",
+        error:
+          "El pago con Mercado Pago se habilita al conectar la cuenta del negocio. " +
+          "Mientras tanto podés completar el pedido por transferencia o efectivo.",
         missingCredentials: true,
+        detail: "MP_ACCESS_TOKEN no configurado",
       },
       { status: 503 },
     );
