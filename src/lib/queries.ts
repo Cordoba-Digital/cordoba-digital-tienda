@@ -1,5 +1,4 @@
 import { and, asc, desc, eq, gte, ilike, inArray, lte, ne, or, sql, type SQL } from "drizzle-orm";
-import { unstable_cache } from "next/cache";
 import { cache } from "react";
 
 import { db } from "@/db";
@@ -16,6 +15,7 @@ import {
   type CategoryRow,
 } from "@/lib/category-tree";
 import { ensureSeeded } from "@/lib/seed";
+import { ttlCache } from "@/lib/ttl-cache";
 
 export type ProductFilters = {
   q?: string;
@@ -112,24 +112,18 @@ export type CategoryTreeNode = Omit<CategoryNode, "children"> & {
  * lo piden varias veces.
  */
 /** Filas planas de categorías, cacheadas 5 min entre requests. */
-const loadCategoryRows = unstable_cache(
-  async (): Promise<CategoryRow[]> => db.select().from(categories).then((rows) => rows as CategoryRow[]),
-  ["category-rows"],
-  { revalidate: 300 },
+const loadCategoryRows = ttlCache("category-rows", 5 * 60_000, () =>
+  db.select().from(categories).then((rows) => rows as CategoryRow[]),
 );
 
 /** Conteo de productos por categoría desde el puente, cacheado 5 min. */
-const loadCategoryCounts = unstable_cache(
-  async (): Promise<Map<number, number>> => {
-    const rows = await db
-      .select({ categoryId: productCategories.categoryId, count: sql<number>`count(*)::int` })
-      .from(productCategories)
-      .groupBy(productCategories.categoryId);
-    return new Map(rows.map((r) => [r.categoryId, r.count]));
-  },
-  ["category-counts"],
-  { revalidate: 300 },
-);
+const loadCategoryCounts = ttlCache("category-counts", 5 * 60_000, async () => {
+  const rows = await db
+    .select({ categoryId: productCategories.categoryId, count: sql<number>`count(*)::int` })
+    .from(productCategories)
+    .groupBy(productCategories.categoryId);
+  return new Map(rows.map((r) => [r.categoryId, r.count]));
+});
 
 /**
  * Árbol completo de categorías con el conteo de productos de cada subárbol.
