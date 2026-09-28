@@ -54,7 +54,7 @@ export function FreeShippingBar({ subtotal }: { subtotal: number }) {
     <div className="rounded-xl bg-emerald-50 p-3">
       <p className="text-xs font-semibold text-emerald-800">
         {remaining === 0 ? (
-          <>ðŸŽ‰ ¡Tenés envío gratis a todo el país!</>
+          <>🎉 ¡Tenés envío gratis a todo el país!</>
         ) : (
           <>
             Te faltan <strong>{money(remaining)}</strong> para el envío gratis
@@ -98,7 +98,7 @@ export function CartDrawer() {
 
         {items.length === 0 ? (
           <div className="flex flex-1 flex-col items-center justify-center gap-3 px-8 text-center">
-            <span className="text-5xl">ðŸ›’</span>
+            <span className="text-5xl">🛒</span>
             <p className="text-base font-bold text-ink-800">Tu carrito está vacío</p>
             <p className="text-sm text-ink-400">Descubrí las ofertas de la semana y armá tu setup.</p>
             <Link
@@ -197,7 +197,7 @@ export function CartDrawer() {
                 </button>
               </div>
               <p className="text-center text-[11px] text-ink-400">
-                ðŸ”’ Compra protegida · Garantía oficial · Factura A/B
+                🔒 Compra protegida · Garantía oficial · Factura A/B
               </p>
             </footer>
           </>

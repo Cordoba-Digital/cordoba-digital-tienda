@@ -346,7 +346,7 @@ export function CheckoutFlow() {
     return (
       <div className="container-xl py-16">
         <div className="card-surface mx-auto flex max-w-lg flex-col items-center gap-3 px-8 py-14 text-center">
-          <span className="text-5xl">ðŸ§¾</span>
+          <span className="text-5xl">🧾</span>
           <h1 className="text-xl font-extrabold text-ink-900">No hay productos para pagar</h1>
           <p className="text-sm text-ink-500">Agregá productos al carrito y volvé para finalizar tu compra.</p>
           <Link href="/productos" className="mt-2 rounded-xl bg-ink-900 px-5 py-3 text-sm font-bold text-white">
@@ -368,10 +368,10 @@ export function CheckoutFlow() {
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-2xl font-extrabold tracking-tight text-ink-900 md:text-3xl">Finalizá tu compra</h1>
-          <p className="text-sm text-ink-500">Compra protegida · ðŸ”’ datos cifrados · sin necesidad de crear cuenta</p>
+          <p className="text-sm text-ink-500">Compra protegida · 🔒 datos cifrados · sin necesidad de crear cuenta</p>
         </div>
         <Link href="/carrito" className="text-sm font-semibold text-ink-500 hover:text-brand-700">
-          â† Volver al carrito
+          ← Volver al carrito
         </Link>
       </div>
 
@@ -393,7 +393,7 @@ export function CheckoutFlow() {
                     active ? "bg-white/20" : done ? "bg-emerald-500 text-white" : "bg-ink-100"
                   }`}
                 >
-                  {done ? "âœ“" : item.id}
+                  {done ? "✓" : item.id}
                 </span>
                 {item.label}
               </button>
@@ -473,7 +473,7 @@ export function CheckoutFlow() {
                       deliveryMethod !== "pickup" ? "border-brand-500 bg-brand-50/50" : "border-ink-100 hover:border-ink-300"
                     }`}
                   >
-                    <p className="text-sm font-extrabold text-ink-900">ðŸšš Envío a domicilio</p>
+                    <p className="text-sm font-extrabold text-ink-900">🚚 Envío a domicilio</p>
                     <p className="mt-1 text-xs text-ink-500">A todo el país con seguimiento online</p>
                   </button>
                   <button
@@ -483,7 +483,7 @@ export function CheckoutFlow() {
                       deliveryMethod === "pickup" ? "border-brand-500 bg-brand-50/50" : "border-ink-100 hover:border-ink-300"
                     }`}
                   >
-                    <p className="text-sm font-extrabold text-ink-900">ðŸ¬ Retiro en el local</p>
+                    <p className="text-sm font-extrabold text-ink-900">🏬 Retiro en el local</p>
                     <p className="mt-1 text-xs text-emerald-600">Gratis · listo en 2 horas</p>
                   </button>
                 </div>
@@ -515,7 +515,7 @@ export function CheckoutFlow() {
                             <Spinner className="h-4 w-4" /> Calculando envíos...
                           </span>
                         ) : zone ? (
-                          <span className="font-semibold text-emerald-600">ðŸ“ Zona: {zone}</span>
+                          <span className="font-semibold text-emerald-600">📍 Zona: {zone}</span>
                         ) : (
                           <span>Ingresá tu CP para ver costos y plazos.</span>
                         )}
@@ -774,7 +774,7 @@ export function CheckoutFlow() {
                         onClick={() => setQuantity(item.slug, item.quantity - 1)}
                         className="h-5 w-5 rounded border border-ink-200"
                       >
-                        âˆ’
+                        −
                       </button>
                       <span>{item.quantity}</span>
                       <button
@@ -793,7 +793,7 @@ export function CheckoutFlow() {
 
             {coupon ? (
               <div className="flex items-center justify-between rounded-lg bg-emerald-50 px-3 py-2 text-xs">
-                <span className="font-bold text-emerald-700">ðŸŽŸï¸ {coupon.code}</span>
+                <span className="font-bold text-emerald-700">🎟ï¸ {coupon.code}</span>
                 <button
                   type="button"
                   onClick={() => {
@@ -862,14 +862,14 @@ export function CheckoutFlow() {
 
             {totals.savings > 0 ? (
               <p className="rounded-lg bg-emerald-50 px-3 py-2 text-xs font-bold text-emerald-700">
-                ðŸŽ‰ Estás ahorrando {money(totals.savings)}
+                🎉 Estás ahorrando {money(totals.savings)}
               </p>
             ) : null}
 
             <ul className="space-y-1.5 border-t border-ink-100 pt-3 text-[11px] text-ink-500">
-              <li>ðŸ”’ Pago seguro · datos cifrados</li>
-              <li>ðŸ›¡ï¸ Garantía oficial y factura</li>
-              <li>ðŸ”„ 10 días para cambios</li>
+              <li>🔒 Pago seguro · datos cifrados</li>
+              <li>🛡ï¸ Garantía oficial y factura</li>
+              <li>🔄 10 días para cambios</li>
             </ul>
           </div>
         </aside>

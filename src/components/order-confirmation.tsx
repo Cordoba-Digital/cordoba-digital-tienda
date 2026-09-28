@@ -68,7 +68,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
       {isNew ? (
         <div className="mb-6 animate-rise overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-500 to-emerald-400 p-6 text-white md:p-8">
           <div className="flex flex-wrap items-center gap-4">
-            <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white/20 text-3xl">âœ“</span>
+            <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white/20 text-3xl">✓</span>
             <div>
               <h1 className="text-2xl font-black md:text-3xl">¡Gracias {order.customerName.split(" ")[0]}! Tu pedido está confirmado</h1>
               <p className="mt-1 text-sm text-emerald-50">
@@ -113,7 +113,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                           done ? "bg-emerald-500 text-white" : "bg-ink-100 text-ink-400"
                         }`}
                       >
-                        {done ? "âœ“" : index + 1}
+                        {done ? "✓" : index + 1}
                       </span>
                       {index < ORDER_STATUS_FLOW.length - 1 ? (
                         <span className={`mt-1 h-8 w-0.5 ${index < current ? "bg-emerald-400" : "bg-ink-100"}`} />
@@ -136,7 +136,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
 
           {needsPayment ? (
             <section className="card-surface border-2 border-amber-200 bg-amber-50/40 p-5">
-              <h2 className="text-lg font-extrabold text-ink-900">ðŸ’¸ Cómo completar tu pago</h2>
+              <h2 className="text-lg font-extrabold text-ink-900">💸 Cómo completar tu pago</h2>
               <p className="mt-1 text-sm text-ink-600">
                 Transferí <strong>{money(order.total)}</strong> a cualquiera de estas cuentas. Reservamos tu stock por 48 hs.
               </p>
@@ -187,7 +187,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                 rel="noreferrer"
                 className="mt-4 inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-emerald-600"
               >
-                ðŸ“Ž Enviar comprobante por WhatsApp
+                📎 Enviar comprobante por WhatsApp
               </a>
             </section>
           ) : null}
@@ -233,7 +233,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
               ) : (
                 <p className="mt-2 text-sm text-ink-600">27 de Abril 259, Córdoba Capital</p>
               )}
-              {order.notes ? <p className="mt-2 text-xs italic text-ink-400">â€œ{order.notes}â€</p> : null}
+              {order.notes ? <p className="mt-2 text-xs italic text-ink-400">“{order.notes}”</p> : null}
             </div>
             <div className="card-surface p-5">
               <h3 className="text-sm font-extrabold uppercase tracking-wide text-ink-400">Pago</h3>

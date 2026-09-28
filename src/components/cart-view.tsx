@@ -57,7 +57,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
     return (
       <div className="container-xl py-16">
         <div className="card-surface mx-auto flex max-w-xl flex-col items-center gap-3 px-8 py-16 text-center">
-          <span className="text-6xl">ðŸ›’</span>
+          <span className="text-6xl">🛒</span>
           <h1 className="text-2xl font-extrabold text-ink-900">Tu carrito está vacío</h1>
           <p className="text-sm text-ink-500">
             Mirá lo más vendido de la semana o escribinos y te ayudamos a elegir el producto ideal.
@@ -67,7 +67,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
               Ver catálogo
             </Link>
             <Link href="/productos?ofertas=1" className="rounded-xl border border-ink-200 px-5 py-3 text-sm font-bold text-ink-700">
-              ðŸ”¥ Ofertas
+              🔥 Ofertas
             </Link>
           </div>
         </div>
@@ -155,7 +155,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
           </div>
 
           <div className="card-surface p-5">
-            <h2 className="text-sm font-extrabold text-ink-900">ðŸŽŸï¸ ¿Tenés un cupón?</h2>
+            <h2 className="text-sm font-extrabold text-ink-900">🎟ï¸ ¿Tenés un cupón?</h2>
             {coupon ? (
               <div className="mt-3 flex items-center justify-between rounded-xl bg-emerald-50 px-4 py-3">
                 <div>
@@ -233,7 +233,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
               href="/checkout"
               className="block w-full rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-3.5 text-center text-sm font-extrabold text-white shadow-lg shadow-brand-600/25 transition hover:from-brand-700 hover:to-brand-600"
             >
-              Continuar con la compra â†’
+              Continuar con la compra →
             </Link>
             <Link
               href="/productos"
@@ -242,9 +242,9 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
               Seguir comprando
             </Link>
             <ul className="space-y-1.5 border-t border-ink-100 pt-3 text-[11px] text-ink-500">
-              <li>ðŸ”’ Tus datos viajan cifrados</li>
-              <li>ðŸ›¡ï¸ Garantía oficial en todos los productos</li>
-              <li>ðŸšš Envíos con seguimiento a todo el país</li>
+              <li>🔒 Tus datos viajan cifrados</li>
+              <li>🛡ï¸ Garantía oficial en todos los productos</li>
+              <li>🚚 Envíos con seguimiento a todo el país</li>
             </ul>
           </div>
         </aside>

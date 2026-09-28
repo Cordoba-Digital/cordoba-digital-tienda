@@ -18,8 +18,9 @@
  *
  * Uso: node scripts/fix-encoding.mjs [archivo ...]
  */
-import { readFileSync, writeFileSync } from "node:fs";
-import { basename, relative, resolve } from "node:path";
+import { readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
+import { extname, join, relative, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
 /**
  * Bytes iniciales válidos en UTF-8 (como code point latin1) y cuántos bytes de
@@ -31,7 +32,11 @@ const LEADS = {
   "Ã": 1, // C3 -> U+00C0..U+00FF
   "Å": 1, // C5 -> U+0140..U+017F
   "â": 2, // E2 -> U+2000..U+20FF
-  "ð": 1, // F0 -> U+1000..U+FFFF (emoji)
+  // Los emojis son 4 bytes UTF-8 (F0 9F 94 A5 = 🔥). cp1252 los lee como
+  // "ð" + 3 caracteres: "ðŸ”¥". Hay que pedir 3 continuaciones, no 1, o el
+  // emoji queda roto y nadie lo detecta (el "Ã" no aparece nunca).
+  "ð": 3, // F0 -> U+1000..U+3FFFF (todo emoji cae acá)
+  "ô": 3, // F4 -> U+100000..U+10FFFF
 };
 
 /**
@@ -109,14 +114,24 @@ export function repair(text) {
   return { text: out, fixed };
 }
 
+const SOURCE_EXTS = new Set([".ts", ".tsx", ".js", ".jsx", ".mjs", ".css"]);
+
+/** Lista recursivamente los archivos de código de un directorio. */
+export function listSourceFiles(dir, out = []) {
+  for (const entry of readdirSync(dir)) {
+    if (entry === "node_modules" || entry === ".next") continue;
+    const full = join(dir, entry);
+    if (statSync(full).isDirectory()) listSourceFiles(full, out);
+    else if (SOURCE_EXTS.has(extname(full))) out.push(full);
+  }
+  return out;
+}
+
 function main() {
   const args = process.argv.slice(2);
-  const files = args.length ? args : [
-    "src/components/cart-view.tsx",
-    "src/components/cart-drawer.tsx",
-    "src/components/checkout-flow.tsx",
-    "src/components/order-confirmation.tsx",
-  ];
+  const files = args.length
+    ? args
+    : listSourceFiles(resolve(process.cwd(), "src")).map((p) => relative(process.cwd(), p));
 
   let changed = 0;
   for (const rel of files) {
@@ -127,18 +142,23 @@ function main() {
     const { text, fixed } = repair(withoutBom);
 
     if (fixed === 0 || text === withoutBom) {
-      console.log(`[fix-encoding] ${basename(rel)}: sin cambios`);
       continue;
     }
 
     writeFileSync(path, text, "utf8");
     changed += 1;
-    console.log(`[fix-encoding] ${basename(rel)}: ${fixed} secuencias reparadas`);
+    console.log(`[fix-encoding] ${rel}: ${fixed} secuencias reparadas`);
   }
 
-  console.log(`[fix-encoding] ${changed} archivo(s) corregidos.`);
-  console.log(`[fix-encoding] diff: git diff --stat -- ${files.join(" ")}`);
-  void relative;
+  console.log(
+    changed === 0
+      ? `[fix-encoding] ${files.length} archivos revisados, ninguno estaba corrupto.`
+      : `[fix-encoding] ${changed} archivo(s) corregidos de ${files.length}.`,
+  );
 }
 
-main();
+// Solo se ejecuta si este archivo es el punto de entrada: `check-accents.mjs`
+// importa `repair` y no debe disparar la escritura.
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main();
+}

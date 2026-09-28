@@ -28,11 +28,11 @@ type Suggestion = {
 };
 
 const ANNOUNCEMENTS = [
-  "ðŸ”¥ 15% OFF pagando con transferencia o USDT",
-  "ðŸšš Envío gratis a todo el país en compras desde $250.000",
-  "ðŸ’³ Hasta 6 cuotas sin interés con todas las tarjetas",
-  "ðŸ¬ Retiro en 2 hs en 27 de Abril 259, Córdoba Capital",
-  "ðŸ›¡ï¸ 12 meses de garantía oficial + soporte post-venta local",
+  "🔥 15% OFF pagando con transferencia o USDT",
+  "🚚 Envío gratis a todo el país en compras desde $250.000",
+  "💳 Hasta 6 cuotas sin interés con todas las tarjetas",
+  "🏬 Retiro en 2 hs en 27 de Abril 259, Córdoba Capital",
+  "🛡ï¸ 12 meses de garantía oficial + soporte post-venta local",
 ];
 
 export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
@@ -341,7 +341,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               href="/productos?ofertas=1"
               className="ml-auto rounded-lg px-3 py-1.5 font-bold text-rose-600 transition hover:bg-rose-50"
             >
-              ðŸ”¥ Ofertas
+              🔥 Ofertas
             </Link>
             <Link href="/ayuda" className="rounded-lg px-3 py-1.5 font-medium text-ink-600 transition hover:bg-ink-50">
               Ayuda
@@ -416,16 +416,16 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
             </div>
             <div className="mt-5 space-y-1 border-t border-ink-100 pt-4 text-sm font-semibold text-ink-700">
               <Link href="/productos?ofertas=1" className="block rounded-xl px-3 py-2.5 text-rose-600 hover:bg-rose-50">
-                ðŸ”¥ Ofertas de la semana
+                🔥 Ofertas de la semana
               </Link>
               <Link href="/favoritos" className="block rounded-xl px-3 py-2.5 hover:bg-ink-50">
                 ❤ï¸ Mis favoritos
               </Link>
               <Link href="/seguimiento" className="block rounded-xl px-3 py-2.5 hover:bg-ink-50">
-                ðŸ“¦ Seguir mi pedido
+                📦 Seguir mi pedido
               </Link>
               <Link href="/ayuda" className="block rounded-xl px-3 py-2.5 hover:bg-ink-50">
-                ðŸ’¬ Centro de ayuda
+                💬 Centro de ayuda
               </Link>
             </div>
             <a
