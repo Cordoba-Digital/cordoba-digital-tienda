@@ -74,11 +74,18 @@ export function ProductCard({ product, compact = false }: { product: ProductView
           {product.name}
         </Link>
 
-        <div className="flex items-center gap-1.5 text-xs text-ink-400">
-          <Stars rating={product.rating} />
-          <span>({product.reviewCount})</span>
-          {product.soldCount > 100 ? <span className="text-ink-300">· +{product.soldCount} vendidos</span> : null}
-        </div>
+        {/* WooCommerce no tiene ratings por producto: sin opiniones no inventamos estrellas. */}
+        {product.reviewCount > 0 || product.soldCount > 100 ? (
+          <div className="flex items-center gap-1.5 text-xs text-ink-400">
+            {product.reviewCount > 0 ? (
+              <>
+                <Stars rating={product.rating} />
+                <span>({product.reviewCount})</span>
+              </>
+            ) : null}
+            {product.soldCount > 100 ? <span className="text-ink-300">· +{product.soldCount} vendidos</span> : null}
+          </div>
+        ) : null}
 
         <div className="mt-auto pt-1">
           {product.compareAtPrice ? (

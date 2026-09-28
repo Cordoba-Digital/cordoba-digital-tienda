@@ -146,15 +146,17 @@ export default async function ProductPage({ params }: { params: Params }) {
               {product.name}
             </h1>
             <div className="mt-2 flex flex-wrap items-center gap-3 text-xs text-ink-500">
-              <span className="flex items-center gap-1.5">
-                <Stars rating={product.rating} />
-                <span className="font-semibold text-ink-700">{(product.rating / 10).toFixed(1)}</span>
-                <a href="#opiniones" className="underline-offset-2 hover:underline">
-                  ({product.reviewCount} opiniones)
-                </a>
-              </span>
-              <span>· +{product.soldCount} vendidos</span>
-              <span>· SKU {product.sku}</span>
+              {hasRatings ? (
+                <span className="flex items-center gap-1.5">
+                  <Stars rating={product.rating} />
+                  <span className="font-semibold text-ink-700">{(product.rating / 10).toFixed(1)}</span>
+                  <a href="#opiniones" className="underline-offset-2 hover:underline">
+                    ({product.reviewCount} opiniones)
+                  </a>
+                </span>
+              ) : null}
+              {product.soldCount > 0 ? <span>· +{product.soldCount} vendidos</span> : null}
+              {product.sku ? <span>· SKU {product.sku}</span> : null}
             </div>
           </div>
 
@@ -215,7 +217,7 @@ export default async function ProductPage({ params }: { params: Params }) {
               <h2 className="text-lg font-extrabold text-ink-900">Opiniones de clientes</h2>
               <ReviewForm slug={product.slug} />
             </div>
-            <RatingSummary rating={product.rating} count={product.reviewCount} />
+            <RatingSummary rating={product.rating} count={product.reviewCount} reviews={productReviews} />
             <div className="space-y-4 border-t border-ink-50 pt-4">
               {productReviews.length === 0 ? (
                 <p className="text-sm text-ink-500">Todavía no hay opiniones. ¡Sé el primero en opinar!</p>

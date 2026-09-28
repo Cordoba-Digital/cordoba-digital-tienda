@@ -100,11 +100,6 @@ function orderFor(sort?: string) {
   }
 }
 
-export async function getCategories() {
-  await ensureSeeded();
-  return db.select().from(categories).orderBy(asc(categories.sortOrder));
-}
-
 export type CategoryTreeNode = Omit<CategoryNode, "children"> & {
   count: number;
   children: CategoryTreeNode[];
@@ -149,13 +144,6 @@ function withGuessedIcons(rows: CategoryRow[]): CategoryRow[] {
   }));
 }
 
-/** Igual que getCategoryTree pero sin conteos (para el header, que no los usa). */
-export async function getCategoryTreePlain(): Promise<CategoryNode[]> {
-  await ensureSeeded();
-  const rows = (await db.select().from(categories)) as CategoryRow[];
-  return buildCategoryTree(withGuessedIcons(rows));
-}
-
 export type CategoryPageData = {
   node: CategoryTreeNode;
   ancestors: CategoryNode[];
@@ -192,12 +180,6 @@ async function subtreeOf(categoryId: number): Promise<{ ids: number[]; slugs: st
   if (!node) return { ids: [], slugs: [] };
   const nodes = withDescendants(node);
   return { ids: nodes.map((n) => n.id), slugs: nodes.map((n) => n.slug) };
-}
-
-/** Conteo por categoría raíz, incluyendo los productos de sus descendientes. */
-export async function getCategoryCounts(): Promise<Map<string, number>> {
-  const tree = await getCategoryTree();
-  return new Map(tree.map((node) => [node.slug, node.count]));
 }
 
 export async function listProducts(filters: ProductFilters) {

@@ -9,7 +9,7 @@
  *   npm run verify:wp
  *   npm run verify:wp -- --limit=3
  */
-import { appendFile, readFile, writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import "dotenv/config";
@@ -69,24 +69,24 @@ async function main() {
 
   const roots = wpCats.filter((c) => !c.parent);
   const byId = new Map(wpCats.map((c) => [c.id, c]));
-  const dbById = new Map(dbCats.map((c) => [c.id, c]));
-  const childrenOfWp = new Map<number, WPCategory[]>();
-  for (const c of wpCats) if (c.parent) childrenOfWp.set(c.parent, [...(childrenOfWp.get(c.parent) ?? []), c]);
 
   // La categoría principal que el migrador elige: la más cercana a la raíz.
+  const depthOf = (c: WPCategory) => {
+    let depth = 0;
+    let cur = c;
+    while (cur.parent) {
+      cur = byId.get(cur.parent)!;
+      depth++;
+    }
+    return depth;
+  };
   const primaryOf = (p: { categories: { slug: string }[] }) => {
-    const slugs = p.categories.map((c) => c.slug);
     let best: WPCategory | null = null;
     let bestDepth = 99;
-    for (const slug of slugs) {
+    for (const { slug } of p.categories) {
       const cat = wpCats.find((c) => c.slug === slug);
       if (!cat) continue;
-      let depth = 0;
-      let cur = cat;
-      while (cur.parent) {
-        cur = byId.get(cur.parent)!;
-        depth++;
-      }
+      const depth = depthOf(cat);
       if (depth < bestDepth) {
         bestDepth = depth;
         best = cat;
@@ -156,8 +156,6 @@ async function main() {
   console.log(`[verify-wp] categorías ausentes ${missingCats.length} · extra ${extraCats.length} · principal distinta ${mismatch.length}`);
   console.log(`[verify-wp] actualizado ${path.relative(process.cwd(), DOC)}`);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const _ = { count, eq, inArray, dbById, childrenOfWp, appendFile };
   await pool.end();
   if (missingCats.length || extraCats.length || mismatch.length) process.exitCode = 2;
 }

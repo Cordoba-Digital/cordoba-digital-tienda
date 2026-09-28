@@ -59,6 +59,21 @@ async function main(): Promise<void> {
 
   // 2. Upsert real (import dinámico para no exigir DATABASE_URL en dry-run).
   const { db, pool } = await import("@/db");
+  const { sql } = await import("drizzle-orm");
+
+  // Guard: este script es del catálogo demo. Con el catálogo real de
+  // WooCommerce cargado, insertarlo mezclaría productos de mentira.
+  const [countRow] = await db.select({ count: sql<number>`count(*)::int` }).from(products);
+  const productCount = countRow?.count ?? 0;
+  if (productCount > 0) {
+    console.error(
+      `[sync-catalog] la base ya tiene ${productCount} productos (catálogo real de WooCommerce). ` +
+        "Este script es solo para el seed demo: abortando para no mezclar catálogos. " +
+        "Para el catálogo real usá `npm run migrate:wp`.",
+    );
+    await pool.end();
+    process.exit(1);
+  }
 
   let okProducts = 0;
   let failProducts = 0;

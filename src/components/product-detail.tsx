@@ -439,11 +439,35 @@ export function ReviewForm({ slug }: { slug: string }) {
   );
 }
 
-export function RatingSummary({ rating, count }: { rating: number; count: number }) {
+export function RatingSummary({
+  rating,
+  count,
+  reviews = [],
+}: {
+  rating: number;
+  count: number;
+  reviews?: { rating: number }[];
+}) {
   const value = rating / 10;
+
+  // La distribución se calcula con las opiniones reales: sin datos no se
+  // inventan porcentajes.
+  if (count === 0 || reviews.length === 0) {
+    return (
+      <p className="rounded-xl bg-ink-50 px-4 py-3 text-sm text-ink-500">
+        Todavía no hay opiniones de este producto. Si lo compraste,{" "}
+        <a href="#opiniones" className="font-semibold text-brand-700 underline underline-offset-2">
+          dejá la tuya
+        </a>
+        .
+      </p>
+    );
+  }
+
+  const total = reviews.length;
   const distribution = [5, 4, 3, 2, 1].map((star) => {
-    const weight = star === 5 ? 0.72 : star === 4 ? 0.19 : star === 3 ? 0.06 : star === 2 ? 0.02 : 0.01;
-    return { star, percent: Math.round(weight * 100) };
+    const hits = reviews.filter((r) => Math.round(r.rating) === star).length;
+    return { star, percent: Math.round((hits / total) * 100) };
   });
 
   return (
