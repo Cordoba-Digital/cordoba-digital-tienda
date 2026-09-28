@@ -1,5 +1,6 @@
-"use client";
+﻿"use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 import { useStore } from "@/components/store-provider";
@@ -28,7 +29,7 @@ export function QuantityStepper({
         onClick={() => onChange(value - 1)}
         className={`${btn} grid place-items-center rounded-l-xl font-bold text-ink-500 transition hover:bg-ink-50 hover:text-ink-900`}
       >
-        −
+        âˆ’
       </button>
       <span className={`${size === "sm" ? "w-7 text-xs" : "w-10 text-sm"} text-center font-bold text-ink-900`}>
         {value}
@@ -53,10 +54,10 @@ export function FreeShippingBar({ subtotal }: { subtotal: number }) {
     <div className="rounded-xl bg-emerald-50 p-3">
       <p className="text-xs font-semibold text-emerald-800">
         {remaining === 0 ? (
-          <>🎉 ¡Tenés envío gratis a todo el país!</>
+          <>ðŸŽ‰ Â¡TenÃ©s envÃ­o gratis a todo el paÃ­s!</>
         ) : (
           <>
-            Te faltan <strong>{money(remaining)}</strong> para el envío gratis
+            Te faltan <strong>{money(remaining)}</strong> para el envÃ­o gratis
           </>
         )}
       </p>
@@ -91,15 +92,15 @@ export function CartDrawer() {
             aria-label="Cerrar carrito"
             className="grid h-9 w-9 place-items-center rounded-full text-xl text-ink-400 transition hover:bg-ink-50 hover:text-ink-900"
           >
-            ×
+            Ã—
           </button>
         </header>
 
         {items.length === 0 ? (
           <div className="flex flex-1 flex-col items-center justify-center gap-3 px-8 text-center">
-            <span className="text-5xl">🛒</span>
-            <p className="text-base font-bold text-ink-800">Tu carrito está vacío</p>
-            <p className="text-sm text-ink-400">Descubrí las ofertas de la semana y armá tu setup.</p>
+            <span className="text-5xl">ðŸ›’</span>
+            <p className="text-base font-bold text-ink-800">Tu carrito estÃ¡ vacÃ­o</p>
+            <p className="text-sm text-ink-400">DescubrÃ­ las ofertas de la semana y armÃ¡ tu setup.</p>
             <Link
               href="/productos?ofertas=1"
               onClick={closeCart}
@@ -115,8 +116,7 @@ export function CartDrawer() {
               {items.map((item) => (
                 <div key={item.slug} className="flex gap-3 rounded-xl border border-ink-100 p-3">
                   <Link href={`/producto/${item.slug}`} onClick={closeCart} className="shrink-0">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={item.image} alt={item.name} className="h-16 w-16 rounded-lg object-cover" />
+                    <Image src={item.image} alt={item.name} width={64} height={64} className="h-16 w-16 rounded-lg object-cover" />
                   </Link>
                   <div className="min-w-0 flex-1">
                     <Link
@@ -170,7 +170,7 @@ export function CartDrawer() {
                 onClick={closeCart}
                 className="block w-full rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-3.5 text-center text-sm font-extrabold text-white shadow-lg shadow-brand-600/25 transition hover:from-brand-700 hover:to-brand-600"
               >
-                Finalizar compra →
+                Finalizar compra â†’
               </Link>
               <div className="flex gap-2">
                 <Link
@@ -189,7 +189,7 @@ export function CartDrawer() {
                 </button>
               </div>
               <p className="text-center text-[11px] text-ink-400">
-                🔒 Compra protegida · Garantía oficial · Factura A/B
+                ðŸ”’ Compra protegida Â· GarantÃ­a oficial Â· Factura A/B
               </p>
             </footer>
           </>
@@ -216,7 +216,7 @@ export function Toaster() {
           }`}
         >
           <p className="text-sm font-bold text-ink-900">
-            {toast.tone === "success" ? "✅ " : toast.tone === "error" ? "⚠️ " : "ℹ️ "}
+            {toast.tone === "success" ? "âœ… " : toast.tone === "error" ? "âš ï¸ " : "â„¹ï¸ "}
             {toast.title}
           </p>
           {toast.description ? <p className="mt-0.5 line-clamp-2 text-xs text-ink-500">{toast.description}</p> : null}

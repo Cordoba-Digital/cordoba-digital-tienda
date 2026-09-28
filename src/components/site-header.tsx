@@ -1,5 +1,6 @@
-"use client";
+﻿"use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -27,11 +28,11 @@ type Suggestion = {
 };
 
 const ANNOUNCEMENTS = [
-  "🔥 15% OFF pagando con transferencia o USDT",
-  "🚚 Envío gratis a todo el país en compras desde $250.000",
-  "💳 Hasta 6 cuotas sin interés con todas las tarjetas",
-  "🏬 Retiro en 2 hs en 27 de Abril 259, Córdoba Capital",
-  "🛡️ 12 meses de garantía oficial + soporte post-venta local",
+  "ðŸ”¥ 15% OFF pagando con transferencia o USDT",
+  "ðŸšš EnvÃ­o gratis a todo el paÃ­s en compras desde $250.000",
+  "ðŸ’³ Hasta 6 cuotas sin interÃ©s con todas las tarjetas",
+  "ðŸ¬ Retiro en 2 hs en 27 de Abril 259, CÃ³rdoba Capital",
+  "ðŸ›¡ï¸ 12 meses de garantÃ­a oficial + soporte post-venta local",
 ];
 
 export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
@@ -114,7 +115,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
-            aria-label="Abrir menú"
+            aria-label="Abrir menÃº"
             className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-ink-100 text-ink-700 lg:hidden"
           >
             <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
@@ -126,12 +127,12 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/logo.png"
-              alt="Córdoba Digital"
+              alt="CÃ³rdoba Digital"
               className="h-10 w-auto bg-white object-contain"
             />
             <span className="hidden leading-tight sm:block">
-              <span className="block text-[15px] font-extrabold tracking-tight text-ink-900">Córdoba Digital</span>
-              <span className="block text-[11px] font-medium text-ink-400">Tecnología con garantía · desde 2006</span>
+              <span className="block text-[15px] font-extrabold tracking-tight text-ink-900">CÃ³rdoba Digital</span>
+              <span className="block text-[11px] font-medium text-ink-400">TecnologÃ­a con garantÃ­a Â· desde 2006</span>
             </span>
           </Link>
 
@@ -141,7 +142,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                 value={term}
                 onChange={(e) => setTerm(e.target.value)}
                 onFocus={() => suggestions.length && setOpen(true)}
-                placeholder="Buscá tu próximo celular, notebook, cámara..."
+                placeholder="BuscÃ¡ tu prÃ³ximo celular, notebook, cÃ¡mara..."
                 className="h-11 w-full rounded-xl border border-ink-200 bg-ink-50/70 pl-11 pr-28 text-sm text-ink-800 outline-none transition placeholder:text-ink-400 focus:border-brand-400 focus:bg-white focus:ring-4 focus:ring-brand-100"
               />
               <svg
@@ -171,8 +172,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                     className="flex items-center gap-3 border-b border-ink-50 px-3 py-2.5 transition last:border-0 hover:bg-ink-50"
                   >
                     {s.image ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={s.image} alt="" className="h-11 w-11 rounded-lg object-cover" />
+                      <Image src={s.image} alt="" width={44} height={44} className="h-11 w-11 rounded-lg object-cover" />
                     ) : null}
                     <span className="min-w-0 flex-1">
                       <span className="block truncate text-sm font-semibold text-ink-800">{s.name}</span>
@@ -186,7 +186,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                   onClick={() => router.push(`/productos?q=${encodeURIComponent(term)}`)}
                   className="w-full bg-ink-50 px-3 py-2.5 text-center text-xs font-bold text-brand-700 hover:bg-brand-50"
                 >
-                  Ver todos los resultados para “{term}”
+                  Ver todos los resultados para â€œ{term}â€
                 </button>
               </div>
             ) : null}
@@ -246,7 +246,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
             <input
               value={term}
               onChange={(e) => setTerm(e.target.value)}
-              placeholder="¿Qué estás buscando?"
+              placeholder="Â¿QuÃ© estÃ¡s buscando?"
               className="h-11 w-full rounded-xl border border-ink-200 bg-ink-50/70 pl-10 pr-4 text-sm outline-none focus:border-brand-400 focus:bg-white"
             />
             <svg
@@ -275,7 +275,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.2">
                   <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" />
                 </svg>
-                Categorías
+                CategorÃ­as
               </button>
               {catsOpen ? (
                 <div
@@ -314,7 +314,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                                   href={`/categoria/${c.path}`}
                                   className="block text-[11px] font-semibold text-brand-600 hover:text-brand-700"
                                 >
-                                  Ver las {c.children.length} subcategorías →
+                                  Ver las {c.children.length} subcategorÃ­as â†’
                                 </Link>
                               </li>
                             ) : null}
@@ -341,7 +341,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               href="/productos?ofertas=1"
               className="ml-auto rounded-lg px-3 py-1.5 font-bold text-rose-600 transition hover:bg-rose-50"
             >
-              🔥 Ofertas
+              ðŸ”¥ Ofertas
             </Link>
             <Link href="/ayuda" className="rounded-lg px-3 py-1.5 font-medium text-ink-600 transition hover:bg-ink-50">
               Ayuda
@@ -356,9 +356,9 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
           <div className="absolute inset-0 bg-ink-950/50" onClick={() => setMenuOpen(false)} />
           <div className="absolute left-0 top-0 h-full w-[85%] max-w-sm animate-pop overflow-y-auto bg-white p-5">
             <div className="mb-5 flex items-center justify-between">
-              <span className="text-lg font-extrabold">Menú</span>
+              <span className="text-lg font-extrabold">MenÃº</span>
               <button type="button" onClick={() => setMenuOpen(false)} className="text-2xl text-ink-400">
-                ×
+                Ã—
               </button>
             </div>
             <div className="space-y-1">
@@ -386,10 +386,10 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                             )
                           }
                           aria-expanded={expanded}
-                          aria-label={`Ver subcategorías de ${c.name}`}
+                          aria-label={`Ver subcategorÃ­as de ${c.name}`}
                           className="px-3 py-3 text-ink-400"
                         >
-                          <span className={`block transition ${expanded ? "rotate-180" : ""}`}>▾</span>
+                          <span className={`block transition ${expanded ? "rotate-180" : ""}`}>â–¾</span>
                         </button>
                       ) : null}
                     </div>
@@ -416,16 +416,16 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
             </div>
             <div className="mt-5 space-y-1 border-t border-ink-100 pt-4 text-sm font-semibold text-ink-700">
               <Link href="/productos?ofertas=1" className="block rounded-xl px-3 py-2.5 text-rose-600 hover:bg-rose-50">
-                🔥 Ofertas de la semana
+                ðŸ”¥ Ofertas de la semana
               </Link>
               <Link href="/favoritos" className="block rounded-xl px-3 py-2.5 hover:bg-ink-50">
-                ❤️ Mis favoritos
+                â¤ï¸ Mis favoritos
               </Link>
               <Link href="/seguimiento" className="block rounded-xl px-3 py-2.5 hover:bg-ink-50">
-                📦 Seguir mi pedido
+                ðŸ“¦ Seguir mi pedido
               </Link>
               <Link href="/ayuda" className="block rounded-xl px-3 py-2.5 hover:bg-ink-50">
-                💬 Centro de ayuda
+                ðŸ’¬ Centro de ayuda
               </Link>
             </div>
             <a

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { Countdown } from "@/components/countdown";
@@ -282,12 +283,19 @@ export default async function HomePage() {
       <section className="container-xl py-14">
         <div className="grid items-center gap-8 overflow-hidden rounded-3xl border border-ink-100 bg-white lg:grid-cols-2">
           <div className="relative h-full min-h-[18rem]">
-            {/* No hay foto del local en el repo: se muestra un panel con los
-                datos reales en vez de una imagen rota. Cuando el cliente pase
-                una foto, se reemplaza por <img src="/images/local-cordoba.jpg">. */}
-            <div className="mesh-dark flex h-full flex-col justify-end gap-3 p-6 text-white">
+            <div className="mesh-dark flex h-full flex-col justify-center gap-4 p-6 text-white">
+              {/* La foto del local viene de Google Places y mide 300×225: la
+                  mostramos a su tamaño real para no estirarla. Conviene pedir
+                  una versión de al menos 1200px. */}
+              <Image
+                src="/images/local-cordoba.jpg"
+                alt="Fachada del local de Córdoba Digital en 27 de Abril 259, Córdoba Capital"
+                width={300}
+                height={225}
+                className="w-[300px] max-w-full rounded-xl border border-white/10 object-cover"
+              />
               <div>
-                <p className="text-3xl font-black tracking-tight">Córdoba Digital</p>
+                <p className="text-2xl font-black tracking-tight">Córdoba Digital</p>
                 <p className="mt-1 text-sm text-ink-300">Tecnología con garantía desde 2006</p>
               </div>
               <dl className="grid gap-2 text-sm text-ink-200">

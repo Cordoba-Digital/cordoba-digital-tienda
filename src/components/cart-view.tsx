@@ -1,5 +1,6 @@
-"use client";
+﻿"use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -35,7 +36,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
       });
       const data = await res.json();
       if (!res.ok || !data.ok) {
-        setCouponError(data.error ?? "Cupón inválido");
+        setCouponError(data.error ?? "CupÃ³n invÃ¡lido");
         setCoupon(null);
         writeCoupon(null);
       } else {
@@ -56,24 +57,24 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
     return (
       <div className="container-xl py-16">
         <div className="card-surface mx-auto flex max-w-xl flex-col items-center gap-3 px-8 py-16 text-center">
-          <span className="text-6xl">🛒</span>
-          <h1 className="text-2xl font-extrabold text-ink-900">Tu carrito está vacío</h1>
+          <span className="text-6xl">ðŸ›’</span>
+          <h1 className="text-2xl font-extrabold text-ink-900">Tu carrito estÃ¡ vacÃ­o</h1>
           <p className="text-sm text-ink-500">
-            Mirá lo más vendido de la semana o escribinos y te ayudamos a elegir el producto ideal.
+            MirÃ¡ lo mÃ¡s vendido de la semana o escribinos y te ayudamos a elegir el producto ideal.
           </p>
           <div className="mt-3 flex flex-wrap justify-center gap-3">
             <Link href="/productos" className="rounded-xl bg-ink-900 px-5 py-3 text-sm font-bold text-white">
-              Ver catálogo
+              Ver catÃ¡logo
             </Link>
             <Link href="/productos?ofertas=1" className="rounded-xl border border-ink-200 px-5 py-3 text-sm font-bold text-ink-700">
-              🔥 Ofertas
+              ðŸ”¥ Ofertas
             </Link>
           </div>
         </div>
 
         {suggestions.length ? (
           <section className="mt-14">
-            <h2 className="mb-5 text-xl font-extrabold text-ink-900">Los más elegidos</h2>
+            <h2 className="mb-5 text-xl font-extrabold text-ink-900">Los mÃ¡s elegidos</h2>
             <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
               {suggestions.slice(0, 4).map((product) => (
                 <ProductCard key={product.slug} product={product} />
@@ -88,7 +89,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
   return (
     <div className="container-xl py-8">
       <h1 className="mb-1 text-2xl font-extrabold tracking-tight text-ink-900 md:text-3xl">Tu carrito</h1>
-      <p className="mb-6 text-sm text-ink-500">Revisá los productos y finalizá la compra en 3 pasos simples.</p>
+      <p className="mb-6 text-sm text-ink-500">RevisÃ¡ los productos y finalizÃ¡ la compra en 3 pasos simples.</p>
 
       <div className="grid gap-6 lg:grid-cols-[1fr_22rem]">
         <div className="space-y-4">
@@ -98,8 +99,13 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
             {items.map((item) => (
               <div key={item.slug} className="flex gap-4 p-4">
                 <Link href={`/producto/${item.slug}`} className="shrink-0">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={item.image} alt={item.name} className="h-24 w-24 rounded-xl object-cover" />
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={96}
+                    height={96}
+                    className="h-24 w-24 rounded-xl object-cover"
+                  />
                 </Link>
                 <div className="min-w-0 flex-1">
                   <p className="text-[11px] font-semibold uppercase tracking-wide text-ink-400">{item.brand}</p>
@@ -113,7 +119,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
                     <p className="mt-1 text-xs text-ink-400">
                       <span className="line-through">{money(item.compareAtPrice)}</span>{" "}
                       <span className="font-semibold text-emerald-600">
-                        ahorrás {money((item.compareAtPrice - item.price) * item.quantity)}
+                        ahorrÃ¡s {money((item.compareAtPrice - item.price) * item.quantity)}
                       </span>
                     </p>
                   ) : null}
@@ -127,7 +133,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
                       }}
                       className="text-xs font-semibold text-ink-400 transition hover:text-brand-700"
                     >
-                      Guardar para después
+                      Guardar para despuÃ©s
                     </button>
                     <button
                       type="button"
@@ -147,7 +153,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
           </div>
 
           <div className="card-surface p-5">
-            <h2 className="text-sm font-extrabold text-ink-900">🎟️ ¿Tenés un cupón?</h2>
+            <h2 className="text-sm font-extrabold text-ink-900">ðŸŽŸï¸ Â¿TenÃ©s un cupÃ³n?</h2>
             {coupon ? (
               <div className="mt-3 flex items-center justify-between rounded-xl bg-emerald-50 px-4 py-3">
                 <div>
@@ -184,7 +190,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
             )}
             {couponError ? <p className="mt-2 text-xs font-semibold text-rose-600">{couponError}</p> : null}
             <p className="mt-2 text-[11px] text-ink-400">
-              Probá con <strong>BIENVENIDO10</strong> (10% OFF) o <strong>TECHO25</strong> ($25.000 OFF desde $150.000).
+              ProbÃ¡ con <strong>BIENVENIDO10</strong> (10% OFF) o <strong>TECHO25</strong> ($25.000 OFF desde $150.000).
             </p>
           </div>
         </div>
@@ -205,12 +211,12 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
               ) : null}
               {discount > 0 ? (
                 <div className="flex justify-between text-emerald-600">
-                  <dt>Cupón {coupon?.code}</dt>
+                  <dt>CupÃ³n {coupon?.code}</dt>
                   <dd className="font-semibold">-{money(discount)}</dd>
                 </div>
               ) : null}
               <div className="flex justify-between text-ink-600">
-                <dt>Envío</dt>
+                <dt>EnvÃ­o</dt>
                 <dd className="font-semibold text-ink-500">Se calcula en el checkout</dd>
               </div>
             </dl>
@@ -225,7 +231,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
               href="/checkout"
               className="block w-full rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-3.5 text-center text-sm font-extrabold text-white shadow-lg shadow-brand-600/25 transition hover:from-brand-700 hover:to-brand-600"
             >
-              Continuar con la compra →
+              Continuar con la compra â†’
             </Link>
             <Link
               href="/productos"
@@ -234,9 +240,9 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
               Seguir comprando
             </Link>
             <ul className="space-y-1.5 border-t border-ink-100 pt-3 text-[11px] text-ink-500">
-              <li>🔒 Tus datos viajan cifrados</li>
-              <li>🛡️ Garantía oficial en todos los productos</li>
-              <li>🚚 Envíos con seguimiento a todo el país</li>
+              <li>ðŸ”’ Tus datos viajan cifrados</li>
+              <li>ðŸ›¡ï¸ GarantÃ­a oficial en todos los productos</li>
+              <li>ðŸšš EnvÃ­os con seguimiento a todo el paÃ­s</li>
             </ul>
           </div>
         </aside>
@@ -244,7 +250,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
 
       {suggestions.length ? (
         <section className="mt-14">
-          <h2 className="mb-5 text-xl font-extrabold text-ink-900">Sumá a tu compra</h2>
+          <h2 className="mb-5 text-xl font-extrabold text-ink-900">SumÃ¡ a tu compra</h2>
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
             {suggestions.slice(0, 4).map((product) => (
               <ProductCard key={product.slug} product={product} />

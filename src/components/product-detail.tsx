@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -28,8 +29,7 @@ export function ProductGallery({ images, name, badge }: { images: string[]; name
               index === active ? "border-brand-500" : "border-ink-100 hover:border-ink-300"
             }`}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={image} alt="" className="h-full w-full object-cover" />
+            <Image src={image} alt="" width={128} height={128} className="h-full w-full object-cover" />
           </button>
         ))}
       </div>
@@ -50,10 +50,12 @@ export function ProductGallery({ images, name, badge }: { images: string[]; name
             {badge}
           </span>
         ) : null}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={list[active]}
           alt={name}
+          width={800}
+          height={800}
+          sizes="(max-width: 1024px) 100vw, 700px"
           className="aspect-square w-full object-cover transition-transform duration-300"
           style={{ transform: zoom ? "scale(1.7)" : "scale(1)", transformOrigin: origin }}
         />

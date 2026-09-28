@@ -61,6 +61,28 @@ Notas de la migración:
   lugar de calcular los huérfanos); corregido y re-verificado.
 - `next.config.ts` emite **308** en los redirects (semánticamente mejor que 301).
 
+### Imágenes — decidido: no copiar, optimizar
+
+`npm run images:migrate` (sin `--yes`) mide el corpus: **5700 imágenes únicas,
+~553 MB** (promedio 99 KB, máximo 718 KB). Copiarlas al repo no conviene:
+
+- 553 MB de binarios en git (historial immense) y en **cada** deploy de Vercel.
+- El hosting viejo es del cliente y sigue en pie hasta el corte, así que las
+  fotos están disponibles mientras tanto.
+
+Lo que sí se hizo: todas las fotos de producto pasan por `next/image`, que
+redimensiona y sirve WebP/AVIF desde el caché de Vercel. Medido sobre
+`macbook-air-m5-15-16gb-1tb-sky-blue.png`:
+
+| | Peso |
+| --- | --- |
+| Original en `wp-content` | 1330 KB |
+| Servido por `next/image` (828px) | 96 KB (PNG) / **30 KB (WebP)** |
+
+Cuando el cliente defina su hosting, la copia de las imágenes es una tarea de
+migración con su almacenamiento. El script queda listo (`--yes`) pero **no se
+va a usar** salvo que el cliente pida almacenamiento propio.
+
 ### 0. Organizar carpeta — HECHO
 
 - `public/images/logo.png`, `public/`, `docs/`, `scripts/`, `.archive/`

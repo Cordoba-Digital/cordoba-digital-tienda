@@ -13,6 +13,7 @@
     "migrate:wp": "tsx scripts/migrate-wp.ts",
     "verify:wp": "tsx scripts/verify-catalog.ts",
     "audit:site": "tsx scripts/audit-site.ts",
+    "images:migrate": "tsx scripts/migrate-images.ts",
     "sync:catalog": "tsx scripts/sync-catalog.ts"
   },
   "dependencies": {
