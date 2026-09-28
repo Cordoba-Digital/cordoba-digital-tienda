@@ -1,4 +1,5 @@
 import { and, asc, desc, eq, gte, ilike, inArray, lte, ne, or, sql, type SQL } from "drizzle-orm";
+import { unstable_cache } from "next/cache";
 import { cache } from "react";
 
 import { db } from "@/db";
@@ -110,23 +111,37 @@ export type CategoryTreeNode = Omit<CategoryNode, "children"> & {
  * Se cachea por request porque el header, la home y las páginas de categoría
  * lo piden varias veces.
  */
+/** Filas planas de categorías, cacheadas 5 min entre requests. */
+const loadCategoryRows = unstable_cache(
+  async (): Promise<CategoryRow[]> => db.select().from(categories).then((rows) => rows as CategoryRow[]),
+  ["category-rows"],
+  { revalidate: 300 },
+);
+
+/** Conteo de productos por categoría desde el puente, cacheado 5 min. */
+const loadCategoryCounts = unstable_cache(
+  async (): Promise<Map<number, number>> => {
+    const rows = await db
+      .select({ categoryId: productCategories.categoryId, count: sql<number>`count(*)::int` })
+      .from(productCategories)
+      .groupBy(productCategories.categoryId);
+    return new Map(rows.map((r) => [r.categoryId, r.count]));
+  },
+  ["category-counts"],
+  { revalidate: 300 },
+);
+
 /**
  * Árbol completo de categorías con el conteo de productos de cada subárbol.
- * Va envuelto en `cache()` de React: en un mismo render lo piden el layout, la
- * home y la página de categoría, y son 128 filas + un group by.
+ *
+ * El layout lo pide en todas las páginas y el header lo necesita, así que va
+ * cacheado 5 minutos: solo cambia cuando se re-migra el catálogo. `cache()` de
+ * React deduplica además dentro de un mismo render.
  */
 export const getCategoryTree = cache(async (): Promise<CategoryTreeNode[]> => {
-  await ensureSeeded();
-  const rows = (await db.select().from(categories)) as CategoryRow[];
+  const [rows, direct] = await Promise.all([loadCategoryRows(), loadCategoryCounts()]);
   const tree = buildCategoryTree(withGuessedIcons(rows));
-  const direct = await db
-    .select({ categoryId: productCategories.categoryId, count: sql<number>`count(*)::int` })
-    .from(productCategories)
-    .groupBy(productCategories.categoryId);
-  const totals = countByCategory(
-    tree,
-    new Map(direct.map((r) => [r.categoryId, r.count])),
-  );
+  const totals = countByCategory(tree, direct);
   const attach = (nodes: CategoryNode[]): CategoryTreeNode[] =>
     nodes.map((node) => ({
       ...node,

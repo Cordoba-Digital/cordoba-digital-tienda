@@ -84,7 +84,8 @@ async function main() {
   const categoryUrls: string[] = [];
   const productUrls: string[] = [];
   for (const sm of submapUrls) {
-    const xml = await fetchText(sm);
+    // El submap también se pide al host canónico: hay que reescribirlo.
+    const xml = await fetchText(toBase(sm));
     for (const m of xml.text.matchAll(/<loc>([^<]+)<\/loc>/g)) {
       const loc = m[1];
       if (loc.includes("/categoria/")) categoryUrls.push(loc);
