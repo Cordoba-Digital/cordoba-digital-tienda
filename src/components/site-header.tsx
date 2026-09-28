@@ -7,7 +7,15 @@ import { useEffect, useRef, useState } from "react";
 import { useStore } from "@/components/store-provider";
 import { money } from "@/lib/format";
 
-type CategoryLink = { slug: string; name: string; icon: string; tagline: string };
+type CategoryLink = {
+  slug: string;
+  name: string;
+  icon: string;
+  tagline: string;
+  path: string;
+  count?: number;
+  children?: { slug: string; name: string; icon: string; path: string; count?: number }[];
+};
 
 type Suggestion = {
   slug: string;
@@ -35,6 +43,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [catsOpen, setCatsOpen] = useState(false);
+  const [expandedCats, setExpandedCats] = useState<string[]>([]);
   const [announcement, setAnnouncement] = useState(0);
   const boxRef = useRef<HTMLDivElement>(null);
 
@@ -271,21 +280,49 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               {catsOpen ? (
                 <div
                   onMouseLeave={() => setCatsOpen(false)}
-                  className="absolute left-0 top-11 z-50 grid w-[560px] animate-pop grid-cols-2 gap-1 rounded-2xl border border-ink-100 bg-white p-2 shadow-2xl shadow-ink-900/10"
+                  className="absolute left-0 top-11 z-50 max-h-[70vh] w-[720px] animate-pop overflow-y-auto rounded-2xl border border-ink-100 bg-white p-3 shadow-2xl shadow-ink-900/10"
                 >
-                  {categories.map((c) => (
-                    <Link
-                      key={c.slug}
-                      href={`/productos?categoria=${c.slug}`}
-                      className="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-ink-50"
-                    >
-                      <span className="text-xl">{c.icon}</span>
-                      <span>
-                        <span className="block text-sm font-semibold text-ink-800">{c.name}</span>
-                        <span className="block text-[11px] text-ink-400">{c.tagline}</span>
-                      </span>
-                    </Link>
-                  ))}
+                  <div className="grid grid-cols-2 gap-x-3 gap-y-1">
+                    {categories.map((c) => (
+                      <div key={c.slug} className="rounded-xl px-3 py-2 transition hover:bg-ink-50">
+                        <Link href={`/categoria/${c.path}`} className="flex items-start gap-3">
+                          <span className="text-xl" aria-hidden>
+                            {c.icon}
+                          </span>
+                          <span className="min-w-0">
+                            <span className="block text-sm font-semibold text-ink-800">{c.name}</span>
+                            {typeof c.count === "number" ? (
+                              <span className="block text-[11px] text-ink-400">{c.count} productos</span>
+                            ) : null}
+                          </span>
+                        </Link>
+                        {c.children?.length ? (
+                          <ul className="ml-9 mt-1 space-y-0.5 border-l border-ink-100 pl-3">
+                            {c.children.slice(0, 8).map((child) => (
+                              <li key={child.slug}>
+                                <Link
+                                  href={`/categoria/${child.path}`}
+                                  className="block truncate text-[12px] text-ink-500 transition hover:text-brand-700"
+                                >
+                                  {child.name}
+                                </Link>
+                              </li>
+                            ))}
+                            {c.children.length > 8 ? (
+                              <li>
+                                <Link
+                                  href={`/categoria/${c.path}`}
+                                  className="block text-[11px] font-semibold text-brand-600 hover:text-brand-700"
+                                >
+                                  Ver las {c.children.length} subcategorías →
+                                </Link>
+                              </li>
+                            ) : null}
+                          </ul>
+                        ) : null}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ) : null}
             </div>
@@ -293,8 +330,9 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
             {categories.slice(0, 6).map((c) => (
               <Link
                 key={c.slug}
-                href={`/productos?categoria=${c.slug}`}
-                className="rounded-lg px-3 py-1.5 font-medium text-ink-600 transition hover:bg-ink-50 hover:text-ink-900"
+                href={`/categoria/${c.path}`}
+                className="max-w-[10rem] truncate rounded-lg px-3 py-1.5 font-medium text-ink-600 transition hover:bg-ink-50 hover:text-ink-900"
+                title={c.name}
               >
                 {c.name}
               </Link>
@@ -324,16 +362,57 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               </button>
             </div>
             <div className="space-y-1">
-              {categories.map((c) => (
-                <Link
-                  key={c.slug}
-                  href={`/productos?categoria=${c.slug}`}
-                  className="flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-ink-700 hover:bg-ink-50"
-                >
-                  <span className="text-xl">{c.icon}</span>
-                  {c.name}
-                </Link>
-              ))}
+              {categories.map((c) => {
+                const expanded = expandedCats.includes(c.slug);
+                const hasKids = Boolean(c.children?.length);
+                return (
+                  <div key={c.slug} className="rounded-xl">
+                    <div className="flex items-center">
+                      <Link
+                        href={`/categoria/${c.path}`}
+                        className="flex min-w-0 flex-1 items-center gap-3 px-3 py-3 text-sm font-semibold text-ink-700 hover:bg-ink-50"
+                      >
+                        <span className="text-xl" aria-hidden>
+                          {c.icon}
+                        </span>
+                        <span className="truncate">{c.name}</span>
+                      </Link>
+                      {hasKids ? (
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setExpandedCats((prev) =>
+                              prev.includes(c.slug) ? prev.filter((s) => s !== c.slug) : [...prev, c.slug],
+                            )
+                          }
+                          aria-expanded={expanded}
+                          aria-label={`Ver subcategorías de ${c.name}`}
+                          className="px-3 py-3 text-ink-400"
+                        >
+                          <span className={`block transition ${expanded ? "rotate-180" : ""}`}>▾</span>
+                        </button>
+                      ) : null}
+                    </div>
+                    {hasKids && expanded ? (
+                      <ul className="mb-1 ml-6 space-y-0.5 border-l border-ink-100 pl-3">
+                        {c.children!.map((child) => (
+                          <li key={child.slug}>
+                            <Link
+                              href={`/categoria/${child.path}`}
+                              className="flex items-center justify-between gap-2 py-1.5 text-[13px] text-ink-600 hover:text-brand-700"
+                            >
+                              <span className="truncate">{child.name}</span>
+                              {typeof child.count === "number" ? (
+                                <span className="shrink-0 text-[11px] text-ink-300">{child.count}</span>
+                              ) : null}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </div>
+                );
+              })}
             </div>
             <div className="mt-5 space-y-1 border-t border-ink-100 pt-4 text-sm font-semibold text-ink-700">
               <Link href="/productos?ofertas=1" className="block rounded-xl px-3 py-2.5 text-rose-600 hover:bg-rose-50">

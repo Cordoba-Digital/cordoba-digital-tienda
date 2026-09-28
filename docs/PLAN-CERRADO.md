@@ -9,21 +9,57 @@
 - Catálogo: **migrar real desde WooCommerce** (`cordobadigital.net`), no seed demo.
 - Deploy: **Vercel preview** (no producción hasta validar).
 
-## Estado (27/09/2026)
+## Estado (28/09/2026)
 
 - [x] Fase 0 — carpeta organizada, `lint` + `tsc` en verde.
 - [x] Fase 1 — MP Checkout Pro esqueleto (preferencia, webhook HMAC, CTA).
   Bloqueado para prueba real: falta `MP_ACCESS_TOKEN` (pestaña Prueba) y `MP_WEBHOOK_SECRET`.
 - [x] Fase 2 — reseñas Google cableadas (API + home + JSON-LD + atribución).
   Sin keys muestra fallback local. Falta `GOOGLE_PLACE_ID` + `GOOGLE_PLACES_API_KEY`.
-- [x] Fase 3 — `scripts/migrate-wp.ts` + `--dry-run` + `docs/MIGRACION-WP.md`.
-  Falta `WC_STORE_URL` + keys y `DATABASE_URL` para correrla.
 - [x] Fase 4 — deploy en Vercel: proyecto `jac10/cordoba-digital` linkeado,
-  `DATABASE_URL` en Preview + Production, deploy Ready en
-  https://cordoba-digital-9sjhyg5wq-jac10.vercel.app (alias cordoba-digital.vercel.app).
-  Nota: Vercel asignó el primer deploy a producción automáticamente;
-  los próximos serán preview salvo `--prod`. Pendiente: resto de envs
-  (`MP_*`, `GOOGLE_*`, `WC_*`, `APP_URL` pública) y `vercel-optimize` con métricas.
+  `DATABASE_URL` en Preview + Production. Pendiente el resto de envs
+  (`MP_*`, `GOOGLE_*`, `APP_URL` pública) y `vercel-optimize` con métricas.
+- [x] **Fases A–E — migración del catálogo real** (detalle abajo).
+
+### Migración del catálogo real — HECHO
+
+Decisiones tomadas: árbol de categorías **1:1** (128, mismos slugs), imágenes
+**servidas desde el WP viejo** vía `<img>`/dominio permitido, stock **1/0
+aproximado** (la API pública no da cantidades) y descripciones como **HTML
+saneado + highlights**.
+
+| Fase | Qué se hizo | Estado |
+| --- | --- | --- |
+| A | `scripts/audit-wp.ts` → `docs/CATALOGO-WP.md` (árbol, marcas, tags, mapeo, 301) | ✅ |
+| B | `categories.parentId`/`descriptionHtml`/`imageUrl`/`wpId`, `products.descriptionHtml`/`weight`/`dimensions`/`seo*`/`wpId`, tabla puente `product_categories` | ✅ |
+| C | `scripts/migrate-wp.ts` sobre la **Store API pública** (sin credenciales), con `--dry-run`/`--prune`/`--limit` y sanitizador HTML propio | ✅ |
+| D | Ruta `/categoria/[...path]`, menú con jerarquía, filtros por descendientes, paginación 24, sitemap por índice (3 submaps), 301 de WooCommerce | ✅ |
+| E | `scripts/verify-catalog.ts` + `npm run verify:wp` | ✅ |
+
+Verificación contra WooCommerce (`npm run verify:wp`, exit 0):
+
+| Métrica | WooCommerce | Nuestra base |
+| --- | --- | --- |
+| Categorías | 128 | 128 |
+| Productos | 2588 | 2588 |
+| Con stock | 2368 | 2368 |
+| En oferta | 2383 | 2383 |
+| Puentes producto→categoría | — | 4374 |
+| Categorías ausentes / extra | — | 0 / 0 |
+| Producto con categoría principal distinta | — | 0 |
+
+Notas de la migración:
+
+- El servidor de WordPress responde **403 "browser outdated"** con User-Agent
+  vacío o viejo: todos los scripts mandan un UA de Chrome.
+- No hacen falta `WC_CONSUMER_KEY`/`WC_CONSUMER_SECRET`. Solo se pierden los
+  `seoTitle`/`seoDescription` por producto de Rank Math (requieren `wc/v3`).
+- Los conteos por categoría OUR son mayores que los de WooCommerce porque una
+  página de categoría incluye los productos de todo su subárbol y un producto
+  puede estar en varias ramas. Ej.: `computacion` 1565 vs 996 en WP.
+- El prune de la primera corrida borró de más (bug: `notInArray` por chunk en
+  lugar de calcular los huérfanos); corregido y re-verificado.
+- `next.config.ts` emite **308** en los redirects (semánticamente mejor que 301).
 
 ### 0. Organizar carpeta — HECHO
 

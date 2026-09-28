@@ -12,14 +12,26 @@ import {
 
 export type Spec = { label: string; value: string };
 
-export const categories = pgTable("categories", {
-  id: serial("id").primaryKey(),
-  slug: text("slug").notNull().unique(),
-  name: text("name").notNull(),
-  icon: text("icon").notNull().default("📦"),
-  tagline: text("tagline").notNull().default(""),
-  sortOrder: integer("sort_order").notNull().default(0),
-});
+export const categories = pgTable(
+  "categories",
+  {
+    id: serial("id").primaryKey(),
+    slug: text("slug").notNull().unique(),
+    name: text("name").notNull(),
+    icon: text("icon").notNull().default("📦"),
+    tagline: text("tagline").notNull().default(""),
+    sortOrder: integer("sort_order").notNull().default(0),
+    // Jerarquía real de WooCommerce (3 niveles). Null = categoría raíz.
+    parentId: integer("parent_id"),
+    descriptionHtml: text("description_html").notNull().default(""),
+    imageUrl: text("image_url"),
+    wpId: integer("wp_id"),
+  },
+  (table) => [
+    index("categories_parent_idx").on(table.parentId),
+    index("categories_sort_idx").on(table.sortOrder),
+  ],
+);
 
 export const products = pgTable(
   "products",
@@ -29,9 +41,12 @@ export const products = pgTable(
     sku: text("sku").notNull().default(""),
     name: text("name").notNull(),
     brand: text("brand").notNull(),
+    // Categoría principal (raíz más cercana). El resto vive en productCategories.
     categorySlug: text("category_slug").notNull(),
     shortDescription: text("short_description").notNull().default(""),
     description: text("description").notNull().default(""),
+    // Descripción original de WooCommerce, saneada.
+    descriptionHtml: text("description_html").notNull().default(""),
     // prices stored in ARS cents
     price: integer("price").notNull(),
     compareAtPrice: integer("compare_at_price"),
@@ -47,11 +62,32 @@ export const products = pgTable(
     featured: boolean("featured").notNull().default(false),
     freeShipping: boolean("free_shipping").notNull().default(false),
     warrantyMonths: integer("warranty_months").notNull().default(12),
+    weight: text("weight"),
+    dimensions: text("dimensions"),
+    seoTitle: text("seo_title"),
+    seoDescription: text("seo_description"),
+    wpId: integer("wp_id"),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (table) => [
     index("products_category_idx").on(table.categorySlug),
     index("products_brand_idx").on(table.brand),
+    index("products_price_idx").on(table.price),
+    index("products_featured_idx").on(table.featured),
+  ],
+);
+
+/** Puente N:N: el 80% del catálogo de WooCommerce está en más de una categoría. */
+export const productCategories = pgTable(
+  "product_categories",
+  {
+    id: serial("id").primaryKey(),
+    productId: integer("product_id").notNull(),
+    categoryId: integer("category_id").notNull(),
+  },
+  (table) => [
+    uniqueIndex("product_categories_unique_idx").on(table.productId, table.categoryId),
+    index("product_categories_category_idx").on(table.categoryId),
   ],
 );
 
@@ -134,6 +170,7 @@ export const subscribers = pgTable("subscribers", {
 export type Product = typeof products.$inferSelect;
 export type Category = typeof categories.$inferSelect;
 export type Review = typeof reviews.$inferSelect;
+export type ProductCategory = typeof productCategories.$inferSelect;
 export type Order = typeof orders.$inferSelect;
 export type OrderItem = typeof orderItems.$inferSelect;
 export type Coupon = typeof coupons.$inferSelect;

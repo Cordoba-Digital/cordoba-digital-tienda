@@ -7,7 +7,7 @@ import { Pill, SectionHeading, Stars } from "@/components/ui";
 import { FREE_SHIPPING_THRESHOLD, money } from "@/lib/format";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { toView } from "@/lib/product-view";
-import { getBestSellers, getCategories, getCategoryCounts, getDealProducts, getFeaturedProducts } from "@/lib/queries";
+import { getBestSellers, getCategoryTree, getDealProducts, getFeaturedProducts } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -38,14 +38,16 @@ const FAQ = [
 ];
 
 export default async function HomePage() {
-  const [featured, deals, bestSellers, categories, counts, googleReviews] = await Promise.all([
+  const [featured, deals, bestSellers, categories, googleReviews] = await Promise.all([
     getFeaturedProducts(8),
     getDealProducts(8),
     getBestSellers(8),
-    getCategories(),
-    getCategoryCounts(),
+    getCategoryTree(),
     getGoogleReviews(),
   ]);
+
+  // Las 10 categorías raíz con más stock mandan la grilla de la home.
+  const topCategories = categories.slice(0, 10);
 
   const ratingValue = (googleReviews.rating ?? 4.8).toFixed(1);
   const reviewCount = googleReviews.count ?? 458;
@@ -183,15 +185,15 @@ export default async function HomePage() {
           action={{ href: "/productos", label: "Ver todo" }}
         />
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-          {categories.map((c) => (
+          {topCategories.map((c) => (
             <Link
               key={c.slug}
-              href={`/productos?categoria=${c.slug}`}
+              href={`/categoria/${c.path}`}
               className="group card-surface flex flex-col gap-1.5 p-4 transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg"
             >
               <span className="text-2xl transition group-hover:scale-110">{c.icon}</span>
               <span className="text-sm font-bold text-ink-900">{c.name}</span>
-              <span className="text-[11px] text-ink-400">{counts.get(c.slug) ?? 0} productos</span>
+              <span className="text-[11px] text-ink-400">{c.count} productos</span>
             </Link>
           ))}
         </div>

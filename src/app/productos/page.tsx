@@ -6,7 +6,7 @@ import { ActiveFilters, FiltersPanel, SortSelect } from "@/components/catalog-fi
 import { ProductCard } from "@/components/product-card";
 import { money } from "@/lib/format";
 import { toView } from "@/lib/product-view";
-import { getBrandFacets, getCategories, listProducts } from "@/lib/queries";
+import { getBrandFacets, getCategoryTree, listProducts } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -27,7 +27,6 @@ function pick(params: Record<string, string | string[] | undefined>, key: string
 export default async function CatalogPage({ searchParams }: { searchParams: SearchParams }) {
   const params = await searchParams;
   const q = pick(params, "q");
-  const categoria = pick(params, "categoria");
   const marcaParam = pick(params, "marca");
   const marcas = marcaParam ? marcaParam.split(",").filter(Boolean) : [];
   const min = pick(params, "min") ? Number(pick(params, "min")) : undefined;
@@ -39,28 +38,24 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
   const stock = pick(params, "stock") === "1";
 
   const [categories, brands, result] = await Promise.all([
-    getCategories(),
-    getBrandFacets(categoria),
+    getCategoryTree(),
+    getBrandFacets(),
     listProducts({
       q,
-      category: categoria,
       brands: marcas,
       min,
       max,
       sort: orden,
       page: pagina,
-      perPage: 12,
+      perPage: 24,
       onlyOffers: ofertas,
       freeShipping: envio,
       inStock: stock,
     }),
   ]);
 
-  const activeCategory = categories.find((c) => c.slug === categoria);
-
   const chips: { key: string; label: string; value: string | null }[] = [];
   if (q) chips.push({ key: "q", label: `“${q}”`, value: null });
-  if (activeCategory) chips.push({ key: "categoria", label: activeCategory.name, value: null });
   marcas.forEach((brand) =>
     chips.push({
       key: "marca",
@@ -87,6 +82,15 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
     return `/productos?${next.toString()}`;
   };
 
+  // Solo las categorías raíz van en el panel: las hijas cuelgan de /categoria/[...path].
+  const rootCategories = categories.map((c) => ({
+    slug: c.slug,
+    name: c.name,
+    icon: c.icon,
+    path: c.path,
+    count: c.count,
+  }));
+
   return (
     <div className="container-xl py-8">
       <nav className="mb-4 flex items-center gap-1.5 text-xs text-ink-400">
@@ -94,24 +98,24 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
           Inicio
         </Link>
         <span>/</span>
-        <span className="font-semibold text-ink-700">{activeCategory ? activeCategory.name : "Catálogo"}</span>
+        <span className="font-semibold text-ink-700">Catálogo</span>
       </nav>
 
       <header className="mb-6">
         <h1 className="text-2xl font-extrabold tracking-tight text-ink-900 md:text-3xl">
-          {q ? `Resultados para “${q}”` : activeCategory ? activeCategory.name : "Todo el catálogo"}
+          {q ? `Resultados para “${q}”` : "Todo el catálogo"}
         </h1>
         <p className="mt-1 text-sm text-ink-500">
-          {activeCategory?.tagline ?? "Productos nuevos, con garantía oficial y envío a todo el país."}
+          Productos nuevos, con garantía oficial y envío a todo el país.
         </p>
       </header>
 
       <div className="grid gap-6 lg:grid-cols-[17rem_1fr]">
         <Suspense fallback={<div className="hidden lg:block" />}>
           <FiltersPanel
-            categories={categories.map((c) => ({ slug: c.slug, name: c.name, icon: c.icon }))}
+            categories={rootCategories}
             brands={brands}
-            current={{ categoria, marcas, min, max, ofertas, envio, stock }}
+            current={{ marcas, min, max, ofertas, envio, stock }}
           />
         </Suspense>
 

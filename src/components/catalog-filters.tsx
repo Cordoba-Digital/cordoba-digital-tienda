@@ -1,11 +1,12 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 import { useCallback, useState } from "react";
 
 import { money } from "@/lib/format";
 
-type Category = { slug: string; name: string; icon: string };
+type Category = { slug: string; name: string; icon: string; path?: string; count?: number };
 type BrandFacet = { brand: string; count: number };
 
 const PRICE_BUCKETS = [
@@ -24,7 +25,7 @@ export const SORT_LIST = [
   { id: "puntaje", label: "Mejor puntaje" },
 ];
 
-function useFilterNav() {
+function useFilterNav(basePath = "/productos") {
   const router = useRouter();
   const params = useSearchParams();
 
@@ -36,14 +37,15 @@ function useFilterNav() {
         else next.set(key, value);
       });
       next.delete("pagina");
-      router.push(`/productos?${next.toString()}`, { scroll: false });
+      const qs = next.toString();
+      router.push(qs ? `${basePath}?${qs}` : basePath, { scroll: false });
     },
-    [params, router],
+    [params, router, basePath],
   );
 }
 
-export function SortSelect({ value }: { value: string }) {
-  const update = useFilterNav();
+export function SortSelect({ value, basePath = "/productos" }: { value: string; basePath?: string }) {
+  const update = useFilterNav(basePath);
   return (
     <label className="flex items-center gap-2 text-sm">
       <span className="hidden text-ink-500 sm:inline">Ordenar por</span>
@@ -64,10 +66,12 @@ export function SortSelect({ value }: { value: string }) {
 
 export function ActiveFilters({
   chips,
+  basePath = "/productos",
 }: {
   chips: { key: string; label: string; value: string | null }[];
+  basePath?: string;
 }) {
-  const update = useFilterNav();
+  const update = useFilterNav(basePath);
   const router = useRouter();
   if (!chips.length) return null;
   return (
@@ -85,7 +89,7 @@ export function ActiveFilters({
       ))}
       <button
         type="button"
-        onClick={() => router.push("/productos")}
+        onClick={() => router.push(basePath)}
         className="text-xs font-semibold text-ink-400 underline-offset-2 hover:text-ink-700 hover:underline"
       >
         Limpiar todo
@@ -98,6 +102,7 @@ export function FiltersPanel({
   categories,
   brands,
   current,
+  basePath = "/productos",
 }: {
   categories: Category[];
   brands: BrandFacet[];
@@ -110,8 +115,9 @@ export function FiltersPanel({
     envio: boolean;
     stock: boolean;
   };
+  basePath?: string;
 }) {
-  const update = useFilterNav();
+  const update = useFilterNav(basePath);
   const [open, setOpen] = useState(false);
 
   const toggleBrand = (brand: string) => {
@@ -135,19 +141,35 @@ export function FiltersPanel({
           >
             🗂️ Todas las categorías
           </button>
-          {categories.map((c) => (
-            <button
-              key={c.slug}
-              type="button"
-              onClick={() => update({ categoria: current.categoria === c.slug ? null : c.slug })}
-              className={`flex w-full items-center gap-2 rounded-lg px-2.5 py-2 text-left text-sm transition ${
-                current.categoria === c.slug ? "bg-brand-50 font-bold text-brand-700" : "text-ink-600 hover:bg-ink-50"
-              }`}
-            >
-              <span>{c.icon}</span>
-              {c.name}
-            </button>
-          ))}
+          {categories.map((c) =>
+            c.path ? (
+              <Link
+                key={c.slug}
+                href={`/categoria/${c.path}`}
+                className="flex w-full items-center gap-2 rounded-lg px-2.5 py-2 text-left text-sm text-ink-600 transition hover:bg-ink-50"
+              >
+                <span>{c.icon}</span>
+                <span className="flex-1">{c.name}</span>
+                {typeof c.count === "number" ? (
+                  <span className="text-[11px] text-ink-300">{c.count}</span>
+                ) : null}
+              </Link>
+            ) : (
+              <button
+                key={c.slug}
+                type="button"
+                onClick={() => update({ categoria: current.categoria === c.slug ? null : c.slug })}
+                className={`flex w-full items-center gap-2 rounded-lg px-2.5 py-2 text-left text-sm transition ${
+                  current.categoria === c.slug
+                    ? "bg-brand-50 font-bold text-brand-700"
+                    : "text-ink-600 hover:bg-ink-50"
+                }`}
+              >
+                <span>{c.icon}</span>
+                {c.name}
+              </button>
+            ),
+          )}
         </div>
       </div>
 

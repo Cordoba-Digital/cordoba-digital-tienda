@@ -6,7 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StoreProvider } from "@/components/store-provider";
 import { WhatsAppFab } from "@/components/whatsapp-fab";
-import { getCategories } from "@/lib/queries";
+import { getCategoryTree } from "@/lib/queries";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -40,13 +40,30 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
-  let categories: { slug: string; name: string; icon: string; tagline: string }[] = [];
+  let categories: {
+    slug: string;
+    name: string;
+    icon: string;
+    tagline: string;
+    path: string;
+    count: number;
+    children: { slug: string; name: string; icon: string; path: string; count: number }[];
+  }[] = [];
   try {
-    categories = (await getCategories()).map((c) => ({
+    categories = (await getCategoryTree()).map((c) => ({
       slug: c.slug,
       name: c.name,
       icon: c.icon,
       tagline: c.tagline,
+      path: c.path,
+      count: c.count,
+      children: c.children.map((child) => ({
+        slug: child.slug,
+        name: child.name,
+        icon: child.icon,
+        path: child.path,
+        count: child.count,
+      })),
     }));
   } catch {
     categories = [];
@@ -58,7 +75,9 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <StoreProvider>
           <SiteHeader categories={categories} />
           <main className="min-h-[60vh]">{children}</main>
-          <SiteFooter />
+          <SiteFooter
+            categories={categories.map((c) => ({ name: c.name, path: c.path, count: c.count }))}
+          />
           <CartDrawer />
           <Toaster />
           <WhatsAppFab />

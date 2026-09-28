@@ -2,16 +2,13 @@ import Link from "next/link";
 
 import { NewsletterForm } from "@/components/newsletter-form";
 
-const CATEGORY_LINKS = [
-  { slug: "celulares", name: "Celulares liberados" },
-  { slug: "notebooks", name: "Notebooks" },
-  { slug: "computacion", name: "Computación" },
-  { slug: "camaras", name: "Cámaras y foto" },
-  { slug: "gaming", name: "Gaming" },
-  { slug: "tv-hogar", name: "TV y Hogar Smart" },
-];
+const CATEGORY_LINKS: { name: string; path: string; count: number }[] = [];
 
-export function SiteFooter() {
+export function SiteFooter({
+  categories = CATEGORY_LINKS,
+}: {
+  categories?: { name: string; path: string; count: number }[];
+}) {
   return (
     <footer className="mt-20 mesh-dark text-ink-200">
       <div className="container-xl grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
@@ -69,9 +66,9 @@ export function SiteFooter() {
         <div>
           <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">Categorías</h3>
           <ul className="space-y-2.5 text-sm">
-            {CATEGORY_LINKS.map((c) => (
-              <li key={c.slug}>
-                <Link href={`/productos?categoria=${c.slug}`} className="text-ink-300 transition hover:text-neon-400">
+            {categories.slice(0, 8).map((c) => (
+              <li key={c.path}>
+                <Link href={`/categoria/${c.path}`} className="text-ink-300 transition hover:text-neon-400">
                   {c.name}
                 </Link>
               </li>

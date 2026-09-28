@@ -14,7 +14,7 @@ import {
 import { Pill, Stars } from "@/components/ui";
 import { formatDate, money } from "@/lib/format";
 import { toView } from "@/lib/product-view";
-import { getCategories, getProductBySlug, getRelatedProducts, getReviewsForProduct } from "@/lib/queries";
+import { getProductBreadcrumbs, getProductBySlug, getRelatedProducts, getReviewsForProduct } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -24,12 +24,15 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const { slug } = await params;
   const product = await getProductBySlug(slug).catch(() => null);
   if (!product) return { title: "Producto no encontrado" };
+  const description = product.seoDescription || product.shortDescription || product.name;
   return {
-    title: product.name,
-    description: product.shortDescription,
+    title: product.seoTitle || product.name,
+    description,
+    alternates: { canonical: `/producto/${product.slug}` },
     openGraph: {
-      title: product.name,
-      description: product.shortDescription,
+      title: product.seoTitle || product.name,
+      description,
+      type: "website",
       images: product.images?.[0] ? [product.images[0]] : undefined,
     },
   };
@@ -40,13 +43,11 @@ export default async function ProductPage({ params }: { params: Params }) {
   const product = await getProductBySlug(slug);
   if (!product) notFound();
 
-  const [related, productReviews, categories] = await Promise.all([
+  const [related, productReviews, breadcrumbs] = await Promise.all([
     getRelatedProducts(product.slug, product.categorySlug, 4),
     getReviewsForProduct(product.slug),
-    getCategories(),
+    getProductBreadcrumbs(product.slug),
   ]);
-
-  const category = categories.find((c) => c.slug === product.categorySlug);
 
   const buyBoxProduct = {
     slug: product.slug,
@@ -61,42 +62,74 @@ export default async function ProductPage({ params }: { params: Params }) {
     sku: product.sku,
   };
 
+  // Google penaliza aggregateRating sin reseñas: WooCommerce no tiene ratings,
+  // así que solo lo emitimos si hay opiniones reales cargadas.
+  const hasRatings = product.reviewCount > 0;
+  const jsonLd: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    image: product.images,
+    description: product.shortDescription,
+    sku: product.sku,
+    brand: { "@type": "Brand", name: product.brand },
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "ARS",
+      price: (product.price / 100).toFixed(0),
+      availability: product.stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+    },
+  };
+  if (hasRatings) {
+    jsonLd.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: (product.rating / 10).toFixed(1),
+      reviewCount: product.reviewCount,
+    };
+  }
+
   return (
     <div className="container-xl py-6 pb-28 lg:pb-6">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: product.name,
-            image: product.images,
-            description: product.shortDescription,
-            sku: product.sku,
-            brand: { "@type": "Brand", name: product.brand },
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: (product.rating / 10).toFixed(1),
-              reviewCount: product.reviewCount,
-            },
-            offers: {
-              "@type": "Offer",
-              priceCurrency: "ARS",
-              price: (product.price / 100).toFixed(0),
-              availability: product.stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-            },
-          }),
+          __html: JSON.stringify(jsonLd),
         }}
       />
+      {breadcrumbs.length ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Inicio", item: "/" },
+                ...breadcrumbs.map((crumb, i) => ({
+                  "@type": "ListItem",
+                  position: i + 2,
+                  name: crumb.name,
+                  item: `/categoria/${crumb.path}`,
+                })),
+                { "@type": "ListItem", position: breadcrumbs.length + 2, name: product.name },
+              ],
+            }),
+          }}
+        />
+      ) : null}
 
       <nav className="mb-4 flex flex-wrap items-center gap-1.5 text-xs text-ink-400">
         <Link href="/" className="hover:text-brand-700">
           Inicio
         </Link>
-        <span>/</span>
-        <Link href={`/productos?categoria=${product.categorySlug}`} className="hover:text-brand-700">
-          {category?.name ?? "Catálogo"}
-        </Link>
+        {breadcrumbs.map((crumb) => (
+          <span key={crumb.path} className="flex items-center gap-1.5">
+            <span>/</span>
+            <Link href={`/categoria/${crumb.path}`} className="hover:text-brand-700">
+              {crumb.name}
+            </Link>
+          </span>
+        ))}
         <span>/</span>
         <span className="font-semibold text-ink-700">{product.brand}</span>
       </nav>
@@ -147,7 +180,18 @@ export default async function ProductPage({ params }: { params: Params }) {
 
           <section className="card-surface p-5">
             <h2 className="mb-3 text-lg font-extrabold text-ink-900">Descripción</h2>
-            <p className="text-sm leading-relaxed text-ink-600">{product.description}</p>
+            {product.descriptionHtml ? (
+              // El HTML viene saneado por el migrador (scripts, estilos y
+              // handlers inline ya eliminados). Ver scripts/migrate-wp.ts.
+              <div
+                className="prose-cd"
+                dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
+              />
+            ) : (
+              <p className="text-sm leading-relaxed text-ink-600">
+                {product.description || product.shortDescription}
+              </p>
+            )}
           </section>
 
           <section className="card-surface p-5">

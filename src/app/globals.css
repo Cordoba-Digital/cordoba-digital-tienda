@@ -137,6 +137,86 @@ body {
   text-wrap: balance;
 }
 
+/* Descripciones largas migradas de WooCommerce: HTML ya saneado por el migrador. */
+.prose-cd {
+  color: var(--color-ink-600);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+.prose-cd > * + * {
+  margin-top: 0.9em;
+}
+.prose-cd h2,
+.prose-cd h3,
+.prose-cd h4,
+.prose-cd h5 {
+  color: var(--color-ink-900);
+  font-weight: 800;
+  line-height: 1.3;
+  margin-top: 1.6em;
+}
+.prose-cd h2 {
+  font-size: 1.15rem;
+}
+.prose-cd h3 {
+  font-size: 1rem;
+}
+.prose-cd h4,
+.prose-cd h5 {
+  font-size: 0.9rem;
+}
+.prose-cd strong {
+  color: var(--color-ink-800);
+  font-weight: 700;
+}
+.prose-cd a {
+  color: var(--color-brand-700);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose-cd ul,
+.prose-cd ol {
+  padding-left: 1.25rem;
+}
+.prose-cd ul {
+  list-style: disc;
+}
+.prose-cd ol {
+  list-style: decimal;
+}
+.prose-cd li + li {
+  margin-top: 0.35rem;
+}
+.prose-cd li::marker {
+  color: var(--color-brand-600);
+}
+.prose-cd img {
+  border-radius: 0.75rem;
+  height: auto;
+  max-width: 100%;
+}
+.prose-cd table {
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  width: 100%;
+}
+.prose-cd th,
+.prose-cd td {
+  border: 1px solid var(--color-ink-100);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.prose-cd th {
+  background: var(--color-ink-50);
+  color: var(--color-ink-800);
+  font-weight: 700;
+}
+.prose-cd blockquote {
+  border-left: 3px solid var(--color-brand-500);
+  color: var(--color-ink-500);
+  padding-left: 0.9rem;
+}
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
