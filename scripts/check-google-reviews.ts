@@ -11,6 +11,50 @@ import "dotenv/config";
 
 const DEFAULT_QUERY = "Córdoba Digital, 27 de Abril 259, Córdoba, Argentina";
 
+/**
+ * Los errores de Google son crípticos si solo mostrás el status. Acá se
+ * traducen a lo que hay que hacer, que es lo que le sirve a quien configuró
+ * la clave.
+ */
+async function explain(res: Response, action: string) {
+  const raw = await res.text();
+  let message = raw;
+  let reason = "";
+  let project = "";
+  try {
+    const data = JSON.parse(raw) as {
+      error?: { message?: string; details?: { reason?: string; metadata?: Record<string, string> }[] };
+    };
+    message = data.error?.message ?? raw;
+    const info = data.error?.details?.find((d) => d.reason)?.metadata;
+    reason = data.error?.details?.find((d) => d.reason)?.reason ?? "";
+    project = info?.consumer?.replace("projects/", "") ?? "";
+  } catch {
+    // respuesta no-JSON (p. ej. 404 vacío)
+  }
+
+  console.error(`\n[reviews] No se pudo ${action}.`);
+  console.error(`[reviews] HTTP ${res.status} · ${reason || "sin código"}`);
+  console.error(`[reviews] Google dice: ${message.split("\n")[0]}`);
+  if (project) console.error(`[reviews] Proyecto: ${project}`);
+  console.error("\n[reviews] Qué hacer según el motivo:");
+
+  if (reason === "API_KEY_SERVICE_BLOCKED") {
+    console.error("  La clave está restringida a otras APIs y Places no está incluida.");
+    console.error("  1. Editá la clave (console.cloud.google.com → APIs y servicios → Credenciales).");
+    console.error("  2. En 'Restricciones de API': elegí 'Places API (New)' en lugar de la lista actual.");
+    console.error("  3. Guardá y probá de nuevo.");
+  } else if (res.status === 403) {
+    console.error("  1. Habilitá 'Places API (New)' en APIs y servicios → Biblioteca.");
+    console.error("  2. Revisá que la clave no esté restringida a otra API.");
+  } else if (res.status === 404) {
+    console.error("  Habilitá 'Places API (New)' en APIs y servicios → Biblioteca del proyecto.");
+  } else if (res.status === 429) {
+    console.error("  Cuota de la API agotada o clave restringida por cuota diaria.");
+  }
+  console.error("");
+}
+
 async function main() {
   const apiKey = process.env.GOOGLE_PLACES_API_KEY?.trim();
   const query = process.argv[2]?.trim() || process.env.GOOGLE_PLACE_QUERY?.trim() || DEFAULT_QUERY;
@@ -26,7 +70,9 @@ async function main() {
     return;
   }
 
-  const findRes = await fetch("https://places.googleapis.com/v1/places:findPlace", {
+  // `searchText` es el endpoint de Places API (New). `findPlace` es del API
+  // anterior y devuelve 404.
+  const findRes = await fetch("https://places.googleapis.com/v1/places:searchText", {
     method: "POST",
     headers: {
       "X-Goog-Api-Key": apiKey,
@@ -37,8 +83,7 @@ async function main() {
   });
 
   if (!findRes.ok) {
-    console.error(`[reviews] findPlace falló: HTTP ${findRes.status}`);
-    console.error(await findRes.text());
+    await explain(findRes, "buscar la ficha");
     process.exitCode = 1;
     return;
   }
@@ -66,9 +111,7 @@ async function main() {
   });
 
   if (!detailRes.ok) {
-    console.error(`[reviews] El detalle falló: HTTP ${detailRes.status}`);
-    console.error("  ¿La clave tiene habilitada Places API (New)?");
-    console.error(await detailRes.text());
+    await explain(detailRes, "leer las reseñas");
     process.exitCode = 1;
     return;
   }

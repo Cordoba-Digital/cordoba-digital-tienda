@@ -32,12 +32,14 @@ const DEFAULT_QUERY = "Córdoba Digital, 27 de Abril 259, Córdoba, Argentina";
 
 /**
  * Resuelve el Place ID a partir del nombre y la dirección, para que el
- * cliente no tenga que buscarlo a mano. Usa Find Place (New), que devuelve el
- * primer resultado con la mayor calificación.
+ * cliente no tenga que buscarlo a mano.
+ *
+ * OJO: se usa `places:searchText`, NO `places:findPlace`. Find Place era del
+ * Places API anterior y responde 404 en la versión actual.
  */
 async function findPlaceId(apiKey: string, query: string): Promise<string | null> {
   try {
-    const res = await fetch("https://places.googleapis.com/v1/places:findPlace", {
+    const res = await fetch("https://places.googleapis.com/v1/places:searchText", {
       method: "POST",
       headers: {
         "X-Goog-Api-Key": apiKey,
