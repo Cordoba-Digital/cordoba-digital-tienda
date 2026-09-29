@@ -133,6 +133,50 @@ export const coupons = pgTable("coupons", {
   active: boolean("active").notNull().default(true),
 });
 
+/**
+ * Guías de compra: los artículos de blog que el sitio original publica y que
+ * el pie enlaza ("Cómo elegir tu próxima impresora", etc.).
+ *
+ * El `slug` es la URL del artículo en el sitio viejo, sin cambio: la idea es
+ * que las guías conserven la dirección que ya está indexada en Google.
+ *
+ * `body` es HTML ya saneado por `scripts/lib/guia-html.mjs`: lista blanca de
+ * etiquetas, sin atributos salvo `href`, y sin los `<style>`/`<script>` que
+ * venían pegados dentro del contenido de cada artículo. La página lo pinta con
+ * `dangerouslySetInnerHTML`, así que el saneador es la única barrera.
+ */
+export const guides = pgTable(
+  "guides",
+  {
+    id: serial("id").primaryKey(),
+    slug: text("slug").notNull(),
+    title: text("title").notNull(),
+    subtitle: text("subtitle").notNull().default(""),
+    description: text("description").notNull().default(""),
+    body: text("body").notNull(),
+    wordCount: integer("word_count").notNull().default(0),
+    /** Orden en el pie. El original los lista en este orden. */
+    footerOrder: integer("footer_order").notNull().default(0),
+    /**
+     * Lo que los autores escribieron arriba del artículo, ya separado del
+     * cuerpo: etiqueta ("GUÍA DEFINITIVA 2026"), actualizacion, cobertura y la
+     * ruta interna de la categoría. Se muestra en la cabecera de la página.
+     */
+    meta: jsonb("meta").$type<{
+      etiqueta?: string;
+      actualizacion?: string;
+      cobertura?: string;
+      categoria?: string;
+    }>().notNull().default({}),
+    publishedAt: timestamp("published_at", { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [
+    uniqueIndex("guides_slug_idx").on(table.slug),
+    index("guides_footer_order_idx").on(table.footerOrder),
+  ],
+);
+
 export type ShippingAddress = {
   street: string;
   number: string;

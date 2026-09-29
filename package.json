@@ -26,6 +26,9 @@
     "fix:galeria": "tsx scripts/fix-galeria.ts",
     "verificar:flujo": "node scripts/verificar-flujo-compra.mjs",
     "verificar:copy": "node scripts/verificar-copy.mjs",
+    "migrar:guias": "tsx scripts/migrar-guias.ts",
+    "test:guias": "tsx scripts/lib/guia-html.test.ts",
+    "verificar:guia": "node scripts/verificar-guia.mjs",
     "sync:catalog": "tsx scripts/sync-catalog.ts"
   },
   "dependencies": {

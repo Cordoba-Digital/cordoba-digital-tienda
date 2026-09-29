@@ -6,7 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StoreProvider } from "@/components/store-provider";
 import { WhatsAppFab } from "@/components/whatsapp-fab";
-import { getCategoryTree, type CategoryTreeNode } from "@/lib/queries";
+import { getCategoryTree, getGuides, type CategoryTreeNode, type GuideTeaser } from "@/lib/queries";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -78,6 +78,16 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     categories = [];
   }
 
+  // Guías de compra para la columna del pie. Si la base no responde, el pie se
+  // dibuja sin esa columna: no vale la pena romper todas las páginas por un
+  // bloque que es solo un listado de enlaces.
+  let guides: GuideTeaser[] = [];
+  try {
+    guides = await getGuides();
+  } catch {
+    guides = [];
+  }
+
   return (
     // `suppressHydrationWarning`: el script de arriba cambia la clase de <html>
     // en el cliente, y React se quejaria de que el servidor no la puso.
@@ -92,6 +102,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
           <SiteFooter
             categories={categories.map((c) => ({ name: c.name, path: c.path, count: c.count }))}
             cuit={process.env.STORE_CUIT?.trim() ?? ""}
+            guides={guides}
           />
           <CartDrawer />
           <Toaster />

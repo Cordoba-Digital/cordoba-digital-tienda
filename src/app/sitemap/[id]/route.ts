@@ -2,7 +2,7 @@ import { asc, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { products } from "@/db/schema";
-import { getCategoryPaths } from "@/lib/queries";
+import { getCategoryPaths, getGuides } from "@/lib/queries";
 import { ensureSeeded } from "@/lib/seed";
 
 export const dynamic = "force-dynamic";
@@ -56,6 +56,16 @@ async function baseEntries(): Promise<Entry[]> {
       loc: `${BASE}/categoria/${category.path}`,
       changefreq: "weekly",
       priority: "0.7",
+    });
+  }
+  // Guías de compra: artículos de blog que el sitio viejo tiene indexados y que
+  // ahora se sirven desde la raíz, con el mismo slug.
+  const guias = await getGuides();
+  for (const guia of guias) {
+    entries.push({
+      loc: `${BASE}/${guia.slug}`,
+      changefreq: "monthly",
+      priority: "0.6",
     });
   }
   return entries;

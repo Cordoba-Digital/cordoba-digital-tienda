@@ -1,20 +1,33 @@
 import Link from "next/link";
 
 import { NewsletterForm } from "@/components/newsletter-form";
+import { getGuides, type GuideTeaser } from "@/lib/queries";
 
 const CATEGORY_LINKS: { name: string; path: string; count: number }[] = [];
 
-export function SiteFooter({
+/**
+ * Guías de compra del pie.
+ *
+ * En el sitio original esta columna existe y enlaza cinco artículos de blog. Las
+ * guías viven en la base (tabla `guides`, migradas con `npm run migrar:guias`) y
+ * conservan el slug del sitio viejo, así que la URL es la misma.
+ *
+ * Si la base no responde, el pie se dibuja sin la columna en vez de romperse:
+ * el pie está en todas las páginas y no puede depender de la base.
+ */
+export async function SiteFooter({
   categories = CATEGORY_LINKS,
   cuit = "",
+  guides = [],
 }: {
   categories?: { name: string; path: string; count: number }[];
   /** CUIT real del cliente. Si viene vacío no se imprime ninguno. */
   cuit?: string;
+  guides?: GuideTeaser[];
 }) {
   return (
     <footer className="mt-20 mesh-dark text-ink-200">
-      <div className="container-xl grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
+      <div className="container-xl grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
         <div>
           <div className="mb-4 flex items-center gap-2.5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -127,6 +140,21 @@ export function SiteFooter({
             </a>
           </div>
         </div>
+
+        {guides.length ? (
+          <div>
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">Guía de compras</h3>
+            <ul className="space-y-2.5 text-sm">
+              {guides.map((guide) => (
+                <li key={guide.slug}>
+                  <Link href={`/${guide.slug}`} className="text-ink-300 transition hover:text-neon-400">
+                    {guide.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
       </div>
 
       <div className="border-t border-white/10">

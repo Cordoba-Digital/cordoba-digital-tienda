@@ -2,7 +2,7 @@ import { and, asc, desc, eq, gte, ilike, inArray, lte, ne, or, sql, type SQL } f
 import { cache } from "react";
 
 import { db } from "@/db";
-import { categories, coupons, orderItems, orders, productCategories, products, reviews } from "@/db/schema";
+import { categories, coupons, guides, orderItems, orders, productCategories, products, reviews } from "@/db/schema";
 import {
   ancestorsOf,
   buildCategoryTree,
@@ -200,6 +200,33 @@ export async function getCategoryPaths(): Promise<{ path: string; name: string; 
   const tree = await getCategoryTree();
   return flattenTree(tree).map((n) => ({ path: n.path, name: n.name, count: n.count, depth: n.depth }));
 }
+
+/** Lo que se muestra de una guía sin el cuerpo: para el pie y los enlazados. */
+export type GuideTeaser = {
+  slug: string;
+  title: string;
+  subtitle: string;
+};
+
+/**
+ * Guías de compra, en el orden en que las lista el pie del sitio original.
+ *
+ * Solo trae lo liviano: el cuerpo son miles de palabras y el pie se renderiza en
+ * todas las páginas, así que no puede ir el artículo entero.
+ */
+export const getGuides = cache(async (): Promise<GuideTeaser[]> => {
+  const rows = await db
+    .select({ slug: guides.slug, title: guides.title, subtitle: guides.subtitle })
+    .from(guides)
+    .orderBy(asc(guides.footerOrder), asc(guides.id));
+  return rows;
+});
+
+/** Una guía por slug, o null si no existe. La página 404 con eso. */
+export const getGuideBySlug = cache(async (slug: string) => {
+  const [row] = await db.select().from(guides).where(eq(guides.slug, slug)).limit(1);
+  return row ?? null;
+});
 
 /** Ids + slugs de la categoría y todo su subárbol, para filtrar productos. */
 async function subtreeOf(categoryId: number): Promise<{ ids: number[]; slugs: string[] }> {
