@@ -41,6 +41,18 @@ const COLUMNAS_PANEL = 8;
  */
 const NIETOS_EN_PANEL = 4;
 
+/**
+ * Etiqueta de conteo para una categoría.
+ *
+ * "Sin productos" en vez de "0 productos": hay categorías vacías en el catálogo
+ * (Servidores tiene 0) y un cero suelto se lee como si el número se hubiera
+ * cortado al cargar, no como que la categoría está vacía.
+ */
+function etiquetaConteo(count?: number): string {
+  if (typeof count !== "number" || count === 0) return "Sin productos";
+  return `${count} producto${count === 1 ? "" : "s"}`;
+}
+
 type Suggestion = {
   slug: string;
   name: string;
@@ -87,7 +99,7 @@ function PanelCategoria({ categoria }: { categoria: CategoryNode }) {
           {categoria.name}
         </span>
         {typeof categoria.count === "number" ? (
-          <span className="text-[11px] text-ink-400">{categoria.count} productos</span>
+          <span className="text-[11px] text-ink-400">{etiquetaConteo(categoria.count)}</span>
         ) : null}
       </div>
 
@@ -461,9 +473,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                           </span>
                           <span className="min-w-0">
                             <span className="block text-sm font-semibold text-ink-800">{c.name}</span>
-                            <span className="block text-[11px] text-ink-400">
-                              {typeof c.count === "number" ? `${c.count} productos` : "Sin productos"}
-                            </span>
+                            <span className="block text-[11px] text-ink-400">{etiquetaConteo(c.count)}</span>
                           </span>
                         </Link>
                         {c.children?.length ? (
