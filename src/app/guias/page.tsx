@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Guías de compra",
   description:
-    "Guías para elegir tu próxima impresora, celular Xiaomi, notebook, MacBook o monopatín eléctrico en Argentina. Escritas para el mercado argentino, con precios y disponibilidad reales.",
+    "Qué mirar antes de comprar tu próxima impresora, celular Xiaomi, notebook, MacBook o monopatín eléctrico en Argentina: diferencias entre opciones y qué conviene descartar.",
   alternates: { canonical: "https://www.cordobadigital.net/guias" },
 };
 
@@ -41,9 +41,18 @@ export default async function GuidesIndexPage() {
 
       <header className="max-w-3xl">
         <h1 className="text-3xl font-black tracking-tight text-ink-900 md:text-4xl">Guías de compra</h1>
+        {/*
+          OJO con esta descripción: se chequea contra el contenido real de los
+          artículos con `npm run verificar:claims-guias`. La versión anterior
+          decía "con los precios y la disponibilidad de Córdoba" y era falsa:
+          solo una de las cinco guías cita precios en pesos, y ninguna trae una
+          lista de disponibilidad. Lo que sí es cierto es que las cinco hablan
+          del mercado argentino y de qué mirar antes de comprar.
+        */}
         <p className="mt-3 text-base leading-relaxed text-ink-600">
-          Cómo elegir tu próximo equipo en Argentina: qué mirar, qué mirar antes de comprar y qué opciones hay hoy en el
-          mercado local. Las escribimos nosotros, con los precios y la disponibilidad de Córdoba.
+          Qué mirar antes de comprar tu próximo equipo en Argentina: en qué se diferencian las opciones, cuáles conviene
+          para cada uso y qué conviene descartar. Guías escritas para Córdoba Digital, con el mercado argentino a la
+          vista.
         </p>
         <p className="mt-2 text-sm text-ink-400">{guias.length} guías</p>
       </header>

@@ -81,10 +81,13 @@ console.log(`flujo de compra contra ${base}\n`);
  */
 async function esperarListo(intentos = 40) {
   for (let i = 0; i < intentos; i += 1) {
-    const listo = await evalEn(
+    // `evalEn` devuelve el string crudo de la expresión, no el valor: hay que
+    // parsearlo. Compararlo contra `true` daba falso siempre y el chequeo
+    // terminaba por timeout aunque la página estuviera cargada.
+    const crudo = await evalEn(
       `(() => document.readyState !== "loading" && document.body.innerText.length > 200)()`,
     );
-    if (listo === true) {
+    if (crudo === "true") {
       await dormir(400);
       return;
     }
