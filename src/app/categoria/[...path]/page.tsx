@@ -212,7 +212,7 @@ export default async function CategoryPage({
         </nav>
       ) : null}
 
-      <div className="grid gap-6 lg:grid-cols-[17rem_1fr]">
+      <div className="grid gap-6 lg:grid-cols-[17rem_minmax(0,1fr)]">
         <Suspense fallback={<div className="hidden lg:block" />}>
           <FiltersPanel
             categories={[]}

@@ -134,7 +134,7 @@ export default async function ProductPage({ params }: { params: Params }) {
         <span className="font-semibold text-ink-700">{product.brand}</span>
       </nav>
 
-      <div className="grid gap-8 lg:grid-cols-[1fr_22rem]">
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_22rem]">
         <div className="space-y-8">
           <div>
             <div className="mb-2 flex flex-wrap items-center gap-2">

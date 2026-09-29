@@ -406,7 +406,7 @@ export function CheckoutFlow() {
         })}
       </ol>
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_23rem]">
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_23rem]">
         <div className="space-y-4">
           {/* STEP 1 */}
           <section className={`card-surface p-5 ${step === 1 ? "" : "opacity-95"}`}>

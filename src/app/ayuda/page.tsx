@@ -118,7 +118,7 @@ export default function HelpPage() {
         </div>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_20rem]">
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_20rem]">
         <div className="space-y-8">
           {SECTIONS.map((section) => (
             <section key={section.id} id={section.id} className="scroll-mt-40">

@@ -110,7 +110,11 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
         </p>
       </header>
 
-      <div className="grid gap-6 lg:grid-cols-[17rem_1fr]">
+      {/* `minmax(0,1fr)` y no `1fr`: el valor por defecto de un ítem de grid es
+          `min-width: auto`, o sea que la columna crece hasta el ancho de su
+          contenido en vez de ceder. Con `1fr` la grilla de productos se
+          desbordaba a ~5.900 px y cada tarjeta quedaba de 1.460 px de lado. */}
+      <div className="grid gap-6 lg:grid-cols-[17rem_minmax(0,1fr)]">
         <Suspense fallback={<div className="hidden lg:block" />}>
           <FiltersPanel
             categories={rootCategories}

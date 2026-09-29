@@ -79,7 +79,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
         </div>
       ) : null}
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_22rem]">
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem]">
         <div className="space-y-5">
           <section className="card-surface p-5">
             <div className="flex flex-wrap items-center justify-between gap-3">

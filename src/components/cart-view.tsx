@@ -91,7 +91,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
       <h1 className="mb-1 text-2xl font-extrabold tracking-tight text-ink-900 md:text-3xl">Tu carrito</h1>
       <p className="mb-6 text-sm text-ink-500">Revisá los productos y finalizá la compra en 3 pasos simples.</p>
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_22rem]">
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem]">
         <div className="space-y-4">
           <FreeShippingBar subtotal={subtotal} />
 

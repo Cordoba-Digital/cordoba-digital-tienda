@@ -95,7 +95,7 @@ export default async function HomePage() {
 
       {/* HERO */}
       <section className="mesh-dark relative overflow-hidden">
-        <div className="container-xl relative grid items-center gap-8 py-9 lg:grid-cols-[1.05fr_1fr] lg:py-12">
+        <div className="container-xl relative grid items-center gap-8 py-9 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:py-12">
           <div className="animate-rise">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold text-white backdrop-blur">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-neon-400" />
@@ -469,7 +469,7 @@ export default async function HomePage() {
       </section>
 
       {/* FAQ + NEWSLETTER */}
-      <section className="container-xl grid gap-8 pb-16 lg:grid-cols-[1.2fr_1fr]">
+      <section className="container-xl grid gap-8 pb-16 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
         <div>
           <SectionHeading eyebrow="Antes de comprar" title="Preguntas frecuentes" action={{ href: "/ayuda", label: "Centro de ayuda" }} />
           <div className="space-y-3">
