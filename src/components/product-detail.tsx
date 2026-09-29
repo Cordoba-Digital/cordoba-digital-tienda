@@ -7,7 +7,14 @@ import { QuantityStepper } from "@/components/cart-drawer";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Spinner, Stars } from "@/components/ui";
-import { INSTALLMENT_PLANS, discountPercent, installmentValue, money, transferPrice } from "@/lib/format";
+import {
+  FREE_SHIPPING_THRESHOLD,
+  INSTALLMENT_PLANS,
+  discountPercent,
+  installmentValue,
+  money,
+  transferPrice,
+} from "@/lib/format";
 import type { ShippingOption } from "@/lib/shipping";
 
 export function ProductGallery({
@@ -224,9 +231,16 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         </div>
       </div>
 
-      {/* Los avisos de garantía, cambios, factura y retiro se movieron a la
-          tarjeta de producto, que es donde el cliente elige. Acá queda el SKU,
-          que sí es un dato propio de esta ficha. */}
+      {/* Avisos del local. El monto de envío sale de la misma constante que usa
+          el checkout, así que si algún día suben el envío gratis no queda
+          desactualizado el texto. */}
+      <ul className="space-y-2 border-t border-ink-100 pt-4 text-xs text-ink-600">
+        <li className="flex items-center gap-2">🛡️ {product.warrantyMonths} meses de garantía oficial</li>
+        <li className="flex items-center gap-2">🔄 10 días para cambios sin cargo</li>
+        <li className="flex items-center gap-2">🧾 Factura A / B</li>
+        <li className="flex items-center gap-2">🏬 Retiro en 2 hs en 27 de Abril 259</li>
+        <li className="flex items-center gap-2">🚚 Envío gratis desde {money(FREE_SHIPPING_THRESHOLD)}</li>
+      </ul>
       <p className="text-[10px] text-ink-300">SKU {product.sku}</p>
     </div>
   );

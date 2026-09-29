@@ -8,27 +8,6 @@ import { Pill, Stars } from "@/components/ui";
 import { discountPercent, installmentValue, money, transferPrice } from "@/lib/format";
 import type { ProductView } from "@/lib/product-view";
 
-/**
- * Línea de confianza del local.
- *
- * Reemplaza al chip de envío, que decía "Envío gratis desde $250.000" en
- * cualquier producto que no llegara al monto: era el texto por defecto y
- * aparecía en casi todas las tarjetas, compitiendo con el precio sin decir
- * nada útil. Estos tres sí diferencian a la tienda, y la garantía sale del dato
- * real del producto, no de un "12 meses" fijo.
- */
-function LineaConfianza({ meses }: { meses: number }) {
-  return (
-    <ul className="mt-1.5 flex flex-wrap items-center gap-x-1.5 text-[11px] text-ink-500">
-      {meses > 0 ? (
-        <li className="font-semibold text-ink-600">🛡️ {meses} meses de garantía</li>
-      ) : null}
-      <li>🔄 Cambios sin cargo</li>
-      <li>🧾 Factura A/B</li>
-    </ul>
-  );
-}
-
 export function ProductCard({ product }: { product: ProductView }) {
   const { toggleFavorite, isFavorite, hydrated } = useStore();
   const off = discountPercent(product.price, product.compareAtPrice);
@@ -136,7 +115,6 @@ export function ProductCard({ product }: { product: ProductView }) {
           <p className="text-[11px] font-semibold text-emerald-700">
             {money(transferPrice(product.price))} con transferencia
           </p>
-          <LineaConfianza meses={product.warrantyMonths} />
         </div>
 
         <div className="mt-auto pt-3">
