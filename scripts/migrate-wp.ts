@@ -24,6 +24,7 @@ import "dotenv/config";
 import { eq, inArray, notInArray, sql } from "drizzle-orm";
 
 import { categories, productCategories, products, type Spec } from "@/db/schema";
+import { buildGallery } from "./lib/wp-images";
 
 // ─── Config ──────────────────────────────────────────────────────────
 
@@ -330,6 +331,7 @@ type MappedProduct = typeof products.$inferInsert & {
   catWpIds: number[];
   descriptionHtml: string;
   images: string[];
+  imageSrcSets: string[][];
   highlights: string[];
   specs: Spec[];
   tags: string[];
@@ -364,47 +366,6 @@ function mapCategory(c: WPCategory, sortOrder: number): typeof categories.$infer
   };
 }
 
-/**
- * Elige la variante liviana de la imagen en vez del original.
- *
- * WooCommerce genera un `srcset` con anchos (300w, 441w, 768w, 800w, 1024w…) y
- * los originales llegan a pesar 1,3 MB. Como el optimizador de Vercel está
- * bloqueado en este proyecto (`unoptimized: true`), conviene guardar la
- * variante correcta desde la migración:
- *
- * - primera imagen: 800w, que es lo que muestra la galería de la ficha
- *   (~700px de ancho) → 1330 KB pasa a 373 KB.
- * - el resto: 441w, suficiente para las miniaturas de la galería y el carrito.
- *
- * Si el original ya es más chico que el objetivo en píxeles, se deja el original.
- */
-const TARGET_W_MAIN = 800;
-const TARGET_W_REST = 441;
-
-function pickImageVariant(image: { src: string; srcset?: string }, isMain: boolean): string {
-  const src = image.src;
-  const srcset = image.srcset?.trim();
-  if (!srcset) return src;
-  const target = isMain ? TARGET_W_MAIN : TARGET_W_REST;
-
-  const variants = srcset
-    .split(",")
-    .map((part) => {
-      const [url, width] = part.trim().split(/\s+/);
-      return { url, w: Number.parseInt(width ?? "", 10) };
-    })
-    .filter((v) => v.url && Number.isFinite(v.w))
-    .sort((a, b) => a.w - b.w);
-
-  if (!variants.length) return src;
-
-  // La más grande que no pase del objetivo; si ninguna entra, la mayor disponible.
-  const fit = [...variants].reverse().find((v) => v.w <= target);
-  if (fit) return fit.url;
-  const original = variants.find((v) => v.url === src);
-  return original?.url ?? variants[variants.length - 1].url;
-}
-
 function mapProduct(
   p: WPProduct,
   byCatId: Map<number, WPCategory>,
@@ -425,23 +386,11 @@ function mapProduct(
       .sort((a, b) => (depthByCatId.get(a.id) ?? Number.MAX_SAFE_INTEGER) - (depthByCatId.get(b.id) ?? Number.MAX_SAFE_INTEGER))[0] ??
     undefined;
 
-  const images = [
-    ...new Set(
-      (p.images ?? [])
-        .map((image, index) => pickImageVariant(image, index === 0))
-        .filter((s): s is string => Boolean(s?.trim())),
-    ),
-  ];
-  // Variantes para el `srcset`: el navegador elige según el ancho de pantalla.
-  const imageSrcSet = [
-    ...new Set(
-      (p.images ?? [])
-        .map((image) => image.srcset)
-        .filter((s): s is string => Boolean(s?.trim()))
-        .flatMap((s) => s.split(",").map((v) => v.trim()))
-        .filter((v) => /\s\d+w$/.test(v)),
-    ),
-  ];
+  // Una entrada de `images` y un `srcset` por foto, en el mismo orden, para
+  // que la miniatura `i` solo pueda mostrar variantes de la foto `i`.
+  const gallery = buildGallery(p.images);
+  const images = gallery.urls;
+  const imageSrcSets = gallery.srcSets;
 
   return {
     slug: p.slug.trim(),
@@ -456,7 +405,8 @@ function mapProduct(
     compareAtPrice,
     stock: p.is_in_stock ? 1 : 0,
     images,
-    imageSrcSet,
+    imageSrcSets,
+    imageSrcSet: [],
     highlights: extractHighlights(p.description),
     specs: [], // la Store API no publica atributos
     tags: (p.tags ?? []).map((t) => t.slug?.trim()).filter((t): t is string => Boolean(t)).slice(0, MAX_TAGS),
@@ -532,6 +482,7 @@ const productUpsertSet = () => ({
   compareAtPrice: sql`excluded.compare_at_price`,
   stock: sql`excluded.stock`,
   images: sql`excluded.images`,
+  imageSrcSets: sql`excluded.image_srcsets`,
   imageSrcSet: sql`excluded.image_srcset`,
   highlights: sql`excluded.highlights`,
   specs: sql`excluded.specs`,

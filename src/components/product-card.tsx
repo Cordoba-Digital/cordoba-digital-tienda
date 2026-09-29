@@ -45,7 +45,7 @@ export function ProductCard({ product }: { product: ProductView }) {
           {product.image ? (
             <ProductImg
               src={product.image}
-              srcSet={product.imageSrcSet}
+              srcSet={product.imageSrcSets[0]}
               alt=""
               sizes="(max-width: 640px) 50vw, (max-width: 1280px) 33vw, 25vw"
               width={400}

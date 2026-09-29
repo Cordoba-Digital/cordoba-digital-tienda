@@ -19,6 +19,8 @@
     "reviews:check": "tsx scripts/check-google-reviews.ts",
     "fix:encoding": "node scripts/fix-encoding.mjs",
     "images:migrate": "tsx scripts/migrate-images.ts",
+    "backfill:srcsets": "tsx scripts/backfill-image-srcsets.ts",
+    "check:gallery": "tsx scripts/check-gallery.ts",
     "sync:catalog": "tsx scripts/sync-catalog.ts"
   },
   "dependencies": {

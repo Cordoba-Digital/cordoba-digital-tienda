@@ -12,12 +12,13 @@ import type { ShippingOption } from "@/lib/shipping";
 
 export function ProductGallery({
   images,
-  srcSet = [],
+  srcSets = [],
   name,
   badge,
 }: {
   images: string[];
-  srcSet?: string[];
+  /** Un srcset por entrada de `images`, en el mismo orden. */
+  srcSets?: string[][];
   name: string;
   badge?: string | null;
 }) {
@@ -25,6 +26,10 @@ export function ProductGallery({
   const [zoom, setZoom] = useState(false);
   const [origin, setOrigin] = useState("50% 50%");
   const list = images.length ? images : [""];
+  // Cada foto usa solo sus propias variantes. Con un srcset compartido entre
+  // todas, el navegador elegía una variante de otra foto y las miniaturas
+  // mostraban la misma imagen.
+  const srcSetOf = (index: number): string[] => srcSets[index] ?? [];
 
   return (
     <div className="flex flex-col-reverse items-center gap-3 sm:flex-row sm:items-start sm:justify-center">
@@ -35,18 +40,20 @@ export function ProductGallery({
             type="button"
             onMouseEnter={() => setActive(index)}
             onClick={() => setActive(index)}
-            className={`h-16 w-16 shrink-0 overflow-hidden rounded-xl border-2 bg-surface transition ${
+            aria-label={`Ver foto ${index + 1} de ${list.length}`}
+            aria-current={index === active}
+            className={`h-20 w-20 shrink-0 overflow-hidden rounded-xl border-2 bg-surface transition sm:h-24 sm:w-24 ${
               index === active ? "border-brand-500" : "border-ink-100 hover:border-ink-300"
             }`}
           >
             <ProductImg
               src={image}
-              srcSet={srcSet}
+              srcSet={srcSetOf(index)}
               alt=""
-              sizes="64px"
+              sizes="96px"
               width={128}
               height={128}
-              className="h-full w-full object-contain p-0.5"
+              className="h-full w-full object-contain p-1"
             />
           </button>
         ))}
@@ -73,7 +80,7 @@ export function ProductGallery({
         ) : null}
         <ProductImg
           src={list[active]}
-          srcSet={srcSet}
+          srcSet={srcSetOf(active)}
           alt={name}
           sizes="(max-width: 1024px) 100vw, 700px"
           width={800}

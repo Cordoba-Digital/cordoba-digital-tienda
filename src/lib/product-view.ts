@@ -14,7 +14,8 @@ export type ProductView = {
   soldCount: number;
   image: string;
   images: string[];
-  imageSrcSet: string[];
+  /** Un srcset por entrada de `images`, en el mismo orden. */
+  imageSrcSets: string[][];
   badge: string | null;
   freeShipping: boolean;
   highlights: string[];
@@ -35,7 +36,7 @@ export function toView(product: Product): ProductView {
     soldCount: product.soldCount,
     image: product.images?.[0] ?? "",
     images: product.images ?? [],
-    imageSrcSet: product.imageSrcSet ?? [],
+    imageSrcSets: product.imageSrcSets ?? [],
     badge: product.badge ?? null,
     freeShipping: product.freeShipping,
     highlights: product.highlights ?? [],

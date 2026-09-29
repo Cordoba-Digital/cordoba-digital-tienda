@@ -162,7 +162,7 @@ export default async function ProductPage({ params }: { params: Params }) {
 
           <ProductGallery
             images={product.images}
-            srcSet={product.imageSrcSet}
+            srcSets={product.imageSrcSets}
             name={product.name}
             badge={product.badge}
           />

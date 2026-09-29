@@ -55,9 +55,20 @@ export const products = pgTable(
     reviewCount: integer("review_count").notNull().default(0),
     soldCount: integer("sold_count").notNull().default(0),
     images: jsonb("images").$type<string[]>().notNull().default([]),
-    // `srcset` de WooCommerce: el navegador elige la variante según el ancho
-    // real de pantalla. Necesario porque el optimizador de Vercel está
-    // bloqueado en este proyecto y se sirven los archivos originales.
+    /**
+     * Un `srcset` por cada entrada de `images`, en el mismo orden.
+     *
+     * Antes era un solo array plano con las variantes de todas las fotos
+     * revueltas, y la galería pasaba ese mismo array a cada miniatura: el
+     * navegador elegía por ancho una variante que podía ser de otra foto, así
+     * que todas las miniaturas mostraban la misma imagen. Un srcset por foto
+     * evita que se mezclen.
+     *
+     * Necesario porque el optimizador de Vercel está bloqueado en este
+     * proyecto (`unoptimized: true`) y se sirven los archivos originales.
+     */
+    imageSrcSets: jsonb("image_srcsets").$type<string[][]>().notNull().default([]),
+    /** @deprecated Usar `imageSrcSets`; esta columna quedó sin uso tras el fix. */
     imageSrcSet: jsonb("image_srcset").$type<string[]>().notNull().default([]),
     highlights: jsonb("highlights").$type<string[]>().notNull().default([]),
     specs: jsonb("specs").$type<Spec[]>().notNull().default([]),

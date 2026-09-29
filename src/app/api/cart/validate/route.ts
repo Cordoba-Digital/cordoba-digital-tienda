@@ -24,7 +24,8 @@ export async function POST(request: Request) {
       compareAtPrice: p.compareAtPrice,
       stock: p.stock,
       image: p.images?.[0] ?? "",
-      imageSrcSet: p.imageSrcSet ?? [],
+      // El carrito y el checkout muestran una sola imagen: la principal.
+      imageSrcSet: p.imageSrcSets?.[0] ?? [],
       freeShipping: p.freeShipping,
     })),
   });
