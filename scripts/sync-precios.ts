@@ -23,6 +23,7 @@ import "dotenv/config";
 import { eq, sql } from "drizzle-orm";
 
 import { categories, productCategories, products } from "@/db/schema";
+import { buildGallery } from "./lib/wp-images";
 
 const STORE_URL = (process.env.WC_STORE_URL ?? "https://www.cordobadigital.net").replace(/\/+$/, "");
 /** El server WP bloquea requests sin UA moderno (403 "Your browser is outdated"). */
@@ -282,6 +283,10 @@ async function main() {
       const reg = toCents(n.prices.regular_price);
       // Lista solo si es realmente mayor: si no hay oferta, va en null.
       const lista = reg !== null && reg > price ? reg : null;
+      // Galería completa con un srcset por foto, igual que el resto del
+      // catálogo. Antes se guardaba solo la primera foto: el producto quedaba
+      // con una miniatura y sin galería.
+      const galeria = buildGallery(n.images);
 
       // Categoría principal = la más cercana a la raíz, igual que `migrate:wp`.
       // Se resuelve por profundidad para no dejar el producto en "general".
@@ -307,8 +312,8 @@ async function main() {
           price,
           compareAtPrice: lista,
           stock: n.is_in_stock ? 1 : 0,
-          images: n.images?.[0]?.src ? [n.images[0].src] : [],
-          imageSrcSets: [],
+          images: galeria.urls,
+          imageSrcSets: galeria.srcSets,
           wpId: n.id,
         })
         .returning({ id: products.id, categorySlug: products.categorySlug });

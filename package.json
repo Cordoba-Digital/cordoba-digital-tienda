@@ -22,6 +22,7 @@
     "backfill:srcsets": "tsx scripts/backfill-image-srcsets.ts",
     "check:gallery": "tsx scripts/check-gallery.ts",
     "sync:precios": "tsx scripts/sync-precios.ts",
+    "fix:galeria": "tsx scripts/fix-galeria.ts",
     "sync:catalog": "tsx scripts/sync-catalog.ts"
   },
   "dependencies": {
