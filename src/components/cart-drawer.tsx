@@ -196,7 +196,7 @@ export function Toaster() {
           }`}
         >
           <p className="text-sm font-bold text-ink-900">
-            {toast.tone === "success" ? "✅ " : toast.tone === "error" ? "⚠ï¸ " : "ℹï¸ "}
+            {toast.tone === "success" ? "✅ " : toast.tone === "error" ? "⚠️ " : "ℹ️ "}
             {toast.title}
           </p>
           {toast.description ? <p className="mt-0.5 line-clamp-2 text-xs text-ink-500">{toast.description}</p> : null}

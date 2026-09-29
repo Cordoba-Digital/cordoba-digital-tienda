@@ -329,7 +329,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                 🔥 Ofertas de la semana
               </Link>
               <Link href="/favoritos" className="block rounded-xl px-3 py-2.5 hover:bg-ink-50">
-                ❤ï¸ Mis favoritos
+                ❤️ Mis favoritos
               </Link>
               <Link href="/seguimiento" className="block rounded-xl px-3 py-2.5 hover:bg-ink-50">
                 📦 Seguir mi pedido

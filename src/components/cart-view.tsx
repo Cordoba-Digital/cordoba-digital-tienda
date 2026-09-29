@@ -153,7 +153,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
           </div>
 
           <div className="card-surface p-5">
-            <h2 className="text-sm font-extrabold text-ink-900">🎟ï¸ ¿Tenés un cupón?</h2>
+            <h2 className="text-sm font-extrabold text-ink-900">🎟️ ¿Tenés un cupón?</h2>
             {coupon ? (
               <div className="mt-3 flex items-center justify-between rounded-xl bg-emerald-50 px-4 py-3">
                 <div>
@@ -235,7 +235,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
             </Link>
             <ul className="space-y-1.5 border-t border-ink-100 pt-3 text-[11px] text-ink-500">
               <li>🔒 Tus datos viajan cifrados</li>
-              <li>🛡ï¸ Garantía oficial en todos los productos</li>
+              <li>🛡️ Garantía oficial en todos los productos</li>
               <li>🚚 Envíos con seguimiento a todo el país</li>
             </ul>
           </div>
