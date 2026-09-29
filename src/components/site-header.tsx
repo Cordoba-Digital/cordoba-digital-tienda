@@ -312,7 +312,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                               <li>
                                 <Link
                                   href={`/categoria/${c.path}`}
-                                  className="block text-[11px] font-semibold text-brand-600 hover:text-brand-700"
+                                  className="block text-[11px] font-semibold text-brand-700 hover:text-brand-800"
                                 >
                                   Ver las {c.children.length} subcategorías →
                                 </Link>

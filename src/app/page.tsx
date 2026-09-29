@@ -113,7 +113,7 @@ export default async function HomePage() {
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 href="/productos"
-                className="rounded-xl bg-gradient-to-r from-brand-500 to-neon-500 px-6 py-3.5 text-sm font-extrabold text-white shadow-[0_18px_40px_-16px_rgba(6,207,238,0.8)] transition hover:opacity-95"
+                className="rounded-xl bg-gradient-to-r from-brand-500 to-neon-500 px-6 py-3.5 text-sm font-extrabold text-white shadow-[0_18px_40px_-16px_rgba(194,65,12,0.55)] transition hover:opacity-95"
               >
                 Ver catálogo completo
               </Link>

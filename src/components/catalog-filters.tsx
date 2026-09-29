@@ -84,7 +84,7 @@ export function ActiveFilters({
           className="inline-flex items-center gap-1.5 rounded-full border border-brand-200 bg-brand-50 px-3 py-1.5 text-xs font-semibold text-brand-700 transition hover:bg-brand-100"
         >
           {chip.label}
-          <span className="text-brand-400">×</span>
+          <span className="text-brand-600">×</span>
         </button>
       ))}
       <button

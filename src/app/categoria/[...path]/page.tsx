@@ -241,7 +241,7 @@ export default async function CategoryPage({
                   className="inline-flex items-center gap-1.5 rounded-full border border-brand-200 bg-brand-50 px-3 py-1.5 text-xs font-semibold text-brand-700 transition hover:bg-brand-100"
                 >
                   {chip.label}
-                  <span className="text-brand-400">×</span>
+                  <span className="text-brand-600">×</span>
                 </Link>
               ))}
               <Link href={`/categoria/${node.path}`} className="text-xs font-semibold text-ink-400 hover:text-ink-700">

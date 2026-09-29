@@ -18,7 +18,7 @@ export function ProductCard({ product, compact = false }: { product: ProductView
 
   return (
     <article
-      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-ink-100 bg-white transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-[0_18px_40px_-20px_rgba(27,65,245,0.45)] ${
+      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-ink-100 bg-white transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-[0_18px_40px_-20px_rgba(194,65,12,0.35)] ${
         compact ? "" : ""
       }`}
     >

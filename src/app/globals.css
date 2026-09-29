@@ -13,20 +13,25 @@
   --color-ink-900: #0a1226;
   --color-ink-950: #050a18;
 
-  --color-brand-50: #eef4ff;
-  --color-brand-100: #d9e6ff;
-  --color-brand-200: #bcd3ff;
-  --color-brand-300: #8eb5ff;
-  --color-brand-400: #598cff;
-  --color-brand-500: #3363ff;
-  --color-brand-600: #1b41f5;
-  --color-brand-700: #162fd8;
-  --color-brand-800: #1729ae;
-  --color-brand-900: #182a89;
+  /* Naranja Córdoba Digital. `brand-500` es el color de marca (#ff6600) y se
+     usa solo para acentos: sobre blanco da 2,9:1 y no cumple WCAG para texto.
+     Para links y botones con etiqueta blanca va `brand-700` (#c2410c, 5,2:1). */
+  --color-brand-50: #fff4ed;
+  --color-brand-100: #ffe6d5;
+  --color-brand-200: #ffc9a8;
+  --color-brand-300: #ffa371;
+  --color-brand-400: #ff7a33;
+  --color-brand-500: #ff6600;
+  --color-brand-600: #e8590c;
+  --color-brand-700: #c2410c;
+  --color-brand-800: #9a2b06;
+  --color-brand-900: #7a2305;
 
-  --color-neon-400: #35e7ff;
-  --color-neon-500: #06cfee;
-  --color-neon-600: #04a6c4;
+  /* Antes cian: con el naranja chocaban en el cintillo, el carrito y los
+     degradados de fondo. Ahora son ámbar, que mantiene el rol de acento. */
+  --color-neon-400: #ffb020;
+  --color-neon-500: #f59e0b;
+  --color-neon-600: #d97706;
 
   --font-sans: var(--font-geist, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif);
 
@@ -128,9 +133,9 @@ body {
 @utility mesh-dark {
   background-color: var(--color-ink-950);
   background-image:
-    radial-gradient(60rem 30rem at 12% -10%, rgba(51, 99, 255, 0.35), transparent 60%),
-    radial-gradient(45rem 26rem at 95% 0%, rgba(6, 207, 238, 0.24), transparent 65%),
-    radial-gradient(40rem 24rem at 60% 120%, rgba(27, 65, 245, 0.28), transparent 60%);
+    radial-gradient(60rem 30rem at 12% -10%, rgba(255, 102, 0, 0.3), transparent 60%),
+    radial-gradient(45rem 26rem at 95% 0%, rgba(255, 176, 32, 0.2), transparent 65%),
+    radial-gradient(40rem 24rem at 60% 120%, rgba(194, 65, 12, 0.24), transparent 60%);
 }
 
 @utility text-balance-pretty {
