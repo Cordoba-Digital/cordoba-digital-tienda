@@ -27,7 +27,7 @@ export function ProductGallery({
   const list = images.length ? images : [""];
 
   return (
-    <div className="flex flex-col-reverse gap-3 sm:flex-row">
+    <div className="flex flex-col-reverse items-center gap-3 sm:flex-row sm:items-start sm:justify-center">
       <div className="no-scrollbar flex gap-2 overflow-x-auto sm:flex-col">
         {list.map((image, index) => (
           <button
@@ -35,7 +35,7 @@ export function ProductGallery({
             type="button"
             onMouseEnter={() => setActive(index)}
             onClick={() => setActive(index)}
-            className={`h-16 w-16 shrink-0 overflow-hidden rounded-xl border-2 transition ${
+            className={`h-16 w-16 shrink-0 overflow-hidden rounded-xl border-2 bg-white transition ${
               index === active ? "border-brand-500" : "border-ink-100 hover:border-ink-300"
             }`}
           >
@@ -46,14 +46,17 @@ export function ProductGallery({
               sizes="64px"
               width={128}
               height={128}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain p-0.5"
             />
           </button>
         ))}
       </div>
 
+      {/* Marco acotado: las fotos de WooCommerce vienen en cualquier proporción
+          (muchas verticales) y con object-cover se recortaban. Con object-contain
+          se ve el producto entero, como en la ficha de Mercado Libre. */}
       <div
-        className="relative flex-1 overflow-hidden rounded-2xl border border-ink-100 bg-white"
+        className="relative aspect-square w-full max-w-[30rem] overflow-hidden rounded-2xl border border-ink-100 bg-white"
         onMouseEnter={() => setZoom(true)}
         onMouseLeave={() => setZoom(false)}
         onMouseMove={(event) => {
@@ -76,9 +79,9 @@ export function ProductGallery({
           width={800}
           height={800}
           priority
-          className="aspect-square w-full object-cover transition-transform duration-300"
+          className="h-full w-full object-contain p-6 transition-transform duration-300"
           // El zoom es una transformación CSS sobre la imagen elegida.
-          style={{ transform: zoom ? "scale(1.7)" : "scale(1)", transformOrigin: origin }}
+          style={{ transform: zoom ? "scale(1.8)" : "scale(1)", transformOrigin: origin }}
         />
         <span className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-semibold text-ink-500">
           🔍 Pasá el mouse para ampliar
