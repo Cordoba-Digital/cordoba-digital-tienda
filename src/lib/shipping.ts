@@ -1,5 +1,20 @@
-import { etaLabel, FREE_SHIPPING_THRESHOLD } from "@/lib/format";
+import { FREE_SHIPPING_THRESHOLD } from "@/lib/format";
+import { NOMBRE_ZONA, PRECIO_POR_ZONA, zonaParaCp, type ZonaEnvio } from "@/lib/tarifas-envio";
 
+/**
+ * Metodos de entrega: retirar en el local, o los dos servicios de Andreani.
+ *
+ * DEUDA TECNICA: los ids se llaman "standard" y "express", pero "express"
+ * significa "Andreani a sucursal" y "standard" significa "Andreani a
+ * domicilio". Los nombres quedaron viejos de cuando "express" era una moto
+ * propia que el local no tiene. Habria que renombrarlos a "estandar" y
+ * "sucursal", pero eso obliga a tocar `api/checkout/route.ts` y
+ * `checkout-flow.tsx`, que en este momento tienen otro trabajo a medio
+ * commitear. Se renombra en cuanto el arbol quede limpio.
+ *
+ * Los precios y las zonas salen de `tarifas-envio.ts`, que se leyo del
+ * calculador del sitio original (ver `docs/TARIFAS-ENVIO.md`).
+ */
 export type DeliveryMethod = "pickup" | "standard" | "express";
 
 export type ShippingOption = {
@@ -12,45 +27,33 @@ export type ShippingOption = {
   badge?: string;
 };
 
-/**
- * Zonas de envío, en **pesos enteros** (misma escala que `products.price`).
- *
- * PENDIENTE DE CONFIRMAR CON EL DUEÑO — estos números NO son del sitio original.
- *
- * Intenté leerlos del checkout real de WooCommerce y no se puede: el sitio
- * original calcula el envío con un plugin de Andreani y muestra una tarifa que
- * no cambia con el destino. Medí 11 códigos postales distintos (Córdoba Capital,
- * CABA, Rosario, Mendoza, Mar del Plata, Río Gallegos) y todos dieron lo mismo:
- * $18.264 estándar / $18.044 sucursal. Además, la captura del propio cliente
- * taken antes mostraba $10.850 para Comodoro Rivadavia, o sea que el número se
- * actualiza sin aviso.
- *
- * O sea: la tabla real de Andreani es por PESO y única, no por zona. La de acá
- * es una aproximación razonable para mostrar el flujo, y hay que reemplazarla
- * con la tarifa del dueño antes de cobrar. Todo queda en este archivo.
- */
-const ZONES: { name: string; test: (zip: string) => boolean; cost: number; min: number; max: number }[] = [
-  { name: "Córdoba Capital", test: (z) => /^50[0-1]\d$/.test(z), cost: 4_900, min: 1, max: 2 },
-  { name: "Interior de Córdoba", test: (z) => /^5\d{3}$/.test(z), cost: 6_900, min: 2, max: 3 },
-  { name: "Centro y Litoral", test: (z) => /^[1-3]\d{3}$/.test(z), cost: 8_900, min: 3, max: 5 },
-  { name: "Cuyo y NOA", test: (z) => /^[47]\d{3}$/.test(z), cost: 10_900, min: 4, max: 6 },
-  { name: "Patagonia", test: (z) => /^[689]\d{3}$/.test(z), cost: 13_900, min: 5, max: 8 },
-];
+/** Plazos que declara el local en la ficha de producto ("1-3 dias habiles"). */
+const PLAZO_DOMICILIO = "Llega entre 1 y 3 días hábiles";
+const PLAZO_SUCURSAL = "El local te confirma la sucursal y el plazo";
 
 export function normalizeZip(input: string): string {
   const digits = (input || "").toUpperCase().replace(/[^0-9]/g, "");
   return digits.slice(0, 4);
 }
 
-export function zoneForZip(zip: string) {
+/**
+ * Zona de un codigo postal, con el nombre que se muestra al cliente.
+ *
+ * Las cuatro zonas no siguen geografia: Posadas (3300) es la mas cara del pais
+ * y Obera, a 300 km (6000), es la general; Bariloche (8400) es "norte" pero
+ * Neuquen (8000) es "general". Por eso se resuelve con la tabla de `tarifas-
+ * envio.ts`, que reproduce los 35 codigos verificados del calculador.
+ */
+export function zoneForZip(zip: string): { zona: ZonaEnvio; name: string; zip: string } | null {
   const normalized = normalizeZip(zip);
   if (normalized.length !== 4) return null;
-  const zone = ZONES.find((z) => z.test(normalized));
-  return zone ? { ...zone, zip: normalized } : null;
+  const zona = zonaParaCp(normalized);
+  return { zona, name: NOMBRE_ZONA[zona], zip: normalized };
 }
 
 export function shippingOptions(zip: string, subtotal: number): ShippingOption[] {
   const zone = zoneForZip(zip);
+
   const options: ShippingOption[] = [
     {
       id: "pickup",
@@ -65,27 +68,36 @@ export function shippingOptions(zip: string, subtotal: number): ShippingOption[]
 
   if (!zone) return options;
 
-  const freeStandard = subtotal >= FREE_SHIPPING_THRESHOLD;
+  // Los dos servicios de Andreani, al precio real de la zona. "Sucursal"
+  // (retirar en la sucursal del correo) sale entre 25% y 35% menos que el
+  // estandar a domicilio, y antes el sitio no lo ofrecia en ninguna pagina.
+  //
+  // OJO: estos precios son los del paquete mas chico. La tarifa de Andreani
+  // sube por peso volumetrico, y todavia no podemos calcularlo porque
+  // `products.weight` esta llena al 39% con valores de relleno (ver
+  // `docs/TARIFAS-ENVIO.md`). Para productos grandes queda subestimado.
+  const gratis = subtotal >= FREE_SHIPPING_THRESHOLD;
+  const tarifa = PRECIO_POR_ZONA[zone.zona];
+
   options.push({
     id: "standard",
     label: `Andreani (estándar) · ${zone.name}`,
     description: "Envío a domicilio con seguimiento online",
-    eta: etaLabel(zone.min, zone.max),
-    cost: freeStandard ? 0 : zone.cost,
-    free: freeStandard,
-    badge: freeStandard ? "Envío gratis" : undefined,
+    eta: PLAZO_DOMICILIO,
+    cost: gratis ? 0 : tarifa.estandar,
+    free: gratis,
+    badge: gratis ? "Envío gratis" : undefined,
   });
 
-  // El original ofrece exactamente dos servicios de Andreani: "estándar" a
-  // domicilio y "sucursal" (retiro en la sucursal del correo). Antes el segundo
-  // era una moto propia en Córdoba, que el original no tiene.
+  // Id "express" por compatibilidad con el resto del codigo; el servicio es
+  // retirar en la sucursal de Andreani, no un envio express.
   options.push({
     id: "express",
-    label: "Andreani (sucursal)",
+    label: `Andreani (sucursal) · ${zone.name}`,
     description: "Retirás en la sucursal de Andreani más cercana",
-    eta: etaLabel(zone.min, zone.max + 1),
-    cost: freeStandard ? 0 : Math.round(zone.cost * 0.95),
-    free: freeStandard,
+    eta: PLAZO_SUCURSAL,
+    cost: gratis ? 0 : tarifa.sucursal,
+    free: gratis,
   });
 
   return options;
