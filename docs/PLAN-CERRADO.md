@@ -20,6 +20,46 @@
   `DATABASE_URL` en Preview + Production. Pendiente el resto de envs
   (`MP_*`, `GOOGLE_*`, `APP_URL` pública) y `vercel-optimize` con métricas.
 - [x] **Fases A–E — migración del catálogo real** (detalle abajo).
+- [x] **Galería de producto con un srcset por foto** (detalle abajo).
+
+### Galería: un `srcset` por foto — HECHO
+
+**Síntoma**: en la ficha de producto todas las miniaturas mostraban la misma
+foto y al hacer clic no cambiaba la imagen, aunque en WooCommerce cada producto
+tiene 2 o más. En el sitio viejo sí se veían fotos distintas.
+
+**No era pérdida de imágenes**: la base tenía 2.146 de 2.588 productos con 2+
+fotos, y contra la Store API los 441 que tienen una sola es porque en WP
+también tienen una sola.
+
+**Causa**: `products.image_srcset` era un **único array plano por producto** con
+las variantes de todas las fotos mezcladas (el iPhone: 29 entradas revueltas
+entre 4 fotos). `ProductGallery` pasaba ese mismo array a cada miniatura, así que
+el navegador elegía por ancho una variante que podía pertenecer a otra foto y
+todas acababan mostrando la misma.
+
+**Arreglo**:
+
+- `products.image_srcsets` (`jsonb`, `string[][]`): un srcset por entrada de
+  `images`, alineado por índice. `srcSets[i]` solo contiene variantes de
+  `urls[i]`. La columna vieja `image_srcset` quedó sin uso.
+- `scripts/lib/wp-images.ts` — elección de variante y armado de galería,
+  compartido entre el migrador y el backfill para que no diverjan.
+- `ProductGallery` usa el srcset de la foto activa; miniatura `i` → `srcSets[i]`.
+- Tarjeta, carrito y checkout usan `imageSrcSets[0]` (solo la foto principal).
+- `scripts/backfill-image-srcsets.ts` — escribe **solo** `images` e
+  `image_srcsets`; no toca precios, stock ni categorías. Correrlo con
+  `--dry-run` primero: imprime cuántos srcsets quedan desalineados.
+- `scripts/check-gallery.ts` — valida contra el deploy que las miniaturas
+  muestren fotos distintas y que ninguna pueda cargar otra foto.
+
+**Verificado**: 2.588/2.588 alineados, 0 srcsets con variantes de otra foto.
+El único producto sin srcsets es `gabinete-aerocool-ore-saturn-...`, que en
+WooCommerce tampoco tiene imagen.
+
+**Nota de git**: este fix quedó dentro del commit `b98e8d9`, cuyo mensaje es
+"captura y sonda de tema". El otro agente corrió `git add -A` y arrastró estos
+archivos. El código está bien; el historial quedó misleading.
 
 ### Migración del catálogo real — HECHO
 

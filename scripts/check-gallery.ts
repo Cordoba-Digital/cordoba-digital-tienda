@@ -20,13 +20,20 @@ const BASE = (baseArg ? baseArg.split("=")[1] : "https://cordoba-digital.vercel.
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 
-/** Slugs de productos que en WooCommerce tienen varias fotos. */
+/**
+ * Slugs reales del catálogo, todos con 2 o más fotos en WooCommerce.
+ *
+ * Un producto con una sola foto no es un bug: 441 de los 2.588 tienen una, y en
+ * WooCommerce también. El checker exige 2 miniaturas distintas justamente para
+ * detectar el srcset mezclado, así que solo tiene sentido con productos que
+ * traen varias fotos.
+ */
 const SLUGS = [
   "macbook-neo-13-8gb-256gb-silver",
   "pc-gamer-amd-ryzen-7-5700g-am4-8gb-ddr4-ssd-240gb-w10",
   "iphone-18-pro-max-512gb",
-  "z-fold-8-ultra-5g-512gb-12gb",
-  "samsung-galaxy-z-fold-8-ultra-5g-512gb-12gb",
+  "aire-acondicionado-bgh-3300w-frio-calo-bse35wcau",
+  "aspiradora-robot-ultracomb-as-6061",
 ];
 
 /** Quita el sufijo de tamaño que WooCommerce agrega (`foto-800x800.jpg`). */
@@ -35,12 +42,18 @@ const baseOf = (url: string): string => url.replace(/-\d+x\d+(?=\.[a-z0-9]+$)/i,
 type Img = { src: string; srcset: string };
 
 function parseGallery(html: string): Img[] {
-  // Miniaturas y foto principal comparten el mismo marcado, así que se toman
-  // todas las <img> del bloque de galería por su atributo srcset.
+  // Solo las <img> de la galería. Se las reconoce por su `sizes`: las
+  // miniaturas declaran `sizes="96px"` y la principal termina en `700px`
+  // (`"(max-width: 1024px) 100vw, 700px"`). Las tarjetas de productos
+  // relacionados usan `sizes` con `50vw`/`25vw`, así que quedan fuera.
   const imgs: Img[] = [];
   const re = /<img\b[^>]*>/g;
   for (const match of html.matchAll(re)) {
     const tag = match[0];
+    const sizes = /sizes="([^"]*)"/.exec(tag)?.[1];
+    const esMiniatura = sizes === "96px";
+    const esPrincipal = Boolean(sizes) && /,\s*700px$/.test(sizes as string);
+    if (!esMiniatura && !esPrincipal) continue;
     const src = /src="([^"]*)"/.exec(tag)?.[1];
     if (!src || !src.includes("/wp-content/uploads/")) continue;
     const raw = /srcset="([^"]*)"/.exec(tag)?.[1];
