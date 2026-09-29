@@ -2,7 +2,7 @@ import { eq, inArray, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orderItems, orders, products, type ShippingAddress } from "@/db/schema";
-import { computeTotals, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
+import { computeTotals, DISCOUNTED_PAYMENTS, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
 import { getCoupon } from "@/lib/queries";
 import { findShippingOption, normalizeZip, type DeliveryMethod } from "@/lib/shipping";
 
@@ -83,7 +83,7 @@ export async function POST(request: Request) {
     };
   }
 
-  const paymentId: PaymentMethodId = (["transferencia", "tarjeta", "mercadopago", "efectivo"] as const).includes(
+  const paymentId: PaymentMethodId = (["transferencia", "usdt", "efectivo", "mercadopago"] as const).includes(
     body.payment?.method as PaymentMethodId,
   )
     ? (body.payment?.method as PaymentMethodId)
@@ -160,7 +160,7 @@ export async function POST(request: Request) {
     .insert(orders)
     .values({
       code,
-      status: paymentId === "transferencia" || paymentId === "efectivo" ? "pendiente_pago" : "pago_confirmado",
+      status: DISCOUNTED_PAYMENTS.includes(paymentId) || paymentId === "usdt" ? "pendiente_pago" : "pago_confirmado",
       customerName: `${firstName} ${lastName}`,
       email,
       phone,
@@ -171,7 +171,7 @@ export async function POST(request: Request) {
       address,
       paymentMethod: paymentId,
       paymentLabel,
-      installments: paymentId === "tarjeta" ? installments : 1,
+      installments: paymentId === "mercadopago" ? installments : 1,
       subtotal: totals.subtotal,
       discount: totals.couponDiscount,
       paymentAdjustment: totals.paymentAdjustment,

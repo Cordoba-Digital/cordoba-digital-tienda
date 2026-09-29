@@ -82,7 +82,7 @@ function Field({
   className?: string;
 }) {
   return (
-    <label className={`block ${className}`}>
+    <label className={`block ${className}`} data-error={error ? "true" : undefined}>
       <span className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-ink-500">{label}</span>
       {children}
       {error ? <span className="mt-1 block text-xs font-semibold text-rose-600">{error}</span> : null}
@@ -98,7 +98,9 @@ export function CheckoutFlow() {
   const router = useRouter();
   const { items, subtotal, listSubtotal, hydrated, clearCart, setQuantity } = useStore();
 
-  const [step, setStep] = useState(1);
+  // Sin wizard: el checkout es una sola página, igual que el del sitio original.
+  // Antes eran 3 pasos y el medio de pago quedaba escondido en el último, así
+  // que el comprador Tomaba la decisión de cómo pagar sin verla.
   const [form, setForm] = useState<FormState>(EMPTY_FORM);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [deliveryMethod, setDeliveryMethod] = useState<DeliveryMethod>("standard");
@@ -216,18 +218,20 @@ export function CheckoutFlow() {
     });
   };
 
-  const validateStep1 = () => {
+  // Los dos validadores DEVUELVEN los errores en vez de fijarlos: si cada uno
+  // hiciera `setErrors`, el segundo pisaría los del primero y el comprador vería
+  // un solo bloque marcado.
+  const datosErrors = (): Record<string, string> => {
     const next: Record<string, string> = {};
     if (form.firstName.trim().length < 2) next.firstName = "Ingresá tu nombre.";
     if (form.lastName.trim().length < 2) next.lastName = "Ingresá tu apellido.";
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email.trim())) next.email = "Ingresá un email válido.";
     if (form.phone.replace(/\D/g, "").length < 8) next.phone = "Ingresá tu teléfono (con característica).";
     if (form.docId.replace(/\D/g, "").length < 7) next.docId = "Necesitamos tu DNI o CUIT para facturar.";
-    setErrors(next);
-    return Object.keys(next).length === 0;
+    return next;
   };
 
-  const validateStep2 = () => {
+  const entregaErrors = (): Record<string, string> => {
     const next: Record<string, string> = {};
     if (deliveryMethod !== "pickup") {
       if (form.zip.replace(/\D/g, "").length !== 4) next.zip = "Código postal de 4 dígitos.";
@@ -236,8 +240,7 @@ export function CheckoutFlow() {
       if (form.city.trim().length < 2) next.city = "Ingresá la localidad.";
       if (!selectedOption) next.delivery = "Elegí una forma de envío.";
     }
-    setErrors(next);
-    return Object.keys(next).length === 0;
+    return next;
   };
 
   const applyCoupon = async (event: React.FormEvent) => {
@@ -258,17 +261,30 @@ export function CheckoutFlow() {
     setCouponCode("");
   };
 
+  // Sin wizard no hay a qué paso volver, así que se validan datos y entrega juntos
+  // y se llevan al primer campo que falta. El `data-error` lo pone cada `Field`
+  // con error; el label no es focusable, así que se le pasa el foco al control
+  // que tiene adentro.
+  const irAlPrimerError = (selector = "[data-error='true']") => {
+    const el = document.querySelector<HTMLElement>(selector);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
+    const foco = el.matches("input, select, textarea")
+      ? el
+      : el.querySelector<HTMLElement>("input, select, textarea");
+    foco?.focus();
+  };
+
   const submit = async () => {
-    if (!validateStep1()) {
-      setStep(1);
-      return;
-    }
-    if (!validateStep2()) {
-      setStep(2);
+    const found = { ...datosErrors(), ...entregaErrors() };
+    if (Object.keys(found).length) {
+      setErrors(found);
+      irAlPrimerError();
       return;
     }
     if (!terms) {
       setErrors({ terms: "Tenés que aceptar los términos para continuar." });
+      irAlPrimerError("[data-error='terms']");
       return;
     }
     setSubmitting(true);
@@ -304,7 +320,7 @@ export function CheckoutFlow() {
       if (!res.ok || !data.ok) {
         if (data.errors) {
           setErrors(data.errors as Record<string, string>);
-          setStep(Object.keys(data.errors)[0] in { firstName: 1, lastName: 1, email: 1, phone: 1, docId: 1 } ? 1 : 2);
+          window.setTimeout(() => irAlPrimerError(), 0);
         }
         setServerError(data.error ?? "Revisá los datos marcados en rojo.");
         return;
@@ -360,12 +376,6 @@ export function CheckoutFlow() {
     );
   }
 
-  const steps = [
-    { id: 1, label: "Tus datos" },
-    { id: 2, label: "Entrega" },
-    { id: 3, label: "Pago" },
-  ];
-
   return (
     <div className="container-xl py-8">
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
@@ -378,384 +388,156 @@ export function CheckoutFlow() {
         </Link>
       </div>
 
-      <ol className="mb-8 flex items-center gap-3">
-        {steps.map((item, index) => {
-          const done = step > item.id;
-          const active = step === item.id;
-          return (
-            <li key={item.id} className="flex flex-1 items-center gap-3">
-              <button
-                type="button"
-                onClick={() => setStep(item.id)}
-                className={`flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-bold transition ${
-                  active ? "bg-brand-600 text-white" : done ? "bg-emerald-50 text-emerald-700" : "bg-surface text-ink-400"
-                }`}
-              >
-                <span
-                  className={`grid h-6 w-6 place-items-center rounded-full text-xs ${
-                    active ? "bg-white/20" : done ? "bg-emerald-500 text-white" : "bg-ink-100"
-                  }`}
-                >
-                  {done ? "✓" : item.id}
-                </span>
-                {item.label}
-              </button>
-              {index < steps.length - 1 ? <span className="hidden h-px flex-1 bg-ink-200 sm:block" /> : null}
-            </li>
-          );
-        })}
-      </ol>
-
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_23rem]">
         <div className="space-y-4">
-          {/* STEP 1 */}
-          <section className={`card-surface p-5 ${step === 1 ? "" : "opacity-95"}`}>
-            <header className="mb-4 flex items-center justify-between">
-              <h2 className="text-lg font-extrabold text-ink-900">1. Tus datos</h2>
-              {step !== 1 ? (
-                <button type="button" onClick={() => setStep(1)} className="text-xs font-bold text-brand-700">
-                  Editar
-                </button>
-              ) : null}
-            </header>
-
-            {step === 1 ? (
-              <div className="space-y-4">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <Field label="Nombre" error={errors.firstName}>
-                    <input className={inputClass} value={form.firstName} onChange={set("firstName")} placeholder="Juan" />
-                  </Field>
-                  <Field label="Apellido" error={errors.lastName}>
-                    <input className={inputClass} value={form.lastName} onChange={set("lastName")} placeholder="Pérez" />
-                  </Field>
-                </div>
-                <Field label="Email" error={errors.email} hint="Te enviamos la confirmación y el seguimiento acá.">
-                  <input className={inputClass} type="email" value={form.email} onChange={set("email")} placeholder="juan@email.com" />
+          <section className="card-surface p-5">
+            <h2 className="mb-4 text-lg font-extrabold text-ink-900">Detalles de facturación</h2>
+            <div className="space-y-4">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <Field label="Nombre" error={errors.firstName}>
+                  <input className={inputClass} value={form.firstName} onChange={set("firstName")} placeholder="Juan" />
                 </Field>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <Field label="Teléfono / WhatsApp" error={errors.phone}>
-                    <input className={inputClass} value={form.phone} onChange={set("phone")} placeholder="351 555 5555" />
-                  </Field>
-                  <Field label="DNI o CUIT" error={errors.docId} hint="Necesario para la factura.">
-                    <input className={inputClass} value={form.docId} onChange={set("docId")} placeholder="30123456" />
-                  </Field>
-                </div>
+                <Field label="Apellidos" error={errors.lastName}>
+                  <input className={inputClass} value={form.lastName} onChange={set("lastName")} placeholder="Pérez" />
+                </Field>
+              </div>
+              <Field label="Email" error={errors.email} hint="Te enviamos la confirmación y el seguimiento acá.">
+                <input className={inputClass} type="email" value={form.email} onChange={set("email")} placeholder="juan@email.com" />
+              </Field>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <Field label="Teléfono / WhatsApp" error={errors.phone}>
+                  <input className={inputClass} value={form.phone} onChange={set("phone")} placeholder="351 555 5555" />
+                </Field>
+                <Field label="DNI o CUIT" error={errors.docId} hint="Necesario para la factura.">
+                  <input className={inputClass} value={form.docId} onChange={set("docId")} placeholder="30123456" />
+                </Field>
+              </div>
+            </div>
+          </section>
+
+          <section className="card-surface p-5">
+            <h2 className="mb-4 text-lg font-extrabold text-ink-900">Entrega</h2>
+            <div className="space-y-4">
+              <div className="grid gap-3 sm:grid-cols-2">
                 <button
                   type="button"
-                  onClick={() => validateStep1() && setStep(2)}
-                  className="w-full rounded-xl bg-brand-600 px-4 py-3 text-sm font-bold text-white transition hover:bg-brand-700 sm:w-auto sm:px-8"
+                  onClick={() => setDeliveryMethod("standard")}
+                  className={`rounded-xl border-2 p-4 text-left transition ${
+                    deliveryMethod !== "pickup" ? "border-brand-500 bg-brand-50/50" : "border-ink-100 hover:border-ink-300"
+                  }`}
                 >
-                  Continuar
+                  <p className="text-sm font-extrabold text-ink-900">🚚 Envío a domicilio</p>
+                  <p className="mt-1 text-xs text-ink-500">A todo el país con seguimiento online</p>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setDeliveryMethod("pickup")}
+                  className={`rounded-xl border-2 p-4 text-left transition ${
+                    deliveryMethod === "pickup" ? "border-brand-500 bg-brand-50/50" : "border-ink-100 hover:border-ink-300"
+                  }`}
+                >
+                  <p className="text-sm font-extrabold text-ink-900">🏬 Retiro en el local</p>
+                  <p className="mt-1 text-xs text-emerald-600">Gratis · listo en 2 horas</p>
                 </button>
               </div>
-            ) : (
-              <p className="text-sm text-ink-600">
-                {form.firstName} {form.lastName} · {form.email} · {form.phone}
-              </p>
-            )}
-          </section>
 
-          {/* STEP 2 */}
-          <section className="card-surface p-5">
-            <header className="mb-4 flex items-center justify-between">
-              <h2 className="text-lg font-extrabold text-ink-900">2. Entrega</h2>
-              {step !== 2 && step > 2 ? (
-                <button type="button" onClick={() => setStep(2)} className="text-xs font-bold text-brand-700">
-                  Editar
-                </button>
-              ) : null}
-            </header>
-
-            {step === 2 ? (
-              <div className="space-y-4">
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <button
-                    type="button"
-                    onClick={() => setDeliveryMethod("standard")}
-                    className={`rounded-xl border-2 p-4 text-left transition ${
-                      deliveryMethod !== "pickup" ? "border-brand-500 bg-brand-50/50" : "border-ink-100 hover:border-ink-300"
-                    }`}
-                  >
-                    <p className="text-sm font-extrabold text-ink-900">🚚 Envío a domicilio</p>
-                    <p className="mt-1 text-xs text-ink-500">A todo el país con seguimiento online</p>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setDeliveryMethod("pickup")}
-                    className={`rounded-xl border-2 p-4 text-left transition ${
-                      deliveryMethod === "pickup" ? "border-brand-500 bg-brand-50/50" : "border-ink-100 hover:border-ink-300"
-                    }`}
-                  >
-                    <p className="text-sm font-extrabold text-ink-900">🏬 Retiro en el local</p>
-                    <p className="mt-1 text-xs text-emerald-600">Gratis · listo en 2 horas</p>
-                  </button>
+              {deliveryMethod === "pickup" ? (
+                <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-600">
+                  <p className="font-bold text-ink-900">27 de Abril 259, Córdoba Capital</p>
+                  <p className="mt-1 text-xs">Lunes a viernes de 14:00 a 18:30 · Sábados de 11:00 a 14:00</p>
+                  <p className="mt-2 text-xs">
+                    Te avisamos por WhatsApp cuando esté listo. Llevá tu DNI y el número de pedido.
+                  </p>
                 </div>
-
-                {deliveryMethod === "pickup" ? (
-                  <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-600">
-                    <p className="font-bold text-ink-900">27 de Abril 259, Córdoba Capital</p>
-                    <p className="mt-1 text-xs">Lunes a viernes de 14:00 a 18:30 · Sábados de 11:00 a 14:00</p>
-                    <p className="mt-2 text-xs">
-                      Te avisamos por WhatsApp cuando esté listo. Llevá tu DNI y el número de pedido.
-                    </p>
+              ) : (
+                <>
+                  <div className="grid gap-4 sm:grid-cols-[10rem_1fr]">
+                    <Field label="Código postal" error={errors.zip}>
+                      <input
+                        className={inputClass}
+                        value={form.zip}
+                        onChange={set("zip")}
+                        inputMode="numeric"
+                        maxLength={4}
+                        placeholder="5000"
+                      />
+                    </Field>
+                    <div className="flex items-end pb-1 text-xs text-ink-500">
+                      {zipLoading ? (
+                        <span className="flex items-center gap-2">
+                          <Spinner className="h-4 w-4" /> Calculando envíos...
+                        </span>
+                      ) : zone ? (
+                        <span className="font-semibold text-emerald-600">📍 Zona: {zone}</span>
+                      ) : (
+                        <span>Ingresá tu CP para ver costos y plazos.</span>
+                      )}
+                    </div>
                   </div>
-                ) : (
-                  <>
-                    <div className="grid gap-4 sm:grid-cols-[10rem_1fr]">
-                      <Field label="Código postal" error={errors.zip}>
-                        <input
-                          className={inputClass}
-                          value={form.zip}
-                          onChange={set("zip")}
-                          inputMode="numeric"
-                          maxLength={4}
-                          placeholder="5000"
-                        />
-                      </Field>
-                      <div className="flex items-end pb-1 text-xs text-ink-500">
-                        {zipLoading ? (
-                          <span className="flex items-center gap-2">
-                            <Spinner className="h-4 w-4" /> Calculando envíos...
-                          </span>
-                        ) : zone ? (
-                          <span className="font-semibold text-emerald-600">📍 Zona: {zone}</span>
-                        ) : (
-                          <span>Ingresá tu CP para ver costos y plazos.</span>
-                        )}
-                      </div>
-                    </div>
 
-                    {options.filter((o) => o.id !== "pickup").length ? (
-                      <div className="space-y-2">
-                        {options
-                          .filter((option) => option.id !== "pickup")
-                          .map((option) => (
-                            <button
-                              key={option.id}
-                              type="button"
-                              onClick={() => setDeliveryMethod(option.id)}
-                              className={`flex w-full items-start justify-between gap-3 rounded-xl border-2 p-4 text-left transition ${
-                                deliveryMethod === option.id
-                                  ? "border-brand-500 bg-brand-50/40"
-                                  : "border-ink-100 hover:border-ink-300"
-                              }`}
-                            >
-                              <span>
-                                <span className="block text-sm font-bold text-ink-900">{option.label}</span>
-                                <span className="block text-xs text-ink-500">{option.description}</span>
-                                <span className="mt-0.5 block text-xs font-semibold text-emerald-600">{option.eta}</span>
-                              </span>
-                              <span className={`text-sm font-extrabold ${option.free ? "text-emerald-600" : "text-ink-900"}`}>
-                                {option.free ? "Gratis" : money(option.cost)}
-                              </span>
-                            </button>
-                          ))}
-                      </div>
-                    ) : null}
-
-                    <div className="grid gap-4 sm:grid-cols-[1fr_8rem]">
-                      <Field label="Calle" error={errors.street}>
-                        <input className={inputClass} value={form.street} onChange={set("street")} placeholder="Av. Colón" />
-                      </Field>
-                      <Field label="Altura" error={errors.number}>
-                        <input className={inputClass} value={form.number} onChange={set("number")} placeholder="1234" />
-                      </Field>
-                    </div>
-                    <div className="grid gap-4 sm:grid-cols-3">
-                      <Field label="Piso / Depto (opcional)">
-                        <input className={inputClass} value={form.extra} onChange={set("extra")} placeholder="3° B" />
-                      </Field>
-                      <Field label="Localidad" error={errors.city}>
-                        <input className={inputClass} value={form.city} onChange={set("city")} placeholder="Córdoba" />
-                      </Field>
-                      <Field label="Provincia">
-                        <select className={inputClass} value={form.province} onChange={set("province")}>
-                          {PROVINCES.map((province) => (
-                            <option key={province}>{province}</option>
-                          ))}
-                        </select>
-                      </Field>
-                    </div>
-                  </>
-                )}
-
-                {errors.delivery ? <p className="text-xs font-semibold text-rose-600">{errors.delivery}</p> : null}
-
-                <div className="flex gap-3">
-                  <button
-                    type="button"
-                    onClick={() => setStep(1)}
-                    className="rounded-xl border border-ink-200 px-5 py-3 text-sm font-bold text-ink-600"
-                  >
-                    Atrás
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => validateStep2() && setStep(3)}
-                    className="flex-1 rounded-xl bg-brand-600 px-4 py-3 text-sm font-bold text-white transition hover:bg-brand-700 sm:flex-none sm:px-8"
-                  >
-                    Continuar al pago
-                  </button>
-                </div>
-              </div>
-            ) : step > 2 ? (
-              <p className="text-sm text-ink-600">
-                {deliveryMethod === "pickup"
-                  ? "Retiro en 27 de Abril 259, Córdoba Capital"
-                  : `${form.street} ${form.number}, ${form.city} (CP ${form.zip}) · ${selectedOption?.label ?? ""}`}
-              </p>
-            ) : (
-              <p className="text-sm text-ink-400">Completá tus datos para elegir la entrega.</p>
-            )}
-          </section>
-
-          {/* STEP 3 */}
-          <section className="card-surface p-5">
-            <header className="mb-4 flex items-center justify-between">
-              <h2 className="text-lg font-extrabold text-ink-900">3. Pago</h2>
-            </header>
-
-            {step === 3 ? (
-              <div className="space-y-4">
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {PAYMENT_METHODS.filter((method) => method.id !== "efectivo" || deliveryMethod === "pickup").map(
-                    (method) => (
-                      <button
-                        key={method.id}
-                        type="button"
-                        onClick={() => setPayment(method.id)}
-                        {...(method.id === "mercadopago" ? { "data-mp-checkout-cta": "checkout-pro" } : {})}
-                        className={`rounded-xl border-2 p-4 text-left transition ${
-                          payment === method.id ? "border-brand-500 bg-brand-50/40" : "border-ink-100 hover:border-ink-300"
-                        }`}
-                      >
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm font-extrabold text-ink-900">
-                            {method.icon} {method.short}
-                          </span>
-                          {method.perk ? (
-                            <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
-                              {method.perk}
-                            </span>
-                          ) : null}
-                        </div>
-                        <p className="mt-1.5 text-xs leading-snug text-ink-500">{method.description}</p>
-                      </button>
-                    ),
-                  )}
-                </div>
-
-                {payment === "tarjeta" ? (
-                  <div className="rounded-xl border border-ink-100 p-4">
-                    <p className="mb-2 text-xs font-bold uppercase tracking-wide text-ink-500">Elegí tu plan de cuotas</p>
-                    <div className="grid gap-2 sm:grid-cols-3">
-                      {INSTALLMENT_PLANS.map((plan) => {
-                        const planTotals = computeTotals({
-                          subtotal,
-                          coupon,
-                          shippingCost: selectedOption?.cost ?? 0,
-                          paymentMethod: "tarjeta",
-                          installments: plan.count,
-                        });
-                        return (
+                  {options.filter((o) => o.id !== "pickup").length ? (
+                    <div className="space-y-2">
+                      {options
+                        .filter((option) => option.id !== "pickup")
+                        .map((option) => (
                           <button
-                            key={plan.count}
+                            key={option.id}
                             type="button"
-                            onClick={() => setInstallments(plan.count)}
-                            className={`rounded-xl border-2 p-3 text-left transition ${
-                              installments === plan.count
-                                ? "border-brand-500 bg-brand-50/50"
+                            onClick={() => setDeliveryMethod(option.id)}
+                            className={`flex w-full items-start justify-between gap-3 rounded-xl border-2 p-4 text-left transition ${
+                              deliveryMethod === option.id
+                                ? "border-brand-500 bg-brand-50/40"
                                 : "border-ink-100 hover:border-ink-300"
                             }`}
                           >
-                            <p className="text-sm font-extrabold text-ink-900">
-                              {plan.count}x {money(planTotals.installmentAmount)}
-                            </p>
-                            <p className="text-[11px] text-ink-500">
-                              {plan.coefficient === 1 ? "Sin interés" : `Total ${money(planTotals.total)}`}
-                            </p>
+                            <span>
+                              <span className="block text-sm font-bold text-ink-900">{option.label}</span>
+                              <span className="block text-xs text-ink-500">{option.description}</span>
+                              <span className="mt-0.5 block text-xs font-semibold text-emerald-600">{option.eta}</span>
+                            </span>
+                            <span className={`text-sm font-extrabold ${option.free ? "text-emerald-600" : "text-ink-900"}`}>
+                              {option.free ? "Gratis" : money(option.cost)}
+                            </span>
                           </button>
-                        );
-                      })}
+                        ))}
                     </div>
-                    <p className="mt-3 text-[11px] text-ink-400">
-                      El cobro se procesa de forma segura con Mercado Pago. Nunca almacenamos los datos de tu tarjeta.
-                    </p>
+                  ) : null}
+
+                  <div className="grid gap-4 sm:grid-cols-[1fr_8rem]">
+                    <Field label="Dirección de la calle" error={errors.street}>
+                      <input className={inputClass} value={form.street} onChange={set("street")} placeholder="Número de la casa y nombre de la calle" />
+                    </Field>
+                    <Field label="Altura" error={errors.number}>
+                      <input className={inputClass} value={form.number} onChange={set("number")} placeholder="1234" />
+                    </Field>
                   </div>
-                ) : null}
-
-                {payment === "transferencia" ? (
-                  <div className="rounded-xl bg-emerald-50 p-4 text-sm text-emerald-800">
-                    <p className="font-bold">¡Buena elección! Te ahorrás {money(Math.abs(totals.paymentAdjustment))}.</p>
-                    <p className="mt-1 text-xs">
-                      Al confirmar te mostramos el CBU / alias y la wallet USDT. Tenés 48 hs para transferir y el stock
-                      queda reservado.
-                    </p>
+                  <div className="grid gap-4 sm:grid-cols-3">
+                    <Field label="Piso / Depto (opcional)">
+                      <input className={inputClass} value={form.extra} onChange={set("extra")} placeholder="3° B" />
+                    </Field>
+                    <Field label="Localidad / Ciudad" error={errors.city}>
+                      <input className={inputClass} value={form.city} onChange={set("city")} placeholder="Córdoba" />
+                    </Field>
+                    <Field label="Región / Provincia" error={errors.province}>
+                      <select className={inputClass} value={form.province} onChange={set("province")}>
+                        {PROVINCES.map((province) => (
+                          <option key={province}>{province}</option>
+                        ))}
+                      </select>
+                    </Field>
                   </div>
-                ) : null}
+                </>
+              )}
 
-                {payment === "efectivo" ? (
-                  <div className="rounded-xl bg-emerald-50 p-4 text-sm text-emerald-800">
-                    <p className="font-bold">Pagás al retirar en el local.</p>
-                    <p className="mt-1 text-xs">Reservamos el producto por 48 horas hábiles a tu nombre.</p>
-                  </div>
-                ) : null}
-
-                <Field label="Comentarios para la entrega (opcional)">
-                  <textarea
-                    value={form.notes}
-                    onChange={set("notes")}
-                    rows={2}
-                    placeholder="Ej: entregar después de las 14 hs, dejar en portería..."
-                    className="w-full rounded-xl border border-ink-200 p-3 text-sm outline-none focus:border-brand-400"
-                  />
-                </Field>
-
-                <label className="flex items-start gap-2.5 text-xs text-ink-600">
-                  <input
-                    type="checkbox"
-                    checked={terms}
-                    onChange={(e) => setTerms(e.target.checked)}
-                    className="mt-0.5 h-4 w-4 accent-brand-600"
-                  />
-                  <span>
-                    Acepto los <Link href="/ayuda" className="font-semibold text-brand-700 underline">términos y condiciones</Link> y
-                    la política de privacidad de Córdoba Digital.
-                  </span>
-                </label>
-                {errors.terms ? <p className="text-xs font-semibold text-rose-600">{errors.terms}</p> : null}
-                {serverError ? (
-                  <p className="rounded-xl bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700">{serverError}</p>
-                ) : null}
-
-                <div className="flex gap-3">
-                  <button
-                    type="button"
-                    onClick={() => setStep(2)}
-                    className="rounded-xl border border-ink-200 px-5 py-3 text-sm font-bold text-ink-600"
-                  >
-                    Atrás
-                  </button>
-                  <button
-                    type="button"
-                    onClick={submit}
-                    disabled={submitting}
-                    className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-3.5 text-sm font-extrabold text-white shadow-lg shadow-brand-600/25 transition hover:from-brand-700 hover:to-brand-600 disabled:opacity-60"
-                  >
-                    {submitting ? <Spinner className="h-4 w-4" /> : null}
-                    Confirmar pedido · {money(totals.total)}
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <p className="text-sm text-ink-400">Elegí cómo querés pagar en el último paso.</p>
-            )}
+              {errors.delivery ? <p className="text-xs font-semibold text-rose-600">{errors.delivery}</p> : null}
+            </div>
           </section>
         </div>
 
-        {/* SUMMARY */}
+        {/* RESUMEN + MEDIO DE PAGO: van juntos, como en el sitio original, para
+            que la forma de pago se vea sin tener que terminar otro paso. */}
         <aside>
-          <div className="card-surface sticky top-36 space-y-4 p-5">
+          <div className="card-surface space-y-4 p-5">
             <h2 className="text-lg font-extrabold text-ink-900">Tu pedido</h2>
             <div className="max-h-56 space-y-3 overflow-y-auto pr-1">
               {items.map((item) => (
@@ -855,7 +637,7 @@ export function CheckoutFlow() {
               <span className="text-sm font-semibold text-ink-600">Total</span>
               <div className="text-right">
                 <span className="block text-2xl font-black text-ink-900">{money(totals.total)}</span>
-                {payment === "tarjeta" && installments > 1 ? (
+                {payment === "mercadopago" && installments > 1 ? (
                   <span className="text-[11px] text-ink-400">
                     {installments} cuotas de {money(totals.installmentAmount)}
                   </span>
@@ -874,6 +656,142 @@ export function CheckoutFlow() {
               <li>🛡ï¸ Garantía oficial y factura</li>
               <li>🔄 10 días para cambios</li>
             </ul>
+
+            {/* MEDIO DE PAGO: va debajo de los totales, igual que en el sitio original, para que la
+                forma de pago se vea sin terminar otro paso. */}
+            <div className="space-y-4 border-t border-ink-100 pt-4">
+              <h2 className="text-lg font-extrabold text-ink-900">Medio de pago</h2>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {PAYMENT_METHODS.filter((method) => method.id !== "efectivo" || deliveryMethod === "pickup").map(
+                    (method) => (
+                      <button
+                        key={method.id}
+                        type="button"
+                        onClick={() => setPayment(method.id)}
+                        {...(method.id === "mercadopago" ? { "data-mp-checkout-cta": "checkout-pro" } : {})}
+                        className={`rounded-xl border-2 p-4 text-left transition ${
+                          payment === method.id ? "border-brand-500 bg-brand-50/40" : "border-ink-100 hover:border-ink-300"
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm font-extrabold text-ink-900">
+                            {method.icon} {method.short}
+                          </span>
+                          {method.perk ? (
+                            <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
+                              {method.perk}
+                            </span>
+                          ) : null}
+                        </div>
+                        <p className="mt-1.5 text-xs leading-snug text-ink-500">{method.description}</p>
+                      </button>
+                    ),
+                  )}
+                </div>
+
+                {payment === "mercadopago" ? (
+                  <div className="rounded-xl border border-ink-100 p-4">
+                    <p className="mb-2 text-xs font-bold uppercase tracking-wide text-ink-500">Elegí tu plan de cuotas</p>
+                    <div className="grid gap-2 sm:grid-cols-3">
+                      {INSTALLMENT_PLANS.map((plan) => {
+                        const planTotals = computeTotals({
+                          subtotal,
+                          coupon,
+                          shippingCost: selectedOption?.cost ?? 0,
+                          paymentMethod: "mercadopago",
+                          installments: plan.count,
+                        });
+                        return (
+                          <button
+                            key={plan.count}
+                            type="button"
+                            onClick={() => setInstallments(plan.count)}
+                            className={`rounded-xl border-2 p-3 text-left transition ${
+                              installments === plan.count
+                                ? "border-brand-500 bg-brand-50/50"
+                                : "border-ink-100 hover:border-ink-300"
+                            }`}
+                          >
+                            <p className="text-sm font-extrabold text-ink-900">
+                              {plan.count}x {money(planTotals.installmentAmount)}
+                            </p>
+                            <p className="text-[11px] text-ink-500">
+                              {plan.coefficient === 1 ? "Sin interés" : `Total ${money(planTotals.total)}`}
+                            </p>
+                          </button>
+                        );
+                      })}
+                    </div>
+                    <p className="mt-3 text-[11px] text-ink-400">
+                      El cobro se procesa de forma segura con Mercado Pago. Nunca almacenamos los datos de tu tarjeta.
+                    </p>
+                  </div>
+                ) : null}
+
+                {payment === "transferencia" ? (
+                  <div className="rounded-xl bg-emerald-50 p-4 text-sm text-emerald-800">
+                    <p className="font-bold">¡Buena elección! Te ahorrás {money(Math.abs(totals.paymentAdjustment))}.</p>
+                    <p className="mt-1 text-xs">
+                      Al confirmar te mostramos el CBU / alias y la wallet USDT. Tenés 48 hs para transferir y el stock
+                      queda reservado.
+                    </p>
+                  </div>
+                ) : null}
+
+                {payment === "usdt" ? (
+                  <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
+                    <p className="font-bold text-ink-900">Pagá con USDT por red TRC20.</p>
+                    <p className="mt-1 text-xs">
+                      El pedido se procesa una vez confirmado el pago. Al confirmar te mostramos la wallet y el stock
+                      queda reservado.
+                    </p>
+                  </div>
+                ) : null}
+
+                {payment === "efectivo" ? (
+                  <div className="rounded-xl bg-emerald-50 p-4 text-sm text-emerald-800">
+                    <p className="font-bold">Pagás al retirar en el local.</p>
+                    <p className="mt-1 text-xs">Reservamos el producto por 48 horas hábiles a tu nombre.</p>
+                  </div>
+                ) : null}
+
+                <Field label="Comentarios para la entrega (opcional)">
+                  <textarea
+                    value={form.notes}
+                    onChange={set("notes")}
+                    rows={2}
+                    placeholder="Ej: entregar después de las 14 hs, dejar en portería..."
+                    className="w-full rounded-xl border border-ink-200 p-3 text-sm outline-none focus:border-brand-400"
+                  />
+                </Field>
+
+                <label className="flex items-start gap-2.5 text-xs text-ink-600" data-error={errors.terms ? "terms" : undefined}>
+                  <input
+                    type="checkbox"
+                    checked={terms}
+                    onChange={(e) => setTerms(e.target.checked)}
+                    className="mt-0.5 h-4 w-4 accent-brand-600"
+                  />
+                  <span>
+                    Acepto los <Link href="/ayuda" className="font-semibold text-brand-700 underline">términos y condiciones</Link> y
+                    la política de privacidad de Córdoba Digital.
+                  </span>
+                </label>
+                {errors.terms ? <p className="text-xs font-semibold text-rose-600">{errors.terms}</p> : null}
+                {serverError ? (
+                  <p className="rounded-xl bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700">{serverError}</p>
+                ) : null}
+
+                <button
+                  type="button"
+                  onClick={submit}
+                  disabled={submitting}
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-3.5 text-sm font-extrabold text-white shadow-lg shadow-brand-600/25 transition hover:from-brand-700 hover:to-brand-600 disabled:opacity-60"
+                >
+                  {submitting ? <Spinner className="h-4 w-4" /> : null}
+                  Confirmar pedido · {money(totals.total)}
+                </button>
+            </div>
           </div>
         </aside>
       </div>

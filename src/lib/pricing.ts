@@ -1,6 +1,18 @@
 import { INSTALLMENT_PLANS, TRANSFER_DISCOUNT } from "@/lib/format";
 
-export type PaymentMethodId = "transferencia" | "tarjeta" | "mercadopago" | "efectivo";
+/**
+ * Medios de pago. Los tres primeros son exactamente los que ofrece el sitio
+ * original, leídos del checkout real (no inventados):
+ *
+ *   - `bacs`                 → "Pago por transferencia bancaria"
+ *   - `cod`                  → "Pago en efectivo o transferencia en el local"
+ *   - `cd_usdt_trc20_manual` → "USDT (TRC20) - Transferencia"
+ *
+ * Mercado Pago se suma como cuarta opción: es la integración que estamos
+ * construyendo y cubre tarjeta de crédito, débito y dinero en cuenta, que es
+ * justamente lo que el original no tiene online.
+ */
+export type PaymentMethodId = "transferencia" | "usdt" | "efectivo" | "mercadopago";
 
 export type PaymentMethod = {
   id: PaymentMethodId;
@@ -14,36 +26,45 @@ export type PaymentMethod = {
 export const PAYMENT_METHODS: PaymentMethod[] = [
   {
     id: "transferencia",
-    label: "Transferencia bancaria o USDT",
-    short: "Transferencia / USDT",
-    description: "Te enviamos el CBU o la wallet al confirmar. Acreditación inmediata.",
+    label: "Pago por transferencia bancaria",
+    short: "Transferencia bancaria",
+    description: "Te enviamos el CBU o el alias al confirmar. Acreditación inmediata.",
     icon: "🏦",
     perk: "15% OFF",
   },
   {
-    id: "tarjeta",
-    label: "Tarjeta de crédito",
-    short: "Tarjeta de crédito",
-    description: "Visa, Mastercard, Amex, Naranja X y Cabal. Hasta 6 cuotas sin interés.",
-    icon: "💳",
-    perk: "6 cuotas sin interés",
-  },
-  {
-    id: "mercadopago",
-    label: "Mercado Pago",
-    short: "Mercado Pago",
-    description: "Pagás con tu cuenta, dinero en cuenta o tarjeta guardada.",
-    icon: "💠",
+    id: "usdt",
+    label: "USDT (TRC20) - Transferencia",
+    short: "USDT (TRC20)",
+    description: "Pagá con USDT por red TRC20. El pedido se procesa una vez confirmado el pago.",
+    icon: "🪙",
   },
   {
     id: "efectivo",
-    label: "Efectivo en el local",
+    label: "Pago en efectivo o transferencia en el local",
     short: "Efectivo en el local",
     description: "Reservás online y pagás al retirar en 27 de Abril 259.",
     icon: "💵",
     perk: "15% OFF",
   },
+  {
+    id: "mercadopago",
+    label: "Mercado Pago",
+    short: "Mercado Pago",
+    description: "Tarjeta de crédito, débito o dinero en cuenta. Hasta 6 cuotas sin interés.",
+    icon: "💠",
+  },
 ];
+
+/**
+ * Métodos que llevan el descuento del 15%.
+ *
+ * OJO: ese 15% NO existe en el sitio original. Al leer su checkout, el total da
+ * exactamente igual al subtotal, sin línea de descuento. Está agrupado acá para
+ * que sea un solo lugar que tocar si el cliente no lo quiere. Ver
+ * `docs/PLAN-CERRADO.md`.
+ */
+export const DISCOUNTED_PAYMENTS: PaymentMethodId[] = ["transferencia", "efectivo"];
 
 export type CouponInfo = {
   code: string;
@@ -83,13 +104,16 @@ export function computeTotals(input: {
   const afterCoupon = Math.max(0, subtotal - couponDiscount);
 
   let paymentAdjustment = 0;
-  if (paymentMethod === "transferencia" || paymentMethod === "efectivo") {
+  if (DISCOUNTED_PAYMENTS.includes(paymentMethod)) {
     paymentAdjustment = -Math.round(afterCoupon * TRANSFER_DISCOUNT);
   }
 
   let total = afterCoupon + paymentAdjustment + shippingCost;
 
-  if (paymentMethod === "tarjeta") {
+  // Las cuotas solo aplican a la tarjeta, o sea Mercado Pago. Las financia el
+  // gateway, no nosotros: acá solo se refleja el efecto en el total para que lo
+  // que ve el comprador coincida con lo que le cobra Mercado Pago.
+  if (paymentMethod === "mercadopago") {
     const plan = INSTALLMENT_PLANS.find((p) => p.count === installments) ?? INSTALLMENT_PLANS[0];
     const withInterest = Math.round(total * plan.coefficient);
     paymentAdjustment = withInterest - total;
@@ -97,7 +121,7 @@ export function computeTotals(input: {
   }
 
   const installmentAmount =
-    paymentMethod === "tarjeta" && installments > 1 ? Math.round(total / installments) : total;
+    paymentMethod === "mercadopago" && installments > 1 ? Math.round(total / installments) : total;
 
   const listSubtotal = input.listSubtotal ?? subtotal;
 

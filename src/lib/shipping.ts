@@ -12,6 +12,23 @@ export type ShippingOption = {
   badge?: string;
 };
 
+/**
+ * Zonas de envío, en **pesos enteros** (misma escala que `products.price`).
+ *
+ * PENDIENTE DE CONFIRMAR CON EL DUEÑO — estos números NO son del sitio original.
+ *
+ * Intenté leerlos del checkout real de WooCommerce y no se puede: el sitio
+ * original calcula el envío con un plugin de Andreani y muestra una tarifa que
+ * no cambia con el destino. Medí 11 códigos postales distintos (Córdoba Capital,
+ * CABA, Rosario, Mendoza, Mar del Plata, Río Gallegos) y todos dieron lo mismo:
+ * $18.264 estándar / $18.044 sucursal. Además, la captura del propio cliente
+ * taken antes mostraba $10.850 para Comodoro Rivadavia, o sea que el número se
+ * actualiza sin aviso.
+ *
+ * O sea: la tabla real de Andreani es por PESO y única, no por zona. La de acá
+ * es una aproximación razonable para mostrar el flujo, y hay que reemplazarla
+ * con la tarifa del dueño antes de cobrar. Todo queda en este archivo.
+ */
 const ZONES: { name: string; test: (zip: string) => boolean; cost: number; min: number; max: number }[] = [
   { name: "Córdoba Capital", test: (z) => /^50[0-1]\d$/.test(z), cost: 4_900, min: 1, max: 2 },
   { name: "Interior de Córdoba", test: (z) => /^5\d{3}$/.test(z), cost: 6_900, min: 2, max: 3 },
@@ -51,36 +68,25 @@ export function shippingOptions(zip: string, subtotal: number): ShippingOption[]
   const freeStandard = subtotal >= FREE_SHIPPING_THRESHOLD;
   options.push({
     id: "standard",
-    label: `Envío a domicilio · ${zone.name}`,
-    description: "Correo Argentino / Andreani con seguimiento online",
+    label: `Andreani (estándar) · ${zone.name}`,
+    description: "Envío a domicilio con seguimiento online",
     eta: etaLabel(zone.min, zone.max),
     cost: freeStandard ? 0 : zone.cost,
     free: freeStandard,
     badge: freeStandard ? "Envío gratis" : undefined,
   });
 
-  const isCordobaCity = /^50[0-1]\d$/.test(zone.zip);
-  if (isCordobaCity) {
-    options.push({
-      id: "express",
-      label: "Moto express en el día",
-      description: "Cadetería propia dentro de Córdoba Capital",
-      eta: "Hoy mismo si comprás antes de las 16 hs",
-      cost: 7_900,
-      free: false,
-      badge: "Más rápido",
-    });
-  } else {
-    options.push({
-      id: "express",
-      label: "Envío express 24/48 hs",
-      description: "Andreani prioritario puerta a puerta",
-      eta: etaLabel(1, 2),
-      cost: Math.round(zone.cost * 1.7),
-      free: false,
-      badge: "Más rápido",
-    });
-  }
+  // El original ofrece exactamente dos servicios de Andreani: "estándar" a
+  // domicilio y "sucursal" (retiro en la sucursal del correo). Antes el segundo
+  // era una moto propia en Córdoba, que el original no tiene.
+  options.push({
+    id: "express",
+    label: "Andreani (sucursal)",
+    description: "Retirás en la sucursal de Andreani más cercana",
+    eta: etaLabel(zone.min, zone.max + 1),
+    cost: freeStandard ? 0 : Math.round(zone.cost * 0.95),
+    free: freeStandard,
+  });
 
   return options;
 }

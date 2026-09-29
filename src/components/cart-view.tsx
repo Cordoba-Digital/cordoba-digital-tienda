@@ -230,7 +230,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
               href="/checkout"
               className="block w-full rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-3.5 text-center text-sm font-extrabold text-white shadow-lg shadow-brand-600/25 transition hover:from-brand-700 hover:to-brand-600"
             >
-              Continuar con la compra →
+              Ir a finalizar la compra →
             </Link>
             <Link
               href="/productos"

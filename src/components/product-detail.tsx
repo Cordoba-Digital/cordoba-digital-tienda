@@ -190,25 +190,22 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         <p className="text-xs font-semibold text-rose-600">Sin stock — consultanos por reposición</p>
       )}
 
+      {/* Un solo botón, como en el sitio original: "Comprar" suma el producto y
+          lleva al carrito. Antes había un "Comprar ahora" naranja y gigante que
+          saltaba directo al checkout, lo que hacía creer que la compra ya venía
+          decidida y además escondía el medio de pago detrás de un wizard de 3
+          pasos. El original va al carrito y ahí se elige cómo pagar. */}
       <div className="space-y-2">
         <button
           type="button"
           disabled={product.stock === 0}
           onClick={() => {
             addItem(payload, quantity, { silent: true, open: false });
-            router.push("/checkout");
+            router.push("/carrito");
           }}
           className="w-full rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-3.5 text-sm font-extrabold text-white shadow-lg shadow-brand-600/25 transition hover:from-brand-700 hover:to-brand-600 disabled:opacity-40"
         >
-          Comprar ahora
-        </button>
-        <button
-          type="button"
-          disabled={product.stock === 0}
-          onClick={() => addItem(payload, quantity)}
-          className="w-full rounded-xl border border-ink-200 bg-surface px-4 py-3 text-sm font-bold text-ink-800 transition hover:border-brand-300 hover:text-brand-700 disabled:opacity-40"
-        >
-          Agregar al carrito
+          Comprar
         </button>
         <div className="flex gap-2">
           <button
@@ -285,7 +282,7 @@ export function MobileBuyBar({ product }: { product: BuyBoxProduct }) {
             disabled={product.stock === 0}
             onClick={() => {
               addItem(payload, 1, { silent: true, open: false });
-              router.push("/checkout");
+              router.push("/carrito");
             }}
             className="rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-5 py-3 text-sm font-extrabold text-white disabled:opacity-40"
           >
