@@ -76,7 +76,14 @@ export const products = pgTable(
     badge: text("badge"),
     featured: boolean("featured").notNull().default(false),
     freeShipping: boolean("free_shipping").notNull().default(false),
-    warrantyMonths: integer("warranty_months").notNull().default(12),
+    /**
+     * Garantía legal en meses. La API pública de WooCommerce NO expone la
+     * garantía, así que este valor no viene del sitio original: es el plazo que
+     * dice la política de garantía de Córdoba Digital ("garantía legal de seis
+     * (6) meses a partir de la entrega", Ley 24.240). Antes estaba en 12, que
+     * no figuraba en ningún lado.
+     */
+    warrantyMonths: integer("warranty_months").notNull().default(6),
     weight: text("weight"),
     dimensions: text("dimensions"),
     seoTitle: text("seo_title"),

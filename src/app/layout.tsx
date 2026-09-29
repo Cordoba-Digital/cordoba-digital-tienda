@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s · Córdoba Digital",
   },
   description:
-    "Celulares liberados, notebooks, cámaras, drones, consolas y más. 15% OFF con transferencia, hasta 6 cuotas sin interés, envío gratis desde $250.000 y retiro en Córdoba Capital.",
+    "Celulares liberados, notebooks, cámaras, drones, consolas y más. Envío gratis desde $250.000, hasta 6 cuotas sin interés y retiro en Córdoba Capital.",
   keywords: [
     "comprar celulares Córdoba",
     "notebooks Córdoba",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Córdoba Digital",
     title: "Córdoba Digital · Tecnología con garantía oficial",
     description:
-      "La tienda de tecnología de Córdoba: envíos a todo el país, 15% OFF con transferencia y soporte post-venta real.",
+      "La tienda de tecnología de Córdoba: envíos a todo el país y soporte post-venta real.",
     images: [{ url: "/images/logo.png", alt: "Córdoba Digital" }],
   },
   icons: {

@@ -7,7 +7,7 @@ import { FreeShippingBar, QuantityStepper } from "@/components/cart-drawer";
 import { ProductCard } from "@/components/product-card";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
-import { money, transferPrice } from "@/lib/format";
+import { money } from "@/lib/format";
 import { readCoupon, writeCoupon } from "@/lib/coupon-storage";
 import { couponDiscountFor, type CouponInfo } from "@/lib/pricing";
 import type { ProductView } from "@/lib/product-view";
@@ -223,9 +223,6 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
               <span className="text-sm font-semibold text-ink-600">Total estimado</span>
               <span className="text-2xl font-black text-ink-900">{money(estimatedTotal)}</span>
             </div>
-            <p className="rounded-xl bg-emerald-50 px-3 py-2.5 text-xs font-semibold text-emerald-700">
-              {money(transferPrice(estimatedTotal))} pagando con transferencia o USDT (15% OFF)
-            </p>
             <Link
               href="/checkout"
               className="block w-full rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-3.5 text-center text-sm font-extrabold text-white shadow-lg shadow-brand-600/25 transition hover:from-brand-700 hover:to-brand-600"

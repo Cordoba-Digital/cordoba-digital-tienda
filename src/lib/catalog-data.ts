@@ -94,7 +94,7 @@ export const seedProducts: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "El rey de la relación precio/calidad: AMOLED 120Hz y 200MP.",
     description:
-      "Redmi Note 14 Pro combina una pantalla AMOLED curva de 6.67\" con 120Hz, cámara principal de 200MP con OIS y batería de 5500mAh con carga turbo de 67W. Versión global liberada, con garantía oficial de 12 meses y actualización a HyperOS.",
+      "Redmi Note 14 Pro combina una pantalla AMOLED curva de 6.67\" con 120Hz, cámara principal de 200MP con OIS y batería de 5500mAh con carga turbo de 67W. Versión global liberada, con garantía legal de 6 meses y actualización a HyperOS.",
     price: 649_900_00,
     compareAtPrice: 789_900_00,
     stock: 23,
@@ -986,41 +986,21 @@ export const seedCoupons = [
     code: "CORDOBA15",
     kind: "percent",
     value: 15,
-    minSubtotal: 500_000_00,
+    minSubtotal: 500_000,
     description: "15% OFF en compras superiores a $500.000",
     active: false,
   },
   {
     code: "TECHO25",
     kind: "fixed",
-    value: 25_000_00,
-    minSubtotal: 150_000_00,
+    value: 25_000,
+    minSubtotal: 150_000,
     description: "$25.000 de descuento en compras desde $150.000",
     active: false,
   },
 ];
 
-const reviewTemplates = [
-  { author: "Martín G.", rating: 5, title: "Todo perfecto", body: "Compré el jueves y el lunes ya lo tenía en casa. Producto original, factura A y muy buena atención por WhatsApp." },
-  { author: "Lucía P.", rating: 5, title: "Súper recomendable", body: "Es la segunda vez que compro en Córdoba Digital. Retiré por el local de 27 de Abril, me lo probaron ahí mismo." },
-  { author: "Federico R.", rating: 4, title: "Muy bueno", body: "Cumple con lo que promete. Le saco una estrella porque tardó un día más de lo estimado, pero avisaron por mail." },
-  { author: "Carolina M.", rating: 5, title: "Excelente relación precio calidad", body: "Pagué por transferencia y me hicieron el 15% de descuento. Llegó embalado impecable a Villa María." },
-  { author: "Diego S.", rating: 5, title: "Atención de 10", body: "Me asesoraron para elegir el modelo correcto según lo que necesitaba. Se nota que saben del tema." },
-  { author: "Vanina T.", rating: 4, title: "Contenta con la compra", body: "Buen producto y buen precio. El seguimiento del envío funcionó bárbaro." },
-];
-
-export function reviewsForProduct(slug: string, count: number) {
-  const picks = Math.max(2, Math.min(4, count % 5));
-  const start = slug.charCodeAt(0) % reviewTemplates.length;
-  return Array.from({ length: picks }, (_, i) => {
-    const template = reviewTemplates[(start + i) % reviewTemplates.length];
-    return {
-      productSlug: slug,
-      author: template.author,
-      rating: template.rating,
-      title: template.title,
-      body: template.body,
-      verified: true,
-    };
-  });
-}
+// NO hay plantillas de reseñas. Existía un `reviewTemplates` con seis clientes
+// inventados ("Martín G.", "Lucía P.", …) que `reviewsForProduct()` repartía
+// entre los productos y guardaba con `verified: true`. Llenó la base con 528
+// testimonios falsos, visibles en la tienda. Ver `src/lib/seed.ts`.

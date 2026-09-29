@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Pill, Stars } from "@/components/ui";
-import { discountPercent, installmentValue, money, transferPrice } from "@/lib/format";
+import { discountPercent, installmentValue, money } from "@/lib/format";
 import type { ProductView } from "@/lib/product-view";
 
 export function ProductCard({ product }: { product: ProductView }) {
@@ -111,9 +111,6 @@ export function ProductCard({ product }: { product: ProductView }) {
           </div>
           <p className="mt-1 text-[11px] text-ink-500">
             6 cuotas de {money(installmentValue(product.price, 6))}
-          </p>
-          <p className="text-[11px] font-semibold text-emerald-700">
-            {money(transferPrice(product.price))} con transferencia
           </p>
         </div>
 

@@ -443,7 +443,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "Cámaras Leica, AMOLED 144Hz y 512GB a precio Xiaomi.",
     description:
-      "El Xiaomi 17T 5G trae óptica co-diseñada con Leica, pantalla CrystalRes AMOLED de 6.67\" a 144Hz, 12GB de RAM, 512GB de almacenamiento y carga HyperCharge de 67W. Versión global liberada con garantía oficial de 12 meses.",
+      "El Xiaomi 17T 5G trae óptica co-diseñada con Leica, pantalla CrystalRes AMOLED de 6.67\" a 144Hz, 12GB de RAM, 512GB de almacenamiento y carga HyperCharge de 67W. Versión global liberada con garantía legal de 6 meses.",
     price: 949_900_00,
     compareAtPrice: 1_119_000_00,
     stock: 11,
@@ -474,7 +474,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "1TB, Leica y 120W HyperCharge: el 17T más extremo.",
     description:
-      "El Xiaomi 17T Pro con 1TB de almacenamiento y 12GB de RAM es para los que no borran nada: cámaras Leica de 50MP, AMOLED de 6.67\" a 144Hz y carga de 120W que completa la batería en 20 minutos. Versión global liberada con garantía oficial de 12 meses.",
+      "El Xiaomi 17T Pro con 1TB de almacenamiento y 12GB de RAM es para los que no borran nada: cámaras Leica de 50MP, AMOLED de 6.67\" a 144Hz y carga de 120W que completa la batería en 20 minutos. Versión global liberada con garantía legal de 6 meses.",
     price: 1_299_000_00,
     compareAtPrice: 1_529_000_00,
     stock: 8,
@@ -505,7 +505,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "El 17T Pro en negro, con Leica y 512GB.",
     description:
-      "Xiaomi 17T Pro en color negro con 12GB de RAM y 512GB de almacenamiento. Óptica Leica, pantalla AMOLED de 6.67\" a 144Hz y carga HyperCharge de 120W. Versión global liberada con garantía oficial de 12 meses.",
+      "Xiaomi 17T Pro en color negro con 12GB de RAM y 512GB de almacenamiento. Óptica Leica, pantalla AMOLED de 6.67\" a 144Hz y carga HyperCharge de 120W. Versión global liberada con garantía legal de 6 meses.",
     price: 1_149_000_00,
     compareAtPrice: 1_349_000_00,
     stock: 9,
@@ -536,7 +536,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "El Poco más bestia: Snapdragon 8 Elite y 90W.",
     description:
-      "El Poco F9 Ultra 5G es potencia pura: Snapdragon 8 Elite, 12GB de RAM, 256GB de almacenamiento, AMOLED de 6.67\" a 120Hz y carga de 90W. El favorito de los gamers por su precio. Versión global liberada con garantía oficial de 12 meses.",
+      "El Poco F9 Ultra 5G es potencia pura: Snapdragon 8 Elite, 12GB de RAM, 256GB de almacenamiento, AMOLED de 6.67\" a 120Hz y carga de 90W. El favorito de los gamers por su precio. Versión global liberada con garantía legal de 6 meses.",
     price: 899_900_00,
     compareAtPrice: 1_059_000_00,
     stock: 13,
@@ -567,7 +567,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "Entrada rendidor con 108MP y batería de 5200mAh.",
     description:
-      "El Redmi 17 trae cámara de 108MP, pantalla de 6.7\" a 120Hz, 128GB de almacenamiento con 6GB de RAM y batería de 5200mAh con carga de 33W. Mucho equipo por poca plata. Versión global liberada con garantía oficial de 12 meses.",
+      "El Redmi 17 trae cámara de 108MP, pantalla de 6.7\" a 120Hz, 128GB de almacenamiento con 6GB de RAM y batería de 5200mAh con carga de 33W. Mucho equipo por poca plata. Versión global liberada con garantía legal de 6 meses.",
     price: 299_900_00,
     compareAtPrice: 359_900_00,
     stock: 30,
@@ -598,7 +598,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "El heredero del rey: AMOLED 120Hz y 200MP con OIS.",
     description:
-      "Redmi Note 17 Pro 5G con pantalla AMOLED de 6.67\" a 120Hz, cámara de 200MP con OIS, 256GB de almacenamiento, 8GB de RAM y carga turbo de 90W. La relación precio/calidad que lo hizo famoso, renovada. Versión global liberada con garantía oficial de 12 meses.",
+      "Redmi Note 17 Pro 5G con pantalla AMOLED de 6.67\" a 120Hz, cámara de 200MP con OIS, 256GB de almacenamiento, 8GB de RAM y carga turbo de 90W. La relación precio/calidad que lo hizo famoso, renovada. Versión global liberada con garantía legal de 6 meses.",
     price: 599_900_00,
     compareAtPrice: 709_900_00,
     stock: 24,
@@ -629,7 +629,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "Pro Max con AMOLED curvo y carga de 120W.",
     description:
-      "El Redmi Note 17 Pro Max 5G sube la apuesta: pantalla AMOLED curva de 6.67\" a 144Hz, cámara de 200MP con OIS, 256GB con 8GB de RAM y carga HyperCharge de 120W. Versión global liberada con garantía oficial de 12 meses.",
+      "El Redmi Note 17 Pro Max 5G sube la apuesta: pantalla AMOLED curva de 6.67\" a 144Hz, cámara de 200MP con OIS, 256GB con 8GB de RAM y carga HyperCharge de 120W. Versión global liberada con garantía legal de 6 meses.",
     price: 699_900_00,
     compareAtPrice: 829_900_00,
     stock: 18,
@@ -660,7 +660,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "El Pro Max con 512GB para no borrar nada nunca más.",
     description:
-      "Redmi Note 17 Pro Max 5G con 512GB de almacenamiento y 8GB de RAM: AMOLED curvo a 144Hz, cámara de 200MP con OIS y carga de 120W. El gama media más completo del año. Versión global liberada con garantía oficial de 12 meses.",
+      "Redmi Note 17 Pro Max 5G con 512GB de almacenamiento y 8GB de RAM: AMOLED curvo a 144Hz, cámara de 200MP con OIS y carga de 120W. El gama media más completo del año. Versión global liberada con garantía legal de 6 meses.",
     price: 749_900_00,
     compareAtPrice: 889_900_00,
     stock: 15,
@@ -691,7 +691,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "5G, AMOLED 120Hz y 108MP al mejor precio.",
     description:
-      "El Redmi Note 14 5G trae pantalla AMOLED de 6.67\" a 120Hz, cámara de 108MP, 256GB con 8GB de RAM y batería de 5110mAh con carga de 45W. Un clásico que rinde en todo. Versión global liberada con garantía oficial de 12 meses.",
+      "El Redmi Note 14 5G trae pantalla AMOLED de 6.67\" a 120Hz, cámara de 108MP, 256GB con 8GB de RAM y batería de 5110mAh con carga de 45W. Un clásico que rinde en todo. Versión global liberada con garantía legal de 6 meses.",
     price: 449_900_00,
     compareAtPrice: 529_900_00,
     stock: 26,
@@ -722,7 +722,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "AMOLED 120Hz y 108MP en el Note más accesible.",
     description:
-      "El Redmi Note 17 con 128GB y 6GB de RAM trae pantalla AMOLED de 6.67\" a 120Hz, cámara de 108MP y batería de 5500mAh con carga de 33W. Ideal para todos los días. Versión global liberada con garantía oficial de 12 meses.",
+      "El Redmi Note 17 con 128GB y 6GB de RAM trae pantalla AMOLED de 6.67\" a 120Hz, cámara de 108MP y batería de 5500mAh con carga de 33W. Ideal para todos los días. Versión global liberada con garantía legal de 6 meses.",
     price: 379_900_00,
     compareAtPrice: 449_900_00,
     stock: 28,
@@ -753,7 +753,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "El Note 17 con 5G, 256GB y 108MP.",
     description:
-      "Redmi Note 17 5G con 256GB de almacenamiento y 8GB de RAM: AMOLED de 6.67\" a 120Hz, cámara de 108MP, conectividad 5G y batería de 5500mAh. Versión global liberada con garantía oficial de 12 meses.",
+      "Redmi Note 17 5G con 256GB de almacenamiento y 8GB de RAM: AMOLED de 6.67\" a 120Hz, cámara de 108MP, conectividad 5G y batería de 5500mAh. Versión global liberada con garantía legal de 6 meses.",
     price: 429_900_00,
     compareAtPrice: 509_900_00,
     stock: 26,
@@ -784,7 +784,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "Batería gigante de 6300mAh y 50MP a precio entrada.",
     description:
-      "El Realme C71 trae batería de 6300mAh para dos días de uso, pantalla de 6.7\" a 120Hz, cámara de 50MP con IA y carga rápida de 45W. Diseño militar resistente a caídas. Equipo nuevo, liberado y con garantía oficial de 12 meses.",
+      "El Realme C71 trae batería de 6300mAh para dos días de uso, pantalla de 6.7\" a 120Hz, cámara de 50MP con IA y carga rápida de 45W. Diseño militar resistente a caídas. Equipo nuevo, liberado y con garantía legal de 6 meses.",
     price: 249_900_00,
     compareAtPrice: 299_900_00,
     stock: 32,
@@ -815,7 +815,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "Blindado IP69 con batería de 6000mAh y 50MP.",
     description:
-      "El Realme C75x es un tanque: resistencia IP69 al agua y polvo, certificación militar, batería de 6000mAh, pantalla de 6.7\" a 120Hz y cámara Sony de 50MP. Equipo nuevo, liberado y con garantía oficial de 12 meses.",
+      "El Realme C75x es un tanque: resistencia IP69 al agua y polvo, certificación militar, batería de 6000mAh, pantalla de 6.7\" a 120Hz y cámara Sony de 50MP. Equipo nuevo, liberado y con garantía legal de 6 meses.",
     price: 319_900_00,
     compareAtPrice: 379_900_00,
     stock: 28,
@@ -846,7 +846,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "256GB, 7000mAh y AMOLED en la serie C más completa.",
     description:
-      "El Realme C85 trae 256GB de almacenamiento con 8GB de RAM, batería enorme de 7000mAh, pantalla AMOLED de 6.8\" a 120Hz y cámara de 50MP con IA. Resistencia IP69 y carga de 45W. Equipo nuevo, liberado y con garantía oficial de 12 meses.",
+      "El Realme C85 trae 256GB de almacenamiento con 8GB de RAM, batería enorme de 7000mAh, pantalla AMOLED de 6.8\" a 120Hz y cámara de 50MP con IA. Resistencia IP69 y carga de 45W. Equipo nuevo, liberado y con garantía legal de 6 meses.",
     price: 349_900_00,
     compareAtPrice: 419_900_00,
     stock: 27,
@@ -877,7 +877,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "celulares",
     shortDescription: "El Note rendidor: 120Hz, 50MP y 6000mAh.",
     description:
-      "El Realme Note 70 combina pantalla de 6.7\" a 120Hz, cámara de 50MP con IA, batería de 6000mAh y resistencia militar a caídas. Mucho equipo a precio accesible. Equipo nuevo, liberado y con garantía oficial de 12 meses.",
+      "El Realme Note 70 combina pantalla de 6.7\" a 120Hz, cámara de 50MP con IA, batería de 6000mAh y resistencia militar a caídas. Mucho equipo a precio accesible. Equipo nuevo, liberado y con garantía legal de 6 meses.",
     price: 289_900_00,
     compareAtPrice: 339_900_00,
     stock: 30,
@@ -908,7 +908,7 @@ export const newProductsA: SeedProduct[] = [
     categorySlug: "tv-hogar",
     shortDescription: "Tablet 2.5K de 11\" con 4 parlantes Dolby para estudiar y ver series.",
     description:
-      "La Redmi Pad 2 trae pantalla 2.5K de 11\" a 90Hz, 128GB de almacenamiento con 4GB de RAM ampliables por microSD, 4 parlantes con Dolby Atmos y batería de 9000mAh. Ideal para estudio y streaming. Versión global con garantía oficial de 12 meses.",
+      "La Redmi Pad 2 trae pantalla 2.5K de 11\" a 90Hz, 128GB de almacenamiento con 4GB de RAM ampliables por microSD, 4 parlantes con Dolby Atmos y batería de 9000mAh. Ideal para estudio y streaming. Versión global con garantía legal de 6 meses.",
     price: 399_900_00,
     compareAtPrice: 479_900_00,
     stock: 19,

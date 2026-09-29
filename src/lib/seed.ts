@@ -1,8 +1,8 @@
 import { sql } from "drizzle-orm";
 
 import { db } from "@/db";
-import { categories, coupons, products, reviews } from "@/db/schema";
-import { reviewsForProduct, seedCategories, seedCoupons, seedProducts } from "@/lib/catalog-data";
+import { categories, coupons, products } from "@/db/schema";
+import { seedCategories, seedCoupons, seedProducts } from "@/lib/catalog-data";
 
 let seeding: Promise<void> | null = null;
 
@@ -41,11 +41,11 @@ async function runSeed() {
     )
     .onConflictDoNothing();
 
-  const allReviews = seedProducts.flatMap((p) => reviewsForProduct(p.slug, p.reviewCount));
-  if (allReviews.length) {
-    await db.insert(reviews).values(allReviews);
-  }
-
+  // NO se siembran reseñas. Antes el seed generaba reseñas de clientes con
+  // nombre y apellido inventados y `verified: true`, y llenó la base con 528
+  // testimonios falsos. Publicar reseñas fabricadas en la tienda de un negocio
+  // real es publicidad engañosa (Ley de Defensa del Consumidor, art. 37). Las
+  // reseñas vienen de Google, vía Places.
   await db.insert(coupons).values(seedCoupons).onConflictDoNothing();
 }
 

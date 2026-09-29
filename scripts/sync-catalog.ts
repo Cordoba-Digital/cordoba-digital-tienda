@@ -12,8 +12,8 @@ import "dotenv/config";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 
-import { products, reviews } from "@/db/schema";
-import { reviewsForProduct, seedProducts } from "@/lib/catalog-data";
+import { products } from "@/db/schema";
+import { seedProducts } from "@/lib/catalog-data";
 
 async function main(): Promise<void> {
   const dryRun = process.argv.includes("--dry-run");
@@ -135,16 +135,10 @@ async function main(): Promise<void> {
   }
   console.log(`[sync-catalog] Productos: ${okProducts} ok, ${failProducts} errores.`);
 
-  // 3. Reviews solo para productos que aún no tienen (no duplicar las existentes).
-  const existing = await db.select({ productSlug: reviews.productSlug }).from(reviews);
-  const withReviews = new Set(existing.map((r) => r.productSlug));
-  const newReviews = seedProducts
-    .filter((p) => !withReviews.has(p.slug))
-    .flatMap((p) => reviewsForProduct(p.slug, p.reviewCount));
-  if (newReviews.length > 0) {
-    await db.insert(reviews).values(newReviews);
-  }
-  console.log(`[sync-catalog] Reviews agregadas: ${newReviews.length}.`);
+  // 3. Reseñas: no se siembran. Este bloque usaba `reviewsForProduct()`, que
+  // repartía seis reseñas de clientes inventados entre los productos y las
+  // guardaba con `verified: true`. Llenó la tienda de testimonios falsos.
+  // Las reseñas reales vienen de Google (Places) o las carga el cliente.
 
   await pool.end();
 }

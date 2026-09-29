@@ -1,4 +1,4 @@
-import { INSTALLMENT_PLANS, TRANSFER_DISCOUNT } from "@/lib/format";
+import { INSTALLMENT_PLANS } from "@/lib/format";
 
 /**
  * Medios de pago. Los tres primeros son exactamente los que ofrece el sitio
@@ -30,7 +30,6 @@ export const PAYMENT_METHODS: PaymentMethod[] = [
     short: "Transferencia bancaria",
     description: "Te enviamos el CBU o el alias al confirmar. Acreditación inmediata.",
     icon: "🏦",
-    perk: "15% OFF",
   },
   {
     id: "usdt",
@@ -45,7 +44,6 @@ export const PAYMENT_METHODS: PaymentMethod[] = [
     short: "Efectivo en el local",
     description: "Reservás online y pagás al retirar en 27 de Abril 259.",
     icon: "💵",
-    perk: "15% OFF",
   },
   {
     id: "mercadopago",
@@ -55,16 +53,6 @@ export const PAYMENT_METHODS: PaymentMethod[] = [
     icon: "💠",
   },
 ];
-
-/**
- * Métodos que llevan el descuento del 15%.
- *
- * OJO: ese 15% NO existe en el sitio original. Al leer su checkout, el total da
- * exactamente igual al subtotal, sin línea de descuento. Está agrupado acá para
- * que sea un solo lugar que tocar si el cliente no lo quiere. Ver
- * `docs/PLAN-CERRADO.md`.
- */
-export const DISCOUNTED_PAYMENTS: PaymentMethodId[] = ["transferencia", "efectivo"];
 
 export type CouponInfo = {
   code: string;
@@ -103,12 +91,11 @@ export function computeTotals(input: {
   const couponDiscount = couponDiscountFor(subtotal, coupon);
   const afterCoupon = Math.max(0, subtotal - couponDiscount);
 
+  // Ningún medio de pago cambia el total. El checkout del sitio original muestra
+  // subtotal = total, sin descuento por transferencia ni por efectivo: el que
+  // quiera el precio del listado, paga el precio del listado.
   let paymentAdjustment = 0;
-  if (DISCOUNTED_PAYMENTS.includes(paymentMethod)) {
-    paymentAdjustment = -Math.round(afterCoupon * TRANSFER_DISCOUNT);
-  }
-
-  let total = afterCoupon + paymentAdjustment + shippingCost;
+  let total = afterCoupon + shippingCost;
 
   // Las cuotas solo aplican a la tarjeta, o sea Mercado Pago. Las financia el
   // gateway, no nosotros: acá solo se refleja el efecto en el total para que lo
@@ -132,7 +119,7 @@ export function computeTotals(input: {
     shippingCost,
     total,
     installmentAmount,
-    savings: Math.max(0, listSubtotal - subtotal) + couponDiscount + Math.max(0, -paymentAdjustment),
+    savings: Math.max(0, listSubtotal - subtotal) + couponDiscount,
   };
 }
 

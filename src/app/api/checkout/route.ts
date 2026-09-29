@@ -2,7 +2,7 @@ import { eq, inArray, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orderItems, orders, products, type ShippingAddress } from "@/db/schema";
-import { computeTotals, DISCOUNTED_PAYMENTS, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
+import { computeTotals, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
 import { getCoupon } from "@/lib/queries";
 import { findShippingOption, normalizeZip, type DeliveryMethod } from "@/lib/shipping";
 
@@ -160,7 +160,9 @@ export async function POST(request: Request) {
     .insert(orders)
     .values({
       code,
-      status: DISCOUNTED_PAYMENTS.includes(paymentId) || paymentId === "usdt" ? "pendiente_pago" : "pago_confirmado",
+      // Mercado Pago cobra en línea, así que el pago ya está acreditado. Los
+      // demás quedan pendientes hasta que el buyer transfiera o pague en el local.
+      status: paymentId === "mercadopago" ? "pago_confirmado" : "pendiente_pago",
       customerName: `${firstName} ${lastName}`,
       email,
       phone,

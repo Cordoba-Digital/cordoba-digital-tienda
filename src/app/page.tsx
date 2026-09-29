@@ -15,22 +15,22 @@ export const dynamic = "force-dynamic";
 const TRUST = [
   { icon: "🚚", title: "Envíos a todo el país", text: `Gratis desde ${money(FREE_SHIPPING_THRESHOLD)} · seguimiento online` },
   { icon: "🔒", title: "Pagos 100% seguros", text: "Tarjetas, Mercado Pago, transferencia y USDT" },
-  { icon: "🛡️", title: "Compra garantizada", text: "12 meses de garantía oficial en todos los productos" },
+  { icon: "🛡️", title: "Compra garantizada", text: "Garantía legal de 6 meses y soporte post-venta propio" },
   { icon: "🎧", title: "Post-venta real", text: "Te atendemos por WhatsApp, mail y en el local" },
 ];
 
 const FAQ = [
   {
     q: "¿Cuánto tarda el envío?",
-    a: "Entre 24 y 72 horas hábiles según tu zona. En Córdoba Capital tenemos moto express en el día y retiro en el local en 2 horas.",
+    a: "Despachamos a todo el país con Andreani. Podés elegir entrega a domicilio o retiro en la sucursal más cercana.",
   },
   {
     q: "¿Los productos son nuevos y con garantía?",
-    a: "Sí. Todos los productos son nuevos, sellados y con 12 meses de garantía oficial. Emitimos factura A o B.",
+    a: "Sí. Todos los productos son nuevos y cuentan con 6 meses de garantía legal a partir de la entrega (Ley 24.240), con servicio técnico propio en el local.",
   },
   {
-    q: "¿Qué descuento tengo pagando por transferencia?",
-    a: "15% OFF sobre el precio de lista, tanto en transferencia bancaria como en USDT. El descuento se calcula automáticamente en el checkout.",
+    q: "¿Qué medios de pago aceptan?",
+    a: "Transferencia bancaria, USDT por red TRC20, efectivo o transferencia en el local (retiro en 27 de Abril 259) y Mercado Pago.",
   },
   {
     q: "¿Puedo pagar en cuotas?",
@@ -134,8 +134,8 @@ export default async function HomePage() {
                 // Cifras reales: el catálogo viene de WooCommerce y el resto son
                 // datos del negocio. No inventamos "clientes felices" ni años.
                 { k: new Intl.NumberFormat("es-AR").format(productCount), v: "productos" },
-                { k: "12 meses", v: "de garantía" },
-                { k: "24-72 h", v: "de entrega" },
+                { k: "6 meses", v: "de garantía legal" },
+                { k: "Todo el país", v: "de envíos" },
                 ...(ratingValue && reviewCount
                   ? [{ k: `${ratingValue}★`, v: "en Google" }]
                   : []),
@@ -187,8 +187,8 @@ export default async function HomePage() {
             ) : null}
 
             <div className="absolute -right-2 top-6 hidden animate-float-slow rounded-2xl border border-white/15 bg-deep/80 px-4 py-3 text-white backdrop-blur md:block">
-              <p className="text-[11px] uppercase tracking-wide text-ink-300">Pagando con transferencia</p>
-              <p className="text-xl font-black text-neon-400">15% OFF</p>
+              <p className="text-[11px] uppercase tracking-wide text-ink-300">Envío a todo el país</p>
+              <p className="text-xl font-black text-neon-400">Andreani</p>
             </div>
           </div>
         </div>
@@ -255,8 +255,8 @@ export default async function HomePage() {
           {[
             {
               icon: "🏦",
-              title: "15% OFF con transferencia o USDT",
-              text: "El descuento se aplica solo al elegir el medio de pago. Sin letra chica.",
+              title: "Transferencia, USDT o efectivo en el local",
+              text: "Te mostramos el CBU o la wallet al confirmar. También podés pagar al retirar.",
               tone: "from-emerald-500 to-emerald-400",
             },
             {
@@ -267,7 +267,7 @@ export default async function HomePage() {
             },
             {
               icon: "🏬",
-              title: "Retiro en 2 horas en el centro",
+              title: "Retiro en el local",
               text: "Comprá online y retirá en 27 de Abril 259. Probamos el producto con vos.",
               tone: "from-ink-900 to-ink-700",
             },
@@ -327,7 +327,7 @@ export default async function HomePage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span aria-hidden>🕑</span>
-                    <span>Lun a Vie 14:00 a 18:30 · Sáb 11:00 a 14:00</span>
+                    <span>Lun a Vie 14:00 a 18:30 · Sáb 12:00 a 14:30</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span aria-hidden>📞</span>
@@ -351,7 +351,7 @@ export default async function HomePage() {
                 "Probamos el equipo con vos antes de que te lo lleves",
                 "Servicio técnico y gestión de garantía en Córdoba",
                 "Asesoramiento para elegir el modelo correcto",
-                "Facturación A/B para empresas y monotributistas",
+                "Emitimos factura o comprobante de compra",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-emerald-100 text-[11px] font-bold text-emerald-700">
@@ -403,8 +403,8 @@ export default async function HomePage() {
             {[
               {
                 icon: "🛡️",
-                title: "Garantía oficial",
-                text: "Todos los productos con garantía del fabricante y post-venta propio en Córdoba.",
+                title: "Garantía legal",
+                text: "6 meses de garantía legal (Ley 24.240) y servicio técnico propio en el local.",
               },
               {
                 icon: "🚚",

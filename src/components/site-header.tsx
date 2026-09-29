@@ -22,11 +22,11 @@ type Suggestion = {
 };
 
 const ANNOUNCEMENTS = [
-  "🔥 15% OFF pagando con transferencia o USDT",
+  "🏦 Transferencia bancaria, USDT o efectivo en el local",
   "🚚 Envío gratis a todo el país en compras desde $250.000",
   "💳 Hasta 6 cuotas sin interés con todas las tarjetas",
-  "🏬 Retiro en 2 hs en 27 de Abril 259, Córdoba Capital",
-  "🛡ï¸ 12 meses de garantía oficial + soporte post-venta local",
+  "🏬 Retiro en 27 de Abril 259, Córdoba Capital",
+  "🛡️ 6 meses de garantía legal + soporte post-venta local",
 ];
 
 export function SiteHeader({ categories }: { categories: CategoryLink[] }) {

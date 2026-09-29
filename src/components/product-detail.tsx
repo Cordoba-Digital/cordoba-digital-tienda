@@ -13,7 +13,6 @@ import {
   discountPercent,
   installmentValue,
   money,
-  transferPrice,
 } from "@/lib/format";
 import type { ShippingOption } from "@/lib/shipping";
 
@@ -148,10 +147,6 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
           </div>
         ) : null}
         <p className="text-3xl font-black tracking-tight text-ink-900">{money(product.price)}</p>
-        <div className="mt-2 rounded-xl bg-emerald-50 px-3 py-2.5">
-          <p className="text-sm font-extrabold text-emerald-700">{money(transferPrice(product.price))}</p>
-          <p className="text-[11px] font-semibold text-emerald-600">Pagando con transferencia o USDT (15% OFF)</p>
-        </div>
       </div>
 
       <div className="rounded-xl border border-ink-100 p-3">
@@ -228,14 +223,16 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         </div>
       </div>
 
-      {/* Avisos del local. El monto de envío sale de la misma constante que usa
-          el checkout, así que si algún día suben el envío gratis no queda
-          desactualizado el texto. */}
+      {/* Avisos del local. Cada dato sale de la política de garantía o de los
+          datos estructurados del sitio original. Se sacó "10 días para cambios
+          sin cargo" y "retiro en 2 hs" porque no figuran en ningún lado del
+          sitio viejo. El monto de envío sale de la misma constante que usa el
+          checkout, así que si suben el envío gratis no queda desactualizado. */}
       <ul className="space-y-2 border-t border-ink-100 pt-4 text-xs text-ink-600">
-        <li className="flex items-center gap-2">🛡️ {product.warrantyMonths} meses de garantía oficial</li>
-        <li className="flex items-center gap-2">🔄 10 días para cambios sin cargo</li>
-        <li className="flex items-center gap-2">🧾 Factura A / B</li>
-        <li className="flex items-center gap-2">🏬 Retiro en 2 hs en 27 de Abril 259</li>
+        <li className="flex items-center gap-2">🛡️ {product.warrantyMonths} meses de garantía legal</li>
+        <li className="flex items-center gap-2">🔧 Servicio técnico propio en el local</li>
+        <li className="flex items-center gap-2">🧾 Factura o comprobante de compra</li>
+        <li className="flex items-center gap-2">🏬 Retiro en 27 de Abril 259, Córdoba Capital</li>
         <li className="flex items-center gap-2">🚚 Envío gratis desde {money(FREE_SHIPPING_THRESHOLD)}</li>
       </ul>
       <p className="text-[10px] text-ink-300">SKU {product.sku}</p>
@@ -263,9 +260,6 @@ export function MobileBuyBar({ product }: { product: BuyBoxProduct }) {
       <div className="flex items-center gap-3">
         <div className="min-w-0">
           <p className="text-lg font-black leading-none text-ink-900">{money(product.price)}</p>
-          <p className="mt-0.5 text-[11px] font-semibold text-emerald-600">
-            {money(transferPrice(product.price))} con transferencia
-          </p>
         </div>
         <div className="ml-auto flex items-center gap-2">
           <button

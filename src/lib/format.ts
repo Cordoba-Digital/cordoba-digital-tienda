@@ -60,12 +60,9 @@ export function installmentTotal(totalCents: number, count: number): number {
   return Math.round(totalCents * plan.coefficient);
 }
 
-/** Cash / bank transfer / crypto discount. */
-export const TRANSFER_DISCOUNT = 0.15;
-
-export function transferPrice(price: number): number {
-  return Math.round(price * (1 - TRANSFER_DISCOUNT));
-}
+// No hay descuento por medio de pago. Existió un 15% para transferencia y
+// efectivo, pero el checkout del sitio original da subtotal igual al total, sin
+// línea de descuento. Se eliminó el 2026-09, después de leer el checkout real.
 
 /** Envío gratis a partir de $250.000, como dice el sitio. Pesos enteros. */
 export const FREE_SHIPPING_THRESHOLD = 250_000;

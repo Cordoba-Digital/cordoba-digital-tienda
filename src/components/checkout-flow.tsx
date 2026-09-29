@@ -185,7 +185,7 @@ export function CheckoutFlow() {
         id: "pickup" as DeliveryMethod,
         label: "Retiro en el local",
         description: "27 de Abril 259, Córdoba Capital",
-        eta: "Listo en 2 horas hábiles",
+        eta: "Listo en el horario de atención",
         cost: 0,
         free: true,
       } satisfies ShippingOption;
@@ -437,14 +437,14 @@ export function CheckoutFlow() {
                   }`}
                 >
                   <p className="text-sm font-extrabold text-ink-900">🏬 Retiro en el local</p>
-                  <p className="mt-1 text-xs text-emerald-600">Gratis · listo en 2 horas</p>
+                  <p className="mt-1 text-xs text-emerald-600">Gratis · 27 de Abril 259, Córdoba Capital</p>
                 </button>
               </div>
 
               {deliveryMethod === "pickup" ? (
                 <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-600">
                   <p className="font-bold text-ink-900">27 de Abril 259, Córdoba Capital</p>
-                  <p className="mt-1 text-xs">Lunes a viernes de 14:00 a 18:30 · Sábados de 11:00 a 14:00</p>
+                  <p className="mt-1 text-xs">Lunes a viernes de 14:00 a 18:30 · Sábados de 12:00 a 14:30</p>
                   <p className="mt-2 text-xs">
                     Te avisamos por WhatsApp cuando esté listo. Llevá tu DNI y el número de pedido.
                   </p>
@@ -616,13 +616,13 @@ export function CheckoutFlow() {
                   <dd>-{money(totals.couponDiscount)}</dd>
                 </div>
               ) : null}
-              {totals.paymentAdjustment !== 0 ? (
-                <div className={`flex justify-between ${totals.paymentAdjustment < 0 ? "text-emerald-600" : "text-ink-600"}`}>
-                  <dt>{totals.paymentAdjustment < 0 ? "Descuento por medio de pago" : "Interés de financiación"}</dt>
-                  <dd>
-                    {totals.paymentAdjustment < 0 ? "-" : "+"}
-                    {money(Math.abs(totals.paymentAdjustment))}
-                  </dd>
+              {/* Solo aparece con cuotas de Mercado Pago, que son las únicas que
+                  suman interés. Como ya no hay descuento por medio de pago, este
+                  valor nunca es negativo. */}
+              {totals.paymentAdjustment > 0 ? (
+                <div className="flex justify-between text-ink-600">
+                  <dt>Interés de financiación</dt>
+                  <dd>+{money(totals.paymentAdjustment)}</dd>
                 </div>
               ) : null}
               <div className="flex justify-between text-ink-600">
@@ -653,8 +653,8 @@ export function CheckoutFlow() {
 
             <ul className="space-y-1.5 border-t border-ink-100 pt-3 text-[11px] text-ink-500">
               <li>🔒 Pago seguro · datos cifrados</li>
-              <li>🛡ï¸ Garantía oficial y factura</li>
-              <li>🔄 10 días para cambios</li>
+              <li>🛡️ 6 meses de garantía legal</li>
+              <li>🔧 Servicio técnico propio en el local</li>
             </ul>
 
             {/* MEDIO DE PAGO: va debajo de los totales, igual que en el sitio original, para que la
@@ -729,11 +729,10 @@ export function CheckoutFlow() {
                 ) : null}
 
                 {payment === "transferencia" ? (
-                  <div className="rounded-xl bg-emerald-50 p-4 text-sm text-emerald-800">
-                    <p className="font-bold">¡Buena elección! Te ahorrás {money(Math.abs(totals.paymentAdjustment))}.</p>
+                  <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
+                    <p className="font-bold text-ink-900">Te enviamos el CBU o el alias para transferir.</p>
                     <p className="mt-1 text-xs">
-                      Al confirmar te mostramos el CBU / alias y la wallet USDT. Tenés 48 hs para transferir y el stock
-                      queda reservado.
+                      Tenés 48 hs para transferir y el stock queda reservado. Nos avisás cuando lo hagas y despachamos.
                     </p>
                   </div>
                 ) : null}

@@ -118,7 +118,7 @@ export function SiteFooter({
           <NewsletterForm />
           <div className="mt-6 space-y-1.5 text-sm text-ink-300">
             <p className="font-semibold text-white">Local: 27 de Abril 259, Córdoba</p>
-            <p>Lun a Vie 14:00 a 18:30 · Sáb 11:00 a 14:00</p>
+            <p>Lun a Vie 14:00 a 18:30 · Sáb 12:00 a 14:30</p>
             <a href="tel:+543516777774" className="block transition hover:text-neon-400">
               +54 351 677-7774
             </a>

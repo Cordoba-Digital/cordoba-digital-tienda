@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
-import { FREE_SHIPPING_THRESHOLD, money, transferPrice } from "@/lib/format";
+import { FREE_SHIPPING_THRESHOLD, money } from "@/lib/format";
 
 export function QuantityStepper({
   value,
@@ -170,9 +170,6 @@ export function CartDrawer() {
                 <span className="text-sm text-ink-500">Subtotal</span>
                 <span className="text-2xl font-extrabold text-ink-900">{money(subtotal)}</span>
               </div>
-              <p className="rounded-lg bg-emerald-50 px-3 py-2 text-xs font-semibold text-emerald-700">
-                Pagando con transferencia o USDT: {money(transferPrice(subtotal))} (15% OFF)
-              </p>
               <Link
                 href="/checkout"
                 onClick={closeCart}
@@ -197,7 +194,7 @@ export function CartDrawer() {
                 </button>
               </div>
               <p className="text-center text-[11px] text-ink-400">
-                🔒 Compra protegida · Garantía oficial · Factura A/B
+                🔒 Compra protegida · 6 meses de garantía legal
               </p>
             </footer>
           </>

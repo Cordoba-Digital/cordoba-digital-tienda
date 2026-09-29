@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { FREE_SHIPPING_THRESHOLD, money } from "@/lib/format";
+
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
@@ -9,6 +11,15 @@ export const metadata: Metadata = {
     "Plazos de envío, medios de pago, cuotas, garantía y devoluciones de Córdoba Digital. Todo claro antes de comprar.",
 };
 
+/**
+ * Contenido del centro de ayuda.
+ *
+ * Cada respuesta sale de un dato del sitio original: la política de garantía
+ * (`/politica-de-garantia/`), el checkout real y los datos estructurados de la
+ * home. Se sacaron las afirmaciones que no existían allá, entre ellas el 15% OFF
+ * por transferencia, la "moto express", el retiro en 2 horas, los 12 meses de
+ * garantía (son 6 por Ley 24.240) y los 10 días de devolución.
+ */
 const SECTIONS = [
   {
     id: "envios",
@@ -17,11 +28,11 @@ const SECTIONS = [
     items: [
       {
         q: "¿Cuánto tarda mi pedido?",
-        a: "Entre 24 y 72 horas hábiles según la zona. En Córdoba Capital ofrecemos moto express en el día (comprando antes de las 16 hs) y retiro en el local en 2 horas.",
+        a: "Despachamos a todo el país con Andreani. Podés elegir entrega a domicilio o retiro en la sucursal más cercana. El plazo exacto se calcula con tu código postal antes de pagar.",
       },
       {
         q: "¿Cuánto cuesta el envío?",
-        a: "Desde $4.900 en Córdoba Capital y hasta $13.900 en Patagonia. Es gratis en compras desde $250.000 con envío estándar. El costo exacto se calcula con tu código postal antes de pagar.",
+        a: `Es gratis en compras desde ${money(FREE_SHIPPING_THRESHOLD)}. Por debajo de ese monto, el costo depende de la zona y se calcula con tu código postal antes de pagar.`,
       },
       {
         q: "¿Puedo seguir mi pedido?",
@@ -29,7 +40,11 @@ const SECTIONS = [
       },
       {
         q: "¿Hacen envíos a todo el país?",
-        a: "Sí, a toda la Argentina excepto Tierra del Fuego, con Correo Argentino y Andreani.",
+        a: "Sí, a toda la Argentina. El envío lo hace Andreani y podés recibir en tu domicilio o retirar en la sucursal.",
+      },
+      {
+        q: "¿Puedo retirar en el local?",
+        a: "Sí, en 27 de Abril 259, Córdoba Capital. Lunes a viernes de 14:00 a 18:30 y sábados de 12:00 a 14:30.",
       },
     ],
   },
@@ -39,20 +54,20 @@ const SECTIONS = [
     title: "Medios de pago y cuotas",
     items: [
       {
-        q: "¿Qué descuento tengo por transferencia o USDT?",
-        a: "15% OFF sobre el precio de lista. Se aplica automáticamente al elegir el medio de pago en el checkout.",
+        q: "¿Qué medios de pago aceptan?",
+        a: "Transferencia bancaria, USDT por red TRC20, efectivo o transferencia en el local, y Mercado Pago. El precio es el mismo con todos los medios de pago.",
       },
       {
         q: "¿Cuántas cuotas puedo hacer?",
-        a: "Hasta 6 cuotas sin interés con Visa, Mastercard, Amex, Naranja X y Cabal. También 9 y 12 cuotas fijas con interés informado antes de confirmar.",
+        a: "Con Mercado Pago, hasta 6 cuotas sin interés y hasta 12 cuotas fijas. Ves el valor exacto de cada cuota antes de confirmar.",
       },
       {
         q: "¿Puedo pagar en efectivo?",
         a: "Sí, eligiendo retiro en el local de 27 de Abril 259. Reservamos el producto por 48 horas hábiles.",
       },
       {
-        q: "¿Emiten factura?",
-        a: "Siempre. Factura A o B según tu condición frente a AFIP. Por eso te pedimos DNI o CUIT en el checkout.",
+        q: "¿Cómo hago la transferencia?",
+        a: "Al confirmar el pedido te mostramos el CBU o el alias. Tenés 48 hs para transferir y el stock queda reservado.",
       },
     ],
   },
@@ -63,15 +78,23 @@ const SECTIONS = [
     items: [
       {
         q: "¿Qué garantía tienen los productos?",
-        a: "Todos los productos son nuevos y tienen 12 meses de garantía oficial (24 o 60 meses en algunos monitores y SSD). La gestionamos nosotros desde Córdoba.",
+        a: "De acuerdo con la Ley 24.240, todos nuestros productos nuevos cuentan con una garantía legal de seis (6) meses a partir de la entrega. En productos usados o reacondicionados, el plazo es de tres (3) meses.",
+      },
+      {
+        q: "¿Qué cubre la garantía?",
+        a: "Defectos de fabricación o fallas de funcionamiento de hardware que surjan bajo un uso normal y adecuado.",
+      },
+      {
+        q: "¿Qué NO cubre la garantía?",
+        a: "Daños por mal uso, golpes, contacto con líquidos, sobretensiones eléctricas o intervenciones de software no oficiales (flasheos o root).",
       },
       {
         q: "¿Qué hago si el producto falla?",
-        a: "Escribinos por WhatsApp con tu número de pedido. Coordinamos el retiro o la visita al local y gestionamos la reparación o el cambio.",
+        a: "Traelo directamente a nuestro local en 27 de Abril 259, Córdoba Capital. Nosotros gestionamos el diagnóstico y la reparación con el servicio técnico oficial o propio, según corresponda.",
       },
       {
-        q: "¿Ofrecen soporte para configurar el equipo?",
-        a: "Sí. Migramos tus datos, instalamos el sistema operativo y configuramos tu equipo sin cargo en el local.",
+        q: "¿Qué necesito para hacer valer la garantía?",
+        a: "Solo el comprobante de compra o la factura emitida por Córdoba Digital.",
       },
     ],
   },
@@ -81,16 +104,12 @@ const SECTIONS = [
     title: "Cambios y devoluciones",
     items: [
       {
-        q: "¿Puedo arrepentirme de la compra?",
-        a: "Sí. Según la Ley de Defensa del Consumidor tenés 10 días corridos desde la recepción para solicitar la devolución del importe.",
-      },
-      {
-        q: "¿Cómo se hace la devolución del dinero?",
-        a: "Por el mismo medio de pago utilizado. En transferencias devolvemos a tu CBU dentro de las 72 horas hábiles de recibido el producto.",
-      },
-      {
         q: "¿Qué pasa si el producto llega dañado?",
-        a: "Nos hacemos cargo del 100%: retiramos el producto sin costo y enviamos uno nuevo o devolvemos el dinero, lo que prefieras.",
+        a: "No tenés que hacer nada: la garantía cubre defectos de fabricación y fallas de hardware. Traelo al local y lo revisamos.",
+      },
+      {
+        q: "¿Puedo cambiar un producto?",
+        a: "Escribinos por WhatsApp con tu número de pedido. Coordinamos el retiro o la visita al local y vemos el caso con la garantía vigente.",
       },
     ],
   },
@@ -162,7 +181,7 @@ export default function HelpPage() {
               <p className="font-bold text-ink-900">Local: 27 de Abril 259</p>
               <p className="mt-1 text-xs">Córdoba Capital (CP 5000)</p>
               <p className="mt-2 text-xs">Lun a Vie 14:00 - 18:30</p>
-              <p className="text-xs">Sábados 11:00 - 14:00</p>
+              <p className="text-xs">Sábados 12:00 - 14:30</p>
             </div>
             <Link
               href="/seguimiento"
