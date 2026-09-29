@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { ActiveFilters, FiltersPanel, SortSelect } from "@/components/catalog-filters";
 import { ProductCard } from "@/components/product-card";
 import { money } from "@/lib/format";
+import { pageWindow } from "@/lib/page-window";
 import { toView } from "@/lib/product-view";
 import { getBrandFacets, getCategoryByPath, listProducts } from "@/lib/queries";
 
@@ -293,23 +294,25 @@ export default async function CategoryPage({
                   ← Anterior
                 </Link>
               ) : null}
-              {Array.from({ length: result.pages }, (_, i) => i + 1)
-                .filter((page) => page === 1 || page === result.pages || Math.abs(page - result.page) <= 2)
-                .map((page, i, arr) => (
-                  <span key={page} className="flex items-center gap-2">
-                    {i > 0 && arr[i - 1] !== page - 1 ? <span className="text-ink-300">…</span> : null}
-                    <Link
-                      href={pageHref(page)}
-                      className={`min-w-10 rounded-lg px-3.5 py-2 text-center text-sm font-bold transition ${
-                        page === result.page
-                          ? "bg-brand-600 text-white"
-                          : "border border-ink-200 bg-surface text-ink-700 hover:border-brand-300"
-                      }`}
-                    >
-                      {page}
-                    </Link>
+              {pageWindow(result.page, result.pages).map((page, i) =>
+                page === "gap" ? (
+                  <span key={`gap-${i}`} className="px-1 text-sm font-bold text-ink-300">
+                    …
                   </span>
-                ))}
+                ) : (
+                  <Link
+                    key={page}
+                    href={pageHref(page as number)}
+                    className={`min-w-10 rounded-lg px-3.5 py-2 text-center text-sm font-bold transition ${
+                      page === result.page
+                        ? "bg-brand-600 text-white"
+                        : "border border-ink-200 bg-surface text-ink-700 hover:border-brand-300"
+                    }`}
+                  >
+                    {page}
+                  </Link>
+                ),
+              )}
               {result.page < result.pages ? (
                 <Link
                   href={pageHref(result.page + 1)}

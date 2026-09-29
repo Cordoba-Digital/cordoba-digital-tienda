@@ -58,13 +58,29 @@ const EXPR = `(() => {
     });
     el = el.parentElement;
   }
+  // Si la página sigue desbordando, hay que señalar QUÉ elemento se sale, no
+  // solo cuánto. Se recorren todos y se listan los que pasan del viewport.
+  const culpables = [];
+  if (document.documentElement.scrollWidth > innerWidth + 2) {
+    for (const el of document.querySelectorAll("body *")) {
+      const r = el.getBoundingClientRect();
+      if (r.right > innerWidth + 2 || r.width > innerWidth + 2) {
+        culpables.push({
+          tag: el.tagName.toLowerCase(),
+          clase: (el.className || "").toString().slice(0, 80),
+          w: Math.round(r.width),
+          right: Math.round(r.right),
+        });
+      }
+    }
+  }
   return JSON.stringify(
     {
       viewport: innerWidth + "x" + innerHeight,
       docScrollW: document.documentElement.scrollWidth,
-      bodyScrollW: document.body.scrollWidth,
       gridTemplateColumns: gs ? gs.gridTemplateColumns : null,
       cadena: chain,
+      desborde: culpables.length ? culpables.slice(0, 8) : "ninguno",
       tarjetas: out,
     },
     null,

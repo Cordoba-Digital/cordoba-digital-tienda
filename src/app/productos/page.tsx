@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import { ActiveFilters, FiltersPanel, SortSelect } from "@/components/catalog-filters";
 import { ProductCard } from "@/components/product-card";
 import { money } from "@/lib/format";
+import { pageWindow } from "@/lib/page-window";
 import { toView } from "@/lib/product-view";
 import { getBrandFacets, getCategoryTree, listProducts } from "@/lib/queries";
 
@@ -178,19 +179,28 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
                   ← Anterior
                 </Link>
               ) : null}
-              {Array.from({ length: result.pages }, (_, i) => i + 1).map((page) => (
-                <Link
-                  key={page}
-                  href={buildPageHref(page)}
-                  className={`min-w-10 rounded-lg px-3.5 py-2 text-center text-sm font-bold transition ${
-                    page === result.page
-                      ? "bg-brand-600 text-white"
-                      : "border border-ink-200 bg-surface text-ink-700 hover:border-brand-300"
-                  }`}
-                >
-                  {page}
-                </Link>
-              ))}
+              {/* Con 2.588 productos son 108 páginas: listarlas todas empujaba la
+                  fila a ~2.000 px y desbordaba la página. Se muestra una ventana
+                  de 5 alrededor de la actual, con "…" a los lados. */}
+              {pageWindow(result.page, result.pages).map((page, i) =>
+                page === "gap" ? (
+                  <span key={`gap-${i}`} className="px-1 text-sm font-bold text-ink-400">
+                    …
+                  </span>
+                ) : (
+                  <Link
+                    key={page}
+                    href={buildPageHref(page as number)}
+                    className={`min-w-10 rounded-lg px-3.5 py-2 text-center text-sm font-bold transition ${
+                      page === result.page
+                        ? "bg-brand-600 text-white"
+                        : "border border-ink-200 bg-surface text-ink-700 hover:border-brand-300"
+                    }`}
+                  >
+                    {page}
+                  </Link>
+                ),
+              )}
               {result.page < result.pages ? (
                 <Link
                   href={buildPageHref(result.page + 1)}
