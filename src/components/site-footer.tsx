@@ -113,8 +113,7 @@ export function SiteFooter({
         <div>
           <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">Newsletter</h3>
           <p className="mb-3 text-sm text-ink-300">
-            Suscribite y recibí el cupón <strong className="text-neon-400">BIENVENIDO10</strong> con 10% OFF en tu
-            primera compra.
+            Suscribite y recibí los ingresos nuevos y las ofertas antes que nadie.
           </p>
           <NewsletterForm />
           <div className="mt-6 space-y-1.5 text-sm text-ink-300">

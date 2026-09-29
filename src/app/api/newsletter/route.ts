@@ -14,5 +14,8 @@ export async function POST(request: Request) {
   } catch {
     return Response.json({ ok: false }, { status: 500 });
   }
-  return Response.json({ ok: true, coupon: "BIENVENIDO10" });
+  // No se devuelve ningun premio: los cupones los carga el local desde su
+  // panel. Antes esta respuesta mandaba BIENVENIDO10, un codigo de demostracion
+  // que no existe en el negocio real.
+  return Response.json({ ok: true });
 }

@@ -487,10 +487,9 @@ export default async function HomePage() {
 
         <div className="mesh-dark flex flex-col justify-center rounded-3xl p-7 text-white">
           <Pill tone="dark" className="w-fit bg-white/10">Newsletter</Pill>
-          <h3 className="mt-3 text-2xl font-extrabold">10% OFF en tu primera compra</h3>
+          <h3 className="mt-3 text-2xl font-extrabold">Novedades y ofertas de Córdoba Digital</h3>
           <p className="mt-2 text-sm text-ink-200">
-            Dejanos tu mail y te enviamos el cupón <strong className="text-neon-400">BIENVENIDO10</strong> más los
-            ingresos y ofertas antes que nadie.
+            Dejanos tu mail y te avisamos los ingresos nuevos y las ofertas, antes que al resto.
           </p>
           <div className="mt-5">
             <NewsletterForm />

@@ -32,7 +32,7 @@ export function NewsletterForm({ variant = "dark" }: { variant?: "dark" | "light
           variant === "dark" ? "bg-emerald-500/15 text-emerald-300" : "bg-emerald-50 text-emerald-700"
         }`}
       >
-        ¡Listo! Usá el cupón <strong>BIENVENIDO10</strong> en tu primera compra.
+        ¡Listo! Te avisamos cuando haya ingresos nuevos y ofertas.
       </div>
     );
   }
@@ -58,7 +58,7 @@ export function NewsletterForm({ variant = "dark" }: { variant?: "dark" | "light
         disabled={state === "loading"}
         className="h-12 w-full whitespace-nowrap rounded-xl bg-gradient-to-r from-brand-500 to-neon-500 px-5 text-sm font-bold text-white transition hover:opacity-90 disabled:opacity-60"
       >
-        {state === "loading" ? "Enviando..." : "Quiero el cupón"}
+        {state === "loading" ? "Enviando..." : "Quiero recibir ofertas"}
       </button>
     </form>
   );

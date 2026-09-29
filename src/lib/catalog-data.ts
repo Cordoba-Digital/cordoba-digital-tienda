@@ -968,6 +968,11 @@ export const seedProducts: SeedProduct[] = [
 // Se mantienen en archivos separados por grupo y se anexan al seed base.
 seedProducts.push(...newProductsA, ...newProductsB, ...newProductsC);
 
+// Cupones de demostracion: los inventamos para que el flujo se pudiera probar,
+// pero el negocio real no tiene ninguno (en el sitio viejo no hay ni uno que
+// funcione). Nacen inactivos a proposito, para no anunciar descuentos que el
+// local no puede honrar. Cuando el cliente mande los suyos, se cargan desde su
+// panel y estos se pueden borrar.
 export const seedCoupons = [
   {
     code: "BIENVENIDO10",
@@ -975,7 +980,7 @@ export const seedCoupons = [
     value: 10,
     minSubtotal: 0,
     description: "10% OFF en tu primera compra",
-    active: true,
+    active: false,
   },
   {
     code: "CORDOBA15",
@@ -983,7 +988,7 @@ export const seedCoupons = [
     value: 15,
     minSubtotal: 500_000_00,
     description: "15% OFF en compras superiores a $500.000",
-    active: true,
+    active: false,
   },
   {
     code: "TECHO25",
@@ -991,7 +996,7 @@ export const seedCoupons = [
     value: 25_000_00,
     minSubtotal: 150_000_00,
     description: "$25.000 de descuento en compras desde $150.000",
-    active: true,
+    active: false,
   },
 ];
 

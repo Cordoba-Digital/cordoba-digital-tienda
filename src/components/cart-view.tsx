@@ -178,7 +178,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
                 <input
                   value={code}
                   onChange={(e) => setCode(e.target.value.toUpperCase())}
-                  placeholder="BIENVENIDO10"
+                  placeholder="CÓDIGO"
                   className="h-10 flex-1 rounded-xl border border-ink-200 px-3 text-sm uppercase outline-none focus:border-brand-400"
                 />
                 <button
@@ -191,9 +191,6 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
               </form>
             )}
             {couponError ? <p className="mt-2 text-xs font-semibold text-rose-600">{couponError}</p> : null}
-            <p className="mt-2 text-[11px] text-ink-400">
-              Probá con <strong>BIENVENIDO10</strong> (10% OFF) o <strong>TECHO25</strong> ($25.000 OFF desde $150.000).
-            </p>
           </div>
         </div>
 
