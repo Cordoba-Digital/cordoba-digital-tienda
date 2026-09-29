@@ -31,6 +31,16 @@ const CATEGORIAS_EN_BARRA = 6;
  */
 const COLUMNAS_PANEL = 8;
 
+/**
+ * Cuántos nietos se muestran bajo una subcategoría.
+ *
+ * Sin tope, "Notebooks" (10 nietos) estiraba una celda de la grilla a ~11 renglones
+ * y dejaba la columna de al lado con un hueco enorme. Con cuatro, las dos
+ * columnas quedan parejas y el resto se sigue viendo entrando a la
+ * subcategoría, que es donde están todos los productos.
+ */
+const NIETOS_EN_PANEL = 4;
+
 type Suggestion = {
   slug: string;
   name: string;
@@ -95,10 +105,10 @@ function PanelCategoria({ categoria }: { categoria: CategoryNode }) {
               ) : null}
             </Link>
             {/* Los nietos solo existen bajo 4 raíces, así que la lista anidada
-                casi nunca se ve. Cuando aparece, va con sangría. */}
+                casi nunca se ve. Cuando aparece, va con sangría y acotada. */}
             {hijo.children?.length ? (
               <ul className="mb-1 ml-4 space-y-0.5 border-l border-ink-100 pl-2">
-                {hijo.children.map((nieto) => (
+                {hijo.children.slice(0, NIETOS_EN_PANEL).map((nieto) => (
                   <li key={nieto.slug}>
                     <Link
                       href={`/categoria/${nieto.path}`}
@@ -108,6 +118,16 @@ function PanelCategoria({ categoria }: { categoria: CategoryNode }) {
                     </Link>
                   </li>
                 ))}
+                {hijo.children.length > NIETOS_EN_PANEL ? (
+                  <li>
+                    <Link
+                      href={`/categoria/${hijo.path}`}
+                      className="block rounded px-2 py-1 text-[11px] font-semibold text-brand-600 transition hover:text-brand-700"
+                    >
+                      +{hijo.children.length - NIETOS_EN_PANEL} más
+                    </Link>
+                  </li>
+                ) : null}
               </ul>
             ) : null}
           </div>
