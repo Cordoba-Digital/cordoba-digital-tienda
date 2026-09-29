@@ -10,6 +10,7 @@ import {
   findByPath,
   flattenTree,
   guessIcon,
+  titleCaseCategoryName,
   withDescendants,
   type CategoryNode,
   type CategoryRow,
@@ -134,7 +135,7 @@ const loadCategoryCounts = ttlCache("category-counts", 5 * 60_000, async () => {
  */
 export const getCategoryTree = cache(async (): Promise<CategoryTreeNode[]> => {
   const [rows, direct] = await Promise.all([loadCategoryRows(), loadCategoryCounts()]);
-  const tree = buildCategoryTree(withGuessedIcons(rows));
+  const tree = buildCategoryTree(withDisplayNames(withGuessedIcons(rows)));
   const totals = countByCategory(tree, direct);
   const attach = (nodes: CategoryNode[]): CategoryTreeNode[] =>
     nodes.map((node) => ({
@@ -145,12 +146,32 @@ export const getCategoryTree = cache(async (): Promise<CategoryTreeNode[]> => {
   return attach(tree);
 });
 
-/** El migrador no trae íconos: los adivinamos por nombre cuando sigue el default. */
+/**
+ * El migrador no trae íconos: los adivinamos por nombre cuando sigue el default.
+ *
+ * Se hace antes de `withDisplayNames` a propósito, porque los patrones de
+ * `guessIcon` están escritos contra los nombres en mayúsculas de WooCommerce.
+ */
 function withGuessedIcons(rows: CategoryRow[]): CategoryRow[] {
   return rows.map((row) => ({
     ...row,
     icon: !row.icon || row.icon === "📦" ? guessIcon(row.name) : row.icon,
   }));
+}
+
+/**
+ * Normaliza el nombre para mostrarlo: WooCommerce los trae en mayúsculas
+ * ("ACCESORIOS P/ CELULARES") y en la web se leen como un grito.
+ *
+ * Se aplica acá y no en la base a propósito. Casi toda la navegación sale de
+ * `getCategoryTree` — el header, el footer, la home, los filtros, las páginas de
+ * categoría y los breadcrumbs del producto — así que un solo paso los cubre a
+ * todos y no hay que acordarse de hacerlo en cada componente. La base guarda el
+ * nombre crudo, que es el que hay que devolver si algún día se sincroniza con
+ * WordPress.
+ */
+function withDisplayNames(rows: CategoryRow[]): CategoryRow[] {
+  return rows.map((row) => ({ ...row, name: titleCaseCategoryName(row.name) }));
 }
 
 export type CategoryPageData = {

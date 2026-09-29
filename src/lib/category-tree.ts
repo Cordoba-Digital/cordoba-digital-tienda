@@ -126,6 +126,70 @@ export function countByCategory(
   return out;
 }
 
+/**
+ * Siglas y abreviaturas que se escriben en mayúsculas y no deben perderlas.
+ *
+ * La lista sale de los nombres que están de verdad en el catálogo, no de
+ * suposiciones: sin esto, "CAMARAS CCTV" se transformaba en "Camaras Cctv" y
+ * "Cables USB" en "Cables Usb", que son dos errores que el cliente ve enseguida.
+ */
+const SIGLAS = new Set([
+  "3D", "AMD", "AP", "CCTV", "CPU", "GPU", "HDD", "HP", "IP", "LCD", "LED", "MSI", "PC", "RAM", "RCA", "SD", "SSD", "TV", "UPS", "USB", "WiFi",
+]);
+
+/** Marcas que llevan mayúscula interna y se capitalizan de otra manera. */
+const MARCAS: Record<string, string> = {
+  PLAYSTATION: "PlayStation",
+  XBOX: "Xbox",
+};
+
+/** Une palabras ya capitalizadas respetando la conjunción "y" en minúscula. */
+function joinWords(words: string[]): string {
+  return words
+    .map((word, i) => (i > 0 && word === "Y" ? "y" : word))
+    .join(" ");
+}
+
+/** Capitaliza una palabra suelta, respetando siglas y marcas. */
+function capitalizeWord(word: string): string {
+  // Los signos pegados a la palabra se quedan donde están: "P/" -> "P/".
+  const signo = word.match(/[^A-Za-z0-9]+$/)?.[0] ?? "";
+  const base = signo ? word.slice(0, -signo.length) : word;
+  if (!base) return word;
+
+  const mayuscula = base.toUpperCase();
+  if (SIGLAS.has(mayuscula)) return mayuscula + signo;
+  if (MARCAS[mayuscula]) return MARCAS[mayuscula] + signo;
+  if (!/\d/.test(base)) return base.charAt(0).toUpperCase() + base.slice(1).toLowerCase() + signo;
+  // Con dígitos se respeta tal cual: "5G", "1080P", "iPhone".
+  return base + signo;
+}
+
+/**
+ * Pasa un nombre de categoría a capitalización normal.
+ *
+ * WooCommerce guardó los nombres en mayúsculas ("ACCESORIOS P/ CELULARES",
+ * "CAMARAS DIGITALES FOTO") porque era su convención de theme. En el backend
+ * del cliente se ve bien, pero en la web queda como un grito. Se resuelve acá,
+ * en la capa de lectura, y no en la base: el dato crudo se conserva para
+ * sincronizar de vuelta con WordPress.
+ *
+ * Reglas:
+ * - Las siglas y marcas se respetan: "CCTV", "USB", "PlayStation".
+ * - Los signos pegados a la palabra se quedan donde están: "P/" -> "P/".
+ * - Los guiones capitalizan cada parte: "ESTABILIZADORES- UPS".
+ * - La conjunción "y" va en minúscula salvo que abra el nombre: "AUDIO Y VIDEO".
+ * - Un token con dígito se respeta: "5G", "1080P".
+ */
+export function titleCaseCategoryName(name: string): string {
+  return joinWords(
+    name
+      .split(" ")
+      .filter((word) => word.length > 0)
+      .map((word) => word.split("-").map(capitalizeWord).join("-")),
+  );
+}
+
 /** Asigna un ícono por defecto según el nombre de la categoría raíz. */
 const ICON_HINTS: { match: RegExp; icon: string }[] = [
   { match: /celular|smartwatch|smartband/i, icon: "📱" },
