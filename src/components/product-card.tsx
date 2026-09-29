@@ -57,16 +57,21 @@ export function ProductCard({ product }: { product: ProductView }) {
           )}
         </Link>
 
-        {/* El descuento va arriba del precio (como en Mercado Libre), no sobre la foto. */}
-        <div className="pointer-events-none absolute left-3 top-3 flex flex-col items-start gap-1.5">
+        {/* Descuento abajo a la izquierda de la foto, como en Mercado Libre. */}
+        <div className="pointer-events-none absolute bottom-0 left-0 flex flex-col items-start gap-1 p-2">
           {off > 0 ? (
-            <span className="rounded-md bg-rose-500 px-2 py-0.5 text-[11px] font-bold text-white">
+            <span className="rounded-sm bg-rose-500 px-2 py-0.5 text-[11px] font-bold text-white">
               -{off}%
             </span>
           ) : null}
           {off <= 0 && product.badge ? <Pill tone="brandSolid">{product.badge}</Pill> : null}
-          {outOfStock ? <Pill tone="neutral">Sin stock</Pill> : null}
         </div>
+
+        {outOfStock ? (
+          <span className="pointer-events-none absolute left-3 top-3 rounded-md bg-ink-900 px-2 py-0.5 text-[11px] font-bold text-white">
+            Sin stock
+          </span>
+        ) : null}
 
         <button
           type="button"
