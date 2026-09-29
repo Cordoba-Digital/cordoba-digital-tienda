@@ -18,12 +18,78 @@ import { getProductBreadcrumbs, getProductBySlug, getRelatedProducts, getReviews
 
 export const dynamic = "force-dynamic";
 
+/**
+ * OJO: esta ruta no puede tener `loading.tsx`.
+ *
+ * `loading.tsx` envuelve la pagina en un <Suspense>, y Next manda el shell
+ * (con el esqueleto) antes de resolver el componente. Para cuando la pagina
+ * llama a `notFound()` las cabeceras ya salieron, asi que el status se queda
+ * en 200: un soft-404 que Google registra como pagina valida. Sin ese archivo
+ * el render bloquea hasta decidir, `notFound()` si es un slug inexistente, y
+ * la respuesta sale con 404 de verdad.
+ *
+ * Por eso `notFound()` va tambien en `generateMetadata`: el titulo tiene que
+ * ser el de la pagina de not-found real, no uno propio de la ruta.
+ */
+
 type Params = Promise<{ slug: string }>;
+
+/** `decodeURIComponent` tira URIError con `%` sueltos (`foo%bar`). */
+function safeDecode(value: string): string {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
+
+/**
+ * Resuelve el slug de la URL contra el catalogo.
+ *
+ * El migrador de WooCommerce dejo 23 slugs con secuencias percent-encoded
+ * pegadas dentro del texto: `...samsung-55%e2%80%b3-uhd-4k-q65c` en vez de
+ * `...samsung-55-uhd-4k-q65c`. Esos productos son inalcanzables con un lookup
+ * directo, y antes del fix de 404 eso terminaba en 23 paginas con 200 y el
+ * texto "Producto no encontrado": soft-404s que el sitemap publica y Google
+ * indexa como si fueran fichas.
+ *
+ * Peor: para una misma URL, Next pasa el slug CRUDO a `generateMetadata` y el
+ * DECODIFICADO al componente de pagina (comprobado en produccion), asi que no
+ * alcanza con mirar uno de los dos. Por eso se prueban las cuatro formas en que
+ * puede estar la misma fila —crudo, decodificado, y cada uno re-codificado con
+ * el hexadecimal en mayusculas y en minusculas— y se toma la primera que
+ * exista. Todas son transformaciones deterministas de la misma cadena: un slug
+ * que no existe sigue sin encontrar nada y responde 404.
+ */
+function slugCandidates(slug: string): string[] {
+  const seen = new Set<string>([slug]);
+  const add = (value: string) => {
+    if (value && value !== slug) seen.add(value);
+  };
+  const decoded = safeDecode(slug);
+  add(decoded);
+  for (const base of [slug, decoded]) {
+    const encoded = encodeURIComponent(base);
+    add(encoded);
+    add(encoded.replace(/%[0-9A-F]{2}/g, (m) => m.toLowerCase()));
+  }
+  return [...seen];
+}
+
+async function findProduct(slug: string) {
+  for (const candidate of slugCandidates(slug)) {
+    const product = await getProductBySlug(candidate);
+    if (product) return product;
+  }
+  return null;
+}
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { slug } = await params;
-  const product = await getProductBySlug(slug).catch(() => null);
-  if (!product) return { title: "Producto no encontrado" };
+  // Sin `.catch(() => null)` a proposito: si la base se cae queremos un 500
+  // visible, no 2.588 productos respondiendo 404 (eso SI destruye el indice).
+  const product = await findProduct(slug);
+  if (!product) notFound();
   const description = product.seoDescription || product.shortDescription || product.name;
   return {
     title: product.seoTitle || product.name,
@@ -40,7 +106,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
 
 export default async function ProductPage({ params }: { params: Params }) {
   const { slug } = await params;
-  const product = await getProductBySlug(slug);
+  const product = await findProduct(slug);
   if (!product) notFound();
 
   const [related, productReviews, breadcrumbs] = await Promise.all([

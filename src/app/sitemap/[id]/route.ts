@@ -1,4 +1,9 @@
-import { getCategoryPaths, listProducts } from "@/lib/queries";
+import { asc, sql } from "drizzle-orm";
+
+import { db } from "@/db";
+import { products } from "@/db/schema";
+import { getCategoryPaths } from "@/lib/queries";
+import { ensureSeeded } from "@/lib/seed";
 
 export const dynamic = "force-dynamic";
 
@@ -56,6 +61,34 @@ async function baseEntries(): Promise<Entry[]> {
   return entries;
 }
 
+/** Cantos productos hay, para saber cuantos submapas existen. */
+async function productCount(): Promise<number> {
+  const [row] = await db.select({ total: sql<number>`count(*)::int` }).from(products);
+  return row?.total ?? 0;
+}
+
+/**
+ * La rebanada de productos del submapa `id`, paginada por `id` de producto.
+ *
+ * No se usa `listProducts` a proposito: ordena por `featured desc, soldCount
+ * desc`, que en 2.588 productos deja empates por todos lados. Un ORDER BY que no
+ * es un orden total hace que dos `LIMIT/OFFSET` consecutivos pisen filas: la
+ * misma fila puede caer en el submapa 1 y en el 2, y otra no caer en ninguno.
+ * Medido contra la base, los tres submapas entregaban 2.580 slugs unicos de
+ * 2.588 productos: 8 nunca se le pasaban a Google y 8 iban duplicados.
+ *
+ * `id` es unico y monotono, asi que la particion es estable entre requests y la
+ * union de los submapas es el catalogo exacto, una vez cada uno.
+ */
+async function productSlice(id: number): Promise<{ slug: string; createdAt: Date }[]> {
+  return db
+    .select({ slug: products.slug, createdAt: products.createdAt })
+    .from(products)
+    .orderBy(asc(products.id))
+    .limit(PRODUCTS_PER_SITEMAP)
+    .offset(id * PRODUCTS_PER_SITEMAP);
+}
+
 /**
  * Un submapa del catalogo. Next 16 no registra una carpeta con texto estatico
  * mezclado con un segmento dinamico (`sitemap-[id].xml` da 404), asi que la
@@ -80,14 +113,15 @@ export async function GET(
 
   const entries: Entry[] = [];
   try {
-    const [{ total }, bases] = await Promise.all([listProducts({ perPage: 1 }), baseEntries()]);
+    await ensureSeeded();
+    const [total, bases] = await Promise.all([productCount(), baseEntries()]);
 
     if (id >= Math.max(1, Math.ceil(total / PRODUCTS_PER_SITEMAP))) return notFound();
 
     entries.push(...bases);
 
-    const page = await listProducts({ perPage: PRODUCTS_PER_SITEMAP, page: id + 1 });
-    for (const product of page.items) {
+    const page = await productSlice(id);
+    for (const product of page) {
       entries.push({
         loc: `${BASE}/producto/${product.slug}`,
         lastmod: new Date(product.createdAt).toISOString(),

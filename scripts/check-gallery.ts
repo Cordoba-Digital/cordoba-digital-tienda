@@ -14,6 +14,12 @@
  *   npm run check:gallery                     # contra el deploy
  *   npm run check:gallery -- --base=http://localhost:3000
  */
+
+// Sin imports ni exports esto es un script global: `BASE`, `UA`, `main` y
+// `decodeEntities` viven en el scope compartido con los otros checkers y
+// `tsc --noEmit` los reporta como redeclarados. El `export {}` lo vuelve modulo.
+export {};
+
 const argv = process.argv.slice(2);
 const baseArg = argv.find((a) => a.startsWith("--base="));
 const BASE = (baseArg ? baseArg.split("=")[1] : "https://cordoba-digital.vercel.app").replace(/\/+$/, "");
