@@ -13,11 +13,11 @@ export type ShippingOption = {
 };
 
 const ZONES: { name: string; test: (zip: string) => boolean; cost: number; min: number; max: number }[] = [
-  { name: "Córdoba Capital", test: (z) => /^50[0-1]\d$/.test(z), cost: 4_900_00, min: 1, max: 2 },
-  { name: "Interior de Córdoba", test: (z) => /^5\d{3}$/.test(z), cost: 6_900_00, min: 2, max: 3 },
-  { name: "Centro y Litoral", test: (z) => /^[1-3]\d{3}$/.test(z), cost: 8_900_00, min: 3, max: 5 },
-  { name: "Cuyo y NOA", test: (z) => /^[47]\d{3}$/.test(z), cost: 10_900_00, min: 4, max: 6 },
-  { name: "Patagonia", test: (z) => /^[689]\d{3}$/.test(z), cost: 13_900_00, min: 5, max: 8 },
+  { name: "Córdoba Capital", test: (z) => /^50[0-1]\d$/.test(z), cost: 4_900, min: 1, max: 2 },
+  { name: "Interior de Córdoba", test: (z) => /^5\d{3}$/.test(z), cost: 6_900, min: 2, max: 3 },
+  { name: "Centro y Litoral", test: (z) => /^[1-3]\d{3}$/.test(z), cost: 8_900, min: 3, max: 5 },
+  { name: "Cuyo y NOA", test: (z) => /^[47]\d{3}$/.test(z), cost: 10_900, min: 4, max: 6 },
+  { name: "Patagonia", test: (z) => /^[689]\d{3}$/.test(z), cost: 13_900, min: 5, max: 8 },
 ];
 
 export function normalizeZip(input: string): string {
@@ -66,7 +66,7 @@ export function shippingOptions(zip: string, subtotal: number): ShippingOption[]
       label: "Moto express en el día",
       description: "Cadetería propia dentro de Córdoba Capital",
       eta: "Hoy mismo si comprás antes de las 16 hs",
-      cost: 7_900_00,
+      cost: 7_900,
       free: false,
       badge: "Más rápido",
     });

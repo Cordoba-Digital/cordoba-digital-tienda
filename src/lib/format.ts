@@ -1,3 +1,18 @@
+/**
+ * Precios: **pesos argentinos enteros**, no centavos.
+ *
+ * Ojo con esto, que ya causó un bug. WooCommerce publica `3299999` para
+ * $3.299.999, y ese mismo número es lo que guardamos en `products.price`. Las
+ * primeras versiones de este archivo llamaban "cents" a esos valores y
+ * dividían entre 100 al formatear, así que la tienda mostraba $33.000 por un
+ * celular de $3.299.999 y Mercado Pong habría cobrado esa cifra.
+ *
+ * Verificado contra `/producto/iphone-18-pro-max-512gb`: el entero crudo es
+ * idéntico en WooCommerce y en la base. Si algún día se cambia la escala de
+ * almacenamiento, hay que cambiar estos dos formateadores, `FREE_SHIPPING_THRESHOLD`,
+ * los costos de `shipping.ts`, los rangos de `catalog-filters.tsx` y
+ * `centsToUnits` en `mercadopago.ts`, todo junto.
+ */
 const arsFormatter = new Intl.NumberFormat("es-AR", {
   style: "currency",
   currency: "ARS",
@@ -5,20 +20,20 @@ const arsFormatter = new Intl.NumberFormat("es-AR", {
   maximumFractionDigits: 0,
 });
 
-const arsFormatterCents = new Intl.NumberFormat("es-AR", {
+const arsFormatterExact = new Intl.NumberFormat("es-AR", {
   style: "currency",
   currency: "ARS",
   minimumFractionDigits: 2,
   maximumFractionDigits: 2,
 });
 
-/** Prices are stored as integer ARS cents. */
-export function money(cents: number): string {
-  return arsFormatter.format(Math.round(cents) / 100);
+/** Precio en pesos enteros tal como viene de WooCommerce. */
+export function money(price: number): string {
+  return arsFormatter.format(Math.round(price));
 }
 
-export function moneyExact(cents: number): string {
-  return arsFormatterCents.format(cents / 100);
+export function moneyExact(price: number): string {
+  return arsFormatterExact.format(Math.round(price));
 }
 
 export function discountPercent(price: number, compareAt?: number | null): number {
@@ -48,11 +63,12 @@ export function installmentTotal(totalCents: number, count: number): number {
 /** Cash / bank transfer / crypto discount. */
 export const TRANSFER_DISCOUNT = 0.15;
 
-export function transferPrice(cents: number): number {
-  return Math.round(cents * (1 - TRANSFER_DISCOUNT));
+export function transferPrice(price: number): number {
+  return Math.round(price * (1 - TRANSFER_DISCOUNT));
 }
 
-export const FREE_SHIPPING_THRESHOLD = 250_000_00; // ARS 250.000 in cents
+/** Envío gratis a partir de $250.000, como dice el sitio. Pesos enteros. */
+export const FREE_SHIPPING_THRESHOLD = 250_000;
 
 export function formatDate(value: Date | string): string {
   const date = typeof value === "string" ? new Date(value) : value;

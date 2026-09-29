@@ -9,11 +9,12 @@ import { money } from "@/lib/format";
 type Category = { slug: string; name: string; icon: string; path?: string; count?: number };
 type BrandFacet = { brand: string; count: number };
 
+/** Rangos en pesos enteros, igual que `products.price` (ver `lib/format.ts`). */
 const PRICE_BUCKETS = [
-  { label: "Hasta $100.000", min: undefined, max: 100_000_00 },
-  { label: "$100.000 a $500.000", min: 100_000_00, max: 500_000_00 },
-  { label: "$500.000 a $1.000.000", min: 500_000_00, max: 1_000_000_00 },
-  { label: "Más de $1.000.000", min: 1_000_000_00, max: undefined },
+  { label: "Hasta $100.000", min: undefined, max: 100_000 },
+  { label: "$100.000 a $500.000", min: 100_000, max: 500_000 },
+  { label: "$500.000 a $1.000.000", min: 500_000, max: 1_000_000 },
+  { label: "Más de $1.000.000", min: 1_000_000, max: undefined },
 ];
 
 export const SORT_LIST = [

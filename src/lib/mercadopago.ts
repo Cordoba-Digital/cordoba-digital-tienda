@@ -30,7 +30,15 @@ export function isPublicAppUrl(url: string): boolean {
   );
 }
 
-/** ARS pesos -> número con 2 decimales para la preferencia. Precios guardados en centavos. */
-export function centsToUnits(cents: number): number {
-  return Math.round(cents) / 100;
+/**
+ * ARS pesos -> número para la preferencia de Mercado Pago.
+ *
+ * OJO: los precios se guardan en **pesos enteros**, no en centavos (ver
+ * `lib/format.ts`). Esta función antes dividía entre 100, lo que hacía que
+ * Checkout Pro cobrara la centésima parte: $33.000 por un celular de $3.299.999.
+ * Se mantiene el nombre histórico para no tocar los call sites, pero ya no
+ * escala nada.
+ */
+export function centsToUnits(price: number): number {
+  return Math.round(price);
 }

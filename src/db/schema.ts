@@ -47,7 +47,7 @@ export const products = pgTable(
     description: text("description").notNull().default(""),
     // Descripción original de WooCommerce, saneada.
     descriptionHtml: text("description_html").notNull().default(""),
-    // prices stored in ARS cents
+    // prices stored as whole ARS pesos (WooCommerce sends integers, not cents)
     price: integer("price").notNull(),
     compareAtPrice: integer("compare_at_price"),
     stock: integer("stock").notNull().default(0),
@@ -120,7 +120,7 @@ export const reviews = pgTable("reviews", {
 export const coupons = pgTable("coupons", {
   code: text("code").primaryKey(),
   kind: text("kind").notNull(), // percent | fixed
-  value: integer("value").notNull(), // percent points or ARS cents
+  value: integer("value").notNull(), // percent points or ARS pesos
   minSubtotal: integer("min_subtotal").notNull().default(0),
   description: text("description").notNull().default(""),
   active: boolean("active").notNull().default(true),
