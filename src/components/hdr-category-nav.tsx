@@ -43,6 +43,15 @@ const BAR_LIMIT = 6;
 /** Una columna angosta para las categorías chicas; el resto se reparte. */
 const ONE_COLUMN_UP_TO = 6;
 const TWO_COLUMNS_UP_TO = 12;
+/**
+ * Cuántos nietos se muestran bajo una subcategoría.
+ *
+ * Sin tope, "Notebooks" (10 nietos) estiraba una celda de la grilla a ~11
+ * renglones y dejaba la columna de al lado con un hueco enorme. Con cuatro, las
+ * columnas quedan parejas y el resto se sigue viendo entrando a la
+ * subcategoría, que es donde están todos los productos.
+ */
+const NIETOS_EN_PANEL = 4;
 
 /**
  * Columnas del panel según cuántas subcategorías tiene la raíz.
@@ -96,7 +105,7 @@ function SubcategoryList({ nodes, columns }: { nodes: CategoryNavNode[]; columns
           </Link>
           {node.children?.length ? (
             <ul className="mb-1 ml-2.5 mt-0.5 space-y-px border-l border-ink-100 pl-2">
-              {node.children.map((grand) => (
+              {node.children.slice(0, NIETOS_EN_PANEL).map((grand) => (
                 <li key={grand.slug} className="break-inside-avoid">
                   <Link
                     href={`/categoria/${grand.path}`}
@@ -111,6 +120,16 @@ function SubcategoryList({ nodes, columns }: { nodes: CategoryNavNode[]; columns
                   </Link>
                 </li>
               ))}
+              {node.children.length > NIETOS_EN_PANEL ? (
+                <li>
+                  <Link
+                    href={`/categoria/${node.path}`}
+                    className="block rounded px-2 py-0.5 text-[11px] font-semibold text-brand-600 transition hover:text-brand-700"
+                  >
+                    +{node.children.length - NIETOS_EN_PANEL} más
+                  </Link>
+                </li>
+              ) : null}
             </ul>
           ) : null}
         </li>
