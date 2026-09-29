@@ -9,15 +9,27 @@ import { useStore } from "@/components/store-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { money } from "@/lib/format";
 
-type CategoryLink = {
+/** Nodo del árbol de categorías, con dos niveles de descendencia. */
+type CategoryNode = {
   slug: string;
   name: string;
   icon: string;
-  tagline: string;
   path: string;
   count?: number;
-  children?: { slug: string; name: string; icon: string; path: string; count?: number }[];
+  children?: CategoryNode[];
 };
+
+type CategoryLink = CategoryNode & { tagline: string };
+
+/** Cuántas categorías raíz van en la barra, en el orden en que las elige el cliente. */
+const CATEGORIAS_EN_BARRA = 6;
+
+/**
+ * Por encima de este número de subcategorías el panel se parte en dos columnas.
+ * Hay dos que lo necesitan de verdad: Computación tiene 20 hijos y 13 nietos, y
+ * Electrodomésticos 19. En una sola columna el panel mediría casi un metro.
+ */
+const COLUMNAS_PANEL = 8;
 
 type Suggestion = {
   slug: string;
@@ -36,6 +48,84 @@ const ANNOUNCEMENTS = [
   "🛡ï¸ 12 meses de garantía oficial + soporte post-venta local",
 ];
 
+/**
+ * Panel de subcategorías que se abre al pasar el mouse por una categoría de la
+ * barra.
+ *
+ * El ancho se decide por la cantidad de subcategorías y no es un valor fijo:
+ * con 6 columnas angostas el panel de Accesorios queda desproporcionado, y con
+ * dos angostas el de Computación (20 hijos) se vuelve una torre. Arriba de
+ * `COLUMNAS_PANEL` se parte en dos.
+ */
+function PanelCategoria({ categoria }: { categoria: CategoryNode }) {
+  const hijos = categoria.children ?? [];
+  if (hijos.length === 0) return null;
+
+  const dosColumnas = hijos.length > COLUMNAS_PANEL;
+
+  return (
+    // No hace falta `onMouseEnter` acá: el `onMouseLeave` de la barra solo se
+    // dispara al salir del conjunto, así que pasar del link al panel no lo cierra.
+    <div
+      className={`absolute left-0 top-full z-50 animate-pop overflow-hidden rounded-2xl border border-ink-100 bg-surface shadow-2xl shadow-black/10 ${
+        dosColumnas ? "w-[620px]" : "w-[280px]"
+      }`}
+    >
+      <div className="flex items-baseline justify-between gap-3 border-b border-ink-100 px-4 py-2.5">
+        <span className="flex items-center gap-2 text-sm font-bold text-ink-900">
+          <span aria-hidden>{categoria.icon}</span>
+          {categoria.name}
+        </span>
+        {typeof categoria.count === "number" ? (
+          <span className="text-[11px] text-ink-400">{categoria.count} productos</span>
+        ) : null}
+      </div>
+
+      <div className={`max-h-[60vh] overflow-y-auto p-2 ${dosColumnas ? "grid grid-cols-2 gap-x-1" : ""}`}>
+        {hijos.map((hijo) => (
+          <div key={hijo.slug}>
+            <Link
+              href={`/categoria/${hijo.path}`}
+              className="flex items-center gap-2 rounded-lg px-2 py-1.5 text-sm font-medium text-ink-700 transition hover:bg-brand-50 hover:text-brand-700"
+            >
+              <span aria-hidden>{hijo.icon}</span>
+              <span className="min-w-0 flex-1 truncate">{hijo.name}</span>
+              {typeof hijo.count === "number" ? (
+                <span className="shrink-0 text-[11px] tabular-nums text-ink-300">{hijo.count}</span>
+              ) : null}
+            </Link>
+            {/* Los nietos solo existen bajo 4 raíces, así que la lista anidada
+                casi nunca se ve. Cuando aparece, va con sangría. */}
+            {hijo.children?.length ? (
+              <ul className="mb-1 ml-4 space-y-0.5 border-l border-ink-100 pl-2">
+                {hijo.children.map((nieto) => (
+                  <li key={nieto.slug}>
+                    <Link
+                      href={`/categoria/${nieto.path}`}
+                      className="block truncate rounded px-2 py-1 text-[12px] text-ink-500 transition hover:text-brand-700"
+                    >
+                      {nieto.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
+        ))}
+      </div>
+
+      <div className="border-t border-ink-100 p-2">
+        <Link
+          href={`/categoria/${categoria.path}`}
+          className="block rounded-lg px-2 py-1.5 text-center text-[13px] font-semibold text-brand-700 transition hover:bg-brand-50"
+        >
+          Ver toda {categoria.name} →
+        </Link>
+      </div>
+    </div>
+  );
+}
+
 export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
   const { count, openCart, favorites, hydrated } = useStore();
   const router = useRouter();
@@ -45,9 +135,43 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [catsOpen, setCatsOpen] = useState(false);
+  const [openCat, setOpenCat] = useState<string | null>(null);
   const [expandedCats, setExpandedCats] = useState<string[]>([]);
   const [announcement, setAnnouncement] = useState(0);
   const boxRef = useRef<HTMLDivElement>(null);
+  const closeTimer = useRef<number | null>(null);
+
+  /**
+   * Cierra el panel un instante después de salir, no en el mismo `mouseleave`.
+   * Sin la espera, el panel se dispara al mover el mouse en diagonal desde la
+   * barra hacia abajo, que es justo el gesto que hace todo el mundo.
+   */
+  const abrirPanel = (slug: string | null) => {
+    if (closeTimer.current) {
+      window.clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+    setOpenCat(slug);
+  };
+
+  const cerrarPanelPronto = () => {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+    closeTimer.current = window.setTimeout(() => {
+      setOpenCat(null);
+      setCatsOpen(false);
+    }, 140);
+  };
+
+  // Escape cierra cualquier panel abierto: sin esto, con teclado no hay salida.
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      setOpenCat(null);
+      setCatsOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, []);
 
   useEffect(() => {
     const id = window.setInterval(() => setAnnouncement((i) => (i + 1) % ANNOUNCEMENTS.length), 4200);
@@ -58,6 +182,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
     const id = window.setTimeout(() => {
       setMenuOpen(false);
       setCatsOpen(false);
+      setOpenCat(null);
       setOpen(false);
     }, 0);
     return () => window.clearTimeout(id);
@@ -266,24 +391,46 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
         </div>
 
         {/* Desktop category bar */}
-        <div className="hidden border-t border-ink-100 lg:block">
-          <div className="container-xl flex h-11 items-center gap-1 text-sm">
+        <div
+          className="hidden border-t border-ink-100 lg:block"
+          // El panel cuelga de la barra; sin esto, al salir del mouse se cerraría
+          // en el hueco entre la barra y el panel.
+          onMouseLeave={cerrarPanelPronto}
+        >
+          <div className="container-xl flex h-11 items-center gap-0.5 text-sm">
+            {/* Todas las categorías. El botón naranja que había acá se llevaba
+                ~150 px de los 1344 disponibles y era lo que obligaba a cortar los
+                nombres de al lado. Ahora es texto con un chevron, como el que
+                usaste de referencia. */}
             <div className="relative">
               <button
                 type="button"
-                onMouseEnter={() => setCatsOpen(true)}
+                onMouseEnter={() => {
+                  abrirPanel(null);
+                  setCatsOpen(true);
+                }}
+                onFocus={() => setCatsOpen(true)}
                 onClick={() => setCatsOpen((v) => !v)}
-                className="flex items-center gap-2 rounded-lg bg-brand-600 px-3 py-1.5 font-bold text-white transition hover:bg-brand-700"
+                aria-expanded={catsOpen}
+                aria-haspopup="true"
+                className="flex items-center gap-1 rounded-lg px-3 py-1.5 font-semibold text-ink-700 transition hover:bg-ink-50 hover:text-ink-900"
               >
-                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.2">
-                  <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" />
-                </svg>
                 Categorías
+                <svg
+                  viewBox="0 0 24 24"
+                  className={`h-3.5 w-3.5 transition-transform ${catsOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  aria-hidden
+                >
+                  <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </button>
               {catsOpen ? (
                 <div
-                  onMouseLeave={() => setCatsOpen(false)}
-                  className="absolute left-0 top-11 z-50 max-h-[70vh] w-[720px] animate-pop overflow-y-auto rounded-2xl border border-ink-100 bg-surface p-3 shadow-2xl shadow-black/10"
+                  onMouseEnter={() => abrirPanel(null)}
+                  className="absolute left-0 top-11 z-50 max-h-[70vh] w-[760px] animate-pop overflow-y-auto rounded-2xl border border-ink-100 bg-surface p-3 shadow-2xl shadow-black/10"
                 >
                   <div className="grid grid-cols-2 gap-x-3 gap-y-1">
                     {categories.map((c) => (
@@ -294,9 +441,9 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                           </span>
                           <span className="min-w-0">
                             <span className="block text-sm font-semibold text-ink-800">{c.name}</span>
-                            {typeof c.count === "number" ? (
-                              <span className="block text-[11px] text-ink-400">{c.count} productos</span>
-                            ) : null}
+                            <span className="block text-[11px] text-ink-400">
+                              {typeof c.count === "number" ? `${c.count} productos` : "Sin productos"}
+                            </span>
                           </span>
                         </Link>
                         {c.children?.length ? (
@@ -330,16 +477,34 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               ) : null}
             </div>
 
-            {categories.slice(0, 6).map((c) => (
-              <Link
-                key={c.slug}
-                href={`/categoria/${c.path}`}
-                className="max-w-[10rem] truncate rounded-lg px-3 py-1.5 font-medium text-ink-600 transition hover:bg-ink-50 hover:text-ink-900"
-                title={c.name}
-              >
-                {c.name}
-              </Link>
-            ))}
+            {/* Las 6 de la barra. Cada una abre su propio panel con las
+                subcategorías; las 12 categorías raíz sin hijos no abren nada y
+                el click va directo a su página. */}
+            {categories.slice(0, CATEGORIAS_EN_BARRA).map((c) => {
+              const tienePanel = Boolean(c.children?.length);
+              const activo = openCat === c.slug;
+              return (
+                <div key={c.slug} className="relative">
+                  <Link
+                    href={`/categoria/${c.path}`}
+                    onMouseEnter={() => {
+                      if (tienePanel) abrirPanel(c.slug);
+                      else setCatsOpen(false);
+                    }}
+                    onFocus={() => tienePanel && abrirPanel(c.slug)}
+                    aria-expanded={tienePanel ? activo : undefined}
+                    aria-haspopup={tienePanel ? "true" : undefined}
+                    className={`block max-w-[11rem] truncate rounded-lg px-3 py-1.5 font-medium transition hover:bg-ink-50 hover:text-ink-900 ${
+                      activo ? "bg-ink-50 text-ink-900" : "text-ink-600"
+                    }`}
+                    title={c.name}
+                  >
+                    {c.name}
+                  </Link>
+                  {activo ? <PanelCategoria categoria={c} /> : null}
+                </div>
+              );
+            })}
             <Link
               href="/productos?ofertas=1"
               className="ml-auto rounded-lg px-3 py-1.5 font-bold text-rose-600 transition hover:bg-rose-50"

@@ -52,31 +52,35 @@ export const metadata: Metadata = {
 const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem("cd-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}var d=t==="dark";document.documentElement.classList.toggle("dark",d);document.documentElement.style.colorScheme=d?"dark":"light";}catch(e){}})();`;
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
-  let categories: {
+  /** Nodo del árbol ya reducido a lo que el header necesita para pintar. */
+  type Level = {
     slug: string;
     name: string;
     icon: string;
-    tagline: string;
     path: string;
     count: number;
-    children: { slug: string; name: string; icon: string; path: string; count: number }[];
-  }[] = [];
+    children: Level[];
+  };
+
+  type Category = Level & { tagline: string };
+
+  let categories: Category[] = [];
   try {
-    categories = (await getCategoryTree()).map((c) => ({
-      slug: c.slug,
-      name: c.name,
-      icon: c.icon,
-      tagline: c.tagline,
-      path: c.path,
-      count: c.count,
-      children: c.children.map((child) => ({
-        slug: child.slug,
-        name: child.name,
-        icon: child.icon,
-        path: child.path,
-        count: child.count,
-      })),
-    }));
+    // Antes solo se pasaba un nivel de hijos. Ahora se baja el árbol entero
+    // porque el panel que se abre al pasar el mouse por una categoría muestra
+    // también los nietos, que existen bajo 4 raíces (Cámaras, Celulares,
+    // Computación y Conectividad). Son 128 nodos: copiarlos es más barato que
+    // un cuarto viaje a la base.
+    const trim = (node: Awaited<ReturnType<typeof getCategoryTree>>[number]): Level => ({
+      slug: node.slug,
+      name: node.name,
+      icon: node.icon,
+      path: node.path,
+      count: node.count,
+      children: node.children.map(trim),
+    });
+
+    categories = (await getCategoryTree()).map((c) => ({ ...trim(c), tagline: c.tagline }));
   } catch {
     categories = [];
   }
