@@ -14,7 +14,7 @@
     "verify:wp": "tsx scripts/verify-catalog.ts",
     "audit:site": "tsx scripts/audit-site.ts",
     "check:encoding": "node scripts/check-accents.mjs",
-    "check:dark": "node scripts/check-dark-css.mjs",
+    "check:dark": "node scripts/check-dark-css.mjs && node scripts/check-dark-contrast.mjs",
     "audit:dark": "node scripts/audit-dark-contrast.mjs && node scripts/audit-dark-residue.mjs",
     "reviews:check": "tsx scripts/check-google-reviews.ts",
     "fix:encoding": "node scripts/fix-encoding.mjs",
