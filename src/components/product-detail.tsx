@@ -90,9 +90,6 @@ export function ProductGallery({
           // El zoom es una transformación CSS sobre la imagen elegida.
           style={{ transform: zoom ? "scale(1.8)" : "scale(1)", transformOrigin: origin }}
         />
-        <span className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-semibold text-ink-500">
-          🔍 Pasá el mouse para ampliar
-        </span>
       </div>
     </div>
   );
