@@ -67,10 +67,36 @@ const chequeo = (nombre, ok, detalle) => {
 
 console.log(`flujo de compra contra ${base}\n`);
 
+/**
+ * Espera a que la página esté de verdad lista antes de mirarla.
+ *
+ * Con un `sleep` fijo el chequeo empieza a leer el DOM mientras todavía se está
+ * armando y falla sin que haya nada roto: dio 4/13 en una corrida y 13/13 en las
+ * tres siguientes del mismo build.
+ *
+ * No se espera `readyState === "complete"` porque en esta página nunca llega: el
+ * widget de WhatsApp deja conexiones abiertas y el documento se queda en
+ * "interactive" para siempre. Alcanza con que haya terminado de parsear y haya
+ * texto en pantalla.
+ */
+async function esperarListo(intentos = 40) {
+  for (let i = 0; i < intentos; i += 1) {
+    const listo = await evalEn(
+      `(() => document.readyState !== "loading" && document.body.innerText.length > 200)()`,
+    );
+    if (listo === true) {
+      await dormir(400);
+      return;
+    }
+    await dormir(500);
+  }
+  throw new Error(`la pagina no termino de cargar: ${await evalEn("(() => location.href)()")}`);
+}
+
 // 1. Ficha: un solo botón "Comprar", sin "Comprar ahora".
 const tab = JSON.parse(orca(["tab", "create", "--url", `${base}/producto/${PRODUCTO}`, "--json"]));
-page = tab.browserPageId;
-await dormir(6000);
+page = tab.browserPageId ?? tab.result?.browserPageId;
+await esperarListo();
 
 // Un solo botón "Comprar": el de la barra móvil está oculto en desktop y cuenta
 // aparte, así que solo se listan los visibles.
@@ -86,13 +112,15 @@ chequeo("la ficha NO manda al checkout directo", !botones.some((b) => /Comprar a
 
 // 2. Comprar lleva al carrito.
 chequeo("el clic en Comprar funciona", evalEn(CLICK_EXACTO("Comprar")) === "ok");
-await dormir(5000);
+await dormir(1200);
+await esperarListo();
 let estado = JSON.parse(evalEn(ESTADO));
 chequeo("Comprar lleva al carrito", estado.url.startsWith("/carrito"), estado.url);
 
 // 3. El carrito lleva al checkout.
 chequeo("el carrito ofrece 'Ir a finalizar la compra'", evalEn(CLICK_EXACTO("Ir a finalizar la compra →")) === "ok");
-await dormir(6000);
+await dormir(1200);
+await esperarListo();
 estado = JSON.parse(evalEn(ESTADO));
 chequeo("el carrito lleva al checkout", estado.url.startsWith("/checkout"), estado.url);
 

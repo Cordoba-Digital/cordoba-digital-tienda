@@ -30,8 +30,11 @@ const EXPR = `(() => {
   const columnaGuias = pie
     ? [...pie.querySelectorAll("h3")].find((h) => /gu[ií]a de compras/i.test(h.textContent || ""))
     : null;
-  const enlacesGuia = columnaGuias
-    ? [...columnaGuias.parentElement.querySelectorAll("a")].map((a) => ({
+  // El título de la columna también es un <a> (abre /guias), así que se cuentan
+  // solo los enlaces de la lista, que son las guías.
+  const listaGuias = columnaGuias ? columnaGuias.parentElement.querySelector("ul") : null;
+  const enlacesGuia = listaGuias
+    ? [...listaGuias.querySelectorAll("a")].map((a) => ({
         texto: (a.textContent || "").trim(),
         href: a.getAttribute("href"),
       }))

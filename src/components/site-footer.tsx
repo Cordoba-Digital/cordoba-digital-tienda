@@ -143,7 +143,13 @@ export async function SiteFooter({
 
         {guides.length ? (
           <div>
-            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">Guía de compras</h3>
+            <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">
+              {/* El título de la columna abre el índice, que no existe en el sitio
+                  original: allá las guías solo se llegan por estos enlaces. */}
+              <Link href="/guias" className="transition hover:text-neon-400">
+                Guía de compras
+              </Link>
+            </h3>
             <ul className="space-y-2.5 text-sm">
               {guides.map((guide) => (
                 <li key={guide.slug}>

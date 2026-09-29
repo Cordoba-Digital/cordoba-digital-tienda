@@ -67,7 +67,11 @@ export default async function GuidePage({ params }: { params: Promise<{ guia: st
           Inicio
         </Link>
         <span className="mx-1.5">/</span>
-        <span className="text-ink-600">Guías de compra</span>
+        <Link href="/guias" className="transition hover:text-brand-700">
+          Guías de compra
+        </Link>
+        <span className="mx-1.5">/</span>
+        <span className="text-ink-600">{article.title}</span>
       </nav>
 
       <header className="mb-8 max-w-3xl">
@@ -114,7 +118,12 @@ export default async function GuidePage({ params }: { params: Promise<{ guia: st
 
       {otras.length ? (
         <aside className="mt-14 max-w-3xl border-t border-ink-100 pt-8">
-          <h2 className="text-lg font-extrabold text-ink-900">Otras guías de compra</h2>
+          <div className="flex items-baseline justify-between gap-4">
+            <h2 className="text-lg font-extrabold text-ink-900">Otras guías de compra</h2>
+            <Link href="/guias" className="text-xs font-bold text-brand-700 transition hover:text-brand-600">
+              Ver las {otras.length + 1} →
+            </Link>
+          </div>
           <ul className="mt-4 space-y-2.5">
             {otras.map((otra) => (
               <li key={otra.slug}>

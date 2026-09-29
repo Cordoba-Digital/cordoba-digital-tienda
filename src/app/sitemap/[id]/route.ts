@@ -30,6 +30,7 @@ type Entry = { loc: string; lastmod?: string; changefreq?: string; priority?: st
 const STATIC_ENTRIES: Entry[] = [
   { loc: `${BASE}/`, changefreq: "daily", priority: "1" },
   { loc: `${BASE}/productos`, changefreq: "daily", priority: "0.9" },
+  { loc: `${BASE}/guias`, changefreq: "weekly", priority: "0.6" },
   { loc: `${BASE}/ayuda`, changefreq: "monthly", priority: "0.5" },
   { loc: `${BASE}/seguimiento`, changefreq: "monthly", priority: "0.4" },
 ];

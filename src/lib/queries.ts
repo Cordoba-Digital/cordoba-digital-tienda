@@ -228,6 +228,41 @@ export const getGuideBySlug = cache(async (slug: string) => {
   return row ?? null;
 });
 
+/** Lo que necesita la ficha del índice de guías, sin el cuerpo del artículo. */
+export type GuideCard = GuideTeaser & {
+  description: string;
+  wordCount: number;
+  updatedAt: Date;
+  meta: {
+    etiqueta?: string;
+    actualizacion?: string;
+    cobertura?: string;
+    categoria?: string;
+  };
+};
+
+/**
+ * Guías con los datos de la tarjeta, para el índice `/guias`.
+ *
+ * Va aparte de `getGuides` a propósito: esa se usa en el pie, que se renderiza en
+ * todas las páginas del sitio, y traer la metadata de las guías ahí suma una
+ * lectura de más en cada request sin que se use.
+ */
+export const getGuideCards = cache(async (): Promise<GuideCard[]> => {
+  return db
+    .select({
+      slug: guides.slug,
+      title: guides.title,
+      subtitle: guides.subtitle,
+      description: guides.description,
+      wordCount: guides.wordCount,
+      updatedAt: guides.updatedAt,
+      meta: guides.meta,
+    })
+    .from(guides)
+    .orderBy(asc(guides.footerOrder), asc(guides.id));
+});
+
 /** Ids + slugs de la categoría y todo su subárbol, para filtrar productos. */
 async function subtreeOf(categoryId: number): Promise<{ ids: number[]; slugs: string[] }> {
   const tree = await getCategoryTree();
