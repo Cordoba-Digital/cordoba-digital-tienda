@@ -14,7 +14,7 @@ export function FavoritesView({ products }: { products: ProductView[] }) {
     return (
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
         {Array.from({ length: 4 }, (_, i) => (
-          <div key={i} className="h-80 animate-pulse rounded-2xl bg-white" />
+          <div key={i} className="h-80 animate-pulse rounded-2xl bg-surface" />
         ))}
       </div>
     );

@@ -47,7 +47,7 @@ export function Pill({
     amber: "bg-amber-50 text-amber-700",
     /** Sólido de marca: para pills que van sobre la foto del producto. */
     brandSolid: "bg-brand-600 text-white",
-    dark: "bg-ink-900 text-white",
+    dark: "bg-deep text-white",
   };
   return (
     <span
@@ -81,7 +81,7 @@ export function SectionHeading({
       {action ? (
         <Link
           href={action.href}
-          className="group inline-flex items-center gap-1.5 rounded-full border border-ink-200 bg-white px-4 py-2 text-sm font-semibold text-ink-700 transition hover:border-brand-300 hover:text-brand-700"
+          className="group inline-flex items-center gap-1.5 rounded-full border border-ink-200 bg-surface px-4 py-2 text-sm font-semibold text-ink-700 transition hover:border-brand-300 hover:text-brand-700"
         >
           {action.label}
           <span className="transition group-hover:translate-x-0.5">→</span>

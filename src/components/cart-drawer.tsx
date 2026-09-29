@@ -22,7 +22,7 @@ export function QuantityStepper({
       ? "h-7 w-7 text-sm"
       : "h-9 w-9 text-base";
   return (
-    <div className="inline-flex items-center rounded-xl border border-ink-200 bg-white">
+    <div className="inline-flex items-center rounded-xl border border-ink-200 bg-surface">
       <button
         type="button"
         aria-label="Restar"
@@ -79,8 +79,8 @@ export function CartDrawer() {
 
   return (
     <div className="fixed inset-0 z-[60]">
-      <div className="absolute inset-0 bg-ink-950/50 backdrop-blur-[2px]" onClick={closeCart} />
-      <aside className="absolute right-0 top-0 flex h-full w-full max-w-[26rem] animate-pop flex-col bg-white shadow-2xl">
+      <div className="absolute inset-0 bg-deep/50 backdrop-blur-[2px]" onClick={closeCart} />
+      <aside className="absolute right-0 top-0 flex h-full w-full max-w-[26rem] animate-pop flex-col bg-surface shadow-2xl">
         <header className="flex items-center justify-between border-b border-ink-100 px-5 py-4">
           <div>
             <h2 className="text-lg font-extrabold text-ink-900">Tu carrito</h2>
@@ -217,10 +217,10 @@ export function Toaster() {
           key={toast.id}
           className={`animate-pop rounded-xl border px-4 py-3 shadow-xl ${
             toast.tone === "success"
-              ? "border-emerald-200 bg-white"
+              ? "border-emerald-200 bg-surface"
               : toast.tone === "error"
-                ? "border-rose-200 bg-white"
-                : "border-ink-200 bg-white"
+                ? "border-rose-200 bg-surface"
+                : "border-ink-200 bg-surface"
           }`}
         >
           <p className="text-sm font-bold text-ink-900">

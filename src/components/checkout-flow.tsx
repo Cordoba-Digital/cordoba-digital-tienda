@@ -92,7 +92,7 @@ function Field({
 }
 
 const inputClass =
-  "h-11 w-full rounded-xl border border-ink-200 bg-white px-3.5 text-sm text-ink-900 outline-none transition placeholder:text-ink-300 focus:border-brand-400 focus:ring-4 focus:ring-brand-100";
+  "h-11 w-full rounded-xl border border-ink-200 bg-surface px-3.5 text-sm text-ink-900 outline-none transition placeholder:text-ink-300 focus:border-brand-400 focus:ring-4 focus:ring-brand-100";
 
 export function CheckoutFlow() {
   const router = useRouter();
@@ -388,7 +388,7 @@ export function CheckoutFlow() {
                 type="button"
                 onClick={() => setStep(item.id)}
                 className={`flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-bold transition ${
-                  active ? "bg-brand-600 text-white" : done ? "bg-emerald-50 text-emerald-700" : "bg-white text-ink-400"
+                  active ? "bg-brand-600 text-white" : done ? "bg-emerald-50 text-emerald-700" : "bg-surface text-ink-400"
                 }`}
               >
                 <span

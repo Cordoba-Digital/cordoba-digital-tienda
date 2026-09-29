@@ -169,7 +169,7 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
               {result.page > 1 ? (
                 <Link
                   href={buildPageHref(result.page - 1)}
-                  className="rounded-lg border border-ink-200 bg-white px-3.5 py-2 text-sm font-semibold text-ink-700 hover:border-brand-300"
+                  className="rounded-lg border border-ink-200 bg-surface px-3.5 py-2 text-sm font-semibold text-ink-700 hover:border-brand-300"
                 >
                   ← Anterior
                 </Link>
@@ -181,7 +181,7 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
                   className={`min-w-10 rounded-lg px-3.5 py-2 text-center text-sm font-bold transition ${
                     page === result.page
                       ? "bg-brand-600 text-white"
-                      : "border border-ink-200 bg-white text-ink-700 hover:border-brand-300"
+                      : "border border-ink-200 bg-surface text-ink-700 hover:border-brand-300"
                   }`}
                 >
                   {page}
@@ -190,7 +190,7 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
               {result.page < result.pages ? (
                 <Link
                   href={buildPageHref(result.page + 1)}
-                  className="rounded-lg border border-ink-200 bg-white px-3.5 py-2 text-sm font-semibold text-ink-700 hover:border-brand-300"
+                  className="rounded-lg border border-ink-200 bg-surface px-3.5 py-2 text-sm font-semibold text-ink-700 hover:border-brand-300"
                 >
                   Siguiente →
                 </Link>

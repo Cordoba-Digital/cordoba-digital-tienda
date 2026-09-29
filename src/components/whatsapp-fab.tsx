@@ -22,7 +22,7 @@ export function WhatsAppFab() {
   return (
     <div className="fixed bottom-5 right-4 z-[55] flex items-end gap-2">
       {showTip ? (
-        <div className="animate-pop max-w-[15rem] rounded-2xl rounded-br-sm border border-ink-100 bg-white px-3.5 py-2.5 text-xs font-medium text-ink-700 shadow-xl">
+        <div className="animate-pop max-w-[15rem] rounded-2xl rounded-br-sm border border-ink-100 bg-surface px-3.5 py-2.5 text-xs font-medium text-ink-700 shadow-xl">
           ¿Dudas con tu compra? Te asesoramos en el momento 👋
         </div>
       ) : null}
@@ -32,7 +32,7 @@ export function WhatsAppFab() {
             type="button"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             aria-label="Volver arriba"
-            className="grid h-10 w-10 place-items-center rounded-full border border-ink-200 bg-white text-ink-600 shadow-lg transition hover:text-brand-700"
+            className="grid h-10 w-10 place-items-center rounded-full border border-ink-200 bg-surface text-ink-600 shadow-lg transition hover:text-brand-700"
           >
             ↑
           </button>

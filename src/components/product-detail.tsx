@@ -35,7 +35,7 @@ export function ProductGallery({
             type="button"
             onMouseEnter={() => setActive(index)}
             onClick={() => setActive(index)}
-            className={`h-16 w-16 shrink-0 overflow-hidden rounded-xl border-2 bg-white transition ${
+            className={`h-16 w-16 shrink-0 overflow-hidden rounded-xl border-2 bg-surface transition ${
               index === active ? "border-brand-500" : "border-ink-100 hover:border-ink-300"
             }`}
           >
@@ -56,7 +56,7 @@ export function ProductGallery({
           (muchas verticales) y con object-cover se recortaban. Con object-contain
           se ve el producto entero, como en la ficha de Mercado Libre. */}
       <div
-        className="relative aspect-square w-full max-w-[30rem] overflow-hidden rounded-2xl border border-ink-100 bg-white"
+        className="relative aspect-square w-full max-w-[30rem] overflow-hidden rounded-2xl border border-ink-100 bg-surface"
         onMouseEnter={() => setZoom(true)}
         onMouseLeave={() => setZoom(false)}
         onMouseMove={(event) => {
@@ -67,7 +67,7 @@ export function ProductGallery({
         }}
       >
         {badge ? (
-          <span className="absolute left-4 top-4 z-10 rounded-full bg-ink-900/85 px-3 py-1.5 text-[11px] font-bold text-white">
+          <span className="absolute left-4 top-4 z-10 rounded-full bg-deep/85 px-3 py-1.5 text-[11px] font-bold text-white">
             {badge}
           </span>
         ) : null}
@@ -150,7 +150,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         <select
           value={plan}
           onChange={(e) => setPlan(Number(e.target.value))}
-          className="h-9 w-full rounded-lg border border-ink-200 bg-white px-2 text-sm font-semibold text-ink-800 outline-none focus:border-brand-400"
+          className="h-9 w-full rounded-lg border border-ink-200 bg-surface px-2 text-sm font-semibold text-ink-800 outline-none focus:border-brand-400"
         >
           {INSTALLMENT_PLANS.map((option) => (
             <option key={option.count} value={option.count}>
@@ -195,7 +195,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
           type="button"
           disabled={product.stock === 0}
           onClick={() => addItem(payload, quantity)}
-          className="w-full rounded-xl border border-ink-200 bg-white px-4 py-3 text-sm font-bold text-ink-800 transition hover:border-brand-300 hover:text-brand-700 disabled:opacity-40"
+          className="w-full rounded-xl border border-ink-200 bg-surface px-4 py-3 text-sm font-bold text-ink-800 transition hover:border-brand-300 hover:text-brand-700 disabled:opacity-40"
         >
           Agregar al carrito
         </button>
@@ -247,7 +247,7 @@ export function MobileBuyBar({ product }: { product: BuyBoxProduct }) {
   };
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-ink-100 bg-white/95 px-4 py-3 pr-[5.5rem] shadow-[0_-8px_24px_-16px_rgba(10,18,38,0.5)] backdrop-blur lg:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-ink-100 bg-surface/95 px-4 py-3 pr-[5.5rem] shadow-[0_-8px_24px_-16px_rgba(10,18,38,0.5)] backdrop-blur lg:hidden">
       <div className="flex items-center gap-3">
         <div className="min-w-0">
           <p className="text-lg font-black leading-none text-ink-900">{money(product.price)}</p>
@@ -369,7 +369,7 @@ export function ReviewForm({ slug }: { slug: string }) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="rounded-xl border border-ink-200 bg-white px-4 py-2.5 text-sm font-bold text-ink-700 transition hover:border-brand-300 hover:text-brand-700"
+        className="rounded-xl border border-ink-200 bg-surface px-4 py-2.5 text-sm font-bold text-ink-700 transition hover:border-brand-300 hover:text-brand-700"
       >
         Escribir una opinión
       </button>

@@ -50,7 +50,7 @@ export function NewsletterForm({ variant = "dark" }: { variant?: "dark" | "light
         className={`h-13 flex-1 rounded-xl px-4 text-[15px] outline-none transition ${
           variant === "dark"
             ? "border border-white/15 bg-white/5 text-white placeholder:text-ink-400 focus:border-neon-400"
-            : "border border-ink-200 bg-white text-ink-900 placeholder:text-ink-400 focus:border-brand-400"
+            : "border border-ink-200 bg-surface text-ink-900 placeholder:text-ink-400 focus:border-brand-400"
         } ${state === "error" ? "border-rose-400" : ""}`}
       />
       <button

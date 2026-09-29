@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 import { useStore } from "@/components/store-provider";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { money } from "@/lib/format";
 
 type CategoryLink = {
@@ -110,7 +111,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
         </div>
       </div>
 
-      <div className="border-b border-ink-100 bg-white/95 backdrop-blur-md">
+      <div className="border-b border-ink-100 bg-surface/95 backdrop-blur-md">
         <div className="container-xl flex h-16 items-center gap-3 md:h-[72px] md:gap-5">
           <button
             type="button"
@@ -143,7 +144,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                 onChange={(e) => setTerm(e.target.value)}
                 onFocus={() => suggestions.length && setOpen(true)}
                 placeholder="Buscá tu próximo celular, notebook, cámara..."
-                className="h-11 w-full rounded-xl border border-ink-200 bg-ink-50/70 pl-11 pr-28 text-sm text-ink-800 outline-none transition placeholder:text-ink-400 focus:border-brand-400 focus:bg-white focus:ring-4 focus:ring-brand-100"
+                className="h-11 w-full rounded-xl border border-ink-200 bg-ink-50/70 pl-11 pr-28 text-sm text-ink-800 outline-none transition placeholder:text-ink-400 focus:border-brand-400 focus:bg-surface focus:ring-4 focus:ring-brand-100"
               />
               <svg
                 viewBox="0 0 24 24"
@@ -164,7 +165,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
             </form>
 
             {open && suggestions.length > 0 ? (
-              <div className="absolute left-0 right-0 top-[52px] z-50 animate-pop overflow-hidden rounded-2xl border border-ink-100 bg-white shadow-2xl shadow-ink-900/10">
+              <div className="absolute left-0 right-0 top-[52px] z-50 animate-pop overflow-hidden rounded-2xl border border-ink-100 bg-surface shadow-2xl shadow-black/10">
                 {suggestions.map((s) => (
                   <Link
                     key={s.slug}
@@ -193,6 +194,8 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
           </div>
 
           <nav className="ml-auto flex items-center gap-1">
+            <ThemeToggle />
+
             <Link
               href="/seguimiento"
               className="hidden items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50 hover:text-ink-900 lg:flex"
@@ -232,7 +235,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               </svg>
               <span className="hidden sm:inline">Carrito</span>
               {hydrated && count > 0 ? (
-                <span className="grid h-5 min-w-5 place-items-center rounded-full bg-neon-400 px-1 text-[11px] font-black text-ink-900">
+                <span className="grid h-5 min-w-5 place-items-center rounded-full bg-neon-400 px-1 text-[11px] font-black text-deep">
                   {count}
                 </span>
               ) : null}
@@ -247,7 +250,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               value={term}
               onChange={(e) => setTerm(e.target.value)}
               placeholder="¿Qué estás buscando?"
-              className="h-11 w-full rounded-xl border border-ink-200 bg-ink-50/70 pl-10 pr-4 text-sm outline-none focus:border-brand-400 focus:bg-white"
+              className="h-11 w-full rounded-xl border border-ink-200 bg-ink-50/70 pl-10 pr-4 text-sm outline-none focus:border-brand-400 focus:bg-surface"
             />
             <svg
               viewBox="0 0 24 24"
@@ -280,7 +283,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               {catsOpen ? (
                 <div
                   onMouseLeave={() => setCatsOpen(false)}
-                  className="absolute left-0 top-11 z-50 max-h-[70vh] w-[720px] animate-pop overflow-y-auto rounded-2xl border border-ink-100 bg-white p-3 shadow-2xl shadow-ink-900/10"
+                  className="absolute left-0 top-11 z-50 max-h-[70vh] w-[720px] animate-pop overflow-y-auto rounded-2xl border border-ink-100 bg-surface p-3 shadow-2xl shadow-black/10"
                 >
                   <div className="grid grid-cols-2 gap-x-3 gap-y-1">
                     {categories.map((c) => (
@@ -353,8 +356,8 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
       {/* Mobile menu */}
       {menuOpen ? (
         <div className="fixed inset-0 z-50 lg:hidden">
-          <div className="absolute inset-0 bg-ink-950/50" onClick={() => setMenuOpen(false)} />
-          <div className="absolute left-0 top-0 h-full w-[85%] max-w-sm animate-pop overflow-y-auto bg-white p-5">
+          <div className="absolute inset-0 bg-deep/50" onClick={() => setMenuOpen(false)} />
+          <div className="absolute left-0 top-0 h-full w-[85%] max-w-sm animate-pop overflow-y-auto bg-surface p-5">
             <div className="mb-5 flex items-center justify-between">
               <span className="text-lg font-extrabold">Menú</span>
               <button type="button" onClick={() => setMenuOpen(false)} className="text-2xl text-ink-400">

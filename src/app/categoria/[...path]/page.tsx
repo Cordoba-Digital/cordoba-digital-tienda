@@ -187,7 +187,7 @@ export default async function CategoryPage({
               <Link
                 key={a.id}
                 href={`/categoria/${a.path}`}
-                className="rounded-full border border-ink-200 bg-white px-2.5 py-1 font-semibold text-ink-600 hover:border-brand-300"
+                className="rounded-full border border-ink-200 bg-surface px-2.5 py-1 font-semibold text-ink-600 hover:border-brand-300"
               >
                 {a.name}
               </Link>
@@ -202,7 +202,7 @@ export default async function CategoryPage({
             <Link
               key={child.id}
               href={`/categoria/${child.path}`}
-              className="inline-flex items-center gap-1.5 rounded-full border border-ink-200 bg-white px-3.5 py-1.5 text-sm font-semibold text-ink-700 transition hover:border-brand-300 hover:text-brand-700"
+              className="inline-flex items-center gap-1.5 rounded-full border border-ink-200 bg-surface px-3.5 py-1.5 text-sm font-semibold text-ink-700 transition hover:border-brand-300 hover:text-brand-700"
             >
               <span aria-hidden>{child.icon}</span>
               {child.name}
@@ -288,7 +288,7 @@ export default async function CategoryPage({
               {result.page > 1 ? (
                 <Link
                   href={pageHref(result.page - 1)}
-                  className="rounded-lg border border-ink-200 bg-white px-3.5 py-2 text-sm font-semibold text-ink-700 hover:border-brand-300"
+                  className="rounded-lg border border-ink-200 bg-surface px-3.5 py-2 text-sm font-semibold text-ink-700 hover:border-brand-300"
                 >
                   ← Anterior
                 </Link>
@@ -303,7 +303,7 @@ export default async function CategoryPage({
                       className={`min-w-10 rounded-lg px-3.5 py-2 text-center text-sm font-bold transition ${
                         page === result.page
                           ? "bg-brand-600 text-white"
-                          : "border border-ink-200 bg-white text-ink-700 hover:border-brand-300"
+                          : "border border-ink-200 bg-surface text-ink-700 hover:border-brand-300"
                       }`}
                     >
                       {page}
@@ -313,7 +313,7 @@ export default async function CategoryPage({
               {result.page < result.pages ? (
                 <Link
                   href={pageHref(result.page + 1)}
-                  className="rounded-lg border border-ink-200 bg-white px-3.5 py-2 text-sm font-semibold text-ink-700 hover:border-brand-300"
+                  className="rounded-lg border border-ink-200 bg-surface px-3.5 py-2 text-sm font-semibold text-ink-700 hover:border-brand-300"
                 >
                   Siguiente →
                 </Link>

@@ -32,7 +32,7 @@ export function Countdown({ label = "Termina en" }: { label?: string }) {
       <div className="flex items-center gap-1">
         {[hours, minutes, seconds].map((unit, index) => (
           <span key={index} className="flex items-center gap-1">
-            <span className="grid h-8 min-w-8 place-items-center rounded-lg bg-ink-900 px-1.5 text-sm font-bold tabular-nums text-white">
+            <span className="grid h-8 min-w-8 place-items-center rounded-lg bg-deep px-1.5 text-sm font-bold tabular-nums text-white">
               {remaining === null ? "--" : pad(unit)}
             </span>
             {index < 2 ? <span className="font-bold text-ink-400">:</span> : null}

@@ -46,7 +46,7 @@ function CopyButton({ value, label }: { value: string; label?: string }) {
           /* ignore */
         }
       }}
-      className="rounded-lg border border-ink-200 bg-white px-2.5 py-1 text-[11px] font-bold text-ink-600 transition hover:border-brand-300 hover:text-brand-700"
+      className="rounded-lg border border-ink-200 bg-surface px-2.5 py-1 text-[11px] font-bold text-ink-600 transition hover:border-brand-300 hover:text-brand-700"
     >
       {copied ? "¡Copiado!" : (label ?? "Copiar")}
     </button>
@@ -141,7 +141,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                 Transferí <strong>{money(order.total)}</strong> a cualquiera de estas cuentas. Reservamos tu stock por 48 hs.
               </p>
               <div className="mt-4 grid gap-3 md:grid-cols-2">
-                <div className="rounded-xl border border-ink-100 bg-white p-4">
+                <div className="rounded-xl border border-ink-100 bg-surface p-4">
                   <p className="text-xs font-bold uppercase tracking-wide text-ink-400">Transferencia bancaria</p>
                   <dl className="mt-2 space-y-1.5 text-sm">
                     <div className="flex items-center justify-between gap-2">
@@ -168,7 +168,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                     </div>
                   </dl>
                 </div>
-                <div className="rounded-xl border border-ink-100 bg-white p-4">
+                <div className="rounded-xl border border-ink-100 bg-surface p-4">
                   <p className="text-xs font-bold uppercase tracking-wide text-ink-400">USDT (red TRC-20)</p>
                   <p className="mt-2 break-all text-sm font-semibold text-ink-900">TQn9Y2khDD95J42FQtQTdwVVR93o7cCbPo</p>
                   <div className="mt-2">

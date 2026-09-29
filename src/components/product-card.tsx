@@ -34,11 +34,11 @@ export function ProductCard({ product }: { product: ProductView }) {
   const freeShipping = product.freeShipping || product.price >= FREE_SHIPPING_THRESHOLD;
 
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-ink-200 bg-white transition hover:border-brand-300 hover:shadow-md">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-ink-200 bg-surface transition hover:border-brand-300 hover:shadow-md">
       <div className="relative">
         <Link
           href={`/producto/${product.slug}`}
-          className="block aspect-square overflow-hidden bg-white p-4"
+          className="block aspect-square overflow-hidden bg-surface p-4"
           tabIndex={-1}
           aria-hidden
         >
@@ -68,7 +68,7 @@ export function ProductCard({ product }: { product: ProductView }) {
         </div>
 
         {outOfStock ? (
-          <span className="pointer-events-none absolute left-3 top-3 rounded-md bg-ink-900 px-2 py-0.5 text-[11px] font-bold text-white">
+          <span className="pointer-events-none absolute left-3 top-3 rounded-md bg-deep px-2 py-0.5 text-[11px] font-bold text-white">
             Sin stock
           </span>
         ) : null}
@@ -77,7 +77,7 @@ export function ProductCard({ product }: { product: ProductView }) {
           type="button"
           onClick={() => toggleFavorite(product.slug)}
           aria-label={fav ? "Quitar de favoritos" : "Guardar en favoritos"}
-          className={`absolute right-3 top-3 grid h-8 w-8 place-items-center rounded-full border bg-white/90 backdrop-blur transition ${
+          className={`absolute right-3 top-3 grid h-8 w-8 place-items-center rounded-full border bg-surface/90 backdrop-blur transition ${
             fav ? "border-rose-200 text-rose-500" : "border-ink-200 text-ink-400 hover:text-rose-500"
           }`}
         >
@@ -142,8 +142,8 @@ export function ProductCard({ product }: { product: ProductView }) {
             href={`/producto/${product.slug}`}
             className={`block w-full rounded-md py-2.5 text-center text-sm font-semibold transition ${
               outOfStock
-                ? "border border-ink-200 bg-white text-ink-400"
-                : "bg-ink-900 text-white hover:bg-brand-600"
+                ? "border border-ink-200 bg-surface text-ink-400"
+                : "bg-deep text-white hover:bg-brand-600"
             }`}
           >
             {outOfStock ? "Sin stock" : "Ver más"}

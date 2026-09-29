@@ -52,7 +52,7 @@ export function SortSelect({ value, basePath = "/productos" }: { value: string; 
       <select
         value={value}
         onChange={(e) => update({ orden: e.target.value })}
-        className="h-10 rounded-xl border border-ink-200 bg-white px-3 text-sm font-semibold text-ink-800 outline-none focus:border-brand-400"
+        className="h-10 rounded-xl border border-ink-200 bg-surface px-3 text-sm font-semibold text-ink-800 outline-none focus:border-brand-400"
       >
         {SORT_LIST.map((option) => (
           <option key={option.id} value={option.id}>
@@ -256,7 +256,7 @@ export function FiltersPanel({
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="flex h-10 items-center gap-2 rounded-xl border border-ink-200 bg-white px-4 text-sm font-bold text-ink-700 lg:hidden"
+        className="flex h-10 items-center gap-2 rounded-xl border border-ink-200 bg-surface px-4 text-sm font-bold text-ink-700 lg:hidden"
       >
         <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M4 6h16M7 12h10M10 18h4" strokeLinecap="round" />
@@ -270,8 +270,8 @@ export function FiltersPanel({
 
       {open ? (
         <div className="fixed inset-0 z-[60] lg:hidden">
-          <div className="absolute inset-0 bg-ink-950/50" onClick={() => setOpen(false)} />
-          <div className="absolute bottom-0 left-0 right-0 max-h-[85vh] animate-pop overflow-y-auto rounded-t-3xl bg-white p-5">
+          <div className="absolute inset-0 bg-deep/50" onClick={() => setOpen(false)} />
+          <div className="absolute bottom-0 left-0 right-0 max-h-[85vh] animate-pop overflow-y-auto rounded-t-3xl bg-surface p-5">
             <div className="mb-4 flex items-center justify-between">
               <h2 className="text-lg font-extrabold">Filtros</h2>
               <button type="button" onClick={() => setOpen(false)} className="text-2xl text-ink-400">

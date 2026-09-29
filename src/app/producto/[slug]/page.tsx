@@ -263,7 +263,7 @@ export default async function ProductPage({ params }: { params: Params }) {
         </section>
       ) : null}
 
-      <section className="mt-14 grid gap-4 rounded-3xl bg-white p-6 md:grid-cols-3">
+      <section className="mt-14 grid gap-4 rounded-3xl bg-surface p-6 md:grid-cols-3">
         {[
           { icon: "🛡️", title: "Garantía oficial", text: `${product.warrantyMonths} meses cubiertos por el fabricante y gestionados por nosotros.` },
           { icon: "🔄", title: "Cambios sin drama", text: "Tenés 10 días corridos para cambiar el producto si no era lo que esperabas." },

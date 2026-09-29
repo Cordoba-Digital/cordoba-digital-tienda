@@ -186,7 +186,7 @@ export default async function HomePage() {
               </Link>
             ) : null}
 
-            <div className="absolute -right-2 top-6 hidden animate-float-slow rounded-2xl border border-white/15 bg-ink-900/80 px-4 py-3 text-white backdrop-blur md:block">
+            <div className="absolute -right-2 top-6 hidden animate-float-slow rounded-2xl border border-white/15 bg-deep/80 px-4 py-3 text-white backdrop-blur md:block">
               <p className="text-[11px] uppercase tracking-wide text-ink-300">Pagando con transferencia</p>
               <p className="text-xl font-black text-neon-400">15% OFF</p>
             </div>
@@ -195,7 +195,7 @@ export default async function HomePage() {
       </section>
 
       {/* TRUST BAR */}
-      <section className="border-b border-ink-100 bg-white">
+      <section className="border-b border-ink-100 bg-surface">
         <div className="container-xl grid gap-3 py-5 sm:grid-cols-2 lg:grid-cols-4">
           {TRUST.map((t) => (
             <div key={t.title} className="flex items-start gap-3 rounded-xl px-2 py-2">
@@ -233,7 +233,7 @@ export default async function HomePage() {
       </section>
 
       {/* OFERTAS */}
-      <section className="bg-white py-12">
+      <section className="bg-surface py-12">
         <div className="container-xl">
           <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -301,7 +301,7 @@ export default async function HomePage() {
 
       {/* LOCAL */}
       <section className="container-xl py-14">
-        <div className="grid items-center gap-8 overflow-hidden rounded-3xl border border-ink-100 bg-white lg:grid-cols-2">
+        <div className="grid items-center gap-8 overflow-hidden rounded-3xl border border-ink-100 bg-surface lg:grid-cols-2">
           <div className="relative h-full min-h-[18rem]">
             <div className="relative h-full min-h-[18rem] overflow-hidden">
               <ProductImg
@@ -384,7 +384,7 @@ export default async function HomePage() {
       </section>
 
       {/* DESTACADOS */}
-      <section className="bg-white py-12">
+      <section className="bg-surface py-12">
         <div className="container-xl">
           <SectionHeading
             eyebrow="Selección del equipo"
@@ -429,7 +429,7 @@ export default async function HomePage() {
         ) : (
           <>
             <div className="mb-8 flex flex-wrap items-center gap-4">
-              <div className="flex items-center gap-3 rounded-2xl border border-ink-100 bg-white px-5 py-3">
+              <div className="flex items-center gap-3 rounded-2xl border border-ink-100 bg-surface px-5 py-3">
                 <span className="text-3xl font-black text-ink-900">{ratingValue}</span>
                 <div>
                   <Stars rating={Math.round((googleReviews.rating ?? 0) * 10)} size="md" />

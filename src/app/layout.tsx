@@ -39,6 +39,18 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * Se ejecuta antes de que se pinte la pagina para que el tema no parpadee.
+ *
+ * Va como script en linea y no en un componente porque este es el unico punto
+ * del ciclo de vida donde el script corre antes del primer pintado: si esperara
+ * al hidratado de React, el sitio se veria en claro y despues saltaria a oscuro.
+ * Lee la eleccion guardada y, si no hay ninguna, sigue la preferencia del
+ * sistema; escribe `<html class="dark">` y actualiza la barra del navegador con
+ * `color-scheme`.
+ */
+const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem("cd-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}var d=t==="dark";document.documentElement.classList.toggle("dark",d);document.documentElement.style.colorScheme=d?"dark":"light";}catch(e){}})();`;
+
 export default async function RootLayout({ children }: { children: ReactNode }) {
   let categories: {
     slug: string;
@@ -70,7 +82,12 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   }
 
   return (
-    <html lang="es-AR">
+    // `suppressHydrationWarning`: el script de arriba cambia la clase de <html>
+    // en el cliente, y React se quejaria de que el servidor no la puso.
+    <html lang="es-AR" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+      </head>
       <body className="min-h-screen bg-ink-50 text-ink-900 antialiased">
         <StoreProvider>
           <SiteHeader categories={categories} />
