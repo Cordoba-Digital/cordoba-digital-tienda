@@ -26,18 +26,27 @@ import { fileURLToPath } from "node:url";
  * Bytes iniciales válidos en UTF-8 (como code point latin1) y cuántos bytes de
  * continuación necesitan. Son NÚMEROS, no arrays: con un array, `1 + need`
  * concatena en string ("11") y el índice del bucle se descontrola.
+ *
+ * La tabla se ARMA desde los rangos de la especificación en vez de listarse a
+ * mano, porque listarla se olvidó de entradas y el checker dio "OK" con cinco
+ * emojis rotos: faltaba "ï" (EF), que es el inicio de U+FE00..U+FE0F, o sea
+ * justo los selectores de variación. Cualquier byte inicial que falte es una
+ * clase entera de corrupción invisible para el gate.
+ *
+ *   C2..DF -> 2 bytes  (U+0080..U+07FF)
+ *   E0..EF -> 3 bytes  (U+0800..U+FFFF)
+ *   F0..F4 -> 4 bytes  (U+10000..U+10FFFF)
  */
-const LEADS = {
-  "Â": 1, // C2 -> U+0080..U+00BF
-  "Ã": 1, // C3 -> U+00C0..U+00FF
-  "Å": 1, // C5 -> U+0140..U+017F
-  "â": 2, // E2 -> U+2000..U+20FF
+const LEADS = (() => {
+  const tabla = {};
+  for (let b = 0xc2; b <= 0xdf; b += 1) tabla[String.fromCharCode(b)] = 1;
+  for (let b = 0xe0; b <= 0xef; b += 1) tabla[String.fromCharCode(b)] = 2;
   // Los emojis son 4 bytes UTF-8 (F0 9F 94 A5 = 🔥). cp1252 los lee como
   // "ð" + 3 caracteres: "ðŸ”¥". Hay que pedir 3 continuaciones, no 1, o el
   // emoji queda roto y nadie lo detecta (el "Ã" no aparece nunca).
-  "ð": 3, // F0 -> U+1000..U+3FFFF (todo emoji cae acá)
-  "ô": 3, // F4 -> U+100000..U+10FFFF
-};
+  for (let b = 0xf0; b <= 0xf4; b += 1) tabla[String.fromCharCode(b)] = 3;
+  return tabla;
+})();
 
 /**
  * cp1252 usa los bytes 0x80-0x9F para caracteres imprimibles (comillas
