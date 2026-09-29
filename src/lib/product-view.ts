@@ -18,6 +18,8 @@ export type ProductView = {
   imageSrcSets: string[][];
   badge: string | null;
   freeShipping: boolean;
+  /** Meses de garantía reales del producto: la tarjeta los muestra. */
+  warrantyMonths: number;
   highlights: string[];
 };
 
@@ -39,6 +41,7 @@ export function toView(product: Product): ProductView {
     imageSrcSets: product.imageSrcSets ?? [],
     badge: product.badge ?? null,
     freeShipping: product.freeShipping,
+    warrantyMonths: product.warrantyMonths,
     highlights: product.highlights ?? [],
   };
 }

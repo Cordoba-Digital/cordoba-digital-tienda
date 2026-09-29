@@ -224,12 +224,9 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         </div>
       </div>
 
-      <ul className="space-y-2 border-t border-ink-100 pt-4 text-xs text-ink-600">
-        <li className="flex items-center gap-2">🛡️ {product.warrantyMonths} meses de garantía oficial</li>
-        <li className="flex items-center gap-2">🔄 10 días para cambios sin cargo</li>
-        <li className="flex items-center gap-2">🧾 Factura A / B</li>
-        <li className="flex items-center gap-2">🏬 Retiro en 2 hs en 27 de Abril 259</li>
-      </ul>
+      {/* Los avisos de garantía, cambios, factura y retiro se movieron a la
+          tarjeta de producto, que es donde el cliente elige. Acá queda el SKU,
+          que sí es un dato propio de esta ficha. */}
       <p className="text-[10px] text-ink-300">SKU {product.sku}</p>
     </div>
   );

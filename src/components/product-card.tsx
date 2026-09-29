@@ -5,21 +5,27 @@ import Link from "next/link";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Pill, Stars } from "@/components/ui";
-import {
-  FREE_SHIPPING_THRESHOLD,
-  discountPercent,
-  installmentValue,
-  money,
-  transferPrice,
-} from "@/lib/format";
+import { discountPercent, installmentValue, money, transferPrice } from "@/lib/format";
 import type { ProductView } from "@/lib/product-view";
 
-/** Chip verde de Mercado Libre: "Llega gratis hoy" / "Envío gratis". */
-function ShippingTag({ free, today }: { free: boolean; today: boolean }) {
+/**
+ * Línea de confianza del local.
+ *
+ * Reemplaza al chip de envío, que decía "Envío gratis desde $250.000" en
+ * cualquier producto que no llegara al monto: era el texto por defecto y
+ * aparecía en casi todas las tarjetas, compitiendo con el precio sin decir
+ * nada útil. Estos tres sí diferencian a la tienda, y la garantía sale del dato
+ * real del producto, no de un "12 meses" fijo.
+ */
+function LineaConfianza({ meses }: { meses: number }) {
   return (
-    <span className="mt-1.5 inline-block rounded-sm bg-emerald-600 px-2 py-[3px] text-[11px] font-semibold text-white">
-      {today ? "Llega gratis hoy" : free ? "Envío gratis" : "Envío gratis desde $250.000"}
-    </span>
+    <ul className="mt-1.5 flex flex-wrap items-center gap-x-1.5 text-[11px] text-ink-500">
+      {meses > 0 ? (
+        <li className="font-semibold text-ink-600">🛡️ {meses} meses de garantía</li>
+      ) : null}
+      <li>🔄 Cambios sin cargo</li>
+      <li>🧾 Factura A/B</li>
+    </ul>
   );
 }
 
@@ -28,10 +34,6 @@ export function ProductCard({ product }: { product: ProductView }) {
   const off = discountPercent(product.price, product.compareAtPrice);
   const fav = hydrated && isFavorite(product.slug);
   const outOfStock = product.stock === 0;
-
-  // "Envío gratis" con la misma regla que usa el checkout (monto mínimo), no
-  // un dato inventado en la tarjeta.
-  const freeShipping = product.freeShipping || product.price >= FREE_SHIPPING_THRESHOLD;
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-ink-200 bg-surface transition hover:border-brand-300 hover:shadow-md">
@@ -134,7 +136,7 @@ export function ProductCard({ product }: { product: ProductView }) {
           <p className="text-[11px] font-semibold text-emerald-700">
             {money(transferPrice(product.price))} con transferencia
           </p>
-          <ShippingTag free={freeShipping} today={freeShipping && product.price >= 500_000_00} />
+          <LineaConfianza meses={product.warrantyMonths} />
         </div>
 
         <div className="mt-auto pt-3">
