@@ -336,6 +336,7 @@ export function CategoryNavBar({ categories }: { categories: CategoryNavRoot[] }
                   id={triggerId}
                   onFocus={hasKids ? () => openPanel(root.slug) : undefined}
                   aria-expanded={hasKids ? isOpen : undefined}
+                  aria-haspopup={hasKids ? true : undefined}
                   aria-controls={hasKids ? `${baseId}-${root.slug}-panel` : undefined}
                   className={`flex min-w-0 items-center whitespace-nowrap rounded-lg px-2 py-1.5 text-[13px] font-medium transition hover:bg-ink-50 hover:text-ink-900 ${
                     isOpen ? "bg-ink-50 text-ink-900" : "text-ink-600"
