@@ -5,7 +5,7 @@ import { NewsletterForm } from "@/components/newsletter-form";
 import { ProductCard, ProductRow } from "@/components/product-card";
 import { ProductImg } from "@/components/product-img";
 import { Pill, SectionHeading, Stars } from "@/components/ui";
-import { FREE_SHIPPING_THRESHOLD, money } from "@/lib/format";
+import { money } from "@/lib/format";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { toView } from "@/lib/product-view";
 import { getBestSellers, getCategoryTree, getDealProducts, getFeaturedProducts, getProductCount } from "@/lib/queries";
@@ -13,7 +13,7 @@ import { getBestSellers, getCategoryTree, getDealProducts, getFeaturedProducts, 
 export const dynamic = "force-dynamic";
 
 const TRUST = [
-  { icon: "🚚", title: "Envíos a todo el país", text: `Gratis desde ${money(FREE_SHIPPING_THRESHOLD)} · seguimiento online` },
+  { icon: "🚚", title: "Envíos a todo el país", text: "Por Andreani, a domicilio o a sucursal · con seguimiento" },
   { icon: "🔒", title: "Pagos 100% seguros", text: "Tarjetas, Mercado Pago, transferencia y USDT" },
   { icon: "🛡️", title: "Compra garantizada", text: "Garantía legal de 6 meses y soporte post-venta propio" },
   { icon: "🎧", title: "Post-venta real", text: "Te atendemos por WhatsApp, mail y en el local" },
@@ -409,7 +409,7 @@ export default async function HomePage() {
               {
                 icon: "🚚",
                 title: "Envíos a todo el país",
-                text: `Despachamos a todas las provincias con seguimiento online. Gratis desde ${money(FREE_SHIPPING_THRESHOLD)}.`,
+                text: "Despachamos a todas las provincias por Andreani, con seguimiento online. También podés retirar en el local sin cargo.",
               },
               {
                 icon: "🏬",

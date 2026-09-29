@@ -74,7 +74,6 @@ export default async function CategoryPage({
   const orden = pick(query, "orden") ?? "relevancia";
   const pagina = Number(pick(query, "pagina") ?? "1");
   const ofertas = pick(query, "ofertas") === "1";
-  const envio = pick(query, "envio") === "1";
   const stock = pick(query, "stock") === "1";
 
   const PER_PAGE = 24;
@@ -89,7 +88,6 @@ export default async function CategoryPage({
       page: pagina,
       perPage: PER_PAGE,
       onlyOffers: ofertas,
-      freeShipping: envio,
       inStock: stock,
     }),
   ]);
@@ -126,7 +124,6 @@ export default async function CategoryPage({
       href: buildHref({ min: null, max: null }),
     });
   if (ofertas) chips.push({ key: "ofertas", label: "Solo ofertas", value: null, href: buildHref({ ofertas: null }) });
-  if (envio) chips.push({ key: "envio", label: "Envío gratis", value: null, href: buildHref({ envio: null }) });
   if (stock) chips.push({ key: "stock", label: "Disponible ya", value: null, href: buildHref({ stock: null }) });
 
   const jsonLd = {
@@ -219,7 +216,7 @@ export default async function CategoryPage({
             categories={[]}
             brands={brands}
             basePath={`/categoria/${node.path}`}
-            current={{ marcas, min, max, ofertas, envio, stock }}
+            current={{ marcas, min, max, ofertas, stock }}
           />
         </Suspense>
 

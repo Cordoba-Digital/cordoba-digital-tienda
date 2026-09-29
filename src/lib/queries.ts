@@ -31,7 +31,6 @@ export type ProductFilters = {
   page?: number;
   perPage?: number;
   onlyOffers?: boolean;
-  freeShipping?: boolean;
   inStock?: boolean;
 };
 
@@ -77,7 +76,6 @@ function buildWhere(filters: ProductFilters, subtree?: { ids: number[]; slugs: s
   if (typeof filters.min === "number") clauses.push(gte(products.price, filters.min));
   if (typeof filters.max === "number") clauses.push(lte(products.price, filters.max));
   if (filters.onlyOffers) clauses.push(sql`${products.compareAtPrice} is not null and ${products.compareAtPrice} > ${products.price}`);
-  if (filters.freeShipping) clauses.push(eq(products.freeShipping, true));
   if (filters.inStock) clauses.push(gte(products.stock, 1));
 
   const valid = clauses.filter(Boolean) as SQL[];

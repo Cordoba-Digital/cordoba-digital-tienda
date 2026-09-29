@@ -1,4 +1,3 @@
-import { FREE_SHIPPING_THRESHOLD } from "@/lib/format";
 import { NOMBRE_ZONA, PRECIO_POR_ZONA, zonaParaCp, type ZonaEnvio } from "@/lib/tarifas-envio";
 
 /**
@@ -51,9 +50,12 @@ export function zoneForZip(zip: string): { zona: ZonaEnvio; name: string; zip: s
   return { zona, name: NOMBRE_ZONA[zona], zip: normalized };
 }
 
-export function shippingOptions(zip: string, subtotal: number): ShippingOption[] {
+export function shippingOptions(zip: string): ShippingOption[] {
   const zone = zoneForZip(zip);
 
+  // El unico envio sin cargo es el retiro en el local. No hay umbral por monto:
+  // el sitio original no anuncia envio gratis en ningun lado y los 2.589
+  // productos tienen `free_shipping = false`.
   const options: ShippingOption[] = [
     {
       id: "pickup",
@@ -73,10 +75,11 @@ export function shippingOptions(zip: string, subtotal: number): ShippingOption[]
   // estandar a domicilio, y antes el sitio no lo ofrecia en ninguna pagina.
   //
   // OJO: estos precios son los del paquete mas chico. La tarifa de Andreani
-  // sube por peso volumetrico, y todavia no podemos calcularlo porque
-  // `products.weight` esta llena al 39% con valores de relleno (ver
-  // `docs/TARIFAS-ENVIO.md`). Para productos grandes queda subestimado.
-  const gratis = subtotal >= FREE_SHIPPING_THRESHOLD;
+  // sube por PESO VOLUMETRICO (probado: dos valijas de 2,4 kg y de 5 kg cobran
+  // lo mismo, y el precio sube con el volumen, r = 0.996). Falta traer el peso
+  // y las medidas reales de cada producto, que hoy no tenemos en la base. Para
+  // los productos grandes el precio queda subestimado (ver
+  // `docs/TARIFAS-ENVIO.md`).
   const tarifa = PRECIO_POR_ZONA[zone.zona];
 
   options.push({
@@ -84,9 +87,8 @@ export function shippingOptions(zip: string, subtotal: number): ShippingOption[]
     label: `Andreani (estándar) · ${zone.name}`,
     description: "Envío a domicilio con seguimiento online",
     eta: PLAZO_DOMICILIO,
-    cost: gratis ? 0 : tarifa.estandar,
-    free: gratis,
-    badge: gratis ? "Envío gratis" : undefined,
+    cost: tarifa.estandar,
+    free: false,
   });
 
   // Id "express" por compatibilidad con el resto del codigo; el servicio es
@@ -96,13 +98,13 @@ export function shippingOptions(zip: string, subtotal: number): ShippingOption[]
     label: `Andreani (sucursal) · ${zone.name}`,
     description: "Retirás en la sucursal de Andreani más cercana",
     eta: PLAZO_SUCURSAL,
-    cost: gratis ? 0 : tarifa.sucursal,
-    free: gratis,
+    cost: tarifa.sucursal,
+    free: false,
   });
 
   return options;
 }
 
-export function findShippingOption(zip: string, subtotal: number, id: DeliveryMethod): ShippingOption | null {
-  return shippingOptions(zip, subtotal).find((option) => option.id === id) ?? null;
+export function findShippingOption(zip: string, id: DeliveryMethod): ShippingOption | null {
+  return shippingOptions(zip).find((option) => option.id === id) ?? null;
 }

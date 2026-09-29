@@ -23,7 +23,7 @@ type Suggestion = {
 
 const ANNOUNCEMENTS = [
   "🏦 Transferencia bancaria, USDT o efectivo en el local",
-  "🚚 Envío gratis a todo el país en compras desde $250.000",
+  "🚚 Envíos a todo el país por Andreani, a domicilio o a sucursal",
   "💳 Hasta 6 cuotas sin interés con todas las tarjetas",
   "🏬 Retiro en 27 de Abril 259, Córdoba Capital",
   "🛡️ 6 meses de garantía legal + soporte post-venta local",

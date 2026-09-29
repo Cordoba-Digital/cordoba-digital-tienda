@@ -9,9 +9,9 @@
  *
  * Verificado contra `/producto/iphone-18-pro-max-512gb`: el entero crudo es
  * idéntico en WooCommerce y en la base. Si algún día se cambia la escala de
- * almacenamiento, hay que cambiar estos dos formateadores, `FREE_SHIPPING_THRESHOLD`,
- * los costos de `shipping.ts`, los rangos de `catalog-filters.tsx` y
- * `centsToUnits` en `mercadopago.ts`, todo junto.
+ * almacenamiento, hay que cambiar estos dos formateadores, los costos de
+ * `tarifas-envio.ts`, los rangos de `catalog-filters.tsx` y `centsToUnits` en
+ * `mercadopago.ts`, todo junto.
  */
 const arsFormatter = new Intl.NumberFormat("es-AR", {
   style: "currency",
@@ -64,8 +64,11 @@ export function installmentTotal(totalCents: number, count: number): number {
 // efectivo, pero el checkout del sitio original da subtotal igual al total, sin
 // línea de descuento. Se eliminó el 2026-09, después de leer el checkout real.
 
-/** Envío gratis a partir de $250.000, como dice el sitio. Pesos enteros. */
-export const FREE_SHIPPING_THRESHOLD = 250_000;
+// Tampoco hay envío gratis por monto. Existió un umbral de $250.000, pero el
+// sitio original no lo menciona en el home, ni en la ficha de producto, ni en
+// ninguna parte: se comprobó el 2026-09. Los 2.589 productos tienen
+// `free_shipping = false`. La única entrega sin cargo es el retiro en el local,
+// que de verdad es gratis.
 
 export function formatDate(value: Date | string): string {
   const date = typeof value === "string" ? new Date(value) : value;

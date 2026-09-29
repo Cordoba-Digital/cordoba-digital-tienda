@@ -83,7 +83,6 @@ export const seedProducts: SeedProduct[] = [
     tags: ["5g", "gama alta", "ia"],
     badge: "Top ventas",
     featured: true,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -114,7 +113,6 @@ export const seedProducts: SeedProduct[] = [
     tags: ["5g", "gama media", "mejor precio"],
     badge: "Más vendido",
     featured: true,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -144,7 +142,6 @@ export const seedProducts: SeedProduct[] = [
     ],
     tags: ["ios", "gama alta"],
     featured: true,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -173,7 +170,6 @@ export const seedProducts: SeedProduct[] = [
       spec("Extras", "IP52, Dual SIM"),
     ],
     tags: ["5g", "gama media"],
-    freeShipping: true,
     warrantyMonths: 12,
   },
 
@@ -206,7 +202,6 @@ export const seedProducts: SeedProduct[] = [
     tags: ["trabajo", "estudio"],
     badge: "Recomendada",
     featured: true,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -236,7 +231,6 @@ export const seedProducts: SeedProduct[] = [
     ],
     tags: ["gamer", "rtx"],
     featured: true,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -265,7 +259,6 @@ export const seedProducts: SeedProduct[] = [
       spec("Peso", "1.47 kg"),
     ],
     tags: ["estudio", "económica"],
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -293,7 +286,6 @@ export const seedProducts: SeedProduct[] = [
       spec("Puertos", "2x Thunderbolt, MagSafe 3"),
     ],
     tags: ["apple", "premium"],
-    freeShipping: true,
     warrantyMonths: 12,
   },
 
@@ -324,7 +316,6 @@ export const seedProducts: SeedProduct[] = [
     ],
     tags: ["gamer", "monitor"],
     badge: "Elegido gamer",
-    freeShipping: true,
     warrantyMonths: 24,
   },
   {
@@ -404,7 +395,6 @@ export const seedProducts: SeedProduct[] = [
       spec("Rendimiento", "Hasta 7.500 pág. negro"),
     ],
     tags: ["oficina", "hogar"],
-    freeShipping: true,
     warrantyMonths: 12,
   },
 
@@ -436,7 +426,6 @@ export const seedProducts: SeedProduct[] = [
     tags: ["mirrorless", "creadores"],
     badge: "Para creadores",
     featured: true,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -463,7 +452,6 @@ export const seedProducts: SeedProduct[] = [
       spec("Resistencia", "Sumergible hasta 10 m"),
     ],
     tags: ["acción", "outdoor"],
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -548,7 +536,6 @@ export const seedProducts: SeedProduct[] = [
     tags: ["aéreo", "combo"],
     badge: "Combo completo",
     featured: true,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -574,7 +561,6 @@ export const seedProducts: SeedProduct[] = [
       spec("Control", "Voz / App / RC opcional"),
     ],
     tags: ["selfie", "creadores"],
-    freeShipping: true,
     warrantyMonths: 12,
   },
 
@@ -605,7 +591,6 @@ export const seedProducts: SeedProduct[] = [
     tags: ["consola", "4k"],
     badge: "Stock limitado",
     featured: true,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -656,7 +641,6 @@ export const seedProducts: SeedProduct[] = [
       spec("Almacenamiento", "512GB NVMe"),
     ],
     tags: ["portátil", "pc gaming"],
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -712,7 +696,6 @@ export const seedProducts: SeedProduct[] = [
     tags: ["anc", "premium"],
     badge: "Premiado",
     featured: true,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -739,7 +722,6 @@ export const seedProducts: SeedProduct[] = [
       spec("Conexión", "Bluetooth 5.1"),
     ],
     tags: ["portátil", "outdoor"],
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -795,7 +777,6 @@ export const seedProducts: SeedProduct[] = [
       spec("Batería", "18 h (hasta 36 h ahorro)"),
     ],
     tags: ["apple", "salud"],
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -877,9 +858,7 @@ export const seedProducts: SeedProduct[] = [
       spec("Conexiones", "3x HDMI, 2x USB, WiFi, Bluetooth"),
     ],
     tags: ["4k", "streaming"],
-    badge: "Envío gratis",
     featured: true,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -905,7 +884,6 @@ export const seedProducts: SeedProduct[] = [
       spec("Audio", "2x 5W Harman Kardon"),
     ],
     tags: ["cine", "portátil"],
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -932,7 +910,6 @@ export const seedProducts: SeedProduct[] = [
       spec("Batería", "7040 mAh"),
     ],
     tags: ["tablet", "estudio"],
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -959,7 +936,6 @@ export const seedProducts: SeedProduct[] = [
       spec("Peso máximo", "100 kg"),
     ],
     tags: ["movilidad", "urbano"],
-    freeShipping: true,
     warrantyMonths: 12,
   },
 ];

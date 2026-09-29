@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s · Córdoba Digital",
   },
   description:
-    "Celulares liberados, notebooks, cámaras, drones, consolas y más. Envío gratis desde $250.000, hasta 6 cuotas sin interés y retiro en Córdoba Capital.",
+    "Celulares liberados, notebooks, cámaras, drones, consolas y más. Envíos a todo el país por Andreani, hasta 6 cuotas sin interés y retiro en Córdoba Capital.",
   keywords: [
     "comprar celulares Córdoba",
     "notebooks Córdoba",

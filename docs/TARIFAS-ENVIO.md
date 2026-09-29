@@ -67,40 +67,66 @@ Por eso `ZONA_POR_PREFIJO` es una **aproximación**: reproduce los 35 códigos q
 se verificaron uno por uno, pero ante un CP no verificado no hay garantía. La
 tabla exacta vive en el tarifario de Andreani, no en este repo.
 
-## Lo que falta: el peso volumétrico
+## Lo que falta: el peso volumétrico (VERIFICADO, y ya se puede calcular)
 
-La tarifa real depende del **tamaño del paquete**, no solo de la zona. Al mismo
-código postal y con la misma cantidad de 1:
+La tarifa real depende del **volumen del paquete**, no solo de la zona. Quedó
+probado el 2026-09-29 cruzando la tarifa real con las medidas reales de cada
+producto:
 
-| Producto | Precio | A sucursal | A domicilio |
-|---|---|---|---|
-| Adaptador USB Tenda | $47.999 | $5.524 | $8.181 |
-| GoPro Battery | $129.999 | $5.524 | $8.181 |
-| Pava eléctrica Liliana | $62.999 | $5.556 | $8.331 |
-| Kit teclado Logitech | $31.999 | $5.556 | $8.331 |
-| Soporte de pared | $59.999 | $15.937 | $18.146 |
-| Valija de viaje | $99.999 | $18.086 | $19.304 |
+| Producto | Peso | Medidas | Volumen | A sucursal | A domicilio |
+|---|---|---|---|---|---|
+| Adaptador USB Tenda | 1 kg | 4×10×10 | 400 cm³ | $5.524 | $8.181 |
+| GoPro batería | 0,3 kg | 10×4×15 | 600 cm³ | $5.524 | $8.181 |
+| Teclado Logitech MK235 | 1 kg | 30×10×10 | 3.000 cm³ | $5.556 | $8.331 |
+| Pava eléctrica Liliana | 2 kg | 25×20×10 | 5.000 cm³ | $5.556 | $8.331 |
+| **Valija ELF** | **2,4 kg** | 21×38×56 | **44.688 cm³** | **$18.086** | **$19.304** |
+| **Valija Everlast** | **5 kg** | 22×38×56 | **46.816 cm³** | **$18.086** | **$19.304** |
 
-Una valija paga **3,3 veces** lo que paga un adaptador USB. Cualquier tariff
-plano por zona sube o baja mucho, y en el caso de los productos grandes lo
-subestima (la valija queda 73% por debajo de lo que cuesta de verdad).
+**Correlación volumen → precio: r = 0,9969.**
 
-**Por qué no se puede calcular todavía:** nuestra tabla `products` tiene las
-columnas `weight` y `dimensions`, pero están llenas al 39% y **todos los pesos
-valen `1`** (datos de relleno). La WooCommerce Store API que usamos para
-migrar no expone peso ni dimensiones.
+Lo que prueba esto:
 
-Para cerrarlo hay dos caminos:
+- **El precio sube con el volumen.** r casi 1.
+- **Lo que manda es el volumen, no la masa.** Las dos valijas pesan 2,4 kg y
+  5 kg y cobran **exactamente lo mismo**. Si fuera por peso, la de 5 kg
+  costaría más.
+- **Es por escalones discretos.** Entre 5.000 y 44.688 cm³ el precio se
+  multiplica por 3,3: hay un corte de volumen en el tarifario.
+- **No depende del precio del producto.** Dos valijas de $99.999 y $89.999
+  pagan lo mismo.
 
-1. **Pedirle al local su base de WooCommerce** (o los pesos y dimensiones). Es
-   lo limpio y además sirve para otros cálculos.
-2. **Consultar su calculador una vez por producto** (2.589 peticiones de solo
-   lectura, con pausas). Funciona: el nonce es global, no por producto, así que
-   una consulta a cp 5000 devuelve la tarifa exacta de ese producto. Con eso se
-   arma una tabla de envío real por producto, sin depender de los pesos.
+**Y el dato clave: el peso y las medidas reales SÍ están en las fichas del
+sitio viejo**, en el JSON-LD de `Product` (`weight`, `depth`, `width`,
+`height`), o en la tabla de atributos. Se leen sin credenciales. Por eso lo que
+decía esta misma doc antes ("la Store API no expone peso ni dimensiones, no se
+puede calcular") era una conclusión equivocada a medias: la Store API
+efectivamente no las expone, pero el HTML del sitio sí.
 
-La opción 2 tiene el detalle de que la fuente es el sitio del cliente y no un
-contrato: si Andreani les cambia la tarifa, hay que repetirla.
+Lo que sigue pendiente es bajarlas para los 2.589 productos y escribir el
+escalonado. Mientras tanto, `PRECIO_POR_ZONA` es el precio del **paquete más
+chico**, así que los productos grandes quedan subestimados: una valija figura
+$5.556 cuando de verdad cuesta $18.086 (73% por debajo).
+
+Nota operativa: el nonce del plugin es global, no por producto, pero WordPress
+lo renueva cada 12 horas y el caché de página del sitio viejo sirve nonces viejos
+(el plugin responde `403 -1`). Para un barrido largo hay que refrescar el nonce
+contra una ficha que esté cacheada recientemente.
+
+## Envío gratis: no existe, y se Sacó
+
+No hay umbral de envío gratis en el sitio original. Se comprobó en el home, en
+la ficha de producto y en el resto del contenido: cero menciones de "gratis" o
+"$250.000". Los 2.589 productos migrados tienen `free_shipping = false`.
+
+Se eliminó todo: la constante `FREE_SHIPPING_THRESHOLD`, la barra de progreso
+"Te faltan $X para el envío gratis" del carrito y del cajón, el aviso de la
+ficha, el cintillo del header, la pregunta de la página de ayuda, la meta
+description, los dos textos del home y el filtro "Envío gratis" del catálogo
+(que además estaba muerto: filtraba por un campo siempre falso).
+
+La única entrega sin cargo que queda es el retiro en el local, que sí es gratis.
+`scripts/check-tarifas-envio.ts` ahora falla si algún servicio de Andreani
+devuelve precio 0 o si aparece la palabra "gratis" en una etiqueta.
 
 ## Cómo se revalida
 

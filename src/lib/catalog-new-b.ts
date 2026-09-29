@@ -30,7 +30,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["gamer", "rtx"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -61,7 +60,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["trabajo", "estudio"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -92,7 +90,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["estudio", "liviana"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -123,7 +120,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["trabajo", "premium"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -154,7 +150,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["trabajo", "estudio"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -185,7 +180,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["estudio", "económica"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -216,7 +210,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["trabajo", "estudio"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -247,7 +240,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["estudio", "económica"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -278,7 +270,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["táctil", "trabajo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -313,7 +304,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["apple", "premium"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -349,7 +339,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["apple", "premium"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -387,7 +376,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["apple", "premium"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -421,7 +409,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["apple", "pro"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -452,7 +439,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["apple", "pro"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -486,7 +472,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["apple", "pro"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -520,7 +505,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["apple", "pro"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -554,7 +538,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["apple", "pro"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -588,7 +571,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["apple", "pro"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -619,7 +601,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["apple", "pro"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   // ─── COMPUTACIÓN ───────────────────────────────────────────
@@ -680,7 +661,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["wifi", "mesh", "hogar"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -710,7 +690,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["almacenamiento", "backup"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 60,
   },
   {
@@ -801,7 +780,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["seguridad", "smart home"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -831,7 +809,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["seguridad", "smart home"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -862,7 +839,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["mirrorless", "profesional"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -893,7 +869,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["video", "full hd"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -924,7 +899,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["video", "4k"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -955,7 +929,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["acción", "360"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -985,7 +958,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["gimbal", "creadores"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -1015,7 +987,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["compacta", "vlog"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   // ─── DRONES ────────────────────────────────────────────────
@@ -1046,7 +1017,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["aéreo", "combo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -1079,7 +1049,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["aéreo", "combo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -1110,7 +1079,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["aéreo", "profesional"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -1141,7 +1109,6 @@ export const newProductsB: SeedProduct[] = [
     tags: ["aéreo", "combo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
 ];

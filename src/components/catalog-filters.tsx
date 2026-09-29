@@ -113,7 +113,6 @@ export function FiltersPanel({
     min?: number;
     max?: number;
     ofertas: boolean;
-    envio: boolean;
     stock: boolean;
   };
   basePath?: string;
@@ -231,7 +230,6 @@ export function FiltersPanel({
         <div className="space-y-1.5">
           {[
             { key: "ofertas", label: "🔥 Solo ofertas", active: current.ofertas },
-            { key: "envio", label: "🚚 Envío gratis", active: current.envio },
             { key: "stock", label: "✅ Disponible ya", active: current.stock },
           ].map((filter) => (
             <label

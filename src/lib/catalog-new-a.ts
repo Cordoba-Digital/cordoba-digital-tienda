@@ -29,7 +29,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["ios", "gama alta", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -60,7 +59,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["ios", "gama alta", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -91,7 +89,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "gama media", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -122,7 +119,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "plegable", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -153,7 +149,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "plegable", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -184,7 +179,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "gama media", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -215,7 +209,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "gama media", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -246,7 +239,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["gama entrada", "batería", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -277,7 +269,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "gama media", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -308,7 +299,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["gama entrada", "económico", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -339,7 +329,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["gama entrada", "económico", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -370,7 +359,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "batería", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -401,7 +389,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "gama media", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -432,7 +419,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "gama alta", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -463,7 +449,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "leica", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -494,7 +479,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "leica", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -525,7 +509,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "leica", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -556,7 +539,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "gamer", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -587,7 +569,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["gama entrada", "mejor precio", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -618,7 +599,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "gama media", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -649,7 +629,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "gama media", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -680,7 +659,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "gama media", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -711,7 +689,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "gama media", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -742,7 +719,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["gama media", "mejor precio", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -773,7 +749,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["5g", "gama media", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -804,7 +779,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["gama entrada", "batería", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -835,7 +809,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["resistente", "batería", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -866,7 +839,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["gama media", "batería", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -897,7 +869,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["gama entrada", "batería", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -928,7 +899,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["tablet", "estudio", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -959,7 +929,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["apple", "tablet", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -990,7 +959,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["apple", "tablet", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -1021,7 +989,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["apple", "tablet", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -1052,7 +1019,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["apple", "tablet", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -1083,7 +1049,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["apple", "tablet", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -1114,7 +1079,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["apple", "tablet", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -1145,7 +1109,6 @@ export const newProductsA: SeedProduct[] = [
     tags: ["apple", "tablet", "nuevo"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
 ];

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { FREE_SHIPPING_THRESHOLD, money } from "@/lib/format";
+import { money } from "@/lib/format";
 
 export const dynamic = "force-dynamic";
 
@@ -32,7 +32,7 @@ const SECTIONS = [
       },
       {
         q: "¿Cuánto cuesta el envío?",
-        a: `Es gratis en compras desde ${money(FREE_SHIPPING_THRESHOLD)}. Por debajo de ese monto, el costo depende de la zona y se calcula con tu código postal antes de pagar.`,
+        a: "Depende de la zona y del tamaño del paquete. Lo ves exacto antes de pagar: ingresás tu código postal en la ficha del producto y te mostramos el precio de cada opción. El retiro en el local no tiene cargo.",
       },
       {
         q: "¿Puedo seguir mi pedido?",

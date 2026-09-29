@@ -30,7 +30,6 @@ export const newProductsC: SeedProduct[] = [
     tags: ["realidad virtual", "gaming", "meta"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -60,7 +59,6 @@ export const newProductsC: SeedProduct[] = [
     tags: ["consola", "4k", "sony"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -91,7 +89,6 @@ export const newProductsC: SeedProduct[] = [
     tags: ["simracing", "accesorio", "pc gaming"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
 
@@ -123,7 +120,6 @@ export const newProductsC: SeedProduct[] = [
     tags: ["bluetooth", "over-ear"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -153,7 +149,6 @@ export const newProductsC: SeedProduct[] = [
     tags: ["portátil", "fiesta", "outdoor"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -183,7 +178,6 @@ export const newProductsC: SeedProduct[] = [
     tags: ["portátil", "outdoor"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
 
@@ -216,7 +210,6 @@ export const newProductsC: SeedProduct[] = [
     tags: ["running", "deporte", "gps"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
 
@@ -249,7 +242,6 @@ export const newProductsC: SeedProduct[] = [
     tags: ["movilidad", "urbano"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -280,7 +272,6 @@ export const newProductsC: SeedProduct[] = [
     tags: ["movilidad", "urbano"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -314,7 +305,6 @@ export const newProductsC: SeedProduct[] = [
     tags: ["movilidad", "urbano", "autonomía"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -348,7 +338,6 @@ export const newProductsC: SeedProduct[] = [
     tags: ["movilidad", "autonomía", "urbano"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -382,7 +371,6 @@ export const newProductsC: SeedProduct[] = [
     tags: ["movilidad", "gama alta", "autonomía"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -413,7 +401,6 @@ export const newProductsC: SeedProduct[] = [
     tags: ["movilidad", "xiaomi", "urbano"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -444,7 +431,6 @@ export const newProductsC: SeedProduct[] = [
     tags: ["movilidad", "xiaomi", "gama alta"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
   {
@@ -475,7 +461,6 @@ export const newProductsC: SeedProduct[] = [
     tags: ["movilidad", "xiaomi", "urbano"],
     badge: "Nuevo",
     featured: false,
-    freeShipping: true,
     warrantyMonths: 12,
   },
 ];

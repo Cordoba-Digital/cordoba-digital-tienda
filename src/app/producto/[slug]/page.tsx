@@ -205,7 +205,6 @@ export default async function ProductPage({ params }: { params: Params }) {
           <div>
             <div className="mb-2 flex flex-wrap items-center gap-2">
               <Pill tone="brand">{product.brand}</Pill>
-              {product.freeShipping ? <Pill tone="success">🚚 Envío gratis</Pill> : null}
               {product.stock > 0 && product.stock <= 5 ? <Pill tone="amber">Últimas unidades</Pill> : null}
             </div>
             <h1 className="text-2xl font-extrabold leading-tight tracking-tight text-ink-900 md:text-3xl">

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
-import { FREE_SHIPPING_THRESHOLD, money } from "@/lib/format";
+import { money } from "@/lib/format";
 
 export function QuantityStepper({
   value,
@@ -43,30 +43,6 @@ export function QuantityStepper({
       >
         +
       </button>
-    </div>
-  );
-}
-
-export function FreeShippingBar({ subtotal }: { subtotal: number }) {
-  const remaining = Math.max(0, FREE_SHIPPING_THRESHOLD - subtotal);
-  const progress = Math.min(100, Math.round((subtotal / FREE_SHIPPING_THRESHOLD) * 100));
-  return (
-    <div className="rounded-xl bg-emerald-50 p-3">
-      <p className="text-xs font-semibold text-emerald-800">
-        {remaining === 0 ? (
-          <>🎉 ¡Tenés envío gratis a todo el país!</>
-        ) : (
-          <>
-            Te faltan <strong>{money(remaining)}</strong> para el envío gratis
-          </>
-        )}
-      </p>
-      <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-emerald-200/60">
-        <div
-          className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-emerald-400 transition-all duration-500"
-          style={{ width: `${progress}%` }}
-        />
-      </div>
     </div>
   );
 }
@@ -112,7 +88,6 @@ export function CartDrawer() {
         ) : (
           <>
             <div className="flex-1 space-y-3 overflow-y-auto px-5 py-4">
-              <FreeShippingBar subtotal={subtotal} />
               {items.map((item) => (
                 <div key={item.slug} className="flex gap-3 rounded-xl border border-ink-100 p-3">
                   <Link href={`/producto/${item.slug}`} onClick={closeCart} className="shrink-0">

@@ -86,6 +86,7 @@ console.log(`   ok  sin cp raro revienta (${["0000", "1234", "5678", "9999", "",
 // Los valores esperados son los que devolvio el calculador del sitio original
 // para el teclado Logitech MK235 con cantidad 1.
 console.log("\n6) shippingOptions devuelve la tarifa real, servicio por servicio");
+// No hay envio gratis por monto: el subtotal ya no se pasa.
 // OJO: los ids internos siguen llamandose "standard" y "express" por
 // compatibilidad (ver la deuda tecnica en `shipping.ts`). "standard" es
 // Andreani a domicilio y "express" es Andreani a sucursal.
@@ -107,7 +108,7 @@ for (const [cp, zonaEsperada, estandar, sucursal] of ESPERADO) {
   }
   if (z.name !== zonaEsperada) falla(`cp ${cp} dio zona "${z.name}", se esperaba "${zonaEsperada}"`);
 
-  const opts = shippingOptions(cp, 0);
+  const opts = shippingOptions(cp);
   const est = opts.find((o) => o.id === "standard");
   const suc = opts.find((o) => o.id === "express");
   const pick = opts.find((o) => o.id === "pickup");
@@ -137,11 +138,36 @@ for (const [cp, zonaEsperada, estandar, sucursal] of ESPERADO) {
 
 console.log("\n7) sin CP no se ofrecen envios, solo el retiro en el local");
 for (const cp of ["", "123", "abcde"]) {
-  const opts = shippingOptions(cp, 0);
+  const opts = shippingOptions(cp);
   if (opts.length !== 1 || opts[0].id !== "pickup")
     falla(`cp "${cp}" ofrecio ${opts.length} opciones en vez de solo el retiro`);
 }
 console.log("   ok  cp incompleto no inventa un precio de envío");
+
+// El unico envio sin cargo es el retiro en el local. Existio un umbral de
+// $250.000 que era inventado: el sitio original no anuncia envio gratis en
+// ningun lado y los 2.589 productos tienen free_shipping = false.
+console.log("\n8) ningun envio de Andreani sale gratis en ninguna zona");
+const TODOS_LOS_CP = [...new Set(CP_VERIFICADOS.map((c) => c.cp))];
+let gratisHallado = 0;
+for (const cp of TODOS_LOS_CP) {
+  for (const o of shippingOptions(cp)) {
+    if (o.id === "pickup") {
+      if (o.cost !== 0 || !o.free) falla(`cp ${cp}: el retiro en el local deberia ser gratis`);
+      continue;
+    }
+    if (o.cost <= 0 || o.free) {
+      falla(`cp ${cp}: "${o.label}" salio gratis ($${o.cost}), y no existe envio gratis`);
+      gratisHallado++;
+    }
+    // Y ningun aviso de "envio gratis" colado en la etiqueta o en el badge.
+    if (/gratis/i.test(`${o.label} ${o.badge ?? ""}`))
+      falla(`cp ${cp}: "${o.label}" anuncia gratis (badge: ${o.badge})`);
+  }
+}
+console.log(
+  `   ${gratisHallado === 0 ? "ok " : "?? "}${TODOS_LOS_CP.length} codigos x 2 servicios: ninguno gratis`,
+);
 
 console.log(
   fallos ? `\n${fallos} FALLA(S)` : "\nOK: las tarifas coinciden con el calculador del sitio original.",

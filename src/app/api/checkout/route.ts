@@ -134,7 +134,7 @@ export async function POST(request: Request) {
       }
     : null;
 
-  const shippingOption = findShippingOption(method === "pickup" ? "5000" : zip, subtotal, method);
+  const shippingOption = findShippingOption(method === "pickup" ? "5000" : zip, method);
   if (!shippingOption) {
     return Response.json({ ok: false, errors: { zip: "No podemos enviar a ese código postal." } }, { status: 400 });
   }

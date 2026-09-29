@@ -7,13 +7,7 @@ import { QuantityStepper } from "@/components/cart-drawer";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Spinner, Stars } from "@/components/ui";
-import {
-  FREE_SHIPPING_THRESHOLD,
-  INSTALLMENT_PLANS,
-  discountPercent,
-  installmentValue,
-  money,
-} from "@/lib/format";
+import { INSTALLMENT_PLANS, discountPercent, installmentValue, money } from "@/lib/format";
 import type { ShippingOption } from "@/lib/shipping";
 
 export function ProductGallery({
@@ -224,16 +218,14 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
       </div>
 
       {/* Avisos del local. Cada dato sale de la política de garantía o de los
-          datos estructurados del sitio original. Se sacó "10 días para cambios
-          sin cargo" y "retiro en 2 hs" porque no figuran en ningún lado del
-          sitio viejo. El monto de envío sale de la misma constante que usa el
-          checkout, así que si suben el envío gratis no queda desactualizado. */}
+          datos estructurados del sitio original. Se sacaron "10 días para
+          cambios sin cargo", "retiro en 2 hs" y el "envío gratis desde
+          $250.000" porque no figuran en ningún lado del sitio viejo. */}
       <ul className="space-y-2 border-t border-ink-100 pt-4 text-xs text-ink-600">
         <li className="flex items-center gap-2">🛡️ {product.warrantyMonths} meses de garantía legal</li>
         <li className="flex items-center gap-2">🔧 Servicio técnico propio en el local</li>
         <li className="flex items-center gap-2">🧾 Factura o comprobante de compra</li>
         <li className="flex items-center gap-2">🏬 Retiro en 27 de Abril 259, Córdoba Capital</li>
-        <li className="flex items-center gap-2">🚚 Envío gratis desde {money(FREE_SHIPPING_THRESHOLD)}</li>
       </ul>
       <p className="text-[10px] text-ink-300">SKU {product.sku}</p>
     </div>

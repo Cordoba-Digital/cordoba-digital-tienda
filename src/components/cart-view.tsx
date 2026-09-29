@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import { FreeShippingBar, QuantityStepper } from "@/components/cart-drawer";
+import { QuantityStepper } from "@/components/cart-drawer";
 import { ProductCard } from "@/components/product-card";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
@@ -93,8 +93,6 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem]">
         <div className="space-y-4">
-          <FreeShippingBar subtotal={subtotal} />
-
           <div className="card-surface divide-y divide-ink-50">
             {items.map((item) => (
               <div key={item.slug} className="flex gap-4 p-4">

@@ -35,7 +35,6 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
   const orden = pick(params, "orden") ?? "relevancia";
   const pagina = Number(pick(params, "pagina") ?? "1");
   const ofertas = pick(params, "ofertas") === "1";
-  const envio = pick(params, "envio") === "1";
   const stock = pick(params, "stock") === "1";
 
   const [categories, brands, result] = await Promise.all([
@@ -50,7 +49,6 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
       page: pagina,
       perPage: 24,
       onlyOffers: ofertas,
-      freeShipping: envio,
       inStock: stock,
     }),
   ]);
@@ -71,7 +69,6 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
       value: null,
     });
   if (ofertas) chips.push({ key: "ofertas", label: "Solo ofertas", value: null });
-  if (envio) chips.push({ key: "envio", label: "Envío gratis", value: null });
   if (stock) chips.push({ key: "stock", label: "Disponible ya", value: null });
 
   const buildPageHref = (page: number) => {
@@ -120,7 +117,7 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
           <FiltersPanel
             categories={rootCategories}
             brands={brands}
-            current={{ marcas, min, max, ofertas, envio, stock }}
+            current={{ marcas, min, max, ofertas, stock }}
           />
         </Suspense>
 
