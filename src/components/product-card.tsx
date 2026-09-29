@@ -140,10 +140,12 @@ export function ProductCard({ product }: { product: ProductView }) {
         <div className="mt-auto pt-3">
           <Link
             href={`/producto/${product.slug}`}
-            className={`block w-full rounded-md py-2.5 text-center text-sm font-semibold transition ${
+            className={`block w-full rounded-md border py-2.5 text-center text-sm font-semibold transition ${
+              // Fondo blanco con borde y texto oscuro: si solo se whiteara el
+              // fondo, el texto blanco quedaría invisible sobre la tarjeta blanca.
               outOfStock
-                ? "border border-ink-200 bg-surface text-ink-400"
-                : "bg-deep text-white hover:bg-brand-600"
+                ? "border-dashed border-ink-200 bg-surface text-ink-400"
+                : "border-ink-200 bg-white text-ink-800 hover:border-brand-400 hover:bg-brand-50 hover:text-brand-700"
             }`}
           >
             {outOfStock ? "Sin stock" : "Ver más"}
