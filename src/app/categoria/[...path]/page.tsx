@@ -276,7 +276,7 @@ export default async function CategoryPage({
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-2 gap-4 xl:grid-cols-3">
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-3 2xl:grid-cols-4">
               {result.items.map((product) => (
                 <ProductCard key={product.slug} product={toView(product)} />
               ))}

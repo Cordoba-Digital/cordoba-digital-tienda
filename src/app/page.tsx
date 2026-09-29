@@ -292,7 +292,7 @@ export default async function HomePage() {
           description="Lo que más sale de nuestro depósito esta semana, con stock confirmado."
           action={{ href: "/productos?orden=vendidos", label: "Ver ranking" }}
         />
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
           {bestSellers.slice(0, 8).map((p) => (
             <ProductCard key={p.slug} product={toView(p)} />
           ))}
