@@ -3,6 +3,9 @@ node_modules/
 .next/
 out/
 
+# artefactos de build: los regenera cada tsc, no son fuente
+*.tsbuildinfo
+
 # env
 .env
 .env.local
