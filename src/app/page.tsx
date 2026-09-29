@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Countdown } from "@/components/countdown";
+import { FaqAccordion } from "@/components/faq-accordion";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { ProductCard, ProductRow } from "@/components/product-card";
 import { ProductImg } from "@/components/product-img";
@@ -473,15 +474,7 @@ export default async function HomePage() {
         <div>
           <SectionHeading eyebrow="Antes de comprar" title="Preguntas frecuentes" action={{ href: "/ayuda", label: "Centro de ayuda" }} />
           <div className="space-y-3">
-            {FAQ.map((item) => (
-              <details key={item.q} className="card-surface group p-4 [&_summary::-webkit-details-marker]:hidden">
-                <summary className="flex cursor-pointer items-center justify-between gap-4 text-sm font-bold text-ink-900">
-                  {item.q}
-                  <span className="text-lg text-ink-300 transition group-open:rotate-45">+</span>
-                </summary>
-                <p className="mt-2.5 text-sm leading-relaxed text-ink-500">{item.a}</p>
-              </details>
-            ))}
+            <FaqAccordion items={FAQ} />
           </div>
         </div>
 

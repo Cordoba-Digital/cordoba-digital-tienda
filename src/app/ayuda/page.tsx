@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { FaqAccordion } from "@/components/faq-accordion";
+
 import { money } from "@/lib/format";
 
 export const dynamic = "force-dynamic";
@@ -146,15 +148,7 @@ export default function HelpPage() {
                 {section.title}
               </h2>
               <div className="space-y-3">
-                {section.items.map((item) => (
-                  <details key={item.q} className="card-surface group p-4 [&_summary::-webkit-details-marker]:hidden">
-                    <summary className="flex cursor-pointer items-center justify-between gap-4 text-sm font-bold text-ink-900">
-                      {item.q}
-                      <span className="text-lg text-ink-300 transition group-open:rotate-45">+</span>
-                    </summary>
-                    <p className="mt-2.5 text-sm leading-relaxed text-ink-600">{item.a}</p>
-                  </details>
-                ))}
+                <FaqAccordion items={section.items} />
               </div>
             </section>
           ))}
