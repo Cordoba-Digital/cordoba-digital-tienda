@@ -352,7 +352,7 @@ export function CheckoutFlow() {
           <span className="text-5xl">🧾</span>
           <h1 className="text-xl font-extrabold text-ink-900">No hay productos para pagar</h1>
           <p className="text-sm text-ink-500">Agregá productos al carrito y volvé para finalizar tu compra.</p>
-          <Link href="/productos" className="mt-2 rounded-xl bg-ink-900 px-5 py-3 text-sm font-bold text-white">
+          <Link href="/productos" className="mt-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white">
             Ir al catálogo
           </Link>
         </div>
@@ -388,7 +388,7 @@ export function CheckoutFlow() {
                 type="button"
                 onClick={() => setStep(item.id)}
                 className={`flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-bold transition ${
-                  active ? "bg-ink-900 text-white" : done ? "bg-emerald-50 text-emerald-700" : "bg-white text-ink-400"
+                  active ? "bg-brand-600 text-white" : done ? "bg-emerald-50 text-emerald-700" : "bg-white text-ink-400"
                 }`}
               >
                 <span
@@ -443,7 +443,7 @@ export function CheckoutFlow() {
                 <button
                   type="button"
                   onClick={() => validateStep1() && setStep(2)}
-                  className="w-full rounded-xl bg-ink-900 px-4 py-3 text-sm font-bold text-white transition hover:bg-brand-700 sm:w-auto sm:px-8"
+                  className="w-full rounded-xl bg-brand-600 px-4 py-3 text-sm font-bold text-white transition hover:bg-brand-700 sm:w-auto sm:px-8"
                 >
                   Continuar
                 </button>
@@ -592,7 +592,7 @@ export function CheckoutFlow() {
                   <button
                     type="button"
                     onClick={() => validateStep2() && setStep(3)}
-                    className="flex-1 rounded-xl bg-ink-900 px-4 py-3 text-sm font-bold text-white transition hover:bg-brand-700 sm:flex-none sm:px-8"
+                    className="flex-1 rounded-xl bg-brand-600 px-4 py-3 text-sm font-bold text-white transition hover:bg-brand-700 sm:flex-none sm:px-8"
                   >
                     Continuar al pago
                   </button>
@@ -816,7 +816,7 @@ export function CheckoutFlow() {
                   placeholder="Cupón de descuento"
                   className="h-9 flex-1 rounded-lg border border-ink-200 px-2.5 text-xs uppercase outline-none focus:border-brand-400"
                 />
-                <button type="submit" className="rounded-lg bg-ink-900 px-3 text-xs font-bold text-white">
+                <button type="submit" className="rounded-lg bg-brand-600 px-3 text-xs font-bold text-white">
                   Aplicar
                 </button>
               </form>

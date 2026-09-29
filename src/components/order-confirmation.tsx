@@ -92,7 +92,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                 <CopyButton value={order.code} label="Copiar código" />
                 <Link
                   href={`/seguimiento?codigo=${order.code}`}
-                  className="rounded-lg bg-ink-900 px-3 py-1.5 text-[11px] font-bold text-white"
+                  className="rounded-lg bg-brand-600 px-3 py-1.5 text-[11px] font-bold text-white"
                 >
                   Seguir pedido
                 </Link>
@@ -282,7 +282,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
             </div>
             <Link
               href="/productos"
-              className="block w-full rounded-xl bg-ink-900 px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-brand-700"
+              className="block w-full rounded-xl bg-brand-600 px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-brand-700"
             >
               Seguir comprando
             </Link>

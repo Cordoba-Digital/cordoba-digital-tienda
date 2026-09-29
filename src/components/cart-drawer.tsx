@@ -104,7 +104,7 @@ export function CartDrawer() {
             <Link
               href="/productos?ofertas=1"
               onClick={closeCart}
-              className="mt-2 rounded-xl bg-ink-900 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700"
+              className="mt-2 rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700"
             >
               Ver ofertas
             </Link>

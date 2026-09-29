@@ -63,7 +63,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
             Mirá lo más vendido de la semana o escribinos y te ayudamos a elegir el producto ideal.
           </p>
           <div className="mt-3 flex flex-wrap justify-center gap-3">
-            <Link href="/productos" className="rounded-xl bg-ink-900 px-5 py-3 text-sm font-bold text-white">
+            <Link href="/productos" className="rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white">
               Ver catálogo
             </Link>
             <Link href="/productos?ofertas=1" className="rounded-xl border border-ink-200 px-5 py-3 text-sm font-bold text-ink-700">
@@ -184,7 +184,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
                 <button
                   type="submit"
                   disabled={checking}
-                  className="rounded-xl bg-ink-900 px-5 text-sm font-bold text-white transition hover:bg-brand-700 disabled:opacity-60"
+                  className="rounded-xl bg-brand-600 px-5 text-sm font-bold text-white transition hover:bg-brand-700 disabled:opacity-60"
                 >
                   Aplicar
                 </button>

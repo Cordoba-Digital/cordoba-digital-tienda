@@ -64,7 +64,7 @@ export function ProductGallery({
         }}
       >
         {badge ? (
-          <span className="absolute left-4 top-4 z-10 rounded-full bg-ink-900 px-3 py-1.5 text-[11px] font-bold text-white">
+          <span className="absolute left-4 top-4 z-10 rounded-full bg-ink-900/85 px-3 py-1.5 text-[11px] font-bold text-white">
             {badge}
           </span>
         ) : null}
@@ -325,7 +325,7 @@ export function ShippingCalculator({ price }: { price: number }) {
         <button
           type="submit"
           disabled={loading}
-          className="inline-flex h-10 items-center gap-2 rounded-xl bg-ink-900 px-4 text-sm font-bold text-white transition hover:bg-brand-700 disabled:opacity-60"
+          className="inline-flex h-10 items-center gap-2 rounded-xl bg-brand-600 px-4 text-sm font-bold text-white transition hover:bg-brand-700 disabled:opacity-60"
         >
           {loading ? <Spinner className="h-4 w-4" /> : null}
           Calcular
@@ -446,7 +446,7 @@ export function ReviewForm({ slug }: { slug: string }) {
         <button
           type="submit"
           disabled={state === "loading"}
-          className="rounded-xl bg-ink-900 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700 disabled:opacity-60"
+          className="rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700 disabled:opacity-60"
         >
           {state === "loading" ? "Publicando..." : "Publicar opinión"}
         </button>

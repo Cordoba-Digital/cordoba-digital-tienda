@@ -94,7 +94,7 @@ export function TrackingForm() {
         <button
           type="submit"
           disabled={loading}
-          className="mt-auto inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-ink-900 px-6 text-sm font-bold text-white transition hover:bg-brand-700 disabled:opacity-60"
+          className="mt-auto inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-brand-600 px-6 text-sm font-bold text-white transition hover:bg-brand-700 disabled:opacity-60"
         >
           {loading ? <Spinner className="h-4 w-4" /> : null}
           Buscar
@@ -143,7 +143,7 @@ export function TrackingForm() {
 
           <Link
             href={`/pedido/${order.code}`}
-            className="mt-5 inline-block rounded-xl bg-ink-900 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700"
+            className="mt-5 inline-block rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700"
           >
             Ver detalle completo
           </Link>

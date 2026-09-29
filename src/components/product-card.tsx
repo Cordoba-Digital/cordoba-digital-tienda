@@ -127,7 +127,7 @@ export function ProductCard({ product, compact = false }: { product: ProductView
             );
             window.setTimeout(() => setAdding(false), 600);
           }}
-          className="mt-2 w-full rounded-xl bg-ink-900 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700 disabled:cursor-not-allowed disabled:bg-ink-200 disabled:text-ink-400"
+          className="mt-2 w-full rounded-xl bg-brand-600 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700 disabled:cursor-not-allowed disabled:bg-ink-200 disabled:text-ink-400"
         >
           {product.stock === 0 ? "Sin stock" : adding ? "¡Agregado!" : "Agregar al carrito"}
         </button>

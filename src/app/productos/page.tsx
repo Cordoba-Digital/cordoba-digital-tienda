@@ -143,7 +143,7 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
                 mercado aunque no estén publicados.
               </p>
               <div className="mt-2 flex gap-3">
-                <Link href="/productos" className="rounded-xl bg-ink-900 px-5 py-2.5 text-sm font-bold text-white">
+                <Link href="/productos" className="rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-bold text-white">
                   Ver todo el catálogo
                 </Link>
                 <a
@@ -180,7 +180,7 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
                   href={buildPageHref(page)}
                   className={`min-w-10 rounded-lg px-3.5 py-2 text-center text-sm font-bold transition ${
                     page === result.page
-                      ? "bg-ink-900 text-white"
+                      ? "bg-brand-600 text-white"
                       : "border border-ink-200 bg-white text-ink-700 hover:border-brand-300"
                   }`}
                 >

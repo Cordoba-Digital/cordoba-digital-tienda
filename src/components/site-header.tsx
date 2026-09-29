@@ -157,7 +157,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               </svg>
               <button
                 type="submit"
-                className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-lg bg-ink-900 px-4 py-2 text-xs font-bold text-white transition hover:bg-brand-700"
+                className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-lg bg-brand-600 px-4 py-2 text-xs font-bold text-white transition hover:bg-brand-700"
               >
                 Buscar
               </button>
@@ -223,7 +223,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
             <button
               type="button"
               onClick={openCart}
-              className="relative flex h-10 items-center gap-2 rounded-xl bg-ink-900 px-3.5 text-sm font-bold text-white transition hover:bg-brand-700"
+              className="relative flex h-10 items-center gap-2 rounded-xl bg-brand-600 px-3.5 text-sm font-bold text-white transition hover:bg-brand-700"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <path d="M3 4h2.2l2 11h10.4l2-8H6" strokeLinecap="round" strokeLinejoin="round" />

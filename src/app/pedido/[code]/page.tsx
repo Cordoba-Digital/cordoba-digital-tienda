@@ -36,7 +36,7 @@ export default async function OrderPage({
             Revisá el código (tiene el formato CD-XXXXXX) o escribinos por WhatsApp y lo buscamos por vos.
           </p>
           <div className="mt-2 flex gap-3">
-            <Link href="/seguimiento" className="rounded-xl bg-ink-900 px-5 py-3 text-sm font-bold text-white">
+            <Link href="/seguimiento" className="rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white">
               Buscar mi pedido
             </Link>
             <a

@@ -261,7 +261,7 @@ export default async function CategoryPage({
               <div className="mt-2 flex gap-3">
                 <Link
                   href={`/categoria/${node.path}`}
-                  className="rounded-xl bg-ink-900 px-5 py-2.5 text-sm font-bold text-white"
+                  className="rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-bold text-white"
                 >
                   Ver toda la categoría
                 </Link>
@@ -302,7 +302,7 @@ export default async function CategoryPage({
                       href={pageHref(page)}
                       className={`min-w-10 rounded-lg px-3.5 py-2 text-center text-sm font-bold transition ${
                         page === result.page
-                          ? "bg-ink-900 text-white"
+                          ? "bg-brand-600 text-white"
                           : "border border-ink-200 bg-white text-ink-700 hover:border-brand-300"
                       }`}
                     >

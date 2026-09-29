@@ -282,7 +282,7 @@ export function FiltersPanel({
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="mt-6 w-full rounded-xl bg-ink-900 px-4 py-3 text-sm font-bold text-white"
+              className="mt-6 w-full rounded-xl bg-brand-600 px-4 py-3 text-sm font-bold text-white"
             >
               Ver resultados
             </button>

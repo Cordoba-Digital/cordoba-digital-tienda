@@ -28,7 +28,7 @@ export function FavoritesView({ products }: { products: ProductView[] }) {
         <p className="text-sm text-ink-500">
           Tocá el corazón en cualquier producto para guardarlo y compararlo después.
         </p>
-        <Link href="/productos" className="mt-2 rounded-xl bg-ink-900 px-5 py-3 text-sm font-bold text-white">
+        <Link href="/productos" className="mt-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white">
           Explorar catálogo
         </Link>
       </div>
@@ -61,7 +61,7 @@ export function FavoritesView({ products }: { products: ProductView[] }) {
                 ),
               )
           }
-          className="rounded-xl bg-ink-900 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700"
+          className="rounded-xl bg-brand-600 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700"
         >
           Agregar todo al carrito
         </button>

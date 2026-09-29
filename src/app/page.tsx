@@ -359,7 +359,7 @@ export default async function HomePage() {
                 href="https://maps.google.com/?q=27+de+Abril+259+Córdoba+Argentina"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-xl bg-ink-900 px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-700"
+                className="rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-700"
               >
                 Cómo llegar
               </a>

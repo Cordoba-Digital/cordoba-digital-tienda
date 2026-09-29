@@ -166,7 +166,7 @@ export default function HelpPage() {
             </div>
             <Link
               href="/seguimiento"
-              className="block rounded-xl bg-ink-900 px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-brand-700"
+              className="block rounded-xl bg-brand-600 px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-brand-700"
             >
               Seguir mi pedido
             </Link>
