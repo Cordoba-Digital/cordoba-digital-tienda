@@ -36,7 +36,7 @@ export function Pill({
   className = "",
 }: {
   children: ReactNode;
-  tone?: "neutral" | "brand" | "success" | "danger" | "amber" | "dark";
+  tone?: "neutral" | "brand" | "brandSolid" | "success" | "danger" | "amber" | "dark";
   className?: string;
 }) {
   const tones: Record<string, string> = {
@@ -45,6 +45,8 @@ export function Pill({
     success: "bg-emerald-50 text-emerald-700",
     danger: "bg-rose-50 text-rose-600",
     amber: "bg-amber-50 text-amber-700",
+    /** Sólido de marca: para pills que van sobre la foto del producto. */
+    brandSolid: "bg-brand-600 text-white",
     dark: "bg-ink-900 text-white",
   };
   return (

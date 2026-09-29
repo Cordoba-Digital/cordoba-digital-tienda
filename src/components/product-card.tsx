@@ -45,7 +45,9 @@ export function ProductCard({ product, compact = false }: { product: ProductView
               -{off}%
             </span>
           ) : null}
-          {product.badge ? <Pill tone="dark">{product.badge}</Pill> : null}
+          {/* El badge solo cuando no hay descuento: el 94% del catálogo está en
+              oferta, así que mostrar los dos era un badge redundante. */}
+          {off <= 0 && product.badge ? <Pill tone="brandSolid">{product.badge}</Pill> : null}
         </div>
 
         <button
