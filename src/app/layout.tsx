@@ -6,7 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StoreProvider } from "@/components/store-provider";
 import { WhatsAppFab } from "@/components/whatsapp-fab";
-import { getCategoryTree } from "@/lib/queries";
+import { getCategoryTree, type CategoryTreeNode } from "@/lib/queries";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -52,31 +52,28 @@ export const metadata: Metadata = {
 const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem("cd-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}var d=t==="dark";document.documentElement.classList.toggle("dark",d);document.documentElement.style.colorScheme=d?"dark":"light";}catch(e){}})();`;
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
-  let categories: {
+  type NavNode = {
     slug: string;
     name: string;
     icon: string;
-    tagline: string;
     path: string;
     count: number;
-    children: { slug: string; name: string; icon: string; path: string; count: number }[];
-  }[] = [];
+    children?: NavNode[];
+  };
+  let categories: (NavNode & { tagline: string })[] = [];
   try {
-    categories = (await getCategoryTree()).map((c) => ({
-      slug: c.slug,
-      name: c.name,
-      icon: c.icon,
-      tagline: c.tagline,
-      path: c.path,
-      count: c.count,
-      children: c.children.map((child) => ({
-        slug: child.slug,
-        name: child.name,
-        icon: child.icon,
-        path: child.path,
-        count: child.count,
-      })),
-    }));
+    // El mapeo baja los tres niveles del árbol, no uno: el header muestra los
+    // nietos indentados dentro del panel de cada raíz. Antes los recortaba acá
+    // y la información no llegaba al componente.
+    const toNavNode = (node: CategoryTreeNode): NavNode => ({
+      slug: node.slug,
+      name: node.name,
+      icon: node.icon,
+      path: node.path,
+      count: node.count,
+      children: node.children.length ? node.children.map(toNavNode) : undefined,
+    });
+    categories = (await getCategoryTree()).map((c) => ({ ...toNavNode(c), tagline: c.tagline }));
   } catch {
     categories = [];
   }

@@ -5,19 +5,12 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
+import { CategoryNavBar, type CategoryNavRoot } from "@/components/hdr-category-nav";
 import { useStore } from "@/components/store-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { money } from "@/lib/format";
 
-type CategoryLink = {
-  slug: string;
-  name: string;
-  icon: string;
-  tagline: string;
-  path: string;
-  count?: number;
-  children?: { slug: string; name: string; icon: string; path: string; count?: number }[];
-};
+type CategoryLink = CategoryNavRoot;
 
 type Suggestion = {
   slug: string;
@@ -44,7 +37,6 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [catsOpen, setCatsOpen] = useState(false);
   const [expandedCats, setExpandedCats] = useState<string[]>([]);
   const [announcement, setAnnouncement] = useState(0);
   const boxRef = useRef<HTMLDivElement>(null);
@@ -57,7 +49,6 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
   useEffect(() => {
     const id = window.setTimeout(() => {
       setMenuOpen(false);
-      setCatsOpen(false);
       setOpen(false);
     }, 0);
     return () => window.clearTimeout(id);
@@ -266,91 +257,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
         </div>
 
         {/* Desktop category bar */}
-        <div className="hidden border-t border-ink-100 lg:block">
-          <div className="container-xl flex h-11 items-center gap-1 text-sm">
-            <div className="relative">
-              <button
-                type="button"
-                onMouseEnter={() => setCatsOpen(true)}
-                onClick={() => setCatsOpen((v) => !v)}
-                className="flex items-center gap-2 rounded-lg bg-brand-600 px-3 py-1.5 font-bold text-white transition hover:bg-brand-700"
-              >
-                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.2">
-                  <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" />
-                </svg>
-                Categorías
-              </button>
-              {catsOpen ? (
-                <div
-                  onMouseLeave={() => setCatsOpen(false)}
-                  className="absolute left-0 top-11 z-50 max-h-[70vh] w-[720px] animate-pop overflow-y-auto rounded-2xl border border-ink-100 bg-surface p-3 shadow-2xl shadow-black/10"
-                >
-                  <div className="grid grid-cols-2 gap-x-3 gap-y-1">
-                    {categories.map((c) => (
-                      <div key={c.slug} className="rounded-xl px-3 py-2 transition hover:bg-ink-50">
-                        <Link href={`/categoria/${c.path}`} className="flex items-start gap-3">
-                          <span className="text-xl" aria-hidden>
-                            {c.icon}
-                          </span>
-                          <span className="min-w-0">
-                            <span className="block text-sm font-semibold text-ink-800">{c.name}</span>
-                            {typeof c.count === "number" ? (
-                              <span className="block text-[11px] text-ink-400">{c.count} productos</span>
-                            ) : null}
-                          </span>
-                        </Link>
-                        {c.children?.length ? (
-                          <ul className="ml-9 mt-1 space-y-0.5 border-l border-ink-100 pl-3">
-                            {c.children.slice(0, 8).map((child) => (
-                              <li key={child.slug}>
-                                <Link
-                                  href={`/categoria/${child.path}`}
-                                  className="block truncate text-[12px] text-ink-500 transition hover:text-brand-700"
-                                >
-                                  {child.name}
-                                </Link>
-                              </li>
-                            ))}
-                            {c.children.length > 8 ? (
-                              <li>
-                                <Link
-                                  href={`/categoria/${c.path}`}
-                                  className="block text-[11px] font-semibold text-brand-700 hover:text-brand-800"
-                                >
-                                  Ver las {c.children.length} subcategorías →
-                                </Link>
-                              </li>
-                            ) : null}
-                          </ul>
-                        ) : null}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ) : null}
-            </div>
-
-            {categories.slice(0, 6).map((c) => (
-              <Link
-                key={c.slug}
-                href={`/categoria/${c.path}`}
-                className="max-w-[10rem] truncate rounded-lg px-3 py-1.5 font-medium text-ink-600 transition hover:bg-ink-50 hover:text-ink-900"
-                title={c.name}
-              >
-                {c.name}
-              </Link>
-            ))}
-            <Link
-              href="/productos?ofertas=1"
-              className="ml-auto rounded-lg px-3 py-1.5 font-bold text-rose-600 transition hover:bg-rose-50"
-            >
-              🔥 Ofertas
-            </Link>
-            <Link href="/ayuda" className="rounded-lg px-3 py-1.5 font-medium text-ink-600 transition hover:bg-ink-50">
-              Ayuda
-            </Link>
-          </div>
-        </div>
+        <CategoryNavBar categories={categories} />
       </div>
 
       {/* Mobile menu */}
