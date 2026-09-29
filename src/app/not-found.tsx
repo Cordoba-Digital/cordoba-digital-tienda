@@ -1,4 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+/**
+ * Esta pagina reemplaza a la ruta que llamo a `notFound()` (producto,
+ * categoria, pedido). El titulo tiene que distinguirla de una pagina real: si
+ * cae en el titulo por defecto del layout, un 404 es indistinguible de un
+ * producto mas en el HTML y no sirve ni para depurar ni para auditar.
+ *
+ * `noindex` es lo que Next ya inyecta en las respuestas 404, pero dejarlo
+ * explicito evita que un dia seGuarde y alguien lo lea como un indexable mas.
+ */
+export const metadata: Metadata = {
+  title: "Página no encontrada (404)",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

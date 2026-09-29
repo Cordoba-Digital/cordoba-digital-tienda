@@ -21,6 +21,7 @@
     "images:migrate": "tsx scripts/migrate-images.ts",
     "backfill:srcsets": "tsx scripts/backfill-image-srcsets.ts",
     "check:gallery": "tsx scripts/check-gallery.ts",
+    "check:soft404": "tsx scripts/check-soft404.ts",
     "sync:catalog": "tsx scripts/sync-catalog.ts"
   },
   "dependencies": {
