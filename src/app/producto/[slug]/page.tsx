@@ -345,7 +345,7 @@ export default async function ProductPage({ params }: { params: Params }) {
       </section>
 
       <p className="mt-8 text-center text-xs text-ink-500">
-        Precio de lista {money(product.price)} · Los precios pueden variar sin previo aviso según disponibilidad.
+        Precio de lista {money(product.compareAtPrice ?? product.price)} · Los precios pueden variar sin previo aviso según disponibilidad.
       </p>
 
       <MobileBuyBar product={buyBoxProduct} />

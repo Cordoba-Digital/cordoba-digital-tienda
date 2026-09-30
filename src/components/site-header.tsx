@@ -315,6 +315,20 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                                 <span className="shrink-0 text-[11px] text-ink-500">{child.count}</span>
                               ) : null}
                             </Link>
+                            {child.children?.length ? (
+                              <ul className="mb-1 ml-4 space-y-0.5 border-l border-ink-100 pl-3">
+                                {child.children.map((grand) => (
+                                  <li key={grand.slug}>
+                                    <Link
+                                      href={`/categoria/${grand.path}`}
+                                      className="block truncate py-1 text-xs text-ink-500 hover:text-brand-700"
+                                    >
+                                      {grand.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            ) : null}
                           </li>
                         ))}
                       </ul>
