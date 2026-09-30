@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+import { url } from "@/lib/site";
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
@@ -9,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/checkout", "/pedido/", "/api/"],
       },
     ],
-    sitemap: "https://www.cordobadigital.net/sitemap.xml",
+    sitemap: url("/sitemap.xml"),
   };
 }

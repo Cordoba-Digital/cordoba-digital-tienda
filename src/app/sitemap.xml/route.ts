@@ -1,8 +1,7 @@
 import { listProducts } from "@/lib/queries";
+import { SITE_URL as BASE } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
-
-const BASE = "https://www.cordobadigital.net";
 
 /** Maximo de URLs de producto por submapa (debe coincidir con el de `sitemap/[id]`). */
 const PRODUCTS_PER_SITEMAP = 1000;

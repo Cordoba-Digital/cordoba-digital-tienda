@@ -7,8 +7,6 @@ import { formatDate } from "@/lib/format";
 
 export const dynamic = "force-dynamic";
 
-const BASE = "https://www.cordobadigital.net";
-
 /**
  * Guías de compra.
  *
@@ -38,11 +36,11 @@ export async function generateMetadata({
   return {
     title: article.title,
     description: article.description.slice(0, 160),
-    alternates: { canonical: `${BASE}/${article.slug}` },
+    alternates: { canonical: `/${article.slug}` },
     openGraph: {
       type: "article",
       locale: "es_AR",
-      url: `${BASE}/${article.slug}`,
+      url: `/${article.slug}`,
       siteName: "Córdoba Digital",
       title: article.title,
       description: article.description.slice(0, 160),

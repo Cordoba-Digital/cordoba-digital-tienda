@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ProductImg, ProductPlaceholder } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Stars } from "@/components/ui";
-import { discountPercent, installmentValue, money } from "@/lib/format";
+import { discountPercent, money } from "@/lib/format";
 import type { ProductView } from "@/lib/product-view";
 
 export function ProductCard({ product }: { product: ProductView }) {
@@ -119,9 +119,6 @@ export function ProductCard({ product }: { product: ProductView }) {
             <p className="text-[11px] text-ink-500 line-through">{money(product.compareAtPrice)}</p>
           ) : null}
           <p className="text-[1.35rem] font-semibold leading-none tracking-tight text-ink-900">{money(product.price)}</p>
-          <p className="mt-1.5 text-[11px] font-medium text-emerald-700">
-            6 cuotas de {money(installmentValue(product.price, 6))}
-          </p>
         </div>
 
         <div className="mt-auto flex gap-2 pt-3">

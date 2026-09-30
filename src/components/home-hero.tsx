@@ -107,7 +107,8 @@ export function HomeHero({
                 <div className="min-w-0">
                   <p className="line-clamp-1 text-xs font-bold text-ink-800">{featured.name}</p>
                   <p className="text-sm font-black text-ink-900">{money(featured.price)}</p>
-                  <p className="text-[11px] font-semibold text-emerald-600">6 cuotas sin interés</p>
+                  {/* Acá decía "6 cuotas sin interés". No hay cuotas en el
+                      sitio original, así que no se anuncia nada. */}
                 </div>
               </div>
             </Link>

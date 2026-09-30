@@ -138,7 +138,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
             <section className="card-surface border-2 border-amber-200 bg-amber-50/40 p-5">
               <h2 className="text-lg font-extrabold text-ink-900">💸 Cómo completar tu pago</h2>
               <p className="mt-1 text-sm text-ink-600">
-                Transferí <strong>{money(order.total)}</strong> a cualquiera de estas cuentas. Reservamos tu stock por 48 hs.
+                Transferí <strong>{money(order.total)}</strong> a cualquiera de estas cuentas.
               </p>
               <div className="mt-4 grid gap-3 md:grid-cols-2">
                 <div className="rounded-xl border border-ink-100 bg-surface p-4">

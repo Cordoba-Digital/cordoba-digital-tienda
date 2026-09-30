@@ -39,8 +39,8 @@ export async function SiteFooter({
             <span className="text-base font-extrabold text-white">Córdoba Digital</span>
           </div>
           <p className="text-sm leading-relaxed text-ink-300">
-            Tecnología con garantía oficial desde 2006. Local a la calle en el centro de Córdoba y envíos a todo el
-            país con seguimiento.
+            Tecnología con garantía legal. Local a la calle en el centro de Córdoba y envíos a todo el país con
+            seguimiento.
           </p>
           <div className="mt-5 flex gap-2">
             <a
@@ -117,7 +117,7 @@ export async function SiteFooter({
             </li>
             <li>
               <Link href="/ayuda#pagos" className="text-ink-300 transition hover:text-neon-400">
-                Medios de pago y cuotas
+                Medios de pago
               </Link>
             </li>
           </ul>

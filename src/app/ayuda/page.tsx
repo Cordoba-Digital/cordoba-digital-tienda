@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Centro de ayuda",
   description:
-    "Plazos de envío, medios de pago, cuotas, garantía y devoluciones de Córdoba Digital. Todo claro antes de comprar.",
+    "Plazos de envío, medios de pago, garantía y devoluciones de Córdoba Digital. Todo claro antes de comprar.",
 };
 
 /**
@@ -53,23 +53,19 @@ const SECTIONS = [
   {
     id: "pagos",
     icon: "💳",
-    title: "Medios de pago y cuotas",
+    title: "Medios de pago",
     items: [
       {
         q: "¿Qué medios de pago aceptan?",
         a: "Transferencia bancaria, USDT por red TRC20, efectivo o transferencia en el local, y Mercado Pago. El precio es el mismo con todos los medios de pago.",
       },
       {
-        q: "¿Cuántas cuotas puedo hacer?",
-        a: "Con Mercado Pago, hasta 6 cuotas sin interés y hasta 12 cuotas fijas. Ves el valor exacto de cada cuota antes de confirmar.",
-      },
-      {
         q: "¿Puedo pagar en efectivo?",
-        a: "Sí, eligiendo retiro en el local de 27 de Abril 180. Reservamos el producto por 48 horas hábiles.",
+        a: "Sí, eligiendo retiro en el local de 27 de Abril 180.",
       },
       {
         q: "¿Cómo hago la transferencia?",
-        a: "Al confirmar el pedido te mostramos el CBU o el alias. Tenés 48 hs para transferir y el stock queda reservado.",
+        a: "Al confirmar el pedido te mostramos el CBU o el alias.",
       },
     ],
   },

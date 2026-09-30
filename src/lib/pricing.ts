@@ -1,5 +1,3 @@
-import { INSTALLMENT_PLANS } from "@/lib/format";
-
 /**
  * Medios de pago. Los tres primeros son exactamente los que ofrece el sitio
  * original, leídos del checkout real (no inventados):
@@ -49,7 +47,7 @@ export const PAYMENT_METHODS: PaymentMethod[] = [
     id: "mercadopago",
     label: "Mercado Pago",
     short: "Mercado Pago",
-    description: "Tarjeta de crédito, débito o dinero en cuenta. Hasta 6 cuotas sin interés.",
+    description: "Tarjeta de crédito, débito o dinero en cuenta.",
     icon: "💠",
   },
 ];
@@ -94,21 +92,19 @@ export function computeTotals(input: {
   // Ningún medio de pago cambia el total. El checkout del sitio original muestra
   // subtotal = total, sin descuento por transferencia ni por efectivo: el que
   // quiera el precio del listado, paga el precio del listado.
-  let paymentAdjustment = 0;
-  let total = afterCoupon + shippingCost;
+  //
+  // Tampoco cambia según cuántas cuotas se elijan. Antes sí: multiplicaba el
+  // total por un coeficiente fijo (1,12 para 9 cuotas y 1,22 para 12) y lo
+  // mostraba como "Interés de financiación". Ese interés no salía de ningún
+  // cálculo, era un número puesto a mano, y además contradecía el comentario de
+  // arriba. Si algún día hay cuotas con interés real, el número tiene que venir
+  // de la cuenta de Mercado Pago, no de una tabla del código.
+  const paymentAdjustment = 0;
+  const total = afterCoupon + shippingCost;
 
-  // Las cuotas solo aplican a la tarjeta, o sea Mercado Pago. Las financia el
-  // gateway, no nosotros: acá solo se refleja el efecto en el total para que lo
-  // que ve el comprador coincida con lo que le cobra Mercado Pago.
-  if (paymentMethod === "mercadopago") {
-    const plan = INSTALLMENT_PLANS.find((p) => p.count === installments) ?? INSTALLMENT_PLANS[0];
-    const withInterest = Math.round(total * plan.coefficient);
-    paymentAdjustment = withInterest - total;
-    total = withInterest;
-  }
-
-  const installmentAmount =
-    paymentMethod === "mercadopago" && installments > 1 ? Math.round(total / installments) : total;
+  // El monto por cuota es solo informativo: el total ya está cerrado y no
+  // depende de cuántas veces se pague.
+  const installmentAmount = installments > 1 ? Math.round(total / installments) : total;
 
   const listSubtotal = input.listSubtotal ?? subtotal;
 

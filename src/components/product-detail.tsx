@@ -7,7 +7,7 @@ import { QuantityStepper } from "@/components/cart-drawer";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Spinner, Stars } from "@/components/ui";
-import { INSTALLMENT_PLANS, discountPercent, installmentValue, money } from "@/lib/format";
+import { discountPercent, money } from "@/lib/format";
 import type { ShippingOption } from "@/lib/shipping";
 
 export function ProductGallery({
@@ -206,7 +206,6 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
   const router = useRouter();
   const { addItem, toggleFavorite, isFavorite, hydrated, pushRecent } = useStore();
   const [quantity, setQuantity] = useState(1);
-  const [plan, setPlan] = useState(6);
   const off = discountPercent(product.price, product.compareAtPrice);
   const fav = hydrated && isFavorite(product.slug);
 
@@ -237,26 +236,8 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         <p className="text-3xl font-black tracking-tight text-ink-900">{money(product.price)}</p>
       </div>
 
-      <div className="rounded-xl border border-ink-100 p-3">
-        <label className="mb-1.5 block text-[11px] font-bold uppercase tracking-wide text-ink-500">Simulá tus cuotas</label>
-        <select
-          value={plan}
-          onChange={(e) => setPlan(Number(e.target.value))}
-          className="h-9 w-full rounded-lg border border-ink-200 bg-surface px-2 text-sm font-semibold text-ink-800 outline-none focus:border-brand-400"
-        >
-          {INSTALLMENT_PLANS.map((option) => (
-            <option key={option.count} value={option.count}>
-              {option.label}
-            </option>
-          ))}
-        </select>
-        <p className="mt-2 text-sm font-bold text-ink-900">
-          {plan} x {money(installmentValue(product.price, plan))}
-        </p>
-        <p className="text-[11px] text-ink-500">
-          {plan <= 6 ? "Sin interés con todas las tarjetas" : "Plan de cuotas fijas con interés"}
-        </p>
-      </div>
+      {/* El simulador de cuotas se sacó: los planes no existen en el sitio
+          original. Ver la nota de installmentValue en lib/format.ts. */}
 
       <div className="flex items-center justify-between text-sm">
         <span className="text-ink-500">Cantidad</span>

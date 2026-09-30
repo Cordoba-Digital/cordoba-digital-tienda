@@ -8,7 +8,7 @@ import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Spinner } from "@/components/ui";
 import { readCoupon, writeCoupon } from "@/lib/coupon-storage";
-import { INSTALLMENT_PLANS, money } from "@/lib/format";
+import { money } from "@/lib/format";
 import { computeTotals, PAYMENT_METHODS, type CouponInfo, type PaymentMethodId } from "@/lib/pricing";
 import type { DeliveryMethod, ShippingOption } from "@/lib/shipping";
 
@@ -616,15 +616,8 @@ export function CheckoutFlow() {
                   <dd>-{money(totals.couponDiscount)}</dd>
                 </div>
               ) : null}
-              {/* Solo aparece con cuotas de Mercado Pago, que son las únicas que
-                  suman interés. Como ya no hay descuento por medio de pago, este
-                  valor nunca es negativo. */}
-              {totals.paymentAdjustment > 0 ? (
-                <div className="flex justify-between text-ink-600">
-                  <dt>Interés de financiación</dt>
-                  <dd>+{money(totals.paymentAdjustment)}</dd>
-                </div>
-              ) : null}
+              {/* `paymentAdjustment` queda siempre en 0: el total no cambia por
+                  medio de pago ni por cantidad de cuotas. Ver computeTotals. */}
               <div className="flex justify-between text-ink-600">
                 <dt>Envío</dt>
                 <dd className={selectedOption?.free ? "font-semibold text-emerald-700" : ""}>
@@ -637,11 +630,6 @@ export function CheckoutFlow() {
               <span className="text-sm font-semibold text-ink-600">Total</span>
               <div className="text-right">
                 <span className="block text-2xl font-black text-ink-900">{money(totals.total)}</span>
-                {payment === "mercadopago" && installments > 1 ? (
-                  <span className="text-[11px] text-ink-500">
-                    {installments} cuotas de {money(totals.installmentAmount)}
-                  </span>
-                ) : null}
               </div>
             </div>
 
@@ -691,38 +679,15 @@ export function CheckoutFlow() {
 
                 {payment === "mercadopago" ? (
                   <div className="rounded-xl border border-ink-100 p-4">
-                    <p className="mb-2 text-xs font-bold uppercase tracking-wide text-ink-500">Elegí tu plan de cuotas</p>
-                    <div className="grid gap-2 sm:grid-cols-3">
-                      {INSTALLMENT_PLANS.map((plan) => {
-                        const planTotals = computeTotals({
-                          subtotal,
-                          coupon,
-                          shippingCost: selectedOption?.cost ?? 0,
-                          paymentMethod: "mercadopago",
-                          installments: plan.count,
-                        });
-                        return (
-                          <button
-                            key={plan.count}
-                            type="button"
-                            onClick={() => setInstallments(plan.count)}
-                            className={`rounded-xl border-2 p-3 text-left transition ${
-                              installments === plan.count
-                                ? "border-brand-500 bg-brand-50/50"
-                                : "border-ink-100 hover:border-ink-300"
-                            }`}
-                          >
-                            <p className="text-sm font-extrabold text-ink-900">
-                              {plan.count}x {money(planTotals.installmentAmount)}
-                            </p>
-                            <p className="text-[11px] text-ink-500">
-                              {plan.coefficient === 1 ? "Sin interés" : `Total ${money(planTotals.total)}`}
-                            </p>
-                          </button>
-                        );
-                      })}
-                    </div>
-                    <p className="mt-3 text-[11px] text-ink-400">
+                    {/* Acá había un selector "Elegí tu plan de cuotas" con 1, 3,
+                        6, 9 y 12 cuotas, y para 9 y 12 multiplicaba el total por
+                        1,12 y 1,22 con el rótulo "Interés de financiación". Ese
+                        interés era un número inventado y además hacía que el
+                        total dependiera de cuántas cuotas se eligieran, al
+                        contrario de lo que dice el checkout del original. Se
+                        saca el selector; el total no se toca. */}
+                    <p className="text-xs font-bold uppercase tracking-wide text-ink-500">Pago con Mercado Pago</p>
+                    <p className="mt-2 text-[11px] text-ink-500">
                       El cobro se procesa de forma segura con Mercado Pago. Nunca almacenamos los datos de tu tarjeta.
                     </p>
                   </div>
@@ -732,7 +697,8 @@ export function CheckoutFlow() {
                   <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
                     <p className="font-bold text-ink-900">Te enviamos el CBU o el alias para transferir.</p>
                     <p className="mt-1 text-xs">
-                      Tenés 48 hs para transferir y el stock queda reservado. Nos avisás cuando lo hagas y despachamos.
+                      Nos avisás cuando lo hagas y despachamos. La reserva de stock por tiempo limitado no se anuncia
+                      hasta que el cliente confirme la política.
                     </p>
                   </div>
                 ) : null}
@@ -750,7 +716,9 @@ export function CheckoutFlow() {
                 {payment === "efectivo" ? (
                   <div className="rounded-xl bg-emerald-50 p-4 text-sm text-emerald-800">
                     <p className="font-bold">Pagás al retirar en el local.</p>
-                    <p className="mt-1 text-xs">Reservamos el producto por 48 horas hábiles a tu nombre.</p>
+                    {/* Acá decía "Reservamos el producto por 48 horas hábiles a
+                        tu nombre". Es un compromiso operativo que no está en el
+                        sitio original y que el cliente tendría que confirmar. */}
                   </div>
                 ) : null}
 

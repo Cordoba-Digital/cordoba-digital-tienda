@@ -24,7 +24,6 @@ type Suggestion = {
 const ANNOUNCEMENTS = [
   "🏦 Transferencia bancaria, USDT o efectivo en el local",
   "🚚 Envíos a todo el país por Andreani, a domicilio o a sucursal",
-  "💳 Hasta 6 cuotas sin interés con todas las tarjetas",
   "🏬 Retiro en 27 de Abril 180, Córdoba Capital",
   "🛡️ 6 meses de garantía legal + soporte post-venta local",
 ];
@@ -124,7 +123,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
             />
             <span className="hidden leading-tight sm:block">
               <span className="block text-[15px] font-extrabold tracking-tight text-ink-900">Córdoba Digital</span>
-              <span className="block text-[11px] font-medium text-ink-500">Tecnología con garantía · desde 2006</span>
+              <span className="block text-[11px] font-medium text-ink-500">Tecnología con garantía legal</span>
             </span>
           </Link>
 

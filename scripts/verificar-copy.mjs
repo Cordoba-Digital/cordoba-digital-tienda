@@ -47,6 +47,19 @@ const PROHIBIDO = [
   ["11 a 14:30", "idem"],
   // El original no publica código postal en ninguna parte.
   ['"postalCode"', "el original no publica código postal"],
+  // Cuotas: se buscó "cuota", "financia" y "sin interés" en la home, /contacto/,
+  // la ficha de producto y la política de garantía del original, y no hay una
+  // sola coincidencia. Además los coeficientes (1,12 y 1,22) no salían de
+  // ningún cálculo.
+  ["cuota sin interés", "el original no ofrece cuotas ni financiación"],
+  ["cuotas sin interés", "idem"],
+  ["cuotas fijas", "idem"],
+  ["Simulá tus cuotas", "idem, el simulador se sacó"],
+  ["plan de cuotas", "idem, el selector del checkout se sacó"],
+  ["interés de financiación", "idem, el interés era un número inventado"],
+  ["48 horas", "no está en el original y es un compromiso operativo"],
+  ["48 hs", "idem"],
+  ["desde 2006", "el original no dice en qué año abrió el negocio"],
 ];
 
 /**

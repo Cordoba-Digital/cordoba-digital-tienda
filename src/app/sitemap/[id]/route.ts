@@ -4,10 +4,9 @@ import { db } from "@/db";
 import { products } from "@/db/schema";
 import { getCategoryPaths, getGuides } from "@/lib/queries";
 import { ensureSeeded } from "@/lib/seed";
+import { SITE_URL as BASE } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
-
-const BASE = "https://www.cordobadigital.net";
 
 /**
  * Maximo de URLs de producto por submapa. Google permite 50.000, pero 1.000

@@ -41,24 +41,29 @@ export function discountPercent(price: number, compareAt?: number | null): numbe
   return Math.round(((compareAt - price) / compareAt) * 100);
 }
 
-/** Card installment plans available in the store. */
-export const INSTALLMENT_PLANS = [
-  { count: 1, coefficient: 1, label: "1 pago" },
-  { count: 3, coefficient: 1, label: "3 cuotas sin interés" },
-  { count: 6, coefficient: 1, label: "6 cuotas sin interés" },
-  { count: 9, coefficient: 1.12, label: "9 cuotas fijas" },
-  { count: 12, coefficient: 1.22, label: "12 cuotas fijas" },
-] as const;
-
+/**
+ * NO hay planes de cuotas en esta tienda, y no se inventan.
+ *
+ * Antes esta tabla decía "3 cuotas sin interés", "6 cuotas sin interés",
+ * "9 cuotas fijas" (×1,12) y "12 cuotas fijas" (×1,22), y con ella el selector
+ * "Simulá tus cuotas" de la ficha, la línea "6 cuotas de $..." de cada card y la
+ * lista del marquee. Nada de eso existe en el sitio original: se buscó
+ * "cuota", "financia" y "sin interés" en la home, /contacto/, la ficha de
+ * producto y la política de garantía, y no hay una sola coincidencia.
+ *
+ * Los coeficientes además no eran de nadie: el 1,12 y el 1,22 no salen de
+ * ningún cálculo, así que el sitio estaba inventando el interés a mostrar.
+ *
+ * Cuando el cliente confirme si ofrece cuotas, lo que corresponde es tomar los
+ * planes reales de la cuenta de Mercado Pago, no volver a una tabla fija acá.
+ * Mientras tanto, las cuotas que sí aparecen en el checkout (el monto por
+ * cuota que devuelve Mercado Pago al pagar con tarjeta) son dato real de la
+ * pasarela y no se tocan.
+ */
 export function installmentValue(totalCents: number, count: number): number {
-  const plan = INSTALLMENT_PLANS.find((p) => p.count === count) ?? INSTALLMENT_PLANS[0];
-  return Math.round((totalCents * plan.coefficient) / count);
+  return Math.round(totalCents / count);
 }
 
-export function installmentTotal(totalCents: number, count: number): number {
-  const plan = INSTALLMENT_PLANS.find((p) => p.count === count) ?? INSTALLMENT_PLANS[0];
-  return Math.round(totalCents * plan.coefficient);
-}
 
 // No hay descuento por medio de pago. Existió un 15% para transferencia y
 // efectivo, pero el checkout del sitio original da subtotal igual al total, sin

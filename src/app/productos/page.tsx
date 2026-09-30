@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   // Google muestra en los resultados. Solo van datos reales.
   description:
     "Celulares, notebooks, cámaras, drones, gaming y más con stock real y envío a todo el país por Andreani.",
+  alternates: { canonical: "/productos" },
 };
 
 type SearchParams = Promise<Record<string, string | string[] | undefined>>;

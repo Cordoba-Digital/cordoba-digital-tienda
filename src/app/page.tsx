@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Countdown } from "@/components/countdown";
@@ -9,9 +10,16 @@ import { ProductImg } from "@/components/product-img";
 import { Pill, SectionHeading } from "@/components/ui";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { toView } from "@/lib/product-view";
+import { url } from "@/lib/site";
 import { getBestSellers, getCategoryTree, getDealProducts, getFeaturedProducts, getProductCount } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  // La home no tenía canonical y era la única que se indexaba sin señalar
+  // dónde está la versión buena. Con esto toda página indexable declara la suya.
+  alternates: { canonical: "/" },
+};
 
 const TRUST = [
   { icon: "🚚", title: "Envíos a todo el país", text: "Por Andreani, a domicilio o a sucursal · con seguimiento" },
@@ -33,10 +41,6 @@ const FAQ = [
     q: "¿Qué medios de pago aceptan?",
     a: "Transferencia bancaria, USDT por red TRC20, efectivo o transferencia en el local (retiro en 27 de Abril 180) y Mercado Pago.",
   },
-  {
-    q: "¿Puedo pagar en cuotas?",
-    a: "Sí, hasta 6 cuotas sin interés con todas las tarjetas y hasta 12 cuotas fijas. Ves el valor exacto de la cuota antes de confirmar.",
-  },
 ];
 
 export default async function HomePage() {
@@ -53,7 +57,11 @@ export default async function HomePage() {
   const ratingValue = googleReviews.rating?.toFixed(1) ?? null;
   const reviewCount = googleReviews.count;
   const heroProduct = featured[0] ? toView(featured[0]) : null;
-  const storeImage = "https://www.cordobadigital.net/images/logo.png";
+  // El logo vive en /public, así que la imagen de Open Graph y la del JSON-LD
+  // salen del propio sitio. Antes apuntaban al dominio viejo, con lo cual la
+  // vista previa al compartir en redes dependía de que el sitio original
+  // estuviera arriba.
+  const storeImage = url("/images/logo.png");
 
   return (
     <>
@@ -139,19 +147,16 @@ export default async function HomePage() {
       </section>
 
       <section className="container-xl py-12">
-        <div className="grid gap-4 md:grid-cols-3">
+        {/* Eran tres tarjetas y la del medio anunciaba "Hasta 6 cuotas sin
+            interés" con la lista de tarjetas. No hay cuotas en el sitio
+            original, así que quedan dos y la grilla pasa a dos columnas. */}
+        <div className="grid gap-4 md:grid-cols-2">
           {[
             {
               icon: "🏦",
               title: "Transferencia, USDT o efectivo en el local",
               text: "Te mostramos el CBU o la wallet al confirmar. También podés pagar al retirar.",
               tone: "from-emerald-500 to-emerald-400",
-            },
-            {
-              icon: "💳",
-              title: "Hasta 6 cuotas sin interés",
-              text: "Visa, Mastercard, Amex, Naranja X y Cabal. Ves el valor de la cuota antes de pagar.",
-              tone: "from-brand-600 to-brand-400",
             },
             {
               icon: "🏬",
@@ -201,7 +206,7 @@ export default async function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/25 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-6 text-white">
               <p className="text-2xl font-black tracking-tight">Córdoba Digital</p>
-              <p className="mt-1 text-sm text-ink-200">Tecnología con garantía desde 2006</p>
+              <p className="mt-1 text-sm text-ink-200">Tecnología con garantía legal</p>
               <dl className="mt-3 grid gap-1.5 text-sm text-ink-100">
                 <div className="flex items-center gap-2">
                   <span aria-hidden>📍</span>
@@ -224,8 +229,8 @@ export default async function HomePage() {
               Comprás por internet, pero hay gente real del otro lado
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-ink-500">
-              Desde 2006 combinamos la agilidad del e-commerce con la confianza de la atención presencial. Si algo falla,
-              no tenés que discutir con un chatbot: venís al local o nos escribís por WhatsApp y lo resolvemos.
+              Combinamos la agilidad del e-commerce con la confianza de la atención presencial. Si algo falla, no tenés
+              que discutir con un chatbot: venís al local o nos escribís por WhatsApp y lo resolvemos.
             </p>
             <ul className="mt-5 space-y-2.5 text-sm text-ink-700">
               {[

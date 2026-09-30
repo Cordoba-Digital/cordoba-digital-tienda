@@ -10,7 +10,10 @@ export const metadata: Metadata = {
   title: "Guías de compra",
   description:
     "Qué mirar antes de comprar tu próxima impresora, celular Xiaomi, notebook, MacBook o monopatín eléctrico en Argentina: diferencias entre opciones y qué conviene descartar.",
-  alternates: { canonical: "https://www.cordobadigital.net/guias" },
+  // Relativo: se resuelve contra metadataBase, que viene de SITE_URL. Antes
+  // estaba hardcodeado al dominio viejo y era el único canonical absoluto, lo
+  // que hacía que esta página se señalara a sí misma en otro sitio.
+  alternates: { canonical: "/guias" },
 };
 
 /**

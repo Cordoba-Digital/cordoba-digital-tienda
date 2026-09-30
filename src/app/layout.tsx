@@ -9,14 +9,18 @@ import { WhatsAppFab } from "@/components/whatsapp-fab";
 import { getCategoryTree, getGuides, type CategoryTreeNode, type GuideTeaser } from "@/lib/queries";
 import "./globals.css";
 
+import { SITE_URL } from "@/lib/site";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.cordobadigital.net"),
+  // Apuntaba al dominio viejo. Todos los canonicals son relativos y se
+  // resuelven contra este valor, así que cambiar el dominio es una sola línea.
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Córdoba Digital · Tecnología con garantía y envíos a todo el país",
     template: "%s · Córdoba Digital",
   },
   description:
-    "Celulares liberados, notebooks, cámaras, drones, consolas y más. Envíos a todo el país por Andreani, hasta 6 cuotas sin interés y retiro en Córdoba Capital.",
+    "Celulares liberados, notebooks, cámaras, drones, consolas y más. Envíos a todo el país por Andreani y retiro en Córdoba Capital.",
   keywords: [
     "comprar celulares Córdoba",
     "notebooks Córdoba",
