@@ -54,43 +54,11 @@ export function ProductGallery({
     };
   }, [lightbox, go]);
 
-  // Compartir: hoja nativa si existe, si no copia el link. Sin toasts ni
-  // librerías: la galería no conoce el store y no vale la pena conectarla.
-  const share = async () => {
-    const url = window.location.href;
-    if (typeof navigator.share === "function") {
-      try {
-        await navigator.share({ title: name, url });
-      } catch {
-        // El usuario cerró la hoja: no es un error.
-      }
-      return;
-    }
-    try {
-      await navigator.clipboard.writeText(url);
-    } catch {
-      // Sin portapapeles (iframe/permisos): no hay nada que hacer.
-    }
-  };
-
   return (
     <>
       {/* Galería sin caja, como la referencia: la foto respira sobre el fondo
           y las miniaturas van en fila abajo en todos los viewports. */}
-      <div className="relative flex flex-col items-center gap-3">
-        <button
-          type="button"
-          onClick={share}
-          aria-label="Compartir este producto"
-          className="absolute right-0 top-0 z-10 grid h-10 w-10 place-items-center rounded-full border border-ink-200 bg-surface/90 text-ink-600 shadow-sm backdrop-blur transition hover:text-ink-900"
-        >
-          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
-            <circle cx="6" cy="12" r="2.5" />
-            <circle cx="18" cy="6" r="2.5" />
-            <circle cx="18" cy="18" r="2.5" />
-            <path d="M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6" strokeLinecap="round" />
-          </svg>
-        </button>
+      <div className="flex flex-col items-center gap-3">
         <div className="no-scrollbar order-2 flex gap-2 self-stretch overflow-x-auto sm:justify-center">
           {list.map((image, index) => (
             <button
