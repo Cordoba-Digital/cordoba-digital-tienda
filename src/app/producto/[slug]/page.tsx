@@ -126,6 +126,9 @@ export default async function ProductPage({ params }: { params: Params }) {
     freeShipping: product.freeShipping,
     warrantyMonths: product.warrantyMonths,
     sku: product.sku,
+    rating: product.rating,
+    reviewCount: product.reviewCount,
+    soldCount: product.soldCount,
   };
 
   // Google penaliza aggregateRating sin reseñas: WooCommerce no tiene ratings,
@@ -200,8 +203,12 @@ export default async function ProductPage({ params }: { params: Params }) {
         <span className="font-semibold text-ink-700">{product.brand}</span>
       </nav>
 
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_22rem]">
-        <div className="order-2 lg:order-1 lg:col-start-1 lg:row-start-1">
+      {/* Ficha en dos columnas: galería a la izquierda y, a la derecha, título
+          arriba del precio con el envío debajo. La columna de info del medio
+          se sacó a pedido: el título suelto al lado de la galería la
+          descentraba y el envío pertenece al buy box, no a la descripción. */}
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_22rem]">
+        <div className="order-2 lg:col-start-1 lg:row-start-1 lg:row-span-3">
           <ProductGallery
             images={product.images}
             srcSets={product.imageSrcSets}
@@ -210,54 +217,29 @@ export default async function ProductPage({ params }: { params: Params }) {
           />
         </div>
 
-        <div className="contents lg:order-2 lg:col-start-2 lg:row-start-1 lg:flex lg:flex-col lg:gap-6">
-          <div className="order-1 lg:order-none">
-            {/* Acá había una fila de pills arriba del nombre: la marca y, si
-                quedaban pocas unidades, un "Últimas unidades". La marca ya
-                está en la migas de pan que queda justo arriba, así que la
-                mitad de la fila estaba duplicada. */}
-            <h1 className="text-2xl font-extrabold leading-tight tracking-tight text-ink-900 md:text-3xl">
-              {product.name}
-            </h1>
-            <div className="mt-2 flex flex-wrap items-center gap-3 text-xs text-ink-500">
-              {hasRatings ? (
-                <span className="flex items-center gap-1.5">
-                  <Stars rating={product.rating} />
-                  <span className="font-semibold text-ink-700">{(product.rating / 10).toFixed(1)}</span>
-                  <a href="#opiniones" className="underline-offset-2 hover:underline">
-                    ({product.reviewCount} opiniones)
-                  </a>
-                </span>
-              ) : null}
-              {product.soldCount > 0 ? <span>· +{product.soldCount} vendidos</span> : null}
-              {product.sku ? <span>· SKU {product.sku}</span> : null}
-            </div>
-          </div>
-
-          {product.highlights.length ? (
-            <div className="card-surface order-4 p-5 lg:order-none">
-              <h2 className="mb-3 text-sm font-extrabold uppercase tracking-wide text-ink-400">Lo más destacado</h2>
-              <ul className="grid gap-2 sm:grid-cols-2">
-                {product.highlights.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-ink-700">
-                    <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-50 text-[11px] font-bold text-brand-700">
-                      ✓
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : null}
-
-          <div className="order-5 lg:order-none">
-            <ShippingCalculator price={product.price} />
-          </div>
-        </div>
-
-        <div className="order-3 lg:col-start-3 lg:row-start-1">
+        <div className="order-1 lg:col-start-2 lg:row-start-1">
           <BuyBox product={buyBoxProduct} />
         </div>
+
+        <div className="order-3 lg:col-start-2 lg:row-start-2">
+          <ShippingCalculator price={product.price} />
+        </div>
+
+        {product.highlights.length ? (
+          <div className="card-surface order-4 p-5 lg:col-start-2 lg:row-start-3">
+            <h2 className="mb-3 text-sm font-extrabold uppercase tracking-wide text-ink-400">Lo más destacado</h2>
+            <ul className="grid gap-2">
+              {product.highlights.map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm text-ink-700">
+                  <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-50 text-[11px] font-bold text-brand-700">
+                    ✓
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
       </div>
 
       <div className="mt-8 space-y-8">

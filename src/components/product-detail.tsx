@@ -15,12 +15,10 @@ export function ProductGallery({
   images,
   srcSets = [],
   name,
-  badge,
 }: {
   images: string[];
   srcSets?: string[][];
   name: string;
-  badge?: string | null;
 }) {
   const [active, setActive] = useState(0);
   const [zoom, setZoom] = useState(false);
@@ -106,11 +104,10 @@ export function ProductGallery({
           tabIndex={0}
           aria-label={`Ampliar foto de ${name}`}
         >
-          {badge ? (
-            <span className="absolute left-4 top-4 z-10 rounded-full bg-deep/85 px-3 py-1.5 text-[11px] font-bold text-white">
-              {badge}
-            </span>
-          ) : null}
+          {/* Acá había un pill con el `badge` ("Oferta") arriba de la foto y un
+              "Ver grande" abajo a la derecha. Se sacaron los dos a pedido: el
+              badge salía en el 91% de las fichas y no distinguía nada. El clic
+              para ampliar sigue funcionando igual. */}
           <ProductImg
             src={list[active]}
             srcSet={srcSetOf(active)}
@@ -122,9 +119,6 @@ export function ProductGallery({
             className="pointer-events-none h-full w-full object-contain p-6 transition-transform duration-300"
             style={{ transform: zoom && !lightbox ? "scale(1.8)" : "scale(1)", transformOrigin: origin }}
           />
-          <span className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-deep/70 px-2.5 py-1 text-[11px] font-semibold text-white">
-            Ver grande
-          </span>
         </div>
       </div>
 
@@ -215,6 +209,9 @@ export type BuyBoxProduct = {
   freeShipping: boolean;
   warrantyMonths: number;
   sku: string;
+  rating?: number;
+  reviewCount?: number;
+  soldCount?: number;
 };
 
 export function BuyBox({ product }: { product: BuyBoxProduct }) {
@@ -241,6 +238,33 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
 
   return (
     <div className="card-surface sticky top-36 space-y-4 p-5">
+      {/* Título integrado a la tarjeta, como en la referencia: marca, nombre
+          y precio en la misma ventana de la derecha, no sueltos al lado de
+          la galería. */}
+      <div>
+        {product.brand && product.brand !== "General" ? (
+          <p className="text-[11px] font-semibold uppercase tracking-wide text-ink-500">{product.brand}</p>
+        ) : null}
+        <h1 className="mt-0.5 text-xl font-extrabold leading-tight tracking-tight text-ink-900">
+          {product.name}
+        </h1>
+        {(product.reviewCount ?? 0) > 0 || (product.soldCount ?? 0) > 0 || product.sku ? (
+          <div className="mt-1.5 flex flex-wrap items-center gap-3 text-xs text-ink-500">
+            {(product.reviewCount ?? 0) > 0 ? (
+              <span className="flex items-center gap-1.5">
+                <Stars rating={product.rating ?? 0} />
+                <span className="font-semibold text-ink-700">{((product.rating ?? 0) / 10).toFixed(1)}</span>
+                <a href="#opiniones" className="underline-offset-2 hover:underline">
+                  ({product.reviewCount} opiniones)
+                </a>
+              </span>
+            ) : null}
+            {(product.soldCount ?? 0) > 0 ? <span>· +{product.soldCount} vendidos</span> : null}
+            {product.sku ? <span>· SKU {product.sku}</span> : null}
+          </div>
+        ) : null}
+      </div>
+
       <div>
         {product.compareAtPrice ? (
           <div className="flex items-center gap-2">
