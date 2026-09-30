@@ -98,6 +98,10 @@ export async function POST(request: Request) {
     return Response.json({ ok: false, errors }, { status: 400 });
   }
 
+  // El cupón se pide temprano y se espera tarde: es independiente de la
+  // validación de productos y así las dos consultas viajan juntas.
+  const couponPromise = body.couponCode ? getCoupon(body.couponCode) : null;
+
   const slugs = items.map((i) => i.slug);
   const rows = await db.select().from(products).where(inArray(products.slug, slugs));
   const bySlug = new Map(rows.map((r) => [r.slug, r]));
@@ -128,7 +132,7 @@ export async function POST(request: Request) {
 
   const subtotal = validated.reduce((acc, item) => acc + item.unitPrice * item.quantity, 0);
 
-  const coupon = body.couponCode ? await getCoupon(body.couponCode) : null;
+  const coupon = couponPromise ? await couponPromise : null;
   const couponInfo = coupon
     ? {
         code: coupon.code,

@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { useCallback, useState } from "react";
+import { startTransition, useCallback, useState } from "react";
 
 import { money } from "@/lib/format";
 
@@ -39,7 +39,11 @@ function useFilterNav(basePath = "/productos") {
       });
       next.delete("pagina");
       const qs = next.toString();
-      router.push(qs ? `${basePath}?${qs}` : basePath, { scroll: false });
+      // Transición: con red lenta el click no se siente bloqueado mientras
+      // navega, y el select/sort no pierde el foco a mitad de camino.
+      startTransition(() => {
+        router.push(qs ? `${basePath}?${qs}` : basePath, { scroll: false });
+      });
     },
     [params, router, basePath],
   );

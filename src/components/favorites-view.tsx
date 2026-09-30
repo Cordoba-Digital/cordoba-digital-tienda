@@ -1,5 +1,7 @@
 "use client";
 
+import { useMemo } from "react";
+
 import Link from "next/link";
 
 import { ProductCard } from "@/components/product-card";
@@ -8,7 +10,12 @@ import type { ProductView } from "@/lib/product-view";
 
 export function FavoritesView({ products }: { products: ProductView[] }) {
   const { favorites, hydrated, addItem } = useStore();
-  const saved = products.filter((product) => favorites.includes(product.slug));
+  // Set memoizado: el filtro recorre el catálogo en cada render y `includes`
+  // sobre array es O(n·m). Con 100 productos no se nota, pero es gratis.
+  const saved = useMemo(() => {
+    const favSet = new Set(favorites);
+    return products.filter((product) => favSet.has(product.slug));
+  }, [products, favorites]);
 
   if (!hydrated) {
     return (

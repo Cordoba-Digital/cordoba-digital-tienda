@@ -277,7 +277,7 @@ export default async function ProductPage({ params }: { params: Params }) {
             <h2 className="text-lg font-extrabold text-ink-900">Opiniones de clientes</h2>
             <ReviewForm slug={product.slug} />
           </div>
-          <RatingSummary rating={product.rating} count={product.reviewCount} reviews={productReviews} />
+          <RatingSummary rating={product.rating} count={product.reviewCount} ratings={productReviews.map((r) => r.rating)} />
           <div className="space-y-4 border-t border-ink-50 pt-4">
             {productReviews.length === 0 ? (
               <p className="text-sm text-ink-500">Todavía no hay opiniones. ¡Sé el primero en opinar!</p>

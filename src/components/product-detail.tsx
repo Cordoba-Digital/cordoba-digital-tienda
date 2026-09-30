@@ -609,15 +609,17 @@ export function ReviewForm({ slug }: { slug: string }) {
 export function RatingSummary({
   rating,
   count,
-  reviews = [],
+  ratings = [],
 }: {
   rating: number;
   count: number;
-  reviews?: { rating: number }[];
+  /** Solo los puntajes: la distribución no necesita título, texto ni autor,
+      así que no se serializan las reseñas enteras al cliente. */
+  ratings?: number[];
 }) {
   const value = rating / 10;
 
-  if (count === 0 || reviews.length === 0) {
+  if (count === 0 || ratings.length === 0) {
     return (
       <p className="rounded-xl bg-ink-50 px-4 py-3 text-sm text-ink-500">
         Todavía no hay opiniones de este producto. Si lo compraste,{" "}
@@ -629,9 +631,9 @@ export function RatingSummary({
     );
   }
 
-  const total = reviews.length;
+  const total = ratings.length;
   const distribution = [5, 4, 3, 2, 1].map((star) => {
-    const hits = reviews.filter((r) => Math.round(r.rating) === star).length;
+    const hits = ratings.filter((r) => Math.round(r) === star).length;
     return { star, percent: Math.round((hits / total) * 100) };
   });
 

@@ -280,18 +280,44 @@ export async function listProducts(filters: ProductFilters) {
     filters.categoryId != null && filters.category == null ? await subtreeOf(filters.categoryId) : undefined;
   const where = buildWhere(filters, subtree);
 
-  const items = await db
-    .select()
-    .from(products)
-    .where(where)
-    .orderBy(...orderFor(filters.sort))
-    .limit(perPage)
-    .offset((page - 1) * perPage);
+  // Proyección explícita a columnas de tarjeta: el `select()` entero traía
+  // `descriptionHtml`, `specs` y SEO por cada una de las 24 filas, peso que
+  // viaja DB→server aunque la tarjeta solo usa `toView` (ver `CardRow`).
+  const cardColumns = {
+    slug: products.slug,
+    name: products.name,
+    brand: products.brand,
+    categorySlug: products.categorySlug,
+    shortDescription: products.shortDescription,
+    price: products.price,
+    compareAtPrice: products.compareAtPrice,
+    stock: products.stock,
+    rating: products.rating,
+    reviewCount: products.reviewCount,
+    soldCount: products.soldCount,
+    images: products.images,
+    imageSrcSets: products.imageSrcSets,
+    badge: products.badge,
+    freeShipping: products.freeShipping,
+    highlights: products.highlights,
+  };
 
-  const [countRow] = await db
-    .select({ count: sql<number>`count(*)::int` })
-    .from(products)
-    .where(where);
+  // Items y conteo en paralelo: son dos round-trips independientes con el
+  // mismo `where`, y esta consulta corre en /productos, /categoria y
+  // /favoritos, o sea en casi todo el tráfico del sitio.
+  const [items, [countRow]] = await Promise.all([
+    db
+      .select(cardColumns)
+      .from(products)
+      .where(where)
+      .orderBy(...orderFor(filters.sort))
+      .limit(perPage)
+      .offset((page - 1) * perPage),
+    db
+      .select({ count: sql<number>`count(*)::int` })
+      .from(products)
+      .where(where),
+  ]);
 
   return {
     items,
@@ -371,11 +397,14 @@ export async function getNewArrivals(limit = 8) {
   return db.select().from(products).orderBy(desc(products.id)).limit(limit);
 }
 
-export async function getProductBySlug(slug: string) {
+/** Por slug, con `cache()` de React: `generateMetadata` y la página llaman a
+    `findProduct()` en el mismo request (hasta 5 lookups por los slugs con
+    `%`-encoding) y sin esto cada uno pegaba a la base. */
+export const getProductBySlug = cache(async (slug: string) => {
   await ensureSeeded();
   const [product] = await db.select().from(products).where(eq(products.slug, slug)).limit(1);
   return product ?? null;
-}
+});
 
 /** Ids de todas las categorías asignadas a un producto. */
 async function categoryIdsOfProduct(slug: string): Promise<number[]> {
@@ -389,8 +418,7 @@ async function categoryIdsOfProduct(slug: string): Promise<number[]> {
 
 /** Cadenas de breadcrumbs (raíz → … → categoría) de un producto. */
 export async function getProductBreadcrumbs(slug: string): Promise<{ name: string; path: string }[]> {
-  const ids = await categoryIdsOfProduct(slug);
-  const tree = await getCategoryTree();
+  const [ids, tree] = await Promise.all([categoryIdsOfProduct(slug), getCategoryTree()]);
   const flat = flattenTree(tree);
   const byId = new Map(flat.map((n) => [n.id, n]));
   const chains = ids

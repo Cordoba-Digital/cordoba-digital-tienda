@@ -23,7 +23,29 @@ export type ProductView = {
   highlights: string[];
 };
 
-export function toView(product: Product): ProductView {
+/** Fila mínima para una tarjeta: todo lo que `toView` lee, sin el HTML de la
+    descripción ni las columnas pesadas que el catálogo nunca muestra. */
+export type CardRow = Pick<
+  Product,
+  | "slug"
+  | "name"
+  | "brand"
+  | "categorySlug"
+  | "shortDescription"
+  | "price"
+  | "compareAtPrice"
+  | "stock"
+  | "rating"
+  | "reviewCount"
+  | "soldCount"
+  | "images"
+  | "imageSrcSets"
+  | "badge"
+  | "freeShipping"
+  | "highlights"
+>;
+
+export function toView(product: CardRow): ProductView {
   const images = (product.images ?? []).map((url) => resolveMedia(url));
   return {
     slug: product.slug,

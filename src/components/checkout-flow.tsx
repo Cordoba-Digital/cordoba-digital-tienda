@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
@@ -129,9 +129,16 @@ export function CheckoutFlow() {
     return () => window.clearTimeout(id);
   }, []);
 
+  // Persistencia con debounce: sin esto cada tecla escribe a localStorage
+  // (lectura/escritura sincrónica que bloquea el hilo en cada keystroke).
+  const persistTimer = useRef<number | undefined>(undefined);
   useEffect(() => {
     if (!hydrated) return;
-    window.localStorage.setItem("cd_checkout_v1", JSON.stringify({ ...form, notes: "" }));
+    window.clearTimeout(persistTimer.current);
+    persistTimer.current = window.setTimeout(() => {
+      window.localStorage.setItem("cd_checkout_v1", JSON.stringify({ ...form, notes: "" }));
+    }, 400);
+    return () => window.clearTimeout(persistTimer.current);
   }, [form, hydrated]);
 
   // Quote shipping whenever the ZIP or subtotal changes.
@@ -202,11 +209,15 @@ export function CheckoutFlow() {
     installments,
   });
 
-  // Sincroniza método de pago con entrega: efectivo solo válido con retiro.
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    if (deliveryMethod !== "pickup" && payment === "efectivo") setPayment("transferencia");
-  }, [deliveryMethod, payment]);
+  // Efectivo solo vale con retiro: se corrige en el mismo handler que
+  // cambia la entrega, no en un efecto posterior (evita un render con el
+  // estado inconsistente y el ida y vuelta del efecto).
+  const chooseDelivery = (method: DeliveryMethod) => {
+    setDeliveryMethod(method);
+    if (method !== "pickup") {
+      setPayment((prev) => (prev === "efectivo" ? "transferencia" : prev));
+    }
+  };
 
   const set = (key: keyof FormState) => (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [key]: event.target.value }));
@@ -421,7 +432,7 @@ export function CheckoutFlow() {
               <div className="grid gap-3 sm:grid-cols-2">
                 <button
                   type="button"
-                  onClick={() => setDeliveryMethod("standard")}
+                  onClick={() => chooseDelivery("standard")}
                   className={`rounded-xl border-2 p-4 text-left transition ${
                     deliveryMethod !== "pickup" ? "border-brand-500 bg-brand-50/50" : "border-ink-100 hover:border-ink-300"
                   }`}
@@ -431,7 +442,7 @@ export function CheckoutFlow() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => setDeliveryMethod("pickup")}
+                  onClick={() => chooseDelivery("pickup")}
                   className={`rounded-xl border-2 p-4 text-left transition ${
                     deliveryMethod === "pickup" ? "border-brand-500 bg-brand-50/50" : "border-ink-100 hover:border-ink-300"
                   }`}
@@ -483,7 +494,7 @@ export function CheckoutFlow() {
                           <button
                             key={option.id}
                             type="button"
-                            onClick={() => setDeliveryMethod(option.id)}
+                            onClick={() => chooseDelivery(option.id)}
                             className={`flex w-full items-start justify-between gap-3 rounded-xl border-2 p-4 text-left transition ${
                               deliveryMethod === option.id
                                 ? "border-brand-500 bg-brand-50/40"

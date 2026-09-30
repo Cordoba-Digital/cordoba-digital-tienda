@@ -50,7 +50,8 @@ function renderEntry({ loc, lastmod, changefreq, priority }: Entry): string {
 /** Estaticas + las 128 categorias del arbol (son las mismas en todos los submapas). */
 async function baseEntries(): Promise<Entry[]> {
   const entries: Entry[] = [...STATIC_ENTRIES];
-  const paths = await getCategoryPaths();
+  // Categorías y guías en paralelo: independientes entre sí.
+  const [paths, guias] = await Promise.all([getCategoryPaths(), getGuides()]);
   for (const category of paths) {
     entries.push({
       loc: `${BASE}/categoria/${category.path}`,
@@ -60,7 +61,6 @@ async function baseEntries(): Promise<Entry[]> {
   }
   // Guías de compra: artículos de blog que el sitio viejo tiene indexados y que
   // ahora se sirven desde la raíz, con el mismo slug.
-  const guias = await getGuides();
   for (const guia of guias) {
     entries.push({
       loc: `${BASE}/${guia.slug}`,

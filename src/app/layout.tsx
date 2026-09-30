@@ -64,8 +64,13 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     count: number;
     children?: NavNode[];
   };
+  // Árbol y guías en paralelo: son independientes y este layout corre en
+  // TODAS las páginas. Cada uno conserva su fallback por separado con
+  // `allSettled`: si la base no responde, la página igual se dibuja.
+  const [treeRes, guideRes] = await Promise.allSettled([getCategoryTree(), getGuides()]);
   let categories: (NavNode & { tagline: string })[] = [];
   try {
+    if (treeRes.status !== "fulfilled") throw new Error("sin árbol");
     // El mapeo baja los tres niveles del árbol, no uno: el header muestra los
     // nietos indentados dentro del panel de cada raíz. Antes los recortaba acá
     // y la información no llegaba al componente.
@@ -77,7 +82,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       count: node.count,
       children: node.children.length ? node.children.map(toNavNode) : undefined,
     });
-    categories = (await getCategoryTree()).map((c) => ({ ...toNavNode(c), tagline: c.tagline }));
+    categories = treeRes.value.map((c) => ({ ...toNavNode(c), tagline: c.tagline }));
   } catch {
     categories = [];
   }
@@ -85,12 +90,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   // Guías de compra para la columna del pie. Si la base no responde, el pie se
   // dibuja sin esa columna: no vale la pena romper todas las páginas por un
   // bloque que es solo un listado de enlaces.
-  let guides: GuideTeaser[] = [];
-  try {
-    guides = await getGuides();
-  } catch {
-    guides = [];
-  }
+  let guides: GuideTeaser[] = guideRes.status === "fulfilled" ? guideRes.value : [];
 
   return (
     // `suppressHydrationWarning`: el script de arriba cambia la clase de <html>
@@ -98,6 +98,10 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     <html lang="es-AR" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+        {/* Las fotos del catálogo viven en el WordPress original: el
+            preconnect ahorra el handshake en la primera imagen (LCP). */}
+        <link rel="preconnect" href="https://www.cordobadigital.net" />
+        <link rel="dns-prefetch" href="https://www.cordobadigital.net" />
       </head>
       <body className="min-h-screen bg-ink-50 text-ink-900 antialiased">
         <StoreProvider>

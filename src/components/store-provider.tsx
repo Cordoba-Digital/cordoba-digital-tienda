@@ -6,6 +6,7 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from "react";
@@ -65,7 +66,12 @@ function readJSON<T>(key: string, fallback: T): T {
   try {
     const raw = window.localStorage.getItem(key);
     if (!raw) return fallback;
-    return JSON.parse(raw) as T;
+    const parsed = JSON.parse(raw) as T;
+    // Si el contenido existe pero no tiene la forma esperada (p. ej. un
+    // string donde va un array), vale el fallback: sin esto un dato
+    // corrupto rompe el carrito en vez de empezar vacío.
+    if (Array.isArray(fallback) && !Array.isArray(parsed)) return fallback;
+    return parsed;
   } catch {
     return fallback;
   }
@@ -168,13 +174,24 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   const clearCart = useCallback(() => setItems([]), []);
 
+  // Espejo de `favorites` para lectura sincrónica en el toggle. Se sincroniza
+  // en efecto (el único lugar donde el linter permite escribir refs): entre
+  // dos clicks discretos React ya flusheó los efectos, así que la lectura
+  // está al día. Sin esto habría que leer `favorites` del closure y el
+  // callback se recrearía (y re-renderizaría suscriptos) en cada cambio.
+  const favoritesRef = useRef<string[]>([]);
+  useEffect(() => {
+    favoritesRef.current = favorites;
+  }, [favorites]);
   const toggleFavorite = useCallback(
     (slug: string) => {
-      const exists = favorites.includes(slug);
-      setFavorites(exists ? favorites.filter((s) => s !== slug) : [...favorites, slug]);
+      const exists = favoritesRef.current.includes(slug);
+      setFavorites((prev) =>
+        prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug],
+      );
       pushToast({ title: exists ? "Quitado de favoritos" : "Guardado en favoritos", tone: "info" });
     },
-    [favorites, pushToast],
+    [pushToast],
   );
 
   const pushRecent = useCallback((slug: string) => {

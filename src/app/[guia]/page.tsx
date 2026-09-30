@@ -52,11 +52,13 @@ export async function generateMetadata({
 
 export default async function GuidePage({ params }: { params: Promise<{ guia: string }> }) {
   const { guia } = await params;
-  const article = await getGuideBySlug(guia);
+  // Artículo y lista de guías en paralelo: el filtro de "otras" solo necesita
+  // el slug, no el artículo resuelto.
+  const [article, todas] = await Promise.all([getGuideBySlug(guia), getGuides()]);
   if (!article) notFound();
 
   const meta = article.meta ?? {};
-  const otras = (await getGuides()).filter((g) => g.slug !== article.slug);
+  const otras = todas.filter((g) => g.slug !== article.slug);
 
   return (
     <article className="container-xl py-8">

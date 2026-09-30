@@ -1,4 +1,4 @@
-import { listProducts } from "@/lib/queries";
+import { getProductCount } from "@/lib/queries";
 import { SITE_URL as BASE } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
@@ -26,7 +26,9 @@ function escapeXml(value: string): string {
 export async function GET(): Promise<Response> {
   let count = 1;
   try {
-    const { total } = await listProducts({ perPage: 1 });
+    // Solo se necesita el total: `getProductCount` es una sola consulta
+    // cacheada, en vez de las dos que hace `listProducts`.
+    const total = await getProductCount();
     count = Math.max(1, Math.ceil(total / PRODUCTS_PER_SITEMAP));
   } catch {
     // Si la base no responde emitimos el indice minimo en vez de un 500.
