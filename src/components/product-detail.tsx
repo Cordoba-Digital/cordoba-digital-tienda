@@ -245,8 +245,16 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
       </div>
 
       {product.stock > 0 ? (
+        /* Antes decía "¡Últimas N unidades!" cuando había 5 o menos. Se sacó
+           porque el campo no sirve para eso: en el catálogo migrado 2.369 de
+           2.589 productos tienen stock = 1 y ninguno tiene entre 2 y 5, así que
+           el aviso salía en el 91% de las fichas y no informaba nada. Peor,
+           un "¡Última unidad!" repetido en cada producto es urgencia inventada.
+           El `stock` del sitio original funciona como disponible/no disponible,
+           no como un conteo real de depósito. Cuando el cliente mande el
+           inventario de verdad, acá vuelve el aviso con el número real. */
         <p className="text-xs font-semibold text-emerald-700">
-          ✅ {product.stock <= 5 ? `¡Últimas ${product.stock} unidades!` : "Stock disponible para envío inmediato"}
+          ✅ Stock disponible para envío inmediato
         </p>
       ) : (
         <p className="text-xs font-semibold text-rose-600">Sin stock — consultanos por reposición</p>

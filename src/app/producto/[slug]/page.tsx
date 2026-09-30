@@ -203,10 +203,10 @@ export default async function ProductPage({ params }: { params: Params }) {
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_22rem]">
         <div className="space-y-8">
           <div>
-            <div className="mb-2 flex flex-wrap items-center gap-2">
-              <Pill tone="brand">{product.brand}</Pill>
-              {product.stock > 0 && product.stock <= 5 ? <Pill tone="amber">Últimas unidades</Pill> : null}
-            </div>
+            {/* Acá había una fila de pills arriba del nombre: la marca y, si
+                quedaban pocas unidades, un "Últimas unidades". La marca ya
+                está en la migas de pan que queda justo arriba, así que la
+                mitad de la fila estaba duplicada. */}
             <h1 className="text-2xl font-extrabold leading-tight tracking-tight text-ink-900 md:text-3xl">
               {product.name}
             </h1>

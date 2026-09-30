@@ -69,14 +69,16 @@ export function ProductImg({
     return <ProductPlaceholder />;
   }
 
-  const srcsetProp = {
-    srcset: resolvedSet.length && current === resolved ? resolvedSet.join(", ") : undefined,
-  } as Record<string, unknown>;
+  // `srcSet` con mayúscula, que es la prop que React conoce, y no `srcset` a
+  // mano con un cast: con la minúscula React avisaba "Invalid DOM property
+  // `srcset`" en cada imagen y salía el cartel de "1 Issue" en desarrollo.
+  const listaSrcSet = resolvedSet.length && current === resolved ? resolvedSet.join(", ") : undefined;
 
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
       src={current}
+      srcSet={listaSrcSet}
       sizes={resolvedSet.length ? sizes : undefined}
       alt={alt}
       width={width}
@@ -94,7 +96,6 @@ export function ProductImg({
         }
         setFailed(true);
       }}
-      {...srcsetProp}
     />
   );
 }
