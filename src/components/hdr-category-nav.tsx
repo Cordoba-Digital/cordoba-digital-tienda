@@ -8,18 +8,22 @@ import { useCallback, useEffect, useId, useRef, useState } from "react";
 
 /**
  * Barra de categorías del escritorio: un ícono compacto con todo el catálogo y
- * las primeras raíces en texto, cada una con su panel de subcategorías al hover.
+ * una tira desplazable con los accesos curados.
+ *
+ * Antes cada acceso abría su panel de subcategorías al hover, pero una tira
+ * con scroll horizontal recorta los paneles (el scroll-x fuerza el recorte
+ * vertical), así que los accesos son enlaces directos y la navegación completa
+ * vive en el panel del ícono. La tira usa `overflow-x-auto` sin barra visible,
+ * como la referencia del rediseño.
  *
  * Antes el acceso a todo el catálogo era el bloque naranja de "Categorías", que
- * se comía ~130 px de la barra y dejaba lugar para 6 de 21 raíces, dos de ellas
- * truncadas. Ese bloque es hoy un ícono de 36 px y las 21 raíces se siguen
- viendo en el panel del ícono; la barra sólo muestra las 6 primeras, que entran
- * enteras con el espacio liberado.
+ * se comía ~130 px de la barra. Ese bloque es hoy un ícono de 36 px.
  *
- * Los paneles se abren por hover con 120 ms de gracia al cerrar: el puntero
- * tiene que atravesar el borde del disparador para llegar al panel y sin ese
- * margen se cerraría en el camino. El panel vive dentro del mismo `<li>` que el
- * disparador, así que seguirlo con el mouse nunca dispara un `mouseleave`.
+ * El panel del ícono se abre por hover con 120 ms de gracia al cerrar: el
+ * puntero tiene que atravesar el borde del disparador para llegar al panel y
+ * sin ese margen se cerraría en el camino. El panel vive dentro del mismo
+ * contenedor que el disparador, así que seguirlo con el mouse nunca dispara
+ * un `mouseleave`.
  */
 
 /** Nodo del árbol como lo pasa el layout: hijos con sus propios hijos. */
@@ -55,6 +59,40 @@ const BAR_ITEMS: { label: string; path: string }[] = [
   { label: "Gaming", path: "consolas-playstation" },
 ];
 
+/** Un acceso curado resuelto contra el árbol real. */
+type BarItem = { label: string; path: string; node: CategoryNavNode };
+
+/**
+ * Enlaces de la tira: los curados más Ofertas y Ayuda, todos directos y sin
+ * paneles. Se usa en desktop y en móvil con el mismo contenido.
+ */
+function StripLinks({ items }: { items: BarItem[] }) {
+  return (
+    <>
+      {items.map(({ label, node: root }) => (
+        <Link
+          key={root.slug}
+          href={`/categoria/${root.path}`}
+          className="shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50 hover:text-ink-900"
+        >
+          {label}
+        </Link>
+      ))}
+      <Link
+        href="/productos?ofertas=1"
+        className="shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-sm font-bold text-rose-600 transition hover:bg-rose-50"
+      >
+        Ofertas
+      </Link>
+      <Link
+        href="/ayuda"
+        className="shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50"
+      >
+        Ayuda
+      </Link>
+    </>
+  );
+}
 /** Busca un nodo en los tres niveles por su path (`a/b/c`). */
 function findNodeByPath(nodes: CategoryNavNode[], path: string): CategoryNavNode | undefined {
   for (const node of nodes) {
@@ -94,33 +132,13 @@ function columnsFor(total: number): 1 | 2 | 3 {
  * Marco comun de los paneles: posicion, decorado y fondo, nada mas.
  *
  * Ni el ancho, ni el display, ni el padding van aca porque cada panel se mide
- * distinto: `RootPanel` se dimensiona con PANEL_WIDTH y el panel del catalogo
- * necesita una grilla de dos columnas pegada al borde. El padding tambien se
- * queda afuera: el panel chico usa `p-3` y el de catalogo `p-0`, para que las
- * dos columnas lleguen hasta el borde redondeado en vez de dejar un marco
- * blanco de 12 px alrededor.
+ * distinto: el panel del catalogo necesita una grilla de dos columnas pegada
+ * al borde. El padding tambien se queda afuera: el panel de catalogo usa
+ * `p-0`, para que las dos columnas lleguen hasta el borde redondeado en vez
+ * de dejar un marco blanco de 12 px alrededor.
  */
 const PANEL_SHELL =
   "absolute left-0 top-full z-50 -mt-1.5 animate-pop rounded-2xl border border-ink-100 bg-surface shadow-2xl shadow-black/10";
-
-/** Ancho del panel según cuántas subcategorías tiene la raíz. */
-const PANEL_WIDTH: Record<1 | 2 | 3, string> = {
-  1: "w-[17.5rem]",
-  2: "w-[31rem]",
-  3: "w-[43rem]",
-};
-
-/**
- * Las columnas van en la lista y no en el panel: multilínea de CSS reparte
- * *todos* los bloques hijos entre columnas, así que con las columnas en el
- * panel el pie "Ver toda la categoría" caía dentro de la segunda columna en vez
- * de abajo del todo.
- */
-const PANEL_COLUMNS: Record<1 | 2 | 3, string> = {
-  1: "columns-1",
-  2: "columns-2 gap-x-5",
-  3: "columns-3 gap-x-5",
-};
 
 /** Hijos de la raíz; los que tienen nietos los muestran indentados. */
 function SubcategoryList({ nodes, columns }: { nodes: CategoryNavNode[]; columns: string }) {
@@ -169,44 +187,6 @@ function SubcategoryList({ nodes, columns }: { nodes: CategoryNavNode[]; columns
         </li>
       ))}
     </ul>
-  );
-}
-
-/** Pie común: la salida del panel es la página de la categoría. */
-function PanelFooter({ path, name }: { path: string; name: string }) {
-  return (
-    <Link
-      href={`/categoria/${path}`}
-      className="mt-2 block rounded-lg bg-ink-50 px-3 py-2 text-center text-[12px] font-bold text-brand-700 transition hover:bg-brand-50 hover:text-brand-800"
-    >
-      Ver toda la categoría
-      <span className="sr-only"> {name}</span> →
-    </Link>
-  );
-}
-
-/** Panel de una raíz con subcategorías. */
-function RootPanel({
-  root,
-  panelId,
-  triggerId,
-}: {
-  root: CategoryNavRoot;
-  panelId: string;
-  triggerId: string;
-}) {
-  const kids = root.children ?? [];
-  const columns = columnsFor(kids.length);
-  return (
-    <div
-      id={panelId}
-      role="group"
-      aria-labelledby={triggerId}
-      className={`${PANEL_SHELL} max-h-[70vh] overflow-y-auto p-3 ${PANEL_WIDTH[columns]}`}
-    >
-      <SubcategoryList nodes={kids} columns={PANEL_COLUMNS[columns]} />
-      <PanelFooter path={root.path} name={root.name} />
-    </div>
   );
 }
 
@@ -370,8 +350,8 @@ function CatalogPanel({
             </p>
           </div>
           {/*
-            Este boton reemplaza el pie gris de `RootPanel`: en el panel de dos
-            niveles queda pegado al titulo del area, que es el link de salida.
+            Botón de salida del panel: queda pegado al título del área,
+            que es el link a su página.
           */}
           <Link
             href={`/categoria/${selected.path}`}
@@ -467,113 +447,83 @@ export function CategoryNavBar({ categories }: { categories: CategoryNavRoot[] }
   }, [openKey]);
 
   /** Tabular fuera del disparador y de su panel cierra; dentro, no. */
-  const handleBlur = (event: React.FocusEvent<HTMLLIElement>) => {
+  const handleBlur = (event: React.FocusEvent<HTMLDivElement>) => {
     const next = event.relatedTarget as Node | null;
     if (!next || !event.currentTarget.contains(next)) closeSoon();
   };
 
-  // Accesos curados resueltos contra el árbol: cada uno linkea a su página y,
-  // si tiene subcategorías, abre su panel al hover como antes.
-  const barItems = BAR_ITEMS.map((item) => ({ ...item, node: findNodeByPath(categories, item.path) })).filter(
-    (item): item is { label: string; path: string; node: CategoryNavNode } => Boolean(item.node),
-  );
+  // Accesos curados resueltos contra el árbol: si una ruta dejara de existir,
+  // ese acceso se omite en vez de romper la barra.
+  const barItems: BarItem[] = BAR_ITEMS.map((item) => ({
+    ...item,
+    node: findNodeByPath(categories, item.path),
+  })).filter((item): item is BarItem => Boolean(item.node));
 
   return (
+    <>
     <div className="hidden border-t border-ink-100 lg:block">
-      <div ref={barRef} className="container-xl flex h-11 items-stretch gap-2">
-        <ul className="flex min-w-0 flex-1 items-stretch gap-0.5">
-          {/*
-            El ícono abre el catálogo completo y además se puede usar con teclado
-            (Enter abre y Escape cierra), así que no depende del puntero.
-          */}
-          <li
-            className="relative flex shrink-0 items-center"
-            onMouseEnter={() => openPanel(ALL_KEY)}
-            onMouseLeave={closeSoon}
-            onBlur={handleBlur}
+      <div ref={barRef} className="container-xl flex h-11 items-center gap-1">
+        {/*
+          El ícono abre el catálogo completo y además se puede usar con teclado
+          (Enter abre y Escape cierra), así que no depende del puntero.
+        */}
+        <div
+          className="relative flex shrink-0 items-center"
+          onMouseEnter={() => openPanel(ALL_KEY)}
+          onMouseLeave={closeSoon}
+          onBlur={handleBlur}
+        >
+          <button
+            type="button"
+            data-nav-trigger={ALL_KEY}
+            id={`${baseId}-all-trigger`}
+            aria-expanded={openKey === ALL_KEY}
+            aria-controls={`${baseId}-all-panel`}
+            aria-haspopup="true"
+            onClick={() => (openKey === ALL_KEY ? closeSoon() : openPanel(ALL_KEY))}
+            aria-label="Ver todas las categorías"
+            title="Ver todas las categorías"
+            className="grid h-9 w-9 place-items-center rounded-lg text-ink-600 transition hover:bg-ink-100 hover:text-ink-900 aria-expanded:bg-ink-100 aria-expanded:text-ink-900"
           >
-            <button
-              type="button"
-              data-nav-trigger={ALL_KEY}
-              id={`${baseId}-all-trigger`}
-              aria-expanded={openKey === ALL_KEY}
-              aria-controls={`${baseId}-all-panel`}
-              aria-haspopup="true"
-              onClick={() => (openKey === ALL_KEY ? closeSoon() : openPanel(ALL_KEY))}
-              aria-label="Ver todas las categorías"
-              title="Ver todas las categorías"
-              className="grid h-9 w-9 place-items-center rounded-lg text-ink-600 transition hover:bg-ink-100 hover:text-ink-900 aria-expanded:bg-ink-100 aria-expanded:text-ink-900"
-            >
-              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" />
-              </svg>
-            </button>
-            {openKey === ALL_KEY ? (
-              <CatalogPanel
-                categories={categories}
-                panelId={`${baseId}-all-panel`}
-                triggerId={`${baseId}-all-trigger`}
-              />
-            ) : null}
-          </li>
-
-          {barItems.map(({ label, node: root }) => {
-            const hasKids = Boolean(root.children?.length);
-            const isOpen = openKey === root.slug;
-            const triggerId = `${baseId}-${root.slug}-trigger`;
-            return (
-              <li
-                key={root.slug}
-                className="relative flex min-w-0 items-center"
-                onMouseEnter={hasKids ? () => openPanel(root.slug) : undefined}
-                onMouseLeave={hasKids ? closeSoon : undefined}
-                onBlur={hasKids ? handleBlur : undefined}
-              >
-                {/*
-                  Etiqueta corta del acceso, sin truncar: los 6 suman ~600 px y
-                  entran cómodos al lado del ícono.
-                */}
-                <Link
-                  href={`/categoria/${root.path}`}
-                  data-nav-trigger={root.slug}
-                  id={triggerId}
-                  onFocus={hasKids ? () => openPanel(root.slug) : undefined}
-                  aria-expanded={hasKids ? isOpen : undefined}
-                  aria-haspopup={hasKids ? true : undefined}
-                  aria-controls={hasKids ? `${baseId}-${root.slug}-panel` : undefined}
-                  className={`flex min-w-0 items-center whitespace-nowrap rounded-lg px-2 py-1.5 text-[13px] font-medium transition hover:bg-ink-50 hover:text-ink-900 ${
-                    isOpen ? "bg-ink-50 text-ink-900" : "text-ink-600"
-                  }`}
-                >
-                  {label}
-                </Link>
-                {hasKids && isOpen ? (
-                  <RootPanel
-                    root={root}
-                    panelId={`${baseId}-${root.slug}-panel`}
-                    triggerId={triggerId}
-                  />
-                ) : null}
-              </li>
-            );
-          })}
-        </ul>
-
-        <div className="flex shrink-0 items-center gap-0.5">
-          <Link
-            href="/productos?ofertas=1"
-            className="whitespace-nowrap rounded-lg px-2 py-1.5 text-[13px] font-bold text-rose-600 transition hover:bg-rose-50"
-          >
-            🔥 Ofertas
-          </Link>
-          <Link
-            href="/ayuda"
-            className="whitespace-nowrap rounded-lg px-2 py-1.5 text-[13px] font-medium text-ink-600 transition hover:bg-ink-50"
-          >
-            Ayuda
-          </Link>
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" />
+            </svg>
+          </button>
+          {openKey === ALL_KEY ? (
+            <CatalogPanel
+              categories={categories}
+              panelId={`${baseId}-all-panel`}
+              triggerId={`${baseId}-all-trigger`}
+            />
+          ) : null}
         </div>
+
+        {/*
+          Tira desplazable con los accesos curados más Ofertas y Ayuda: son
+          enlaces directos, sin paneles al hover. La navegación por
+          subcategorías vive en el panel del ícono.
+        */}
+        <nav
+          aria-label="Categorías"
+          className="no-scrollbar flex min-w-0 flex-1 items-center gap-0.5 overflow-x-auto"
+        >
+          <StripLinks items={barItems} />
+        </nav>
       </div>
     </div>
+    {/*
+      La misma tira en móvil: acá el contenido (~770 px) sí desborda y la tira
+      desplaza de verdad. Sin hamburguesa: el menú completo ya vive en el
+      drawer del header.
+    */}
+    <div className="border-t border-ink-100 lg:hidden">
+      <nav
+        aria-label="Accesos de categorías"
+        className="no-scrollbar flex h-11 items-center gap-0.5 overflow-x-auto px-4"
+      >
+        <StripLinks items={barItems} />
+      </nav>
+    </div>
+    </>
   );
 }
