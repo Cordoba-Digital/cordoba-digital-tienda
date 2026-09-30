@@ -307,7 +307,10 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         <li className="flex items-center gap-2">🧽 Factura o comprobante de compra</li>
         <li className="flex items-center gap-2">🏬 Retiro en 27 de Abril 180, Córdoba Capital</li>
       </ul>
-      <p className="text-[10px] text-ink-500">SKU {product.sku}</p>
+      {/* 63 de los 2.589 productos migrados vienen con el SKU vacío, no nulo.
+          Sin esta guarda la caja de compra imprimía un "SKU " pelado. La misma
+          guarda ya está en la línea de arriba del nombre, en la ficha. */}
+      {product.sku ? <p className="text-[10px] text-ink-500">SKU {product.sku}</p> : null}
     </div>
   );
 }
