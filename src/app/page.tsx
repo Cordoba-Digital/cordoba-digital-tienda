@@ -54,7 +54,6 @@ export default async function HomePage() {
     getProductCount(),
   ]);
 
-  const topCategories = categories.slice(0, 10);
   const ratingValue = googleReviews.rating?.toFixed(1) ?? null;
   const reviewCount = googleReviews.count;
   const heroProduct = featured[0] ? toView(featured[0]) : null;
@@ -124,18 +123,24 @@ export default async function HomePage() {
           description="Todo el catálogo organizado para que encuentres lo que buscás en menos de 3 clics."
           action={{ href: "/productos", label: "Ver todo" }}
         />
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-          {topCategories.map((c) => (
+        {/*
+          Fila desplazable de círculos, como la referencia del rediseño: las 21
+          raíces reales con su nombre y su link, sin conteos. Con 21 ítems la
+          fila desborda y desplaza en desktop y en móvil. El scrollbar fino
+          sale del estilo global (`*` en globals.css) y es la señal de que hay
+          más para ver. Sin estado activo inventado: el hover tiñe el círculo.
+        */}
+        <div className="flex gap-4 overflow-x-auto pb-3 sm:gap-5">
+          {categories.map((c) => (
             <Link
               key={c.slug}
               href={`/categoria/${c.path}`}
-              className="group card-surface flex flex-col gap-1.5 p-4 transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg"
+              className="group flex w-20 shrink-0 flex-col items-center gap-2 text-center sm:w-24"
             >
-              <span className="grid h-11 w-11 place-items-center rounded-xl bg-brand-50 text-brand-700 transition group-hover:bg-brand-700 group-hover:text-white">
-                <CategoryIcon name={c.name} className="h-6 w-6" />
+              <span className="grid h-20 w-20 place-items-center rounded-full border border-ink-100 bg-surface text-brand-700 shadow-sm transition group-hover:border-brand-300 group-hover:bg-brand-50 group-hover:shadow-md sm:h-24 sm:w-24">
+                <CategoryIcon name={c.name} className="h-9 w-9 sm:h-10 sm:w-10" />
               </span>
-              <span className="text-sm font-bold text-ink-900">{c.name}</span>
-              <span className="text-[11px] text-ink-500">{c.count} productos</span>
+              <span className="text-xs font-semibold leading-tight text-ink-900 sm:text-[13px]">{c.name}</span>
             </Link>
           ))}
         </div>
