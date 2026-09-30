@@ -213,7 +213,6 @@ export default async function ProductPage({ params }: { params: Params }) {
             images={product.images}
             srcSets={product.imageSrcSets}
             name={product.name}
-            badge={product.badge}
           />
         </div>
 
