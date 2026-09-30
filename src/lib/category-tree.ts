@@ -193,9 +193,13 @@ const PALABRAS_PERDIDAS: Record<string, string[]> = {
 };
 
 /** Une palabras ya capitalizadas respetando la conjunción "y" en minúscula. */
+const CONECTORES = new Set(["Y", "De", "Del", "La", "El", "Los", "Las", "Para", "Con", "En", "Por", "Sin", "Al"]);
+
 function joinWords(words: string[]): string {
+  // Los conectores van en minúscula salvo que abran el nombre:
+  // "Computadoras de Escritorio", "Notebooks para Oficina".
   return words
-    .map((word, i) => (i > 0 && word === "Y" ? "y" : word))
+    .map((word, i) => (i > 0 && CONECTORES.has(word) ? word.toLowerCase() : word))
     .join(" ");
 }
 

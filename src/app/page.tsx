@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { CategoryIcon, Icon } from "@/components/category-icon";
 import { Countdown } from "@/components/countdown";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { HomeHero } from "@/components/home-hero";
@@ -22,10 +23,10 @@ export const metadata: Metadata = {
 };
 
 const TRUST = [
-  { icon: "🚚", title: "Envíos a todo el país", text: "Por Andreani, a domicilio o a sucursal · con seguimiento" },
-  { icon: "🔒", title: "Pagos 100% seguros", text: "Tarjetas, Mercado Pago, transferencia y USDT" },
-  { icon: "🛡️", title: "Compra garantizada", text: "Garantía legal de 6 meses y soporte post-venta propio" },
-  { icon: "🎧", title: "Post-venta real", text: "Te atendemos por WhatsApp, mail y en el local" },
+  { icon: "truck", title: "Envíos a todo el país", text: "Por Andreani, a domicilio o a sucursal · con seguimiento" },
+  { icon: "lock", title: "Pagos 100% seguros", text: "Tarjetas, Mercado Pago, transferencia y USDT" },
+  { icon: "shield", title: "Compra garantizada", text: "Garantía legal de 6 meses y soporte post-venta propio" },
+  { icon: "headphones", title: "Post-venta real", text: "Te atendemos por WhatsApp, mail y en el local" },
 ];
 
 const FAQ = [
@@ -45,7 +46,7 @@ const FAQ = [
 
 export default async function HomePage() {
   const [featured, deals, bestSellers, categories, googleReviews, productCount] = await Promise.all([
-    getFeaturedProducts(8),
+    getFeaturedProducts(24),
     getDealProducts(8),
     getBestSellers(10),
     getCategoryTree(),
@@ -57,6 +58,12 @@ export default async function HomePage() {
   const ratingValue = googleReviews.rating?.toFixed(1) ?? null;
   const reviewCount = googleReviews.count;
   const heroProduct = featured[0] ? toView(featured[0]) : null;
+  // "Destacados" y "Más vendidos" caían al mismo fallback (lo más nuevo con
+  // stock) y mostraban los mismos productos. Acá se excluyen los ya mostrados
+  // arriba; si no quedan suficientes distintos, la sección no se muestra.
+  const bestSlugs = new Set(bestSellers.map((p) => p.slug));
+  const dealSlugs = new Set(deals.map((p) => p.slug));
+  const featuredPicks = featured.filter((p) => !bestSlugs.has(p.slug) && !dealSlugs.has(p.slug)).slice(0, 8);
   // El logo vive en /public, así que la imagen de Open Graph y la del JSON-LD
   // salen del propio sitio. Antes apuntaban al dominio viejo, con lo cual la
   // vista previa al compartir en redes dependía de que el sitio original
@@ -98,7 +105,9 @@ export default async function HomePage() {
         <div className="container-xl grid gap-3 py-5 sm:grid-cols-2 lg:grid-cols-4">
           {TRUST.map((t) => (
             <div key={t.title} className="flex items-start gap-3 rounded-xl px-2 py-2">
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-xl">{t.icon}</span>
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-700">
+                <Icon name={t.icon} className="h-5 w-5" />
+              </span>
               <div>
                 <p className="text-sm font-bold text-ink-900">{t.title}</p>
                 <p className="text-xs leading-snug text-ink-500">{t.text}</p>
@@ -122,7 +131,9 @@ export default async function HomePage() {
               href={`/categoria/${c.path}`}
               className="group card-surface flex flex-col gap-1.5 p-4 transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg"
             >
-              <span className="text-2xl transition group-hover:scale-110">{c.icon}</span>
+              <span className="grid h-11 w-11 place-items-center rounded-xl bg-brand-50 text-brand-700 transition group-hover:bg-brand-700 group-hover:text-white">
+                <CategoryIcon name={c.name} className="h-6 w-6" />
+              </span>
               <span className="text-sm font-bold text-ink-900">{c.name}</span>
               <span className="text-[11px] text-ink-500">{c.count} productos</span>
             </Link>
@@ -277,6 +288,7 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {featuredPicks.length >= 4 ? (
       <section className="bg-surface py-12">
         <div className="container-xl">
           <SectionHeading
@@ -285,9 +297,10 @@ export default async function HomePage() {
             description="Los productos que recomendamos por rendimiento, precio y disponibilidad."
             action={{ href: "/productos", label: "Ver catálogo" }}
           />
-          <ProductRow products={featured.map(toView)} />
+          <ProductRow products={featuredPicks.map(toView)} />
         </div>
       </section>
+      ) : null}
 
       <section className="container-xl grid gap-8 py-14 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
         <div>

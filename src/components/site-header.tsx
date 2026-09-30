@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
+import { CategoryIcon } from "@/components/category-icon";
 import { CategoryNavBar, type CategoryNavRoot } from "@/components/hdr-category-nav";
 import { useStore } from "@/components/store-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -289,9 +290,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                         href={`/categoria/${c.path}`}
                         className="flex min-w-0 flex-1 items-center gap-3 px-3 py-3 text-sm font-semibold text-ink-700 hover:bg-ink-50"
                       >
-                        <span className="text-xl" aria-hidden>
-                          {c.icon}
-                        </span>
+                        <CategoryIcon name={c.name} className="h-5 w-5 shrink-0 text-brand-700" />
                         <span className="truncate">{c.name}</span>
                       </Link>
                       {hasKids ? (

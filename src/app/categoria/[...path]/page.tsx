@@ -4,11 +4,12 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
 import { ActiveFilters, FiltersPanel, SortSelect } from "@/components/catalog-filters";
+import { CategoryIcon } from "@/components/category-icon";
+import { CategoryChips, EmptyResults, Pagination } from "@/components/catalog-ui";
 import { ProductCard } from "@/components/product-card";
 import { money } from "@/lib/format";
-import { pageWindow } from "@/lib/page-window";
 import { toView } from "@/lib/product-view";
-import { getBrandFacets, getCategoryByPath, listProducts } from "@/lib/queries";
+import { getBrandFacets, getCategoryByPath, getCategoryTree, listProducts } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const trail = [...ancestors.map((a) => a.name), node.name].join(" · ");
   const description =
     stripTags(node.descriptionHtml).slice(0, 155) ||
-    `${node.name} en Córdoba Digital. ${node.count} productos con stock real, garantía oficial, envíos a todo el país y 15% OFF con transferencia.`;
+    `${node.name} en Córdoba Digital. ${node.count} productos con stock real, garantía legal y envíos a todo el país.`;
 
   return {
     title: `${node.name} — ${node.count} productos`,
@@ -77,7 +78,7 @@ export default async function CategoryPage({
   const stock = pick(query, "stock") === "1";
 
   const PER_PAGE = 24;
-  const [brands, result] = await Promise.all([
+  const [brands, result, tree] = await Promise.all([
     getBrandFacets(node.id),
     listProducts({
       categoryId: node.id,
@@ -90,6 +91,7 @@ export default async function CategoryPage({
       onlyOffers: ofertas,
       inStock: stock,
     }),
+    getCategoryTree(),
   ]);
 
   const buildHref = (updates: Record<string, string | null>) => {
@@ -162,37 +164,41 @@ export default async function CategoryPage({
         ))}
       </nav>
 
-      <header className="mb-6">
-        <div className="flex items-center gap-3">
-          <span className="text-3xl" aria-hidden>
-            {node.icon}
-          </span>
+      <header className="mb-6 flex flex-col gap-4 rounded-3xl border border-ink-100 bg-surface p-5 md:flex-row md:items-center md:p-6">
+        <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-brand-50 text-brand-700">
+          <CategoryIcon name={node.name} className="h-8 w-8" />
+        </span>
+        <div className="min-w-0 flex-1">
           <h1 className="text-2xl font-extrabold tracking-tight text-ink-900 md:text-3xl">{node.name}</h1>
-        </div>
-        <p className="mt-2 max-w-3xl text-sm text-ink-600">
-          {stripTags(node.descriptionHtml).slice(0, 240) ||
-            node.tagline ||
-            "Stock real, garantía oficial y envíos a todo el país."}
-        </p>
-        <p className="mt-2 text-sm text-ink-500">
-          <strong className="text-ink-900">{result.total}</strong> producto{result.total === 1 ? "" : "s"}
-          {result.pages > 1 ? ` · página ${result.page} de ${result.pages}` : ""}
-        </p>
-        {ancestors.length ? (
-          <p className="mt-2 flex flex-wrap items-center gap-1.5 text-xs text-ink-500">
-            <span>Ver también:</span>
-            {ancestors.map((a) => (
-              <Link
-                key={a.id}
-                href={`/categoria/${a.path}`}
-                className="rounded-full border border-ink-200 bg-surface px-2.5 py-1 font-semibold text-ink-600 hover:border-brand-300"
-              >
-                {a.name}
-              </Link>
-            ))}
+          <p className="mt-1.5 max-w-3xl text-sm text-ink-600">
+            {stripTags(node.descriptionHtml).slice(0, 240) ||
+              node.tagline ||
+              "Stock real, garantía legal y envíos a todo el país."}
           </p>
-        ) : null}
+          {ancestors.length ? (
+            <p className="mt-2 flex flex-wrap items-center gap-1.5 text-xs text-ink-500">
+              <span>Ver también:</span>
+              {ancestors.map((a) => (
+                <Link
+                  key={a.id}
+                  href={`/categoria/${a.path}`}
+                  className="rounded-full border border-ink-200 bg-surface px-2.5 py-1 font-semibold text-ink-600 hover:border-brand-300"
+                >
+                  {a.name}
+                </Link>
+              ))}
+            </p>
+          ) : null}
+        </div>
+        <p className="shrink-0 rounded-2xl bg-ink-50 px-4 py-2.5 text-center">
+          <strong className="block text-xl font-black leading-none text-ink-900">{result.total.toLocaleString("es-AR")}</strong>
+          <span className="text-[11px] font-medium uppercase tracking-wide text-ink-500">
+            producto{result.total === 1 ? "" : "s"}
+          </span>
+        </p>
       </header>
+
+      <CategoryChips items={tree.map((c) => ({ slug: c.slug, name: c.name, path: c.path }))} activePath={breadcrumb[0]?.path} />
 
       {children.length ? (
         <nav className="mb-6 flex flex-wrap gap-2" aria-label={`Subcategorías de ${node.name}`}>
@@ -202,7 +208,6 @@ export default async function CategoryPage({
               href={`/categoria/${child.path}`}
               className="inline-flex items-center gap-1.5 rounded-full border border-ink-200 bg-surface px-3.5 py-1.5 text-sm font-semibold text-ink-700 transition hover:border-brand-300 hover:text-brand-700"
             >
-              <span aria-hidden>{child.icon}</span>
               {child.name}
               <span className="text-[11px] font-normal text-ink-500">{child.count}</span>
             </Link>
@@ -239,7 +244,7 @@ export default async function CategoryPage({
                   className="inline-flex items-center gap-1.5 rounded-full border border-brand-200 bg-brand-50 px-3 py-1.5 text-xs font-semibold text-brand-700 transition hover:bg-brand-100"
                 >
                   {chip.label}
-                  <span className="text-brand-600">×</span>
+                  <span aria-hidden className="text-brand-600">×</span>
                 </Link>
               ))}
               <Link href={`/categoria/${node.path}`} className="text-xs font-semibold text-ink-400 hover:text-ink-700">
@@ -249,30 +254,7 @@ export default async function CategoryPage({
           ) : null}
 
           {result.items.length === 0 ? (
-            <div className="card-surface flex flex-col items-center gap-3 px-6 py-16 text-center">
-              <span className="text-5xl">🔍</span>
-              <h2 className="text-lg font-bold text-ink-900">No encontramos productos con esos filtros</h2>
-              <p className="max-w-md text-sm text-ink-500">
-                Probá quitando algún filtro o escribinos por WhatsApp: conseguimos más del 90% de los productos del
-                mercado aunque no estén publicados.
-              </p>
-              <div className="mt-2 flex gap-3">
-                <Link
-                  href={`/categoria/${node.path}`}
-                  className="rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white"
-                >
-                  Ver toda la categoría
-                </Link>
-                <a
-                  href="https://wa.me/5493516777774"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-xl border border-ink-200 px-5 py-2.5 text-sm font-bold text-ink-700"
-                >
-                  Pedir cotización
-                </a>
-              </div>
-            </div>
+            <EmptyResults resetHref={`/categoria/${node.path}`} resetLabel="Ver toda la categoría" />
           ) : (
             <div className="grid grid-cols-2 gap-3 md:grid-cols-3 2xl:grid-cols-4">
               {result.items.map((product) => (
@@ -281,45 +263,7 @@ export default async function CategoryPage({
             </div>
           )}
 
-          {result.pages > 1 ? (
-            <nav className="mt-8 flex flex-wrap items-center justify-center gap-2">
-              {result.page > 1 ? (
-                <Link
-                  href={pageHref(result.page - 1)}
-                  className="rounded-lg border border-ink-200 bg-surface px-3.5 py-2 text-sm font-semibold text-ink-700 hover:border-brand-300"
-                >
-                  ← Anterior
-                </Link>
-              ) : null}
-              {pageWindow(result.page, result.pages).map((page, i) =>
-                page === "gap" ? (
-                  <span key={`gap-${i}`} className="px-1 text-sm font-bold text-ink-500">
-                    …
-                  </span>
-                ) : (
-                  <Link
-                    key={page}
-                    href={pageHref(page as number)}
-                    className={`min-w-10 rounded-lg px-3.5 py-2 text-center text-sm font-bold transition ${
-                      page === result.page
-                        ? "bg-brand-700 text-white"
-                        : "border border-ink-200 bg-surface text-ink-700 hover:border-brand-300"
-                    }`}
-                  >
-                    {page}
-                  </Link>
-                ),
-              )}
-              {result.page < result.pages ? (
-                <Link
-                  href={pageHref(result.page + 1)}
-                  className="rounded-lg border border-ink-200 bg-surface px-3.5 py-2 text-sm font-semibold text-ink-700 hover:border-brand-300"
-                >
-                  Siguiente →
-                </Link>
-              ) : null}
-            </nav>
-          ) : null}
+          <Pagination page={result.page} pages={result.pages} hrefFor={pageHref} />
         </section>
       </div>
     </div>

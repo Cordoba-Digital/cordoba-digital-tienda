@@ -3,9 +3,9 @@ import Link from "next/link";
 import { Suspense } from "react";
 
 import { ActiveFilters, FiltersPanel, SortSelect } from "@/components/catalog-filters";
+import { CategoryChips, EmptyResults, Pagination } from "@/components/catalog-ui";
 import { ProductCard } from "@/components/product-card";
 import { money } from "@/lib/format";
-import { pageWindow } from "@/lib/page-window";
 import { toView } from "@/lib/product-view";
 import { getBrandFacets, getCategoryTree, listProducts } from "@/lib/queries";
 
@@ -103,14 +103,16 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
         <span className="font-semibold text-ink-700">Catálogo</span>
       </nav>
 
-      <header className="mb-6">
+      <header className="mb-5">
         <h1 className="text-2xl font-extrabold tracking-tight text-ink-900 md:text-3xl">
-          {q ? `Resultados para “${q}”` : "Todo el catálogo"}
+          {q ? `Resultados para “${q}”` : ofertas ? "Ofertas de la semana" : "Todo el catálogo"}
         </h1>
         <p className="mt-1 text-sm text-ink-500">
-          Productos nuevos, con garantía oficial y envío a todo el país.
+          Productos nuevos, con garantía legal y envío a todo el país.
         </p>
       </header>
+
+      <CategoryChips items={rootCategories} />
 
       {/* `minmax(0,1fr)` y no `1fr`: el valor por defecto de un ítem de grid es
           `min-width: auto`, o sea que la columna crece hasta el ancho de su
@@ -126,9 +128,9 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
         </Suspense>
 
         <section>
-          <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-3 border-b border-ink-100 pb-3">
             <p className="text-sm text-ink-500">
-              <strong className="text-ink-900">{result.total}</strong> producto{result.total === 1 ? "" : "s"}
+              <strong className="text-ink-900">{result.total.toLocaleString("es-AR")}</strong> producto{result.total === 1 ? "" : "s"}
               {result.pages > 1 ? ` · página ${result.page} de ${result.pages}` : ""}
             </p>
             <Suspense fallback={null}>
@@ -141,27 +143,7 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
           </Suspense>
 
           {result.items.length === 0 ? (
-            <div className="card-surface flex flex-col items-center gap-3 px-6 py-16 text-center">
-              <span className="text-5xl">🔍</span>
-              <h2 className="text-lg font-bold text-ink-900">No encontramos productos con esos filtros</h2>
-              <p className="max-w-md text-sm text-ink-500">
-                Probá quitando algún filtro o escribinos por WhatsApp: conseguimos más del 90% de los productos del
-                mercado aunque no estén publicados.
-              </p>
-              <div className="mt-2 flex gap-3">
-                <Link href="/productos" className="rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white">
-                  Ver todo el catálogo
-                </Link>
-                <a
-                  href="https://wa.me/5493516777774"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-xl border border-ink-200 px-5 py-2.5 text-sm font-bold text-ink-700"
-                >
-                  Pedir cotización
-                </a>
-              </div>
-            </div>
+            <EmptyResults resetHref="/productos" resetLabel="Ver todo el catálogo" />
           ) : (
             <div className="grid grid-cols-2 gap-3 md:grid-cols-3 2xl:grid-cols-4">
               {result.items.map((product) => (
@@ -170,48 +152,7 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
             </div>
           )}
 
-          {result.pages > 1 ? (
-            <nav className="mt-8 flex items-center justify-center gap-2">
-              {result.page > 1 ? (
-                <Link
-                  href={buildPageHref(result.page - 1)}
-                  className="rounded-lg border border-ink-200 bg-surface px-3.5 py-2 text-sm font-semibold text-ink-700 hover:border-brand-300"
-                >
-                  ← Anterior
-                </Link>
-              ) : null}
-              {/* Con 2.588 productos son 108 páginas: listarlas todas empujaba la
-                  fila a ~2.000 px y desbordaba la página. Se muestra una ventana
-                  de 5 alrededor de la actual, con "…" a los lados. */}
-              {pageWindow(result.page, result.pages).map((page, i) =>
-                page === "gap" ? (
-                  <span key={`gap-${i}`} className="px-1 text-sm font-bold text-ink-500">
-                    …
-                  </span>
-                ) : (
-                  <Link
-                    key={page}
-                    href={buildPageHref(page as number)}
-                    className={`min-w-10 rounded-lg px-3.5 py-2 text-center text-sm font-bold transition ${
-                      page === result.page
-                        ? "bg-brand-700 text-white"
-                        : "border border-ink-200 bg-surface text-ink-700 hover:border-brand-300"
-                    }`}
-                  >
-                    {page}
-                  </Link>
-                ),
-              )}
-              {result.page < result.pages ? (
-                <Link
-                  href={buildPageHref(result.page + 1)}
-                  className="rounded-lg border border-ink-200 bg-surface px-3.5 py-2 text-sm font-semibold text-ink-700 hover:border-brand-300"
-                >
-                  Siguiente →
-                </Link>
-              ) : null}
-            </nav>
-          ) : null}
+          <Pagination page={result.page} pages={result.pages} hrefFor={buildPageHref} />
         </section>
       </div>
     </div>
