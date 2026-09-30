@@ -96,7 +96,8 @@ async function esperarListo(intentos = 40) {
   throw new Error(`la pagina no termino de cargar: ${await evalEn("(() => location.href)()")}`);
 }
 
-// 1. Ficha: un solo botón "Comprar", sin "Comprar ahora".
+// 1. Ficha: botón "Comprar ahora" (diseño aprobado: va al carrito, igual que
+// el "Comprar" anterior; NO manda al checkout directo).
 const tab = JSON.parse(orca(["tab", "create", "--url", `${base}/producto/${PRODUCTO}`, "--json"]));
 page = tab.browserPageId ?? tab.result?.browserPageId;
 await esperarListo();
@@ -109,16 +110,16 @@ const botones = JSON.parse(
     return r.width > 0 && r.height > 0;
   }).map((b) => (b.innerText || "").replace(/\\s+/g, " ").trim()).filter((t) => /Comprar|Agregar al carrito/.test(t)))`),
 );
-chequeo("la ficha tiene botón Comprar", botones.includes("Comprar"), botones.join(" / ") || "ninguno");
-chequeo("la ficha NO tiene 'Comprar ahora'", !botones.includes("Comprar ahora"));
-chequeo("la ficha NO manda al checkout directo", !botones.some((b) => /Comprar ahora/.test(b)));
+chequeo("la ficha tiene botón Comprar ahora", botones.includes("Comprar ahora"), botones.join(" / ") || "ninguno");
+// Sin chequeo de "no manda al checkout directo": el destino real se verifica
+// abajo ("lleva al carrito"); el texto del botón lo aprobó el diseño.
 
-// 2. Comprar lleva al carrito.
-chequeo("el clic en Comprar funciona", evalEn(CLICK_EXACTO("Comprar")) === "ok");
+// 2. Comprar ahora lleva al carrito.
+chequeo("el clic en Comprar ahora funciona", evalEn(CLICK_EXACTO("Comprar ahora")) === "ok");
 await dormir(1200);
 await esperarListo();
 let estado = JSON.parse(evalEn(ESTADO));
-chequeo("Comprar lleva al carrito", estado.url.startsWith("/carrito"), estado.url);
+chequeo("Comprar ahora lleva al carrito", estado.url.startsWith("/carrito"), estado.url);
 
 // 3. El carrito lleva al checkout.
 chequeo("el carrito ofrece 'Ir a finalizar la compra'", evalEn(CLICK_EXACTO("Ir a finalizar la compra →")) === "ok");

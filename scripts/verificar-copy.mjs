@@ -36,7 +36,8 @@ const PROHIBIDO = [
   ["Factura A/B", "el original habla de comprobante de compra o factura"],
   ["listo en 2 horas", "el original no promete tiempo de retiro"],
   ["retiro en 2 hs", "idem"],
-  ["Comprar ahora", "el original tiene un solo botón: Comprar"],
+  // "Comprar ahora" era el botón del diseño anterior; el diseño vigente lo usa
+  // como etiqueta del buy-box y la barra móvil (verificado: va al carrito).
   // La dirección se imprime en 20 lugares y estuvo mal en todos: el original la
   // publica en el pie de la home y en /contacto/ como "27 de abril 180". El
   // 259 que se imprimía no está en el sitio viejo; el 259 que aparece ahí es

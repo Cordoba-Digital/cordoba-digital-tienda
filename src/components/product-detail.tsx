@@ -15,10 +15,12 @@ export function ProductGallery({
   images,
   srcSets = [],
   name,
+  badge = null,
 }: {
   images: string[];
   srcSets?: string[][];
   name: string;
+  badge?: string | null;
 }) {
   const [active, setActive] = useState(0);
   const [zoom, setZoom] = useState(false);
@@ -56,10 +58,10 @@ export function ProductGallery({
 
   return (
     <>
-      {/* Galería sin caja, como la referencia: la foto respira sobre el fondo
-          y las miniaturas van en fila abajo en todos los viewports. */}
-      <div className="flex flex-col items-center gap-3">
-        <div className="no-scrollbar order-2 flex gap-2 self-stretch overflow-x-auto sm:justify-center">
+      {/* Galería dentro de una tarjeta: miniaturas en columna a la izquierda
+          (en fila abajo en celular) y la foto principal grande sobre blanco. */}
+      <div className="card-surface flex flex-col gap-3 p-3 sm:flex-row sm:p-4">
+        <div className="no-scrollbar order-2 flex gap-2 overflow-x-auto sm:order-1 sm:max-h-[34rem] sm:flex-col sm:overflow-y-auto sm:overflow-x-visible">
           {list.map((image, index) => (
             <button
               key={`${image}-${index}`}
@@ -68,17 +70,17 @@ export function ProductGallery({
               onClick={() => setActive(index)}
               aria-label={`Ver foto ${index + 1} de ${list.length}`}
               aria-current={index === active}
-              className={`h-20 w-20 shrink-0 overflow-hidden rounded-xl border-2 bg-surface transition sm:h-24 sm:w-24 ${
-                index === active ? "border-brand-500" : "border-ink-100 hover:border-ink-300"
+              className={`h-16 w-16 shrink-0 overflow-hidden rounded-xl border bg-white transition sm:h-[4.5rem] sm:w-[4.5rem] ${
+                index === active ? "border-2 border-brand-500" : "border-ink-100 hover:border-ink-300"
               }`}
             >
               <ProductImg
                 src={image}
                 srcSet={srcSetOf(index)}
                 alt=""
-                sizes="96px"
-                width={128}
-                height={128}
+                sizes="72px"
+                width={96}
+                height={96}
                 className="h-full w-full object-contain p-1"
               />
             </button>
@@ -86,7 +88,7 @@ export function ProductGallery({
         </div>
 
         <div
-          className="relative order-1 aspect-square w-full max-w-[30rem] cursor-zoom-in overflow-hidden"
+          className="relative order-1 mx-auto aspect-square w-full max-w-[36rem] flex-1 cursor-zoom-in overflow-hidden rounded-xl bg-white sm:order-2"
           onMouseEnter={() => setZoom(true)}
           onMouseLeave={() => setZoom(false)}
           onMouseMove={(event) => {
@@ -110,6 +112,11 @@ export function ProductGallery({
               "Ver grande" abajo a la derecha. Se sacaron los dos a pedido: el
               badge salía en el 91% de las fichas y no distinguía nada. El clic
               para ampliar sigue funcionando igual. */}
+          {badge ? (
+            <span className="absolute left-3 top-3 z-10 rounded-lg bg-rose-600 px-2.5 py-1.5 text-[13px] font-extrabold leading-none text-white">
+              {badge}
+            </span>
+          ) : null}
           <ProductImg
             src={list[active]}
             srcSet={srcSetOf(active)}
@@ -118,7 +125,7 @@ export function ProductGallery({
             width={800}
             height={800}
             priority
-            className="pointer-events-none h-full w-full object-contain p-2 transition-transform duration-300"
+            className="pointer-events-none h-full w-full object-contain p-4 transition-transform duration-300"
             style={{ transform: zoom && !lightbox ? "scale(1.8)" : "scale(1)", transformOrigin: origin }}
           />
         </div>
@@ -239,19 +246,19 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
   };
 
   return (
-    <div className="card-surface sticky top-36 space-y-4 p-5">
-      {/* Título integrado a la tarjeta, como en la referencia: marca, nombre
-          y precio en la misma ventana de la derecha, no sueltos al lado de
-          la galería. */}
+    <div className="card-surface space-y-5 p-6 lg:sticky lg:top-36">
       <div>
         {product.brand && product.brand !== "General" ? (
-          <p className="text-[11px] font-semibold uppercase tracking-wide text-ink-500">{product.brand}</p>
+          <p className="flex items-center gap-2 text-[13px] font-bold text-ink-500">
+            <span className="grid h-6 w-6 place-items-center rounded-md bg-brand-500 text-[11px] font-extrabold text-white" aria-hidden>
+              {product.brand.charAt(0).toUpperCase()}
+            </span>
+            {product.brand}
+          </p>
         ) : null}
-        <h1 className="mt-0.5 text-xl font-extrabold leading-tight tracking-tight text-ink-900">
-          {product.name}
-        </h1>
-        {(product.reviewCount ?? 0) > 0 || (product.soldCount ?? 0) > 0 || product.sku ? (
-          <div className="mt-1.5 flex flex-wrap items-center gap-3 text-xs text-ink-500">
+        <h1 className="mt-2.5 text-2xl font-extrabold leading-tight tracking-tight text-ink-900">{product.name}</h1>
+        {(product.reviewCount ?? 0) > 0 || (product.soldCount ?? 0) > 0 ? (
+          <div className="mt-2 flex flex-wrap items-center gap-3 text-xs text-ink-500">
             {(product.reviewCount ?? 0) > 0 ? (
               <span className="flex items-center gap-1.5">
                 <Stars rating={product.rating ?? 0} />
@@ -261,33 +268,69 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
                 </a>
               </span>
             ) : null}
-            {(product.soldCount ?? 0) > 0 ? <span>· +{product.soldCount} vendidos</span> : null}
-            {product.sku ? <span>· SKU {product.sku}</span> : null}
+            {(product.soldCount ?? 0) > 0 ? <span>+{product.soldCount} vendidos</span> : null}
           </div>
         ) : null}
+        <p className="mt-2 text-[13px] leading-relaxed text-ink-500">
+          {product.sku ? (
+            <>
+              SKU {product.sku}
+              <br />
+            </>
+          ) : null}
+          Vendido por <span className="font-bold text-brand-700">Córdoba Digital</span>
+        </p>
       </div>
-
-      {/* "Vendido por" con dato real (somos el vendedor), como la referencia.
-          Sin cuotas ni promos bancarias: no hay datos y no se inventan. */}
-      <p className="-mt-2 text-xs text-ink-500">
-        Vendido por <span className="font-semibold text-brand-700">Córdoba Digital</span>
-      </p>
 
       <div>
         {product.compareAtPrice ? (
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-ink-500 line-through">{money(product.compareAtPrice)}</span>
-            <span className="rounded-full bg-rose-600 px-2 py-0.5 text-[11px] font-bold text-white">-{off}%</span>
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-[15px] text-ink-500 line-through">{money(product.compareAtPrice)}</span>
+            <span className="rounded-md bg-rose-600 px-2 py-1 text-xs font-extrabold leading-none text-white">{off}% OFF</span>
           </div>
         ) : null}
-        <p className="text-3xl font-black tracking-tight text-ink-900">{money(product.price)}</p>
+        <p className="mt-0.5 text-[2.4rem] font-extrabold leading-tight tracking-tight text-ink-900">{money(product.price)}</p>
       </div>
 
-      {/* El simulador de cuotas se sacó: los planes no existen en el sitio
-          original. Ver la nota de installmentValue en lib/format.ts. */}
+      {/* Sin cuotas ni promos bancarias: no hay datos y no se inventan.
+          Solo los medios de pago que el sitio realmente ofrece. */}
+      <div className="divide-y divide-ink-100 overflow-hidden rounded-xl border border-ink-100 text-[13px]">
+        <div className="flex items-start gap-3 px-3.5 py-3">
+          <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-brand-700" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M3 10l9-6 9 6M5 10v8M19 10v8M9 10v8M15 10v8M3 20h18" />
+            </svg>
+          <p className="leading-snug text-ink-500">
+            <b className="block text-sm text-ink-900">Transferencia, USDT o efectivo en el local</b>
+            Te mostramos el CBU o la wallet al confirmar.
+          </p>
+        </div>
+        <div className="flex items-start gap-3 px-3.5 py-3">
+          <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-brand-700" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M3 7h18v12H3zM3 11h18" />
+            </svg>
+          <p className="leading-snug text-ink-500">
+            <b className="block text-sm text-ink-900">Tarjetas y Mercado Pago</b>
+            Pagás seguro, sin guardar datos de tarjeta.
+          </p>
+        </div>
+      </div>
 
-      <div className="flex items-center justify-between text-sm">
-        <span className="text-ink-500">Cantidad</span>
+      {product.stock > 0 ? (
+        /* Antes decía "¡Últimas N unidades!" cuando había 5 o menos. Se sacó
+           porque el campo no sirve para eso: 2.369 de 2.589 productos tienen
+           stock = 1 y ninguno tiene entre 2 y 5, así que el aviso salía en el
+           91% de las fichas. El `stock` del sitio original funciona como
+           disponible/no disponible, no como un conteo real de depósito. */
+        <p className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1.5 text-[13px] font-bold text-emerald-700">
+          <span className="h-2 w-2 rounded-full bg-current" aria-hidden />
+          Stock disponible para envío inmediato
+        </p>
+      ) : (
+        <p className="text-sm font-semibold text-rose-600">Sin stock — consultanos por reposición</p>
+      )}
+
+      <div className="flex items-center justify-between text-sm font-semibold text-ink-700">
+        <span>Cantidad</span>
         {/* Tope: 10 unidades, o el `stock` cuando la cantidad es real
             (> 1) y menor. Con `stock` 1 la cantidad es desconocida (solo
             "hay stock"), así que rige el tope general. */}
@@ -298,23 +341,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         />
       </div>
 
-      {product.stock > 0 ? (
-        /* Antes decía "¡Últimas N unidades!" cuando había 5 o menos. Se sacó
-           porque el campo no sirve para eso: en el catálogo migrado 2.369 de
-           2.589 productos tienen stock = 1 y ninguno tiene entre 2 y 5, así que
-           el aviso salía en el 91% de las fichas y no informaba nada. Peor,
-           un "¡Última unidad!" repetido en cada producto es urgencia inventada.
-           El `stock` del sitio original funciona como disponible/no disponible,
-           no como un conteo real de depósito. Cuando el cliente mande el
-           inventario de verdad, acá vuelve el aviso con el número real. */
-        <p className="text-xs font-semibold text-emerald-700">
-          ✅ Stock disponible para envío inmediato
-        </p>
-      ) : (
-        <p className="text-xs font-semibold text-rose-600">Sin stock — consultanos por reposición</p>
-      )}
-
-      <div className="space-y-2">
+      <div className="space-y-2.5">
         <button
           type="button"
           disabled={product.stock === 0}
@@ -322,24 +349,24 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
             addItem(payload, quantity, { silent: true, open: false });
             router.push("/carrito");
           }}
-          className="w-full rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-3.5 text-sm font-extrabold text-white shadow-lg shadow-brand-600/25 transition hover:from-brand-700 hover:to-brand-600 disabled:opacity-40"
+          className="h-[52px] w-full rounded-xl bg-brand-500 text-[15px] font-extrabold text-deep transition hover:bg-brand-400 disabled:opacity-40"
         >
-          Comprar
+          Comprar ahora
         </button>
         <button
           type="button"
           disabled={product.stock === 0}
           onClick={() => addItem(payload, quantity)}
-          className="w-full rounded-xl border border-ink-200 bg-surface px-4 py-3 text-sm font-bold text-ink-800 transition hover:border-brand-400 hover:text-brand-700 disabled:opacity-40"
+          className="h-[52px] w-full rounded-xl border-2 border-brand-700 text-[15px] font-extrabold text-brand-700 transition hover:bg-brand-50 disabled:opacity-40"
         >
           Agregar al carrito
         </button>
-        <div className="flex gap-2">
+        <div className="grid grid-cols-2 gap-2.5">
           <button
             type="button"
             onClick={() => toggleFavorite(product.slug)}
-            className={`flex-1 rounded-xl border px-3 py-2.5 text-xs font-bold transition ${
-              fav ? "border-rose-200 bg-rose-50 text-rose-600" : "border-ink-200 text-ink-600 hover:text-rose-500"
+            className={`h-11 rounded-xl border text-sm font-bold transition ${
+              fav ? "border-rose-200 bg-rose-50 text-rose-600" : "border-ink-200 text-ink-700 hover:border-ink-400"
             }`}
           >
             {fav ? "♥ En favoritos" : "♡ Guardar"}
@@ -348,29 +375,34 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
             href={`https://wa.me/5493516777774?text=${encodeURIComponent(`Hola! Quiero consultar por ${product.name}`)}`}
             target="_blank"
             rel="noreferrer"
-            className="flex-1 rounded-xl border border-ink-200 px-3 py-2.5 text-center text-xs font-bold text-ink-600 transition hover:border-emerald-300 hover:text-emerald-700"
+            className="grid h-11 place-items-center rounded-xl border border-ink-200 text-sm font-bold text-ink-700 transition hover:border-ink-400"
           >
             Consultar
           </a>
         </div>
       </div>
 
-      {/* El envío como sección con divisor dentro de la tarjeta, no como card
-          aparte: una sola ventana con secciones, como la referencia. */}
-      <div className="border-t border-ink-100 pt-4">
+      <div className="space-y-4 border-t border-ink-100 pt-5">
         <ShippingCalculator price={product.price} />
+        <div className="flex items-start gap-3 text-[13px] leading-snug text-ink-500">
+          <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-brand-700" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11zM12 10m-2.5 0a2.5 2.5 0 105 0 2.5 2.5 0 10-5 0" />
+            </svg>
+          <p>
+            <b className="block text-sm text-ink-900">Retiro gratis en el local</b>
+            27 de Abril 180, Córdoba Capital. Lo probamos con vos.
+          </p>
+        </div>
+        <div className="flex items-start gap-3 text-[13px] leading-snug text-ink-500">
+          <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-brand-700" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z" />
+            </svg>
+          <p>
+            <b className="block text-sm text-ink-900">{product.warrantyMonths} meses de garantía legal</b>
+            Servicio técnico propio en Córdoba y factura o comprobante de compra.
+          </p>
+        </div>
       </div>
-
-      <ul className="space-y-2 border-t border-ink-100 pt-4 text-xs text-ink-600">
-        <li className="flex items-center gap-2">🛡️ {product.warrantyMonths} meses de garantía legal</li>
-        <li className="flex items-center gap-2">🔧 Servicio técnico propio en el local</li>
-        <li className="flex items-center gap-2">🧽 Factura o comprobante de compra</li>
-        <li className="flex items-center gap-2">🏬 Retiro en 27 de Abril 180, Córdoba Capital</li>
-      </ul>
-      {/* 63 de los 2.589 productos migrados vienen con el SKU vacío, no nulo.
-          Sin esta guarda la caja de compra imprimía un "SKU " pelado. La misma
-          guarda ya está en la línea de arriba del nombre, en la ficha. */}
-      {product.sku ? <p className="text-[10px] text-ink-500">SKU {product.sku}</p> : null}
     </div>
   );
 }
@@ -402,9 +434,13 @@ export function MobileBuyBar({ product }: { product: BuyBoxProduct }) {
             aria-label="Agregar al carrito"
             disabled={product.stock === 0}
             onClick={() => addItem(payload, 1)}
-            className="grid h-11 w-11 place-items-center rounded-xl border border-ink-200 text-lg disabled:opacity-40"
+            className="grid h-11 w-11 place-items-center rounded-xl border border-ink-200 text-ink-800 disabled:opacity-40"
           >
-            🛒
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <circle cx="9" cy="20" r="1.5" />
+              <circle cx="17" cy="20" r="1.5" />
+              <path d="M2.5 3.5h2l2.6 12.5a1 1 0 001 .8h8.7a1 1 0 001-.8L20.5 7H6" />
+            </svg>
           </button>
           <button
             type="button"
@@ -413,9 +449,9 @@ export function MobileBuyBar({ product }: { product: BuyBoxProduct }) {
               addItem(payload, 1, { silent: true, open: false });
               router.push("/carrito");
             }}
-            className="rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-5 py-3 text-sm font-extrabold text-white disabled:opacity-40"
+            className="rounded-xl bg-brand-500 px-5 py-3 text-sm font-extrabold text-deep disabled:opacity-40"
           >
-            Comprar
+            Comprar ahora
           </button>
         </div>
       </div>
@@ -454,22 +490,26 @@ export function ShippingCalculator({ price }: { price: number }) {
   };
 
   return (
-    <div className="card-surface p-5">
-      <h3 className="text-sm font-extrabold text-ink-900">📍 Calculá el costo de envío</h3>
-      <p className="mt-1 text-xs text-ink-500">Ingresá tu código postal y te mostramos las opciones disponibles.</p>
-      <form onSubmit={quote} className="mt-3 flex gap-2">
+    <div className="flex items-start gap-3">
+      <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-brand-700" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+        <path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z" />
+      </svg>
+      <div className="min-w-0 flex-1 text-[13px] leading-snug text-ink-500">
+      <h3 className="text-sm font-bold text-ink-900">Calculá el costo de envío</h3>
+      <p className="mt-0.5">Ingresá tu código postal y te mostramos las opciones de Andreani.</p>
+      <form onSubmit={quote} className="mt-2.5 flex gap-2">
         <input
           value={zip}
           onChange={(e) => setZip(e.target.value)}
           inputMode="numeric"
           maxLength={8}
           placeholder="Ej: 5000"
-          className="h-10 w-32 rounded-xl border border-ink-200 px-3 text-sm outline-none focus:border-brand-400"
+          className="h-10 min-w-0 flex-1 rounded-xl border border-ink-200 bg-ink-50 px-3 text-sm text-ink-900 outline-none focus:border-brand-400"
         />
         <button
           type="submit"
           disabled={loading}
-          className="inline-flex h-10 items-center gap-2 rounded-xl bg-brand-700 px-4 text-sm font-bold text-white transition hover:bg-brand-800 disabled:opacity-60"
+          className="inline-flex h-10 items-center gap-2 rounded-xl bg-deep px-4 text-sm font-bold text-white transition hover:opacity-90 disabled:opacity-60"
         >
           {loading ? <Spinner className="h-4 w-4" /> : null}
           Calcular
@@ -492,6 +532,7 @@ export function ShippingCalculator({ price }: { price: number }) {
           ))}
         </div>
       ) : null}
+      </div>
     </div>
   );
 }

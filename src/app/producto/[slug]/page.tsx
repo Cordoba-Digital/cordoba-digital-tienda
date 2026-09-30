@@ -11,7 +11,7 @@ import {
   ReviewForm,
 } from "@/components/product-detail";
 import { Pill, Stars } from "@/components/ui";
-import { formatDate, money } from "@/lib/format";
+import { discountPercent, formatDate, money } from "@/lib/format";
 import { toView } from "@/lib/product-view";
 import { getProductBreadcrumbs, getProductBySlug, getRelatedProducts, getReviewsForProduct } from "@/lib/queries";
 
@@ -202,28 +202,22 @@ export default async function ProductPage({ params }: { params: Params }) {
         <span className="font-semibold text-ink-700">{product.brand}</span>
       </nav>
 
-      {/* Ficha en dos columnas: galería a la izquierda y, a la derecha, título
-          arriba del precio con el envío debajo. La columna de info del medio
-          se sacó a pedido: el título suelto al lado de la galería la
-          descentraba y el envío pertenece al buy box, no a la descripción. */}
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_22rem]">
-        <div className="order-2 lg:col-start-1 lg:row-start-1">
-          <ProductGallery
-            images={product.images}
-            srcSets={product.imageSrcSets}
-            name={product.name}
-          />
-        </div>
-
-        <div className="order-1 lg:col-start-2 lg:row-start-1">
-          <BuyBox product={buyBoxProduct} />
-        </div>
+      {/* Ficha en dos columnas: galería a la izquierda y, a la derecha, la caja
+          de compra fija al hacer scroll. En celular va primero la galería. */}
+      <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_25rem]">
+        <ProductGallery
+          images={product.images}
+          srcSets={product.imageSrcSets}
+          name={product.name}
+          badge={discountPercent(product.price, product.compareAtPrice) > 0 ? `-${discountPercent(product.price, product.compareAtPrice)}%` : null}
+        />
+        <BuyBox product={buyBoxProduct} />
       </div>
 
       <div className="mt-8 space-y-8">
         {product.highlights.length ? (
-          <section className="card-surface p-5">
-            <h2 className="mb-3 text-sm font-extrabold uppercase tracking-wide text-ink-400">Lo más destacado</h2>
+          <section className="card-surface p-6">
+            <h2 className="mb-3 text-xl font-bold tracking-tight text-ink-900">Lo más destacado</h2>
             <ul className="grid gap-2 sm:grid-cols-2">
               {product.highlights.map((item) => (
                 <li key={item} className="flex items-start gap-2 text-sm text-ink-700">
@@ -236,8 +230,8 @@ export default async function ProductPage({ params }: { params: Params }) {
             </ul>
           </section>
         ) : null}
-        <section className="card-surface p-5">
-          <h2 className="mb-3 text-lg font-extrabold text-ink-900">Descripción</h2>
+        <section className="card-surface p-6">
+          <h2 className="mb-3 text-xl font-bold tracking-tight text-ink-900">Descripción</h2>
           {product.descriptionHtml ? (
             // El HTML viene saneado por el migrador (scripts, estilos y
             // handlers inline ya eliminados). Ver scripts/migrate-wp.ts.
@@ -252,8 +246,8 @@ export default async function ProductPage({ params }: { params: Params }) {
           )}
         </section>
 
-        <section className="card-surface p-5">
-          <h2 className="mb-3 text-lg font-extrabold text-ink-900">Ficha técnica</h2>
+        <section className="card-surface p-6">
+          <h2 className="mb-3 text-xl font-bold tracking-tight text-ink-900">Ficha técnica</h2>
           <dl className="divide-y divide-ink-50">
             {/* Sin fallback a highlights: ya tienen su sección arriba y
                 repetirlos acá duplicaba el contenido en la misma página.
@@ -274,7 +268,7 @@ export default async function ProductPage({ params }: { params: Params }) {
 
         <section id="opiniones" className="card-surface space-y-5 p-5">
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <h2 className="text-lg font-extrabold text-ink-900">Opiniones de clientes</h2>
+            <h2 className="text-xl font-bold tracking-tight text-ink-900">Opiniones de clientes</h2>
             <ReviewForm slug={product.slug} />
           </div>
           <RatingSummary rating={product.rating} count={product.reviewCount} ratings={productReviews.map((r) => r.rating)} />
