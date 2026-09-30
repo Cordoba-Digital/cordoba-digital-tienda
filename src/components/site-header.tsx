@@ -119,7 +119,10 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
             <img
               src="/images/logo.png"
               alt="Córdoba Digital"
-              className="h-10 w-auto bg-white object-contain"
+              // h-14 (56px): el logo se veía chico al lado del original. El
+              // ancho es automático así que escala proporcional, sin tocar
+              // el resto del header.
+              className="h-14 w-auto bg-white object-contain"
             />
             <span className="hidden leading-tight sm:block">
               <span className="block text-[15px] font-extrabold tracking-tight text-ink-900">Córdoba Digital</span>
