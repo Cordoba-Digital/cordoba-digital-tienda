@@ -33,6 +33,7 @@
     "verificar:guia": "node scripts/verificar-guia.mjs",
     "verificar:guias": "node scripts/verificar-indice-guias.mjs",
     "verificar:claims-guias": "tsx scripts/verificar-claims-guias.ts",
+    "verificar:menu": "node scripts/verificar-menu-categorias.mjs",
     "sync:catalog": "tsx scripts/sync-catalog.ts"
   },
   "dependencies": {

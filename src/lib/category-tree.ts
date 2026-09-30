@@ -143,6 +143,55 @@ const MARCAS: Record<string, string> = {
   XBOX: "Xbox",
 };
 
+/**
+ * Palabras a las que WooCommerce les borró el tilde al pasarlas a mayúsculas.
+ *
+ * El theme del cliente escribía todo en mayúsculas y sin tildes, así que
+ * "CÁMARAS" llegó a la base como "CAMARAS" y "ELECTRODOMÉSTICOS" como
+ * "ELECTRODOMESTICOS". El dato crudo no se toca (hay que devolverlo si algún
+ * día se sincroniza con WordPress), así que la tilde se pone acá, en la capa
+ * de lectura.
+ *
+ * La lista sale de las 128 filas reales del árbol, no de suposiciones: en el
+ * catálogo quedan 10 nombres sin tilde de los que el cliente se dio cuenta
+ * (6 con "CAMARAS", más "ELECTRODOMESTICOS", "ELECTRONICA", "CALEFACCION" y
+ * "MONOPATINES ELECTRICOS"). Se incluyen también los singulares porque
+ * WooCommerce alterna "CAMARA" y "CAMARAS" según cómo se creo la categoría.
+ *
+ * La clave está en mayúsculas sin tilde (lo que llega de WooCommerce) y el
+ * valor en mayúsculas CON tilde: el tilde se resuelve antes del case, así que
+ * "CAMARAS", "Camaras" y "Cámaras" terminan igual.
+ */
+const TILDES: Record<string, string> = {
+  CAMARA: "CÁMARA",
+  CAMARAS: "CÁMARAS",
+  ELECTRICO: "ELÉCTRICO",
+  ELECTRICAS: "ELÉCTRICAS",
+  ELECTRICOS: "ELÉCTRICOS",
+  ELECTRODOMESTICO: "ELECTRODOMÉSTICO",
+  ELECTRODOMESTICOS: "ELECTRODOMÉSTICOS",
+  CALEFACCION: "CALEFACCIÓN",
+  ELECTRONICA: "ELECTRÓNICA",
+};
+
+/**
+ * Nombres donde WooCommerce se comió una palabra, no solo el tilde.
+ *
+ * "CAMARAS DIGITALES FOTO" debería decir "Cámaras digitales y foto": es la
+ * conjunción "y" del español la que falta en el nombre crudo, y el nombre de
+ * la categoría es una frase, no una lista de palabras sueltas. En
+ * `src/lib/catalog-data.ts` esa misma categoría se llama "Cámaras y foto", así
+ * que la intención del cliente está escrita; lo que se pierde es solo el "y".
+ *
+ * Se corrige por tokens, no por cadena completa, para que el nombre siga
+ * pasando por el normalizador de mayúsculas y tildes como cualquier otro. Es
+ * el único caso de las 128 filas: los otros 127 pierden, como mucho, la tilde.
+ * Solo cambia el texto de la fila, nunca su slug.
+ */
+const PALABRAS_PERDIDAS: Record<string, string[]> = {
+  "CAMARAS DIGITALES FOTO": ["CAMARAS", "DIGITALES", "Y", "FOTO"],
+};
+
 /** Une palabras ya capitalizadas respetando la conjunción "y" en minúscula. */
 function joinWords(words: string[]): string {
   return words
@@ -150,23 +199,28 @@ function joinWords(words: string[]): string {
     .join(" ");
 }
 
-/** Capitaliza una palabra suelta, respetando siglas y marcas. */
+/** Capitaliza una palabra suelta, respetando siglas, marcas y tildes. */
 function capitalizeWord(word: string): string {
   // Los signos pegados a la palabra se quedan donde están: "P/" -> "P/".
-  const signo = word.match(/[^A-Za-z0-9]+$/)?.[0] ?? "";
+  // El corte cuenta cualquier letra, tilde incluida: si una palabra termina en
+  // vocal acentuada ("CAFÉ") esa vocal es parte de la palabra, no un signo.
+  const signo = word.match(/[^\p{L}\p{N}]+$/u)?.[0] ?? "";
   const base = signo ? word.slice(0, -signo.length) : word;
   if (!base) return word;
 
   const mayuscula = base.toUpperCase();
   if (SIGLAS.has(mayuscula)) return mayuscula + signo;
   if (MARCAS[mayuscula]) return MARCAS[mayuscula] + signo;
-  if (!/\d/.test(base)) return base.charAt(0).toUpperCase() + base.slice(1).toLowerCase() + signo;
   // Con dígitos se respeta tal cual: "5G", "1080P", "iPhone".
-  return base + signo;
+  if (/\d/.test(base)) return base + signo;
+  // El tilde va antes del case: WooCommerce lo mandó en mayúsculas sin tilde
+  // ("CAMARAS") y el case es lo último que se arregla.
+  const conTilde = TILDES[mayuscula] ?? base;
+  return conTilde.charAt(0).toUpperCase() + conTilde.slice(1).toLowerCase() + signo;
 }
 
 /**
- * Pasa un nombre de categoría a capitalización normal.
+ * Pasa un nombre de categoría a capitalización normal con tildes correctas.
  *
  * WooCommerce guardó los nombres en mayúsculas ("ACCESORIOS P/ CELULARES",
  * "CAMARAS DIGITALES FOTO") porque era su convención de theme. En el backend
@@ -176,15 +230,22 @@ function capitalizeWord(word: string): string {
  *
  * Reglas:
  * - Las siglas y marcas se respetan: "CCTV", "USB", "PlayStation".
+ * - Las tildes perdidas se recuperan antes del case: "CAMARAS" -> "Cámaras".
  * - Los signos pegados a la palabra se quedan donde están: "P/" -> "P/".
  * - Los guiones capitalizan cada parte: "ESTABILIZADORES- UPS".
  * - La conjunción "y" va en minúscula salvo que abra el nombre: "AUDIO Y VIDEO".
  * - Un token con dígito se respeta: "5G", "1080P".
+ *
+ * Solo se toca el texto de la fila: el slug y la ruta no pasan por acá, así que
+ * las URLs quedan byte a byte iguales antes y después.
  */
 export function titleCaseCategoryName(name: string): string {
+  // La clave se busca en mayúsculas para que el arreglo sea idempotente: si
+  // el nombre ya viene corregido ("Cámaras Digitales Foto") vuelve a salir
+  // "Cámaras Digitales y Foto" y no "Cámaras Digitales Y Foto".
+  const palabras = PALABRAS_PERDIDAS[name.toUpperCase()] ?? name.split(" ");
   return joinWords(
-    name
-      .split(" ")
+    palabras
       .filter((word) => word.length > 0)
       .map((word) => word.split("-").map(capitalizeWord).join("-")),
   );

@@ -66,8 +66,18 @@ function columnsFor(total: number): 1 | 2 | 3 {
   return 3;
 }
 
+/**
+ * Marco comun de los paneles: posicion, decorado y fondo, nada mas.
+ *
+ * Ni el ancho, ni el display, ni el padding van aca porque cada panel se mide
+ * distinto: `RootPanel` se dimensiona con PANEL_WIDTH y el panel del catalogo
+ * necesita una grilla de dos columnas pegada al borde. El padding tambien se
+ * queda afuera: el panel chico usa `p-3` y el de catalogo `p-0`, para que las
+ * dos columnas lleguen hasta el borde redondeado en vez de dejar un marco
+ * blanco de 12 px alrededor.
+ */
 const PANEL_SHELL =
-  "absolute left-0 top-full z-50 -mt-1.5 animate-pop rounded-2xl border border-ink-100 bg-surface p-3 shadow-2xl shadow-black/10";
+  "absolute left-0 top-full z-50 -mt-1.5 animate-pop rounded-2xl border border-ink-100 bg-surface shadow-2xl shadow-black/10";
 
 /** Ancho del panel según cuántas subcategorías tiene la raíz. */
 const PANEL_WIDTH: Record<1 | 2 | 3, string> = {
@@ -168,7 +178,7 @@ function RootPanel({
       id={panelId}
       role="group"
       aria-labelledby={triggerId}
-      className={`${PANEL_SHELL} max-h-[70vh] overflow-y-auto ${PANEL_WIDTH[columns]}`}
+      className={`${PANEL_SHELL} max-h-[70vh] overflow-y-auto p-3 ${PANEL_WIDTH[columns]}`}
     >
       <SubcategoryList nodes={kids} columns={PANEL_COLUMNS[columns]} />
       <PanelFooter path={root.path} name={root.name} />
@@ -176,8 +186,71 @@ function RootPanel({
   );
 }
 
-/** Panel del ícono compacto: las 21 raíces, con sus hijos y nietos. */
-function AllCategoriesPanel({
+/**
+ * Columna derecha de un area sin subcategorias.
+ *
+ * 12 de las 21 areas son hojas: si ahi se dibujara la lista, el panel se veria
+ * roto. Se dice lo mismo que dice la pagina y se manda al unico lugar donde hay
+ * productos, salvo que el area este vacia, en cuyo caso no hay nada que
+ * prometer y se dice eso sin boton.
+ */
+function LeafDetail({ root }: { root: CategoryNavRoot }) {
+  const total = typeof root.count === "number" ? root.count : 0;
+  return (
+    <div className="rounded-xl bg-ink-50 p-4">
+      <div className="flex items-start gap-3">
+        <span className="text-2xl leading-none" aria-hidden>
+          {root.icon}
+        </span>
+        <div className="min-w-0">
+          {total > 0 ? (
+            <>
+              <p className="text-[13px] leading-snug text-ink-600">
+                Esta área no tiene subcategorías: entra y ves los{" "}
+                {total.toLocaleString("es-AR")} productos directamente.
+              </p>
+              <Link
+                href={`/categoria/${root.path}`}
+                className="mt-3 inline-block rounded-lg border border-ink-200 bg-surface px-3 py-1.5 text-[12px] font-bold text-ink-800 transition hover:border-ink-300 hover:bg-ink-100"
+              >
+                Ver los productos
+                <span className="sr-only"> de {root.name}</span> →
+              </Link>
+            </>
+          ) : (
+            <p className="text-[13px] leading-snug text-ink-600">
+              No hay productos en esta categoría por el momento.
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Panel del icono compacto: el catalogo en dos niveles (area + subcategorias).
+ *
+ * Antes este panel volcaba el arbol entero de una sola vez: 21 raices + 83
+ * subcategorias + 24 nietos = 128 links en `columns-2 / lg:columns-3 /
+ * 2xl:columns-4` dentro de un `max-h-[70vh] overflow-y-auto`. Medido en la
+ * pagina eso siempre necesitaba scroll y cortaba la ultima linea a media altura.
+ * Y el reparto por columnas de CSS balancea por altura de bloque, asi que un
+ * grupo de 20 hijos (Computacion) se comia media columna y dejaba un hueco
+ * enorme al lado: un muro de texto sin jerarquia.
+ *
+ * Ahora hay un nivel mas: a la izquierda las 21 areas, que ademas son el link
+ * a su propia pagina, y a la derecha solo lo que cuelga del area apuntada. Lo
+ * mas pesado que se ve de una vez son 41 links (21 areas + los 20 hijos de
+ * Computacion), con jerarquia y sin huecos. Solo 9 areas tienen subcategorias;
+ * las otras 12 son hojas y la derecha muestra `LeafDetail` en vez de una lista
+ * vacia.
+ *
+ * Flechas arriba/abajo recorren las areas: con 21 entradas, tabular para ver las
+ * subcategorias de cada una es inviable. Como el `onFocus` ya selecciona, con
+ * mover el foco alcanza para que la derecha cambie.
+ */
+function CatalogPanel({
   categories,
   panelId,
   triggerId,
@@ -186,31 +259,115 @@ function AllCategoriesPanel({
   panelId: string;
   triggerId: string;
 }) {
+  const [selectedSlug, setSelectedSlug] = useState<string>(categories[0]?.slug ?? "");
+  const listRef = useRef<HTMLUListElement>(null);
+  const selected = categories.find((root) => root.slug === selectedSlug) ?? categories[0];
+  const kids = selected?.children ?? [];
+  const total = typeof selected?.count === "number" ? selected.count : 0;
+
+  /** Flecha vertical: mueve el foco entre areas, sin salirse de la lista. */
+  const handleListKeyDown = (event: React.KeyboardEvent<HTMLUListElement>) => {
+    if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+    const items = Array.from(
+      listRef.current?.querySelectorAll<HTMLAnchorElement>("a[data-area]") ?? [],
+    );
+    if (items.length === 0) return;
+    const from = items.indexOf(document.activeElement as HTMLAnchorElement);
+    const step = event.key === "ArrowDown" ? 1 : -1;
+    const next = from < 0 ? 0 : Math.min(items.length - 1, Math.max(0, from + step));
+    event.preventDefault();
+    items[next]?.focus();
+  };
+
+  if (!selected) return null;
+
   return (
     <div
       id={panelId}
       role="group"
       aria-labelledby={triggerId}
-      className={`${PANEL_SHELL} max-h-[70vh] w-[min(66rem,calc(100vw_-_3rem))] overflow-y-auto p-4`}
+      className={`${PANEL_SHELL} grid max-h-[70vh] w-[min(64rem,calc(100vw_-_3rem))] grid-cols-[15.5rem_1fr] overflow-hidden p-0`}
     >
-      <div className="columns-2 gap-x-5 lg:columns-3 2xl:columns-4">
-        {categories.map((root) => (
-          <div key={root.slug} className="mb-3 break-inside-avoid">
-            <Link
-              href={`/categoria/${root.path}`}
-              className="flex items-center gap-2 rounded-lg px-2 py-1 transition hover:bg-ink-50"
-            >
-              <span className="text-base leading-none" aria-hidden>
-                {root.icon}
-              </span>
-              <span className="min-w-0 flex-1 text-[13px] font-bold text-ink-800">{root.name}</span>
-              {typeof root.count === "number" && root.count > 0 ? (
-                <span className="shrink-0 text-[11px] tabular-nums text-ink-500">{root.count}</span>
-              ) : null}
-            </Link>
-            {root.children?.length ? <SubcategoryList nodes={root.children} columns="columns-1" /> : null}
+      <ul
+        ref={listRef}
+        aria-label="Áreas del catálogo"
+        onKeyDown={handleListKeyDown}
+        className="max-h-[70vh] overflow-y-auto border-r border-ink-100 p-2"
+      >
+        {categories.map((root) => {
+          const isSelected = root.slug === selected.slug;
+          return (
+            <li key={root.slug}>
+              <Link
+                href={`/categoria/${root.path}`}
+                data-area={root.slug}
+                title={root.name}
+                aria-current={isSelected ? "true" : undefined}
+                onMouseEnter={() => setSelectedSlug(root.slug)}
+                onFocus={() => setSelectedSlug(root.slug)}
+                className={`flex items-center gap-2 rounded-lg px-2 py-1.5 transition ${
+                  isSelected
+                    ? "bg-brand-50 text-brand-900"
+                    : "text-ink-700 hover:bg-ink-50 hover:text-ink-900"
+                }`}
+              >
+                <span className="text-base leading-none" aria-hidden>
+                  {root.icon}
+                </span>
+                <span className="min-w-0 flex-1 truncate text-[13px] font-medium">
+                  {root.name}
+                </span>
+                {typeof root.count === "number" ? (
+                  <span className="shrink-0 text-[11px] tabular-nums text-ink-500">
+                    {root.count.toLocaleString("es-AR")}
+                  </span>
+                ) : null}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+
+      {/*
+        Es hijo de una grilla, asi que sin `min-h-0` su alto minimo automatico
+        lo deja estirado por el contenido y el `overflow-y-auto` de abajo no
+        llega a cortar: el area con 20 hijos se saldria del panel.
+      */}
+      <div className="flex min-h-0 flex-col overflow-y-auto p-4">
+        <div className="mb-3 flex items-start gap-3 border-b border-ink-100 pb-3">
+          <span className="text-xl leading-none" aria-hidden>
+            {selected.icon}
+          </span>
+          <div className="min-w-0 flex-1">
+            <h3 className="truncate text-[15px] font-bold text-ink-900">{selected.name}</h3>
+            <p className="mt-0.5 text-[12px] text-ink-500">
+              {kids.length > 0 ? `${kids.length} subcategorías · ` : ""}
+              {`${total.toLocaleString("es-AR")} productos`}
+            </p>
           </div>
-        ))}
+          {/*
+            Este boton reemplaza el pie gris de `RootPanel`: en el panel de dos
+            niveles queda pegado al titulo del area, que es el link de salida.
+          */}
+          <Link
+            href={`/categoria/${selected.path}`}
+            className="shrink-0 rounded-lg bg-brand-700 px-2.5 py-1.5 text-[12px] font-bold text-white transition hover:bg-brand-800"
+          >
+            Ver toda la categoría
+            <span className="sr-only"> {selected.name}</span>
+          </Link>
+        </div>
+
+        {kids.length > 0 ? (
+          // `columnsFor` da 1 hasta 6 hijos y 2 o 3 despues; 3 columnas en una
+          // columna de ~44 rem solo agrega huecos, asi que el tope es 2.
+          <SubcategoryList
+            nodes={kids}
+            columns={columnsFor(kids.length) === 1 ? "columns-1" : "columns-2 gap-x-5"}
+          />
+        ) : (
+          <LeafDetail root={selected} />
+        )}
       </div>
     </div>
   );
@@ -324,7 +481,7 @@ export function CategoryNavBar({ categories }: { categories: CategoryNavRoot[] }
               </svg>
             </button>
             {openKey === ALL_KEY ? (
-              <AllCategoriesPanel
+              <CatalogPanel
                 categories={categories}
                 panelId={`${baseId}-all-panel`}
                 triggerId={`${baseId}-all-trigger`}
