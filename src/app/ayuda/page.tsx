@@ -46,7 +46,7 @@ const SECTIONS = [
       },
       {
         q: "¿Puedo retirar en el local?",
-        a: "Sí, en 27 de Abril 259, Córdoba Capital. Lunes a viernes de 14:00 a 18:30 y sábados de 12:00 a 14:30.",
+        a: "Sí, en 27 de Abril 180, Córdoba Capital. Lunes a viernes de 14:00 a 18:30 y sábados de 12:00 a 14:30.",
       },
     ],
   },
@@ -65,7 +65,7 @@ const SECTIONS = [
       },
       {
         q: "¿Puedo pagar en efectivo?",
-        a: "Sí, eligiendo retiro en el local de 27 de Abril 259. Reservamos el producto por 48 horas hábiles.",
+        a: "Sí, eligiendo retiro en el local de 27 de Abril 180. Reservamos el producto por 48 horas hábiles.",
       },
       {
         q: "¿Cómo hago la transferencia?",
@@ -92,7 +92,7 @@ const SECTIONS = [
       },
       {
         q: "¿Qué hago si el producto falla?",
-        a: "Traelo directamente a nuestro local en 27 de Abril 259, Córdoba Capital. Nosotros gestionamos el diagnóstico y la reparación con el servicio técnico oficial o propio, según corresponda.",
+        a: "Traelo directamente a nuestro local en 27 de Abril 180, Córdoba Capital. Nosotros gestionamos el diagnóstico y la reparación con el servicio técnico oficial o propio, según corresponda.",
       },
       {
         q: "¿Qué necesito para hacer valer la garantía?",
@@ -170,7 +170,7 @@ export default function HelpPage() {
               consultas@cordobadigital.net
             </a>
             <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-600">
-              <p className="font-bold text-ink-900">Local: 27 de Abril 259</p>
+              <p className="font-bold text-ink-900">Local: 27 de Abril 180</p>
               <p className="mt-1 text-xs">Córdoba Capital (CP 5000)</p>
               <p className="mt-2 text-xs">Lun a Vie 14:00 - 18:30</p>
               <p className="text-xs">Sábados 12:00 - 14:30</p>

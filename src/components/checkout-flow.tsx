@@ -184,7 +184,7 @@ export function CheckoutFlow() {
       return {
         id: "pickup" as DeliveryMethod,
         label: "Retiro en el local",
-        description: "27 de Abril 259, Córdoba Capital",
+        description: "27 de Abril 180, Córdoba Capital",
         eta: "Listo en el horario de atención",
         cost: 0,
         free: true,
@@ -437,13 +437,13 @@ export function CheckoutFlow() {
                   }`}
                 >
                   <p className="text-sm font-extrabold text-ink-900">🏬 Retiro en el local</p>
-                  <p className="mt-1 text-xs text-emerald-700">Gratis · 27 de Abril 259, Córdoba Capital</p>
+                  <p className="mt-1 text-xs text-emerald-700">Gratis · 27 de Abril 180, Córdoba Capital</p>
                 </button>
               </div>
 
               {deliveryMethod === "pickup" ? (
                 <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-600">
-                  <p className="font-bold text-ink-900">27 de Abril 259, Córdoba Capital</p>
+                  <p className="font-bold text-ink-900">27 de Abril 180, Córdoba Capital</p>
                   <p className="mt-1 text-xs">Lunes a viernes de 14:00 a 18:30 · Sábados de 12:00 a 14:30</p>
                   <p className="mt-2 text-xs">
                     Te avisamos por WhatsApp cuando esté listo. Llevá tu DNI y el número de pedido.

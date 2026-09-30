@@ -6,7 +6,10 @@
  * contienen ni "Ã" ni "Â", así que un chequeo por caracteres se los pierde
  * (pasó: el 🔥 de la barra del header quedó roto y el chequeo decía "OK").
  *
- * Recorre todo `src/` recursivamente, sin lista manual.
+ * Recorre `src/` y `scripts/` recursivamente, sin lista manual. Antes solo
+ * miraba `src/`, y por eso los scripts quedaban fuera del control: uno de ellos
+ * tenía "ǭrbol" y "nǧmeros" (á y ó leídas como latin-1) y el chequeo decía
+ * "73 archivos, ninguno corrupto".
  *
  * Uso: node scripts/check-accents.mjs
  */
@@ -15,8 +18,18 @@ import { extname, join, relative, resolve } from "node:path";
 
 import { repair } from "./fix-encoding.mjs";
 
-const ROOTS = ["src"];
+const ROOTS = ["src", "scripts"];
 const EXTS = new Set([".ts", ".tsx", ".js", ".jsx", ".mjs", ".css"]);
+
+/**
+ * Los dos archivos que guardan las secuencias corruptas como dato, no como
+ * texto: este tiene la lista de señales que busca y `fix-encoding.mjs` la
+ * tabla de bytes iniciales. Si se revisaran, se marcarían a sí mismos.
+ */
+const EXCLUIDOS = new Set(["scripts/check-accents.mjs", "scripts/fix-encoding.mjs"]);
+
+/** En Windows `relative` devuelve backslashes, y el set usa barras. */
+const esExcluido = (full) => EXCLUIDOS.has(relative(resolve("."), full).split("\\").join("/"));
 
 function walk(dir, out = []) {
   for (const entry of readdirSync(dir)) {
@@ -25,7 +38,7 @@ function walk(dir, out = []) {
     if (stats.isDirectory()) {
       if (entry === "node_modules" || entry === ".next") continue;
       walk(full, out);
-    } else if (EXTS.has(extname(full))) {
+    } else if (EXTS.has(extname(full)) && !esExcluido(full)) {
       out.push(full);
     }
   }

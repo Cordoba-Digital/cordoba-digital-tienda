@@ -28,7 +28,7 @@ let cache: { at: number; data: GoogleReviewsResult } | null = null;
 const TTL_MS = 24 * 60 * 60 * 1000;
 
 /** Dirección por defecto: sirve para resolver el Place ID sola. */
-const DEFAULT_QUERY = "Córdoba Digital, 27 de Abril 259, Córdoba, Argentina";
+const DEFAULT_QUERY = "Córdoba Digital, 27 de Abril 180, Córdoba, Argentina";
 
 /**
  * Resuelve el Place ID a partir del nombre y la dirección, para que el

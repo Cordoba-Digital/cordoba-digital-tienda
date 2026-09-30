@@ -231,7 +231,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                   {order.address.city}, {order.address.province} (CP {order.address.zip})
                 </p>
               ) : (
-                <p className="mt-2 text-sm text-ink-600">27 de Abril 259, Córdoba Capital</p>
+                <p className="mt-2 text-sm text-ink-600">27 de Abril 180, Córdoba Capital</p>
               )}
               {order.notes ? <p className="mt-2 text-xs italic text-ink-400">“{order.notes}”</p> : null}
             </div>

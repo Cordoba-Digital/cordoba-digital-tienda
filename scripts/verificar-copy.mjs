@@ -37,6 +37,16 @@ const PROHIBIDO = [
   ["listo en 2 horas", "el original no promete tiempo de retiro"],
   ["retiro en 2 hs", "idem"],
   ["Comprar ahora", "el original tiene un solo botón: Comprar"],
+  // La dirección se imprime en 20 lugares y estuvo mal en todos: el original la
+  // publica en el pie de la home y en /contacto/ como "27 de abril 180". El
+  // 259 que se imprimía no está en el sitio viejo; el 259 que aparece ahí es
+  // parte de precios (1.259.999, 259.999).
+  ["Abril 259", "la dirección real es 27 de abril 180 (pie y /contacto del original)"],
+  ["Abril+259", "idem, en el link de Google Maps"],
+  ["Sáb 11 a 14", "el horario real del sábado es de 12 a 14:30"],
+  ["11 a 14:30", "idem"],
+  // El original no publica código postal en ninguna parte.
+  ['"postalCode"', "el original no publica código postal"],
 ];
 
 /**

@@ -60,7 +60,7 @@ export function shippingOptions(zip: string): ShippingOption[] {
     {
       id: "pickup",
       label: "Retiro en el local",
-      description: "27 de Abril 259, Córdoba Capital · Lun a Vie 14 a 18:30, Sáb 11 a 14",
+      description: "27 de Abril 180, Córdoba Capital · Lun a Vie 14 a 18:30, Sáb 12 a 14:30",
       eta: "Listo en 2 horas hábiles",
       cost: 0,
       free: true,

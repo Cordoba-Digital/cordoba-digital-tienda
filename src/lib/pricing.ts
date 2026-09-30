@@ -42,7 +42,7 @@ export const PAYMENT_METHODS: PaymentMethod[] = [
     id: "efectivo",
     label: "Pago en efectivo o transferencia en el local",
     short: "Efectivo en el local",
-    description: "Reservás online y pagás al retirar en 27 de Abril 259.",
+    description: "Reservás online y pagás al retirar en 27 de Abril 180.",
     icon: "💵",
   },
   {
