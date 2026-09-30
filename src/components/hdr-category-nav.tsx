@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+
+import { CategoryIcon } from "@/components/category-icon";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 
@@ -38,8 +40,30 @@ export type CategoryNavRoot = CategoryNavNode & {
 const CLOSE_DELAY_MS = 120;
 /** Llave del panel con todas las categorías (las de raíz son su slug). */
 const ALL_KEY = "all-categories";
-/** Raíces que entran en la barra. El resto vive en el panel del ícono. */
-const BAR_LIMIT = 6;
+/**
+ * Accesos curados de la barra, con etiqueta corta para el visitante. No son
+ * las 6 primeras raíces: incluyen un nieto (Notebooks) y hojas (Drones).
+ * Las rutas son las del árbol real y no cambian nunca; si una dejara de
+ * existir, ese acceso se omite en vez de romper la barra.
+ */
+const BAR_ITEMS: { label: string; path: string }[] = [
+  { label: "Celulares Liberados", path: "celulares-cordoba" },
+  { label: "Notebooks", path: "computacion/notebooks-cordoba" },
+  { label: "Computación", path: "computacion" },
+  { label: "Cámaras y Foto", path: "camaras-digitales" },
+  { label: "Drones", path: "drones" },
+  { label: "Gaming", path: "consolas-playstation" },
+];
+
+/** Busca un nodo en los tres niveles por su path (`a/b/c`). */
+function findNodeByPath(nodes: CategoryNavNode[], path: string): CategoryNavNode | undefined {
+  for (const node of nodes) {
+    if (node.path === path) return node;
+    const hit = node.children?.length ? findNodeByPath(node.children, path) : undefined;
+    if (hit) return hit;
+  }
+  return undefined;
+}
 /** Una columna angosta para las categorías chicas; el resto se reparte. */
 const ONE_COLUMN_UP_TO = 6;
 const TWO_COLUMNS_UP_TO = 12;
@@ -200,7 +224,7 @@ function LeafDetail({ root }: { root: CategoryNavRoot }) {
     <div className="rounded-xl bg-ink-50 p-4">
       <div className="flex items-start gap-3">
         <span className="text-2xl leading-none" aria-hidden>
-          {root.icon}
+          <CategoryIcon name={root.name} className="h-6 w-6 text-brand-700" />
         </span>
         <div className="min-w-0">
           {total > 0 ? (
@@ -312,7 +336,7 @@ function CatalogPanel({
                 }`}
               >
                 <span className="text-base leading-none" aria-hidden>
-                  {root.icon}
+                  <CategoryIcon name={root.name} className="h-5 w-5" />
                 </span>
                 <span className="min-w-0 flex-1 truncate text-[13px] font-medium">
                   {root.name}
@@ -336,7 +360,7 @@ function CatalogPanel({
       <div className="flex min-h-0 flex-col overflow-y-auto p-4">
         <div className="mb-3 flex items-start gap-3 border-b border-ink-100 pb-3">
           <span className="text-xl leading-none" aria-hidden>
-            {selected.icon}
+            <CategoryIcon name={selected.name} className="h-6 w-6 text-brand-700" />
           </span>
           <div className="min-w-0 flex-1">
             <h3 className="truncate text-[15px] font-bold text-ink-900">{selected.name}</h3>
@@ -448,7 +472,11 @@ export function CategoryNavBar({ categories }: { categories: CategoryNavRoot[] }
     if (!next || !event.currentTarget.contains(next)) closeSoon();
   };
 
-  const visible = categories.slice(0, BAR_LIMIT);
+  // Accesos curados resueltos contra el árbol: cada uno linkea a su página y,
+  // si tiene subcategorías, abre su panel al hover como antes.
+  const barItems = BAR_ITEMS.map((item) => ({ ...item, node: findNodeByPath(categories, item.path) })).filter(
+    (item): item is { label: string; path: string; node: CategoryNavNode } => Boolean(item.node),
+  );
 
   return (
     <div className="hidden border-t border-ink-100 lg:block">
@@ -489,7 +517,7 @@ export function CategoryNavBar({ categories }: { categories: CategoryNavRoot[] }
             ) : null}
           </li>
 
-          {visible.map((root) => {
+          {barItems.map(({ label, node: root }) => {
             const hasKids = Boolean(root.children?.length);
             const isOpen = openKey === root.slug;
             const triggerId = `${baseId}-${root.slug}-trigger`;
@@ -502,9 +530,8 @@ export function CategoryNavBar({ categories }: { categories: CategoryNavRoot[] }
                 onBlur={hasKids ? handleBlur : undefined}
               >
                 {/*
-                  Nombre entero, sin truncar: los 6 suman ~750 px y el más largo,
-                  "Accesorios P/ Celulares", necesita 152 px. Con el padding que
-                  tenía antes el sexto nombre se pisaba con "Ofertas" a 1024 px.
+                  Etiqueta corta del acceso, sin truncar: los 6 suman ~600 px y
+                  entran cómodos al lado del ícono.
                 */}
                 <Link
                   href={`/categoria/${root.path}`}
@@ -518,7 +545,7 @@ export function CategoryNavBar({ categories }: { categories: CategoryNavRoot[] }
                     isOpen ? "bg-ink-50 text-ink-900" : "text-ink-600"
                   }`}
                 >
-                  {root.name}
+                  {label}
                 </Link>
                 {hasKids && isOpen ? (
                   <RootPanel
