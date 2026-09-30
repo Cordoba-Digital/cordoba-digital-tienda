@@ -54,10 +54,44 @@ export function ProductGallery({
     };
   }, [lightbox, go]);
 
+  // Compartir: hoja nativa si existe, si no copia el link. Sin toasts ni
+  // librerías: la galería no conoce el store y no vale la pena conectarla.
+  const share = async () => {
+    const url = window.location.href;
+    if (typeof navigator.share === "function") {
+      try {
+        await navigator.share({ title: name, url });
+      } catch {
+        // El usuario cerró la hoja: no es un error.
+      }
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+    } catch {
+      // Sin portapapeles (iframe/permisos): no hay nada que hacer.
+    }
+  };
+
   return (
     <>
-      <div className="flex flex-col-reverse items-center gap-3 sm:flex-row sm:items-start sm:justify-center">
-        <div className="no-scrollbar flex gap-2 overflow-x-auto sm:flex-col">
+      {/* Galería sin caja, como la referencia: la foto respira sobre el fondo
+          y las miniaturas van en fila abajo en todos los viewports. */}
+      <div className="relative flex flex-col items-center gap-3">
+        <button
+          type="button"
+          onClick={share}
+          aria-label="Compartir este producto"
+          className="absolute right-0 top-0 z-10 grid h-10 w-10 place-items-center rounded-full border border-ink-200 bg-surface/90 text-ink-600 shadow-sm backdrop-blur transition hover:text-ink-900"
+        >
+          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+            <circle cx="6" cy="12" r="2.5" />
+            <circle cx="18" cy="6" r="2.5" />
+            <circle cx="18" cy="18" r="2.5" />
+            <path d="M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6" strokeLinecap="round" />
+          </svg>
+        </button>
+        <div className="no-scrollbar order-2 flex gap-2 self-stretch overflow-x-auto sm:justify-center">
           {list.map((image, index) => (
             <button
               key={`${image}-${index}`}
@@ -84,7 +118,7 @@ export function ProductGallery({
         </div>
 
         <div
-          className="relative aspect-square w-full max-w-[30rem] cursor-zoom-in overflow-hidden rounded-2xl border border-ink-100 bg-surface"
+          className="relative order-1 aspect-square w-full max-w-[30rem] cursor-zoom-in overflow-hidden"
           onMouseEnter={() => setZoom(true)}
           onMouseLeave={() => setZoom(false)}
           onMouseMove={(event) => {
@@ -116,7 +150,7 @@ export function ProductGallery({
             width={800}
             height={800}
             priority
-            className="pointer-events-none h-full w-full object-contain p-6 transition-transform duration-300"
+            className="pointer-events-none h-full w-full object-contain p-2 transition-transform duration-300"
             style={{ transform: zoom && !lightbox ? "scale(1.8)" : "scale(1)", transformOrigin: origin }}
           />
         </div>
@@ -265,6 +299,12 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         ) : null}
       </div>
 
+      {/* "Vendido por" con dato real (somos el vendedor), como la referencia.
+          Sin cuotas ni promos bancarias: no hay datos y no se inventan. */}
+      <p className="-mt-2 text-xs text-ink-500">
+        Vendido por <span className="font-semibold text-brand-700">Córdoba Digital</span>
+      </p>
+
       <div>
         {product.compareAtPrice ? (
           <div className="flex items-center gap-2">
@@ -345,6 +385,12 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
             Consultar
           </a>
         </div>
+      </div>
+
+      {/* El envío como sección con divisor dentro de la tarjeta, no como card
+          aparte: una sola ventana con secciones, como la referencia. */}
+      <div className="border-t border-ink-100 pt-4">
+        <ShippingCalculator price={product.price} />
       </div>
 
       <ul className="space-y-2 border-t border-ink-100 pt-4 text-xs text-ink-600">

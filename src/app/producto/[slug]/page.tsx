@@ -9,7 +9,6 @@ import {
   ProductGallery,
   RatingSummary,
   ReviewForm,
-  ShippingCalculator,
 } from "@/components/product-detail";
 import { Pill, Stars } from "@/components/ui";
 import { formatDate, money } from "@/lib/format";
@@ -208,7 +207,7 @@ export default async function ProductPage({ params }: { params: Params }) {
           se sacó a pedido: el título suelto al lado de la galería la
           descentraba y el envío pertenece al buy box, no a la descripción. */}
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_22rem]">
-        <div className="order-2 lg:col-start-1 lg:row-start-1 lg:row-span-3">
+        <div className="order-2 lg:col-start-1 lg:row-start-1">
           <ProductGallery
             images={product.images}
             srcSets={product.imageSrcSets}
@@ -219,15 +218,13 @@ export default async function ProductPage({ params }: { params: Params }) {
         <div className="order-1 lg:col-start-2 lg:row-start-1">
           <BuyBox product={buyBoxProduct} />
         </div>
+      </div>
 
-        <div className="order-3 lg:col-start-2 lg:row-start-2">
-          <ShippingCalculator price={product.price} />
-        </div>
-
+      <div className="mt-8 space-y-8">
         {product.highlights.length ? (
-          <div className="card-surface order-4 p-5 lg:col-start-2 lg:row-start-3">
+          <section className="card-surface p-5">
             <h2 className="mb-3 text-sm font-extrabold uppercase tracking-wide text-ink-400">Lo más destacado</h2>
-            <ul className="grid gap-2">
+            <ul className="grid gap-2 sm:grid-cols-2">
               {product.highlights.map((item) => (
                 <li key={item} className="flex items-start gap-2 text-sm text-ink-700">
                   <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-50 text-[11px] font-bold text-brand-700">
@@ -237,11 +234,8 @@ export default async function ProductPage({ params }: { params: Params }) {
                 </li>
               ))}
             </ul>
-          </div>
+          </section>
         ) : null}
-      </div>
-
-      <div className="mt-8 space-y-8">
         <section className="card-surface p-5">
           <h2 className="mb-3 text-lg font-extrabold text-ink-900">Descripción</h2>
           {product.descriptionHtml ? (
@@ -261,18 +255,16 @@ export default async function ProductPage({ params }: { params: Params }) {
         <section className="card-surface p-5">
           <h2 className="mb-3 text-lg font-extrabold text-ink-900">Ficha técnica</h2>
           <dl className="divide-y divide-ink-50">
-            {product.specs.length
-              ? product.specs.map((item) => (
-                  <div key={item.label} className="grid grid-cols-[10rem_1fr] gap-3 py-2.5 text-sm">
-                    <dt className="font-semibold text-ink-500">{item.label}</dt>
-                    <dd className="text-ink-800">{item.value}</dd>
-                  </div>
-                ))
-              : product.highlights.map((item) => (
-                  <div key={item} className="py-2.5 text-sm">
-                    <dd className="text-ink-800">{item}</dd>
-                  </div>
-                ))}
+            {/* Sin fallback a highlights: ya tienen su sección arriba y
+                repetirlos acá duplicaba el contenido en la misma página.
+                Los specs vienen vacíos de WooCommerce; cuando el cliente
+                mande specs reales, esta tabla los muestra. */}
+            {product.specs.map((item) => (
+              <div key={item.label} className="grid grid-cols-[10rem_1fr] gap-3 py-2.5 text-sm">
+                <dt className="font-semibold text-ink-500">{item.label}</dt>
+                <dd className="text-ink-800">{item.value}</dd>
+              </div>
+            ))}
             <div className="grid grid-cols-[10rem_1fr] gap-3 py-2.5 text-sm">
               <dt className="font-semibold text-ink-500">Garantía</dt>
               <dd className="text-ink-800">{product.warrantyMonths} meses oficial</dd>
