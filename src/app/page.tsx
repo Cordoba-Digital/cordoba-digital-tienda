@@ -47,7 +47,7 @@ export default async function HomePage() {
   const [featured, deals, bestSellers, categories, googleReviews, productCount] = await Promise.all([
     getFeaturedProducts(8),
     getDealProducts(8),
-    getBestSellers(8),
+    getBestSellers(10),
     getCategoryTree(),
     getGoogleReviews(),
     getProductCount(),
@@ -184,10 +184,18 @@ export default async function HomePage() {
           description="Lo que más sale de nuestro depósito esta semana, con stock confirmado."
           action={{ href: "/productos?orden=vendidos", label: "Ver ranking" }}
         />
-        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+        {/* 10 para dos filas de 5 en 2xl; las 2 últimas solo existen ahí
+            (`contents` las vuelve items del grid) para no dejar filas
+            raras en los anchos menores. */}
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4 2xl:grid-cols-5">
           {bestSellers.slice(0, 8).map((p) => (
             <ProductCard key={p.slug} product={toView(p)} />
           ))}
+          <div className="hidden 2xl:contents">
+            {bestSellers.slice(8, 10).map((p) => (
+              <ProductCard key={p.slug} product={toView(p)} />
+            ))}
+          </div>
         </div>
       </section>
 
