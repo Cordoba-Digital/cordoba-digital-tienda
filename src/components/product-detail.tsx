@@ -59,9 +59,13 @@ export function ProductGallery({
   return (
     <>
       {/* Galería dentro de una tarjeta: miniaturas en columna a la izquierda
-          (en fila abajo en celular) y la foto principal grande sobre blanco. */}
+          (en fila abajo en celular) y la foto principal grande sobre blanco.
+          El alto topeado a la ventana: en desktop la columna es ancha y el
+          cuadrado puro salía de ~800 px, obligando a scrollear para ver la
+          foto entera. Con el tope el `aspect-square` cede y el `object-contain`
+          sigue encajando la foto completa. */}
       <div className="card-surface flex flex-col gap-3 p-3 sm:flex-row sm:p-4">
-        <div className="no-scrollbar order-2 flex gap-2 overflow-x-auto sm:order-1 sm:max-h-[34rem] sm:flex-col sm:overflow-y-auto sm:overflow-x-visible">
+        <div className="no-scrollbar order-2 flex gap-2 overflow-x-auto sm:order-1 sm:max-h-[78vh] sm:flex-col sm:overflow-y-auto sm:overflow-x-visible">
           {list.map((image, index) => (
             <button
               key={`${image}-${index}`}
@@ -88,7 +92,7 @@ export function ProductGallery({
         </div>
 
         <div
-          className="relative order-1 mx-auto aspect-square w-full max-w-[36rem] flex-1 cursor-zoom-in overflow-hidden rounded-xl bg-white sm:order-2"
+          className="relative order-1 mx-auto aspect-square max-h-[78vh] w-full max-w-[36rem] flex-1 cursor-zoom-in overflow-hidden rounded-xl bg-white sm:order-2"
           onMouseEnter={() => setZoom(true)}
           onMouseLeave={() => setZoom(false)}
           onMouseMove={(event) => {
