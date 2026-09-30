@@ -125,11 +125,13 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               className="h-14 w-auto bg-white object-contain"
             />
             {/* El tagline "Tecnología con garantía legal" se sacó a pedido:
-                al lado del logo mete ruido. El nombre va en naranja de marca
-                en vez de negro: se lee mejor y es el color del sitio. El
-                `brand-700` sobre blanco da 5,2:1 y pasa AA. */}
+                al lado del logo mete ruido. El nombre va en negro
+                (`text-ink-900`) y un punto más grande para que tenga presencia
+                al lado del logo agrandado. La rampa ink se invierte en modo
+                oscuro (`html.dark` en globals.css), así que el mismo token es
+                negro sobre claro y casi blanco sobre oscuro, sin clases extra. */}
             <span className="hidden leading-tight sm:block">
-              <span className="block text-[15px] font-extrabold tracking-tight text-brand-700">Córdoba Digital</span>
+              <span className="block text-[17px] font-extrabold tracking-tight text-ink-900">Córdoba Digital</span>
             </span>
           </Link>
 
