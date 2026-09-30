@@ -12,7 +12,7 @@ export function HomeHero({
 }: {
   productCount: number;
   ratingValue: string | null;
-  reviewCount: number;
+  reviewCount: number | null;
   featured: ProductView | null;
 }) {
   const stats = [
