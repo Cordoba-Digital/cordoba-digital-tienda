@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { money } from "@/lib/format";
+import { MAX_QTY_PER_ITEM } from "@/lib/pricing";
 
 export function QuantityStepper({
   value,
@@ -13,10 +14,9 @@ export function QuantityStepper({
   size = "md",
 }: {
   value: number;
-  // Tope opcional. Cuando no se conoce la cantidad real (el `stock` migrado
-  // es 1 = hay stock, 0 = no hay, porque la Store API pública no expone
-  // cantidades), no se pasa `max` y el `+` no se deshabilita nunca: igual que
-  // en el original, donde se puede pedir más de 1 unidad.
+  // Tope opcional: con `max` el `+` se deshabilita al llegar. Todos los
+  // llamados pasan tope (10, o el `stock` real si es menor), porque el
+  // `stock` migrado 1 = hay stock no es una cantidad conocida.
   max?: number;
   onChange: (next: number) => void;
   size?: "sm" | "md";
@@ -118,7 +118,7 @@ export function CartDrawer() {
                       <QuantityStepper
                         size="sm"
                         value={item.quantity}
-                        max={item.stock > 1 ? item.stock : undefined}
+                        max={item.stock > 1 ? Math.min(item.stock, MAX_QTY_PER_ITEM) : MAX_QTY_PER_ITEM}
                         onChange={(next) => setQuantity(item.slug, next)}
                       />
                       <span className="text-sm font-extrabold text-ink-900">{money(item.price * item.quantity)}</span>

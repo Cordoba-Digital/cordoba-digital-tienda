@@ -8,6 +8,7 @@ import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Spinner, Stars } from "@/components/ui";
 import { discountPercent, money } from "@/lib/format";
+import { MAX_QTY_PER_ITEM } from "@/lib/pricing";
 import type { ShippingOption } from "@/lib/shipping";
 
 export function ProductGallery({
@@ -255,12 +256,12 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
 
       <div className="flex items-center justify-between text-sm">
         <span className="text-ink-500">Cantidad</span>
-        {/* El tope solo va cuando la cantidad es real (`stock` > 1). Con
-            `stock` 1 la cantidad es desconocida (solo "hay stock") y el
-            original deja pedir más de 1, así que no se limita. */}
+        {/* Tope: 10 unidades, o el `stock` cuando la cantidad es real
+            (> 1) y menor. Con `stock` 1 la cantidad es desconocida (solo
+            "hay stock"), así que rige el tope general. */}
         <QuantityStepper
           value={quantity}
-          max={product.stock > 1 ? product.stock : undefined}
+          max={product.stock > 1 ? Math.min(product.stock, MAX_QTY_PER_ITEM) : MAX_QTY_PER_ITEM}
           onChange={setQuantity}
         />
       </div>

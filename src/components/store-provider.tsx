@@ -10,6 +10,8 @@ import {
   type ReactNode,
 } from "react";
 
+import { MAX_QTY_PER_ITEM } from "@/lib/pricing";
+
 export type CartItem = {
   slug: string;
   name: string;
@@ -70,13 +72,14 @@ function readJSON<T>(key: string, fallback: T): T {
 }
 
 // El `stock` migrado es disponibilidad, no cantidad (1 = hay, 0 = no hay,
-// porque la Store API pública no expone cantidades). Solo recorta cuando la
-// cantidad es real (> 1); con 1 la cantidad es desconocida y el original no
-// limita, así que no se recorta.
+// porque la Store API pública no expone cantidades). El tope real es
+// MAX_QTY_PER_ITEM; el `stock` solo recorta cuando la cantidad es conocida
+// (> 1) y menor que ese tope.
 function clampQty(stock: number, quantity: number): number {
   if (stock <= 0) return 0;
   const qty = Math.max(1, Math.floor(quantity));
-  return stock > 1 ? Math.min(stock, qty) : qty;
+  const cap = stock > 1 ? Math.min(stock, MAX_QTY_PER_ITEM) : MAX_QTY_PER_ITEM;
+  return Math.min(cap, qty);
 }
 
 export function StoreProvider({ children }: { children: ReactNode }) {

@@ -9,7 +9,7 @@ import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { money } from "@/lib/format";
 import { readCoupon, writeCoupon } from "@/lib/coupon-storage";
-import { couponDiscountFor, type CouponInfo } from "@/lib/pricing";
+import { couponDiscountFor, MAX_QTY_PER_ITEM, type CouponInfo } from "@/lib/pricing";
 import type { ProductView } from "@/lib/product-view";
 
 export function CartView({ suggestions }: { suggestions: ProductView[] }) {
@@ -124,7 +124,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
                     </p>
                   ) : null}
                   <div className="mt-3 flex flex-wrap items-center gap-3">
-                    <QuantityStepper value={item.quantity} max={item.stock > 1 ? item.stock : undefined} onChange={(q) => setQuantity(item.slug, q)} />
+                    <QuantityStepper value={item.quantity} max={item.stock > 1 ? Math.min(item.stock, MAX_QTY_PER_ITEM) : MAX_QTY_PER_ITEM} onChange={(q) => setQuantity(item.slug, q)} />
                     <button
                       type="button"
                       onClick={() => {

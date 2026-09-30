@@ -2,7 +2,7 @@ import { eq, inArray, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orderItems, orders, products, type ShippingAddress } from "@/db/schema";
-import { computeTotals, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
+import { computeTotals, MAX_QTY_PER_ITEM, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
 import { getCoupon } from "@/lib/queries";
 import { findShippingOption, normalizeZip, type DeliveryMethod } from "@/lib/shipping";
 
@@ -108,11 +108,12 @@ export async function POST(request: Request) {
     if (!product) {
       return Response.json({ ok: false, error: `El producto ${item.slug} ya no está disponible.` }, { status: 409 });
     }
-    // El `stock` migrado es disponibilidad, no cantidad: solo recorta cuando
-    // la cantidad es real (> 1). Con 1 la cantidad es desconocida y no se
-    // limita, igual que en el original. El 0 (sin stock) sigue rechazando.
+    // El `stock` migrado es disponibilidad, no cantidad. El tope por producto
+    // es MAX_QTY_PER_ITEM; el `stock` solo recorta cuando la cantidad es real
+    // (> 1) y menor. El 0 (sin stock) sigue rechazando.
     const wanted = Math.max(1, Math.floor(item.quantity));
-    const quantity = product.stock > 1 ? Math.min(wanted, product.stock) : product.stock === 0 ? 0 : wanted;
+    const cap = product.stock > 1 ? Math.min(product.stock, MAX_QTY_PER_ITEM) : product.stock === 0 ? 0 : MAX_QTY_PER_ITEM;
+    const quantity = Math.min(wanted, cap);
     if (quantity === 0) {
       return Response.json({ ok: false, error: `Nos quedamos sin stock de ${product.name}.` }, { status: 409 });
     }
