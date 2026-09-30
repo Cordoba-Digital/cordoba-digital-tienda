@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { QuantityStepper } from "@/components/cart-drawer";
 import { ProductImg } from "@/components/product-img";
@@ -25,6 +25,7 @@ export function ProductGallery({
   const [zoom, setZoom] = useState(false);
   const [origin, setOrigin] = useState("50% 50%");
   const [lightbox, setLightbox] = useState(false);
+  const touchStartX = useRef<number | null>(null);
   const list = images.length ? images : [""];
   const srcSetOf = (index: number): string[] => srcSets[index] ?? [];
 
@@ -168,7 +169,20 @@ export function ProductGallery({
               </button>
             </>
           ) : null}
-          <div className="max-h-[88vh] max-w-5xl" onClick={(event) => event.stopPropagation()}>
+          <div
+            className="max-h-[88vh] max-w-5xl"
+            onClick={(event) => event.stopPropagation()}
+            onTouchStart={(event) => {
+              touchStartX.current = event.touches[0]?.clientX ?? null;
+            }}
+            onTouchEnd={(event) => {
+              if (touchStartX.current == null) return;
+              const endX = event.changedTouches[0]?.clientX ?? touchStartX.current;
+              const dx = endX - touchStartX.current;
+              touchStartX.current = null;
+              if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
+            }}
+          >
             <ProductImg
               src={list[active]}
               srcSet={srcSetOf(active)}

@@ -82,9 +82,13 @@ export function ProductCard({ product }: { product: ProductView }) {
 
         <button
           type="button"
-          onClick={() => toggleFavorite(product.slug)}
+          onClick={(event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            toggleFavorite(product.slug);
+          }}
           aria-label={fav ? "Quitar de favoritos" : "Guardar en favoritos"}
-          className={`absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border bg-surface/90 shadow-sm backdrop-blur transition ${
+          className={`absolute right-3 top-3 z-10 grid h-9 w-9 place-items-center rounded-full border bg-surface/90 shadow-sm backdrop-blur transition ${
             fav ? "border-rose-200 text-rose-500" : "border-ink-200 text-ink-400 hover:text-rose-500"
           }`}
         >
@@ -101,7 +105,7 @@ export function ProductCard({ product }: { product: ProductView }) {
 
         <Link
           href={`/producto/${product.slug}`}
-          className="mt-0.5 line-clamp-2 text-[13px] font-medium leading-snug text-ink-800 hover:text-brand-700"
+          className="mt-0.5 line-clamp-2 text-[13px] font-medium leading-snug text-ink-800 after:absolute after:inset-0 hover:text-brand-700"
         >
           {product.name}
         </Link>
@@ -114,27 +118,26 @@ export function ProductCard({ product }: { product: ProductView }) {
           </div>
         ) : null}
 
-        <div className="mt-2">
-          {product.compareAtPrice ? (
-            <p className="text-[11px] text-ink-500 line-through">{money(product.compareAtPrice)}</p>
-          ) : null}
-          <p className="text-[1.35rem] font-semibold leading-none tracking-tight text-ink-900">{money(product.price)}</p>
-        </div>
-
-        <div className="mt-auto flex gap-2 pt-3">
-          <Link
-            href={`/producto/${product.slug}`}
-            className="flex-1 rounded-xl border border-ink-200 bg-surface py-2.5 text-center text-sm font-semibold text-ink-800 transition hover:border-brand-400 hover:text-brand-700"
-          >
-            Ver
-          </Link>
+        <div className="mt-auto flex items-end justify-between gap-2 pt-3">
+          <div>
+            {product.compareAtPrice ? (
+              <p className="text-[11px] text-ink-500 line-through">{money(product.compareAtPrice)}</p>
+            ) : null}
+            <p className="text-[1.35rem] font-semibold leading-none tracking-tight text-ink-900">{money(product.price)}</p>
+          </div>
           <button
             type="button"
             disabled={outOfStock}
             onClick={addToCart}
-            className="flex-1 rounded-xl bg-brand-700 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800 disabled:cursor-not-allowed disabled:bg-ink-200 disabled:text-ink-400"
+            aria-label="Agregar al carrito"
+            title={outOfStock ? "Sin stock" : "Agregar al carrito"}
+            className="relative z-10 grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand-700 text-white shadow-sm transition hover:bg-brand-800 disabled:cursor-not-allowed disabled:bg-ink-200 disabled:text-ink-400"
           >
-            {outOfStock ? "Sin stock" : "Agregar"}
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <circle cx="9" cy="20" r="1.5" />
+              <circle cx="17" cy="20" r="1.5" />
+              <path d="M2.5 3.5h2l2.6 12.5a1 1 0 001 .8h8.7a1 1 0 001-.8L20.5 7H6" />
+            </svg>
           </button>
         </div>
       </div>

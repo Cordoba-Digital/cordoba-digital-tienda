@@ -200,9 +200,18 @@ export default async function ProductPage({ params }: { params: Params }) {
         <span className="font-semibold text-ink-700">{product.brand}</span>
       </nav>
 
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_22rem]">
-        <div className="space-y-8">
-          <div>
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_22rem]">
+        <div className="order-2 lg:order-1 lg:col-start-1 lg:row-start-1">
+          <ProductGallery
+            images={product.images}
+            srcSets={product.imageSrcSets}
+            name={product.name}
+            badge={product.badge}
+          />
+        </div>
+
+        <div className="contents lg:order-2 lg:col-start-2 lg:row-start-1 lg:flex lg:flex-col lg:gap-6">
+          <div className="order-1 lg:order-none">
             {/* Acá había una fila de pills arriba del nombre: la marca y, si
                 quedaban pocas unidades, un "Últimas unidades". La marca ya
                 está en la migas de pan que queda justo arriba, así que la
@@ -225,15 +234,8 @@ export default async function ProductPage({ params }: { params: Params }) {
             </div>
           </div>
 
-          <ProductGallery
-            images={product.images}
-            srcSets={product.imageSrcSets}
-            name={product.name}
-            badge={product.badge}
-          />
-
           {product.highlights.length ? (
-            <div className="card-surface p-5">
+            <div className="card-surface order-4 p-5 lg:order-none">
               <h2 className="mb-3 text-sm font-extrabold uppercase tracking-wide text-ink-400">Lo más destacado</h2>
               <ul className="grid gap-2 sm:grid-cols-2">
                 {product.highlights.map((item) => (
@@ -248,71 +250,81 @@ export default async function ProductPage({ params }: { params: Params }) {
             </div>
           ) : null}
 
-          <ShippingCalculator price={product.price} />
-
-          <section className="card-surface p-5">
-            <h2 className="mb-3 text-lg font-extrabold text-ink-900">Descripción</h2>
-            {product.descriptionHtml ? (
-              // El HTML viene saneado por el migrador (scripts, estilos y
-              // handlers inline ya eliminados). Ver scripts/migrate-wp.ts.
-              <div
-                className="prose-cd"
-                dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
-              />
-            ) : (
-              <p className="text-sm leading-relaxed text-ink-600">
-                {product.description || product.shortDescription}
-              </p>
-            )}
-          </section>
-
-          <section className="card-surface p-5">
-            <h2 className="mb-3 text-lg font-extrabold text-ink-900">Ficha técnica</h2>
-            <dl className="divide-y divide-ink-50">
-              {product.specs.map((item) => (
-                <div key={item.label} className="grid grid-cols-[10rem_1fr] gap-3 py-2.5 text-sm">
-                  <dt className="font-semibold text-ink-500">{item.label}</dt>
-                  <dd className="text-ink-800">{item.value}</dd>
-                </div>
-              ))}
-              <div className="grid grid-cols-[10rem_1fr] gap-3 py-2.5 text-sm">
-                <dt className="font-semibold text-ink-500">Garantía</dt>
-                <dd className="text-ink-800">{product.warrantyMonths} meses oficial</dd>
-              </div>
-            </dl>
-          </section>
-
-          <section id="opiniones" className="card-surface space-y-5 p-5">
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <h2 className="text-lg font-extrabold text-ink-900">Opiniones de clientes</h2>
-              <ReviewForm slug={product.slug} />
-            </div>
-            <RatingSummary rating={product.rating} count={product.reviewCount} reviews={productReviews} />
-            <div className="space-y-4 border-t border-ink-50 pt-4">
-              {productReviews.length === 0 ? (
-                <p className="text-sm text-ink-500">Todavía no hay opiniones. ¡Sé el primero en opinar!</p>
-              ) : (
-                productReviews.map((review) => (
-                  <article key={review.id} className="border-b border-ink-50 pb-4 last:border-0 last:pb-0">
-                    <div className="flex items-center gap-2">
-                      <Stars rating={review.rating * 10} />
-                      {review.verified ? <Pill tone="success">Compra verificada</Pill> : null}
-                    </div>
-                    {review.title ? <h3 className="mt-1.5 text-sm font-bold text-ink-900">{review.title}</h3> : null}
-                    <p className="mt-1 text-sm leading-relaxed text-ink-600">{review.body}</p>
-                    <p className="mt-1.5 text-[11px] text-ink-500">
-                      {review.author} · {formatDate(review.createdAt)}
-                    </p>
-                  </article>
-                ))
-              )}
-            </div>
-          </section>
+          <div className="order-5 lg:order-none">
+            <ShippingCalculator price={product.price} />
+          </div>
         </div>
 
-        <div>
+        <div className="order-3 lg:col-start-3 lg:row-start-1">
           <BuyBox product={buyBoxProduct} />
         </div>
+      </div>
+
+      <div className="mt-8 space-y-8">
+        <section className="card-surface p-5">
+          <h2 className="mb-3 text-lg font-extrabold text-ink-900">Descripción</h2>
+          {product.descriptionHtml ? (
+            // El HTML viene saneado por el migrador (scripts, estilos y
+            // handlers inline ya eliminados). Ver scripts/migrate-wp.ts.
+            <div
+              className="prose-cd"
+              dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
+            />
+          ) : (
+            <p className="text-sm leading-relaxed text-ink-600">
+              {product.description || product.shortDescription}
+            </p>
+          )}
+        </section>
+
+        <section className="card-surface p-5">
+          <h2 className="mb-3 text-lg font-extrabold text-ink-900">Ficha técnica</h2>
+          <dl className="divide-y divide-ink-50">
+            {product.specs.length
+              ? product.specs.map((item) => (
+                  <div key={item.label} className="grid grid-cols-[10rem_1fr] gap-3 py-2.5 text-sm">
+                    <dt className="font-semibold text-ink-500">{item.label}</dt>
+                    <dd className="text-ink-800">{item.value}</dd>
+                  </div>
+                ))
+              : product.highlights.map((item) => (
+                  <div key={item} className="py-2.5 text-sm">
+                    <dd className="text-ink-800">{item}</dd>
+                  </div>
+                ))}
+            <div className="grid grid-cols-[10rem_1fr] gap-3 py-2.5 text-sm">
+              <dt className="font-semibold text-ink-500">Garantía</dt>
+              <dd className="text-ink-800">{product.warrantyMonths} meses oficial</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section id="opiniones" className="card-surface space-y-5 p-5">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <h2 className="text-lg font-extrabold text-ink-900">Opiniones de clientes</h2>
+            <ReviewForm slug={product.slug} />
+          </div>
+          <RatingSummary rating={product.rating} count={product.reviewCount} reviews={productReviews} />
+          <div className="space-y-4 border-t border-ink-50 pt-4">
+            {productReviews.length === 0 ? (
+              <p className="text-sm text-ink-500">Todavía no hay opiniones. ¡Sé el primero en opinar!</p>
+            ) : (
+              productReviews.map((review) => (
+                <article key={review.id} className="border-b border-ink-50 pb-4 last:border-0 last:pb-0">
+                  <div className="flex items-center gap-2">
+                    <Stars rating={review.rating * 10} />
+                    {review.verified ? <Pill tone="success">Compra verificada</Pill> : null}
+                  </div>
+                  {review.title ? <h3 className="mt-1.5 text-sm font-bold text-ink-900">{review.title}</h3> : null}
+                  <p className="mt-1 text-sm leading-relaxed text-ink-600">{review.body}</p>
+                  <p className="mt-1.5 text-[11px] text-ink-500">
+                    {review.author} · {formatDate(review.createdAt)}
+                  </p>
+                </article>
+              ))
+            )}
+          </div>
+        </section>
       </div>
 
       {related.length ? (
