@@ -13,7 +13,11 @@ export function QuantityStepper({
   size = "md",
 }: {
   value: number;
-  max: number;
+  // Tope opcional. Cuando no se conoce la cantidad real (el `stock` migrado
+  // es 1 = hay stock, 0 = no hay, porque la Store API pública no expone
+  // cantidades), no se pasa `max` y el `+` no se deshabilita nunca: igual que
+  // en el original, donde se puede pedir más de 1 unidad.
+  max?: number;
   onChange: (next: number) => void;
   size?: "sm" | "md";
 }) {
@@ -37,7 +41,7 @@ export function QuantityStepper({
       <button
         type="button"
         aria-label="Sumar"
-        disabled={value >= max}
+        disabled={max !== undefined && value >= max}
         onClick={() => onChange(value + 1)}
         className={`${btn} grid place-items-center rounded-r-xl font-bold text-ink-500 transition hover:bg-ink-50 hover:text-ink-900 disabled:text-ink-200`}
       >
@@ -114,7 +118,7 @@ export function CartDrawer() {
                       <QuantityStepper
                         size="sm"
                         value={item.quantity}
-                        max={item.stock}
+                        max={item.stock > 1 ? item.stock : undefined}
                         onChange={(next) => setQuantity(item.slug, next)}
                       />
                       <span className="text-sm font-extrabold text-ink-900">{money(item.price * item.quantity)}</span>

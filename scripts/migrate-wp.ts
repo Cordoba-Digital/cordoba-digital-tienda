@@ -403,7 +403,15 @@ function mapProduct(
     descriptionHtml: sanitizeHtml(p.description),
     price,
     compareAtPrice,
-    stock: p.is_in_stock ? 1 : 0,
+    // Cantidad real solo cuando WooCommerce la informa (`low_stock_remaining`,
+    // que viene únicamente si el producto está en stock bajo). Si no, el
+    // `stock` guardado es disponibilidad (1 = hay, 0 = no hay) y el resto del
+    // código no debe usarlo como tope: ver `clampQty` y el checkout.
+    stock: !p.is_in_stock
+      ? 0
+      : typeof p.low_stock_remaining === "number" && p.low_stock_remaining > 0
+        ? Math.floor(p.low_stock_remaining)
+        : 1,
     images,
     imageSrcSets,
     imageSrcSet: [],

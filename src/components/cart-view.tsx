@@ -124,7 +124,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
                     </p>
                   ) : null}
                   <div className="mt-3 flex flex-wrap items-center gap-3">
-                    <QuantityStepper value={item.quantity} max={item.stock} onChange={(q) => setQuantity(item.slug, q)} />
+                    <QuantityStepper value={item.quantity} max={item.stock > 1 ? item.stock : undefined} onChange={(q) => setQuantity(item.slug, q)} />
                     <button
                       type="button"
                       onClick={() => {

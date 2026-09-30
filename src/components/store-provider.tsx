@@ -69,6 +69,16 @@ function readJSON<T>(key: string, fallback: T): T {
   }
 }
 
+// El `stock` migrado es disponibilidad, no cantidad (1 = hay, 0 = no hay,
+// porque la Store API pública no expone cantidades). Solo recorta cuando la
+// cantidad es real (> 1); con 1 la cantidad es desconocida y el original no
+// limita, así que no se recorta.
+function clampQty(stock: number, quantity: number): number {
+  if (stock <= 0) return 0;
+  const qty = Math.max(1, Math.floor(quantity));
+  return stock > 1 ? Math.min(stock, qty) : qty;
+}
+
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [favorites, setFavorites] = useState<string[]>([]);
@@ -128,10 +138,10 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       setItems((prev) => {
         const existing = prev.find((i) => i.slug === item.slug);
         if (existing) {
-          const nextQty = Math.min(existing.stock, existing.quantity + quantity);
+          const nextQty = clampQty(existing.stock, existing.quantity + quantity);
           return prev.map((i) => (i.slug === item.slug ? { ...i, quantity: nextQty } : i));
         }
-        return [...prev, { ...item, quantity: Math.min(item.stock || 1, quantity) }];
+        return [...prev, { ...item, quantity: clampQty(item.stock, quantity) }];
       });
       if (!options?.silent) {
         pushToast({ title: "Agregado al carrito", description: item.name, tone: "success" });
@@ -148,7 +158,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const setQuantity = useCallback((slug: string, quantity: number) => {
     setItems((prev) =>
       prev
-        .map((i) => (i.slug === slug ? { ...i, quantity: Math.max(0, Math.min(i.stock, quantity)) } : i))
+        .map((i) => (i.slug === slug ? { ...i, quantity: clampQty(i.stock, quantity) } : i))
         .filter((i) => i.quantity > 0),
     );
   }, []);

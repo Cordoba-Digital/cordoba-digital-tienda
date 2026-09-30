@@ -241,7 +241,14 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
 
       <div className="flex items-center justify-between text-sm">
         <span className="text-ink-500">Cantidad</span>
-        <QuantityStepper value={quantity} max={Math.max(1, product.stock)} onChange={setQuantity} />
+        {/* El tope solo va cuando la cantidad es real (`stock` > 1). Con
+            `stock` 1 la cantidad es desconocida (solo "hay stock") y el
+            original deja pedir más de 1, así que no se limita. */}
+        <QuantityStepper
+          value={quantity}
+          max={product.stock > 1 ? product.stock : undefined}
+          onChange={setQuantity}
+        />
       </div>
 
       {product.stock > 0 ? (

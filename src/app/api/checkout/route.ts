@@ -108,7 +108,11 @@ export async function POST(request: Request) {
     if (!product) {
       return Response.json({ ok: false, error: `El producto ${item.slug} ya no está disponible.` }, { status: 409 });
     }
-    const quantity = Math.min(Math.max(1, Math.floor(item.quantity)), Math.max(0, product.stock));
+    // El `stock` migrado es disponibilidad, no cantidad: solo recorta cuando
+    // la cantidad es real (> 1). Con 1 la cantidad es desconocida y no se
+    // limita, igual que en el original. El 0 (sin stock) sigue rechazando.
+    const wanted = Math.max(1, Math.floor(item.quantity));
+    const quantity = product.stock > 1 ? Math.min(wanted, product.stock) : product.stock === 0 ? 0 : wanted;
     if (quantity === 0) {
       return Response.json({ ok: false, error: `Nos quedamos sin stock de ${product.name}.` }, { status: 409 });
     }
