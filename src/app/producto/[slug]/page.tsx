@@ -184,7 +184,7 @@ export default async function ProductPage({ params }: { params: Params }) {
         />
       ) : null}
 
-      <nav className="mb-4 flex flex-wrap items-center gap-1.5 text-xs text-ink-400">
+      <nav className="mb-4 flex flex-wrap items-center gap-1.5 text-xs text-ink-500">
         <Link href="/" className="hover:text-brand-700">
           Inicio
         </Link>
@@ -300,7 +300,7 @@ export default async function ProductPage({ params }: { params: Params }) {
                     </div>
                     {review.title ? <h3 className="mt-1.5 text-sm font-bold text-ink-900">{review.title}</h3> : null}
                     <p className="mt-1 text-sm leading-relaxed text-ink-600">{review.body}</p>
-                    <p className="mt-1.5 text-[11px] text-ink-400">
+                    <p className="mt-1.5 text-[11px] text-ink-500">
                       {review.author} · {formatDate(review.createdAt)}
                     </p>
                   </article>
@@ -344,7 +344,7 @@ export default async function ProductPage({ params }: { params: Params }) {
         ))}
       </section>
 
-      <p className="mt-8 text-center text-xs text-ink-400">
+      <p className="mt-8 text-center text-xs text-ink-500">
         Precio de lista {money(product.price)} · Los precios pueden variar sin previo aviso según disponibilidad.
       </p>
 

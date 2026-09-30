@@ -94,7 +94,7 @@ export function TrackingForm() {
         <button
           type="submit"
           disabled={loading}
-          className="mt-auto inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-brand-600 px-6 text-sm font-bold text-white transition hover:bg-brand-700 disabled:opacity-60"
+          className="mt-auto inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-brand-700 px-6 text-sm font-bold text-white transition hover:bg-brand-800 disabled:opacity-60"
         >
           {loading ? <Spinner className="h-4 w-4" /> : null}
           Buscar
@@ -109,14 +109,14 @@ export function TrackingForm() {
         <div className="card-surface animate-rise p-5">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-ink-100 pb-4">
             <div>
-              <p className="text-xs font-bold uppercase tracking-wide text-ink-400">Pedido {order.code}</p>
+              <p className="text-xs font-bold uppercase tracking-wide text-ink-500">Pedido {order.code}</p>
               <p className="text-lg font-extrabold text-ink-900">{statusLabel(order.status)}</p>
               <p className="text-xs text-ink-500">
                 {order.deliveryLabel} · {order.deliveryEta}
               </p>
             </div>
             <div className="text-right">
-              <p className="text-xs text-ink-400">Total</p>
+              <p className="text-xs text-ink-500">Total</p>
               <p className="text-xl font-black text-ink-900">{money(order.total)}</p>
             </div>
           </div>
@@ -128,12 +128,12 @@ export function TrackingForm() {
                 <li key={stage.id} className="text-center">
                   <span
                     className={`mx-auto grid h-8 w-8 place-items-center rounded-full text-xs font-bold ${
-                      done ? "bg-emerald-500 text-white" : "bg-ink-100 text-ink-400"
+                      done ? "bg-emerald-700 text-white" : "bg-ink-100 text-ink-500"
                     }`}
                   >
                     {done ? "✓" : index + 1}
                   </span>
-                  <p className={`mt-1.5 text-[11px] font-semibold ${done ? "text-ink-900" : "text-ink-400"}`}>
+                  <p className={`mt-1.5 text-[11px] font-semibold ${done ? "text-ink-900" : "text-ink-500"}`}>
                     {stage.label}
                   </p>
                 </li>
@@ -143,7 +143,7 @@ export function TrackingForm() {
 
           <Link
             href={`/pedido/${order.code}`}
-            className="mt-5 inline-block rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700"
+            className="mt-5 inline-block rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800"
           >
             Ver detalle completo
           </Link>

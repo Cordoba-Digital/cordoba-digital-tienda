@@ -84,15 +84,15 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
           <section className="card-surface p-5">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
-                <p className="text-xs font-bold uppercase tracking-wide text-ink-400">Número de pedido</p>
+                <p className="text-xs font-bold uppercase tracking-wide text-ink-500">Número de pedido</p>
                 <p className="text-2xl font-black tracking-tight text-ink-900">{order.code}</p>
-                <p className="text-xs text-ink-400">Realizado el {order.createdAt}</p>
+                <p className="text-xs text-ink-500">Realizado el {order.createdAt}</p>
               </div>
               <div className="flex gap-2">
                 <CopyButton value={order.code} label="Copiar código" />
                 <Link
                   href={`/seguimiento?codigo=${order.code}`}
-                  className="rounded-lg bg-brand-600 px-3 py-1.5 text-[11px] font-bold text-white"
+                  className="rounded-lg bg-brand-700 px-3 py-1.5 text-[11px] font-bold text-white"
                 >
                   Seguir pedido
                 </Link>
@@ -110,7 +110,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                     <div className="flex flex-col items-center">
                       <span
                         className={`grid h-7 w-7 place-items-center rounded-full text-xs font-bold ${
-                          done ? "bg-emerald-500 text-white" : "bg-ink-100 text-ink-400"
+                          done ? "bg-emerald-700 text-white" : "bg-ink-100 text-ink-500"
                         }`}
                       >
                         {done ? "✓" : index + 1}
@@ -120,7 +120,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                       ) : null}
                     </div>
                     <div className="pb-1">
-                      <p className={`text-sm font-bold ${done ? "text-ink-900" : "text-ink-400"}`}>{stage.label}</p>
+                      <p className={`text-sm font-bold ${done ? "text-ink-900" : "text-ink-500"}`}>{stage.label}</p>
                       <p className="text-xs text-ink-500">{stage.description}</p>
                       {index === current ? (
                         <span className="mt-1 inline-block rounded-full bg-brand-50 px-2 py-0.5 text-[10px] font-bold text-brand-700">
@@ -142,7 +142,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
               </p>
               <div className="mt-4 grid gap-3 md:grid-cols-2">
                 <div className="rounded-xl border border-ink-100 bg-surface p-4">
-                  <p className="text-xs font-bold uppercase tracking-wide text-ink-400">Transferencia bancaria</p>
+                  <p className="text-xs font-bold uppercase tracking-wide text-ink-500">Transferencia bancaria</p>
                   <dl className="mt-2 space-y-1.5 text-sm">
                     <div className="flex items-center justify-between gap-2">
                       <dt className="text-ink-500">CBU</dt>
@@ -174,7 +174,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                   <div className="mt-2">
                     <CopyButton value="TQn9Y2khDD95J42FQtQTdwVVR93o7cCbPo" label="Copiar wallet" />
                   </div>
-                  <p className="mt-3 text-[11px] text-ink-400">
+                  <p className="mt-3 text-[11px] text-ink-500">
                     Cotización del día informada por WhatsApp al momento de la transferencia.
                   </p>
                 </div>
@@ -185,7 +185,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                 )}`}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-4 inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-emerald-600"
+                className="mt-4 inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-emerald-600"
               >
                 📎 Enviar comprobante por WhatsApp
               </a>
@@ -209,7 +209,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                     <Link href={`/producto/${item.productSlug}`} className="line-clamp-1 text-sm font-semibold text-ink-800 hover:text-brand-700">
                       {item.name}
                     </Link>
-                    <p className="text-xs text-ink-400">
+                    <p className="text-xs text-ink-500">
                       {item.quantity} x {money(item.unitPrice)}
                     </p>
                   </div>
@@ -223,7 +223,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
             <div className="card-surface p-5">
               <h3 className="text-sm font-extrabold uppercase tracking-wide text-ink-400">Entrega</h3>
               <p className="mt-2 text-sm font-bold text-ink-900">{order.deliveryLabel}</p>
-              <p className="text-xs text-emerald-600">{order.deliveryEta}</p>
+              <p className="text-xs text-emerald-700">{order.deliveryEta}</p>
               {order.address ? (
                 <p className="mt-2 text-sm text-ink-600">
                   {order.address.street} {order.address.number} {order.address.extra}
@@ -257,13 +257,13 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                 <dd>{money(order.subtotal)}</dd>
               </div>
               {order.discount > 0 ? (
-                <div className="flex justify-between text-emerald-600">
+                <div className="flex justify-between text-emerald-700">
                   <dt>Cupón {order.couponCode}</dt>
                   <dd>-{money(order.discount)}</dd>
                 </div>
               ) : null}
               {order.paymentAdjustment !== 0 ? (
-                <div className={`flex justify-between ${order.paymentAdjustment < 0 ? "text-emerald-600" : "text-ink-600"}`}>
+                <div className={`flex justify-between ${order.paymentAdjustment < 0 ? "text-emerald-700" : "text-ink-600"}`}>
                   <dt>{order.paymentAdjustment < 0 ? "Descuento medio de pago" : "Financiación"}</dt>
                   <dd>
                     {order.paymentAdjustment < 0 ? "-" : "+"}
@@ -282,7 +282,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
             </div>
             <Link
               href="/productos"
-              className="block w-full rounded-xl bg-brand-600 px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-brand-700"
+              className="block w-full rounded-xl bg-brand-700 px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-brand-800"
             >
               Seguir comprando
             </Link>
@@ -294,7 +294,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
             >
               ¿Necesitás ayuda? Escribinos
             </a>
-            <p className="text-center text-[11px] text-ink-400">
+            <p className="text-center text-[11px] text-ink-500">
               Guardá el código <strong>{order.code}</strong> para consultar el estado cuando quieras.
             </p>
           </div>

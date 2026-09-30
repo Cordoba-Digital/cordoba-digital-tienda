@@ -31,7 +31,7 @@ export default async function GuidesIndexPage() {
 
   return (
     <div className="container-xl py-10">
-      <nav aria-label="Miga de pan" className="mb-6 text-xs text-ink-400">
+      <nav aria-label="Miga de pan" className="mb-6 text-xs text-ink-500">
         <Link href="/" className="transition hover:text-brand-700">
           Inicio
         </Link>
@@ -54,7 +54,7 @@ export default async function GuidesIndexPage() {
           para cada uso y qué conviene descartar. Guías escritas para Córdoba Digital, con el mercado argentino a la
           vista.
         </p>
-        <p className="mt-2 text-sm text-ink-400">{guias.length} guías</p>
+        <p className="mt-2 text-sm text-ink-500">{guias.length} guías</p>
       </header>
 
       {guias.length === 0 ? (
@@ -85,7 +85,7 @@ export default async function GuidesIndexPage() {
                 <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-ink-500">{guia.description}</p>
               ) : null}
 
-              <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-ink-400">
+              <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-ink-500">
                 <span>Actualizada el {formatDate(guia.updatedAt)}</span>
                 <span>· {minutosDeLectura(guia.wordCount)} min de lectura</span>
                 {guia.wordCount > 0 ? <span>· {guia.wordCount.toLocaleString("es-AR")} palabras</span> : null}
@@ -100,7 +100,7 @@ export default async function GuidesIndexPage() {
                 </Link>
                 {guia.meta?.categoria ? (
                   <>
-                    <span className="mx-2 text-ink-300">·</span>
+                    <span className="mx-2 text-ink-500">·</span>
                     <Link
                       href={guia.meta.categoria}
                       className="text-sm font-semibold text-ink-600 transition hover:text-brand-700"

@@ -62,7 +62,7 @@ export default async function GuidePage({ params }: { params: Promise<{ guia: st
 
   return (
     <article className="container-xl py-8">
-      <nav aria-label="Miga de pan" className="mb-6 text-xs text-ink-400">
+      <nav aria-label="Miga de pan" className="mb-6 text-xs text-ink-500">
         <Link href="/" className="transition hover:text-brand-700">
           Inicio
         </Link>
@@ -91,7 +91,7 @@ export default async function GuidePage({ params }: { params: Promise<{ guia: st
           <p className="mt-3 text-sm leading-relaxed text-ink-500">{article.description}</p>
         ) : null}
 
-        <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-ink-400">
+        <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-ink-500">
           <span>Actualizado el {formatDate(article.updatedAt)}</span>
           {meta.actualizacion ? <span>· {meta.actualizacion}</span> : null}
           {meta.cobertura ? <span>· Cobertura: {meta.cobertura}</span> : null}
@@ -100,7 +100,7 @@ export default async function GuidePage({ params }: { params: Promise<{ guia: st
         {meta.categoria ? (
           <Link
             href={meta.categoria}
-            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-700"
+            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-brand-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-800"
           >
             Ver productos de esta categoría →
           </Link>

@@ -68,9 +68,9 @@ export function ProductCard({ product }: { product: ProductView }) {
 
         <div className="pointer-events-none absolute bottom-3 left-3 flex flex-col items-start gap-1">
           {off > 0 ? (
-            <span className="rounded-md bg-rose-500 px-2 py-0.5 text-[11px] font-bold text-white shadow-sm">{off}% OFF</span>
+            <span className="rounded-md bg-rose-600 px-2 py-0.5 text-[11px] font-bold text-white shadow-sm">{off}% OFF</span>
           ) : product.badge ? (
-            <span className="rounded-md bg-brand-600 px-2 py-0.5 text-[11px] font-bold text-white shadow-sm">{product.badge}</span>
+            <span className="rounded-md bg-brand-700 px-2 py-0.5 text-[11px] font-bold text-white shadow-sm">{product.badge}</span>
           ) : null}
         </div>
 
@@ -96,7 +96,7 @@ export function ProductCard({ product }: { product: ProductView }) {
 
       <div className="flex flex-1 flex-col px-3.5 pb-3.5 pt-1">
         {product.brand && product.brand !== "General" ? (
-          <p className="text-[11px] font-semibold uppercase tracking-wide text-ink-400">{product.brand}</p>
+          <p className="text-[11px] font-semibold uppercase tracking-wide text-ink-500">{product.brand}</p>
         ) : null}
 
         <Link
@@ -116,7 +116,7 @@ export function ProductCard({ product }: { product: ProductView }) {
 
         <div className="mt-2">
           {product.compareAtPrice ? (
-            <p className="text-[11px] text-ink-400 line-through">{money(product.compareAtPrice)}</p>
+            <p className="text-[11px] text-ink-500 line-through">{money(product.compareAtPrice)}</p>
           ) : null}
           <p className="text-[1.35rem] font-semibold leading-none tracking-tight text-ink-900">{money(product.price)}</p>
           <p className="mt-1.5 text-[11px] font-medium text-emerald-700">
@@ -135,7 +135,7 @@ export function ProductCard({ product }: { product: ProductView }) {
             type="button"
             disabled={outOfStock}
             onClick={addToCart}
-            className="flex-1 rounded-xl bg-brand-600 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700 disabled:cursor-not-allowed disabled:bg-ink-200 disabled:text-ink-400"
+            className="flex-1 rounded-xl bg-brand-700 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800 disabled:cursor-not-allowed disabled:bg-ink-200 disabled:text-ink-400"
           >
             {outOfStock ? "Sin stock" : "Agregar"}
           </button>

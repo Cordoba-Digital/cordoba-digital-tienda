@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { QuantityStepper } from "@/components/cart-drawer";
 import { ProductImg } from "@/components/product-img";
@@ -28,9 +28,15 @@ export function ProductGallery({
   const list = images.length ? images : [""];
   const srcSetOf = (index: number): string[] => srcSets[index] ?? [];
 
-  const go = (delta: number) => {
-    setActive((current) => (current + delta + list.length) % list.length);
-  };
+  // `go` se memoriza para poder ponerlo en las dependencias del efecto de
+  // teclado: si no, eslint avisa de que el efecto closurea una función que
+  // cambia en cada render.
+  const go = useCallback(
+    (delta: number) => {
+      setActive((current) => (current + delta + list.length) % list.length);
+    },
+    [list.length],
+  );
 
   useEffect(() => {
     if (!lightbox) return;
@@ -46,7 +52,7 @@ export function ProductGallery({
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
     };
-  }, [lightbox, list.length]);
+  }, [lightbox, go]);
 
   return (
     <>
@@ -224,15 +230,15 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
       <div>
         {product.compareAtPrice ? (
           <div className="flex items-center gap-2">
-            <span className="text-sm text-ink-400 line-through">{money(product.compareAtPrice)}</span>
-            <span className="rounded-full bg-rose-500 px-2 py-0.5 text-[11px] font-bold text-white">-{off}%</span>
+            <span className="text-sm text-ink-500 line-through">{money(product.compareAtPrice)}</span>
+            <span className="rounded-full bg-rose-600 px-2 py-0.5 text-[11px] font-bold text-white">-{off}%</span>
           </div>
         ) : null}
         <p className="text-3xl font-black tracking-tight text-ink-900">{money(product.price)}</p>
       </div>
 
       <div className="rounded-xl border border-ink-100 p-3">
-        <label className="mb-1.5 block text-[11px] font-bold uppercase tracking-wide text-ink-400">Simul\u00e1 tus cuotas</label>
+        <label className="mb-1.5 block text-[11px] font-bold uppercase tracking-wide text-ink-500">Simul\u00e1 tus cuotas</label>
         <select
           value={plan}
           onChange={(e) => setPlan(Number(e.target.value))}
@@ -247,7 +253,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         <p className="mt-2 text-sm font-bold text-ink-900">
           {plan} x {money(installmentValue(product.price, plan))}
         </p>
-        <p className="text-[11px] text-ink-400">
+        <p className="text-[11px] text-ink-500">
           {plan <= 6 ? "Sin inter\u00e9s con todas las tarjetas" : "Plan de cuotas fijas con inter\u00e9s"}
         </p>
       </div>
@@ -258,7 +264,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
       </div>
 
       {product.stock > 0 ? (
-        <p className="text-xs font-semibold text-emerald-600">
+        <p className="text-xs font-semibold text-emerald-700">
           \u2705 {product.stock <= 5 ? `\u00a1\u00daltimas ${product.stock} unidades!` : "Stock disponible para env\u00edo inmediato"}
         </p>
       ) : (
@@ -312,7 +318,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         <li className="flex items-center gap-2">\ud83e\uddfd Factura o comprobante de compra</li>
         <li className="flex items-center gap-2">\ud83c\udfec Retiro en 27 de Abril 259, C\u00f3rdoba Capital</li>
       </ul>
-      <p className="text-[10px] text-ink-300">SKU {product.sku}</p>
+      <p className="text-[10px] text-ink-500">SKU {product.sku}</p>
     </div>
   );
 }
@@ -411,7 +417,7 @@ export function ShippingCalculator({ price }: { price: number }) {
         <button
           type="submit"
           disabled={loading}
-          className="inline-flex h-10 items-center gap-2 rounded-xl bg-brand-600 px-4 text-sm font-bold text-white transition hover:bg-brand-700 disabled:opacity-60"
+          className="inline-flex h-10 items-center gap-2 rounded-xl bg-brand-700 px-4 text-sm font-bold text-white transition hover:bg-brand-800 disabled:opacity-60"
         >
           {loading ? <Spinner className="h-4 w-4" /> : null}
           Calcular
@@ -532,7 +538,7 @@ export function ReviewForm({ slug }: { slug: string }) {
         <button
           type="submit"
           disabled={state === "loading"}
-          className="rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700 disabled:opacity-60"
+          className="rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800 disabled:opacity-60"
         >
           {state === "loading" ? "Publicando..." : "Publicar opini\u00f3n"}
         </button>

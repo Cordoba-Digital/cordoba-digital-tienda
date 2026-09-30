@@ -124,7 +124,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
             />
             <span className="hidden leading-tight sm:block">
               <span className="block text-[15px] font-extrabold tracking-tight text-ink-900">Córdoba Digital</span>
-              <span className="block text-[11px] font-medium text-ink-400">Tecnología con garantía · desde 2006</span>
+              <span className="block text-[11px] font-medium text-ink-500">Tecnología con garantía · desde 2006</span>
             </span>
           </Link>
 
@@ -149,7 +149,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               </svg>
               <button
                 type="submit"
-                className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-lg bg-brand-600 px-4 py-2 text-xs font-bold text-white transition hover:bg-brand-700"
+                className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-lg bg-brand-700 px-4 py-2 text-xs font-bold text-white transition hover:bg-brand-800"
               >
                 Buscar
               </button>
@@ -168,7 +168,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                     ) : null}
                     <span className="min-w-0 flex-1">
                       <span className="block truncate text-sm font-semibold text-ink-800">{s.name}</span>
-                      <span className="block text-xs text-ink-400">{s.brand}</span>
+                      <span className="block text-xs text-ink-500">{s.brand}</span>
                     </span>
                     <span className="text-sm font-bold text-ink-900">{money(s.price)}</span>
                   </Link>
@@ -208,7 +208,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                 <path d="M12 21s-7.5-4.6-9.5-9A5.5 5.5 0 0112 5.5 5.5 5.5 0 0121.5 12c-2 4.4-9.5 9-9.5 9z" />
               </svg>
               {hydrated && favorites.length > 0 ? (
-                <span className="absolute right-1 top-1 grid h-4 min-w-4 place-items-center rounded-full bg-rose-500 px-1 text-[10px] font-bold text-white">
+                <span className="absolute right-1 top-1 grid h-4 min-w-4 place-items-center rounded-full bg-rose-600 px-1 text-[10px] font-bold text-white">
                   {favorites.length}
                 </span>
               ) : null}
@@ -217,7 +217,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
             <button
               type="button"
               onClick={openCart}
-              className="relative flex h-10 items-center gap-2 rounded-xl bg-brand-600 px-3.5 text-sm font-bold text-white transition hover:bg-brand-700"
+              className="relative flex h-10 items-center gap-2 rounded-xl bg-brand-700 px-3.5 text-sm font-bold text-white transition hover:bg-brand-800"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <path d="M3 4h2.2l2 11h10.4l2-8H6" strokeLinecap="round" strokeLinejoin="round" />
@@ -313,7 +313,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                             >
                               <span className="truncate">{child.name}</span>
                               {typeof child.count === "number" ? (
-                                <span className="shrink-0 text-[11px] text-ink-300">{child.count}</span>
+                                <span className="shrink-0 text-[11px] text-ink-500">{child.count}</span>
                               ) : null}
                             </Link>
                           </li>
@@ -342,7 +342,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               href="https://wa.me/5493516777774"
               target="_blank"
               rel="noreferrer"
-              className="mt-5 flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-4 py-3 text-sm font-bold text-white"
+              className="mt-5 flex items-center justify-center gap-2 rounded-xl bg-emerald-700 px-4 py-3 text-sm font-bold text-white"
             >
               Escribinos por WhatsApp
             </a>

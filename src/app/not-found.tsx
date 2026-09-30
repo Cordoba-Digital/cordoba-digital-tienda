@@ -25,7 +25,7 @@ export default function NotFound() {
           El link que seguiste no existe o el producto ya no está publicado. Probá buscando en el catálogo.
         </p>
         <div className="mt-2 flex flex-wrap justify-center gap-3">
-          <Link href="/" className="rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white">
+          <Link href="/" className="rounded-xl bg-brand-700 px-5 py-3 text-sm font-bold text-white">
             Volver al inicio
           </Link>
           <Link href="/productos" className="rounded-xl border border-ink-200 px-5 py-3 text-sm font-bold text-ink-700">

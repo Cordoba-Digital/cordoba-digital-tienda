@@ -26,6 +26,8 @@
     "fix:galeria": "tsx scripts/fix-galeria.ts",
     "verificar:flujo": "node scripts/verificar-flujo-compra.mjs",
     "verificar:copy": "node scripts/verificar-copy.mjs",
+    "check:contraste": "node scripts/check-contraste.mjs",
+    "check:contraste:todo": "node scripts/contraste-todas.mjs",
     "migrar:guias": "tsx scripts/migrar-guias.ts",
     "test:guias": "tsx scripts/lib/guia-html.test.ts",
     "verificar:guia": "node scripts/verificar-guia.mjs",

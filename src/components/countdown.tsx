@@ -28,14 +28,14 @@ export function Countdown({ label = "Termina en" }: { label?: string }) {
 
   return (
     <div className="flex items-center gap-2">
-      <span className="text-xs font-semibold uppercase tracking-wide text-ink-400">{label}</span>
+      <span className="text-xs font-semibold uppercase tracking-wide text-ink-500">{label}</span>
       <div className="flex items-center gap-1">
         {[hours, minutes, seconds].map((unit, index) => (
           <span key={index} className="flex items-center gap-1">
             <span className="grid h-8 min-w-8 place-items-center rounded-lg bg-deep px-1.5 text-sm font-bold tabular-nums text-white">
               {remaining === null ? "--" : pad(unit)}
             </span>
-            {index < 2 ? <span className="font-bold text-ink-400">:</span> : null}
+            {index < 2 ? <span className="font-bold text-ink-500">:</span> : null}
           </span>
         ))}
       </div>

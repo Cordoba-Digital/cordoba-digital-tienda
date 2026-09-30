@@ -32,7 +32,7 @@ export default function TrackingPage() {
             href="https://wa.me/5493516777774"
             target="_blank"
             rel="noreferrer"
-            className="mt-3 inline-block rounded-xl bg-emerald-500 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-emerald-600"
+            className="mt-3 inline-block rounded-xl bg-emerald-700 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-emerald-600"
           >
             Escribir por WhatsApp
           </a>

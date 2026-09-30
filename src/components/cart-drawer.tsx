@@ -60,7 +60,7 @@ export function CartDrawer() {
         <header className="flex items-center justify-between border-b border-ink-100 px-5 py-4">
           <div>
             <h2 className="text-lg font-extrabold text-ink-900">Tu carrito</h2>
-            <p className="text-xs text-ink-400">{count} producto{count === 1 ? "" : "s"}</p>
+            <p className="text-xs text-ink-500">{count} producto{count === 1 ? "" : "s"}</p>
           </div>
           <button
             type="button"
@@ -80,7 +80,7 @@ export function CartDrawer() {
             <Link
               href="/productos?ofertas=1"
               onClick={closeCart}
-              className="mt-2 rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700"
+              className="mt-2 rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800"
             >
               Ver ofertas
             </Link>
@@ -109,7 +109,7 @@ export function CartDrawer() {
                     >
                       {item.name}
                     </Link>
-                    <p className="mt-0.5 text-[11px] text-ink-400">{item.brand}</p>
+                    <p className="mt-0.5 text-[11px] text-ink-500">{item.brand}</p>
                     <div className="mt-2 flex items-center justify-between gap-2">
                       <QuantityStepper
                         size="sm"
@@ -124,7 +124,7 @@ export function CartDrawer() {
                     type="button"
                     onClick={() => removeItem(item.slug)}
                     aria-label="Quitar"
-                    className="self-start text-ink-300 transition hover:text-rose-500"
+                    className="self-start text-ink-500 transition hover:text-rose-500"
                   >
                     <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
@@ -136,7 +136,7 @@ export function CartDrawer() {
 
             <footer className="space-y-3 border-t border-ink-100 px-5 py-4">
               {savings > 0 ? (
-                <p className="flex items-center justify-between text-xs font-semibold text-emerald-600">
+                <p className="flex items-center justify-between text-xs font-semibold text-emerald-700">
                   <span>Ahorro por ofertas</span>
                   <span>-{money(savings)}</span>
                 </p>
@@ -168,7 +168,7 @@ export function CartDrawer() {
                   Seguir comprando
                 </button>
               </div>
-              <p className="text-center text-[11px] text-ink-400">
+              <p className="text-center text-[11px] text-ink-500">
                 🔒 Compra protegida · 6 meses de garantía legal
               </p>
             </footer>

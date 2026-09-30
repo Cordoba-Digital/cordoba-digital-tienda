@@ -13,8 +13,11 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Catálogo de tecnología",
+  // El 15% OFF con transferencia se sacó del sitio (no existe en el checkout
+  // del original) pero se había quedado en esta descripción, que es lo que
+  // Google muestra en los resultados. Solo van datos reales.
   description:
-    "Celulares, notebooks, cámaras, drones, gaming y más con stock real, envío a todo el país y 15% OFF con transferencia.",
+    "Celulares, notebooks, cámaras, drones, gaming y más con stock real y envío a todo el país por Andreani.",
 };
 
 type SearchParams = Promise<Record<string, string | string[] | undefined>>;
@@ -91,7 +94,7 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
 
   return (
     <div className="container-xl py-8">
-      <nav className="mb-4 flex items-center gap-1.5 text-xs text-ink-400">
+      <nav className="mb-4 flex items-center gap-1.5 text-xs text-ink-500">
         <Link href="/" className="hover:text-brand-700">
           Inicio
         </Link>
@@ -145,7 +148,7 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
                 mercado aunque no estén publicados.
               </p>
               <div className="mt-2 flex gap-3">
-                <Link href="/productos" className="rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-bold text-white">
+                <Link href="/productos" className="rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white">
                   Ver todo el catálogo
                 </Link>
                 <a
@@ -181,7 +184,7 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
                   de 5 alrededor de la actual, con "…" a los lados. */}
               {pageWindow(result.page, result.pages).map((page, i) =>
                 page === "gap" ? (
-                  <span key={`gap-${i}`} className="px-1 text-sm font-bold text-ink-400">
+                  <span key={`gap-${i}`} className="px-1 text-sm font-bold text-ink-500">
                     …
                   </span>
                 ) : (
@@ -190,7 +193,7 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
                     href={buildPageHref(page as number)}
                     className={`min-w-10 rounded-lg px-3.5 py-2 text-center text-sm font-bold transition ${
                       page === result.page
-                        ? "bg-brand-600 text-white"
+                        ? "bg-brand-700 text-white"
                         : "border border-ink-200 bg-surface text-ink-700 hover:border-brand-300"
                     }`}
                   >

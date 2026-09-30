@@ -100,7 +100,7 @@ function SubcategoryList({ nodes, columns }: { nodes: CategoryNavNode[]; columns
           >
             <span className="min-w-0 flex-1">{node.name}</span>
             {typeof node.count === "number" && node.count > 0 ? (
-              <span className="shrink-0 text-[11px] tabular-nums text-ink-300">{node.count}</span>
+              <span className="shrink-0 text-[11px] tabular-nums text-ink-500">{node.count}</span>
             ) : null}
           </Link>
           {node.children?.length ? (
@@ -109,11 +109,11 @@ function SubcategoryList({ nodes, columns }: { nodes: CategoryNavNode[]; columns
                 <li key={grand.slug} className="break-inside-avoid">
                   <Link
                     href={`/categoria/${grand.path}`}
-                    className="flex items-baseline gap-2 rounded px-2 py-0.5 text-[11.5px] leading-snug text-ink-400 transition hover:bg-ink-50 hover:text-brand-700"
+                    className="flex items-baseline gap-2 rounded px-2 py-0.5 text-[11.5px] leading-snug text-ink-500 transition hover:bg-ink-50 hover:text-brand-700"
                   >
                     <span className="min-w-0 flex-1">{grand.name}</span>
                     {typeof grand.count === "number" && grand.count > 0 ? (
-                      <span className="shrink-0 text-[10.5px] tabular-nums text-ink-300">
+                      <span className="shrink-0 text-[10.5px] tabular-nums text-ink-500">
                         {grand.count}
                       </span>
                     ) : null}
@@ -205,7 +205,7 @@ function AllCategoriesPanel({
               </span>
               <span className="min-w-0 flex-1 text-[13px] font-bold text-ink-800">{root.name}</span>
               {typeof root.count === "number" && root.count > 0 ? (
-                <span className="shrink-0 text-[11px] tabular-nums text-ink-300">{root.count}</span>
+                <span className="shrink-0 text-[11px] tabular-nums text-ink-500">{root.count}</span>
               ) : null}
             </Link>
             {root.children?.length ? <SubcategoryList nodes={root.children} columns="columns-1" /> : null}

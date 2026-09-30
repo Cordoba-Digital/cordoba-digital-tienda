@@ -63,7 +63,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
             Mirá lo más vendido de la semana o escribinos y te ayudamos a elegir el producto ideal.
           </p>
           <div className="mt-3 flex flex-wrap justify-center gap-3">
-            <Link href="/productos" className="rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white">
+            <Link href="/productos" className="rounded-xl bg-brand-700 px-5 py-3 text-sm font-bold text-white">
               Ver catálogo
             </Link>
             <Link href="/productos?ofertas=1" className="rounded-xl border border-ink-200 px-5 py-3 text-sm font-bold text-ink-700">
@@ -108,7 +108,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
                   />
                 </Link>
                 <div className="min-w-0 flex-1">
-                  <p className="text-[11px] font-semibold uppercase tracking-wide text-ink-400">{item.brand}</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-wide text-ink-500">{item.brand}</p>
                   <Link
                     href={`/producto/${item.slug}`}
                     className="line-clamp-2 text-sm font-bold text-ink-900 hover:text-brand-700"
@@ -118,7 +118,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
                   {item.compareAtPrice ? (
                     <p className="mt-1 text-xs text-ink-400">
                       <span className="line-through">{money(item.compareAtPrice)}</span>{" "}
-                      <span className="font-semibold text-emerald-600">
+                      <span className="font-semibold text-emerald-700">
                         ahorrás {money((item.compareAtPrice - item.price) * item.quantity)}
                       </span>
                     </p>
@@ -131,14 +131,14 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
                         toggleFavorite(item.slug);
                         removeItem(item.slug);
                       }}
-                      className="text-xs font-semibold text-ink-400 transition hover:text-brand-700"
+                      className="text-xs font-semibold text-ink-500 transition hover:text-brand-700"
                     >
                       Guardar para después
                     </button>
                     <button
                       type="button"
                       onClick={() => removeItem(item.slug)}
-                      className="text-xs font-semibold text-ink-400 transition hover:text-rose-600"
+                      className="text-xs font-semibold text-ink-500 transition hover:text-rose-600"
                     >
                       Eliminar
                     </button>
@@ -146,7 +146,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
                 </div>
                 <div className="text-right">
                   <p className="text-lg font-extrabold text-ink-900">{money(item.price * item.quantity)}</p>
-                  <p className="text-[11px] text-ink-400">{money(item.price)} c/u</p>
+                  <p className="text-[11px] text-ink-500">{money(item.price)} c/u</p>
                 </div>
               </div>
             ))}
@@ -158,7 +158,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
               <div className="mt-3 flex items-center justify-between rounded-xl bg-emerald-50 px-4 py-3">
                 <div>
                   <p className="text-sm font-bold text-emerald-700">{coupon.code} aplicado</p>
-                  <p className="text-xs text-emerald-600">{coupon.description}</p>
+                  <p className="text-xs text-emerald-700">{coupon.description}</p>
                 </div>
                 <button
                   type="button"
@@ -182,7 +182,7 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
                 <button
                   type="submit"
                   disabled={checking}
-                  className="rounded-xl bg-brand-600 px-5 text-sm font-bold text-white transition hover:bg-brand-700 disabled:opacity-60"
+                  className="rounded-xl bg-brand-700 px-5 text-sm font-bold text-white transition hover:bg-brand-800 disabled:opacity-60"
                 >
                   Aplicar
                 </button>
@@ -201,13 +201,13 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
                 <dd className="font-semibold text-ink-900">{money(subtotal)}</dd>
               </div>
               {savings > 0 ? (
-                <div className="flex justify-between text-emerald-600">
+                <div className="flex justify-between text-emerald-700">
                   <dt>Ahorro por ofertas</dt>
                   <dd className="font-semibold">-{money(savings)}</dd>
                 </div>
               ) : null}
               {discount > 0 ? (
-                <div className="flex justify-between text-emerald-600">
+                <div className="flex justify-between text-emerald-700">
                   <dt>Cupón {coupon?.code}</dt>
                   <dd className="font-semibold">-{money(discount)}</dd>
                 </div>

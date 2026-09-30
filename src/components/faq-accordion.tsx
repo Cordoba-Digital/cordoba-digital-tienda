@@ -37,7 +37,11 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
     setAbiertas((prev) => ({ ...prev, [clave]: !prev[clave] }));
 
   return (
-    <>
+    // El `space-y-3` va acá adentro y no en el que llama: cuando lo tenía el
+    // call site, basta con un refactor para que las tarjetas queden pegadas
+    // (0px de separación) sin que se note en el build. Se midió en producción:
+    // la home mostraba 0 y el centro de ayuda 12.
+    <div className="space-y-3">
       {items.map((item, i) => {
         const idPanel = `${base}-panel-${i}`;
         const idBoton = `${base}-boton-${i}`;
@@ -57,7 +61,9 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
                 {item.q}
                 <span
                   aria-hidden
-                  className="text-lg leading-none text-ink-300 transition-transform duration-300 ease-out data-[abierto=si]:rotate-45 motion-reduce:transition-none"
+                  // ink-300 daba 2,19:1 sobre la card blanca y el "+" casi no
+                  // se veía. ink-500 pasa AA con holgura.
+                  className="text-lg leading-none text-ink-500 transition-transform duration-300 ease-out data-[abierto=si]:rotate-45 motion-reduce:transition-none"
                   data-abierto={abierta ? "si" : "no"}
                 >
                   +
@@ -78,6 +84,6 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }

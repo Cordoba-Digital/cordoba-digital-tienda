@@ -144,7 +144,7 @@ export default async function CategoryPage({
     <div className="container-xl py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <nav className="mb-4 flex flex-wrap items-center gap-1.5 text-xs text-ink-400">
+      <nav className="mb-4 flex flex-wrap items-center gap-1.5 text-xs text-ink-500">
         <Link href="/" className="hover:text-brand-700">
           Inicio
         </Link>
@@ -179,7 +179,7 @@ export default async function CategoryPage({
           {result.pages > 1 ? ` · página ${result.page} de ${result.pages}` : ""}
         </p>
         {ancestors.length ? (
-          <p className="mt-2 flex flex-wrap items-center gap-1.5 text-xs text-ink-400">
+          <p className="mt-2 flex flex-wrap items-center gap-1.5 text-xs text-ink-500">
             <span>Ver también:</span>
             {ancestors.map((a) => (
               <Link
@@ -204,7 +204,7 @@ export default async function CategoryPage({
             >
               <span aria-hidden>{child.icon}</span>
               {child.name}
-              <span className="text-[11px] font-normal text-ink-400">{child.count}</span>
+              <span className="text-[11px] font-normal text-ink-500">{child.count}</span>
             </Link>
           ))}
         </nav>
@@ -259,7 +259,7 @@ export default async function CategoryPage({
               <div className="mt-2 flex gap-3">
                 <Link
                   href={`/categoria/${node.path}`}
-                  className="rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-bold text-white"
+                  className="rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white"
                 >
                   Ver toda la categoría
                 </Link>
@@ -293,7 +293,7 @@ export default async function CategoryPage({
               ) : null}
               {pageWindow(result.page, result.pages).map((page, i) =>
                 page === "gap" ? (
-                  <span key={`gap-${i}`} className="px-1 text-sm font-bold text-ink-300">
+                  <span key={`gap-${i}`} className="px-1 text-sm font-bold text-ink-500">
                     …
                   </span>
                 ) : (
@@ -302,7 +302,7 @@ export default async function CategoryPage({
                     href={pageHref(page as number)}
                     className={`min-w-10 rounded-lg px-3.5 py-2 text-center text-sm font-bold transition ${
                       page === result.page
-                        ? "bg-brand-600 text-white"
+                        ? "bg-brand-700 text-white"
                         : "border border-ink-200 bg-surface text-ink-700 hover:border-brand-300"
                     }`}
                   >

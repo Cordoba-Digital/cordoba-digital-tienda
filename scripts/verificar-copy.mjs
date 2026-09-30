@@ -2,18 +2,27 @@
  * Verifica que no queden afirmaciones inventadas en las páginas públicas.
  *
  * El sitio se migró de WooCommerce y hay que copiarlo tal cual: el copy de la
- * home, del checkout, de la ficha de producto y del centro de ayuda tiene que salir de
- * datos reales del sitio original, no de suposiciones. Esta lista es la de las
- * afirmaciones que se sacaron por no existir en el original, y sirve de alarma
+ * home, del checkout, de la ficha de producto y del centro de ayuda tiene que
+ * salir de datos reales del sitio original, no de suposiciones. Esta lista es la
+ * de las afirmaciones que se sacaron por no existir en el original, y sirve de alarma
  * para que no vuelvan.
+ *
+ * Revisa el HTML completo, no solo el texto visible. Antes miraba únicamente
+ * `document.body.innerText`, y por eso se le colaron dos afirmaciones en el
+ * `<head>`: la descripción de /productos seguía anunciando el 15% OFF con
+ * transferencia que ya se había sacado del sitio, y Google la muestra en los
+ * resultados igual que el texto de la página.
+ *
+ * También revisa `<title>`, `meta[name=keywords]`, las etiquetas de Open Graph y
+ * los JSON-LD, porque los buscadores leen tanto o más el head que el cuerpo.
+ *
+ * Un HTML vacío o una página que no carga se reporta como FALLA, no como
+ * limpio: antes una página caída daba "0 caracteres revisados" y pasaba el
+ * control, que es un falso verde.
  *
  * Uso: node scripts/verificar-copy.mjs <baseUrl>
  */
-import { execFileSync } from "node:child_process";
-
-const base = process.argv[2] || "http://localhost:3000";
-const orca = (a) => execFileSync("orca", a, { encoding: "utf8", maxBuffer: 256 * 1024 * 1024 });
-const dormir = (ms) => new Promise((r) => setTimeout(r, ms));
+const base = (process.argv[2] || "http://localhost:3000").replace(/\/$/, "");
 
 /** Texto que NO debe aparecer en ninguna página, con el motivo. */
 const PROHIBIDO = [
@@ -30,41 +39,90 @@ const PROHIBIDO = [
   ["Comprar ahora", "el original tiene un solo botón: Comprar"],
 ];
 
-const PAGINAS = ["/", "/producto/iphone-18-pro-max-512gb", "/ayuda", "/carrito", "/productos"];
+/**
+ * Páginas a revisar. `/categoria/...` y `/producto/...` no entran acá porque sus
+ * textos vienen del WooCommerce original, no de este código.
+ */
+const PAGINAS = [
+  "/",
+  "/productos",
+  "/producto/iphone-18-pro-max-512gb",
+  "/ayuda",
+  "/carrito",
+  "/checkout",
+  "/favoritos",
+  "/seguimiento",
+  "/guias",
+];
 
-let pagina = null;
-const evalEn = (expr) => {
-  const args = pagina ? ["--page", pagina, "--expression", expr, "--json"] : ["--expression", expr, "--json"];
-  const raw = JSON.parse(orca(["eval", ...args]));
-  if (!raw.ok) throw new Error(raw.error?.message ?? "fallo el eval");
-  return raw.result.result;
-};
-
-const LEER = `(() => JSON.stringify({
-  url: location.pathname,
-  texto: (document.body.innerText || "").replace(/\\s+/g, " "),
-}))()`;
+/** Mínimo de caracteres para considerar que la página realmente se leyó. */
+const MINIMO = 2000;
 
 const fallas = [];
+let totalRevisado = 0;
+
 console.log(`copy sin inventos contra ${base}\n`);
 
 for (const ruta of PAGINAS) {
-  const tab = JSON.parse(orca(["tab", "create", "--url", `${base}${ruta}`, "--json"]));
-  pagina = tab.browserPageId;
-  await dormir(4000);
+  let html = "";
+  let estado = 200;
+  try {
+    const res = await fetch(`${base}${ruta}`, {
+      headers: { "User-Agent": "verificar-copy (chequeo interno)" },
+    });
+    estado = res.status;
+    html = await res.text();
+  } catch (e) {
+    console.log(`  FALLA ${ruta}  no se pudo pedir la página: ${e.message}`);
+    fallas.push(`${ruta}: no se pudo pedir`);
+    continue;
+  }
 
-  const datos = JSON.parse(evalEn(LEER));
-  const malos = PROHIBIDO.filter(([aguja]) => datos.texto.toLowerCase().includes(aguja.toLowerCase()));
+  if (estado !== 200) {
+    console.log(`  FALLA ${ruta}  respondió ${estado}`);
+    fallas.push(`${ruta}: HTTP ${estado}`);
+    continue;
+  }
+
+  if (html.length < MINIMO) {
+    console.log(
+      `  FALLA ${ruta}  solo ${html.length} bytes (se esperaban ${MINIMO}): la página no llegó a renderizar, no se puede afirmar que esté limpia`,
+    );
+    fallas.push(`${ruta}: respuesta demasiado corta (${html.length} bytes)`);
+    continue;
+  }
+
+  const plano = html
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&[a-z]+;|&#\d+;/gi, " ")
+    .replace(/\s+/g, " ")
+    .toLowerCase();
+
+  // El HTML entero, en minúsculas, para buscar también dentro de los atributos.
+  const crudo = html.toLowerCase();
+
+  // La aguja va en minúscula como el texto: si no, nunca encuentra nada.
+  const malos = PROHIBIDO.filter(([aguja]) => {
+    const n = aguja.toLowerCase();
+    return plano.includes(n) || crudo.includes(n);
+  });
+
+  totalRevisado += plano.length;
+
   if (malos.length === 0) {
-    console.log(`  OK   ${ruta}  (${datos.texto.length} caracteres revisados)`);
+    console.log(`  OK   ${ruta}  (${plano.length} caracteres revisados, ${html.length} bytes)`);
   } else {
-    console.log(`  FALLA ${ruta}`);
+    console.log(`  FALLA ${ruta}  (${plano.length} caracteres revisados)`);
     for (const [aguja, motivo] of malos) {
-      console.log(`        "${aguja}" — ${motivo}`);
+      const enHead = crudo.indexOf(aguja) < crudo.indexOf("</head>");
+      console.log(`        "${aguja}" — ${motivo}${enHead ? "  [en el <head>]" : ""}`);
       fallas.push(`${ruta}: ${aguja}`);
     }
   }
 }
 
-console.log(`\n[copy] ${PAGINAS.length - new Set(fallas.map((f) => f.split(":")[0])).size}/${PAGINAS.length} páginas limpias`);
+const limpias = PAGINAS.length - new Set(fallas.map((f) => f.split(":")[0])).size;
+console.log(`\n[copy] ${limpias}/${PAGINAS.length} páginas limpias · ${totalRevisado} caracteres en total`);
 process.exit(fallas.length ? 1 : 0);

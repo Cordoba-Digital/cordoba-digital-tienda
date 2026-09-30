@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 import { resolveMedia, resolveSrcSet } from "@/lib/media";
 
@@ -53,11 +53,17 @@ export function ProductImg({
   const [failed, setFailed] = useState(!src);
   const [triedFallback, setTriedFallback] = useState(false);
 
-  useEffect(() => {
+  // Cuando React reutiliza el componente para otra foto (las galerías y las
+  // cards con segunda imagen al hover), hay que volver al estado inicial. Se
+  // ajusta durante el render y no en un efecto: llamar setState dentro de un
+  // efecto dispara un segundo render en cascada y eslint lo marca como error.
+  const [srcAnterior, setSrcAnterior] = useState(src);
+  if (srcAnterior !== src) {
+    setSrcAnterior(src);
     setCurrent(resolved || fallback);
     setFailed(!src);
     setTriedFallback(false);
-  }, [resolved, fallback, src]);
+  }
 
   if (failed || !current) {
     return <ProductPlaceholder />;

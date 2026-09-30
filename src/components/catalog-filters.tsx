@@ -91,7 +91,7 @@ export function ActiveFilters({
       <button
         type="button"
         onClick={() => router.push(basePath)}
-        className="text-xs font-semibold text-ink-400 underline-offset-2 hover:text-ink-700 hover:underline"
+        className="text-xs font-semibold text-ink-500 underline-offset-2 hover:text-ink-700 hover:underline"
       >
         Limpiar todo
       </button>
@@ -130,7 +130,7 @@ export function FiltersPanel({
   const body = (
     <div className="space-y-6">
       <div>
-        <h3 className="mb-2.5 text-xs font-bold uppercase tracking-wider text-ink-400">Categoría</h3>
+        <h3 className="mb-2.5 text-xs font-bold uppercase tracking-wider text-ink-500">Categoría</h3>
         <div className="space-y-1">
           <button
             type="button"
@@ -151,7 +151,8 @@ export function FiltersPanel({
                 <span>{c.icon}</span>
                 <span className="flex-1">{c.name}</span>
                 {typeof c.count === "number" ? (
-                  <span className="text-[11px] text-ink-300">{c.count}</span>
+                  // ink-300 daba 2,19:1 sobre fondo claro: ilegible a 11px.
+                  <span className="text-[11px] text-ink-500">{c.count}</span>
                 ) : null}
               </Link>
             ) : (
@@ -174,7 +175,7 @@ export function FiltersPanel({
       </div>
 
       <div>
-        <h3 className="mb-2.5 text-xs font-bold uppercase tracking-wider text-ink-400">Marca</h3>
+        <h3 className="mb-2.5 text-xs font-bold uppercase tracking-wider text-ink-500">Marca</h3>
         <div className="max-h-64 space-y-1 overflow-y-auto pr-1">
           {brands.map((b) => (
             <label
@@ -188,14 +189,14 @@ export function FiltersPanel({
                 className="h-4 w-4 rounded border-ink-300 text-brand-600 accent-brand-600"
               />
               <span className="flex-1">{b.brand}</span>
-              <span className="text-[11px] text-ink-300">{b.count}</span>
+              <span className="text-[11px] text-ink-500">{b.count}</span>
             </label>
           ))}
         </div>
       </div>
 
       <div>
-        <h3 className="mb-2.5 text-xs font-bold uppercase tracking-wider text-ink-400">Precio</h3>
+        <h3 className="mb-2.5 text-xs font-bold uppercase tracking-wider text-ink-500">Precio</h3>
         <div className="space-y-1">
           {PRICE_BUCKETS.map((bucket) => {
             const active = current.min === bucket.min && current.max === bucket.max;
@@ -219,14 +220,14 @@ export function FiltersPanel({
           })}
         </div>
         {current.min || current.max ? (
-          <p className="mt-2 text-[11px] text-ink-400">
+          <p className="mt-2 text-[11px] text-ink-500">
             Filtrando {current.min ? `desde ${money(current.min)}` : ""} {current.max ? `hasta ${money(current.max)}` : ""}
           </p>
         ) : null}
       </div>
 
       <div>
-        <h3 className="mb-2.5 text-xs font-bold uppercase tracking-wider text-ink-400">Beneficios</h3>
+        <h3 className="mb-2.5 text-xs font-bold uppercase tracking-wider text-ink-500">Beneficios</h3>
         <div className="space-y-1.5">
           {[
             { key: "ofertas", label: "🔥 Solo ofertas", active: current.ofertas },
@@ -273,7 +274,7 @@ export function FiltersPanel({
           <div className="absolute bottom-0 left-0 right-0 max-h-[85vh] animate-pop overflow-y-auto rounded-t-3xl bg-surface p-5">
             <div className="mb-4 flex items-center justify-between">
               <h2 className="text-lg font-extrabold">Filtros</h2>
-              <button type="button" onClick={() => setOpen(false)} className="text-2xl text-ink-400">
+              <button type="button" onClick={() => setOpen(false)} className="text-2xl text-ink-500">
                 ×
               </button>
             </div>
@@ -281,7 +282,7 @@ export function FiltersPanel({
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="mt-6 w-full rounded-xl bg-brand-600 px-4 py-3 text-sm font-bold text-white"
+              className="mt-6 w-full rounded-xl bg-brand-700 px-4 py-3 text-sm font-bold text-white"
             >
               Ver resultados
             </button>

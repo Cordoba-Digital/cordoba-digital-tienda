@@ -43,10 +43,10 @@ export function Pill({
     neutral: "bg-ink-100 text-ink-700",
     brand: "bg-brand-50 text-brand-700",
     success: "bg-emerald-50 text-emerald-700",
-    danger: "bg-rose-50 text-rose-600",
+    danger: "bg-rose-50 text-rose-700",
     amber: "bg-amber-50 text-amber-700",
     /** Sólido de marca: para pills que van sobre la foto del producto. */
-    brandSolid: "bg-brand-600 text-white",
+    brandSolid: "bg-brand-700 text-white",
     dark: "bg-deep text-white",
   };
   return (

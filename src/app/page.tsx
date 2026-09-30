@@ -114,7 +114,7 @@ export default async function HomePage() {
             >
               <span className="text-2xl transition group-hover:scale-110">{c.icon}</span>
               <span className="text-sm font-bold text-ink-900">{c.name}</span>
-              <span className="text-[11px] text-ink-400">{c.count} productos</span>
+              <span className="text-[11px] text-ink-500">{c.count} productos</span>
             </Link>
           ))}
         </div>
@@ -245,7 +245,7 @@ export default async function HomePage() {
                 href="https://maps.google.com/?q=27+de+Abril+259+C\u00f3rdoba+Argentina"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-700"
+                className="rounded-xl bg-brand-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-800"
               >
                 C\u00f3mo llegar
               </a>

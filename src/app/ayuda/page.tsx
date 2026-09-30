@@ -147,9 +147,7 @@ export default function HelpPage() {
                 <span>{section.icon}</span>
                 {section.title}
               </h2>
-              <div className="space-y-3">
-                <FaqAccordion items={section.items} />
-              </div>
+              <FaqAccordion items={section.items} />
             </section>
           ))}
         </div>
@@ -161,7 +159,7 @@ export default function HelpPage() {
               href="https://wa.me/5493516777774"
               target="_blank"
               rel="noreferrer"
-              className="block rounded-xl bg-emerald-500 px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-emerald-600"
+              className="block rounded-xl bg-emerald-700 px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-emerald-600"
             >
               WhatsApp · +54 351 677-7774
             </a>
@@ -179,7 +177,7 @@ export default function HelpPage() {
             </div>
             <Link
               href="/seguimiento"
-              className="block rounded-xl bg-brand-600 px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-brand-700"
+              className="block rounded-xl bg-brand-700 px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-brand-800"
             >
               Seguir mi pedido
             </Link>

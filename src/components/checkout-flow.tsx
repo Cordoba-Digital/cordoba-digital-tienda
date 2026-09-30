@@ -86,13 +86,13 @@ function Field({
       <span className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-ink-500">{label}</span>
       {children}
       {error ? <span className="mt-1 block text-xs font-semibold text-rose-600">{error}</span> : null}
-      {!error && hint ? <span className="mt-1 block text-[11px] text-ink-400">{hint}</span> : null}
+      {!error && hint ? <span className="mt-1 block text-[11px] text-ink-500">{hint}</span> : null}
     </label>
   );
 }
 
 const inputClass =
-  "h-11 w-full rounded-xl border border-ink-200 bg-surface px-3.5 text-sm text-ink-900 outline-none transition placeholder:text-ink-300 focus:border-brand-400 focus:ring-4 focus:ring-brand-100";
+  "h-11 w-full rounded-xl border border-ink-200 bg-surface px-3.5 text-sm text-ink-900 outline-none transition placeholder:text-ink-500 focus:border-brand-400 focus:ring-4 focus:ring-brand-100";
 
 export function CheckoutFlow() {
   const router = useRouter();
@@ -368,7 +368,7 @@ export function CheckoutFlow() {
           <span className="text-5xl">🧾</span>
           <h1 className="text-xl font-extrabold text-ink-900">No hay productos para pagar</h1>
           <p className="text-sm text-ink-500">Agregá productos al carrito y volvé para finalizar tu compra.</p>
-          <Link href="/productos" className="mt-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white">
+          <Link href="/productos" className="mt-2 rounded-xl bg-brand-700 px-5 py-3 text-sm font-bold text-white">
             Ir al catálogo
           </Link>
         </div>
@@ -437,7 +437,7 @@ export function CheckoutFlow() {
                   }`}
                 >
                   <p className="text-sm font-extrabold text-ink-900">🏬 Retiro en el local</p>
-                  <p className="mt-1 text-xs text-emerald-600">Gratis · 27 de Abril 259, Córdoba Capital</p>
+                  <p className="mt-1 text-xs text-emerald-700">Gratis · 27 de Abril 259, Córdoba Capital</p>
                 </button>
               </div>
 
@@ -468,7 +468,7 @@ export function CheckoutFlow() {
                           <Spinner className="h-4 w-4" /> Calculando envíos...
                         </span>
                       ) : zone ? (
-                        <span className="font-semibold text-emerald-600">📍 Zona: {zone}</span>
+                        <span className="font-semibold text-emerald-700">📍 Zona: {zone}</span>
                       ) : (
                         <span>Ingresá tu CP para ver costos y plazos.</span>
                       )}
@@ -493,9 +493,9 @@ export function CheckoutFlow() {
                             <span>
                               <span className="block text-sm font-bold text-ink-900">{option.label}</span>
                               <span className="block text-xs text-ink-500">{option.description}</span>
-                              <span className="mt-0.5 block text-xs font-semibold text-emerald-600">{option.eta}</span>
+                              <span className="mt-0.5 block text-xs font-semibold text-emerald-700">{option.eta}</span>
                             </span>
-                            <span className={`text-sm font-extrabold ${option.free ? "text-emerald-600" : "text-ink-900"}`}>
+                            <span className={`text-sm font-extrabold ${option.free ? "text-emerald-700" : "text-ink-900"}`}>
                               {option.free ? "Gratis" : money(option.cost)}
                             </span>
                           </button>
@@ -553,7 +553,7 @@ export function CheckoutFlow() {
                   />
                   <div className="min-w-0 flex-1">
                     <p className="line-clamp-1 text-xs font-semibold text-ink-800">{item.name}</p>
-                    <div className="mt-0.5 flex items-center gap-2 text-[11px] text-ink-400">
+                    <div className="mt-0.5 flex items-center gap-2 text-[11px] text-ink-500">
                       <button
                         type="button"
                         onClick={() => setQuantity(item.slug, item.quantity - 1)}
@@ -598,7 +598,7 @@ export function CheckoutFlow() {
                   placeholder="Cupón de descuento"
                   className="h-9 flex-1 rounded-lg border border-ink-200 px-2.5 text-xs uppercase outline-none focus:border-brand-400"
                 />
-                <button type="submit" className="rounded-lg bg-brand-600 px-3 text-xs font-bold text-white">
+                <button type="submit" className="rounded-lg bg-brand-700 px-3 text-xs font-bold text-white">
                   Aplicar
                 </button>
               </form>
@@ -611,7 +611,7 @@ export function CheckoutFlow() {
                 <dd>{money(totals.subtotal)}</dd>
               </div>
               {totals.couponDiscount > 0 ? (
-                <div className="flex justify-between text-emerald-600">
+                <div className="flex justify-between text-emerald-700">
                   <dt>Cupón {coupon?.code}</dt>
                   <dd>-{money(totals.couponDiscount)}</dd>
                 </div>
@@ -627,7 +627,7 @@ export function CheckoutFlow() {
               ) : null}
               <div className="flex justify-between text-ink-600">
                 <dt>Envío</dt>
-                <dd className={selectedOption?.free ? "font-semibold text-emerald-600" : ""}>
+                <dd className={selectedOption?.free ? "font-semibold text-emerald-700" : ""}>
                   {selectedOption ? (selectedOption.free ? "Gratis" : money(selectedOption.cost)) : "A calcular"}
                 </dd>
               </div>
@@ -638,7 +638,7 @@ export function CheckoutFlow() {
               <div className="text-right">
                 <span className="block text-2xl font-black text-ink-900">{money(totals.total)}</span>
                 {payment === "mercadopago" && installments > 1 ? (
-                  <span className="text-[11px] text-ink-400">
+                  <span className="text-[11px] text-ink-500">
                     {installments} cuotas de {money(totals.installmentAmount)}
                   </span>
                 ) : null}
