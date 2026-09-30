@@ -17,7 +17,6 @@ export function ProductGallery({
   badge,
 }: {
   images: string[];
-  /** Un srcset por entrada de `images`, en el mismo orden. */
   srcSets?: string[][];
   name: string;
   badge?: string | null;
@@ -25,73 +24,162 @@ export function ProductGallery({
   const [active, setActive] = useState(0);
   const [zoom, setZoom] = useState(false);
   const [origin, setOrigin] = useState("50% 50%");
+  const [lightbox, setLightbox] = useState(false);
   const list = images.length ? images : [""];
-  // Cada foto usa solo sus propias variantes. Con un srcset compartido entre
-  // todas, el navegador elegía una variante de otra foto y las miniaturas
-  // mostraban la misma imagen.
   const srcSetOf = (index: number): string[] => srcSets[index] ?? [];
 
+  const go = (delta: number) => {
+    setActive((current) => (current + delta + list.length) % list.length);
+  };
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setLightbox(false);
+      if (event.key === "ArrowRight") go(1);
+      if (event.key === "ArrowLeft") go(-1);
+    };
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [lightbox, list.length]);
+
   return (
-    <div className="flex flex-col-reverse items-center gap-3 sm:flex-row sm:items-start sm:justify-center">
-      <div className="no-scrollbar flex gap-2 overflow-x-auto sm:flex-col">
-        {list.map((image, index) => (
-          <button
-            key={`${image}-${index}`}
-            type="button"
-            onMouseEnter={() => setActive(index)}
-            onClick={() => setActive(index)}
-            aria-label={`Ver foto ${index + 1} de ${list.length}`}
-            aria-current={index === active}
-            className={`h-20 w-20 shrink-0 overflow-hidden rounded-xl border-2 bg-surface transition sm:h-24 sm:w-24 ${
-              index === active ? "border-brand-500" : "border-ink-100 hover:border-ink-300"
-            }`}
-          >
-            <ProductImg
-              src={image}
-              srcSet={srcSetOf(index)}
-              alt=""
-              sizes="96px"
-              width={128}
-              height={128}
-              className="h-full w-full object-contain p-1"
-            />
-          </button>
-        ))}
+    <>
+      <div className="flex flex-col-reverse items-center gap-3 sm:flex-row sm:items-start sm:justify-center">
+        <div className="no-scrollbar flex gap-2 overflow-x-auto sm:flex-col">
+          {list.map((image, index) => (
+            <button
+              key={`${image}-${index}`}
+              type="button"
+              onMouseEnter={() => setActive(index)}
+              onClick={() => setActive(index)}
+              aria-label={`Ver foto ${index + 1} de ${list.length}`}
+              aria-current={index === active}
+              className={`h-20 w-20 shrink-0 overflow-hidden rounded-xl border-2 bg-surface transition sm:h-24 sm:w-24 ${
+                index === active ? "border-brand-500" : "border-ink-100 hover:border-ink-300"
+              }`}
+            >
+              <ProductImg
+                src={image}
+                srcSet={srcSetOf(index)}
+                alt=""
+                sizes="96px"
+                width={128}
+                height={128}
+                className="h-full w-full object-contain p-1"
+              />
+            </button>
+          ))}
+        </div>
+
+        <div
+          className="relative aspect-square w-full max-w-[30rem] cursor-zoom-in overflow-hidden rounded-2xl border border-ink-100 bg-surface"
+          onMouseEnter={() => setZoom(true)}
+          onMouseLeave={() => setZoom(false)}
+          onMouseMove={(event) => {
+            const rect = event.currentTarget.getBoundingClientRect();
+            const x = ((event.clientX - rect.left) / rect.width) * 100;
+            const y = ((event.clientY - rect.top) / rect.height) * 100;
+            setOrigin(`${x}% ${y}%`);
+          }}
+          onClick={() => setLightbox(true)}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              setLightbox(true);
+            }
+          }}
+          role="button"
+          tabIndex={0}
+          aria-label={`Ampliar foto de ${name}`}
+        >
+          {badge ? (
+            <span className="absolute left-4 top-4 z-10 rounded-full bg-deep/85 px-3 py-1.5 text-[11px] font-bold text-white">
+              {badge}
+            </span>
+          ) : null}
+          <ProductImg
+            src={list[active]}
+            srcSet={srcSetOf(active)}
+            alt={name}
+            sizes="(max-width: 1024px) 100vw, 700px"
+            width={800}
+            height={800}
+            priority
+            className="pointer-events-none h-full w-full object-contain p-6 transition-transform duration-300"
+            style={{ transform: zoom && !lightbox ? "scale(1.8)" : "scale(1)", transformOrigin: origin }}
+          />
+          <span className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-deep/70 px-2.5 py-1 text-[11px] font-semibold text-white">
+            Ver grande
+          </span>
+        </div>
       </div>
 
-      {/* Marco acotado: las fotos de WooCommerce vienen en cualquier proporción
-          (muchas verticales) y con object-cover se recortaban. Con object-contain
-          se ve el producto entero, como en la ficha de Mercado Libre. */}
-      <div
-        className="relative aspect-square w-full max-w-[30rem] overflow-hidden rounded-2xl border border-ink-100 bg-surface"
-        onMouseEnter={() => setZoom(true)}
-        onMouseLeave={() => setZoom(false)}
-        onMouseMove={(event) => {
-          const rect = event.currentTarget.getBoundingClientRect();
-          const x = ((event.clientX - rect.left) / rect.width) * 100;
-          const y = ((event.clientY - rect.top) / rect.height) * 100;
-          setOrigin(`${x}% ${y}%`);
-        }}
-      >
-        {badge ? (
-          <span className="absolute left-4 top-4 z-10 rounded-full bg-deep/85 px-3 py-1.5 text-[11px] font-bold text-white">
-            {badge}
-          </span>
-        ) : null}
-        <ProductImg
-          src={list[active]}
-          srcSet={srcSetOf(active)}
-          alt={name}
-          sizes="(max-width: 1024px) 100vw, 700px"
-          width={800}
-          height={800}
-          priority
-          className="h-full w-full object-contain p-6 transition-transform duration-300"
-          // El zoom es una transformación CSS sobre la imagen elegida.
-          style={{ transform: zoom ? "scale(1.8)" : "scale(1)", transformOrigin: origin }}
-        />
-      </div>
-    </div>
+      {lightbox ? (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-ink-950/92 p-4"
+          onClick={() => setLightbox(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Galer\u00eda de ${name}`}
+        >
+          <button
+            type="button"
+            onClick={() => setLightbox(false)}
+            className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/10 text-lg text-white hover:bg-white/20"
+            aria-label="Cerrar"
+          >
+            \u00d7
+          </button>
+          {list.length > 1 ? (
+            <>
+              <button
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  go(-1);
+                }}
+                className="absolute left-3 grid h-11 w-11 place-items-center rounded-full bg-white/10 text-xl text-white hover:bg-white/20 sm:left-6"
+                aria-label="Foto anterior"
+              >
+                \u2039
+              </button>
+              <button
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  go(1);
+                }}
+                className="absolute right-3 grid h-11 w-11 place-items-center rounded-full bg-white/10 text-xl text-white hover:bg-white/20 sm:right-6"
+                aria-label="Foto siguiente"
+              >
+                \u203a
+              </button>
+            </>
+          ) : null}
+          <div className="max-h-[88vh] max-w-5xl" onClick={(event) => event.stopPropagation()}>
+            <ProductImg
+              src={list[active]}
+              srcSet={srcSetOf(active)}
+              alt={name}
+              sizes="90vw"
+              width={1200}
+              height={1200}
+              priority
+              className="max-h-[88vh] w-auto object-contain"
+            />
+            <p className="mt-3 text-center text-xs text-white/70">
+              {active + 1} / {list.length} \u00b7 Esc o click afuera para cerrar
+            </p>
+          </div>
+        </div>
+      ) : null}
+    </>
   );
 }
 
@@ -144,9 +232,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
       </div>
 
       <div className="rounded-xl border border-ink-100 p-3">
-        <label className="mb-1.5 block text-[11px] font-bold uppercase tracking-wide text-ink-400">
-          Simulá tus cuotas
-        </label>
+        <label className="mb-1.5 block text-[11px] font-bold uppercase tracking-wide text-ink-400">Simul\u00e1 tus cuotas</label>
         <select
           value={plan}
           onChange={(e) => setPlan(Number(e.target.value))}
@@ -162,7 +248,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
           {plan} x {money(installmentValue(product.price, plan))}
         </p>
         <p className="text-[11px] text-ink-400">
-          {plan <= 6 ? "Sin interés con todas las tarjetas" : "Plan de cuotas fijas con interés"}
+          {plan <= 6 ? "Sin inter\u00e9s con todas las tarjetas" : "Plan de cuotas fijas con inter\u00e9s"}
         </p>
       </div>
 
@@ -173,17 +259,12 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
 
       {product.stock > 0 ? (
         <p className="text-xs font-semibold text-emerald-600">
-          ✅ {product.stock <= 5 ? `¡Últimas ${product.stock} unidades!` : "Stock disponible para envío inmediato"}
+          \u2705 {product.stock <= 5 ? `\u00a1\u00daltimas ${product.stock} unidades!` : "Stock disponible para env\u00edo inmediato"}
         </p>
       ) : (
-        <p className="text-xs font-semibold text-rose-600">Sin stock — consultanos por reposición</p>
+        <p className="text-xs font-semibold text-rose-600">Sin stock \u2014 consultanos por reposici\u00f3n</p>
       )}
 
-      {/* Un solo botón, como en el sitio original: "Comprar" suma el producto y
-          lleva al carrito. Antes había un "Comprar ahora" naranja y gigante que
-          saltaba directo al checkout, lo que hacía creer que la compra ya venía
-          decidida y además escondía el medio de pago detrás de un wizard de 3
-          pasos. El original va al carrito y ahí se elige cómo pagar. */}
       <div className="space-y-2">
         <button
           type="button"
@@ -196,6 +277,14 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         >
           Comprar
         </button>
+        <button
+          type="button"
+          disabled={product.stock === 0}
+          onClick={() => addItem(payload, quantity)}
+          className="w-full rounded-xl border border-ink-200 bg-surface px-4 py-3 text-sm font-bold text-ink-800 transition hover:border-brand-400 hover:text-brand-700 disabled:opacity-40"
+        >
+          Agregar al carrito
+        </button>
         <div className="flex gap-2">
           <button
             type="button"
@@ -204,7 +293,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
               fav ? "border-rose-200 bg-rose-50 text-rose-600" : "border-ink-200 text-ink-600 hover:text-rose-500"
             }`}
           >
-            {fav ? "♥ En favoritos" : "♡ Guardar"}
+            {fav ? "\u2665 En favoritos" : "\u2661 Guardar"}
           </button>
           <a
             href={`https://wa.me/5493516777774?text=${encodeURIComponent(`Hola! Quiero consultar por ${product.name}`)}`}
@@ -217,15 +306,11 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         </div>
       </div>
 
-      {/* Avisos del local. Cada dato sale de la política de garantía o de los
-          datos estructurados del sitio original. Se sacaron "10 días para
-          cambios sin cargo", "retiro en 2 hs" y el "envío gratis desde
-          $250.000" porque no figuran en ningún lado del sitio viejo. */}
       <ul className="space-y-2 border-t border-ink-100 pt-4 text-xs text-ink-600">
-        <li className="flex items-center gap-2">🛡️ {product.warrantyMonths} meses de garantía legal</li>
-        <li className="flex items-center gap-2">🔧 Servicio técnico propio en el local</li>
-        <li className="flex items-center gap-2">🧾 Factura o comprobante de compra</li>
-        <li className="flex items-center gap-2">🏬 Retiro en 27 de Abril 259, Córdoba Capital</li>
+        <li className="flex items-center gap-2">\ud83d\udee1\ufe0f {product.warrantyMonths} meses de garant\u00eda legal</li>
+        <li className="flex items-center gap-2">\ud83d\udd27 Servicio t\u00e9cnico propio en el local</li>
+        <li className="flex items-center gap-2">\ud83e\uddfd Factura o comprobante de compra</li>
+        <li className="flex items-center gap-2">\ud83c\udfec Retiro en 27 de Abril 259, C\u00f3rdoba Capital</li>
       </ul>
       <p className="text-[10px] text-ink-300">SKU {product.sku}</p>
     </div>
@@ -261,7 +346,7 @@ export function MobileBuyBar({ product }: { product: BuyBoxProduct }) {
             onClick={() => addItem(payload, 1)}
             className="grid h-11 w-11 place-items-center rounded-xl border border-ink-200 text-lg disabled:opacity-40"
           >
-            🛒
+            \ud83d\uded2
           </button>
           <button
             type="button"
@@ -298,13 +383,13 @@ export function ShippingCalculator({ price }: { price: number }) {
       });
       const data = await res.json();
       if (!res.ok || !data.ok) {
-        setError(data.error ?? "No pudimos calcular el envío.");
+        setError(data.error ?? "No pudimos calcular el env\u00edo.");
         setResult(null);
       } else {
         setResult({ zone: data.zone, options: data.options });
       }
     } catch {
-      setError("No pudimos calcular el envío. Probá de nuevo.");
+      setError("No pudimos calcular el env\u00edo. Prob\u00e1 de nuevo.");
     } finally {
       setLoading(false);
     }
@@ -312,8 +397,8 @@ export function ShippingCalculator({ price }: { price: number }) {
 
   return (
     <div className="card-surface p-5">
-      <h3 className="text-sm font-extrabold text-ink-900">📍 Calculá el costo de envío</h3>
-      <p className="mt-1 text-xs text-ink-500">Ingresá tu código postal y te mostramos las opciones disponibles.</p>
+      <h3 className="text-sm font-extrabold text-ink-900">\ud83d\udccd Calcul\u00e1 el costo de env\u00edo</h3>
+      <p className="mt-1 text-xs text-ink-500">Ingres\u00e1 tu c\u00f3digo postal y te mostramos las opciones disponibles.</p>
       <form onSubmit={quote} className="mt-3 flex gap-2">
         <input
           value={zip}
@@ -369,7 +454,7 @@ export function ReviewForm({ slug }: { slug: string }) {
         onClick={() => setOpen(true)}
         className="rounded-xl border border-ink-200 bg-surface px-4 py-2.5 text-sm font-bold text-ink-700 transition hover:border-brand-300 hover:text-brand-700"
       >
-        Escribir una opinión
+        Escribir una opini\u00f3n
       </button>
     );
   }
@@ -377,7 +462,7 @@ export function ReviewForm({ slug }: { slug: string }) {
   if (state === "done") {
     return (
       <div className="rounded-xl bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-700">
-        ¡Gracias por tu opinión! Ya está publicada.
+        \u00a1Gracias por tu opini\u00f3n! Ya est\u00e1 publicada.
       </div>
     );
   }
@@ -415,7 +500,7 @@ export function ReviewForm({ slug }: { slug: string }) {
             className={`text-xl transition ${value <= rating ? "text-amber-400" : "text-ink-200"}`}
             aria-label={`${value} estrellas`}
           >
-            ★
+            \u2605
           </button>
         ))}
       </div>
@@ -429,7 +514,7 @@ export function ReviewForm({ slug }: { slug: string }) {
         <input
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          placeholder="Título (opcional)"
+          placeholder="T\u00edtulo (opcional)"
           className="h-10 rounded-xl border border-ink-200 px-3 text-sm outline-none focus:border-brand-400"
         />
       </div>
@@ -441,7 +526,7 @@ export function ReviewForm({ slug }: { slug: string }) {
         className="w-full rounded-xl border border-ink-200 p-3 text-sm outline-none focus:border-brand-400"
       />
       {state === "error" ? (
-        <p className="text-xs font-semibold text-rose-600">Completá tu nombre y una opinión de al menos 10 caracteres.</p>
+        <p className="text-xs font-semibold text-rose-600">Complet\u00e1 tu nombre y una opini\u00f3n de al menos 10 caracteres.</p>
       ) : null}
       <div className="flex gap-2">
         <button
@@ -449,7 +534,7 @@ export function ReviewForm({ slug }: { slug: string }) {
           disabled={state === "loading"}
           className="rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700 disabled:opacity-60"
         >
-          {state === "loading" ? "Publicando..." : "Publicar opinión"}
+          {state === "loading" ? "Publicando..." : "Publicar opini\u00f3n"}
         </button>
         <button
           type="button"
@@ -474,14 +559,12 @@ export function RatingSummary({
 }) {
   const value = rating / 10;
 
-  // La distribución se calcula con las opiniones reales: sin datos no se
-  // inventan porcentajes.
   if (count === 0 || reviews.length === 0) {
     return (
       <p className="rounded-xl bg-ink-50 px-4 py-3 text-sm text-ink-500">
-        Todavía no hay opiniones de este producto. Si lo compraste,{" "}
+        Todav\u00eda no hay opiniones de este producto. Si lo compraste,{" "}
         <a href="#opiniones" className="font-semibold text-brand-700 underline underline-offset-2">
-          dejá la tuya
+          dej\u00e1 la tuya
         </a>
         .
       </p>
@@ -498,17 +581,19 @@ export function RatingSummary({
     <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
       <div className="text-center sm:w-40">
         <p className="text-4xl font-black text-ink-900">{value.toFixed(1)}</p>
-        <Stars rating={rating} size="md" />
-        <p className="mt-1 text-xs text-ink-400">{count} opiniones</p>
+        <div className="mt-1 flex justify-center">
+          <Stars rating={rating} />
+        </div>
+        <p className="mt-1 text-xs text-ink-500">{count} opiniones</p>
       </div>
       <div className="flex-1 space-y-1.5">
         {distribution.map((row) => (
-          <div key={row.star} className="flex items-center gap-2 text-xs text-ink-500">
-            <span className="w-8">{row.star}★</span>
-            <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-ink-100">
+          <div key={row.star} className="flex items-center gap-2 text-xs">
+            <span className="w-6 text-ink-500">{row.star}\u2605</span>
+            <div className="h-2 flex-1 overflow-hidden rounded-full bg-ink-100">
               <div className="h-full rounded-full bg-amber-400" style={{ width: `${row.percent}%` }} />
             </div>
-            <span className="w-8 text-right">{row.percent}%</span>
+            <span className="w-8 text-right text-ink-400">{row.percent}%</span>
           </div>
         ))}
       </div>

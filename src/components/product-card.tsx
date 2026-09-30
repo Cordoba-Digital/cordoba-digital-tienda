@@ -2,50 +2,76 @@
 
 import Link from "next/link";
 
-import { ProductImg } from "@/components/product-img";
+import { ProductImg, ProductPlaceholder } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
-import { Pill, Stars } from "@/components/ui";
+import { Stars } from "@/components/ui";
 import { discountPercent, installmentValue, money } from "@/lib/format";
 import type { ProductView } from "@/lib/product-view";
 
 export function ProductCard({ product }: { product: ProductView }) {
-  const { toggleFavorite, isFavorite, hydrated } = useStore();
+  const { toggleFavorite, isFavorite, hydrated, addItem } = useStore();
   const off = discountPercent(product.price, product.compareAtPrice);
   const fav = hydrated && isFavorite(product.slug);
   const outOfStock = product.stock === 0;
+  const hoverSrc = product.images[1] && product.images[1] !== product.image ? product.images[1] : null;
+
+  const addToCart = (event: React.MouseEvent) => {
+    event.preventDefault();
+    event.stopPropagation();
+    if (outOfStock) return;
+    addItem({
+      slug: product.slug,
+      name: product.name,
+      brand: product.brand,
+      image: product.image,
+      imageSrcSet: product.imageSrcSets[0],
+      price: product.price,
+      compareAtPrice: product.compareAtPrice,
+      stock: product.stock,
+      freeShipping: product.freeShipping,
+    });
+  };
 
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-ink-200 bg-surface transition hover:border-brand-300 hover:shadow-md">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-ink-100 bg-surface shadow-[0_1px_2px_rgba(10,18,38,0.04)] transition duration-200 hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-lg">
       <div className="relative">
-        <Link
-          href={`/producto/${product.slug}`}
-          className="block aspect-square overflow-hidden bg-surface p-4"
-          tabIndex={-1}
-          aria-hidden
-        >
+        <Link href={`/producto/${product.slug}`} className="relative block aspect-square overflow-hidden bg-ink-50 p-5">
           {product.image ? (
-            <ProductImg
-              src={product.image}
-              srcSet={product.imageSrcSets[0]}
-              alt=""
-              sizes="(max-width: 640px) 50vw, (max-width: 1280px) 33vw, 25vw"
-              width={400}
-              height={400}
-              className="h-full w-full object-contain transition duration-300 group-hover:scale-105"
-            />
+            <>
+              <ProductImg
+                src={product.image}
+                srcSet={product.imageSrcSets[0]}
+                alt={product.name}
+                sizes="(max-width: 640px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                width={400}
+                height={400}
+                className={`h-full w-full object-contain transition duration-300 group-hover:scale-105 ${hoverSrc ? "group-hover:opacity-0" : ""}`}
+              />
+              {hoverSrc ? (
+                <div className="absolute inset-5 opacity-0 transition duration-300 group-hover:opacity-100">
+                  <ProductImg
+                    src={hoverSrc}
+                    srcSet={product.imageSrcSets[1]}
+                    alt=""
+                    sizes="(max-width: 640px) 50vw, 25vw"
+                    width={400}
+                    height={400}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              ) : null}
+            </>
           ) : (
-            <div className="flex h-full items-center justify-center text-4xl">📦</div>
+            <ProductPlaceholder />
           )}
         </Link>
 
-        {/* Descuento abajo a la izquierda de la foto, como en Mercado Libre. */}
-        <div className="pointer-events-none absolute bottom-0 left-0 flex flex-col items-start gap-1 p-2">
+        <div className="pointer-events-none absolute bottom-3 left-3 flex flex-col items-start gap-1">
           {off > 0 ? (
-            <span className="rounded-sm bg-rose-500 px-2 py-0.5 text-[11px] font-bold text-white">
-              -{off}%
-            </span>
+            <span className="rounded-md bg-rose-500 px-2 py-0.5 text-[11px] font-bold text-white shadow-sm">{off}% OFF</span>
+          ) : product.badge ? (
+            <span className="rounded-md bg-brand-600 px-2 py-0.5 text-[11px] font-bold text-white shadow-sm">{product.badge}</span>
           ) : null}
-          {off <= 0 && product.badge ? <Pill tone="brandSolid">{product.badge}</Pill> : null}
         </div>
 
         {outOfStock ? (
@@ -58,37 +84,28 @@ export function ProductCard({ product }: { product: ProductView }) {
           type="button"
           onClick={() => toggleFavorite(product.slug)}
           aria-label={fav ? "Quitar de favoritos" : "Guardar en favoritos"}
-          className={`absolute right-3 top-3 grid h-8 w-8 place-items-center rounded-full border bg-surface/90 backdrop-blur transition ${
+          className={`absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border bg-surface/90 shadow-sm backdrop-blur transition ${
             fav ? "border-rose-200 text-rose-500" : "border-ink-200 text-ink-400 hover:text-rose-500"
           }`}
         >
-          <svg
-            viewBox="0 0 24 24"
-            className="h-4 w-4"
-            fill={fav ? "currentColor" : "none"}
-            stroke="currentColor"
-            strokeWidth="2"
-          >
+          <svg viewBox="0 0 24 24" className="h-4 w-4" fill={fav ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2">
             <path d="M12 21s-7.5-4.6-9.5-9A5.5 5.5 0 0112 5.5 5.5 5.5 0 0121.5 12c-2 4.4-9.5 9-9.5 9z" />
           </svg>
         </button>
       </div>
 
-      <div className="flex flex-1 flex-col p-3">
+      <div className="flex flex-1 flex-col px-3.5 pb-3.5 pt-1">
+        {product.brand && product.brand !== "General" ? (
+          <p className="text-[11px] font-semibold uppercase tracking-wide text-ink-400">{product.brand}</p>
+        ) : null}
+
         <Link
           href={`/producto/${product.slug}`}
-          className="line-clamp-2 text-[13px] leading-snug text-ink-800 hover:text-brand-700"
+          className="mt-0.5 line-clamp-2 text-[13px] font-medium leading-snug text-ink-800 hover:text-brand-700"
         >
           {product.name}
         </Link>
 
-        {product.brand && product.brand !== "General" ? (
-          <p className="mt-1.5 text-[11px] font-medium uppercase tracking-wide text-ink-400">
-            {product.brand}
-          </p>
-        ) : null}
-
-        {/* Solo si hay datos reales: WooCommerce no tiene ratings por producto. */}
         {product.reviewCount > 0 ? (
           <div className="mt-1.5 flex items-center gap-1.5 text-[11px] text-ink-500">
             <Stars rating={product.rating} />
@@ -101,32 +118,27 @@ export function ProductCard({ product }: { product: ProductView }) {
           {product.compareAtPrice ? (
             <p className="text-[11px] text-ink-400 line-through">{money(product.compareAtPrice)}</p>
           ) : null}
-          <div className="flex flex-wrap items-baseline gap-1.5">
-            <p className="text-xl font-light tracking-tight text-ink-900">{money(product.price)}</p>
-            {off > 0 ? (
-              <span className="rounded-sm bg-emerald-600 px-1.5 py-0.5 text-[11px] font-bold text-white">
-                {off}% OFF
-              </span>
-            ) : null}
-          </div>
-          <p className="mt-1 text-[11px] text-ink-500">
+          <p className="text-[1.35rem] font-semibold leading-none tracking-tight text-ink-900">{money(product.price)}</p>
+          <p className="mt-1.5 text-[11px] font-medium text-emerald-700">
             6 cuotas de {money(installmentValue(product.price, 6))}
           </p>
         </div>
 
-        <div className="mt-auto pt-3">
+        <div className="mt-auto flex gap-2 pt-3">
           <Link
             href={`/producto/${product.slug}`}
-            className={`block w-full rounded-md border py-2.5 text-center text-sm font-semibold transition ${
-              // Fondo blanco con borde y texto oscuro: si solo se whiteara el
-              // fondo, el texto blanco quedaría invisible sobre la tarjeta blanca.
-              outOfStock
-                ? "border-dashed border-ink-200 bg-surface text-ink-400"
-                : "border-ink-200 bg-white text-ink-800 hover:border-brand-400 hover:bg-brand-50 hover:text-brand-700"
-            }`}
+            className="flex-1 rounded-xl border border-ink-200 bg-surface py-2.5 text-center text-sm font-semibold text-ink-800 transition hover:border-brand-400 hover:text-brand-700"
           >
-            {outOfStock ? "Sin stock" : "Ver más"}
+            Ver
           </Link>
+          <button
+            type="button"
+            disabled={outOfStock}
+            onClick={addToCart}
+            className="flex-1 rounded-xl bg-brand-600 py-2.5 text-sm font-bold text-white transition hover:bg-brand-700 disabled:cursor-not-allowed disabled:bg-ink-200 disabled:text-ink-400"
+          >
+            {outOfStock ? "Sin stock" : "Agregar"}
+          </button>
         </div>
       </div>
     </article>

@@ -1,5 +1,7 @@
 import type { Product } from "@/db/schema";
 
+import { resolveMedia, resolveSrcSet } from "@/lib/media";
+
 export type ProductView = {
   slug: string;
   name: string;
@@ -22,6 +24,7 @@ export type ProductView = {
 };
 
 export function toView(product: Product): ProductView {
+  const images = (product.images ?? []).map((url) => resolveMedia(url));
   return {
     slug: product.slug,
     name: product.name,
@@ -34,9 +37,9 @@ export function toView(product: Product): ProductView {
     rating: product.rating,
     reviewCount: product.reviewCount,
     soldCount: product.soldCount,
-    image: product.images?.[0] ?? "",
-    images: product.images ?? [],
-    imageSrcSets: product.imageSrcSets ?? [],
+    image: images[0] ?? "",
+    images,
+    imageSrcSets: (product.imageSrcSets ?? []).map((set) => resolveSrcSet(set)),
     badge: product.badge ?? null,
     freeShipping: product.freeShipping,
     highlights: product.highlights ?? [],

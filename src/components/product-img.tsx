@@ -1,28 +1,35 @@
-/**
- * Imagen de producto con `srcset`.
- *
- * El optimizador de imágenes de Vercel está bloqueado en este proyecto
- * (`unoptimized: true` en `next.config.ts`), así que `<Image>` sirve el archivo
- * original. Como WooCommerce publica variantes de 100w a 1536w, usamos
- * `srcset` a mano: el navegador descarga la que corresponde al ancho real de
- * pantalla (≈441w en las tarjetas, ≈800w en la ficha) en vez de los 1,3 MB del
- * original.
- */
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+
+import { resolveMedia, resolveSrcSet } from "@/lib/media";
 
 type Props = {
-  /** URL principal (generalmente la variante de 800w). */
   src: string;
-  /** Variantes adicionales, en formato `url 300w`. */
   srcSet?: string[];
   alt: string;
   sizes: string;
   className?: string;
-  /** Para que el navegador no descargue la imagen si está fuera de pantalla. */
   priority?: boolean;
   width?: number;
   height?: number;
   style?: React.CSSProperties;
 };
+
+export function ProductPlaceholder({ className = "" }: { className?: string }) {
+  return (
+    <div
+      className={`grid h-full w-full place-items-center bg-gradient-to-br from-ink-50 to-ink-100 ${className}`}
+      aria-hidden
+    >
+      <svg viewBox="0 0 64 64" className="h-12 w-12 text-ink-300" fill="none">
+        <rect x="8" y="14" width="48" height="36" rx="6" stroke="currentColor" strokeWidth="2" />
+        <circle cx="22" cy="28" r="4" stroke="currentColor" strokeWidth="2" />
+        <path d="M14 44l12-12 8 8 6-6 10 10" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      </svg>
+    </div>
+  );
+}
 
 export function ProductImg({
   src,
@@ -35,26 +42,52 @@ export function ProductImg({
   height,
   style,
 }: Props) {
-  /* eslint-disable @next/next/no-img-element -- `next/image` no sirve: con el
-     optimizador bloqueado en Vercel habría que subir 1,3 MB por foto, y no
-     soporta el `srcset` que publica WooCommerce.
+  const resolved = useMemo(() => resolveMedia(src), [src]);
+  const resolvedSet = useMemo(() => resolveSrcSet(srcSet), [srcSet]);
+  const fallback = useMemo(() => {
+    if (!src || src === resolved) return "";
+    return src;
+  }, [src, resolved]);
 
-     Ojo: el atributo va en minúsculas a propósito y con un cast de tipos. Con
-     `srcSet` (la forma que typescript conoce) React lo emite tal cual en el
-     HTML y el navegador nunca llega a activar el srcset. */
-  const srcsetProp = { srcset: srcSet.length ? srcSet.join(", ") : undefined } as Record<string, unknown>;
+  const [current, setCurrent] = useState(resolved || fallback);
+  const [failed, setFailed] = useState(!src);
+  const [triedFallback, setTriedFallback] = useState(false);
+
+  useEffect(() => {
+    setCurrent(resolved || fallback);
+    setFailed(!src);
+    setTriedFallback(false);
+  }, [resolved, fallback, src]);
+
+  if (failed || !current) {
+    return <ProductPlaceholder />;
+  }
+
+  const srcsetProp = {
+    srcset: resolvedSet.length && current === resolved ? resolvedSet.join(", ") : undefined,
+  } as Record<string, unknown>;
 
   return (
+    // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={src}
-      sizes={srcSet.length ? sizes : undefined}
+      src={current}
+      sizes={resolvedSet.length ? sizes : undefined}
       alt={alt}
       width={width}
       height={height}
       loading={priority ? "eager" : "lazy"}
       decoding="async"
+      referrerPolicy="no-referrer"
       className={className}
       style={style}
+      onError={() => {
+        if (!triedFallback && fallback && fallback !== current) {
+          setTriedFallback(true);
+          setCurrent(fallback);
+          return;
+        }
+        setFailed(true);
+      }}
       {...srcsetProp}
     />
   );
