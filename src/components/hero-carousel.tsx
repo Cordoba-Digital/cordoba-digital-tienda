@@ -30,7 +30,7 @@ export type HeroSlide = {
   } | null;
 };
 
-const INTERVAL_MS = 5000;
+const INTERVAL_MS = 3000;
 
 export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
   const { addItem } = useStore();
@@ -65,7 +65,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
     if (paused || reduceMotion || count < 2) return;
     const timer = setInterval(() => setIndex((i) => (i + 1) % count), INTERVAL_MS);
     return () => clearInterval(timer);
-  }, [paused, reduceMotion, count]);
+  }, [paused, reduceMotion, count, index]);
 
   return (
     <section
@@ -110,7 +110,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
       }}
     >
       <div
-        className="flex transition-transform duration-500 ease-out motion-reduce:transition-none"
+        className="flex transition-transform duration-300 ease-out motion-reduce:transition-none"
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
         {slides.map((slide, i) => {
