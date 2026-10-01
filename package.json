@@ -14,8 +14,6 @@
     "verify:wp": "tsx scripts/verify-catalog.ts",
     "audit:site": "tsx scripts/audit-site.ts",
     "check:encoding": "node scripts/check-accents.mjs",
-    "check:dark": "node scripts/check-dark-css.mjs && node scripts/check-dark-contrast.mjs",
-    "audit:dark": "node scripts/audit-dark-contrast.mjs && node scripts/audit-dark-residue.mjs",
     "reviews:check": "tsx scripts/check-google-reviews.ts",
     "fix:encoding": "node scripts/fix-encoding.mjs",
     "images:migrate": "tsx scripts/migrate-images.ts",
@@ -39,6 +37,7 @@
   "dependencies": {
     "dotenv": "17.3.1",
     "drizzle-orm": "0.45.2",
+    "lucide-react": "^1.49.0",
     "mercadopago": "^3.6.1",
     "next": "16.2.6",
     "pg": "8.20.0",

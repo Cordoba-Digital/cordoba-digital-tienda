@@ -3,15 +3,21 @@ import type { ProductView } from "@/lib/product-view";
 
 const fmt = new Intl.NumberFormat("es-AR");
 
+// La tarjeta del hero muestra marca, precio tachado y un botón "Agregar" que
+// suma al carrito de verdad, así que el producto entra completo: los campos
+// vienen todos de `ProductView` y no hay que inventar nada.
 function pick(p: ProductView | null): HeroSlide["product"] {
   if (!p?.image) return null;
   return {
     slug: p.slug,
     name: p.name,
+    brand: p.brand,
     image: p.image,
     srcSet: p.imageSrcSets[0],
     price: p.price,
     compareAtPrice: p.compareAtPrice,
+    stock: p.stock,
+    freeShipping: p.freeShipping,
   };
 }
 

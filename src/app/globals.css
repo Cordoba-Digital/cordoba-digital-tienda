@@ -1,43 +1,50 @@
 @import "tailwindcss";
 
-/* La variante `dark:` sigue por defecto a la preferencia del sistema. Como el
-   eleccion la hace el visitante con el boton del encabezado, hay que atarla a la
-   clase que escribe el script del layout: si no, el boton y el CSS contarian
-   historias distintas en una maquina que este en oscuro sin haberlo pedido. */
-@custom-variant dark (&:where(.dark, .dark *));
-
+/*
+ * Paleta y tipografia de la referencia: fondo papel calido, texto casi negro y
+ * una sola rampa de grises calidos. Los numeros conservan el significado que ya
+ * tenia el codigo (ink-50 = fondo, ink-100 = borde, ink-900 = texto) asi que el
+ * resto del sitio no cambia de reglas, solo de tono.
+ */
 @theme {
-  --color-ink-50: #f5f7fb;
-  --color-ink-100: #e8ecf6;
-  --color-ink-200: #cbd5e9;
-  --color-ink-300: #9fb0d0;
-  --color-ink-400: #6b7fa6;
-  --color-ink-500: #465a82;
-  --color-ink-600: #2f4166;
-  --color-ink-700: #1d2c4c;
-  --color-ink-800: #121e38;
-  --color-ink-900: #0a1226;
-  --color-ink-950: #050a18;
+  /* Tinta del texto principal y fondo de las secciones oscuras. Es el mismo
+     valor que `ink-900`: existe como nombre corto para poder decir `bg-ink`
+     sin repetir el numero. */
+  --color-ink: #14161c;
 
-  /* Superficie de tarjetas, paneles, formularios y el encabezado. Reemplaza al
-     `bg-white` literal en todo el sitio, asi el tema oscuro no deja cajas
-     blancas pegadas sobre el fondo oscuro. */
+  --color-ink-50: #f4f1eb;
+  --color-ink-100: #e7e2da;
+  --color-ink-200: #d8d1c4;
+  /* Los grises calidos se reparten por uso, no por numero: `ink-300` es el tono
+     decorativo (bordes, iconos) y no llega a 4,5:1, asi que no puede llevar
+     texto chico. Desde `ink-400` para arriba todos pasan AA sobre el papel y
+     sobre una tarjeta blanca, que es lo que allows el texto del sitio. */
+  --color-ink-300: #b0a695;
+  --color-ink-400: #6f6759;
+  --color-ink-500: #574f45;
+  --color-ink-600: #443e37;
+  --color-ink-700: #36302a;
+  --color-ink-800: #26221c;
+  --color-ink-900: #14161c;
+  --color-ink-950: #0a0b0e;
+
+  /* Tarjetas, paneles y formularios sobre el papel calido. */
   --color-surface: #ffffff;
 
-  /* Fondos que tienen que seguir oscuros en los dos temas: boton "Ver mas",
-     contador de ofertas, distintivos sobre la foto y el logo sobre pastilla. */
-  --color-deep: #0a1226;
+  /* Fondos que tienen que seguir oscuros siempre: boton "Ver mas", contador de
+     ofertas, distintivos sobre la foto y el logo sobre pastilla. */
+  --color-deep: #14161c;
 
-  /* Naranja Córdoba Digital. `brand-500` es el color de marca (#ff6600) y se
-     usa solo para acentos: sobre blanco da 2,9:1 y no cumple WCAG para texto.
-     Para links y botones con etiqueta blanca va `brand-700` (#c2410c, 5,2:1). */
-  --color-brand-50: #fff4ed;
-  --color-brand-100: #ffe6d5;
-  --color-brand-200: #ffc9a8;
-  --color-brand-300: #ffa371;
-  --color-brand-400: #ff7a33;
-  --color-brand-500: #ff6600;
-  --color-brand-600: #e8590c;
+  /* Naranja Córdoba Digital. `brand-500` es el color de marca y se usa solo para
+     acentos: sobre blanco da menos de 4,5:1 y no cumple WCAG para texto. Para
+     links y botones con etiqueta blanca va `brand-700`. */
+  --color-brand-50: #fff1ea;
+  --color-brand-100: #ffe0d0;
+  --color-brand-200: #ffc0a0;
+  --color-brand-300: #ff9a63;
+  --color-brand-400: #f97316;
+  --color-brand-500: #f15a24;
+  --color-brand-600: #d9480f;
   --color-brand-700: #c2410c;
   --color-brand-800: #9a2b06;
   --color-brand-900: #7a2305;
@@ -48,7 +55,7 @@
   --color-neon-500: #f59e0b;
   --color-neon-600: #d97706;
 
-  --font-sans: var(--font-geist, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif);
+  --font-sans: var(--font-jakarta, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif);
 
   --animate-marquee: marquee 38s linear infinite;
   --animate-float-slow: float-slow 9s ease-in-out infinite;
@@ -119,74 +126,6 @@
   }
 }
 
-/* ---------------------------------------------------------------- Modo oscuro
-
-   Tailwind v4 compila cada utilidad de color a `var(--color-<nombre>)`, asi que
-   basta con repuntar las variables dentro de `html.dark` para que las ~250
-   utilidades de grises que ya usa el sitio se inviertan solas. Solo hay que
-   escribir el bloque con especificidad de elemento: `:root` (que emite `@theme`)
-   y `.dark` se aplican al mismo `<html>` y con la misma especificidad, asi que
-   sin `html.` gana el que aparezca primero en la hoja. */
-html.dark {
-  color-scheme: dark;
-
-  /* Escala de grises invertida: en oscuro los numeros altos son los claros,
-     que es lo que espera el codigo existente (`text-ink-900` = texto principal,
-     `bg-ink-50` = fondo de pagina, `border-ink-100` = borde sutil). */
-  --color-ink-50: #070c18;
-  --color-ink-100: #101828;
-  --color-ink-200: #182138;
-  --color-ink-300: #26314b;
-  --color-ink-400: #7b8caf;
-  --color-ink-500: #94a3bd;
-  --color-ink-600: #b3bfd2;
-  --color-ink-700: #ccd5e3;
-  --color-ink-800: #e0e7f1;
-  --color-ink-900: #f3f6fb;
-  --color-ink-950: #ffffff;
-
-  /* Tarjetas y paneles. Un punto mas claro que el fondo para que la grilla se
-     lea, y con `border-ink-100` alcanza el mismo tono. */
-  --color-surface: #101828;
-
-  /* Naranja: los tonos claros pasan a oscuros (los usan de fondo en chips
-     apagados) y los oscuros a claros, porque `brand-700` esta usado como color
-     de texto y sobre fondo oscuro no llegaria a 4,5:1. `brand-500` y
-     `brand-600` no se tocan: son el color de marca y el fondo de los botones
-     con etiqueta blanca, y aclararlos leeria peor. */
-  --color-brand-50: #2a1408;
-  --color-brand-100: #3d1d0b;
-  --color-brand-200: #5c2c0f;
-  --color-brand-300: #7c3a12;
-  --color-brand-400: #9a4a17;
-  --color-brand-700: #ffb185;
-  --color-brand-800: #ffcdb1;
-  --color-brand-900: #ffe6d5;
-
-  --color-neon-400: #ffc45c;
-
-  /* Estados. Los tonos 50/100/200 son Pasteles que se usan de fondo (aviso de
-     stock, error de pago, "listo para retirar") y los 600/700/800 son el texto
-     que va sobre ellos. Se invierten los dos lados a la vez, porque si solo
-     cambiara el fondo el texto oscuro se quedaria ilegible sobre el pastel. */
-  --color-emerald-50: #06281c;
-  --color-emerald-100: #0a3d2a;
-  --color-emerald-200: #14563c;
-  --color-emerald-600: #34d399;
-  --color-emerald-700: #6ee7b7;
-  --color-emerald-800: #a7f3d0;
-  --color-rose-50: #33111a;
-  --color-rose-100: #4a1724;
-  --color-rose-200: #6b2133;
-  --color-rose-600: #fb7185;
-  --color-rose-700: #fda4af;
-  --color-amber-50: #2e2005;
-  --color-amber-100: #452e08;
-  --color-amber-200: #6b450b;
-  --color-amber-600: #fbbf24;
-  --color-amber-700: #fcd34d;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -218,42 +157,25 @@ body {
   }
 }
 
+/*
+ * Tarjeta de la referencia: esquinas muy redondeadas, anillo finísimo en vez de
+ * borde y sombra que recién aparece al pasar el mouse. El anillo va como
+ * `box-shadow` duplicado porque en la maqueta es un anillo, no un borde de 1px.
+ */
 @utility card-surface {
   background-color: var(--color-surface);
-  border-radius: 1rem;
-  border: 1px solid var(--color-ink-100);
-  box-shadow: 0 1px 2px rgba(10, 18, 38, 0.04);
+  border-radius: 1.75rem;
+  box-shadow:
+    0 1px 2px rgba(20, 22, 28, 0.04),
+    0 0 0 1px rgba(20, 22, 28, 0.05);
 }
 
 @utility mesh-dark {
-  /* Las secciones oscuras fijan la rampa clara de su propio subarbol: el hero y
-     el footer usan `text-ink-200` / `text-ink-300`, que con la rampa invertida
-     del tema oscuro pasarian a ser oscuros sobre este fondo. Al repuntarlas
-     aca, estas secciones se ven igual en los dos temas. */
-  --color-ink-50: #f5f7fb;
-  --color-ink-100: #e8ecf6;
-  --color-ink-200: #cbd5e9;
-  --color-ink-300: #9fb0d0;
-  --color-ink-400: #6b7fa6;
-  --color-ink-500: #465a82;
-  --color-ink-600: #2f4166;
-  --color-ink-700: #1d2c4c;
-  --color-ink-800: #121e38;
-  --color-ink-900: #0a1226;
-  --color-ink-950: #050a18;
-  --color-brand-50: #fff4ed;
-  --color-brand-100: #ffe6d5;
-  --color-brand-200: #ffc9a8;
-  --color-brand-300: #ffa371;
-  --color-brand-400: #ff7a33;
-  --color-brand-700: #c2410c;
-  --color-brand-800: #9a2b06;
-  --color-brand-900: #7a2305;
-  --color-neon-400: #ffb020;
-
-  background-color: #050a18;
+  /* Seccion oscura sobre tema claro (hero, ofertas, pie, boletin). No es modo
+     oscuro: fija su propio fondo y sus textos claros explicitos. */
+  background-color: #14161c;
   background-image:
-    radial-gradient(60rem 30rem at 12% -10%, rgba(255, 102, 0, 0.3), transparent 60%),
+    radial-gradient(60rem 30rem at 12% -10%, rgba(241, 90, 36, 0.3), transparent 60%),
     radial-gradient(45rem 26rem at 95% 0%, rgba(255, 176, 32, 0.2), transparent 65%),
     radial-gradient(40rem 24rem at 60% 120%, rgba(194, 65, 12, 0.24), transparent 60%);
 }

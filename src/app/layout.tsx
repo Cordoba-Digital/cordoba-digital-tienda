@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import localFont from "next/font/local";
 
 import { CartDrawer, Toaster } from "@/components/cart-drawer";
 import { SiteFooter } from "@/components/site-footer";
@@ -43,17 +44,19 @@ export const metadata: Metadata = {
   },
 };
 
-/**
- * Se ejecuta antes de que se pinte la pagina para que el tema no parpadee.
- *
- * Va como script en linea y no en un componente porque este es el unico punto
- * del ciclo de vida donde el script corre antes del primer pintado: si esperara
- * al hidratado de React, el sitio se veria en claro y despues saltaria a oscuro.
- * Lee la eleccion guardada y, si no hay ninguna, sigue la preferencia del
- * sistema; escribe `<html class="dark">` y actualiza la barra del navegador con
- * `color-scheme`.
- */
-const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem("cd-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}var d=t==="dark";document.documentElement.classList.toggle("dark",d);document.documentElement.style.colorScheme=d?"dark":"light";}catch(e){}})();`;
+/* Plus Jakarta Sans servida desde `public/fonts`: sin dependencia de Google
+   Fonts en build ni en runtime. */
+const jakarta = localFont({
+  src: [
+    { path: "../../public/fonts/plus-jakarta-sans-400-latin.woff2", weight: "400", style: "normal" },
+    { path: "../../public/fonts/plus-jakarta-sans-500-latin.woff2", weight: "500", style: "normal" },
+    { path: "../../public/fonts/plus-jakarta-sans-600-latin.woff2", weight: "600", style: "normal" },
+    { path: "../../public/fonts/plus-jakarta-sans-700-latin.woff2", weight: "700", style: "normal" },
+    { path: "../../public/fonts/plus-jakarta-sans-800-latin.woff2", weight: "800", style: "normal" },
+  ],
+  variable: "--font-jakarta",
+  display: "swap",
+});
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   type NavNode = {
@@ -93,11 +96,8 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   let guides: GuideTeaser[] = guideRes.status === "fulfilled" ? guideRes.value : [];
 
   return (
-    // `suppressHydrationWarning`: el script de arriba cambia la clase de <html>
-    // en el cliente, y React se quejaria de que el servidor no la puso.
-    <html lang="es-AR" suppressHydrationWarning>
+    <html lang="es-AR" className={jakarta.variable}>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
         {/* Las fotos del catálogo viven en el WordPress original: el
             preconnect ahorra el handshake en la primera imagen (LCP). */}
         <link rel="preconnect" href="https://www.cordobadigital.net" />

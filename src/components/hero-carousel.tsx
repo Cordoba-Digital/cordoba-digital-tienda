@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { ChevronLeft, ChevronRight, Truck } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { ProductImg } from "@/components/product-img";
-import { money } from "@/lib/format";
+import { useStore } from "@/components/store-provider";
+import { discountPercent, money } from "@/lib/format";
 
 export type HeroSlide = {
   id: string;
@@ -18,16 +20,20 @@ export type HeroSlide = {
   product: {
     slug: string;
     name: string;
+    brand: string;
     image: string;
     srcSet?: string[];
     price: number;
     compareAtPrice: number | null;
+    stock: number;
+    freeShipping: boolean;
   } | null;
 };
 
 const INTERVAL_MS = 5000;
 
 export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
+  const { addItem } = useStore();
   const count = slides.length;
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -63,6 +69,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
 
   return (
     <section
+      id="hero"
       className="mesh-dark relative overflow-hidden"
       role="region"
       aria-roledescription="carrusel"
@@ -119,6 +126,33 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
           const Title = i === 0 ? "h1" : "p";
           const statsCols =
             slide.stats.length >= 4 ? "grid-cols-2 sm:grid-cols-4" : slide.stats.length === 3 ? "grid-cols-3" : "grid-cols-2";
+          const producto = slide.product;
+          const sinStock = producto ? producto.stock === 0 : true;
+          // Solo se anuncia descuento cuando hay uno real en la base: el
+          // porcentaje sale de comparar el precio actual con el anterior.
+          const off = producto ? discountPercent(producto.price, producto.compareAtPrice) : 0;
+
+          const agregar = (event: React.MouseEvent<HTMLButtonElement>) => {
+            // El botón vive dentro de la diapositiva, que tiene manejadores de
+            // toque y rueda. Sin esto el clic podría contarse como gesto.
+            event.preventDefault();
+            event.stopPropagation();
+            if (!producto || sinStock) return;
+            // Misma forma que usa `ProductCard`: el carrito guardaría el
+            // producto incompleto y el panel de pedidos lo mostraría sin marca.
+            addItem({
+              slug: producto.slug,
+              name: producto.name,
+              brand: producto.brand,
+              image: producto.image,
+              imageSrcSet: producto.srcSet,
+              price: producto.price,
+              compareAtPrice: producto.compareAtPrice,
+              stock: producto.stock,
+              freeShipping: producto.freeShipping,
+            });
+          };
+
           return (
             <div
               key={slide.id}
@@ -131,32 +165,36 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
             >
               <div
                 className={`container-xl relative grid items-center gap-8 py-9 lg:py-12 ${
-                  slide.product ? "lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]" : "lg:max-w-3xl"
+                  producto ? "lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]" : "lg:max-w-3xl"
                 }`}
               >
-                <div className="animate-rise">
+                <div>
                   <span className={`inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold text-white backdrop-blur${enterClass}`} style={enterStyle(0)}>
-                    <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-neon-400" />
+                    <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" aria-hidden />
                     {slide.pill}
                   </span>
                   <Title className={`mt-3.5 text-balance-pretty text-[1.75rem] font-black leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-[2.6rem]${enterClass}`} style={enterStyle(70)}>
                     {slide.titleLead}{" "}
-                    <span className="bg-gradient-to-r from-neon-400 to-brand-300 bg-clip-text text-transparent">
-                      {slide.titleAccent}
-                    </span>
+                    {/* Naranja sólido, no degradado: `brand-400` da 6,45:1 sobre
+                        el fondo del hero (`#14161c`), bien por encima de AA. */}
+                    <span className="text-brand-400">{slide.titleAccent}</span>
                   </Title>
-                  <p className={`mt-3.5 max-w-xl text-[15px] leading-relaxed text-ink-200${enterClass}`} style={enterStyle(140)}>{slide.text}</p>
+                  <p className={`mt-3.5 max-w-xl text-[15px] leading-relaxed text-white/70${enterClass}`} style={enterStyle(140)}>{slide.text}</p>
+                  {/* Botones píldora. El naranja de marca lleva la etiqueta en
+                      tinta oscura y no en blanco: `brand-500` es un naranja
+                      claro y con blanco da 3,37:1, que no pasa los 4,5:1 de
+                      WCAG AA para texto chico. Sobre tinta da 5,36:1. */}
                   <div className={`mt-5 flex flex-wrap gap-2.5${enterClass}`} style={enterStyle(210)}>
                     <Link
                       href={slide.cta.href}
-                      className="rounded-xl bg-gradient-to-r from-brand-500 to-neon-500 px-5 py-3 text-sm font-extrabold text-white shadow-[0_18px_40px_-16px_rgba(194,65,12,0.55)] transition hover:opacity-95"
+                      className="rounded-full bg-brand-500 px-5 py-3 text-sm font-extrabold text-deep transition hover:bg-brand-400"
                     >
                       {slide.cta.label}
                     </Link>
                     {slide.cta2 ? (
                       <Link
                         href={slide.cta2.href}
-                        className="rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-bold text-white backdrop-blur transition hover:bg-white/10"
+                        className="rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/10"
                       >
                         {slide.cta2.label}
                       </Link>
@@ -164,60 +202,93 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                   </div>
                   <dl className={`mt-6 grid max-w-xl gap-2.5 ${statsCols}`}>
                     {slide.stats.map((stat) => (
-                      <div key={stat.v} className="rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 backdrop-blur">
+                      <div key={stat.v} className={`rounded-2xl border border-white/10 bg-white/5 px-3 py-2.5 backdrop-blur${enterClass}`} style={enterStyle(280)}>
                         <dt className="text-base font-black leading-none text-white">{stat.k}</dt>
-                        <dd className="mt-1 text-[10px] font-medium uppercase tracking-wide text-ink-300">{stat.v}</dd>
+                        <dd className="mt-1 text-[10px] font-medium uppercase tracking-wide text-white/45">{stat.v}</dd>
                       </div>
                     ))}
                   </dl>
                 </div>
 
-                {slide.product ? (
+                {/*
+                  Una sola tarjeta blanca con todo el producto adentro. Antes la
+                  información iba en una mini tarjeta flotante superpuesta abajo
+                  a la izquierda, que terminaba tapando los puntos de avance, y
+                  había además un cartel "Andreani" suelto arriba a la derecha.
+                  Ahora los datos, el precio y los dos botones viven en la
+                  tarjeta y no hay nada flotando por encima.
+                */}
+                {producto ? (
                   <div className={`relative${enterClass}`} style={enterStyle(280)}>
-                    <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl">
-                      <div className="aspect-[4/3] lg:aspect-[5/4]">
-                        <ProductImg
-                          src={slide.product.image}
-                          srcSet={slide.product.srcSet}
-                          alt={slide.product.name}
-                          sizes="(max-width: 1024px) 100vw, 40vw"
-                          width={800}
-                          height={640}
-                          priority={i === 0}
-                          className="h-full w-full object-contain p-8"
-                        />
+                    <article className="rounded-[28px] bg-surface p-4 shadow-[0_28px_70px_-34px_rgba(20,22,28,0.5)] ring-1 ring-black/5 sm:p-5">
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-deep px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white">
+                          <Truck size={12} strokeWidth={2.4} aria-hidden />
+                          Envío Andreani
+                        </span>
+                        {off > 0 ? (
+                          <span className="text-[13px] font-extrabold text-rose-600">{off}% OFF</span>
+                        ) : null}
                       </div>
-                    </div>
 
-                    <Link
-                      href={`/producto/${slide.product.slug}`}
-                      className="absolute -bottom-5 left-2 hidden w-[18rem] animate-float-slow rounded-2xl border border-ink-100 bg-surface p-3 shadow-2xl sm:block"
-                    >
-                      <div className={`flex items-center gap-3${enterClass}`} style={enterStyle(350)}>
-                        <div className="h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-ink-50">
+                      <div className="mt-3 overflow-hidden rounded-2xl bg-ink-50">
+                        <div className="aspect-[4/3] p-5">
                           <ProductImg
-                            src={slide.product.image}
-                            srcSet={slide.product.srcSet}
-                            alt=""
-                            sizes="56px"
-                            width={56}
-                            height={56}
-                            className="h-full w-full object-contain p-1"
+                            src={producto.image}
+                            srcSet={producto.srcSet}
+                            alt={producto.name}
+                            sizes="(max-width: 1024px) 100vw, 40vw"
+                            width={800}
+                            height={600}
+                            priority={i === 0}
+                            className="h-full w-full object-contain"
                           />
                         </div>
-                        <div className="min-w-0">
-                          <p className="line-clamp-1 text-xs font-bold text-ink-800">{slide.product.name}</p>
-                          <p className="text-sm font-black text-ink-900">{money(slide.product.price)}</p>
-                          {/* Acá decía "6 cuotas sin interés". No hay cuotas en el
-                              sitio original, así que no se anuncia nada. */}
-                        </div>
                       </div>
-                    </Link>
 
-                    <div className="absolute -right-2 top-6 hidden animate-float-slow rounded-2xl border border-white/15 bg-deep/80 px-4 py-3 text-white backdrop-blur md:block">
-                      <p className={`text-[11px] uppercase tracking-wide text-ink-300${enterClass}`} style={enterStyle(420)}>Envío a todo el país</p>
-                      <p className={`text-xl font-black text-neon-400${enterClass}`} style={enterStyle(420)}>Andreani</p>
-                    </div>
+                      <div className="mt-3.5">
+                        {producto.brand && producto.brand !== "General" ? (
+                          <p className="text-[10px] uppercase tracking-[0.14em] text-ink-400">{producto.brand}</p>
+                        ) : null}
+                        <Link
+                          href={`/producto/${producto.slug}`}
+                          className={`mt-1 block line-clamp-2 text-[15px] font-bold leading-snug text-ink-900 hover:text-brand-700${enterClass}`}
+                          style={enterStyle(350)}
+                        >
+                          {producto.name}
+                        </Link>
+                        <div className={`mt-2 flex flex-wrap items-baseline gap-x-2 gap-y-0.5${enterClass}`} style={enterStyle(350)}>
+                          <p className="text-[17px] font-extrabold leading-none tracking-tight text-ink-900">
+                            {money(producto.price)}
+                          </p>
+                          {producto.compareAtPrice ? (
+                            <p className="text-[13px] leading-none text-ink-400 line-through">
+                              {money(producto.compareAtPrice)}
+                            </p>
+                          ) : null}
+                        </div>
+                        {/* Acá antes decía "6 cuotas sin interés". No hay cuotas
+                            en el sitio original, así que no se anuncia nada. */}
+                      </div>
+
+                      <div className={`mt-4 flex items-center gap-2${enterClass}`} style={enterStyle(420)}>
+                        <Link
+                          href={`/producto/${producto.slug}`}
+                          className="min-w-0 flex-1 rounded-full bg-ink-900 px-4 py-2.5 text-center text-[13px] font-extrabold text-white transition hover:bg-ink-800"
+                        >
+                          Ver este equipo
+                        </Link>
+                        <button
+                          type="button"
+                          onClick={agregar}
+                          disabled={sinStock}
+                          aria-label={sinStock ? `${producto.name} sin stock` : `Agregar ${producto.name} al carrito`}
+                          className="shrink-0 rounded-full bg-brand-500 px-4 py-2.5 text-[13px] font-extrabold text-deep transition hover:bg-brand-400 disabled:cursor-not-allowed disabled:bg-ink-100 disabled:text-ink-500"
+                        >
+                          {sinStock ? "Sin stock" : "Agregar"}
+                        </button>
+                      </div>
+                    </article>
                   </div>
                 ) : null}
               </div>
@@ -228,27 +299,28 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
 
       {count > 1 ? (
         <>
+          {/* Flechas sobre los bordes de la sección, translúcidas para que se
+              lean tanto sobre el fondo oscuro como sobre la tarjeta blanca. */}
           <button
             type="button"
             onClick={() => go(-1)}
             aria-label="Diapositiva anterior"
-            className="absolute left-3 top-1/2 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-white text-deep shadow-lg transition hover:bg-brand-50 focus-visible:outline-2 focus-visible:outline-neon-400 sm:grid"
+            className="absolute left-3 top-1/2 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-white/15 text-white backdrop-blur-md transition hover:bg-white/25 focus-visible:outline-2 focus-visible:outline-neon-400 sm:grid"
           >
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <path d="M15 5l-7 7 7 7" />
-            </svg>
+            <ChevronLeft size={20} strokeWidth={2.4} aria-hidden />
           </button>
           <button
             type="button"
             onClick={() => go(1)}
             aria-label="Diapositiva siguiente"
-            className="absolute right-3 top-1/2 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-white text-deep shadow-lg transition hover:bg-brand-50 focus-visible:outline-2 focus-visible:outline-neon-400 sm:grid"
+            className="absolute right-3 top-1/2 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-white/15 text-white backdrop-blur-md transition hover:bg-white/25 focus-visible:outline-2 focus-visible:outline-neon-400 sm:grid"
           >
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <path d="M9 5l7 7-7 7" />
-            </svg>
+            <ChevronRight size={20} strokeWidth={2.4} aria-hidden />
           </button>
-          <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center rounded-full bg-black/25 px-2.5 py-0.5 backdrop-blur">
+          {/* Los puntos van centrados abajo, con espacio de sobra: el cintillo
+              de confianza que viene después pisa los últimos 24-32 px del hero,
+              así que quedan por encima de esa franja. */}
+          <div className="absolute bottom-10 left-1/2 flex -translate-x-1/2 items-center gap-0.5 sm:bottom-12">
             {slides.map((slide, i) => (
               <button
                 key={slide.id}
@@ -258,7 +330,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                 aria-current={i === index}
                 className="grid h-11 w-8 place-items-center rounded-full focus-visible:outline-2 focus-visible:outline-neon-400"
               >
-                <span className={`h-1.5 rounded-full transition-all ${i === index ? "w-5 bg-brand-500/90" : "w-1.5 bg-white/40 hover:bg-white/70"}`} />
+                <span className={`h-1.5 rounded-full transition-all ${i === index ? "w-5 bg-brand-400" : "w-1.5 bg-white/40 hover:bg-white/70"}`} />
               </button>
             ))}
             {/* Sin botón de pausa manual: el cambio es automático (la pausa al

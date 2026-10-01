@@ -73,18 +73,20 @@ export function SectionHeading({
     <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
       <div>
         {eyebrow ? (
-          <p className="mb-1.5 text-xs font-bold uppercase tracking-[0.18em] text-brand-700">{eyebrow}</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">{eyebrow}</p>
         ) : null}
-        <h2 className="text-2xl font-extrabold tracking-tight text-ink-900 md:text-3xl">{title}</h2>
-        {description ? <p className="mt-1.5 max-w-2xl text-sm text-ink-500">{description}</p> : null}
+        <h2 className="mt-1 text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">{title}</h2>
+        {description ? <p className="mt-1.5 max-w-xl text-sm leading-relaxed text-ink-500">{description}</p> : null}
       </div>
       {action ? (
         <Link
           href={action.href}
-          className="group inline-flex items-center gap-1.5 rounded-full border border-ink-200 bg-surface px-4 py-2 text-sm font-semibold text-ink-700 transition hover:border-brand-300 hover:text-brand-700"
+          className="group inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-ink-900 transition hover:text-brand-700"
         >
           {action.label}
-          <span className="transition group-hover:translate-x-0.5">→</span>
+          <span className="transition group-hover:translate-x-0.5" aria-hidden>
+            →
+          </span>
         </Link>
       ) : null}
     </div>

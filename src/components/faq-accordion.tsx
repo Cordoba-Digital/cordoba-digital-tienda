@@ -28,13 +28,64 @@ export type FaqItem = {
   a: string;
 };
 
-export function FaqAccordion({ items }: { items: FaqItem[] }) {
+export function FaqAccordion({ items, variant = "tarjeta" }: { items: FaqItem[]; variant?: "tarjeta" | "plano" }) {
   const base = useId();
   // Varias respuestas pueden estar abiertas a la vez, como antes.
   const [abiertas, setAbiertas] = useState<Record<string, boolean>>({});
 
   const alternar = (clave: string) =>
     setAbiertas((prev) => ({ ...prev, [clave]: !prev[clave] }));
+
+  // `plano` es la lista undivided que va dentro de una tarjeta sola (la home):
+  // cada pregunta se separa con una línea en vez de ser una tarjeta propia, para
+  // no meter una caja dentro de otra.
+  if (variant === "plano") {
+    return (
+      <div>
+        {items.map((item, i) => {
+          const idPanel = `${base}-panel-${i}`;
+          const idBoton = `${base}-boton-${i}`;
+          const abierta = abiertas[item.q] ?? false;
+          return (
+            <div key={item.q} className="border-b border-ink-100 last:border-b-0">
+              <h3 className="m-0">
+                <button
+                  type="button"
+                  id={idBoton}
+                  aria-expanded={abierta}
+                  aria-controls={idPanel}
+                  onClick={() => alternar(item.q)}
+                  className="flex w-full cursor-pointer items-center justify-between gap-4 py-4 text-left text-[15px] font-bold text-ink-900 hover:text-brand-700"
+                >
+                  {item.q}
+                  <span
+                    aria-hidden
+                    className="shrink-0 text-ink-400 transition-transform duration-300 ease-out data-[abierto=si]:rotate-180 motion-reduce:transition-none"
+                    data-abierto={abierta ? "si" : "no"}
+                  >
+                    <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M6 9l6 6 6-6" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <div
+                id={idPanel}
+                role="region"
+                aria-labelledby={idBoton}
+                className="grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none"
+                style={{ gridTemplateRows: abierta ? "1fr" : "0fr" }}
+              >
+                <div className="min-h-0 overflow-hidden">
+                  <p className="pb-4 text-sm leading-relaxed text-ink-500">{item.a}</p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
 
   return (
     // El `space-y-3` va acá adentro y no en el que llama: cuando lo tenía el

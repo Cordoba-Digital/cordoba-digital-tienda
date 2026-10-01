@@ -1,19 +1,37 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {
+  ArrowRight,
+  Clock,
+  ExternalLink,
+  MapPin,
+  Phone,
+  Store,
+  Timer,
+  Wallet,
+} from "lucide-react";
 
-import { CategoryIcon, Icon } from "@/components/category-icon";
+import { CategoryRow } from "@/components/category-row";
+import { Icon } from "@/components/category-icon";
 import { Countdown } from "@/components/countdown";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { HomeHero } from "@/components/home-hero";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { ProductCard, ProductRow } from "@/components/product-card";
 import { ProductImg } from "@/components/product-img";
-import { Pill, SectionHeading } from "@/components/ui";
+import { SectionHeading } from "@/components/ui";
 import { discountPercent } from "@/lib/format";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { toView } from "@/lib/product-view";
 import { url } from "@/lib/site";
-import { getBestSellers, getCategoryTree, getDealProducts, getFeaturedProducts, getProductCount } from "@/lib/queries";
+import {
+  getBestSellers,
+  getCategoryTree,
+  getDealProducts,
+  getFeaturedProducts,
+  getGuides,
+  getProductCount,
+} from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -23,11 +41,21 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
+/*
+ * Datos del local, tomados del sitio original. Se declaran una sola vez acá
+ * porque la sección del local y el pie los repiten.
+ */
+const DIRECCION = "27 de Abril 180, Córdoba Capital";
+const HORARIOS = "Lun a Vie 14:00 a 18:30 · Sáb 12:00 a 14:30";
+const TELEFONO = "+54 351 677-7774";
+const MAPS = "https://maps.google.com/?q=27+de+Abril+180+Cordoba+Argentina";
+const WHATSAPP = "https://wa.me/5493516777774";
+
 const TRUST = [
-  { icon: "truck", title: "Envíos a todo el país", text: "Por Andreani, a domicilio o a sucursal · con seguimiento" },
-  { icon: "lock", title: "Pagos 100% seguros", text: "Tarjetas, Mercado Pago, transferencia y USDT" },
-  { icon: "shield", title: "Compra garantizada", text: "Garantía legal de 6 meses y soporte post-venta propio" },
-  { icon: "headphones", title: "Post-venta real", text: "Te atendemos por WhatsApp, mail y en el local" },
+  { icon: "truck", title: "Envíos a todo el país", text: "Andreani a domicilio o a sucursal, con seguimiento." },
+  { icon: "lock", title: "Pagos claros", text: "Tarjeta, Mercado Pago, transferencia, efectivo y USDT." },
+  { icon: "shield", title: "Compra garantizada", text: "6 meses de garantía legal y postventa en Córdoba." },
+  { icon: "headphones", title: "Postventa real", text: "WhatsApp, mail y el local. Nada de call center." },
 ];
 
 const FAQ = [
@@ -41,18 +69,31 @@ const FAQ = [
   },
   {
     q: "¿Qué medios de pago aceptan?",
-    a: "Transferencia bancaria, USDT por red TRC20, efectivo o transferencia en el local (retiro en 27 de Abril 180) y Mercado Pago.",
+    a: "Transferencia bancaria, USDT por red TRC20, efectivo o transferencia en el local y Mercado Pago.",
+  },
+  {
+    q: "¿Puedo retirar en el local?",
+    a: "Sí. Comprá online y retirá en 27 de Abril 180, Córdoba Capital, dentro del horario de atención.",
+  },
+  {
+    q: "¿Puedo ver el equipo antes de comprarlo?",
+    a: "En el local probamos el equipo con vos antes de que te lo lleves. Si no podés venir, contanos por WhatsApp qué modelo te interesa.",
+  },
+  {
+    q: "¿Hacen cambio si algo no funciona?",
+    a: "Sí. La garantía se gestiona con nuestro servicio técnico en Córdoba y el cambio o la reparación se resuelven por el mismo canal.",
   },
 ];
 
 export default async function HomePage() {
-  const [featured, deals, bestSellers, categories, googleReviews, productCount] = await Promise.all([
+  const [featured, deals, bestSellers, categories, googleReviews, productCount, guides] = await Promise.all([
     getFeaturedProducts(24),
     getDealProducts(8),
-    getBestSellers(10),
+    getBestSellers(8),
     getCategoryTree(),
     getGoogleReviews(),
     getProductCount(),
+    getGuides(),
   ]);
 
   const ratingValue = googleReviews.rating?.toFixed(1) ?? null;
@@ -118,23 +159,37 @@ export default async function HomePage() {
         maxOff={heroMaxOff}
       />
 
-      <section className="border-b border-ink-100 bg-surface">
-        <div className="container-xl grid gap-3 py-5 sm:grid-cols-2 lg:grid-cols-4">
-          {TRUST.map((t) => (
-            <div key={t.title} className="flex items-start gap-3 rounded-xl px-2 py-2">
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-700">
-                <Icon name={t.icon} className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="text-sm font-bold text-ink-900">{t.title}</p>
-                <p className="text-xs leading-snug text-ink-500">{t.text}</p>
+      {/*
+        Cintillo de confianza: una caja blanca que pisa el hero. El `z-10` la
+        saca del orden normal para que la sombra caiga sobre el fondo oscuro.
+      */}
+      <section className="relative z-10 -mt-6 pb-2 sm:-mt-8">
+        <div className="container-xl">
+          <div className="grid overflow-hidden rounded-2xl bg-surface shadow-[0_20px_50px_-30px_rgba(20,22,28,0.45)] ring-1 ring-black/5 sm:grid-cols-2 lg:grid-cols-4">
+            {TRUST.map((t, i) => (
+              <div
+                key={t.title}
+                className={`flex gap-3 p-4 sm:p-5 ${i > 0 ? "border-t border-ink-100 sm:border-t-0 sm:border-l sm:border-ink-100" : ""}`}
+              >
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-700">
+                  <Icon name={t.icon} className="h-[18px] w-[18px]" />
+                </span>
+                <div>
+                  <p className="text-sm font-bold text-ink-900">{t.title}</p>
+                  <p className="mt-0.5 text-xs leading-relaxed text-ink-500">{t.text}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="container-xl py-12">
+      {/*
+        Fila desplazable de categorías: 21 raíces reales con su icono y su conteo
+        de la base. La foto, el dron y el CCTV van por separado, para que no
+        confundas una cosa con otra.
+      */}
+      <section id="categorias" className="container-xl py-14">
         <SectionHeading
           eyebrow="Explorá"
           title="Categorías"
@@ -142,73 +197,68 @@ export default async function HomePage() {
           action={{ href: "/productos", label: "Ver todo" }}
         />
         {/*
-          Fila desplazable de círculos, como la referencia del rediseño: las 21
-          raíces reales con su nombre y su link, sin conteos. Con 21 ítems la
-          fila desborda y desplaza en desktop y en móvil. El scrollbar mínimo
-          (`scroll-minimo`) es la señal de que hay más para ver. Sin estado
-          activo inventado: el hover tiñe el círculo.
+          La fila vive en su propio componente porque necesita estado para la
+          barra de avance y para apagar las flechas en los extremos.
         */}
-        <div className="scroll-minimo flex gap-4 overflow-x-auto pb-3 sm:gap-5">
-          {categories.map((c) => (
-            <Link
-              key={c.slug}
-              href={`/categoria/${c.path}`}
-              className="group flex w-20 shrink-0 flex-col items-center gap-2 text-center sm:w-24"
-            >
-              <span className="grid h-20 w-20 place-items-center rounded-full border border-ink-100 bg-surface text-brand-700 shadow-sm transition group-hover:border-brand-300 group-hover:bg-brand-50 group-hover:shadow-md sm:h-24 sm:w-24">
-                <CategoryIcon name={c.name} className="h-9 w-9 sm:h-10 sm:w-10" />
-              </span>
-              <span className="text-xs font-semibold leading-tight text-ink-900 sm:text-[13px]">{c.name}</span>
-            </Link>
-          ))}
-        </div>
+        <CategoryRow
+          items={categories.map((c) => ({ name: c.name, href: `/categoria/${c.path}`, count: c.count }))}
+          label="las categorías"
+        />
       </section>
 
-      <section className="bg-surface py-12">
-        <div className="container-xl">
-          <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+      {/* Ofertas: panel oscuro redondeado con el contador a la derecha. */}
+      <section id="ofertas" className="container-xl">
+        <div className="rounded-[28px] bg-ink px-4 py-6 text-white sm:px-6 sm:py-8">
+          <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <Pill tone="danger">Ofertas relámpago</Pill>
-              <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-ink-900 md:text-3xl">
+              <p className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-300">
+                <Timer size={13} aria-hidden /> Ofertas relámpago
+              </p>
+              <h2 className="mt-1 text-2xl font-extrabold tracking-tight sm:text-3xl">
                 Los descuentos más grandes de la semana
               </h2>
-              <p className="mt-1 text-sm text-ink-500">Stock limitado. Los precios vuelven a la normalidad a la medianoche.</p>
+              <p className="mt-1 max-w-xl text-sm text-white/60">
+                Stock limitado en depósito. A la medianoche, hora Córdoba, estos precios vuelven a la lista.
+              </p>
             </div>
-            <Countdown />
+            <div className="text-right">
+              <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white/40">Termina en</p>
+              {/* El contador va con `tono="oscuro"`: el panel es `bg-ink` y las
+                  cajitas de los digitos necesitan el tono claro de la variante
+                  oscura para no desvanecerse en el fondo. */}
+              <Countdown label="" tono="oscuro" />
+            </div>
           </div>
-          <ProductRow products={deals.map(toView)} />
+          <div className="mt-6">
+            <ProductRow products={deals.map(toView)} label="las ofertas" />
+          </div>
         </div>
       </section>
 
-      <section className="container-xl py-12">
-        {/* Eran tres tarjetas y la del medio anunciaba "Hasta 6 cuotas sin
-            interés" con la lista de tarjetas. No hay cuotas en el sitio
-            original, así que quedan dos y la grilla pasa a dos columnas. */}
-        <div className="grid gap-4 md:grid-cols-2">
-          {[
-            {
-              icon: "🏦",
-              title: "Transferencia, USDT o efectivo en el local",
-              text: "Te mostramos el CBU o la wallet al confirmar. También podés pagar al retirar.",
-              tone: "from-emerald-500 to-emerald-400",
-            },
-            {
-              icon: "🏬",
-              title: "Retiro en el local",
-              text: "Comprá online y retirá en 27 de Abril 180. Probamos el producto con vos.",
-              tone: "from-ink-900 to-ink-700",
-            },
-          ].map((b) => (
-            <div key={b.title} className="card-surface overflow-hidden">
-              <div className={`h-1.5 w-full bg-gradient-to-r ${b.tone}`} />
-              <div className="p-5">
-                <span className="text-2xl">{b.icon}</span>
-                <h3 className="mt-2 text-base font-extrabold text-ink-900">{b.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-ink-500">{b.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+      <section className="container-xl grid gap-4 py-8 md:grid-cols-2">
+        <article className="rounded-[28px] bg-surface p-6 ring-1 ring-black/5">
+          <div className="mb-4 h-1 w-14 rounded-full bg-emerald-500" />
+          <Wallet size={22} className="text-emerald-700" aria-hidden />
+          <h3 className="mt-3 text-xl font-extrabold tracking-tight text-ink-900">Transferencia, USDT o efectivo</h3>
+          <p className="mt-2 text-sm leading-relaxed text-ink-500">
+            Te mostramos el CBU o la wallet cuando confirmás el pedido, no antes. En el local también podés pagar en
+            efectivo. Nunca te pedimos una clave, un código ni un token por chat.
+          </p>
+          <Link href="/ayuda" className="mt-4 inline-block text-sm font-bold text-brand-700 hover:text-brand-800">
+            Ver medios de pago
+          </Link>
+        </article>
+        <article className="rounded-[28px] bg-surface p-6 ring-1 ring-black/5">
+          <div className="mb-4 h-1 w-14 rounded-full bg-brand-500" />
+          <Store size={22} className="text-brand-700" aria-hidden />
+          <h3 className="mt-3 text-xl font-extrabold tracking-tight text-ink-900">Retiro en el local</h3>
+          <p className="mt-2 text-sm leading-relaxed text-ink-500">
+            Comprá online y retirá en {DIRECCION}. {HORARIOS}. Probamos el equipo con vos antes de que te lo lleves.
+          </p>
+          <a href={WHATSAPP} className="mt-4 inline-block text-sm font-bold text-brand-700 hover:text-brand-800">
+            Avisar que paso a retirar
+          </a>
+        </article>
       </section>
 
       <section className="container-xl py-6">
@@ -218,125 +268,169 @@ export default async function HomePage() {
           description="Lo que más sale de nuestro depósito esta semana, con stock confirmado."
           action={{ href: "/productos?orden=vendidos", label: "Ver ranking" }}
         />
-        {/* 10 para dos filas de 5 en 2xl; las 2 últimas solo existen ahí
-            (`contents` las vuelve items del grid) para no dejar filas
-            raras en los anchos menores. */}
-        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4 2xl:grid-cols-5">
-          {bestSellers.slice(0, 8).map((p) => (
-            <ProductCard key={p.slug} product={toView(p)} />
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+          {bestSellers.slice(0, 8).map((p, i) => (
+            <ProductCard key={p.slug} product={toView(p)} badge={i < 3 ? `Top ${i + 1}` : undefined} />
           ))}
-          <div className="hidden 2xl:contents">
-            {bestSellers.slice(8, 10).map((p) => (
-              <ProductCard key={p.slug} product={toView(p)} />
-            ))}
-          </div>
         </div>
       </section>
 
-      <section className="container-xl py-14">
-        <div className="grid items-center gap-8 overflow-hidden rounded-3xl border border-ink-100 bg-surface lg:grid-cols-2">
-          <div className="relative h-full min-h-[18rem]">
+      <section id="local" className="container-xl grid gap-4 py-12 lg:grid-cols-2">
+        <div className="overflow-hidden rounded-[28px] bg-ink text-white">
+          <div className="h-52 sm:h-64">
             <ProductImg
               src="/images/local-cordoba-1400.jpg"
               srcSet={["/images/local-cordoba-700.jpg 700w", "/images/local-cordoba-1400.jpg 1400w"]}
-              sizes="(max-width: 1024px) 100vw, 40vw"
+              sizes="(max-width: 1024px) 100vw, 50vw"
               alt="Fachada del local de Córdoba Digital en 27 de Abril 180, Córdoba Capital"
               width={1400}
               height={882}
-              className="h-full min-h-[18rem] w-full object-cover"
+              className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/25 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-              <p className="text-2xl font-black tracking-tight">Córdoba Digital</p>
-              <p className="mt-1 text-sm text-ink-200">Tecnología con garantía legal</p>
-              <dl className="mt-3 grid gap-1.5 text-sm text-ink-100">
-                <div className="flex items-center gap-2">
-                  <span aria-hidden>📍</span>
-                  <span>27 de Abril 180, Córdoba Capital</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span aria-hidden>🕑</span>
-                  <span>Lun a Vie 14:00 a 18:30 · Sáb 12:00 a 14:30</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span aria-hidden>📞</span>
-                  <span>+54 351 677-7774</span>
-                </div>
-              </dl>
-            </div>
           </div>
-          <div className="p-7 lg:p-10">
-            <Pill tone="brand">Online + local a la calle</Pill>
-            <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-ink-900 md:text-3xl">
-              Comprás por internet, pero hay gente real del otro lado
-            </h2>
-            <p className="mt-3 text-sm leading-relaxed text-ink-500">
-              Combinamos la agilidad del e-commerce con la confianza de la atención presencial. Si algo falla, no tenés
-              que discutir con un chatbot: venís al local o nos escribís por WhatsApp y lo resolvemos.
+          <div className="space-y-3 px-6 pb-6 pt-2">
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/45">Local a la calle</p>
+            <h3 className="text-2xl font-extrabold">Córdoba Digital</h3>
+            <p className="flex items-start gap-2 text-sm text-white/80">
+              <MapPin size={16} className="mt-0.5 shrink-0 text-brand-300" aria-hidden />
+              {DIRECCION}
             </p>
-            <ul className="mt-5 space-y-2.5 text-sm text-ink-700">
-              {[
-                "Probamos el equipo con vos antes de que te lo lleves",
-                "Servicio técnico y gestión de garantía en Córdoba",
-                "Asesoramiento para elegir el modelo correcto",
-                "Emitimos factura o comprobante de compra",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-emerald-100 text-[11px] font-bold text-emerald-700">
-                    ✓
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-6 flex flex-wrap gap-3">
+            <p className="flex items-start gap-2 text-sm text-white/80">
+              <Clock size={16} className="mt-0.5 shrink-0 text-brand-300" aria-hidden />
+              {HORARIOS}
+            </p>
+            <p className="flex items-center gap-2 text-sm text-white/80">
+              <Phone size={16} className="text-brand-300" aria-hidden />
+              <a href="tel:+543516777774" className="hover:text-white">
+                {TELEFONO}
+              </a>
+            </p>
+            <div className="flex flex-wrap gap-2 pt-2">
               <a
-                href="https://maps.google.com/?q=27+de+Abril+180+Córdoba+Argentina"
+                href={MAPS}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-xl bg-brand-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-800"
+                className="inline-flex items-center gap-1.5 rounded-full bg-surface px-4 py-2 text-sm font-bold text-ink-900"
               >
-                Cómo llegar
+                Cómo llegar <ExternalLink size={14} aria-hidden />
               </a>
               <a
-                href="https://wa.me/5493516777774"
+                href={WHATSAPP}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-xl border border-ink-200 px-5 py-3 text-sm font-bold text-ink-700 transition hover:border-emerald-300 hover:text-emerald-700"
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/20 px-4 py-2 text-sm font-bold text-white"
               >
                 Consultar por WhatsApp
               </a>
             </div>
           </div>
         </div>
+        <div className="flex flex-col justify-center rounded-[28px] bg-surface p-6 ring-1 ring-black/5 sm:p-8">
+          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Online + local a la calle</p>
+          <h2 className="mt-2 text-3xl font-extrabold leading-[1.1] tracking-tight text-ink-900">
+            Comprás por internet, pero hay gente real del otro lado
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-ink-500">
+            Combinamos la agilidad del e-commerce con la confianza de atender en el centro. Si algo falla, no discutís
+            con un chatbot: venís al local o nos escribís por WhatsApp y lo resolvemos.
+          </p>
+          <ul className="mt-5 space-y-3">
+            {[
+              "Probamos el equipo con vos antes de que te lo lleves",
+              "Servicio técnico y gestión de garantía en Córdoba",
+              "Asesoramiento para elegir el modelo correcto",
+              "Emitimos factura o comprobante de compra",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2.5 text-sm font-medium text-ink-700">
+                <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-emerald-50 text-emerald-700">
+                  <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M5 12l5 5L20 7" />
+                  </svg>
+                </span>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <div className="mt-6 flex flex-wrap gap-2">
+            <a
+              href={MAPS}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full bg-ink-900 px-4 py-2.5 text-sm font-bold text-white"
+            >
+              Cómo llegar
+            </a>
+            <a
+              href={WHATSAPP}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-700 hover:bg-ink-50"
+            >
+              Consultar por WhatsApp
+            </a>
+          </div>
+        </div>
       </section>
 
       {featuredPicks.length >= 4 ? (
-      <section className="bg-surface py-12">
-        <div className="container-xl">
+        <section className="container-xl py-4">
           <SectionHeading
             eyebrow="Selección del equipo"
             title="Destacados de la semana"
-            description="Los productos que recomendamos por rendimiento, precio y disponibilidad."
+            description="Lo que recomendaríamos si nos preguntás por rendimiento, precio y disponibilidad real."
             action={{ href: "/productos", label: "Ver catálogo" }}
           />
-          <ProductRow products={featuredPicks.map(toView)} />
-        </div>
-      </section>
+          <ProductRow products={featuredPicks.map(toView)} label="los destacados" />
+        </section>
       ) : null}
 
-      <section className="container-xl grid gap-8 py-14 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
-        <div>
-          <SectionHeading eyebrow="Antes de comprar" title="Preguntas frecuentes" action={{ href: "/ayuda", label: "Centro de ayuda" }} />
-          <FaqAccordion items={FAQ} />
+      {guides.length > 0 ? (
+        <section className="container-xl py-12">
+          <SectionHeading
+            eyebrow="Antes de comprar"
+            title="Guías cortas, sin relleno"
+            action={{ href: "/ayuda", label: "Centro de ayuda" }}
+          />
+          <div className="grid gap-3 md:grid-cols-3">
+            {guides.slice(0, 3).map((g) => (
+              <Link
+                key={g.slug}
+                href={`/guias/${g.slug}`}
+                className="rounded-[24px] bg-surface p-5 ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-lg"
+              >
+                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">Guía de compra</p>
+                <h3 className="mt-2 text-lg font-extrabold tracking-tight text-ink-900">{g.title}</h3>
+                {/* Sin bajada: el `subtitle` de la guia es el titulo de SEO en
+                    mayusculas y repetiria el titulo de la tarjeta. */}
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-ink-900">
+                  Leer <ArrowRight size={14} aria-hidden />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      <section id="preguntas" className="container-xl grid gap-4 pb-16 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="rounded-[28px] bg-surface p-5 ring-1 ring-black/5 sm:p-7">
+          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Antes de comprar</p>
+          <h2 className="mt-1 text-2xl font-extrabold tracking-tight text-ink-900">Preguntas frecuentes</h2>
+          <div className="mt-3">
+            <FaqAccordion items={FAQ} variant="plano" />
+          </div>
+          <Link href="/ayuda" className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">
+            Centro de ayuda <ArrowRight size={14} aria-hidden />
+          </Link>
         </div>
-        <div className="mesh-dark flex flex-col justify-center rounded-3xl p-7 text-white">
-          <Pill tone="dark" className="w-fit bg-white/10">
-            Newsletter
-          </Pill>
-          <h3 className="mt-3 text-2xl font-extrabold">Novedades y ofertas de Córdoba Digital</h3>
-          <p className="mt-2 text-sm text-ink-200">Dejanos tu mail y te avisamos los ingresos nuevos y las ofertas.</p>
-          <div className="mt-5">
+        <div className="flex flex-col justify-between rounded-[28px] bg-ink p-6 text-white sm:p-7">
+          <div>
+            <p className="inline-flex rounded-full bg-white/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-white/70">
+              Newsletter
+            </p>
+            <h3 className="mt-4 text-2xl font-extrabold tracking-tight">Novedades y ofertas de Córdoba Digital</h3>
+            <p className="mt-2 text-sm leading-relaxed text-white/65">Ingresos de depósito y ofertas fuertes. No un mail por día.</p>
+          </div>
+          <div className="mt-6">
             <NewsletterForm />
           </div>
         </div>

@@ -8,7 +8,6 @@ import { useEffect, useRef, useState } from "react";
 import { CategoryIcon } from "@/components/category-icon";
 import { CategoryNavBar, type CategoryNavRoot } from "@/components/hdr-category-nav";
 import { useStore } from "@/components/store-provider";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { money } from "@/lib/format";
 
 type CategoryLink = CategoryNavRoot;
@@ -193,8 +192,6 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
           </div>
 
           <nav className="ml-auto flex items-center gap-1">
-            <ThemeToggle />
-
             <Link
               href="/seguimiento"
               className="hidden items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50 hover:text-ink-900 lg:flex"
