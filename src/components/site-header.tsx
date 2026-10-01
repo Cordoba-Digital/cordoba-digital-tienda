@@ -115,15 +115,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
           </button>
 
           <Link href="/" className="flex shrink-0 items-center gap-2.5">
-            <span className="grid h-11 w-11 place-items-center rounded-2xl bg-brand-500 text-white">
-              <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M4 10l1.5-5h13L20 10M4 10v9a1 1 0 001 1h14a1 1 0 001-1v-9M4 10h16M9 20v-6h6v6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </span>
-            <span className="hidden leading-tight sm:block">
-              <span className="block text-[17px] font-extrabold tracking-tight text-ink-900">Córdoba Digital</span>
-              <span className="block text-[10px] font-bold tracking-[0.18em] text-brand-600">CENTRO · STOCK REAL</span>
-            </span>
+            <Image src="/images/logo.png" alt="Córdoba Digital" width={160} height={64} className="h-12 w-auto object-contain" priority />
           </Link>
 
           <div ref={boxRef} className="relative hidden flex-1 md:block">

@@ -394,7 +394,7 @@ export default async function HomePage() {
             {guides.slice(0, 3).map((g) => (
               <Link
                 key={g.slug}
-                href={`/guias/${g.slug}`}
+                href={`/${g.slug}`}
                 className="rounded-[24px] bg-surface p-5 ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-lg"
               >
                 <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">Guía de compra</p>
