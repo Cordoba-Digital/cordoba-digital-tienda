@@ -6,6 +6,7 @@ import { CartDrawer, Toaster } from "@/components/cart-drawer";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StoreProvider } from "@/components/store-provider";
+import { SmoothScroll } from "@/components/smooth-scroll";
 import { WhatsAppFab } from "@/components/whatsapp-fab";
 import { getCategoryTree, getGuides, type CategoryTreeNode, type GuideTeaser } from "@/lib/queries";
 import "./globals.css";
@@ -105,6 +106,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       </head>
       <body className="min-h-screen bg-ink-50 text-ink-900 antialiased">
         <StoreProvider>
+          <SmoothScroll />
           <SiteHeader categories={categories} />
           <main className="min-h-[60vh]">{children}</main>
           <SiteFooter
