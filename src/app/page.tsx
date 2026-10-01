@@ -9,6 +9,7 @@ import { NewsletterForm } from "@/components/newsletter-form";
 import { ProductCard, ProductRow } from "@/components/product-card";
 import { ProductImg } from "@/components/product-img";
 import { Pill, SectionHeading } from "@/components/ui";
+import { discountPercent } from "@/lib/format";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { toView } from "@/lib/product-view";
 import { url } from "@/lib/site";
@@ -56,7 +57,14 @@ export default async function HomePage() {
 
   const ratingValue = googleReviews.rating?.toFixed(1) ?? null;
   const reviewCount = googleReviews.count;
-  const heroProduct = featured[0] ? toView(featured[0]) : null;
+  // Hero de 5 slides: principal, oferta, más vendido, envío y pago. Mismo
+  // mapeo que la propuesta original, sobre los queries del deploy.
+  const heroMain = featured[0] ? toView(featured[0]) : null;
+  const heroDeal = deals[0] ? toView(deals[0]) : null;
+  const heroBest = bestSellers[0] ? toView(bestSellers[0]) : null;
+  const heroShipping = featured[1] ? toView(featured[1]) : null;
+  const heroPayment = featured[2] ? toView(featured[2]) : null;
+  const heroMaxOff = Math.max(0, ...deals.map((d) => discountPercent(d.price, d.compareAtPrice)));
   // "Destacados" y "Más vendidos" caían al mismo fallback (lo más nuevo con
   // stock) y mostraban los mismos productos. Acá se excluyen los ya mostrados
   // arriba; si no quedan suficientes distintos, la sección no se muestra.
@@ -98,7 +106,17 @@ export default async function HomePage() {
         }}
       />
 
-      <HomeHero productCount={productCount} ratingValue={ratingValue} reviewCount={reviewCount} featured={heroProduct} />
+      <HomeHero
+        productCount={productCount}
+        ratingValue={ratingValue}
+        reviewCount={reviewCount}
+        main={heroMain}
+        deal={heroDeal}
+        best={heroBest}
+        shipping={heroShipping}
+        payment={heroPayment}
+        maxOff={heroMaxOff}
+      />
 
       <section className="border-b border-ink-100 bg-surface">
         <div className="container-xl grid gap-3 py-5 sm:grid-cols-2 lg:grid-cols-4">
