@@ -162,7 +162,7 @@ export function ProductCard({ product, badge }: { product: ProductView; badge?: 
  * táctil y teclado, y las flechas solo la mueven un ancho de tarjeta. La fila de
  * categorías del home no usa flechas (va con `scroll-minimo` a secas).
  */
-export function ProductRow({ products, label, badge }: { products: ProductView[]; label: string; badge?: (product: ProductView, index: number) => string | undefined }) {
+export function ProductRow({ products, label, badges }: { products: ProductView[]; label: string; badges?: (string | undefined)[] }) {
   // Referencia normal y no un estado: la tira no se vuelve a pintar cuando el
   // nodo se monta o se desmonta, y `move` lee el nodo por `ref.current`.
   const ref = useRef<HTMLDivElement | null>(null);
@@ -176,7 +176,7 @@ export function ProductRow({ products, label, badge }: { products: ProductView[]
       >
         {products.map((product, index) => (
           <div key={product.slug} className="w-[210px] shrink-0 snap-start md:w-[228px]">
-            <ProductCard product={product} badge={badge?.(product, index)} />
+            <ProductCard product={product} badge={badges?.[index]} />
           </div>
         ))}
       </div>

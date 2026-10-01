@@ -271,7 +271,7 @@ export default async function HomePage() {
         <ProductRow
           products={bestSellers.slice(0, 8).map(toView)}
           label="los más vendidos"
-          badge={(_, i) => (i < 3 ? `Top ${i + 1}` : undefined)}
+          badges={bestSellers.slice(0, 8).map((_, i) => (i < 3 ? `Top ${i + 1}` : undefined))}
         />
       </section>
 
