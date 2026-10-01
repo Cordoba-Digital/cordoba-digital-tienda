@@ -12,6 +12,116 @@ import { money } from "@/lib/format";
 import { computeTotals, PAYMENT_METHODS, type CouponInfo, type PaymentMethodId } from "@/lib/pricing";
 import type { DeliveryMethod, ShippingOption } from "@/lib/shipping";
 
+type CheckoutIconProps = { className?: string };
+
+function IconBank({ className = "h-5 w-5 shrink-0 text-brand-700" }: CheckoutIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M3 10l9-6 9 6M5 10v8M19 10v8M9 10v8M15 10v8M3 20h18" />
+    </svg>
+  );
+}
+
+function IconCard({ className = "h-5 w-5 shrink-0 text-brand-700" }: CheckoutIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M3 7h18v12H3zM3 11h18" />
+    </svg>
+  );
+}
+
+function IconUsdt({ className = "h-5 w-5 shrink-0 text-brand-700" }: CheckoutIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M9 8.5h6M12 8.5v6.5" />
+    </svg>
+  );
+}
+
+function IconTruck({ className = "h-5 w-5 shrink-0 text-brand-700" }: CheckoutIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z" />
+    </svg>
+  );
+}
+
+function IconPin({ className = "h-5 w-5 shrink-0 text-brand-700" }: CheckoutIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11zM12 10m-2.5 0a2.5 2.5 0 105 0 2.5 2.5 0 10-5 0" />
+    </svg>
+  );
+}
+
+function IconShield({ className = "h-5 w-5 shrink-0 text-brand-700" }: CheckoutIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z" />
+    </svg>
+  );
+}
+
+function IconLock({ className = "h-5 w-5 shrink-0 text-brand-700" }: CheckoutIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <rect x="5" y="10" width="14" height="10" rx="2" />
+      <path d="M8 10V7a4 4 0 018 0v3M12 14.5v2" />
+    </svg>
+  );
+}
+
+function IconTicket({ className = "h-5 w-5 shrink-0 text-brand-700" }: CheckoutIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M4 8h16v3a1.5 1.5 0 000 3v3H4v-3a1.5 1.5 0 000-3zM13.5 8.5v1.5M13.5 11.2v1.6M13.5 14v1.5" />
+    </svg>
+  );
+}
+
+function IconTag({ className = "h-5 w-5 shrink-0 text-brand-700" }: CheckoutIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M4 4h7l9 9-7 7-9-9z" />
+      <circle cx="9" cy="9" r="1.4" />
+    </svg>
+  );
+}
+
+function IconReceipt({ className = "h-5 w-5 shrink-0 text-brand-700" }: CheckoutIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M6 3.5h12V21l-2-1.4-2 1.4-2-1.4-2 1.4-2-1.4-2 1.4zM9 8h6M9 12h6" />
+    </svg>
+  );
+}
+
+function IconStore({ className = "h-5 w-5 shrink-0 text-brand-700" }: CheckoutIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M4 9.5l1.6-4.5h12.8L20 9.5M4 9.5V19h16V9.5M4 9.5h16M9.5 19v-4.5h5V19" />
+    </svg>
+  );
+}
+
+function IconCash({ className = "h-5 w-5 shrink-0 text-brand-700" }: CheckoutIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <rect x="3" y="6.5" width="18" height="11" rx="2" />
+      <circle cx="12" cy="12" r="2.6" />
+      <path d="M6 9.5h.01M18 14.5h.01" />
+    </svg>
+  );
+}
+
+const PAYMENT_ICONS = {
+  transferencia: IconBank,
+  usdt: IconUsdt,
+  efectivo: IconCash,
+  mercadopago: IconCard,
+} as const;
+
 const PROVINCES = [
   "Buenos Aires",
   "CABA",
@@ -376,7 +486,7 @@ export function CheckoutFlow() {
     return (
       <div className="container-xl py-16">
         <div className="card-surface mx-auto flex max-w-lg flex-col items-center gap-3 px-8 py-14 text-center">
-          <span className="text-5xl">🧾</span>
+          <IconReceipt className="h-12 w-12 shrink-0 text-brand-700" />
           <h1 className="text-xl font-extrabold text-ink-900">No hay productos para pagar</h1>
           <p className="text-sm text-ink-500">Agregá productos al carrito y volvé para finalizar tu compra.</p>
           <Link href="/productos" className="mt-2 rounded-xl bg-brand-700 px-5 py-3 text-sm font-bold text-white">
@@ -392,7 +502,7 @@ export function CheckoutFlow() {
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-2xl font-extrabold tracking-tight text-ink-900 md:text-3xl">Finalizá tu compra</h1>
-          <p className="text-sm text-ink-500">Compra protegida · 🔒 datos cifrados · sin necesidad de crear cuenta</p>
+          <p className="text-sm text-ink-500">Compra protegida · <IconLock className="inline h-4 w-4 shrink-0 text-brand-700 align-[-2px]" /> datos cifrados · sin necesidad de crear cuenta</p>
         </div>
         <Link href="/carrito" className="text-sm font-semibold text-ink-500 hover:text-brand-700">
           ← Volver al carrito
@@ -402,7 +512,7 @@ export function CheckoutFlow() {
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_23rem]">
         <div className="space-y-4">
           <section className="card-surface p-5">
-            <h2 className="mb-4 text-lg font-extrabold text-ink-900">Detalles de facturación</h2>
+            <h2 className="mb-4 text-xl font-extrabold tracking-tight text-ink-900">Detalles de facturación</h2>
             <div className="space-y-4">
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field label="Nombre" error={errors.firstName}>
@@ -427,7 +537,7 @@ export function CheckoutFlow() {
           </section>
 
           <section className="card-surface p-5">
-            <h2 className="mb-4 text-lg font-extrabold text-ink-900">Entrega</h2>
+            <h2 className="mb-4 text-xl font-extrabold tracking-tight text-ink-900">Entrega</h2>
             <div className="space-y-4">
               <div className="grid gap-3 sm:grid-cols-2">
                 <button
@@ -437,7 +547,7 @@ export function CheckoutFlow() {
                     deliveryMethod !== "pickup" ? "border-brand-500 bg-brand-50/50" : "border-ink-100 hover:border-ink-300"
                   }`}
                 >
-                  <p className="text-sm font-extrabold text-ink-900">🚚 Envío a domicilio</p>
+                  <p className="flex items-center gap-2 text-sm font-extrabold text-ink-900"><IconTruck /> Envío a domicilio</p>
                   <p className="mt-1 text-xs text-ink-500">A todo el país con seguimiento online</p>
                 </button>
                 <button
@@ -447,7 +557,7 @@ export function CheckoutFlow() {
                     deliveryMethod === "pickup" ? "border-brand-500 bg-brand-50/50" : "border-ink-100 hover:border-ink-300"
                   }`}
                 >
-                  <p className="text-sm font-extrabold text-ink-900">🏬 Retiro en el local</p>
+                  <p className="flex items-center gap-2 text-sm font-extrabold text-ink-900"><IconStore /> Retiro en el local</p>
                   <p className="mt-1 text-xs text-emerald-700">Gratis · 27 de Abril 180, Córdoba Capital</p>
                 </button>
               </div>
@@ -479,7 +589,7 @@ export function CheckoutFlow() {
                           <Spinner className="h-4 w-4" /> Calculando envíos...
                         </span>
                       ) : zone ? (
-                        <span className="font-semibold text-emerald-700">📍 Zona: {zone}</span>
+                        <span className="inline-flex items-center gap-1.5 font-semibold text-emerald-700"><IconPin className="h-4 w-4 shrink-0 text-brand-700" /> Zona: {zone}</span>
                       ) : (
                         <span>Ingresá tu CP para ver costos y plazos.</span>
                       )}
@@ -547,9 +657,9 @@ export function CheckoutFlow() {
 
         {/* RESUMEN + MEDIO DE PAGO: van juntos, como en el sitio original, para
             que la forma de pago se vea sin tener que terminar otro paso. */}
-        <aside>
+        <aside className="self-start lg:sticky lg:top-36">
           <div className="card-surface space-y-4 p-5">
-            <h2 className="text-lg font-extrabold text-ink-900">Tu pedido</h2>
+            <h2 className="text-xl font-extrabold tracking-tight text-ink-900">Tu pedido</h2>
             <div className="max-h-56 space-y-3 overflow-y-auto pr-1">
               {items.map((item) => (
                 <div key={item.slug} className="flex items-center gap-3">
@@ -589,7 +699,7 @@ export function CheckoutFlow() {
 
             {coupon ? (
               <div className="flex items-center justify-between rounded-lg bg-emerald-50 px-3 py-2 text-xs">
-                <span className="font-bold text-emerald-700">🎟️ {coupon.code}</span>
+                <span className="inline-flex items-center gap-1.5 font-bold text-emerald-700"><IconTicket className="h-4 w-4 shrink-0 text-brand-700" /> {coupon.code}</span>
                 <button
                   type="button"
                   onClick={() => {
@@ -645,24 +755,26 @@ export function CheckoutFlow() {
             </div>
 
             {totals.savings > 0 ? (
-              <p className="rounded-lg bg-emerald-50 px-3 py-2 text-xs font-bold text-emerald-700">
-                🎉 Estás ahorrando {money(totals.savings)}
+              <p className="flex items-center gap-1.5 rounded-lg bg-emerald-50 px-3 py-2 text-xs font-bold text-emerald-700">
+                <IconTag className="h-4 w-4 shrink-0 text-brand-700" /> Estás ahorrando {money(totals.savings)}
               </p>
             ) : null}
 
             <ul className="space-y-1.5 border-t border-ink-100 pt-3 text-[11px] text-ink-500">
-              <li>🔒 Pago seguro · datos cifrados</li>
-              <li>🛡️ 6 meses de garantía legal</li>
-              <li>🔧 Servicio técnico propio en el local</li>
+              <li className="flex items-center gap-1.5"><IconLock className="h-4 w-4 shrink-0 text-brand-700" /> Pago seguro · datos cifrados</li>
+              <li className="flex items-center gap-1.5"><IconShield className="h-4 w-4 shrink-0 text-brand-700" /> 6 meses de garantía legal</li>
+              <li className="flex items-center gap-1.5"><IconStore className="h-4 w-4 shrink-0 text-brand-700" /> Servicio técnico propio en el local</li>
             </ul>
 
             {/* MEDIO DE PAGO: va debajo de los totales, igual que en el sitio original, para que la
                 forma de pago se vea sin terminar otro paso. */}
             <div className="space-y-4 border-t border-ink-100 pt-4">
-              <h2 className="text-lg font-extrabold text-ink-900">Medio de pago</h2>
+              <h2 className="text-xl font-extrabold tracking-tight text-ink-900">Medio de pago</h2>
                 <div className="grid gap-3 sm:grid-cols-2">
                   {PAYMENT_METHODS.filter((method) => method.id !== "efectivo" || deliveryMethod === "pickup").map(
-                    (method) => (
+                    (method) => {
+                      const PaymentIcon = PAYMENT_ICONS[method.id];
+                      return (
                       <button
                         key={method.id}
                         type="button"
@@ -673,8 +785,8 @@ export function CheckoutFlow() {
                         }`}
                       >
                         <div className="flex items-center justify-between">
-                          <span className="text-sm font-extrabold text-ink-900">
-                            {method.icon} {method.short}
+                          <span className="inline-flex items-center gap-2 text-sm font-extrabold text-ink-900">
+                            <PaymentIcon /> {method.short}
                           </span>
                           {method.perk ? (
                             <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
@@ -684,7 +796,8 @@ export function CheckoutFlow() {
                         </div>
                         <p className="mt-1.5 text-xs leading-snug text-ink-500">{method.description}</p>
                       </button>
-                    ),
+                      );
+                    },
                   )}
                 </div>
 
@@ -764,7 +877,7 @@ export function CheckoutFlow() {
                   type="button"
                   onClick={submit}
                   disabled={submitting}
-                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-3.5 text-sm font-extrabold text-white shadow-lg shadow-brand-600/25 transition hover:from-brand-700 hover:to-brand-600 disabled:opacity-60"
+                  className="flex h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-brand-500 text-[15px] font-extrabold text-deep transition hover:bg-brand-400 disabled:opacity-40"
                 >
                   {submitting ? <Spinner className="h-4 w-4" /> : null}
                   Confirmar pedido · {money(totals.total)}
