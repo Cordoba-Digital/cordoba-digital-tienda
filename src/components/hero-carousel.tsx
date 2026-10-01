@@ -84,6 +84,12 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
       >
         {slides.map((slide, i) => {
           const active = i === index;
+          // Entrada escalonada solo del slide activo: fade + rise (solo
+          // transform/opacity, sin layout) con keyframes propios `hero-enter`.
+          // Sin `key` ni remontajes: las fotos persisten y no reflashean.
+          const enter = active && !reduceMotion;
+          const enterClass = enter ? " animate-hero-enter motion-reduce:animate-none" : "";
+          const enterStyle = (ms: number) => (enter ? { animationDelay: `${ms}ms` } : undefined);
           // Un solo `h1` en toda la home: el del primer slide. El resto usa el
           // mismo estilo en un `p` para no romper la jerarquía de títulos.
           const Title = i === 0 ? "h1" : "p";
@@ -105,18 +111,18 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                 }`}
               >
                 <div className="animate-rise">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold text-white backdrop-blur">
+                  <span className={`inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold text-white backdrop-blur${enterClass}`} style={enterStyle(0)}>
                     <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-neon-400" />
                     {slide.pill}
                   </span>
-                  <Title className="mt-3.5 text-balance-pretty text-[1.75rem] font-black leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-[2.6rem]">
+                  <Title className={`mt-3.5 text-balance-pretty text-[1.75rem] font-black leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-[2.6rem]${enterClass}`} style={enterStyle(70)}>
                     {slide.titleLead}{" "}
                     <span className="bg-gradient-to-r from-neon-400 to-brand-300 bg-clip-text text-transparent">
                       {slide.titleAccent}
                     </span>
                   </Title>
-                  <p className="mt-3.5 max-w-xl text-[15px] leading-relaxed text-ink-200">{slide.text}</p>
-                  <div className="mt-5 flex flex-wrap gap-2.5">
+                  <p className={`mt-3.5 max-w-xl text-[15px] leading-relaxed text-ink-200${enterClass}`} style={enterStyle(140)}>{slide.text}</p>
+                  <div className={`mt-5 flex flex-wrap gap-2.5${enterClass}`} style={enterStyle(210)}>
                     <Link
                       href={slide.cta.href}
                       className="rounded-xl bg-gradient-to-r from-brand-500 to-neon-500 px-5 py-3 text-sm font-extrabold text-white shadow-[0_18px_40px_-16px_rgba(194,65,12,0.55)] transition hover:opacity-95"
@@ -143,7 +149,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                 </div>
 
                 {slide.product ? (
-                  <div className="relative">
+                  <div className={`relative${enterClass}`} style={enterStyle(280)}>
                     <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white shadow-2xl">
                       <div className="aspect-[4/3] lg:aspect-[5/4]">
                         <ProductImg
@@ -163,7 +169,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                       href={`/producto/${slide.product.slug}`}
                       className="absolute -bottom-5 left-2 hidden w-[18rem] animate-float-slow rounded-2xl border border-ink-100 bg-surface p-3 shadow-2xl sm:block"
                     >
-                      <div className="flex items-center gap-3">
+                      <div className={`flex items-center gap-3${enterClass}`} style={enterStyle(350)}>
                         <div className="h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-ink-50">
                           <ProductImg
                             src={slide.product.image}
@@ -185,8 +191,8 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                     </Link>
 
                     <div className="absolute -right-2 top-6 hidden animate-float-slow rounded-2xl border border-white/15 bg-deep/80 px-4 py-3 text-white backdrop-blur md:block">
-                      <p className="text-[11px] uppercase tracking-wide text-ink-300">Envío a todo el país</p>
-                      <p className="text-xl font-black text-neon-400">Andreani</p>
+                      <p className={`text-[11px] uppercase tracking-wide text-ink-300${enterClass}`} style={enterStyle(420)}>Envío a todo el país</p>
+                      <p className={`text-xl font-black text-neon-400${enterClass}`} style={enterStyle(420)}>Andreani</p>
                     </div>
                   </div>
                 ) : null}
