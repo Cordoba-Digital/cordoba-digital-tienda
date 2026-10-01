@@ -232,14 +232,14 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                       </div>
 
                       <div className="mt-3 overflow-hidden rounded-2xl bg-ink-50">
-                        <div className="aspect-[4/3] p-5">
+                        <div className="aspect-[16/10] p-4">
                           <ProductImg
                             src={producto.image}
                             srcSet={producto.srcSet}
                             alt={producto.name}
                             sizes="(max-width: 1024px) 100vw, 40vw"
                             width={800}
-                            height={600}
+                            height={500}
                             priority={i === 0}
                             className="h-full w-full object-contain"
                           />

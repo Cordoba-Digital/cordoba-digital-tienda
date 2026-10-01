@@ -107,7 +107,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Abrir menú"
-            className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-ink-100 text-ink-700 lg:hidden"
+            className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-ink-100 text-ink-700 lg:hidden"
           >
             <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" />
@@ -115,23 +115,14 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
           </button>
 
           <Link href="/" className="flex shrink-0 items-center gap-2.5">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/logo.png"
-              alt="Córdoba Digital"
-              // h-14 (56px): el logo se veía chico al lado del original. El
-              // ancho es automático así que escala proporcional, sin tocar
-              // el resto del header.
-              className="h-14 w-auto bg-white object-contain"
-            />
-            {/* El tagline "Tecnología con garantía legal" se sacó a pedido:
-                al lado del logo mete ruido. El nombre va en negro
-                (`text-ink-900`) y un punto más grande para que tenga presencia
-                al lado del logo agrandado. La rampa ink se invierte en modo
-                oscuro (`html.dark` en globals.css), así que el mismo token es
-                negro sobre claro y casi blanco sobre oscuro, sin clases extra. */}
+            <span className="grid h-11 w-11 place-items-center rounded-2xl bg-brand-500 text-white">
+              <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M4 10l1.5-5h13L20 10M4 10v9a1 1 0 001 1h14a1 1 0 001-1v-9M4 10h16M9 20v-6h6v6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
             <span className="hidden leading-tight sm:block">
               <span className="block text-[17px] font-extrabold tracking-tight text-ink-900">Córdoba Digital</span>
+              <span className="block text-[10px] font-bold tracking-[0.18em] text-brand-600">CENTRO · STOCK REAL</span>
             </span>
           </Link>
 
@@ -142,7 +133,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                 onChange={(e) => setTerm(e.target.value)}
                 onFocus={() => suggestions.length && setOpen(true)}
                 placeholder="Buscá tu próximo celular, notebook, cámara..."
-                className="h-11 w-full rounded-xl border border-ink-200 bg-ink-50/70 pl-11 pr-28 text-sm text-ink-800 outline-none transition placeholder:text-ink-400 focus:border-brand-400 focus:bg-surface focus:ring-4 focus:ring-brand-100"
+                className="h-11 w-full rounded-full border border-ink-100 bg-ink-50/80 pl-11 pr-28 text-sm text-ink-800 outline-none transition placeholder:text-ink-400 focus:border-brand-400 focus:bg-surface focus:ring-4 focus:ring-brand-100"
               />
               <svg
                 viewBox="0 0 24 24"
@@ -156,7 +147,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               </svg>
               <button
                 type="submit"
-                className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-lg bg-brand-700 px-4 py-2 text-xs font-bold text-white transition hover:bg-brand-800"
+                className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-full bg-brand-700 px-4 py-2 text-xs font-bold text-white transition hover:bg-brand-800"
               >
                 Buscar
               </button>
@@ -194,7 +185,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
           <nav className="ml-auto flex items-center gap-1">
             <Link
               href="/seguimiento"
-              className="hidden items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50 hover:text-ink-900 lg:flex"
+              className="hidden items-center gap-2 rounded-full border border-ink-200 px-4 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50 hover:text-ink-900 lg:flex"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z" />
@@ -206,7 +197,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
 
             <Link
               href="/favoritos"
-              className="relative grid h-10 w-10 place-items-center rounded-xl text-ink-600 transition hover:bg-ink-50 hover:text-rose-500"
+              className="relative grid h-10 w-10 place-items-center rounded-full border border-ink-100 text-ink-600 transition hover:bg-ink-50 hover:text-rose-500"
               aria-label="Favoritos"
             >
               <svg viewBox="0 0 24 24" className="h-5.5 w-5.5" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -222,7 +213,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
             <button
               type="button"
               onClick={openCart}
-              className="relative flex h-10 items-center gap-2 rounded-xl bg-brand-700 px-3.5 text-sm font-bold text-white transition hover:bg-brand-800"
+              className="relative flex h-10 items-center gap-2 rounded-full bg-brand-500 px-4 text-sm font-bold text-white transition hover:bg-brand-600"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <path d="M3 4h2.2l2 11h10.4l2-8H6" strokeLinecap="round" strokeLinejoin="round" />
@@ -246,7 +237,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               value={term}
               onChange={(e) => setTerm(e.target.value)}
               placeholder="¿Qué estás buscando?"
-              className="h-11 w-full rounded-xl border border-ink-200 bg-ink-50/70 pl-10 pr-4 text-sm outline-none focus:border-brand-400 focus:bg-surface"
+              className="h-11 w-full rounded-full border border-ink-100 bg-ink-50/80 pl-10 pr-4 text-sm outline-none focus:border-brand-400 focus:bg-surface"
             />
             <svg
               viewBox="0 0 24 24"

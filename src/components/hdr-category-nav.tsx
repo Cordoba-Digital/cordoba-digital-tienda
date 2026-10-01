@@ -73,20 +73,20 @@ function StripLinks({ items }: { items: BarItem[] }) {
         <Link
           key={root.slug}
           href={`/categoria/${root.path}`}
-          className="shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50 hover:text-ink-900"
+          className="shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50 hover:text-ink-900"
         >
           {label}
         </Link>
       ))}
       <Link
         href="/productos?ofertas=1"
-        className="shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-sm font-bold text-rose-600 transition hover:bg-rose-50"
+        className="shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-sm font-bold text-rose-600 transition hover:bg-rose-50"
       >
         Ofertas
       </Link>
       <Link
         href="/ayuda"
-        className="shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50"
+        className="shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50"
       >
         Ayuda
       </Link>
@@ -483,7 +483,7 @@ export function CategoryNavBar({ categories }: { categories: CategoryNavRoot[] }
             onClick={() => (openKey === ALL_KEY ? closeSoon() : openPanel(ALL_KEY))}
             aria-label="Ver todas las categorías"
             title="Ver todas las categorías"
-            className="grid h-9 w-9 place-items-center rounded-lg text-ink-600 transition hover:bg-ink-100 hover:text-ink-900 aria-expanded:bg-ink-100 aria-expanded:text-ink-900"
+            className="grid h-9 w-9 place-items-center rounded-full border border-ink-100 text-ink-600 transition hover:bg-ink-50 hover:text-ink-900 aria-expanded:bg-ink-100 aria-expanded:text-ink-900"
           >
             <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" />
