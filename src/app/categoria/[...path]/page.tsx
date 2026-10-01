@@ -94,7 +94,7 @@ export default async function CategoryPage({
     getCategoryTree(),
   ]);
 
-  const buildHref = (updates: Record<string, string | null>) => {
+  const buildHref = (updates: Record<string, string | null>, keepPage = false) => {
     const next = new URLSearchParams();
     Object.entries(query).forEach(([key, value]) => {
       if (typeof value === "string" && value) next.set(key, value);
@@ -103,11 +103,13 @@ export default async function CategoryPage({
       if (value === null) next.delete(key);
       else next.set(key, value);
     });
-    next.delete("pagina");
+    // Cambiar de filtros vuelve a la página 1 (la 3 de otros filtros no existe
+    // acá); solo los links de paginación conservan `pagina`.
+    if (!keepPage) next.delete("pagina");
     return `/categoria/${node.path}?${next.toString()}`;
   };
 
-  const pageHref = (page: number) => buildHref({ pagina: String(page) });
+  const pageHref = (page: number) => buildHref({ pagina: String(page) }, true);
 
   const chips: { key: string; label: string; value: string | null; href: string }[] = [];
   marcas.forEach((brand) =>
