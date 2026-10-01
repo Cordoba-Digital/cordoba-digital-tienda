@@ -276,19 +276,18 @@ export default async function HomePage() {
       </section>
 
       <section id="local" className="container-xl grid gap-4 py-12 lg:grid-cols-2">
-        <div className="overflow-hidden rounded-[28px] bg-ink text-white">
-          <div className="h-52 sm:h-64">
-            <ProductImg
-              src="/images/local-cordoba-1400.jpg"
-              srcSet={["/images/local-cordoba-700.jpg 700w", "/images/local-cordoba-1400.jpg 1400w"]}
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              alt="Fachada del local de Córdoba Digital en 27 de Abril 180, Córdoba Capital"
-              width={1400}
-              height={882}
-              className="h-full w-full object-cover"
-            />
-          </div>
-          <div className="space-y-3 px-6 pb-6 pt-2">
+        <div className="relative flex min-h-[560px] flex-col justify-end overflow-hidden rounded-[28px] bg-ink text-white">
+          <ProductImg
+            src="/images/local-cordoba-1400.jpg"
+            srcSet={["/images/local-cordoba-700.jpg 700w", "/images/local-cordoba-1400.jpg 1400w"]}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            alt="Fachada del local de Córdoba Digital en 27 de Abril 180, Córdoba Capital"
+            width={1400}
+            height={882}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/5" />
+          <div className="relative z-10 space-y-3 px-6 pb-6 pt-8">
             <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/45">Local a la calle</p>
             <h3 className="text-2xl font-extrabold">Córdoba Digital</h3>
             <p className="flex items-start gap-2 text-sm text-white/80">
