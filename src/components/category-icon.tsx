@@ -104,18 +104,88 @@ const PATHS: Record<string, ReactNode> = {
       <path d="M3 8l9 5 9-5M12 13v8" />
     </>
   ),
+  wind: (
+    <>
+      <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2" />
+      <path d="M9.6 4.6A2 2 0 1 1 11 8H2" />
+      <path d="M12.6 19.4A2 2 0 1 0 14 16H2" />
+    </>
+  ),
+  wrench: <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-8 8l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 8-8z" />,
+  drone: (
+    <>
+      <circle cx="5" cy="5" r="1.5" />
+      <circle cx="19" cy="5" r="1.5" />
+      <circle cx="5" cy="19" r="1.5" />
+      <circle cx="19" cy="19" r="1.5" />
+      <rect x="10" y="10" width="4" height="4" rx="1" />
+      <path d="M6.2 6.2 10 10M17.8 6.2 14 10M6.2 17.8 10 14M17.8 17.8 14 14" />
+      <path d="M2.5 5h3M18.5 5h3M2.5 19h3M18.5 19h3" />
+    </>
+  ),
+  sofa: (
+    <>
+      <path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3" />
+      <path d="M2 16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0z" />
+      <path d="M4 18v2M20 18v2" />
+    </>
+  ),
+  zap: <path d="M13 2 3 14h7l-1 8 10-12h-7z" />,
+  circuit: (
+    <>
+      <rect x="4" y="4" width="16" height="16" rx="2" />
+      <rect x="9" y="9" width="6" height="6" rx="1" />
+      <path d="M9 12H6M15 12h3M12 9V6M12 15v3" />
+      <circle cx="5" cy="12" r="0.8" />
+      <circle cx="19" cy="12" r="0.8" />
+      <circle cx="12" cy="5" r="0.8" />
+      <circle cx="12" cy="19" r="0.8" />
+    </>
+  ),
+  backpack: (
+    <>
+      <path d="M4 10V6a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4" />
+      <path d="M4 10h16v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z" />
+      <path d="M8 10h8" />
+      <path d="M8 21v-5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2z" />
+    </>
+  ),
+  puzzle: <path d="M14 7V4a2 2 0 0 0-4 0v3H7a2 2 0 0 0-2 2v3h3a2 2 0 1 1 0 4H5v3a2 2 0 0 0 2 2h3v-3a2 2 0 1 1 4 0v3h3a2 2 0 0 0 2-2v-3h-3a2 2 0 1 1 0-4h3V9a2 2 0 0 0-2-2z" />,
+  server: (
+    <>
+      <rect x="2" y="3" width="20" height="7" rx="2" />
+      <rect x="2" y="14" width="20" height="7" rx="2" />
+      <path d="M6 6.5h.5M6 17.5h.5" />
+    </>
+  ),
+  radio: (
+    <>
+      <circle cx="12" cy="12" r="2" />
+      <path d="M4.9 19.1a10 10 0 0 1 0-14.2M7.8 16.2a6 6 0 0 1 0-8.5M16.2 7.8a6 6 0 0 1 0 8.5M19.1 4.9a10 10 0 0 1 0 14.2" />
+    </>
+  ),
 };
 
 /** Orden importa: lo más específico va primero. */
 const RULES: [RegExp, keyof typeof PATHS][] = [
   [/cctv|seguridad|alarma/, "shield"],
-  [/aires|climatiz|acondicionad/, "snow"],
+  [/aires|climatiz|acondicionad/, "wind"],
   [/accesorio|cargador|cable/, "plug"],
   [/audio|video|auricular|parlante/, "headphones"],
-  [/celular|smartwatch|smartband/, "phone"],
-  [/camara|lente|foto|dron|gimbal/, "camera"],
+  [/herramienta/, "wrench"],
+  [/dron/, "drone"],
+  [/camara|lente|foto|gimbal/, "camera"],
   [/impresora|sublimac|3d/, "printer"],
+  [/mueble/, "sofa"],
+  [/monopatin/, "zap"],
+  [/electronica/, "circuit"],
+  [/mochila/, "backpack"],
+  [/juguete/, "puzzle"],
   [/consola|videojueg|jueg/, "gamepad"],
+  [/servidor/, "server"],
+  [/handy|handie/, "radio"],
+  [/calefac|estufa/, "flame"],
+  [/celular|smartwatch|smartband/, "phone"],
   [/televis|proyector|pantalla/, "tv"],
   [/conectividad|router|wifi|red\b/, "wifi"],
   [/electrodomestic|freidora|cafetera|heladera|lavarropas|microondas/, "appliance"],
