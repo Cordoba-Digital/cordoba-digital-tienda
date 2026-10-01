@@ -502,17 +502,21 @@ export function CheckoutFlow() {
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-2xl font-extrabold tracking-tight text-ink-900 md:text-3xl">Finalizá tu compra</h1>
-          <p className="text-sm text-ink-500">Compra protegida · <IconLock className="inline h-4 w-4 shrink-0 text-brand-700 align-[-2px]" /> datos cifrados · sin necesidad de crear cuenta</p>
+          <div className="mt-1 flex flex-wrap items-center gap-4 text-xs font-medium text-ink-500">
+            <span className="flex items-center gap-1.5"><IconShield className="h-4 w-4 shrink-0 text-emerald-600" /> Compra protegida</span>
+            <span className="flex items-center gap-1.5"><IconLock className="h-4 w-4 shrink-0 text-emerald-600" /> Datos cifrados</span>
+            <span className="hidden sm:inline">Sin necesidad de crear cuenta</span>
+          </div>
         </div>
         <Link href="/carrito" className="text-sm font-semibold text-ink-500 hover:text-brand-700">
           ← Volver al carrito
         </Link>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_23rem]">
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_400px]">
         <div className="space-y-4">
-          <section className="card-surface p-5">
-            <h2 className="mb-4 text-xl font-extrabold tracking-tight text-ink-900">Detalles de facturación</h2>
+          <section className="card-surface p-6 sm:p-8">
+            <h2 className="mb-6 text-xl font-extrabold tracking-tight text-ink-900">Detalles de facturación</h2>
             <div className="space-y-4">
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field label="Nombre" error={errors.firstName}>
@@ -536,15 +540,15 @@ export function CheckoutFlow() {
             </div>
           </section>
 
-          <section className="card-surface p-5">
-            <h2 className="mb-4 text-xl font-extrabold tracking-tight text-ink-900">Entrega</h2>
+          <section className="card-surface p-6 sm:p-8">
+            <h2 className="mb-6 text-xl font-extrabold tracking-tight text-ink-900">Entrega</h2>
             <div className="space-y-4">
               <div className="grid gap-3 sm:grid-cols-2">
                 <button
                   type="button"
                   onClick={() => chooseDelivery("standard")}
-                  className={`rounded-xl border-2 p-4 text-left transition ${
-                    deliveryMethod !== "pickup" ? "border-brand-500 bg-brand-50/50" : "border-ink-100 hover:border-ink-300"
+                  className={`rounded-2xl border p-4 text-left transition ${
+                    deliveryMethod !== "pickup" ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-100 bg-surface hover:bg-ink-50"
                   }`}
                 >
                   <p className="flex items-center gap-2 text-sm font-extrabold text-ink-900"><IconTruck /> Envío a domicilio</p>
@@ -553,8 +557,8 @@ export function CheckoutFlow() {
                 <button
                   type="button"
                   onClick={() => chooseDelivery("pickup")}
-                  className={`rounded-xl border-2 p-4 text-left transition ${
-                    deliveryMethod === "pickup" ? "border-brand-500 bg-brand-50/50" : "border-ink-100 hover:border-ink-300"
+                  className={`rounded-2xl border p-4 text-left transition ${
+                    deliveryMethod === "pickup" ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-100 bg-surface hover:bg-ink-50"
                   }`}
                 >
                   <p className="flex items-center gap-2 text-sm font-extrabold text-ink-900"><IconStore /> Retiro en el local</p>
@@ -605,10 +609,10 @@ export function CheckoutFlow() {
                             key={option.id}
                             type="button"
                             onClick={() => chooseDelivery(option.id)}
-                            className={`flex w-full items-start justify-between gap-3 rounded-xl border-2 p-4 text-left transition ${
+                            className={`flex w-full items-start justify-between gap-3 rounded-2xl border p-4 text-left transition ${
                               deliveryMethod === option.id
-                                ? "border-brand-500 bg-brand-50/40"
-                                : "border-ink-100 hover:border-ink-300"
+                                ? "border-brand-500 bg-brand-50/40 ring-1 ring-brand-500/20"
+                                : "border-ink-100 bg-surface hover:bg-ink-50"
                             }`}
                           >
                             <span>
@@ -655,11 +659,12 @@ export function CheckoutFlow() {
           </section>
         </div>
 
-        {/* RESUMEN + MEDIO DE PAGO: van juntos, como en el sitio original, para
-            que la forma de pago se vea sin tener que terminar otro paso. */}
+        {/* RESUMEN (Tu pedido) y MEDIO DE PAGO: van juntos en la columna derecha,
+            en dos tarjetas, para que el comprador vea el pago sin otro paso. */}
         <aside className="self-start lg:sticky lg:top-36">
-          <div className="card-surface space-y-4 p-5">
-            <h2 className="text-xl font-extrabold tracking-tight text-ink-900">Tu pedido</h2>
+          <div className="space-y-6">
+            <div className="card-surface space-y-4 p-6">
+              <h2 className="text-xl font-extrabold tracking-tight text-ink-900">Tu pedido</h2>
             <div className="max-h-56 space-y-3 overflow-y-auto pr-1">
               {items.map((item) => (
                 <div key={item.slug} className="flex items-center gap-3">
@@ -674,22 +679,26 @@ export function CheckoutFlow() {
                   />
                   <div className="min-w-0 flex-1">
                     <p className="line-clamp-1 text-xs font-semibold text-ink-800">{item.name}</p>
-                    <div className="mt-0.5 flex items-center gap-2 text-[11px] text-ink-500">
-                      <button
-                        type="button"
-                        onClick={() => setQuantity(item.slug, item.quantity - 1)}
-                        className="h-5 w-5 rounded border border-ink-200"
-                      >
-                        −
-                      </button>
-                      <span>{item.quantity}</span>
-                      <button
-                        type="button"
-                        onClick={() => setQuantity(item.slug, item.quantity + 1)}
-                        className="h-5 w-5 rounded border border-ink-200"
-                      >
-                        +
-                      </button>
+                    <div className="mt-1">
+                      <div className="inline-flex items-center gap-2 rounded-lg border border-ink-100 bg-ink-50 px-1 text-[11px] text-ink-500">
+                        <button
+                          type="button"
+                          aria-label="Quitar una unidad"
+                          onClick={() => setQuantity(item.slug, item.quantity - 1)}
+                          className="px-1.5 py-0.5"
+                        >
+                          −
+                        </button>
+                        <span className="font-bold tabular-nums text-ink-800">{item.quantity}</span>
+                        <button
+                          type="button"
+                          aria-label="Agregar una unidad"
+                          onClick={() => setQuantity(item.slug, item.quantity + 1)}
+                          className="px-1.5 py-0.5"
+                        >
+                          +
+                        </button>
+                      </div>
                     </div>
                   </div>
                   <span className="text-xs font-bold text-ink-900">{money(item.price * item.quantity)}</span>
@@ -765,12 +774,12 @@ export function CheckoutFlow() {
               <li className="flex items-center gap-1.5"><IconShield className="h-4 w-4 shrink-0 text-brand-700" /> 6 meses de garantía legal</li>
               <li className="flex items-center gap-1.5"><IconStore className="h-4 w-4 shrink-0 text-brand-700" /> Servicio técnico propio en el local</li>
             </ul>
+            </div>
 
-            {/* MEDIO DE PAGO: va debajo de los totales, igual que en el sitio original, para que la
-                forma de pago se vea sin terminar otro paso. */}
-            <div className="space-y-4 border-t border-ink-100 pt-4">
+            {/* MEDIO DE PAGO: tarjeta aparte, igual que en la referencia. */}
+            <div className="card-surface space-y-4 p-6">
               <h2 className="text-xl font-extrabold tracking-tight text-ink-900">Medio de pago</h2>
-                <div className="grid gap-3 sm:grid-cols-2">
+              <div className="grid gap-2">
                   {PAYMENT_METHODS.filter((method) => method.id !== "efectivo" || deliveryMethod === "pickup").map(
                     (method) => {
                       const PaymentIcon = PAYMENT_ICONS[method.id];
@@ -780,21 +789,24 @@ export function CheckoutFlow() {
                         type="button"
                         onClick={() => setPayment(method.id)}
                         {...(method.id === "mercadopago" ? { "data-mp-checkout-cta": "checkout-pro" } : {})}
-                        className={`rounded-xl border-2 p-4 text-left transition ${
-                          payment === method.id ? "border-brand-500 bg-brand-50/40" : "border-ink-100 hover:border-ink-300"
+                        className={`flex w-full items-start gap-3 rounded-2xl border p-4 text-left transition ${
+                          payment === method.id ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-100 bg-surface hover:bg-ink-50"
                         }`}
                       >
-                        <div className="flex items-center justify-between">
-                          <span className="inline-flex items-center gap-2 text-sm font-extrabold text-ink-900">
-                            <PaymentIcon /> {method.short}
+                        <span className={`mt-0.5 rounded-lg p-2 ${payment === method.id ? "bg-brand-100 text-brand-700" : "bg-ink-50 text-ink-400"}`}>
+                          <PaymentIcon className="h-5 w-5 shrink-0" />
+                        </span>
+                        <span className="min-w-0 flex-1">
+                          <span className="flex items-center justify-between gap-2 text-sm font-extrabold text-ink-900">
+                            {method.short}
+                            {method.perk ? (
+                              <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
+                                {method.perk}
+                              </span>
+                            ) : null}
                           </span>
-                          {method.perk ? (
-                            <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
-                              {method.perk}
-                            </span>
-                          ) : null}
-                        </div>
-                        <p className="mt-1.5 text-xs leading-snug text-ink-500">{method.description}</p>
+                          <span className="mt-0.5 block text-xs leading-snug text-ink-500">{method.description}</span>
+                        </span>
                       </button>
                       );
                     },
