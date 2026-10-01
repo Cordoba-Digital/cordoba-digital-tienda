@@ -84,19 +84,24 @@ function buildWhere(filters: ProductFilters, subtree?: { ids: number[]; slugs: s
 }
 
 function orderFor(sort?: string) {
+  // Empate determinista y "lo nuevo primero": WooCommerce no trae `featured`
+  // (siempre false) ni `soldCount` (casi todo en 0), así que sin este
+  // desempate los productos migrados más recientes caían en un orden
+  // arbitrario y quedaban enterrados en las últimas páginas del catálogo.
+  const newest = desc(products.createdAt);
   switch (sort) {
     case "precio-asc":
-      return [asc(products.price)];
+      return [asc(products.price), newest];
     case "precio-desc":
-      return [desc(products.price)];
+      return [desc(products.price), newest];
     case "descuento":
-      return [desc(sql`coalesce(${products.compareAtPrice}, ${products.price}) - ${products.price}`)];
+      return [desc(sql`coalesce(${products.compareAtPrice}, ${products.price}) - ${products.price}`), newest];
     case "vendidos":
-      return [desc(products.soldCount)];
+      return [desc(products.soldCount), newest];
     case "puntaje":
-      return [desc(products.rating), desc(products.reviewCount)];
+      return [desc(products.rating), desc(products.reviewCount), newest];
     default:
-      return [desc(products.featured), desc(products.soldCount)];
+      return [desc(products.featured), desc(products.soldCount), newest];
   }
 }
 
@@ -349,16 +354,18 @@ export async function getBrandFacets(categoryId?: number) {
 
 export async function getFeaturedProducts(limit = 8) {
   await ensureSeeded();
+  // El catálogo migrado de WooCommerce no trae `featured` (todo false) ni
+  // `soldCount` (todo 0). Ordenar por soldCount las enterraba detrás del
+  // catálogo viejo: acá van primero los más nuevos con stock (createdAt, y
+  // `id` como desempate determinista), que es donde caen las tandas recién
+  // migradas de www.cordobadigital.net. El flag `featured` solo desempata.
   const rows = await db
     .select()
     .from(products)
-    .where(and(eq(products.featured, true), gte(products.stock, 1)))
-    .orderBy(desc(products.soldCount))
+    .where(gte(products.stock, 1))
+    .orderBy(desc(products.createdAt), desc(products.featured), desc(products.id))
     .limit(limit);
-  if (rows.length) return rows;
-  // El catálogo migrado de WooCommerce no trae `featured`: usamos lo más nuevo
-  // con stock para que la home nunca quede vacía.
-  return db.select().from(products).where(gte(products.stock, 1)).orderBy(desc(products.id)).limit(limit);
+  return rows;
 }
 
 export async function getDealProducts(limit = 8) {
@@ -389,12 +396,14 @@ export async function getBestSellers(limit = 8) {
     .orderBy(desc(products.reviewCount))
     .limit(limit);
   if (reviewed.length >= Math.min(4, limit)) return reviewed;
-  return db.select().from(products).where(gte(products.stock, 1)).orderBy(desc(products.id)).limit(limit);
+  // Fallback: los más nuevos con stock (ids altos / createdAt reciente), que
+  // es donde están los migrados de www.cordobadigital.net.
+  return db.select().from(products).where(gte(products.stock, 1)).orderBy(desc(products.createdAt), desc(products.id)).limit(limit);
 }
 
 export async function getNewArrivals(limit = 8) {
   await ensureSeeded();
-  return db.select().from(products).orderBy(desc(products.id)).limit(limit);
+  return db.select().from(products).orderBy(desc(products.createdAt), desc(products.id)).limit(limit);
 }
 
 /** Por slug, con `cache()` de React: `generateMetadata` y la página llaman a
