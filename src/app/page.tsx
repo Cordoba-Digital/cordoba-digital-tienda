@@ -17,7 +17,7 @@ import { Countdown } from "@/components/countdown";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { HomeHero } from "@/components/home-hero";
 import { NewsletterForm } from "@/components/newsletter-form";
-import { ProductCard, ProductRow } from "@/components/product-card";
+import { ProductRow } from "@/components/product-card";
 import { ProductImg } from "@/components/product-img";
 import { SectionHeading } from "@/components/ui";
 import { discountPercent } from "@/lib/format";
@@ -268,11 +268,11 @@ export default async function HomePage() {
           description="Lo que más sale de nuestro depósito esta semana, con stock confirmado."
           action={{ href: "/productos?orden=vendidos", label: "Ver ranking" }}
         />
-        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-          {bestSellers.slice(0, 8).map((p, i) => (
-            <ProductCard key={p.slug} product={toView(p)} badge={i < 3 ? `Top ${i + 1}` : undefined} />
-          ))}
-        </div>
+        <ProductRow
+          products={bestSellers.slice(0, 8).map(toView)}
+          label="los más vendidos"
+          badge={(_, i) => (i < 3 ? `Top ${i + 1}` : undefined)}
+        />
       </section>
 
       <section id="local" className="container-xl grid gap-4 py-12 lg:grid-cols-2">
