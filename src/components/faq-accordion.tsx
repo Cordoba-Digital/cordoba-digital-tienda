@@ -30,11 +30,11 @@ export type FaqItem = {
 
 export function FaqAccordion({ items, variant = "tarjeta" }: { items: FaqItem[]; variant?: "tarjeta" | "plano" }) {
   const base = useId();
-  // Varias respuestas pueden estar abiertas a la vez, como antes.
-  const [abiertas, setAbiertas] = useState<Record<string, boolean>>({});
+  // Solo una respuesta abierta a la vez: al abrir una, la anterior se cierra.
+  const [abiertaClave, setAbiertaClave] = useState<string | null>(null);
 
   const alternar = (clave: string) =>
-    setAbiertas((prev) => ({ ...prev, [clave]: !prev[clave] }));
+    setAbiertaClave((prev) => (prev === clave ? null : clave));
 
   // `plano` es la lista undivided que va dentro de una tarjeta sola (la home):
   // cada pregunta se separa con una línea en vez de ser una tarjeta propia, para
@@ -45,7 +45,7 @@ export function FaqAccordion({ items, variant = "tarjeta" }: { items: FaqItem[];
         {items.map((item, i) => {
           const idPanel = `${base}-panel-${i}`;
           const idBoton = `${base}-boton-${i}`;
-          const abierta = abiertas[item.q] ?? false;
+          const abierta = abiertaClave === item.q;
           return (
             <div key={item.q} className="border-b border-ink-100 last:border-b-0">
               <h3 className="m-0">
@@ -96,7 +96,7 @@ export function FaqAccordion({ items, variant = "tarjeta" }: { items: FaqItem[];
       {items.map((item, i) => {
         const idPanel = `${base}-panel-${i}`;
         const idBoton = `${base}-boton-${i}`;
-        const abierta = abiertas[item.q] ?? false;
+        const abierta = abiertaClave === item.q;
 
         return (
           <div key={item.q} className="card-surface">
