@@ -147,7 +147,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               </svg>
               <button
                 type="submit"
-                className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-full bg-brand-700 px-4 py-2 text-xs font-bold text-white transition hover:bg-brand-800"
+                className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-full bg-brand-500 px-4 py-2 text-xs font-bold text-white transition hover:bg-brand-600"
               >
                 Buscar
               </button>
