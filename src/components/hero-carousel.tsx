@@ -35,8 +35,10 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
     () => typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches,
   );
   const touchX = useRef<number | null>(null);
-  // Mousepad: el swipe horizontal manda varios eventos seguidos; el candado
-  // evita saltear varios slides de un solo gesto.
+  // Panel táctil: manda muchos eventos chicos por swipe (3-15 px) en vez de
+  // uno grande, así que se acumulan en una ventana corta y se dispara al
+  // llegar al total. El candado evita saltear varios slides de un gesto.
+  const wheelAcc = useRef({ x: 0, at: 0 });
   const wheelLock = useRef(0);
 
   const go = useCallback((delta: number) => setIndex((i) => (i + delta + count) % count), [count]);
@@ -82,14 +84,21 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
       }}
       onWheel={(event) => {
         // Solo gestos predominantemente horizontales (swipe de dos dedos del
-        // mousepad). La rueda vertical no se intercepta: sigue scrolleando la
-        // página con normalidad (sin preventDefault).
+        // panel táctil). La rueda vertical no se intercepta: sigue scrolleando
+        // la página con normalidad (sin preventDefault).
         if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
-        if (Math.abs(event.deltaX) < 30) return;
         const now = Date.now();
+        // Ventana corta: pausas largas reinician el acumulado (evita que el
+        // jitter sume de a poco hasta disparar solo).
+        if (now - wheelAcc.current.at > 200) wheelAcc.current.x = 0;
+        wheelAcc.current.at = now;
+        wheelAcc.current.x += event.deltaX;
+        if (Math.abs(wheelAcc.current.x) < 60) return;
         if (now - wheelLock.current < 900) return;
         wheelLock.current = now;
-        go(event.deltaX > 0 ? 1 : -1);
+        const dir = wheelAcc.current.x > 0 ? 1 : -1;
+        wheelAcc.current.x = 0;
+        go(dir);
       }}
     >
       <div
