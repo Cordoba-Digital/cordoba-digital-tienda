@@ -235,8 +235,11 @@ export default async function ProductPage({ params }: { params: Params }) {
           {product.descriptionHtml ? (
             // El HTML viene saneado por el migrador (scripts, estilos y
             // handlers inline ya eliminados). Ver scripts/migrate-wp.ts.
+            // `prose-soft`: el HTML migrado abusa de <strong> y de subtítulos
+            // en cada línea; la referencia muestra el cuerpo en peso normal.
+            // La jerarquía sobrevive por tamaño y espaciado, no por peso.
             <div
-              className="prose-cd"
+              className="prose-cd prose-soft"
               dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
             />
           ) : (

@@ -282,6 +282,22 @@ body {
   color: var(--color-ink-800);
   font-weight: 700;
 }
+/*
+ * Descripción de ficha (`prose-soft`): el HTML migrado abusa de <strong> y de
+ * subtítulos (h2-h4) en cada línea, y la referencia muestra el cuerpo en peso
+ * normal. Se normaliza solo en este scope: las guías usan `prose-cd` con su
+ * negrita intacta. La jerarquía sobrevive por tamaño y espaciado, no por peso.
+ */
+.prose-cd.prose-soft h2,
+.prose-cd.prose-soft h3,
+.prose-cd.prose-soft h4,
+.prose-cd.prose-soft h5,
+.prose-cd.prose-soft strong,
+.prose-cd.prose-soft b,
+.prose-cd.prose-soft th {
+  font-weight: 400;
+  color: inherit;
+}
 .prose-cd a {
   color: var(--color-brand-700);
   text-decoration: underline;
