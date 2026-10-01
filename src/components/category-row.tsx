@@ -115,7 +115,7 @@ export function CategoryRow({ items, label }: { items: CategoryRowItem[]; label:
   return (
     <div>
       <div className="relative">
-        <div ref={ref} className="scroll-minimo flex gap-2 overflow-x-auto pb-3">
+        <div ref={ref} className="no-scrollbar flex gap-2 overflow-x-auto pb-3">
           {items.map((item) => (
             <Link
               key={item.href}
