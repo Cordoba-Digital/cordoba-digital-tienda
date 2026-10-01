@@ -35,6 +35,9 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
     () => typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches,
   );
   const touchX = useRef<number | null>(null);
+  // Mousepad: el swipe horizontal manda varios eventos seguidos; el candado
+  // evita saltear varios slides de un solo gesto.
+  const wheelLock = useRef(0);
 
   const go = useCallback((delta: number) => setIndex((i) => (i + delta + count) % count), [count]);
 
@@ -76,6 +79,17 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
         const dx = (event.changedTouches[0]?.clientX ?? touchX.current) - touchX.current;
         touchX.current = null;
         if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
+      }}
+      onWheel={(event) => {
+        // Solo gestos predominantemente horizontales (swipe de dos dedos del
+        // mousepad). La rueda vertical no se intercepta: sigue scrolleando la
+        // página con normalidad (sin preventDefault).
+        if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
+        if (Math.abs(event.deltaX) < 30) return;
+        const now = Date.now();
+        if (now - wheelLock.current < 900) return;
+        wheelLock.current = now;
+        go(event.deltaX > 0 ? 1 : -1);
       }}
     >
       <div
@@ -237,23 +251,8 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                 <span className={`h-1.5 rounded-full transition-all ${i === index ? "w-5 bg-brand-500/90" : "w-1.5 bg-white/40 hover:bg-white/70"}`} />
               </button>
             ))}
-            <button
-              type="button"
-              onClick={() => setPaused((p) => !p)}
-              aria-label={paused ? "Reanudar carrusel" : "Pausar carrusel"}
-              aria-pressed={paused}
-              className="grid h-11 w-8 place-items-center rounded-full text-white/60 transition hover:text-white focus-visible:outline-2 focus-visible:outline-neon-400"
-            >
-              {paused ? (
-                <svg viewBox="0 0 24 24" className="h-3 w-3" fill="currentColor" aria-hidden>
-                  <path d="M7 4l13 8-13 8z" />
-                </svg>
-              ) : (
-                <svg viewBox="0 0 24 24" className="h-3 w-3" fill="currentColor" aria-hidden>
-                  <path d="M6 4h4v16H6zM14 4h4v16h-4z" />
-                </svg>
-              )}
-            </button>
+            {/* Sin botón de pausa manual: el cambio es automático (la pausa al
+                hover/foco sigue activa pero es invisible). */}
           </div>
         </>
       ) : null}
