@@ -25,7 +25,7 @@ export type HeroSlide = {
   } | null;
 };
 
-const INTERVAL_MS = 6500;
+const INTERVAL_MS = 5000;
 
 export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
   const count = slides.length;
@@ -67,10 +67,11 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
       role="region"
       aria-roledescription="carrusel"
       aria-label="Destacados de la tienda"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={(event) => {
+        // Solo el teclado pausa: el mouse ya no frena la rotación (quedaba
+        // quieto con el cursor apoyado y parecía roto). Con foco dentro se
+        // pausa igual, por accesibilidad.
         if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setPaused(false);
       }}
       onTouchStart={(event) => {
