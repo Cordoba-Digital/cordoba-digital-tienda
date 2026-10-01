@@ -62,10 +62,10 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
   // deriva; el cambio manual igual reinicia el ciclo porque `go` re-renderiza
   // pero el intervalo sigue su ritmo.
   useEffect(() => {
-    if (paused || reduceMotion || count < 2) return;
+    if (paused || count < 2) return;
     const timer = setInterval(() => setIndex((i) => (i + 1) % count), INTERVAL_MS);
     return () => clearInterval(timer);
-  }, [paused, reduceMotion, count, index]);
+  }, [paused, count, index]);
 
   return (
     <section
