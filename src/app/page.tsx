@@ -144,11 +144,11 @@ export default async function HomePage() {
         {/*
           Fila desplazable de círculos, como la referencia del rediseño: las 21
           raíces reales con su nombre y su link, sin conteos. Con 21 ítems la
-          fila desborda y desplaza en desktop y en móvil. El scrollbar fino
-          sale del estilo global (`*` en globals.css) y es la señal de que hay
-          más para ver. Sin estado activo inventado: el hover tiñe el círculo.
+          fila desborda y desplaza en desktop y en móvil. El scrollbar mínimo
+          (`scroll-minimo`) es la señal de que hay más para ver. Sin estado
+          activo inventado: el hover tiñe el círculo.
         */}
-        <div className="flex gap-4 overflow-x-auto pb-3 sm:gap-5">
+        <div className="scroll-minimo flex gap-4 overflow-x-auto pb-3 sm:gap-5">
           {categories.map((c) => (
             <Link
               key={c.slug}
