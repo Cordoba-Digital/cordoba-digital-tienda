@@ -252,7 +252,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
       {menuOpen ? (
         <div className="fixed inset-0 z-50 lg:hidden">
           <div className="absolute inset-0 bg-deep/50" onClick={() => setMenuOpen(false)} />
-          <div className="absolute left-0 top-0 h-full w-[85%] max-w-sm animate-pop overflow-y-auto bg-surface p-5" data-lenis-prevent>
+          <div className="absolute left-0 top-0 h-full w-[85%] max-w-sm animate-pop overflow-y-auto overscroll-contain bg-surface p-5" data-lenis-prevent>
             <div className="mb-5 flex items-center justify-between">
               <span className="text-lg font-extrabold">Menú</span>
               <button type="button" onClick={() => setMenuOpen(false)} className="text-2xl text-ink-400">

@@ -665,7 +665,7 @@ export function CheckoutFlow() {
           <div className="space-y-6">
             <div className="card-surface space-y-4 p-6">
               <h2 className="text-xl font-extrabold tracking-tight text-ink-900">Tu pedido</h2>
-            <div className="max-h-56 space-y-3 overflow-y-auto data-lenis-prevent pr-1">
+            <div className="max-h-56 space-y-3 overflow-y-auto overscroll-contain data-lenis-prevent pr-1">
               {items.map((item) => (
                 <div key={item.slug} className="flex items-center gap-3">
                   <ProductImg

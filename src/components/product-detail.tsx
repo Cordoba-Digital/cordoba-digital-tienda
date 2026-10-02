@@ -65,7 +65,7 @@ export function ProductGallery({
           foto entera. Con el tope el `aspect-square` cede y el `object-contain`
           sigue encajando la foto completa. */}
       <div className="card-surface flex flex-col gap-3 p-3 sm:flex-row sm:p-4">
-        <div className="no-scrollbar order-2 flex gap-2 overflow-x-auto data-lenis-prevent sm:order-1 sm:max-h-[78vh] sm:flex-col sm:overflow-y-auto sm:overflow-x-visible">
+        <div className="no-scrollbar order-2 flex gap-2 overflow-x-auto overscroll-contain data-lenis-prevent sm:order-1 sm:max-h-[78vh] sm:flex-col sm:overflow-y-auto sm:overflow-x-visible">
           {list.map((image, index) => (
             <button
               key={`${image}-${index}`}
@@ -137,7 +137,7 @@ export function ProductGallery({
 
       {lightbox ? (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-ink-950/92 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-ink-950/92 p-4 overscroll-contain"
           onClick={() => setLightbox(false)}
           role="dialog"
           aria-modal="true"
@@ -178,7 +178,7 @@ export function ProductGallery({
             </>
           ) : null}
           <div
-            className="max-h-[88vh] max-w-5xl"
+            className="max-h-[88vh] max-w-5xl touch-none overscroll-contain"
             onClick={(event) => event.stopPropagation()}
             onTouchStart={(event) => {
               touchStartX.current = event.touches[0]?.clientX ?? null;
