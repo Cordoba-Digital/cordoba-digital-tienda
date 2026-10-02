@@ -5,7 +5,13 @@ import Lenis from "lenis";
 
 export function SmoothScroll() {
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      window.matchMedia("(pointer: coarse)").matches ||
+      "ontouchstart" in window
+    ) {
+      return;
+    }
 
     const lenis = new Lenis({
       duration: 1.1,
