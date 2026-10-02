@@ -780,7 +780,9 @@ export function CheckoutFlow() {
             <div className="card-surface space-y-4 p-6">
               <h2 className="text-xl font-extrabold tracking-tight text-ink-900">Medio de pago</h2>
               <div className="grid gap-2">
-                  {PAYMENT_METHODS.filter((method) => method.id !== "efectivo" || deliveryMethod === "pickup").map(
+                  {PAYMENT_METHODS.filter((method) =>
+                  method.id === "transferencia" || (method.id === "efectivo" && deliveryMethod === "pickup"),
+                ).map(
                     (method) => {
                       const PaymentIcon = PAYMENT_ICONS[method.id];
                       return (
@@ -813,21 +815,9 @@ export function CheckoutFlow() {
                   )}
                 </div>
 
-                {payment === "mercadopago" ? (
-                  <div className="rounded-xl border border-ink-100 p-4">
-                    {/* Acá había un selector "Elegí tu plan de cuotas" con 1, 3,
-                        6, 9 y 12 cuotas, y para 9 y 12 multiplicaba el total por
-                        1,12 y 1,22 con el rótulo "Interés de financiación". Ese
-                        interés era un número inventado y además hacía que el
-                        total dependiera de cuántas cuotas se eligieran, al
-                        contrario de lo que dice el checkout del original. Se
-                        saca el selector; el total no se toca. */}
-                    <p className="text-xs font-bold uppercase tracking-wide text-ink-500">Pago con Mercado Pago</p>
-                    <p className="mt-2 text-[11px] text-ink-500">
-                      El cobro se procesa de forma segura con Mercado Pago. Nunca almacenamos los datos de tu tarjeta.
-                    </p>
-                  </div>
-                ) : null}
+                {/* Mercado Pago y USDT quedan ocultos hasta que el negocio los
+                    habilite formalmente; hoy se muestran solo transferencia y
+                    efectivo/seña en el local. */}
 
                 {payment === "transferencia" ? (
                   <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
@@ -835,16 +825,6 @@ export function CheckoutFlow() {
                     <p className="mt-1 text-xs">
                       Nos avisás cuando lo hagas y despachamos. La reserva de stock por tiempo limitado no se anuncia
                       hasta que el cliente confirme la política.
-                    </p>
-                  </div>
-                ) : null}
-
-                {payment === "usdt" ? (
-                  <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
-                    <p className="font-bold text-ink-900">Pagá con USDT por red TRC20.</p>
-                    <p className="mt-1 text-xs">
-                      El pedido se procesa una vez confirmado el pago. Al confirmar te mostramos la wallet y el stock
-                      queda reservado.
                     </p>
                   </div>
                 ) : null}

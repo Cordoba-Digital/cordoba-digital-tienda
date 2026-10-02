@@ -304,8 +304,8 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
               <path d="M3 10l9-6 9 6M5 10v8M19 10v8M9 10v8M15 10v8M3 20h18" />
             </svg>
           <p className="leading-snug text-ink-500">
-            <b className="block text-sm text-ink-900">Transferencia, USDT o efectivo en el local</b>
-            Te mostramos el CBU o la wallet al confirmar.
+            <b className="block text-sm text-ink-900">Transferencia bancaria o efectivo en el local</b>
+            Te mostramos el CBU al confirmar.
           </p>
         </div>
         <div className="flex items-start gap-3 px-3.5 py-3">
@@ -313,8 +313,8 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
               <path d="M3 7h18v12H3zM3 11h18" />
             </svg>
           <p className="leading-snug text-ink-500">
-            <b className="block text-sm text-ink-900">Tarjetas y Mercado Pago</b>
-            Pagás seguro, sin guardar datos de tarjeta.
+            <b className="block text-sm text-ink-900">Seña en el local</b>
+            Reservás con seña y pagás el resto al retirar.
           </p>
         </div>
       </div>

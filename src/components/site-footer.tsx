@@ -170,7 +170,7 @@ export async function SiteFooter({
             {cuit ? ` · CUIT ${cuit}` : ""} · Todos los derechos reservados.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2">
-            {["Visa", "Mastercard", "Amex", "Naranja X", "Cabal", "Mercado Pago", "Transferencia", "USDT"].map((m) => (
+            {["Transferencia", "Efectivo", "Visa", "Mastercard", "Amex", "Naranja X", "Cabal"].map((m) => (
               <span key={m} className="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-[10px] font-semibold text-ink-200">
                 {m}
               </span>

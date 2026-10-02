@@ -22,7 +22,7 @@ type Suggestion = {
 };
 
 const ANNOUNCEMENTS = [
-  "🏦 Transferencia bancaria, USDT o efectivo en el local",
+  "🏦 Transferencia bancaria o efectivo/seña en el local",
   "🚚 Envíos a todo el país por Andreani, a domicilio o a sucursal",
   "🏬 Retiro en 27 de Abril 180, Córdoba Capital",
   "🛡️ 6 meses de garantía legal + soporte post-venta local",

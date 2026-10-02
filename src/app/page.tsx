@@ -53,7 +53,7 @@ const WHATSAPP = "https://wa.me/5493516777774";
 
 const TRUST = [
   { icon: "truck", title: "Envíos a todo el país", text: "Andreani a domicilio o a sucursal, con seguimiento." },
-  { icon: "lock", title: "Pagos claros", text: "Tarjeta, Mercado Pago, transferencia, efectivo y USDT." },
+  { icon: "lock", title: "Pagos claros", text: "Transferencia bancaria y efectivo/seña en el local." },
   { icon: "shield", title: "Compra garantizada", text: "6 meses de garantía legal y postventa en Córdoba." },
   { icon: "headphones", title: "Postventa real", text: "WhatsApp, mail y el local. Nada de call center." },
 ];
@@ -69,7 +69,7 @@ const FAQ = [
   },
   {
     q: "¿Qué medios de pago aceptan?",
-    a: "Transferencia bancaria, USDT por red TRC20, efectivo o transferencia en el local y Mercado Pago.",
+    a: "Transferencia bancaria y efectivo o seña en el local.",
   },
   {
     q: "¿Puedo retirar en el local?",
@@ -239,10 +239,10 @@ export default async function HomePage() {
         <article className="rounded-[28px] bg-surface p-6 ring-1 ring-black/5">
           <div className="mb-4 h-1 w-14 rounded-full bg-emerald-500" />
           <Wallet size={22} className="text-emerald-700" aria-hidden />
-          <h3 className="mt-3 text-xl font-extrabold tracking-tight text-ink-900">Transferencia, USDT o efectivo</h3>
+          <h3 className="mt-3 text-xl font-extrabold tracking-tight text-ink-900">Transferencia o efectivo en el local</h3>
           <p className="mt-2 text-sm leading-relaxed text-ink-500">
-            Te mostramos el CBU o la wallet cuando confirmás el pedido, no antes. En el local también podés pagar en
-            efectivo. Nunca te pedimos una clave, un código ni un token por chat.
+            Te mostramos el CBU cuando confirmás el pedido, no antes. En el local también podés pagar en efectivo o seña.
+            Nunca te pedimos una clave, un código ni un token por chat.
           </p>
           <Link href="/ayuda" className="mt-4 inline-block text-sm font-bold text-brand-700 hover:text-brand-800">
             Ver medios de pago

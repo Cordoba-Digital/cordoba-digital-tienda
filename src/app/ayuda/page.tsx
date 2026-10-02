@@ -57,7 +57,7 @@ const SECTIONS = [
     items: [
       {
         q: "¿Qué medios de pago aceptan?",
-        a: "Transferencia bancaria, USDT por red TRC20, efectivo o transferencia en el local, y Mercado Pago. El precio es el mismo con todos los medios de pago.",
+        a: "Transferencia bancaria y efectivo o seña en el local.",
       },
       {
         q: "¿Puedo pagar en efectivo?",
