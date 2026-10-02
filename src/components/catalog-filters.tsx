@@ -234,7 +234,7 @@ export function FiltersPanel({
             />
           </div>
         ) : null}
-        <div className="max-h-72 space-y-0.5 overflow-y-auto pr-1">
+        <div className="max-h-72 space-y-0.5 overflow-y-auto data-lenis-prevent pr-1">
           {visibleBrands.map((b) => (
             <label
               key={b.brand}
@@ -360,7 +360,7 @@ export function FiltersPanel({
       </button>
 
       <aside className="hidden lg:block">
-        <div className="card-surface sticky top-36 max-h-[calc(100vh-10rem)] overflow-y-auto p-5">{body}</div>
+        <div className="card-surface sticky top-36 max-h-[calc(100vh-10rem)] overflow-y-auto data-lenis-prevent p-5">{body}</div>
       </aside>
 
       {open ? (
@@ -378,7 +378,7 @@ export function FiltersPanel({
                 <Icon name="x" className="h-5 w-5" />
               </button>
             </div>
-            <div className="overflow-y-auto px-5 py-5">{body}</div>
+            <div className="overflow-y-auto data-lenis-prevent px-5 py-5">{body}</div>
             <div className="border-t border-ink-100 p-4">
               <button
                 type="button"

@@ -91,7 +91,7 @@ export function CartDrawer() {
           </div>
         ) : (
           <>
-            <div className="flex-1 space-y-3 overflow-y-auto px-5 py-4">
+            <div className="flex-1 space-y-3 overflow-y-auto data-lenis-prevent px-5 py-4">
               {items.map((item) => (
                 <div key={item.slug} className="flex gap-3 rounded-xl border border-ink-100 p-3">
                   <Link href={`/producto/${item.slug}`} onClick={closeCart} className="shrink-0">

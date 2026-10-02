@@ -13,6 +13,7 @@ export function SmoothScroll() {
       wheelMultiplier: 1,
       touchMultiplier: 1.2,
       syncTouch: true,
+      allowNestedScroll: true,
     });
 
     let frame = 0;

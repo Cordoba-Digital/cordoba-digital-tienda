@@ -65,7 +65,7 @@ export function ProductGallery({
           foto entera. Con el tope el `aspect-square` cede y el `object-contain`
           sigue encajando la foto completa. */}
       <div className="card-surface flex flex-col gap-3 p-3 sm:flex-row sm:p-4">
-        <div className="no-scrollbar order-2 flex gap-2 overflow-x-auto sm:order-1 sm:max-h-[78vh] sm:flex-col sm:overflow-y-auto sm:overflow-x-visible">
+        <div className="no-scrollbar order-2 flex gap-2 overflow-x-auto data-lenis-prevent sm:order-1 sm:max-h-[78vh] sm:flex-col sm:overflow-y-auto sm:overflow-x-visible">
           {list.map((image, index) => (
             <button
               key={`${image}-${index}`}
