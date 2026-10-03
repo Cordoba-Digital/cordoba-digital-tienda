@@ -9,6 +9,7 @@ import { useStore } from "@/components/store-provider";
 import { Spinner, Stars } from "@/components/ui";
 import { discountPercent, money } from "@/lib/format";
 import { MAX_QTY_PER_ITEM } from "@/lib/pricing";
+import { fetchShippingQuote } from "@/lib/shipping-quote";
 import type { ShippingOption } from "@/lib/shipping";
 
 export function ProductGallery({
@@ -474,20 +475,10 @@ export function ShippingCalculator({ price }: { price: number }) {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("/api/shipping", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ zip, subtotal: price }),
-      });
-      const data = await res.json();
-      if (!res.ok || !data.ok) {
-        setError(data.error ?? "No pudimos calcular el envío.");
-        setResult(null);
-      } else {
-        setResult({ zone: data.zone, options: data.options });
-      }
-    } catch {
-      setError("No pudimos calcular el envío. Probá de nuevo.");
+      const data = await fetchShippingQuote({ zip, subtotal: price });
+      setResult({ zone: data.zone, options: data.options });
+    } catch (error) {
+      setError(error instanceof Error ? error.message : "No pudimos calcular el envío. Probá de nuevo.");
     } finally {
       setLoading(false);
     }

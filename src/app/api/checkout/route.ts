@@ -4,6 +4,7 @@ import { db } from "@/db";
 import { orderItems, orders, products, type ShippingAddress } from "@/db/schema";
 import { computeTotals, MAX_QTY_PER_ITEM, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
 import { getCoupon } from "@/lib/queries";
+import { validateDelivery, validatePersonalData } from "@/lib/checkout-validation";
 import { findShippingOption, normalizeZip, type DeliveryMethod } from "@/lib/shipping";
 
 export const dynamic = "force-dynamic";
@@ -56,11 +57,7 @@ export async function POST(request: Request) {
   const phone = (customer.phone ?? "").trim();
   const docId = (customer.docId ?? "").trim();
 
-  if (firstName.length < 2) errors.firstName = "Ingresá tu nombre.";
-  if (lastName.length < 2) errors.lastName = "Ingresá tu apellido.";
-  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) errors.email = "Ingresá un email válido.";
-  if (phone.replace(/\D/g, "").length < 8) errors.phone = "Ingresá un teléfono de contacto.";
-  if (docId.replace(/\D/g, "").length < 7) errors.docId = "Ingresá tu DNI o CUIT para la factura.";
+  Object.assign(errors, validatePersonalData({ firstName, lastName, email, phone, docId }));
 
   const delivery = body.delivery ?? {};
   const method: DeliveryMethod = delivery.method === "pickup" || delivery.method === "express" ? delivery.method : "standard";
@@ -68,11 +65,18 @@ export async function POST(request: Request) {
   let address: ShippingAddress | null = null;
 
   if (method !== "pickup") {
-    if (zip.length !== 4) errors.zip = "Ingresá un código postal válido.";
-    if ((delivery.street ?? "").trim().length < 3) errors.street = "Ingresá la calle.";
-    if ((delivery.number ?? "").trim().length < 1) errors.number = "Ingresá la altura.";
-    if ((delivery.city ?? "").trim().length < 2) errors.city = "Ingresá la localidad.";
-    if ((delivery.province ?? "").trim().length < 2) errors.province = "Elegí la provincia.";
+    Object.assign(
+      errors,
+      validateDelivery({
+        method,
+        zip,
+        street: delivery.street,
+        number: delivery.number,
+        city: delivery.city,
+        province: delivery.province,
+        requireShippingOption: false,
+      }),
+    );
     address = {
       street: (delivery.street ?? "").trim(),
       number: (delivery.number ?? "").trim(),

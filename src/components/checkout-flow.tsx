@@ -10,6 +10,8 @@ import { Spinner } from "@/components/ui";
 import { readCoupon, writeCoupon } from "@/lib/coupon-storage";
 import { money } from "@/lib/format";
 import { computeTotals, PAYMENT_METHODS, type CouponInfo, type PaymentMethodId } from "@/lib/pricing";
+import { validateDelivery, validatePersonalData } from "@/lib/checkout-validation";
+import { useShippingQuote } from "@/lib/shipping-quote";
 import type { DeliveryMethod, ShippingOption } from "@/lib/shipping";
 
 type CheckoutIconProps = { className?: string };
@@ -214,9 +216,6 @@ export function CheckoutFlow() {
   const [form, setForm] = useState<FormState>(EMPTY_FORM);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [deliveryMethod, setDeliveryMethod] = useState<DeliveryMethod>("standard");
-  const [options, setOptions] = useState<ShippingOption[]>([]);
-  const [zone, setZone] = useState<string | null>(null);
-  const [zipLoading, setZipLoading] = useState(false);
   const [payment, setPayment] = useState<PaymentMethodId>("transferencia");
   const [installments, setInstallments] = useState(6);
   const [coupon, setCoupon] = useState<CouponInfo | null>(null);
@@ -252,49 +251,7 @@ export function CheckoutFlow() {
   }, [form, hydrated]);
 
   // Quote shipping whenever the ZIP or subtotal changes.
-  useEffect(() => {
-    const zip = form.zip.replace(/\D/g, "").slice(0, 4);
-    let cancelled = false;
-    if (zip.length !== 4) {
-      const id = window.setTimeout(() => {
-        if (cancelled) return;
-        setOptions([]);
-        setZone(null);
-      }, 0);
-      return () => {
-        cancelled = true;
-        window.clearTimeout(id);
-      };
-    }
-    const id = window.setTimeout(async () => {
-      if (cancelled) return;
-      setZipLoading(true);
-      try {
-        const res = await fetch("/api/shipping", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ zip, subtotal }),
-        });
-        const data = await res.json();
-        if (cancelled) return;
-        if (data.ok) {
-          setOptions(data.options as ShippingOption[]);
-          setZone(data.zone as string);
-        } else {
-          setOptions([]);
-          setZone(null);
-        }
-      } catch {
-        /* ignore */
-      } finally {
-        if (!cancelled) setZipLoading(false);
-      }
-    }, 350);
-    return () => {
-      cancelled = true;
-      window.clearTimeout(id);
-    };
-  }, [form.zip, subtotal]);
+  const { options, zone, loading: zipLoading } = useShippingQuote({ zip: form.zip, subtotal });
 
   const selectedOption = useMemo(() => {
     if (deliveryMethod === "pickup") {
@@ -342,27 +299,19 @@ export function CheckoutFlow() {
   // Los dos validadores DEVUELVEN los errores en vez de fijarlos: si cada uno
   // hiciera `setErrors`, el segundo pisaría los del primero y el comprador vería
   // un solo bloque marcado.
-  const datosErrors = (): Record<string, string> => {
-    const next: Record<string, string> = {};
-    if (form.firstName.trim().length < 2) next.firstName = "Ingresá tu nombre.";
-    if (form.lastName.trim().length < 2) next.lastName = "Ingresá tu apellido.";
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email.trim())) next.email = "Ingresá un email válido.";
-    if (form.phone.replace(/\D/g, "").length < 8) next.phone = "Ingresá tu teléfono (con característica).";
-    if (form.docId.replace(/\D/g, "").length < 7) next.docId = "Necesitamos tu DNI o CUIT para facturar.";
-    return next;
-  };
+  const datosErrors = (): Record<string, string> => validatePersonalData(form);
 
-  const entregaErrors = (): Record<string, string> => {
-    const next: Record<string, string> = {};
-    if (deliveryMethod !== "pickup") {
-      if (form.zip.replace(/\D/g, "").length !== 4) next.zip = "Código postal de 4 dígitos.";
-      if (form.street.trim().length < 3) next.street = "Ingresá la calle.";
-      if (form.number.trim().length < 1) next.number = "Altura.";
-      if (form.city.trim().length < 2) next.city = "Ingresá la localidad.";
-      if (!selectedOption) next.delivery = "Elegí una forma de envío.";
-    }
-    return next;
-  };
+  const entregaErrors = (): Record<string, string> =>
+    validateDelivery({
+      method: deliveryMethod,
+      zip: form.zip,
+      street: form.street,
+      number: form.number,
+      city: form.city,
+      province: form.province,
+      selectedOption,
+      requireShippingOption: true,
+    });
 
   const applyCoupon = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -448,32 +397,8 @@ export function CheckoutFlow() {
       }
       clearCart();
       writeCoupon(null);
-      if (payment === "mercadopago") {
-        try {
-          const pref = await fetch("/api/checkout/mercadopago", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ code: data.code }),
-          });
-          const prefData = await pref.json();
-          if (pref.ok && prefData.ok && prefData.init_point) {
-            window.location.href = prefData.init_point as string;
-            return;
-          }
-          setServerError(
-            prefData.error ??
-              "Creamos tu pedido pero no pudimos abrir Mercado Pago. Entrá a Seguimiento para reintentar.",
-          );
-          if (prefData.missingCredentials) {
-            console.warn("[checkout] Mercado Pago no habilitado:", prefData.detail);
-          }
-          router.push(`/pedido/${data.code}?nuevo=1&mp=pendiente`);
-          return;
-        } catch {
-          router.push(`/pedido/${data.code}?nuevo=1&mp=pendiente`);
-          return;
-        }
-      }
+      // La rama de Mercado Pago queda fuera de este loader: solo se habilita
+      // cuando el negocio active la opción en el checkout.
       router.push(`/pedido/${data.code}?nuevo=1`);
     } catch {
       setServerError("No pudimos procesar el pedido. Probá de nuevo en unos segundos.");
