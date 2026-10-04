@@ -197,7 +197,7 @@ function Field({
     <label className={`block ${className}`} data-error={error ? "true" : undefined}>
       <span className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-ink-500">{label}</span>
       {children}
-      {error ? <span className="mt-1 block text-xs font-semibold text-rose-600">{error}</span> : null}
+      {error ? <span role="alert" className="mt-1 block text-xs font-semibold text-rose-600">{error}</span> : null}
       {!error && hint ? <span className="mt-1 block text-[11px] text-ink-500">{hint}</span> : null}
     </label>
   );
@@ -579,7 +579,7 @@ export function CheckoutFlow() {
                 </>
               )}
 
-              {errors.delivery ? <p className="text-xs font-semibold text-rose-600">{errors.delivery}</p> : null}
+              {errors.delivery ? <p role="alert" className="text-xs font-semibold text-rose-600">{errors.delivery}</p> : null}
             </div>
           </section>
         </div>
@@ -785,9 +785,9 @@ export function CheckoutFlow() {
                     la política de privacidad de Córdoba Digital.
                   </span>
                 </label>
-                {errors.terms ? <p className="text-xs font-semibold text-rose-600">{errors.terms}</p> : null}
+                {errors.terms ? <p role="alert" className="text-xs font-semibold text-rose-600">{errors.terms}</p> : null}
                 {serverError ? (
-                  <p className="rounded-xl bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700">{serverError}</p>
+                  <p role="alert" className="rounded-xl bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700">{serverError}</p>
                 ) : null}
 
                 <button

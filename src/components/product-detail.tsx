@@ -510,7 +510,7 @@ export function ShippingCalculator({ price }: { price: number }) {
           Calcular
         </button>
       </form>
-      {error ? <p className="mt-2 text-xs font-semibold text-rose-600">{error}</p> : null}
+      {error ? <p role="alert" className="mt-2 text-xs font-semibold text-rose-600">{error}</p> : null}
       {result ? (
         <div className="mt-3 space-y-2">
           <p className="text-xs font-semibold text-ink-500">Zona detectada: {result.zone}</p>
