@@ -326,7 +326,7 @@ export function FiltersPanel({
           ].map((filter) => (
             <label
               key={filter.key}
-              className="flex cursor-pointer items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm text-ink-600 transition hover:bg-ink-50"
+              className="flex cursor-pointer items-center gap-2.5 rounded-lg px-2.5 py-3 text-sm text-ink-600 transition hover:bg-ink-50"
             >
               <input
                 type="checkbox"

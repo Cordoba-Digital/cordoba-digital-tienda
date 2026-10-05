@@ -173,7 +173,7 @@ export function CartDrawer() {
                 </button>
               </div>
               <p className="text-center text-[11px] text-ink-500">
-                🔒 Compra protegida · 6 meses de garantía legal
+                Compra protegida · 6 meses de garantía legal
               </p>
             </footer>
           </>

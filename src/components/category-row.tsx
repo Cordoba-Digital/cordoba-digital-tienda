@@ -143,7 +143,7 @@ export function CategoryRow({ items, label }: { items: CategoryRowItem[]; label:
           onClick={() => mover(-1)}
           disabled={enInicio}
           aria-label={`Anterior en ${label}`}
-          className={`absolute -left-3 top-5 hidden h-9 w-9 place-items-center rounded-full border border-ink-100 bg-surface text-ink-700 shadow-md transition hover:bg-brand-50 hover:text-brand-700 md:grid ${
+          className={`absolute -left-3 top-5 hidden h-11 w-11 place-items-center rounded-full border border-ink-100 bg-surface text-ink-700 shadow-md transition hover:bg-brand-50 hover:text-brand-700 md:grid ${
             enInicio ? "pointer-events-none opacity-40" : ""
           }`}
         >
@@ -154,7 +154,7 @@ export function CategoryRow({ items, label }: { items: CategoryRowItem[]; label:
           onClick={() => mover(1)}
           disabled={enFinal}
           aria-label={`Siguiente en ${label}`}
-          className={`absolute -right-3 top-5 hidden h-9 w-9 place-items-center rounded-full border border-ink-100 bg-surface text-ink-700 shadow-md transition hover:bg-brand-50 hover:text-brand-700 md:grid ${
+          className={`absolute -right-3 top-5 hidden h-11 w-11 place-items-center rounded-full border border-ink-100 bg-surface text-ink-700 shadow-md transition hover:bg-brand-50 hover:text-brand-700 md:grid ${
             enFinal ? "pointer-events-none opacity-40" : ""
           }`}
         >

@@ -140,7 +140,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
               <p className="mt-1 text-sm text-ink-600">
                 Transferí <strong>{money(order.total)}</strong> a cualquiera de estas cuentas.
               </p>
-              <div className="mt-4 grid gap-3 md:grid-cols-2">
+              <div className="mt-4">
                 <div className="rounded-xl border border-ink-100 bg-surface p-4">
                   <p className="text-xs font-bold uppercase tracking-wide text-ink-500">Transferencia bancaria</p>
                   <dl className="mt-2 space-y-1.5 text-sm">
@@ -167,16 +167,6 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
                       <dd className="font-semibold text-ink-900">30-71234567-9</dd>
                     </div>
                   </dl>
-                </div>
-                <div className="rounded-xl border border-ink-100 bg-surface p-4">
-                  <p className="text-xs font-bold uppercase tracking-wide text-ink-400">USDT (red TRC-20)</p>
-                  <p className="mt-2 break-all text-sm font-semibold text-ink-900">TQn9Y2khDD95J42FQtQTdwVVR93o7cCbPo</p>
-                  <div className="mt-2">
-                    <CopyButton value="TQn9Y2khDD95J42FQtQTdwVVR93o7cCbPo" label="Copiar wallet" />
-                  </div>
-                  <p className="mt-3 text-[11px] text-ink-500">
-                    Cotización del día informada por WhatsApp al momento de la transferencia.
-                  </p>
                 </div>
               </div>
               <a

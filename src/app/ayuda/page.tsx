@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { FaqAccordion } from "@/components/faq-accordion";
+import { Banknote, RefreshCw, Shield, Truck } from "lucide-react";
 
 import { money } from "@/lib/format";
 
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
 const SECTIONS = [
   {
     id: "envios",
-    icon: "🚚",
+    icon: <Truck size={18} />,
     title: "Envíos y plazos",
     items: [
       {
@@ -52,7 +53,7 @@ const SECTIONS = [
   },
   {
     id: "pagos",
-    icon: "💳",
+    icon: <Banknote size={18} />,
     title: "Medios de pago",
     items: [
       {
@@ -71,7 +72,7 @@ const SECTIONS = [
   },
   {
     id: "garantia",
-    icon: "🛡️",
+    icon: <Shield size={18} />,
     title: "Garantía y post-venta",
     items: [
       {
@@ -98,7 +99,7 @@ const SECTIONS = [
   },
   {
     id: "cambios",
-    icon: "🔄",
+    icon: <RefreshCw size={18} />,
     title: "Cambios y devoluciones",
     items: [
       {

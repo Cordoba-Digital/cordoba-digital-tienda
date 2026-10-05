@@ -268,6 +268,15 @@ export default async function CategoryPage({
           <Pagination page={result.page} pages={result.pages} hrefFor={pageHref} />
         </section>
       </div>
+
+      {node.descriptionHtml?.trim() ? (
+        <section className="card-surface mt-8 p-6">
+          <div
+            className="prose-cd prose-soft"
+            dangerouslySetInnerHTML={{ __html: node.descriptionHtml }}
+          />
+        </section>
+      ) : null}
     </div>
   );
 }

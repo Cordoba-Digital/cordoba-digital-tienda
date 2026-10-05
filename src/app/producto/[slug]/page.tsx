@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ProductCard } from "@/components/product-card";
+import { RefreshCw, Shield, MessageCircle } from "lucide-react";
 import {
   BuyBox,
   MobileBuyBar,
@@ -312,9 +313,9 @@ export default async function ProductPage({ params }: { params: Params }) {
 
       <section className="mt-14 grid gap-4 rounded-3xl bg-surface p-6 md:grid-cols-3">
         {[
-          { icon: "🛡️", title: "Garantía oficial", text: `${product.warrantyMonths} meses cubiertos por el fabricante y gestionados por nosotros.` },
-          { icon: "🔄", title: "Cambios sin drama", text: "Tenés 10 días corridos para cambiar el producto si no era lo que esperabas." },
-          { icon: "💬", title: "Asesoramiento real", text: "Preguntanos por WhatsApp antes de comprar: te respondemos en minutos." },
+          { icon: <Shield size={24} />, title: "Garantía oficial", text: `${product.warrantyMonths} meses cubiertos por el fabricante y gestionados por nosotros.` },
+          { icon: <RefreshCw size={24} />, title: "Cambios sin drama", text: "Tenés 10 días corridos para cambiar el producto si no era lo que esperabas." },
+          { icon: <MessageCircle size={24} />, title: "Asesoramiento real", text: "Preguntanos por WhatsApp antes de comprar: te respondemos en minutos." },
         ].map((item) => (
           <div key={item.title} className="flex items-start gap-3">
             <span className="text-2xl">{item.icon}</span>

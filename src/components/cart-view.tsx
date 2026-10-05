@@ -7,6 +7,7 @@ import { QuantityStepper } from "@/components/cart-drawer";
 import { ProductCard } from "@/components/product-card";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
+import { Box, Shield, Truck, Lock } from "lucide-react";
 import { money } from "@/lib/format";
 import { readCoupon, writeCoupon } from "@/lib/coupon-storage";
 import { couponDiscountFor, MAX_QTY_PER_ITEM, type CouponInfo } from "@/lib/pricing";
@@ -234,9 +235,9 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
               Seguir comprando
             </Link>
             <ul className="space-y-1.5 border-t border-ink-100 pt-3 text-[11px] text-ink-500">
-              <li>🔒 Tus datos viajan cifrados</li>
-              <li>🛡️ Garantía oficial en todos los productos</li>
-              <li>🚚 Envíos con seguimiento a todo el país</li>
+              <li className="flex items-center gap-1.5"><Lock size={13} /> Tus datos viajan cifrados</li>
+              <li className="flex items-center gap-1.5"><Shield size={13} /> Garantía oficial en todos los productos</li>
+              <li className="flex items-center gap-1.5"><Truck size={13} /> Envíos con seguimiento a todo el país</li>
             </ul>
           </div>
         </aside>
