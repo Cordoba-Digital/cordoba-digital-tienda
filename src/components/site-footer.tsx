@@ -77,6 +77,17 @@ export async function SiteFooter({
               </svg>
             </a>
           </div>
+
+          <div className="mt-6 space-y-1.5 text-sm text-ink-300">
+            <p className="font-semibold text-white">Local: 27 de Abril 180, Córdoba</p>
+            <p>Lun a Vie 14:00 a 18:30 · Sáb 12:00 a 14:30</p>
+            <a href="tel:+543516777774" className="block transition hover:text-neon-400">
+              +54 351 677-7774
+            </a>
+            <a href="mailto:consultas@cordobadigital.net" className="block transition hover:text-neon-400">
+              consultas@cordobadigital.net
+            </a>
+          </div>
         </div>
 
         <div>
@@ -129,16 +140,6 @@ export async function SiteFooter({
             Suscribite y recibí los ingresos nuevos y las ofertas antes que nadie.
           </p>
           <NewsletterForm />
-          <div className="mt-6 space-y-1.5 text-sm text-ink-300">
-            <p className="font-semibold text-white">Local: 27 de Abril 180, Córdoba</p>
-            <p>Lun a Vie 14:00 a 18:30 · Sáb 12:00 a 14:30</p>
-            <a href="tel:+543516777774" className="block transition hover:text-neon-400">
-              +54 351 677-7774
-            </a>
-            <a href="mailto:consultas@cordobadigital.net" className="block transition hover:text-neon-400">
-              consultas@cordobadigital.net
-            </a>
-          </div>
         </div>
 
         {guides.length ? (
