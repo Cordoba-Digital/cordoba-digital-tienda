@@ -233,6 +233,21 @@ export const subscribers = pgTable("subscribers", {
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
 
+export const arrepentimientoRequests = pgTable(
+  "arrepentimiento_requests",
+  {
+    id: serial("id").primaryKey(),
+    nombre: text("nombre").notNull(),
+    email: text("email").notNull(),
+    numeroPedido: text("numero_pedido").notNull().default(""),
+    telefono: text("telefono").notNull(),
+    fechaCompra: text("fecha_compra").notNull(),
+    producto: text("producto").notNull(),
+    comentarios: text("comentarios").notNull().default(""),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+);
+
 export type Product = typeof products.$inferSelect;
 export type Category = typeof categories.$inferSelect;
 export type Review = typeof reviews.$inferSelect;
@@ -240,3 +255,4 @@ export type ProductCategory = typeof productCategories.$inferSelect;
 export type Order = typeof orders.$inferSelect;
 export type OrderItem = typeof orderItems.$inferSelect;
 export type Coupon = typeof coupons.$inferSelect;
+export type ArrepentimientoRequest = typeof arrepentimientoRequests.$inferSelect;

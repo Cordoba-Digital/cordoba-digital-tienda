@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import { NewsletterForm } from "@/components/newsletter-form";
 import { getGuides, type GuideTeaser } from "@/lib/queries";
 
 const CATEGORY_LINKS: { name: string; path: string; count: number }[] = [];
@@ -42,6 +41,17 @@ export async function SiteFooter({
             Tecnología con garantía legal. Local a la calle en el centro de Córdoba y envíos a todo el país con
             seguimiento.
           </p>
+          <div className="mt-6 space-y-1.5 text-sm text-ink-300">
+            <p className="font-semibold text-white">Local: 27 de Abril 180, Córdoba</p>
+            <p>Lun a Vie 14:00 a 18:30 · Sáb 12:00 a 14:30</p>
+            <a href="tel:+543516777774" className="block transition hover:text-neon-400">
+              +54 351 677-7774
+            </a>
+            <a href="mailto:consultas@cordobadigital.net" className="block transition hover:text-neon-400">
+              consultas@cordobadigital.net
+            </a>
+          </div>
+
           <div className="mt-5 flex gap-2">
             <a
               href="https://instagram.com/cordobadigital.ok"
@@ -78,16 +88,6 @@ export async function SiteFooter({
             </a>
           </div>
 
-          <div className="mt-6 space-y-1.5 text-sm text-ink-300">
-            <p className="font-semibold text-white">Local: 27 de Abril 180, Córdoba</p>
-            <p>Lun a Vie 14:00 a 18:30 · Sáb 12:00 a 14:30</p>
-            <a href="tel:+543516777774" className="block transition hover:text-neon-400">
-              +54 351 677-7774
-            </a>
-            <a href="mailto:consultas@cordobadigital.net" className="block transition hover:text-neon-400">
-              consultas@cordobadigital.net
-            </a>
-          </div>
         </div>
 
         <div>
@@ -117,12 +117,12 @@ export async function SiteFooter({
               </Link>
             </li>
             <li>
-              <Link href="/ayuda#garantia" className="text-ink-300 transition hover:text-neon-400">
+              <Link href="/politica-de-garantia" className="text-ink-300 transition hover:text-neon-400">
                 Garantía y post-venta
               </Link>
             </li>
             <li>
-              <Link href="/ayuda#cambios" className="text-ink-300 transition hover:text-neon-400">
+              <Link href="/cambio-devoluciones" className="text-ink-300 transition hover:text-neon-400">
                 Cambios y devoluciones
               </Link>
             </li>
@@ -135,11 +135,15 @@ export async function SiteFooter({
         </div>
 
         <div>
-          <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">Newsletter</h3>
-          <p className="mb-3 text-sm text-ink-300">
-            Suscribite y recibí los ingresos nuevos y las ofertas antes que nadie.
-          </p>
-          <NewsletterForm />
+          <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-white">INFORMACIÓN</h3>
+          <ul className="space-y-2.5 text-sm">
+            <li><Link href="/quienes-somos" className="text-ink-300 transition hover:text-neon-400">¿Quiénes Somos?</Link></li>
+            <li><Link href="/por-que-elegirnos" className="text-ink-300 transition hover:text-neon-400">¿Por qué elegirnos?</Link></li>
+            <li><Link href="/politica-de-garantia" className="text-ink-300 transition hover:text-neon-400">Política de Garantía</Link></li>
+            <li><Link href="/cambio-devoluciones" className="text-ink-300 transition hover:text-neon-400">Cambios y Devoluciones</Link></li>
+            <li><Link href="/politica-privacidad" className="text-ink-300 transition hover:text-neon-400">Políticas de Privacidad</Link></li>
+            <li><Link href="/arrepentimiento" className="text-ink-300 transition hover:text-neon-400">Botón de Arrepentimiento</Link></li>
+          </ul>
         </div>
 
         {guides.length ? (
