@@ -69,7 +69,7 @@ const FAQ = [
   },
   {
     q: "¿Qué medios de pago aceptan?",
-    a: "Transferencia bancaria y efectivo o seña en el local.",
+    a: "Transferencia bancaria.",
   },
   {
     q: "¿Puedo retirar en el local?",

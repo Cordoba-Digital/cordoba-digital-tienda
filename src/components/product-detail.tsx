@@ -394,7 +394,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
               <path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11zM12 10m-2.5 0a2.5 2.5 0 105 0 2.5 2.5 0 10-5 0" />
             </svg>
           <p>
-            <b className="block text-sm text-ink-900">Retiro gratis en el local</b>
+            <b className="block text-sm text-ink-900">Retiro en el local</b>
             27 de Abril 180, Córdoba Capital. Lo probamos con vos.
           </p>
         </div>

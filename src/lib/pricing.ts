@@ -13,12 +13,12 @@
 export type PaymentMethodId = "transferencia" | "usdt" | "efectivo" | "mercadopago";
 
 /**
- * Tope de unidades por producto en un pedido: 10. Vale para la ficha, el
+ * Tope de unidades por producto en un pedido: 5. Vale para la ficha, el
  * carrito y el checkout, que lo leen de acá para no repetir el número.
  * No sale del sitio original (que no publica tope): es una decisión del
  * negocio para evitar pedidos mayoristas por el canal minorista.
  */
-export const MAX_QTY_PER_ITEM = 10;
+export const MAX_QTY_PER_ITEM = 5;
 
 export type PaymentMethod = {
   id: PaymentMethodId;
