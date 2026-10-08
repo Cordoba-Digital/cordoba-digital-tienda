@@ -37,7 +37,7 @@ export function ProductCard({ product, badge }: { product: ProductView; badge?: 
   return (
     <article className="group relative flex h-full flex-col rounded-2xl bg-surface p-2.5 shadow-sm ring-1 ring-black/[0.05] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-24px_rgba(20,22,28,0.45)]">
       <div className="relative">
-        <Link href={`/producto/${product.slug}`} className="relative block aspect-[5/4] overflow-hidden rounded-xl bg-ink-50 p-4">
+        <Link href={`/producto/${product.slug}`} className="relative block aspect-[5/4] overflow-hidden rounded-xl bg-[#f8f1e9] p-4">
           {product.image ? (
             <>
               <ProductImg
@@ -50,7 +50,7 @@ export function ProductCard({ product, badge }: { product: ProductView; badge?: 
                 className={`h-full w-full object-contain transition duration-300 group-hover:scale-105 ${hoverSrc ? "group-hover:opacity-0" : ""}`}
               />
               {hoverSrc ? (
-                <div className="absolute inset-4 opacity-0 transition duration-300 group-hover:opacity-100">
+                <div className="absolute inset-4 rounded-lg bg-[#f8f1e9] opacity-0 transition duration-300 group-hover:opacity-100">
                   <ProductImg
                     src={hoverSrc}
                     srcSet={product.imageSrcSets[1]}

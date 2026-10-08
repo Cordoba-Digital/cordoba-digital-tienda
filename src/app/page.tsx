@@ -18,7 +18,6 @@ import { FaqAccordion } from "@/components/faq-accordion";
 import { HomeHero } from "@/components/home-hero";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { ProductRow } from "@/components/product-card";
-import { ProductImg } from "@/components/product-img";
 import { SectionHeading } from "@/components/ui";
 import { discountPercent } from "@/lib/format";
 import { getGoogleReviews } from "@/lib/google-reviews";
@@ -277,9 +276,10 @@ export default async function HomePage() {
 
       <section id="local" className="container-xl grid gap-4 py-12 lg:grid-cols-2">
         <div className="relative flex min-h-[560px] flex-col justify-end overflow-hidden rounded-[28px] bg-ink text-white">
-          <ProductImg
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/images/local-cordoba-1400.jpg"
-            srcSet={["/images/local-cordoba-700.jpg 700w", "/images/local-cordoba-1400.jpg 1400w"]}
+            srcSet={["/images/local-cordoba-700.jpg 700w", "/images/local-cordoba-1400.jpg 1400w"].join(", ")}
             sizes="(max-width: 1024px) 100vw, 50vw"
             alt="Fachada del local de Córdoba Digital en 27 de Abril 180, Córdoba Capital"
             width={1400}
