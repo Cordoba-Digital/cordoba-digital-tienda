@@ -43,6 +43,13 @@ function safeDecode(value: string): string {
   }
 }
 
+/** `priceValidUntil` del Offer: `updatedAt + 30 días` en `YYYY-MM-DD`. Null si el dato no es una fecha válida. */
+function toPriceValidUntil(updatedAt: unknown): string | null {
+  const date = updatedAt instanceof Date ? updatedAt : new Date(updatedAt as string | number);
+  if (Number.isNaN(date.getTime())) return null;
+  return new Date(date.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
+
 /**
  * Resuelve el slug de la URL contra el catalogo.
  *
@@ -134,6 +141,34 @@ export default async function ProductPage({ params }: { params: Params }) {
   // Google penaliza aggregateRating sin reseñas: WooCommerce no tiene ratings,
   // así que solo lo emitimos si hay opiniones reales cargadas.
   const hasRatings = product.reviewCount > 0;
+
+  // Filas estructuradas (AI Commerce): solo las que tengan dato. "Estado" va
+  // siempre (la columna tiene default 'Nuevo'). "Liberado" solo tiene sentido
+  // en telefonía/wearables: se muestra si la categoría principal lo sugiere
+  // (celular, tablet, smartwatch) o si hay modelo cargado.
+  const categoryLower = product.categorySlug.toLowerCase();
+  const showUnlocked =
+    categoryLower.includes("celular") ||
+    categoryLower.includes("tablet") ||
+    categoryLower.includes("smartwatch") ||
+    product.model.trim() !== "";
+  const condition = product.condition.trim() || "Nuevo";
+  const specRows: { label: string; value: string }[] = [];
+  if (product.brand && product.brand !== "General") specRows.push({ label: "Marca", value: product.brand });
+  if (product.model.trim()) specRows.push({ label: "Modelo", value: product.model });
+  if (product.storage.trim()) specRows.push({ label: "Memoria", value: product.storage });
+  if (product.ram.trim()) specRows.push({ label: "RAM", value: product.ram });
+  specRows.push({ label: "Estado", value: condition });
+  if (showUnlocked) specRows.push({ label: "Liberado", value: product.isUnlocked ? "Sí" : "No" });
+  if (product.sku) specRows.push({ label: "SKU", value: product.sku });
+  if (product.weight) specRows.push({ label: "Peso", value: product.weight });
+  if (product.dimensions) specRows.push({ label: "Dimensiones", value: product.dimensions });
+
+  const additionalProperty = specRows
+    .filter((row) => ["Modelo", "Memoria", "RAM", "Estado", "Liberado"].includes(row.label))
+    .map((row) => ({ "@type": "PropertyValue", name: row.label, value: row.value }));
+
+  const priceValidUntil = toPriceValidUntil(product.updatedAt);
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -142,11 +177,19 @@ export default async function ProductPage({ params }: { params: Params }) {
     description: product.shortDescription,
     sku: product.sku,
     brand: { "@type": "Brand", name: product.brand },
+    ...(additionalProperty.length ? { additionalProperty } : {}),
     offers: {
       "@type": "Offer",
       priceCurrency: "ARS",
       price: (product.price / 100).toFixed(0),
       availability: product.stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+      itemCondition:
+        condition.toLowerCase() === "nuevo"
+          ? "https://schema.org/NewCondition"
+          : "https://schema.org/UsedCondition",
+      ...(priceValidUntil ? { priceValidUntil } : {}),
+      seller: { "@type": "Organization", name: "Córdoba Digital" },
+      areaServed: "AR",
     },
   };
   if (hasRatings) {
@@ -216,6 +259,35 @@ export default async function ProductPage({ params }: { params: Params }) {
       </div>
 
       <div className="mt-8 space-y-8">
+        <section className="card-surface p-6">
+          <h2 className="mb-3 text-xl font-bold tracking-tight text-ink-900">Características</h2>
+          <dl className="divide-y divide-ink-50">
+            {/* Filas estructuradas (AI Commerce): solo las que tengan dato.
+                Van primero; abajo siguen los specs legacy de WooCommerce y la
+                garantía. Sin fallback a highlights: ya tienen su sección arriba. */}
+            {specRows.map((item) => (
+              <div key={item.label} className="grid grid-cols-[10rem_1fr] gap-3 py-2.5 text-sm">
+                <dt className="font-semibold text-ink-500">{item.label}</dt>
+                <dd className="text-ink-800">{item.value}</dd>
+              </div>
+            ))}
+            {/* Sin fallback a highlights: ya tienen su sección arriba y
+                repetirlos acá duplicaba el contenido en la misma página.
+                Los specs vienen vacíos de WooCommerce; cuando el cliente
+                mande specs reales, esta tabla los muestra. */}
+            {product.specs.map((item) => (
+              <div key={item.label} className="grid grid-cols-[10rem_1fr] gap-3 py-2.5 text-sm">
+                <dt className="font-semibold text-ink-500">{item.label}</dt>
+                <dd className="text-ink-800">{item.value}</dd>
+              </div>
+            ))}
+            <div className="grid grid-cols-[10rem_1fr] gap-3 py-2.5 text-sm">
+              <dt className="font-semibold text-ink-500">Garantía</dt>
+              <dd className="text-ink-800">{product.warrantyMonths} meses oficial</dd>
+            </div>
+          </dl>
+        </section>
+
         {product.highlights.length ? (
           <section className="card-surface p-6">
             <h2 className="mb-3 text-xl font-bold tracking-tight text-ink-900">Lo más destacado</h2>
@@ -248,26 +320,6 @@ export default async function ProductPage({ params }: { params: Params }) {
               {product.description || product.shortDescription}
             </p>
           )}
-        </section>
-
-        <section className="card-surface p-6">
-          <h2 className="mb-3 text-xl font-bold tracking-tight text-ink-900">Ficha técnica</h2>
-          <dl className="divide-y divide-ink-50">
-            {/* Sin fallback a highlights: ya tienen su sección arriba y
-                repetirlos acá duplicaba el contenido en la misma página.
-                Los specs vienen vacíos de WooCommerce; cuando el cliente
-                mande specs reales, esta tabla los muestra. */}
-            {product.specs.map((item) => (
-              <div key={item.label} className="grid grid-cols-[10rem_1fr] gap-3 py-2.5 text-sm">
-                <dt className="font-semibold text-ink-500">{item.label}</dt>
-                <dd className="text-ink-800">{item.value}</dd>
-              </div>
-            ))}
-            <div className="grid grid-cols-[10rem_1fr] gap-3 py-2.5 text-sm">
-              <dt className="font-semibold text-ink-500">Garantía</dt>
-              <dd className="text-ink-800">{product.warrantyMonths} meses oficial</dd>
-            </div>
-          </dl>
         </section>
 
         <section id="opiniones" className="card-surface space-y-5 p-5">

@@ -86,7 +86,7 @@ export function ProductImg({
       loading={priority ? "eager" : "lazy"}
       decoding="async"
       referrerPolicy="no-referrer"
-      className={`${className ?? ""} mix-blend-multiply filter brightness-110 saturate-125 contrast-110`}
+      className={className}
       style={style}
       onError={() => {
         if (!triedFallback && fallback && fallback !== current) {

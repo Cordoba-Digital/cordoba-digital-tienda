@@ -37,9 +37,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
   const count = slides.length;
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [reduceMotion, setReduceMotion] = useState(
-    () => typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-  );
+  const [reduceMotion, setReduceMotion] = useState(false);
   const touchX = useRef<number | null>(null);
   // Panel táctil: manda muchos eventos chicos por swipe (3-15 px) en vez de
   // uno grande, así que se acumulan en una ventana corta y se dispara al
@@ -52,9 +50,13 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
   // Solo suscribe al cambio; el valor inicial sale del useState de arriba.
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const id = window.setTimeout(() => setReduceMotion(mq.matches), 0);
     const onChange = (event: MediaQueryListEvent) => setReduceMotion(event.matches);
     mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
+    return () => {
+      window.clearTimeout(id);
+      mq.removeEventListener("change", onChange);
+    };
   }, []);
 
   // Avance automático: `index` queda fuera de las dependencias a propósito.
