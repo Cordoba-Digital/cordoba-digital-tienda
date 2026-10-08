@@ -428,6 +428,10 @@ function mapProduct(
     seoDescription: null,
     wpId: p.id,
     catWpIds: cats.map((c) => c.id),
+    // La Store API no publica modelo/memoria/RAM/estado: esos campos quedan en
+    // sus defaults y el admin los puede completar sin que el migrate los pise
+    // (no están en `productUpsertSet`).
+    origin: "wp",
   };
 }
 
@@ -504,6 +508,8 @@ const productUpsertSet = () => ({
   seoTitle: sql`excluded.seo_title`,
   seoDescription: sql`excluded.seo_description`,
   wpId: sql`excluded.wp_id`,
+  origin: sql`excluded.origin`,
+  updatedAt: sql`now()`,
 });
 
 const categoryUpsertSet = () => ({
@@ -619,7 +625,13 @@ async function writeProducts(db: Db, mapped: MappedProduct[], tally: ErrorTally)
       await db
         .insert(products)
         .values(group.map(({ catWpIds: _catWpIds, wpId: _wpId, ...row }) => row))
-        .onConflictDoUpdate({ target: products.slug, set: productUpsertSet() });
+        // Las filas `manual` (alta desde el admin) no se pisan aunque WP traiga
+        // el mismo slug: el conflicto se resuelve sin actualizar.
+        .onConflictDoUpdate({
+          target: products.slug,
+          set: productUpsertSet(),
+          where: sql`${products.origin} <> 'manual'`,
+        });
       tally.ok += group.length;
       if (tally.ok % 50 === 0) console.log(`[migrate-wp] productos: ${tally.ok}/${mapped.length}...`);
     } catch (error) {
@@ -695,8 +707,13 @@ async function prune(
   const keepProducts = new Set(wpProductSlugs);
   const keepCategories = new Set(wpCategorySlugs);
 
-  const existingProducts = await db.select({ slug: products.slug }).from(products);
-  const deadProductSlugs = existingProducts.map((r) => r.slug).filter((slug) => !keepProducts.has(slug));
+  const existingProducts = await db.select({ slug: products.slug, origin: products.origin }).from(products);
+  // Las altas manuales del admin (`origin = 'manual'`) nunca se borran,
+  // aunque su slug no exista en WooCommerce.
+  const deadProductSlugs = existingProducts
+    .filter((r) => r.origin !== "manual")
+    .map((r) => r.slug)
+    .filter((slug) => !keepProducts.has(slug));
 
   for (const group of chunk(deadProductSlugs, PRUNE_CHUNK)) {
     try {

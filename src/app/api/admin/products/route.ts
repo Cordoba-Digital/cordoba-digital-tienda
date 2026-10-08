@@ -1,5 +1,5 @@
 import { sessionFromCookieHeader, verifyAdminSessionValue } from "@/lib/admin-auth";
-import { listAdminProducts, listProductCategories } from "@/lib/admin-products";
+import { createAdminProduct, listAdminProducts, listProductCategories, type AdminProductCreateInput } from "@/lib/admin-products";
 
 export const dynamic = "force-dynamic";
 
@@ -29,4 +29,16 @@ export async function GET(request: Request) {
     listProductCategories(),
   ]);
   return Response.json({ ok: true, ...result, categories });
+}
+
+export async function POST(request: Request) {
+  if (!(await authorized(request))) {
+    return Response.json({ ok: false, error: "No autorizado." }, { status: 401 });
+  }
+  const body = (await request.json().catch(() => ({}))) as AdminProductCreateInput;
+  const result = await createAdminProduct(body);
+  if (!result.ok) {
+    return Response.json({ ok: false, error: result.error }, { status: result.status });
+  }
+  return Response.json({ ok: true, slug: result.slug });
 }

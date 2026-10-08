@@ -86,6 +86,23 @@ export const products = pgTable(
     warrantyMonths: integer("warranty_months").notNull().default(6),
     weight: text("weight"),
     dimensions: text("dimensions"),
+    /**
+     * Ficha estructurada (AI Commerce): modelo, memoria, RAM, estado y liberado
+     * como columnas propias —no texto libre— para que sean filtrables, salgan en
+     * la tabla de specs y alimenten el futuro feed de Shopping.
+     */
+    model: text("model").notNull().default(""),
+    storage: text("storage").notNull().default(""),
+    ram: text("ram").notNull().default(""),
+    condition: text("condition").notNull().default("Nuevo"),
+    isUnlocked: boolean("is_unlocked").notNull().default(true),
+    /**
+     * Origen de la fila: `wp` (migración WooCommerce) o `manual` (alta desde el
+     * admin). El prune de `migrate-wp` solo borra `origin = 'wp'` y el upsert
+     * no pisa los campos de una fila manual.
+     */
+    origin: text("origin").notNull().default("wp"),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
     seoTitle: text("seo_title"),
     seoDescription: text("seo_description"),
     wpId: integer("wp_id"),
