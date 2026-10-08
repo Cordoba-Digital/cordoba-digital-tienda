@@ -202,6 +202,17 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               ) : null}
             </Link>
 
+            <Link
+              href="/mi-cuenta"
+              className="grid h-10 w-10 place-items-center rounded-full border border-ink-100 text-ink-600 transition hover:bg-ink-50 hover:text-brand-700"
+              aria-label="Mi cuenta"
+            >
+              <svg viewBox="0 0 24 24" className="h-5.5 w-5.5" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <circle cx="12" cy="8" r="3.5" />
+                <path d="M4.5 20c1.5-3.5 4.5-5 7.5-5s6 1.5 7.5 5" />
+              </svg>
+            </Link>
+
             <button
               type="button"
               onClick={openCart}
@@ -330,6 +341,9 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               </Link>
               <Link href="/favoritos" className="block rounded-xl px-3 py-2.5 hover:bg-ink-50">
                 ❤️ Mis favoritos
+              </Link>
+              <Link href="/mi-cuenta" className="block rounded-xl px-3 py-2.5 hover:bg-ink-50">
+                👤 Mi cuenta
               </Link>
               <Link href="/seguimiento" className="block rounded-xl px-3 py-2.5 hover:bg-ink-50">
                 📦 Seguir mi pedido

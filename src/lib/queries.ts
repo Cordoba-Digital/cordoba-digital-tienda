@@ -415,6 +415,38 @@ export const getProductBySlug = cache(async (slug: string) => {
   return product ?? null;
 });
 
+function safeDecodeSlug(value: string): string {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
+
+/**
+ * Resuelve un slug contra el catálogo probando sus variantes de encoding.
+ * El migrador dejó slugs con `%e2%80%b3` literal pegado en el texto, y según
+ * la ruta Next entrega el segmento crudo o ya decodificado: se prueban crudo,
+ * decodificado y re-codificados (hex en ambas cajas). Misma estrategia que la
+ * ficha pública (`producto/[slug]`); la usa también el PATCH del admin.
+ */
+export async function findProductBySlug(slug: string) {
+  await ensureSeeded();
+  const seen = new Set<string>([slug]);
+  const decoded = safeDecodeSlug(slug);
+  if (decoded !== slug) seen.add(decoded);
+  for (const base of [...seen]) {
+    const encoded = encodeURIComponent(base);
+    seen.add(encoded);
+    seen.add(encoded.replace(/%[0-9A-F]{2}/g, (m) => m.toLowerCase()));
+  }
+  for (const candidate of seen) {
+    const [product] = await db.select().from(products).where(eq(products.slug, candidate)).limit(1);
+    if (product) return product;
+  }
+  return null;
+}
+
 /** Ids de todas las categorías asignadas a un producto. */
 async function categoryIdsOfProduct(slug: string): Promise<number[]> {
   const rows = await db
@@ -485,6 +517,43 @@ export async function getOrderByCode(code: string, email?: string) {
   if (email && order.email.toLowerCase() !== email.trim().toLowerCase()) return null;
   const items = await db.select().from(orderItems).where(eq(orderItems.orderId, order.id));
   return { order, items };
+}
+
+/**
+ * Historial de un cliente: matchea por email en minúsculas, así incluye los
+ * pedidos hechos como invitado antes de registrarse. Ordenados nuevos primero.
+ */
+export async function getOrdersByEmail(email: string) {
+  const normalized = email.trim().toLowerCase();
+  if (!normalized) return [];
+  const rows = await db
+    .select({
+      id: orders.id,
+      code: orders.code,
+      status: orders.status,
+      customerName: orders.customerName,
+      paymentLabel: orders.paymentLabel,
+      deliveryLabel: orders.deliveryLabel,
+      total: orders.total,
+      trackingCode: orders.trackingCode,
+      createdAt: orders.createdAt,
+    })
+    .from(orders)
+    .where(eq(orders.email, normalized))
+    .orderBy(desc(orders.createdAt));
+  if (!rows.length) return [];
+  const counts = await db
+    .select({ orderId: orderItems.orderId, count: sql<number>`count(*)::int` })
+    .from(orderItems)
+    .where(
+      sql`${orderItems.orderId} in (${sql.join(
+        rows.map((r) => sql`${r.id}`),
+        sql`, `,
+      )})`,
+    )
+    .groupBy(orderItems.orderId);
+  const byOrder = new Map(counts.map((r) => [r.orderId, r.count]));
+  return rows.map((r) => ({ ...r, itemsCount: byOrder.get(r.id) ?? 0 }));
 }
 
 export async function searchProducts(term: string, limit = 6) {

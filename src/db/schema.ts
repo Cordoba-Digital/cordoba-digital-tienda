@@ -212,10 +212,21 @@ export const orders = pgTable(
     notes: text("notes").notNull().default(""),
     mercadopagoPreferenceId: text("mercadopago_preference_id"),
     mercadopagoPaymentId: text("mercadopago_payment_id"),
+    trackingCode: text("tracking_code").notNull().default(""),
+    statusUpdatedAt: timestamp("status_updated_at", { withTimezone: true }).notNull().defaultNow(),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (table) => [uniqueIndex("orders_code_idx").on(table.code)],
 );
+
+export const orderEvents = pgTable("order_events", {
+  id: serial("id").primaryKey(),
+  orderId: integer("order_id").notNull(),
+  fromStatus: text("from_status").notNull().default(""),
+  toStatus: text("to_status").notNull(),
+  note: text("note").notNull().default(""),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+});
 
 export const orderItems = pgTable("order_items", {
   id: serial("id").primaryKey(),
@@ -232,6 +243,42 @@ export const subscribers = pgTable("subscribers", {
   email: text("email").notNull().unique(),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
+
+/**
+ * Clientes con cuenta (login con Google). El pedido invitado sigue existiendo:
+ * al registrarse con el mismo email, el historial muestra también los pedidos
+ * viejos por match de email (ver `getOrdersByEmail`).
+ */
+export const users = pgTable(
+  "users",
+  {
+    id: serial("id").primaryKey(),
+    googleSub: text("google_sub").notNull().unique(),
+    email: text("email").notNull(),
+    name: text("name").notNull().default(""),
+    avatarUrl: text("avatar_url").notNull().default(""),
+    isDisabled: boolean("is_disabled").notNull().default(false),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [uniqueIndex("users_email_idx").on(table.email)],
+);
+
+/**
+ * Sesiones de clientes. Se guarda el hash SHA-256 del token (la cookie lleva
+ * el token crudo): si la base se filtra, las sesiones no sirven sin más.
+ */
+export const userSessions = pgTable(
+  "user_sessions",
+  {
+    id: serial("id").primaryKey(),
+    userId: integer("user_id").notNull(),
+    tokenHash: text("token_hash").notNull().unique(),
+    expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index("user_sessions_user_idx").on(table.userId)],
+);
 
 export const arrepentimientoRequests = pgTable(
   "arrepentimiento_requests",
@@ -254,5 +301,8 @@ export type Review = typeof reviews.$inferSelect;
 export type ProductCategory = typeof productCategories.$inferSelect;
 export type Order = typeof orders.$inferSelect;
 export type OrderItem = typeof orderItems.$inferSelect;
+export type OrderEvent = typeof orderEvents.$inferSelect;
+export type User = typeof users.$inferSelect;
+export type UserSession = typeof userSessions.$inferSelect;
 export type Coupon = typeof coupons.$inferSelect;
 export type ArrepentimientoRequest = typeof arrepentimientoRequests.$inferSelect;
