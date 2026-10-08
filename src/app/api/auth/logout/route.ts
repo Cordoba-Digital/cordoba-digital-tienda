@@ -1,3 +1,5 @@
+import { NextResponse } from "next/server";
+
 import { cookieFromHeader, CUSTOMER_COOKIE } from "@/lib/customer-session";
 import { clearCustomerSessionCookie, revokeCustomerSession } from "@/lib/customer-auth";
 
@@ -7,7 +9,7 @@ export const dynamic = "force-dynamic";
 export async function POST(request: Request) {
   const token = cookieFromHeader(request.headers.get("cookie"), CUSTOMER_COOKIE);
   await revokeCustomerSession(token);
-  const res = Response.redirect(new URL("/", request.url), 303);
+  const res = NextResponse.redirect(new URL("/", request.url), 303);
   clearCustomerSessionCookie(res);
   return res;
 }

@@ -1,6 +1,8 @@
 import { and, eq, gt } from "drizzle-orm";
 import { cookies } from "next/headers";
 
+import { NextResponse } from "next/server";
+
 import { db } from "@/db";
 import { users, userSessions, type User } from "@/db/schema";
 import {
@@ -96,15 +98,20 @@ export async function upsertCustomerFromGoogle(profile: {
   return created!;
 }
 
-function sessionCookieHeader(token: string, maxAge: number): string {
-  const secure = process.env.NODE_ENV === "production" ? "; Secure" : "";
-  return `${CUSTOMER_COOKIE}=${encodeURIComponent(token)}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${maxAge}${secure}`;
+function baseCookieOptions(maxAge: number) {
+  return {
+    httpOnly: true as const,
+    sameSite: "lax" as const,
+    path: "/",
+    maxAge,
+    ...(process.env.NODE_ENV === "production" ? { secure: true as const } : {}),
+  };
 }
 
-export function setCustomerSessionCookie(res: Response, token: string): void {
-  res.headers.append("Set-Cookie", sessionCookieHeader(token, CUSTOMER_SESSION_TTL_MS / 1000));
+export function setCustomerSessionCookie(res: NextResponse, token: string): void {
+  res.cookies.set(CUSTOMER_COOKIE, token, baseCookieOptions(CUSTOMER_SESSION_TTL_MS / 1000));
 }
 
-export function clearCustomerSessionCookie(res: Response): void {
-  res.headers.append("Set-Cookie", sessionCookieHeader("", 0));
+export function clearCustomerSessionCookie(res: NextResponse): void {
+  res.cookies.set(CUSTOMER_COOKIE, "", baseCookieOptions(0));
 }

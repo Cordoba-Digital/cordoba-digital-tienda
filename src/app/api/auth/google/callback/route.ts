@@ -1,5 +1,8 @@
+import { NextResponse } from "next/server";
+
 import { cookieFromHeader, OAUTH_STATE_COOKIE, safeEqual, safeNextPath } from "@/lib/customer-session";
 import {
+  clearCustomerSessionCookie,
   createCustomerSession,
   googleOAuthConfigured,
   googleRedirectUri,
@@ -9,16 +12,12 @@ import {
 
 export const dynamic = "force-dynamic";
 
-function clearStateCookie(res: Response): void {
-  res.headers.append("Set-Cookie", `${OAUTH_STATE_COOKIE}=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0`);
-}
-
 export async function GET(request: Request) {
   const url = new URL(request.url);
-  const fallback = new URL("/ingresar?error=oauth", request.url);
+  const fallback = NextResponse.redirect(new URL("/ingresar?error=oauth", request.url));
 
   if (!googleOAuthConfigured()) {
-    return Response.redirect(new URL("/ingresar?error=config", request.url));
+    return NextResponse.redirect(new URL("/ingresar?error=config", request.url));
   }
 
   // El usuario puede cancelar en Google: vuelve con ?error=access_denied.
@@ -26,15 +25,13 @@ export async function GET(request: Request) {
   const returnedState = url.searchParams.get("state");
   const rawCookie = cookieFromHeader(request.headers.get("cookie"), OAUTH_STATE_COOKIE);
   if (!code || !returnedState || !rawCookie) {
-    return Response.redirect(fallback);
+    return fallback;
   }
   const dot = rawCookie.indexOf(".");
   const expectedState = dot === -1 ? "" : rawCookie.slice(0, dot);
   const next = safeNextPath(dot === -1 ? null : decodeURIComponent(rawCookie.slice(dot + 1)));
   if (!expectedState || !safeEqual(returnedState, expectedState)) {
-    const res = Response.redirect(fallback);
-    clearStateCookie(res);
-    return res;
+    return fallback;
   }
 
   try {
@@ -68,18 +65,13 @@ export async function GET(request: Request) {
       picture: profile.picture,
     });
     if (customer.isDisabled) {
-      const res = Response.redirect(new URL("/ingresar?error=disabled", request.url));
-      clearStateCookie(res);
-      return res;
+      return NextResponse.redirect(new URL("/ingresar?error=disabled", request.url));
     }
     const token = await createCustomerSession(customer.id);
-    const res = Response.redirect(new URL(next, request.url));
+    const res = NextResponse.redirect(new URL(next, request.url));
     setCustomerSessionCookie(res, token);
-    clearStateCookie(res);
     return res;
   } catch {
-    const res = Response.redirect(fallback);
-    clearStateCookie(res);
-    return res;
+    return fallback;
   }
 }
