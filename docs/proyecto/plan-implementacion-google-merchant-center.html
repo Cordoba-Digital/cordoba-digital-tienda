@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Plan implementación Google Merchant Center</title>
+<style>
+body { font-family: Inter, Arial, sans-serif; color: #111827; margin: 0; padding: 32px; line-height: 1.55; }
+h1 { font-size: 28px; margin-bottom: 6px; }
+h2 { margin-top: 26px; font-size: 18px; }
+p { margin: 8px 0; }
+ul, ol { margin: 8px 0; padding-left: 28px; }
+pre { background: #f3f4f6; padding: 16px; border-radius: 12px; overflow-x: auto; }
+.box { border: 1px solid #d1d5db; border-radius: 16px; padding: 18px; margin-top: 20px; }
+</style>
+</head>
+<body>
+<h1>Plan de implementación: feed Google Merchant Center</h1>
+<p><strong>Objetivo:</strong> Exponer un feed público compatible con Google Merchant Center directamente desde la nueva web y desde Neon.</p>
+
+<h2>Fase 1 — Preparar esquema de productos</h2>
+<p>Validar que Neon tenga o derive:</p>
+<ul>
+<li>id</li>
+<li>title</li>
+<li>description</li>
+<li>link</li>
+<li>image_link</li>
+<li>availability</li>
+<li>price</li>
+<li>currency</li>
+<li>brand</li>
+<li>condition</li>
+<li>google_product_category</li>
+<li>category</li>
+<li>stock</li>
+<li>gtin, mpn, sku cuando existan</li>
+</ul>
+<p>Si faltan GTIN/MPN, Google puede aceptar productos corrientes, pero la calidad del feed baja.</p>
+
+<h2>Fase 2 — Crear el feed en Next.js</h2>
+<p>Crear una ruta:</p>
+<pre>/products.xml</pre>
+<p>con Content-Type:</p>
+<pre>application/xml; charset=utf-8</pre>
+<p>Debe devolver un &lt;rss&gt;/Atom o feed XML válido para Merchant Center.</p>
+
+<h2>Fase 3 — Mapear Neon al feed</h2>
+<p>Cada producto debe transformarse en un item con campos como:</p>
+<pre>id
+title
+description
+link
+image_link
+availability
+price [value][currency]
+brand
+condition: new</pre>
+<p>La disponibilidad puede salir de:</p>
+<pre>stock &gt; 0 ? "in stock" : "out of stock"</pre>
+
+<h2>Fase 4 — Validación</h2>
+<p>Agregar checks mientras lo hacemos:</p>
+<ul>
+<li>URL pública sin bloqueo;</li>
+<li>XML bien formado;</li>
+<li>field id obligatorio;</li>
+<li>imagen accesible;</li>
+<li>precio con importe decimal;</li>
+<li>link canónico;</li>
+<li>máximo permitido por Google;</li>
+<li>no devolver HTML ni error 500.</li>
+</ul>
+
+<h2>Fase 5 — Registrar en Google Merchant Center</h2>
+<p>En Merchant Center:</p>
+<ol>
+<li>Ir a Productos &gt; Fuentes de datos.</li>
+<li>Agregar Feed.</li>
+<li>Elegir formato XML/RSS o CSV.</li>
+<li>Apuntar a:</li>
+</ol>
+<pre>https://cordoba-digital.vercel.app/products.xml</pre>
+<ol start="5"><li>Programar una frecuency recurrente.</li></ol>
+
+<h2>Fase 6 — Verificar dominio</h2>
+<p>Separar en dos tareas:</p>
+<ol>
+<li>Verificar dominio de Merchant Center.</li>
+<li>Conectar Google Search Console si todavía no está vinculado.</li>
+</ol>
+<p>Sin dominio verificado no queda completo el ciclo.</p>
+
+<h2>Fase 7 — Dejar automático</h2>
+<p>1. Endpoint + fetch de Google<br/>Google llama cada 6/12/24 horas.</p>
+</body>
+</html>

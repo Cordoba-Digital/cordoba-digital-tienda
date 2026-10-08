@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Panorama técnico Google Merchant Center</title>
+<style>
+body { font-family: Georgia, "Times New Roman", serif; color: #111; padding: 36px; line-height: 1.45; }
+header { border-bottom: 1px solid #d1d5db; padding-bottom: 16px; margin-bottom: 24px; }
+h1 { font-size: 30px; margin: 0 0 4px; font-weight: 600; }
+.meta { color: #6b7280; font-size: 14px; margin-top: 4px; }
+h2 { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #111; margin: 30px 0 12px; border-bottom: 1px solid #111827; padding-bottom: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 8px 10px; border: 1px solid #d1d5db; vertical-align: top; }
+th { background: #f3f4f6; }
+pre { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px; white-space: pre-wrap; }
+p { margin: 8px 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Panorama técnico</h1>
+  <div class="meta">6 de octubre de 2026</div>
+  <div class="meta">Ronan Carranza</div>
+  <h1 style="font-size:22px; margin-top:10px;">Integración Google Merchant Center</h1>
+  <p>Feed y conexión desde la nueva web usando Neon como fuente de datos.</p>
+</header>
+
+<h2>Arquitectura general</h2>
+<table>
+  <tr><th>Componente</th><th>Actual / recomendado</th><th>Estado</th></tr>
+  <tr><td>Web pública y API</td><td>Next.js en Vercel</td><td>Implementado</td></tr>
+  <tr><td>Base de datos</td><td>Postgres (Neon)</td><td>Configurado</td></tr>
+  <tr><td>Panel /admin</td><td>Gestión propia de productos</td><td>Pendiente integrar</td></tr>
+  <tr><td>Feed</td><td>/products.xml desde Neon</td><td>Por implementar</td></tr>
+  <tr><td>Google Merchant Center</td><td>Fetch recurrente del endpoint XML</td><td>Por conectar</td></tr>
+</table>
+
+<h2>Cómo se actualiza Google</h2>
+<p>Google Merchant Center se conecta así:</p>
+<pre>Panel /admin → API route → Neon
+Neon → /products.xml
+/products.xml → Google Merchant Center</pre>
+<p>No se sube XML a Neon. Neon es la fuente; Next.js genera el feed cuando Google lo solicita.</p>
+
+<h2>Dónde vive cada cosa</h2>
+<table>
+  <tr><th>Dato / servicio</th><th>Dónde se guarda o vive</th></tr>
+  <tr><td>Productos, categorías, pedidos</td><td>Base Postgres (Neon)</td></tr>
+  <tr><td>Carga/edición de productos</td><td>Panel /admin en la nueva web</td></tr>
+  <tr><td>Generación del feed</td><td>Route `/products.xml` en Next.js</td></tr>
+  <tr><td>Actualización en Google</td><td>Fetch recurrente configurado en Merchant Center</td></tr>
+</table>
+
+<h2>Fase 7 — Dejar automático</h2>
+<p>Opciones recomendadas:</p>
+<ol>
+  <li>Endpoint + fetch de Google<br/>Google llama cada 6/12/24 horas.</li>
+</ol>
+
+<h2>Notas</h2>
+<table>
+  <tr><th>Aspecto</th><th>Detalle</th></tr>
+  <tr><td>Manual / carga</td><td>Primero queda operativo el admin o la migración; luego el feed sale de Neon.</td></tr>
+  <tr><td>Tiempo de actualización</td><td>Depende de la frecuencia de fetch en Google Merchant Center.</td></tr>
+  <tr><td>Activación posterior</td><td>API directa de Content API puede sumarse si después se necesita realtime.</td></tr>
+</table>
+</body>
+</html>

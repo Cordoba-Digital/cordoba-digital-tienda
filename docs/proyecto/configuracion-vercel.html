@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family:'Plus Jakarta Sans'; src:url('file:///C:/Users/ASUS/orca/workspaces/Projecto-Ventas-WebCBa/preview-downloads/public/fonts/plus-jakarta-sans-400-latin.woff2') format('woff2'); font-weight:400; }
+  @font-face { font-family:'Plus Jakarta Sans'; src:url('file:///C:/Users/ASUS/orca/workspaces/Projecto-Ventas-WebCBa/preview-downloads/public/fonts/plus-jakarta-sans-500-latin.woff2') format('woff2'); font-weight:500; }
+  @font-face { font-family:'Plus Jakarta Sans'; src:url('file:///C:/Users/ASUS/orca/workspaces/Projecto-Ventas-WebCBa/preview-downloads/public/fonts/plus-jakarta-sans-700-latin.woff2') format('woff2'); font-weight:700; }
+  @font-face { font-family:'Plus Jakarta Sans'; src:url('file:///C:/Users/ASUS/orca/workspaces/Projecto-Ventas-WebCBa/preview-downloads/public/fonts/plus-jakarta-sans-800-latin.woff2') format('woff2'); font-weight:800; }
+  @page { size: A4; margin: 16mm 15mm; }
+  * { box-sizing: border-box; }
+  body { font-family:'Plus Jakarta Sans','Segoe UI',Arial,sans-serif; color:#1b1b1b; font-size:10.5pt; line-height:1.5; margin:0; background:#fff; }
+  .brand { display:flex; align-items:center; gap:14px; border-bottom:3px solid #c8621c; padding-bottom:12px; margin-bottom:18px; }
+  .brand img { height:52px; }
+  .brand-meta { margin-left:auto; text-align:right; color:#555; font-size:9pt; }
+  h1 { font-size:24pt; font-weight:800; line-height:1.15; margin:0 0 6px 0; }
+  .lede { color:#444; margin:0 0 18px 0; }
+  h2 { font-size:11.5pt; font-weight:700; text-transform:uppercase; margin:18px 0 8px 0; }
+  ol, ul { margin:6px 0 12px 0; padding-left:18px; }
+  li { margin-bottom:4px; }
+  table { width:100%; border-collapse:collapse; margin:8px 0 12px 0; font-size:10pt; }
+  th, td { text-align:left; padding:7px 10px; border-bottom:1px solid #e6e2dc; vertical-align:top; }
+  th { border-bottom:2px solid #1b1b1b; }
+  .panel { border-left:3px solid #c8621c; background:#faf7f3; padding:10px 12px; margin:10px 0; }
+</style>
+</head>
+<body>
+<div class="brand"><img src="file:///C:/Users/ASUS/orca/workspaces/Projecto-Ventas-WebCBa/preview-downloads/public/images/logo.png" alt="Córdoba Digital"><div class="brand-meta">Configuración técnica<br>2 de octubre de 2026<br>Ronan Carranza</div></div>
+
+<h1>Configuración de Vercel y variables de entorno</h1>
+<p class="lede">Cómo registrar credenciales sin filtrarlas ni guardarlas en Git.</p>
+
+<h2>Variables de entorno</h2>
+<ol>
+<li>Entrar a Vercel → proyecto `cordoba-digital` → Settings → Environment Variables.</li>
+<li>Agregar cada variable para Production, Preview y Development según corresponda.</li>
+<li>No subir `.env` al repositorio.</li>
+<li>Después de guardar, volver a desplegar.</li>
+</ol>
+
+<h2>Variables esperadas</h2>
+<table>
+<tr><th>Variable</th><th>Para qué</th></tr>
+<tr><td>`DATABASE_URL`</td><td>Conexión a Postgres (Neon/Vercel Postgres)</td></tr>
+<tr><td>`APP_URL`</td><td>URL pública del sitio, ej. `https://cordoba-digital.vercel.app`</td></tr>
+<tr><td>`MP_ACCESS_TOKEN`</td><td>Mercado Pago, si se activa</td></tr>
+<tr><td>`MP_PUBLIC_KEY`</td><td>Mercado Pago, si se activa</td></tr>
+<tr><td>`MP_WEBHOOK_SECRET`</td><td>Firma de webhooks de MP</td></tr>
+<tr><td>`GOOGLE_PLACES_API_KEY`</td><td>Comentarios/estrellas de Google Places</td></tr>
+<tr><td>`GOOGLE_PLACE_ID`</td><td>Negocio a consultar en Places</td></tr>
+</table>
+
+<h2>Región de funciones</h2>
+<p>Se dejó configurado para que las funciones corran en la misma región que Neon:</p>
+<div class="panel"><strong>vercel.json</strong><br>
+<code>{ "$schema": "https://openapi.vercel.sh/vercel.json", "regions": ["cle1"] }</code></div>
+<p>`cle1` equivale a AWS `us-east-2`.</p>
+
+<h2>Checklist</h2>
+<ul>
+<li>Commit y push de `vercel.json`</li>
+<li>Deploy producción completado</li>
+<li>Región runtime verificada como `cle1`</li>
+<li>Variables de entorno cargadas en el panel</li>
+<li>Secrets no versionados en Git</li>
+</ul>
+
+</body>
+</html>
