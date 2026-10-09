@@ -5,10 +5,11 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
-type IconName = "panel" | "pedidos" | "pagos" | "usuarios" | "productos" | "archivo" | "actividad" | "tienda" | "salir";
+type IconName = "panel" | "pedidos" | "pagos" | "usuarios" | "productos" | "nuevo" | "archivo" | "actividad" | "tienda" | "salir";
 
 const PATHS: Record<IconName, string> = {
-  panel: "M4 13h6V4H4v9Zm0 7h6v-5H4v5Zm10 0h6v-9h-6v9Zm0-16v5h6V4h-6Z",
+  panel: "M4 4v16h16M8 15l3.5-4 3 2.5L20 7",
+  nuevo: "M12 5v14M5 12h14",
   pedidos: "M6 7h12l-1 13H7L6 7Zm3 0V6a3 3 0 0 1 6 0v1",
   pagos: "M3 7h18v10H3V7Zm0 4h18M7 15h3",
   usuarios: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0",
@@ -27,15 +28,31 @@ function Icon({ name }: { name: IconName }) {
   );
 }
 
-const NAV: { href: string; label: string; icon: IconName }[] = [
-  { href: "/admin", label: "Panel", icon: "panel" },
-  { href: "/admin/pedidos", label: "Pedidos", icon: "pedidos" },
-  { href: "/admin/pagos", label: "Pagos", icon: "pagos" },
-  { href: "/admin/usuarios", label: "Usuarios", icon: "usuarios" },
-  { href: "/admin/productos", label: "Productos", icon: "productos" },
-  { href: "/admin/productos/archivados", label: "Archivados", icon: "archivo" },
-  { href: "/admin/actividad", label: "Actividad", icon: "actividad" },
+type NavItem = { href: string; label: string; icon: IconName };
+
+/** Agrupado por tarea: catálogo primero, que es lo que más se usa. */
+const GROUPS: { title?: string; items: NavItem[] }[] = [
+  { items: [{ href: "/admin", label: "Panel", icon: "panel" }] },
+  {
+    title: "Catálogo",
+    items: [
+      { href: "/admin/productos", label: "Productos", icon: "productos" },
+      { href: "/admin/productos/nuevo", label: "Nuevo producto", icon: "nuevo" },
+      { href: "/admin/productos/archivados", label: "Archivados", icon: "archivo" },
+    ],
+  },
+  {
+    title: "Ventas",
+    items: [
+      { href: "/admin/pedidos", label: "Pedidos", icon: "pedidos" },
+      { href: "/admin/pagos", label: "Pagos", icon: "pagos" },
+    ],
+  },
+  { title: "Clientes", items: [{ href: "/admin/usuarios", label: "Usuarios", icon: "usuarios" }] },
+  { title: "Control", items: [{ href: "/admin/actividad", label: "Actividad", icon: "actividad" }] },
 ];
+
+const NAV = GROUPS.flatMap((g) => g.items);
 
 /** La entrada activa es la de prefijo más largo (Archivados gana a Productos). */
 function activeHref(pathname: string): string {
@@ -87,31 +104,38 @@ export function AdminSidebar({ badges = {}, who = "" }: { badges?: Record<string
         id="admin-nav"
         className={`${open ? "block" : "hidden"} border-b border-ink-100 bg-surface lg:fixed lg:inset-y-0 lg:left-0 lg:block lg:w-60 lg:border-b-0 lg:border-r`}
       >
-        <div className="flex h-full flex-col px-3 py-4">
+        <div className="flex h-full flex-col overflow-y-auto px-3 py-4">
           <Link href="/admin" className="mb-6 hidden items-center gap-2 px-3 lg:flex">
             <Image src="/images/logo.png" alt="Córdoba Digital" width={96} height={38} className="h-8 w-auto" />
             <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-ink-500">Admin</span>
           </Link>
-          <nav aria-label="Administración" className="space-y-1">
-            {NAV.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                aria-current={active === item.href ? "page" : undefined}
-                className={itemCls(active === item.href)}
-              >
-                <Icon name={item.icon} />
-                <span className="flex-1">{item.label}</span>
-                {badges[item.href] ? (
-                  <span
-                    title="Pedidos esperando pago"
-                    className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${active === item.href ? "bg-white/20 text-white" : "bg-amber-100 text-amber-800"}`}
-                  >
-                    {badges[item.href]}
-                  </span>
+          <nav aria-label="Administración" className="space-y-5">
+            {GROUPS.map((group, gi) => (
+              <div key={group.title ?? gi} className="space-y-1">
+                {group.title ? (
+                  <p className="px-3 pb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-ink-400">{group.title}</p>
                 ) : null}
-              </Link>
+                {group.items.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    aria-current={active === item.href ? "page" : undefined}
+                    className={itemCls(active === item.href)}
+                  >
+                    <Icon name={item.icon} />
+                    <span className="flex-1">{item.label}</span>
+                    {badges[item.href] ? (
+                      <span
+                        title="Pedidos esperando pago"
+                        className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${active === item.href ? "bg-white/20 text-white" : "bg-amber-100 text-amber-800"}`}
+                      >
+                        {badges[item.href]}
+                      </span>
+                    ) : null}
+                  </Link>
+                ))}
+              </div>
             ))}
           </nav>
           <div className="mt-6 space-y-1 border-t border-ink-100 pt-4 lg:mt-auto">
