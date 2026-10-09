@@ -192,7 +192,6 @@ export default async function HomePage() {
         <SectionHeading
           eyebrow="Explorá"
           title="Categorías"
-          description="Todo el catálogo organizado para que encuentres lo que buscás en menos de 3 clics."
           action={{ href: "/productos", label: "Ver todo" }}
         />
         {/*
