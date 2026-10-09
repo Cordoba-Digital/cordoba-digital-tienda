@@ -209,8 +209,10 @@ export function CartDrawer() {
 }
 
 export function Toaster() {
-  const { toasts } = useStore();
-  if (!toasts.length) return null;
+  const { toasts, cartOpen } = useStore();
+  // Con el carrito abierto los avisos quedarían encima del pie del panel
+  // (en mobile ocupa todo el ancho), así que se ocultan hasta cerrarlo.
+  if (!toasts.length || cartOpen) return null;
   return (
     <div className="pointer-events-none fixed bottom-24 right-4 z-[70] flex w-[min(22rem,calc(100vw-2rem))] flex-col gap-2">
       {toasts.map((toast) => (

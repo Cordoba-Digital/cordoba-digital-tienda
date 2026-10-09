@@ -120,13 +120,13 @@ const loadCategoryRows = ttlCache("category-rows", 5 * 60_000, () =>
   db.select().from(categories).then((rows) => rows as CategoryRow[]),
 );
 
-/** Conteo de productos por categoría desde el puente, cacheado 5 min. */
+/** Ids de producto por categoría desde el puente, cacheado 5 min. */
 const loadCategoryCounts = ttlCache("category-counts", 5 * 60_000, async () => {
   const rows = await db
-    .select({ categoryId: productCategories.categoryId, count: sql<number>`count(*)::int` })
+    .select({ categoryId: productCategories.categoryId, productIds: sql<number[]>`array_agg(${productCategories.productId})` })
     .from(productCategories)
     .groupBy(productCategories.categoryId);
-  return new Map(rows.map((r) => [r.categoryId, r.count]));
+  return new Map(rows.map((r) => [r.categoryId, r.productIds]));
 });
 
 /**

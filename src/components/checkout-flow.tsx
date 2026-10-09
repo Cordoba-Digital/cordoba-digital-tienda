@@ -7,8 +7,10 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Spinner } from "@/components/ui";
+import { trackBeginCheckout } from "@/lib/analytics";
 import { readCoupon, writeCoupon } from "@/lib/coupon-storage";
 import { money } from "@/lib/format";
+import { isPaymentMethodOffered } from "@/lib/checkout-payment";
 import { computeTotals, PAYMENT_METHODS, type CouponInfo, type PaymentMethodId } from "@/lib/pricing";
 import { validateDelivery, validatePersonalData } from "@/lib/checkout-validation";
 import { useShippingQuote } from "@/lib/shipping-quote";
@@ -237,6 +239,22 @@ export function CheckoutFlow() {
     }, 0);
     return () => window.clearTimeout(id);
   }, []);
+
+  // `begin_checkout` una sola vez, cuando el carrito ya se leyó de localStorage.
+  const checkoutTracked = useRef(false);
+  useEffect(() => {
+    if (!hydrated || checkoutTracked.current || items.length === 0) return;
+    checkoutTracked.current = true;
+    trackBeginCheckout(
+      items.map((item) => ({
+        item_id: item.slug,
+        item_name: item.name,
+        item_brand: item.brand,
+        price: item.price,
+        quantity: item.quantity,
+      })),
+    );
+  }, [hydrated, items]);
 
   // Persistencia con debounce: sin esto cada tecla escribe a localStorage
   // (lectura/escritura sincrónica que bloquea el hilo en cada keystroke).
@@ -705,9 +723,7 @@ export function CheckoutFlow() {
             <div className="card-surface space-y-4 p-6">
               <h2 className="text-xl font-extrabold tracking-tight text-ink-900">Medio de pago</h2>
               <div className="grid gap-2">
-                  {PAYMENT_METHODS.filter((method) =>
-                  method.id === "transferencia" || (method.id === "efectivo" && deliveryMethod === "pickup"),
-                ).map(
+                  {PAYMENT_METHODS.filter((method) => isPaymentMethodOffered(method.id, deliveryMethod)).map(
                     (method) => {
                       const PaymentIcon = PAYMENT_ICONS[method.id];
                       return (

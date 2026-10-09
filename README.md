@@ -51,6 +51,18 @@ npm run verify:wp                       # compara la base contra WooCommerce
   con validación HMAC `x-signature`. Nunca `sandbox_init_point`.
 - Tarjeta directa: se procesa vía Mercado Pago (no se guardan datos de tarjeta).
 
+## Google (Merchant Center, Analytics, Search Console)
+
+- **Feed de Merchant Center**: `/products.xml` (RSS 2.0 con atributos `g:`), se
+  arma en cada pedido desde la base. En Merchant Center: Productos > Fuentes de
+  datos > Agregar feed > URL `https://<dominio>/products.xml`, descarga diaria.
+  Quedan afuera los productos sin precio o sin foto.
+- **GA4**: variable `GA_MEASUREMENT_ID` (`G-XXXXXXXX`). Sin ella no se carga
+  ningún script. Envía páginas vistas y los eventos `view_item`,
+  `add_to_cart`, `begin_checkout` y `purchase` (`src/lib/analytics.ts`).
+- **Search Console**: variable `GOOGLE_SITE_VERIFICATION` con el código de la
+  meta `google-site-verification` (varios códigos separados por coma).
+
 ## Estructura
 
 - `src/app` — páginas + API routes (`/categoria/[...path]` para el árbol de categorías)
