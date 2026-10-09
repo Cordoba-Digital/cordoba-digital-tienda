@@ -251,7 +251,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
   };
 
   return (
-    <div className="card-surface space-y-5 p-6 lg:sticky lg:top-36">
+    <div className="card-surface space-y-4 p-5 lg:sticky lg:top-36">
       <div>
         {product.brand && product.brand !== "General" ? (
           <p className="flex items-center gap-2 text-[13px] font-bold text-ink-500">
@@ -261,7 +261,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
             {product.brand}
           </p>
         ) : null}
-        <h1 className="mt-2.5 text-2xl font-extrabold leading-tight tracking-tight text-ink-900">{product.name}</h1>
+        <h1 className="mt-2 text-2xl font-extrabold leading-tight tracking-tight text-ink-900">{product.name}</h1>
         {(product.reviewCount ?? 0) > 0 || (product.soldCount ?? 0) > 0 ? (
           <div className="mt-2 flex flex-wrap items-center gap-3 text-xs text-ink-500">
             {(product.reviewCount ?? 0) > 0 ? (
@@ -276,13 +276,8 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
             {(product.soldCount ?? 0) > 0 ? <span>+{product.soldCount} vendidos</span> : null}
           </div>
         ) : null}
-        <p className="mt-2 text-[13px] leading-relaxed text-ink-500">
-          {product.sku ? (
-            <>
-              SKU {product.sku}
-              <br />
-            </>
-          ) : null}
+        <p className="mt-1.5 text-[13px] leading-relaxed text-ink-500">
+          {product.sku ? <>SKU {product.sku} · </> : null}
           Vendido por <span className="font-bold text-brand-700">Córdoba Digital</span>
         </p>
       </div>
@@ -294,45 +289,34 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
             <span className="rounded-md bg-rose-600 px-2 py-1 text-xs font-extrabold leading-none text-white">{off}% OFF</span>
           </div>
         ) : null}
-        <p className="mt-0.5 text-[2.4rem] font-extrabold leading-tight tracking-tight text-ink-900">{money(product.price)}</p>
+        <p className="mt-0.5 text-[2.25rem] font-extrabold leading-tight tracking-tight text-ink-900">{money(product.price)}</p>
+        {product.stock > 0 ? (
+          /* Antes decía "¡Últimas N unidades!" cuando había 5 o menos. Se sacó
+             porque el campo no sirve para eso: 2.369 de 2.589 productos tienen
+             stock = 1 y ninguno tiene entre 2 y 5, así que el aviso salía en el
+             91% de las fichas. El `stock` del sitio original funciona como
+             disponible/no disponible, no como un conteo real de depósito. */
+          <p className="mt-1.5 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-[13px] font-bold text-emerald-700">
+            <span className="h-2 w-2 rounded-full bg-current" aria-hidden />
+            Stock disponible para envío inmediato
+          </p>
+        ) : (
+          <p className="mt-1.5 text-sm font-semibold text-rose-600">Sin stock — consultanos por reposición</p>
+        )}
       </div>
 
       {/* Sin cuotas ni promos bancarias: no hay datos y no se inventan.
-          Solo los medios de pago que el sitio realmente ofrece. */}
-      <div className="divide-y divide-ink-100 overflow-hidden rounded-xl border border-ink-100 text-[13px]">
-        <div className="flex items-start gap-3 px-3.5 py-3">
-          <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-brand-700" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <path d="M3 10l9-6 9 6M5 10v8M19 10v8M9 10v8M15 10v8M3 20h18" />
-            </svg>
-          <p className="leading-snug text-ink-500">
-            <b className="block text-sm text-ink-900">Transferencia bancaria o efectivo en el local</b>
-            Te mostramos el CBU al confirmar.
-          </p>
-        </div>
-        <div className="flex items-start gap-3 px-3.5 py-3">
-          <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-brand-700" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <path d="M3 7h18v12H3zM3 11h18" />
-            </svg>
-          <p className="leading-snug text-ink-500">
-            <b className="block text-sm text-ink-900">Seña en el local</b>
-            Reservás con seña y pagás el resto al retirar.
-          </p>
-        </div>
-      </div>
-
-      {product.stock > 0 ? (
-        /* Antes decía "¡Últimas N unidades!" cuando había 5 o menos. Se sacó
-           porque el campo no sirve para eso: 2.369 de 2.589 productos tienen
-           stock = 1 y ninguno tiene entre 2 y 5, así que el aviso salía en el
-           91% de las fichas. El `stock` del sitio original funciona como
-           disponible/no disponible, no como un conteo real de depósito. */
-        <p className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1.5 text-[13px] font-bold text-emerald-700">
-          <span className="h-2 w-2 rounded-full bg-current" aria-hidden />
-          Stock disponible para envío inmediato
+          Solo los medios de pago que el sitio realmente ofrece, en una sola
+          fila para que la caja entre hasta Guardar/Consultar sin scroll en
+          una notebook al 100%. */}
+      <div className="flex items-start gap-2.5 rounded-xl border border-ink-100 px-3.5 py-2.5 text-[13px]">
+        <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] shrink-0 text-brand-700" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <path d="M3 10l9-6 9 6M5 10v8M19 10v8M9 10v8M15 10v8M3 20h18" />
+        </svg>
+        <p className="leading-snug text-ink-500">
+          <b className="text-ink-900">Transferencia, efectivo o seña en el local.</b> El CBU te lo mostramos al confirmar.
         </p>
-      ) : (
-        <p className="text-sm font-semibold text-rose-600">Sin stock — consultanos por reposición</p>
-      )}
+      </div>
 
       <div className="flex items-center justify-between text-sm font-semibold text-ink-700">
         <span>Cantidad</span>
@@ -346,7 +330,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         />
       </div>
 
-      <div className="space-y-2.5">
+      <div className="space-y-2">
         <button
           type="button"
           disabled={product.stock === 0}
@@ -354,7 +338,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
             addItem(payload, quantity, { silent: true, open: false });
             router.push("/carrito");
           }}
-          className="h-[52px] w-full rounded-xl bg-brand-500 text-[15px] font-extrabold text-deep transition hover:bg-brand-400 disabled:opacity-40"
+          className="h-12 w-full rounded-xl bg-brand-500 text-[15px] font-extrabold text-deep transition hover:bg-brand-400 disabled:opacity-40"
         >
           Comprar ahora
         </button>
@@ -362,11 +346,11 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
           type="button"
           disabled={product.stock === 0}
           onClick={() => addItem(payload, quantity)}
-          className="h-[52px] w-full rounded-xl border-2 border-brand-700 text-[15px] font-extrabold text-brand-700 transition hover:bg-brand-50 disabled:opacity-40"
+          className="h-12 w-full rounded-xl border-2 border-brand-700 text-[15px] font-extrabold text-brand-700 transition hover:bg-brand-50 disabled:opacity-40"
         >
           Agregar al carrito
         </button>
-        <div className="grid grid-cols-2 gap-2.5">
+        <div className="grid grid-cols-2 gap-2">
           <button
             type="button"
             onClick={() => toggleFavorite(product.slug)}
@@ -387,7 +371,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         </div>
       </div>
 
-      <div className="space-y-4 border-t border-ink-100 pt-5">
+      <div className="space-y-4 border-t border-ink-100 pt-4">
         <ShippingCalculator price={product.price} />
         <div className="flex items-start gap-3 text-[13px] leading-snug text-ink-500">
           <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-brand-700" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
