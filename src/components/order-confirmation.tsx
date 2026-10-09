@@ -7,7 +7,7 @@ import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { trackPurchase } from "@/lib/analytics";
 import { money } from "@/lib/format";
-import { ORDER_STATUS_FLOW, statusIndex } from "@/lib/pricing";
+import { isCancelled, ORDER_STATUS_FLOW, statusIndex } from "@/lib/pricing";
 
 export type OrderSummary = {
   code: string;
@@ -88,7 +88,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
     });
   }, [isNew, order]);
 
-  const needsPayment = order.paymentMethod === "transferencia";
+  const needsPayment = order.paymentMethod === "transferencia" && !isCancelled(order.status);
 
   return (
     <div className="container-xl py-8">
@@ -129,36 +129,43 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
 
           <section className="card-surface p-5">
             <h2 className="mb-4 text-lg font-extrabold text-ink-900">Estado del pedido</h2>
-            <ol className="space-y-4">
-              {ORDER_STATUS_FLOW.map((stage, index) => {
-                const done = index <= current;
-                return (
-                  <li key={stage.id} className="flex gap-3">
-                    <div className="flex flex-col items-center">
-                      <span
-                        className={`grid h-7 w-7 place-items-center rounded-full text-xs font-bold ${
-                          done ? "bg-emerald-700 text-white" : "bg-ink-100 text-ink-500"
-                        }`}
-                      >
-                        {done ? "✓" : index + 1}
-                      </span>
-                      {index < ORDER_STATUS_FLOW.length - 1 ? (
-                        <span className={`mt-1 h-8 w-0.5 ${index < current ? "bg-emerald-400" : "bg-ink-100"}`} />
-                      ) : null}
-                    </div>
-                    <div className="pb-1">
-                      <p className={`text-sm font-bold ${done ? "text-ink-900" : "text-ink-500"}`}>{stage.label}</p>
-                      <p className="text-xs text-ink-500">{stage.description}</p>
-                      {index === current ? (
-                        <span className="mt-1 inline-block rounded-full bg-brand-50 px-2 py-0.5 text-[10px] font-bold text-brand-700">
-                          Estado actual
+            {isCancelled(order.status) ? (
+              <p className="rounded-xl bg-ink-50 px-4 py-3 text-sm font-semibold text-ink-700">
+                Este pedido está cancelado: venció la reserva de 48 hs sin pago o lo cancelamos a pedido. Si ya
+                pagaste o querés retomarlo, escribinos por WhatsApp con el número de pedido.
+              </p>
+            ) : (
+              <ol className="space-y-4">
+                {ORDER_STATUS_FLOW.map((stage, index) => {
+                  const done = index <= current;
+                  return (
+                    <li key={stage.id} className="flex gap-3">
+                      <div className="flex flex-col items-center">
+                        <span
+                          className={`grid h-7 w-7 place-items-center rounded-full text-xs font-bold ${
+                            done ? "bg-emerald-700 text-white" : "bg-ink-100 text-ink-500"
+                          }`}
+                        >
+                          {done ? "✓" : index + 1}
                         </span>
-                      ) : null}
-                    </div>
-                  </li>
-                );
-              })}
-            </ol>
+                        {index < ORDER_STATUS_FLOW.length - 1 ? (
+                          <span className={`mt-1 h-8 w-0.5 ${index < current ? "bg-emerald-400" : "bg-ink-100"}`} />
+                        ) : null}
+                      </div>
+                      <div className="pb-1">
+                        <p className={`text-sm font-bold ${done ? "text-ink-900" : "text-ink-500"}`}>{stage.label}</p>
+                        <p className="text-xs text-ink-500">{stage.description}</p>
+                        {index === current ? (
+                          <span className="mt-1 inline-block rounded-full bg-brand-50 px-2 py-0.5 text-[10px] font-bold text-brand-700">
+                            Estado actual
+                          </span>
+                        ) : null}
+                      </div>
+                    </li>
+                  );
+                })}
+              </ol>
+            )}
           </section>
 
           {needsPayment ? (

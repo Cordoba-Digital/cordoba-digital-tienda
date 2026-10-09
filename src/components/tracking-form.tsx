@@ -6,7 +6,7 @@ import { useCallback, useEffect, useState } from "react";
 
 import { Spinner } from "@/components/ui";
 import { money } from "@/lib/format";
-import { ORDER_STATUS_FLOW, statusIndex, statusLabel } from "@/lib/pricing";
+import { isCancelled, ORDER_STATUS_FLOW, statusIndex, statusLabel } from "@/lib/pricing";
 
 type TrackedOrder = {
   code: string;
@@ -121,25 +121,31 @@ export function TrackingForm() {
             </div>
           </div>
 
-          <ol className="mt-4 grid gap-3 sm:grid-cols-5">
-            {ORDER_STATUS_FLOW.map((stage, index) => {
-              const done = index <= current;
-              return (
-                <li key={stage.id} className="text-center">
-                  <span
-                    className={`mx-auto grid h-8 w-8 place-items-center rounded-full text-xs font-bold ${
-                      done ? "bg-emerald-700 text-white" : "bg-ink-100 text-ink-500"
-                    }`}
-                  >
-                    {done ? "✓" : index + 1}
-                  </span>
-                  <p className={`mt-1.5 text-[11px] font-semibold ${done ? "text-ink-900" : "text-ink-500"}`}>
-                    {stage.label}
-                  </p>
-                </li>
-              );
-            })}
-          </ol>
+          {isCancelled(order.status) ? (
+            <p className="mt-4 rounded-xl bg-ink-50 px-4 py-3 text-sm font-semibold text-ink-700">
+              Este pedido está cancelado. Si ya pagaste o querés retomarlo, escribinos por WhatsApp con el número de pedido.
+            </p>
+          ) : (
+            <ol className="mt-4 grid gap-3 sm:grid-cols-5">
+              {ORDER_STATUS_FLOW.map((stage, index) => {
+                const done = index <= current;
+                return (
+                  <li key={stage.id} className="text-center">
+                    <span
+                      className={`mx-auto grid h-8 w-8 place-items-center rounded-full text-xs font-bold ${
+                        done ? "bg-emerald-700 text-white" : "bg-ink-100 text-ink-500"
+                      }`}
+                    >
+                      {done ? "✓" : index + 1}
+                    </span>
+                    <p className={`mt-1.5 text-[11px] font-semibold ${done ? "text-ink-900" : "text-ink-500"}`}>
+                      {stage.label}
+                    </p>
+                  </li>
+                );
+              })}
+            </ol>
+          )}
 
           <Link
             href={`/pedido/${order.code}`}

@@ -135,11 +135,25 @@ export const ORDER_STATUS_FLOW = [
   { id: "entregado", label: "Entregado", description: "¡Disfrutalo! La garantía ya está activa." },
 ] as const;
 
+/** Fuera del flujo lineal: un pedido vencido sin pago o cancelado a mano. */
+export const CANCELLED_STATUS = {
+  id: "cancelado",
+  label: "Cancelado",
+  description: "El pedido se canceló y el stock reservado volvió a la tienda.",
+} as const;
+
+/** Todos los estados que el admin puede asignar: el flujo más "Cancelado". */
+export const ADMIN_ORDER_STATUSES = [...ORDER_STATUS_FLOW, CANCELLED_STATUS] as const;
+
+export function isCancelled(status: string): boolean {
+  return status === CANCELLED_STATUS.id;
+}
+
 export function statusIndex(status: string): number {
   const index = ORDER_STATUS_FLOW.findIndex((s) => s.id === status);
   return index === -1 ? 0 : index;
 }
 
 export function statusLabel(status: string): string {
-  return ORDER_STATUS_FLOW.find((s) => s.id === status)?.label ?? "Pedido recibido";
+  return ADMIN_ORDER_STATUSES.find((s) => s.id === status)?.label ?? "Pedido recibido";
 }

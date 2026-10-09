@@ -3,6 +3,7 @@ import { and, eq } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orders } from "@/db/schema";
+import { applyOrderStatus } from "@/lib/order-status";
 
 export const dynamic = "force-dynamic";
 
@@ -65,11 +66,28 @@ async function handleEventAsync(notification: MpNotification): Promise<void> {
         and(eq(orders.code, ref), eq(orders.paymentMethod, "mercadopago"), eq(orders.status, "pendiente_pago")),
       )
       .returning({ id: orders.id });
-    console.log(
-      updated.length
-        ? `[mp-webhook] orden ${ref} -> pago_confirmado (payment ${payment.id})`
-        : `[mp-webhook] payment ${payment.id} aprobado sin pedido MP pendiente ref=${ref}`,
-    );
+    if (updated.length) {
+      console.log(`[mp-webhook] orden ${ref} -> pago_confirmado (payment ${payment.id})`);
+      return;
+    }
+    // Pago que llega después de que el pedido venció: se reactiva y se vuelve
+    // a reservar el stock, en vez de perder el cobro.
+    const [cancelled] = await db
+      .select({ id: orders.id })
+      .from(orders)
+      .where(and(eq(orders.code, ref), eq(orders.paymentMethod, "mercadopago"), eq(orders.status, "cancelado")))
+      .limit(1);
+    if (cancelled) {
+      await applyOrderStatus(cancelled.id, {
+        from: "cancelado",
+        to: "pago_confirmado",
+        note: `Pago de Mercado Pago acreditado después de cancelado (payment ${payment.id}).`,
+        extra: { mercadopagoPaymentId: String(payment.id) },
+      });
+      console.log(`[mp-webhook] orden ${ref} cancelada reactivada -> pago_confirmado (payment ${payment.id})`);
+      return;
+    }
+    console.log(`[mp-webhook] payment ${payment.id} aprobado sin pedido MP pendiente ref=${ref}`);
   } else {
     console.log(`[mp-webhook] payment ${payment.id} status=${payment.status} ref=${ref}`);
   }

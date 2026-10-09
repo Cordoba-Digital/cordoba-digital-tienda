@@ -7,7 +7,8 @@ import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
 import { getAdminStats } from "@/lib/admin-stats";
 import { money } from "@/lib/format";
-import { ORDER_STATUS_FLOW, statusLabel } from "@/lib/pricing";
+import { expireStalePendingOrders } from "@/lib/order-status";
+import { ADMIN_ORDER_STATUSES, statusLabel } from "@/lib/pricing";
 
 export const dynamic = "force-dynamic";
 
@@ -35,6 +36,8 @@ export default async function AdminDashboardPage() {
   if (!(await verifyAdminSessionValue(jar.get(ADMIN_COOKIE)?.value))) {
     redirect("/admin/login?next=/admin");
   }
+  // Vence los pedidos sin pago antes de contar, por si el cron diario no corrió.
+  await expireStalePendingOrders();
   const stats = await getAdminStats();
 
   const kpis = [
@@ -94,7 +97,7 @@ export default async function AdminDashboardPage() {
             </Link>
           </div>
           <ul className="space-y-2">
-            {ORDER_STATUS_FLOW.map((s) => (
+            {ADMIN_ORDER_STATUSES.map((s) => (
               <li key={s.id}>
                 <Link
                   href={`/admin/pedidos?status=${s.id}`}

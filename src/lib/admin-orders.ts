@@ -2,9 +2,9 @@ import { and, desc, eq, ilike, or, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orderEvents, orderItems, orders } from "@/db/schema";
-import { ORDER_STATUS_FLOW } from "@/lib/pricing";
+import { ADMIN_ORDER_STATUSES } from "@/lib/pricing";
 
-export const ADMIN_STATUS_IDS: Set<string> = new Set(ORDER_STATUS_FLOW.map((s) => s.id));
+export const ADMIN_STATUS_IDS: Set<string> = new Set(ADMIN_ORDER_STATUSES.map((s) => s.id));
 
 export type AdminOrderRow = {
   id: number;

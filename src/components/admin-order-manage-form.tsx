@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import { ORDER_STATUS_FLOW } from "@/lib/pricing";
+import { ADMIN_ORDER_STATUSES } from "@/lib/pricing";
 
 export function AdminOrderManageForm({ code, currentStatus, trackingCode }: { code: string; currentStatus: string; trackingCode: string }) {
   const router = useRouter();
@@ -49,7 +49,7 @@ export function AdminOrderManageForm({ code, currentStatus, trackingCode }: { co
           onChange={(e) => setNextStatus(e.target.value)}
           className="mt-1 w-full rounded-xl border border-ink-200 bg-surface px-3 py-2.5 text-sm text-ink-900 outline-none focus:border-brand-400"
         >
-          {ORDER_STATUS_FLOW.map((s) => (
+          {ADMIN_ORDER_STATUSES.map((s) => (
             <option key={s.id} value={s.id}>{s.label} ({s.id})</option>
           ))}
         </select>

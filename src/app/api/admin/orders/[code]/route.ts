@@ -1,10 +1,10 @@
 import { eq } from "drizzle-orm";
 
 import { db } from "@/db";
-import { orderEvents, orderItems, orders } from "@/db/schema";
+import { orderItems, orders } from "@/db/schema";
 import { sessionFromCookieHeader, verifyAdminSessionValue } from "@/lib/admin-auth";
 import { ADMIN_STATUS_IDS, getAdminOrderDetail } from "@/lib/admin-orders";
-import { statusIndex } from "@/lib/pricing";
+import { applyOrderStatus, canTransition } from "@/lib/order-status";
 
 export const dynamic = "force-dynamic";
 
@@ -37,43 +37,30 @@ export async function PATCH(request: Request, context: { params: Promise<{ code:
     return Response.json({ ok: false, error: "No encontramos un pedido con ese código." }, { status: 404 });
   }
 
-  const patch: Partial<typeof orders.$inferInsert> = {};
   const eventNote = (body.note ?? "").trim().slice(0, 500);
-
+  let next = order.status;
   if (body.status !== undefined) {
-    const next = body.status.trim();
+    next = body.status.trim();
     if (!ADMIN_STATUS_IDS.has(next)) {
       return Response.json({ ok: false, error: "Estado inválido." }, { status: 400 });
     }
-    // El flujo es lineal hacia adelante; se permite avanzar o repetir el actual
-    // (idempotencia del webhook), pero no retroceder.
-    if (statusIndex(next) < statusIndex(order.status)) {
-      return Response.json({ ok: false, error: `No se puede volver de ${order.status} a ${next}.` }, { status: 400 });
-    }
-    if (next !== order.status) {
-      patch.status = next;
-      patch.statusUpdatedAt = new Date();
-    }
+    // El flujo avanza (o repite el actual, por idempotencia del webhook), se
+    // puede cancelar mientras no salió, y un cancelado se puede reactivar.
+    const blocked = canTransition(order.status, next);
+    if (blocked) return Response.json({ ok: false, error: blocked }, { status: 400 });
   }
 
+  const extra: Partial<typeof orders.$inferInsert> = {};
   if (body.trackingCode !== undefined) {
-    patch.trackingCode = body.trackingCode.trim().slice(0, 120);
+    extra.trackingCode = body.trackingCode.trim().slice(0, 120);
   }
 
-  if (!patch.status && patch.trackingCode === undefined) {
+  if (next === order.status && extra.trackingCode === undefined && !eventNote) {
     return Response.json({ ok: false, error: "Nada para actualizar." }, { status: 400 });
   }
 
-  const [updated] = await db.update(orders).set(patch).where(eq(orders.id, order.id)).returning();
-  if (patch.status || eventNote) {
-    await db.insert(orderEvents).values({
-      orderId: order.id,
-      fromStatus: order.status,
-      toStatus: patch.status ?? order.status,
-      note: eventNote,
-    });
-  }
-
+  await applyOrderStatus(order.id, { from: order.status, to: next, note: eventNote, extra });
+  const [updated] = await db.select().from(orders).where(eq(orders.id, order.id)).limit(1);
   const items = await db.select().from(orderItems).where(eq(orderItems.orderId, order.id));
   return Response.json({ ok: true, order: updated, items });
 }

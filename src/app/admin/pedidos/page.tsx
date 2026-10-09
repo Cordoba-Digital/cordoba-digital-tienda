@@ -7,7 +7,8 @@ import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
 import { listAdminOrders } from "@/lib/admin-orders";
 import { money } from "@/lib/format";
-import { ORDER_STATUS_FLOW, statusLabel } from "@/lib/pricing";
+import { expireStalePendingOrders } from "@/lib/order-status";
+import { ADMIN_ORDER_STATUSES, statusLabel } from "@/lib/pricing";
 
 export const dynamic = "force-dynamic";
 
@@ -50,6 +51,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
   const status = first(sp.status).trim();
   const page = Math.max(1, Number(first(sp.page)) || 1);
 
+  await expireStalePendingOrders();
   const { orders, total, pages, stats } = await listAdminOrders({ q, status, page, perPage: 20 });
   const base = { ...(q ? { q } : {}), ...(status ? { status } : {}) };
 
@@ -64,8 +66,8 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
         <AdminLogoutButton />
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-        {ORDER_STATUS_FLOW.map((s) => (
+      <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        {ADMIN_ORDER_STATUSES.map((s) => (
           <Link
             key={s.id}
             href={withParams(base, { status: status === s.id ? null : s.id, page: null })}
