@@ -9,8 +9,16 @@
 export const ADMIN_COOKIE = "admin_session";
 /** Marca que el login con Google en curso es para el admin (guarda el `state`). */
 export const ADMIN_OAUTH_COOKIE = "admin_oauth";
-/** 12 horas: una jornada de trabajo. Una sesión robada deja de servir rápido. */
+/** Sin "Recordarme": 12 horas, una jornada de trabajo. */
 const SESSION_TTL_MS = 12 * 60 * 60 * 1000;
+/**
+ * Con "Recordarme": 30 días, y se renueva sola con el uso (ver
+ * `shouldRenewAdminSession`). Sigue cortándose al instante si el email sale de
+ * `ADMIN_EMAILS` o de Accesos.
+ */
+const REMEMBER_TTL_MS = 30 * 24 * 60 * 60 * 1000;
+/** Una sesión recordada se renueva como mucho una vez por día. */
+const RENEW_AFTER_MS = 24 * 60 * 60 * 1000;
 
 function sessionSecret(): string {
   return process.env.ADMIN_SESSION_SECRET?.trim() || process.env.ADMIN_PASSWORD?.trim() || "";
@@ -72,19 +80,21 @@ export function sessionFromCookieHeader(header: string | null): string | null {
 }
 
 /**
- * Cookie: `<vence>.<firma>.<email>`. El email es el de Google; vacío si se
- * entró con la contraseña. La firma cubre vencimiento y email.
+ * Cookie: `<vence>.<firma>.<modo>.<email>`. Modo `r` = recordada (30 días),
+ * `s` = jornada (12 h). El email es el de Google; vacío si se entró con la
+ * contraseña. La firma cubre vencimiento, modo y email.
  */
-export async function createAdminSessionValue(email = ""): Promise<string | null> {
+export async function createAdminSessionValue(email = "", remember = false): Promise<string | null> {
   const secret = sessionSecret();
   if (!secret) return null;
   const who = email.trim().toLowerCase();
-  const exp = String(Date.now() + SESSION_TTL_MS);
-  const sig = await hmacHex(secret, `admin:${exp}:${who}`);
-  return `${exp}.${sig}.${who}`;
+  const mode = remember ? "r" : "s";
+  const exp = String(Date.now() + (remember ? REMEMBER_TTL_MS : SESSION_TTL_MS));
+  const sig = await hmacHex(secret, `admin:${exp}:${mode}:${who}`);
+  return `${exp}.${sig}.${mode}.${who}`;
 }
 
-export type AdminSession = { email: string };
+export type AdminSession = { email: string; remember: boolean; expiresAt: number };
 
 /**
  * Valida firma y vencimiento de la cookie y devuelve quién es. No consulta la
@@ -96,18 +106,20 @@ export async function decodeAdminSession(value: string | undefined | null): Prom
   if (!value) return null;
   const secret = sessionSecret();
   if (!secret) return null;
-  const first = value.indexOf(".");
-  const second = value.indexOf(".", first + 1);
-  if (first < 1 || second === -1) return null;
-  const exp = value.slice(0, first);
-  const sig = value.slice(first + 1, second);
-  const email = value.slice(second + 1);
-  if (!/^\d+$/.test(exp) || sig.length !== 64) return null;
+  const [exp, sig, mode] = value.split(".", 3);
+  const email = value.slice(`${exp}.${sig}.${mode}.`.length);
+  if (!exp || !/^\d+$/.test(exp) || sig?.length !== 64 || (mode !== "r" && mode !== "s")) return null;
+  if (!value.startsWith(`${exp}.${sig}.${mode}.`)) return null;
   if (Number(exp) < Date.now()) return null;
-  const expected = await hmacHex(secret, `admin:${exp}:${email}`);
+  const expected = await hmacHex(secret, `admin:${exp}:${mode}:${email}`);
   if (!timingSafeEqualText(expected, sig)) return null;
   if (!email && !adminPasswordConfigured()) return null;
-  return { email };
+  return { email, remember: mode === "r", expiresAt: Number(exp) };
+}
+
+/** Una sesión recordada que se usó y se renovó hace más de un día. */
+export function shouldRenewAdminSession(session: AdminSession): boolean {
+  return session.remember && session.expiresAt - Date.now() < REMEMBER_TTL_MS - RENEW_AFTER_MS;
 }
 
 /** Quién hizo el cambio, para el registro de actividad. */
@@ -120,18 +132,18 @@ export function adminActorLabel(session: AdminSession | null): string {
  * vienen de otro sitio, que es la primera barrera contra CSRF (la segunda es el
  * chequeo de `Origin` del middleware).
  */
-export function adminCookieOptions(): { httpOnly: true; sameSite: "strict"; path: string; maxAge: number; secure: boolean } {
+export function adminCookieOptions(remember = false): { httpOnly: true; sameSite: "strict"; path: string; maxAge: number; secure: boolean } {
   return {
     httpOnly: true,
     sameSite: "strict",
     path: "/",
-    maxAge: SESSION_TTL_MS / 1000,
+    maxAge: (remember ? REMEMBER_TTL_MS : SESSION_TTL_MS) / 1000,
     secure: process.env.NODE_ENV === "production",
   };
 }
 
 /** Header `Set-Cookie` de la sesión del admin. */
-export function adminSessionCookieHeader(session: string): string {
-  const opts = adminCookieOptions();
+export function adminSessionCookieHeader(session: string, remember = false): string {
+  const opts = adminCookieOptions(remember);
   return `${ADMIN_COOKIE}=${encodeURIComponent(session)}; Path=${opts.path}; HttpOnly; SameSite=Strict; Max-Age=${opts.maxAge}${opts.secure ? "; Secure" : ""}`;
 }

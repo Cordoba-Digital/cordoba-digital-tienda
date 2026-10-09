@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 import { Pill } from "@/components/ui";
 import { isAllowedAdminEmail } from "@/lib/admin-access";
+import { ADMIN_COOKIE } from "@/lib/admin-auth";
+import { readAdminSession } from "@/lib/admin-session";
 import { getCurrentCustomer } from "@/lib/customer-auth";
 import { money } from "@/lib/format";
 import { getOrdersByEmail } from "@/lib/queries";
@@ -21,7 +24,17 @@ export default async function MiCuentaPage() {
   if (!customer) {
     redirect("/ingresar?next=/mi-cuenta");
   }
-  const [orders, isAdmin] = await Promise.all([getOrdersByEmail(customer.email), isAllowedAdminEmail(customer.email)]);
+  const jar = await cookies();
+  const [orders, isAdmin, adminSession] = await Promise.all([
+    getOrdersByEmail(customer.email),
+    isAllowedAdminEmail(customer.email),
+    readAdminSession(jar.get(ADMIN_COOKIE)?.value),
+  ]);
+  // Si todavía no hay sesión de admin, el botón entra directo con Google
+  // (misma cuenta, recordada) sin pasar por la pantalla de login del panel.
+  const adminHref = adminSession
+    ? "/admin"
+    : `/api/auth/google/start?admin=1&remember=1&hint=${encodeURIComponent(customer.email)}&next=%2Fadmin`;
 
   return (
     <div className="container-xl space-y-6 py-8">
@@ -43,12 +56,12 @@ export default async function MiCuentaPage() {
         </div>
         <div className="flex items-center gap-2">
           {isAdmin ? (
-            <Link
-              href="/admin"
+            <a
+              href={adminHref}
               className="rounded-xl bg-ink-900 px-4 py-2 text-xs font-bold text-white transition hover:bg-ink-700"
             >
               Panel admin
-            </Link>
+            </a>
           ) : null}
           <form action="/api/auth/logout" method="post">
             <button

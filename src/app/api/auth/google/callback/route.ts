@@ -51,15 +51,19 @@ export async function GET(request: Request) {
   const returnedState = url.searchParams.get("state");
   const rawCookie = cookieFromHeader(request.headers.get("cookie"), OAUTH_STATE_COOKIE);
   if (!code || !returnedState || !rawCookie) {
+    console.warn("[auth] callback sin", !code ? "code" : !returnedState ? "state" : "cookie de state", url.searchParams.get("error") ?? "");
     return fallback;
   }
   const dot = rawCookie.indexOf(".");
   const expectedState = dot === -1 ? "" : rawCookie.slice(0, dot);
   const next = safeNextPath(dot === -1 ? null : decodeURIComponent(rawCookie.slice(dot + 1)));
   if (!expectedState || !safeEqual(returnedState, expectedState)) {
+    console.warn("[auth] callback con state distinto al de la cookie");
     return fallback;
   }
-  const adminState = cookieFromHeader(request.headers.get("cookie"), ADMIN_OAUTH_COOKIE);
+  const adminCookie = cookieFromHeader(request.headers.get("cookie"), ADMIN_OAUTH_COOKIE) ?? "";
+  const rememberAdmin = adminCookie.endsWith(".r");
+  const adminState = rememberAdmin ? adminCookie.slice(0, -2) : adminCookie;
   const forAdmin = !!adminState && safeEqual(adminState, expectedState);
   const adminFail = (reason: string) => {
     const res = NextResponse.redirect(new URL(`/admin/login?error=${reason}`, request.url));
@@ -108,11 +112,11 @@ export async function GET(request: Request) {
         });
         return adminFail("email");
       }
-      const session = await createAdminSessionValue(email);
+      const session = await createAdminSessionValue(email, rememberAdmin);
       if (!session) return adminFail("config");
       await logAdminAction(email, { action: "ingreso", entityType: "sesion", entityId: clientIp(request), summary: "Ingresó con Google" });
       const target = next === "/admin" || next.startsWith("/admin/") ? next : "/admin";
-      return adminLanding(target, [adminSessionCookieHeader(session), CLEAR_ADMIN_OAUTH]);
+      return adminLanding(target, [adminSessionCookieHeader(session, rememberAdmin), CLEAR_ADMIN_OAUTH]);
     }
 
     const customer = await upsertCustomerFromGoogle({
@@ -128,7 +132,8 @@ export async function GET(request: Request) {
     const res = NextResponse.redirect(new URL(next, request.url));
     setCustomerSessionCookie(res, token);
     return res;
-  } catch {
+  } catch (error) {
+    console.error("[auth] fallo el ingreso con Google:", error instanceof Error ? error.message : error);
     return forAdmin ? adminFail("oauth") : fallback;
   }
 }

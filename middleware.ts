@@ -1,6 +1,12 @@
 import { NextResponse } from "next/server";
 
-import { decodeAdminSession, sessionFromCookieHeader } from "@/lib/admin-auth";
+import {
+  adminSessionCookieHeader,
+  createAdminSessionValue,
+  decodeAdminSession,
+  sessionFromCookieHeader,
+  shouldRenewAdminSession,
+} from "@/lib/admin-auth";
 import { cookieFromHeader, CUSTOMER_COOKIE, looksLikeSessionToken } from "@/lib/customer-session";
 
 const SAFE_METHODS = new Set(["GET", "HEAD", "OPTIONS"]);
@@ -44,8 +50,16 @@ export async function middleware(request: Request) {
     }
     if (path === "/admin/login" || path === "/api/admin/login") return withAdminHeaders(NextResponse.next());
     // Solo firma y vencimiento: la lista de admins se revisa en cada página y ruta (acá no hay base).
-    const valid = (await decodeAdminSession(sessionFromCookieHeader(request.headers.get("cookie")))) !== null;
-    if (valid) return withAdminHeaders(NextResponse.next());
+    const session = await decodeAdminSession(sessionFromCookieHeader(request.headers.get("cookie")));
+    if (session) {
+      const res = withAdminHeaders(NextResponse.next());
+      // "Recordarme": cada día de uso corre los 30 días de nuevo.
+      if (isAdminPage && shouldRenewAdminSession(session)) {
+        const renewed = await createAdminSessionValue(session.email, true);
+        if (renewed) res.headers.append("Set-Cookie", adminSessionCookieHeader(renewed, true));
+      }
+      return res;
+    }
     if (isAdminApi) {
       return withAdminHeaders(NextResponse.json({ ok: false, error: "No autorizado." }, { status: 401 }));
     }
