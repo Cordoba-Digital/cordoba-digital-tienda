@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
-type IconName = "panel" | "pedidos" | "pagos" | "usuarios" | "productos" | "nuevo" | "archivo" | "actividad" | "tienda" | "salir";
+type IconName = "panel" | "pedidos" | "pagos" | "usuarios" | "productos" | "nuevo" | "archivo" | "actividad" | "accesos" | "tienda" | "salir";
 
 const PATHS: Record<IconName, string> = {
   panel: "M4 4v16h16M8 15l3.5-4 3 2.5L20 7",
@@ -16,6 +16,7 @@ const PATHS: Record<IconName, string> = {
   productos: "M12 3 4 7v10l8 4 8-4V7l-8-4Zm0 0v18M4 7l8 4 8-4",
   archivo: "M4 5h16v4H4V5Zm1 4v10h14V9M10 13h4",
   actividad: "M12 7v5l3 2M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z",
+  accesos: "M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6l-7-3Zm-3 9 2 2 4-4",
   tienda: "M4 10h16l-1-5H5l-1 5Zm1 0v9h14v-9M10 19v-5h4v5",
   salir: "M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10",
 };
@@ -49,7 +50,13 @@ const GROUPS: { title?: string; items: NavItem[] }[] = [
     ],
   },
   { title: "Clientes", items: [{ href: "/admin/usuarios", label: "Usuarios", icon: "usuarios" }] },
-  { title: "Control", items: [{ href: "/admin/actividad", label: "Actividad", icon: "actividad" }] },
+  {
+    title: "Control",
+    items: [
+      { href: "/admin/actividad", label: "Actividad", icon: "actividad" },
+      { href: "/admin/accesos", label: "Accesos", icon: "accesos" },
+    ],
+  },
 ];
 
 const NAV = GROUPS.flatMap((g) => g.items);

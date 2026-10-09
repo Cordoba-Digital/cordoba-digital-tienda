@@ -5,8 +5,8 @@ import {
   adminGoogleConfigured,
   adminSessionCookieHeader,
   createAdminSessionValue,
-  isAdminEmail,
 } from "@/lib/admin-auth";
+import { isAllowedAdminEmail } from "@/lib/admin-access";
 import { logAdminAction } from "@/lib/admin-audit";
 import { clientIp, loginBlockedMinutes, recordFailedLogin } from "@/lib/admin-login-guard";
 import { cookieFromHeader, OAUTH_STATE_COOKIE, safeEqual, safeNextPath } from "@/lib/customer-session";
@@ -98,7 +98,7 @@ export async function GET(request: Request) {
 
     if (forAdmin) {
       const email = profile.email.trim().toLowerCase();
-      if (!isAdminEmail(email)) {
+      if (!(await isAllowedAdminEmail(email))) {
         await recordFailedLogin(clientIp(request));
         await logAdminAction(email, {
           action: "ingreso_rechazado",

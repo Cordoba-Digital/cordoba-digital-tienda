@@ -1,4 +1,5 @@
-import { sessionFromCookieHeader, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { sessionFromCookieHeader } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { MAX_UPLOAD_BYTES, importRemoteImage, saveUploadedImage } from "@/lib/product-images";
 
 export const dynamic = "force-dynamic";

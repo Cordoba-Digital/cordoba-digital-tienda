@@ -4,7 +4,8 @@ import { redirect } from "next/navigation";
 
 import { AdminPaymentVerify } from "@/components/admin-payment-verify";
 import { Pill } from "@/components/ui";
-import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { ADMIN_COOKIE } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { listAdminPayments, PAYMENT_FLAG_LABEL, type PaymentFlag } from "@/lib/admin-payments";
 import { money } from "@/lib/format";
 import { statusLabel } from "@/lib/pricing";

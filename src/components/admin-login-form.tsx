@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const ERRORS: Record<string, string> = {
   email:
-    "Ese email de Google no tiene acceso al panel. Pedí que lo agreguen a ADMIN_EMAILS.",
+    "Ese email de Google no tiene acceso al panel. Pedile a un dueño que te agregue en Accesos.",
   oauth: "No se pudo completar el ingreso con Google. Probá de nuevo.",
   config: "El ingreso con Google no está configurado en el servidor.",
   bloqueado: "Demasiados intentos fallidos. Probá de nuevo en unos minutos.",

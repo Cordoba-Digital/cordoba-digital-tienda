@@ -2,7 +2,8 @@ import { eq } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orderItems, orders } from "@/db/schema";
-import { sessionFromCookieHeader, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { sessionFromCookieHeader } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { actorFromRequest, logAdminAction, type FieldChange } from "@/lib/admin-audit";
 import { ADMIN_STATUS_IDS, getAdminOrderDetail } from "@/lib/admin-orders";
 import { applyOrderStatus, canTransition } from "@/lib/order-status";

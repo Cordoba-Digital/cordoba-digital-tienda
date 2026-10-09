@@ -4,7 +4,8 @@ import { notFound, redirect } from "next/navigation";
 
 import { AdminProductArchiveButton } from "@/components/admin-product-archive-button";
 import { AdminProductForm } from "@/components/admin-product-form";
-import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { ADMIN_COOKIE } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { getAdminProductForEdit, listProductCategories } from "@/lib/admin-products";
 
 export const dynamic = "force-dynamic";

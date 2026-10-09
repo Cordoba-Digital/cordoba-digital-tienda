@@ -16,7 +16,7 @@ function sessionSecret(): string {
   return process.env.ADMIN_SESSION_SECRET?.trim() || process.env.ADMIN_PASSWORD?.trim() || "";
 }
 
-/** Emails que pueden entrar al admin con Google (`ADMIN_EMAILS`, separados por coma). */
+/** Dueños del panel (`ADMIN_EMAILS`, separados por coma). Los demás admins están en Accesos. */
 export function adminEmails(): string[] {
   return (process.env.ADMIN_EMAILS ?? "")
     .split(/[\s,;]+/)
@@ -24,9 +24,6 @@ export function adminEmails(): string[] {
     .filter((e) => e.includes("@"));
 }
 
-export function isAdminEmail(email: string): boolean {
-  return adminEmails().includes(email.trim().toLowerCase());
-}
 
 /** El ingreso con Google necesita la app de Google, la lista de emails y un secreto de sesión. */
 export function adminGoogleConfigured(): boolean {
@@ -90,10 +87,12 @@ export async function createAdminSessionValue(email = ""): Promise<string | null
 export type AdminSession = { email: string };
 
 /**
- * Valida la cookie y devuelve quién es. Sacar un email de `ADMIN_EMAILS` (o
- * borrar `ADMIN_PASSWORD`) corta en el acto las sesiones abiertas con él.
+ * Valida firma y vencimiento de la cookie y devuelve quién es. No consulta la
+ * lista de admins (sirve en el middleware, que corre en Edge sin base): las
+ * páginas y rutas usan `readAdminSession` de `admin-session`, que además
+ * revisa que el email siga habilitado.
  */
-export async function readAdminSession(value: string | undefined | null): Promise<AdminSession | null> {
+export async function decodeAdminSession(value: string | undefined | null): Promise<AdminSession | null> {
   if (!value) return null;
   const secret = sessionSecret();
   if (!secret) return null;
@@ -107,12 +106,8 @@ export async function readAdminSession(value: string | undefined | null): Promis
   if (Number(exp) < Date.now()) return null;
   const expected = await hmacHex(secret, `admin:${exp}:${email}`);
   if (!timingSafeEqualText(expected, sig)) return null;
-  if (email ? !isAdminEmail(email) : !adminPasswordConfigured()) return null;
+  if (!email && !adminPasswordConfigured()) return null;
   return { email };
-}
-
-export async function verifyAdminSessionValue(value: string | undefined | null): Promise<boolean> {
-  return (await readAdminSession(value)) !== null;
 }
 
 /** Quién hizo el cambio, para el registro de actividad. */

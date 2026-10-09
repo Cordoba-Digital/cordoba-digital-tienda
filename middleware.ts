@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-import { sessionFromCookieHeader, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { decodeAdminSession, sessionFromCookieHeader } from "@/lib/admin-auth";
 import { cookieFromHeader, CUSTOMER_COOKIE, looksLikeSessionToken } from "@/lib/customer-session";
 
 const SAFE_METHODS = new Set(["GET", "HEAD", "OPTIONS"]);
@@ -43,7 +43,8 @@ export async function middleware(request: Request) {
       return withAdminHeaders(NextResponse.json({ ok: false, error: "Origen no permitido." }, { status: 403 }));
     }
     if (path === "/admin/login" || path === "/api/admin/login") return withAdminHeaders(NextResponse.next());
-    const valid = await verifyAdminSessionValue(sessionFromCookieHeader(request.headers.get("cookie")));
+    // Solo firma y vencimiento: la lista de admins se revisa en cada página y ruta (acá no hay base).
+    const valid = (await decodeAdminSession(sessionFromCookieHeader(request.headers.get("cookie")))) !== null;
     if (valid) return withAdminHeaders(NextResponse.next());
     if (isAdminApi) {
       return withAdminHeaders(NextResponse.json({ ok: false, error: "No autorizado." }, { status: 401 }));

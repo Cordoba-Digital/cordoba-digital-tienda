@@ -1,4 +1,5 @@
-import { sessionFromCookieHeader, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { sessionFromCookieHeader } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { actorFromRequest, logAdminAction } from "@/lib/admin-audit";
 import { getAdminProductForEdit, NOT_ARCHIVED, restoreAdminProduct } from "@/lib/admin-products";
 

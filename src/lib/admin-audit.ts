@@ -1,7 +1,8 @@
 import { sql } from "drizzle-orm";
 
 import { db } from "@/db";
-import { adminActorLabel, readAdminSession, sessionFromCookieHeader } from "@/lib/admin-auth";
+import { adminActorLabel, sessionFromCookieHeader } from "@/lib/admin-auth";
+import { readAdminSession } from "@/lib/admin-session";
 
 /**
  * Registro de actividad del admin: quién (email de Google, o "contraseña"),
@@ -12,7 +13,7 @@ import { adminActorLabel, readAdminSession, sessionFromCookieHeader } from "@/li
 export type FieldChange = { from: unknown; to: unknown };
 export type AuditEntry = {
   action: string;
-  entityType: "producto" | "pedido" | "usuario" | "sesion";
+  entityType: "producto" | "pedido" | "usuario" | "sesion" | "acceso";
   entityId: string;
   summary: string;
   changes?: Record<string, FieldChange>;

@@ -1,4 +1,5 @@
-import { sessionFromCookieHeader, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { sessionFromCookieHeader } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { actorFromRequest, diffFields, fieldLabel, logAdminAction } from "@/lib/admin-audit";
 import {
   archiveAdminProduct,

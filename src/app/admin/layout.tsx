@@ -3,7 +3,8 @@ import { cookies } from "next/headers";
 import type { ReactNode } from "react";
 
 import { AdminSidebar } from "@/components/admin-sidebar";
-import { ADMIN_COOKIE, readAdminSession } from "@/lib/admin-auth";
+import { ADMIN_COOKIE } from "@/lib/admin-auth";
+import { readAdminSession } from "@/lib/admin-session";
 import { countPendingOrders } from "@/lib/admin-stats";
 
 export const metadata: Metadata = {

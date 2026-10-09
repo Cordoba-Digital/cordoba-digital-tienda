@@ -5,7 +5,8 @@ import type { ReactNode } from "react";
 
 import { AdminSalesChart } from "@/components/admin-sales-chart";
 import { Pill } from "@/components/ui";
-import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { ADMIN_COOKIE } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { getAdminStats, RANGE_OPTIONS, type RangeDays } from "@/lib/admin-stats";
 import { money } from "@/lib/format";
 import { expireStalePendingOrders } from "@/lib/order-status";

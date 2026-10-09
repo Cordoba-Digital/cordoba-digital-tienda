@@ -2,7 +2,8 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { ADMIN_COOKIE } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { fieldLabel, listAdminActivity, type ActivityRow } from "@/lib/admin-audit";
 
 export const dynamic = "force-dynamic";
@@ -15,6 +16,7 @@ const ENTITIES = [
   { id: "pedido", label: "Pedidos" },
   { id: "usuario", label: "Usuarios" },
   { id: "sesion", label: "Ingresos" },
+  { id: "acceso", label: "Accesos" },
 ];
 
 const when = new Intl.DateTimeFormat("es-AR", {
@@ -39,6 +41,7 @@ function entityLink(row: ActivityRow): string | null {
   if (row.entityType === "producto") return `/admin/productos/${encodeURIComponent(row.entityId)}`;
   if (row.entityType === "pedido") return `/admin/pedidos/${encodeURIComponent(row.entityId)}`;
   if (row.entityType === "usuario") return `/admin/usuarios/${encodeURIComponent(row.entityId)}`;
+  if (row.entityType === "acceso") return "/admin/accesos";
   return null;
 }
 
