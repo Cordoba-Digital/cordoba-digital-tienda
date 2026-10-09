@@ -1,5 +1,6 @@
 import { sessionFromCookieHeader, verifyAdminSessionValue } from "@/lib/admin-auth";
-import { NOT_ARCHIVED, restoreAdminProduct } from "@/lib/admin-products";
+import { actorFromRequest, logAdminAction } from "@/lib/admin-audit";
+import { getAdminProductForEdit, NOT_ARCHIVED, restoreAdminProduct } from "@/lib/admin-products";
 
 export const dynamic = "force-dynamic";
 
@@ -23,5 +24,12 @@ export async function POST(request: Request, context: { params: Promise<{ slug: 
   if (error) {
     return Response.json({ ok: false, error }, { status: 409 });
   }
+  const restored = await getAdminProductForEdit(slug);
+  await logAdminAction(await actorFromRequest(request), {
+    action: "restauracion",
+    entityType: "producto",
+    entityId: restored?.slug ?? slug,
+    summary: `Volvió a publicar ${restored?.name ?? slug}`,
+  });
   return Response.json({ ok: true });
 }

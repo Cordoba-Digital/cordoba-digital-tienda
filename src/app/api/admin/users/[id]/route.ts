@@ -1,4 +1,5 @@
 import { sessionFromCookieHeader, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { actorFromRequest, logAdminAction } from "@/lib/admin-audit";
 import { getAdminUserDetail, setUserDisabled } from "@/lib/admin-users";
 
 export const dynamic = "force-dynamic";
@@ -44,5 +45,12 @@ export async function PATCH(request: Request) {
   if (!updated) {
     return Response.json({ ok: false, error: "Usuario inexistente." }, { status: 404 });
   }
+  await logAdminAction(await actorFromRequest(request), {
+    action: body.disabled ? "bloqueo" : "desbloqueo",
+    entityType: "usuario",
+    entityId: String(id),
+    summary: `${body.disabled ? "Bloqueó" : "Desbloqueó"} al usuario #${id}`,
+    changes: { bloqueado: { from: !body.disabled, to: body.disabled } },
+  });
   return Response.json({ ok: true, disabled: body.disabled });
 }

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
-type IconName = "panel" | "pedidos" | "pagos" | "usuarios" | "productos" | "archivo" | "tienda" | "salir";
+type IconName = "panel" | "pedidos" | "pagos" | "usuarios" | "productos" | "archivo" | "actividad" | "tienda" | "salir";
 
 const PATHS: Record<IconName, string> = {
   panel: "M4 13h6V4H4v9Zm0 7h6v-5H4v5Zm10 0h6v-9h-6v9Zm0-16v5h6V4h-6Z",
@@ -14,6 +14,7 @@ const PATHS: Record<IconName, string> = {
   usuarios: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0",
   productos: "M12 3 4 7v10l8 4 8-4V7l-8-4Zm0 0v18M4 7l8 4 8-4",
   archivo: "M4 5h16v4H4V5Zm1 4v10h14V9M10 13h4",
+  actividad: "M12 7v5l3 2M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z",
   tienda: "M4 10h16l-1-5H5l-1 5Zm1 0v9h14v-9M10 19v-5h4v5",
   salir: "M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10",
 };
@@ -33,6 +34,7 @@ const NAV: { href: string; label: string; icon: IconName }[] = [
   { href: "/admin/usuarios", label: "Usuarios", icon: "usuarios" },
   { href: "/admin/productos", label: "Productos", icon: "productos" },
   { href: "/admin/productos/archivados", label: "Archivados", icon: "archivo" },
+  { href: "/admin/actividad", label: "Actividad", icon: "actividad" },
 ];
 
 /** La entrada activa es la de prefijo más largo (Archivados gana a Productos). */
@@ -42,7 +44,8 @@ function activeHref(pathname: string): string {
 }
 
 /** `badges`: contador por sección (pedidos esperando pago, por ejemplo). */
-export function AdminSidebar({ badges = {} }: { badges?: Record<string, number> }) {
+/** `who`: email con el que se entró (vacío si fue con la contraseña). */
+export function AdminSidebar({ badges = {}, who = "" }: { badges?: Record<string, number>; who?: string }) {
   const pathname = usePathname() ?? "";
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -112,6 +115,9 @@ export function AdminSidebar({ badges = {} }: { badges?: Record<string, number> 
             ))}
           </nav>
           <div className="mt-6 space-y-1 border-t border-ink-100 pt-4 lg:mt-auto">
+            <p className="truncate px-3 pb-2 text-xs text-ink-500" title={who || "Ingreso con contraseña"}>
+              {who || "Ingreso con contraseña"}
+            </p>
             <Link href="/" target="_blank" className={itemCls(false)}>
               <Icon name="tienda" />
               Ver tienda

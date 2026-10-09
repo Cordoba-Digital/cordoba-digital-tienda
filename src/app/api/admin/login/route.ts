@@ -1,4 +1,5 @@
-import { ADMIN_COOKIE, adminCookieOptions, adminPasswordConfigured, createAdminSessionValue, verifyAdminPassword } from "@/lib/admin-auth";
+import { ADMIN_COOKIE, adminPasswordConfigured, adminSessionCookieHeader, createAdminSessionValue, verifyAdminPassword } from "@/lib/admin-auth";
+import { logAdminAction } from "@/lib/admin-audit";
 import { clearFailedLogins, clientIp, loginBlockedMinutes, recordFailedLogin } from "@/lib/admin-login-guard";
 
 export const dynamic = "force-dynamic";
@@ -26,12 +27,9 @@ export async function POST(request: Request) {
   if (!session) {
     return Response.json({ ok: false, error: "No se pudo crear la sesión." }, { status: 500 });
   }
+  await logAdminAction("contraseña", { action: "ingreso", entityType: "sesion", entityId: ip, summary: "Ingresó con la contraseña" });
   const res = Response.json({ ok: true });
-  const opts = adminCookieOptions();
-  res.headers.append(
-    "Set-Cookie",
-    `${ADMIN_COOKIE}=${encodeURIComponent(session)}; Path=${opts.path}; HttpOnly; SameSite=Strict; Max-Age=${opts.maxAge}${opts.secure ? "; Secure" : ""}`,
-  );
+  res.headers.append("Set-Cookie", adminSessionCookieHeader(session));
   return res;
 }
 

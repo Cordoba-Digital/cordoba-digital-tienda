@@ -3,8 +3,10 @@ import { eq } from "drizzle-orm";
 import { db } from "@/db";
 import { orderItems, orders } from "@/db/schema";
 import { sessionFromCookieHeader, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { actorFromRequest, logAdminAction, type FieldChange } from "@/lib/admin-audit";
 import { ADMIN_STATUS_IDS, getAdminOrderDetail } from "@/lib/admin-orders";
 import { applyOrderStatus, canTransition } from "@/lib/order-status";
+import { statusLabel } from "@/lib/pricing";
 
 export const dynamic = "force-dynamic";
 
@@ -60,6 +62,22 @@ export async function PATCH(request: Request, context: { params: Promise<{ code:
   }
 
   await applyOrderStatus(order.id, { from: order.status, to: next, note: eventNote, extra });
+  const changes: Record<string, FieldChange> = {};
+  if (next !== order.status) changes.estado = { from: statusLabel(order.status), to: statusLabel(next) };
+  if (extra.trackingCode !== undefined && extra.trackingCode !== (order.trackingCode ?? "")) {
+    changes.seguimiento = { from: order.trackingCode ?? "", to: extra.trackingCode };
+  }
+  if (eventNote) changes.nota = { from: null, to: eventNote };
+  await logAdminAction(await actorFromRequest(request), {
+    action: "pedido",
+    entityType: "pedido",
+    entityId: order.code,
+    summary:
+      next !== order.status
+        ? `Pedido ${order.code}: ${statusLabel(order.status)} → ${statusLabel(next)}`
+        : `Pedido ${order.code}: ${Object.keys(changes).join(", ") || "actualizado"}`,
+    changes,
+  });
   const [updated] = await db.select().from(orders).where(eq(orders.id, order.id)).limit(1);
   const items = await db.select().from(orderItems).where(eq(orderItems.orderId, order.id));
   return Response.json({ ok: true, order: updated, items });
