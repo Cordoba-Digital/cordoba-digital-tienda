@@ -31,7 +31,8 @@ type PlanCategoria = { parent: string; reglas: Regla[] };
 
 /**
  * Reglas sobre el nombre normalizado (minúsculas, sin tildes), en orden: gana
- * la primera que coincide. Los slugs llevan
+ * la primera que coincide. Ajustadas con los nombres reales del catálogo
+ * (salida del modo prueba del 9/10/2026). Los slugs llevan
  * prefijo o sufijo porque `computacion/sillas-gamer`, `computacion/joystick` y
  * `calefaccion` ya existen.
  */
@@ -47,13 +48,13 @@ export const PLAN: PlanCategoria[] = [
       {
         slug: "ventiladores",
         name: "Ventiladores",
-        match: /ventilador|turbo ?ventilador|circulador|climatizador|enfriador/,
+        match: /ventilador|circulador|climatizador|enfriador/,
       },
-      { slug: "aires-acondicionados-portatiles", name: "Aires Portátiles", match: /portat?il/ },
       {
-        slug: "aires-acondicionados-split",
-        name: "Aires Split / Inverter",
-        match: /aire acondicionado|split|inverter|frio ?\/ ?calor/,
+        // Split, inverter y portátiles juntos: portátiles hay uno solo.
+        slug: "equipos-de-aire-acondicionado",
+        name: "Equipos de Aire Acondicionado",
+        match: /aire acon|split|invert|portat?il|frio ?\/ ?calor/,
       },
     ],
   },
@@ -65,73 +66,53 @@ export const PLAN: PlanCategoria[] = [
         name: "Taladros y Atornilladores",
         match: /taladro|atornillador|rotomartillo|percutor|llave de impacto/,
       },
-      { slug: "amoladoras-y-lijadoras", name: "Amoladoras y Lijadoras", match: /amoladora|pulidora|lijadora/ },
+      {
+        slug: "amoladoras-y-lijadoras",
+        name: "Amoladoras, Lijadoras y Lustradoras",
+        match: /amoladora|pulidora|lijadora|lustra/,
+      },
       { slug: "sierras-electricas", name: "Sierras", match: /sierra|caladora|ingletadora/ },
       { slug: "soldadoras", name: "Soldadoras", match: /soldador/ },
       {
         slug: "compresores-e-hidrolavadoras",
-        name: "Compresores e Hidrolavadoras",
-        match: /compresor|hidrolavadora|inflador/,
+        name: "Hidrolavadoras, Infladores y Generadores",
+        match: /compresor|hidrolavadora|inflador|grupo electrogeno|generador/,
       },
-      {
-        slug: "herramientas-de-medicion",
-        name: "Medición",
-        match: /medidor|nivel laser|laser|multimetro|tester|pinza amperometrica|distanciometro/,
-      },
-      {
-        slug: "herramientas-de-mano",
-        name: "Herramientas de Mano",
-        match: /destornillador|alicate|pinza|martillo|llave|juego de|set de|kit de|caja de herramientas/,
-      },
+      { slug: "escaleras", name: "Escaleras", match: /escalera/ },
+      { slug: "iluminacion-y-emergencia", name: "Iluminación", match: /luz de emergencia|plafon|reflector|lampara/ },
     ],
   },
   {
     parent: "drones",
     reglas: [
       {
-        slug: "accesorios-para-drones",
-        name: "Accesorios para Drones",
-        // Anclado al inicio: "DJI Mini 4 Pro con control RC 2" es un dron, no un accesorio.
-        match: /^(bateria|helice|control|radio ?control|estuche|bolso|mochila|cargador|filtro|hub|goggles|gafas|protector|repuesto|kit|soporte|dji care)/,
+        slug: "camaras-de-accion-y-gimbals",
+        name: "Cámaras de Acción y Gimbals",
+        match: /osmo|^dji rs ?\d|ronin|gimbal|estabilizador|action \d|pocket \d/,
       },
-      { slug: "drones-con-camara", name: "Drones", match: /dron|mavic|mini \d|air \d|avata|neo|flip|fpv/ },
+      { slug: "drones-con-camara", name: "Drones", match: /dron|mavic|avata|fpv/ },
     ],
   },
   {
     parent: "muebles",
     reglas: [
-      { slug: "sillas-de-oficina-y-gamer", name: "Sillas", match: /silla|butaca|sillon/ },
+      { slug: "dormitorio", name: "Dormitorio", match: /box|plaza|cama|mesa de luz|placard|cajonera/ },
       { slug: "escritorios-y-mesas", name: "Escritorios y Mesas", match: /escritorio|mesa|desk/ },
-      {
-        slug: "estanterias-y-organizadores",
-        name: "Estanterías y Organizadores",
-        match: /estante|rack|biblioteca|organizador|cajonera|armario|placard/,
-      },
-    ],
-  },
-  {
-    parent: "monopatines-electricos",
-    reglas: [
-      {
-        slug: "accesorios-para-monopatines",
-        name: "Accesorios para Monopatines",
-        match: /^(casco|cubierta|neumatico|camara|cargador|bateria|candado|soporte|guardabarro|luz|repuesto)/,
-      },
-      { slug: "bicicletas-electricas", name: "Bicicletas Eléctricas", match: /bicicleta|bici/ },
-      { slug: "monopatines", name: "Monopatines", match: /monopatin|scooter/ },
+      { slug: "racks-tv-y-bibliotecas", name: "Racks de TV y Bibliotecas", match: /rack|biblioteca|estante/ },
     ],
   },
   {
     parent: "consolas-playstation",
     reglas: [
-      { slug: "consolas-ps", name: "Consolas", match: /consola|playstation \d (slim|pro|digital|standard)|ps\d (slim|pro|digital)/ },
-      { slug: "joysticks-playstation", name: "Joysticks", match: /joystick|dualsense|dualshock|control/ },
-      { slug: "juegos-playstation", name: "Juegos", match: /juego|game/ },
-      { slug: "accesorios-playstation", name: "Accesorios", match: /auricular|headset|cargador|base|vr|portal|disco|cover/ },
+      // Joysticks primero: "Joystick Sony Playstation 5" no es una consola.
+      { slug: "joysticks-y-volantes", name: "Joysticks y Volantes", match: /joystick|dualsense|dualshock|volante/ },
+      { slug: "consolas-ps", name: "Consolas", match: /consola|playstation \d|nintendo switch/ },
+      { slug: "realidad-virtual", name: "Realidad Virtual", match: /meta quest|\bvr\b/ },
     ],
   },
-  // Electrónica, Mochilas, Juguetes, Servidores, Handy y Calefacción tienen
-  // menos de 13 productos: subdividirlas deja subcategorías de 1 o 2 productos.
+  // Monopatines: los 15 son monopatines; la diferencia es la marca y eso ya es
+  // un filtro. Electrónica, Mochilas, Juguetes, Servidores, Handy y Calefacción
+  // tienen 12 productos o menos: quedarían subcategorías de 1 o 2.
 ];
 
 /**
@@ -145,12 +126,15 @@ const MARCAS = [
   "Atma", "Electrolux", "TCL", "Noblex", "Gree", "Carrier", "York", "Whirlpool", "Axel",
   "Ultracomb", "Punktal", "Daewoo", "Westinghouse", "Sansei", "Siam", "Coventry", "Electra",
   "Telefunken", "Candy", "Enova", "Necchi", "Winco", "Smartlife", "Yelmo", "Magiclick", "Kacemaster",
+  "Embassy", "Oryx", "Alpaca", "Hitachi", "Hyundai",
   // Herramientas
   "Black+Decker", "Dewalt", "Makita", "Bosch", "Stanley", "Gamma", "Dowen Pagio", "Lusqtoff",
-  "Einhell", "Skil", "Bauker", "Truper", "Niwa", "Barovo", "Ingco",
+  "Einhell", "Skil", "Bauker", "Truper", "Niwa", "Barovo", "Ingco", "Karcher", "Kassel", "Airbender",
+  "Waggs", "Etheos", "TRV",
   // Drones, monopatines, consolas, handies, muebles
   "DJI", "Xiaomi", "Segway", "Ninebot", "Daihatsu", "Sony", "Baofeng", "Kenwood", "Motorola",
-  "Yaesu", "Icom", "Retevis", "Cougar", "Corsair", "Redragon", "Logitech",
+  "Yaesu", "Icom", "Retevis", "Cougar", "Corsair", "Redragon", "Logitech", "Delos", "Xtrike Me",
+  "Netmak", "Level Up", "Meta", "Nintendo",
 ];
 
 /** Variantes del nombre que también cuentan como la marca. */
@@ -159,6 +143,8 @@ const ALIAS: Record<string, string> = {
   "black and decker": "Black+Decker",
   "black decker": "Black+Decker",
   "de walt": "Dewalt",
+  dahiatsu: "Daihatsu",
+  xtrike: "Xtrike Me",
   playstation: "Sony",
   dualsense: "Sony",
   dualshock: "Sony",
