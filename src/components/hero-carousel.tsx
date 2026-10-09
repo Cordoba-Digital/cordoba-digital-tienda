@@ -166,7 +166,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
               className="w-full shrink-0"
             >
               <div
-                className={`container-xl relative grid items-center gap-8 pt-9 lg:pt-12 ${
+                className={`container-xl relative grid items-center gap-8 pb-4 pt-9 lg:pt-12 ${
                   producto ? "lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]" : "lg:max-w-3xl"
                 }`}
               >
@@ -299,58 +299,35 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
         })}
       </div>
 
-      {/* Controles en flujo normal, debajo del contenido y alineados con la
-          columna de texto. Antes los puntos iban absolutos al centro y la
-          tarjeta del producto los tapaba, y las flechas quedaban pegadas a
-          los bordes de la pantalla, lejos de todo. El padding de abajo deja
-          lugar al cintillo de confianza que pisa los últimos 24-32 px. */}
-      <div className={`container-xl pb-12 sm:pb-14 ${count > 1 ? "pt-6" : "pt-3"}`}>
-        {count > 1 ? (
-          <div className="flex items-center gap-3">
-            <button
-              type="button"
-              onClick={() => go(-1)}
-              aria-label="Diapositiva anterior"
-              className="group hidden h-10 w-10 place-items-center rounded-full border border-white/15 bg-white/5 text-white/80 transition hover:border-white/35 hover:bg-white/15 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid"
-            >
-              <ChevronLeft size={18} strokeWidth={2.4} aria-hidden className="transition-transform group-hover:-translate-x-0.5" />
-            </button>
-            <div className="flex items-center">
-              {slides.map((slide, i) => {
-                const current = i === index;
-                return (
-                  <button
-                    key={slide.id}
-                    type="button"
-                    onClick={() => setIndex(i)}
-                    aria-label={`Ir a la diapositiva ${i + 1} de ${count}`}
-                    aria-current={current ? "true" : undefined}
-                    className="group grid h-10 place-items-center px-1 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-neon-400 rounded-full"
-                  >
-                    <span
-                      aria-hidden
-                      className={`block h-2 rounded-full transition-all duration-300 motion-reduce:transition-none ${
-                        current ? "w-7 bg-brand-400" : "w-2 bg-white/30 group-hover:bg-white/60"
-                      }`}
-                    />
-                  </button>
-                );
-              })}
-            </div>
-            <button
-              type="button"
-              onClick={() => go(1)}
-              aria-label="Diapositiva siguiente"
-              className="group hidden h-10 w-10 place-items-center rounded-full border border-white/15 bg-white/5 text-white/80 transition hover:border-white/35 hover:bg-white/15 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid"
-            >
-              <ChevronRight size={18} strokeWidth={2.4} aria-hidden className="transition-transform group-hover:translate-x-0.5" />
-            </button>
-            <p className="ml-1 text-xs font-semibold tabular-nums text-white/45" aria-live="off">
-              <span className="text-white/85">{String(index + 1).padStart(2, "0")}</span> / {String(count).padStart(2, "0")}
-            </p>
-          </div>
-        ) : null}
-      </div>
+      {/* Remate del hero: el fondo oscuro se funde en el crema de la página
+          (`ink-50`, el fondo del body) para que el cintillo de confianza que
+          pisa el hero no corte en seco. Va detrás del contenido. */}
+      <div aria-hidden className="pointer-events-none h-24 bg-gradient-to-b from-transparent via-ink-50/25 to-ink-50 sm:h-32" />
+
+      {count > 1 ? (
+        <>
+          {/* Flechas a los costados, sin relleno: solo el contorno y el ícono
+              con sombra, para que se lean sobre el fondo oscuro y también si
+              caen sobre la tarjeta blanca. En móvil se usa swipe. Sin puntos
+              de avance: el usuario los pidió fuera. */}
+          <button
+            type="button"
+            onClick={() => go(-1)}
+            aria-label="Diapositiva anterior"
+            className="group absolute left-3 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-transparent text-white transition hover:border-white/60 hover:bg-black/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid xl:left-6"
+          >
+            <ChevronLeft size={22} strokeWidth={2.2} aria-hidden className="drop-shadow-[0_1px_3px_rgba(0,0,0,0.55)] transition-transform group-hover:-translate-x-0.5" />
+          </button>
+          <button
+            type="button"
+            onClick={() => go(1)}
+            aria-label="Diapositiva siguiente"
+            className="group absolute right-3 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-transparent text-white transition hover:border-white/60 hover:bg-black/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid xl:right-6"
+          >
+            <ChevronRight size={22} strokeWidth={2.2} aria-hidden className="drop-shadow-[0_1px_3px_rgba(0,0,0,0.55)] transition-transform group-hover:translate-x-0.5" />
+          </button>
+        </>
+      ) : null}
     </section>
   );
 }
