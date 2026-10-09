@@ -14,7 +14,13 @@ import {
 import { Pill, Stars } from "@/components/ui";
 import { discountPercent, formatDate, money } from "@/lib/format";
 import { toView } from "@/lib/product-view";
-import { getProductBreadcrumbs, getProductBySlug, getRelatedProducts, getReviewsForProduct } from "@/lib/queries";
+import {
+  getProductBreadcrumbs,
+  getProductBySlug,
+  getRelatedProducts,
+  getReviewsForProduct,
+  getVerifiedRatingStats,
+} from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -116,10 +122,11 @@ export default async function ProductPage({ params }: { params: Params }) {
   const product = await findProduct(slug);
   if (!product) notFound();
 
-  const [related, productReviews, breadcrumbs] = await Promise.all([
+  const [related, productReviews, breadcrumbs, ratingStats] = await Promise.all([
     getRelatedProducts(product.slug, product.categorySlug, 4),
     getReviewsForProduct(product.slug),
     getProductBreadcrumbs(product.slug),
+    getVerifiedRatingStats(product.slug),
   ]);
 
   const buyBoxProduct = {
@@ -133,14 +140,14 @@ export default async function ProductPage({ params }: { params: Params }) {
     freeShipping: product.freeShipping,
     warrantyMonths: product.warrantyMonths,
     sku: product.sku,
-    rating: product.rating,
-    reviewCount: product.reviewCount,
+    rating: ratingStats.rating,
+    reviewCount: ratingStats.count,
     soldCount: product.soldCount,
   };
 
-  // Google penaliza aggregateRating sin reseñas: WooCommerce no tiene ratings,
-  // así que solo lo emitimos si hay opiniones reales cargadas.
-  const hasRatings = product.reviewCount > 0;
+  // Google penaliza aggregateRating sin reseñas y las reseñas autogeneradas:
+  // solo cuentan las de compra verificada (pedido pago con este producto).
+  const hasRatings = ratingStats.count > 0;
 
   // Filas estructuradas (AI Commerce): solo las que tengan dato. "Estado" va
   // siempre (la columna tiene default 'Nuevo'). "Liberado" solo tiene sentido
@@ -199,8 +206,8 @@ export default async function ProductPage({ params }: { params: Params }) {
   if (hasRatings) {
     jsonLd.aggregateRating = {
       "@type": "AggregateRating",
-      ratingValue: (product.rating / 10).toFixed(1),
-      reviewCount: product.reviewCount,
+      ratingValue: (ratingStats.rating / 10).toFixed(1),
+      reviewCount: ratingStats.count,
     };
   }
 
@@ -337,7 +344,7 @@ export default async function ProductPage({ params }: { params: Params }) {
             <h2 className="text-xl font-bold tracking-tight text-ink-900">Opiniones de clientes</h2>
             <ReviewForm slug={product.slug} />
           </div>
-          <RatingSummary rating={product.rating} count={product.reviewCount} ratings={productReviews.map((r) => r.rating)} />
+          <RatingSummary rating={ratingStats.rating} count={ratingStats.count} distribution={ratingStats.distribution} />
           <div className="space-y-4 border-t border-ink-50 pt-4">
             {productReviews.length === 0 ? (
               <p className="text-sm text-ink-500">Todavía no hay opiniones. ¡Sé el primero en opinar!</p>

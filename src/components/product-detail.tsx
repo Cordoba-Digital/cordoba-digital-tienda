@@ -533,7 +533,10 @@ export function ReviewForm({ slug }: { slug: string }) {
   const [author, setAuthor] = useState("");
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  const [orderCode, setOrderCode] = useState("");
+  const [email, setEmail] = useState("");
   const [state, setState] = useState<"idle" | "loading" | "done" | "error">("idle");
+  const [error, setError] = useState("");
   const router = useRouter();
 
   if (!open) {
@@ -560,7 +563,13 @@ export function ReviewForm({ slug }: { slug: string }) {
     <form
       onSubmit={async (event) => {
         event.preventDefault();
+        if (!orderCode.trim() || !email.trim()) {
+          setError("Ingresá el número de pedido y el email con el que compraste.");
+          setState("error");
+          return;
+        }
         if (author.trim().length < 2 || body.trim().length < 10) {
+          setError("Completá tu nombre y una opinión de al menos 10 caracteres.");
           setState("error");
           return;
         }
@@ -568,12 +577,14 @@ export function ReviewForm({ slug }: { slug: string }) {
         const res = await fetch("/api/reviews", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ slug, author, rating, title, body }),
+          body: JSON.stringify({ slug, author, rating, title, body, orderCode, email }),
         });
         if (res.ok) {
           setState("done");
           router.refresh();
         } else {
+          const data = (await res.json().catch(() => ({}))) as { error?: string };
+          setError(data.error ?? "No pudimos publicar tu opinión. Probá de nuevo.");
           setState("error");
         }
       }}
@@ -592,6 +603,27 @@ export function ReviewForm({ slug }: { slug: string }) {
             ★
           </button>
         ))}
+      </div>
+      <p className="text-xs text-ink-500">
+        Solo pueden opinar quienes compraron este producto. Usá el número de pedido (CD-XXXXXX) y el email de la
+        compra.
+      </p>
+      <div className="grid gap-3 sm:grid-cols-2">
+        <input
+          value={orderCode}
+          onChange={(e) => setOrderCode(e.target.value)}
+          placeholder="Número de pedido"
+          autoComplete="off"
+          className="h-10 rounded-xl border border-ink-200 px-3 text-sm uppercase outline-none focus:border-brand-400"
+        />
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email de la compra"
+          autoComplete="email"
+          className="h-10 rounded-xl border border-ink-200 px-3 text-sm outline-none focus:border-brand-400"
+        />
       </div>
       <div className="grid gap-3 sm:grid-cols-2">
         <input
@@ -615,7 +647,7 @@ export function ReviewForm({ slug }: { slug: string }) {
         className="w-full rounded-xl border border-ink-200 p-3 text-sm outline-none focus:border-brand-400"
       />
       {state === "error" ? (
-        <p className="text-xs font-semibold text-rose-600">Completá tu nombre y una opinión de al menos 10 caracteres.</p>
+        <p className="text-xs font-semibold text-rose-600">{error}</p>
       ) : null}
       <div className="flex gap-2">
         <button
@@ -640,17 +672,16 @@ export function ReviewForm({ slug }: { slug: string }) {
 export function RatingSummary({
   rating,
   count,
-  ratings = [],
+  distribution = {},
 }: {
   rating: number;
   count: number;
-  /** Solo los puntajes: la distribución no necesita título, texto ni autor,
-      así que no se serializan las reseñas enteras al cliente. */
-  ratings?: number[];
+  /** Cantidad de reseñas verificadas por puntaje (1 a 5). */
+  distribution?: Record<number, number>;
 }) {
   const value = rating / 10;
 
-  if (count === 0 || ratings.length === 0) {
+  if (count === 0) {
     return (
       <p className="rounded-xl bg-ink-50 px-4 py-3 text-sm text-ink-500">
         Todavía no hay opiniones de este producto. Si lo compraste,{" "}
@@ -662,11 +693,10 @@ export function RatingSummary({
     );
   }
 
-  const total = ratings.length;
-  const distribution = [5, 4, 3, 2, 1].map((star) => {
-    const hits = ratings.filter((r) => Math.round(r) === star).length;
-    return { star, percent: Math.round((hits / total) * 100) };
-  });
+  const rows = [5, 4, 3, 2, 1].map((star) => ({
+    star,
+    percent: Math.round(((distribution[star] ?? 0) / count) * 100),
+  }));
 
   return (
     <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -675,10 +705,12 @@ export function RatingSummary({
         <div className="mt-1 flex justify-center">
           <Stars rating={rating} />
         </div>
-        <p className="mt-1 text-xs text-ink-500">{count} opiniones</p>
+        <p className="mt-1 text-xs text-ink-500">
+          {count} {count === 1 ? "opinión verificada" : "opiniones verificadas"}
+        </p>
       </div>
       <div className="flex-1 space-y-1.5">
-        {distribution.map((row) => (
+        {rows.map((row) => (
           <div key={row.star} className="flex items-center gap-2 text-xs">
             <span className="w-6 text-ink-500">{row.star}★</span>
             <div className="h-2 flex-1 overflow-hidden rounded-full bg-ink-100">
