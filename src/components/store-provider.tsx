@@ -152,10 +152,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         }
         return [...prev, { ...item, quantity: clampQty(item.stock, quantity) }];
       });
-      if (!options?.silent) {
+      // Si se abre el carrito, el propio panel confirma el agregado: el aviso
+      // sobraría y en la esquina inferior derecha tapaba "Finalizar compra".
+      if (options?.open !== false) setCartOpen(true);
+      else if (!options?.silent) {
         pushToast({ title: "Agregado al carrito", description: item.name, tone: "success" });
       }
-      if (options?.open !== false) setCartOpen(true);
     },
     [pushToast],
   );
