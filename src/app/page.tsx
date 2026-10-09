@@ -146,42 +146,49 @@ export default async function HomePage() {
         }}
       />
 
-      <HomeHero
-        productCount={productCount}
-        ratingValue={ratingValue}
-        reviewCount={reviewCount}
-        main={heroMain}
-        deal={heroDeal}
-        best={heroBest}
-        shipping={heroShipping}
-        payment={heroPayment}
-        maxOff={heroMaxOff}
-      />
-
       {/*
-        Cintillo de confianza: una caja blanca que pisa el hero. El `z-10` la
-        saca del orden normal para que la sombra caiga sobre el fondo oscuro.
+        Hero y cintillo comparten el mismo fondo oscuro (`mesh-dark` vive acá y
+        no en el carrusel): el negro baja hasta el borde inferior del cintillo,
+        con corte recto, en vez de partirlo mitad oscuro y mitad crema.
       */}
-      <section className="relative z-10 -mt-6 pb-2 sm:-mt-8">
-        <div className="container-xl">
-          <div className="grid overflow-hidden rounded-2xl bg-surface shadow-[0_20px_50px_-30px_rgba(20,22,28,0.45)] ring-1 ring-black/5 sm:grid-cols-2 lg:grid-cols-4">
-            {TRUST.map((t, i) => (
-              <div
-                key={t.title}
-                className={`flex gap-3 p-4 sm:p-5 ${i > 0 ? "border-t border-ink-100 sm:border-t-0 sm:border-l sm:border-ink-100" : ""}`}
-              >
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-700">
-                  <Icon name={t.icon} className="h-[18px] w-[18px]" />
-                </span>
-                <div>
-                  <p className="text-sm font-bold text-ink-900">{t.title}</p>
-                  <p className="mt-0.5 text-xs leading-relaxed text-ink-500">{t.text}</p>
+      <div className="mesh-dark">
+        <HomeHero
+          productCount={productCount}
+          ratingValue={ratingValue}
+          reviewCount={reviewCount}
+          main={heroMain}
+          deal={heroDeal}
+          best={heroBest}
+          shipping={heroShipping}
+          payment={heroPayment}
+          maxOff={heroMaxOff}
+        />
+
+        {/*
+          Cintillo de confianza: una caja blanca que pisa el hero. El `z-10` la
+          saca del orden normal para que la sombra caiga sobre el fondo oscuro.
+        */}
+        <section className="relative z-10 -mt-6 sm:-mt-8">
+          <div className="container-xl">
+            <div className="grid overflow-hidden rounded-2xl bg-surface shadow-[0_20px_50px_-30px_rgba(20,22,28,0.45)] ring-1 ring-black/5 sm:grid-cols-2 lg:grid-cols-4">
+              {TRUST.map((t, i) => (
+                <div
+                  key={t.title}
+                  className={`flex gap-3 p-4 sm:p-5 ${i > 0 ? "border-t border-ink-100 sm:border-t-0 sm:border-l sm:border-ink-100" : ""}`}
+                >
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-700">
+                    <Icon name={t.icon} className="h-[18px] w-[18px]" />
+                  </span>
+                  <div>
+                    <p className="text-sm font-bold text-ink-900">{t.title}</p>
+                    <p className="mt-0.5 text-xs leading-relaxed text-ink-500">{t.text}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/*
         Fila desplazable de categorías: 21 raíces reales con su icono y su conteo

@@ -88,7 +88,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
     <section
       ref={sectionRef}
       id="hero"
-      className="mesh-dark relative overflow-hidden lg:flex lg:h-[clamp(25rem,calc(100svh-var(--hero-top,150px)-88px),40rem)] lg:flex-col"
+      className="relative overflow-hidden lg:flex lg:h-[clamp(25rem,calc(100svh-var(--hero-top,150px)-88px),40rem)] lg:flex-col"
       style={heroTop ? ({ "--hero-top": `${heroTop}px` } as React.CSSProperties) : undefined}
       role="region"
       aria-roledescription="carrusel"
