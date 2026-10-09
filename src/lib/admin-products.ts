@@ -525,13 +525,15 @@ export async function listArchivedProducts(): Promise<ArchivedProductRow[]> {
   }));
 }
 
+export const NOT_ARCHIVED = "No está en archivados.";
+
 export async function restoreAdminProduct(slug: string): Promise<string | null> {
   await ensureArchiveTable();
   const result = await db.execute<{ data: typeof products.$inferSelect; category_ids: number[] }>(
     sql`select data, category_ids from product_archive where slug = ${slug} limit 1`,
   );
   const row = result.rows[0];
-  if (!row) return "No está en archivados.";
+  if (!row) return NOT_ARCHIVED;
   const [taken] = await db.select({ id: products.id }).from(products).where(eq(products.slug, slug)).limit(1);
   if (taken) return "Ya hay un producto activo con esa URL. Cambiale el nombre o archivalo antes de restaurar.";
 

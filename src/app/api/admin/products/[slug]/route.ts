@@ -9,6 +9,9 @@ import {
 
 export const dynamic = "force-dynamic";
 
+// El slug va crudo: `findProductBySlug` prueba sus variantes de encoding. Un
+// `decodeURIComponent` acá rompía con los slugs migrados que tienen `%` literal.
+
 async function authorized(request: Request): Promise<boolean> {
   return verifyAdminSessionValue(sessionFromCookieHeader(request.headers.get("cookie")));
 }
@@ -19,7 +22,7 @@ export async function PATCH(request: Request, context: { params: Promise<{ slug:
   }
   const { slug } = await context.params;
   const body = (await request.json().catch(() => ({}))) as ProductPatch;
-  const error = await updateAdminProduct(decodeURIComponent(slug), {
+  const error = await updateAdminProduct(slug, {
     price: body.price,
     stock: body.stock,
     featured: body.featured,
@@ -38,7 +41,7 @@ export async function PUT(request: Request, context: { params: Promise<{ slug: s
   }
   const { slug } = await context.params;
   const body = (await request.json().catch(() => ({}))) as AdminProductCreateInput;
-  const result = await updateAdminProductFull(decodeURIComponent(slug), body);
+  const result = await updateAdminProductFull(slug, body);
   if (!result.ok) {
     return Response.json({ ok: false, error: result.error }, { status: result.status });
   }
@@ -51,7 +54,7 @@ export async function DELETE(request: Request, context: { params: Promise<{ slug
     return Response.json({ ok: false, error: "No autorizado." }, { status: 401 });
   }
   const { slug } = await context.params;
-  const error = await archiveAdminProduct(decodeURIComponent(slug));
+  const error = await archiveAdminProduct(slug);
   if (error) {
     return Response.json({ ok: false, error }, { status: 404 });
   }

@@ -1,5 +1,5 @@
 import { sessionFromCookieHeader, verifyAdminSessionValue } from "@/lib/admin-auth";
-import { restoreAdminProduct } from "@/lib/admin-products";
+import { NOT_ARCHIVED, restoreAdminProduct } from "@/lib/admin-products";
 
 export const dynamic = "force-dynamic";
 
@@ -9,7 +9,17 @@ export async function POST(request: Request, context: { params: Promise<{ slug: 
     return Response.json({ ok: false, error: "No autorizado." }, { status: 401 });
   }
   const { slug } = await context.params;
-  const error = await restoreAdminProduct(decodeURIComponent(slug));
+  // Según la ruta el slug llega crudo o decodificado: se prueban las dos formas.
+  let error = await restoreAdminProduct(slug);
+  if (error === NOT_ARCHIVED) {
+    let decoded = slug;
+    try {
+      decoded = decodeURIComponent(slug);
+    } catch {
+      // `%` literal de la migración: no se puede decodificar, queda crudo.
+    }
+    if (decoded !== slug) error = await restoreAdminProduct(decoded);
+  }
   if (error) {
     return Response.json({ ok: false, error }, { status: 409 });
   }
