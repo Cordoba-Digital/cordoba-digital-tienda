@@ -11,6 +11,7 @@ import {
   type ReactNode,
 } from "react";
 
+import { trackAddToCart } from "@/lib/analytics";
 import { MAX_QTY_PER_ITEM } from "@/lib/pricing";
 
 export type CartItem = {
@@ -151,6 +152,13 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           return prev.map((i) => (i.slug === item.slug ? { ...i, quantity: nextQty } : i));
         }
         return [...prev, { ...item, quantity: clampQty(item.stock, quantity) }];
+      });
+      trackAddToCart({
+        item_id: item.slug,
+        item_name: item.name,
+        item_brand: item.brand,
+        price: item.price,
+        quantity: clampQty(item.stock, quantity),
       });
       if (!options?.silent) {
         pushToast({ title: "Agregado al carrito", description: item.name, tone: "success" });

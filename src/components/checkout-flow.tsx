@@ -7,6 +7,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Spinner } from "@/components/ui";
+import { trackBeginCheckout } from "@/lib/analytics";
 import { readCoupon, writeCoupon } from "@/lib/coupon-storage";
 import { money } from "@/lib/format";
 import { computeTotals, PAYMENT_METHODS, type CouponInfo, type PaymentMethodId } from "@/lib/pricing";
@@ -237,6 +238,22 @@ export function CheckoutFlow() {
     }, 0);
     return () => window.clearTimeout(id);
   }, []);
+
+  // `begin_checkout` una sola vez, cuando el carrito ya se leyó de localStorage.
+  const checkoutTracked = useRef(false);
+  useEffect(() => {
+    if (!hydrated || checkoutTracked.current || items.length === 0) return;
+    checkoutTracked.current = true;
+    trackBeginCheckout(
+      items.map((item) => ({
+        item_id: item.slug,
+        item_name: item.name,
+        item_brand: item.brand,
+        price: item.price,
+        quantity: item.quantity,
+      })),
+    );
+  }, [hydrated, items]);
 
   // Persistencia con debounce: sin esto cada tecla escribe a localStorage
   // (lectura/escritura sincrónica que bloquea el hilo en cada keystroke).

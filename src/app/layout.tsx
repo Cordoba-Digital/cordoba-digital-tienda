@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import localFont from "next/font/local";
 
 import { CartDrawer, Toaster } from "@/components/cart-drawer";
+import { GoogleAnalytics } from "@/components/google-analytics";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StoreProvider } from "@/components/store-provider";
@@ -43,7 +44,20 @@ export const metadata: Metadata = {
     icon: "/images/logo.png",
     apple: "/images/logo.png",
   },
+  // Meta `google-site-verification` para Search Console (y Merchant Center,
+  // que acepta el mismo método). Admite varios códigos separados por coma.
+  verification: googleVerification(),
 };
+
+function googleVerification(): Metadata["verification"] {
+  const codes = (process.env.GOOGLE_SITE_VERIFICATION ?? "")
+    .split(",")
+    .map((code) => code.trim())
+    .filter(Boolean);
+  return codes.length ? { google: codes } : undefined;
+}
+
+const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID?.trim() ?? "";
 
 /* Plus Jakarta Sans servida desde `public/fonts`: sin dependencia de Google
    Fonts en build ni en runtime. */
@@ -118,6 +132,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
           <Toaster />
           <WhatsAppFab />
         </StoreProvider>
+        {GA_MEASUREMENT_ID ? <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} /> : null}
       </body>
     </html>
   );

@@ -7,6 +7,7 @@ import { QuantityStepper } from "@/components/cart-drawer";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Spinner, Stars } from "@/components/ui";
+import { trackViewItem } from "@/lib/analytics";
 import { discountPercent, money } from "@/lib/format";
 import { MAX_QTY_PER_ITEM } from "@/lib/pricing";
 import { fetchShippingQuote } from "@/lib/shipping-quote";
@@ -238,6 +239,16 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
   useEffect(() => {
     pushRecent(product.slug);
   }, [product.slug, pushRecent]);
+
+  useEffect(() => {
+    trackViewItem({
+      item_id: product.slug,
+      item_name: product.name,
+      item_brand: product.brand,
+      price: product.price,
+      quantity: 1,
+    });
+  }, [product.slug, product.name, product.brand, product.price]);
 
   const payload = {
     slug: product.slug,

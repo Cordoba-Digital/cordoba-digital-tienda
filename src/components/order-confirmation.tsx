@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
+import { trackPurchase } from "@/lib/analytics";
 import { money } from "@/lib/format";
 import { ORDER_STATUS_FLOW, statusIndex } from "@/lib/pricing";
 
@@ -60,6 +61,32 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
   useEffect(() => {
     if (isNew) clearCart();
   }, [isNew, clearCart]);
+
+  // `purchase` solo en la confirmación recién creada (`?nuevo=1`). Una recarga
+  // de esa misma URL no lo repite: GA4 descarta igual los `transaction_id`
+  // duplicados, pero así tampoco se ensucia el conteo de eventos.
+  useEffect(() => {
+    if (!isNew) return;
+    const key = `cd_ga_purchase_${order.code}`;
+    try {
+      if (window.sessionStorage.getItem(key)) return;
+      window.sessionStorage.setItem(key, "1");
+    } catch {
+      /* sin sessionStorage: lo mandamos igual */
+    }
+    trackPurchase({
+      transactionId: order.code,
+      value: order.total,
+      shipping: order.shippingCost,
+      coupon: order.couponCode,
+      items: order.items.map((item) => ({
+        item_id: item.productSlug,
+        item_name: item.name,
+        price: item.unitPrice,
+        quantity: item.quantity,
+      })),
+    });
+  }, [isNew, order]);
 
   const needsPayment = order.paymentMethod === "transferencia";
 
