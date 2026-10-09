@@ -3,6 +3,8 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 
+import type { AdminProductEditData } from "@/lib/admin-products";
+
 const inputCls =
   "w-full rounded-lg border border-ink-200 bg-surface px-3 py-2 text-sm text-ink-900 outline-none focus:border-brand-400";
 const labelCls = "mb-1 block text-xs font-bold uppercase tracking-wide text-ink-500";
@@ -13,38 +15,57 @@ function digitsOnly(value: string): string {
   return value.replace(/[^0-9]/g, "");
 }
 
-export function AdminProductForm({ categories }: { categories: { slug: string; name: string }[] }) {
+type SpecRow = { label: string; value: string };
+
+export function AdminProductForm({
+  categories,
+  initial,
+}: {
+  categories: { slug: string; name: string }[];
+  /** Con `initial` el form edita ese producto (PUT); sin él, da de alta (POST). */
+  initial?: AdminProductEditData;
+}) {
   const router = useRouter();
+  const editing = Boolean(initial);
 
-  const [name, setName] = useState("");
-  const [brand, setBrand] = useState("");
-  const [model, setModel] = useState("");
-  const [storage, setStorage] = useState("");
-  const [ram, setRam] = useState("");
-  const [condition, setCondition] = useState<"Nuevo" | "Usado">("Nuevo");
-  const [isUnlocked, setIsUnlocked] = useState(true);
+  const [name, setName] = useState(initial?.name ?? "");
+  const [brand, setBrand] = useState(initial?.brand ?? "");
+  const [model, setModel] = useState(initial?.model ?? "");
+  const [storage, setStorage] = useState(initial?.storage ?? "");
+  const [ram, setRam] = useState(initial?.ram ?? "");
+  const [condition, setCondition] = useState<"Nuevo" | "Usado">(initial?.condition === "Usado" ? "Usado" : "Nuevo");
+  const [isUnlocked, setIsUnlocked] = useState(initial?.isUnlocked ?? true);
 
-  const [images, setImages] = useState<string[]>([""]);
+  const [images, setImages] = useState<string[]>(initial?.images?.length ? initial.images : [""]);
   const [broken, setBroken] = useState<Record<number, boolean>>({});
   const [retry, setRetry] = useState<Record<number, number>>({});
 
-  const [price, setPrice] = useState("");
-  const [compareAtPrice, setCompareAtPrice] = useState("");
-  const [sku, setSku] = useState("");
-  const [stock, setStock] = useState("1");
-  const [categorySlug, setCategorySlug] = useState("");
-  const [secondary, setSecondary] = useState<string[]>([]);
-  const [tags, setTags] = useState("");
-  const [shortDescription, setShortDescription] = useState("");
-  const [description, setDescription] = useState("");
-  const [badge, setBadge] = useState("");
-  const [featured, setFeatured] = useState(false);
-  const [warrantyMonths, setWarrantyMonths] = useState("6");
-  const [seoTitle, setSeoTitle] = useState("");
-  const [seoDescription, setSeoDescription] = useState("");
+  const [price, setPrice] = useState(initial ? String(initial.price) : "");
+  const [compareAtPrice, setCompareAtPrice] = useState(initial?.compareAtPrice ? String(initial.compareAtPrice) : "");
+  const [sku, setSku] = useState(initial?.sku ?? "");
+  const [stock, setStock] = useState(initial ? String(initial.stock ?? 0) : "1");
+  const [categorySlug, setCategorySlug] = useState(initial?.categorySlug ?? "");
+  const [secondary, setSecondary] = useState<string[]>(initial?.secondaryCategorySlugs ?? []);
+  const [tags, setTags] = useState((initial?.tags ?? []).join(", "));
+  const [shortDescription, setShortDescription] = useState(initial?.shortDescription ?? "");
+  const [description, setDescription] = useState(initial?.description ?? "");
+  // Solo los productos migrados de WooCommerce traen HTML; la ficha lo muestra
+  // antes que la descripción en texto, así que se edita ese campo.
+  const hasHtml = Boolean(initial?.descriptionHtml);
+  const [descriptionHtml, setDescriptionHtml] = useState(initial?.descriptionHtml ?? "");
+  const [badge, setBadge] = useState(initial?.badge ?? "");
+  const [featured, setFeatured] = useState(initial?.featured ?? false);
+  const [warrantyMonths, setWarrantyMonths] = useState(String(initial?.warrantyMonths ?? 6));
+  const [seoTitle, setSeoTitle] = useState(initial?.seoTitle ?? "");
+  const [seoDescription, setSeoDescription] = useState(initial?.seoDescription ?? "");
+  const [weight, setWeight] = useState(initial?.weight ?? "");
+  const [dimensions, setDimensions] = useState(initial?.dimensions ?? "");
+  const [highlights, setHighlights] = useState((initial?.highlights ?? []).join("\n"));
+  const [specs, setSpecs] = useState<SpecRow[]>(initial?.specs?.length ? initial.specs : [{ label: "", value: "" }]);
 
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
+  const [saved, setSaved] = useState(false);
 
   const discount = useMemo(() => {
     const p = Number(price);
@@ -61,9 +82,11 @@ export function AdminProductForm({ categories }: { categories: { slug: string; n
     event.preventDefault();
     setSaving(true);
     setError("");
+    setSaved(false);
     try {
-      const res = await fetch("/api/admin/products", {
-        method: "POST",
+      const url = initial ? `/api/admin/products/${encodeURIComponent(initial.slug)}` : "/api/admin/products";
+      const res = await fetch(url, {
+        method: initial ? "PUT" : "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: name.trim(),
@@ -88,11 +111,21 @@ export function AdminProductForm({ categories }: { categories: { slug: string; n
           tags: tags.split(",").map((t) => t.trim()).filter(Boolean),
           seoTitle: seoTitle.trim(),
           seoDescription: seoDescription.trim(),
+          weight: weight.trim(),
+          dimensions: dimensions.trim(),
+          highlights: highlights.split("\n").map((h) => h.trim()).filter(Boolean),
+          specs: specs.map((r) => ({ label: r.label.trim(), value: r.value.trim() })).filter((r) => r.label || r.value),
+          ...(hasHtml ? { descriptionHtml } : {}),
         }),
       });
       const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string; slug?: string };
       if (!res.ok || !data.ok || !data.slug) {
-        setError(data.error ?? "No se pudo crear el producto.");
+        setError(data.error ?? (editing ? "No se pudo guardar." : "No se pudo crear el producto."));
+        return;
+      }
+      if (editing) {
+        setSaved(true);
+        router.refresh();
         return;
       }
       router.push(`/admin/productos?q=${encodeURIComponent(data.slug)}`);
@@ -150,6 +183,61 @@ export function AdminProductForm({ categories }: { categories: { slug: string; n
           <label htmlFor="nuevo-desc" className={labelCls}>Descripción</label>
           <textarea id="nuevo-desc" value={description} onChange={(e) => setDescription(e.target.value)} rows={4} className={inputCls} />
         </div>
+        {hasHtml ? (
+          <div>
+            <label htmlFor="nuevo-desc-html" className={labelCls}>Descripción con formato (HTML, es la que se ve en la ficha)</label>
+            <textarea id="nuevo-desc-html" value={descriptionHtml} onChange={(e) => setDescriptionHtml(e.target.value)} rows={10} className={`${inputCls} font-mono text-xs`} />
+            <p className="mt-1 text-xs text-ink-400">Si la vaciás, la ficha pasa a mostrar la descripción de arriba.</p>
+          </div>
+        ) : null}
+      </section>
+
+      <section className={sectionCls}>
+        <h2 className={sectionTitleCls}>Ficha técnica</h2>
+        <div>
+          <label htmlFor="nuevo-highlights" className={labelCls}>Destacados (uno por línea)</label>
+          <textarea id="nuevo-highlights" value={highlights} onChange={(e) => setHighlights(e.target.value)} rows={4} placeholder={"Ej. Pantalla OLED 6.1\"\nCámara dual 12MP"} className={inputCls} />
+        </div>
+        <fieldset className="space-y-2">
+          <legend className={labelCls}>Especificaciones</legend>
+          {specs.map((row, index) => (
+            <div key={index} className="flex gap-2">
+              <input
+                value={row.label}
+                onChange={(e) => setSpecs(specs.map((r, i) => (i === index ? { ...r, label: e.target.value } : r)))}
+                placeholder="Dato (ej. Batería)"
+                aria-label={`Dato ${index + 1}`}
+                maxLength={80}
+                className={`${inputCls} sm:max-w-56`}
+              />
+              <input
+                value={row.value}
+                onChange={(e) => setSpecs(specs.map((r, i) => (i === index ? { ...r, value: e.target.value } : r)))}
+                placeholder="Valor (ej. 4000 mAh)"
+                aria-label={`Valor ${index + 1}`}
+                maxLength={300}
+                className={inputCls}
+              />
+              <button
+                type="button"
+                onClick={() => setSpecs(specs.length > 1 ? specs.filter((_, i) => i !== index) : [{ label: "", value: "" }])}
+                aria-label={`Quitar fila ${index + 1}`}
+                className="shrink-0 rounded-lg border border-ink-200 px-3 text-sm font-bold text-ink-600"
+              >
+                ✕
+              </button>
+            </div>
+          ))}
+          {specs.length < 40 ? (
+            <button
+              type="button"
+              onClick={() => setSpecs([...specs, { label: "", value: "" }])}
+              className="rounded-xl border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
+            >
+              ＋ Agregar fila
+            </button>
+          ) : null}
+        </fieldset>
       </section>
 
       <section className={sectionCls}>
@@ -268,6 +356,20 @@ export function AdminProductForm({ categories }: { categories: { slug: string; n
       </section>
 
       <section className={sectionCls}>
+        <h2 className={sectionTitleCls}>Envío</h2>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <div>
+            <label htmlFor="nuevo-peso" className={labelCls}>Peso</label>
+            <input id="nuevo-peso" value={weight} onChange={(e) => setWeight(e.target.value)} maxLength={60} placeholder="Ej. 0.4 kg" className={inputCls} />
+          </div>
+          <div>
+            <label htmlFor="nuevo-medidas" className={labelCls}>Medidas (largo × ancho × alto)</label>
+            <input id="nuevo-medidas" value={dimensions} onChange={(e) => setDimensions(e.target.value)} maxLength={100} placeholder="Ej. 20 × 12 × 6 cm" className={inputCls} />
+          </div>
+        </div>
+      </section>
+
+      <section className={sectionCls}>
         <h2 className={sectionTitleCls}>Categoría</h2>
         <div>
           <label htmlFor="nuevo-cat" className={labelCls}>Principal *</label>
@@ -333,14 +435,19 @@ export function AdminProductForm({ categories }: { categories: { slug: string; n
 
       {error ? <p role="alert" className="rounded-xl bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-600">{error}</p> : null}
 
-      <div className="flex gap-2">
+      <div className="flex items-center gap-3">
         <button
           type="submit"
           disabled={saving}
           className="rounded-xl bg-brand-700 px-6 py-3 text-sm font-bold text-white transition hover:bg-brand-800 disabled:opacity-40"
         >
-          {saving ? "Creando…" : "Crear producto"}
+          {editing ? (saving ? "Guardando…" : "Guardar cambios") : saving ? "Creando…" : "Crear producto"}
         </button>
+        {saved ? (
+          <p role="status" className="text-sm font-semibold text-emerald-700">
+            Guardado.
+          </p>
+        ) : null}
       </div>
     </form>
   );

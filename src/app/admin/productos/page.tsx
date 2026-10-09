@@ -65,16 +65,23 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Admin · Catálogo</p>
           <h1 className="mt-1 text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">Productos</h1>
           <p className="mt-1 text-sm text-ink-500">
-            {total} productos. Editá precio, stock, etiqueta y destacados. Las fotos y el alta masiva siguen en el
-            WordPress original y la migración por script.
+            {total} productos. Cambiá precio y stock desde la lista, o tocá Editar para la ficha completa.
           </p>
         </div>
-        <Link
-          href="/admin/productos/nuevo"
-          className="rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800"
-        >
-          ＋ Nuevo
-        </Link>
+        <div className="flex gap-2">
+          <Link
+            href="/admin/productos/archivados"
+            className="rounded-xl border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-700 transition hover:border-brand-300"
+          >
+            Archivados
+          </Link>
+          <Link
+            href="/admin/productos/nuevo"
+            className="rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800"
+          >
+            ＋ Nuevo
+          </Link>
+        </div>
       </div>
 
       <form action="/admin/productos" method="get" className="flex flex-wrap gap-2">

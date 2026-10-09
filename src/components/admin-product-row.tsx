@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 import { ProductImg } from "@/components/product-img";
@@ -121,6 +122,12 @@ export function AdminProductRow({ product }: { product: AdminProductRow }) {
         >
           {saving ? "…" : saved || "Guardar"}
         </button>
+        <Link
+          href={`/admin/productos/${encodeURIComponent(product.slug)}`}
+          className="ml-2 inline-block rounded-xl border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700 transition hover:border-brand-300"
+        >
+          Editar
+        </Link>
         {error ? <p role="alert" className="mt-1 text-xs font-semibold text-rose-600">{error}</p> : null}
       </td>
     </tr>
