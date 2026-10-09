@@ -37,7 +37,7 @@ function LoginForm() {
   }
 
   return (
-    <div className="mx-auto max-w-sm">
+    <div className="mx-auto w-full max-w-sm">
       <div className="card-surface p-6">
         <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Admin</p>
         <h1 className="mt-1 text-2xl font-black tracking-tight text-ink-900">Ingresar al panel</h1>

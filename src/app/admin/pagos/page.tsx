@@ -2,7 +2,6 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-import { AdminLogoutButton } from "@/components/admin-logout-button";
 import { AdminPaymentVerify } from "@/components/admin-payment-verify";
 import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
@@ -50,7 +49,6 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-2xl font-black text-ink-900">Pagos — Mercado Pago</h1>
-        <AdminLogoutButton />
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

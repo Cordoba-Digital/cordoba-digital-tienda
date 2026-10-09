@@ -8,6 +8,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StoreProvider } from "@/components/store-provider";
 import { SmoothScroll } from "@/components/smooth-scroll";
+import { StoreChrome } from "@/components/store-chrome";
 import { WhatsAppFab } from "@/components/whatsapp-fab";
 import { getCategoryTree, getGuides, type CategoryTreeNode, type GuideTeaser } from "@/lib/queries";
 import "./globals.css";
@@ -121,16 +122,20 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       <body className="min-h-screen bg-ink-50 text-ink-900 antialiased">
         <StoreProvider>
           <SmoothScroll />
-          <SiteHeader categories={categories} />
+          <StoreChrome>
+            <SiteHeader categories={categories} />
+          </StoreChrome>
           <main className="min-h-[60vh]">{children}</main>
-          <SiteFooter
-            categories={categories.map((c) => ({ name: c.name, path: c.path, count: c.count }))}
-            cuit={process.env.STORE_CUIT?.trim() ?? ""}
-            guides={guides}
-          />
-          <CartDrawer />
+          <StoreChrome>
+            <SiteFooter
+              categories={categories.map((c) => ({ name: c.name, path: c.path, count: c.count }))}
+              cuit={process.env.STORE_CUIT?.trim() ?? ""}
+              guides={guides}
+            />
+            <CartDrawer />
+            <WhatsAppFab />
+          </StoreChrome>
           <Toaster />
-          <WhatsAppFab />
         </StoreProvider>
         {GA_MEASUREMENT_ID ? <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} /> : null}
       </body>

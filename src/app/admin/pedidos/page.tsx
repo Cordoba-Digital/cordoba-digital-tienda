@@ -2,7 +2,6 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-import { AdminLogoutButton } from "@/components/admin-logout-button";
 import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
 import { listAdminOrders } from "@/lib/admin-orders";
@@ -63,7 +62,6 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
           <h1 className="mt-1 text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">Pedidos</h1>
           <p className="mt-1 text-sm text-ink-500">{total} pedidos en total. Buscá por código, cliente o email.</p>
         </div>
-        <AdminLogoutButton />
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6">

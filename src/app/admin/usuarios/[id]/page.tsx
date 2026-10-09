@@ -2,7 +2,6 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 
-import { AdminLogoutButton } from "@/components/admin-logout-button";
 import { AdminUserDisableButton } from "@/components/admin-user-disable-button";
 import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
@@ -35,7 +34,6 @@ export default async function AdminUserDetailPage({ params }: { params: Promise<
           <h1 className="text-2xl font-black text-ink-900">{user.name || user.email}</h1>
           {user.isDisabled && <Pill tone="amber">Bloqueado</Pill>}
         </div>
-        <AdminLogoutButton />
       </div>
 
       <div className="grid gap-3 md:grid-cols-3">

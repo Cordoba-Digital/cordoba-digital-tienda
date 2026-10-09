@@ -2,7 +2,6 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-import { AdminLogoutButton } from "@/components/admin-logout-button";
 import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
 import { getAdminStats } from "@/lib/admin-stats";
@@ -66,7 +65,6 @@ export default async function AdminDashboardPage() {
           <h1 className="mt-1 text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">Panel</h1>
           <p className="mt-1 text-sm text-ink-500">Resumen del negocio de un vistazo.</p>
         </div>
-        <AdminLogoutButton />
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
