@@ -2,12 +2,20 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { uploadProductImage } from "@/lib/prepare-image";
+import { importProductImage, uploadProductImage } from "@/lib/prepare-image";
 
 const MAX_IMAGES = 8;
 
+function isOwnImage(value: string): boolean {
+  return /^\/(api\/)?imagenes\/[a-z0-9-]*[a-f0-9]{24}\.[a-z]+$/.test(value);
+}
+
+function isExternalUrl(value: string): boolean {
+  return /^https?:\/\/\S+$/i.test(value);
+}
+
 function isImageUrl(value: string): boolean {
-  return /^https?:\/\/\S+$/i.test(value) || /^\/api\/imagenes\/[a-f0-9]{24}\.[a-z]+$/.test(value);
+  return isExternalUrl(value) || isOwnImage(value);
 }
 
 function move<T>(list: T[], from: number, to: number): T[] {
@@ -30,17 +38,23 @@ function isEditable(target: EventTarget | null): boolean {
 /**
  * Fotos del producto: la primera es la principal. Se agregan subiendo
  * archivos, arrastrándolos, pegándolos con Ctrl+V (en cualquier parte de la
- * ficha) o con su URL. `upload` permite cambiar dónde se guardan (por ejemplo
- * Vercel Blob) sin tocar el resto.
+ * ficha) o con su URL. Siempre se guarda una copia propia, con el nombre del
+ * producto en el archivo; si una foto de otra web no se puede descargar, queda
+ * el link y se avisa. `upload`/`importUrl` permiten cambiar dónde se guardan
+ * (por ejemplo Vercel Blob) sin tocar el resto.
  */
 export function AdminImageManager({
   images,
   onChange,
+  productName = "",
   upload = uploadProductImage,
+  importUrl = importProductImage,
 }: {
   images: string[];
   onChange: (next: string[]) => void;
-  upload?: (file: File) => Promise<string>;
+  productName?: string;
+  upload?: (file: File, productName: string) => Promise<string>;
+  importUrl?: (url: string, productName: string) => Promise<string>;
 }) {
   const [draft, setDraft] = useState("");
   const [error, setError] = useState("");
@@ -50,9 +64,9 @@ export function AdminImageManager({
   const [pending, setPending] = useState(0);
   const fileInput = useRef<HTMLInputElement>(null);
   // La lista cambia mientras se suben varias fotos: siempre leemos la última.
-  const latest = useRef({ images, onChange });
+  const latest = useRef({ images, onChange, productName });
   useEffect(() => {
-    latest.current = { images, onChange };
+    latest.current = { images, onChange, productName };
   });
 
   const room = MAX_IMAGES - images.length;
@@ -90,7 +104,7 @@ export function AdminImageManager({
     const failures: string[] = [];
     for (const file of batch) {
       try {
-        add([await upload(file)]);
+        add([await upload(file, latest.current.productName)]);
       } catch (e) {
         failures.push(`${file.name || "foto"}: ${e instanceof Error ? e.message : "no se pudo subir"}`);
       } finally {
@@ -100,10 +114,45 @@ export function AdminImageManager({
     if (failures.length) setError(failures.join(" · "));
   }
 
+  /** Fotos de otra web: se descarga una copia; si no se puede, queda el link. */
+  async function addExternal(urls: string[]) {
+    const clean = [...new Set(urls.map((u) => u.trim()).filter(Boolean))];
+    const own = clean.filter(isOwnImage);
+    if (own.length) add(own);
+    const external = clean.filter((u) => isExternalUrl(u) && !latest.current.images.includes(u));
+    if (clean.some((u) => !isImageUrl(u))) setError("Algunas líneas no son URLs http(s) y se ignoraron.");
+    const free = MAX_IMAGES - latest.current.images.length - pending;
+    if (!external.length) return;
+    if (free <= 0) {
+      setError(`Llegaste al máximo de ${MAX_IMAGES} fotos.`);
+      return;
+    }
+    const batch = external.slice(0, free);
+    setPending((n) => n + batch.length);
+    const kept: string[] = [];
+    for (const url of batch) {
+      try {
+        add([await importUrl(url, latest.current.productName)]);
+      } catch {
+        add([url]);
+        kept.push(url);
+      } finally {
+        setPending((n) => n - 1);
+      }
+    }
+    if (kept.length) {
+      setError(
+        `${kept.length === 1 ? "Una foto no se pudo copiar y quedó" : `${kept.length} fotos no se pudieron copiar y quedaron`} como link a la otra web: si esa web la borra, se rompe. Mejor descargala y subila.`,
+      );
+    }
+  }
+
   // Ctrl+V con una foto copiada, en cualquier parte de la ficha.
   const onFilesRef = useRef(onFiles);
+  const addExternalRef = useRef(addExternal);
   useEffect(() => {
     onFilesRef.current = onFiles;
+    addExternalRef.current = addExternal;
   });
   useEffect(() => {
     function onPaste(event: ClipboardEvent) {
@@ -117,7 +166,7 @@ export function AdminImageManager({
       const text = event.clipboardData?.getData("text/plain").trim() ?? "";
       if (!isEditable(event.target) && /^https?:\/\/\S+$/i.test(text)) {
         event.preventDefault();
-        add(text.split(/\s+/));
+        void addExternalRef.current(text.split(/\s+/));
       }
     }
     window.addEventListener("paste", onPaste);
@@ -137,7 +186,7 @@ export function AdminImageManager({
     const html = event.dataTransfer.getData("text/html");
     const fromHtml = /<img[^>]+src="(https?:[^"]+)"/i.exec(html)?.[1];
     const urls = (fromHtml ? [fromHtml] : uri.split(/\s+/)).filter((u) => u && !u.startsWith("#"));
-    if (urls.length) add(urls);
+    if (urls.length) void addExternal(urls);
   }
 
   const btn = "rounded-md border border-ink-200 bg-surface px-2 py-1 text-[11px] font-bold text-ink-700 transition hover:border-ink-400 disabled:opacity-30";
@@ -286,7 +335,7 @@ export function AdminImageManager({
               onKeyDown={(e) => {
                 if (e.key === "Enter" && !e.shiftKey) {
                   e.preventDefault();
-                  add(draft.split(/\s+/));
+                  void addExternal(draft.split(/\s+/));
                   setDraft("");
                 }
               }}
@@ -298,7 +347,7 @@ export function AdminImageManager({
             <button
               type="button"
               onClick={() => {
-                add(draft.split(/\s+/));
+                void addExternal(draft.split(/\s+/));
                 setDraft("");
               }}
               disabled={!draft.trim()}

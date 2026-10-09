@@ -32,12 +32,29 @@ export async function prepareImage(file: File): Promise<Blob> {
   return scale === 1 && blob.size >= file.size ? file : blob;
 }
 
-/** Sube una foto al admin y devuelve su URL pública. */
-export async function uploadProductImage(file: File): Promise<string> {
+type UploadResponse = { ok?: boolean; url?: string; error?: string };
+
+async function readUrl(res: Response): Promise<string> {
+  const data = (await res.json().catch(() => ({}))) as UploadResponse;
+  if (!res.ok || !data.ok || !data.url) throw new Error(data.error ?? "No se pudo guardar la foto.");
+  return data.url;
+}
+
+/** Sube una foto y devuelve su URL. `productName` le da nombre al archivo. */
+export async function uploadProductImage(file: File, productName = ""): Promise<string> {
   const body = new FormData();
   body.append("file", await prepareImage(file), file.name || "foto");
-  const res = await fetch("/api/admin/uploads", { method: "POST", body });
-  const data = (await res.json().catch(() => ({}))) as { ok?: boolean; url?: string; error?: string };
-  if (!res.ok || !data.ok || !data.url) throw new Error(data.error ?? "No se pudo subir la foto.");
-  return data.url;
+  body.append("name", productName);
+  return readUrl(await fetch("/api/admin/uploads", { method: "POST", body }));
+}
+
+/** Descarga en el servidor una foto de otra web y devuelve la URL de nuestra copia. */
+export async function importProductImage(url: string, productName = ""): Promise<string> {
+  return readUrl(
+    await fetch("/api/admin/uploads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ url, name: productName }),
+    }),
+  );
 }

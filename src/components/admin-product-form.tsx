@@ -200,6 +200,7 @@ export function AdminProductForm({
             </div>
             <AdminImageManager
               images={images}
+              productName={name}
               onChange={(next) => {
                 setImages(next);
                 setDirty(true);
