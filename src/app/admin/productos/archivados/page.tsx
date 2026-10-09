@@ -29,7 +29,7 @@ export default async function ArchivedProductsPage() {
         </p>
       </div>
 
-      <div className="card-surface overflow-hidden">
+      <div className="admin-table overflow-hidden">
         {items.length === 0 ? (
           <p className="px-4 py-8 text-center text-sm text-ink-500">No hay productos archivados.</p>
         ) : (
@@ -38,9 +38,9 @@ export default async function ArchivedProductsPage() {
               <li key={p.slug} className="flex items-center gap-3 border-b border-ink-50 px-4 py-3 last:border-0">
                 {p.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={p.image} alt="" referrerPolicy="no-referrer" className="h-12 w-12 shrink-0 rounded-lg object-cover" />
+                  <img src={p.image} alt="" referrerPolicy="no-referrer" className="h-12 w-12 shrink-0 object-cover" />
                 ) : (
-                  <span className="h-12 w-12 shrink-0 rounded-lg bg-ink-50" />
+                  <span className="h-12 w-12 shrink-0 bg-ink-50" />
                 )}
                 <div className="min-w-0 flex-1">
                   <p className="truncate text-sm font-semibold text-ink-900" title={p.name}>{p.name}</p>

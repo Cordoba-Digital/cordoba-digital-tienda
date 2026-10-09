@@ -83,19 +83,19 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
           name="q"
           defaultValue={q}
           placeholder="Buscar por código, nombre o email…"
-          className="min-w-0 flex-1 rounded-xl border border-ink-200 bg-surface px-3 py-2.5 text-sm text-ink-900 outline-none focus:border-brand-400"
+          className="min-w-0 flex-1 border border-ink-200 bg-surface px-3 py-2.5 text-sm text-ink-900 outline-none focus:border-brand-400"
         />
-        <button type="submit" className="rounded-xl bg-ink-900 px-4 py-2.5 text-sm font-bold text-white">
+        <button type="submit" className="bg-ink-900 px-4 py-2.5 text-sm font-bold text-white">
           Buscar
         </button>
         {q || status ? (
-          <Link href="/admin/pedidos" className="rounded-xl border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-600">
+          <Link href="/admin/pedidos" className="border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-600">
             Limpiar
           </Link>
         ) : null}
       </form>
 
-      <div className="card-surface overflow-hidden">
+      <div className="admin-table overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[760px] text-left text-sm">
             <thead>
@@ -145,7 +145,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
           {page > 1 ? (
             <Link
               href={withParams({ ...base, page: String(page - 1) }, {})}
-              className="rounded-xl border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
+              className="border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
             >
               ← Anterior
             </Link>
@@ -153,7 +153,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
           {page < pages ? (
             <Link
               href={withParams({ ...base, page: String(page + 1) }, {})}
-              className="rounded-xl border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
+              className="border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
             >
               Siguiente →
             </Link>

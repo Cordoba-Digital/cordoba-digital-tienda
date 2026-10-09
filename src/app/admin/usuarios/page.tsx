@@ -62,17 +62,17 @@ export default async function AdminUsersPage({ searchParams }: { searchParams: S
           name="q"
           defaultValue={q}
           placeholder="Email o nombre…"
-          className="min-w-52 flex-1 rounded-xl border border-ink-200 bg-surface px-3 py-2 text-sm"
+          className="min-w-52 flex-1 border border-ink-200 bg-surface px-3 py-2 text-sm"
         />
-        <button type="submit" className="rounded-xl bg-ink-900 px-4 py-2 text-sm font-bold text-white">
+        <button type="submit" className="bg-ink-900 px-4 py-2 text-sm font-bold text-white">
           Buscar
         </button>
       </form>
 
       {result.items.length === 0 ? (
-        <p className="card-surface p-6 text-sm text-ink-500">Nadie coincide con esa búsqueda.</p>
+        <p className="admin-table p-6 text-sm text-ink-500">Nadie coincide con esa búsqueda.</p>
       ) : (
-        <div className="card-surface overflow-x-auto">
+        <div className="admin-table overflow-x-auto">
           <table className="w-full min-w-[720px] text-left text-sm">
             <thead>
               <tr className="border-b border-ink-200 text-xs text-ink-500">
@@ -108,7 +108,7 @@ export default async function AdminUsersPage({ searchParams }: { searchParams: S
       {result.pages > 1 && (
         <div className="flex items-center gap-2 text-sm">
           {page > 1 && (
-            <Link className="rounded-lg border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page - 1) })}>
+            <Link className="border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page - 1) })}>
               ← Anterior
             </Link>
           )}
@@ -116,7 +116,7 @@ export default async function AdminUsersPage({ searchParams }: { searchParams: S
             Página {result.page} de {result.pages}
           </span>
           {page < result.pages && (
-            <Link className="rounded-lg border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page + 1) })}>
+            <Link className="border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page + 1) })}>
               Siguiente →
             </Link>
           )}

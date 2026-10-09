@@ -85,9 +85,9 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
           name="q"
           defaultValue={q}
           placeholder="Código, email o cliente…"
-          className="min-w-52 flex-1 rounded-xl border border-ink-200 bg-surface px-3 py-2 text-sm"
+          className="min-w-52 flex-1 border border-ink-200 bg-surface px-3 py-2 text-sm"
         />
-        <select name="flag" defaultValue={flag} className="rounded-xl border border-ink-200 bg-surface px-3 py-2 text-sm">
+        <select name="flag" defaultValue={flag} className="border border-ink-200 bg-surface px-3 py-2 text-sm">
           <option value="">Todos</option>
           {FLAGS.map((f) => (
             <option key={f} value={f}>
@@ -95,17 +95,17 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
             </option>
           ))}
         </select>
-        <button type="submit" className="rounded-xl bg-ink-900 px-4 py-2 text-sm font-bold text-white">
+        <button type="submit" className="bg-ink-900 px-4 py-2 text-sm font-bold text-white">
           Filtrar
         </button>
       </form>
 
       {result.items.length === 0 ? (
-        <p className="card-surface p-6 text-sm text-ink-500">
+        <p className="admin-table p-6 text-sm text-ink-500">
           No hay pagos con Mercado Pago para este filtro. Los pedidos con transferencia o efectivo no aparecen acá.
         </p>
       ) : (
-        <div className="card-surface overflow-x-auto">
+        <div className="admin-table overflow-x-auto">
           <table className="w-full min-w-[760px] text-left text-sm">
             <thead>
               <tr className="border-b border-ink-200 text-xs text-ink-500">
@@ -166,7 +166,7 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
       {result.pages > 1 && (
         <div className="flex items-center gap-2 text-sm">
           {page > 1 && (
-            <Link className="rounded-lg border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page - 1) })}>
+            <Link className="border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page - 1) })}>
               ← Anterior
             </Link>
           )}
@@ -174,7 +174,7 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
             Página {result.page} de {result.pages}
           </span>
           {page < result.pages && (
-            <Link className="rounded-lg border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page + 1) })}>
+            <Link className="border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page + 1) })}>
               Siguiente →
             </Link>
           )}

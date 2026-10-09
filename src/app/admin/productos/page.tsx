@@ -132,7 +132,7 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
         ))}
       </div>
 
-      <div className="bg-surface shadow-[0_0_0_1px_rgba(20,22,28,0.08)]" role="table" aria-label="Productos">
+      <div className="admin-table" role="table" aria-label="Productos">
         <div
           role="row"
           className="hidden border-b border-ink-100 px-4 py-3 text-xs font-bold uppercase tracking-wide text-ink-500 lg:grid lg:grid-cols-[minmax(0,1fr)_8.5rem_5rem_8.5rem_6rem] lg:gap-4"

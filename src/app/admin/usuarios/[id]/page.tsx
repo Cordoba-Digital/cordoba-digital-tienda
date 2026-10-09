@@ -69,7 +69,7 @@ export default async function AdminUserDetailPage({ params }: { params: Promise<
       {orders.length === 0 ? (
         <p className="card-surface p-6 text-sm text-ink-500">Todavía no compró nada con este email.</p>
       ) : (
-        <div className="card-surface overflow-x-auto">
+        <div className="admin-table overflow-x-auto">
           <table className="w-full min-w-[640px] text-left text-sm">
             <thead>
               <tr className="border-b border-ink-200 text-xs text-ink-500">
