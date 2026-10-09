@@ -85,7 +85,6 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
       </div>
 
       <form action="/admin/productos" method="get" className="flex flex-wrap gap-2">
-        {category ? <input type="hidden" name="categoria" value={category} /> : null}
         {sinStock ? <input type="hidden" name="sinStock" value="1" /> : null}
         {oferta ? <input type="hidden" name="oferta" value="1" /> : null}
         {destacados ? <input type="hidden" name="destacados" value="1" /> : null}

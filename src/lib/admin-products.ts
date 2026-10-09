@@ -38,7 +38,22 @@ export async function listAdminProducts(input: {
     const term = `%${q}%`;
     clauses.push(or(ilike(products.name, term), ilike(products.sku, term), ilike(products.brand, term)));
   }
-  if (category) clauses.push(eq(products.categorySlug, category));
+  if (category) {
+    // Cualquier producto asignado a la categoría o a una subcategoría, sea
+    // principal o secundaria: casi todo el catálogo está en más de una.
+    clauses.push(sql`(${products.categorySlug} = ${category} or exists (
+      select 1 from product_categories pc
+      where pc.product_id = ${products.id}
+        and pc.category_id in (
+          with recursive tree as (
+            select id from categories where slug = ${category}
+            union all
+            select c.id from categories c join tree on c.parent_id = tree.id
+          )
+          select id from tree
+        )
+    ))`);
+  }
   if (input.sinStock) clauses.push(sql`${products.stock} <= 0`);
   if (input.oferta) clauses.push(sql`${products.compareAtPrice} is not null and ${products.compareAtPrice} > ${products.price}`);
   if (input.destacados) clauses.push(eq(products.featured, true));
