@@ -5,12 +5,12 @@ import net from "node:net";
 import { sql } from "drizzle-orm";
 
 import { db } from "@/db";
-import { putR2Object, r2Config } from "@/lib/r2";
+import { imageStore, putStoredImage } from "@/lib/image-storage";
 
 /**
- * Fotos de producto guardadas por nosotros. Con R2 configurado (ver `r2.ts`)
- * van a Cloudflare R2 y se sirven desde su dominio público; si no, van a
- * Postgres y se sirven desde `/imagenes/<nombre-del-producto>-<id>.webp`. En
+ * Fotos de producto guardadas por nosotros. Con Vercel Blob o Cloudflare R2
+ * configurados (ver `image-storage.ts`) van ahí y se sirven desde su dominio
+ * público; si no, van a Postgres y se sirven desde `/imagenes/<nombre-del-producto>-<id>.webp`. En
  * los dos casos con caché larga (el id es aleatorio y el archivo nunca
  * cambia). El nombre del archivo lleva el del producto porque Google lo usa
  * para entender la foto.
@@ -109,7 +109,7 @@ export async function prepareProductImage(raw: Buffer): Promise<PreparedImage> {
   return { ok: true, bytes, ext, contentType: TYPES[ext] };
 }
 
-/** Clave en R2: `productos/<nombre-del-producto>-<id>.<ext>`. */
+/** Clave en Blob/R2: `productos/<nombre-del-producto>-<id>.<ext>`. */
 export function productImageKey(productName: string, id: string, ext: string): string {
   return `productos/${imageSlug(productName) || "producto"}-${id}.${ext}`;
 }
@@ -119,11 +119,11 @@ export async function saveUploadedImage(raw: Buffer, productName = ""): Promise<
   if (!prepared.ok) return prepared;
   const { bytes, ext, contentType } = prepared;
   const id = crypto.randomBytes(12).toString("hex");
-  if (r2Config()) {
+  if (imageStore()) {
     try {
-      return { ok: true, url: await putR2Object(productImageKey(productName, id, ext), bytes, contentType) };
+      return { ok: true, url: await putStoredImage(productImageKey(productName, id, ext), bytes, contentType) };
     } catch (error) {
-      console.error("[product-images] no se pudo subir a R2", error);
+      console.error("[product-images] no se pudo subir la foto", error);
       return { ok: false, error: "No se pudo guardar la foto. Probá de nuevo." };
     }
   }

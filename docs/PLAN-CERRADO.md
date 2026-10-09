@@ -120,8 +120,8 @@ redimensiona y sirve WebP/AVIF desde el caché de Vercel. Medido sobre
 | Servido por `next/image` (828px) | 96 KB (PNG) / **30 KB (WebP)** |
 
 Cuando el cliente defina su hosting, la copia de las imágenes es una tarea de
-migración con su almacenamiento. **Actualización:** se eligió Cloudflare R2; el
-script ahora copia a R2. Ver `docs/IMAGENES-R2.md`.
+migración con su almacenamiento. **Actualización:** las fotos se copian a Vercel
+Blob (o R2) desde el panel. Ver `docs/IMAGENES.md`.
 
 ### 0. Organizar carpeta — HECHO
 

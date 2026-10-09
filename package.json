@@ -37,6 +37,7 @@
     "subcategorias": "tsx scripts/subcategorias.ts"
   },
   "dependencies": {
+    "@vercel/blob": "2.8.1",
     "aws4fetch": "1.0.20",
     "dotenv": "17.3.1",
     "drizzle-orm": "0.45.2",

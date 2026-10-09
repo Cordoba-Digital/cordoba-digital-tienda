@@ -2,8 +2,8 @@ import { AwsClient } from "aws4fetch";
 
 /**
  * Cloudflare R2 (API compatible con S3) para las fotos de producto. Se activa
- * con las cinco variables R2_*; si falta alguna, las fotos siguen yendo a
- * Postgres (`product_images`). Las fotos se sirven directo desde
+ * con las cinco variables R2_* y tiene prioridad sobre Vercel Blob (ver
+ * `image-storage.ts`). Las fotos se sirven directo desde
  * R2_PUBLIC_URL (dominio propio o r2.dev), sin pasar por las funciones de Vercel.
  */
 type R2Config = { endpoint: string; publicUrl: string; client: AwsClient };
