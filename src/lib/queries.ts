@@ -15,7 +15,6 @@ import {
   type CategoryNode,
   type CategoryRow,
 } from "@/lib/category-tree";
-import { ensureSeeded } from "@/lib/seed";
 import { ttlCache } from "@/lib/ttl-cache";
 
 export type ProductFilters = {
@@ -61,7 +60,7 @@ function buildWhere(filters: ProductFilters, subtree?: { ids: number[]; slugs: s
   if (filters.category) clauses.push(eq(products.categorySlug, filters.category));
   if (subtree && (subtree.ids.length || subtree.slugs.length)) {
     // Puente N:N (categorías secundarias) + categoría principal, para que el
-    // seed demo sin filas en el puente siga apareciendo.
+    // producto sin filas en el puente siga apareciendo.
     const viaBridge = subtree.ids.length
       ? inArray(
           products.id,
@@ -278,7 +277,6 @@ async function subtreeOf(categoryId: number): Promise<{ ids: number[]; slugs: st
 }
 
 export async function listProducts(filters: ProductFilters) {
-  await ensureSeeded();
   const page = Math.max(1, filters.page ?? 1);
   const perPage = filters.perPage ?? 12;
   const subtree =
@@ -334,7 +332,6 @@ export async function listProducts(filters: ProductFilters) {
 }
 
 export async function getBrandFacets(categoryId?: number) {
-  await ensureSeeded();
   if (categoryId == null) {
     return db
       .select({ brand: products.brand, count: sql<number>`count(*)::int` })
@@ -353,7 +350,6 @@ export async function getBrandFacets(categoryId?: number) {
 }
 
 export async function getFeaturedProducts(limit = 8) {
-  await ensureSeeded();
   // El catálogo migrado de WooCommerce no trae `featured` (todo false) ni
   // `soldCount` (todo 0). Ordenar por soldCount las enterraba detrás del
   // catálogo viejo: acá van primero los más nuevos con stock (createdAt, y
@@ -369,7 +365,6 @@ export async function getFeaturedProducts(limit = 8) {
 }
 
 export async function getDealProducts(limit = 8) {
-  await ensureSeeded();
   return db
     .select()
     .from(products)
@@ -380,13 +375,11 @@ export async function getDealProducts(limit = 8) {
 
 /** Total de productos del catálogo, cacheado 5 min. */
 export const getProductCount = ttlCache("product-count", 5 * 60_000, async () => {
-  await ensureSeeded();
   const [row] = await db.select({ count: sql<number>`count(*)::int` }).from(products);
   return row?.count ?? 0;
 });
 
 export async function getBestSellers(limit = 8) {
-  await ensureSeeded();
   // `soldCount` viene en 0 desde WooCommerce: usamos los más cotizados como
   // aproximación honesta (productos con reseñas) y si no hay, los nuevos.
   const reviewed = await db
@@ -402,7 +395,6 @@ export async function getBestSellers(limit = 8) {
 }
 
 export async function getNewArrivals(limit = 8) {
-  await ensureSeeded();
   return db.select().from(products).orderBy(desc(products.createdAt), desc(products.id)).limit(limit);
 }
 
@@ -410,7 +402,6 @@ export async function getNewArrivals(limit = 8) {
     `findProduct()` en el mismo request (hasta 5 lookups por los slugs con
     `%`-encoding) y sin esto cada uno pegaba a la base. */
 export const getProductBySlug = cache(async (slug: string) => {
-  await ensureSeeded();
   const [product] = await db.select().from(products).where(eq(products.slug, slug)).limit(1);
   return product ?? null;
 });
@@ -431,7 +422,6 @@ function safeDecodeSlug(value: string): string {
  * ficha pública (`producto/[slug]`); la usa también el PATCH del admin.
  */
 export async function findProductBySlug(slug: string) {
-  await ensureSeeded();
   const seen = new Set<string>([slug]);
   const decoded = safeDecodeSlug(slug);
   if (decoded !== slug) seen.add(decoded);
@@ -473,12 +463,10 @@ export async function getProductBreadcrumbs(slug: string): Promise<{ name: strin
 
 export async function getProductsBySlugs(slugs: string[]) {
   if (!slugs.length) return [];
-  await ensureSeeded();
   return db.select().from(products).where(inArray(products.slug, slugs));
 }
 
 export async function getRelatedProducts(slug: string, categorySlug: string, limit = 4) {
-  await ensureSeeded();
   return db
     .select()
     .from(products)
@@ -488,7 +476,6 @@ export async function getRelatedProducts(slug: string, categorySlug: string, lim
 }
 
 export async function getReviewsForProduct(slug: string) {
-  await ensureSeeded();
   return db
     .select({
       id: reviews.id,
@@ -531,7 +518,6 @@ export async function getVerifiedRatingStats(slug: string) {
 }
 
 export async function getCoupon(code: string) {
-  await ensureSeeded();
   const normalized = code.trim().toUpperCase();
   const [coupon] = await db.select().from(coupons).where(eq(coupons.code, normalized)).limit(1);
   if (!coupon || !coupon.active) return null;
@@ -539,7 +525,6 @@ export async function getCoupon(code: string) {
 }
 
 export async function getActiveCoupons() {
-  await ensureSeeded();
   return db.select().from(coupons).where(eq(coupons.active, true));
 }
 
@@ -591,7 +576,6 @@ export async function getOrdersByEmail(email: string) {
 }
 
 export async function searchProducts(term: string, limit = 6) {
-  await ensureSeeded();
   if (!term.trim()) return [];
   const pattern = `%${term.trim()}%`;
   return db

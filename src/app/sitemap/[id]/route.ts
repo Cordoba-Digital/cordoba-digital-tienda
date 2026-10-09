@@ -3,7 +3,6 @@ import { asc, sql } from "drizzle-orm";
 import { db } from "@/db";
 import { products } from "@/db/schema";
 import { getCategoryPaths, getGuides } from "@/lib/queries";
-import { ensureSeeded } from "@/lib/seed";
 import { SITE_URL as BASE } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
@@ -123,7 +122,6 @@ export async function GET(
 
   const entries: Entry[] = [];
   try {
-    await ensureSeeded();
     const [total, bases] = await Promise.all([productCount(), baseEntries()]);
 
     if (id >= Math.max(1, Math.ceil(total / PRODUCTS_PER_SITEMAP))) return notFound();

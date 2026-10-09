@@ -5,7 +5,6 @@ import { products } from "@/db/schema";
 import { ancestorsOf, flattenTree } from "@/lib/category-tree";
 import { renderFeed, renderItem, skipReason } from "@/lib/merchant-feed";
 import { getCategoryTree } from "@/lib/queries";
-import { ensureSeeded } from "@/lib/seed";
 
 export const dynamic = "force-dynamic";
 
@@ -20,7 +19,6 @@ export const dynamic = "force-dynamic";
  */
 export async function GET(): Promise<Response> {
   try {
-    await ensureSeeded();
     const [rows, tree] = await Promise.all([
       db
         .select({
