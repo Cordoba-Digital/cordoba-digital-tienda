@@ -13,6 +13,29 @@ export const dynamic = "force-dynamic";
  */
 const PAID_STATUSES = new Set(["pago_confirmado", "preparando", "enviado", "entregado"]);
 
+/**
+ * Crea `order_id` y sus índices si faltan, así el despliegue no depende de
+ * correr `db:push` a mano. Es idempotente y corre una vez por instancia; las
+ * filas viejas quedan con `order_id` null y no chocan con el índice único.
+ */
+let schemaReady: Promise<void> | null = null;
+function ensureReviewsSchema(): Promise<void> {
+  if (!schemaReady) {
+    schemaReady = (async () => {
+      await db.execute(sql`alter table reviews add column if not exists order_id integer`);
+      await db.execute(sql`alter table reviews alter column verified set default false`);
+      await db.execute(
+        sql`create unique index if not exists reviews_order_product_idx on reviews (order_id, product_slug)`,
+      );
+      await db.execute(sql`create index if not exists reviews_product_idx on reviews (product_slug)`);
+    })().catch((error) => {
+      schemaReady = null;
+      throw error;
+    });
+  }
+  return schemaReady;
+}
+
 export async function POST(request: Request) {
   const body = (await request.json().catch(() => ({}))) as {
     slug?: string;
@@ -37,6 +60,8 @@ export async function POST(request: Request) {
   if (!orderCode || !email) {
     return Response.json({ ok: false, error: "Ingresá el número de pedido y el email con el que compraste." }, { status: 400 });
   }
+
+  await ensureReviewsSchema();
 
   const [product] = await db.select({ slug: products.slug }).from(products).where(eq(products.slug, slug)).limit(1);
   if (!product) return Response.json({ ok: false, error: "Producto inexistente" }, { status: 404 });
