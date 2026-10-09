@@ -406,3 +406,16 @@ input[type="number"]::-webkit-inner-spin-button {
     background-color: var(--color-ink-300);
   }
 }
+
+/* Tablas del admin: esquinas rectas (las tarjetas de números siguen redondeadas). */
+@utility admin-table {
+  background-color: var(--color-surface);
+  box-shadow: 0 0 0 1px rgba(20, 22, 28, 0.08);
+}
+
+/* Tarjetas del admin: borde fino y esquinas apenas redondeadas. */
+@utility admin-card {
+  background-color: var(--color-surface);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 1px rgba(20, 22, 28, 0.08);
+}

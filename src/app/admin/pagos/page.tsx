@@ -2,10 +2,10 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-import { AdminLogoutButton } from "@/components/admin-logout-button";
 import { AdminPaymentVerify } from "@/components/admin-payment-verify";
 import { Pill } from "@/components/ui";
-import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { ADMIN_COOKIE } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { listAdminPayments, PAYMENT_FLAG_LABEL, type PaymentFlag } from "@/lib/admin-payments";
 import { money } from "@/lib/format";
 import { statusLabel } from "@/lib/pricing";
@@ -50,21 +50,20 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-2xl font-black text-ink-900">Pagos — Mercado Pago</h1>
-        <AdminLogoutButton />
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="card-surface p-4">
+        <div className="admin-card p-4">
           <p className="text-xs font-bold text-ink-500">Pendientes de pago</p>
           <p className="text-2xl font-black text-ink-900">{result.summary.pendientes}</p>
           <p className="text-sm font-bold text-ink-500">{money(result.summary.montoPendiente)}</p>
         </div>
-        <div className="card-surface p-4">
+        <div className="admin-card p-4">
           <p className="text-xs font-bold text-ink-500">Confirmados</p>
           <p className="text-2xl font-black text-ink-900">{result.summary.confirmados}</p>
           <p className="text-sm font-bold text-ink-500">{money(result.summary.montoConfirmado)} acreditados</p>
         </div>
-        <div className="card-surface p-4">
+        <div className="admin-card p-4">
           <p className="text-xs font-bold text-ink-500">Órdenes con MP</p>
           <p className="text-2xl font-black text-ink-900">{result.total}</p>
           <Link
@@ -74,7 +73,7 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
             Ver los que fueron a pagar
           </Link>
         </div>
-        <div className="card-surface p-4">
+        <div className="admin-card p-4">
           <p className="text-xs font-bold text-ink-500">Conciliación</p>
           <p className="text-sm text-ink-500">
             Botón “Verificar en MP” por fila: compara el monto acreditado con el total. No modifica nada.
@@ -87,9 +86,9 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
           name="q"
           defaultValue={q}
           placeholder="Código, email o cliente…"
-          className="min-w-52 flex-1 rounded-xl border border-ink-200 bg-surface px-3 py-2 text-sm"
+          className="min-w-52 flex-1 border border-ink-200 bg-surface px-3 py-2 text-sm"
         />
-        <select name="flag" defaultValue={flag} className="rounded-xl border border-ink-200 bg-surface px-3 py-2 text-sm">
+        <select name="flag" defaultValue={flag} className="border border-ink-200 bg-surface px-3 py-2 text-sm">
           <option value="">Todos</option>
           {FLAGS.map((f) => (
             <option key={f} value={f}>
@@ -97,17 +96,17 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
             </option>
           ))}
         </select>
-        <button type="submit" className="rounded-xl bg-ink-900 px-4 py-2 text-sm font-bold text-white">
+        <button type="submit" className="bg-ink-900 px-4 py-2 text-sm font-bold text-white">
           Filtrar
         </button>
       </form>
 
       {result.items.length === 0 ? (
-        <p className="card-surface p-6 text-sm text-ink-500">
+        <p className="admin-table p-6 text-sm text-ink-500">
           No hay pagos con Mercado Pago para este filtro. Los pedidos con transferencia o efectivo no aparecen acá.
         </p>
       ) : (
-        <div className="card-surface overflow-x-auto">
+        <div className="admin-table overflow-x-auto">
           <table className="w-full min-w-[760px] text-left text-sm">
             <thead>
               <tr className="border-b border-ink-200 text-xs text-ink-500">
@@ -134,7 +133,7 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
                   </td>
                   <td className="px-3 py-2 font-black">{money(row.total)}</td>
                   <td className="px-3 py-2">
-                    <Pill tone={row.status === "pendiente_pago" ? "amber" : "brand"}>
+                    <Pill solid tone={row.status === "pendiente_pago" ? "amber" : "brand"}>
                       {statusLabel(row.status)}
                     </Pill>
                   </td>
@@ -168,7 +167,7 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
       {result.pages > 1 && (
         <div className="flex items-center gap-2 text-sm">
           {page > 1 && (
-            <Link className="rounded-lg border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page - 1) })}>
+            <Link className="border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page - 1) })}>
               ← Anterior
             </Link>
           )}
@@ -176,7 +175,7 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
             Página {result.page} de {result.pages}
           </span>
           {page < result.pages && (
-            <Link className="rounded-lg border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page + 1) })}>
+            <Link className="border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page + 1) })}>
               Siguiente →
             </Link>
           )}

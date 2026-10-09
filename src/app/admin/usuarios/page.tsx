@@ -2,9 +2,9 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-import { AdminLogoutButton } from "@/components/admin-logout-button";
 import { Pill } from "@/components/ui";
-import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { ADMIN_COOKIE } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { listAdminUsers } from "@/lib/admin-users";
 import { money } from "@/lib/format";
 
@@ -40,20 +40,19 @@ export default async function AdminUsersPage({ searchParams }: { searchParams: S
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-2xl font-black text-ink-900">Usuarios</h1>
-        <AdminLogoutButton />
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3">
-        <div className="card-surface p-4">
+        <div className="admin-card p-4">
           <p className="text-xs font-bold text-ink-500">Cuentas con Google</p>
           <p className="text-2xl font-black text-ink-900">{result.summary.total}</p>
         </div>
-        <div className="card-surface p-4">
+        <div className="admin-card p-4">
           <p className="text-xs font-bold text-ink-500">Con compras</p>
           <p className="text-2xl font-black text-ink-900">{result.summary.withOrders}</p>
           <p className="text-sm text-ink-500">Incluye pedidos de invitado con el mismo email</p>
         </div>
-        <div className="card-surface p-4">
+        <div className="admin-card p-4">
           <p className="text-xs font-bold text-ink-500">Bloqueados</p>
           <p className="text-2xl font-black text-ink-900">{result.summary.disabled}</p>
         </div>
@@ -64,17 +63,17 @@ export default async function AdminUsersPage({ searchParams }: { searchParams: S
           name="q"
           defaultValue={q}
           placeholder="Email o nombre…"
-          className="min-w-52 flex-1 rounded-xl border border-ink-200 bg-surface px-3 py-2 text-sm"
+          className="min-w-52 flex-1 border border-ink-200 bg-surface px-3 py-2 text-sm"
         />
-        <button type="submit" className="rounded-xl bg-ink-900 px-4 py-2 text-sm font-bold text-white">
+        <button type="submit" className="bg-ink-900 px-4 py-2 text-sm font-bold text-white">
           Buscar
         </button>
       </form>
 
       {result.items.length === 0 ? (
-        <p className="card-surface p-6 text-sm text-ink-500">Nadie coincide con esa búsqueda.</p>
+        <p className="admin-table p-6 text-sm text-ink-500">Nadie coincide con esa búsqueda.</p>
       ) : (
-        <div className="card-surface overflow-x-auto">
+        <div className="admin-table overflow-x-auto">
           <table className="w-full min-w-[720px] text-left text-sm">
             <thead>
               <tr className="border-b border-ink-200 text-xs text-ink-500">
@@ -98,7 +97,7 @@ export default async function AdminUsersPage({ searchParams }: { searchParams: S
                   <td className="px-3 py-2 font-black">{money(u.totalSpent)}</td>
                   <td className="px-3 py-2">{u.activeSessions}</td>
                   <td className="px-3 py-2">
-                    {u.isDisabled ? <Pill tone="amber">Bloqueado</Pill> : <span className="text-xs text-ink-500">Activo</span>}
+                    {u.isDisabled ? <Pill solid tone="amber">Bloqueado</Pill> : <span className="text-xs text-ink-500">Activo</span>}
                   </td>
                 </tr>
               ))}
@@ -110,7 +109,7 @@ export default async function AdminUsersPage({ searchParams }: { searchParams: S
       {result.pages > 1 && (
         <div className="flex items-center gap-2 text-sm">
           {page > 1 && (
-            <Link className="rounded-lg border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page - 1) })}>
+            <Link className="border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page - 1) })}>
               ← Anterior
             </Link>
           )}
@@ -118,7 +117,7 @@ export default async function AdminUsersPage({ searchParams }: { searchParams: S
             Página {result.page} de {result.pages}
           </span>
           {page < result.pages && (
-            <Link className="rounded-lg border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page + 1) })}>
+            <Link className="border border-ink-200 px-3 py-1 font-bold" href={withParams(base, { page: String(page + 1) })}>
               Siguiente →
             </Link>
           )}

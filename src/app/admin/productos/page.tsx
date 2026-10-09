@@ -2,8 +2,10 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
+import { AdminProductFilters } from "@/components/admin-product-filters";
 import { AdminProductRow } from "@/components/admin-product-row";
-import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { ADMIN_COOKIE } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { listAdminProducts, listProductCategories } from "@/lib/admin-products";
 
 export const dynamic = "force-dynamic";
@@ -35,28 +37,29 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
   const first = (v: string | string[] | undefined): string => (Array.isArray(v) ? (v[0] ?? "") : (v ?? ""));
   const q = first(sp.q).trim();
   const category = first(sp.categoria).trim();
-  const sinStock = flag(sp.sinStock);
+  // `?sinStock=1` sigue funcionando (lo usa el Panel) y equivale a `?stock=sin`.
+  const stockParam = first(sp.stock);
+  const stock: "" | "con" | "sin" = stockParam === "con" || stockParam === "sin" ? stockParam : flag(sp.sinStock) ? "sin" : "";
+  const sortParam = first(sp.orden);
+  const sort: "" | "stock-desc" | "stock-asc" = sortParam === "stock-desc" || sortParam === "stock-asc" ? sortParam : "";
   const oferta = flag(sp.oferta);
   const destacados = flag(sp.destacados);
   const page = Math.max(1, Number(first(sp.page)) || 1);
 
   const [{ items, total, pages }, categories] = await Promise.all([
-    listAdminProducts({ q, category, sinStock, oferta, destacados, page, perPage: 20 }),
+    listAdminProducts({ q, category, sinStock: false, stock, sort, oferta, destacados, page, perPage: 20 }),
     listProductCategories(),
   ]);
   const base = {
     ...(q ? { q } : {}),
     ...(category ? { categoria: category } : {}),
-    ...(sinStock ? { sinStock: "1" } : {}),
+    ...(stock ? { stock } : {}),
+    ...(sort ? { orden: sort } : {}),
     ...(oferta ? { oferta: "1" } : {}),
     ...(destacados ? { destacados: "1" } : {}),
   };
 
-  const toggles = [
-    { id: "sinStock", label: "Sin stock", active: sinStock },
-    { id: "oferta", label: "En oferta", active: oferta },
-    { id: "destacados", label: "Destacados", active: destacados },
-  ];
+
 
   return (
     <div className="space-y-6">
@@ -65,88 +68,53 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Admin · Catálogo</p>
           <h1 className="mt-1 text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">Productos</h1>
           <p className="mt-1 text-sm text-ink-500">
-            {total} productos. Editá precio, stock, etiqueta y destacados. Las fotos y el alta masiva siguen en el
-            WordPress original y la migración por script.
+            {total} productos. Cambiá precio y stock desde la lista, o tocá Editar para la ficha completa.
           </p>
         </div>
-        <Link
-          href="/admin/productos/nuevo"
-          className="rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800"
-        >
-          ＋ Nuevo
-        </Link>
-      </div>
-
-      <form action="/admin/productos" method="get" className="flex flex-wrap gap-2">
-        {category ? <input type="hidden" name="categoria" value={category} /> : null}
-        {sinStock ? <input type="hidden" name="sinStock" value="1" /> : null}
-        {oferta ? <input type="hidden" name="oferta" value="1" /> : null}
-        {destacados ? <input type="hidden" name="destacados" value="1" /> : null}
-        <input
-          name="q"
-          defaultValue={q}
-          placeholder="Buscar por nombre, SKU o marca…"
-          className="min-w-0 flex-1 rounded-xl border border-ink-200 bg-surface px-3 py-2.5 text-sm text-ink-900 outline-none focus:border-brand-400"
-        />
-        <select
-          name="categoria"
-          defaultValue={category}
-          className="rounded-xl border border-ink-200 bg-surface px-3 py-2.5 text-sm text-ink-900 outline-none focus:border-brand-400"
-        >
-          <option value="">Todas las categorías</option>
-          {categories.map((c) => (
-            <option key={c.slug} value={c.slug}>
-              {c.name}
-            </option>
-          ))}
-        </select>
-        <button type="submit" className="rounded-xl bg-ink-900 px-4 py-2.5 text-sm font-bold text-white">
-          Buscar
-        </button>
-        {q || category || sinStock || oferta || destacados ? (
-          <Link href="/admin/productos" className="rounded-xl border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-600">
-            Limpiar
-          </Link>
-        ) : null}
-      </form>
-
-      <div className="flex flex-wrap gap-2">
-        {toggles.map((t) => (
+        <div className="flex gap-2">
           <Link
-            key={t.id}
-            href={withParams(base, { [t.id]: t.active ? null : "1", page: null })}
-            className={`rounded-full border px-4 py-1.5 text-xs font-bold transition ${
-              t.active
-                ? "border-brand-700 bg-brand-700 text-white"
-                : "border-ink-200 bg-surface text-ink-600 hover:border-brand-300"
-            }`}
+            href="/admin/productos/archivados"
+            className="border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-700 transition hover:border-brand-300"
           >
-            {t.label}
+            Archivados
           </Link>
-        ))}
+          <Link
+            href="/admin/productos/nuevo"
+            className="bg-brand-700 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800"
+          >
+            ＋ Nuevo
+          </Link>
+        </div>
       </div>
 
-      <div className="card-surface overflow-hidden">
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[860px] text-left text-sm">
-            <thead>
-              <tr className="border-b border-ink-100 text-xs uppercase tracking-wide text-ink-500">
-                <th className="px-4 py-3">Producto</th>
-                <th className="px-4 py-3">Precio</th>
-                <th className="px-4 py-3">Stock</th>
-                <th className="px-4 py-3">Etiqueta</th>
-                <th className="px-4 py-3 text-right">Acción</th>
-              </tr>
-            </thead>
-            <tbody>
-              {items.length === 0 ? (
-                <tr><td colSpan={5} className="px-4 py-8 text-center text-sm text-ink-500">Sin productos para este filtro.</td></tr>
-              ) : (
-                items.map((p) => <AdminProductRow key={p.slug} product={p} />)
-              )}
-            </tbody>
-          </table>
+      <AdminProductFilters
+        q={q}
+        category={category}
+        categories={categories}
+        stock={stock}
+        sort={sort}
+        oferta={oferta}
+        destacados={destacados}
+      />
+
+      <div className="admin-table" role="table" aria-label="Productos">
+        <div
+          role="row"
+          className="hidden border-b border-ink-100 px-4 py-3 text-xs font-bold uppercase tracking-wide text-ink-500 lg:grid lg:grid-cols-[minmax(0,1fr)_8.5rem_6.5rem_8.5rem_6rem] lg:gap-4"
+        >
+          <span role="columnheader">Producto</span>
+          <span role="columnheader">Precio</span>
+          <span role="columnheader" aria-sort={sort === "stock-desc" ? "descending" : sort === "stock-asc" ? "ascending" : "none"}>
+            Stock
+          </span>
+          <span role="columnheader">Etiqueta</span>
+          <span role="columnheader" className="text-right">Acción</span>
         </div>
+        {items.length === 0 ? (
+          <p className="px-4 py-8 text-center text-sm text-ink-500">Sin productos para este filtro.</p>
+        ) : (
+          items.map((p) => <AdminProductRow key={p.slug} product={p} />)
+        )}
       </div>
 
       <div className="flex items-center justify-between gap-2">
@@ -155,7 +123,7 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
           {page > 1 ? (
             <Link
               href={withParams({ ...base, page: String(page - 1) }, {})}
-              className="rounded-xl border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
+              className="border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
             >
               ← Anterior
             </Link>
@@ -163,7 +131,7 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
           {page < pages ? (
             <Link
               href={withParams({ ...base, page: String(page + 1) }, {})}
-              className="rounded-xl border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
+              className="border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
             >
               Siguiente →
             </Link>

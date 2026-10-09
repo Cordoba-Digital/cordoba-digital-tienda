@@ -2,10 +2,11 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 
-import { AdminLogoutButton } from "@/components/admin-logout-button";
+import { AdminUserDeleteButton } from "@/components/admin-user-delete-button";
 import { AdminUserDisableButton } from "@/components/admin-user-disable-button";
 import { Pill } from "@/components/ui";
-import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { ADMIN_COOKIE } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { getAdminUserDetail } from "@/lib/admin-users";
 import { money, formatDateTime } from "@/lib/format";
 import { statusLabel } from "@/lib/pricing";
@@ -33,24 +34,23 @@ export default async function AdminUserDetailPage({ params }: { params: Promise<
             ← Usuarios
           </Link>
           <h1 className="text-2xl font-black text-ink-900">{user.name || user.email}</h1>
-          {user.isDisabled && <Pill tone="amber">Bloqueado</Pill>}
+          {user.isDisabled && <Pill solid tone="amber">Bloqueado</Pill>}
         </div>
-        <AdminLogoutButton />
       </div>
 
       <div className="grid gap-3 md:grid-cols-3">
-        <div className="card-surface space-y-1 p-4 text-sm">
+        <div className="admin-card space-y-1 p-4 text-sm">
           <p className="text-xs font-bold text-ink-500">Cuenta</p>
           <p className="font-bold text-ink-900">{user.email}</p>
           {user.name && <p className="text-ink-500">{user.name}</p>}
           <p className="text-xs text-ink-500">Alta: {formatDateTime(user.createdAt)}</p>
         </div>
-        <div className="card-surface space-y-1 p-4 text-sm">
+        <div className="admin-card space-y-1 p-4 text-sm">
           <p className="text-xs font-bold text-ink-500">Compras</p>
           <p className="text-2xl font-black text-ink-900">{user.orderCount} pedidos</p>
           <p className="font-bold text-ink-500">{money(user.totalSpent)} en total</p>
         </div>
-        <div className="card-surface space-y-2 p-4 text-sm">
+        <div className="admin-card space-y-2 p-4 text-sm">
           <p className="text-xs font-bold text-ink-500">Sesiones activas: {user.activeSessions}</p>
           {user.sessions.length === 0 ? (
             <p className="text-ink-500">Sin sesiones vigentes.</p>
@@ -63,15 +63,18 @@ export default async function AdminUserDetailPage({ params }: { params: Promise<
               ))}
             </ul>
           )}
-          <AdminUserDisableButton id={user.id} disabled={user.isDisabled} />
+          <div className="flex flex-wrap gap-2">
+            <AdminUserDisableButton id={user.id} disabled={user.isDisabled} />
+            <AdminUserDeleteButton id={user.id} label={user.name || user.email} />
+          </div>
         </div>
       </div>
 
       <h2 className="text-lg font-black text-ink-900">Historial de pedidos</h2>
       {orders.length === 0 ? (
-        <p className="card-surface p-6 text-sm text-ink-500">Todavía no compró nada con este email.</p>
+        <p className="admin-card p-6 text-sm text-ink-500">Todavía no compró nada con este email.</p>
       ) : (
-        <div className="card-surface overflow-x-auto">
+        <div className="admin-table overflow-x-auto">
           <table className="w-full min-w-[640px] text-left text-sm">
             <thead>
               <tr className="border-b border-ink-200 text-xs text-ink-500">
@@ -92,7 +95,7 @@ export default async function AdminUserDetailPage({ params }: { params: Promise<
                   </td>
                   <td className="px-3 py-2 text-xs text-ink-500">{formatDateTime(o.createdAt)}</td>
                   <td className="px-3 py-2">
-                    <Pill tone={o.status === "pendiente_pago" ? "amber" : "brand"}>{statusLabel(o.status)}</Pill>
+                    <Pill solid tone={o.status === "pendiente_pago" ? "amber" : "brand"}>{statusLabel(o.status)}</Pill>
                   </td>
                   <td className="px-3 py-2">{o.itemsCount}</td>
                   <td className="px-3 py-2 font-black">{money(o.total)}</td>

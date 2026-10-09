@@ -3,6 +3,7 @@ import { eq, inArray, sql } from "drizzle-orm";
 import { db } from "@/db";
 import { orderItems, orders, products, type ShippingAddress } from "@/db/schema";
 import { computeTotals, MAX_QTY_PER_ITEM, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
+import { ensureOrderStockSchema, reserveOrderStock } from "@/lib/order-status";
 import { getCoupon } from "@/lib/queries";
 import { resolvePaymentMethod } from "@/lib/checkout-payment";
 import { validateDelivery, validatePersonalData } from "@/lib/checkout-validation";
@@ -192,6 +193,7 @@ export async function POST(request: Request) {
     })
     .returning({ id: orders.id, code: orders.code });
 
+  await ensureOrderStockSchema();
   await db.insert(orderItems).values(
     validated.map((item) => ({
       orderId: created.id,
@@ -203,23 +205,9 @@ export async function POST(request: Request) {
     })),
   );
 
-  await Promise.all(
-    validated.map((item) =>
-      db
-        .update(products)
-        .set({
-          // OJO: el catálogo migrado guarda `stock` como disponibilidad
-          // (1 = hay stock, 0 = no hay) porque la API pública de WooCommerce no
-          // expone cantidades. Si descontáramos siempre, la primera venta dejaría
-          // el producto agotado para siempre. Solo bajamos el stock cuando
-          // representa una cantidad real (> 1), que es lo que tendremos cuando
-          // el cliente pase las claves de WooCommerce.
-          stock: sql`case when ${products.stock} > 1 then greatest(${products.stock} - ${item.quantity}, 0) else ${products.stock} end`,
-          soldCount: sql`${products.soldCount} + ${item.quantity}`,
-        })
-        .where(eq(products.slug, item.slug)),
-    ),
-  );
+  // Descuenta stock solo donde es una cantidad real y anota cuánto, para
+  // devolverlo si el pedido se cancela o vence sin pago.
+  await db.transaction((tx) => reserveOrderStock(tx, created.id));
 
   return Response.json({ ok: true, code: created.code, total: totals.total });
 }

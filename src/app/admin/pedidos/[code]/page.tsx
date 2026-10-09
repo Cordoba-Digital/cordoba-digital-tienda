@@ -5,7 +5,8 @@ import { notFound, redirect } from "next/navigation";
 import { AdminOrderManageForm } from "@/components/admin-order-manage-form";
 import { OrderConfirmation, type OrderSummary } from "@/components/order-confirmation";
 import { Pill } from "@/components/ui";
-import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { ADMIN_COOKIE } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { getAdminOrderDetail } from "@/lib/admin-orders";
 import { formatDateTime } from "@/lib/format";
 import { statusLabel } from "@/lib/pricing";
@@ -57,10 +58,10 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <Link href="/admin/pedidos" className="text-sm font-bold text-brand-700 hover:underline">← Volver a pedidos</Link>
-        <Pill tone="neutral">{statusLabel(order.status)}</Pill>
+        <Pill solid tone="neutral">{statusLabel(order.status)}</Pill>
       </div>
 
-      <div className="card-surface space-y-4 p-5">
+      <div className="admin-card space-y-4 p-5">
         <h2 className="text-lg font-extrabold text-ink-900">Gestión interna</h2>
         <AdminOrderManageForm code={order.code} currentStatus={order.status} trackingCode={order.trackingCode ?? ""} />
         <dl className="grid gap-2 text-xs text-ink-500 md:grid-cols-2">

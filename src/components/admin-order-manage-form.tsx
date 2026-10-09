@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import { ORDER_STATUS_FLOW } from "@/lib/pricing";
+import { ADMIN_ORDER_STATUSES } from "@/lib/pricing";
 
 export function AdminOrderManageForm({ code, currentStatus, trackingCode }: { code: string; currentStatus: string; trackingCode: string }) {
   const router = useRouter();
@@ -49,7 +49,7 @@ export function AdminOrderManageForm({ code, currentStatus, trackingCode }: { co
           onChange={(e) => setNextStatus(e.target.value)}
           className="mt-1 w-full rounded-xl border border-ink-200 bg-surface px-3 py-2.5 text-sm text-ink-900 outline-none focus:border-brand-400"
         >
-          {ORDER_STATUS_FLOW.map((s) => (
+          {ADMIN_ORDER_STATUSES.map((s) => (
             <option key={s.id} value={s.id}>{s.label} ({s.id})</option>
           ))}
         </select>
@@ -76,12 +76,12 @@ export function AdminOrderManageForm({ code, currentStatus, trackingCode }: { co
         <button
           type="submit"
           disabled={saving}
-          className="rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800 disabled:opacity-50"
+          className="rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800 disabled:cursor-not-allowed"
         >
           {saving ? "Guardando…" : "Guardar cambios"}
         </button>
         {saved ? <p className="text-xs font-bold text-emerald-700">{saved}</p> : null}
-        {error ? <p role="alert" className="text-xs font-semibold text-rose-600">{error}</p> : null}
+        {error ? <p role="alert" className="text-xs font-semibold text-red-600">{error}</p> : null}
       </div>
     </form>
   );

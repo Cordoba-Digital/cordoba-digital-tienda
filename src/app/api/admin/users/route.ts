@@ -1,4 +1,5 @@
-import { sessionFromCookieHeader, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { sessionFromCookieHeader } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { listAdminUsers } from "@/lib/admin-users";
 
 export const dynamic = "force-dynamic";

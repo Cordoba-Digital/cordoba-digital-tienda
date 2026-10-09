@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { Pill } from "@/components/ui";
+import { isAllowedAdminEmail } from "@/lib/admin-access";
 import { getCurrentCustomer } from "@/lib/customer-auth";
 import { money } from "@/lib/format";
 import { getOrdersByEmail } from "@/lib/queries";
@@ -20,7 +21,7 @@ export default async function MiCuentaPage() {
   if (!customer) {
     redirect("/ingresar?next=/mi-cuenta");
   }
-  const orders = await getOrdersByEmail(customer.email);
+  const [orders, isAdmin] = await Promise.all([getOrdersByEmail(customer.email), isAllowedAdminEmail(customer.email)]);
 
   return (
     <div className="container-xl space-y-6 py-8">
@@ -40,14 +41,24 @@ export default async function MiCuentaPage() {
             <p className="text-xs text-ink-500">{customer.email}</p>
           </div>
         </div>
-        <form action="/api/auth/logout" method="post">
-          <button
-            type="submit"
-            className="rounded-xl border border-ink-200 px-4 py-2 text-xs font-bold text-ink-600 transition hover:border-rose-300 hover:text-rose-600"
-          >
-            Salir
-          </button>
-        </form>
+        <div className="flex items-center gap-2">
+          {isAdmin ? (
+            <Link
+              href="/admin"
+              className="rounded-xl bg-ink-900 px-4 py-2 text-xs font-bold text-white transition hover:bg-ink-700"
+            >
+              Panel admin
+            </Link>
+          ) : null}
+          <form action="/api/auth/logout" method="post">
+            <button
+              type="submit"
+              className="rounded-xl border border-ink-200 px-4 py-2 text-xs font-bold text-ink-600 transition hover:border-rose-300 hover:text-rose-600"
+            >
+              Salir
+            </button>
+          </form>
+        </div>
       </div>
 
       <section>

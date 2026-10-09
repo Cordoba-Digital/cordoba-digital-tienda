@@ -1,4 +1,6 @@
-import { sessionFromCookieHeader, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { sessionFromCookieHeader } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
+import { actorFromRequest, logAdminAction } from "@/lib/admin-audit";
 import { createAdminProduct, listAdminProducts, listProductCategories, type AdminProductCreateInput } from "@/lib/admin-products";
 
 export const dynamic = "force-dynamic";
@@ -40,5 +42,11 @@ export async function POST(request: Request) {
   if (!result.ok) {
     return Response.json({ ok: false, error: result.error }, { status: result.status });
   }
+  await logAdminAction(await actorFromRequest(request), {
+    action: "alta",
+    entityType: "producto",
+    entityId: result.slug,
+    summary: `Creó ${typeof body.name === "string" ? body.name.trim() : result.slug}`,
+  });
   return Response.json({ ok: true, slug: result.slug });
 }

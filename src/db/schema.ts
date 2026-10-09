@@ -267,6 +267,12 @@ export const orderItems = pgTable("order_items", {
   image: text("image").notNull().default(""),
   unitPrice: integer("unit_price").notNull(),
   quantity: integer("quantity").notNull(),
+  /**
+   * Unidades que este ítem descontó del stock al comprarse (0 cuando el stock
+   * era solo disponibilidad 1/0). Es lo que se devuelve si el pedido se cancela.
+   * La columna la crea `ensureOrderStockSchema` al primer uso.
+   */
+  stockReserved: integer("stock_reserved").notNull().default(0),
 });
 
 export const subscribers = pgTable("subscribers", {

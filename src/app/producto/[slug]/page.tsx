@@ -21,6 +21,7 @@ import {
   getReviewsForProduct,
   getVerifiedRatingStats,
 } from "@/lib/queries";
+import { url as siteUrl } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
 
@@ -180,7 +181,8 @@ export default async function ProductPage({ params }: { params: Params }) {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
-    image: product.images,
+    // Las fotos subidas desde el admin se guardan con ruta relativa.
+    image: product.images.map((img) => (img.startsWith("/") ? siteUrl(img) : img)),
     description: product.shortDescription,
     sku: product.sku,
     brand: { "@type": "Brand", name: product.brand },

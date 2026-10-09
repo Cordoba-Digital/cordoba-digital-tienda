@@ -126,7 +126,7 @@ export function ProductGallery({
           <ProductImg
             src={list[active]}
             srcSet={srcSetOf(active)}
-            alt={name}
+            alt={active === 0 ? name : `${name} - foto ${active + 1}`}
             sizes="(max-width: 1024px) 100vw, 700px"
             width={800}
             height={800}

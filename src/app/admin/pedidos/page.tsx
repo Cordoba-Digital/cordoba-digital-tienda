@@ -2,12 +2,13 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-import { AdminLogoutButton } from "@/components/admin-logout-button";
 import { Pill } from "@/components/ui";
-import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { ADMIN_COOKIE } from "@/lib/admin-auth";
+import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { listAdminOrders } from "@/lib/admin-orders";
 import { money } from "@/lib/format";
-import { ORDER_STATUS_FLOW, statusLabel } from "@/lib/pricing";
+import { expireStalePendingOrders } from "@/lib/order-status";
+import { ADMIN_ORDER_STATUSES, statusLabel } from "@/lib/pricing";
 
 export const dynamic = "force-dynamic";
 
@@ -50,6 +51,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
   const status = first(sp.status).trim();
   const page = Math.max(1, Number(first(sp.page)) || 1);
 
+  await expireStalePendingOrders();
   const { orders, total, pages, stats } = await listAdminOrders({ q, status, page, perPage: 20 });
   const base = { ...(q ? { q } : {}), ...(status ? { status } : {}) };
 
@@ -61,15 +63,14 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
           <h1 className="mt-1 text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">Pedidos</h1>
           <p className="mt-1 text-sm text-ink-500">{total} pedidos en total. Buscá por código, cliente o email.</p>
         </div>
-        <AdminLogoutButton />
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-        {ORDER_STATUS_FLOW.map((s) => (
+      <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        {ADMIN_ORDER_STATUSES.map((s) => (
           <Link
             key={s.id}
             href={withParams(base, { status: status === s.id ? null : s.id, page: null })}
-            className={`card-surface p-4 transition ${status === s.id ? "ring-2 ring-brand-500" : ""}`}
+            className={`admin-card p-4 transition ${status === s.id ? "ring-2 ring-brand-500" : ""}`}
           >
             <p className="text-xs font-bold text-ink-500">{s.label}</p>
             <p className="mt-1 text-2xl font-black text-ink-900">{stats[s.id] ?? 0}</p>
@@ -83,19 +84,19 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
           name="q"
           defaultValue={q}
           placeholder="Buscar por código, nombre o email…"
-          className="min-w-0 flex-1 rounded-xl border border-ink-200 bg-surface px-3 py-2.5 text-sm text-ink-900 outline-none focus:border-brand-400"
+          className="min-w-0 flex-1 border border-ink-200 bg-surface px-3 py-2.5 text-sm text-ink-900 outline-none focus:border-brand-400"
         />
-        <button type="submit" className="rounded-xl bg-ink-900 px-4 py-2.5 text-sm font-bold text-white">
+        <button type="submit" className="bg-ink-900 px-4 py-2.5 text-sm font-bold text-white">
           Buscar
         </button>
         {q || status ? (
-          <Link href="/admin/pedidos" className="rounded-xl border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-600">
+          <Link href="/admin/pedidos" className="border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-600">
             Limpiar
           </Link>
         ) : null}
       </form>
 
-      <div className="card-surface overflow-hidden">
+      <div className="admin-table overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[760px] text-left text-sm">
             <thead>
@@ -129,7 +130,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
                     </td>
                     <td className="px-4 py-3 font-bold text-ink-900">{money(o.total)}</td>
                     <td className="px-4 py-3">
-                      <Pill tone={statusTone(o.status)}>{statusLabel(o.status)}</Pill>
+                      <Pill solid tone={statusTone(o.status)}>{statusLabel(o.status)}</Pill>
                     </td>
                   </tr>
                 ))
@@ -145,7 +146,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
           {page > 1 ? (
             <Link
               href={withParams({ ...base, page: String(page - 1) }, {})}
-              className="rounded-xl border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
+              className="border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
             >
               ← Anterior
             </Link>
@@ -153,7 +154,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
           {page < pages ? (
             <Link
               href={withParams({ ...base, page: String(page + 1) }, {})}
-              className="rounded-xl border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
+              className="border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
             >
               Siguiente →
             </Link>

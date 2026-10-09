@@ -34,10 +34,13 @@ export function Pill({
   children,
   tone = "neutral",
   className = "",
+  solid = false,
 }: {
   children: ReactNode;
   tone?: "neutral" | "brand" | "brandSolid" | "success" | "danger" | "amber" | "dark";
   className?: string;
+  /** Colores plenos en vez de fondos claros (lo usa el panel admin). */
+  solid?: boolean;
 }) {
   const tones: Record<string, string> = {
     neutral: "bg-ink-100 text-ink-700",
@@ -49,9 +52,16 @@ export function Pill({
     brandSolid: "bg-brand-700 text-white",
     dark: "bg-deep text-white",
   };
+  const solidTones: Record<string, string> = {
+    neutral: "bg-ink-700 text-white",
+    brand: "bg-brand-700 text-white",
+    success: "bg-emerald-600 text-white",
+    danger: "bg-red-600 text-white",
+    amber: "bg-amber-500 text-ink-900",
+  };
   return (
     <span
-      className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-semibold tracking-wide ${tones[tone]} ${className}`}
+      className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-semibold tracking-wide ${(solid && solidTones[tone]) || tones[tone]} ${className}`}
     >
       {children}
     </span>
