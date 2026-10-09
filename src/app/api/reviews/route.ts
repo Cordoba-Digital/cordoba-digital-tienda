@@ -15,7 +15,7 @@ const PAID_STATUSES = new Set(["pago_confirmado", "preparando", "enviado", "entr
 
 /**
  * Crea `order_id` y sus índices si faltan, así el despliegue no depende de
- * correr `db:push` a mano. Es idempotente y corre una vez por instancia; las
+ * correr las migraciones a mano. Es idempotente y corre una vez por instancia; las
  * filas viejas quedan con `order_id` null y no chocan con el índice único.
  */
 let schemaReady: Promise<void> | null = null;
