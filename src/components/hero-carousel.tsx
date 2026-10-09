@@ -299,14 +299,14 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
         })}
       </div>
 
-      {/* Remate del hero: el fondo oscuro se funde en el crema de la página
+      {/* Remate del hero: un degradé leve que acerca el fondo oscuro al crema de la página
           (`ink-50`, el fondo del body) para que el cintillo de confianza que
           pisa el hero no corte en seco. Va detrás del contenido. */}
-      <div aria-hidden className="pointer-events-none h-24 bg-gradient-to-b from-transparent via-ink-50/25 to-ink-50 sm:h-32" />
+      <div aria-hidden className="pointer-events-none h-16 bg-gradient-to-b from-transparent via-ink-50/10 to-ink-50/80 sm:h-20" />
 
       {count > 1 ? (
         <>
-          {/* Flechas a los costados, sin relleno: solo el contorno y el ícono
+          {/* Flechas a los costados, sin relleno ni contorno: solo el ícono
               con sombra, para que se lean sobre el fondo oscuro y también si
               caen sobre la tarjeta blanca. En móvil se usa swipe. Sin puntos
               de avance: el usuario los pidió fuera. */}
@@ -314,17 +314,17 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
             type="button"
             onClick={() => go(-1)}
             aria-label="Diapositiva anterior"
-            className="group absolute left-3 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-transparent text-white transition hover:border-white/60 hover:bg-black/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid xl:left-6"
+            className="group absolute left-3 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-transparent text-white/85 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid xl:left-6"
           >
-            <ChevronLeft size={22} strokeWidth={2.2} aria-hidden className="drop-shadow-[0_1px_3px_rgba(0,0,0,0.55)] transition-transform group-hover:-translate-x-0.5" />
+            <ChevronLeft size={30} strokeWidth={2} aria-hidden className="drop-shadow-[0_1px_3px_rgba(0,0,0,0.55)] transition-transform group-hover:-translate-x-0.5" />
           </button>
           <button
             type="button"
             onClick={() => go(1)}
             aria-label="Diapositiva siguiente"
-            className="group absolute right-3 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-transparent text-white transition hover:border-white/60 hover:bg-black/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid xl:right-6"
+            className="group absolute right-3 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-transparent text-white/85 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid xl:right-6"
           >
-            <ChevronRight size={22} strokeWidth={2.2} aria-hidden className="drop-shadow-[0_1px_3px_rgba(0,0,0,0.55)] transition-transform group-hover:translate-x-0.5" />
+            <ChevronRight size={30} strokeWidth={2} aria-hidden className="drop-shadow-[0_1px_3px_rgba(0,0,0,0.55)] transition-transform group-hover:translate-x-0.5" />
           </button>
         </>
       ) : null}
