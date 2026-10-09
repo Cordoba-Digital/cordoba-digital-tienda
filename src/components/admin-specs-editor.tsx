@@ -4,7 +4,24 @@ import { useState } from "react";
 
 export type SpecRow = { label: string; value: string };
 
-const SUGGESTED = ["Pantalla", "Procesador", "Memoria RAM", "Almacenamiento", "Batería", "Cámara", "Sistema operativo", "Conectividad", "Potencia (W)", "Color"];
+// Las que ya están cargadas no se muestran.
+const SUGGESTED = [
+  "Procesador",
+  "Gráficos",
+  "Memoria RAM",
+  "Almacenamiento",
+  "Pantalla",
+  "Teclado",
+  "Cámara",
+  "Audio",
+  "Conectividad inalámbrica",
+  "Puertos",
+  "Batería",
+  "Peso",
+  "Sistema operativo",
+  "Potencia (W)",
+  "Color",
+];
 
 const cell =
   "w-full rounded-md border border-transparent bg-transparent px-2 py-1.5 text-sm text-ink-900 outline-none hover:border-ink-200 focus:border-ink-400 focus:bg-surface";
