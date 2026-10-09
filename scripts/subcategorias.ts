@@ -114,9 +114,30 @@ export const PLAN: PlanCategoria[] = [
       { slug: "realidad-virtual", name: "Realidad Virtual", match: /meta quest|\bvr\b/, min: 1 },
     ],
   },
-  // Monopatines: los 15 son monopatines; la diferencia es la marca y eso ya es
-  // un filtro. Electrónica, Mochilas, Juguetes, Servidores, Handy y Calefacción
-  // tienen 12 productos o menos: quedarían subcategorías de 1 o 2.
+  {
+    parent: "mochilas",
+    // No tiene mochilas: son valijas, maletines y bandoleras.
+    rename: "Valijas y Bolsos",
+    reglas: [
+      { slug: "valijas", name: "Valijas", match: /valija/ },
+      { slug: "bolsos-y-maletines", name: "Bolsos y Maletines", match: /maletin|bandolera|bolso|mochila/ },
+    ],
+  },
+  {
+    parent: "electronica",
+    reglas: [
+      {
+        slug: "enchufes-y-prolongadores",
+        name: "Enchufes y Prolongadores",
+        match: /prolongador|zapatilla|alargue|protector de tension|tomacorriente|enchufe/,
+      },
+      // Con 2 productos no se crea; `\bled\b` para no agarrar "Switch Oled".
+      { slug: "iluminacion", name: "Iluminación", match: /luz de emergencia|lampara|linterna|\bled\b/ },
+    ],
+  },
+  // Sin subcategorías: Monopatines (los 15 son monopatines), Juguetes (9 de 10
+  // son lanzadores X-Shot), Handy (los 7 son handies Baofeng), Servidores (sin
+  // productos) y Calefacción (uno solo). La diferencia es la marca o el modelo.
 ];
 
 /**
@@ -138,7 +159,7 @@ const MARCAS = [
   // Drones, monopatines, consolas, handies, muebles
   "DJI", "Xiaomi", "Segway", "Ninebot", "Daihatsu", "Sony", "Baofeng", "Kenwood", "Motorola",
   "Yaesu", "Icom", "Retevis", "Cougar", "Corsair", "Redragon", "Logitech", "Delos", "Xtrike Me",
-  "Netmak", "Level Up", "Meta", "Nintendo",
+  "Netmak", "Level Up", "Meta", "Nintendo", "Everlast", "ELF", "Boya", "Amazon", "X-Shot",
 ];
 
 /** Variantes del nombre que también cuentan como la marca. */

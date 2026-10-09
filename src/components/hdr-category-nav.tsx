@@ -255,7 +255,7 @@ function LeafDetail({ root }: { root: CategoryNavRoot }) {
  * mover el foco alcanza para que la derecha cambie.
  */
 function CatalogPanel({
-  categories,
+  categories: allCategories,
   panelId,
   triggerId,
 }: {
@@ -263,6 +263,8 @@ function CatalogPanel({
   panelId: string;
   triggerId: string;
 }) {
+  // Un área sin productos (hoy Servidores) solo lleva a una página vacía.
+  const categories = allCategories.filter((root) => root.count !== 0);
   const [selectedSlug, setSelectedSlug] = useState<string>(categories[0]?.slug ?? "");
   const listRef = useRef<HTMLUListElement>(null);
   const selected = categories.find((root) => root.slug === selectedSlug) ?? categories[0];

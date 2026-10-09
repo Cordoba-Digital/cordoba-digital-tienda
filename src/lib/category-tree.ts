@@ -110,17 +110,23 @@ export function ancestorsOf<T extends CategoryNode>(node: T, byId: Map<number, T
   return chain;
 }
 
-/** Suma `count` por categoría, incluyendo los productos de sus descendientes. */
+/**
+ * Productos distintos por categoría, incluyendo los de sus descendientes.
+ *
+ * Cuenta ids y no suma conteos: un producto suele estar a la vez en la
+ * categoría padre y en una subcategoría (el puente es N:N), y sumar lo contaba
+ * dos veces (Aires Acondicionados mostraba 68 con 34 productos).
+ */
 export function countByCategory(
   nodes: CategoryNode[],
-  directCounts: Map<number, number>,
+  productsByCategory: Map<number, number[]>,
 ): Map<number, number> {
   const out = new Map<number, number>();
-  const walk = (node: CategoryNode): number => {
-    let total = directCounts.get(node.id) ?? 0;
-    for (const child of node.children) total += walk(child);
-    out.set(node.id, total);
-    return total;
+  const walk = (node: CategoryNode): Set<number> => {
+    const ids = new Set(productsByCategory.get(node.id) ?? []);
+    for (const child of node.children) for (const id of walk(child)) ids.add(id);
+    out.set(node.id, ids.size);
+    return ids;
   };
   for (const root of nodes) walk(root);
   return out;
