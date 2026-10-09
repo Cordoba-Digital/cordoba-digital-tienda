@@ -225,7 +225,11 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               </svg>
               <span className="hidden sm:inline">Carrito</span>
               {hydrated && count > 0 ? (
-                <span className="grid h-5 min-w-5 place-items-center rounded-full bg-neon-400 px-1 text-[11px] font-black text-deep">
+                // La `key` reinicia el salto cada vez que cambia la cantidad.
+                <span
+                  key={count}
+                  className="grid h-5 min-w-5 animate-bump place-items-center rounded-full bg-neon-400 px-1 text-[11px] font-black text-deep motion-reduce:animate-none"
+                >
                   {count}
                 </span>
               ) : null}

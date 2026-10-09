@@ -52,15 +52,33 @@ export function QuantityStepper({
 }
 
 export function CartDrawer() {
-  const { cartOpen, closeCart, items, setQuantity, removeItem, subtotal, listSubtotal, count } = useStore();
-
-  if (!cartOpen) return null;
+  const { cartOpen, closeCart, items, setQuantity, removeItem, subtotal, listSubtotal, count, lastAdded } = useStore();
   const savings = Math.max(0, listSubtotal - subtotal);
 
+  // El panel queda siempre montado para poder animar la entrada y la salida.
+  // Cerrado: `invisible` (con la transición de `visibility` se oculta recién
+  // cuando termina el deslizamiento) e `inert` para que no reciba foco.
+  // Con movimiento reducido solo hay fundido, sin desplazamiento.
   return (
-    <div className="fixed inset-0 z-[60]">
-      <div className="absolute inset-0 bg-deep/50 backdrop-blur-[2px]" onClick={closeCart} />
-      <aside className="absolute right-0 top-0 flex h-full w-full max-w-[26rem] animate-pop flex-col bg-surface shadow-2xl">
+    <div
+      inert={!cartOpen}
+      aria-hidden={!cartOpen}
+      className={`fixed inset-0 z-[60] transition-[visibility] duration-300 ${cartOpen ? "visible" : "invisible"}`}
+    >
+      <div
+        className={`absolute inset-0 bg-deep/50 backdrop-blur-[2px] transition-opacity duration-300 ease-out ${
+          cartOpen ? "opacity-100" : "opacity-0"
+        }`}
+        onClick={closeCart}
+      />
+      <aside
+        role="dialog"
+        aria-modal="true"
+        aria-label="Tu carrito"
+        className={`absolute right-0 top-0 flex h-full w-full max-w-[26rem] flex-col bg-surface shadow-2xl transition-[transform,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:translate-x-0 motion-reduce:transition-opacity ${
+          cartOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+        }`}
+      >
         <header className="flex items-center justify-between border-b border-ink-100 px-5 py-4">
           <div>
             <h2 className="text-lg font-extrabold text-ink-900">Tu carrito</h2>
@@ -91,9 +109,16 @@ export function CartDrawer() {
           </div>
         ) : (
           <>
-            <div className="flex-1 space-y-3 overflow-y-auto overscroll-contain data-lenis-prevent px-5 py-4">
+            <div data-lenis-prevent className="flex-1 space-y-3 overflow-y-auto overscroll-contain px-5 py-4">
               {items.map((item) => (
-                <div key={item.slug} className="flex gap-3 rounded-xl border border-ink-100 p-3">
+                <div key={item.slug} className="relative flex gap-3 rounded-xl border border-ink-100 p-3">
+                  {lastAdded?.slug === item.slug ? (
+                    <span
+                      key={lastAdded.at}
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 animate-flash rounded-xl motion-reduce:animate-none"
+                    />
+                  ) : null}
                   <Link href={`/producto/${item.slug}`} onClick={closeCart} className="shrink-0">
                     <ProductImg
                       src={item.image}
