@@ -21,7 +21,7 @@
  */
 import "dotenv/config";
 
-import { eq, inArray, notInArray, sql } from "drizzle-orm";
+import { and, eq, inArray, isNotNull, notInArray, sql } from "drizzle-orm";
 
 import { categories, productCategories, products, type Spec } from "@/db/schema";
 import { buildGallery } from "./lib/wp-images";
@@ -485,7 +485,9 @@ type Db = typeof import("@/db").db;
 const productUpsertSet = () => ({
   sku: sql`excluded.sku`,
   name: sql`excluded.name`,
-  brand: sql`excluded.brand`,
+  // WooCommerce no tiene marca en la mayoría de los productos ("General"):
+  // no pisar la que completó `npm run subcategorias` desde el nombre.
+  brand: sql`CASE WHEN excluded.brand = ${FALLBACK_BRAND} THEN products.brand ELSE excluded.brand END`,
   categorySlug: sql`excluded.category_slug`,
   shortDescription: sql`excluded.short_description`,
   description: sql`excluded.description`,
@@ -676,7 +678,19 @@ async function writeBridge(
 
     try {
       // Borrar y reinsertar por lote: la pasada es idempotente aunque se corte.
-      await db.delete(productCategories).where(inArray(productCategories.productId, productIds));
+      // Solo los links a categorías de WooCommerce: las subcategorías propias
+      // (`wp_id` null, ver scripts/subcategorias.ts) no vienen del WP.
+      await db
+        .delete(productCategories)
+        .where(
+          and(
+            inArray(productCategories.productId, productIds),
+            inArray(
+              productCategories.categoryId,
+              db.select({ id: categories.id }).from(categories).where(isNotNull(categories.wpId)),
+            ),
+          ),
+        );
       await db
         .insert(productCategories)
         .values(toInsert)
@@ -728,8 +742,15 @@ async function prune(
     }
   }
 
-  const existingCategories = await db.select({ slug: categories.slug }).from(categories);
-  const deadCategorySlugs = existingCategories.map((r) => r.slug).filter((slug) => !keepCategories.has(slug));
+  const existingCategories = await db
+    .select({ slug: categories.slug, wpId: categories.wpId, parentId: categories.parentId })
+    .from(categories);
+  // Las subcategorías propias (sin `wp_id` y con padre) no están en el WP y
+  // no se borran; el seed demo eran categorías raíz.
+  const deadCategorySlugs = existingCategories
+    .filter((r) => !(r.wpId == null && r.parentId != null))
+    .map((r) => r.slug)
+    .filter((slug) => !keepCategories.has(slug));
 
   for (const group of chunk(deadCategorySlugs, PRUNE_CHUNK)) {
     try {
