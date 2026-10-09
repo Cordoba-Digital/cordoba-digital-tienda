@@ -114,9 +114,57 @@ export const PLAN: PlanCategoria[] = [
       { slug: "realidad-virtual", name: "Realidad Virtual", match: /meta quest|\bvr\b/, min: 1 },
     ],
   },
+  // Las de abajo tienen 12 productos o menos. Las reglas son a ciegas (sin los
+  // nombres reales todavía): el modo prueba dice cuáles llegan al mínimo.
+  {
+    parent: "mochilas",
+    reglas: [
+      {
+        slug: "mochilas-para-camaras",
+        name: "Mochilas para Cámaras y Drones",
+        match: /camara|foto|reflex|lowepro|dron|lente/,
+      },
+      { slug: "bolsos-y-fundas", name: "Bolsos, Maletines y Fundas", match: /^(bolso|maletin|funda|estuche|sobre|portanotebook)/ },
+      {
+        slug: "mochilas-para-notebook",
+        name: "Mochilas para Notebook",
+        match: /notebook|laptop|\d+([.,]\d)? ?("|″|pulg)|antirrobo|urbana|mochila/,
+      },
+    ],
+  },
+  {
+    parent: "electronica",
+    reglas: [
+      { slug: "calculadoras", name: "Calculadoras", match: /calculadora/ },
+      { slug: "pilas-y-baterias", name: "Pilas y Baterías", match: /^(pila|bateria|cargador de pilas)|pilas/ },
+      { slug: "iluminacion", name: "Iluminación", match: /lampara|linterna|luz|led|foco|velador/ },
+      { slug: "balanzas", name: "Balanzas", match: /balanza/ },
+      { slug: "relojes-y-despertadores", name: "Relojes y Despertadores", match: /reloj|despertador/ },
+      { slug: "cables-y-zapatillas", name: "Zapatillas y Alargues", match: /zapatilla|alargue|estabilizador|protector de tension/ },
+    ],
+  },
+  {
+    parent: "juguetes",
+    reglas: [
+      {
+        slug: "juguetes-a-control-remoto",
+        name: "A Control Remoto",
+        match: /control remoto|\brc\b|radiocontrol|auto|camion|helicoptero|dron/,
+      },
+      { slug: "juguetes-educativos-y-robots", name: "Educativos y Robots", match: /robot|educativ|stem|ciencia|kit|construccion|bloques|lego/ },
+      { slug: "juegos-de-mesa", name: "Juegos de Mesa y Rompecabezas", match: /juego de mesa|rompecabezas|puzzle|cartas/ },
+      { slug: "peluches-y-munecos", name: "Peluches y Muñecos", match: /peluche|muneco|muneca|figura/ },
+    ],
+  },
+  {
+    parent: "handy-handies",
+    reglas: [
+      { slug: "accesorios-para-handies", name: "Accesorios para Handies", match: /^(bateria|antena|cargador|auricular|microfono|clip|funda|cable)/ },
+      { slug: "handies", name: "Handies", match: /handy|handie|radio|walkie|baofeng|motorola|kenwood|retevis/ },
+    ],
+  },
   // Monopatines: los 15 son monopatines; la diferencia es la marca y eso ya es
-  // un filtro. Electrónica, Mochilas, Juguetes, Servidores, Handy y Calefacción
-  // tienen 12 productos o menos: quedarían subcategorías de 1 o 2.
+  // un filtro. Servidores no tiene productos y Calefacción tiene uno solo.
 ];
 
 /**
