@@ -19,7 +19,7 @@ type Props = {
 export function ProductPlaceholder({ className = "" }: { className?: string }) {
   return (
     <div
-      className={`grid h-full w-full place-items-center bg-gradient-to-br from-ink-50 to-ink-100 ${className}`}
+      className={`grid h-full w-full place-items-center bg-gradient-to-br from-white to-ink-100 ${className}`}
       aria-hidden
     >
       <svg viewBox="0 0 64 64" className="h-12 w-12 text-ink-300" fill="none">

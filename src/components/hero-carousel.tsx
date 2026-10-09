@@ -233,7 +233,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                         ) : null}
                       </div>
 
-                      <div className="mt-3 overflow-hidden rounded-2xl bg-ink-50">
+                      <div className="mt-3 overflow-hidden rounded-2xl bg-white">
                         <div className="aspect-[16/10] p-4">
                           <ProductImg
                             src={producto.image}
