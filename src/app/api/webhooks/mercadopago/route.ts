@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orders } from "@/db/schema";
@@ -56,11 +56,20 @@ async function handleEventAsync(notification: MpNotification): Promise<void> {
   if (!ref || payment.id == null) return;
 
   if (payment.status === "approved") {
-    await db
+    const updated = await db
       .update(orders)
       .set({ status: "pago_confirmado", mercadopagoPaymentId: String(payment.id) })
-      .where(eq(orders.code, ref));
-    console.log(`[mp-webhook] orden ${ref} -> pago_confirmado (payment ${payment.id})`);
+      // Solo un pedido de Mercado Pago que sigue pendiente pasa a pagado: un
+      // cobro nunca acredita una transferencia ni hace retroceder un envío.
+      .where(
+        and(eq(orders.code, ref), eq(orders.paymentMethod, "mercadopago"), eq(orders.status, "pendiente_pago")),
+      )
+      .returning({ id: orders.id });
+    console.log(
+      updated.length
+        ? `[mp-webhook] orden ${ref} -> pago_confirmado (payment ${payment.id})`
+        : `[mp-webhook] payment ${payment.id} aprobado sin pedido MP pendiente ref=${ref}`,
+    );
   } else {
     console.log(`[mp-webhook] payment ${payment.id} status=${payment.status} ref=${ref}`);
   }
