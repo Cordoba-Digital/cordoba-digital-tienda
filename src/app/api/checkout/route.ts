@@ -4,6 +4,7 @@ import { db } from "@/db";
 import { orderItems, orders, products, type ShippingAddress } from "@/db/schema";
 import { computeTotals, MAX_QTY_PER_ITEM, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
 import { getCoupon } from "@/lib/queries";
+import { resolvePaymentMethod } from "@/lib/checkout-payment";
 import { validateDelivery, validatePersonalData } from "@/lib/checkout-validation";
 import { findShippingOption, normalizeZip, type DeliveryMethod } from "@/lib/shipping";
 
@@ -87,16 +88,10 @@ export async function POST(request: Request) {
     };
   }
 
-  const paymentId: PaymentMethodId = (["transferencia", "usdt", "efectivo", "mercadopago"] as const).includes(
-    body.payment?.method as PaymentMethodId,
-  )
-    ? (body.payment?.method as PaymentMethodId)
-    : "transferencia";
+  const payment = resolvePaymentMethod(body.payment?.method, method);
+  const paymentId: PaymentMethodId = payment.ok ? payment.method : "transferencia";
+  if (!payment.ok) errors.payment = payment.error;
   const installments = Math.max(1, Math.min(12, Number(body.payment?.installments ?? 1)));
-
-  if (paymentId === "efectivo" && method !== "pickup") {
-    errors.payment = "El pago en efectivo solo está disponible retirando en el local.";
-  }
 
   if (Object.keys(errors).length) {
     return Response.json({ ok: false, errors }, { status: 400 });
@@ -173,9 +168,9 @@ export async function POST(request: Request) {
     .insert(orders)
     .values({
       code,
-      // Mercado Pago cobra en línea, así que el pago ya está acreditado. Los
-      // demás quedan pendientes hasta que el buyer transfiera o pague en el local.
-      status: paymentId === "mercadopago" ? "pago_confirmado" : "pendiente_pago",
+      // Todo pedido nace pendiente, también el de Mercado Pago: el pago se
+      // acredita recién cuando el webhook firmado confirma un cobro aprobado.
+      status: "pendiente_pago",
       customerName: `${firstName} ${lastName}`,
       email,
       phone,

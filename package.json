@@ -28,6 +28,7 @@
     "check:contraste:todo": "node scripts/contraste-todas.mjs",
     "migrar:guias": "tsx scripts/migrar-guias.ts",
     "test:guias": "tsx scripts/lib/guia-html.test.ts",
+    "test:checkout": "tsx scripts/lib/checkout-payment.test.ts",
     "verificar:guia": "node scripts/verificar-guia.mjs",
     "verificar:guias": "node scripts/verificar-indice-guias.mjs",
     "verificar:claims-guias": "tsx scripts/verificar-claims-guias.ts",
