@@ -71,13 +71,13 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
         <div className="flex gap-2">
           <Link
             href="/admin/productos/archivados"
-            className="rounded-xl border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-700 transition hover:border-brand-300"
+            className="border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-700 transition hover:border-brand-300"
           >
             Archivados
           </Link>
           <Link
             href="/admin/productos/nuevo"
-            className="rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800"
+            className="bg-brand-700 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800"
           >
             ＋ Nuevo
           </Link>
@@ -92,12 +92,12 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
           name="q"
           defaultValue={q}
           placeholder="Buscar por nombre, SKU o marca…"
-          className="min-w-0 flex-1 rounded-xl border border-ink-200 bg-surface px-3 py-2.5 text-sm text-ink-900 outline-none focus:border-brand-400"
+          className="min-w-0 basis-full border sm:basis-auto sm:flex-1 border-ink-200 bg-surface px-3 py-2.5 text-sm text-ink-900 outline-none focus:border-brand-400"
         />
         <select
           name="categoria"
           defaultValue={category}
-          className="rounded-xl border border-ink-200 bg-surface px-3 py-2.5 text-sm text-ink-900 outline-none focus:border-brand-400"
+          className="border border-ink-200 bg-surface px-3 py-2.5 text-sm text-ink-900 outline-none focus:border-brand-400"
         >
           <option value="">Todas las categorías</option>
           {categories.map((c) => (
@@ -106,11 +106,11 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
             </option>
           ))}
         </select>
-        <button type="submit" className="rounded-xl bg-ink-900 px-4 py-2.5 text-sm font-bold text-white">
+        <button type="submit" className="bg-ink-900 px-4 py-2.5 text-sm font-bold text-white">
           Buscar
         </button>
         {q || category || sinStock || oferta || destacados ? (
-          <Link href="/admin/productos" className="rounded-xl border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-600">
+          <Link href="/admin/productos" className="border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-600">
             Limpiar
           </Link>
         ) : null}
@@ -121,7 +121,7 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
           <Link
             key={t.id}
             href={withParams(base, { [t.id]: t.active ? null : "1", page: null })}
-            className={`rounded-full border px-4 py-1.5 text-xs font-bold transition ${
+            className={`border px-4 py-1.5 text-xs font-bold transition ${
               t.active
                 ? "border-brand-700 bg-brand-700 text-white"
                 : "border-ink-200 bg-surface text-ink-600 hover:border-brand-300"
@@ -132,27 +132,22 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
         ))}
       </div>
 
-      <div className="card-surface overflow-hidden">
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[860px] text-left text-sm">
-            <thead>
-              <tr className="border-b border-ink-100 text-xs uppercase tracking-wide text-ink-500">
-                <th className="px-4 py-3">Producto</th>
-                <th className="px-4 py-3">Precio</th>
-                <th className="px-4 py-3">Stock</th>
-                <th className="px-4 py-3">Etiqueta</th>
-                <th className="px-4 py-3 text-right">Acción</th>
-              </tr>
-            </thead>
-            <tbody>
-              {items.length === 0 ? (
-                <tr><td colSpan={5} className="px-4 py-8 text-center text-sm text-ink-500">Sin productos para este filtro.</td></tr>
-              ) : (
-                items.map((p) => <AdminProductRow key={p.slug} product={p} />)
-              )}
-            </tbody>
-          </table>
+      <div className="bg-surface shadow-[0_0_0_1px_rgba(20,22,28,0.08)]" role="table" aria-label="Productos">
+        <div
+          role="row"
+          className="hidden border-b border-ink-100 px-4 py-3 text-xs font-bold uppercase tracking-wide text-ink-500 lg:grid lg:grid-cols-[minmax(0,1fr)_8.5rem_5rem_8.5rem_6rem] lg:gap-4"
+        >
+          <span role="columnheader">Producto</span>
+          <span role="columnheader">Precio</span>
+          <span role="columnheader">Stock</span>
+          <span role="columnheader">Etiqueta</span>
+          <span role="columnheader" className="text-right">Acción</span>
         </div>
+        {items.length === 0 ? (
+          <p className="px-4 py-8 text-center text-sm text-ink-500">Sin productos para este filtro.</p>
+        ) : (
+          items.map((p) => <AdminProductRow key={p.slug} product={p} />)
+        )}
       </div>
 
       <div className="flex items-center justify-between gap-2">
@@ -161,7 +156,7 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
           {page > 1 ? (
             <Link
               href={withParams({ ...base, page: String(page - 1) }, {})}
-              className="rounded-xl border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
+              className="border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
             >
               ← Anterior
             </Link>
@@ -169,7 +164,7 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
           {page < pages ? (
             <Link
               href={withParams({ ...base, page: String(page + 1) }, {})}
-              className="rounded-xl border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
+              className="border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
             >
               Siguiente →
             </Link>
