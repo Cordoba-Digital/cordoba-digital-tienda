@@ -4,6 +4,7 @@ import { db } from "@/db";
 import { categories, productCategories, products, type Spec } from "@/db/schema";
 import { findProductBySlug } from "@/lib/queries";
 import { sanitizeHtml } from "@/lib/sanitize-html";
+import { UPLOADED_IMAGE_PATH } from "@/lib/product-images";
 
 export type AdminProductRow = {
   slug: string;
@@ -250,8 +251,8 @@ async function normalizeProductInput(
 
   const images = Array.isArray(raw.images) ? raw.images.map((u) => (typeof u === "string" ? u.trim() : "")) : [];
   if (images.length > 8) return { ok: false, error: "Podés agregar hasta 8 imágenes." };
-  if (images.some((u) => !isHttpUrl(u))) {
-    return { ok: false, error: "Cada imagen debe ser una URL http(s) válida." };
+  if (images.some((u) => !isHttpUrl(u) && !UPLOADED_IMAGE_PATH.test(u))) {
+    return { ok: false, error: "Cada imagen debe ser una URL http(s) válida o una foto subida." };
   }
 
   const highlights = Array.isArray(raw.highlights)

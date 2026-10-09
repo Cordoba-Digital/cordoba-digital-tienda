@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+import { uploadProductImage } from "@/lib/prepare-image";
 
 const MAX_IMAGES = 8;
 
-function isHttpUrl(value: string): boolean {
-  return /^https?:\/\/\S+$/i.test(value);
+function isImageUrl(value: string): boolean {
+  return /^https?:\/\/\S+$/i.test(value) || /^\/api\/imagenes\/[a-f0-9]{24}\.[a-z]+$/.test(value);
 }
 
 function move<T>(list: T[], from: number, to: number): T[] {
@@ -16,15 +18,25 @@ function move<T>(list: T[], from: number, to: number): T[] {
   return next;
 }
 
+function imageFiles(list: FileList | File[] | null | undefined): File[] {
+  return Array.from(list ?? []).filter((f) => f.type.startsWith("image/") || /\.(jpe?g|png|webp|gif|avif|heic)$/i.test(f.name));
+}
+
+function isEditable(target: EventTarget | null): boolean {
+  if (!(target instanceof HTMLElement)) return false;
+  return target.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName);
+}
+
 /**
- * Fotos del producto: la primera es la principal. Hoy se cargan por URL; para
- * subir archivos (Vercel Blob) alcanza con pasar `upload`, que recibe el
- * archivo y devuelve la URL pública: el resto del manejo no cambia.
+ * Fotos del producto: la primera es la principal. Se agregan subiendo
+ * archivos, arrastrándolos, pegándolos con Ctrl+V (en cualquier parte de la
+ * ficha) o con su URL. `upload` permite cambiar dónde se guardan (por ejemplo
+ * Vercel Blob) sin tocar el resto.
  */
 export function AdminImageManager({
   images,
   onChange,
-  upload,
+  upload = uploadProductImage,
 }: {
   images: string[];
   onChange: (next: string[]) => void;
@@ -34,49 +46,133 @@ export function AdminImageManager({
   const [error, setError] = useState("");
   const [broken, setBroken] = useState<Record<string, boolean>>({});
   const [dragFrom, setDragFrom] = useState<number | null>(null);
-  const [uploading, setUploading] = useState(false);
+  const [dropActive, setDropActive] = useState(false);
+  const [pending, setPending] = useState(0);
+  const fileInput = useRef<HTMLInputElement>(null);
+  // La lista cambia mientras se suben varias fotos: siempre leemos la última.
+  const latest = useRef({ images, onChange });
+  useEffect(() => {
+    latest.current = { images, onChange };
+  });
 
   const room = MAX_IMAGES - images.length;
 
   function add(urls: string[]) {
     setError("");
+    const current = latest.current.images;
+    const free = MAX_IMAGES - current.length;
     const clean = urls.map((u) => u.trim()).filter(Boolean);
-    const invalid = clean.filter((u) => !isHttpUrl(u));
-    const fresh = clean.filter((u) => isHttpUrl(u) && !images.includes(u));
+    const invalid = clean.filter((u) => !isImageUrl(u));
+    const fresh = [...new Set(clean.filter((u) => isImageUrl(u) && !current.includes(u)))];
     if (invalid.length) setError("Algunas líneas no son URLs http(s) y se ignoraron.");
-    if (fresh.length > room) setError(`Máximo ${MAX_IMAGES} fotos: se agregaron las primeras ${room}.`);
-    if (fresh.length) onChange([...images, ...fresh.slice(0, Math.max(0, room))]);
-  }
-
-  async function onFiles(files: FileList | null) {
-    if (!upload || !files?.length) return;
-    setUploading(true);
-    setError("");
-    try {
-      const urls: string[] = [];
-      for (const file of Array.from(files).slice(0, room)) urls.push(await upload(file));
-      add(urls);
-    } catch {
-      setError("No se pudo subir la foto.");
-    } finally {
-      setUploading(false);
+    if (fresh.length > free) setError(`Máximo ${MAX_IMAGES} fotos: se agregaron las primeras ${free}.`);
+    if (fresh.length && free > 0) {
+      const next = [...current, ...fresh.slice(0, free)];
+      latest.current = { ...latest.current, images: next };
+      latest.current.onChange(next);
     }
   }
 
+  async function onFiles(list: FileList | File[] | null | undefined) {
+    const files = imageFiles(list);
+    if (!files.length) {
+      if (list && Array.from(list).length) setError("Eso no es una foto.");
+      return;
+    }
+    const free = MAX_IMAGES - latest.current.images.length - pending;
+    if (free <= 0) {
+      setError(`Llegaste al máximo de ${MAX_IMAGES} fotos.`);
+      return;
+    }
+    const batch = files.slice(0, free);
+    setError(files.length > free ? `Máximo ${MAX_IMAGES} fotos: se suben las primeras ${free}.` : "");
+    setPending((n) => n + batch.length);
+    const failures: string[] = [];
+    for (const file of batch) {
+      try {
+        add([await upload(file)]);
+      } catch (e) {
+        failures.push(`${file.name || "foto"}: ${e instanceof Error ? e.message : "no se pudo subir"}`);
+      } finally {
+        setPending((n) => n - 1);
+      }
+    }
+    if (failures.length) setError(failures.join(" · "));
+  }
+
+  // Ctrl+V con una foto copiada, en cualquier parte de la ficha.
+  const onFilesRef = useRef(onFiles);
+  useEffect(() => {
+    onFilesRef.current = onFiles;
+  });
+  useEffect(() => {
+    function onPaste(event: ClipboardEvent) {
+      const files = imageFiles(event.clipboardData?.files);
+      if (files.length) {
+        event.preventDefault();
+        void onFilesRef.current(files);
+        return;
+      }
+      // Sin archivo: si fuera de un campo de texto pegan la URL de una foto, se agrega.
+      const text = event.clipboardData?.getData("text/plain").trim() ?? "";
+      if (!isEditable(event.target) && /^https?:\/\/\S+$/i.test(text)) {
+        event.preventDefault();
+        add(text.split(/\s+/));
+      }
+    }
+    window.addEventListener("paste", onPaste);
+    return () => window.removeEventListener("paste", onPaste);
+  }, []);
+
+  function onDrop(event: React.DragEvent) {
+    event.preventDefault();
+    setDropActive(false);
+    if (dragFrom !== null) return; // reordenar lo maneja cada foto
+    if (event.dataTransfer.files.length) {
+      void onFiles(event.dataTransfer.files);
+      return;
+    }
+    // Foto arrastrada desde otra pestaña: llega como URL.
+    const uri = event.dataTransfer.getData("text/uri-list") || event.dataTransfer.getData("text/plain");
+    const html = event.dataTransfer.getData("text/html");
+    const fromHtml = /<img[^>]+src="(https?:[^"]+)"/i.exec(html)?.[1];
+    const urls = (fromHtml ? [fromHtml] : uri.split(/\s+/)).filter((u) => u && !u.startsWith("#"));
+    if (urls.length) add(urls);
+  }
+
   const btn = "rounded-md border border-ink-200 bg-surface px-2 py-1 text-[11px] font-bold text-ink-700 transition hover:border-ink-400 disabled:opacity-30";
+  const full = room - pending <= 0;
 
   return (
-    <div className="space-y-4">
-      {images.length ? (
-        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+    <div
+      className="space-y-4"
+      onDragOver={(e) => {
+        if (dragFrom !== null) return;
+        e.preventDefault();
+        e.dataTransfer.dropEffect = "copy";
+        if (!dropActive) setDropActive(true);
+      }}
+      onDragLeave={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setDropActive(false);
+      }}
+      onDrop={onDrop}
+    >
+      {images.length || pending ? (
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
           {images.map((url, index) => (
             <li
               key={url}
               draggable
-              onDragStart={() => setDragFrom(index)}
+              onDragStart={(e) => {
+                e.dataTransfer.effectAllowed = "move";
+                setDragFrom(index);
+              }}
               onDragOver={(e) => e.preventDefault()}
-              onDrop={() => {
-                if (dragFrom !== null) onChange(move(images, dragFrom, index));
+              onDrop={(e) => {
+                if (dragFrom === null) return; // un archivo: lo maneja el contenedor
+                e.preventDefault();
+                e.stopPropagation();
+                onChange(move(images, dragFrom, index));
                 setDragFrom(null);
               }}
               onDragEnd={() => setDragFrom(null)}
@@ -94,6 +190,7 @@ export function AdminImageManager({
                   <img
                     src={url}
                     alt=""
+                    draggable={false}
                     referrerPolicy="no-referrer"
                     onError={() => setBroken((prev) => ({ ...prev, [url]: true }))}
                     className="h-full w-full object-contain p-2"
@@ -130,16 +227,59 @@ export function AdminImageManager({
               </div>
             </li>
           ))}
+          {Array.from({ length: pending }, (_, i) => (
+            <li key={`pending-${i}`} className="grid aspect-square place-items-center rounded-xl border border-dashed border-ink-200 bg-ink-50 text-xs font-semibold text-ink-500">
+              <span className="flex items-center gap-2">
+                <span className="h-3 w-3 animate-spin rounded-full border-2 border-ink-300 border-t-ink-700" aria-hidden />
+                Subiendo…
+              </span>
+            </li>
+          ))}
         </ul>
-      ) : (
-        <p className="rounded-xl border border-dashed border-ink-200 px-4 py-6 text-center text-sm text-ink-500">
-          Todavía no hay fotos. La primera que agregues va a ser la principal.
-        </p>
-      )}
+      ) : null}
 
-      {room > 0 ? (
-        <div className="space-y-2">
-          <div className="flex flex-col gap-2 sm:flex-row">
+      {!full ? (
+        <div
+          className={`rounded-xl border-2 border-dashed px-4 py-6 text-center transition ${
+            dropActive ? "border-brand-500 bg-brand-50" : "border-ink-200 bg-surface"
+          }`}
+        >
+          <svg viewBox="0 0 24 24" className="mx-auto h-7 w-7 text-ink-400" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
+            <path d="M12 16V4m0 0l-4 4m4-4l4 4M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          <p className="mt-2 text-sm font-semibold text-ink-800">
+            {dropActive ? "Soltá las fotos acá" : "Arrastrá fotos acá o pegalas con Ctrl+V"}
+          </p>
+          <p className="mt-0.5 text-xs text-ink-500">
+            JPG, PNG, WebP o GIF. Se achican solas antes de subir.
+            {images.length === 0 ? " La primera va a ser la principal." : ""}
+          </p>
+          <button
+            type="button"
+            onClick={() => fileInput.current?.click()}
+            className="mt-3 rounded-lg bg-ink-900 px-4 py-2 text-sm font-bold text-white transition hover:bg-ink-700"
+          >
+            Subir archivo
+          </button>
+          <input
+            ref={fileInput}
+            type="file"
+            accept="image/*"
+            multiple
+            className="sr-only"
+            tabIndex={-1}
+            onChange={(e) => {
+              void onFiles(e.target.files);
+              e.target.value = "";
+            }}
+          />
+        </div>
+      ) : null}
+
+      {!full ? (
+        <details className="text-sm">
+          <summary className="cursor-pointer text-xs font-semibold text-ink-600">Agregar por URL</summary>
+          <div className="mt-2 flex flex-col gap-2 sm:flex-row">
             <textarea
               value={draft}
               onChange={(e) => setDraft(e.target.value)}
@@ -151,7 +291,7 @@ export function AdminImageManager({
                 }
               }}
               rows={1}
-              placeholder="Pegá una o varias URLs de fotos (una por línea) y tocá Agregar"
+              placeholder="Pegá una o varias URLs de fotos (una por línea)"
               aria-label="URLs de fotos"
               className="min-h-10 w-full resize-y rounded-lg border border-ink-200 bg-surface px-3 py-2 text-sm text-ink-900 outline-none focus:border-ink-400"
             />
@@ -162,24 +302,18 @@ export function AdminImageManager({
                 setDraft("");
               }}
               disabled={!draft.trim()}
-              className="shrink-0 rounded-lg bg-ink-900 px-4 py-2 text-sm font-bold text-white disabled:opacity-40"
+              className="shrink-0 rounded-lg border border-ink-200 px-4 py-2 text-sm font-bold text-ink-800 disabled:opacity-40"
             >
               Agregar
             </button>
-            {upload ? (
-              <label className="shrink-0 cursor-pointer rounded-lg border border-ink-200 px-4 py-2 text-center text-sm font-bold text-ink-700">
-                {uploading ? "Subiendo…" : "Subir archivo"}
-                <input type="file" accept="image/*" multiple className="sr-only" onChange={(e) => void onFiles(e.target.files)} />
-              </label>
-            ) : null}
           </div>
-          <p className="text-xs text-ink-500">
-            {images.length}/{MAX_IMAGES} fotos. Arrastrá para reordenar.
-          </p>
-        </div>
-      ) : (
-        <p className="text-xs text-ink-500">Llegaste al máximo de {MAX_IMAGES} fotos.</p>
-      )}
+        </details>
+      ) : null}
+
+      <p className="text-xs text-ink-500">
+        {full ? `Llegaste al máximo de ${MAX_IMAGES} fotos.` : `${images.length}/${MAX_IMAGES} fotos.`}
+        {images.length > 1 ? " Arrastrá una foto sobre otra para reordenar." : ""}
+      </p>
       {error ? <p role="alert" className="text-xs font-semibold text-rose-600">{error}</p> : null}
     </div>
   );
