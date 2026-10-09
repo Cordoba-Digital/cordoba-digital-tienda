@@ -5,7 +5,7 @@
  */
 import { sql } from "drizzle-orm";
 
-import { db } from "../src/db";
+import { db } from "../../src/db";
 
 async function main() {
   const filas = await db.execute(sql`select name from categories`);
