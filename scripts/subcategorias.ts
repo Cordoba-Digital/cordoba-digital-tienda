@@ -26,8 +26,10 @@ import { categories, productCategories, products } from "@/db/schema";
 const FALLBACK_BRAND = "General";
 const MIN_PRODUCTOS = 3;
 
-type Regla = { slug: string; name: string; match: RegExp };
-type PlanCategoria = { parent: string; reglas: Regla[] };
+/** `min` pisa `MIN_PRODUCTOS` para una subcategoría que se quiere aunque sea chica. */
+type Regla = { slug: string; name: string; match: RegExp; min?: number };
+/** `rename` cambia el nombre visible del padre; el slug (y la URL) no cambia. */
+type PlanCategoria = { parent: string; rename?: string; reglas: Regla[] };
 
 /**
  * Reglas sobre el nombre normalizado (minúsculas, sin tildes), en orden: gana
@@ -103,11 +105,13 @@ export const PLAN: PlanCategoria[] = [
   },
   {
     parent: "consolas-playstation",
+    // Tiene Nintendo Switch y Meta Quest, no solo PlayStation.
+    rename: "Consolas y Gaming",
     reglas: [
       // Joysticks primero: "Joystick Sony Playstation 5" no es una consola.
       { slug: "joysticks-y-volantes", name: "Joysticks y Volantes", match: /joystick|dualsense|dualshock|volante/ },
       { slug: "consolas-ps", name: "Consolas", match: /consola|playstation \d|nintendo switch/ },
-      { slug: "realidad-virtual", name: "Realidad Virtual", match: /meta quest|\bvr\b/ },
+      { slug: "realidad-virtual", name: "Realidad Virtual", match: /meta quest|\bvr\b/, min: 1 },
     ],
   },
   // Monopatines: los 15 son monopatines; la diferencia es la marca y eso ya es
@@ -196,6 +200,7 @@ async function main(): Promise<void> {
 
   type Asignacion = { regla: Regla; parentId: number; icon: string; productIds: number[]; nombres: string[] };
   const asignaciones: Asignacion[] = [];
+  const renombres: { id: number; slug: string; name: string }[] = [];
   const marcas: { id: number; nombre: string; marca: string }[] = [];
   const conflictos: string[] = [];
 
@@ -233,11 +238,16 @@ async function main(): Promise<void> {
     }
 
     console.log(`\n═══ ${plan.parent} · ${filas.length} productos ═══`);
+    if (plan.rename) {
+      console.log(`\n  ✎ Se renombra a "${plan.rename}" (la URL /categoria/${plan.parent} no cambia)`);
+      renombres.push({ id: padre.id, slug: plan.parent, name: plan.rename });
+    }
     for (const regla of plan.reglas) {
       const g = grupos.get(regla.slug);
       const n = g?.filas.length ?? 0;
-      const crea = n >= MIN_PRODUCTOS;
-      console.log(`\n  ${crea ? "✔" : "✘"} ${regla.name} (${regla.slug}) · ${n}${crea ? "" : ` · menos de ${MIN_PRODUCTOS}, no se crea`}`);
+      const min = regla.min ?? MIN_PRODUCTOS;
+      const crea = n >= min;
+      console.log(`\n  ${crea ? "✔" : "✘"} ${regla.name} (${regla.slug}) · ${n}${crea ? "" : ` · menos de ${min}, no se crea`}`);
       for (const f of g?.filas ?? []) console.log(`      - ${f.name}`);
       if (!crea || !g) continue;
 
@@ -276,6 +286,10 @@ async function main(): Promise<void> {
   }
 
   await db.transaction(async (tx) => {
+    for (const r of renombres) {
+      await tx.update(categories).set({ name: r.name }).where(eq(categories.id, r.id));
+      console.log(`[subcategorias] ${r.slug} renombrada a "${r.name}"`);
+    }
     let orden = 0;
     for (const a of asignaciones) {
       orden += 1;
