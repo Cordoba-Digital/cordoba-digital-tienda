@@ -7,7 +7,8 @@
  */
 
 export const ADMIN_COOKIE = "admin_session";
-const SESSION_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+/** 12 horas: una jornada de trabajo. Una sesión robada deja de servir rápido. */
+const SESSION_TTL_MS = 12 * 60 * 60 * 1000;
 
 function sessionSecret(): string {
   return process.env.ADMIN_SESSION_SECRET?.trim() || process.env.ADMIN_PASSWORD?.trim() || "";
@@ -68,10 +69,15 @@ export async function verifyAdminSessionValue(value: string | undefined | null):
   return timingSafeEqualText(expected, sig);
 }
 
-export function adminCookieOptions(): { httpOnly: true; sameSite: "lax"; path: string; maxAge: number; secure: boolean } {
+/**
+ * `SameSite=Strict`: el navegador no manda la cookie del admin en pedidos que
+ * vienen de otro sitio, que es la primera barrera contra CSRF (la segunda es el
+ * chequeo de `Origin` del middleware).
+ */
+export function adminCookieOptions(): { httpOnly: true; sameSite: "strict"; path: string; maxAge: number; secure: boolean } {
   return {
     httpOnly: true,
-    sameSite: "lax",
+    sameSite: "strict",
     path: "/",
     maxAge: SESSION_TTL_MS / 1000,
     secure: process.env.NODE_ENV === "production",

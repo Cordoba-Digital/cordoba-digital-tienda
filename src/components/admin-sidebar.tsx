@@ -41,7 +41,8 @@ function activeHref(pathname: string): string {
   return matches.sort((a, b) => b.href.length - a.href.length)[0]?.href ?? "";
 }
 
-export function AdminSidebar() {
+/** `badges`: contador por sección (pedidos esperando pago, por ejemplo). */
+export function AdminSidebar({ badges = {} }: { badges?: Record<string, number> }) {
   const pathname = usePathname() ?? "";
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -98,7 +99,15 @@ export function AdminSidebar() {
                 className={itemCls(active === item.href)}
               >
                 <Icon name={item.icon} />
-                {item.label}
+                <span className="flex-1">{item.label}</span>
+                {badges[item.href] ? (
+                  <span
+                    title="Pedidos esperando pago"
+                    className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${active === item.href ? "bg-white/20 text-white" : "bg-amber-100 text-amber-800"}`}
+                  >
+                    {badges[item.href]}
+                  </span>
+                ) : null}
               </Link>
             ))}
           </nav>

@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 
 import { AdminSidebar } from "@/components/admin-sidebar";
 import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
+import { countPendingOrders } from "@/lib/admin-stats";
 
 export const metadata: Metadata = {
   title: "Admin",
@@ -22,7 +23,7 @@ export default async function AdminLayout({ children }: { children: ReactNode })
   }
   return (
     <div className="min-h-screen">
-      <AdminSidebar />
+      <AdminSidebar badges={{ "/admin/pedidos": await countPendingOrders() }} />
       <div className="lg:pl-60">
         <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8">{children}</div>
       </div>
