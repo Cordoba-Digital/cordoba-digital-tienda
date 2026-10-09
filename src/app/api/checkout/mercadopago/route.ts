@@ -3,7 +3,7 @@ import { Preference } from "mercadopago";
 
 import { db } from "@/db";
 import { orderItems, orders } from "@/db/schema";
-import { appBaseUrl, centsToUnits, isPublicAppUrl, mpClient, MP_CURRENCY } from "@/lib/mercadopago";
+import { appBaseUrl, pesosToUnits, isPublicAppUrl, mpClient, MP_CURRENCY } from "@/lib/mercadopago";
 
 export const dynamic = "force-dynamic";
 
@@ -61,7 +61,7 @@ export async function POST(request: Request) {
           id: item.productSlug,
           title: item.name.slice(0, 200),
           quantity: item.quantity,
-          unit_price: centsToUnits(item.unitPrice),
+          unit_price: pesosToUnits(item.unitPrice),
           currency_id: MP_CURRENCY,
         })),
         payer: { email: order.email, name: order.customerName },

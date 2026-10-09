@@ -10,7 +10,7 @@
  * Verificado contra `/producto/iphone-18-pro-max-512gb`: el entero crudo es
  * idéntico en WooCommerce y en la base. Si algún día se cambia la escala de
  * almacenamiento, hay que cambiar estos dos formateadores, los costos de
- * `tarifas-envio.ts`, los rangos de `catalog-filters.tsx` y `centsToUnits` en
+ * `tarifas-envio.ts`, los rangos de `catalog-filters.tsx` y `pesosToUnits` en
  * `mercadopago.ts`, todo junto.
  */
 const arsFormatter = new Intl.NumberFormat("es-AR", {
@@ -27,16 +27,19 @@ const arsFormatterExact = new Intl.NumberFormat("es-AR", {
   maximumFractionDigits: 2,
 });
 
+/** Pesos argentinos enteros, tal como se guardan en `products.price`. */
+export type PesosARS = number;
+
 /** Precio en pesos enteros tal como viene de WooCommerce. */
-export function money(price: number): string {
+export function money(price: PesosARS): string {
   return arsFormatter.format(Math.round(price));
 }
 
-export function moneyExact(price: number): string {
+export function moneyExact(price: PesosARS): string {
   return arsFormatterExact.format(Math.round(price));
 }
 
-export function discountPercent(price: number, compareAt?: number | null): number {
+export function discountPercent(price: PesosARS, compareAt?: number | null): number {
   if (!compareAt || compareAt <= price) return 0;
   return Math.round(((compareAt - price) / compareAt) * 100);
 }
@@ -60,8 +63,8 @@ export function discountPercent(price: number, compareAt?: number | null): numbe
  * cuota que devuelve Mercado Pago al pagar con tarjeta) son dato real de la
  * pasarela y no se tocan.
  */
-export function installmentValue(totalCents: number, count: number): number {
-  return Math.round(totalCents / count);
+export function installmentValue(totalPesos: PesosARS, count: number): number {
+  return Math.round(totalPesos / count);
 }
 
 

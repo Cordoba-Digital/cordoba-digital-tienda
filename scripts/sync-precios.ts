@@ -117,7 +117,7 @@ async function fetchAll(): Promise<{ items: StoreProduct[]; total: number }> {
  * importes de Mercado Pago, así que va aparte: acá se preserva tal cual para
  * que el sync no mezcle dos temas.
  */
-const toCents = (value: string | undefined | null): number | null => {
+const toPesos = (value: string | undefined | null): number | null => {
   if (value === undefined || value === null || value === "") return null;
   const n = Number(value);
   if (!Number.isFinite(n)) return null;
@@ -199,14 +199,14 @@ async function main() {
       continue;
     }
 
-    const woo = toCents(rp.prices.price);
+    const woo = toPesos(rp.prices.price);
     if (woo === null) continue;
 
     // WooCommerce devuelve `regular_price` == `price` cuando el producto NO
     // está en oferta. Guardar esa lista igual al precio pinta un tachado sobre
     // sí mismo ("$3.299.999  $3.299.999"), que es lo que veía el iPhone.
     // Sin oferta, la lista va en null y no se muestra tachado.
-    const regBruto = toCents(rp.prices.regular_price);
+    const regBruto = toPesos(rp.prices.regular_price);
     const listaWoo = regBruto !== null && regBruto > woo ? regBruto : null;
     const listaCambia = listaWoo !== nuestro.compareAtPrice;
     const cambia = nuestro.price !== woo;
@@ -279,8 +279,8 @@ async function main() {
   if (nuevos.length && addMissing) {
     console.log(`[sync] creando ${nuevos.length} producto(s) nuevo(s)…`);
     for (const n of nuevos) {
-      const price = toCents(n.prices.price) ?? 0;
-      const reg = toCents(n.prices.regular_price);
+      const price = toPesos(n.prices.price) ?? 0;
+      const reg = toPesos(n.prices.regular_price);
       // Lista solo si es realmente mayor: si no hay oferta, va en null.
       const lista = reg !== null && reg > price ? reg : null;
       // Galería completa con un srcset por foto, igual que el resto del

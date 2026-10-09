@@ -294,8 +294,8 @@ function extractHighlights(html?: string | null, limit = 6): string[] {
   return out;
 }
 
-/** La Store API ya devuelve centavos como strings: NO multiplicar por 100. */
-function toCents(value?: string | null): number | null {
+/** La Store API devuelve pesos enteros como strings: NO multiplicar ni dividir. */
+function toPesos(value?: string | null): number | null {
   if (value == null) return null;
   const trimmed = value.trim();
   if (trimmed === "") return null;
@@ -310,8 +310,8 @@ function chunk<T>(items: T[], size: number): T[][] {
   return out;
 }
 
-const money = (cents: number): string =>
-  `$${(cents / 100).toLocaleString("es-AR", { maximumFractionDigits: 0 })}`;
+const money = (pesos: number): string =>
+  `$${pesos.toLocaleString("es-AR", { maximumFractionDigits: 0 })}`;
 
 /** `{length,width,height}` en cm → `"10x15x10 cm"`. null si falta todo. */
 function formatDimensions(d: WPProduct["dimensions"]): string | null {
@@ -371,8 +371,8 @@ function mapProduct(
   byCatId: Map<number, WPCategory>,
   depthByCatId: Map<number, number>,
 ): MappedProduct {
-  const price = toCents(p.prices.price) ?? toCents(p.prices.regular_price) ?? 0;
-  const regular = toCents(p.prices.regular_price);
+  const price = toPesos(p.prices.price) ?? toPesos(p.prices.regular_price) ?? 0;
+  const regular = toPesos(p.prices.regular_price);
   const onSale = p.on_sale === true;
   const hasDiscount = regular != null && regular > price;
   const compareAtPrice = onSale && hasDiscount ? (regular as number) : null;
@@ -816,7 +816,7 @@ async function main(): Promise<void> {
         productSkips.push(`id=${p.id} sin slug/name`);
         continue;
       }
-      if (toCents(p.prices?.price) == null && toCents(p.prices?.regular_price) == null) {
+      if (toPesos(p.prices?.price) == null && toPesos(p.prices?.regular_price) == null) {
         productSkips.push(`id=${p.id} '${p.slug}' sin precio válido`);
         continue;
       }
