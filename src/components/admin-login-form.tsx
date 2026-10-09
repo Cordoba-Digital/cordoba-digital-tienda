@@ -25,6 +25,7 @@ export function AdminLoginForm({
   const [password, setPassword] = useState("");
   const [error, setError] = useState(ERRORS[params.get("error") ?? ""] ?? "");
   const [loading, setLoading] = useState(false);
+  const [remember, setRemember] = useState(true);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -34,7 +35,7 @@ export function AdminLoginForm({
       const res = await fetch("/api/admin/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password }),
+        body: JSON.stringify({ password, remember }),
       });
       const data = (await res.json().catch(() => ({}))) as {
         ok?: boolean;
@@ -63,10 +64,26 @@ export function AdminLoginForm({
           Ingresar al panel
         </h1>
         <p className="mt-1 text-sm text-ink-500">Uso interno del local.</p>
+        {google || passwordEnabled ? (
+          <label className="mt-5 flex cursor-pointer items-start gap-2.5 text-sm text-ink-700">
+            <input
+              type="checkbox"
+              checked={remember}
+              onChange={(e) => setRemember(e.target.checked)}
+              className="mt-0.5 h-4 w-4 accent-brand-700"
+            />
+            <span>
+              <span className="font-semibold text-ink-900">Recordarme en este dispositivo</span>
+              <span className="block text-xs text-ink-500">
+                No vas a tener que volver a ingresar por 30 días. Destildalo en una computadora compartida.
+              </span>
+            </span>
+          </label>
+        ) : null}
         {google ? (
           <a
-            href={`/api/auth/google/start?admin=1&next=${encodeURIComponent(next)}`}
-            className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-ink-200 bg-surface px-4 py-3 text-sm font-bold text-ink-900 transition hover:border-ink-400"
+            href={`/api/auth/google/start?admin=1${remember ? "&remember=1" : ""}&next=${encodeURIComponent(next)}`}
+            className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl border border-ink-200 bg-surface px-4 py-3 text-sm font-bold text-ink-900 transition hover:border-ink-400"
           >
             <svg viewBox="0 0 48 48" className="h-5 w-5" aria-hidden>
               <path

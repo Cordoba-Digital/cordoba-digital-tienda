@@ -16,20 +16,21 @@ export async function POST(request: Request) {
       { status: 429, headers: { "Retry-After": String(blocked * 60) } },
     );
   }
-  const body = (await request.json().catch(() => ({}))) as { password?: string };
+  const body = (await request.json().catch(() => ({}))) as { password?: string; remember?: unknown };
+  const remember = body.remember === true;
   if (!verifyAdminPassword((body.password ?? "").trim())) {
     await recordFailedLogin(ip);
     await new Promise((r) => setTimeout(r, 500));
     return Response.json({ ok: false, error: "Contraseña incorrecta." }, { status: 401 });
   }
   await clearFailedLogins(ip);
-  const session = await createAdminSessionValue();
+  const session = await createAdminSessionValue("", remember);
   if (!session) {
     return Response.json({ ok: false, error: "No se pudo crear la sesión." }, { status: 500 });
   }
   await logAdminAction("contraseña", { action: "ingreso", entityType: "sesion", entityId: ip, summary: "Ingresó con la contraseña" });
   const res = Response.json({ ok: true });
-  res.headers.append("Set-Cookie", adminSessionCookieHeader(session));
+  res.headers.append("Set-Cookie", adminSessionCookieHeader(session, remember));
   return res;
 }
 

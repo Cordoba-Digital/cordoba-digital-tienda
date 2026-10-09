@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { OAUTH_STATE_COOKIE, OAUTH_STATE_TTL_MS, randomToken, safeNextPath } from "@/lib/customer-session";
 import { ADMIN_OAUTH_COOKIE, adminGoogleConfigured } from "@/lib/admin-auth";
 import { googleOAuthConfigured, googleRedirectUri } from "@/lib/customer-auth";
+import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
 
@@ -11,7 +12,16 @@ export const dynamic = "force-dynamic";
  * Guarda `state` aleatorio en cookie httpOnly corta y redirige a Google.
  */
 export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
+  const requestUrl = new URL(request.url);
+  const { searchParams } = requestUrl;
+  // Google siempre vuelve al dominio de SITE_URL. Si el ingreso arranca en otro
+  // (un preview, www, etc.), la cookie de `state` quedaría en el dominio
+  // equivocado y el primer intento fallaría: primero se salta al dominio bueno.
+  const canonical = new URL(SITE_URL);
+  const host = request.headers.get("x-forwarded-host") ?? request.headers.get("host") ?? requestUrl.host;
+  if (host !== canonical.host) {
+    return NextResponse.redirect(new URL(`${requestUrl.pathname}${requestUrl.search}`, canonical));
+  }
   // `?admin=1`: ingreso al panel. Usa la misma app de Google y el mismo
   // callback (no hace falta registrar otra URL en Google Cloud).
   const forAdmin = searchParams.get("admin") === "1";
@@ -30,8 +40,13 @@ export async function GET(request: Request) {
     response_type: "code",
     scope: "openid email profile",
     state,
-    prompt: "select_account",
   });
+  // En el panel se elige la cuenta; en la tienda Google entra directo con la
+  // cuenta ya abierta (un click). Desde "Panel admin" de Mi cuenta llega
+  // `hint` con el email ya conocido, así que tampoco se pregunta.
+  const hint = forAdmin ? searchParams.get("hint")?.trim() : undefined;
+  if (hint) params.set("login_hint", hint);
+  else if (forAdmin) params.set("prompt", "select_account");
   const cookieOptions = {
     httpOnly: true,
     sameSite: "lax" as const,
@@ -42,7 +57,8 @@ export async function GET(request: Request) {
   const res = NextResponse.redirect(`https://accounts.google.com/o/oauth2/v2/auth?${params.toString()}`);
   res.cookies.set(OAUTH_STATE_COOKIE, `${state}.${encodeURIComponent(next)}`, cookieOptions);
   // Marca este intento como ingreso al admin (atada al mismo `state`).
-  if (forAdmin) res.cookies.set(ADMIN_OAUTH_COOKIE, state, cookieOptions);
+  // `.r`: el admin tildó "Recordarme".
+  if (forAdmin) res.cookies.set(ADMIN_OAUTH_COOKIE, searchParams.get("remember") === "1" ? `${state}.r` : state, cookieOptions);
   else res.cookies.delete(ADMIN_OAUTH_COOKIE);
   return res;
 }

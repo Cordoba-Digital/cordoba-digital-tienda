@@ -1,4 +1,4 @@
-import { and, eq, gt } from "drizzle-orm";
+import { and, eq, gt, lt } from "drizzle-orm";
 import { cookies } from "next/headers";
 
 import { NextResponse } from "next/server";
@@ -57,6 +57,30 @@ export async function getCustomerFromToken(token: string | undefined | null): Pr
     .limit(1);
   if (!row || row.isDisabled) return null;
   return row;
+}
+
+/** Renovar la sesión cuando le quedan menos de 25 días: en uso, no vence nunca. */
+const RENEW_BELOW_MS = 25 * 24 * 60 * 60 * 1000;
+
+/**
+ * Corre otra vez los 30 días de la sesión si hace falta. Devuelve `true` si la
+ * renovó (entonces hay que volver a mandar la cookie con su nuevo vencimiento).
+ */
+export async function renewCustomerSessionIfNeeded(token: string | undefined | null): Promise<boolean> {
+  if (!token || !/^[0-9a-f]{64}$/.test(token)) return false;
+  const tokenHash = await sha256Hex(token);
+  const renewed = await db
+    .update(userSessions)
+    .set({ expiresAt: new Date(Date.now() + CUSTOMER_SESSION_TTL_MS) })
+    .where(
+      and(
+        eq(userSessions.tokenHash, tokenHash),
+        gt(userSessions.expiresAt, new Date()),
+        lt(userSessions.expiresAt, new Date(Date.now() + RENEW_BELOW_MS)),
+      ),
+    )
+    .returning({ id: userSessions.id });
+  return renewed.length > 0;
 }
 
 export async function revokeCustomerSession(token: string | undefined | null): Promise<void> {
