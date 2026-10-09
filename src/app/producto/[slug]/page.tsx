@@ -205,7 +205,7 @@ export default async function ProductPage({ params }: { params: Params }) {
   }
 
   return (
-    <div className="container-xl py-6 pb-28 lg:pb-6">
+    <div className="container-xl py-6 pb-28 lg:pb-6 lg:pt-4">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -251,19 +251,23 @@ export default async function ProductPage({ params }: { params: Params }) {
       </nav>
 
       {/* Ficha en dos columnas: galería a la izquierda y, a la derecha, la caja
-          de compra fija al hacer scroll. En celular va primero la galería. */}
-      <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_25rem]">
-        <ProductGallery
-          images={product.images}
-          srcSets={product.imageSrcSets}
-          name={product.name}
-          badge={discountPercent(product.price, product.compareAtPrice) > 0 ? `-${discountPercent(product.price, product.compareAtPrice)}%` : null}
-        />
-        <BuyBox product={buyBoxProduct} />
-      </div>
-
-      <div className="mt-8 space-y-8">
-        <section className="card-surface p-6">
+          de compra fija al hacer scroll. La caja ocupa las dos filas, así que
+          las características suben a la columna izquierda, debajo de la foto,
+          en vez de dejar ese hueco vacío. En celular el orden es galería, caja
+          de compra y características. */}
+      <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_25rem] lg:grid-rows-[auto_1fr]">
+        <div className="min-w-0 lg:col-start-1 lg:row-start-1">
+          <ProductGallery
+            images={product.images}
+            srcSets={product.imageSrcSets}
+            name={product.name}
+            badge={discountPercent(product.price, product.compareAtPrice) > 0 ? `-${discountPercent(product.price, product.compareAtPrice)}%` : null}
+          />
+        </div>
+        <div className="lg:col-start-2 lg:row-span-2 lg:row-start-1">
+          <BuyBox product={buyBoxProduct} />
+        </div>
+        <section className="card-surface p-6 lg:col-start-1 lg:row-start-2 lg:self-start">
           <h2 className="mb-3 text-xl font-bold tracking-tight text-ink-900">Características</h2>
           <dl className="divide-y divide-ink-50">
             {/* Filas estructuradas (AI Commerce): solo las que tengan dato.
@@ -291,7 +295,9 @@ export default async function ProductPage({ params }: { params: Params }) {
             </div>
           </dl>
         </section>
+      </div>
 
+      <div className="mt-8 space-y-8">
         {product.highlights.length ? (
           <section className="card-surface p-6">
             <h2 className="mb-3 text-xl font-bold tracking-tight text-ink-900">Lo más destacado</h2>
