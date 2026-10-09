@@ -60,7 +60,7 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
         <Pill tone="neutral">{statusLabel(order.status)}</Pill>
       </div>
 
-      <div className="card-surface space-y-4 p-5">
+      <div className="admin-card space-y-4 p-5">
         <h2 className="text-lg font-extrabold text-ink-900">Gestión interna</h2>
         <AdminOrderManageForm code={order.code} currentStatus={order.status} trackingCode={order.trackingCode ?? ""} />
         <dl className="grid gap-2 text-xs text-ink-500 md:grid-cols-2">

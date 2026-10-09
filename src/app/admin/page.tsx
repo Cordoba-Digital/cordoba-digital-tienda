@@ -28,7 +28,7 @@ function statusTone(status: string): "amber" | "brand" | "success" | "neutral" {
   }
 }
 
-const card = "rounded-2xl border border-ink-100 bg-surface";
+const card = "rounded-lg border border-ink-100 bg-surface";
 
 /** Variación contra el período anterior del mismo largo. Sin base, no se muestra. */
 function Delta({ now, before }: { now: number; before: number }) {
@@ -132,7 +132,7 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
             <h2 className="text-base font-bold text-ink-900">Alertas de stock</h2>
             <Link href="/admin/productos?sinStock=1" className="text-xs font-bold text-brand-700 hover:underline">Ver →</Link>
           </div>
-          <Link href="/admin/productos?sinStock=1" className="mb-3 flex items-center justify-between rounded-xl bg-rose-50 px-3 py-2.5">
+          <Link href="/admin/productos?sinStock=1" className="mb-3 flex items-center justify-between rounded-lg bg-rose-50 px-3 py-2.5">
             <span className="text-sm font-semibold text-rose-800">⚠ Sin stock</span>
             <span className="text-sm font-black text-rose-800">{s.outOfStockCount.toLocaleString("es-AR")} productos</span>
           </Link>
@@ -245,7 +245,7 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
         ) : (
           <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             {s.topProducts.map((p) => (
-              <li key={p.slug} className="overflow-hidden rounded-xl border border-ink-100">
+              <li key={p.slug} className="overflow-hidden rounded-lg border border-ink-100">
                 <Link href={`/admin/productos/${encodeURIComponent(p.slug)}`} className="block">
                   <div className="aspect-square bg-white">
                     {p.image ? (

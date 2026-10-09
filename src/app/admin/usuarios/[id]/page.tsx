@@ -37,18 +37,18 @@ export default async function AdminUserDetailPage({ params }: { params: Promise<
       </div>
 
       <div className="grid gap-3 md:grid-cols-3">
-        <div className="card-surface space-y-1 p-4 text-sm">
+        <div className="admin-card space-y-1 p-4 text-sm">
           <p className="text-xs font-bold text-ink-500">Cuenta</p>
           <p className="font-bold text-ink-900">{user.email}</p>
           {user.name && <p className="text-ink-500">{user.name}</p>}
           <p className="text-xs text-ink-500">Alta: {formatDateTime(user.createdAt)}</p>
         </div>
-        <div className="card-surface space-y-1 p-4 text-sm">
+        <div className="admin-card space-y-1 p-4 text-sm">
           <p className="text-xs font-bold text-ink-500">Compras</p>
           <p className="text-2xl font-black text-ink-900">{user.orderCount} pedidos</p>
           <p className="font-bold text-ink-500">{money(user.totalSpent)} en total</p>
         </div>
-        <div className="card-surface space-y-2 p-4 text-sm">
+        <div className="admin-card space-y-2 p-4 text-sm">
           <p className="text-xs font-bold text-ink-500">Sesiones activas: {user.activeSessions}</p>
           {user.sessions.length === 0 ? (
             <p className="text-ink-500">Sin sesiones vigentes.</p>
@@ -67,7 +67,7 @@ export default async function AdminUserDetailPage({ params }: { params: Promise<
 
       <h2 className="text-lg font-black text-ink-900">Historial de pedidos</h2>
       {orders.length === 0 ? (
-        <p className="card-surface p-6 text-sm text-ink-500">Todavía no compró nada con este email.</p>
+        <p className="admin-card p-6 text-sm text-ink-500">Todavía no compró nada con este email.</p>
       ) : (
         <div className="admin-table overflow-x-auto">
           <table className="w-full min-w-[640px] text-left text-sm">

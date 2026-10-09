@@ -42,16 +42,16 @@ export default async function AdminUsersPage({ searchParams }: { searchParams: S
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3">
-        <div className="card-surface p-4">
+        <div className="admin-card p-4">
           <p className="text-xs font-bold text-ink-500">Cuentas con Google</p>
           <p className="text-2xl font-black text-ink-900">{result.summary.total}</p>
         </div>
-        <div className="card-surface p-4">
+        <div className="admin-card p-4">
           <p className="text-xs font-bold text-ink-500">Con compras</p>
           <p className="text-2xl font-black text-ink-900">{result.summary.withOrders}</p>
           <p className="text-sm text-ink-500">Incluye pedidos de invitado con el mismo email</p>
         </div>
-        <div className="card-surface p-4">
+        <div className="admin-card p-4">
           <p className="text-xs font-bold text-ink-500">Bloqueados</p>
           <p className="text-2xl font-black text-ink-900">{result.summary.disabled}</p>
         </div>

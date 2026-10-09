@@ -52,17 +52,17 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="card-surface p-4">
+        <div className="admin-card p-4">
           <p className="text-xs font-bold text-ink-500">Pendientes de pago</p>
           <p className="text-2xl font-black text-ink-900">{result.summary.pendientes}</p>
           <p className="text-sm font-bold text-ink-500">{money(result.summary.montoPendiente)}</p>
         </div>
-        <div className="card-surface p-4">
+        <div className="admin-card p-4">
           <p className="text-xs font-bold text-ink-500">Confirmados</p>
           <p className="text-2xl font-black text-ink-900">{result.summary.confirmados}</p>
           <p className="text-sm font-bold text-ink-500">{money(result.summary.montoConfirmado)} acreditados</p>
         </div>
-        <div className="card-surface p-4">
+        <div className="admin-card p-4">
           <p className="text-xs font-bold text-ink-500">Órdenes con MP</p>
           <p className="text-2xl font-black text-ink-900">{result.total}</p>
           <Link
@@ -72,7 +72,7 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
             Ver los que fueron a pagar
           </Link>
         </div>
-        <div className="card-surface p-4">
+        <div className="admin-card p-4">
           <p className="text-xs font-bold text-ink-500">Conciliación</p>
           <p className="text-sm text-ink-500">
             Botón “Verificar en MP” por fila: compara el monto acreditado con el total. No modifica nada.

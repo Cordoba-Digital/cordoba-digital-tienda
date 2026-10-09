@@ -10,7 +10,7 @@ import type { AdminProductEditData } from "@/lib/admin-products";
 const inputCls =
   "w-full rounded-lg border border-ink-200 bg-surface px-3 py-2 text-sm text-ink-900 outline-none focus:border-ink-400";
 const labelCls = "mb-1 block text-xs font-semibold text-ink-600";
-const sectionCls = "rounded-2xl border border-ink-100 bg-surface p-5 space-y-4";
+const sectionCls = "rounded-lg border border-ink-100 bg-surface p-5 space-y-4";
 const sectionTitleCls = "text-sm font-bold text-ink-900";
 
 function digitsOnly(value: string): string {

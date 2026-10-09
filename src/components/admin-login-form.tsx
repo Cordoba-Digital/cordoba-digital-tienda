@@ -55,7 +55,7 @@ export function AdminLoginForm({
 
   return (
     <div className="mx-auto w-full max-w-sm">
-      <div className="card-surface p-6">
+      <div className="admin-card p-6">
         <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">
           Admin
         </p>
