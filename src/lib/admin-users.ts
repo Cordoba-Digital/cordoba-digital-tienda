@@ -165,3 +165,15 @@ export async function setUserDisabled(id: number, disabled: boolean): Promise<bo
     .returning({ id: users.id });
   return updated.length > 0;
 }
+
+/**
+ * Borra la cuenta y sus sesiones. Los pedidos quedan: se enlazan por email,
+ * no por la cuenta. Si la persona vuelve a entrar con Google, se crea de nuevo.
+ */
+export async function deleteUser(id: number): Promise<{ email: string; name: string } | null> {
+  return db.transaction(async (tx) => {
+    await tx.delete(userSessions).where(eq(userSessions.userId, id));
+    const [gone] = await tx.delete(users).where(eq(users.id, id)).returning({ email: users.email, name: users.name });
+    return gone ?? null;
+  });
+}

@@ -1,6 +1,6 @@
 import { sessionFromCookieHeader, verifyAdminSessionValue } from "@/lib/admin-auth";
 import { actorFromRequest, logAdminAction } from "@/lib/admin-audit";
-import { getAdminUserDetail, setUserDisabled } from "@/lib/admin-users";
+import { deleteUser, getAdminUserDetail, setUserDisabled } from "@/lib/admin-users";
 
 export const dynamic = "force-dynamic";
 
@@ -53,4 +53,25 @@ export async function PATCH(request: Request) {
     changes: { bloqueado: { from: !body.disabled, to: body.disabled } },
   });
   return Response.json({ ok: true, disabled: body.disabled });
+}
+
+export async function DELETE(request: Request) {
+  if (!(await authorized(request))) {
+    return Response.json({ ok: false, error: "No autorizado." }, { status: 401 });
+  }
+  const id = idFrom(request);
+  if (id === null) {
+    return Response.json({ ok: false, error: "ID inválido." }, { status: 400 });
+  }
+  const gone = await deleteUser(id);
+  if (!gone) {
+    return Response.json({ ok: false, error: "Usuario inexistente." }, { status: 404 });
+  }
+  await logAdminAction(await actorFromRequest(request), {
+    action: "eliminacion",
+    entityType: "usuario",
+    entityId: String(id),
+    summary: `Eliminó la cuenta de ${gone.name ? `${gone.name} (${gone.email})` : gone.email}`,
+  });
+  return Response.json({ ok: true });
 }

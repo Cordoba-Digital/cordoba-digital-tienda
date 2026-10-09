@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 
+import { AdminUserDeleteButton } from "@/components/admin-user-delete-button";
 import { AdminUserDisableButton } from "@/components/admin-user-disable-button";
 import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
@@ -61,7 +62,10 @@ export default async function AdminUserDetailPage({ params }: { params: Promise<
               ))}
             </ul>
           )}
-          <AdminUserDisableButton id={user.id} disabled={user.isDisabled} />
+          <div className="flex flex-wrap gap-2">
+            <AdminUserDisableButton id={user.id} disabled={user.isDisabled} />
+            <AdminUserDeleteButton id={user.id} label={user.name || user.email} />
+          </div>
         </div>
       </div>
 
