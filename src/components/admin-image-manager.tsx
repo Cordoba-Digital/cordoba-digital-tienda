@@ -62,6 +62,7 @@ export function AdminImageManager({
   const [dragFrom, setDragFrom] = useState<number | null>(null);
   const [dropActive, setDropActive] = useState(false);
   const [pending, setPending] = useState(0);
+  const [urlOpen, setUrlOpen] = useState(false);
   const fileInput = useRef<HTMLInputElement>(null);
   // La lista cambia mientras se suben varias fotos: siempre leemos la última.
   const latest = useRef({ images, onChange, productName });
@@ -277,7 +278,7 @@ export function AdminImageManager({
             </li>
           ))}
           {Array.from({ length: pending }, (_, i) => (
-            <li key={`pending-${i}`} className="grid aspect-square place-items-center rounded-xl border border-dashed border-ink-200 bg-ink-50 text-xs font-semibold text-ink-500">
+            <li key={`pending-${i}`} className="grid aspect-square place-items-center rounded-xl border border-ink-200 bg-ink-50 text-xs font-semibold text-ink-500">
               <span className="flex items-center gap-2">
                 <span className="h-3 w-3 animate-spin rounded-full border-2 border-ink-300 border-t-ink-700" aria-hidden />
                 Subiendo…
@@ -289,74 +290,96 @@ export function AdminImageManager({
 
       {!full ? (
         <div
-          className={`rounded-xl border-2 border-dashed px-4 py-6 text-center transition ${
-            dropActive ? "border-brand-500 bg-brand-50" : "border-ink-200 bg-surface"
+          className={`rounded-lg border transition ${
+            dropActive ? "border-brand-500 bg-brand-50" : "border-ink-200 bg-ink-50/50"
           }`}
         >
-          <svg viewBox="0 0 24 24" className="mx-auto h-7 w-7 text-ink-400" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
-            <path d="M12 16V4m0 0l-4 4m4-4l4 4M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          <p className="mt-2 text-sm font-semibold text-ink-800">
-            {dropActive ? "Soltá las fotos acá" : "Arrastrá fotos acá o pegalas con Ctrl+V"}
-          </p>
-          <p className="mt-0.5 text-xs text-ink-500">
-            JPG, PNG, WebP o GIF. Se achican solas antes de subir.
-            {images.length === 0 ? " La primera va a ser la principal." : ""}
-          </p>
-          <button
-            type="button"
-            onClick={() => fileInput.current?.click()}
-            className="mt-3 rounded-lg bg-ink-900 px-4 py-2 text-sm font-bold text-white transition hover:bg-ink-700"
-          >
-            Subir archivo
-          </button>
-          <input
-            ref={fileInput}
-            type="file"
-            accept="image/*"
-            multiple
-            className="sr-only"
-            tabIndex={-1}
-            onChange={(e) => {
-              void onFiles(e.target.files);
-              e.target.value = "";
-            }}
-          />
-        </div>
-      ) : null}
-
-      {!full ? (
-        <details className="text-sm">
-          <summary className="cursor-pointer text-xs font-semibold text-ink-600">Agregar por URL</summary>
-          <div className="mt-2 flex flex-col gap-2 sm:flex-row">
-            <textarea
-              value={draft}
-              onChange={(e) => setDraft(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" && !e.shiftKey) {
-                  e.preventDefault();
+          <div className="flex flex-col gap-3 p-3 sm:flex-row sm:items-center sm:gap-4 sm:p-4">
+            <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4">
+              <span
+                className={`grid h-10 w-10 shrink-0 place-items-center rounded-full transition ${
+                  dropActive ? "bg-brand-100 text-brand-700" : "bg-surface text-ink-500 ring-1 ring-ink-200"
+                }`}
+                aria-hidden
+              >
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+                  <path d="M4 16l4.5-4.5a2 2 0 012.8 0L16 16m-2-2l1.5-1.5a2 2 0 012.8 0L20 14M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2zm8-12h.01" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+              <div className="min-w-0 flex-1">
+                <p className="text-sm font-semibold text-ink-800">
+                  {dropActive ? "Soltá las fotos para subirlas" : "Arrastrá fotos o pegalas con Ctrl+V"}
+                </p>
+                <p className="mt-0.5 text-xs text-ink-500">
+                  JPG, PNG, WebP o GIF. Se optimizan solas.
+                  {images.length === 0 ? " La primera es la principal." : ""}
+                </p>
+              </div>
+            </div>
+            <div className="flex shrink-0 gap-2">
+              <button
+                type="button"
+                onClick={() => fileInput.current?.click()}
+                className="rounded-lg bg-ink-900 px-3.5 py-2 text-sm font-bold text-white transition hover:bg-ink-700"
+              >
+                Subir archivo
+              </button>
+              <button
+                type="button"
+                onClick={() => setUrlOpen((v) => !v)}
+                aria-expanded={urlOpen}
+                className={`rounded-lg border px-3.5 py-2 text-sm font-bold transition ${
+                  urlOpen ? "border-ink-400 bg-surface text-ink-900" : "border-ink-200 bg-surface text-ink-700 hover:border-ink-300 hover:text-ink-900"
+                }`}
+              >
+                Por URL
+              </button>
+            </div>
+            <input
+              ref={fileInput}
+              type="file"
+              accept="image/*"
+              multiple
+              className="sr-only"
+              tabIndex={-1}
+              onChange={(e) => {
+                void onFiles(e.target.files);
+                e.target.value = "";
+              }}
+            />
+          </div>
+          {urlOpen ? (
+            <div className="flex flex-col gap-2 border-t border-ink-200 p-3 sm:flex-row sm:p-4">
+              <textarea
+                value={draft}
+                onChange={(e) => setDraft(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" && !e.shiftKey) {
+                    e.preventDefault();
+                    void addExternal(draft.split(/\s+/));
+                    setDraft("");
+                  }
+                }}
+                rows={1}
+                autoFocus
+                placeholder="Pegá URLs de fotos, una por línea"
+                aria-label="URLs de fotos"
+                className="min-h-10 w-full resize-y rounded-lg border border-ink-200 bg-surface px-3 py-2 text-sm text-ink-900 outline-none focus:border-ink-400"
+              />
+              <button
+                type="button"
+                onClick={() => {
                   void addExternal(draft.split(/\s+/));
                   setDraft("");
-                }
-              }}
-              rows={1}
-              placeholder="Pegá una o varias URLs de fotos (una por línea)"
-              aria-label="URLs de fotos"
-              className="min-h-10 w-full resize-y rounded-lg border border-ink-200 bg-surface px-3 py-2 text-sm text-ink-900 outline-none focus:border-ink-400"
-            />
-            <button
-              type="button"
-              onClick={() => {
-                void addExternal(draft.split(/\s+/));
-                setDraft("");
-              }}
-              disabled={!draft.trim()}
-              className="shrink-0 rounded-lg border border-ink-200 px-4 py-2 text-sm font-bold text-ink-800 disabled:opacity-40"
-            >
-              Agregar
-            </button>
-          </div>
-        </details>
+                }}
+                disabled={!draft.trim()}
+                className="shrink-0 rounded-lg border border-ink-200 bg-surface px-4 py-2 text-sm font-bold text-ink-800 disabled:opacity-40"
+              >
+                Agregar
+              </button>
+            </div>
+          ) : null}
+        </div>
       ) : null}
 
       <p className="text-xs text-ink-500">
