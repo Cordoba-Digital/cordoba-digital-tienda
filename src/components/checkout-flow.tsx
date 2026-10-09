@@ -9,6 +9,7 @@ import { useStore } from "@/components/store-provider";
 import { Spinner } from "@/components/ui";
 import { readCoupon, writeCoupon } from "@/lib/coupon-storage";
 import { money } from "@/lib/format";
+import { isPaymentMethodOffered } from "@/lib/checkout-payment";
 import { computeTotals, PAYMENT_METHODS, type CouponInfo, type PaymentMethodId } from "@/lib/pricing";
 import { validateDelivery, validatePersonalData } from "@/lib/checkout-validation";
 import { useShippingQuote } from "@/lib/shipping-quote";
@@ -705,9 +706,7 @@ export function CheckoutFlow() {
             <div className="card-surface space-y-4 p-6">
               <h2 className="text-xl font-extrabold tracking-tight text-ink-900">Medio de pago</h2>
               <div className="grid gap-2">
-                  {PAYMENT_METHODS.filter((method) =>
-                  method.id === "transferencia" || (method.id === "efectivo" && deliveryMethod === "pickup"),
-                ).map(
+                  {PAYMENT_METHODS.filter((method) => isPaymentMethodOffered(method.id, deliveryMethod)).map(
                     (method) => {
                       const PaymentIcon = PAYMENT_ICONS[method.id];
                       return (
