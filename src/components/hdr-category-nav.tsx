@@ -136,9 +136,14 @@ function columnsFor(total: number): 1 | 2 | 3 {
  * al borde. El padding tambien se queda afuera: el panel de catalogo usa
  * `p-0`, para que las dos columnas lleguen hasta el borde redondeado en vez
  * de dejar un marco blanco de 12 px alrededor.
+ *
+ * Se posiciona contra el `container-xl` de la barra (no contra el ícono): con
+ * `inset-x-6` (el padding del contenedor desde md) toma los mismos bordes que
+ * la fila logo–carrito, y con `top-full` queda pegado debajo de la barra, con
+ * las esquinas de arriba rectas para que se lea como parte del header.
  */
 const PANEL_SHELL =
-  "absolute left-0 top-full z-50 -mt-1.5 animate-pop rounded-2xl border border-ink-100 bg-surface shadow-2xl shadow-black/10";
+  "absolute inset-x-6 top-full z-50 animate-pop rounded-b-2xl border border-ink-100 bg-surface shadow-2xl shadow-black/10";
 
 /** Hijos de la raíz; los que tienen nietos los muestran indentados. */
 function SubcategoryList({ nodes, columns }: { nodes: CategoryNavNode[]; columns: string }) {
@@ -292,13 +297,13 @@ function CatalogPanel({
       id={panelId}
       role="group"
       aria-labelledby={triggerId}
-      className={`${PANEL_SHELL} grid max-h-[70vh] w-[min(64rem,calc(100vw_-_3rem))] grid-cols-[15.5rem_1fr] overflow-hidden p-0`}
+      className={`${PANEL_SHELL} grid max-h-[70vh] grid-cols-[15.5rem_1fr] overflow-hidden p-0`}
     >
       <ul
         ref={listRef}
         aria-label="Áreas del catálogo"
         onKeyDown={handleListKeyDown}
-        className="max-h-[70vh] overflow-y-auto overscroll-contain data-lenis-prevent border-r border-ink-100 p-2"
+        className="scroll-fino max-h-[70vh] overflow-y-auto overscroll-contain data-lenis-prevent border-r border-ink-100 py-2 pl-2 pr-1"
       >
         {categories.map((root) => {
           const isSelected = root.slug === selected.slug;
@@ -339,7 +344,7 @@ function CatalogPanel({
         lo deja estirado por el contenido y el `overflow-y-auto` de abajo no
         llega a cortar: el area con 20 hijos se saldria del panel.
       */}
-      <div className="flex min-h-0 flex-col overflow-y-auto overscroll-contain data-lenis-prevent p-4">
+      <div className="scroll-fino flex min-h-0 flex-col overflow-y-auto overscroll-contain data-lenis-prevent p-4">
         <div className="mb-3 flex items-start gap-3 border-b border-ink-100 pb-3">
           <span className="text-xl leading-none" aria-hidden>
             <CategoryIcon name={selected.name} className="h-6 w-6 text-brand-700" />
@@ -464,13 +469,13 @@ export function CategoryNavBar({ categories }: { categories: CategoryNavRoot[] }
   return (
     <>
     <div className="hidden border-t border-ink-100 lg:block">
-      <div ref={barRef} className="container-xl flex h-11 items-center gap-1">
+      <div ref={barRef} className="container-xl relative flex h-11 items-center gap-1">
         {/*
           El ícono abre el catálogo completo y además se puede usar con teclado
           (Enter abre y Escape cierra), así que no depende del puntero.
         */}
         <div
-          className="relative flex shrink-0 items-center"
+          className="flex shrink-0 items-center"
           onMouseEnter={() => openPanel(ALL_KEY)}
           onMouseLeave={closeSoon}
           onBlur={handleBlur}
