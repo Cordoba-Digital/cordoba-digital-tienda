@@ -38,6 +38,11 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const [reduceMotion, setReduceMotion] = useState(false);
+  // Distancia del hero al borde de arriba (barra + header + menú). En
+  // escritorio el hero se dimensiona para que, al abrir la página, entren
+  // completos él y el cintillo de confianza que lo pisa (~88 px).
+  const [heroTop, setHeroTop] = useState<number | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const touchX = useRef<number | null>(null);
   // Panel táctil: manda muchos eventos chicos por swipe (3-15 px) en vez de
   // uno grande, así que se acumulan en una ventana corta y se dispara al
@@ -59,6 +64,16 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
     };
   }, []);
 
+  useEffect(() => {
+    const measure = () => {
+      const el = sectionRef.current;
+      if (el) setHeroTop(Math.round(el.getBoundingClientRect().top + window.scrollY));
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
+
   // Avance automático: `index` queda fuera de las dependencias a propósito.
   // Con el tick funcional el timer no se recrea en cada diapositiva y no hay
   // deriva; el cambio manual igual reinicia el ciclo porque `go` re-renderiza
@@ -71,8 +86,10 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
 
   return (
     <section
+      ref={sectionRef}
       id="hero"
-      className="mesh-dark relative overflow-hidden"
+      className="mesh-dark relative overflow-hidden lg:flex lg:h-[clamp(25rem,calc(100svh-var(--hero-top,150px)-88px),40rem)] lg:flex-col"
+      style={heroTop ? ({ "--hero-top": `${heroTop}px` } as React.CSSProperties) : undefined}
       role="region"
       aria-roledescription="carrusel"
       aria-label="Destacados de la tienda"
@@ -112,7 +129,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
       }}
     >
       <div
-        className="flex transition-transform duration-300 ease-out motion-reduce:transition-none"
+        className="flex transition-transform duration-300 ease-out motion-reduce:transition-none lg:min-h-0 lg:flex-1"
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
         {slides.map((slide, i) => {
@@ -163,10 +180,10 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
               aria-label={`${i + 1} de ${count}`}
               aria-hidden={!active}
               inert={!active}
-              className="w-full shrink-0"
+              className="w-full shrink-0 lg:h-full"
             >
               <div
-                className={`container-xl relative grid items-center gap-8 pb-4 pt-9 lg:pt-12 ${
+                className={`container-xl relative grid items-center gap-8 pb-4 pt-9 lg:h-full lg:pb-0 lg:pt-6 ${
                   producto ? "lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]" : "lg:max-w-3xl"
                 }`}
               >
@@ -221,8 +238,8 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                   tarjeta y no hay nada flotando por encima.
                 */}
                 {producto ? (
-                  <div className={`relative${enterClass}`} style={enterStyle(280)}>
-                    <article className="rounded-[28px] bg-surface p-4 shadow-[0_28px_70px_-34px_rgba(20,22,28,0.5)] ring-1 ring-black/5 sm:p-5">
+                  <div className={`relative lg:h-full lg:min-h-0${enterClass}`} style={enterStyle(280)}>
+                    <article className="rounded-[28px] bg-surface p-4 lg:flex lg:h-full lg:flex-col shadow-[0_28px_70px_-34px_rgba(20,22,28,0.5)] ring-1 ring-black/5 sm:p-5">
                       <div className="flex items-center justify-between gap-3">
                         <span className="inline-flex items-center gap-1.5 rounded-full bg-deep px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white">
                           <Truck size={12} strokeWidth={2.4} aria-hidden />
@@ -233,8 +250,8 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                         ) : null}
                       </div>
 
-                      <div className="mt-3 overflow-hidden rounded-2xl bg-white">
-                        <div className="aspect-[16/10] p-4">
+                      <div className="mt-3 overflow-hidden rounded-2xl bg-white lg:min-h-0 lg:flex-1">
+                        <div className="aspect-[16/10] p-4 lg:aspect-auto lg:h-full lg:p-3">
                           <ProductImg
                             src={producto.image}
                             srcSet={producto.srcSet}
@@ -302,7 +319,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
       {/* Remate del hero: un degradé leve que acerca el fondo oscuro al crema de la página
           (`ink-50`, el fondo del body) para que el cintillo de confianza que
           pisa el hero no corte en seco. Va detrás del contenido. */}
-      <div aria-hidden className="pointer-events-none h-16 bg-gradient-to-b from-transparent via-ink-50/10 to-ink-50/80 sm:h-20" />
+      <div aria-hidden className="pointer-events-none h-16 shrink-0 bg-gradient-to-b from-transparent via-ink-50/10 to-ink-50/80 sm:h-20 lg:h-16" />
 
       {count > 1 ? (
         <>
@@ -314,7 +331,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
             type="button"
             onClick={() => go(-1)}
             aria-label="Diapositiva anterior"
-            className="group absolute left-3 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-transparent text-white/85 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid xl:left-6"
+            className="group absolute left-0.5 top-1/2 z-10 hidden h-12 w-8 -translate-y-1/2 place-items-center rounded-lg bg-transparent text-white/85 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid min-[1440px]:left-6 min-[1440px]:w-12"
           >
             <ChevronLeft size={30} strokeWidth={2} aria-hidden className="drop-shadow-[0_1px_3px_rgba(0,0,0,0.55)] transition-transform group-hover:-translate-x-0.5" />
           </button>
@@ -322,7 +339,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
             type="button"
             onClick={() => go(1)}
             aria-label="Diapositiva siguiente"
-            className="group absolute right-3 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-transparent text-white/85 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid xl:right-6"
+            className="group absolute right-0.5 top-1/2 z-10 hidden h-12 w-8 -translate-y-1/2 place-items-center rounded-lg bg-transparent text-white/85 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid min-[1440px]:right-6 min-[1440px]:w-12"
           >
             <ChevronRight size={30} strokeWidth={2} aria-hidden className="drop-shadow-[0_1px_3px_rgba(0,0,0,0.55)] transition-transform group-hover:translate-x-0.5" />
           </button>
