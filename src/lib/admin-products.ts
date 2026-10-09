@@ -1,4 +1,4 @@
-import { and, desc, eq, ilike, or, sql } from "drizzle-orm";
+import { and, asc, desc, eq, ilike, or, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { categories, productCategories, products, type Spec } from "@/db/schema";
@@ -24,6 +24,10 @@ export async function listAdminProducts(input: {
   q: string;
   category: string;
   sinStock: boolean;
+  /** "con": stock > 0, "sin": sin stock. Gana sobre `sinStock`. */
+  stock?: "" | "con" | "sin";
+  /** Orden por stock; sin valor, los más nuevos primero. */
+  sort?: "" | "stock-desc" | "stock-asc";
   oferta: boolean;
   destacados: boolean;
   page: number;
@@ -55,7 +59,9 @@ export async function listAdminProducts(input: {
         )
     ))`);
   }
-  if (input.sinStock) clauses.push(sql`${products.stock} <= 0`);
+  const stockFilter = input.stock || (input.sinStock ? "sin" : "");
+  if (stockFilter === "sin") clauses.push(sql`${products.stock} <= 0`);
+  if (stockFilter === "con") clauses.push(sql`${products.stock} > 0`);
   if (input.oferta) clauses.push(sql`${products.compareAtPrice} is not null and ${products.compareAtPrice} > ${products.price}`);
   if (input.destacados) clauses.push(eq(products.featured, true));
   const where = clauses.length ? and(...clauses) : undefined;
@@ -77,7 +83,13 @@ export async function listAdminProducts(input: {
       })
       .from(products)
       .where(where)
-      .orderBy(desc(products.createdAt))
+      .orderBy(
+        ...(input.sort === "stock-desc"
+          ? [desc(products.stock), desc(products.createdAt)]
+          : input.sort === "stock-asc"
+            ? [asc(products.stock), desc(products.createdAt)]
+            : [desc(products.createdAt)]),
+      )
       .limit(perPage)
       .offset((page - 1) * perPage),
     db.select({ count: sql<number>`count(*)::int` }).from(products).where(where),

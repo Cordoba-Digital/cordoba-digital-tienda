@@ -130,9 +130,9 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
         <section className={`${card} p-5`}>
           <div className="mb-3 flex items-center justify-between">
             <h2 className="text-base font-bold text-ink-900">Alertas de stock</h2>
-            <Link href="/admin/productos?sinStock=1" className="text-xs font-bold text-brand-700 hover:underline">Ver →</Link>
+            <Link href="/admin/productos?stock=sin" className="text-xs font-bold text-brand-700 hover:underline">Ver →</Link>
           </div>
-          <Link href="/admin/productos?sinStock=1" className="mb-3 flex items-center justify-between rounded-lg bg-rose-50 px-3 py-2.5">
+          <Link href="/admin/productos?stock=sin" className="mb-3 flex items-center justify-between rounded-lg bg-rose-50 px-3 py-2.5">
             <span className="text-sm font-semibold text-rose-800">⚠ Sin stock</span>
             <span className="text-sm font-black text-rose-800">{s.outOfStockCount.toLocaleString("es-AR")} productos</span>
           </Link>
