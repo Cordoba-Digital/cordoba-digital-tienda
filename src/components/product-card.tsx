@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Link from "next/link";
 
@@ -8,30 +8,50 @@ import { ProductImg, ProductPlaceholder } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Stars } from "@/components/ui";
 import { discountPercent, money } from "@/lib/format";
+import { MAX_QTY_PER_ITEM } from "@/lib/pricing";
 import type { ProductView } from "@/lib/product-view";
 
 export function ProductCard({ product, badge }: { product: ProductView; badge?: string }) {
-  const { toggleFavorite, isFavorite, hydrated, addItem } = useStore();
+  const { toggleFavorite, isFavorite, hydrated, addItem, items, setQuantity, removeItem } = useStore();
   const off = discountPercent(product.price, product.compareAtPrice);
   const fav = hydrated && isFavorite(product.slug);
   const outOfStock = product.stock === 0;
   const hoverSrc = product.images[1] && product.images[1] !== product.image ? product.images[1] : null;
+  const inCart = hydrated ? (items.find((i) => i.slug === product.slug)?.quantity ?? 0) : 0;
+  const maxQty = product.stock > 1 ? Math.min(product.stock, MAX_QTY_PER_ITEM) : MAX_QTY_PER_ITEM;
+  // Aviso breve sobre la foto al agregar desde la tarjeta: el panel lateral ya
+  // no se abre, así que la confirmación tiene que estar acá.
+  const [added, setAdded] = useState(0);
+  useEffect(() => {
+    if (!added) return;
+    const id = window.setTimeout(() => setAdded(0), 1600);
+    return () => window.clearTimeout(id);
+  }, [added]);
 
-  const addToCart = (event: React.MouseEvent) => {
+  const stop = (event: React.MouseEvent) => {
     event.preventDefault();
     event.stopPropagation();
+  };
+
+  const addToCart = (event: React.MouseEvent) => {
+    stop(event);
     if (outOfStock) return;
-    addItem({
-      slug: product.slug,
-      name: product.name,
-      brand: product.brand,
-      image: product.image,
-      imageSrcSet: product.imageSrcSets[0],
-      price: product.price,
-      compareAtPrice: product.compareAtPrice,
-      stock: product.stock,
-      freeShipping: product.freeShipping,
-    });
+    addItem(
+      {
+        slug: product.slug,
+        name: product.name,
+        brand: product.brand,
+        image: product.image,
+        imageSrcSet: product.imageSrcSets[0],
+        price: product.price,
+        compareAtPrice: product.compareAtPrice,
+        stock: product.stock,
+        freeShipping: product.freeShipping,
+      },
+      1,
+      { silent: true, open: false },
+    );
+    setAdded(Date.now());
   };
 
   return (
@@ -75,6 +95,15 @@ export function ProductCard({ product, badge }: { product: ProductView; badge?: 
         ) : product.badge ? (
           <span className="pointer-events-none absolute left-2 top-2 rounded-md bg-brand-700 px-2 py-0.5 text-[11px] font-bold text-white shadow-sm">
             {product.badge}
+          </span>
+        ) : null}
+
+        {added ? (
+          <span
+            key={added}
+            className="pointer-events-none absolute bottom-2 right-2 animate-pop rounded-full bg-emerald-600 px-2 py-0.5 text-[11px] font-bold text-white shadow-sm motion-reduce:animate-none"
+          >
+            ✓ Agregado
           </span>
         ) : null}
 
@@ -128,27 +157,67 @@ export function ProductCard({ product, badge }: { product: ProductView; badge?: 
           </div>
         ) : null}
 
-        <div className="mt-auto flex items-end justify-between gap-2 pt-3">
+        <div className="mt-auto flex flex-wrap items-end justify-between gap-2 pt-3">
           <div>
             {product.compareAtPrice ? (
               <p className="text-xs text-ink-400 line-through">{money(product.compareAtPrice)}</p>
             ) : null}
             <p className="text-[17px] font-extrabold tracking-tight leading-none text-ink-900">{money(product.price)}</p>
           </div>
-          <button
-            type="button"
-            disabled={outOfStock}
-            onClick={addToCart}
-            aria-label="Agregar al carrito"
-            title={outOfStock ? "Sin stock" : "Agregar al carrito"}
-            className="relative z-10 grid h-9 w-9 shrink-0 place-items-center rounded-full bg-brand-700 text-white transition hover:bg-brand-800 disabled:cursor-not-allowed disabled:bg-ink-200 disabled:text-ink-400"
-          >
-            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <circle cx="9" cy="20" r="1.5" />
-              <circle cx="17" cy="20" r="1.5" />
-              <path d="M2.5 3.5h2l2.6 12.5a1 1 0 001 .8h8.7a1 1 0 001-.8L20.5 7H6" />
-            </svg>
-          </button>
+          {inCart > 0 ? (
+            // Ya está en el carrito: la cantidad se ajusta acá mismo. Restar
+            // desde 1 lo quita y vuelve el botón de agregar.
+            <div
+              role="group"
+              aria-label={`Cantidad en el carrito: ${inCart}`}
+              className="relative z-10 ml-auto inline-flex h-9 shrink-0 animate-pop items-center rounded-full bg-brand-700 text-white motion-reduce:animate-none"
+            >
+              <button
+                type="button"
+                aria-label={inCart === 1 ? "Quitar del carrito" : "Restar uno"}
+                onClick={(event) => {
+                  stop(event);
+                  // `setQuantity` no baja de 1, así que el último se quita aparte.
+                  if (inCart === 1) removeItem(product.slug);
+                  else setQuantity(product.slug, inCart - 1);
+                }}
+                className="grid h-9 w-8 place-items-center rounded-l-full text-base font-bold transition hover:bg-brand-800"
+              >
+                −
+              </button>
+              <span aria-live="polite" className="min-w-5 text-center text-sm font-extrabold tabular-nums">
+                {inCart}
+              </span>
+              <button
+                type="button"
+                aria-label="Sumar uno"
+                disabled={inCart >= maxQty}
+                title={inCart >= maxQty ? `Máximo ${maxQty} por producto` : undefined}
+                onClick={(event) => {
+                  stop(event);
+                  setQuantity(product.slug, inCart + 1);
+                }}
+                className="grid h-9 w-8 place-items-center rounded-r-full text-base font-bold transition hover:bg-brand-800 disabled:cursor-not-allowed disabled:text-white/40 disabled:hover:bg-transparent"
+              >
+                +
+              </button>
+            </div>
+          ) : (
+            <button
+              type="button"
+              disabled={outOfStock}
+              onClick={addToCart}
+              aria-label="Agregar al carrito"
+              title={outOfStock ? "Sin stock" : "Agregar al carrito"}
+              className="relative z-10 ml-auto grid h-9 w-9 shrink-0 place-items-center rounded-full bg-brand-700 text-white transition hover:bg-brand-800 disabled:cursor-not-allowed disabled:bg-ink-200 disabled:text-ink-400"
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <circle cx="9" cy="20" r="1.5" />
+                <circle cx="17" cy="20" r="1.5" />
+                <path d="M2.5 3.5h2l2.6 12.5a1 1 0 001 .8h8.7a1 1 0 001-.8L20.5 7H6" />
+              </svg>
+            </button>
+          )}
         </div>
       </div>
     </article>

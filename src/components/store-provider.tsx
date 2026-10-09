@@ -40,6 +40,8 @@ type StoreState = {
   hydrated: boolean;
   cartOpen: boolean;
   toasts: ToastMessage[];
+  /** Último agregado: el panel lo resalta y `at` reinicia la animación. */
+  lastAdded: { slug: string; at: number } | null;
   addItem: (item: Omit<CartItem, "quantity">, quantity?: number, options?: { silent?: boolean; open?: boolean }) => void;
   removeItem: (slug: string) => void;
   setQuantity: (slug: string, quantity: number) => void;
@@ -95,6 +97,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [hydrated, setHydrated] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
+  const [lastAdded, setLastAdded] = useState<StoreState["lastAdded"]>(null);
 
   useEffect(() => {
     const id = window.setTimeout(() => {
@@ -144,6 +147,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   const addItem: StoreState["addItem"] = useCallback(
     (item, quantity = 1, options) => {
+      setLastAdded({ slug: item.slug, at: Date.now() });
       setItems((prev) => {
         const existing = prev.find((i) => i.slug === item.slug);
         if (existing) {
@@ -208,6 +212,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       hydrated,
       cartOpen,
       toasts,
+      lastAdded,
       addItem,
       removeItem,
       setQuantity,
@@ -229,6 +234,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     hydrated,
     cartOpen,
     toasts,
+    lastAdded,
     addItem,
     removeItem,
     setQuantity,
