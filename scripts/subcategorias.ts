@@ -114,57 +114,30 @@ export const PLAN: PlanCategoria[] = [
       { slug: "realidad-virtual", name: "Realidad Virtual", match: /meta quest|\bvr\b/, min: 1 },
     ],
   },
-  // Las de abajo tienen 12 productos o menos. Las reglas son a ciegas (sin los
-  // nombres reales todavía): el modo prueba dice cuáles llegan al mínimo.
   {
     parent: "mochilas",
+    // No tiene mochilas: son valijas, maletines y bandoleras.
+    rename: "Valijas y Bolsos",
     reglas: [
-      {
-        slug: "mochilas-para-camaras",
-        name: "Mochilas para Cámaras y Drones",
-        match: /camara|foto|reflex|lowepro|dron|lente/,
-      },
-      { slug: "bolsos-y-fundas", name: "Bolsos, Maletines y Fundas", match: /^(bolso|maletin|funda|estuche|sobre|portanotebook)/ },
-      {
-        slug: "mochilas-para-notebook",
-        name: "Mochilas para Notebook",
-        match: /notebook|laptop|\d+([.,]\d)? ?("|″|pulg)|antirrobo|urbana|mochila/,
-      },
+      { slug: "valijas", name: "Valijas", match: /valija/ },
+      { slug: "bolsos-y-maletines", name: "Bolsos y Maletines", match: /maletin|bandolera|bolso|mochila/ },
     ],
   },
   {
     parent: "electronica",
     reglas: [
-      { slug: "calculadoras", name: "Calculadoras", match: /calculadora/ },
-      { slug: "pilas-y-baterias", name: "Pilas y Baterías", match: /^(pila|bateria|cargador de pilas)|pilas/ },
-      { slug: "iluminacion", name: "Iluminación", match: /lampara|linterna|luz|led|foco|velador/ },
-      { slug: "balanzas", name: "Balanzas", match: /balanza/ },
-      { slug: "relojes-y-despertadores", name: "Relojes y Despertadores", match: /reloj|despertador/ },
-      { slug: "cables-y-zapatillas", name: "Zapatillas y Alargues", match: /zapatilla|alargue|estabilizador|protector de tension/ },
-    ],
-  },
-  {
-    parent: "juguetes",
-    reglas: [
       {
-        slug: "juguetes-a-control-remoto",
-        name: "A Control Remoto",
-        match: /control remoto|\brc\b|radiocontrol|auto|camion|helicoptero|dron/,
+        slug: "enchufes-y-prolongadores",
+        name: "Enchufes y Prolongadores",
+        match: /prolongador|zapatilla|alargue|protector de tension|tomacorriente|enchufe/,
       },
-      { slug: "juguetes-educativos-y-robots", name: "Educativos y Robots", match: /robot|educativ|stem|ciencia|kit|construccion|bloques|lego/ },
-      { slug: "juegos-de-mesa", name: "Juegos de Mesa y Rompecabezas", match: /juego de mesa|rompecabezas|puzzle|cartas/ },
-      { slug: "peluches-y-munecos", name: "Peluches y Muñecos", match: /peluche|muneco|muneca|figura/ },
+      // Con 2 productos no se crea; `\bled\b` para no agarrar "Switch Oled".
+      { slug: "iluminacion", name: "Iluminación", match: /luz de emergencia|lampara|linterna|\bled\b/ },
     ],
   },
-  {
-    parent: "handy-handies",
-    reglas: [
-      { slug: "accesorios-para-handies", name: "Accesorios para Handies", match: /^(bateria|antena|cargador|auricular|microfono|clip|funda|cable)/ },
-      { slug: "handies", name: "Handies", match: /handy|handie|radio|walkie|baofeng|motorola|kenwood|retevis/ },
-    ],
-  },
-  // Monopatines: los 15 son monopatines; la diferencia es la marca y eso ya es
-  // un filtro. Servidores no tiene productos y Calefacción tiene uno solo.
+  // Sin subcategorías: Monopatines (los 15 son monopatines), Juguetes (9 de 10
+  // son lanzadores X-Shot), Handy (los 7 son handies Baofeng), Servidores (sin
+  // productos) y Calefacción (uno solo). La diferencia es la marca o el modelo.
 ];
 
 /**
@@ -186,7 +159,7 @@ const MARCAS = [
   // Drones, monopatines, consolas, handies, muebles
   "DJI", "Xiaomi", "Segway", "Ninebot", "Daihatsu", "Sony", "Baofeng", "Kenwood", "Motorola",
   "Yaesu", "Icom", "Retevis", "Cougar", "Corsair", "Redragon", "Logitech", "Delos", "Xtrike Me",
-  "Netmak", "Level Up", "Meta", "Nintendo",
+  "Netmak", "Level Up", "Meta", "Nintendo", "Everlast", "ELF", "Boya", "Amazon", "X-Shot",
 ];
 
 /** Variantes del nombre que también cuentan como la marca. */
