@@ -166,7 +166,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
               className="w-full shrink-0"
             >
               <div
-                className={`container-xl relative grid items-center gap-8 py-9 lg:py-12 ${
+                className={`container-xl relative grid items-center gap-8 pt-9 lg:pt-12 ${
                   producto ? "lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]" : "lg:max-w-3xl"
                 }`}
               >
@@ -299,47 +299,58 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
         })}
       </div>
 
-      {count > 1 ? (
-        <>
-          {/* Flechas sobre los bordes de la sección, translúcidas para que se
-              lean tanto sobre el fondo oscuro como sobre la tarjeta blanca. */}
-          <button
-            type="button"
-            onClick={() => go(-1)}
-            aria-label="Diapositiva anterior"
-            className="absolute left-3 top-1/2 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-white/15 text-white backdrop-blur-md transition hover:bg-white/25 focus-visible:outline-2 focus-visible:outline-neon-400 sm:grid"
-          >
-            <ChevronLeft size={20} strokeWidth={2.4} aria-hidden />
-          </button>
-          <button
-            type="button"
-            onClick={() => go(1)}
-            aria-label="Diapositiva siguiente"
-            className="absolute right-3 top-1/2 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 bg-white/15 text-white backdrop-blur-md transition hover:bg-white/25 focus-visible:outline-2 focus-visible:outline-neon-400 sm:grid"
-          >
-            <ChevronRight size={20} strokeWidth={2.4} aria-hidden />
-          </button>
-          {/* Los puntos van centrados abajo, con espacio de sobra: el cintillo
-              de confianza que viene después pisa los últimos 24-32 px del hero,
-              así que quedan por encima de esa franja. */}
-          <div className="absolute bottom-10 left-1/2 flex -translate-x-1/2 items-center gap-0.5 sm:bottom-12">
-            {slides.map((slide, i) => (
-              <button
-                key={slide.id}
-                type="button"
-                onClick={() => setIndex(i)}
-                aria-label={`Ir a la diapositiva ${i + 1}: ${slide.id}`}
-                aria-current={i === index}
-                className="grid h-11 w-8 place-items-center rounded-full focus-visible:outline-2 focus-visible:outline-neon-400"
-              >
-                <span className={`h-1.5 rounded-full transition-all ${i === index ? "w-5 bg-brand-400" : "w-1.5 bg-white/40 hover:bg-white/70"}`} />
-              </button>
-            ))}
-            {/* Sin botón de pausa manual: el cambio es automático (la pausa al
-                hover/foco sigue activa pero es invisible). */}
+      {/* Controles en flujo normal, debajo del contenido y alineados con la
+          columna de texto. Antes los puntos iban absolutos al centro y la
+          tarjeta del producto los tapaba, y las flechas quedaban pegadas a
+          los bordes de la pantalla, lejos de todo. El padding de abajo deja
+          lugar al cintillo de confianza que pisa los últimos 24-32 px. */}
+      <div className={`container-xl pb-12 sm:pb-14 ${count > 1 ? "pt-6" : "pt-3"}`}>
+        {count > 1 ? (
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => go(-1)}
+              aria-label="Diapositiva anterior"
+              className="group hidden h-10 w-10 place-items-center rounded-full border border-white/15 bg-white/5 text-white/80 transition hover:border-white/35 hover:bg-white/15 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid"
+            >
+              <ChevronLeft size={18} strokeWidth={2.4} aria-hidden className="transition-transform group-hover:-translate-x-0.5" />
+            </button>
+            <div className="flex items-center">
+              {slides.map((slide, i) => {
+                const current = i === index;
+                return (
+                  <button
+                    key={slide.id}
+                    type="button"
+                    onClick={() => setIndex(i)}
+                    aria-label={`Ir a la diapositiva ${i + 1} de ${count}`}
+                    aria-current={current ? "true" : undefined}
+                    className="group grid h-10 place-items-center px-1 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-neon-400 rounded-full"
+                  >
+                    <span
+                      aria-hidden
+                      className={`block h-2 rounded-full transition-all duration-300 motion-reduce:transition-none ${
+                        current ? "w-7 bg-brand-400" : "w-2 bg-white/30 group-hover:bg-white/60"
+                      }`}
+                    />
+                  </button>
+                );
+              })}
+            </div>
+            <button
+              type="button"
+              onClick={() => go(1)}
+              aria-label="Diapositiva siguiente"
+              className="group hidden h-10 w-10 place-items-center rounded-full border border-white/15 bg-white/5 text-white/80 transition hover:border-white/35 hover:bg-white/15 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid"
+            >
+              <ChevronRight size={18} strokeWidth={2.4} aria-hidden className="transition-transform group-hover:translate-x-0.5" />
+            </button>
+            <p className="ml-1 text-xs font-semibold tabular-nums text-white/45" aria-live="off">
+              <span className="text-white/85">{String(index + 1).padStart(2, "0")}</span> / {String(count).padStart(2, "0")}
+            </p>
           </div>
-        </>
-      ) : null}
+        ) : null}
+      </div>
     </section>
   );
 }
