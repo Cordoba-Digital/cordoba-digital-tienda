@@ -130,16 +130,30 @@ export const productCategories = pgTable(
   ],
 );
 
-export const reviews = pgTable("reviews", {
-  id: serial("id").primaryKey(),
-  productSlug: text("product_slug").notNull(),
-  author: text("author").notNull(),
-  rating: integer("rating").notNull(),
-  title: text("title").notNull().default(""),
-  body: text("body").notNull().default(""),
-  verified: boolean("verified").notNull().default(true),
-  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
-});
+/**
+ * Reseñas de producto. Solo se aceptan con un pedido pago que incluya el
+ * producto (`/api/reviews`), y solo las `verified` cuentan para el promedio y
+ * el AggregateRating. `orderId` es null en las filas anteriores a ese cambio;
+ * el índice único deja una sola reseña por pedido y producto.
+ */
+export const reviews = pgTable(
+  "reviews",
+  {
+    id: serial("id").primaryKey(),
+    productSlug: text("product_slug").notNull(),
+    orderId: integer("order_id"),
+    author: text("author").notNull(),
+    rating: integer("rating").notNull(),
+    title: text("title").notNull().default(""),
+    body: text("body").notNull().default(""),
+    verified: boolean("verified").notNull().default(false),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [
+    uniqueIndex("reviews_order_product_idx").on(table.orderId, table.productSlug),
+    index("reviews_product_idx").on(table.productSlug),
+  ],
+);
 
 export const coupons = pgTable("coupons", {
   code: text("code").primaryKey(),

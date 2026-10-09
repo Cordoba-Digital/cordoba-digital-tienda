@@ -490,11 +490,44 @@ export async function getRelatedProducts(slug: string, categorySlug: string, lim
 export async function getReviewsForProduct(slug: string) {
   await ensureSeeded();
   return db
-    .select()
+    .select({
+      id: reviews.id,
+      author: reviews.author,
+      rating: reviews.rating,
+      title: reviews.title,
+      body: reviews.body,
+      verified: reviews.verified,
+      createdAt: reviews.createdAt,
+    })
     .from(reviews)
     .where(eq(reviews.productSlug, slug))
     .orderBy(desc(reviews.createdAt))
     .limit(12);
+}
+
+/**
+ * Promedio y distribución de las reseñas verificadas (compra con pedido pago).
+ * Es lo único que alimenta el resumen de estrellas y el AggregateRating del
+ * JSON-LD: no se usan `products.rating`/`reviewCount`, que pueden traer valores
+ * del catálogo semilla o reseñas sin compra.
+ */
+export async function getVerifiedRatingStats(slug: string) {
+  const rows = await db
+    .select({ rating: reviews.rating, count: sql<number>`count(*)::int` })
+    .from(reviews)
+    .where(and(eq(reviews.productSlug, slug), eq(reviews.verified, true)))
+    .groupBy(reviews.rating);
+  const distribution: Record<number, number> = {};
+  let count = 0;
+  let sum = 0;
+  for (const row of rows) {
+    distribution[row.rating] = row.count;
+    count += row.count;
+    sum += row.rating * row.count;
+  }
+  // rating * 10, igual que `products.rating`.
+  const rating = count ? Math.round((sum / count) * 10) : 0;
+  return { count, rating, distribution };
 }
 
 export async function getCoupon(code: string) {
