@@ -572,7 +572,8 @@ export async function getOrdersByEmail(email: string) {
       createdAt: orders.createdAt,
     })
     .from(orders)
-    .where(eq(orders.email, normalized))
+    // `lower()` para usar `orders_email_lower_idx` y encontrar pedidos viejos guardados con mayúsculas.
+    .where(sql`lower(${orders.email}) = ${normalized}`)
     .orderBy(desc(orders.createdAt));
   if (!rows.length) return [];
   const counts = await db

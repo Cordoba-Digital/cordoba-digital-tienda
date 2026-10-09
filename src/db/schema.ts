@@ -1,3 +1,4 @@
+import { sql } from "drizzle-orm";
 import {
   boolean,
   index,
@@ -247,33 +248,45 @@ export const orders = pgTable(
     statusUpdatedAt: timestamp("status_updated_at", { withTimezone: true }).notNull().defaultNow(),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
-  (table) => [uniqueIndex("orders_code_idx").on(table.code)],
+  (table) => [
+    uniqueIndex("orders_code_idx").on(table.code),
+    // "Mi cuenta" y el panel de usuarios buscan pedidos por email sin mayúsculas.
+    index("orders_email_lower_idx").on(sql`lower(${table.email})`),
+  ],
 );
 
-export const orderEvents = pgTable("order_events", {
-  id: serial("id").primaryKey(),
-  orderId: integer("order_id").notNull(),
-  fromStatus: text("from_status").notNull().default(""),
-  toStatus: text("to_status").notNull(),
-  note: text("note").notNull().default(""),
-  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
-});
+export const orderEvents = pgTable(
+  "order_events",
+  {
+    id: serial("id").primaryKey(),
+    orderId: integer("order_id").notNull(),
+    fromStatus: text("from_status").notNull().default(""),
+    toStatus: text("to_status").notNull(),
+    note: text("note").notNull().default(""),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index("order_events_order_idx").on(table.orderId)],
+);
 
-export const orderItems = pgTable("order_items", {
-  id: serial("id").primaryKey(),
-  orderId: integer("order_id").notNull(),
-  productSlug: text("product_slug").notNull(),
-  name: text("name").notNull(),
-  image: text("image").notNull().default(""),
-  unitPrice: integer("unit_price").notNull(),
-  quantity: integer("quantity").notNull(),
-  /**
-   * Unidades que este ítem descontó del stock al comprarse (0 cuando el stock
-   * era solo disponibilidad 1/0). Es lo que se devuelve si el pedido se cancela.
-   * La columna la crea `ensureOrderStockSchema` al primer uso.
-   */
-  stockReserved: integer("stock_reserved").notNull().default(0),
-});
+export const orderItems = pgTable(
+  "order_items",
+  {
+    id: serial("id").primaryKey(),
+    orderId: integer("order_id").notNull(),
+    productSlug: text("product_slug").notNull(),
+    name: text("name").notNull(),
+    image: text("image").notNull().default(""),
+    unitPrice: integer("unit_price").notNull(),
+    quantity: integer("quantity").notNull(),
+    /**
+     * Unidades que este ítem descontó del stock al comprarse (0 cuando el stock
+     * era solo disponibilidad 1/0). Es lo que se devuelve si el pedido se cancela.
+     * La columna la crea `ensureOrderStockSchema` al primer uso.
+     */
+    stockReserved: integer("stock_reserved").notNull().default(0),
+  },
+  (table) => [index("order_items_order_idx").on(table.orderId)],
+);
 
 export const subscribers = pgTable("subscribers", {
   id: serial("id").primaryKey(),
