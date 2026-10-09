@@ -123,8 +123,8 @@ export async function saveUploadedImage(raw: Buffer, productName = ""): Promise<
     try {
       return { ok: true, url: await putStoredImage(productImageKey(productName, id, ext), bytes, contentType) };
     } catch (error) {
-      console.error("[product-images] no se pudo subir la foto", error);
-      return { ok: false, error: "No se pudo guardar la foto. Probá de nuevo." };
+      // Si Blob/R2 falla, la foto no se pierde: va a Postgres como antes.
+      console.error("[product-images] no se pudo subir la foto, se guarda en la base", error);
     }
   }
   await ensureTable();
