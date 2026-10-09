@@ -26,6 +26,10 @@ function statusTone(status: string): "amber" | "brand" | "success" | "neutral" {
   }
 }
 
+function plural(n: number, one: string, many: string): string {
+  return `${n} ${n === 1 ? one : many}`;
+}
+
 export default async function AdminDashboardPage() {
   const jar = await cookies();
   if (!(await verifyAdminSessionValue(jar.get(ADMIN_COOKIE)?.value))) {
@@ -34,9 +38,15 @@ export default async function AdminDashboardPage() {
   const stats = await getAdminStats();
 
   const kpis = [
-    { label: "Ventas de hoy", value: money(stats.todayRevenue), sub: `${stats.todayCount} pedidos` },
-    { label: "Ventas del mes", value: money(stats.monthRevenue), sub: `${stats.monthCount} pedidos` },
-    { label: "Ticket promedio", value: money(stats.avgTicket), sub: "este mes" },
+    { label: "Ventas de hoy", value: money(stats.todayRevenue), sub: plural(stats.todayCount, "pedido pagado", "pedidos pagados") },
+    { label: "Ventas del mes", value: money(stats.monthRevenue), sub: plural(stats.monthCount, "pedido pagado", "pedidos pagados") },
+    {
+      label: "Por cobrar",
+      value: money(stats.monthPendingRevenue),
+      sub: `${plural(stats.monthPendingCount, "pedido", "pedidos")} sin pago este mes`,
+      href: "/admin/pedidos?status=pendiente_pago",
+    },
+    { label: "Ticket promedio", value: money(stats.avgTicket), sub: "pagados este mes" },
     {
       label: "Sin stock",
       value: String(stats.outOfStockCount),
@@ -56,7 +66,7 @@ export default async function AdminDashboardPage() {
         <AdminLogoutButton />
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
         {kpis.map((kpi) => {
           const card = (
             <div className="card-surface p-4">
@@ -99,7 +109,7 @@ export default async function AdminDashboardPage() {
         </section>
 
         <section className="card-surface p-5">
-          <h2 className="mb-3 text-lg font-extrabold text-ink-900">Más vendidos del mes</h2>
+          <h2 className="mb-3 text-lg font-extrabold text-ink-900">Más vendidos del mes <span className="text-xs font-semibold text-ink-400">(pagados)</span></h2>
           {stats.topProducts.length === 0 ? (
             <p className="text-sm text-ink-500">Todavía no hay ventas este mes.</p>
           ) : (
