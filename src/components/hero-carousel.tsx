@@ -316,10 +316,10 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
         })}
       </div>
 
-      {/* Remate del hero: un degradé leve que acerca el fondo oscuro al crema de la página
-          (`ink-50`, el fondo del body) para que el cintillo de confianza que
-          pisa el hero no corte en seco. Va detrás del contenido. */}
-      <div aria-hidden className="pointer-events-none h-16 shrink-0 bg-gradient-to-b from-transparent via-ink-50/10 to-ink-50/80 sm:h-20 lg:h-16" />
+      {/* Espacio al pie del hero, sobre el que se apoya el cintillo de
+          confianza (lo pisa 24-32 px). Fondo liso, sin degradé: el usuario
+          lo pidió con el corte recto. */}
+      <div aria-hidden className="h-16 shrink-0 sm:h-20 lg:h-16" />
 
       {count > 1 ? (
         <>
