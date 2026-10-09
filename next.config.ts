@@ -1,5 +1,14 @@
 import type { NextConfig } from "next";
 
+/** Dominio público de las fotos en Cloudflare R2 (ver src/lib/r2.ts). */
+const r2Host = (() => {
+  try {
+    return process.env.R2_PUBLIC_URL ? new URL(process.env.R2_PUBLIC_URL).hostname : null;
+  } catch {
+    return null;
+  }
+})();
+
 const nextConfig: NextConfig = {
   // Las URLs del catálogo migrado desde WooCommerce. Son 301 porque el
   // contenido ya no existe en las rutas viejas: la equivalencia es 1:1
@@ -54,6 +63,8 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "*.public.blob.vercel-storage.com",
       },
+      { protocol: "https", hostname: "*.r2.dev" },
+      ...(r2Host ? [{ protocol: "https" as const, hostname: r2Host }] : []),
     ],
   },
 };

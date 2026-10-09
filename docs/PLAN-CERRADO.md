@@ -103,7 +103,7 @@ Notas de la migración:
 
 ### Imágenes — decidido: no copiar, optimizar
 
-`npm run images:migrate` (sin `--yes`) mide el corpus: **5700 imágenes únicas,
+`npm run images:migrate` (sin `--yes`) medía el corpus: **5700 imágenes únicas,
 ~553 MB** (promedio 99 KB, máximo 718 KB). Copiarlas al repo no conviene:
 
 - 553 MB de binarios en git (historial immense) y en **cada** deploy de Vercel.
@@ -120,8 +120,8 @@ redimensiona y sirve WebP/AVIF desde el caché de Vercel. Medido sobre
 | Servido por `next/image` (828px) | 96 KB (PNG) / **30 KB (WebP)** |
 
 Cuando el cliente defina su hosting, la copia de las imágenes es una tarea de
-migración con su almacenamiento. El script queda listo (`--yes`) pero **no se
-va a usar** salvo que el cliente pida almacenamiento propio.
+migración con su almacenamiento. **Actualización:** se eligió Cloudflare R2; el
+script ahora copia a R2. Ver `docs/IMAGENES-R2.md`.
 
 ### 0. Organizar carpeta — HECHO
 

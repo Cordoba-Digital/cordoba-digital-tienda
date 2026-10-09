@@ -31,7 +31,8 @@ npm run verify:wp                       # compara la base contra WooCommerce
 ```
 
 - Fuente: **WC Store API pública** (`/wp-json/wc/store/v1`): sin credenciales.
-- Las imágenes se sirven desde el servidor viejo de WordPress (`wp-content`).
+- Las imágenes se sirven desde el servidor viejo de WordPress (`wp-content`) hasta
+  copiarlas a Cloudflare R2 (`docs/IMAGENES-R2.md`).
 - Las páginas de categoría son `/categoria/<padre>/<hijo>/...` y las URLs viejas
   de WooCommerce redirigen con 308. Ver `docs/MIGRACION-WP.md` y `docs/CATALOGO-WP.md`.
 
