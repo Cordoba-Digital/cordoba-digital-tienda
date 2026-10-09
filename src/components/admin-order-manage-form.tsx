@@ -76,12 +76,12 @@ export function AdminOrderManageForm({ code, currentStatus, trackingCode }: { co
         <button
           type="submit"
           disabled={saving}
-          className="rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800 disabled:opacity-50"
+          className="rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800 disabled:cursor-not-allowed"
         >
           {saving ? "Guardando…" : "Guardar cambios"}
         </button>
         {saved ? <p className="text-xs font-bold text-emerald-700">{saved}</p> : null}
-        {error ? <p role="alert" className="text-xs font-semibold text-rose-600">{error}</p> : null}
+        {error ? <p role="alert" className="text-xs font-semibold text-red-600">{error}</p> : null}
       </div>
     </form>
   );

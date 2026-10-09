@@ -33,7 +33,7 @@ export default async function AdminUserDetailPage({ params }: { params: Promise<
             ← Usuarios
           </Link>
           <h1 className="text-2xl font-black text-ink-900">{user.name || user.email}</h1>
-          {user.isDisabled && <Pill tone="amber">Bloqueado</Pill>}
+          {user.isDisabled && <Pill solid tone="amber">Bloqueado</Pill>}
         </div>
       </div>
 
@@ -94,7 +94,7 @@ export default async function AdminUserDetailPage({ params }: { params: Promise<
                   </td>
                   <td className="px-3 py-2 text-xs text-ink-500">{formatDateTime(o.createdAt)}</td>
                   <td className="px-3 py-2">
-                    <Pill tone={o.status === "pendiente_pago" ? "amber" : "brand"}>{statusLabel(o.status)}</Pill>
+                    <Pill solid tone={o.status === "pendiente_pago" ? "amber" : "brand"}>{statusLabel(o.status)}</Pill>
                   </td>
                   <td className="px-3 py-2">{o.itemsCount}</td>
                   <td className="px-3 py-2 font-black">{money(o.total)}</td>

@@ -95,7 +95,7 @@ export function AdminLoginForm({
           </p>
         ) : null}
         {!google && !passwordEnabled ? (
-          <p className="mt-5 text-sm font-semibold text-rose-600">
+          <p className="mt-5 text-sm font-semibold text-red-600">
             El panel no tiene ningún ingreso configurado. Definí ADMIN_EMAILS
             (con Google) o ADMIN_PASSWORD en el servidor.
           </p>
@@ -116,20 +116,20 @@ export function AdminLoginForm({
               />
             </label>
             {error ? (
-              <p role="alert" className="text-xs font-semibold text-rose-600">
+              <p role="alert" className="text-xs font-semibold text-red-600">
                 {error}
               </p>
             ) : null}
             <button
               type="submit"
               disabled={loading || !password}
-              className="w-full rounded-xl bg-brand-700 px-4 py-3 text-sm font-bold text-white transition hover:bg-brand-800 disabled:opacity-50"
+              className="w-full rounded-xl bg-brand-700 px-4 py-3 text-sm font-bold text-white transition hover:bg-brand-800 disabled:cursor-not-allowed"
             >
               {loading ? "Ingresando…" : "Ingresar"}
             </button>
           </form>
         ) : error ? (
-          <p role="alert" className="mt-3 text-xs font-semibold text-rose-600">
+          <p role="alert" className="mt-3 text-xs font-semibold text-red-600">
             {error}
           </p>
         ) : null}

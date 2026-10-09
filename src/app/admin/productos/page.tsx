@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
+import { AdminProductFilters } from "@/components/admin-product-filters";
 import { AdminProductRow } from "@/components/admin-product-row";
 import { ADMIN_COOKIE, verifyAdminSessionValue } from "@/lib/admin-auth";
 import { listAdminProducts, listProductCategories } from "@/lib/admin-products";
@@ -57,19 +58,7 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
     ...(destacados ? { destacados: "1" } : {}),
   };
 
-  const stockOptions = [
-    { id: "", label: "Todos" },
-    { id: "con", label: "Con stock" },
-    { id: "sin", label: "Sin stock" },
-  ] as const;
-  // Encabezado Stock: sin orden → mayor a menor → menor a mayor → sin orden.
-  const nextSort = sort === "" ? "stock-desc" : sort === "stock-desc" ? "stock-asc" : null;
-  const sortHint = sort === "stock-desc" ? "mayor a menor" : sort === "stock-asc" ? "menor a mayor" : "";
 
-  const toggles = [
-    { id: "oferta", label: "En oferta", active: oferta },
-    { id: "destacados", label: "Destacados", active: destacados },
-  ];
 
   return (
     <div className="space-y-6">
@@ -97,102 +86,25 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
         </div>
       </div>
 
-      <form action="/admin/productos" method="get" className="flex flex-wrap gap-2">
-        {stock ? <input type="hidden" name="stock" value={stock} /> : null}
-        {sort ? <input type="hidden" name="orden" value={sort} /> : null}
-        {oferta ? <input type="hidden" name="oferta" value="1" /> : null}
-        {destacados ? <input type="hidden" name="destacados" value="1" /> : null}
-        <input
-          name="q"
-          defaultValue={q}
-          placeholder="Buscar por nombre, SKU o marca…"
-          className="min-w-0 basis-full border sm:basis-auto sm:flex-1 border-ink-200 bg-surface px-3 py-2.5 text-sm text-ink-900 outline-none focus:border-brand-400"
-        />
-        <select
-          name="categoria"
-          defaultValue={category}
-          className="border border-ink-200 bg-surface px-3 py-2.5 text-sm text-ink-900 outline-none focus:border-brand-400"
-        >
-          <option value="">Todas las categorías</option>
-          {categories.map((c) => (
-            <option key={c.slug} value={c.slug}>
-              {c.name}
-            </option>
-          ))}
-        </select>
-        <button type="submit" className="bg-ink-900 px-4 py-2.5 text-sm font-bold text-white">
-          Buscar
-        </button>
-        {q || category || stock || sort || oferta || destacados ? (
-          <Link href="/admin/productos" className="border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-600">
-            Limpiar
-          </Link>
-        ) : null}
-      </form>
-
-      <div className="flex flex-wrap items-center gap-2">
-        <div className="flex border border-ink-200 bg-surface" role="group" aria-label="Filtrar por stock">
-          <span className="border-r border-ink-200 px-3 py-1.5 text-xs font-bold text-ink-500">Stock</span>
-          {stockOptions.map((o) => (
-            <Link
-              key={o.id || "todos"}
-              href={withParams(base, { stock: o.id || null, page: null })}
-              aria-current={stock === o.id ? "true" : undefined}
-              className={`px-3 py-1.5 text-xs font-bold transition ${
-                stock === o.id ? "bg-brand-700 text-white" : "text-ink-600 hover:bg-ink-50"
-              }`}
-            >
-              {o.label}
-            </Link>
-          ))}
-        </div>
-        {toggles.map((t) => (
-          <Link
-            key={t.id}
-            href={withParams(base, { [t.id]: t.active ? null : "1", page: null })}
-            className={`border px-4 py-1.5 text-xs font-bold transition ${
-              t.active
-                ? "border-brand-700 bg-brand-700 text-white"
-                : "border-ink-200 bg-surface text-ink-600 hover:border-brand-300"
-            }`}
-          >
-            {t.label}
-          </Link>
-        ))}
-        <div className="flex border border-ink-200 bg-surface lg:hidden" role="group" aria-label="Ordenar">
-          {([
-            { id: "", label: "Recientes" },
-            { id: "stock-desc", label: "Más stock" },
-            { id: "stock-asc", label: "Menos stock" },
-          ] as const).map((o) => (
-            <Link
-              key={o.id || "recientes"}
-              href={withParams(base, { orden: o.id || null, page: null })}
-              className={`px-3 py-1.5 text-xs font-bold ${sort === o.id ? "bg-ink-900 text-white" : "text-ink-600"}`}
-            >
-              {o.label}
-            </Link>
-          ))}
-        </div>
-      </div>
+      <AdminProductFilters
+        q={q}
+        category={category}
+        categories={categories}
+        stock={stock}
+        sort={sort}
+        oferta={oferta}
+        destacados={destacados}
+      />
 
       <div className="admin-table" role="table" aria-label="Productos">
         <div
           role="row"
-          className="hidden border-b border-ink-100 px-4 py-3 text-xs font-bold uppercase tracking-wide text-ink-500 lg:grid lg:grid-cols-[minmax(0,1fr)_8.5rem_5rem_8.5rem_6rem] lg:gap-4"
+          className="hidden border-b border-ink-100 px-4 py-3 text-xs font-bold uppercase tracking-wide text-ink-500 lg:grid lg:grid-cols-[minmax(0,1fr)_8.5rem_6.5rem_8.5rem_6rem] lg:gap-4"
         >
           <span role="columnheader">Producto</span>
           <span role="columnheader">Precio</span>
           <span role="columnheader" aria-sort={sort === "stock-desc" ? "descending" : sort === "stock-asc" ? "ascending" : "none"}>
-            <Link
-              href={withParams(base, { orden: nextSort, page: null })}
-              title="Ordenar por stock"
-              className={`inline-flex items-center gap-1 hover:text-ink-900 ${sort ? "text-ink-900" : ""}`}
-            >
-              Stock
-              <span aria-hidden>{sort === "stock-desc" ? "↓" : sort === "stock-asc" ? "↑" : "↕"}</span>
-              <span className="sr-only">{sortHint ? `ordenado de ${sortHint}` : "sin ordenar"}</span>
-            </Link>
+            Stock
           </span>
           <span role="columnheader">Etiqueta</span>
           <span role="columnheader" className="text-right">Acción</span>

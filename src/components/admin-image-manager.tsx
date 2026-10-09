@@ -232,7 +232,7 @@ export function AdminImageManager({
             >
               <div className="relative aspect-square cursor-grab bg-white active:cursor-grabbing">
                 {broken[url] ? (
-                  <div className="grid h-full place-items-center p-3 text-center text-xs font-semibold text-rose-600">
+                  <div className="grid h-full place-items-center p-3 text-center text-xs font-semibold text-red-600">
                     La imagen no carga. Revisá la URL.
                   </div>
                 ) : (
@@ -270,7 +270,7 @@ export function AdminImageManager({
                   type="button"
                   onClick={() => onChange(images.filter((_, i) => i !== index))}
                   aria-label={`Quitar foto ${index + 1}`}
-                  className={`${btn} hover:border-rose-300 hover:text-rose-600`}
+                  className={`${btn} hover:border-red-600 hover:text-red-600`}
                 >
                   ✕
                 </button>
@@ -291,14 +291,14 @@ export function AdminImageManager({
       {!full ? (
         <div
           className={`rounded-lg border transition ${
-            dropActive ? "border-brand-500 bg-brand-50" : "border-ink-200 bg-ink-50/50"
+            dropActive ? "border-brand-700 bg-surface ring-1 ring-brand-700" : "border-ink-200 bg-ink-50/50"
           }`}
         >
           <div className="flex flex-col gap-3 p-3 sm:flex-row sm:items-center sm:gap-4 sm:p-4">
             <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4">
               <span
                 className={`grid h-10 w-10 shrink-0 place-items-center rounded-full transition ${
-                  dropActive ? "bg-brand-100 text-brand-700" : "bg-surface text-ink-500 ring-1 ring-ink-200"
+                  dropActive ? "bg-brand-700 text-white" : "bg-surface text-ink-500 ring-1 ring-ink-200"
                 }`}
                 aria-hidden
               >
@@ -386,7 +386,7 @@ export function AdminImageManager({
         {full ? `Llegaste al máximo de ${MAX_IMAGES} fotos.` : `${images.length}/${MAX_IMAGES} fotos.`}
         {images.length > 1 ? " Arrastrá una foto sobre otra para reordenar." : ""}
       </p>
-      {error ? <p role="alert" className="text-xs font-semibold text-rose-600">{error}</p> : null}
+      {error ? <p role="alert" className="text-xs font-semibold text-red-600">{error}</p> : null}
     </div>
   );
 }

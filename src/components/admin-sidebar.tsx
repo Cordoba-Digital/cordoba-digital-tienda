@@ -128,7 +128,7 @@ export function AdminSidebar({ badges = {}, who = "" }: { badges?: Record<string
                     {badges[item.href] ? (
                       <span
                         title="Pedidos esperando pago"
-                        className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${active === item.href ? "bg-white/20 text-white" : "bg-amber-100 text-amber-800"}`}
+                        className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${active === item.href ? "bg-white text-ink-900" : "bg-brand-700 text-white"}`}
                       >
                         {badges[item.href]}
                       </span>

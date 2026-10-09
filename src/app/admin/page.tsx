@@ -36,7 +36,7 @@ function Delta({ now, before }: { now: number; before: number }) {
   const pct = Math.round(((now - before) / before) * 1000) / 10;
   const up = pct >= 0;
   return (
-    <span className={`text-xs font-semibold ${up ? "text-emerald-700" : "text-rose-700"}`}>
+    <span className={`text-xs font-semibold ${up ? "text-emerald-700" : "text-red-600"}`}>
       {up ? "▲" : "▼"} {Math.abs(pct).toLocaleString("es-AR")}% <span className="hidden font-normal text-ink-500 sm:inline">vs. período anterior</span>
     </span>
   );
@@ -132,9 +132,9 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
             <h2 className="text-base font-bold text-ink-900">Alertas de stock</h2>
             <Link href="/admin/productos?stock=sin" className="text-xs font-bold text-brand-700 hover:underline">Ver →</Link>
           </div>
-          <Link href="/admin/productos?stock=sin" className="mb-3 flex items-center justify-between rounded-lg bg-rose-50 px-3 py-2.5">
-            <span className="text-sm font-semibold text-rose-800">⚠ Sin stock</span>
-            <span className="text-sm font-black text-rose-800">{s.outOfStockCount.toLocaleString("es-AR")} productos</span>
+          <Link href="/admin/productos?stock=sin" className="mb-3 flex items-center justify-between rounded-lg bg-red-600 px-3 py-2.5 transition hover:bg-red-700">
+            <span className="text-sm font-semibold text-white">⚠ Sin stock</span>
+            <span className="text-sm font-black text-white">{s.outOfStockCount.toLocaleString("es-AR")} productos</span>
           </Link>
           {s.stockAlerts.length === 0 ? (
             <p className="text-sm text-ink-500">Ningún producto con stock bajo (2 a 5 unidades).</p>
@@ -183,7 +183,7 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
                       <td className="max-w-[180px] truncate px-3 py-2.5 text-ink-700">{o.customerName}</td>
                       <td className="px-3 py-2.5 text-ink-500">{formatDate(o.createdAt)}</td>
                       <td className="px-3 py-2.5 text-right font-semibold text-ink-900">{money(o.total)}</td>
-                      <td className="px-5 py-2.5"><Pill tone={statusTone(o.status)}>{statusLabel(o.status)}</Pill></td>
+                      <td className="px-5 py-2.5"><Pill solid tone={statusTone(o.status)}>{statusLabel(o.status)}</Pill></td>
                     </tr>
                   ))}
                 </tbody>
@@ -228,7 +228,7 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
               {ADMIN_ORDER_STATUSES.map((st) => (
                 <li key={st.id}>
                   <Link href={`/admin/pedidos?status=${st.id}`} className="flex items-center justify-between rounded-lg px-1 py-1.5 hover:bg-ink-50">
-                    <Pill tone={statusTone(st.id)}>{st.label}</Pill>
+                    <Pill solid tone={statusTone(st.id)}>{st.label}</Pill>
                     <span className="text-sm font-bold text-ink-900">{s.byStatus[st.id] ?? 0}</span>
                   </Link>
                 </li>

@@ -51,13 +51,22 @@ export function AdminProductRow({ product }: { product: AdminProductRow }) {
     }
   }
 
+  // Estado según lo que está escrito, así se ve el cambio antes de guardar.
+  const units = Number(stock) || 0;
+  const stockState =
+    units <= 0
+      ? { label: "Sin stock", dot: "bg-red-600", text: "text-red-600" }
+      : units <= 3
+        ? { label: "Pocos", dot: "bg-amber-500", text: "text-ink-700" }
+        : { label: "Disponible", dot: "bg-emerald-600", text: "text-ink-700" };
+
   const field =
     "w-full border border-ink-200 bg-surface px-2 py-1.5 text-sm text-ink-900 outline-none focus:border-brand-400";
 
   return (
     <div
       role="row"
-      className="grid grid-cols-2 gap-x-3 gap-y-2 border-b border-ink-100 px-4 py-3 last:border-0 hover:bg-ink-50/50 sm:grid-cols-4 lg:grid-cols-[minmax(0,1fr)_8.5rem_5rem_8.5rem_6rem] lg:items-start lg:gap-4"
+      className="grid grid-cols-2 gap-x-3 gap-y-2 border-b border-ink-100 px-4 py-3 last:border-0 hover:bg-ink-50/50 sm:grid-cols-4 lg:grid-cols-[minmax(0,1fr)_8.5rem_6.5rem_8.5rem_6rem] lg:items-start lg:gap-4"
     >
       <div role="cell" className="col-span-2 flex min-w-0 items-center gap-3 sm:col-span-4 lg:col-span-1">
         <div className="h-12 w-12 shrink-0 overflow-hidden bg-ink-50">
@@ -98,7 +107,10 @@ export function AdminProductRow({ product }: { product: AdminProductRow }) {
           className={`${field} font-bold`}
           aria-label={`Stock de ${product.name}`}
         />
-        {product.stock <= 0 ? <p className="mt-0.5 text-xs font-bold text-rose-600">Sin stock</p> : null}
+        <p className={`mt-1 flex items-center gap-1.5 text-xs font-semibold ${stockState.text}`}>
+          <span className={`h-2 w-2 shrink-0 rounded-full ${stockState.dot}`} aria-hidden />
+          {stockState.label}
+        </p>
       </div>
       <div role="cell" className="min-w-0">
         <input
@@ -119,7 +131,7 @@ export function AdminProductRow({ product }: { product: AdminProductRow }) {
           type="button"
           onClick={save}
           disabled={saving || !dirty}
-          className="w-full bg-brand-700 px-3 py-2 text-xs font-bold text-white transition hover:bg-brand-800 disabled:opacity-40"
+          className="w-full border border-brand-700 bg-brand-700 px-3 py-2 text-xs font-bold text-white transition hover:bg-brand-800 disabled:cursor-default disabled:border-ink-200 disabled:bg-surface disabled:text-ink-400"
         >
           {saving ? "…" : saved || "Guardar"}
         </button>
@@ -129,7 +141,7 @@ export function AdminProductRow({ product }: { product: AdminProductRow }) {
         >
           Editar
         </Link>
-        {error ? <p role="alert" className="text-xs font-semibold text-rose-600">{error}</p> : null}
+        {error ? <p role="alert" className="text-xs font-semibold text-red-600">{error}</p> : null}
       </div>
     </div>
   );

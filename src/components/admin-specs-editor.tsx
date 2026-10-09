@@ -88,7 +88,7 @@ export function AdminSpecsEditor({ rows, onChange }: { rows: SpecRow[]; onChange
                   <td className="whitespace-nowrap px-1 py-1 text-right">
                     <button type="button" onClick={() => swap(index, index - 1)} disabled={index === 0} aria-label="Subir fila" className={btn}>↑</button>
                     <button type="button" onClick={() => swap(index, index + 1)} disabled={index === rows.length - 1} aria-label="Bajar fila" className={btn}>↓</button>
-                    <button type="button" onClick={() => onChange(rows.filter((_, i) => i !== index))} aria-label={`Quitar fila ${index + 1}`} className={`${btn} hover:text-rose-600`}>✕</button>
+                    <button type="button" onClick={() => onChange(rows.filter((_, i) => i !== index))} aria-label={`Quitar fila ${index + 1}`} className={`${btn} hover:text-red-600`}>✕</button>
                   </td>
                 </tr>
               ))
@@ -129,7 +129,7 @@ export function AdminSpecsEditor({ rows, onChange }: { rows: SpecRow[]; onChange
               setPasting(false);
             }}
             disabled={!pasteText.trim()}
-            className="rounded-lg bg-ink-900 px-4 py-2 text-xs font-bold text-white disabled:opacity-40"
+            className="rounded-lg bg-ink-900 px-4 py-2 text-xs font-bold text-white disabled:cursor-not-allowed"
           >
             Agregar a la tabla
           </button>

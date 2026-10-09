@@ -96,7 +96,7 @@ export default async function AdminUsersPage({ searchParams }: { searchParams: S
                   <td className="px-3 py-2 font-black">{money(u.totalSpent)}</td>
                   <td className="px-3 py-2">{u.activeSessions}</td>
                   <td className="px-3 py-2">
-                    {u.isDisabled ? <Pill tone="amber">Bloqueado</Pill> : <span className="text-xs text-ink-500">Activo</span>}
+                    {u.isDisabled ? <Pill solid tone="amber">Bloqueado</Pill> : <span className="text-xs text-ink-500">Activo</span>}
                   </td>
                 </tr>
               ))}

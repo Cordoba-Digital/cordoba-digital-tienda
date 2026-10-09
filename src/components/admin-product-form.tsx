@@ -362,13 +362,13 @@ export function AdminProductForm({
 
       <div className="fixed inset-x-0 bottom-0 z-20 border-t border-ink-100 bg-surface/95 backdrop-blur lg:left-60">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-end gap-3 px-4 py-3 sm:px-6 lg:px-8">
-          {error ? <p role="alert" className="mr-auto text-sm font-semibold text-rose-600">{error}</p> : null}
+          {error ? <p role="alert" className="mr-auto text-sm font-semibold text-red-600">{error}</p> : null}
           {!error && saved ? <p role="status" className="mr-auto text-sm font-semibold text-emerald-700">Cambios guardados.</p> : null}
           {!error && !saved && dirty && editing ? <p className="mr-auto text-sm text-ink-500">Tenés cambios sin guardar.</p> : null}
           <button
             type="submit"
             disabled={saving}
-            className="rounded-lg bg-ink-900 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-ink-800 disabled:opacity-40"
+            className="rounded-lg bg-ink-900 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-ink-800 disabled:cursor-not-allowed"
           >
             {editing ? (saving ? "Guardando…" : "Guardar cambios") : saving ? "Creando…" : "Crear producto"}
           </button>

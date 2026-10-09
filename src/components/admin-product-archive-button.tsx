@@ -40,13 +40,13 @@ export function AdminProductArchiveButton({ slug, mode }: { slug: string; mode: 
         disabled={busy}
         className={
           mode === "archive"
-            ? "rounded-xl border border-rose-200 px-4 py-2 text-xs font-bold text-rose-700 transition hover:bg-rose-50 disabled:opacity-40"
+            ? "rounded-xl border border-red-600 px-4 py-2 text-xs font-bold text-red-600 transition hover:bg-red-600 hover:text-white disabled:cursor-not-allowed"
             : "rounded-xl border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700 transition hover:border-brand-300 disabled:opacity-40"
         }
       >
         {busy ? "…" : mode === "archive" ? "Archivar" : "Restaurar"}
       </button>
-      {error ? <span role="alert" className="text-xs font-semibold text-rose-600">{error}</span> : null}
+      {error ? <span role="alert" className="text-xs font-semibold text-red-600">{error}</span> : null}
     </span>
   );
 }

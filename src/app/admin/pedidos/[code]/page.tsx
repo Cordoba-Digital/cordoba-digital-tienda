@@ -57,7 +57,7 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <Link href="/admin/pedidos" className="text-sm font-bold text-brand-700 hover:underline">← Volver a pedidos</Link>
-        <Pill tone="neutral">{statusLabel(order.status)}</Pill>
+        <Pill solid tone="neutral">{statusLabel(order.status)}</Pill>
       </div>
 
       <div className="admin-card space-y-4 p-5">

@@ -129,7 +129,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
                     </td>
                     <td className="px-4 py-3 font-bold text-ink-900">{money(o.total)}</td>
                     <td className="px-4 py-3">
-                      <Pill tone={statusTone(o.status)}>{statusLabel(o.status)}</Pill>
+                      <Pill solid tone={statusTone(o.status)}>{statusLabel(o.status)}</Pill>
                     </td>
                   </tr>
                 ))
