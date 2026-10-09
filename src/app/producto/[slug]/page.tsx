@@ -181,7 +181,11 @@ export default async function ProductPage({ params }: { params: Params }) {
     offers: {
       "@type": "Offer",
       priceCurrency: "ARS",
-      price: (product.price / 100).toFixed(0),
+      // Precios en pesos enteros (ver `lib/format.ts`): sin dividir entre 100.
+      // Esta línea era el último resto del bug de "centavos" que ya se corrigió
+      // en el formateo visible y en Mercado Pago; con `/ 100` Google y los
+      // comparadores de IA leían precios 100x menores ($33.000 en vez de $3.299.999).
+      price: product.price,
       availability: product.stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
       itemCondition:
         condition.toLowerCase() === "nuevo"
