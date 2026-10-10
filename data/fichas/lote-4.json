@@ -1,0 +1,1036 @@
+{
+  "lote": "lote-4",
+  "nota": "Cuarta tanda (celulares): 16 fichas. Estado del 14 Pro Max 256 confirmado Nuevo por el dueño.",
+  "productos": [
+    {
+      "brand": "Apple",
+      "descriptionHtml": "<p>El iPhone 15 suma la Dynamic Island, la cámara de 48 MP y el USB-C a la línea base de Apple. Esta versión viene en negro con 128 GB.</p><h3>Cámara</h3><p>Principal de 48 MP con zoom 2x de calidad óptica: te acercás sin perder detalle y recortás fotos manteniendo nitidez. Un salto grande si venís de un iPhone con cámara de 12 MP.</p><h3>Pantalla y diseño</h3><p>Super Retina XDR de 6,1 pulgadas con Dynamic Island, donde ves llamadas, música y temporizadores sin cambiar de app. Frente Ceramic Shield y elegante acabado en negro.</p><h3>Rendimiento y batería</h3><p>El chip A16 Bionic mueve apps, juegos y video 4K sin esfuerzo. La batería llega hasta 20 horas de reproducción de video, y el USB-C sirve para cargar y conectar accesorios.</p><h3>Antes de comprar</h3><p>El cargador se vende por separado. Si necesitás más espacio para video 4K, consultanos por otras memorias.</p>",
+      "highlights": [
+        "Chip A16 Bionic para apps y juegos exigentes",
+        "Cámara de 48 MP con zoom 2x de calidad óptica",
+        "Dynamic Island para avisos y controles en vivo",
+        "USB-C para carga y accesorios",
+        "Hasta 20 horas de reproducción de video"
+      ],
+      "model": "iPhone 15",
+      "name": "iPhone 15 128 GB Negro",
+      "revisar": [
+        "El tamaño de 6,1 pulgadas de la pantalla es conocimiento general del modelo, no estaba en la descripción original.",
+        "Cargador no incluido es el estándar de Apple, no estaba en la descripción original."
+      ],
+      "seoDescription": "iPhone 15 de 128 GB en negro, con chip A16 Bionic, cámara de 48 MP y USB-C. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "seoTitle": "iPhone 15 128 GB Negro",
+      "shortDescription": "iPhone 15 de 128 GB en negro. Chip A16 Bionic, pantalla Super Retina XDR de 6,1 pulgadas con Dynamic Island, cámara de 48 MP con zoom 2x y USB-C. Con garantía oficial.",
+      "slug": "iphone-15-128gb",
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Negro"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Super Retina XDR de 6,1 pulgadas con Dynamic Island"
+        },
+        {
+          "label": "Procesador",
+          "value": "Apple A16 Bionic"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "Principal 48 MP con zoom 2x de calidad óptica"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 20 h de reproducción de video"
+        },
+        {
+          "label": "Conector",
+          "value": "USB-C"
+        },
+        {
+          "label": "Diseño",
+          "value": "Frente Ceramic Shield"
+        }
+      ],
+      "storage": "128 GB"
+    },
+    {
+      "brand": "Apple",
+      "descriptionHtml": "<p>El iPhone 17 trae pantalla con ProMotion, doble cámara de 48 MP y chip A19 con Apple Intelligence. Esta versión viene en blanco con 256 GB.</p><h3>Rendimiento</h3><p>El A19 con GPU de 5 núcleos y aceleradores neurales mueve juegos AAA, edición de foto y funciones de Apple Intelligence como Traducción en Vivo. La batería acompaña todo el día, con hasta 30 horas de video.</p><h3>Cámara</h3><ul><li>Fusion principal de 48 MP con teleobjetivo 2x de calidad óptica.</li><li>Fusion ultra gran angular de 48 MP, con 4 veces más resolución que la del iPhone 16.</li><li>Frontal Center Stage de 18 MP con Captura Dual: grabás con ambas cámaras a la vez.</li><li>Video 4K a 60 fps en Dolby Vision, estable aunque te muevas.</li></ul><h3>Pantalla</h3><p>Super Retina XDR de 6,3 pulgadas con ProMotion de hasta 120 Hz: todo se mueve más fluido. El frente Ceramic Shield 2 la protege de rayones y golpes.</p><h3>Antes de comprar</h3><p>La carga rápida necesita un adaptador de alto voltaje, que se vende por separado. Con 256 GB tenés el doble de base que el modelo anterior.</p>",
+      "highlights": [
+        "Chip A19 con Apple Intelligence",
+        "Doble cámara Fusion de 48 MP con zoom 2x",
+        "Pantalla de 6,3 pulgadas ProMotion hasta 120 Hz",
+        "Frontal Center Stage de 18 MP con Captura Dual",
+        "Hasta 30 horas de reproducción de video",
+        "Ceramic Shield 2 en el frente"
+      ],
+      "model": "iPhone 17",
+      "name": "iPhone 17 256 GB Blanco",
+      "revisar": [
+        "El color blanco sale solo del slug, ni el nombre ni la descripción lo indican: confirmar con la foto.",
+        "Adaptador de carga no incluido es el estándar de Apple, no estaba en la descripción original."
+      ],
+      "seoDescription": "iPhone 17 de 256 GB en blanco, con chip A19, pantalla de 6,3 pulgadas a 120 Hz y doble cámara de 48 MP. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "iPhone 17 256 GB Blanco",
+      "shortDescription": "iPhone 17 de 256 GB en blanco. Pantalla Super Retina XDR de 6,3 pulgadas con ProMotion a 120 Hz, chip A19, doble cámara Fusion de 48 MP y frontal Center Stage de 18 MP.",
+      "slug": "iphone-17-256gb-white",
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Blanco"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Super Retina XDR de 6,3 pulgadas con ProMotion hasta 120 Hz"
+        },
+        {
+          "label": "Procesador",
+          "value": "Apple A19 (GPU de 5 núcleos)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "Fusion 48 MP + ultra gran angular 48 MP, zoom 2x"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "Center Stage 18 MP con Captura Dual"
+        },
+        {
+          "label": "Video",
+          "value": "4K a 60 fps en Dolby Vision"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 30 h de reproducción de video"
+        },
+        {
+          "label": "Carga",
+          "value": "Carga rápida (hasta 8 h de video en 10 min)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "5G, Wi-Fi 7, Bluetooth 6, eSIM"
+        },
+        {
+          "label": "Diseño",
+          "value": "Frente Ceramic Shield 2"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "brand": "Apple",
+      "descriptionHtml": "<p>El iPhone 17 Pro es el iPhone más potente de su generación: unibody de aluminio forjado, chip A19 Pro con cámara de vapor y triple cámara de 48 MP. Esta versión trae 256 GB.</p><h3>Rendimiento</h3><p>El A19 Pro con GPU de 6 núcleos y aceleradores neurales rinde hasta un 40 por ciento más de forma sostenida, gracias a la cámara de vapor soldada a láser que disipa el calor. Ideal para video pesado, juegos y modelos de IA en el equipo.</p><h3>Cámara</h3><ul><li>Fusion principal de 48 MP (24/48 mm, f/1.78).</li><li>Fusion ultra gran angular de 48 MP con macro (13 mm, f/2.2).</li><li>Fusion teleobjetivo de 48 MP con 4x y 8x (100/200 mm, f/2.8).</li><li>Frontal Center Stage de 18 MP, con encuadre que se amplía solo en las selfies grupales.</li></ul><h3>Diseño</h3><p>Estructura unibody de aluminio forjado en caliente: más resistencia, mejor rendimiento y más batería. El frente Ceramic Shield 2 resiste 3 veces mejor los rayones. Pantalla Super Retina XDR de 6,3 pulgadas.</p>",
+      "highlights": [
+        "Chip A19 Pro con cámara de vapor",
+        "Triple cámara Fusion de 48 MP con tele 4x y 8x",
+        "Unibody de aluminio forjado en caliente",
+        "Frontal Center Stage de 18 MP",
+        "Ceramic Shield 2, 3 veces más antirayones"
+      ],
+      "model": "iPhone 17 Pro",
+      "name": "iPhone 17 Pro 256 GB",
+      "revisar": [
+        "La fuente no informa batería ni color de este modelo: no los publiqué, pedirlos antes de publicar.",
+        "El dato de GPU de 6 núcleos y el 40 por ciento sostenido salen de la ficha original."
+      ],
+      "seoDescription": "iPhone 17 Pro de 256 GB con chip A19 Pro, triple cámara Fusion de 48 MP y pantalla de 6,3 pulgadas. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "iPhone 17 Pro 256 GB",
+      "shortDescription": "iPhone 17 Pro de 256 GB. Pantalla Super Retina XDR de 6,3 pulgadas, chip A19 Pro con cámara de vapor, triple cámara Fusion de 48 MP y frontal Center Stage de 18 MP.",
+      "slug": "iphone-17-pro-256gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Super Retina XDR de 6,3 pulgadas"
+        },
+        {
+          "label": "Procesador",
+          "value": "Apple A19 Pro (GPU de 6 núcleos)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "48 MP + 48 MP ultra gran angular + 48 MP tele (4x/8x)"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "Center Stage 18 MP"
+        },
+        {
+          "label": "Diseño",
+          "value": "Unibody de aluminio forjado en caliente"
+        },
+        {
+          "label": "Refrigeración",
+          "value": "Cámara de vapor soldada a láser"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Frente Ceramic Shield 2"
+        },
+        {
+          "label": "Inteligencia artificial",
+          "value": "Apple Intelligence"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "brand": "Apple",
+      "descriptionHtml": "<p>El iPhone 17 Pro Max es el iPhone más grande y con más batería de su generación: pantalla de 6,9 pulgadas, chip A19 Pro y triple cámara de 48 MP. Esta versión trae 512 GB.</p><h3>Rendimiento y batería</h3><p>El A19 Pro con cámara de vapor rinde hasta un 40 por ciento más de forma sostenida para video, juegos e IA en el equipo. La batería llega hasta 37 horas de video, la mayor autonomía declarada de la ficha.</p><h3>Cámara</h3><ul><li>Fusion principal de 48 MP (24/48 mm, f/1.78).</li><li>Fusion ultra gran angular de 48 MP con macro (13 mm, f/2.2).</li><li>Fusion teleobjetivo de 48 MP con 4x y 8x (100/200 mm, f/2.8).</li><li>Frontal Center Stage de 18 MP con Captura Dual.</li></ul><h3>Diseño y resistencia</h3><p>Unibody de aluminio forjado con frente Ceramic Shield 2, 3 veces más resistente a rayones. Certificación IP68: aguanta 30 minutos hasta 6 metros. Si preferís el tamaño chico, mirá el <a href=\"/producto/iphone-17-pro-256gb\">iPhone 17 Pro de 256 GB</a>.</p>",
+      "highlights": [
+        "Chip A19 Pro con cámara de vapor",
+        "Pantalla Super Retina XDR de 6,9 pulgadas",
+        "Triple cámara Fusion de 48 MP con tele 8x",
+        "Hasta 37 horas de reproducción de video",
+        "IP68: 30 minutos hasta 6 metros",
+        "512 GB para video ProRes y ProRAW"
+      ],
+      "model": "iPhone 17 Pro Max",
+      "name": "iPhone 17 Pro Max 512 GB",
+      "revisar": [
+        "La ficha original dice Hasta 37 sin unidad: lo interpreté como horas de video, confirmar.",
+        "El color no está indicado en la fuente: confirmar con la foto."
+      ],
+      "seoDescription": "iPhone 17 Pro Max de 512 GB con chip A19 Pro, pantalla de 6,9 pulgadas y triple cámara de 48 MP. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "iPhone 17 Pro Max 512 GB",
+      "shortDescription": "iPhone 17 Pro Max de 512 GB. Pantalla Super Retina XDR de 6,9 pulgadas, chip A19 Pro, triple cámara Fusion de 48 MP, hasta 37 horas de video e IP68. Con garantía oficial.",
+      "slug": "iphone-17-pro-max-512gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Super Retina XDR de 6,9 pulgadas"
+        },
+        {
+          "label": "Procesador",
+          "value": "Apple A19 Pro (GPU de 6 núcleos)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "48 MP + 48 MP ultra gran angular + 48 MP tele (4x/8x)"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "Center Stage 18 MP con Captura Dual"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 37 h de reproducción de video"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP68 (30 min hasta 6 m) y Ceramic Shield 2"
+        },
+        {
+          "label": "Diseño",
+          "value": "Unibody de aluminio forjado en caliente"
+        },
+        {
+          "label": "Refrigeración",
+          "value": "Cámara de vapor soldada a láser"
+        },
+        {
+          "label": "Inteligencia artificial",
+          "value": "Apple Intelligence"
+        }
+      ],
+      "storage": "512 GB"
+    },
+    {
+      "brand": "Apple",
+      "descriptionHtml": "<p>El iPhone 18 Pro Max apunta a lo más alto de Apple: pantalla de 6,9 pulgadas a 120 Hz, chip A20 Pro de 2 nm y cámara de 48 MP con apertura variable. Esta versión trae 256 GB y 12 GB de RAM.</p><h3>Rendimiento</h3><p>El A20 Pro de 2 nm con 12 GB de RAM ejecuta Apple Intelligence en el equipo y sostiene juegos de consola y video 4K sin caídas, con cámara de vapor que disipa el calor. El módem Apple C2 suma 5G eficiente.</p><h3>Cámara</h3><ul><li>Principal de 48 MP con apertura variable y estabilización óptica.</li><li>Ultra gran angular y teleobjetivo periscópico de 48 MP, con macro profesional.</li><li>Video cinematográfico 4K a 120 fps en Dolby Vision.</li><li>Frontal TrueDepth de 18 MP con Center Stage.</li></ul><h3>Pantalla y diseño</h3><p>Super Retina XDR OLED de 6,9 pulgadas con ProMotion de 1 a 120 Hz y Ceramic Shield de nueva generación. Chasis unibody de titanio de grado aeroespacial con IP68.</p><h3>Antes de comprar</h3><p>La caja trae cable USB-C trenzado y extractor de SIM: el cargador se vende por separado. Es un modelo futuro y sus datos salen de la ficha del proveedor.</p>",
+      "highlights": [
+        "Chip A20 Pro de 2 nm con Apple Intelligence",
+        "Cámara de 48 MP con apertura variable",
+        "Pantalla de 6,9 pulgadas de 1 a 120 Hz",
+        "Titanio unibody con cámara de vapor",
+        "Video 4K a 120 fps en Dolby Vision",
+        "Módem Apple C2 con 5G"
+      ],
+      "model": "iPhone 18 Pro Max",
+      "name": "iPhone 18 Pro Max 256 GB",
+      "ram": "12 GB",
+      "revisar": [
+        "Modelo futuro sin confirmación oficial: todas las specs salen de la ficha del proveedor, mantenerlas mínimas hasta confirmar.",
+        "La RAM de 12 GB y el Bluetooth 5.4 salen de la fuente y no están confirmados."
+      ],
+      "seoDescription": "iPhone 18 Pro Max de 256 GB con chip A20 Pro, pantalla de 6,9 pulgadas a 120 Hz y cámara de 48 MP. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "iPhone 18 Pro Max 256 GB",
+      "shortDescription": "iPhone 18 Pro Max de 256 GB y 12 GB de RAM. Pantalla de 6,9 pulgadas a 120 Hz, chip A20 Pro de 2 nm, cámara de 48 MP con apertura variable y titanio unibody.",
+      "slug": "iphone-18-pro-max-256gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Super Retina XDR OLED 6,9 pulgadas, ProMotion 1-120 Hz"
+        },
+        {
+          "label": "Procesador",
+          "value": "Apple A20 Pro (2 nm)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "48 MP con apertura variable y OIS + 48 MP UGA + 48 MP tele"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "TrueDepth 18 MP con Center Stage"
+        },
+        {
+          "label": "Diseño",
+          "value": "Titanio unibody con cámara de vapor, IP68"
+        },
+        {
+          "label": "Conectividad",
+          "value": "5G (módem C2), Wi-Fi 7, Bluetooth 5.4, NFC, USB-C"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "iOS con Apple Intelligence"
+        },
+        {
+          "label": "En la caja",
+          "value": "Cable USB-C trenzado y extractor de SIM (sin cargador)"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "brand": "Samsung",
+      "descriptionHtml": "<p>El Galaxy S26 Ultra es lo máximo de Samsung: chasis de titanio, pantalla QHD+ de 6,9 pulgadas, Snapdragon 8 Elite Gen 5 y cámara de 200 MP con S Pen. Esta versión trae 512 GB y 12 GB de RAM.</p><h3>Rendimiento e IA</h3><p>El Snapdragon 8 Elite Gen 5 for Galaxy de 3 nm con 12 GB LPDDR5X mueve edición 8K, juegos pesados e IA en el equipo. Galaxy AI traduce llamadas, resume notas y edita fotos con IA generativa.</p><h3>Cámara</h3><ul><li>Principal de 200 MP (f/1.7, OIS) con Nightography.</li><li>Tele periscópico 5x de 50 MP y tele 3x de 10 MP.</li><li>Ultra gran angular de 50 MP con macro por autoenfoque.</li><li>Video 8K a 30 fps y 4K a 120 fps en HDR10+.</li></ul><h3>Pantalla y S Pen</h3><p>Dynamic AMOLED 2X QHD+ de 6,9 pulgadas de 1 a 120 Hz, con 3000 nits y Gorilla Armor 2 antirreflejo. El S Pen va integrado y sirve para notas, dibujo y gestos en el aire.</p><h3>Antes de comprar</h3><p>No tiene ranura microSD: los 512 GB no se amplían. Si buscás algo más accesible, mirá el <a href=\"/producto/samsung-galaxy-s26-fe-5g-256gb-8gb\">Galaxy S26 FE 5G</a>.</p>",
+      "highlights": [
+        "Snapdragon 8 Elite Gen 5 for Galaxy de 3 nm",
+        "Cámara de 200 MP con zoom óptico de 5x",
+        "Pantalla QHD+ de 6,9 pulgadas con 3000 nits",
+        "S Pen integrado con gestos en el aire",
+        "Batería de 5000 mAh con carga de 45 W",
+        "Titanio aeroespacial con Gorilla Armor 2"
+      ],
+      "model": "Galaxy S26 Ultra 5G",
+      "name": "Samsung Galaxy S26 Ultra 5G 512 GB 12 GB RAM",
+      "ram": "12 GB",
+      "revisar": [
+        "Modelo futuro sin confirmación oficial: todas las specs salen de la ficha del proveedor, confirmar antes de publicar.",
+        "Los 7 años de actualizaciones y la latencia del S Pen salen de la fuente y no se publicaron por ser promesas del proveedor."
+      ],
+      "seoDescription": "Galaxy S26 Ultra 5G de 512 GB y 12 GB de RAM, con Snapdragon 8 Elite Gen 5 y cámara de 200 MP. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Samsung Galaxy S26 Ultra 5G 512GB",
+      "shortDescription": "Samsung Galaxy S26 Ultra 5G con 512 GB y 12 GB de RAM. Pantalla QHD+ de 6,9 pulgadas a 120 Hz, Snapdragon 8 Elite Gen 5, cámara de 200 MP y S Pen integrado.",
+      "slug": "samsung-galaxy-s26-ultra-5g-512gb-12gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Dynamic AMOLED 2X QHD+ 6,9 pulgadas, 1-120 Hz, 3000 nits"
+        },
+        {
+          "label": "Procesador",
+          "value": "Snapdragon 8 Elite Gen 5 for Galaxy (3 nm)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "200 MP (OIS) + 50 MP tele 5x + 10 MP tele 3x + 50 MP UGA"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "12 MP con video 4K a 60 fps"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "45 W por cable, 15 W inalámbrica y PowerShare"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Titanio grado 2, IP68 y Gorilla Armor 2"
+        },
+        {
+          "label": "Lápiz óptico",
+          "value": "S Pen integrado con gestos en el aire"
+        },
+        {
+          "label": "Conectividad",
+          "value": "5G, Dual SIM y eSIM, Wi-Fi 7, NFC, UWB"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android 16 con One UI y Galaxy AI"
+        }
+      ],
+      "storage": "512 GB"
+    },
+    {
+      "brand": "Samsung",
+      "descriptionHtml": "<p>El Galaxy S26 FE trae lo esencial de la serie S a un precio más calmo: pantalla de 6,7 pulgadas a 120 Hz, triple cámara de 50 MP con zoom 3x y Galaxy AI. Esta versión trae 256 GB y 8 GB de RAM.</p><h3>Pantalla</h3><p>Dynamic AMOLED 2X FHD+ de 6,7 pulgadas con 120 Hz adaptativos y Gorilla Glass Victus Plus. Se ve bien al sol y responde fluido en juegos y redes.</p><h3>Cámara</h3><ul><li>Principal de 50 MP (f/1.8, OIS) con Nightography.</li><li>Teleobjetivo de 8 MP con zoom óptico 3x.</li><li>Ultra gran angular de 12 MP.</li><li>Frontal de 12 MP con Dual Pixel.</li></ul><h3>Rendimiento e IA</h3><p>Procesador de 4 nm con 8 GB LPDDR5X y 256 GB para apps, fotos y video 4K. Galaxy AI traduce llamadas, busca rodeando con Circle to Search y borra objetos de las fotos. Además trae DeX para trabajar en un monitor y parlantes estéreo Dolby Atmos.</p><h3>Batería y resistencia</h3><p>Batería de 4900 mAh para todo el día, con carga rápida de 45 W e inalámbrica con PowerShare. Certificación IP68 y marco de aluminio reforzado. Si querés lo máximo, mirá el <a href=\"/producto/samsung-galaxy-s26-ultra-5g-512gb-12gb\">Galaxy S26 Ultra 5G</a>.</p>",
+      "highlights": [
+        "Triple cámara de 50 MP con zoom óptico 3x",
+        "Dynamic AMOLED de 6,7 pulgadas a 120 Hz",
+        "Batería de 4900 mAh con carga de 45 W",
+        "IP68 con marco de aluminio reforzado",
+        "Galaxy AI: Circle to Search y edición con IA",
+        "Samsung DeX por cable o inalámbrico"
+      ],
+      "model": "Galaxy S26 FE 5G",
+      "name": "Samsung Galaxy S26 FE 5G 256 GB 8 GB RAM",
+      "ram": "8 GB",
+      "revisar": [
+        "Modelo futuro sin confirmación oficial: la fuente no define el procesador exacto (Exynos o Snapdragon de 4 nm), confirmar antes de publicar.",
+        "Los tiempos de carga y los años de actualizaciones de la fuente no se publicaron por ser promesas del proveedor."
+      ],
+      "seoDescription": "Galaxy S26 FE 5G de 256 GB y 8 GB de RAM, con pantalla de 6,7 pulgadas a 120 Hz y cámara de 50 MP. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Samsung Galaxy S26 FE 5G 256GB",
+      "shortDescription": "Samsung Galaxy S26 FE 5G con 256 GB y 8 GB de RAM. Dynamic AMOLED de 6,7 pulgadas a 120 Hz, triple cámara de 50 MP con zoom óptico 3x, batería de 4900 mAh e IP68.",
+      "slug": "samsung-galaxy-s26-fe-5g-256gb-8gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Dynamic AMOLED 2X FHD+ 6,7 pulgadas, 120 Hz adaptativos"
+        },
+        {
+          "label": "Procesador",
+          "value": "De 4 nm con Galaxy AI (la fuente no define el modelo)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (OIS) + 12 MP UGA + 8 MP tele 3x"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "12 MP con Dual Pixel"
+        },
+        {
+          "label": "Batería",
+          "value": "4900 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "45 W por cable, inalámbrica y PowerShare"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP68 y marco de aluminio reforzado"
+        },
+        {
+          "label": "Audio",
+          "value": "Parlantes estéreo Dolby Atmos"
+        },
+        {
+          "label": "Conectividad",
+          "value": "5G, Dual SIM y eSIM, Wi-Fi 6E, NFC, DeX"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android con One UI y Galaxy AI"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "brand": "Samsung",
+      "descriptionHtml": "<p>El Galaxy A37 5G es el gama media equilibrado de Samsung: acabado en cristal, pantalla grande, cámara con estabilización óptica y batería que llega hasta dos días. Esta versión trae 256 GB de almacenamiento y 8 GB de RAM.</p><h3>Pantalla</h3><p>Panel Super AMOLED de 6,7\" con resolución FHD+ y 120 Hz adaptativos: colores intensos, negros profundos y movimiento fluido al navegar o jugar. Trae herramientas de Galaxy AI para editar fotos, como el borrador de objetos.</p><h3>Cámara</h3><ul><li>Principal de 50 MP con OIS y video 4K: fotos nítidas de noche y en movimiento.</li><li>Ultra gran angular de 8 MP para paisajes y grupos.</li><li>Macro de 5 MP para primeros planos.</li><li>Frontal de 12 MP para selfies y videollamadas.</li></ul><h3>Batería y rendimiento</h3><p>El Exynos 1480 con 8 GB de RAM mueve juegos y multitarea sin tirones. La batería de 5000 mAh admite carga rápida de hasta 45 W por USB-C.</p><h3>Resistencia y seguridad</h3><p>Certificación IP68 contra agua y polvo, lector de huella bajo pantalla y Samsung Knox. Si buscás una pantalla más compacta, mirá el <a href=\"/producto/samsung-galaxy-a36-5g-8gb-256gb\">Galaxy A36 5G</a>.</p>",
+      "highlights": [
+        "Pantalla Super AMOLED de 6,7\" a 120 Hz",
+        "Cámara principal de 50 MP con OIS y video 4K",
+        "Batería de 5000 mAh con carga rápida de 45 W",
+        "Resistente al agua y al polvo (IP68)",
+        "Huella bajo pantalla y Samsung Knox",
+        "5G con NanoSIM y eSIM, NFC y Wi-Fi 6"
+      ],
+      "model": "Galaxy A37 5G",
+      "name": "Samsung Galaxy A37 5G 256 GB 8 GB RAM",
+      "ram": "8 GB",
+      "revisar": [
+        "La descripción original trae un resto de citas numeradas junto a la certificación IP68; no lo publiqué.",
+        "La descripción no declara si el cargador viene incluido ni sus vatios: solo dice que el equipo soporta 45 W."
+      ],
+      "seoDescription": "Galaxy A37 5G de 256 GB y 8 GB de RAM: Super AMOLED de 6,7\" a 120 Hz, cámara de 50 MP con OIS y batería de 5000 mAh. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Samsung Galaxy A37 5G 256 GB 8 GB RAM",
+      "shortDescription": "Galaxy A37 5G con 256 GB y 8 GB de RAM. Pantalla Super AMOLED de 6,7\" a 120 Hz, cámara principal de 50 MP con OIS, batería de 5000 mAh con carga de 45 W y certificación IP68. Nuevo, con garantía oficial.",
+      "slug": "samsung-galaxy-a37-5g-256gb-8gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Super AMOLED de 6,7\" FHD+ (1080 x 2340), 120 Hz"
+        },
+        {
+          "label": "Procesador",
+          "value": "Samsung Exynos 1480 octa-core (hasta 2,75 GHz)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (f/1.8, OIS) + 8 MP ultra gran angular + 5 MP macro"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "12 MP"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "Rápida de hasta 45 W por USB-C"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP68 (agua y polvo)"
+        },
+        {
+          "label": "Red",
+          "value": "5G (NanoSIM + eSIM)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6, Bluetooth 5.3, NFC, GPS"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android 16 con One UI 8.5 y Galaxy AI"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Huella bajo pantalla y Samsung Knox"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Galaxy A36 5G apuesta a lo esencial bien hecho: cuerpo de cristal, buena pantalla, cámara con OIS y batería de larga duración, con protección contra agua y memoria ampliable. Esta versión trae 256 GB y 8 GB de RAM.</p><h3>Pantalla</h3><p>Super AMOLED de 6,6\" FHD+ a 120 Hz con Gorilla Glass Victus y Vision Booster, que ajusta brillo y contraste para ver bien hasta al sol.</p><h3>Cámara</h3><ul><li>Principal de 50 MP con OIS: fotos más nítidas de noche.</li><li>Ultra gran angular de 8 MP y macro de 5 MP.</li><li>Frontal de 13 MP con modo retrato.</li></ul><h3>Batería y seguridad</h3><p>Batería de 5000 mAh con carga rápida de 25 W, lector de huella bajo pantalla y Samsung Knox Vault para tus claves y datos.</p><h3>Antes de comprar</h3><p>La ranura microSD es híbrida: si ponés la tarjeta de hasta 1 TB, ocupás el lugar de la segunda SIM. Si preferís pantalla más grande y mejor resistencia, mirá el <a href=\"/producto/samsung-galaxy-a37-5g-256gb-8gb\">Galaxy A37 5G</a>.</p>",
+      "highlights": [
+        "Pantalla Super AMOLED de 6,6\" a 120 Hz",
+        "Cámara de 50 MP con OIS para fotos de noche",
+        "Batería de 5000 mAh con carga rápida de 25 W",
+        "Resistente al agua y al polvo (IP67)",
+        "MicroSD hasta 1 TB y NFC para pagos"
+      ],
+      "model": "Galaxy A36 5G",
+      "name": "Samsung Galaxy A36 5G 256 GB 8 GB RAM",
+      "ram": "8 GB",
+      "revisar": [
+        "El copete dice 'A26/A36' pero todo el resto de la descripción es del A36; publico A36 según el nombre.",
+        "La descripción no declara el modelo del procesador, solo 'Octa-Core de 4 nm / 5 nm'; el 5G sale de la conectividad declarada, no del chip."
+      ],
+      "seoDescription": "Galaxy A36 5G de 256 GB y 8 GB de RAM: Super AMOLED de 6,6\" a 120 Hz, cámara de 50 MP con OIS y batería de 5000 mAh. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Samsung Galaxy A36 5G 256 GB 8 GB RAM",
+      "shortDescription": "Galaxy A36 5G con 256 GB y 8 GB de RAM. Pantalla Super AMOLED de 6,6\" a 120 Hz con Gorilla Glass Victus, cámara de 50 MP con OIS, batería de 5000 mAh y memoria ampliable con microSD. Nuevo, con garantía oficial.",
+      "slug": "samsung-galaxy-a36-5g-8gb-256gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Super AMOLED de 6,6\" FHD+ (2340 x 1080), 120 Hz, Gorilla Glass Victus"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa-core de alta eficiencia (la descripción no declara el modelo)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (f/1.8, OIS) + 8 MP ultra gran angular + 5 MP macro"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "13 MP (f/2.2) con modo retrato"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "Rápida de 25 W por USB-C"
+        },
+        {
+          "label": "Ranura microSD",
+          "value": "Sí, híbrida, hasta 1 TB"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP67 (agua dulce y polvo)"
+        },
+        {
+          "label": "Red",
+          "value": "5G Dual SIM"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6, Bluetooth 5.3, NFC, GPS"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android con One UI"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Galaxy Z Flip 8 5G es el plegable de bolsillo de Samsung: se dobla a la mitad y se abre en una pantalla grande de 6,9\". Esta versión trae 512 GB y 12 GB de RAM para Galaxy AI.</p><h3>Dos pantallas</h3><p>La interna es Dynamic AMOLED 2X de 6,9\" FHD+ de 1 a 120 Hz con Gorilla Glass Victus 2. La externa FlexWindow muestra widgets, mensajes y música sin abrir el teléfono, y saca selfies con la cámara principal.</p><h3>Cámara</h3><ul><li>Principal de 50 MP con OIS para fotos nítidas de noche.</li><li>Ultra gran angular de 12 MP.</li><li>Frontal de 10 MP con video 4K a 60 fps.</li><li>El modo Flex lo deja parado en cualquier ángulo para videollamadas o fotos.</li></ul><h3>Rendimiento y batería</h3><p>Procesador octa-core con 12 GB de RAM LPDDR5X y 512 GB UFS 4.0. Batería de 4300 mAh con carga rápida, inalámbrica y PowerShare, estructura de aluminio Armor y Android 16 con One UI. Si querés formato grande para trabajar, mirá el <a href=\"/producto/samsung-galaxy-z-fold-8-5g-512gb-12gb\">Galaxy Z Fold 8 5G</a>.</p>",
+      "highlights": [
+        "Se pliega a la mitad: entra en cualquier bolsillo",
+        "Pantalla interna de 6,9\" a 120 Hz",
+        "Pantalla externa FlexWindow para usarlo cerrado",
+        "Cámara de 50 MP con OIS y modo Flex",
+        "Batería de 4300 mAh con carga inalámbrica",
+        "12 GB de RAM para Galaxy AI"
+      ],
+      "model": "Galaxy Z Flip 8 5G",
+      "name": "Samsung Galaxy Z Flip 8 5G 512 GB 12 GB RAM",
+      "ram": "12 GB",
+      "revisar": [
+        "La tabla de la descripción dice '(12GB / 256GB)' pero nombre y slug son de 512 GB; publico 512 GB según el nombre.",
+        "La potencia de carga dice '25W/45W' sin aclarar y el procesador figura como 'Snapdragon / Exynos' sin modelo: no publiqué esos datos.",
+        "La resistencia figura como 'IP48/IP68': confirmar el grado real con la ficha del fabricante."
+      ],
+      "seoDescription": "Galaxy Z Flip 8 5G plegable de 512 GB y 12 GB de RAM: pantalla de 6,9\" a 120 Hz, FlexWindow y cámara de 50 MP. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Samsung Galaxy Z Flip 8 5G 512 GB",
+      "shortDescription": "Galaxy Z Flip 8 5G plegable con 512 GB y 12 GB de RAM. Pantalla interna Dynamic AMOLED 2X de 6,9\" a 120 Hz, pantalla externa FlexWindow, cámara de 50 MP con OIS y Galaxy AI. Nuevo, con garantía oficial.",
+      "slug": "samsung-galaxy-z-flip-8-5g-512gb-12gb",
+      "specs": [
+        {
+          "label": "Pantalla principal",
+          "value": "Dynamic AMOLED 2X de 6,9\" FHD+ (2520 x 1080), 1 a 120 Hz, Gorilla Glass Victus 2"
+        },
+        {
+          "label": "Pantalla externa",
+          "value": "Super AMOLED FlexWindow con widgets"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa-core de 4 nm (la descripción no declara el modelo)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (f/1.8, OIS) + 12 MP ultra gran angular (123°)"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "10 MP (f/2.2), video 4K a 60 fps"
+        },
+        {
+          "label": "Batería",
+          "value": "4300 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "Rápida, inalámbrica y PowerShare"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Al agua (la descripción indica IP48/IP68)"
+        },
+        {
+          "label": "Red",
+          "value": "5G (NanoSIM + eSIM)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 7, Bluetooth 5.4, NFC, GPS, Samsung DeX"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android 16 con One UI y Galaxy AI"
+        }
+      ],
+      "storage": "512 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Galaxy Z Fold 8 5G es el plegable grande de Samsung: cerrado es un teléfono normal de 9,7 mm, abierto es una tablet de 7,6\" para trabajar. Esta versión trae 512 GB y 12 GB de RAM.</p><h3>Pantallas</h3><p>La interna es Dynamic AMOLED 2X de 7,6\" a 120 Hz con 3000 nits de brillo y compatibilidad con S Pen. La exterior es de 6,3\" a 120 Hz con Gorilla Glass Victus 2. La multitarea divide la pantalla en hasta 3 apps.</p><h3>Cámara</h3><ul><li>Principal de 50 MP con OIS y motor ProVisual.</li><li>Ultra gran angular de 12 MP.</li><li>Teleobjetivo de 10 MP con zoom óptico 3x.</li><li>Frontal de 10 MP más cámara bajo la pantalla interna.</li></ul><h3>Rendimiento y batería</h3><p>Snapdragon 8 Elite con 12 GB de RAM LPDDR5X y 512 GB UFS 4.0 para IA, juegos y video 4K. Batería de 4400 mAh con carga rápida, inalámbrica y PowerShare, bisagra Armor con titanio y DeX inalámbrico. Si preferís un plegable compacto, mirá el <a href=\"/producto/samsung-galaxy-z-flip-8-5g-512gb-12gb\">Galaxy Z Flip 8 5G</a>.</p>",
+      "highlights": [
+        "Pantalla plegable de 7,6\" con 3000 nits de brillo",
+        "Abierto trabaja como una tablet compacta",
+        "Snapdragon 8 Elite con 12 GB de RAM",
+        "Triple cámara de 50 MP con teleobjetivo 3x",
+        "Batería de 4400 mAh con carga inalámbrica",
+        "Multitarea con hasta 3 apps a la vez"
+      ],
+      "model": "Galaxy Z Fold 8 5G",
+      "name": "Samsung Galaxy Z Fold 8 5G 512 GB 12 GB RAM",
+      "ram": "12 GB",
+      "revisar": [
+        "El cuerpo dice 'Snapdragon 8 Elite' y la tabla '8 Elite Gen 5 para Galaxy': publico el primero, confirmar la generación.",
+        "La carga dice '25W/45W' y la resistencia 'IP48/IP68' sin aclarar: no publiqué los vatios.",
+        "La tabla estima unos 460 GB libres para el usuario; no lo publiqué por ser una estimación."
+      ],
+      "seoDescription": "Galaxy Z Fold 8 5G plegable de 512 GB y 12 GB de RAM: pantalla de 7,6\" a 120 Hz, Snapdragon 8 Elite y cámara de 50 MP. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Samsung Galaxy Z Fold 8 5G 512 GB",
+      "shortDescription": "Galaxy Z Fold 8 5G plegable con 512 GB y 12 GB de RAM. Pantalla interna de 7,6\" a 120 Hz que se abre como una tablet, Snapdragon 8 Elite, cámara triple de 50 MP y Galaxy AI. Nuevo, con garantía oficial.",
+      "slug": "samsung-galaxy-z-fold-8-5g-512gb-12gb",
+      "specs": [
+        {
+          "label": "Pantalla principal",
+          "value": "Dynamic AMOLED 2X de 7,6\" QXGA+, 120 Hz, 3000 nits, compatible con S Pen"
+        },
+        {
+          "label": "Pantalla exterior",
+          "value": "Dynamic AMOLED 2X de 6,3\" FHD+, 120 Hz, Gorilla Glass Victus 2"
+        },
+        {
+          "label": "Procesador",
+          "value": "Snapdragon 8 Elite"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (f/1.8, OIS) + 12 MP ultra gran angular + 10 MP teleobjetivo 3x"
+        },
+        {
+          "label": "Cámaras frontales",
+          "value": "10 MP en la pantalla exterior + cámara bajo pantalla"
+        },
+        {
+          "label": "Batería",
+          "value": "4400 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "Rápida, inalámbrica y PowerShare"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Al agua (la descripción indica IP48/IP68)"
+        },
+        {
+          "label": "Red",
+          "value": "5G (NanoSIM + eSIM)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 7, Bluetooth 5.4, NFC, Samsung DeX inalámbrico"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android 16 con One UI y Galaxy AI"
+        }
+      ],
+      "storage": "512 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Redmi Note 15 Pro 5G trae cámara de 200 MP y carga de 67 W con cargador incluido, una combinación difícil de encontrar en la gama media. Esta versión tiene 512 GB y 8 GB de RAM.</p><h3>Cámara</h3><ul><li>Principal de 200 MP con OIS y zoom 2x y 4x sin perder calidad.</li><li>Ultra gran angular de 8 MP y macro de 2 MP.</li><li>Video 4K con estabilización OIS + EIS.</li></ul><h3>Pantalla</h3><p>AMOLED de 6,67\" con resolución 1.5K, 120 Hz, Dolby Vision y HDR10+, con Gorilla Glass y atenuación de alta frecuencia para cuidar la vista.</p><h3>Batería y conexiones</h3><p>Batería de 5100 mAh con carga turbo de 67 W. Procesador 5G de 4 nm, NFC para pagos, infrarrojo y HyperOS. En la caja vienen el cargador de 67 W, el cable, una funda y el extractor de SIM. Si buscás algo más accesible con OIS, mirá el <a href=\"/producto/xiaomi-redmi-note-15-5g-512gb-8gb\">Redmi Note 15 5G</a>.</p>",
+      "highlights": [
+        "Cámara de 200 MP con OIS y zoom 2x y 4x",
+        "Pantalla AMOLED 1.5K de 6,67\" a 120 Hz",
+        "Batería de 5100 mAh, carga turbo de 67 W",
+        "Cargador de 67 W incluido en la caja",
+        "NFC, infrarrojo y Dolby Vision"
+      ],
+      "model": "Redmi Note 15 Pro 5G",
+      "name": "Xiaomi Redmi Note 15 Pro 5G 512 GB 8 GB RAM",
+      "ram": "8 GB",
+      "revisar": [
+        "La resistencia figura como 'IP65/IP68' sin aclarar: confirmar el grado real.",
+        "El copete dice 'pantalla curva' pero el resto de la descripción no lo confirma: no lo publiqué.",
+        "El procesador no tiene modelo declarado, solo '4 nm' 5G."
+      ],
+      "seoDescription": "Redmi Note 15 Pro 5G de 512 GB y 8 GB de RAM: cámara de 200 MP con OIS, AMOLED 1.5K a 120 Hz y carga turbo de 67 W. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Xiaomi Redmi Note 15 Pro 5G 512 GB",
+      "shortDescription": "Redmi Note 15 Pro 5G con 512 GB y 8 GB de RAM. Cámara de 200 MP con OIS, pantalla AMOLED 1.5K de 6,67\" a 120 Hz, batería de 5100 mAh y carga turbo de 67 W con cargador incluido. Nuevo, con garantía oficial.",
+      "slug": "xiaomi-redmi-note-15-pro-5g-512gb-8gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED de 6,67\" 1.5K, 120 Hz, Dolby Vision, HDR10+, Gorilla Glass"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa-core 5G de 4 nm (la descripción no declara el modelo)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "200 MP (f/1.65, OIS) + 8 MP gran angular + 2 MP macro"
+        },
+        {
+          "label": "Video",
+          "value": "4K con estabilización OIS + EIS"
+        },
+        {
+          "label": "Batería",
+          "value": "5100 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "Turbo de 67 W, cargador incluido"
+        },
+        {
+          "label": "En la caja",
+          "value": "Cargador 67 W, cable USB-C, funda y extractor de SIM"
+        },
+        {
+          "label": "Red",
+          "value": "5G"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6, Bluetooth 5.3, NFC, infrarrojo"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Xiaomi HyperOS (Android)"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Al polvo y salpicaduras (la descripción indica IP65/IP68)"
+        }
+      ],
+      "storage": "512 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Redmi Note 15 5G es el primero de la línea Note 15 con estabilización óptica: cámara de 108 MP con OIS, pantalla muy brillante y batería grande. Esta versión trae 512 GB y 8 GB de RAM.</p><h3>Cámara</h3><ul><li>Principal de 108 MP con OIS y video 4K.</li><li>Ultra gran angular de 8 MP.</li><li>Frontal de 20 MP.</li></ul><h3>Pantalla</h3><p>AMOLED de 6,77\" FHD+ a 120 Hz con hasta 3200 nits: se ve bien hasta al sol. Trae el lector de huellas integrado en el panel y reconoce toques con los dedos húmedos.</p><h3>Rendimiento y batería</h3><p>Snapdragon 6 Gen 3 de 4 nm con 5G, batería de silicio-carbono de 5520 mAh con carga de 45 W (cargador incluido) y parlantes estéreo con Dolby Atmos.</p><h3>Antes de comprar</h3><p>La bandeja es híbrida: elegís entre dos SIM o una SIM más la microSD. Si querés la cámara de 200 MP, mirá el <a href=\"/producto/xiaomi-redmi-note-15-pro-5g-512gb-8gb\">Redmi Note 15 Pro 5G</a>.</p>",
+      "highlights": [
+        "Cámara de 108 MP con OIS y video 4K",
+        "Pantalla AMOLED de 6,77\" con 3200 nits",
+        "Snapdragon 6 Gen 3 de 4 nm",
+        "Batería de 5520 mAh, carga de 45 W",
+        "Huella en pantalla y memoria microSD",
+        "Parlantes estéreo con Dolby Atmos"
+      ],
+      "model": "Redmi Note 15 5G",
+      "name": "Xiaomi Redmi Note 15 5G 512 GB 8 GB RAM",
+      "ram": "8 GB",
+      "revisar": [
+        "Un subtítulo dice '256 GB' pero nombre, slug y el resto de la ficha son de 512 GB; publico 512 GB según el nombre."
+      ],
+      "seoDescription": "Redmi Note 15 5G de 512 GB y 8 GB de RAM: AMOLED de 6,77\" a 120 Hz, cámara de 108 MP con OIS y batería de 5520 mAh. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Xiaomi Redmi Note 15 5G 512 GB 8 GB",
+      "shortDescription": "Redmi Note 15 5G con 512 GB y 8 GB de RAM. Pantalla AMOLED de 6,77\" a 120 Hz con 3200 nits, cámara de 108 MP con OIS, Snapdragon 6 Gen 3 y batería de 5520 mAh. Nuevo, con garantía oficial.",
+      "slug": "xiaomi-redmi-note-15-5g-512gb-8gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED de 6,77\" FHD+ (2392 x 1080), 120 Hz, 3200 nits, huella en pantalla"
+        },
+        {
+          "label": "Procesador",
+          "value": "Snapdragon 6 Gen 3 (4 nm, hasta 2,4 GHz)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "108 MP (f/1.75, OIS) + 8 MP ultra gran angular (f/2.2)"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "20 MP (f/2.2)"
+        },
+        {
+          "label": "Batería",
+          "value": "5520 mAh (silicio-carbono)"
+        },
+        {
+          "label": "Carga",
+          "value": "Rápida de 45 W por USB-C (cargador incluido), inversa de 18 W"
+        },
+        {
+          "label": "Ranura microSD",
+          "value": "Sí, bandeja híbrida"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP66 (polvo y chorros de agua)"
+        },
+        {
+          "label": "Red",
+          "value": "5G"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi doble banda, Bluetooth 5.3, NFC, infrarrojo"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Xiaomi HyperOS (Android)"
+        }
+      ],
+      "storage": "512 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Poco F8 Ultra 5G es lo más potente de Poco: Snapdragon 8 Elite Gen 5, teleobjetivo periscópico real de 5x y un sistema de sonido 2.1 firmado por Bose que no tiene rival. Esta versión trae 512 GB y 16 GB de RAM.</p><h3>Cámara</h3><ul><li>Principal de 50 MP con OIS y sensor de gran formato.</li><li>Teleobjetivo periscópico 5x de 50 MP con OIS y macro desde 30 cm.</li><li>Ultra gran angular de 50 MP.</li><li>Video 8K y frontal de 32 MP con 4K.</li></ul><h3>Pantalla y sonido</h3><p>AMOLED HyperRGB de 6,9\" a 120 Hz con 3500 nits y Dolby Vision. El audio 2.1 combina parlantes estéreo con un subwoofer trasero para graves reales, con Dolby Atmos.</p><h3>Batería y rendimiento</h3><p>Batería de silicio-carbono de 6500 mAh: carga de 100 W por cable (completa en 38 minutos), inalámbrica de 50 W e inversa de 22,5 W. Chip VisionBoost D8, Wi-Fi 7, USB-C con salida de video e IP68.</p><h3>Antes de comprar</h3><p>No acepta microSD: los 512 GB internos son todo el espacio disponible.</p>",
+      "highlights": [
+        "Snapdragon 8 Elite Gen 5 de 3 nm",
+        "Teleobjetivo periscópico 5x de 50 MP con OIS",
+        "Pantalla de 6,9\" a 120 Hz con 3500 nits",
+        "Sonido 2.1 firmado por Bose",
+        "Batería de 6500 mAh, carga de 100 W",
+        "Carga inalámbrica de 50 W"
+      ],
+      "model": "Poco F8 Ultra 5G",
+      "name": "Xiaomi Poco F8 Ultra 5G 512 GB 16 GB RAM",
+      "ram": "16 GB",
+      "seoDescription": "Poco F8 Ultra 5G de 512 GB y 16 GB de RAM: Snapdragon 8 Elite Gen 5, teleobjetivo 5x, pantalla de 6,9\" y sonido Bose. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Xiaomi Poco F8 Ultra 5G 512 GB",
+      "shortDescription": "Poco F8 Ultra 5G con 512 GB y 16 GB de RAM. Snapdragon 8 Elite Gen 5, cámara triple de 50 MP con teleobjetivo periscópico 5x, pantalla de 6,9\" y sonido Bose 2.1. Nuevo, con garantía oficial.",
+      "slug": "xiaomi-poco-f8-ultra-5g-512gb-16gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED HyperRGB de 6,9\" (1200 x 2608), 120 Hz, 3500 nits, Dolby Vision"
+        },
+        {
+          "label": "Procesador",
+          "value": "Snapdragon 8 Elite Gen 5 (3 nm, hasta 4,6 GHz) + chip VisionBoost D8"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (f/1.67, OIS) + 50 MP periscópico 5x (OIS) + 50 MP gran angular"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "32 MP, video 4K"
+        },
+        {
+          "label": "Batería",
+          "value": "6500 mAh (silicio-carbono)"
+        },
+        {
+          "label": "Carga",
+          "value": "100 W por cable (100 % en 38 min), inalámbrica de 50 W"
+        },
+        {
+          "label": "Audio",
+          "value": "2.1 por Bose con subwoofer, Dolby Atmos"
+        },
+        {
+          "label": "Red",
+          "value": "5G (doble SIM + doble eSIM)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 7, Bluetooth 6.0, NFC, infrarrojo, USB-C 3.2 con DisplayPort"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP68 (sumergible a 1,5 m)"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Xiaomi HyperOS 3 (Android 16)"
+        }
+      ],
+      "storage": "512 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Moto G35 5G es un gama de entrada completo: pantalla de 120 Hz, cámara de 50 MP, NFC y ficha de auriculares. Esta versión trae 256 GB de almacenamiento y 4 GB de RAM.</p><h3>Pantalla</h3><p>FHD+ de 6,7\" a 120 Hz con hasta 1000 nits de brillo: nítida hasta en exteriores. El audio Dolby Atmos acompaña películas y juegos.</p><h3>Cámara</h3><ul><li>Principal de 50 MP con Quad Pixel: rinde mejor con poca luz.</li><li>Ultra gran angular de 8 MP.</li><li>Selfie de 16 MP.</li></ul><h3>Batería y conexiones</h3><p>Batería de 5000 mAh para todo el día, procesador octa-core a 2,2 GHz, NFC, Bluetooth 5.0 y ficha de 3,5 mm. Corre Android 14.</p><h3>Antes de comprar</h3><p>Es repelente al agua, no sumergible: banca salpicaduras y lluvia liviana, no inmersiones.</p>",
+      "highlights": [
+        "Pantalla FHD+ de 6,7\" a 120 Hz y 1000 nits",
+        "Cámara de 50 MP con tecnología Quad Pixel",
+        "Gran angular de 8 MP y selfie de 16 MP",
+        "Batería de 5000 mAh para todo el día",
+        "NFC, Bluetooth 5.0 y ficha de 3,5 mm"
+      ],
+      "model": "Moto G35 5G",
+      "name": "Motorola Moto G35 5G 256 GB 4 GB RAM",
+      "ram": "4 GB",
+      "revisar": [
+        "El nombre y la ficha técnica dicen 4 GB de RAM pero el slug dice 8 GB; publico 4 GB según el nombre.",
+        "La descripción no declara el modelo del procesador, solo 'Octa-Core a 2,2 GHz'; el 5G sale del nombre y del texto del fabricante, no del chip."
+      ],
+      "seoDescription": "Moto G35 5G de 256 GB y 4 GB de RAM: pantalla FHD+ de 6,7\" a 120 Hz, cámara de 50 MP y batería de 5000 mAh. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Motorola Moto G35 5G 256 GB 4 GB",
+      "shortDescription": "Moto G35 5G con 256 GB y 4 GB de RAM. Pantalla FHD+ de 6,7\" a 120 Hz con 1000 nits, cámara de 50 MP con Quad Pixel, batería de 5000 mAh y sonido Dolby Atmos. Nuevo, con garantía oficial.",
+      "slug": "motorola-moto-g35-5g-256gb-8gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "FHD+ de 6,7\", 120 Hz, 1000 nits"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa-core a 2,2 GHz (la descripción no declara el modelo)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (f/1.8) + 8 MP ultra gran angular"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "16 MP (f/2.45)"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Red",
+          "value": "5G"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Bluetooth 5.0, NFC, ficha de 3,5 mm"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android 14"
+        },
+        {
+          "label": "Audio",
+          "value": "Dolby Atmos"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Repelente a salpicaduras (IP52)"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "brand": "Apple",
+      "descriptionHtml": "<p>El iPhone 14 Pro Max es el Pro grande de Apple: pantalla de 6,7 pulgadas con siempre activa, chip A16 Bionic y cámara gran angular de 48 MP. Esta versión trae 256 GB de almacenamiento.</p><h3>Cámara</h3><ul><li>Gran angular de 48 MP con sensor quad pixel y ProRAW de alta resolución.</li><li>Teleobjetivo con zoom óptico de 2x y 3x para retratos.</li><li>Ultra gran angular con macro y fotos nocturnas hasta 3 veces mejores.</li><li>Modo Cine en 4K HDR a 24 fps.</li></ul><h3>Rendimiento y batería</h3><p>El A16 Bionic mueve juegos, video 4K y multitarea sin trabarse, y su Secure Enclave protege tus datos de Face ID. La batería llega hasta 29 horas de reproducción de video, y con MagSafe cargás más rápido sin cables.</p><h3>Diseño</h3><p>Acero inoxidable de calidad quirúrgica y frente Ceramic Shield. La pantalla siempre activa muestra la hora y los widgets sin tocar el equipo, y se apaga sola en el bolsillo para ahorrar batería.</p><h3>Antes de comprar</h3><p>El cargador MagSafe se vende por separado. Consultá el color disponible antes de confirmar tu compra.</p>",
+      "highlights": [
+        "Chip A16 Bionic con Secure Enclave para tus datos",
+        "Cámara gran angular de 48 MP con ProRAW",
+        "Pantalla de 6,7 pulgadas con siempre activa",
+        "Hasta 29 horas de reproducción de video",
+        "Acero quirúrgico y frente Ceramic Shield",
+        "Modo Cine en 4K HDR a 24 fps"
+      ],
+      "model": "iPhone 14 Pro Max",
+      "name": "iPhone 14 Pro Max 256 GB",
+      "revisar": [
+        "Saque CPO del nombre por ser tag interno y la base lo marca como Nuevo.",
+        "La descripción original dice Usado en el primer renglón pero la base lo marca como Nuevo: confirmar el estado real antes de publicar.",
+        "El color no está indicado en la fuente (habla de cuatro colores): confirmar cuál es."
+      ],
+      "seoDescription": "iPhone 14 Pro Max de 256 GB con chip A16 Bionic, pantalla de 6,7 pulgadas y cámara de 48 MP. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "iPhone 14 Pro Max 256 GB",
+      "shortDescription": "iPhone 14 Pro Max de 256 GB. Pantalla Super Retina XDR de 6,7 pulgadas con siempre activa, chip A16 Bionic y cámara gran angular de 48 MP con ProRAW. Acero inoxidable y Ceramic Shield.",
+      "slug": "iphone-14-pro-max-256gb-cpo",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Super Retina XDR de 6,7 pulgadas con siempre activa"
+        },
+        {
+          "label": "Procesador",
+          "value": "Apple A16 Bionic"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "Gran angular 48 MP (f/1.78, OIS) + teleobjetivo 3x + ultra gran angular"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "TrueDepth con autoenfoque"
+        },
+        {
+          "label": "Video",
+          "value": "Modo Cine en 4K HDR a 24 fps"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 29 h de reproducción de video"
+        },
+        {
+          "label": "Carga",
+          "value": "MagSafe e inalámbrica (cargador se vende por separado)"
+        },
+        {
+          "label": "Diseño",
+          "value": "Acero inoxidable y frente Ceramic Shield"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "iOS 16"
+        }
+      ],
+      "storage": "256 GB"
+    }
+  ]
+}
