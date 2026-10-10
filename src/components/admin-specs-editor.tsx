@@ -23,6 +23,41 @@ const SUGGESTED = [
   "Color",
 ];
 
+/** Ejemplo de valor según el dato elegido (sin mayúsculas ni acentos). */
+const EXAMPLES: Record<string, string> = {
+  procesador: "Intel Core i5-12450H",
+  graficos: "NVIDIA RTX 4060 8GB",
+  "memoria ram": "16GB DDR5",
+  ram: "8GB",
+  almacenamiento: "512GB SSD",
+  memoria: "128GB",
+  pantalla: '15.6" Full HD 144Hz',
+  teclado: "Retroiluminado en español",
+  camara: "12 MP + 12 MP",
+  audio: "Parlantes estéreo",
+  "conectividad inalambrica": "Wi-Fi 6 y Bluetooth 5.2",
+  conectividad: "Wi-Fi 6 y Bluetooth 5.2",
+  puertos: "2× USB-C, 1× HDMI",
+  bateria: "4000 mAh",
+  peso: "1.8 kg",
+  "sistema operativo": "Windows 11",
+  "potencia (w)": "65 W",
+  potencia: "65 W",
+  color: "Rojo",
+  modelo: "A2633",
+  garantia: "12 meses",
+  medidas: "20 × 12 × 6 cm",
+  resolucion: "1920 × 1080",
+  capacidad: "1 TB",
+  material: "Aluminio",
+};
+
+function valueExample(label: string): string {
+  const key = label.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  if (!key) return "Ej. 4000 mAh";
+  return EXAMPLES[key] ? `Ej. ${EXAMPLES[key]}` : "Valor";
+}
+
 const cell =
   "w-full rounded-md border border-transparent bg-transparent px-2 py-1.5 text-sm text-ink-900 outline-none hover:border-ink-200 focus:border-ink-400 focus:bg-surface";
 
@@ -83,7 +118,7 @@ export function AdminSpecsEditor({ rows, onChange }: { rows: SpecRow[]; onChange
                     <input value={row.label} onChange={(e) => update(index, { label: e.target.value })} maxLength={80} placeholder="Ej. Batería" aria-label={`Dato ${index + 1}`} className={`${cell} font-semibold`} />
                   </td>
                   <td className="px-1 py-1">
-                    <input value={row.value} onChange={(e) => update(index, { value: e.target.value })} maxLength={300} placeholder="Ej. 4000 mAh" aria-label={`Valor ${index + 1}`} className={cell} />
+                    <input value={row.value} onChange={(e) => update(index, { value: e.target.value })} maxLength={300} placeholder={valueExample(row.label)} aria-label={`Valor ${index + 1}`} className={cell} />
                   </td>
                   <td className="whitespace-nowrap px-1 py-1 text-right">
                     <button type="button" onClick={() => swap(index, index - 1)} disabled={index === 0} aria-label="Subir fila" className={btn}>↑</button>
