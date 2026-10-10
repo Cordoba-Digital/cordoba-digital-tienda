@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
+import { AdminOrdersWipeButton } from "@/components/admin-orders-wipe-button";
 import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
@@ -63,6 +64,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
           <h1 className="mt-1 text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">Pedidos</h1>
           <p className="mt-1 text-sm text-ink-500">{total} pedidos en total. Buscá por código, cliente o email.</p>
         </div>
+        {total > 0 ? <AdminOrdersWipeButton /> : null}
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6">

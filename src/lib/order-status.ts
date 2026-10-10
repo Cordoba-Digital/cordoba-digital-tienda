@@ -127,3 +127,22 @@ export async function expireStalePendingOrders(): Promise<number> {
   }
   return stale.length;
 }
+
+/**
+ * Borra todos los pedidos (y con ellos los pagos, que salen de los pedidos).
+ * Antes devuelve a la tienda el stock y las ventas que descontaron los que no
+ * estaban cancelados, así el catálogo queda como si nunca hubieran existido.
+ */
+export async function deleteAllOrders(): Promise<number> {
+  await ensureOrderStockSchema();
+  return db.transaction(async (tx) => {
+    const all = await tx.select({ id: orders.id, status: orders.status }).from(orders).for("update");
+    for (const order of all) {
+      if (!isCancelled(order.status)) await releaseOrderStock(tx, order.id);
+    }
+    await tx.delete(orderEvents);
+    await tx.delete(orderItems);
+    await tx.delete(orders);
+    return all.length;
+  });
+}
