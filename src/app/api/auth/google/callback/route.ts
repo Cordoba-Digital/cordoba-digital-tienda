@@ -28,7 +28,22 @@ export const dynamic = "force-dynamic";
  */
 function adminLanding(path: string, setCookie: string[]): Response {
   const target = path.replace(/[^A-Za-z0-9/_\-?=&%.]/g, "");
-  const html = `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${target}"><title>Ingresando…</title><p style="font-family:sans-serif">Ingresando al panel… <a href="${target}">Continuar</a></p>`;
+  const html = `<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=${target}"><title>Ingresando al panel…</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{display:grid;place-items:center;background:#f4f1eb;color:#14161c;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:16px}
+.c{width:100%;max-width:340px;background:#fff;border:1px solid #d8d1c4;border-radius:16px;padding:32px 24px;text-align:center;box-shadow:0 20px 50px rgba(20,22,28,.10)}
+.s{width:36px;height:36px;margin:0 auto 18px;border-radius:50%;border:3px solid #ffe0d0;border-top-color:#f15a24;animation:r .8s linear infinite}
+h1{margin:0;font-size:18px;font-weight:700;letter-spacing:-.01em}
+p{margin:6px 0 0;font-size:13px;color:#574f45}
+a{color:#c2410c;font-weight:700;text-decoration:none}a:hover{text-decoration:underline}
+@keyframes r{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.s{animation-duration:2.4s}}
+</style></head>
+<body><main class="c" role="status" aria-live="polite"><div class="s" aria-hidden="true"></div>
+<h1>Ingresando al panel</h1><p>Un segundo, ya te llevamos. <a href="${target}">Entrar ahora</a></p></main></body></html>`;
   const res = new Response(html, {
     headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "Referrer-Policy": "no-referrer" },
   });
