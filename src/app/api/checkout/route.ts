@@ -6,6 +6,7 @@ import { computeTotals, MAX_QTY_PER_ITEM, PAYMENT_METHODS, type PaymentMethodId 
 import { ensureOrderStockSchema, reserveOrderStock } from "@/lib/order-status";
 import { getCoupon } from "@/lib/queries";
 import { resolvePaymentMethod } from "@/lib/checkout-payment";
+import { mercadoPagoReady } from "@/lib/mercadopago";
 import { validateDelivery, validatePersonalData } from "@/lib/checkout-validation";
 import { findShippingOption, normalizeZip, type DeliveryMethod } from "@/lib/shipping";
 
@@ -36,34 +37,53 @@ type CheckoutBody = {
 
 function orderCode(): string {
   const alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+  // El código es la llave para ver el pedido en /pedido/[code]: tiene que salir
+  // de un generador criptográfico, no de Math.random (predecible). 256 es
+  // múltiplo de 32, así que el módulo no sesga.
+  const bytes = crypto.getRandomValues(new Uint8Array(6));
   let suffix = "";
-  for (let i = 0; i < 6; i += 1) {
-    suffix += alphabet[Math.floor(Math.random() * alphabet.length)];
+  for (const byte of bytes) {
+    suffix += alphabet[byte % alphabet.length];
   }
   return `CD-${suffix}`;
 }
 
+function text(value: unknown): string {
+  return typeof value === "string" ? value.trim() : "";
+}
+
 export async function POST(request: Request) {
-  const body = (await request.json().catch(() => ({}))) as CheckoutBody;
+  // `?? {}` cubre un body `null`; `text` evita un 500 si un campo no es texto.
+  const body = ((await request.json().catch(() => ({}))) ?? {}) as CheckoutBody;
   const errors: Record<string, string> = {};
 
-  const items = (body.items ?? []).filter((i) => i && typeof i.slug === "string" && i.quantity > 0);
+  // El mismo producto puede venir en dos líneas: se suman antes de validar, así
+  // el tope por producto vale para el total y no para cada línea.
+  const rawItems: unknown[] = Array.isArray(body.items) ? body.items : [];
+  const merged = new Map<string, number>();
+  for (const raw of rawItems) {
+    const item = raw as { slug?: unknown; quantity?: unknown } | null;
+    const quantity = Number(item?.quantity);
+    if (!item || typeof item.slug !== "string" || !Number.isFinite(quantity) || quantity <= 0) continue;
+    merged.set(item.slug, (merged.get(item.slug) ?? 0) + Math.floor(quantity));
+  }
+  const items = [...merged].map(([slug, quantity]) => ({ slug, quantity }));
   if (!items.length) {
     return Response.json({ ok: false, error: "Tu carrito está vacío." }, { status: 400 });
   }
 
   const customer = body.customer ?? {};
-  const firstName = (customer.firstName ?? "").trim();
-  const lastName = (customer.lastName ?? "").trim();
-  const email = (customer.email ?? "").trim().toLowerCase();
-  const phone = (customer.phone ?? "").trim();
-  const docId = (customer.docId ?? "").trim();
+  const firstName = text(customer.firstName);
+  const lastName = text(customer.lastName);
+  const email = text(customer.email).toLowerCase();
+  const phone = text(customer.phone);
+  const docId = text(customer.docId);
 
   Object.assign(errors, validatePersonalData({ firstName, lastName, email, phone, docId }));
 
   const delivery = body.delivery ?? {};
   const method: DeliveryMethod = delivery.method === "pickup" || delivery.method === "express" ? delivery.method : "standard";
-  const zip = normalizeZip(delivery.zip ?? "");
+  const zip = normalizeZip(text(delivery.zip));
   let address: ShippingAddress | null = null;
 
   if (method !== "pickup") {
@@ -72,24 +92,24 @@ export async function POST(request: Request) {
       validateDelivery({
         method,
         zip,
-        street: delivery.street,
-        number: delivery.number,
-        city: delivery.city,
-        province: delivery.province,
+        street: text(delivery.street),
+        number: text(delivery.number),
+        city: text(delivery.city),
+        province: text(delivery.province),
         requireShippingOption: false,
       }),
     );
     address = {
-      street: (delivery.street ?? "").trim(),
-      number: (delivery.number ?? "").trim(),
-      extra: (delivery.extra ?? "").trim(),
-      city: (delivery.city ?? "").trim(),
-      province: (delivery.province ?? "").trim(),
+      street: text(delivery.street),
+      number: text(delivery.number),
+      extra: text(delivery.extra),
+      city: text(delivery.city),
+      province: text(delivery.province),
       zip,
     };
   }
 
-  const payment = resolvePaymentMethod(body.payment?.method, method);
+  const payment = resolvePaymentMethod(body.payment?.method, method, { mercadoPago: mercadoPagoReady() });
   const paymentId: PaymentMethodId = payment.ok ? payment.method : "transferencia";
   if (!payment.ok) errors.payment = payment.error;
   const installments = Math.max(1, Math.min(12, Number(body.payment?.installments ?? 1)));
@@ -100,7 +120,8 @@ export async function POST(request: Request) {
 
   // El cupón se pide temprano y se espera tarde: es independiente de la
   // validación de productos y así las dos consultas viajan juntas.
-  const couponPromise = body.couponCode ? getCoupon(body.couponCode) : null;
+  const couponCode = text(body.couponCode);
+  const couponPromise = couponCode ? getCoupon(couponCode) : null;
 
   const slugs = items.map((i) => i.slug);
   const rows = await db.select().from(products).where(inArray(products.slug, slugs));
@@ -165,49 +186,54 @@ export async function POST(request: Request) {
     code = orderCode();
   }
 
-  const [created] = await db
-    .insert(orders)
-    .values({
-      code,
-      // Todo pedido nace pendiente, también el de Mercado Pago: el pago se
-      // acredita recién cuando el webhook firmado confirma un cobro aprobado.
-      status: "pendiente_pago",
-      customerName: `${firstName} ${lastName}`,
-      email,
-      phone,
-      docId,
-      deliveryMethod: method,
-      deliveryLabel: shippingOption.label,
-      deliveryEta: shippingOption.eta,
-      address,
-      paymentMethod: paymentId,
-      paymentLabel,
-      installments: paymentId === "mercadopago" ? installments : 1,
-      subtotal: totals.subtotal,
-      discount: totals.couponDiscount,
-      paymentAdjustment: totals.paymentAdjustment,
-      shippingCost: totals.shippingCost,
-      total: totals.total,
-      couponCode: couponInfo?.code ?? null,
-      notes: (body.notes ?? "").trim().slice(0, 500),
-    })
-    .returning({ id: orders.id, code: orders.code });
-
+  // Pedido, ítems y stock en una sola transacción: si algo falla, no queda un
+  // pedido sin productos ni stock descontado de más.
   await ensureOrderStockSchema();
-  await db.insert(orderItems).values(
-    validated.map((item) => ({
-      orderId: created.id,
-      productSlug: item.slug,
-      name: item.name,
-      image: item.image,
-      unitPrice: item.unitPrice,
-      quantity: item.quantity,
-    })),
-  );
+  const created = await db.transaction(async (tx) => {
+    const [order] = await tx
+      .insert(orders)
+      .values({
+        code,
+        // Todo pedido nace pendiente, también el de Mercado Pago: el pago se
+        // acredita recién cuando el webhook firmado confirma un cobro aprobado.
+        status: "pendiente_pago",
+        customerName: `${firstName} ${lastName}`,
+        email,
+        phone,
+        docId,
+        deliveryMethod: method,
+        deliveryLabel: shippingOption.label,
+        deliveryEta: shippingOption.eta,
+        address,
+        paymentMethod: paymentId,
+        paymentLabel,
+        installments: paymentId === "mercadopago" ? installments : 1,
+        subtotal: totals.subtotal,
+        discount: totals.couponDiscount,
+        paymentAdjustment: totals.paymentAdjustment,
+        shippingCost: totals.shippingCost,
+        total: totals.total,
+        couponCode: couponInfo?.code ?? null,
+        notes: text(body.notes).slice(0, 500),
+      })
+      .returning({ id: orders.id, code: orders.code });
 
-  // Descuenta stock solo donde es una cantidad real y anota cuánto, para
-  // devolverlo si el pedido se cancela o vence sin pago.
-  await db.transaction((tx) => reserveOrderStock(tx, created.id));
+    await tx.insert(orderItems).values(
+      validated.map((item) => ({
+        orderId: order.id,
+        productSlug: item.slug,
+        name: item.name,
+        image: item.image,
+        unitPrice: item.unitPrice,
+        quantity: item.quantity,
+      })),
+    );
+
+    // Descuenta stock solo donde es una cantidad real y anota cuánto, para
+    // devolverlo si el pedido se cancela o vence sin pago.
+    await reserveOrderStock(tx, order.id);
+    return order;
+  });
 
   return Response.json({ ok: true, code: created.code, total: totals.total });
 }

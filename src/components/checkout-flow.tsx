@@ -208,7 +208,7 @@ function Field({
 const inputClass =
   "h-11 w-full rounded-xl border border-ink-200 bg-surface px-3.5 text-sm text-ink-900 outline-none transition placeholder:text-ink-500 focus:border-brand-400 focus:ring-4 focus:ring-brand-100";
 
-export function CheckoutFlow() {
+export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean }) {
   const router = useRouter();
   const { items, subtotal, listSubtotal, hydrated, clearCart, setQuantity } = useStore();
 
@@ -415,8 +415,23 @@ export function CheckoutFlow() {
       }
       clearCart();
       writeCoupon(null);
-      // La rama de Mercado Pago queda fuera de este loader: solo se habilita
-      // cuando el negocio active la opción en el checkout.
+      if (payment === "mercadopago") {
+        // El pedido ya existe: si crear el cobro falla, desde la página del
+        // pedido se puede reintentar con el botón de pagar.
+        const pay = await fetch("/api/checkout/mercadopago", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ code: data.code }),
+        })
+          .then((r) => r.json())
+          .catch(() => null);
+        if (pay?.ok && pay.init_point) {
+          window.location.assign(pay.init_point);
+          return;
+        }
+        router.push(`/pedido/${data.code}?nuevo=1&pago=error`);
+        return;
+      }
       router.push(`/pedido/${data.code}?nuevo=1`);
     } catch {
       setServerError("No pudimos procesar el pedido. Probá de nuevo en unos segundos.");
@@ -723,7 +738,7 @@ export function CheckoutFlow() {
             <div className="card-surface space-y-4 p-6">
               <h2 className="text-xl font-extrabold tracking-tight text-ink-900">Medio de pago</h2>
               <div className="grid gap-2">
-                  {PAYMENT_METHODS.filter((method) => isPaymentMethodOffered(method.id, deliveryMethod)).map(
+                  {PAYMENT_METHODS.filter((method) => isPaymentMethodOffered(method.id, deliveryMethod, { mercadoPago })).map(
                     (method) => {
                       const PaymentIcon = PAYMENT_ICONS[method.id];
                       return (
@@ -756,9 +771,18 @@ export function CheckoutFlow() {
                   )}
                 </div>
 
-                {/* Mercado Pago y USDT quedan ocultos hasta que el negocio los
-                    habilite formalmente; hoy se muestran solo transferencia y
-                    efectivo/seña en el local. */}
+                {/* USDT queda oculto hasta que el negocio lo habilite. Mercado
+                    Pago aparece solo si el servidor tiene sus credenciales. */}
+
+                {payment === "mercadopago" ? (
+                  <div className="rounded-xl bg-sky-50 p-4 text-sm text-sky-900">
+                    <p className="font-bold">Al confirmar te llevamos a Mercado Pago para pagar.</p>
+                    <p className="mt-1 text-xs">
+                      Tarjeta de crédito, débito o dinero en cuenta. Las cuotas las elegís ahí. Cuando el pago se
+                      acredita, el pedido pasa a &quot;Pago acreditado&quot; solo.
+                    </p>
+                  </div>
+                ) : null}
 
                 {payment === "transferencia" ? (
                   <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-700">

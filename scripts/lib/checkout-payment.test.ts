@@ -43,10 +43,20 @@ prueba("rechaza efectivo con envío", () => {
   assert.equal(resolvePaymentMethod("efectivo", "standard").ok, false);
 });
 
-prueba("rechaza Mercado Pago mientras está oculto", () => {
-  assert.ok(!CHECKOUT_PAYMENT_METHODS.includes("mercadopago"), "este caso asume Mercado Pago oculto");
+prueba("rechaza Mercado Pago si el servidor no tiene sus credenciales", () => {
+  assert.ok(!CHECKOUT_PAYMENT_METHODS.includes("mercadopago"), "Mercado Pago no va en la lista fija");
   assert.equal(resolvePaymentMethod("mercadopago", "standard").ok, false);
-  assert.equal(resolvePaymentMethod("mercadopago", "pickup").ok, false);
+  assert.equal(resolvePaymentMethod("mercadopago", "pickup", { mercadoPago: false }).ok, false);
+});
+
+prueba("acepta Mercado Pago con credenciales, con envío o retirando", () => {
+  assert.deepEqual(resolvePaymentMethod("mercadopago", "standard", { mercadoPago: true }), { ok: true, method: "mercadopago" });
+  assert.deepEqual(resolvePaymentMethod("mercadopago", "pickup", { mercadoPago: true }), { ok: true, method: "mercadopago" });
+});
+
+prueba("con Mercado Pago activo sigue rechazando USDT y efectivo con envío", () => {
+  assert.equal(resolvePaymentMethod("usdt", "standard", { mercadoPago: true }).ok, false);
+  assert.equal(resolvePaymentMethod("efectivo", "standard", { mercadoPago: true }).ok, false);
 });
 
 prueba("rechaza USDT mientras está oculto", () => {

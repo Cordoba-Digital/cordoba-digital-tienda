@@ -77,5 +77,8 @@ export async function POST(request: Request) {
     emailError = error instanceof Error ? error.message : "No se pudo enviar el email.";
   }
 
-  return Response.json({ ok: true, saved: true, emailSent, emailError, id: record.id });
+  // El detalle del SMTP queda en los logs: puede nombrar el servidor o el
+  // usuario de la casilla, y al cliente no le sirve.
+  if (emailError) console.error("[arrepentimiento] email no enviado:", emailError);
+  return Response.json({ ok: true, saved: true, emailSent, id: record.id });
 }

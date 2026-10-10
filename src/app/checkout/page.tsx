@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { CheckoutFlow } from "@/components/checkout-flow";
+import { mercadoPagoReady } from "@/lib/mercadopago";
 
 export const dynamic = "force-dynamic";
 
@@ -14,5 +15,5 @@ export const metadata: Metadata = {
 };
 
 export default function CheckoutPage() {
-  return <CheckoutFlow />;
+  return <CheckoutFlow mercadoPago={mercadoPagoReady()} />;
 }

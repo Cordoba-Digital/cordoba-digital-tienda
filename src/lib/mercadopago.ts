@@ -8,6 +8,15 @@ export function mpClient() {
   return new MercadoPagoConfig({ accessToken: token });
 }
 
+/**
+ * Mercado Pago se ofrece en el checkout solo con las dos credenciales cargadas:
+ * el Access Token para crear el cobro y la clave secreta del webhook para
+ * confirmarlo. Con una sola, el cliente pagaría y el pedido nunca se acreditaría.
+ */
+export function mercadoPagoReady(): boolean {
+  return !!process.env.MP_ACCESS_TOKEN?.trim() && !!process.env.MP_WEBHOOK_SECRET?.trim();
+}
+
 export function appBaseUrl(request?: Request): string {
   const configured = process.env.APP_URL?.trim();
   if (configured) return configured.replace(/\/$/, "");

@@ -33,7 +33,13 @@ export async function PATCH(request: Request, context: { params: Promise<{ code:
   }
   const { code } = await context.params;
   const normalized = decodeURIComponent(code).trim().toUpperCase();
-  const body = (await request.json().catch(() => ({}))) as { status?: string; trackingCode?: string; note?: string };
+  const raw = (await request.json().catch(() => ({}))) as Record<string, unknown>;
+  for (const field of ["status", "trackingCode", "note"]) {
+    if (raw?.[field] !== undefined && typeof raw[field] !== "string") {
+      return Response.json({ ok: false, error: `El campo ${field} tiene que ser texto.` }, { status: 400 });
+    }
+  }
+  const body = (raw ?? {}) as { status?: string; trackingCode?: string; note?: string };
 
   const [order] = await db.select().from(orders).where(eq(orders.code, normalized)).limit(1);
   if (!order) {
@@ -62,7 +68,10 @@ export async function PATCH(request: Request, context: { params: Promise<{ code:
     return Response.json({ ok: false, error: "Nada para actualizar." }, { status: 400 });
   }
 
-  await applyOrderStatus(order.id, { from: order.status, to: next, note: eventNote, extra });
+  const applied = await applyOrderStatus(order.id, { from: order.status, to: next, note: eventNote, extra });
+  if (!applied) {
+    return Response.json({ ok: false, error: "El pedido cambió mientras lo editabas. Recargá y probá de nuevo." }, { status: 409 });
+  }
   const changes: Record<string, FieldChange> = {};
   if (next !== order.status) changes.estado = { from: statusLabel(order.status), to: statusLabel(next) };
   if (extra.trackingCode !== undefined && extra.trackingCode !== (order.trackingCode ?? "")) {

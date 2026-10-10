@@ -81,13 +81,16 @@ export function shippingOptions(zip: string): ShippingOption[] {
   // los productos grandes el precio queda subestimado (ver
   // `docs/TARIFAS-ENVIO.md`).
   const tarifa = PRECIO_POR_ZONA[zone.zona];
+  // La tarifa de Andreani viene con centavos (8331.43), pero los importes del
+  // pedido son pesos enteros (`integer` en la base): sin redondear, guardar un
+  // pedido con envío fallaba y el checkout respondía 500.
 
   options.push({
     id: "standard",
     label: `Andreani (estándar) · ${zone.name}`,
     description: "Envío a domicilio con seguimiento online",
     eta: PLAZO_DOMICILIO,
-    cost: tarifa.estandar,
+    cost: Math.round(tarifa.estandar),
     free: false,
   });
 
@@ -98,7 +101,7 @@ export function shippingOptions(zip: string): ShippingOption[] {
     label: `Andreani (sucursal) · ${zone.name}`,
     description: "Retirás en la sucursal de Andreani más cercana",
     eta: PLAZO_SUCURSAL,
-    cost: tarifa.sucursal,
+    cost: Math.round(tarifa.sucursal),
     free: false,
   });
 

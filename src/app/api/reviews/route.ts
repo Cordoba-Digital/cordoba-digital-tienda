@@ -2,6 +2,7 @@ import { and, eq, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orderItems, orders, products, reviews } from "@/db/schema";
+import { blockedMinutes, ipFromHeaders, recordMiss, REVIEW_LIMIT, tooManyAttempts } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -66,6 +67,10 @@ export async function POST(request: Request) {
   const [product] = await db.select({ slug: products.slug }).from(products).where(eq(products.slug, slug)).limit(1);
   if (!product) return Response.json({ ok: false, error: "Producto inexistente" }, { status: 404 });
 
+  const ip = ipFromHeaders(request.headers);
+  const blocked = await blockedMinutes(REVIEW_LIMIT, ip);
+  if (blocked) return tooManyAttempts(blocked);
+
   // Mismo mensaje para "no existe" y "email distinto": no revela qué códigos son válidos.
   const [order] = await db
     .select({ id: orders.id, email: orders.email, status: orders.status })
@@ -73,6 +78,7 @@ export async function POST(request: Request) {
     .where(eq(orders.code, orderCode))
     .limit(1);
   if (!order || order.email.trim().toLowerCase() !== email) {
+    await recordMiss(REVIEW_LIMIT, ip);
     return Response.json({ ok: false, error: "No encontramos un pedido con ese número y email." }, { status: 403 });
   }
 

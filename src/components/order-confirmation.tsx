@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { ProductImg } from "@/components/product-img";
@@ -54,7 +55,16 @@ function CopyButton({ value, label }: { value: string; label?: string }) {
   );
 }
 
-export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew: boolean }) {
+export function OrderConfirmation({
+  order,
+  isNew,
+  paymentReturn,
+}: {
+  order: OrderSummary;
+  isNew: boolean;
+  /** `?pago=` con el que vuelve Mercado Pago (exito, pendiente, fallo) o `error` si no se pudo iniciar. */
+  paymentReturn?: string;
+}) {
   const { clearCart } = useStore();
   const current = statusIndex(order.status);
 
@@ -89,6 +99,7 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
   }, [isNew, order]);
 
   const needsPayment = order.paymentMethod === "transferencia" && !isCancelled(order.status);
+  const awaitingMercadoPago = order.paymentMethod === "mercadopago" && order.status === "pendiente_pago";
 
   return (
     <div className="container-xl py-8">
@@ -167,6 +178,8 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
               </ol>
             )}
           </section>
+
+          {awaitingMercadoPago ? <MercadoPagoPanel code={order.code} total={order.total} paymentReturn={paymentReturn} /> : null}
 
           {needsPayment ? (
             <section className="card-surface border-2 border-amber-200 bg-amber-50/40 p-5">
@@ -250,8 +263,12 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
               <p className="text-xs text-emerald-700">{order.deliveryEta}</p>
               {order.address ? (
                 <p className="mt-2 text-sm text-ink-600">
-                  {order.address.street} {order.address.number} {order.address.extra}
-                  <br />
+                  {order.address.street ? (
+                    <>
+                      {order.address.street} {order.address.number} {order.address.extra}
+                      <br />
+                    </>
+                  ) : null}
                   {order.address.city}, {order.address.province} (CP {order.address.zip})
                 </p>
               ) : (
@@ -325,5 +342,78 @@ export function OrderConfirmation({ order, isNew }: { order: OrderSummary; isNew
         </aside>
       </div>
     </div>
+  );
+}
+
+/**
+ * Pedido de Mercado Pago que todavía no se acreditó. Si el cliente vuelve de
+ * MP con el pago aprobado, el webhook puede tardar unos segundos: la página se
+ * refresca sola hasta que el estado cambia. Si no pagó (o falló), puede
+ * reintentar desde acá.
+ */
+function MercadoPagoPanel({ code, total, paymentReturn }: { code: string; total: number; paymentReturn?: string }) {
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const confirming = paymentReturn === "exito";
+
+  useEffect(() => {
+    if (!confirming) return;
+    let tries = 0;
+    const id = window.setInterval(() => {
+      tries += 1;
+      router.refresh();
+      if (tries >= 12) window.clearInterval(id);
+    }, 5000);
+    return () => window.clearInterval(id);
+  }, [confirming, router]);
+
+  const pay = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/checkout/mercadopago", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ code }),
+      });
+      const data = await res.json();
+      if (data.ok && data.init_point) {
+        window.location.assign(data.init_point);
+        return;
+      }
+      setError(data.error ?? "No pudimos iniciar el pago. Probá de nuevo.");
+    } catch {
+      setError("No pudimos iniciar el pago. Probá de nuevo.");
+    }
+    setLoading(false);
+  };
+
+  return (
+    <section className="card-surface border-2 border-sky-200 bg-sky-50/40 p-5">
+      <h2 className="text-lg font-extrabold text-ink-900">
+        {confirming ? "Estamos confirmando tu pago" : paymentReturn === "pendiente" ? "Tu pago está pendiente" : "Falta el pago"}
+      </h2>
+      <p className="mt-1 text-sm text-ink-600">
+        {confirming
+          ? "Mercado Pago nos está avisando del cobro. En unos segundos el pedido pasa a “Pago acreditado”."
+          : paymentReturn === "pendiente"
+            ? "Mercado Pago todavía no acreditó el pago (por ejemplo, si elegiste pagar en efectivo). Cuando se acredite, el pedido se actualiza solo."
+            : paymentReturn === "fallo"
+              ? "El pago no se completó. Podés intentarlo de nuevo con otra tarjeta o medio."
+              : `Pagá ${money(total)} con Mercado Pago para confirmar el pedido.`}
+      </p>
+      {confirming ? null : (
+        <button
+          type="button"
+          onClick={pay}
+          disabled={loading}
+          className="mt-4 rounded-xl bg-sky-600 px-4 py-2.5 text-sm font-bold text-white disabled:opacity-60"
+        >
+          {loading ? "Abriendo Mercado Pago…" : `Pagar ${money(total)} con Mercado Pago`}
+        </button>
+      )}
+      {error ? <p className="mt-2 text-sm font-semibold text-red-700">{error}</p> : null}
+    </section>
   );
 }

@@ -1,9 +1,11 @@
 import crypto from "node:crypto";
 import { and, eq } from "drizzle-orm";
+import { after } from "next/server";
 
 import { db } from "@/db";
 import { orders } from "@/db/schema";
-import { applyOrderStatus } from "@/lib/order-status";
+import { applyOrderStatus, canTransition } from "@/lib/order-status";
+import { CANCELLED_STATUS, isCancelled } from "@/lib/pricing";
 
 export const dynamic = "force-dynamic";
 
@@ -51,46 +53,76 @@ async function handleEventAsync(notification: MpNotification): Promise<void> {
     id?: number;
     status?: string;
     external_reference?: string;
+    transaction_amount?: number;
   };
 
   const ref = (payment.external_reference ?? "").trim().toUpperCase();
   if (!ref || payment.id == null) return;
+  const paymentId = String(payment.id);
+
+  const [order] = await db
+    .select({ id: orders.id, status: orders.status, total: orders.total, paidWith: orders.mercadopagoPaymentId })
+    .from(orders)
+    .where(and(eq(orders.code, ref), eq(orders.paymentMethod, "mercadopago")))
+    .limit(1);
+  if (!order) {
+    console.log(`[mp-webhook] payment ${paymentId} status=${payment.status} sin pedido MP ref=${ref}`);
+    return;
+  }
 
   if (payment.status === "approved") {
-    const updated = await db
-      .update(orders)
-      .set({ status: "pago_confirmado", mercadopagoPaymentId: String(payment.id) })
-      // Solo un pedido de Mercado Pago que sigue pendiente pasa a pagado: un
-      // cobro nunca acredita una transferencia ni hace retroceder un envío.
-      .where(
-        and(eq(orders.code, ref), eq(orders.paymentMethod, "mercadopago"), eq(orders.status, "pendiente_pago")),
-      )
-      .returning({ id: orders.id });
-    if (updated.length) {
-      console.log(`[mp-webhook] orden ${ref} -> pago_confirmado (payment ${payment.id})`);
-      return;
-    }
-    // Pago que llega después de que el pedido venció: se reactiva y se vuelve
-    // a reservar el stock, en vez de perder el cobro.
-    const [cancelled] = await db
-      .select({ id: orders.id })
-      .from(orders)
-      .where(and(eq(orders.code, ref), eq(orders.paymentMethod, "mercadopago"), eq(orders.status, "cancelado")))
-      .limit(1);
-    if (cancelled) {
-      await applyOrderStatus(cancelled.id, {
-        from: "cancelado",
-        to: "pago_confirmado",
-        note: `Pago de Mercado Pago acreditado después de cancelado (payment ${payment.id}).`,
-        extra: { mercadopagoPaymentId: String(payment.id) },
+    // Solo se acredita si MP cobró exactamente el total del pedido. Si no
+    // coincide, el pedido queda como está y el panel muestra la nota para que
+    // alguien lo revise antes de despachar.
+    const amount = typeof payment.transaction_amount === "number" ? Math.round(payment.transaction_amount) : null;
+    if (amount !== order.total) {
+      await applyOrderStatus(order.id, {
+        from: order.status,
+        to: order.status,
+        note: `Pago ${paymentId} aprobado por $${amount ?? "?"}, pero el pedido es de $${order.total}. Revisar antes de despachar.`,
       });
-      console.log(`[mp-webhook] orden ${ref} cancelada reactivada -> pago_confirmado (payment ${payment.id})`);
+      console.warn(`[mp-webhook] orden ${ref}: monto ${amount} != total ${order.total} (payment ${paymentId})`);
       return;
     }
-    console.log(`[mp-webhook] payment ${payment.id} aprobado sin pedido MP pendiente ref=${ref}`);
-  } else {
-    console.log(`[mp-webhook] payment ${payment.id} status=${payment.status} ref=${ref}`);
+
+    // Un pendiente pasa a pagado; uno vencido se reactiva y vuelve a reservar
+    // el stock, en vez de perder el cobro. Un cobro nunca hace retroceder un
+    // pedido que ya avanzó.
+    if (order.status === "pendiente_pago" || isCancelled(order.status)) {
+      const applied = await applyOrderStatus(order.id, {
+        from: order.status,
+        to: "pago_confirmado",
+        note: isCancelled(order.status)
+          ? `Pago de Mercado Pago acreditado después de cancelado (payment ${paymentId}).`
+          : `Pago de Mercado Pago acreditado (payment ${paymentId}).`,
+        extra: { mercadopagoPaymentId: paymentId },
+      });
+      if (applied) console.log(`[mp-webhook] orden ${ref} ${order.status} -> pago_confirmado (payment ${paymentId})`);
+      return;
+    }
+    console.log(`[mp-webhook] payment ${paymentId} aprobado; orden ${ref} ya en ${order.status}`);
+    return;
   }
+
+  if (payment.status === "refunded" || payment.status === "charged_back") {
+    // Solo cuenta si es el pago que acreditó este pedido.
+    if (order.paidWith !== paymentId || isCancelled(order.status)) return;
+    const what = payment.status === "refunded" ? "devuelto" : "desconocido por el titular (contracargo)";
+    const blocked = canTransition(order.status, CANCELLED_STATUS.id);
+    await applyOrderStatus(order.id, {
+      from: order.status,
+      // Si el pedido todavía no salió, se cancela y el stock vuelve a la tienda.
+      // Si ya salió, no se puede cancelar: queda la nota para el admin.
+      to: blocked ? order.status : CANCELLED_STATUS.id,
+      note: blocked
+        ? `El pago ${paymentId} fue ${what} en Mercado Pago, pero el pedido ya salió. Revisar.`
+        : `Cancelado: el pago ${paymentId} fue ${what} en Mercado Pago.`,
+    });
+    console.warn(`[mp-webhook] orden ${ref}: payment ${paymentId} ${payment.status}`);
+    return;
+  }
+
+  console.log(`[mp-webhook] payment ${paymentId} status=${payment.status} ref=${ref}`);
 }
 
 /**
@@ -110,7 +142,10 @@ export async function POST(request: Request) {
   }
 
   const { ts, v1 } = parseSignature(signature);
-  const dataId = notification.data?.id;
+  // Según la documentación de MP, el id firmado es el `data.id` de la URL (en
+  // minúsculas si es alfanumérico); el del body queda como respaldo.
+  const queryId = new URL(request.url).searchParams.get("data.id");
+  const dataId = String(queryId ?? notification.data?.id ?? "").toLowerCase();
   if (!ts || !v1 || !dataId || !requestId) {
     return new Response(null, { status: 400 });
   }
@@ -127,9 +162,12 @@ export async function POST(request: Request) {
   const response = new Response(null, { status: 200 });
 
   // Procesamiento async (dedup natural: mismo payment id sobrescribe mismo estado).
-  queueMicrotask(() => {
-    handleEventAsync(notification).catch((error) => console.error("[mp-webhook] handler:", error));
-  });
+  // `after` mantiene viva la función en Vercel hasta que termina: con
+  // `queueMicrotask` la instancia podía congelarse apenas salía el 200 y el
+  // pedido quedaba en `pendiente_pago` aunque el cobro estuviera aprobado.
+  after(() =>
+    handleEventAsync(notification).catch((error) => console.error("[mp-webhook] handler:", error)),
+  );
 
   return response;
 }

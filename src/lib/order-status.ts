@@ -85,24 +85,33 @@ export function canTransition(from: string, to: string): string | null {
 /**
  * Cambia el estado de un pedido, registra el evento y mueve el stock cuando
  * entra o sale de "Cancelado". `extra` permite guardar otros campos en la
- * misma escritura (código de seguimiento, pago de Mercado Pago).
+ * misma escritura (código de seguimiento, pago de Mercado Pago). Devuelve
+ * false si el pedido ya no estaba en `from` (otro cambio llegó antes).
  */
 export async function applyOrderStatus(
   orderId: number,
   input: { from: string; to: string; note?: string; extra?: Partial<typeof orders.$inferInsert> },
-): Promise<void> {
+): Promise<boolean> {
   await ensureOrderStockSchema();
-  await db.transaction(async (tx) => {
+  return db.transaction(async (tx) => {
     const changed = input.from !== input.to;
-    await tx
+    // Solo aplica si el pedido sigue en `from`. Si dos avisos llegan juntos (el
+    // webhook de MP repite notificaciones), el segundo espera al primero, ya no
+    // encuentra el estado viejo y no vuelve a mover el stock.
+    const updated = await tx
       .update(orders)
-      .set({ ...input.extra, ...(changed ? { status: input.to, statusUpdatedAt: new Date() } : {}) })
-      .where(eq(orders.id, orderId));
+      // `status` va siempre (aunque no cambie) para que el update nunca quede
+      // vacío: con solo una nota, Drizzle fallaba con "No values to set".
+      .set({ ...input.extra, status: input.to, ...(changed ? { statusUpdatedAt: new Date() } : {}) })
+      .where(and(eq(orders.id, orderId), eq(orders.status, input.from)))
+      .returning({ id: orders.id });
+    if (!updated.length) return false;
     if (changed && isCancelled(input.to)) await releaseOrderStock(tx, orderId);
     if (changed && isCancelled(input.from)) await reserveOrderStock(tx, orderId);
     if (changed || input.note) {
       await tx.insert(orderEvents).values({ orderId, fromStatus: input.from, toStatus: input.to, note: input.note ?? "" });
     }
+    return true;
   });
 }
 

@@ -3,6 +3,7 @@ import { Preference } from "mercadopago";
 
 import { db } from "@/db";
 import { orderItems, orders } from "@/db/schema";
+import { PENDING_EXPIRY_HOURS } from "@/lib/order-status";
 import { appBaseUrl, pesosToUnits, isPublicAppUrl, mpClient, MP_CURRENCY } from "@/lib/mercadopago";
 
 export const dynamic = "force-dynamic";
@@ -44,6 +45,9 @@ export async function POST(request: Request) {
   if (order.paymentMethod !== "mercadopago") {
     return Response.json({ ok: false, error: "El pedido no usa Mercado Pago." }, { status: 409 });
   }
+  if (order.status !== "pendiente_pago") {
+    return Response.json({ ok: false, error: "Este pedido ya no está esperando el pago." }, { status: 409 });
+  }
 
   const items = await db.select().from(orderItems).where(eq(orderItems.orderId, order.id));
   if (!items.length) {
@@ -53,17 +57,45 @@ export async function POST(request: Request) {
   const baseUrl = appBaseUrl(request);
   const publicUrl = isPublicAppUrl(baseUrl);
 
+  // MP tiene que cobrar exactamente `order.total`. Si solo mandáramos los
+  // productos, no cobraría el envío y tampoco descontaría el cupón. El envío
+  // va como un ítem más; si hay descuento (MP no acepta precios negativos),
+  // el pedido va como un único ítem por el total.
+  const lineItems = items.map((item) => ({
+    id: item.productSlug,
+    title: item.name.slice(0, 200),
+    quantity: item.quantity,
+    unit_price: pesosToUnits(item.unitPrice),
+    currency_id: MP_CURRENCY,
+  }));
+  if (order.shippingCost > 0) {
+    lineItems.push({
+      id: "envio",
+      title: `Envío: ${order.deliveryLabel}`.slice(0, 200),
+      quantity: 1,
+      unit_price: pesosToUnits(order.shippingCost),
+      currency_id: MP_CURRENCY,
+    });
+  }
+  const lineTotal = lineItems.reduce((acc, item) => acc + item.unit_price * item.quantity, 0);
+  const preferenceItems =
+    lineTotal === pesosToUnits(order.total)
+      ? lineItems
+      : [
+          {
+            id: order.code,
+            title: `Pedido ${order.code} en Córdoba Digital`,
+            quantity: 1,
+            unit_price: pesosToUnits(order.total),
+            currency_id: MP_CURRENCY,
+          },
+        ];
+
   try {
     const preference = new Preference(client);
     const result = await preference.create({
       body: {
-        items: items.map((item) => ({
-          id: item.productSlug,
-          title: item.name.slice(0, 200),
-          quantity: item.quantity,
-          unit_price: pesosToUnits(item.unitPrice),
-          currency_id: MP_CURRENCY,
-        })),
+        items: preferenceItems,
         payer: { email: order.email, name: order.customerName },
         back_urls: {
           success: `${baseUrl}/pedido/${order.code}?pago=exito`,
@@ -72,7 +104,14 @@ export async function POST(request: Request) {
         },
         // auto_return solo válido con URL pública HTTPS — MP rechaza localhost.
         ...(publicUrl ? { auto_return: "approved" as const } : {}),
-        notification_url: publicUrl ? `${baseUrl}/api/webhooks/mercadopago` : undefined,
+        // `source_news=webhooks`: MP avisa solo por Webhooks (firmados), no
+        // también por IPN, que llega sin firma y el webhook rechazaría.
+        notification_url: publicUrl ? `${baseUrl}/api/webhooks/mercadopago?source_news=webhooks` : undefined,
+        // El link de pago vence con la reserva de stock (48 hs desde el pedido).
+        expires: true,
+        expiration_date_to: new Date(
+          new Date(order.createdAt).getTime() + PENDING_EXPIRY_HOURS * 60 * 60 * 1000,
+        ).toISOString(),
         external_reference: order.code,
         statement_descriptor: "CORDOBA DIGITAL",
       },
