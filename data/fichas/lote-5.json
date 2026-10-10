@@ -1,0 +1,1023 @@
+{
+  "lote": "lote-5",
+  "nota": "Quinta tanda (celulares): 16 fichas. Datos de la descripcion o el nombre; lo dudoso va en revisar y no se publica.",
+  "productos": [
+    {
+      "brand": null,
+      "descriptionHtml": "<p>El iPhone 13 sigue siendo una gran compra: chip A15 Bionic, 5G y una cámara dual que rinde muy bien de noche. Esta versión trae 128 GB y viene en verde.</p><h3>Cámara</h3><ul><li>Dual de 12 MP: gran angular f/1.6 con estabilización por desplazamiento de sensor y ultra gran angular de 120 grados.</li><li>Modo cinematográfico: graba con poca profundidad de campo y cambia el enfoque después.</li><li>Modo Noche, Deep Fusion y Estilos Fotográficos.</li></ul><h3>Pantalla y rendimiento</h3><p>La Super Retina XDR OLED de 6,1 pulgadas se ve nítida y con colores reales, y el A15 mueve todo sin esfuerzo. La batería llega a 19 horas de video y se carga por MagSafe, Qi o carga rápida.</p><h3>Antes de comprar</h3><p>Se desbloquea con Face ID y no tiene lector de huella. El cargador se vende por separado. Si preferís más memoria, mirá el <a href=\"/producto/iphone-13-256gb-midnight\">iPhone 13 de 256 GB en medianoche</a>.</p>",
+      "highlights": [
+        "Chip A15 Bionic con 5G, rápido para todo",
+        "Cámara dual de 12 MP con modo cinematográfico",
+        "Pantalla OLED Super Retina XDR de 6,1 pulgadas",
+        "Hasta 19 horas de reproducción de video",
+        "Ceramic Shield y resistencia al agua"
+      ],
+      "model": "iPhone 13",
+      "name": "iPhone 13 128 GB Verde",
+      "revisar": [
+        "Saco 'CPO' del nombre: es tag interno y la base marca el producto como nuevo.",
+        "El color verde sale solo del slug; la descripción no lo menciona. Confirmar con la foto.",
+        "'3227 mAh' interpreta el '3.227' de la descripción corta; confirmar la unidad.",
+        "La fuente lista 'Huella dactilar' pero el iPhone 13 solo tiene Face ID; no lo publiqué.",
+        "La fuente lista 'Radio' en conectividad pero no es radio FM; no lo publiqué.",
+        "Conector Lightning y cargador vendido por separado son conocimiento general, no estaban en la fuente.",
+        "La fuente decía iOS 15; puse 'iOS' genérico porque el equipo se actualiza."
+      ],
+      "seoDescription": "iPhone 13 de 128 GB en verde, nuevo: chip A15, OLED de 6,1 pulgadas y cámara dual de 12 MP. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "iPhone 13 128 GB Verde nuevo",
+      "shortDescription": "iPhone 13 de 128 GB en verde. Pantalla Super Retina XDR OLED de 6,1 pulgadas, chip A15 Bionic con 5G, cámara dual de 12 MP con modo cine y Face ID. Nuevo, con garantía oficial.",
+      "slug": "iphone-13-128gb-green",
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Verde"
+        },
+        {
+          "label": "Pantalla",
+          "value": "OLED Super Retina XDR de 6,1 pulgadas (2532 x 1170, 460 ppi)"
+        },
+        {
+          "label": "Procesador",
+          "value": "Apple A15 Bionic"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "Dual 12 MP: gran angular (f/1.6) + ultra gran angular (f/2.4, 120°)"
+        },
+        {
+          "label": "Video",
+          "value": "Modo cinematográfico con cambio de enfoque posterior"
+        },
+        {
+          "label": "Batería",
+          "value": "3227 mAh, hasta 19 h de reproducción de video"
+        },
+        {
+          "label": "Carga",
+          "value": "MagSafe (15 W), Qi (7,5 W) y carga rápida"
+        },
+        {
+          "label": "Red",
+          "value": "5G"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi, Bluetooth 5.0, GPS; conector Lightning"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Face ID (reconocimiento facial)"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "iOS"
+        }
+      ],
+      "storage": "128 GB"
+    },
+    {
+      "descriptionHtml": "<p>El iPhone 13 rinde muy bien incluso años después de su lanzamiento: chip A15, 5G y cámara dual con modo noche. Esta versión trae 256 GB y viene en medianoche.</p><h3>Cámara</h3><ul><li>Dual de 12 MP: gran angular f/1.6 con estabilización por desplazamiento de sensor y ultra gran angular de 120 grados.</li><li>Modo cinematográfico: graba con poca profundidad de campo y cambia el enfoque después.</li><li>Modo Noche, Deep Fusion y Estilos Fotográficos.</li></ul><h3>Pantalla y rendimiento</h3><p>La Super Retina XDR OLED de 6,1 pulgadas se ve nítida y con colores reales, y el A15 mueve todo sin esfuerzo. La batería llega a 19 horas de video y se carga por MagSafe, Qi o carga rápida.</p><h3>Antes de comprar</h3><p>Se desbloquea con Face ID y no tiene lector de huella. El cargador se vende por separado. Si te alcanza con menos memoria, mirá el <a href=\"/producto/iphone-13-128gb-green\">iPhone 13 de 128 GB en verde</a>.</p>",
+      "highlights": [
+        "Chip A15 Bionic con 5G, rápido para todo",
+        "Cámara dual de 12 MP con modo cinematográfico",
+        "Pantalla OLED Super Retina XDR de 6,1 pulgadas",
+        "Hasta 19 horas de reproducción de video",
+        "Ceramic Shield y resistencia al agua"
+      ],
+      "model": "iPhone 13",
+      "name": "iPhone 13 256 GB Medianoche",
+      "revisar": [
+        "Saco 'CPO' del nombre: es tag interno y la base marca el producto como nuevo.",
+        "El color medianoche sale solo del slug; la descripción no lo menciona. Confirmar con la foto.",
+        "'3227 mAh' interpreta el '3.227' de la descripción corta; confirmar la unidad.",
+        "La fuente lista 'Huella dactilar' pero el iPhone 13 solo tiene Face ID; no lo publiqué.",
+        "La fuente lista 'Radio' en conectividad pero no es radio FM; no lo publiqué.",
+        "Conector Lightning y cargador vendido por separado son conocimiento general, no estaban en la fuente.",
+        "La fuente decía iOS 15; puse 'iOS' genérico porque el equipo se actualiza."
+      ],
+      "seoDescription": "iPhone 13 de 256 GB en medianoche, nuevo: chip A15, OLED de 6,1 pulgadas y cámara dual de 12 MP. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "iPhone 13 256 GB Medianoche nuevo",
+      "shortDescription": "iPhone 13 de 256 GB en medianoche. Pantalla Super Retina XDR OLED de 6,1 pulgadas, chip A15 Bionic con 5G, cámara dual de 12 MP con modo cine y Face ID. Nuevo, con garantía oficial.",
+      "slug": "iphone-13-256gb-midnight",
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Medianoche (Midnight)"
+        },
+        {
+          "label": "Pantalla",
+          "value": "OLED Super Retina XDR de 6,1 pulgadas (2532 x 1170, 460 ppi)"
+        },
+        {
+          "label": "Procesador",
+          "value": "Apple A15 Bionic"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "Dual 12 MP: gran angular (f/1.6) + ultra gran angular (f/2.4, 120°)"
+        },
+        {
+          "label": "Video",
+          "value": "Modo cinematográfico con cambio de enfoque posterior"
+        },
+        {
+          "label": "Batería",
+          "value": "3227 mAh, hasta 19 h de reproducción de video"
+        },
+        {
+          "label": "Carga",
+          "value": "MagSafe (15 W), Qi (7,5 W) y carga rápida"
+        },
+        {
+          "label": "Red",
+          "value": "5G"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi, Bluetooth 5.0, GPS; conector Lightning"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Face ID (reconocimiento facial)"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "iOS"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Galaxy A07 es un equipo accesible para el día a día: 128 GB para tus fotos y apps, 4 GB de RAM y Android con Google Play. Ideal si buscás tu primer smartphone o una actualización simple y rendidora, a un precio accesible.</p><h3>Pantalla</h3><p>La pantalla amplia sirve para ver videos, navegar por redes sociales y hacer videollamadas con buena calidad. El tamaño generoso ayuda a leer, escribir y mirar mapas con comodidad.</p><h3>Batería</h3><p>La batería de larga duración te acompaña durante todo el día sin andar pensando en el cargador.</p><h3>Cámara</h3><p>Saca fotos nítidas y con colores vibrantes para guardar tus recuerdos y compartirlos en redes sin complicaciones.</p><p>Si tenés dudas sobre este equipo, escribinos por WhatsApp y te asesoramos.</p>",
+      "highlights": [
+        "128 GB para fotos, videos y aplicaciones",
+        "4 GB de RAM para un uso fluido",
+        "Pantalla amplia para videos y redes",
+        "Android con Google Play",
+        "Batería para acompañarte todo el día"
+      ],
+      "model": "Galaxy A07",
+      "name": "Samsung Galaxy A07 128 GB 4 GB RAM",
+      "ram": "4 GB",
+      "revisar": [
+        "La fuente no trae procesador, tamaño de pantalla, cámaras en MP, batería en mAh ni red: la ficha quedó en general y hay que completarla con la ficha oficial de Samsung.",
+        "Saqué el 'consultá stock y precio por WhatsApp' de la fuente porque no se publica."
+      ],
+      "seoDescription": "Samsung Galaxy A07 nuevo y liberado: 128 GB, 4 GB de RAM y Android con Google Play. Pantalla amplia y gran batería. Garantía y envíos a todo el país.",
+      "seoTitle": "Samsung Galaxy A07 128 GB 4 GB RAM",
+      "shortDescription": "Samsung Galaxy A07 con 128 GB y 4 GB de RAM. Pantalla amplia para videos y redes, cámara para el día a día, Android con Google Play y batería para todo el día.",
+      "slug": "samsung-galaxy-a07-128gb-4gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Amplia, para video, redes y videollamadas"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "Para fotos nítidas con colores vibrantes"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "Para selfies y videollamadas"
+        },
+        {
+          "label": "Batería",
+          "value": "Larga duración, para todo el día"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android con Google Play"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Primer smartphone o actualización simple"
+        }
+      ],
+      "storage": "128 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Galaxy A16 rinde mucho por su precio: pantalla Super AMOLED grande, cámara triple de 50 MP y batería que dura hasta 2 días. Esta versión trae 128 GB y 4 GB de RAM.</p><h3>Pantalla</h3><p>Super AMOLED de 6,7 pulgadas FHD+ con 90 Hz, Vision Booster para ver bien al sol y filtro de luz azul para cuidarte la vista.</p><h3>Cámara</h3><ul><li>Principal de 50 MP para fotos nítidas.</li><li>Ultra gran angular de 5 MP para paisajes y grupos.</li><li>Macro de 2 MP para detalles de cerca.</li><li>Frontal de 13 MP para selfies.</li></ul><h3>Batería y seguridad</h3><p>5000 mAh con carga súper rápida. Se desbloquea con la huella lateral y protege tus datos con Knox Vault, además de 4 generaciones de actualizaciones de sistema.</p>",
+      "highlights": [
+        "Pantalla Super AMOLED de 6,7 pulgadas a 90 Hz",
+        "Cámara principal de 50 MP, frontal de 13 MP",
+        "Batería de 5000 mAh para hasta 2 días",
+        "Huella lateral y Samsung Knox Vault",
+        "4 generaciones de SO y 5 años de seguridad"
+      ],
+      "model": "Galaxy A16",
+      "name": "Samsung Galaxy A16 128 GB 4 GB RAM",
+      "ram": "4 GB",
+      "revisar": [
+        "La descripción atribuye las cámaras (50+5+2, frontal 13) al Galaxy A15; gana el nombre (A16) y las mantengo porque coinciden con la ficha pública del A16. Confirmar.",
+        "La fuente no indica la red (4G o 5G): no la publiqué, confirmar la variante."
+      ],
+      "seoDescription": "Galaxy A16 nuevo y liberado: AMOLED de 6,7 pulgadas a 90 Hz, cámara triple de 50 MP y batería de 5000 mAh. Garantía y envíos a todo el país.",
+      "seoTitle": "Samsung Galaxy A16 128 GB 4 GB RAM",
+      "shortDescription": "Samsung Galaxy A16 con 128 GB y 4 GB de RAM. Pantalla Super AMOLED de 6,7 pulgadas a 90 Hz con Vision Booster, cámara triple de 50 MP, batería de 5000 mAh y Knox Vault.",
+      "slug": "samsung-galaxy-a16-128gb-4gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Super AMOLED 6,7 pulgadas FHD+, 90 Hz, 800 nits, Vision Booster"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa-Core (2,2 y 2 GHz)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP + 5 MP ultra gran angular + 2 MP macro"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "13 MP"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh, hasta 2 días de uso"
+        },
+        {
+          "label": "Carga",
+          "value": "Carga súper rápida"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Huella lateral y Samsung Knox Vault"
+        },
+        {
+          "label": "Actualizaciones",
+          "value": "Hasta 4 generaciones de SO y 5 años de seguridad"
+        }
+      ],
+      "storage": "128 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Galaxy A27 5G equilibra pantalla, cámara y batería: AMOLED de 6,6 pulgadas a 120 Hz, cámara de 50 MP con estabilización óptica y 5000 mAh. Esta versión trae 256 GB y 8 GB de RAM.</p><h3>Pantalla</h3><p>Super AMOLED FHD+ de 6,6 pulgadas con 120 Hz adaptativos y Vision Booster, que ajusta el brillo para que se vea bien hasta al sol.</p><h3>Cámara</h3><ul><li>Principal de 50 MP con OIS: menos fotos movidas y videos estables.</li><li>Ultra gran angular de 8 MP y macro de 2 MP.</li><li>Frontal de 13 MP con retrato mejorado.</li></ul><h3>Batería y extras</h3><p>5000 mAh con carga de 25 W, resistencia IP67, Knox, huella en pantalla y microSD de hasta 1 TB. Viene con One UI y 4 generaciones de actualizaciones.</p>",
+      "highlights": [
+        "Pantalla Super AMOLED de 6,6 pulgadas a 120 Hz",
+        "Cámara de 50 MP con estabilización óptica",
+        "Batería de 5000 mAh con carga de 25 W",
+        "Resistencia al agua y polvo IP67",
+        "256 GB ampliables con microSD hasta 1 TB",
+        "Samsung Knox y huella en pantalla"
+      ],
+      "model": "Galaxy A27 5G",
+      "name": "Samsung Galaxy A27 5G 256 GB 8 GB RAM",
+      "ram": "8 GB",
+      "revisar": [
+        "La fuente alterna entre 'Exynos' y 'Octa-Core de 4 nm/5 nm' sin nombrar el chip: dejé 'Octa-Core 5G' genérico.",
+        "Quité emojis de la fuente; no había citas numeradas en esta ficha."
+      ],
+      "seoDescription": "Galaxy A27 5G nuevo y liberado: AMOLED de 6,6 pulgadas a 120 Hz, cámara de 50 MP con OIS e IP67. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Samsung Galaxy A27 5G 256 GB 8 GB RAM",
+      "shortDescription": "Samsung Galaxy A27 5G con 256 GB y 8 GB de RAM. Pantalla Super AMOLED de 6,6 pulgadas a 120 Hz con Vision Booster, cámara de 50 MP con OIS, batería de 5000 mAh e IP67.",
+      "slug": "samsung-galaxy-a27-5g-256gb-8gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Super AMOLED 6,6 pulgadas FHD+, 120 Hz, Vision Booster"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa-Core 5G"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (f/1.8, OIS) + 8 MP gran angular + 2 MP macro"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "13 MP (f/2.2) con retrato mejorado"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "25 W por USB-C"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP67 (polvo y agua dulce)"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Huella en pantalla y Samsung Knox"
+        },
+        {
+          "label": "Memoria",
+          "value": "microSD hasta 1 TB"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "One UI (Android), 4 generaciones de SO"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Galaxy A57 5G es de lo mejor de la gama media: pantalla Super AMOLED Plus, cámara de 50 MP con OIS, IP68 y funciones de Galaxy AI. Esta versión trae 128 GB y 8 GB de RAM.</p><h3>Pantalla</h3><p>Super AMOLED Plus de 6,7 pulgadas FHD+ a 120 Hz con Gorilla Glass Victus+: colores vivos y buena visibilidad al sol.</p><h3>Cámara</h3><ul><li>Principal de 50 MP f/1.8 con OIS y modo noche.</li><li>Ultra gran angular de 12 MP y macro de 5 MP.</li><li>Frontal Super HDR de 12 MP.</li></ul><h3>Inteligencia y batería</h3><p>Trae Circle to Search, borrador de objetos y edición con IA. La batería de 5000 mAh se carga con carga súper rápida por USB-C, y el equipo suma huella en pantalla y Knox.</p>",
+      "highlights": [
+        "Pantalla Super AMOLED Plus de 6,7 pulgadas a 120 Hz",
+        "Cámara triple de 50 MP con OIS",
+        "Resistencia al agua y polvo IP68",
+        "Batería de 5000 mAh, carga súper rápida",
+        "Galaxy AI: Circle to Search y borrador",
+        "Huella en pantalla y Samsung Knox"
+      ],
+      "model": "Galaxy A57 5G",
+      "name": "Samsung Galaxy A57 5G 128 GB 8 GB RAM",
+      "ram": "8 GB",
+      "revisar": [
+        "Quité emojis y citas numeradas de la fuente; no se publica nada de eso.",
+        "La fuente no nombra el procesador: dejé 'Octa-Core 5G' genérico.",
+        "La fuente dice microSD 'según la región': no lo publiqué, confirmar.",
+        "'Carga súper rápida' quedó sin watts porque la fuente no los da."
+      ],
+      "seoDescription": "Galaxy A57 5G nuevo y liberado: AMOLED Plus de 6,7 pulgadas a 120 Hz, cámara de 50 MP con OIS e IP68. Garantía y envíos a todo el país.",
+      "seoTitle": "Samsung Galaxy A57 5G 128 GB 8 GB RAM",
+      "shortDescription": "Samsung Galaxy A57 5G con 128 GB y 8 GB de RAM. Pantalla Super AMOLED Plus de 6,7 pulgadas a 120 Hz, cámara triple de 50 MP con OIS, batería de 5000 mAh, Galaxy AI e IP68.",
+      "slug": "samsung-galaxy-a57-5g-128gb-8gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Super AMOLED Plus 6,7 pulgadas FHD+, 120 Hz, Gorilla Glass Victus+"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa-Core 5G"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (f/1.8, OIS) + 12 MP gran angular + 5 MP macro"
+        },
+        {
+          "label": "Carga",
+          "value": "Súper rápida por USB-C"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "12 MP Super HDR"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP68 (polvo y agua)"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Huella en pantalla y Samsung Knox"
+        },
+        {
+          "label": "Red",
+          "value": "5G doble SIM"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi, Bluetooth, NFC y GPS"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android con One UI"
+        }
+      ],
+      "storage": "128 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Galaxy S25 FE trae lo esencial de la serie S a un precio más amable: Exynos 2400, pantalla AMOLED de 6,7 pulgadas y triple cámara con video 8K. Esta versión trae 256 GB y 8 GB de RAM.</p><h3>Pantalla y diseño</h3><p>Dynamic AMOLED 2X de 6,7 pulgadas FHD+ a 120 Hz con biseles finos. El cuerpo combina Gorilla Glass Victus+ con marco de aluminio y certificación IP68.</p><h3>Cámara</h3><ul><li>Principal de 50 MP f/1.8, gran angular de 12 MP y tercera de 8 MP.</li><li>Video 8K y cámara lenta hasta 240 fps en Full HD.</li></ul><h3>Batería</h3><p>4900 mAh para todo el día, con carga rápida que llega al 65 por ciento en 30 minutos. Con un uso moderado llegás al final del día sin andar buscando un enchufe.</p>",
+      "highlights": [
+        "Exynos 2400 de 10 núcleos para todo",
+        "AMOLED de 6,7 pulgadas a 120 Hz, FHD+",
+        "Triple cámara de 50 MP con video 8K",
+        "Batería de 4900 mAh, 65 % en 30 min",
+        "IP68, Victus+ y marco de aluminio"
+      ],
+      "model": "Galaxy S25 FE 5G",
+      "name": "Samsung Galaxy S25 FE 5G 256 GB 8 GB RAM",
+      "ram": "8 GB",
+      "revisar": [
+        "La fuente no indica el color de esta unidad (lista Navy, Jetblack, Icy Blue y White): confirmar con la foto.",
+        "No hay cámara frontal en la fuente: no la publiqué.",
+        "La carga viene sin watts en la fuente: dejé 'rápida por cable'.",
+        "No puse medidas ni gramos en specs por regla."
+      ],
+      "seoDescription": "Galaxy S25 FE 5G nuevo y liberado: Exynos 2400, AMOLED de 6,7 pulgadas a 120 Hz y cámara de 50 MP con 8K. Garantía y envíos a todo el país.",
+      "seoTitle": "Samsung Galaxy S25 FE 256 GB 8 GB RAM",
+      "shortDescription": "Samsung Galaxy S25 FE 5G con 256 GB y 8 GB de RAM. Exynos 2400, pantalla Dynamic AMOLED 2X de 6,7 pulgadas a 120 Hz, triple cámara de 50 MP con 8K, batería de 4900 mAh e IP68.",
+      "slug": "samsung-s25-fe-256gb-8gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Dynamic AMOLED 2X 6,7 pulgadas FHD+ (1080 x 2340), 120 Hz"
+        },
+        {
+          "label": "Procesador",
+          "value": "Samsung Exynos 2400 (10 núcleos)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (f/1.8) + 12 MP (f/2.2) + 8 MP (f/2.4)"
+        },
+        {
+          "label": "Video",
+          "value": "8K y cámara lenta hasta 240 fps en Full HD"
+        },
+        {
+          "label": "Batería",
+          "value": "4900 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "Rápida por cable (65 % en 30 minutos)"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP68 (polvo y agua)"
+        },
+        {
+          "label": "Diseño",
+          "value": "Gorilla Glass Victus+ y marco Armor Aluminum"
+        },
+        {
+          "label": "Red",
+          "value": "5G"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "descriptionHtml": "<p>El POCO F6 está pensado para jugar: Snapdragon 8s Gen 3, refrigeración LiquidCool y pantalla AMOLED 1,5K a 120 Hz. Esta versión trae 256 GB y 8 GB de RAM.</p><h3>Rendimiento</h3><p>El 8s Gen 3 de 4 nm con memorias LPDDR5X y UFS 4.0 mueve juegos exigentes sin tirones, y el sistema IceLoop con 8 sensores mantiene la temperatura a raya.</p><h3>Pantalla y cámara</h3><p>Flow AMOLED de 6,67 pulgadas 1,5K a 120 Hz para ver todo fluido. Cámara principal de 50 MP con OIS, ultra gran angular de 8 MP y frontal de 20 MP.</p><h3>Batería</h3><p>5000 mAh para todo el día y carga de 90 W que completa el 100 por ciento en 35 minutos en modo Boost. Resistencia IP64 a salpicaduras y polvo.</p>",
+      "highlights": [
+        "Snapdragon 8s Gen 3 de 4 nm, ideal gaming",
+        "AMOLED de 6,67 pulgadas 1,5K a 120 Hz",
+        "Cámara de 50 MP con OIS, frontal de 20 MP",
+        "Carga de 90 W: 100 % en 35 minutos",
+        "Batería de 5000 mAh para todo el día",
+        "Refrigeración LiquidCool e IP64"
+      ],
+      "model": "Poco F6 5G",
+      "name": "Xiaomi Poco F6 5G 256 GB 8 GB RAM",
+      "ram": "8 GB",
+      "revisar": [],
+      "seoDescription": "POCO F6 5G nuevo y liberado: Snapdragon 8s Gen 3, AMOLED de 6,67 pulgadas a 120 Hz y carga de 90 W. Garantía y envíos a todo el país.",
+      "seoTitle": "Xiaomi Poco F6 5G 256 GB 8 GB RAM",
+      "shortDescription": "Xiaomi POCO F6 5G con 256 GB y 8 GB de RAM. Snapdragon 8s Gen 3, pantalla Flow AMOLED de 6,67 pulgadas a 120 Hz, cámara de 50 MP con OIS, batería de 5000 mAh y carga de 90 W.",
+      "slug": "xiaomi-poco-f6-256gb-8gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Flow AMOLED 6,67 pulgadas 1,5K (2712 x 1220), 120 Hz"
+        },
+        {
+          "label": "Procesador",
+          "value": "Snapdragon 8s Gen 3 (4 nm)"
+        },
+        {
+          "label": "Memoria",
+          "value": "LPDDR5X + UFS 4.0"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP con OIS + 8 MP ultra gran angular"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "20 MP"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "90 W (100 % en 35 min en modo Boost)"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP64 (salpicaduras y polvo)"
+        },
+        {
+          "label": "Refrigeración",
+          "value": "LiquidCool 4.0 con IceLoop"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Xiaomi HyperOS"
+        },
+        {
+          "label": "Red",
+          "value": "5G"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "ram": "12 GB",
+      "storage": "512 GB",
+      "model": "Poco X7 5G",
+      "name": "Xiaomi Poco X7 5G 512 GB 12 GB RAM",
+      "slug": "xiaomi-poco-x7-5g-512gb-12gb",
+      "seoTitle": "Xiaomi Poco X7 5G 512 GB 12 GB RAM",
+      "seoDescription": "Poco X7 5G nuevo y liberado: AMOLED 1.5K de 6,67\" a 120 Hz, cámara de 50 MP con OIS y carga de 45 W incluida. Garantía y envíos a todo el país.",
+      "shortDescription": "Poco X7 5G con 512 GB y 12 GB de RAM. Pantalla CrystalRes AMOLED de 6,67\" 1.5K a 120 Hz, cámara de 50 MP con OIS, batería de 5110 mAh y carga turbo de 45 W. Nuevo y liberado.",
+      "highlights": [
+        "Pantalla AMOLED 1.5K de 6,67\" a 120 Hz con Dolby Vision",
+        "Cámara de 50 MP con OIS y video en 4K",
+        "Batería de 5110 mAh con carga turbo de 45 W",
+        "Cargador de 45 W incluido en la caja",
+        "Resistente al agua y polvo (IP68), con NFC",
+        "Dimensity 7300-Ultra de 4 nm para jugar fluido"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "CrystalRes AMOLED 6,67\" 1.5K (2712 x 1220), 120 Hz, Dolby Vision, HDR10+"
+        },
+        {
+          "label": "Procesador",
+          "value": "MediaTek Dimensity 7300-Ultra (4 nm, octa-core hasta 2.5 GHz)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP con OIS (f/1.5) + 8 MP gran angular + 2 MP macro, video 4K"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "20 MP (f/2.2)"
+        },
+        {
+          "label": "Batería",
+          "value": "5110 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "Turbo de 45 W, cargador incluido"
+        },
+        {
+          "label": "Red",
+          "value": "5G (doble SIM 5G+5G / 5G+4G)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6, Bluetooth 5.4, NFC, infrarrojos"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Huella en pantalla y desbloqueo facial"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP68 (agua y polvo)"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Xiaomi HyperOS"
+        },
+        {
+          "label": "En la caja",
+          "value": "Adaptador de 45 W, cable USB-C, funda y herramienta de SIM"
+        }
+      ],
+      "descriptionHtml": "<p>El Poco X7 5G apuesta a pantalla y cámara: panel CrystalRes AMOLED de 6,67\" con resolución 1.5K y principal de 50 MP con estabilización óptica. Esta versión trae 512 GB y 12 GB de RAM.</p><h3>Pantalla</h3><p>Resolución de 2712 x 1220 con 120 Hz, Dolby Vision y HDR10+. Llega a 3000 nits de pico, así que se ve bien incluso al sol, y trae Gorilla Glass Victus 2.</p><h3>Cámara</h3><ul><li>Principal de 50 MP con OIS y apertura f/1.5.</li><li>Ultra gran angular de 8 MP y macro de 2 MP.</li><li>Video trasero en 4K y cámara lenta a 120 fps.</li><li>Frontal de 20 MP para selfies y videollamadas.</li></ul><h3>Batería</h3><p>5110 mAh para todo el día con carga turbo de 45 W. El cargador viene en la caja, junto con funda, cable USB-C y herramienta de SIM.</p><h3>Conectividad</h3><p>5G con doble SIM, Wi-Fi 6, Bluetooth 5.4, NFC e infrarrojos. Huella en pantalla y resistencia IP68 al agua y al polvo.</p>",
+      "revisar": []
+    },
+    {
+      "ram": "8 GB",
+      "storage": "256 GB",
+      "model": "Redmi Note 17 Pro 5G",
+      "name": "Xiaomi Redmi Note 17 Pro 5G 256 GB 8 GB RAM",
+      "slug": "xiaomi-redmi-note-17-pro-5g-256gb-8gb",
+      "seoTitle": "Xiaomi Redmi Note 17 Pro 5G 256 GB",
+      "seoDescription": "Redmi Note 17 Pro 5G nuevo y liberado: batería de 8340 mAh, AMOLED 1.5K de 6,83\" a 120 Hz y cámara de 50 MP con OIS. Garantía y envíos a todo el país.",
+      "shortDescription": "Redmi Note 17 Pro 5G con 256 GB y 8 GB de RAM. Batería de silicio-carbono de 8340 mAh con carga de 67 W, AMOLED de 6,83\" a 120 Hz y cámara de 50 MP con OIS. Nuevo y liberado.",
+      "highlights": [
+        "Batería de silicio-carbono de 8340 mAh, más de dos días",
+        "Carga rápida de 67 W con carga inversa por cable",
+        "AMOLED 1.5K de 6,83\" a 120 Hz y 3500 nits",
+        "Cámara de 50 MP con OIS y gran angular de 8 MP",
+        "Resistente al agua y polvo (IP68/IP69K)",
+        "Snapdragon 6s Gen 4 de 4 nm con 5G y NFC"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED CrystalRes 6,83\" 1.5K (2772 x 1280), 120 Hz, 3500 nits, Gorilla Glass Victus 2"
+        },
+        {
+          "label": "Procesador",
+          "value": "Qualcomm Snapdragon 6s Gen 4 (4 nm, octa-core hasta 2.4 GHz)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP principal con OIS (f/1.8) + 8 MP ultra gran angular"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "16 MP con modo retrato e IA"
+        },
+        {
+          "label": "Batería",
+          "value": "8340 mAh de silicio-carbono"
+        },
+        {
+          "label": "Carga",
+          "value": "Rápida de 67 W, inversa por cable de 22.5 W"
+        },
+        {
+          "label": "Red",
+          "value": "5G (doble SIM / eSIM)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi dual, Bluetooth 5.4, NFC, infrarrojos"
+        },
+        {
+          "label": "Audio",
+          "value": "Parlantes estéreo con Dolby Atmos"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP68 / IP69K (agua y polvo)"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Xiaomi HyperOS 3 (Android 16)"
+        }
+      ],
+      "descriptionHtml": "<p>El Redmi Note 17 Pro 5G apunta a la autonomía: batería de silicio-carbono de 8340 mAh para más de dos días de uso moderado, con carga rápida de 67 W. Esta versión trae 256 GB y 8 GB de RAM.</p><h3>Pantalla</h3><p>AMOLED CrystalRes de 6,83\" con resolución 1.5K, 120 Hz y pico de 3500 nits. Protegida con Gorilla Glass Victus 2.</p><h3>Cámara</h3><ul><li>Principal de 50 MP con OIS y apertura f/1.8.</li><li>Ultra gran angular de 8 MP.</li><li>Frontal de 16 MP con modo retrato e IA.</li></ul><h3>Rendimiento</h3><p>Snapdragon 6s Gen 4 de 4 nm con 5G, pensado para gastar poca batería. Parlantes estéreo con Dolby Atmos, NFC e infrarrojos.</p><h3>Resistencia</h3><p>Certificación IP68/IP69K contra agua y polvo. Corre HyperOS 3 sobre Android 16.</p>",
+      "revisar": [
+        "Los datos salen de la descripción actual de la tienda (texto comercial con tabla y preguntas frecuentes), no de la ficha del fabricante: confirmar chip, batería, cámaras, IP68/IP69K y eSIM antes de publicar.",
+        "La descripción no dice si el cargador viene en la caja: no lo afirmé."
+      ]
+    },
+    {
+      "ram": "8 GB",
+      "storage": "256 GB",
+      "model": "Redmi 15C",
+      "name": "Xiaomi Redmi 15C 256 GB 8 GB RAM",
+      "slug": "xiaomi-redmi-15c-256gb-8gb",
+      "seoTitle": "Xiaomi Redmi 15C 256 GB 8 GB RAM",
+      "seoDescription": "Redmi 15C nuevo y liberado: pantalla de 6,9\" a 120 Hz, cámara de 50 MP y batería de 6000 mAh con carga de 33 W. Garantía y envíos a todo el país.",
+      "shortDescription": "Redmi 15C con 256 GB y 8 GB de RAM. Pantalla de 6,9\" a 120 Hz, cámara principal de 50 MP con IA, batería de 6000 mAh y carga turbo de 33 W. Nuevo y liberado.",
+      "highlights": [
+        "Pantalla de 6,9\" a 120 Hz con cuidado visual TÜV",
+        "Batería de 6000 mAh para todo el día y más",
+        "Carga turbo de 33 W con carga inversa",
+        "Cámara principal de 50 MP con IA",
+        "Resistente a salpicaduras y polvo (IP64)"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "6,9\" HD+ (1600 x 720), hasta 120 Hz adaptativos, TÜV"
+        },
+        {
+          "label": "Procesador",
+          "value": "MediaTek Helio G81-Ultra (octa-core)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "Doble con principal de 50 MP e IA"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "8 MP"
+        },
+        {
+          "label": "Batería",
+          "value": "6000 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "Turbo de 33 W y carga inversa (adaptador no incluido)"
+        },
+        {
+          "label": "Red",
+          "value": "4G LTE"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP64 (polvo y salpicaduras)"
+        },
+        {
+          "label": "Extras",
+          "value": "Tacto con manos húmedas 2.0, RAM ampliable por software"
+        }
+      ],
+      "descriptionHtml": "<p>El Redmi 15C es un gama de entrada con pantalla grande de 6,9\" y batería de 6000 mAh. Esta versión trae 256 GB y 8 GB de RAM con ampliación por software.</p><h3>Pantalla</h3><p>Panel de 6,9\" con resolución de 1600 x 720 y hasta 120 Hz adaptativos. Tiene certificaciones TÜV de luz azul baja y responde al tacto con las manos húmedas.</p><h3>Batería</h3><p>6000 mAh para todo el día y más, con carga turbo de 33 W y carga inversa para rescatar otros equipos.</p><h3>Cámara</h3><p>Principal de 50 MP con IA y frontal de 8 MP para selfies y videollamadas.</p><h3>Antes de comprar</h3><p>Es un equipo 4G: si buscás 5G, mirá otras opciones. El adaptador de corriente no viene en la caja. Resiste salpicaduras y polvo (IP64), pero no lo sumerjas.</p>",
+      "revisar": [
+        "El Helio G81-Ultra es 4G: lo publico como 4G aunque el nombre no lo aclara."
+      ]
+    },
+    {
+      "ram": "12 GB",
+      "storage": "1 TB",
+      "model": "15T Pro 5G",
+      "name": "Xiaomi 15T Pro 5G 1 TB 12 GB RAM",
+      "slug": "xiaomi-15t-pro-5g-1tb-12gb-slim",
+      "seoTitle": "Xiaomi 15T Pro 5G 1 TB 12 GB RAM",
+      "seoDescription": "Xiaomi 15T Pro 5G nuevo y liberado: cámaras Leica con teleobjetivo 5x, pantalla de 6,83\" a 144 Hz y batería de 5500 mAh. Garantía y envíos a todo el país.",
+      "shortDescription": "Xiaomi 15T Pro 5G con 1 TB y 12 GB de RAM. Triple cámara Leica con teleobjetivo óptico de 5x, pantalla de 6,83\" a 144 Hz y batería de 5500 mAh con HyperCharge de 90 W. Nuevo y liberado.",
+      "highlights": [
+        "Triple cámara Leica con teleobjetivo óptico de 5x",
+        "Principal de 50 MP con OIS y sensor Light Fusion 900",
+        "Pantalla de 6,83\" a 144 Hz con Gorilla Glass 7i",
+        "Batería de 5500 mAh con HyperCharge de 90 W",
+        "Resistente al agua y polvo (IP68)"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "6,83\" plana a 144 Hz, Gorilla Glass 7i"
+        },
+        {
+          "label": "Procesador",
+          "value": "MediaTek Dimensity 9400+"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "Triple Leica: 50 MP OIS + teleobjetivo 5x + 12 MP gran angular"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "32 MP en pantalla"
+        },
+        {
+          "label": "Batería",
+          "value": "Xiaomi Surge de 5500 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "HyperCharge de 90 W (cargador no incluido)"
+        },
+        {
+          "label": "Red",
+          "value": "5G"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP68 (agua y polvo)"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Xiaomi HyperOS 3"
+        },
+        {
+          "label": "Video",
+          "value": "4K a 120 fps, Log de 10 bits, 3 micrófonos"
+        }
+      ],
+      "descriptionHtml": "<p>El Xiaomi 15T Pro 5G es el fotográfico de la serie T: triple cámara con óptica Leica y teleobjetivo óptico de 5x, pantalla de 6,83\" a 144 Hz y batería de 5500 mAh. Esta versión trae 1 TB y 12 GB de RAM.</p><h3>Cámara</h3><ul><li>Principal de 50 MP con OIS y sensor Light Fusion 900.</li><li>Teleobjetivo Leica con zoom óptico de 5x y ultra zoom de 20x.</li><li>Ultra gran angular de 12 MP y frontal de 32 MP.</li><li>Video en 4K a 120 fps y Log de 10 bits para editar después.</li></ul><h3>Pantalla y rendimiento</h3><p>Panel plano de 6,83\" a 144 Hz con Gorilla Glass 7i y Dimensity 9400+ para mover juegos y edición sin problema. Corre HyperOS 3.</p><h3>Batería</h3><p>5500 mAh con HyperCharge de 90 W para recargas muy rápidas.</p><h3>Antes de comprar</h3><p>El cargador no viene en la caja. Resiste agua y polvo (IP68), pero no lo uses en pileta o playa.</p>",
+      "revisar": [
+        "Slim es tag interno: la descripción no da grosor ni lo justifica, lo saqué del nombre."
+      ]
+    },
+    {
+      "ram": "16 GB",
+      "storage": "1 TB",
+      "model": "Moto Signature 5G",
+      "name": "Motorola Moto Signature 5G 1 TB 16 GB RAM",
+      "slug": "motorola-moto-signature-5g-1tb-16gb",
+      "seoTitle": "Motorola Moto Signature 5G 1 TB 16 GB",
+      "seoDescription": "Moto Signature 5G nuevo y liberado: 1 TB y 16 GB de RAM, Snapdragon 8 Gen 5 y triple cámara de 50 MP. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Moto Signature 5G con 1 TB y 16 GB de RAM. Snapdragon 8 Gen 5, pOLED de 6,78\" a 165 Hz, triple cámara de 50 MP y batería de 5200 mAh. Nuevo y liberado.",
+      "highlights": [
+        "1 TB de almacenamiento y 16 GB de RAM",
+        "Snapdragon 8 Gen 5 para gaming y multitarea",
+        "pOLED 1.5K de 6,78\" a 165 Hz, usable mojada",
+        "Tres cámaras de 50 MP con OIS y frontal de 50 MP",
+        "Batería de 5200 mAh, carga de 90 W e inalámbrica",
+        "Resistente al agua y polvo (IP68/IP69)"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "pOLED 6,78\" 1.5K (2780 x 1264), 165 Hz, HDR10+, Gorilla Glass Victus 2"
+        },
+        {
+          "label": "Procesador",
+          "value": "Qualcomm Snapdragon 8 Gen 5 (3 nm)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "Triple de 50 MP: principal OIS + teleobjetivo periscópico + gran angular/macro"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "50 MP con video en 4K"
+        },
+        {
+          "label": "Batería",
+          "value": "5200 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "TurboPower de 90 W e inalámbrica de 50 W"
+        },
+        {
+          "label": "Red",
+          "value": "5G (doble SIM)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 7, Bluetooth 5.4, NFC, USB-C 3.2"
+        },
+        {
+          "label": "Audio",
+          "value": "Estéreo con Dolby Atmos"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP68 / IP69 y MIL-STD-810H"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android 16 con My UX y moto AI"
+        },
+        {
+          "label": "En la caja",
+          "value": "Cargador TurboPower, cable USB-C, funda y herramienta de SIM"
+        }
+      ],
+      "descriptionHtml": "<p>El Moto Signature 5G es lo más alto de Motorola: 1 TB de almacenamiento, 16 GB de RAM y Snapdragon 8 Gen 5. Pantalla pOLED de 6,78\" a 165 Hz y tres cámaras de 50 MP.</p><h3>Rendimiento</h3><p>Chip de 3 nm con 16 GB de RAM y 1 TB UFS 4.0: entra todo sin depender de la nube. Ideal para gaming exigente y multitarea pesada.</p><h3>Cámara</h3><ul><li>Principal de 50 MP Sony LYTIA con OIS.</li><li>Teleobjetivo periscópico de 50 MP con zoom asistido por IA.</li><li>Ultra gran angular y macro de 50 MP.</li><li>Frontal de 50 MP con video en 4K.</li></ul><h3>Pantalla y batería</h3><p>pOLED 1.5K a 165 Hz que se puede usar mojada. Batería de 5200 mAh con TurboPower de 90 W y carga inalámbrica de 50 W.</p><h3>Resistencia y conexión</h3><p>IP68/IP69 y estándar militar MIL-STD-810H. 5G doble SIM, Wi-Fi 7, NFC y sonido Dolby Atmos. La caja trae cargador, cable, funda y herramienta de SIM.</p>",
+      "revisar": [
+        "Los datos salen de la descripción actual de la tienda (texto comercial con tabla y preguntas frecuentes), no de la ficha del fabricante: confirmar chip, cámaras, carga inalámbrica de 50 W, Wi-Fi 7 y contenido de la caja antes de publicar."
+      ]
+    },
+    {
+      "ram": "4 GB",
+      "storage": "256 GB",
+      "model": "Moto G04s",
+      "name": "Motorola Moto G04s 256 GB 4 GB RAM",
+      "slug": "motorola-moto-g04s-256gb-4gb",
+      "seoTitle": "Motorola Moto G04s 256 GB 4 GB RAM",
+      "seoDescription": "Moto G04s nuevo y liberado: pantalla de 6,6\" a 90 Hz, cámara de 50 MP y batería de 5000 mAh. Ideal para uso diario. Garantía y envíos a todo el país.",
+      "shortDescription": "Moto G04s con 256 GB y 4 GB de RAM. Pantalla HD+ de 6,6\" a 90 Hz, cámara de 50 MP con modo nocturno, batería de 5000 mAh y Dolby Atmos. Nuevo y liberado.",
+      "highlights": [
+        "Pantalla de 6,6\" HD+ a 90 Hz con Gorilla Glass 3",
+        "Cámara de 50 MP con modo nocturno e IA",
+        "Batería de 5000 mAh para todo el día",
+        "256 GB de memoria y RAM expandible hasta 8 GB",
+        "Sonido Dolby Atmos y diseño mate liviano"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "IPS HD+ de 6,6\" a 90 Hz, Gorilla Glass 3"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa-core a 1.6 GHz (modelo sin declarar)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP con Quad Pixel, Night Vision, HDR y retrato"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "5 MP (f/2.2) con retoque facial"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Audio",
+          "value": "Dolby Atmos"
+        },
+        {
+          "label": "Diseño",
+          "value": "Trasera mate, delgado y liviano"
+        }
+      ],
+      "descriptionHtml": "<p>El Moto G04s es un gama de entrada para uso diario: pantalla de 6,6\" a 90 Hz, cámara de 50 MP y batería de 5000 mAh. Esta versión trae 256 GB y 4 GB de RAM expandible hasta 8 GB por software.</p><h3>Pantalla y sonido</h3><p>Panel HD+ de 6,6\" a 90 Hz con Gorilla Glass 3 y audio Dolby Atmos para ver series y escuchar música.</p><h3>Cámara</h3><p>Principal de 50 MP con Quad Pixel para fotos más nítidas con poca luz, más Night Vision, HDR y retrato. Frontal de 5 MP con retoque facial.</p><h3>Uso diario</h3><p>Procesador de ocho núcleos para WhatsApp, redes y videollamadas. Trasera mate en varios colores y batería de 5000 mAh para todo el día. Si buscás un equipo simple para llamar, mensajear y redes, cumple sin vueltas.</p>",
+      "revisar": [
+        "La descripción no declara red, sistema operativo, carga ni contenido de la caja: pedir ficha del fabricante.",
+        "El procesador figura solo como octa-core a 1.6 GHz: no afirmo modelo de chip ni red.",
+        "No afirmo microSD: la descripción no la menciona."
+      ]
+    },
+    {
+      "ram": "8 GB",
+      "storage": "256 GB",
+      "model": "C71",
+      "name": "Realme C71 256 GB 8 GB RAM",
+      "slug": "realme-c71-256gb-8gb-16gb",
+      "seoTitle": "Realme C71 256 GB 8 GB RAM",
+      "seoDescription": "Realme C71 nuevo y liberado: pantalla de 6,74\" fluida, batería de 5000 mAh y memoria expandible con microSD. Garantía y envíos a todo el país.",
+      "shortDescription": "Realme C71 con 256 GB expandibles y 8 GB de RAM. Pantalla amplia de 6,74\" con desplazamiento fluido, batería de 5000 mAh y cámara con IA. Ideal para uso diario.",
+      "highlights": [
+        "Pantalla amplia de 6,74\" con tasa fluida",
+        "Batería de 5000 mAh para todo el día",
+        "256 GB expandibles con tarjeta microSD",
+        "RAM dinámica para mejor multitarea",
+        "Cámara con IA para fotos del día a día"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "6,74\" con tasa de refresco fluida"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa-core (modelo sin declarar)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "Principal con IA (MP sin declarar)"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "Para selfies y videollamadas (MP sin declarar)"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh con modos de ahorro"
+        },
+        {
+          "label": "Ranura microSD",
+          "value": "Sí, memoria expandible"
+        }
+      ],
+      "descriptionHtml": "<p>El Realme C71 es un gama de entrada para quienes priorizan batería y pantalla sin gastar de más. Esta versión trae 256 GB expandibles con microSD y 8 GB de RAM con ampliación dinámica por software. Ideal como equipo diario o de respaldo.</p><h3>Pantalla</h3><p>Panel amplio de 6,74\" con desplazamiento fluido para redes, chats y videos. Cuerpo delgado con acabado que disimula las huellas.</p><h3>Batería</h3><p>5000 mAh para jornadas largas de trabajo, estudio o streaming, con modos de ahorro para emergencias.</p><h3>Uso diario</h3><p>Procesador de ocho núcleos para WhatsApp, billeteras virtuales y transporte. La RAM dinámica por software ayuda a alternar entre aplicaciones sin cierres molestos. Cámara principal con IA que ajusta color y balance según la escena, más frontal para videollamadas.</p>",
+      "revisar": [
+        "Descripción de relleno sin datos duros (sin MP de cámaras, chip, carga ni red): mínimo honesto, pedir ficha del fabricante.",
+        "El nombre trae +16 GB: lo interpreto como RAM dinámica por software, sin afirmarlo como RAM física.",
+        "No afirmo red (4G/5G) ni tasa exacta de pantalla: confirmar."
+      ]
+    },
+    {
+      "ram": "12 GB",
+      "storage": "256 GB",
+      "model": "Note 40 Pro",
+      "name": "Infinix Note 40 Pro 256 GB 12 GB RAM",
+      "slug": "infinix-note-40-pro-256gb-12gb-nfc",
+      "seoTitle": "Infinix Note 40 Pro 256 GB 12 GB RAM",
+      "seoDescription": "Infinix Note 40 Pro nuevo y liberado: AMOLED curvo de 6,78\" a 120 Hz, cámara de 108 MP con OIS y parlantes JBL. Garantía y envíos a todo el país.",
+      "shortDescription": "Infinix Note 40 Pro con 256 GB y 12 GB de RAM. AMOLED curvo de 6,78\" a 120 Hz con huella en pantalla, cámara de 108 MP con OIS, NFC y sonido JBL. Nuevo y liberado.",
+      "highlights": [
+        "AMOLED curvo de 6,78\" a 120 Hz con huella en pantalla",
+        "Cámara de 108 MP con OIS y frontal de 32 MP",
+        "Carga rápida de 70 W por cable y sonido JBL",
+        "NFC, infrarrojos y USB-C con OTG",
+        "Batería de 5000 mAh para todo el día"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED curvo 6,78\" FHD+ (1080 x 2436), 120 Hz, 1300 nits pico"
+        },
+        {
+          "label": "Procesador",
+          "value": "MediaTek Dimensity 7020"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "108 MP con OIS (f/1.75) + 2 MP + 2 MP, video 2K"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "32 MP (f/2.2)"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "Rápida de 70 W por cable"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Doble SIM, NFC, Wi-Fi dual, USB-C OTG, infrarrojos, FM"
+        },
+        {
+          "label": "Audio",
+          "value": "Parlantes estéreo JBL con DTS y Hi-Res"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Huella en pantalla"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP54 (salpicaduras y polvo)"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "XOS 14"
+        }
+      ],
+      "descriptionHtml": "<p>El Infinix Note 40 Pro combina pantalla curva AMOLED de 6,78\" a 120 Hz con cámara de 108 MP con OIS y sonido firmado por JBL. Esta versión trae 256 GB y 12 GB de RAM, con NFC.</p><h3>Pantalla</h3><p>AMOLED curvo FHD+ de 6,78\" a 120 Hz con huella en pantalla y Gorilla Glass. Pico de 1300 nits para verse bien al sol.</p><h3>Cámara</h3><ul><li>Principal de 108 MP con OIS y apertura f/1.75.</li><li>Frontal de 32 MP para selfies nítidas.</li><li>Video hasta 2K a 30 fps o 1080p a 60 fps.</li></ul><h3>Batería y sonido</h3><p>5000 mAh con carga rápida de 70 W por cable. Doble parlante con sonido JBL, DTS y Hi-Res.</p><h3>Antes de comprar</h3><p>Resiste salpicaduras y polvo (IP54), pero no es sumergible. Corre XOS 14 y trae infrarrojos, radio FM y USB-C con OTG.</p>",
+      "revisar": [
+        "El nombre dice Pro Plus pero el slug, el modelo X6850 y la tabla (70 W, 5000 mAh) apuntan al Note 40 Pro: lo publico como Pro, confirmar con el equipo físico.",
+        "La descripción mezcla datos de dos variantes (chip Dimensity 7020 contra modelo X6850; 100 W y 20 W inalámbrica del título contra 70 W de la tabla): usé la tabla y no afirmo red.",
+        "No afirmo si el cargador inalámbrico viene incluido: el nombre lo sugiere pero la tabla no lo confirma."
+      ]
+    }
+  ]
+}
