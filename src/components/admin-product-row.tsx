@@ -92,7 +92,7 @@ export function AdminProductRow({ product }: { product: AdminProductRow }) {
       <div role="cell" className="min-w-0">
         <input
           inputMode="numeric"
-          value={price}
+          value={price.replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
           onChange={(e) => setPrice(e.target.value.replace(/[^0-9]/g, ""))}
           className={`${field} font-bold`}
           aria-label={`Precio de ${product.name}`}

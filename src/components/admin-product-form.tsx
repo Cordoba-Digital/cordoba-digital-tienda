@@ -17,6 +17,11 @@ function digitsOnly(value: string): string {
   return value.replace(/[^0-9]/g, "");
 }
 
+/** Muestra el precio con puntos de miles (120000 → 120.000); el estado guarda solo dígitos. */
+function withDots(digits: string): string {
+  return digits.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
 export function AdminProductForm({
   categories,
   initial,
@@ -267,11 +272,11 @@ export function AdminProductForm({
             <h2 className={sectionTitleCls}>Precio</h2>
             <div>
               <label htmlFor="p-precio" className={labelCls}>Precio *</label>
-              <input id="p-precio" value={price} onChange={(e) => setPrice(digitsOnly(e.target.value))} inputMode="numeric" required placeholder="Ej. 499999" className={inputCls} />
+              <input id="p-precio" value={withDots(price)} onChange={(e) => setPrice(digitsOnly(e.target.value))} inputMode="numeric" required placeholder="Ej. 499.999" className={inputCls} />
             </div>
             <div>
               <label htmlFor="p-anterior" className={labelCls}>Precio anterior (tachado)</label>
-              <input id="p-anterior" value={compareAtPrice} onChange={(e) => setCompareAtPrice(digitsOnly(e.target.value))} inputMode="numeric" placeholder="Opcional" className={inputCls} />
+              <input id="p-anterior" value={withDots(compareAtPrice)} onChange={(e) => setCompareAtPrice(digitsOnly(e.target.value))} inputMode="numeric" placeholder="Opcional" className={inputCls} />
               <p className="mt-1 text-xs text-ink-500" aria-live="polite">{discount !== null ? `Muestra ${discount}% OFF` : "Sin descuento"}</p>
             </div>
           </section>
