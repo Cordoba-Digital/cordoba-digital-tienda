@@ -11,7 +11,7 @@ type Tx = Parameters<Parameters<typeof db.transaction>[0]>[0];
 
 /**
  * Crea `order_items.stock_reserved` si falta, así el despliegue no depende de
- * correr `db:push` a mano. Idempotente; corre una vez por instancia.
+ * correr las migraciones a mano. Idempotente; corre una vez por instancia.
  */
 let schemaReady: Promise<void> | null = null;
 export function ensureOrderStockSchema(): Promise<void> {

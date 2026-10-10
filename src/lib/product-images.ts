@@ -5,12 +5,15 @@ import net from "node:net";
 import { sql } from "drizzle-orm";
 
 import { db } from "@/db";
+import { imageStore, putStoredImage } from "@/lib/image-storage";
 
 /**
- * Fotos de producto guardadas por nosotros. Mientras no haya Vercel Blob van
- * a Postgres y se sirven desde `/imagenes/<nombre-del-producto>-<id>.webp`,
- * con caché larga (el id es aleatorio y el archivo nunca cambia). El nombre
- * del archivo lleva el del producto porque Google lo usa para entender la foto.
+ * Fotos de producto guardadas por nosotros. Con Vercel Blob o Cloudflare R2
+ * configurados (ver `image-storage.ts`) van ahí y se sirven desde su dominio
+ * público; si no, van a Postgres y se sirven desde `/imagenes/<nombre-del-producto>-<id>.webp`. En
+ * los dos casos con caché larga (el id es aleatorio y el archivo nunca
+ * cambia). El nombre del archivo lleva el del producto porque Google lo usa
+ * para entender la foto.
  */
 export const MAX_UPLOAD_BYTES = 4 * 1024 * 1024;
 const MAX_REMOTE_BYTES = 10 * 1024 * 1024;
@@ -94,16 +97,39 @@ async function optimize(bytes: Buffer, ext: Ext): Promise<{ bytes: Buffer; ext: 
 
 export type SaveImageResult = { ok: true; url: string } | { ok: false; error: string };
 
-export async function saveUploadedImage(raw: Buffer, productName = ""): Promise<SaveImageResult> {
+export type PreparedImage = { ok: true; bytes: Buffer; ext: Ext; contentType: string } | { ok: false; error: string };
+
+/** Valida el tipo real, achica y pasa a WebP. Lo usan la subida del admin y la migración de fotos. */
+export async function prepareProductImage(raw: Buffer): Promise<PreparedImage> {
   if (!raw.length) return { ok: false, error: "El archivo está vacío." };
   const detected = sniffImage(raw);
   if (!detected) return { ok: false, error: "Solo se aceptan fotos JPG, PNG, WebP, GIF o AVIF." };
   const { bytes, ext } = await optimize(raw, detected);
   if (bytes.length > MAX_UPLOAD_BYTES) return { ok: false, error: "La foto supera los 4 MB." };
-  await ensureTable();
+  return { ok: true, bytes, ext, contentType: TYPES[ext] };
+}
+
+/** Clave en Blob/R2: `productos/<nombre-del-producto>-<id>.<ext>`. */
+export function productImageKey(productName: string, id: string, ext: string): string {
+  return `productos/${imageSlug(productName) || "producto"}-${id}.${ext}`;
+}
+
+export async function saveUploadedImage(raw: Buffer, productName = ""): Promise<SaveImageResult> {
+  const prepared = await prepareProductImage(raw);
+  if (!prepared.ok) return prepared;
+  const { bytes, ext, contentType } = prepared;
   const id = crypto.randomBytes(12).toString("hex");
+  if (imageStore()) {
+    try {
+      return { ok: true, url: await putStoredImage(productImageKey(productName, id, ext), bytes, contentType) };
+    } catch (error) {
+      // Si Blob/R2 falla, la foto no se pierde: va a Postgres como antes.
+      console.error("[product-images] no se pudo subir la foto, se guarda en la base", error);
+    }
+  }
+  await ensureTable();
   await db.execute(
-    sql`insert into product_images (id, content_type, bytes, data) values (${id}, ${TYPES[ext]}, ${bytes.length}, ${bytes})`,
+    sql`insert into product_images (id, content_type, bytes, data) values (${id}, ${contentType}, ${bytes.length}, ${bytes})`,
   );
   const slug = imageSlug(productName) || "producto";
   return { ok: true, url: `/imagenes/${slug}-${id}.${ext}` };

@@ -7,7 +7,7 @@
  *
  * Uso: node scripts/diagnostico-guia.mjs <slug>
  */
-import { sanearGuia, separarPreambulo } from "./lib/guia-html";
+import { sanearGuia, separarPreambulo } from "../lib/guia-html";
 
 const slug = process.argv[2] ?? "como-elegir-tu-proxima-impresora";
 const UA =

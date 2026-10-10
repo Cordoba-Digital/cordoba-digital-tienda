@@ -2,7 +2,6 @@ import { inArray } from "drizzle-orm";
 
 import { db } from "@/db";
 import { products } from "@/db/schema";
-import { ensureSeeded } from "@/lib/seed";
 
 export const dynamic = "force-dynamic";
 
@@ -11,7 +10,6 @@ export async function POST(request: Request) {
   const slugs = (body.slugs ?? []).filter((s) => typeof s === "string").slice(0, 50);
   if (!slugs.length) return Response.json({ ok: true, products: [] });
 
-  await ensureSeeded();
   const rows = await db.select().from(products).where(inArray(products.slug, slugs));
 
   return Response.json({

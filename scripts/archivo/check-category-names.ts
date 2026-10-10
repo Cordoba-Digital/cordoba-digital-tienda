@@ -9,8 +9,8 @@
  */
 import { sql } from "drizzle-orm";
 
-import { db } from "../src/db";
-import { titleCaseCategoryName } from "../src/lib/category-tree";
+import { db } from "../../src/db";
+import { titleCaseCategoryName } from "../../src/lib/category-tree";
 
 /**
  * Casos que el helper tiene que clavar. Salen del catálogo real, no inventados:

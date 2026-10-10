@@ -34,7 +34,7 @@ async function main() {
       : "image_srcsets existe.",
   );
   if (falta) {
-    console.log("  1) npx drizzle-kit push");
+    console.log("  1) npm run db:migrate");
     console.log("  2) npx tsx scripts/backfill-image-srcsets.ts");
   }
   process.exit(falta ? 1 : 0);

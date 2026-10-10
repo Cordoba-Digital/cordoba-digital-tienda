@@ -8,7 +8,7 @@
  *
  * Uso: node scripts/ver-contexto-claims.ts <patrón en regex>
  */
-import { aTextoPlano, sanearGuia, separarPreambulo } from "./lib/guia-html";
+import { aTextoPlano, sanearGuia, separarPreambulo } from "../lib/guia-html";
 
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";

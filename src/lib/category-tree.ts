@@ -186,7 +186,7 @@ const TILDES: Record<string, string> = {
  * "CAMARAS DIGITALES FOTO" debería decir "Cámaras digitales y foto": es la
  * conjunción "y" del español la que falta en el nombre crudo, y el nombre de
  * la categoría es una frase, no una lista de palabras sueltas. En
- * `src/lib/catalog-data.ts` esa misma categoría se llama "Cámaras y foto", así
+ * el viejo catálogo demo esa misma categoría se llamaba "Cámaras y foto", así
  * que la intención del cliente está escrita; lo que se pierde es solo el "y".
  *
  * Se corrige por tokens, no por cadena completa, para que el nombre siga

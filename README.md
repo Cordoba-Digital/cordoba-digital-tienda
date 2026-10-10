@@ -12,7 +12,7 @@ Reemplazo moderno de `cordobadigital.net` (WooCommerce) con checkout real.
 ```bash
 npm install
 cp .env.example .env   # completar DATABASE_URL + MP_* + GOOGLE_*
-npm run db:push
+npm run db:migrate
 npm run dev
 ```
 
@@ -31,7 +31,8 @@ npm run verify:wp                       # compara la base contra WooCommerce
 ```
 
 - Fuente: **WC Store API pública** (`/wp-json/wc/store/v1`): sin credenciales.
-- Las imágenes se sirven desde el servidor viejo de WordPress (`wp-content`).
+- Las imágenes se sirven desde el servidor viejo de WordPress (`wp-content`) hasta
+  copiarlas a Vercel Blob desde Panel → Fotos del WordPress (`docs/IMAGENES.md`).
 - Las páginas de categoría son `/categoria/<padre>/<hijo>/...` y las URLs viejas
   de WooCommerce redirigen con 308. Ver `docs/MIGRACION-WP.md` y `docs/CATALOGO-WP.md`.
 
@@ -39,9 +40,10 @@ npm run verify:wp                       # compara la base contra WooCommerce
 
 - `npm run dev` — desarrollo
 - `npm run build` / `npm start` — producción
-- `npm run db:push` — aplica el schema (`drizzle-kit push`)
+- `npm run db:generate` / `db:migrate` — migraciones versionadas en `drizzle/` (ver `docs/MIGRACIONES.md`)
 - `npm run audit:wp` / `migrate:wp` / `verify:wp` — ciclo del catálogo
-- `npm run typecheck` / `npm run lint`
+- `npm run typecheck` / `npm run lint` / `npm run test:checkout` / `npm run test:guias`
+  (los corre el CI en cada PR, junto con `next build`)
 
 ## Pagos
 

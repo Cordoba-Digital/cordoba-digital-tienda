@@ -10,8 +10,8 @@
  */
 import { count, eq, gt, isNotNull, ne, sql } from "drizzle-orm";
 
-import { db } from "../src/db";
-import { products } from "../src/db/schema";
+import { db } from "../../src/db";
+import { products } from "../../src/db/schema";
 
 async function main() {
   const total = (await db.select({ n: count() }).from(products))[0].n;

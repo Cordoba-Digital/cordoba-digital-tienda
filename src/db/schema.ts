@@ -1,5 +1,7 @@
+import { sql } from "drizzle-orm";
 import {
   boolean,
+  customType,
   index,
   integer,
   jsonb,
@@ -247,33 +249,45 @@ export const orders = pgTable(
     statusUpdatedAt: timestamp("status_updated_at", { withTimezone: true }).notNull().defaultNow(),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
-  (table) => [uniqueIndex("orders_code_idx").on(table.code)],
+  (table) => [
+    uniqueIndex("orders_code_idx").on(table.code),
+    // "Mi cuenta" y el panel de usuarios buscan pedidos por email sin mayúsculas.
+    index("orders_email_lower_idx").on(sql`lower(${table.email})`),
+  ],
 );
 
-export const orderEvents = pgTable("order_events", {
-  id: serial("id").primaryKey(),
-  orderId: integer("order_id").notNull(),
-  fromStatus: text("from_status").notNull().default(""),
-  toStatus: text("to_status").notNull(),
-  note: text("note").notNull().default(""),
-  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
-});
+export const orderEvents = pgTable(
+  "order_events",
+  {
+    id: serial("id").primaryKey(),
+    orderId: integer("order_id").notNull(),
+    fromStatus: text("from_status").notNull().default(""),
+    toStatus: text("to_status").notNull(),
+    note: text("note").notNull().default(""),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index("order_events_order_idx").on(table.orderId)],
+);
 
-export const orderItems = pgTable("order_items", {
-  id: serial("id").primaryKey(),
-  orderId: integer("order_id").notNull(),
-  productSlug: text("product_slug").notNull(),
-  name: text("name").notNull(),
-  image: text("image").notNull().default(""),
-  unitPrice: integer("unit_price").notNull(),
-  quantity: integer("quantity").notNull(),
-  /**
-   * Unidades que este ítem descontó del stock al comprarse (0 cuando el stock
-   * era solo disponibilidad 1/0). Es lo que se devuelve si el pedido se cancela.
-   * La columna la crea `ensureOrderStockSchema` al primer uso.
-   */
-  stockReserved: integer("stock_reserved").notNull().default(0),
-});
+export const orderItems = pgTable(
+  "order_items",
+  {
+    id: serial("id").primaryKey(),
+    orderId: integer("order_id").notNull(),
+    productSlug: text("product_slug").notNull(),
+    name: text("name").notNull(),
+    image: text("image").notNull().default(""),
+    unitPrice: integer("unit_price").notNull(),
+    quantity: integer("quantity").notNull(),
+    /**
+     * Unidades que este ítem descontó del stock al comprarse (0 cuando el stock
+     * era solo disponibilidad 1/0). Es lo que se devuelve si el pedido se cancela.
+     * La columna la crea `ensureOrderStockSchema` al primer uso.
+     */
+    stockReserved: integer("stock_reserved").notNull().default(0),
+  },
+  (table) => [index("order_items_order_idx").on(table.orderId)],
+);
 
 export const subscribers = pgTable("subscribers", {
   id: serial("id").primaryKey(),
@@ -331,6 +345,67 @@ export const arrepentimientoRequests = pgTable(
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
 );
+
+/*
+ * Tablas que la app crea sola al primer uso (`create table if not exists` en
+ * src/lib). Se declaran acá para que las migraciones las conozcan: sin esto
+ * `drizzle-kit` las tomaba como sobrantes y proponía borrarlas.
+ */
+
+const bytea = customType<{ data: Buffer }>({ dataType: () => "bytea" });
+
+/** Intentos fallidos de login al panel (ver `admin-login-guard.ts`). */
+export const adminLoginAttempts = pgTable(
+  "admin_login_attempts",
+  {
+    id: serial("id").primaryKey(),
+    ip: text("ip").notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index("admin_login_attempts_ip_idx").on(table.ip, table.createdAt)],
+);
+
+/** Admins agregados desde Panel → Accesos (ver `admin-access.ts`). */
+export const adminAccess = pgTable("admin_access", {
+  email: text("email").primaryKey(),
+  addedBy: text("added_by").notNull(),
+  addedAt: timestamp("added_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+/** Registro de acciones del panel (ver `admin-audit.ts`). */
+export const adminAudit = pgTable(
+  "admin_audit",
+  {
+    id: serial("id").primaryKey(),
+    at: timestamp("at", { withTimezone: true }).notNull().defaultNow(),
+    actor: text("actor").notNull(),
+    action: text("action").notNull(),
+    entityType: text("entity_type").notNull(),
+    entityId: text("entity_id").notNull(),
+    summary: text("summary").notNull(),
+    changes: jsonb("changes"),
+  },
+  (table) => [index("admin_audit_at_idx").on(table.at.desc().nullsFirst())],
+);
+
+/** Fotos subidas desde el panel (ver `product-images.ts`). */
+export const productImages = pgTable("product_images", {
+  id: text("id").primaryKey(),
+  contentType: text("content_type").notNull(),
+  bytes: integer("bytes").notNull(),
+  data: bytea("data").notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+/** Productos archivados desde el panel, para poder restaurarlos (ver `admin-products.ts`). */
+export const productArchive = pgTable("product_archive", {
+  id: serial("id").primaryKey(),
+  slug: text("slug").notNull().unique("product_archive_slug_key"),
+  name: text("name").notNull(),
+  data: jsonb("data").notNull(),
+  categoryIds: jsonb("category_ids").notNull().default(sql`'[]'::jsonb`),
+  archivedAt: timestamp("archived_at", { withTimezone: true }).notNull().defaultNow(),
+});
 
 export type Product = typeof products.$inferSelect;
 export type Category = typeof categories.$inferSelect;
