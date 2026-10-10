@@ -34,7 +34,8 @@
     "verificar:guias": "node scripts/verificar-indice-guias.mjs",
     "verificar:claims-guias": "tsx scripts/verificar-claims-guias.ts",
     "verificar:menu": "node scripts/verificar-menu-categorias.mjs",
-    "subcategorias": "tsx scripts/subcategorias.ts"
+    "subcategorias": "tsx scripts/subcategorias.ts",
+    "categorias:limpiar": "tsx scripts/limpiar-categorias.ts"
   },
   "dependencies": {
     "@vercel/blob": "2.8.1",

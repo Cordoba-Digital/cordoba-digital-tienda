@@ -3,10 +3,13 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState, useTransition } from "react";
 
+import type { AdminCategoryOption } from "@/lib/admin-products";
+import { groupCategoryOptions } from "@/lib/category-tree";
+
 type Props = {
   q: string;
   category: string;
-  categories: { slug: string; name: string }[];
+  categories: AdminCategoryOption[];
   stock: "" | "con" | "sin";
   sort: "" | "stock-desc" | "stock-asc";
   oferta: boolean;
@@ -85,10 +88,14 @@ export function AdminProductFilters({ q, category, categories, stock, sort, ofer
         className={`${control} min-w-0 flex-1 sm:max-w-56 sm:flex-none`}
       >
         <option value="">Todas las categorías</option>
-        {categories.map((c) => (
-          <option key={c.slug} value={c.slug}>
-            {c.name}
-          </option>
+        {groupCategoryOptions(categories).map(({ group, items }) => (
+          <optgroup key={group} label={group}>
+            {items.map((c) => (
+              <option key={c.slug} value={c.slug}>
+                {c.name}
+              </option>
+            ))}
+          </optgroup>
         ))}
       </select>
       <select

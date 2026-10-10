@@ -2,6 +2,7 @@ import { and, asc, desc, eq, ilike, or, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { categories, productCategories, products, type Spec } from "@/db/schema";
+import { buildCategoryTree, titleCaseCategoryName, type CategoryNode, type CategoryRow } from "@/lib/category-tree";
 import { findProductBySlug } from "@/lib/queries";
 import { sanitizeHtml } from "@/lib/sanitize-html";
 import { UPLOADED_IMAGE_PATH } from "@/lib/product-images";
@@ -99,11 +100,37 @@ export async function listAdminProducts(input: {
   return { items: rows, total, page, perPage, pages: Math.max(1, Math.ceil(total / perPage)) };
 }
 
-export async function listProductCategories(): Promise<{ slug: string; name: string }[]> {
-  return db
-    .select({ slug: categories.slug, name: categories.name })
-    .from(categories)
-    .orderBy(categories.name);
+export type AdminCategoryOption = {
+  slug: string;
+  /** Ruta debajo de la raíz, ej. "Cámaras Reflex y Mirrorless › Sony". La raíz va con su nombre. */
+  name: string;
+  /** Nombre de la categoría raíz, para agrupar los selectores con `<optgroup>`. */
+  group: string;
+};
+
+/**
+ * Categorías para los selectores del admin, en el orden del árbol y con la
+ * ruta completa. Antes era una lista plana por nombre y las hojas de marca
+ * ("Sony", "Tp Link") quedaban mezcladas con los tipos de producto sin que se
+ * viera de qué categoría colgaban. Los nombres pasan por el mismo arreglo de
+ * mayúsculas que usa la tienda.
+ */
+export async function listProductCategories(): Promise<AdminCategoryOption[]> {
+  const rows = (await db.select().from(categories)) as CategoryRow[];
+  const tree = buildCategoryTree(rows.map((row) => ({ ...row, name: titleCaseCategoryName(row.name) })));
+  const out: AdminCategoryOption[] = [];
+  const walk = (nodes: CategoryNode[], group: string, trail: string[]) => {
+    for (const node of nodes) {
+      const path = [...trail, node.name];
+      out.push({ slug: node.slug, name: path.join(" › "), group });
+      walk(node.children, group, path);
+    }
+  };
+  for (const root of tree) {
+    out.push({ slug: root.slug, name: root.name, group: root.name });
+    walk(root.children, root.name, []);
+  }
+  return out;
 }
 
 export type ProductPatch = {

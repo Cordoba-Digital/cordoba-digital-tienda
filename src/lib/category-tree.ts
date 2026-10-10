@@ -283,3 +283,14 @@ export function guessIcon(name: string): string {
   for (const hint of ICON_HINTS) if (hint.match.test(name)) return hint.icon;
   return "📦";
 }
+
+/** Agrupa las opciones por raíz conservando el orden, para renderizar `<optgroup>`. */
+export function groupCategoryOptions<T extends { group: string }>(options: T[]): { group: string; items: T[] }[] {
+  const groups: { group: string; items: T[] }[] = [];
+  for (const option of options) {
+    const last = groups.at(-1);
+    if (last && last.group === option.group) last.items.push(option);
+    else groups.push({ group: option.group, items: [option] });
+  }
+  return groups;
+}

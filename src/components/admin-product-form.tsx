@@ -5,7 +5,8 @@ import { useRouter } from "next/navigation";
 
 import { AdminImageManager } from "@/components/admin-image-manager";
 import { AdminSpecsEditor, type SpecRow } from "@/components/admin-specs-editor";
-import type { AdminProductEditData } from "@/lib/admin-products";
+import type { AdminCategoryOption, AdminProductEditData } from "@/lib/admin-products";
+import { groupCategoryOptions } from "@/lib/category-tree";
 
 const inputCls =
   "w-full rounded-lg border border-ink-200 bg-surface px-3 py-2 text-sm text-ink-900 outline-none focus:border-ink-400";
@@ -26,7 +27,7 @@ export function AdminProductForm({
   categories,
   initial,
 }: {
-  categories: { slug: string; name: string }[];
+  categories: AdminCategoryOption[];
   /** Con `initial` el form edita ese producto (PUT); sin él, da de alta (POST). */
   initial?: AdminProductEditData;
 }) {
@@ -317,8 +318,12 @@ export function AdminProductForm({
               <label htmlFor="p-cat" className={labelCls}>Principal *</label>
               <select id="p-cat" value={categorySlug} onChange={(e) => setCategorySlug(e.target.value)} required className={inputCls}>
                 <option value="">Elegí una categoría…</option>
-                {categories.map((c) => (
-                  <option key={c.slug} value={c.slug}>{c.name}</option>
+                {groupCategoryOptions(categories).map(({ group, items }) => (
+                  <optgroup key={group} label={group}>
+                    {items.map((c) => (
+                      <option key={c.slug} value={c.slug}>{c.name}</option>
+                    ))}
+                  </optgroup>
                 ))}
               </select>
             </div>

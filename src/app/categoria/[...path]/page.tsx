@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { Suspense } from "react";
 
 import { ActiveFilters, FiltersPanel, SortSelect } from "@/components/catalog-filters";
 import { CategoryIcon } from "@/components/category-icon";
 import { CategoryChips, EmptyResults, Pagination } from "@/components/catalog-ui";
 import { ProductCard } from "@/components/product-card";
+import { mergedCategoryRedirect } from "@/lib/category-merges";
 import { money } from "@/lib/format";
 import { toView } from "@/lib/product-view";
 import { getBrandFacets, getCategoryByPath, getCategoryTree, listProducts } from "@/lib/queries";
@@ -65,7 +66,12 @@ export default async function CategoryPage({
 }) {
   const [{ path }, query] = await Promise.all([params, searchParams]);
   const data = await getCategoryByPath(path);
-  if (!data) notFound();
+  if (!data) {
+    // Categoría fusionada en otra (ver category-merges.ts): la URL vieja no se pierde.
+    const target = mergedCategoryRedirect(path.join("/"));
+    if (target) permanentRedirect(target);
+    notFound();
+  }
 
   const { node, ancestors, children, breadcrumb } = data;
   const marcasParam = pick(query, "marca");
