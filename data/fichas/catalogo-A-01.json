@@ -1,0 +1,2415 @@
+{
+  "lote": "catalogo-A-01",
+  "productos": [
+    {
+      "slug": "aire-acondicionado-bgh-3300w-frio-calo-bse35wcau",
+      "model": "BSE35WCAU",
+      "seoTitle": "Aire acondicionado BGH Silent Air 3300 W",
+      "seoDescription": "Aire acondicionado split BGH Silent Air de 3300 W, frío y calor, con control remoto. Nuevo, con garantía oficial y envíos a todo el país.",
+      "shortDescription": "Aire acondicionado split BGH Silent Air de 3300 W con función frío y calor y control remoto. Pensado para ambientes chicos o medianos. Nuevo, con garantía oficial.",
+      "highlights": [
+        "Frío y calor: lo usás todo el año",
+        "Capacidad de 3300 W para ambientes chicos o medianos",
+        "Split: unidad interna y externa separadas",
+        "Control remoto para regular temperatura y modo",
+        "Clasificación energética A",
+        "Filtros de aire incluidos en la unidad interna"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Split de pared"
+        },
+        {
+          "label": "Climatización",
+          "value": "Frío/Calor"
+        },
+        {
+          "label": "Capacidad",
+          "value": "3300 W"
+        },
+        {
+          "label": "Clasificación energética",
+          "value": "A"
+        },
+        {
+          "label": "Línea",
+          "value": "Silent Air"
+        },
+        {
+          "label": "Control remoto",
+          "value": "Sí"
+        }
+      ],
+      "descriptionHtml": "<p>El BGH Silent Air de 3300 W es un split frío/calor para ambientes chicos o medianos. Sirve para refrescar en verano y calefaccionar en invierno con un solo equipo.</p><h3>Frío y calor</h3><p>Tiene función de refrigeración y de calefacción, así que no necesitás otro equipo para el invierno.</p><h3>Split</h3><p>La unidad interna distribuye el aire y la externa expulsa el calor. Esa separación hace que el funcionamiento sea más silencioso que en un equipo de ventana.</p><h3>Comodidad</h3><p>Con el control remoto elegís la temperatura, el modo (frío o calor) y la velocidad del ventilador sin levantarte. La unidad interna lleva filtros de aire que se pueden limpiar.</p><h3>Antes de comprar</h3><ul><li>La capacidad de 3300 W es para ambientes chicos o medianos. Para espacios grandes conviene un equipo de mayor potencia.</li><li>La instalación no está incluida en el producto.</li></ul><p>Si tenés dudas sobre el tamaño del ambiente o la instalación, escribinos por WhatsApp y te asesoramos.</p>",
+      "revisar": [
+        "La descripción original es genérica (\"suele\", \"ejemplo general\"). Usé solo capacidad 3300 W, frío/calor, split, control remoto, filtros y clasificación A.",
+        "El código no coincide: SKU BSE35WCAU, texto dice BS35WCAU y \"3000F\". Confirmar el modelo exacto.",
+        "La descripción menciona \"tecnología Inverter\" sin afirmarlo. No lo puse: confirmar si es Inverter.",
+        "Faltan frigorías, gas refrigerante, consumo y medidas."
+      ]
+    },
+    {
+      "slug": "aire-acondicionado-bgh-5000w-frio-calor-bshe52wcu",
+      "model": "BSHE52WCU",
+      "seoTitle": "Aire acondicionado BGH 5000 W frío/calor",
+      "seoDescription": "Aire acondicionado split BGH de 5000 W, frío y calor, con control remoto y filtros de aire. Nuevo, con garantía oficial y envíos a todo el país.",
+      "shortDescription": "Aire acondicionado split BGH de 5000 W con función frío y calor, control remoto y filtros de aire. Para ambientes de tamaño mediano a grande. Nuevo, con garantía.",
+      "highlights": [
+        "Frío y calor para usar todo el año",
+        "Capacidad de 5000 W para ambientes medianos a grandes",
+        "Split: funcionamiento más silencioso que uno de ventana",
+        "Control remoto para temperatura, modo y ventilador",
+        "Filtros de aire de fácil acceso para limpiar"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Split"
+        },
+        {
+          "label": "Climatización",
+          "value": "Frío/Calor"
+        },
+        {
+          "label": "Capacidad",
+          "value": "5000 W"
+        },
+        {
+          "label": "Control remoto",
+          "value": "Sí"
+        },
+        {
+          "label": "Filtros de aire",
+          "value": "Sí, de fácil acceso"
+        }
+      ],
+      "descriptionHtml": "<p>El BGH BSHE52WCU es un split frío/calor de 5000 W, pensado para ambientes de tamaño mediano a grande.</p><h3>Frío y calor</h3><p>Enfría en los días calurosos y calefacciona en los fríos, así que lo usás durante todo el año.</p><h3>Split</h3><p>La unidad interna es compacta y reparte el aire. La externa disipa el calor. Esa separación lo hace más silencioso que un equipo de ventana.</p><h3>Uso diario</h3><p>El control remoto regula temperatura, modo y velocidad del ventilador. Los filtros se limpian con facilidad y retienen polvo y partículas.</p><h3>Antes de comprar</h3><ul><li>Es un equipo de 5000 W: para un ambiente chico puede ser más de lo que necesitás.</li><li>La instalación no está incluida en el producto.</li></ul><p>Si tenés dudas sobre el tamaño del ambiente o la instalación, escribinos por WhatsApp y te asesoramos.</p>",
+      "revisar": [
+        "La descripción original es genérica y dice \"aproximadas, verificar manual\". Solo usé capacidad, frío/calor, split, control remoto y filtros.",
+        "No dice si es Inverter ni la clasificación energética. Faltan frigorías, gas y medidas."
+      ]
+    },
+    {
+      "slug": "aire-acondicionado-hitachi-6100w-frio-calor",
+      "name": "Aire Acondicionado Hitachi Eco 6100 W Frío/Calor",
+      "model": "HSP6100FCECO",
+      "seoTitle": "Aire acondicionado Hitachi Eco 6100 W",
+      "seoDescription": "Aire acondicionado split Hitachi Eco de 6100 W frío/calor, 5200 frigorías y gas R410A. Nuevo, con garantía oficial y envíos a todo el país.",
+      "shortDescription": "Split frío/calor Hitachi Eco de 6100 W (5200 frigorías) con gas R410A y eficiencia A en frío. Modos Quiet, Smart, Super, Turbo, Sleep e I Feel. Nuevo, con garantía.",
+      "highlights": [
+        "6100 W y 5200 frigorías en frío, 6400 W en calor",
+        "Eficiencia energética A en frío y B en calor",
+        "Modos Quiet, Smart, Super, I Feel, Sleep y Turbo",
+        "Deshumidificación, timer y deflectores móviles",
+        "Gas refrigerante R410A, de fabricación argentina"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Split"
+        },
+        {
+          "label": "Climatización",
+          "value": "Frío/Calor"
+        },
+        {
+          "label": "Capacidad en frío",
+          "value": "6100 W (5200 frigorías)"
+        },
+        {
+          "label": "Capacidad en calor",
+          "value": "6400 W"
+        },
+        {
+          "label": "Gas refrigerante",
+          "value": "R410A"
+        },
+        {
+          "label": "Eficiencia energética",
+          "value": "A en frío, B en calor"
+        },
+        {
+          "label": "Funciones",
+          "value": "Quiet, Smart, Super, I Feel, Sleep, Turbo, deshumidificación, ventilación, timer"
+        },
+        {
+          "label": "Unidad interior",
+          "value": "99,8 x 32,5 x 22,2 cm (ancho x alto x prof.), 12,5 kg"
+        },
+        {
+          "label": "Unidad exterior",
+          "value": "81 x 58,5 x 28 cm (ancho x alto x prof.), 40 kg"
+        },
+        {
+          "label": "Origen",
+          "value": "Argentina"
+        },
+        {
+          "label": "En la caja",
+          "value": "Control remoto y manual de uso"
+        }
+      ],
+      "descriptionHtml": "<p>El Hitachi Eco HSP6100FCECO es un split frío/calor de 6100 W y 5200 frigorías, con eficiencia A en frío y gas R410A.</p><h3>Modos de funcionamiento</h3><ul><li>Quiet: baja el ruido al mínimo.</li><li>Smart: elige modo y temperatura según el ambiente.</li><li>Super: arranca o frena el enfriamiento y calentamiento rápido.</li><li>I Feel: ajusta la temperatura para tu comodidad.</li><li>Sleep: crea un ambiente más cómodo para dormir.</li><li>Turbo: en frío llega a 16 °C y en calor a 31 °C.</li></ul><h3>Más funciones</h3><p>Tiene deshumidificación, ventilación, timer, display con indicador de temperatura y deflectores móviles.</p><h3>Medidas</h3><p>Unidad interior de 99,8 x 32,5 x 22,2 cm y 12,5 kg. Unidad exterior de 81 x 58,5 x 28 cm y 40 kg.</p><h3>Antes de comprar</h3><ul><li>No tiene filtro antialergias ni autolimpieza.</li><li>La eficiencia en calor es B.</li><li>La instalación no está incluida en el producto.</li></ul><p>Si tenés dudas sobre el tamaño del ambiente o la instalación, escribinos por WhatsApp y te asesoramos.</p>",
+      "revisar": [
+        "La descripción dice \"Clase A\" en frío y \"B\" en calor; usé ambas. No indica si es Inverter, no lo puse.",
+        "La capacidad en calor (6400 W) sale de la descripción corta."
+      ]
+    },
+    {
+      "slug": "aire-acondicionado-inverter-5500w",
+      "name": "Aire Acondicionado Inverter Hisense 5500 W Frío/Calor",
+      "model": "AS18UR4SXSCD00PX4N",
+      "seoTitle": "Aire acondicionado Hisense Inverter 5500 W",
+      "seoDescription": "Aire acondicionado Hisense Inverter de 5500 W frío/calor, eficiencia A++, 4730 frigorías y modo silencioso. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Split Inverter Hisense de 5500 W (4730 frigorías) frío/calor, eficiencia A++. Con I Feel, Smart, Super, Sleep, autolimpieza y modo silencioso de 16 dB. Nuevo, con garantía.",
+      "highlights": [
+        "Inverter de 5500 W y 4730 frigorías",
+        "Eficiencia energética A++",
+        "Modo silencioso de solo 16 dB",
+        "Flujo de aire de larga distancia, hasta 12 m",
+        "I Feel: el control remoto mide la temperatura del ambiente",
+        "Autolimpieza de la unidad interior"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Split Inverter"
+        },
+        {
+          "label": "Climatización",
+          "value": "Frío/Calor"
+        },
+        {
+          "label": "Potencia",
+          "value": "5500 W"
+        },
+        {
+          "label": "Frigorías",
+          "value": "4730"
+        },
+        {
+          "label": "Eficiencia energética",
+          "value": "A++"
+        },
+        {
+          "label": "Nivel de ruido",
+          "value": "Desde 16 dB (modo silencioso)"
+        },
+        {
+          "label": "Alcance del aire",
+          "value": "Hasta 12 m"
+        },
+        {
+          "label": "Funciones",
+          "value": "Sleep, I Feel, Smart, Super, deshumidificación, autolimpieza"
+        }
+      ],
+      "descriptionHtml": "<p>El Hisense Inverter de 5500 W es un split frío/calor con eficiencia A++ y un modo silencioso de 16 dB.</p><h3>Control de temperatura</h3><p>El sensor I Feel va en el control remoto: mide la temperatura donde estás y se la informa al equipo, que ajusta mejor y gasta menos. El modo Smart elige solo la temperatura más cómoda según la habitación.</p><h3>Potencia y alcance</h3><p>El modo Super trabaja a máxima potencia para bajar rápido la temperatura. El flujo de aire llega hasta 12 m, así que cubre toda la habitación.</p><h3>Silencio y limpieza</h3><p>En modo silencioso emite solo 16 dB. La función de autolimpieza elimina la humedad dentro de la unidad interior para evitar microorganismos.</p><h3>Antes de comprar</h3><ul><li>La instalación no está incluida en el producto.</li></ul><p>Si tenés dudas sobre el tamaño del ambiente o la instalación, escribinos por WhatsApp y te asesoramos.</p>",
+      "revisar": [
+        "Usé el SKU AS18UR4SXSCD00PX4N como modelo: confirmar que es el código de modelo.",
+        "Faltan gas refrigerante, medidas y pesos."
+      ]
+    },
+    {
+      "slug": "aire-acondicionado-inverter-alaska-bgh-5300w-f-c",
+      "name": "Aire Acondicionado Inverter Alaska BGH 5300 W Frío/Calor",
+      "model": "ASIE53WCGT",
+      "seoTitle": "Aire acondicionado Alaska BGH Inverter 5300 W",
+      "seoDescription": "Aire acondicionado Alaska BGH Inverter de 5300 W frío/calor, eficiencia A++, 40,5 dB y filtro antibacterial. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Split Inverter Alaska (fabricado y garantizado por BGH) de 5300 W en frío y 5400 W en calor. Eficiencia A++, gas R-410A, display digital y 40,5 dB de ruido.",
+      "highlights": [
+        "Inverter con eficiencia energética Argentina A++",
+        "5300 W en frío y 5400 W en calor",
+        "Filtros antibacterial y antipolvo, lavables",
+        "Limpieza automática, timer y función sueño",
+        "Nivel de ruido de 40,5 dB"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Split de pared, Inverter"
+        },
+        {
+          "label": "Climatización",
+          "value": "Frío/Calor"
+        },
+        {
+          "label": "Capacidad en frío",
+          "value": "5300 W"
+        },
+        {
+          "label": "Capacidad en calor",
+          "value": "5400 W"
+        },
+        {
+          "label": "Eficiencia energética",
+          "value": "A++ (Argentina)"
+        },
+        {
+          "label": "Gas refrigerante",
+          "value": "R-410A"
+        },
+        {
+          "label": "Nivel de ruido",
+          "value": "40,5 dB"
+        },
+        {
+          "label": "Filtros",
+          "value": "Antibacterial y antipolvo, lavables"
+        },
+        {
+          "label": "Unidad interna",
+          "value": "97,1 x 32,1 x 22,8 cm, 11,8 kg"
+        },
+        {
+          "label": "Unidad externa",
+          "value": "72 x 49,5 x 27 cm, 22,3 kg"
+        },
+        {
+          "label": "Control remoto",
+          "value": "Sí"
+        }
+      ],
+      "descriptionHtml": "<p>El Alaska 5300 W es un split Inverter frío/calor fabricado y garantizado por BGH. Tiene eficiencia energética A++.</p><h3>Inverter</h3><p>Ajusta la velocidad del compresor en lugar de prenderse y apagarse, así consume menos y mantiene la temperatura más pareja.</p><h3>Funciones</h3><ul><li>Display digital y panel de control electrónico.</li><li>Timer, función sueño, deshumidificación y ventilación.</li><li>Limpieza automática.</li><li>Filtros antibacterial y antipolvo, lavables.</li></ul><h3>Medidas</h3><p>Unidad interna de 97,1 x 32,1 x 22,8 cm (11,8 kg). Unidad externa de 72 x 49,5 x 27 cm (22,3 kg).</p><h3>Antes de comprar</h3><ul><li>Incluye control remoto. La instalación no está incluida en el producto.</li></ul><p>Si tenés dudas sobre el tamaño del ambiente o la instalación, escribinos por WhatsApp y te asesoramos.</p>",
+      "revisar": [
+        "El SKU y el nombre dicen ASIE53WCGT, pero el texto dice \"Modelo ASI53WCGT\". Usé el SKU, confirmar."
+      ]
+    },
+    {
+      "slug": "aire-acondicionado-inverter-samsung-3150w-frio-calor",
+      "name": "Aire Acondicionado Inverter Samsung 3150 W Frío/Calor",
+      "model": "AR12BSHQAWK",
+      "seoTitle": "Aire acondicionado Samsung Inverter 3150 W",
+      "seoDescription": "Aire acondicionado Samsung Digital Inverter AR12BSHQAWK de 3150 W frío/calor, eficiencia A++ y filtro HD lavable. Garantía y envíos a todo el país.",
+      "shortDescription": "Split Digital Inverter Samsung AR12BSHQAWK de 3150 W, frío y calor, eficiencia A++. Con Fast Cooling, filtro HD lavable, modo Good Sleep y DuraFin+.",
+      "highlights": [
+        "Digital Inverter con eficiencia energética A++",
+        "Fast Cooling: enfría o calienta más rápido",
+        "Filtro HD lavable contra polvo y alérgenos",
+        "Modo Good Sleep ajusta la temperatura mientras dormís",
+        "2-Way Auto Swing para repartir el aire parejo",
+        "Condensador DuraFin+ resistente a la corrosión"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Split Digital Inverter"
+        },
+        {
+          "label": "Climatización",
+          "value": "Frío/Calor"
+        },
+        {
+          "label": "Capacidad",
+          "value": "3150 W"
+        },
+        {
+          "label": "Eficiencia energética",
+          "value": "A++"
+        },
+        {
+          "label": "Modos",
+          "value": "Fast Cooling, Good Sleep, ECO"
+        },
+        {
+          "label": "Distribución del aire",
+          "value": "2-Way Auto Swing"
+        },
+        {
+          "label": "Filtro",
+          "value": "HD, lavable"
+        },
+        {
+          "label": "Condensador",
+          "value": "DuraFin+, resistente a la corrosión"
+        }
+      ],
+      "descriptionHtml": "<p>El Samsung AR12BSHQAWK es un split Digital Inverter de 3150 W, frío y calor, con eficiencia A++.</p><h3>Ahorro</h3><p>La tecnología Digital Inverter mantiene la temperatura sin prender y apagar todo el tiempo. Eso reduce las variaciones, el ruido y el consumo. El modo ECO usa menos capacidad del compresor cuando no hace tanto calor.</p><h3>Confort</h3><ul><li>Fast Cooling: arranca con el ventilador a máxima velocidad para llegar rápido a la temperatura elegida.</li><li>Good Sleep: ajusta la temperatura para cada etapa del sueño.</li><li>2-Way Auto Swing: reparte el aire en varias direcciones.</li></ul><h3>Limpieza y durabilidad</h3><p>El filtro HD retiene polvo, polen, moho y pelo de mascotas, y se enjuaga con agua. El condensador DuraFin+ resiste la corrosión.</p><h3>Antes de comprar</h3><ul><li>La instalación no está incluida en el producto.</li></ul><p>Si tenés dudas sobre el tamaño del ambiente o la instalación, escribinos por WhatsApp y te asesoramos.</p>",
+      "revisar": [
+        "La descripción está cortada al final. Faltan gas refrigerante, frigorías, medidas y nivel de ruido.",
+        "La capacidad de 3150 W sale del nombre. El SKU trae el texto \"Samsung\" antes del código."
+      ]
+    },
+    {
+      "slug": "aire-acondicionado-inverter-samsung-5000w-frio-calor",
+      "name": "Aire Acondicionado Inverter Samsung 5000 W Frío/Calor",
+      "model": "AR18BSHQAWK",
+      "seoTitle": "Aire acondicionado Samsung Inverter 5000 W",
+      "seoDescription": "Aire acondicionado Samsung Digital Inverter AR18BSHQAWK de 5000 W frío/calor, 4222 frigorías y filtro HD lavable. Garantía y envíos a todo el país.",
+      "shortDescription": "Split Digital Inverter Samsung AR18BSHQAWK de 5000 W, frío y calor, 4222 frigorías. Con Fast Cooling, filtro HD lavable, Good Sleep y DuraFin+. Origen Argentina.",
+      "highlights": [
+        "Digital Inverter frío/calor, 4222 frigorías",
+        "Fast Cooling para llegar rápido a la temperatura elegida",
+        "Filtro HD lavable contra polvo y alérgenos",
+        "Modo Good Sleep y modo ECO",
+        "Capacidad de enfriamiento de 16.889 Btu/h",
+        "Fabricado en Argentina"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Split Digital Inverter"
+        },
+        {
+          "label": "Climatización",
+          "value": "Frío/Calor"
+        },
+        {
+          "label": "Capacidad",
+          "value": "5000 W"
+        },
+        {
+          "label": "Frigorías",
+          "value": "4222"
+        },
+        {
+          "label": "Capacidad de enfriamiento",
+          "value": "16.889 Btu/h"
+        },
+        {
+          "label": "Rango de refrigeración",
+          "value": "1,992 a 6,125 kW"
+        },
+        {
+          "label": "Modos",
+          "value": "Fast Cooling, Good Sleep, ECO"
+        },
+        {
+          "label": "Filtro",
+          "value": "HD, lavable"
+        },
+        {
+          "label": "Origen",
+          "value": "Argentina"
+        }
+      ],
+      "descriptionHtml": "<p>El Samsung AR18BSHQAWK es un split Digital Inverter de 5000 W con función frío/calor y 4222 frigorías.</p><h3>Enfriá rápido</h3><p>Fast Cooling usa la velocidad más alta del ventilador antes de bajarla, para llegar pronto a la temperatura que elegiste.</p><h3>Aire limpio</h3><p>El filtro HD captura polvo, polen, esporas de moho y caspa de mascotas. Se enjuaga con agua y se reutiliza.</p><h3>Descanso y ahorro</h3><p>Good Sleep ajusta la temperatura durante la noche. El modo ECO usa menos capacidad del compresor para consumir menos.</p><h3>Durabilidad</h3><p>El condensador DuraFin+ resiste la corrosión. Su resistencia se probó en niebla salina durante 480 horas.</p><h3>Antes de comprar</h3><ul><li>La instalación no está incluida en el producto.</li></ul><p>Si tenés dudas sobre el tamaño del ambiente o la instalación, escribinos por WhatsApp y te asesoramos.</p>",
+      "revisar": [
+        "La descripción está cortada después de \"EER\". Faltan eficiencia energética, gas y medidas.",
+        "La descripción corta dice \"1542 watts\": parece consumo, no lo puse porque no está claro."
+      ]
+    },
+    {
+      "slug": "aire-acondicionado-inverter-samsung-6000w-frio-calor",
+      "name": "Aire Acondicionado Inverter Samsung 6000 W Frío/Calor",
+      "model": "AR24BSHQAWK2BG",
+      "seoTitle": "Aire acondicionado Samsung Inverter 6000 W",
+      "seoDescription": "Aire acondicionado Samsung Digital Inverter AR24BSHQAWK2BG de 6000 W frío/calor, A++ y 4990 frigorías. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Split Digital Inverter Samsung AR24BSHQAWK2BG de 6000 W, frío y calor, 4990 frigorías y eficiencia A++. Con Fast Cooling, filtro HD lavable y Good Sleep.",
+      "highlights": [
+        "Digital Inverter frío/calor de 4990 frigorías",
+        "Eficiencia energética A++",
+        "Fast Cooling para llegar rápido a la temperatura elegida",
+        "Filtro HD lavable contra polvo y alérgenos",
+        "Capacidad de enfriamiento de 19.960 Btu/h",
+        "Fabricado en Argentina"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Split Digital Inverter"
+        },
+        {
+          "label": "Climatización",
+          "value": "Frío/Calor"
+        },
+        {
+          "label": "Capacidad",
+          "value": "6000 W"
+        },
+        {
+          "label": "Frigorías",
+          "value": "4990"
+        },
+        {
+          "label": "Capacidad de enfriamiento",
+          "value": "19.960 Btu/h"
+        },
+        {
+          "label": "Rango de refrigeración",
+          "value": "2,667 a 7,884 kW"
+        },
+        {
+          "label": "Eficiencia energética",
+          "value": "A++"
+        },
+        {
+          "label": "Modos",
+          "value": "Fast Cooling, Good Sleep, ECO"
+        },
+        {
+          "label": "Filtro",
+          "value": "HD, lavable"
+        },
+        {
+          "label": "Origen",
+          "value": "Argentina"
+        }
+      ],
+      "descriptionHtml": "<p>El Samsung AR24BSHQAWK2BG es un split Digital Inverter de 6000 W. Enfría y calefacciona, con eficiencia A++.</p><h3>Enfriá rápido</h3><p>Fast Cooling usa la velocidad más alta del ventilador antes de bajarla, para llegar pronto a la temperatura elegida.</p><h3>Aire limpio</h3><p>El filtro HD captura polvo, polen, moho y caspa de mascotas. Se enjuaga con agua y se reutiliza.</p><h3>Descanso y ahorro</h3><p>Good Sleep ajusta la temperatura durante la noche. El modo ECO baja el consumo cuando no hace tanto calor.</p><h3>Durabilidad</h3><p>El condensador DuraFin+ resiste la corrosión (480 horas de prueba en niebla salina).</p><h3>Antes de comprar</h3><ul><li>Es un equipo de gran capacidad: está pensado para ambientes grandes.</li><li>La instalación no está incluida en el producto.</li></ul><p>Si tenés dudas sobre el tamaño del ambiente o la instalación, escribinos por WhatsApp y te asesoramos.</p>",
+      "revisar": [
+        "La descripción está cortada después de \"EER\". Faltan gas, medidas y ruido.",
+        "La descripción corta dice \"1822 watts\": parece consumo, no lo puse."
+      ]
+    },
+    {
+      "slug": "aire-acondicionado-philco-3400w-frio-calor",
+      "name": "Aire Acondicionado Philco 3400 W Frío/Calor",
+      "model": "PHS32HA4CN",
+      "seoTitle": "Aire acondicionado Philco 3400 W frío/calor",
+      "seoDescription": "Aire acondicionado split Philco de 3400 W frío/calor, 2900 frigorías, gas R410A y eficiencia A. Nuevo, con garantía y envíos a todo el país.",
+      "shortDescription": "Split frío/calor Philco de 3400 W y 2900 frigorías, con gas R410A y eficiencia A. Funciona también como ventilador y deshumidificador. No es Inverter.",
+      "highlights": [
+        "3400 W y 2900 frigorías, en frío y en calor",
+        "Eficiencia energética A con gas R410A",
+        "Hace de aire acondicionado, ventilador y deshumidificador",
+        "Display LCD oculto que se puede apagar de noche",
+        "Filtros lavables, timer y función sleep",
+        "Control remoto multifunción"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Split"
+        },
+        {
+          "label": "Climatización",
+          "value": "Frío/Calor"
+        },
+        {
+          "label": "Potencia",
+          "value": "3400 W"
+        },
+        {
+          "label": "Frigorías en frío",
+          "value": "2900"
+        },
+        {
+          "label": "Eficiencia energética",
+          "value": "A"
+        },
+        {
+          "label": "Gas refrigerante",
+          "value": "R410A"
+        },
+        {
+          "label": "Inverter",
+          "value": "No"
+        },
+        {
+          "label": "Funciones",
+          "value": "Deshumidificación, ventilación, sleep, timer programable"
+        },
+        {
+          "label": "Unidad interior",
+          "value": "80,2 x 29,7 x 18,9 cm, 9,1 kg"
+        },
+        {
+          "label": "Unidad exterior",
+          "value": "72 x 49,5 x 27 cm, 28,7 kg"
+        },
+        {
+          "label": "Color",
+          "value": "Blanco"
+        }
+      ],
+      "descriptionHtml": "<p>El Philco de 3400 W es un split frío/calor con eficiencia A que además funciona como ventilador y deshumidificador.</p><h3>Frío y calor</h3><p>Tiene 3400 W de potencia en frío y en calor. Usa gas R410A, que no daña la capa de ozono.</p><h3>Funciones</h3><p>El modo deshumidificación baja la humedad del ambiente. El barrido de aire automático ayuda a mantener limpio el sistema interno. Tiene timer programable, función sleep y control remoto multifunción.</p><h3>Diseño</h3><p>El display LCD queda oculto y se puede apagar para que no moleste con luz de noche. Los filtros son lavables.</p><h3>Medidas</h3><p>Unidad interior de 80,2 x 29,7 x 18,9 cm (9,1 kg). Unidad exterior de 72 x 49,5 x 27 cm (28,7 kg).</p><h3>Antes de comprar</h3><ul><li>No es Inverter: el compresor se prende y se apaga.</li><li>No tiene filtro antialergias.</li><li>La instalación no está incluida en el producto.</li></ul><p>Si tenés dudas sobre el tamaño del ambiente o la instalación, escribinos por WhatsApp y te asesoramos.</p>",
+      "revisar": [
+        "La ficha técnica de la descripción dice modelo PHS32HA3API y 3200 W; el SKU es PHS32HA4CN y el nombre 3400 W. Usé el nombre y el SKU. Confirmar modelo.",
+        "La ficha dice \"Display Led No\" y \"Pantalla Led Sí\" a la vez: no mencioné el display como LED."
+      ]
+    },
+    {
+      "slug": "aire-acondicionado-portatil-kanji-2650w-frio-calor",
+      "name": "Aire Acondicionado Portátil Kanji 2650 W Frío/Calor",
+      "model": "KJH-AA2650FCBC",
+      "seoTitle": "Aire acondicionado portátil Kanji 2650 W",
+      "seoDescription": "Aire acondicionado portátil Kanji de 2650 W frío/calor con control remoto, timer de 24 horas y 2 velocidades. Garantía y envíos a todo el país.",
+      "shortDescription": "Aire acondicionado portátil Kanji de 2650 W con frío y calor, control remoto, timer de 24 horas y ventilador de 2 velocidades. Se apoya en el piso.",
+      "highlights": [
+        "Portátil: lo apoyás en el piso y lo movés de ambiente",
+        "2650 W en frío y 2650 W en calor",
+        "Timer de 24 horas y termostato fácil de programar",
+        "Ventilador de 2 velocidades",
+        "Eficiencia energética A, SEER 18",
+        "Incluye control remoto"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Portátil, de piso"
+        },
+        {
+          "label": "Climatización",
+          "value": "Frío/Calor"
+        },
+        {
+          "label": "Capacidad de refrigeración",
+          "value": "2650 W"
+        },
+        {
+          "label": "Capacidad de calefacción",
+          "value": "2650 W"
+        },
+        {
+          "label": "Eficiencia energética",
+          "value": "A (SEER 18)"
+        },
+        {
+          "label": "Ventilador",
+          "value": "2 velocidades"
+        },
+        {
+          "label": "Timer",
+          "value": "24 horas"
+        },
+        {
+          "label": "Alimentación",
+          "value": "220 a 240 V, 50 Hz, 4,3 A máx."
+        },
+        {
+          "label": "Potencia máxima",
+          "value": "1050 W"
+        },
+        {
+          "label": "Refrigerante",
+          "value": "R410A, carga de 590 g"
+        },
+        {
+          "label": "Medidas",
+          "value": "69,8 x 35,4 x 33,8 cm (alto x ancho x prof.)"
+        },
+        {
+          "label": "Peso",
+          "value": "20 kg"
+        }
+      ],
+      "descriptionHtml": "<p>El Kanji de 2650 W es un aire acondicionado portátil con frío y calor. Se apoya en el piso, no requiere obra y lo podés cambiar de ambiente.</p><h3>Frío y calor</h3><p>Tiene 2650 W de capacidad de refrigeración y de calefacción.</p><h3>Uso</h3><p>Trae control remoto, termostato fácil de programar, timer de 24 horas y ventilador de 2 velocidades.</p><h3>Datos eléctricos</h3><p>Funciona a 220-240 V y 50 Hz. Consume hasta 1050 W y 4,3 A. Usa gas R410A (590 g).</p><h3>Medidas</h3><p>69,8 cm de alto, 35,4 cm de ancho, 33,8 cm de profundidad y 20 kg.</p><h3>Antes de comprar</h3><ul><li>Pesa 20 kg: tenelo en cuenta si lo vas a mover seguido.</li></ul><p>Si tenés dudas sobre el tamaño del ambiente o la instalación, escribinos por WhatsApp y te asesoramos.</p>",
+      "revisar": [
+        "No dice cómo se evacúa el aire caliente (manguera o kit de ventana) ni si lo incluye. Confirmar y agregar a \"En la caja\"."
+      ]
+    },
+    {
+      "slug": "caloventor-split-de-pared-peabody-negro",
+      "model": "PE-CV20N",
+      "seoTitle": "Caloventor split de pared Peabody Negro",
+      "seoDescription": "Caloventor split de pared Peabody negro de 2000 W con display touch, control remoto y vidrio templado. Garantía y envíos a todo el país.",
+      "shortDescription": "Calefactor split de pared Peabody de 2000 W, color negro. Display touch LED con control de temperatura, control remoto y frente de vidrio curvo templado.",
+      "highlights": [
+        "2000 W de potencia, con modo ahorro de 1000 W",
+        "Display touch LED con control de temperatura",
+        "Control remoto incluido",
+        "Oscilación para direccionar el calor",
+        "Apagado automático ante sobrecalentamiento",
+        "Frente de vidrio curvo templado"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Calefactor split de pared"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        },
+        {
+          "label": "Potencia",
+          "value": "2000 W (1000 W en modo ahorro)"
+        },
+        {
+          "label": "Display",
+          "value": "Touch LED con control de temperatura"
+        },
+        {
+          "label": "Control remoto",
+          "value": "Sí"
+        },
+        {
+          "label": "Funciones",
+          "value": "ECO, solo viento, viento con resistencia mínima, viento con resistencia máxima"
+        },
+        {
+          "label": "Oscilación",
+          "value": "Sí"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Apagado automático ante sobrecalentamiento"
+        },
+        {
+          "label": "Frente",
+          "value": "Vidrio curvo templado"
+        },
+        {
+          "label": "Origen",
+          "value": "Argentina"
+        }
+      ],
+      "descriptionHtml": "<p>El caloventor split de pared Peabody da calor con 2000 W y se instala en la pared, así que no ocupa lugar en el piso.</p><h3>Funciones</h3><ul><li>Modo ECO.</li><li>Solo viento, sin calor.</li><li>Viento con resistencia al mínimo.</li><li>Viento con resistencia al máximo.</li><li>Modo de ahorro de energía a 1000 W.</li></ul><h3>Control</h3><p>Display touch LED con control de temperatura y control remoto. La oscilación direcciona el calor por el ambiente.</p><h3>Seguridad y diseño</h3><p>Se apaga solo si se sobrecalienta. Tiene frente de vidrio curvo templado y espacio para guardar el cable. Es de fabricación argentina.</p><p>Disponible también en otro color. Si necesitás ayuda para elegir, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "Mismo producto en negro y rojo (slug aparte). Confirmar que las fotos coinciden con el color.",
+        "No dice si trae soporte o tarugos de instalación. Agregar \"En la caja\" si se sabe."
+      ]
+    },
+    {
+      "slug": "caloventor-split-de-pared-peabody-rojo",
+      "model": "PE-CV20R",
+      "seoTitle": "Caloventor split de pared Peabody Rojo",
+      "seoDescription": "Caloventor split de pared Peabody rojo de 2000 W con display touch, control remoto y vidrio templado. Garantía y envíos a todo el país.",
+      "shortDescription": "Calefactor split de pared Peabody de 2000 W, color rojo. Display touch LED con control de temperatura, control remoto y frente de vidrio curvo templado.",
+      "highlights": [
+        "2000 W de potencia, con modo ahorro de 1000 W",
+        "Display touch LED con control de temperatura",
+        "Control remoto incluido",
+        "Oscilación para direccionar el calor",
+        "Apagado automático ante sobrecalentamiento",
+        "Frente de vidrio curvo templado"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Calefactor split de pared"
+        },
+        {
+          "label": "Color",
+          "value": "Rojo"
+        },
+        {
+          "label": "Potencia",
+          "value": "2000 W (1000 W en modo ahorro)"
+        },
+        {
+          "label": "Display",
+          "value": "Touch LED con control de temperatura"
+        },
+        {
+          "label": "Control remoto",
+          "value": "Sí"
+        },
+        {
+          "label": "Funciones",
+          "value": "ECO, solo viento, viento con resistencia mínima, viento con resistencia máxima"
+        },
+        {
+          "label": "Oscilación",
+          "value": "Sí"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Apagado automático ante sobrecalentamiento"
+        },
+        {
+          "label": "Frente",
+          "value": "Vidrio curvo templado"
+        },
+        {
+          "label": "Origen",
+          "value": "Argentina"
+        }
+      ],
+      "descriptionHtml": "<p>El caloventor split de pared Peabody da calor con 2000 W y se instala en la pared, así que no ocupa lugar en el piso.</p><h3>Funciones</h3><ul><li>Modo ECO.</li><li>Solo viento, sin calor.</li><li>Viento con resistencia al mínimo.</li><li>Viento con resistencia al máximo.</li><li>Modo de ahorro de energía a 1000 W.</li></ul><h3>Control</h3><p>Display touch LED con control de temperatura y control remoto. La oscilación direcciona el calor por el ambiente.</p><h3>Seguridad y diseño</h3><p>Se apaga solo si se sobrecalienta. Tiene frente de vidrio curvo templado y espacio para guardar el cable. Es de fabricación argentina.</p><p>Disponible también en otro color. Si necesitás ayuda para elegir, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "Mismo producto en negro y rojo (slug aparte). Confirmar que las fotos coinciden con el color.",
+        "No dice si trae soporte o tarugos de instalación. Agregar \"En la caja\" si se sabe."
+      ]
+    },
+    {
+      "slug": "ventilador-3-en-1-embassy-18-90w-aspas-metalicas",
+      "model": "FE-18B",
+      "seoTitle": "Ventilador 3 en 1 Embassy 18″ 90 W",
+      "seoDescription": "Ventilador 3 en 1 Embassy FE-18B de 18″ y 90 W con aspas metálicas: de pie, mesa o pared, 3 velocidades. Garantía y envíos a todo el país.",
+      "shortDescription": "Ventilador Embassy FE-18B de 18″ y 90 W que se usa de pie, de mesa o de pared. Cinco aspas metálicas, 3 velocidades y altura de hasta 1,70 m.",
+      "highlights": [
+        "Tres usos en uno: pie, mesa y pared",
+        "Cinco aspas metálicas de 18″",
+        "3 velocidades y 90 W de potencia",
+        "Altura ajustable, hasta 1,70 m",
+        "Grilla de aleación para mayor durabilidad"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "3 en 1: pie, mesa y pared"
+        },
+        {
+          "label": "Diámetro",
+          "value": "18″"
+        },
+        {
+          "label": "Aspas",
+          "value": "5, metálicas, color plateado"
+        },
+        {
+          "label": "Velocidades",
+          "value": "3"
+        },
+        {
+          "label": "Potencia",
+          "value": "90 W"
+        },
+        {
+          "label": "Alimentación",
+          "value": "220 V, 50 Hz"
+        },
+        {
+          "label": "Altura",
+          "value": "Hasta 1,70 m"
+        },
+        {
+          "label": "Profundidad",
+          "value": "25 cm"
+        },
+        {
+          "label": "Estructura",
+          "value": "Negra, base de plástico tipo volante"
+        },
+        {
+          "label": "Grilla",
+          "value": "Aleación"
+        }
+      ],
+      "descriptionHtml": "<p>El Embassy FE-18B es un ventilador 3 en 1 de 18″: lo usás de pie, sobre una mesa o colgado en la pared.</p><h3>Uso</h3><p>Con 3 velocidades y 90 W de potencia, refresca ambientes de la casa. El pie se ajusta en altura hasta 1,70 m.</p><h3>Construcción</h3><p>Tiene cinco aspas metálicas plateadas y una grilla de aleación. La estructura es negra y la base de plástico tipo volante.</p><h3>Datos técnicos</h3><p>Funciona a 220 V y 50 Hz. Tiene 25 cm de profundidad.</p>",
+      "revisar": [
+        "No dice si oscila ni el largo del cable."
+      ]
+    },
+    {
+      "slug": "ventilador-3-en-1-oryx-18",
+      "model": "IF-318",
+      "seoTitle": "Ventilador 3 en 1 Oryx 18″ 90 W",
+      "seoDescription": "Ventilador 3 en 1 Oryx IF-318 de 18″ y 90 W, color plata, con oscilación y 3 velocidades. De pie, pared o mesa. Garantía y envíos a todo el país.",
+      "shortDescription": "Ventilador rotativo 3 en 1 Oryx IF-318 de 18″ y 90 W, color plata. Se usa de pie, pared o mesa, con 3 velocidades, oscilación y motor bobinado en cobre.",
+      "highlights": [
+        "Se usa de pie, de pared o de mesa",
+        "18″ con 3 velocidades y oscilación",
+        "Motor con bobinado de cobre de 90 W",
+        "Altura de hasta 1,70 m",
+        "Industria argentina"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Rotativo 3 en 1: pie, pared y mesa"
+        },
+        {
+          "label": "Diámetro",
+          "value": "18″"
+        },
+        {
+          "label": "Aspas",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Velocidades",
+          "value": "3"
+        },
+        {
+          "label": "Oscilación",
+          "value": "Sí"
+        },
+        {
+          "label": "Potencia",
+          "value": "90 W"
+        },
+        {
+          "label": "Motor",
+          "value": "Bobinado de cobre"
+        },
+        {
+          "label": "Altura",
+          "value": "Hasta 1,70 m"
+        },
+        {
+          "label": "Color",
+          "value": "Plata"
+        },
+        {
+          "label": "Origen",
+          "value": "Argentina"
+        }
+      ],
+      "descriptionHtml": "<p>El Oryx IF-318 es un ventilador rotativo 3 en 1 de 18″ en color plata. Lo podés usar de pie, de pared o en una mesa.</p><h3>Uso</h3><p>Tiene 3 velocidades y oscilación para repartir el aire por toda la habitación. Con el pie llega a 1,70 m de altura.</p><h3>Motor</h3><p>El bobinado es de cobre y la potencia, de 90 W.</p><h3>Antes de comprar</h3><ul><li>No incluye control remoto ni luz.</li></ul>",
+      "revisar": [
+        "La descripción se contradice: dice \"5 aspas de aluminio\" y también \"3 aspas\"; y habla de 90 W y de 110 W. Usé 90 W (nombre) y no puse la cantidad de aspas. Confirmar."
+      ]
+    },
+    {
+      "slug": "ventilador-de-pie-embassy-3-velocidades",
+      "model": "EM-1070",
+      "seoTitle": "Ventilador de pie Embassy 18″ 70 W",
+      "seoDescription": "Ventilador de pie Embassy EM-1070 de 18″ (45 cm) y 70 W, oscilante, con 3 velocidades y altura de hasta 170 cm. Garantía y envíos a todo el país.",
+      "shortDescription": "Ventilador de pie Embassy EM-1070 de 18″ (45 cm) y 70 W. Oscilante, 3 velocidades, 5 aspas plásticas y altura regulable de 140 a 170 cm.",
+      "highlights": [
+        "Oscilante, con 3 velocidades",
+        "Cinco aspas plásticas de 18″ (45 cm)",
+        "Altura regulable de 140 a 170 cm",
+        "Pie de gran estabilidad",
+        "Fácil de armar"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "De pie, oscilante"
+        },
+        {
+          "label": "Diámetro",
+          "value": "18″ (45 cm)"
+        },
+        {
+          "label": "Aspas",
+          "value": "5, plásticas"
+        },
+        {
+          "label": "Velocidades",
+          "value": "3"
+        },
+        {
+          "label": "Potencia",
+          "value": "70 W"
+        },
+        {
+          "label": "Alimentación",
+          "value": "220 V, 50 Hz"
+        },
+        {
+          "label": "Altura",
+          "value": "140 a 170 cm"
+        },
+        {
+          "label": "Cable",
+          "value": "150 cm"
+        },
+        {
+          "label": "Embalaje",
+          "value": "62 x 17 x 55 cm"
+        }
+      ],
+      "descriptionHtml": "<p>El Embassy EM-1070 es un ventilador de pie de 18″ con 70 W de potencia y oscilación.</p><h3>Uso</h3><p>Tiene 3 velocidades y cinco aspas plásticas. La altura se regula entre 140 y 170 cm.</p><h3>Armado</h3><p>Se entrega desarmado en caja, y el armado es sencillo. El pie es estable y el cable mide 150 cm.</p><h3>Antes de comprar</h3><ul><li>Se entrega desarmado.</li></ul>",
+      "revisar": []
+    },
+    {
+      "slug": "ventilador-de-pie-industrial-30",
+      "model": "PE-VI300",
+      "seoTitle": "Ventilador de pie industrial 30″ Peabody",
+      "seoDescription": "Ventilador de pie industrial Peabody de 30″ y 280 W, con 3 velocidades, palas de aluminio y oscilación de 180°. Garantía y envíos a todo el país.",
+      "shortDescription": "Ventilador de pie industrial Peabody de 30″ y 280 W. Tres palas de aluminio, motor con bobinado de cobre, cabezal oscilante y regulable en altura.",
+      "highlights": [
+        "30″ y 280 W para ambientes grandes",
+        "Tres palas de aluminio tipo hélice",
+        "Oscilación de 180° y cabezal regulable",
+        "Motor con bobinado de cobre",
+        "Pie metálico con altura regulable",
+        "Hecho en Argentina"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "De pie, industrial"
+        },
+        {
+          "label": "Diámetro",
+          "value": "30″"
+        },
+        {
+          "label": "Potencia",
+          "value": "280 W"
+        },
+        {
+          "label": "Velocidades",
+          "value": "3"
+        },
+        {
+          "label": "Palas",
+          "value": "3, aluminio tipo hélice"
+        },
+        {
+          "label": "Oscilación",
+          "value": "180°"
+        },
+        {
+          "label": "Motor",
+          "value": "Bobinado de cobre"
+        },
+        {
+          "label": "Pie",
+          "value": "Metálico, altura regulable"
+        },
+        {
+          "label": "Rejilla",
+          "value": "Metálica"
+        },
+        {
+          "label": "Origen",
+          "value": "Argentina"
+        }
+      ],
+      "descriptionHtml": "<p>El Peabody de 30″ y 280 W es un ventilador de pie pensado para espacios grandes y entornos industriales.</p><h3>Caudal de aire</h3><p>Tiene tres palas de aluminio tipo hélice y un motor con bobinado de cobre. Mueve un gran caudal de aire con 3 velocidades.</p><h3>Cobertura</h3><p>La oscilación de 180° y el cabezal regulable permiten dirigir el viento. Remueve gases y aromas en espacios de trabajo.</p><h3>Estructura</h3><p>Rejilla y pie metálicos. La altura se regula.</p>",
+      "revisar": [
+        "La descripción dice que resiste ambientes severos y altas temperaturas, sin datos concretos: no lo puse como dato."
+      ]
+    },
+    {
+      "slug": "ventilador-de-pie-liliana-orbital-18",
+      "model": "VPRN18",
+      "seoTitle": "Ventilador de pie Liliana Orbital 18″",
+      "seoDescription": "Ventilador de pie Liliana Orbital VPRN18 de 18″ y 75 W, con 3 velocidades, barral telescópico de hasta 1,70 m y dispositivo repeler. Garantía.",
+      "shortDescription": "Ventilador de pie Liliana Orbital de 18″ y 75 W. El cabezal orbital dirige la brisa en horizontal y vertical. Barral telescópico de hasta 1,70 m y 3 velocidades.",
+      "highlights": [
+        "Sistema orbital: brisa horizontal y vertical",
+        "Barral telescópico metálico, hasta 1,70 m",
+        "3 velocidades, 3 aspas negras y 75 W",
+        "Dispositivo repeler para tabletas anti-insectos",
+        "Base redonda"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "De pie, orbital"
+        },
+        {
+          "label": "Diámetro",
+          "value": "18″"
+        },
+        {
+          "label": "Potencia",
+          "value": "75 W"
+        },
+        {
+          "label": "Velocidades",
+          "value": "3"
+        },
+        {
+          "label": "Aspas",
+          "value": "3, negras"
+        },
+        {
+          "label": "Parrilla",
+          "value": "Metálica, negra"
+        },
+        {
+          "label": "Barral",
+          "value": "Telescópico metálico, hasta 1,70 m"
+        },
+        {
+          "label": "Base",
+          "value": "Redonda"
+        },
+        {
+          "label": "Medidas",
+          "value": "52,4 x 16 x 74,6 cm"
+        }
+      ],
+      "descriptionHtml": "<p>El Liliana Orbital VPRN18 es un ventilador de pie de 18″ con un sistema que mueve el cabezal en forma elíptica.</p><h3>Sistema orbital</h3><p>El cabezal se desplaza sobre su eje y reparte la brisa de forma suave hacia ambos lados, arriba y abajo. El aire recircula de manera constante.</p><h3>Dispositivo repeler</h3><p>Permite colocar una tableta repelente de insectos de tamaño estándar. Las aspas distribuyen sus partículas por el ambiente.</p><h3>Construcción</h3><p>Tiene barral telescópico metálico de hasta 1,70 m, parrilla metálica y base redonda.</p>",
+      "revisar": [
+        "Las medidas de 52,4 x 16 x 74,6 cm parecen del producto embalado. Confirmar."
+      ]
+    },
+    {
+      "slug": "ventilador-de-pie-liliana-parrilla-cromada-digital-20",
+      "model": "VPD20R",
+      "seoTitle": "Ventilador de pie Liliana 20″ Digital",
+      "seoDescription": "Ventilador de pie Liliana VPD20R de 20″ y 90 W, orbital, con control remoto, timer de hasta 7:30 h y parrilla cromada. Garantía y envíos a todo el país.",
+      "shortDescription": "Ventilador de pie Liliana de 20″ y 90 W con comando digital, control remoto y timer programable hasta 7:30 h. Sistema orbital, modos Brisa y Sleep, parrilla cromada.",
+      "highlights": [
+        "Control remoto y timer programable hasta 7:30 h",
+        "Sistema orbital: brisa horizontal y vertical",
+        "Modo Brisa regula el caudal de aire solo",
+        "Función Sleep baja el caudal de a poco",
+        "Barral extensible con traba, hasta 1,70 m",
+        "Parrilla cromada y 3 aspas metálicas"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "De pie, orbital, comando digital"
+        },
+        {
+          "label": "Diámetro",
+          "value": "20″"
+        },
+        {
+          "label": "Potencia",
+          "value": "90 W"
+        },
+        {
+          "label": "Velocidades",
+          "value": "3"
+        },
+        {
+          "label": "Aspas",
+          "value": "3, metálicas"
+        },
+        {
+          "label": "Parrilla",
+          "value": "Cromada"
+        },
+        {
+          "label": "Control remoto",
+          "value": "Sí"
+        },
+        {
+          "label": "Timer",
+          "value": "Programable hasta 7:30 h"
+        },
+        {
+          "label": "Modos",
+          "value": "Brisa y Sleep"
+        },
+        {
+          "label": "Barral",
+          "value": "Extensible con traba, hasta 1,70 m"
+        },
+        {
+          "label": "Medidas",
+          "value": "57,4 x 16 x 75,5 cm"
+        }
+      ],
+      "descriptionHtml": "<p>El Liliana VPD20R es un ventilador de pie de 20″ con comando digital, control remoto y timer.</p><h3>Control</h3><p>Lo manejás con el control remoto. El timer se programa hasta 7:30 horas. El modo Brisa regula solo la intensidad del aire y la función Sleep la baja gradualmente mientras dormís.</p><h3>Sistema orbital</h3><p>Mueve el cabezal en forma elíptica y reparte el aire en horizontal y vertical.</p><h3>Repeler</h3><p>Admite una tableta repelente de insectos de tamaño estándar.</p><h3>Construcción</h3><p>Barral extensible con traba, base redonda, parrilla cromada, tres aspas metálicas y enrollacable.</p>",
+      "revisar": [
+        "Las medidas de 57,4 x 16 x 75,5 cm parecen del producto embalado. Confirmar."
+      ]
+    },
+    {
+      "slug": "ventilador-de-techo-embassy-retractil-con-luz-led",
+      "model": "KB-7018",
+      "seoTitle": "Ventilador de techo retráctil Embassy con luz",
+      "seoDescription": "Ventilador de techo retráctil Embassy KB-7018 de 42″ y 70 W con luz LED de tres tonos, control remoto y timer. Garantía y envíos a todo el país.",
+      "shortDescription": "Ventilador de techo Embassy KB-7018 de 42″ y 70 W con luz LED. Cuatro aspas retráctiles transparentes y control remoto para el motor, la luz (fría, neutra o cálida) y el timer.",
+      "highlights": [
+        "42″ y 70 W con cuatro aspas retráctiles",
+        "Luz LED con tres tonos: fría, neutra y cálida",
+        "Control remoto para motor, luz y timer",
+        "Aspas de plástico transparente",
+        "Plafón blanco"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "De techo, con luz"
+        },
+        {
+          "label": "Diámetro",
+          "value": "42″"
+        },
+        {
+          "label": "Potencia del motor",
+          "value": "70 W"
+        },
+        {
+          "label": "Aspas",
+          "value": "4, de plástico transparente, retráctiles"
+        },
+        {
+          "label": "Iluminación",
+          "value": "Lámpara LED (fría, neutra o cálida)"
+        },
+        {
+          "label": "Control remoto",
+          "value": "Motor, luz y timer"
+        },
+        {
+          "label": "Plafón",
+          "value": "Blanco"
+        }
+      ],
+      "descriptionHtml": "<p>El Embassy KB-7018 combina ventilador y luz en un solo equipo de techo. Tiene aspas retráctiles que quedan recogidas cuando no se usan.</p><h3>Ventilador</h3><p>Motor de 70 W y 42 pulgadas de diámetro, con cuatro aspas de plástico transparente.</p><h3>Luz LED</h3><p>La lámpara LED permite elegir luz fría, neutra o cálida.</p><h3>Control remoto</h3><p>Enciende el motor, la luz y programa el timer.</p><h3>Antes de comprar</h3><ul><li>No dice cuántas velocidades tiene.</li><li>La instalación en el techo no está incluida en el producto.</li></ul>",
+      "revisar": [
+        "Faltan cantidad de velocidades y potencia de la lámpara."
+      ]
+    },
+    {
+      "slug": "ventilador-de-techo-liliana-4-aspas-65w-c-luz",
+      "model": "VTHB114",
+      "seoTitle": "Ventilador de techo Liliana 4 aspas con luz",
+      "seoDescription": "Ventilador de techo Liliana VTHB114 de 65 W con luz LED, 4 palas metálicas de 1,2 m y 5 velocidades. Garantía y envíos a todo el país.",
+      "shortDescription": "Ventilador de techo Liliana VTHB114 con luz LED, 4 palas metálicas blancas de 1,2 m (48″) y 65 W. Cinco velocidades con regulador de pared y doble rodamiento blindado.",
+      "highlights": [
+        "Luz LED incluida",
+        "4 palas metálicas blancas de 1,2 m (48″)",
+        "5 velocidades con regulador de pared",
+        "Motor con doble rodamiento blindado",
+        "65 W y hasta 300 rpm",
+        "Industria argentina"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "De techo, con luz LED"
+        },
+        {
+          "label": "Diámetro",
+          "value": "1,2 m (48″)"
+        },
+        {
+          "label": "Palas",
+          "value": "4, metálicas, blancas"
+        },
+        {
+          "label": "Velocidades",
+          "value": "5"
+        },
+        {
+          "label": "Regulador",
+          "value": "De pared"
+        },
+        {
+          "label": "Potencia",
+          "value": "65 W"
+        },
+        {
+          "label": "Velocidad máxima",
+          "value": "300 rpm"
+        },
+        {
+          "label": "Motor",
+          "value": "Doble rodamiento blindado"
+        },
+        {
+          "label": "Medidas",
+          "value": "54,5 x 24,5 x 20 cm"
+        },
+        {
+          "label": "Origen",
+          "value": "Argentina"
+        }
+      ],
+      "descriptionHtml": "<p>El Liliana VTHB114 es un ventilador de techo con luz LED y cuatro palas metálicas blancas de 48″.</p><h3>Velocidad</h3><p>Se regula con un control de pared en 5 velocidades. La máxima es de 300 rpm.</p><h3>Motor</h3><p>Tiene doble rodamiento blindado y 65 W de potencia.</p><h3>Luz</h3><p>Incluye luz LED.</p><h3>Antes de comprar</h3><ul><li>El control es de pared, no trae control remoto.</li><li>La instalación no está incluida en el producto.</li></ul>",
+      "revisar": [
+        "Las medidas de 54,5 x 24,5 x 20 cm parecen del embalaje. La descripción original dice \"Garantía 2 años\": confirmar antes de mencionarla."
+      ]
+    },
+    {
+      "slug": "ventilador-de-techo-retractil-daihatsu",
+      "model": "DTECH43W",
+      "seoTitle": "Ventilador de techo retráctil Daihatsu",
+      "seoDescription": "Ventilador de techo retráctil Daihatsu con luz LED de 3 tonos, 70 W, 6 niveles de potencia y control remoto. Garantía y envíos a todo el país.",
+      "shortDescription": "Ventilador de techo Daihatsu de 120 cm con aspas retráctiles de acrílico transparente, luz LED de tres tonos, 6 niveles de potencia y control remoto.",
+      "highlights": [
+        "Aspas retráctiles transparentes de acrílico",
+        "120 cm de diámetro y motor de 70 W",
+        "6 niveles de potencia",
+        "Luz LED cálida, fría o neutra",
+        "Control remoto incluido"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "De techo, retráctil, con luz"
+        },
+        {
+          "label": "Diámetro",
+          "value": "120 cm"
+        },
+        {
+          "label": "Potencia del motor",
+          "value": "70 W"
+        },
+        {
+          "label": "Niveles de potencia",
+          "value": "6"
+        },
+        {
+          "label": "Aspas",
+          "value": "Retráctiles, de acrílico transparente"
+        },
+        {
+          "label": "Iluminación",
+          "value": "LED cálida, fría o neutra"
+        },
+        {
+          "label": "Control remoto",
+          "value": "Sí"
+        }
+      ],
+      "descriptionHtml": "<p>El Daihatsu DTECH43W es un ventilador de techo con luz LED y aspas retráctiles que se ven casi invisibles.</p><h3>Ventilador</h3><p>Motor de 70 W y 120 cm de diámetro, con 6 niveles de potencia. Las aspas son de acrílico transparente y se pliegan cuando no están en uso.</p><h3>Luz y control</h3><p>Lámpara LED en tres tonos (cálida, fría y neutra), con control remoto.</p><h3>Antes de comprar</h3><ul><li>La instalación en el techo no está incluida en el producto.</li></ul>",
+      "revisar": [
+        "La descripción original menciona \"1 año\" de garantía y \"bajo consumo / super silencioso\" sin datos: no los puse."
+      ]
+    },
+    {
+      "slug": "ventilador-turbo-18-alpaca",
+      "model": "VK-40",
+      "seoTitle": "Ventilador turbo 18″ Alpaca",
+      "seoDescription": "Ventilador turbo Alpaca VK-40 de 18″ y 75 W, con control de 3 velocidades y rotación de 180°. Garantía y envíos a todo el país.",
+      "shortDescription": "Ventilador turbo Alpaca VK-40 de 18″ y 75 W. Tiene control de 3 velocidades, rotación de 180° y está hecho en plástico ignífugo.",
+      "highlights": [
+        "18″ y 75 W de potencia",
+        "Control de 3 velocidades",
+        "Rotación de 180°",
+        "Plástico ignífugo"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Turbo"
+        },
+        {
+          "label": "Diámetro",
+          "value": "18″"
+        },
+        {
+          "label": "Potencia",
+          "value": "75 W"
+        },
+        {
+          "label": "Velocidades",
+          "value": "3"
+        },
+        {
+          "label": "Rotación",
+          "value": "180°"
+        },
+        {
+          "label": "Material",
+          "value": "Plástico ignífugo"
+        }
+      ],
+      "descriptionHtml": "<p>El Alpaca VK-40 es un ventilador turbo de 18″ y 75 W con control de 3 velocidades.</p><h3>Lo que sabemos</h3><p>Rota 180° para repartir el aire y está fabricado en plástico ignífugo.</p><p>Es una ficha corta: si necesitás más datos antes de comprar, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "Casi no hay información. No dice si es de pie, de mesa o de piso, ni cantidad de aspas, ni medidas. Pedir ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "ventilador-turbo-embassy-2-en-1-piso-pared",
+      "model": "FP-1870",
+      "seoTitle": "Ventilador turbo Embassy 18″ 2 en 1",
+      "seoDescription": "Ventilador turbo Embassy FP-1870 de 18″ y 70 W, 2 en 1 de piso y pared, oscilante, con 3 velocidades. Garantía y envíos a todo el país.",
+      "shortDescription": "Ventilador turbo Embassy FP-1870 de 18″ (45 cm) y 70 W que se usa en el piso o en la pared. Oscilante, con 3 velocidades y 5 aspas plásticas.",
+      "highlights": [
+        "2 en 1: piso o pared",
+        "Oscilante, con 3 velocidades",
+        "Cinco aspas plásticas de 18″ (45 cm)",
+        "70 W de potencia",
+        "Cable de 150 cm"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Turbo 2 en 1: piso y pared"
+        },
+        {
+          "label": "Diámetro",
+          "value": "18″ (45 cm)"
+        },
+        {
+          "label": "Aspas",
+          "value": "5, plásticas"
+        },
+        {
+          "label": "Velocidades",
+          "value": "3"
+        },
+        {
+          "label": "Oscilación",
+          "value": "Sí"
+        },
+        {
+          "label": "Potencia",
+          "value": "70 W"
+        },
+        {
+          "label": "Alimentación",
+          "value": "220 V, 50 Hz"
+        },
+        {
+          "label": "Cable",
+          "value": "150 cm"
+        },
+        {
+          "label": "Embalaje",
+          "value": "52 x 18 x 52 cm"
+        }
+      ],
+      "descriptionHtml": "<p>El Embassy FP-1870 es un ventilador turbo de 18″ que se apoya en el piso o se cuelga en la pared.</p><h3>Uso</h3><p>Tiene 3 velocidades y oscila para repartir el aire. La potencia es de 70 W.</p><h3>Datos</h3><p>Cinco aspas plásticas, 220 V, 50 Hz y cable de 150 cm.</p>",
+      "revisar": []
+    },
+    {
+      "slug": "ventilador-turbo-liliana-3-aspas-35w-10-cabezal-reclinable",
+      "model": "VTF10P",
+      "seoTitle": "Ventilador turbo Liliana 10″ 35 W",
+      "seoDescription": "Ventilador turbo Liliana VTF10P de 10″ y 35 W, 3 aspas, cabezal reclinable y 2 velocidades. Piso, mesa o pared. Garantía y envíos a todo el país.",
+      "shortDescription": "Ventilador turbo Liliana VTF10P de 10″ y 35 W con 3 aspas, 2 velocidades y cabezal reclinable. Se usa en el piso, sobre una mesa o en la pared.",
+      "highlights": [
+        "Tres usos: piso, mesa y pared",
+        "Cabezal reclinable para dirigir el aire",
+        "2 velocidades y 35 W",
+        "Diámetro de 10″ con 3 aspas",
+        "Compacto: 31,1 x 17,2 x 30,6 cm"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Turbo: piso, mesa y pared"
+        },
+        {
+          "label": "Diámetro",
+          "value": "10″"
+        },
+        {
+          "label": "Aspas",
+          "value": "3"
+        },
+        {
+          "label": "Velocidades",
+          "value": "2"
+        },
+        {
+          "label": "Potencia",
+          "value": "35 W"
+        },
+        {
+          "label": "Cabezal",
+          "value": "Reclinable"
+        },
+        {
+          "label": "Medidas",
+          "value": "31,1 x 17,2 x 30,6 cm"
+        }
+      ],
+      "descriptionHtml": "<p>El Liliana VTF10P es un ventilador turbo chico de 10″ y 35 W, pensado para espacios reducidos.</p><h3>Uso</h3><p>Lo apoyás en el piso o en una mesa, o lo colgás en la pared. El cabezal es reclinable, así que el aire va hacia donde lo necesitás.</p><h3>Datos</h3><p>Tiene 3 aspas y 2 velocidades.</p>",
+      "revisar": [
+        "La descripción original es texto de relleno; los datos salen de la descripción corta. Faltan material de las aspas y peso."
+      ]
+    },
+    {
+      "slug": "ventilador-turbo-liliana-5-aspas-16-65w",
+      "model": "VTF16P",
+      "seoTitle": "Ventilador turbo Liliana 16″ 65 W",
+      "seoDescription": "Ventilador turbo Liliana VTF16P de 16″ y 65 W con 5 aspas, base antideslizante, cabezal reclinable y 3 velocidades. Garantía y envíos a todo el país.",
+      "shortDescription": "Ventilador turbo Liliana VTF16P de 16″ y 65 W con 5 aspas negras, 3 velocidades, cabezal reclinable y base antideslizante. Motor reforzado y gran caudal de aire.",
+      "highlights": [
+        "5 aspas negras de 16″ y 65 W",
+        "3 velocidades y gran caudal de aire",
+        "Cabezal reclinable",
+        "Base antideslizante",
+        "Motor reforzado y parrilla plástica espiralada"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Turbo"
+        },
+        {
+          "label": "Diámetro",
+          "value": "16″"
+        },
+        {
+          "label": "Aspas",
+          "value": "5, negras"
+        },
+        {
+          "label": "Velocidades",
+          "value": "3"
+        },
+        {
+          "label": "Potencia",
+          "value": "65 W"
+        },
+        {
+          "label": "Cabezal",
+          "value": "Reclinable"
+        },
+        {
+          "label": "Base",
+          "value": "Antideslizante"
+        },
+        {
+          "label": "Parrilla",
+          "value": "Plástica espiralada"
+        },
+        {
+          "label": "Motor",
+          "value": "Reforzado"
+        },
+        {
+          "label": "Medidas",
+          "value": "54,2 x 23,2 x 50,8 cm"
+        }
+      ],
+      "descriptionHtml": "<p>El Liliana VTF16P es un ventilador turbo de 16″ con cinco aspas negras y un motor reforzado.</p><h3>Uso</h3><p>El cabezal reclinable permite dirigir el aire. La base antideslizante lo mantiene firme en el piso. Tiene 3 velocidades y mueve un gran caudal de aire.</p><h3>Construcción</h3><p>Parrilla plástica espiralada y motor reforzado. Potencia de 65 W.</p>",
+      "revisar": [
+        "La descripción larga dice 75 W y la corta 65 W. Usé 65 W (nombre y descripción corta). Confirmar."
+      ]
+    },
+    {
+      "slug": "ventilador-turbo-liliana-5-aspas-20-90w",
+      "model": "VTF18P",
+      "seoTitle": "Ventilador turbo Liliana 18″ 75 W",
+      "seoDescription": "Ventilador turbo Liliana VTF18P de 18″ y 75 W con 5 aspas, base antideslizante, cabezal reclinable y 3 velocidades. Garantía y envíos a todo el país.",
+      "shortDescription": "Ventilador turbo Liliana VTF18P de 18″ y 75 W con 5 aspas negras, 3 velocidades, cabezal reclinable y base antideslizante. Gran caudal de aire.",
+      "highlights": [
+        "5 aspas negras de 18″ y 75 W",
+        "3 velocidades y gran caudal de aire",
+        "Cabezal reclinable",
+        "Base antideslizante",
+        "Medidas: 60,3 x 23,8 x 57,5 cm"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Turbo"
+        },
+        {
+          "label": "Diámetro",
+          "value": "18″"
+        },
+        {
+          "label": "Aspas",
+          "value": "5, negras"
+        },
+        {
+          "label": "Velocidades",
+          "value": "3"
+        },
+        {
+          "label": "Potencia",
+          "value": "75 W"
+        },
+        {
+          "label": "Cabezal",
+          "value": "Reclinable"
+        },
+        {
+          "label": "Base",
+          "value": "Antideslizante"
+        },
+        {
+          "label": "Medidas",
+          "value": "60,3 x 23,8 x 57,5 cm"
+        }
+      ],
+      "descriptionHtml": "<p>El Liliana VTF18P es un ventilador turbo de 18″ y 75 W con cinco aspas negras.</p><h3>Uso</h3><p>La base antideslizante lo mantiene firme y el cabezal reclinable dirige el aire. Tiene 3 velocidades y mueve un gran caudal de aire.</p>",
+      "revisar": [
+        "El slug dice \"20-90w\" pero el producto es de 18″ y 75 W (nombre y descripción larga). La descripción corta dice \"75″\" y 90 W: error de origen. El slug no se cambia.",
+        "La descripción original menciona 2 años de garantía: confirmar antes de publicarlo."
+      ]
+    },
+    {
+      "slug": "ventilador-turbo-liliana-5-aspas-20-90w-2",
+      "model": "VTF20P",
+      "seoTitle": "Ventilador turbo Liliana 20″ 90 W",
+      "seoDescription": "Ventilador turbo Liliana VTF20P de 20″ y 90 W con 5 aspas, base antideslizante, cabezal reclinable y 3 velocidades. Garantía y envíos a todo el país.",
+      "shortDescription": "Ventilador turbo Liliana VTF20P de 20″ y 90 W con 5 aspas negras, 3 velocidades, cabezal reclinable y base antideslizante. Gran caudal de aire.",
+      "highlights": [
+        "5 aspas negras de 20″ y 90 W",
+        "3 velocidades y gran caudal de aire",
+        "Cabezal reclinable",
+        "Base antideslizante",
+        "Medidas: 64,8 x 23,8 x 62,9 cm"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Turbo"
+        },
+        {
+          "label": "Diámetro",
+          "value": "20″"
+        },
+        {
+          "label": "Aspas",
+          "value": "5, negras"
+        },
+        {
+          "label": "Velocidades",
+          "value": "3"
+        },
+        {
+          "label": "Potencia",
+          "value": "90 W"
+        },
+        {
+          "label": "Cabezal",
+          "value": "Reclinable"
+        },
+        {
+          "label": "Base",
+          "value": "Antideslizante"
+        },
+        {
+          "label": "Medidas",
+          "value": "64,8 x 23,8 x 62,9 cm"
+        }
+      ],
+      "descriptionHtml": "<p>El Liliana VTF20P es el más grande de la serie turbo: 20″ de diámetro, cinco aspas negras y 90 W.</p><h3>Uso</h3><p>La base antideslizante lo mantiene firme y el cabezal reclinable dirige el aire. Tiene 3 velocidades y mueve un gran caudal de aire.</p>",
+      "revisar": [
+        "La descripción larga es texto de relleno; los datos salen de la descripción corta."
+      ]
+    },
+    {
+      "slug": "auricular-headset-verbatim-con-mic-y-control-remoto-en-linea",
+      "name": "Auricular Headset Verbatim con Micrófono y Control Remoto en Línea",
+      "brand": "Verbatim",
+      "model": "70723",
+      "seoTitle": "Auricular Headset Verbatim con micrófono",
+      "seoDescription": "Auricular headset Verbatim con micrófono y control remoto en línea para llamadas y música. Diseño ergonómico. Garantía y envíos a todo el país.",
+      "shortDescription": "Auricular headset Verbatim con micrófono integrado y control remoto en línea para manejar llamadas y música. Diseño ergonómico.",
+      "highlights": [
+        "Micrófono integrado para llamadas",
+        "Control remoto en línea para llamadas y música",
+        "Diseño ergonómico para uso prolongado"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Headset con micrófono"
+        },
+        {
+          "label": "Control",
+          "value": "Remoto en línea"
+        }
+      ],
+      "descriptionHtml": "<p>El headset Verbatim tiene micrófono integrado y control remoto en el cable, para atender llamadas y manejar la música sin sacar el celular.</p><h3>Para qué sirve</h3><p>Sirve para trabajar, estudiar o escuchar música. El diseño ergonómico busca que sea cómodo en sesiones largas.</p><p>Es una ficha corta: si querés confirmar compatibilidad, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "Casi no hay datos: falta tipo de conector, largo de cable, impedancia, color y si es de diadema o in-ear. Pedir ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "auriculares-estereo-verbatim-con-microfono",
+      "name": "Auriculares Headset Verbatim Estéreo con Micrófono",
+      "brand": "Verbatim",
+      "model": "70721",
+      "seoTitle": "Auricular Verbatim estéreo con micrófono",
+      "seoDescription": "Auricular headset Verbatim estéreo con micrófono giratorio, banda ajustable y conector de 3,5 mm. Garantía y envíos a todo el país.",
+      "shortDescription": "Auricular headset Verbatim estéreo con micrófono giratorio, banda ajustable y almohadillas de espuma. Conector de audio de 3,5 mm.",
+      "highlights": [
+        "Banda ajustable para cualquier tamaño de cabeza",
+        "Almohadillas de espuma suave",
+        "Micrófono giratorio que se sube cuando no lo usás",
+        "Conector de audio de 3,5 mm",
+        "Sonido estéreo"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Headset estéreo de diadema"
+        },
+        {
+          "label": "Conector",
+          "value": "Audio de 3,5 mm"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Giratorio"
+        },
+        {
+          "label": "Banda",
+          "value": "Ajustable"
+        },
+        {
+          "label": "Almohadillas",
+          "value": "Espuma suave"
+        }
+      ],
+      "descriptionHtml": "<p>El headset estéreo Verbatim se conecta por el jack de 3,5 mm y trae un micrófono giratorio.</p><h3>Comodidad</h3><p>La banda ajustable se adapta a cualquier tamaño de cabeza. Las almohadillas de espuma suave son cómodas durante mucho tiempo.</p><h3>Micrófono</h3><p>Se posiciona para hablar mejor y se gira hacia arriba cuando no lo usás.</p><h3>Compatibilidad</h3><p>Con el conector de 3,5 mm se enchufa directo en dispositivos que lo tengan.</p>",
+      "revisar": [
+        "Falta largo de cable, impedancia y tamaño de los drivers. La garantía limitada de 1 año figura en la descripción original: no la mencioné."
+      ]
+    },
+    {
+      "slug": "auriculares-gamer-noga-stormer-bold",
+      "brand": "Noga",
+      "model": "Stormer 1688",
+      "seoTitle": "Auriculares gamer Noga Bold",
+      "seoDescription": "Auriculares gamer Noga Bold con parlantes de 40 mm, bajos potentes y almohadillas acolchadas. Garantía y envíos a todo el país.",
+      "shortDescription": "Auriculares gamer Noga Bold con parlantes de 40 mm, bajos potentes y agudos profundos. Almohadillas acolchadas que aíslan del ruido externo.",
+      "highlights": [
+        "Parlantes de 40 mm de diámetro",
+        "Bajos potentes y agudos profundos",
+        "Almohadillas acolchadas que aíslan el ruido externo"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Auriculares gamer"
+        },
+        {
+          "label": "Parlantes",
+          "value": "40 mm"
+        }
+      ],
+      "descriptionHtml": "<p>Los Noga Bold son auriculares gamer con parlantes de 40 mm, pensados para jugar con buen sonido.</p><h3>Sonido</h3><p>Los parlantes de 40 mm entregan bajos potentes y agudos profundos.</p><h3>Comodidad</h3><p>Las almohadillas son acolchadas y aíslan parte del ruido externo.</p><p>Es una ficha corta: si querés confirmar la conexión o la compatibilidad, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "Casi no hay datos: falta conector (3,5 mm o USB), micrófono, luces, largo de cable y compatibilidad.",
+        "El SKU es \"Noga Stormer 1688\" y el slug dice \"stormer-bold\": confirmar si el modelo es Stormer o Bold. Puse como modelo \"Stormer 1688\"."
+      ]
+    },
+    {
+      "slug": "cable-auxiliar-general-electric-1-2m",
+      "name": "Cable Auxiliar General Electric 1,2 m",
+      "brand": "General Electric",
+      "model": "13697",
+      "seoTitle": "Cable auxiliar General Electric 1,2 m",
+      "seoDescription": "Cable auxiliar General Electric de 1,2 m para conectar equipos de audio. Nuevo, con garantía oficial y envíos a todo el país, retiro en Córdoba.",
+      "shortDescription": "Cable auxiliar General Electric de 1,2 m. Sirve para conectar equipos de audio entre sí.",
+      "highlights": [
+        "Cable auxiliar de 1,2 m",
+        "Marca General Electric"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cable auxiliar de audio"
+        },
+        {
+          "label": "Largo",
+          "value": "1,2 m"
+        }
+      ],
+      "descriptionHtml": "<p>Cable auxiliar General Electric de 1,2 m, para conectar equipos de audio.</p><h3>Lo que sabemos</h3><p>Es un cable auxiliar de 1,2 metros. La publicación no detalla el tipo de conectores.</p><p>Si necesitás confirmar compatibilidad, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "Casi no hay datos: falta tipo de conectores (3,5 mm macho/macho, ángulo), color y material.",
+        "La marca figuraba como \"General\": la cambié a General Electric por el nombre."
+      ]
+    },
+    {
+      "slug": "cable-hdmi-general-electric-3-metros-premium",
+      "name": "Cable HDMI General Electric 3 m Premium",
+      "brand": "General Electric",
+      "model": "33520",
+      "seoTitle": "Cable HDMI General Electric 3 m Premium",
+      "seoDescription": "Cable HDMI General Electric Premium de 3 metros para conectar TV, monitor y otros equipos. Con garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cable HDMI General Electric Premium de 3 metros. Sirve para conectar un televisor, monitor o proyector a otro equipo de video.",
+      "highlights": [
+        "Cable HDMI de 3 metros",
+        "Línea Premium de General Electric"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cable HDMI"
+        },
+        {
+          "label": "Largo",
+          "value": "3 m"
+        },
+        {
+          "label": "Línea",
+          "value": "Premium"
+        }
+      ],
+      "descriptionHtml": "<p>Cable HDMI General Electric Premium de 3 metros, para conectar televisores, monitores y otros equipos con entrada HDMI.</p><h3>Lo que sabemos</h3><p>Tiene 3 metros de largo. La publicación no detalla la versión de HDMI ni si soporta 4K.</p><p>Si necesitás confirmar la versión de HDMI, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "Casi no hay datos: falta versión de HDMI (1.4, 2.0), si soporta 4K, blindaje y tipo de conectores.",
+        "La marca figuraba como \"General\": la cambié a General Electric por el nombre."
+      ]
+    },
+    {
+      "slug": "filmadora-panasonic-hc-v900-hd",
+      "name": "Videocámara Panasonic HC-V900 Full HD",
+      "model": "HC-V900",
+      "seoTitle": "Filmadora Panasonic HC-V900 Full HD",
+      "seoDescription": "Filmadora Panasonic HC-V900 Full HD con zoom óptico 24x, estabilizador de 5 ejes, sensor BSI y USB-C. Garantía y envíos a todo el país.",
+      "shortDescription": "Videocámara Panasonic HC-V900 Full HD con sensor BSI de 1/2,5″, lente gran angular de 25 mm, zoom óptico 24x y estabilizador HYBRID O.I.S.+ de 5 ejes.",
+      "highlights": [
+        "Zoom óptico 24x e i.Zoom 32x",
+        "Gran angular de 25 mm para grupos y paisajes",
+        "Estabilizador HYBRID O.I.S.+ de 5 ejes",
+        "Full HD a 60p/50p, MP4 y AVCHD",
+        "Sensor BSI de 1/2,5″ para poca luz",
+        "Pantalla táctil giratoria de 3″ y USB-C"
+      ],
+      "specs": [
+        {
+          "label": "Sensor",
+          "value": "BSI MOS de 1/2,5″"
+        },
+        {
+          "label": "Resolución de video",
+          "value": "Full HD (1920 x 1080) a 60p/50p/24p"
+        },
+        {
+          "label": "Formatos",
+          "value": "MP4 y AVCHD"
+        },
+        {
+          "label": "Lente",
+          "value": "Gran angular de 25 mm (equivalente 35 mm), f/1,8 a f/4,0"
+        },
+        {
+          "label": "Zoom",
+          "value": "Óptico 24x, i.Zoom 32x, digital 70x/1500x"
+        },
+        {
+          "label": "Estabilizador",
+          "value": "HYBRID O.I.S.+ de 5 ejes, con Ball O.I.S. y Level Shot"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Táctil LCD de 3,0″ (460.800 puntos), giratoria"
+        },
+        {
+          "label": "Audio",
+          "value": "Micrófono de zoom estéreo con protección contra el viento; entrada de micrófono de 3,5 mm"
+        },
+        {
+          "label": "Conexiones",
+          "value": "Micro HDMI y USB-C"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "Tarjetas SD, SDHC y SDXC"
+        }
+      ],
+      "descriptionHtml": "<p>La Panasonic HC-V900 es una videocámara Full HD compacta para eventos, viajes y videos familiares. Tiene lente gran angular de 25 mm y zoom óptico de 24x.</p><h3>Imagen</h3><ul><li>Sensor BSI MOS de 1/2,5″ pensado para escenas con poca luz.</li><li>Zoom óptico 24x e i.Zoom de 32x.</li><li>Full HD a 60p/50p en MP4 y AVCHD.</li></ul><h3>Estabilización y enfoque</h3><p>El HYBRID O.I.S.+ corrige 5 ejes, tanto en gran angular como en teleobjetivo. Level Shot corrige la inclinación del horizonte. El autofocus sigue rostros y sujetos en movimiento.</p><h3>Audio y conexiones</h3><p>Micrófono de zoom estéreo con protección contra el viento y entrada de micrófono de 3,5 mm. Pantalla táctil giratoria de 3″. Se carga y transfiere por USB-C.</p>",
+      "revisar": [
+        "La descripción original menciona \"Leica Dicomar\" y \"Full HD\" sin detalles de la caja: no pude confirmar qué accesorios trae. Agregar \"En la caja\"."
+      ]
+    },
+    {
+      "slug": "grabador-portatil-zoom-h4n-pro",
+      "name": "Grabador Portátil Zoom H4n Pro",
+      "brand": "Zoom",
+      "model": "H4n Pro",
+      "seoTitle": "Grabador portátil Zoom H4n Pro 4 pistas",
+      "seoDescription": "Grabador portátil Zoom H4n Pro de 4 pistas con micrófonos X/Y, entradas XLR/TRS, phantom y USB. Garantía y envíos a todo el país.",
+      "shortDescription": "Grabador portátil Zoom H4n Pro de 4 pistas con micrófonos estéreo X/Y, dos entradas combo XLR/TRS, alimentación phantom y graba en tarjetas SD hasta 24 bits/96 kHz.",
+      "highlights": [
+        "Graba 4 pistas en simultáneo",
+        "Micrófonos estéreo X/Y ajustables de 90° a 120°",
+        "Dos entradas combo XLR/TRS con phantom +24/+48 V",
+        "Hasta 24 bits/96 kHz en WAV o MP3",
+        "Funciona como interfaz de audio USB 2x2",
+        "Efectos, metrónomo, afinador y looper"
+      ],
+      "specs": [
+        {
+          "label": "Pistas",
+          "value": "4 en simultáneo"
+        },
+        {
+          "label": "Micrófonos",
+          "value": "Estéreo X/Y incorporados, 90° a 120°"
+        },
+        {
+          "label": "Nivel máximo",
+          "value": "Hasta 140 dB SPL con los micrófonos X/Y"
+        },
+        {
+          "label": "Entradas",
+          "value": "2 combo XLR/TRS con bloqueo; mini jack estéreo de 1/8″ mic/línea"
+        },
+        {
+          "label": "Alimentación phantom",
+          "value": "+24 V o +48 V; plug-in de 2,5 V en el mini jack"
+        },
+        {
+          "label": "Resolución",
+          "value": "Hasta 24 bits/96 kHz"
+        },
+        {
+          "label": "Ruido de entrada",
+          "value": "-120 dBu EIN"
+        },
+        {
+          "label": "Formatos",
+          "value": "WAV (BWF) y MP3"
+        },
+        {
+          "label": "Salidas",
+          "value": "Auriculares/línea con volumen propio"
+        },
+        {
+          "label": "Interfaz USB",
+          "value": "2 entradas / 2 salidas, para PC o Mac"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "Tarjetas SD"
+        },
+        {
+          "label": "En la caja",
+          "value": "Manual, cable USB y estuche protector"
+        }
+      ],
+      "descriptionHtml": "<p>El Zoom H4n Pro es un grabador portátil de 4 pistas para músicos y realizadores. Combina micrófonos X/Y, preamplificadores de bajo ruido y entradas profesionales.</p><h3>Modos de grabación</h3><p>En modo estéreo usás los micrófonos X/Y o micrófonos externos: sirve para ensayos, actuaciones y instrumentos acústicos. El modo de 4 canales graba con los X/Y y dos entradas externas a la vez, por ejemplo el sonido de sala y la salida de una mesa.</p><h3>Entradas y salidas</h3><p>Dos conectores combo XLR/TRS con phantom conmutable y una entrada de micrófono o línea de 1/8″. Monitoreás con auriculares o por la salida de línea.</p><h3>Herramientas</h3><p>Trae EQ, compresión, reverb, delay, emuladores de amplis, metrónomo, afinador y looper.</p><h3>Archivos</h3><p>Graba en WAV (BWF, con marcas y fecha) o en MP3.</p><h3>Antes de comprar</h3><ul><li>Graba en tarjeta SD: la tarjeta no figura entre los accesorios incluidos.</li><li>Los accesorios opcionales (estuche PCH-4n, antiviento WSU-1, adaptador AD-14, control remoto RC4) se venden aparte.</li></ul>",
+      "revisar": [
+        "La descripción corta dice \"SD y SD\" (cortada). Puse \"Tarjetas SD\": confirmar si es SD y SDHC.",
+        "La lista \"En la caja\" de la descripción original es corta (manual, USB, estuche). Confirmar si trae también pilas o adaptador.",
+        "La marca figuraba como \"General\": la cambié a Zoom por el nombre."
+      ]
+    },
+    {
+      "slug": "microfono-corbatero-waggs-inalambrico-lightning-y-usb-c",
+      "brand": "Waggs",
+      "model": "Lavalier Lightning/USB-C",
+      "seoTitle": "Micrófono corbatero Waggs Lightning y USB-C",
+      "seoDescription": "Micrófono corbatero inalámbrico Waggs con conexión Lightning y USB-C para celulares. Ideal para entrevistas. Garantía y envíos a todo el país.",
+      "shortDescription": "Micrófono corbatero inalámbrico Waggs con conectores Lightning y USB-C para celulares. Recomendado para entrevistas: reduce el ruido ambiente y capta la voz.",
+      "highlights": [
+        "Inalámbrico, tipo corbatero (lavalier)",
+        "Incluye conexión Lightning y USB-C",
+        "Pensado para celulares",
+        "Recomendado para entrevistas",
+        "Reduce el sonido ambiental"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Corbatero (lavalier) inalámbrico"
+        },
+        {
+          "label": "Conectores",
+          "value": "Lightning y USB-C"
+        },
+        {
+          "label": "Compatible con",
+          "value": "Celulares"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Entrevistas"
+        }
+      ],
+      "descriptionHtml": "<p>El micrófono corbatero Waggs es inalámbrico y viene con conexión Lightning y USB-C, para usarlo con iPhone o con celulares Android que tengan USB-C.</p><h3>Uso</h3><p>Se prende a la ropa y capta tu voz de cerca. Está recomendado para entrevistas, videos y notas de voz. Busca reducir el sonido ambiental.</p><p>Si necesitás confirmar la compatibilidad con tu celular, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "Casi no hay datos: falta alcance, batería, si trae receptor y cuántos micrófonos incluye.",
+        "La descripción corta dice \"frecuencia máxima 20 Hz y mínima 20 Hz\": es un error, no lo puse.",
+        "La marca figuraba como \"General\": la cambié a Waggs por el nombre."
+      ]
+    },
+    {
+      "slug": "microfono-waggs-omnidireccional",
+      "brand": "Waggs",
+      "model": "MICR02",
+      "seoTitle": "Micrófono Waggs omnidireccional condenser",
+      "seoDescription": "Micrófono condenser Waggs omnidireccional con brazo ajustable y filtro antipop, conexión Jack 3,5 mm y XLR. Garantía y envíos a todo el país.",
+      "shortDescription": "Micrófono condenser Waggs omnidireccional con brazo ajustable, filtro antipop y cable de 3 m. Conexión jack de 3,5 mm o XLR, para grabar, transmitir y hacer podcasts.",
+      "highlights": [
+        "Condenser omnidireccional",
+        "Brazo ajustable con filtro antipop",
+        "Conexión jack de 3,5 mm o XLR",
+        "Respuesta de frecuencia de 20 Hz a 20 kHz",
+        "Compatible con Windows, macOS, PS4 y Xbox",
+        "Cable de 3 metros"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Condenser omnidireccional"
+        },
+        {
+          "label": "Respuesta de frecuencia",
+          "value": "20 Hz a 20 kHz"
+        },
+        {
+          "label": "Impedancia",
+          "value": "50 Ω"
+        },
+        {
+          "label": "Sensibilidad",
+          "value": "-38 dB"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Jack 3,5 mm / XLR"
+        },
+        {
+          "label": "Cable",
+          "value": "3 m"
+        },
+        {
+          "label": "Peso",
+          "value": "1,2 kg"
+        },
+        {
+          "label": "Color",
+          "value": "Negro y dorado"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Windows, macOS, PS4 y Xbox"
+        },
+        {
+          "label": "En la caja",
+          "value": "Micrófono, filtro antipop, brazo ajustable, cable jack de 3,5 mm y manual"
+        }
+      ],
+      "descriptionHtml": "<p>El micrófono Waggs es un condenser pensado para grabaciones, transmisiones en vivo y podcasts. Viene con brazo ajustable y filtro antipop.</p><h3>Sonido</h3><p>Responde de 20 Hz a 20 kHz con sensibilidad de -38 dB. El filtro antipop integrado reduce los golpes de aire de la voz.</p><h3>Conexión</h3><p>Tiene conexión jack de 3,5 mm o XLR. Sirve con computadoras, mezcladores y consolas como PS4 y Xbox.</p><h3>En la caja</h3><p>Micrófono condenser, filtro antipop, brazo ajustable, cable jack de 3,5 mm y manual de usuario.</p><h3>Antes de comprar</h3><ul><li>Con XLR necesitás una interfaz o mezclador con entrada para ese conector.</li></ul>",
+      "revisar": [
+        "La descripción dice a la vez \"Cardioide\" y \"Omnidireccional\". Usé \"omnidireccional\" por el nombre. Confirmar.",
+        "No queda claro si el XLR viene con cable (solo figura el cable jack de 3,5 mm).",
+        "La marca figuraba como \"General\": la cambié a Waggs por el nombre."
+      ]
+    },
+    {
+      "slug": "monitor-led-22-samsung-t350-fhd-ips-5ms-hdmi-vga-75hz",
+      "name": "Monitor LED 22″ Samsung T350 FHD IPS 5 ms HDMI VGA 75 Hz",
+      "brand": "Samsung",
+      "model": "LF22T350FHLCZB",
+      "seoTitle": "Monitor Samsung 22″ T350 FHD IPS 75 Hz",
+      "seoDescription": "Monitor Samsung T350 de 22″ Full HD con panel IPS, 75 Hz, 5 ms, HDMI y VGA, FreeSync y modo Eye Saver. Garantía y envíos a todo el país.",
+      "shortDescription": "Monitor Samsung T350 de 22″ Full HD con panel IPS, 75 Hz y 5 ms de respuesta. Entradas HDMI y VGA, FreeSync, modo de juego y Eye Saver.",
+      "highlights": [
+        "Panel IPS de 22″ Full HD (1920 x 1080)",
+        "75 Hz con tiempo de respuesta de 5 ms",
+        "Entradas HDMI 1.4 y VGA (D-sub)",
+        "AMD FreeSync para juegos más fluidos",
+        "Modos Eye Saver y Flicker Free para cuidar la vista",
+        "Modo de juego"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "IPS LED de 22″, 16:9"
+        },
+        {
+          "label": "Resolución",
+          "value": "1920 x 1080 (Full HD)"
+        },
+        {
+          "label": "Frecuencia",
+          "value": "75 Hz"
+        },
+        {
+          "label": "Tiempo de respuesta",
+          "value": "5 ms"
+        },
+        {
+          "label": "Brillo",
+          "value": "250 cd/m²"
+        },
+        {
+          "label": "Contraste",
+          "value": "1000:1 (típico)"
+        },
+        {
+          "label": "Entradas",
+          "value": "HDMI 1.4 y VGA (D-sub)"
+        },
+        {
+          "label": "Funciones",
+          "value": "FreeSync, Game Mode, Eye Saver Mode, Flicker Free, Eco Saving Plus"
+        },
+        {
+          "label": "Medidas con base",
+          "value": "48,89 x 39,69 x 23,2 cm, 2,3 kg"
+        },
+        {
+          "label": "Medidas sin base",
+          "value": "48,89 x 29,44 x 3,94 cm, 2,0 kg"
+        },
+        {
+          "label": "Cable de alimentación",
+          "value": "1,5 m"
+        }
+      ],
+      "descriptionHtml": "<p>El Samsung T350 es un monitor de 22″ Full HD con panel IPS y 75 Hz. Sirve para la casa, la oficina y para jugar.</p><h3>Imagen</h3><p>El panel IPS mantiene los colores desde cualquier ángulo. Los 75 Hz dan una imagen más suave que los 60 Hz de un monitor básico.</p><h3>Para jugar</h3><p>AMD FreeSync sincroniza el monitor con la placa de video para reducir el desgarro de imagen. El modo de juego ajusta color y contraste.</p><h3>Cuidado visual</h3><p>Flicker Free elimina el parpadeo y Eye Saver reduce la luz azul para que la vista se canse menos.</p><h3>Conexiones</h3><p>Entradas HDMI y VGA para conectar dos equipos.</p>",
+      "revisar": [
+        "La descripción no menciona parlantes ni USB: confirmar antes de publicar.",
+        "La marca figuraba como \"General\": la cambié a Samsung por el nombre."
+      ]
+    },
+    {
+      "slug": "monitor-smart-samsung-32%e2%80%b3-m5-fhd-60hz-wi-fi-bt",
+      "name": "Monitor Smart Samsung 32″ M5 FHD 60 Hz Wi-Fi y Bluetooth",
+      "brand": "Samsung",
+      "model": "LS32BM500ELCZB",
+      "seoTitle": "Monitor Smart Samsung M5 32″ Full HD",
+      "seoDescription": "Monitor Smart Samsung M5 de 32″ Full HD con Wi-Fi y Bluetooth, apps de video integradas, AirPlay y HDR10. Garantía y envíos a todo el país.",
+      "shortDescription": "Monitor Smart Samsung M5 de 32″ Full HD, 60 Hz, con Wi-Fi y Bluetooth. Trae apps como Netflix y YouTube y sirve también como pantalla de trabajo sin PC.",
+      "highlights": [
+        "32″ Full HD con panel VA y HDR10",
+        "Apps de video integradas, como Netflix y YouTube",
+        "Wi-Fi y Bluetooth",
+        "Modo Trabajo: Microsoft 365 y acceso remoto a otra PC",
+        "AirPlay y Samsung DeX",
+        "Sensor de luz que ajusta el brillo"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "32″, 16:9, panel VA"
+        },
+        {
+          "label": "Resolución",
+          "value": "1920 x 1080 (Full HD)"
+        },
+        {
+          "label": "Frecuencia",
+          "value": "60 Hz"
+        },
+        {
+          "label": "Tiempo de respuesta",
+          "value": "4 ms (GTG)"
+        },
+        {
+          "label": "Brillo",
+          "value": "250 cd/m² típico, 200 mín."
+        },
+        {
+          "label": "Contraste",
+          "value": "3000:1 típico"
+        },
+        {
+          "label": "Ángulo de visión",
+          "value": "178° (H) / 178° (V)"
+        },
+        {
+          "label": "HDR",
+          "value": "HDR10"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi y Bluetooth"
+        },
+        {
+          "label": "Smart",
+          "value": "Apps de video, modo Trabajo, SmartThings, AirPlay"
+        }
+      ],
+      "descriptionHtml": "<p>El Samsung M5 es un Smart Monitor de 32″: sirve como monitor de PC y también para ver contenido sin conectar una computadora.</p><h3>Entretenimiento</h3><p>Con conexión Wi-Fi accedés a apps como Netflix y YouTube desde el monitor. Con AirPlay, tu iPhone, iPad o Mac se ve en la pantalla grande.</p><h3>Trabajo</h3><p>El modo Trabajo permite navegar, editar documentos con Microsoft 365 y acceder a otra PC. Con Samsung DeX se conecta a celulares Samsung.</p><h3>Imagen</h3><p>Panel VA con contraste de 3000:1, HDR10 y 178° de ángulo de visión. El sensor de luz ajusta el brillo al ambiente.</p><h3>Hogar</h3><p>Con SmartThings lo usás como centro de control de tus dispositivos conectados.</p><h3>Antes de comprar</h3><ul><li>La cámara SlimFit para videollamadas es un accesorio que se compra por separado.</li></ul>",
+      "revisar": [
+        "La descripción original está cortada. Faltan puertos (HDMI, USB), parlantes, soporte VESA y medidas.",
+        "\"BT\" en el nombre lo expandí a Bluetooth. La marca figuraba como \"General\": la cambié a Samsung por el nombre."
+      ]
+    },
+    {
+      "slug": "netmak-cable-hdmi-4k-m-m-v2-0-15m-nm-c98",
+      "name": "Cable HDMI Netmak 4K Macho/Macho V2.0 1,5 m NM-C98",
+      "model": "NM-C98",
+      "seoTitle": "Cable HDMI Netmak 4K V2.0 1,5 m",
+      "seoDescription": "Cable HDMI Netmak 4K versión 2.0 de 1,5 m, macho/macho, con HDR, 3D, audio multicanal y blindaje triple. Garantía y envíos a todo el país.",
+      "shortDescription": "Cable HDMI Netmak NM-C98 de 1,5 metros, versión 2.0, macho/macho. Transmite video 4K Ultra HD con HDR y audio multicanal.",
+      "highlights": [
+        "HDMI 2.0 con video 4K Ultra HD",
+        "Compatible con HDR, 3D y audio multicanal",
+        "Conectores macho/macho de 1,5 m",
+        "Blindaje triple contra interferencias",
+        "Para Smart TV, consolas, Blu-ray, PC y proyectores"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "HDMI macho/macho"
+        },
+        {
+          "label": "Versión",
+          "value": "2.0"
+        },
+        {
+          "label": "Largo",
+          "value": "1,5 m"
+        },
+        {
+          "label": "Resolución",
+          "value": "4K Ultra HD"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "HDR, 3D y audio multicanal"
+        },
+        {
+          "label": "Blindaje",
+          "value": "Triple"
+        }
+      ],
+      "descriptionHtml": "<p>El cable HDMI Netmak NM-C98 de 1,5 metros es versión 2.0 y transmite video 4K y audio multicanal.</p><h3>Qué soporta</h3><p>Resolución 4K Ultra HD, HDR, 3D y audio multicanal.</p><h3>Construcción</h3><p>Blindaje triple que protege la señal de interferencias electromagnéticas. Los conectores facilitan la instalación en espacios reducidos.</p><h3>Para qué usarlo</h3><p>Conecta Smart TV, consolas, reproductores Blu-ray, computadoras y proyectores.</p>",
+      "revisar": [
+        "El mismo código NM-C98 aparece en la versión de 3 m. Confirmar que no se mezclan fichas."
+      ]
+    },
+    {
+      "slug": "netmak-cable-hdmi-4k-m-m-v2-0-3m-nm-c98-3",
+      "name": "Cable HDMI Netmak 4K Macho/Macho V2.0 3 m NM-C98",
+      "model": "NM-C98",
+      "seoTitle": "Cable HDMI Netmak 4K V2.0 3 m",
+      "seoDescription": "Cable HDMI Netmak 4K versión 2.0 de 3 metros, macho/macho, hasta 18 Gbps y 4K a 60 fps. Garantía y envíos a todo el país.",
+      "shortDescription": "Cable HDMI Netmak NM-C98 de 3 metros, versión 2.0, macho/macho. Soporta video 4K a 60 fps con un ancho de banda de hasta 18 Gbps.",
+      "highlights": [
+        "HDMI 2.0 con video 4K a 60 fps",
+        "Ancho de banda de hasta 18 Gbps",
+        "Audio digital multicanal",
+        "Conectores macho/macho de 3 m",
+        "Para TV, monitores, consolas y decodificadores"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "HDMI macho/macho"
+        },
+        {
+          "label": "Versión",
+          "value": "2.0"
+        },
+        {
+          "label": "Largo",
+          "value": "3 m"
+        },
+        {
+          "label": "Resolución",
+          "value": "4K Ultra HD a 60 fps"
+        },
+        {
+          "label": "Ancho de banda",
+          "value": "Hasta 18 Gbps"
+        },
+        {
+          "label": "Audio",
+          "value": "Digital multicanal"
+        }
+      ],
+      "descriptionHtml": "<p>El cable HDMI Netmak NM-C98 de 3 metros es versión 2.0. Es útil cuando el televisor queda lejos del equipo.</p><h3>Qué soporta</h3><p>Video 4K a 60 fps y audio digital multicanal, con un ancho de banda de hasta 18 Gbps.</p><h3>Para qué usarlo</h3><p>Conecta televisores, monitores, consolas, decodificadores y computadoras.</p>",
+      "revisar": [
+        "El mismo código NM-C98 aparece en la versión de 1,5 m; el SKU de esta es \"NM-C98 3\". Confirmar el código."
+      ]
+    },
+    {
+      "slug": "netmak-cable-hdmi-m-m-v1-4-10m-nm-c47-10",
+      "name": "Cable HDMI Netmak Macho/Macho V1.4 10 m NM-C47",
+      "model": "NM-C47",
+      "seoTitle": "Cable HDMI Netmak V1.4 de 10 m",
+      "seoDescription": "Cable HDMI Netmak versión 1.4 de 10 metros, macho/macho, hasta 1080p Full HD con audio multicanal. Garantía y envíos a todo el país.",
+      "shortDescription": "Cable HDMI Netmak NM-C47 de 10 metros, versión 1.4, macho/macho. Transmite video hasta 1080p Full HD y audio multicanal.",
+      "highlights": [
+        "HDMI 1.4 con video hasta 1080p Full HD",
+        "Audio multicanal",
+        "Largo de 10 metros",
+        "Conectores macho/macho",
+        "Para TV, monitores, proyectores, consolas y Blu-ray"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "HDMI macho/macho"
+        },
+        {
+          "label": "Versión",
+          "value": "1.4"
+        },
+        {
+          "label": "Largo",
+          "value": "10 m"
+        },
+        {
+          "label": "Resolución",
+          "value": "Hasta 1080p Full HD"
+        },
+        {
+          "label": "Audio",
+          "value": "Multicanal"
+        }
+      ],
+      "descriptionHtml": "<p>El cable HDMI Netmak NM-C47 mide 10 metros y es versión 1.4. Sirve para llegar a equipos que quedan lejos entre sí.</p><h3>Qué soporta</h3><p>Video hasta 1080p Full HD y audio multicanal.</p><h3>Para qué usarlo</h3><p>Conecta televisores, monitores, proyectores, consolas, reproductores Blu-ray y otros equipos multimedia.</p><h3>Antes de comprar</h3><ul><li>Es HDMI 1.4: la descripción indica hasta 1080p. Si buscás 4K, conviene el modelo de versión 2.0.</li></ul>",
+      "revisar": []
+    },
+    {
+      "slug": "panasonic-ag-cx20",
+      "name": "Videocámara Panasonic AG-CX20 4K",
+      "model": "AG-CX20",
+      "seoTitle": "Videocámara Panasonic AG-CX20 4K",
+      "seoDescription": "Videocámara profesional Panasonic AG-CX20 con grabación 4K UHD a 60p, zoom óptico 20x, HDMI, USB 3.0 y XLR. Garantía y envíos a todo el país.",
+      "shortDescription": "Videocámara profesional Panasonic AG-CX20 con grabación 4K UHD a 60p, zoom óptico 20x y estabilización híbrida de 5 ejes. Salida HDMI, USB 3.0 y audio XLR.",
+      "highlights": [
+        "Grabación 4K UHD a 60p",
+        "Zoom óptico 20x",
+        "Estabilización híbrida de 5 ejes",
+        "Sensor BSI MOS de 1/2,3″",
+        "HDMI, USB 3.0, XLR y transmisión IP en vivo",
+        "Doble ranura SD con grabación de respaldo"
+      ],
+      "specs": [
+        {
+          "label": "Sensor",
+          "value": "BSI MOS de 1/2,3″"
+        },
+        {
+          "label": "Procesador",
+          "value": "Venus Engine"
+        },
+        {
+          "label": "Resolución",
+          "value": "4K UHD a 60p"
+        },
+        {
+          "label": "Zoom óptico",
+          "value": "20x"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Híbrida de 5 ejes"
+        },
+        {
+          "label": "Conexiones",
+          "value": "HDMI, USB 3.0, audio XLR"
+        },
+        {
+          "label": "Transmisión",
+          "value": "IP en vivo"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "Doble ranura para tarjetas SD, con grabación continua y respaldo automático"
+        }
+      ],
+      "descriptionHtml": "<p>La Panasonic AG-CX20 es una videocámara profesional compacta, pensada para producción audiovisual, periodismo y creadores de contenido.</p><h3>Imagen</h3><p>Graba en 4K UHD a 60p con un sensor BSI MOS de 1/2,3″, que rinde bien con poca luz. El procesador Venus Engine reproduce el color con precisión.</p><h3>Zoom y estabilización</h3><p>Zoom óptico de 20x y estabilización híbrida de 5 ejes para tomas estables en movimiento.</p><h3>Conexiones y grabación</h3><p>HDMI, USB 3.0, audio XLR y transmisión IP en vivo. Dos ranuras SD permiten grabar de forma continua y con respaldo automático.</p>",
+      "revisar": [
+        "Los datos vienen de un texto comercial genérico, sin hoja técnica. Verificar contra la ficha oficial de Panasonic (modelo, sensor, conexiones).",
+        "Se quitó una frase sobre WhatsApp, stock y precios de la descripción original.",
+        "Cambié el nombre a \"Videocámara Panasonic AG-CX20 4K\" para que se entienda qué es. Confirmar."
+      ]
+    },
+    {
+      "slug": "panasonic-ag-cx350",
+      "name": "Videocámara Panasonic AG-CX350 4K",
+      "model": "AG-CX350",
+      "seoTitle": "Videocámara Panasonic AG-CX350 4K",
+      "seoDescription": "Videocámara profesional Panasonic AG-CX350 con 4K UHD a 60p, zoom óptico 20x, streaming integrado, HDMI, SDI y red. Garantía y envíos a todo el país.",
+      "shortDescription": "Videocámara profesional Panasonic AG-CX350 con grabación 4K UHD, zoom óptico 20x y streaming en vivo integrado. Conectividad HDMI, SDI, USB y red.",
+      "highlights": [
+        "Grabación 4K UHD hasta 60p",
+        "Zoom óptico 20x y sensor MOS 4K de 1/2,5″",
+        "Streaming en vivo a YouTube, Facebook Live o RTMP",
+        "Conexiones HDMI, SDI, USB y red",
+        "Formatos Full HD y alta velocidad para cámara lenta",
+        "Estabilización de imagen integrada"
+      ],
+      "specs": [
+        {
+          "label": "Sensor",
+          "value": "MOS 4K de 1/2,5″"
+        },
+        {
+          "label": "Resolución",
+          "value": "4K UHD a 60p y Full HD"
+        },
+        {
+          "label": "Zoom óptico",
+          "value": "20x"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Sí"
+        },
+        {
+          "label": "Streaming",
+          "value": "Integrado: YouTube, Facebook Live y servicios RTMP"
+        },
+        {
+          "label": "Conexiones",
+          "value": "HDMI, SDI, USB y red"
+        },
+        {
+          "label": "Grabación especial",
+          "value": "Alta velocidad para cámara lenta"
+        }
+      ],
+      "descriptionHtml": "<p>La Panasonic AG-CX350 es una videocámara profesional con streaming integrado, pensada para documentales, eventos corporativos y transmisiones deportivas.</p><h3>Imagen</h3><p>Sensor MOS 4K de 1/2,5″, grabación en 4K 60p y Full HD, y opciones de alta velocidad para cámara lenta.</p><h3>Zoom y estabilización</h3><p>Zoom óptico de 20x y estabilización de imagen para tomas suaves en movimiento.</p><h3>Transmisión</h3><p>Transmite en vivo a YouTube, Facebook Live o servicios RTMP personalizados sin equipo extra.</p><h3>Conexiones</h3><p>HDMI, SDI, USB y red, para integrarla a un flujo de trabajo profesional.</p>",
+      "revisar": [
+        "Los datos vienen de un texto comercial genérico, sin hoja técnica. Verificar contra la ficha oficial de Panasonic.",
+        "Se quitó una frase sobre WhatsApp, stock y precios. Cambié el nombre a \"Videocámara Panasonic AG-CX350 4K\"."
+      ]
+    },
+    {
+      "slug": "panasonic-hc-vx3-uhd-4k",
+      "name": "Videocámara Panasonic HC-VX3 UHD 4K",
+      "model": "HC-VX3",
+      "seoTitle": "Videocámara Panasonic HC-VX3 UHD 4K",
+      "seoDescription": "Videocámara Panasonic HC-VX3 UHD 4K con lente Leica Dicomar, zoom óptico 24x, estabilización híbrida de 5 ejes y pantalla táctil. Garantía y envíos.",
+      "shortDescription": "Videocámara Panasonic HC-VX3 con grabación UHD 4K, lente Leica Dicomar con zoom óptico 24x y estabilizador Hybrid O.I.S. de 5 ejes. Pantalla táctil articulada.",
+      "highlights": [
+        "Video UHD 4K nativo",
+        "Lente Leica Dicomar con zoom óptico 24x",
+        "Estabilización Hybrid O.I.S. de 5 ejes",
+        "Micrófono con sonido envolvente de 5.1 canales",
+        "Entradas para micrófono externo y auriculares",
+        "Pantalla táctil LCD articulada"
+      ],
+      "specs": [
+        {
+          "label": "Resolución",
+          "value": "UHD 4K nativo"
+        },
+        {
+          "label": "Lente",
+          "value": "Leica Dicomar"
+        },
+        {
+          "label": "Zoom óptico",
+          "value": "24x"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Hybrid O.I.S. de 5 ejes"
+        },
+        {
+          "label": "Audio",
+          "value": "Micrófono 5.1 canales, con reducción de viento"
+        },
+        {
+          "label": "Entradas",
+          "value": "Micrófono externo y auriculares"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Táctil LCD, totalmente articulada"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Automático (AF) de alta precisión con seguimiento"
+        }
+      ],
+      "descriptionHtml": "<p>La Panasonic HC-VX3 es una videocámara compacta que graba en UHD 4K. Está pensada para creadores de contenido, eventos y vlogs.</p><h3>Imagen</h3><p>Graba en UHD 4K nativo con un lente Leica Dicomar. El zoom óptico de 24x acerca la imagen sin perder resolución.</p><h3>Estabilización</h3><p>El sistema Hybrid O.I.S. de 5 ejes corrige el temblor de las manos y la inclinación. Sirve para grabar caminando o con el zoom al máximo.</p><h3>Audio</h3><p>Micrófono con sonido envolvente 5.1 que reduce el ruido del viento. Tiene entradas para micrófono externo y auriculares.</p><h3>Pantalla y enfoque</h3><p>La pantalla táctil articulada permite encuadrar desde cualquier ángulo, incluso en modo autorretrato. El enfoque automático sigue sujetos en movimiento.</p>",
+      "revisar": [
+        "La descripción original está cortada después de \"Edición en Cámara 4K\". Faltan sensor, tamaño de pantalla, conexiones y almacenamiento.",
+        "Cambié el nombre a \"Videocámara Panasonic HC-VX3 UHD 4K\". Confirmar."
+      ]
+    },
+    {
+      "slug": "panasonic-hc-x2100",
+      "name": "Videocámara Panasonic HC-X2100 4K",
+      "model": "HC-X2100",
+      "seoTitle": "Videocámara Panasonic HC-X2100 4K",
+      "seoDescription": "Videocámara profesional Panasonic HC-X2100 con 4K 60p, zoom óptico 24x, pantalla táctil de 3,5″, Wi-Fi, streaming y XLR. Garantía y envíos a todo el país.",
+      "shortDescription": "Videocámara profesional Panasonic HC-X2100 con grabación 4K 60p, zoom óptico 24x, estabilización híbrida de 5 ejes, Wi-Fi y streaming directo.",
+      "highlights": [
+        "Grabación 4K 60p/50p y Full HD 120p",
+        "Zoom óptico 24x",
+        "Estabilización híbrida de 5 ejes",
+        "Wi-Fi y streaming directo",
+        "Pantalla táctil LCD de 3,5″",
+        "Doble ranura SD y entrada XLR"
+      ],
+      "specs": [
+        {
+          "label": "Resolución",
+          "value": "4K 60p/50p y Full HD 120p"
+        },
+        {
+          "label": "Zoom óptico",
+          "value": "24x"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Híbrida de 5 ejes"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Automático de alta precisión"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Táctil LCD de 3,5″"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi y streaming directo"
+        },
+        {
+          "label": "Audio",
+          "value": "Entrada XLR"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "Doble ranura para tarjetas SD"
+        }
+      ],
+      "descriptionHtml": "<p>La Panasonic HC-X2100 es una videocámara profesional compacta con grabación 4K y streaming. Sirve para transmisiones en vivo, documentales y eventos corporativos.</p><h3>Imagen</h3><p>Sensor 4K de alta sensibilidad que rinde bien con poca luz. Graba en 4K 60p/50p y en Full HD a 120p.</p><h3>Zoom y estabilización</h3><p>Zoom óptico de 24x y estabilización híbrida de 5 ejes. El enfoque automático es de alta precisión.</p><h3>Conexiones y control</h3><p>Wi-Fi y streaming directo, pantalla táctil LCD de 3,5″, entrada XLR para audio profesional y dos ranuras para tarjetas SD.</p>",
+      "revisar": [
+        "Los datos vienen de un texto comercial genérico, sin hoja técnica. Verificar contra la ficha oficial de Panasonic.",
+        "Se quitó una frase sobre WhatsApp, stock y financiamiento. Cambié el nombre a \"Videocámara Panasonic HC-X2100 4K\"."
+      ]
+    }
+  ]
+}

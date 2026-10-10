@@ -1,0 +1,3318 @@
+{
+ "lote": "limpieza-1",
+ "soloSinCurar": true,
+ "nota": "Limpieza automática sin redactar: nombre, marca, título y descripción para Google.",
+ "productos": [
+  {
+   "slug": "189029",
+   "seoTitle": "Balanza de Cocina Yelmo BL-7001",
+   "seoDescription": "Construcción en acero inoxidable y plástico de alta resistencia. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "189045",
+   "brand": "Winco",
+   "seoTitle": "Cafetera de Filtro Winco W1930",
+   "seoDescription": "Cafetera de Filtro Winco W1930, ideal para preparar café de manera rápida y eficiente. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "190805",
+   "seoTitle": "Rack Delos TV 65″ Varillado 2 puertas",
+   "seoDescription": "Rack Delos TV 65″ con varillado, 2 puertas corredizas y un estante, ideal para optimizar tu espacio y organizar tus… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "192956",
+   "brand": "Philips",
+   "seoTitle": "Auricular Philips Manos Libres Tae 4105",
+   "seoDescription": "Bajos potentes Micrófono Control de música y llamadas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "access-point-aruba-instant-on-ap25-rw-4x4-wifi-6",
+   "seoTitle": "Instant On AP25 (RW) 4×4 Wi-Fi 6 AP",
+   "seoDescription": "Instant On AP25 (RW) 4×4 Wi-Fi 6 AP. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Instant On AP25 (RW) 4×4 Wi-Fi 6 AP. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "access-point-huawei-ekit-ap263-wifi6-poe",
+   "name": "Access Point Huawei Ekit AP263 WIFI6 POE",
+   "brand": "Huawei",
+   "seoTitle": "Access Point Huawei Ekit AP263 WIFI6 POE",
+   "seoDescription": "Access Point Huawei Ekit AP263 WIFI6 POE. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Access Point Huawei Ekit AP263 WIFI6 POE. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "access-point-huawei-ekit-ap361-wifi6-poe-2",
+   "name": "Access Point Huawei Ekit AP361 WIFI6 POE",
+   "brand": "Huawei",
+   "seoTitle": "Access Point Huawei Ekit AP361 WIFI6 POE",
+   "seoDescription": "Access Point Huawei Ekit AP361 WIFI6 POE. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Access Point Huawei Ekit AP361 WIFI6 POE. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "access-point-huawei-ekit-ap362-wifi6-poe-2",
+   "name": "Access Point Huawei Ekit AP362 WIFI6 POE",
+   "brand": "Huawei",
+   "seoTitle": "Access Point Huawei Ekit AP362 WIFI6 POE",
+   "seoDescription": "Access Point Huawei Ekit AP362 WIFI6 POE. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Access Point Huawei Ekit AP362 WIFI6 POE. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "access-point-huawei-ekit-ap661-wifi6-long-range-2",
+   "name": "Access Point Huawei Ekit AP661 WIFI6 Long Range",
+   "brand": "Huawei",
+   "seoTitle": "Access Point Huawei Ekit AP661 WIFI6 Long",
+   "seoDescription": "Access Point Huawei Ekit AP661 WIFI6 Long Range. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Access Point Huawei Ekit AP661 WIFI6 Long Range. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "access-point-tp-link-eap235-wall-pared-ac1200-giga",
+   "name": "Access Point TP-Link Omada EAP235-WALL AC1200",
+   "brand": "TP-Link",
+   "seoTitle": "Access Point TP-Link Omada EAP235-WALL AC1200",
+   "seoDescription": "Access Point TP-Link Omada EAP235-WALL AC1200. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Access Point TP-Link Omada EAP235-WALL AC1200. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "access-point-tp-link-eap610-out-ax1800-mu-mimo-poe-2",
+   "name": "Access Point TP-Link Omada EAP610-OUT AX1800",
+   "brand": "TP-Link",
+   "seoTitle": "Access Point TP-Link Omada EAP610-OUT AX1800",
+   "seoDescription": "Access Point TP-Link Omada EAP610-OUT AX1800. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Access Point TP-Link Omada EAP610-OUT AX1800. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "access-point-tp-link-eap660-hd-wifi-6-ax3600",
+   "name": "Access Point TP-Link Omada EAP660 HD AX3600",
+   "brand": "TP-Link",
+   "seoTitle": "Access Point TP-Link Omada EAP660 HD AX3600",
+   "seoDescription": "Access Point TP-Link Omada EAP660 HD AX3600. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Access Point TP-Link Omada EAP660 HD AX3600. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "access-point-tp-link-tl-cpe510-5ghz-300mbps-13dbi-64mb",
+   "brand": "TP-Link",
+   "seoTitle": "Access Point Tp-link TL-CPE510 5ghz 300mbps",
+   "seoDescription": "Marca: TP-Link Línea: Pharos Modelo: CPE510 Voltaje: 100V/240V Funciones: Access point exterior/Repetidor. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "adaptador-de-montura-canon-ef-eos-r",
+   "brand": "Canon",
+   "seoTitle": "Adaptador de montura Canon EF-EOS R Original",
+   "seoDescription": "Montura CANON EF-EOS R Marca CANON Compatibilidad Sensor de Imagen EF-S (APS-C), EF (Full Frame) Linea EOS R. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "adaptador-inalambrico-tp-link-pci-express-banda-dual-ac-ac1200",
+   "seoTitle": "Adaptador Inalámbrico Tp Link PCI Express",
+   "seoDescription": "Adaptador WiFi TP-Link AC1200 PCI Express de banda dual. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "adaptador-montura-nikon-ftz-ii",
+   "brand": "Nikon",
+   "seoTitle": "Adaptador Montura Nikon FTZ II",
+   "seoDescription": "El adaptador de montura FTZ II funciona con lentes con montura F. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "adaptador-usb-inalambrico-tenda-u18-dual-band",
+   "seoTitle": "Adaptador Usb Inalámbrico Tenda U18 Dual Band",
+   "seoDescription": "Adaptador Usb Inalámbrico Tenda U18 Dual Band. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "adaptador-wi-fi-usb-nano-mercusys",
+   "seoTitle": "Adaptador Wi-Fi USB Nano Mercusys",
+   "seoDescription": "Adaptador Wi-Fi USB Nano Mercusys MW150US N150 (150 Mbps) Agregá conectividad inalámbrica a tu PC de escritorio o… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "aio-22-cx-amd-ryzen-5-6600h16gbssd480-webcam",
+   "name": "AIO 22 CX AMD Ryzen 5 6600H+16GB+SSD480 Webcam",
+   "brand": "AMD",
+   "seoTitle": "AIO 22 CX AMD Ryzen 5 6600H+16GB+SSD480",
+   "seoDescription": "AIO 22 CX AMD Ryzen 5 6600H+16GB+SSD480 Webcam. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "AIO 22 CX AMD Ryzen 5 6600H+16GB+SSD480 Webcam. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "aio-22-cx-amd-ryzen-5-6600h8gbssd240-webcam",
+   "name": "AIO 22 CX AMD Ryzen 5 6600H+8GB+SSD240 Webcam",
+   "brand": "AMD",
+   "seoTitle": "AIO 22 CX AMD Ryzen 5 6600H+8GB+SSD240 Webcam",
+   "seoDescription": "AIO 22 CX AMD Ryzen 5 6600H+8GB+SSD240 Webcam. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "AIO 22 CX AMD Ryzen 5 6600H+8GB+SSD240 Webcam. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "aio-22-cx-intel-i5-12450h8gbssd240-webcam",
+   "name": "AIO 22 CX Intel I5 12450H+8GB+SSD240 Webcam",
+   "brand": "Intel",
+   "seoTitle": "AIO 22 CX Intel I5 12450H+8GB+SSD240 Webcam",
+   "seoDescription": "AIO 22 CX Intel I5 12450H+8GB+SSD240 Webcam. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "AIO 22 CX Intel I5 12450H+8GB+SSD240 Webcam. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "aio-24-dell-optiplex-7420-i5-14500t-8g-512gb-w11p",
+   "name": "AIO 24 Dell Optiplex 7420 I5-14500T 8G 512GB W11P",
+   "brand": "Dell",
+   "seoTitle": "AIO 24 Dell Optiplex 7420 I5-14500T 8G 512GB",
+   "seoDescription": "AIO 24 Dell Optiplex 7420 I5-14500T 8G 512GB W11P. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "AIO 24 Dell Optiplex 7420 I5-14500T 8G 512GB W11P. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "aio-24-dell-pro-i5-14500t-16-512g-w11pro",
+   "name": "AIO 24 Dell PRO I5 14500T 16 512G W11PRO",
+   "brand": "Dell",
+   "seoTitle": "AIO 24 Dell PRO I5 14500T 16 512G W11PRO",
+   "seoDescription": "AIO 24 Dell PRO I5 14500T 16 512G W11PRO. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "AIO 24 Dell PRO I5 14500T 16 512G W11PRO. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "aio-24-hp-240-i5-1334u-16gb-ssd512gb",
+   "name": "AIO 24 HP 240 I5-1334U 16GB SSD512GB",
+   "brand": "HP",
+   "seoTitle": "AIO 24 HP 240 I5-1334U 16GB SSD512GB",
+   "seoDescription": "AIO 24 HP 240 I5-1334U 16GB SSD512GB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "AIO 24 HP 240 I5-1334U 16GB SSD512GB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "aire-acon-lg-invert-dual-cool-3600w-wifi",
+   "name": "Aire Acon LG Invert Dual Cool 3600W WIFI",
+   "seoTitle": "Aire Acon LG Invert Dual Cool 3600W WIFI",
+   "seoDescription": "Aire Acon LG Invert Dual Cool 3600W WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Aire Acon LG Invert Dual Cool 3600W WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "aire-acond-lg-invert-dual-cool-5400-wifi",
+   "name": "Aire Acond LG Invert Dual Cool 5400 WIFI",
+   "seoTitle": "Aire Acond LG Invert Dual Cool 5400 WIFI",
+   "seoDescription": "Aire Acond LG Invert Dual Cool 5400 WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Aire Acond LG Invert Dual Cool 5400 WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "aire-acond-lg-invert-dual-cool-6500-wifi",
+   "name": "Aire Acond LG Invert Dual Cool 6500 WIFI",
+   "seoTitle": "Aire Acond LG Invert Dual Cool 6500 WIFI",
+   "seoDescription": "Aire Acond LG Invert Dual Cool 6500 WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Aire Acond LG Invert Dual Cool 6500 WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "aire-acondicionado-bgh-3300w-frio-calo-bse35wcau",
+   "seoTitle": "Aire Acondicionado BGH 3300W Frío/Calor",
+   "seoDescription": "El aire acondicionado Split Frío/Calor BGH 3000F 3300W BS35WCAU es un modelo diseñado para proporcionar tanto… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "aire-acondicionado-bgh-5000w-frio-calor-bshe52wcu",
+   "seoTitle": "Aire Acondicionado BGH 5000W Frío/Calor",
+   "seoDescription": "El Aire Acondicionado BGH 5000W Frío/Calor BSHE52WCU es un modelo de aire acondicionado Split diseñado para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "aire-acondicionado-hitachi-6100w-frio-calor",
+   "seoTitle": "Aire Acondicionado Hitachi Eco 6100W",
+   "seoDescription": "Frigorias 5200 Capacidad frío: 6100W Capacidad Calor 6400 Watts Gas refrigerante R410-A Eficiencia energética: A. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "aire-acondicionado-inverter-5500w",
+   "seoTitle": "Aire Acondicionado INVERTER Hisense 5500W F/C",
+   "seoDescription": "Aire Acondicionado INVERTER Hisense 5500W F/C. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "aire-acondicionado-inverter-alaska-bgh-5300w-f-c",
+   "seoTitle": "Aire Acondicionado INVERTER Alaska BGH 5300W",
+   "seoDescription": "Aire Acondicionado INVERTER Alaska BGH 5300W F/C. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "aire-acondicionado-inverter-samsung-3150w-frio-calor",
+   "seoTitle": "Aire Acondicionado INVERTER Samsung 3150W",
+   "seoDescription": "Split Inverter Eficiencia Energética A++ Modelo AR12BSHQAWK. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "aire-acondicionado-inverter-samsung-5000w-frio-calor",
+   "seoTitle": "Aire Acondicionado INVERTER Samsung 5000W",
+   "seoDescription": "Split Digital Inverter Frio / Calor Frigorías 4222 FG 1542 watts Modelo AR18BSHQAWK Origen Argentina. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "aire-acondicionado-inverter-samsung-6000w-frio-calor",
+   "seoTitle": "Aire Acondicionado INVERTER Samsung 6000W",
+   "seoDescription": "Aire Acondicionado INVERTER Samsung 6000W Frio/Calor. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "aire-acondicionado-inverter-smart-hyundai-3200w-frio-calor",
+   "seoTitle": "Aire Acondicionado INVERTER Smart Hyundai",
+   "seoDescription": "/&gt;Aire acondicionado Split inverter frio/calor. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "aire-acondicionado-philco-3400w-frio-calor",
+   "seoTitle": "Aire Acondicionado Philco 3400W Frio/Calor",
+   "seoDescription": "Aire Acondicionado Philco 3400W Frio/Calor. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "aire-acondicionado-portatil-kanji-2650w-frio-calor",
+   "seoTitle": "Aire Acondicionado Portatil Kanji 2650W",
+   "seoDescription": "Aire Acondicionado Portatil Kanji 2650W Frio/Calor. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "airpods-pro-2",
+   "brand": "Apple",
+   "seoTitle": "Airpods Pro 2 Apple",
+   "seoDescription": "Airpods Pro 2 Apple. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "alarma-ezviz-smart-home-a3-gateway-2",
+   "name": "Alarma Ezviz Smart Home A3 Gateway",
+   "brand": "Ezviz",
+   "seoTitle": "Alarma Ezviz Smart Home A3 Gateway",
+   "seoDescription": "Alarma Ezviz Smart Home A3 Gateway. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Alarma Ezviz Smart Home A3 Gateway. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "alarma-ezviz-smart-home-kit-cs-tx-a3-r100-2",
+   "name": "Alarma Ezviz Smart Home Kit Cs-tx/A3-R100",
+   "brand": "Ezviz",
+   "seoTitle": "Alarma Ezviz Smart Home Kit Cs-tx/A3-R100",
+   "seoDescription": "Alarma Ezviz Smart Home Kit Cs-tx/A3-R100. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Alarma Ezviz Smart Home Kit Cs-tx/A3-R100. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "alarma-ezviz-smart-home-t10c-sensor-fuga-agua-2",
+   "name": "Alarma Ezviz Smart Home T10C Sensor Fuga Agua",
+   "brand": "Ezviz",
+   "seoTitle": "Alarma Ezviz Smart Home T10C Sensor Fuga Agua",
+   "seoDescription": "Alarma Ezviz Smart Home T10C Sensor Fuga Agua. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Alarma Ezviz Smart Home T10C Sensor Fuga Agua. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "alarma-ezviz-smart-home-t33-control-infrarrojo",
+   "name": "Alarma Ezviz Smart Home T33 Control Infrarrojo",
+   "brand": "Ezviz",
+   "seoTitle": "Alarma Ezviz Smart Home T33 Control",
+   "seoDescription": "Alarma inteligente EZVIZ T33 con control infrarrojo avanzado. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "alarma-ezviz-smart-home-t3c-boton-inteligente-2",
+   "name": "Alarma Ezviz Smart Home T3C Boton Inteligente",
+   "brand": "Ezviz",
+   "seoTitle": "Alarma Ezviz Smart Home T3C Boton Inteligente",
+   "seoDescription": "Alarma Ezviz Smart Home T3C Boton Inteligente. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Alarma Ezviz Smart Home T3C Boton Inteligente. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "alarma-ezviz-smart-home-t4c-detector-de-humo",
+   "name": "Alarma Ezviz Smart Home T4C Detector de Humo",
+   "brand": "Ezviz",
+   "seoTitle": "Alarma Ezviz Smart Home T4C Detector de Humo",
+   "seoDescription": "Alarma Ezviz Smart Home T4C Detector de Humo. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Alarma Ezviz Smart Home T4C Detector de Humo. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "alarma-ezviz-smart-home-t9c-sirena",
+   "name": "Alarma Ezviz Smart Home T9C Sirena",
+   "brand": "Ezviz",
+   "seoTitle": "Alarma Ezviz Smart Home T9C Sirena",
+   "seoDescription": "Alarma Ezviz Smart Home T9C Sirena. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Alarma Ezviz Smart Home T9C Sirena. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "amazon-fire-tv-stick-4k-wifi-6-black",
+   "name": "Amazon Fire TV Stick 4K (WIFI 6) Black",
+   "seoTitle": "Amazon Fire TV Stick 4K (WIFI 6) Black",
+   "seoDescription": "Streaming device 4K Ultra HD con WiFi 6, control por voz Alexa, acceso a Netflix, Prime Video, Disney+ y miles de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "amoladora-dahiatsu",
+   "seoTitle": "Amoladora Dahiatsu",
+   "seoDescription": "Amoladora Dahiatsu: potencia y precisión para tus proyectos de bricolaje. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "anafe-electrico-1000w-jahro-blanco",
+   "brand": "Jahro",
+   "seoTitle": "Anafe Eléctrico 1000W Jahro Blanco",
+   "seoDescription": "1 placa Regulador de temperatura Termostato automático Placa calentadora de 155 mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "anafe-electrico-1000w-w1040",
+   "brand": "Jahro",
+   "seoTitle": "Anafe Eléctrico 1000W Jahro Negro",
+   "seoDescription": "1 placa Regulador de temperatura Termostato automático Placa calentadora de 155 mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "anafe-electrico-dual-2000w-jahro-blanco",
+   "brand": "Jahro",
+   "seoTitle": "Anafe Eléctrico Dual 2000W Jahro Blanco",
+   "seoDescription": "Anafe eléctrico 2 placas Regulador de temperatura Termostato automático Placa calentadora de 155 mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "anafe-electrico-dual-2000w-w41",
+   "brand": "Jahro",
+   "seoTitle": "Anafe Eléctrico Dual 2000W Jahro Negro",
+   "seoDescription": "Anafe eléctrico 2 placas Regulador de temperatura Termostato automático Placa calentadora de 155 mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "anafe-electrico-dual-2000w-winco",
+   "brand": "Winco",
+   "seoTitle": "Anafe Eléctrico Dual 2000W Winco",
+   "seoDescription": "Anafe electrico Doble Regulador de temperatura Termostato automático 2 Placas calentadoras de 155mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "antena-7dbi-omni-d-link-ant24-0700-2400mhz-sma-2",
+   "name": "Antena 7DBI Omni D-Link ANT24-0700 2400MHZ SMA",
+   "brand": "D-Link",
+   "seoTitle": "Antena 7DBI Omni D-Link ANT24-0700 2400MHZ",
+   "seoDescription": "Antena 7DBI Omni D-Link ANT24-0700 2400MHZ SMA. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Antena 7DBI Omni D-Link ANT24-0700 2400MHZ SMA. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "antena-rootena-5-8ghz-24dbi-mmcx-pacific-wireless",
+   "name": "Antena Rootena 5.8GHZ 24DBI Mmcx Pacific Wireless",
+   "seoTitle": "Antena Rootena 5.8GHZ 24DBI Mmcx Pacific",
+   "seoDescription": "Antena Rootena 5.8GHZ 24DBI Mmcx Pacific Wireless. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Antena Rootena 5.8GHZ 24DBI Mmcx Pacific Wireless. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "antena-rootena-5-8ghz-24dbi-ufl-pacific-wireless",
+   "name": "Antena Rootena 5.8GHZ 24DBI UFL Pacific Wireless",
+   "seoTitle": "Antena Rootena 5.8GHZ 24DBI UFL Pacific",
+   "seoDescription": "Antena Rootena 5.8GHZ 24DBI UFL Pacific Wireless. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Antena Rootena 5.8GHZ 24DBI UFL Pacific Wireless. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ap-mikrotik-hap-ax-lite-l41g-2axd-2-4-ghz-wifi-6-sin-fuente-usb-no-la-trabajamos",
+   "name": "AP MikroTik HAP AX Lite L41G-2AXD 2.4 GHz WIFI 6 sin Fuente USB (NO la Trabajamos)",
+   "brand": "MikroTik",
+   "seoTitle": "AP MikroTik HAP AX Lite L41G-2AXD 2.4 GHz",
+   "seoDescription": "AP MikroTik HAP AX Lite L41G-2AXD 2.4 GHz WIFI 6 sin Fuente USB (NO la Trabajamos). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "AP MikroTik HAP AX Lite L41G-2AXD 2.4 GHz WIFI 6 sin Fuente USB (NO la Trabajamos). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ap-mikrotik-rb952ui-5ac2nd-sf",
+   "name": "AP MikroTik RB952UI-5AC2ND SF",
+   "brand": "MikroTik",
+   "seoTitle": "AP MikroTik RB952UI-5AC2ND SF",
+   "seoDescription": "AP MikroTik RB952UI-5AC2ND SF. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "AP MikroTik RB952UI-5AC2ND SF. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ap-mikrotik-rb962uigs-5hact2hnt-sf",
+   "name": "AP MikroTik RB962UiGS-5HacT2HnT SF",
+   "brand": "MikroTik",
+   "seoTitle": "AP MikroTik RB962UiGS-5HacT2HnT SF",
+   "seoDescription": "AP MikroTik RB962UiGS-5HacT2HnT SF. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "AP MikroTik RB962UiGS-5HacT2HnT SF. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ap-mikrotik-rbcapgi-5acd2nd-xl-cap-xl-ac-sin-fuente",
+   "name": "AP MikroTik RBCAPGI-5ACD2ND-XL CAP XL AC sin Fuente",
+   "brand": "MikroTik",
+   "seoTitle": "AP MikroTik RBCAPGI-5ACD2ND-XL CAP XL AC",
+   "seoDescription": "AP MikroTik RBCAPGI-5ACD2ND-XL CAP XL AC sin Fuente. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "AP MikroTik RBCAPGI-5ACD2ND-XL CAP XL AC sin Fuente. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "apc-bateria-de-reemplazo-cartucho-140-2",
+   "name": "APC Bateria de Reemplazo Cartucho #140",
+   "brand": "APC",
+   "seoTitle": "APC Bateria de Reemplazo Cartucho #140",
+   "seoDescription": "Batería de reemplazo APC Cartucho #140 para sistemas UPS. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "apc-easy-pdu-metered-1u-16a-230v-8c13-3",
+   "brand": "APC",
+   "seoTitle": "APC Easy PDU, Metered, 1U, 16A, 230V, (8)C13",
+   "seoDescription": "PDU APC Easy Metered 1U con 8 tomas C13, 16A, 230V. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "apc-easy-pdubasiczerou16a230v20c13-4c19",
+   "brand": "APC",
+   "seoTitle": "APC Easy PDU,Basic,ZeroU,16A,230V,(20)C13 &",
+   "seoDescription": "APC Easy PDU 16A 230V: distribución de energía eficiente y segura para tu equipo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "apc-modbus-jbus-interface-card-2",
+   "brand": "APC",
+   "seoTitle": "APC Modbus/Jbus Interface Card",
+   "seoDescription": "Tarjeta interfaz APC Modbus/Jbus para comunicación industrial avanzada. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "apc-netshelter-sx-42u-48u-baying-trim-kit-black-2",
+   "brand": "APC",
+   "seoTitle": "APC NetShelter SX 42U/48U Baying Trim Kit",
+   "seoDescription": "Kit de molduras negras APC NetShelter SX para racks 42U/48U. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "apc-panel-bypass-pdu-rm-230v-32a-c192-c138",
+   "name": "APC Panel Bypass PDU RM 230V, 32A, C19(2), C13(8)",
+   "brand": "APC",
+   "seoTitle": "APC Panel Bypass PDU RM 230V, 32A, C19(2)",
+   "seoDescription": "APC Panel Bypass PDU RM 230V, 32A, C19(2), C13(8). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "APC Panel Bypass PDU RM 230V, 32A, C19(2), C13(8). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "apc-placa-red-web-snmp",
+   "name": "APC Placa Red WEB Snmp",
+   "brand": "APC",
+   "seoTitle": "APC Placa Red WEB Snmp",
+   "seoDescription": "APC Placa Red WEB Snmp. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "APC Placa Red WEB Snmp. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "apc-sensor-monit-acceso-p-netshelter-sx-12ft-demo-2",
+   "name": "APC Sensor Monit Acceso P/Netshelter SX 12FT (demo",
+   "brand": "APC",
+   "seoTitle": "APC Sensor Monit Acceso P/Netshelter SX 12FT",
+   "seoDescription": "Sensor APC de monitoreo y acceso para rack NetShelter SX de 12 pies. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "apc-sensor-temp-p-centro-datos-c-pantalla-2",
+   "name": "APC Sensor Temp P/Centro Datos C/Pantalla",
+   "brand": "APC",
+   "seoTitle": "APC Sensor Temp P/Centro Datos C/Pantalla",
+   "seoDescription": "Sensor de temperatura APC profesional para centros de datos con pantalla integrada. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "apc-srt-19-rail-kit-for-smart-ups-srt-2",
+   "name": "APC SRT 19 Rail Kit FOR Smart-ups SRT",
+   "brand": "APC",
+   "seoTitle": "APC SRT 19 Rail Kit FOR Smart-ups SRT",
+   "seoDescription": "Kit de montaje en rack de 19 pulgadas APC SRT para Smart-UPS SRT. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "apc-tarjeta-snmp-card-p-smart-ups",
+   "brand": "APC",
+   "seoTitle": "APC Tarjeta SNMP CARD p/SMART UPS",
+   "seoDescription": "Tarjeta SNMP de APC para monitoreo remoto y gestión inteligente de sistemas UPS Smart. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "apple-20w-usb-c-power-adapter",
+   "name": "Apple 20W USB C Power Adapter",
+   "brand": "Apple",
+   "seoTitle": "Apple 20W USB C Power Adapter",
+   "seoDescription": "Apple 20W USB C Power Adapter. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Apple 20W USB C Power Adapter. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "apple-67w-usb-c-power-adapter",
+   "name": "Apple 67W Usb-c Power Adapter",
+   "brand": "Apple",
+   "seoTitle": "Apple 67W Usb-c Power Adapter",
+   "seoDescription": "Apple 67W Usb-c Power Adapter. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Apple 67W Usb-c Power Adapter. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "apple-airpods-4-active-noise-cancellation",
+   "seoTitle": "Apple Airpods 4 Active Noise Cancellation",
+   "seoDescription": "Experimenta audio de calidad superior con los Apple AirPods 4 Active Noise Cancellation. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "apple-airpods-pro-2da-gen",
+   "seoTitle": "Apple Airpods Pro 2da Gen",
+   "seoDescription": "AirPods Pro 2da Gen con cancelación de ruido mejorada, audio espacial personalizado, hasta 30 horas de batería y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "apple-airpods-pro-3ra-gen",
+   "seoTitle": "Apple Airpods Pro 3ra Gen",
+   "seoDescription": "Experimenta audio superior con los AirPods Pro 3ra Gen. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "apple-airtags-rastreados-4-pack",
+   "seoTitle": "Apple Airtags Rastreados 4 Pack",
+   "seoDescription": "Pack 4 Apple AirTags originales para rastrear llaves, billeteras y objetos personales. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "apple-mouse-magic-2-blanco",
+   "name": "Apple Mouse Magic 2 Blanco",
+   "brand": "Apple",
+   "seoTitle": "Apple Mouse Magic 2 Blanco",
+   "seoDescription": "Apple Mouse Magic 2 Blanco. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Apple Mouse Magic 2 Blanco. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "apple-reloj-iwatch-serie-7-45mm-blue-open-box",
+   "name": "Apple Reloj Iwatch Serie 7 45MM Blue Open BOX",
+   "brand": "Apple",
+   "seoTitle": "Apple Reloj Iwatch Serie 7 45MM Blue Open BOX",
+   "seoDescription": "Apple Reloj Iwatch Serie 7 45MM Blue Open BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Apple Reloj Iwatch Serie 7 45MM Blue Open BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "apple-reloj-iwatch-serie-7-45mm-gree-open-box",
+   "name": "Apple Reloj Iwatch Serie 7 45MM Gree Open BOX",
+   "brand": "Apple",
+   "seoTitle": "Apple Reloj Iwatch Serie 7 45MM Gree Open BOX",
+   "seoDescription": "Apple Reloj Iwatch Serie 7 45MM Gree Open BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Apple Reloj Iwatch Serie 7 45MM Gree Open BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "apple-usb-c-digital-av-multiport-adapter",
+   "name": "Apple Usb-c Digital AV Multiport Adapter",
+   "brand": "Apple",
+   "seoTitle": "Apple Usb-c Digital AV Multiport Adapter",
+   "seoDescription": "Apple Usb-c Digital AV Multiport Adapter. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Apple Usb-c Digital AV Multiport Adapter. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "apple-usb-c-power-adapter-20w-original",
+   "brand": "Apple",
+   "seoTitle": "Cargador Apple USB-C Power Adaptador 20W",
+   "seoDescription": "Homologado para Argentina. El adaptador de corriente USB-C de 20 W de Apple es muy rápido y eficiente, perfecto para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "apple-usb-c-to-lightning-cable-2-m",
+   "name": "Apple Usb-c TO Lightning Cable (2 m)",
+   "brand": "Apple",
+   "seoTitle": "Apple Usb-c TO Lightning Cable (2 m)",
+   "seoDescription": "Apple Usb-c TO Lightning Cable (2 m). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Apple Usb-c TO Lightning Cable (2 m). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "applewatch-s10-46mm-gps-aluminium-case",
+   "seoTitle": "Applewatch S10 46mm GPS Aluminium Case",
+   "seoDescription": "Apple Watch S10 46mm con GPS, caja de aluminio resistente, pantalla brillante, monitoreo de salud avanzado y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "applewatch-s11-42mm-gps-aluminuim-case",
+   "seoTitle": "Applewatch S11 42mm GPS Aluminuim Case",
+   "seoDescription": "Apple Watch Series 11 42mm GPS con caja de aluminio. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "applewatch-s11-46mm-gps-aluminium",
+   "seoTitle": "Applewatch S11 46mm GPS Aluminium",
+   "seoDescription": "Nuevo Apple Watch Series 11 46mm GPS con caja de aluminio. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "applewatch-se-3-40mm-gps",
+   "seoTitle": "Applewatch SE 3 40mm GPS",
+   "seoDescription": "Apple Watch SE 3 40mm GPS con pantalla Retina Always-On, seguimiento fitness avanzado, resistencia al agua y batería… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "applewatch-ultra-2-49mm-cel-gps",
+   "seoTitle": "Applewatch Ultra 2 49mm Cel GPS",
+   "seoDescription": "Apple Watch Ultra 2 49mm con conectividad celular y GPS. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "aspiradora-de-auto-winco-w550",
+   "brand": "Winco",
+   "seoTitle": "Aspiradora de Auto Winco W550",
+   "seoDescription": "Aspiradora de auto Conexion directa 12V (exclusivamente) Filtro HEPA Incluye cepillo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "aspiradora-inalambrica-winco-2-en-1",
+   "brand": "Winco",
+   "seoTitle": "Aspiradora Inalambrica Winco 2 en 1",
+   "seoDescription": "Aspiradora Inalámbrica 2 EN 1 2 niveles de succión Filtro Hepa de fácil limpieza Tanque colector: 0.4 Litros. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "aspiradora-robot-ultracomb-as-6061",
+   "brand": "Ultracomb",
+   "seoTitle": "Aspiradora Robot Ultracomb AS-6061",
+   "seoDescription": "Aspiradora Robot Ultracomb AS-6061. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "aspiradora-sin-bolsa-midea-direct-cyclone-1400w",
+   "brand": "Midea",
+   "seoTitle": "Aspiradora sin bolsa Midea Direct Cyclone",
+   "seoDescription": "Potencia 14000W Largo del cable 5 mts. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "asus-vivobook-16-i7-1355u-16gb-ssd-512gb-16-fhd-w11",
+   "seoTitle": "Asus Vivobook 16 i7-1355U 16gb SSD 512gb 16″",
+   "seoDescription": "Pantalla gigante y potencia sin límites para tus proyectos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "asus-vivobook-go-e1504ga-i3-n305-8gb-ssd-256gb-15-6-fhd-w11-silver",
+   "seoTitle": "Asus Vivobook Go i3-N305 8gb SSD 256gb 15.6″",
+   "seoDescription": "Diseñada para la productividad diaria y la movilidad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "atornillador-inalambrico-daihatsu-3-6v",
+   "seoTitle": "Atornillador Inalambrico Compacto Daihatsu",
+   "seoDescription": "Atornillador Inalambrico Compacto Daihatsu 3.6V Hi-a36. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "atornillador-inalambrico-hyundai-3-6v",
+   "seoTitle": "Atornillador Inalámbrico Hyundai 3.6V",
+   "seoDescription": "BATERIA: 3.6V 1.300 mAh VELOCIDAD: 200rpm MAXIMO TORQUE: 4 NM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "atornillador-inalambrico-multipuntas-daihatsu-3-6v",
+   "seoTitle": "Atornillador Inalambrico Multipuntas Daihatsu",
+   "seoDescription": "Atornillador multipuntas de 3.6V. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auricular-daewoo-candy-spark-yellow",
+   "seoTitle": "Auriculares Daewoo Candy Spark Yellow",
+   "seoDescription": "Auricular True Wireless. Alcance inalámbrico de 15 m. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auricular-dekkin-tws-sport",
+   "brand": "Dekkin",
+   "seoTitle": "Auricular Dekkin TWS Sport",
+   "seoDescription": "Calce ideal para el deporte Almohadillas de silicona extras Micrófono incorporado Control de música y llamadas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auricular-eurosound-brick",
+   "seoTitle": "Auriculares Eurosound Inalámbrico Brick",
+   "seoDescription": "Auriculares Eurosound Inalámbrico Brick: calidad de sonido excepcional, diseño ergonómico y conectividad Bluetooth… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auricular-headset-verbatim-con-mic-y-control-remoto-en-linea",
+   "seoTitle": "Auricular Headset Verbatim con Mic y control",
+   "seoDescription": "Auricular Headset Verbatim con micrófono y control remoto en línea, ideal para llamadas y música. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auricular-jahro-bx-324-stereo",
+   "brand": "Jahro",
+   "seoTitle": "Auricular Jahro Bx-324 Stereo",
+   "seoDescription": "Auricular Jahro Bx-324 Stereo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auricular-jahro-gh-112",
+   "brand": "Jahro",
+   "seoTitle": "Auricular Jahro GH-112",
+   "seoDescription": "Auricular Jahro GH-112. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auricular-nakamichi-in-ear-ce100",
+   "seoTitle": "Auricular Nakamichi In-ear Ce100",
+   "seoDescription": "Auricular Nakamichi In-ear Ce100. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Auricular Nakamichi In-ear Ce100. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "auricular-samsung-3-5mm-negros",
+   "brand": "Samsung",
+   "seoTitle": "Auricular Samsung 3.5mm Negros",
+   "seoDescription": "Impedancia 32 ohm Respuesta de frecuencia 20~20 kHz Sensibilidad 93.2 dB 3 button(play/pause, volume up, down). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-bluetooth-dekkin-rosa",
+   "brand": "Dekkin",
+   "seoTitle": "Auriculares Bluetooth Dekkin Rosa",
+   "seoDescription": "Tipo de conexión: Bluetooth 5.0. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-bluetooth-jbl-tune-730bt-white",
+   "seoTitle": "Auriculares Bluetooth JBL Tune 730BT White",
+   "seoDescription": "Autonomía imparable y el legendario sonido JBL Pure Bass. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-bluetooth-philips-supraurales-tah4205bk-00",
+   "brand": "Philips",
+   "seoTitle": "Auriculares Bluetooth Philips Supraurales",
+   "seoDescription": "Auriculares On Ear Bluetooth 29 horas de tiempo de reproducción Carga rápida Botón de refuerzo de graves Graves… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-bluetooth-stromberg-slag",
+   "seoTitle": "Auriculares Bluetooth Stromberg Slag",
+   "seoDescription": "Auriculares Bluetooth Stromberg Slag. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-bluetooth-tws-dekkin-c-estuche",
+   "brand": "Dekkin",
+   "seoTitle": "Auriculares Bluetooth TWS Dekkin c/Estuche",
+   "seoDescription": "Auriculares Bluetooth TWS Dekkin c/Estuche. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-dekkin-tws-dot",
+   "brand": "Dekkin",
+   "seoTitle": "Auriculares Dekkin TWS Dot",
+   "seoDescription": "Almohadillas de silicona extras Hasta 4 horas de autonomía Micrófono incorporado Control de música y llamadas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-estereo-verbatim-con-microfono",
+   "seoTitle": "Auricular Headset Verbatim Estéreo",
+   "seoDescription": "Auricular Headset Verbatim Estéreo con micrófono. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-gamer-noga-stormer-bold",
+   "brand": "Noga",
+   "seoTitle": "Auriculares Gamer Noga Bold",
+   "seoDescription": "Auriculares Gamer Noga Bold. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-inalambricos-jbl-520t-blanco",
+   "brand": "JBL",
+   "seoTitle": "Auriculares Inalámbricos JBL T520 Blanco",
+   "seoDescription": "Auriculares Inalámbricos JBL T520 Blanco. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-inalambricos-kitty-cat-beat-purpura",
+   "brand": "Dekkin",
+   "seoTitle": "Auriculares Inalámbricos Kitty Cat Beat",
+   "seoDescription": "Auriculares Inalámbricos Kitty Cat Beat Purpura Dekkin. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-inalambricos-kitty-cat-beat-verde",
+   "brand": "Dekkin",
+   "seoTitle": "Auriculares Inalámbricos Kitty Cat Beat Verde",
+   "seoDescription": "Auriculares Inalámbricos Kitty Cat Beat Verde Dekkin. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-inalambricos-philips-supraurales-tah4205wt-00",
+   "brand": "Philips",
+   "seoTitle": "Auriculares Bluetooth Philips Supraurales",
+   "seoDescription": "Auriculares On Ear Bluetooth 29 horas de tiempo de reproducción Carga rápida Botón de refuerzo de graves Graves… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-logitech-h390-usb",
+   "brand": "Logitech",
+   "seoTitle": "Auriculares Logitech H390 Usb",
+   "seoDescription": "Disfruta de videollamadas nítidas con una simple conexión USB y un micrófono con supresión de ruido. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-noga-gamer-misfit-7-1",
+   "brand": "Noga",
+   "seoTitle": "Auriculares Noga Gamer Misfit 7.1",
+   "seoDescription": "Auriculares Noga Gamer Misfit 7.1. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Auriculares Noga Gamer Misfit 7.1. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "auriculares-philips-supraurales-vincha-con-microfono-blanco",
+   "brand": "Philips",
+   "seoTitle": "Auriculares Philips Supraurales Vincha",
+   "seoDescription": "Cerrados con controladores de 32 mm Soporte de sujeción liviano Plegado compacto. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-samsung-tipo-c",
+   "brand": "Samsung",
+   "seoTitle": "Auriculares Samsung Tipo C",
+   "seoDescription": "Auriculares Samsung Tipo C. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-usb-c-dekkin-manos-libres-068",
+   "brand": "Dekkin",
+   "seoTitle": "Auriculares USB-C Dekkin Manos Libres",
+   "seoDescription": "Cable 1.2mt Ficha tipo C Microfono incorporado Control Volumen Incorporado Material ABS. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "auriculares-usb-c-dekkin-manos-libres-072",
+   "brand": "Dekkin",
+   "seoTitle": "Auriculares USB-C Dekkin Manos Libres 072",
+   "seoDescription": "Cable 1.2mt Ficha tipo C Microfono incorporado Control Volumen Incorporado Material ABS. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "balanza-comercial-eiffel-30kg-5grs",
+   "seoTitle": "Balanza Comercial Eiffel 30Kg. 5grs.",
+   "seoDescription": "Balanza Comercial Eiffel 30Kg. 5grs.. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "bandas-isometricas-waggs-fitness-de-resistencia-x-5-unidades",
+   "seoTitle": "Bandas Isométricas Waggs Fitness",
+   "seoDescription": "Bandas Isométricas Waggs Fitness de Resistencia x 5 Unidades. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Bandas Isométricas Waggs Fitness de Resistencia x 5 Unidades. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "bandeja-adicional-brother-lt5505-p-5100dn-6400w",
+   "name": "Bandeja Adicional Brother LT5505 P/ 5100DN - 6400W",
+   "brand": "Brother",
+   "seoTitle": "Bandeja Adicional Brother LT5505 P/ 5100DN",
+   "seoDescription": "Bandeja Adicional Brother LT5505 P/ 5100DN - 6400W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Bandeja Adicional Brother LT5505 P/ 5100DN - 6400W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "bandeja-p-sobres-c8053a-hp4100-laser",
+   "name": "Bandeja P/Sobres C8053A HP4100 Laser",
+   "seoTitle": "Bandeja P/Sobres C8053A HP4100 Laser",
+   "seoDescription": "Bandeja P/Sobres C8053A HP4100 Laser. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Bandeja P/Sobres C8053A HP4100 Laser. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "bandolera-elf-2101",
+   "seoTitle": "Bandolera Elf 2101",
+   "seoDescription": "Porta Tablet Bolsillos internos y externos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "bandolera-elf-2106",
+   "seoTitle": "Bandolera Elf 2106",
+   "seoDescription": "Porta Tablet Bolsillos internos y externos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "base-notebook-targus-chill-mat-con-4-puertos-usb-2-0",
+   "brand": "Targus",
+   "seoTitle": "Base Notebook Targus Chill Mat con 4 puertos",
+   "seoDescription": "Base Notebook Targus Chill Mat con 4 puertos USB 2.0. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Base Notebook Targus Chill Mat con 4 puertos USB 2.0. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "base-para-notebook-cm-notepal-x150-spec",
+   "name": "Base para Notebook CM Notepal X150 Spec",
+   "seoTitle": "Base para Notebook CM Notepal X150 Spec",
+   "seoDescription": "Base para Notebook CM Notepal X150 Spec. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Base para Notebook CM Notepal X150 Spec. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "bateria-apc-easy-srv-36v-1kva-torre-2",
+   "name": "Bateria APC Easy SRV 36V 1KVA Torre",
+   "brand": "APC",
+   "seoTitle": "Bateria APC Easy SRV 36V 1KVA Torre",
+   "seoDescription": "Batería de respaldo APC Easy SRV 36V 1KVA formato torre. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "bateria-apc-smart-ups-xl-24v",
+   "name": "Bateria APC Smart-ups XL 24V",
+   "brand": "APC",
+   "seoTitle": "Bateria APC Smart-ups XL 24V",
+   "seoDescription": "Batería APC Smart-UPS XL 24V para protección y respaldo de energía confiable. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "bateria-apc-srt-192v-5kva-and-6kva-2",
+   "name": "Bateria APC SRT 192V 5KVA AND 6KVA",
+   "brand": "APC",
+   "seoTitle": "Bateria APC SRT 192V 5KVA AND 6KVA",
+   "seoDescription": "Batería APC SRT 192V para sistemas UPS de 5KVA y 6KVA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "bateria-apc-srtg-192v-32x5ah-p-ups-6810kva",
+   "name": "Bateria APC Srtg 192V 32X5AH P/UPS 6,8,10KVA",
+   "brand": "APC",
+   "seoTitle": "Bateria APC Srtg 192V 32X5AH P/UPS 6,8,10KVA",
+   "seoDescription": "Batería APC SRTG 192V 32x5AH compatible con UPS de 6, 8 y 10KVA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "bateria-apc-symmetra-sybt9-2",
+   "name": "Bateria APC Symmetra SYBT9",
+   "brand": "APC",
+   "seoTitle": "Bateria APC Symmetra SYBT9",
+   "seoDescription": "Batería de repuesto APC Symmetra SYBT9 para sistemas UPS. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "bateria-eaton-9e-ebm240-p-ups10-20kva-al-2",
+   "name": "Batería Eaton 9E EBM240 P/UPS10-20KVA (al)",
+   "brand": "Eaton",
+   "seoTitle": "Batería Eaton 9E EBM240 P/UPS10-20KVA (al)",
+   "seoDescription": "Batería Eaton 9E EBM240 original para sistemas UPS de 10-20KVA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "bateria-ext-eaton-9px-180v-gen-2-p-ups-6kva",
+   "name": "Batería EXT Eaton 9PX 180V (GEN 2) P/ UPS 6KVA",
+   "brand": "Eaton",
+   "seoTitle": "Batería EXT Eaton 9PX 180V (GEN 2) P/ UPS",
+   "seoDescription": "Batería externa Eaton 9PX 180V segunda generación, compatible con UPS 6KVA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "bateria-ext-eaton-9px-240v-gen-2-p-ups-11kva",
+   "name": "Batería EXT Eaton 9PX 240V (GEN 2) P/UPS 11KVA",
+   "brand": "Eaton",
+   "seoTitle": "Batería EXT Eaton 9PX 240V (GEN 2) P/UPS",
+   "seoDescription": "Batería externa Eaton 9PX segunda generación 240V compatible con UPS 11KVA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "bateria-ext-eaton-9sx-480v-rt-6u-s-kit-2",
+   "name": "Batería EXT Eaton 9SX 480V RT 6U s/Kit",
+   "brand": "Eaton",
+   "seoTitle": "Batería EXT Eaton 9SX 480V RT 6U s/Kit",
+   "seoDescription": "Batería externa Eaton 9SX 480V formato rack 6U para sistemas UPS. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "bateria-gopro-enduro-battery-hero-13",
+   "brand": "GoPro",
+   "seoTitle": "Bateria GoPro Enduro Battery Hero 13",
+   "seoDescription": "Incluye 1 Batería Compatible con modelos Hero 13. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "bateria-ion-litio-20v-2ah-daihatsu",
+   "seoTitle": "Bateria ion Litio 20V 2Ah Daihatsu",
+   "seoDescription": "Batería de 20 V / 2.0 AH. Voltaje 20 V (Li-ion) Capacidad (Li-ion) 2000 mAh Potencia 40 Wh. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "batidora-de-inmersion-oster-stick-mixer-2802",
+   "seoTitle": "Batidora de inmersión Oster STICK MIXER 2802",
+   "seoDescription": "La batidora de inmersión de alto rendimiento Oster® te permite preparar una variedad de bebidas y recetas… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "batidora-de-inmersion-oster-stick-mixer-2803",
+   "seoTitle": "Batidora de inmersión Oster STICK MIXER 2803",
+   "seoDescription": "La batidora de inmersión de alto rendimiento Oster® te permite preparar una variedad de bebidas y recetas… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "biblioteca-estudio-delos-5-estantes",
+   "seoTitle": "Biblioteca Estudio Delos 5 Estantes",
+   "seoDescription": "Peso 328 kg Dimensiones 29 × 71 × 180 cm Bultos 1 Línea Estudio Material Melamina 15mm Marca Delos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "biz-1100-duo-usb-nc-apac",
+   "name": "BIZ 1100 DUO USB NC Apac",
+   "seoTitle": "BIZ 1100 DUO USB NC Apac",
+   "seoDescription": "BIZ 1100 DUO USB NC Apac. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "BIZ 1100 DUO USB NC Apac. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "bombilla-stanley-para-mate-spoon-verde",
+   "brand": "Stanley",
+   "seoTitle": "Bombilla Stanley Para Mate Spoon Verde",
+   "seoDescription": "Bombilla Stanley Para Mate Spoon Verde. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Bombilla Stanley Para Mate Spoon Verde. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "box-cama-1-plaza-duo",
+   "seoTitle": "Box Duo Delos 1 Plaza Pino Cascina",
+   "seoDescription": "Alto: 40 Largo: 81 Profundidad: 192 Bultos: 2 Peso: 60 KG. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "box-duo-delos-1-plaza-roble-nebraska-natural",
+   "seoTitle": "Box Duo Delos 1 Plaza Roble Nebraska Natural",
+   "seoDescription": "Alto: 40 Largo: 81 Profundidad: 192 Bultos: 2 Peso: 60 KG. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "box-duo-delos-2-plazas-pino-cascina",
+   "seoTitle": "Box Duo Delos 2 Plazas Pino Cascina",
+   "seoDescription": "Peso 88 kg Dimensiones 191 × 141 × 40 cm Bultos 3 Línea Duo Material Melamina 15mm Marca Delos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "box-duo-delos-2-plazas-roble-nebraska-natural",
+   "seoTitle": "Box Duo Delos 2 Plazas Roble Nebraska Natural",
+   "seoDescription": "Peso 88 kg Dimensiones 191 × 141 × 40 cm Bultos 3 Línea Duo Material Melamina 15mm Marca Delos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "bridge-smc-eliteconnect-wireless-2-4ghz-11mbps",
+   "seoTitle": "BRIDGE SMC EliteConnect™ WIRELESS 2.4GHz",
+   "seoDescription": "BRIDGE SMC EliteConnect™ WIRELESS 2.4GHz 11Mbps. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "BRIDGE SMC EliteConnect™ WIRELESS 2.4GHz 11Mbps. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "bridge-smc-eliteconnect-wireless-2-4ghz-54mbps",
+   "seoTitle": "BRIDGE SMC EliteConnect WIRELESS 2.4GHz",
+   "seoDescription": "BRIDGE SMC EliteConnect WIRELESS 2.4GHz 54Mbps. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "BRIDGE SMC EliteConnect WIRELESS 2.4GHz 54Mbps. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cable-auxiliar-general-electric-1-2m",
+   "seoTitle": "Cable Auxiliar General Electric 1.2m.",
+   "seoDescription": "Cable Auxiliar General Electric 1.2m.. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cable Auxiliar General Electric 1.2m.. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cable-hdmi-general-electric-3-metros-premium",
+   "seoTitle": "Cable HDMI General Electric 3 Metros Premium",
+   "seoDescription": "Cable HDMI General Electric 3 Metros Premium. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cable HDMI General Electric 3 Metros Premium. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cable-lightning-mallado-dekkin",
+   "brand": "Dekkin",
+   "seoTitle": "Cable Lightning Mallado Dekkin",
+   "seoDescription": "Cable Lightning Mallado Dekkin. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cable-micro-usb-mallado-dekkin",
+   "brand": "Dekkin",
+   "seoTitle": "Cable Micro USB Mallado Dekkin",
+   "seoDescription": "Cable Micro USB Mallado Dekkin. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cable-trenzado-dekkin-tipo-c",
+   "brand": "Dekkin",
+   "seoTitle": "Cable Trenzado Dekkin Tipo C",
+   "seoDescription": "Cable Trenzado Dekkin Tipo C. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cable Trenzado Dekkin Tipo C. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cable-trv-usb-c-a-usb-c-mallado-3a",
+   "brand": "TRV",
+   "seoTitle": "Cable TRV Usb C a Usb C Mallado 3A",
+   "seoDescription": "Cable TRV Usb C a Usb C Mallado 3A. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cable TRV Usb C a Usb C Mallado 3A. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cable-u-utp-lszh-cat-6-cpr-eca",
+   "seoTitle": "Cable U/UTP LSZH Cat 6 CPR-eca",
+   "seoDescription": "Cable U/UTP LSZH Cat 6 CPR-eca. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cable-usb-c-dekkin-3a",
+   "brand": "Dekkin",
+   "seoTitle": "Cable USB-C Dekkin 3A",
+   "seoDescription": "Amperaje: 3A Largo del cable: Cable de 1m Carga y sincroniza datos Carga Ultra Rápida. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cafetera-automatica-eiffel-expreso-multicapsula-para-dolce-gusto",
+   "seoTitle": "Cafetera Automática Eiffel Expreso",
+   "seoDescription": "Voltaje: 220V Cafetera expreso. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cafetera-de-filtro-winco-w1932",
+   "brand": "Winco",
+   "seoTitle": "Cafetera de Filtro Winco W1932",
+   "seoDescription": "Cafetera de Filtro Winco W1932. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cafetera-electrica-yelmo-1-8-lts-ca-7115-900w-18-pocillos",
+   "seoTitle": "Cafetera Eléctrica Yelmo 1.8 Lts CA-7115 900W",
+   "seoDescription": "Cafetera Eléctrica Yelmo 1.8 Lts CA-7115 900W 18 Pocillos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cafetera-nescafe-dolce-gusto-piccolo-xs",
+   "seoTitle": "Cafetera Moulinex Nescafe Dolce Gusto Piccolo",
+   "seoDescription": "Cafetera Moulinex Nescafe Dolce Gusto Piccolo XS. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "caja-fuerte-digital-gadnic",
+   "brand": "Gadnic",
+   "seoTitle": "Caja Fuerte Digital Gadnic",
+   "seoDescription": "Caja Fuerte Digital Gadnic. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "calculadora-cientifica-casio-fx-350la-plus-2",
+   "seoTitle": "Calculadora Científica Casio FX-350LA Plus 2",
+   "seoDescription": "Calculadora Científica Casio FX-350LA Plus 2. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "calculadora-cientifica-casio-fx-82la-cw",
+   "seoTitle": "Calculadora Científica Casio FX-82LA CW",
+   "seoDescription": "Calculo Basico Calculo Avanzado Calculo Aplicado 10 + 2 Dígitos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "calefactor-de-mica-peabody",
+   "brand": "Peabody",
+   "seoTitle": "Calefactor de Mica Peabody 2000W",
+   "seoDescription": "2 Niveles de Potencia (1000w/2000w). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "calefactor-de-mica-peabody-2000w-negro",
+   "brand": "Peabody",
+   "seoTitle": "Calefactor de Mica Peabody 2000W Negro",
+   "seoDescription": "2 Niveles de Potencia (1000w/2000w). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "calefactor-electrico-liliana-tecnohot-2200w",
+   "brand": "Liliana",
+   "seoTitle": "Calefactor Electrico Liliana Tecnohot 2200W",
+   "seoDescription": "Termostato regulable que ahorra energía. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "caloventor-liliana-de-pared-smartheat-2000w",
+   "brand": "Liliana",
+   "seoTitle": "Caloventor Liliana de Pared Smartheat 2000w",
+   "seoDescription": "Frente de vidrio templado blanco : Diseño elegante y moderno. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "caloventor-liliana-heatsense-3-en-1",
+   "brand": "Liliana",
+   "seoTitle": "Caloventor Liliana Heatsense 3 en 1",
+   "seoDescription": "Caloventor Liliana Heatsense 3 en 1. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "caloventor-philco-2000w",
+   "brand": "Philco",
+   "seoTitle": "Caloventor Philco 2000W",
+   "seoDescription": "Potencia: 2000 W 2 Niveles de calor Modo ventilación Termostato regulable Corte seguridad por sobrecalentamiento… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "caloventor-split-de-pared-peabody-blanco",
+   "seoTitle": "Caloventor Split de Pared Peabody Blanco",
+   "seoDescription": "Display Touch LED con control de temperatura. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "caloventor-split-de-pared-peabody-negro",
+   "seoTitle": "Caloventor Split de Pared Peabody Negro",
+   "seoDescription": "Caloventor Split de Pared Peabody Negro. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "caloventor-split-de-pared-peabody-rojo",
+   "seoTitle": "Caloventor Split de Pared Peabody Rojo",
+   "seoDescription": "Caloventor Split de Pared Peabody Rojo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "caloventor-split-liliana-de-pared-2000w",
+   "brand": "Liliana",
+   "seoTitle": "Caloventor Split Liliana de Pared 2000W",
+   "seoDescription": "Turbina tangencial Termostato DISPLAY DIGITAL Control remoto con selector de temperatura y timer. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "caloventor-split-whitenblack-2000w-cpwb01",
+   "brand": "Whitenblack",
+   "seoTitle": "Caloventor Split Whitenblack 2000W CPWB01",
+   "seoDescription": "Potente turbina tangencial de 1.500 RPM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "caloventor-winco-1800w-w114",
+   "brand": "Winco",
+   "seoTitle": "Caloventor Winco 1800W W114",
+   "seoDescription": "Caloventor Winco 1800W W114. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "caloventor-winco-2000w-w116",
+   "brand": "Winco",
+   "seoTitle": "Caloventor Winco 2000W W116",
+   "seoDescription": "Caloventor Winco 2000W W116. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "caloventor-winco-2000w-w116-negro",
+   "brand": "Winco",
+   "seoTitle": "Caloventor Winco 2000W W116N",
+   "seoDescription": "Caloventor Winco 2000W W116N. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-2mp-hikvision-easylink-kit-nks422w03h",
+   "name": "Camara 2MP Hikvision Easylink Kit NKS422W03H",
+   "brand": "Hikvision",
+   "seoTitle": "Camara 2MP Hikvision Easylink Kit NKS422W03H",
+   "seoDescription": "Kit cámara seguridad Hikvision 2MP EasyLink NKS422W03H con conectividad WiFi, instalación fácil y monitoreo remoto… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-2mp-hikvision-easylink-kit-nks422w0h",
+   "name": "Camara 2MP Hikvision Easylink Kit NKS422W0H",
+   "brand": "Hikvision",
+   "seoTitle": "Camara 2MP Hikvision Easylink Kit NKS422W0H",
+   "seoDescription": "Kit de videovigilancia Hikvision EasyLink 2MP con conectividad inalámbrica, instalación fácil y grabación HD para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-4mp-hikvision-easylink-kit-nks424w03h",
+   "name": "Camara 4MP Hikvision Easylink Kit NKS424W03H",
+   "brand": "Hikvision",
+   "seoTitle": "Camara 4MP Hikvision Easylink Kit NKS424W03H",
+   "seoDescription": "Kit de cámara de seguridad Hikvision 4MP con tecnología EasyLink para vigilancia profesional de alta resolución y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-4mp-hikvision-easylink-kit-nks424w0h",
+   "name": "Camara 4MP Hikvision Easylink Kit NKS424W0H",
+   "brand": "Hikvision",
+   "seoTitle": "Camara 4MP Hikvision Easylink Kit NKS424W0H",
+   "seoDescription": "Seguridad inalámbrica Plug & Play sin enredos de cables. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-compacta-cinema-line-fx30-body",
+   "seoTitle": "Sony Cinema Line FX30 Body",
+   "seoDescription": "Sensor CMOS Exmor R tipo APS-C (23,3 x 15,5 mm) LCD Tipo de 7,5 cm (tipo 3,0) PÍXELES Aprox. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-de-seguridad-ip-wifi-tenda-ac5",
+   "seoTitle": "Router 4P Tenda AC5 Dual Band AC1200",
+   "seoDescription": "Router 4P Tenda AC5 Dual Band AC1200. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-de-seguridad-ip-wifi-tenda-ch3-wca-exterior-360-1080p",
+   "seoTitle": "Camara de Seguridad IP Wifi Tenda CH3-WCA",
+   "seoDescription": "Camara de Seguridad IP Wifi Tenda CH3-WCA Exterior 360 1080p. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-de-seguridad-ip-wifi-tenda-cp3-full-hd",
+   "seoTitle": "Camara de Seguridad IP Wifi Tenda CP3 Full HD",
+   "seoDescription": "Camara de Seguridad IP Wifi Tenda CP3 Full HD. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-de-seguridad-ip-wifi-tenda-cp7-2-5k",
+   "seoTitle": "Camara de Seguridad IP Wifi Tenda CP7 2.5K",
+   "seoDescription": "Camara de Seguridad IP Wifi Tenda CP7 2.5K. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-de-seguridad-ip-wifi-tenda-ct3-exterior-full-hd",
+   "seoTitle": "Camara de Seguridad IP Wifi Tenda CT3",
+   "seoDescription": "Visión nocturna en color Resolución Full HD 1080p Antenas Wi-Fi duales Alertas de voz personalizables Protección… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-de-seguridad-ip-wifi-tenda-ct6-exterior-2k",
+   "seoTitle": "Camara de Seguridad IP Wifi Tenda CT6",
+   "seoDescription": "Visión nocturna en color Resolución 2K Antenas Wi-Fi duales Alertas de voz personalizables Protección contra el… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-de-seguridad-kassel-interior-full-hd",
+   "brand": "Kassel",
+   "seoTitle": "Cámara de Seguridad Kassel Interior Full HD",
+   "seoDescription": "Controla todos los aspectos de la cámara de manera remota gracias a la aplicación descargable. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-insta360-x5-bundle",
+   "seoTitle": "Cámara Insta360 X5 Bundle",
+   "seoDescription": "La experiencia 360° más potente y completa del mercado. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-1080p-loosafe-ls-q3-poe",
+   "name": "Camara IP 1080P Loosafe LS-Q3 POE",
+   "seoTitle": "Camara IP 1080P Loosafe LS-Q3 POE",
+   "seoDescription": "Camara IP 1080P Loosafe LS-Q3 POE. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 1080P Loosafe LS-Q3 POE. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-1080p-loosafe-ls-q4-wifi",
+   "name": "Camara IP 1080P Loosafe LS-Q4 WIFI",
+   "seoTitle": "Camara IP 1080P Loosafe LS-Q4 WIFI",
+   "seoDescription": "Camara IP 1080P Loosafe LS-Q4 WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 1080P Loosafe LS-Q4 WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-1080p-loosafe-ls-qw25-w-2",
+   "name": "Camara IP 1080P Loosafe LS-QW25-W",
+   "seoTitle": "Camara IP 1080P Loosafe LS-QW25-W",
+   "seoDescription": "Camara IP 1080P Loosafe LS-QW25-W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 1080P Loosafe LS-QW25-W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-2mp-ezviz-bm1-bear-baby-call-monitor-2",
+   "name": "Camara IP 2MP Ezviz BM1 Bear Baby Call Monitor",
+   "brand": "Ezviz",
+   "seoTitle": "Camara IP 2MP Ezviz BM1 Bear Baby Call",
+   "seoDescription": "Camara IP 2MP Ezviz BM1 Bear Baby Call Monitor. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 2MP Ezviz BM1 Bear Baby Call Monitor. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-2mp-ezviz-c8pf-pt-2-8-12-dual-lens-340",
+   "name": "Camara IP 2MP Ezviz C8PF PT 2.8/12 Dual Lens 340°",
+   "brand": "Ezviz",
+   "seoTitle": "Camara IP 2MP Ezviz C8PF PT 2.8/12 Dual Lens",
+   "seoDescription": "Camara IP 2MP Ezviz C8PF PT 2.8/12 Dual Lens 340°. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 2MP Ezviz C8PF PT 2.8/12 Dual Lens 340°. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-2mp-ezviz-h1c-2-4mm-1080p-interior",
+   "name": "Camara IP 2MP Ezviz H1C 2.4MM 1080P Interior",
+   "brand": "Ezviz",
+   "seoTitle": "Camara IP 2MP Ezviz H1C 2.4MM 1080P Interior",
+   "seoDescription": "Camara IP 2MP Ezviz H1C 2.4MM 1080P Interior. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 2MP Ezviz H1C 2.4MM 1080P Interior. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-2mp-ezviz-h3c-2-8mm-exterior-expo",
+   "name": "Camara IP 2MP Ezviz H3C 2.8MM Exterior Expo",
+   "brand": "Ezviz",
+   "seoTitle": "Camara IP 2MP Ezviz H3C 2.8MM Exterior Expo",
+   "seoDescription": "Cámara IP EZVIZ H3C 2MP para exteriores con lente 2.8mm, resolución Full HD y resistencia climática profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-2mp-ezviz-h6c-4mm-360-interior",
+   "name": "Camara IP 2MP Ezviz H6C 4MM 360° Interior",
+   "brand": "Ezviz",
+   "seoTitle": "Camara IP 2MP Ezviz H6C 4MM 360° Interior",
+   "seoDescription": "Camara IP 2MP Ezviz H6C 4MM 360° Interior. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 2MP Ezviz H6C 4MM 360° Interior. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ipc-b120ha-luc-h265-ip67-mic",
+   "name": "Camara IP 2MP HiLook IPC-B120HA-LUC H265+ IP67 MIC",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook IPC-B120HA-LUC H265+",
+   "seoDescription": "Camara IP 2MP HiLook IPC-B120HA-LUC H265+ IP67 MIC. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 2MP HiLook IPC-B120HA-LUC H265+ IP67 MIC. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ipc-b120ha-lufc-sl",
+   "name": "Camara IP 2MP HiLook IPC-B120HA-LUFC/SL",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook IPC-B120HA-LUFC/SL",
+   "seoDescription": "Cámara IP HiLook 2MP con tecnología ColorVu para videovigilancia profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ipc-b129ha-lu-colorvu",
+   "name": "Camara IP 2MP HiLook IPC-B129HA-LU Colorvu",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook IPC-B129HA-LU Colorvu",
+   "seoDescription": "Cámara IP Hilook 2MP con tecnología ColorVu para visión nocturna a todo color, seguridad profesional las 24 horas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ipc-b129ha-luf-srb-colorvu",
+   "name": "Camara IP 2MP HiLook IPC-B129HA-LUF/SRB Colorvu",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook IPC-B129HA-LUF/SRB",
+   "seoDescription": "Cámara IP 2MP HiLook ColorVu con visión nocturna a color, resolución Full HD y tecnología avanzada para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ipc-b620ha-lzu-varif-h265",
+   "name": "Camara IP 2MP HiLook IPC-B620HA-LZU Varif H265+",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook IPC-B620HA-LZU Varif",
+   "seoDescription": "Camara IP 2MP HiLook IPC-B620HA-LZU Varif H265+. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 2MP HiLook IPC-B620HA-LZU Varif H265+. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ipc-d120ha-luc-h265-ip67",
+   "name": "Camara IP 2MP HiLook IPC-D120HA-LUC H265+ IP67",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook IPC-D120HA-LUC H265+",
+   "seoDescription": "Camara IP 2MP HiLook IPC-D120HA-LUC H265+ IP67. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 2MP HiLook IPC-D120HA-LUC H265+ IP67. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ipc-d120ha-lufc-h265-ip67",
+   "name": "Camara IP 2MP HiLook IPC-D120HA-LUFC H265+ IP67",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook IPC-D120HA-LUFC H265+",
+   "seoDescription": "Cámara IP Hilook 2MP con compresión H265+, protección IP67 y visión nocturna. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ipc-d129ha-lu-color-vu",
+   "name": "Camara IP 2MP HiLook IPC-D129HA-LU Color VU",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook IPC-D129HA-LU Color VU",
+   "seoDescription": "Cámara IP HiLook 2MP con tecnología Color VU para vigilancia nocturna a color, resolución Full HD y diseño compacto… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ipc-d620ha-lzu-varif-h265",
+   "name": "Camara IP 2MP HiLook IPC-D620HA-LZU Varif H265+",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook IPC-D620HA-LZU Varif",
+   "seoDescription": "Camara IP 2MP HiLook IPC-D620HA-LZU Varif H265+. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 2MP HiLook IPC-D620HA-LZU Varif H265+. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ipc-t220ha-luc-h265-ip67",
+   "name": "Camara IP 2MP HiLook IPC-T220HA-LUC H265+ IP67",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook IPC-T220HA-LUC H265+",
+   "seoDescription": "Camara IP 2MP HiLook IPC-T220HA-LUC H265+ IP67. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 2MP HiLook IPC-T220HA-LUC H265+ IP67. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ipc-t220ha-lufc-sl-h265-ip67",
+   "name": "Camara IP 2MP HiLook IPC-T220HA-LUFC/SL H265+ IP67",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook IPC-T220HA-LUFC/SL H265+",
+   "seoDescription": "Cámara IP HiLook 2MP con tecnología H265+, resistencia IP67 y visión nocturna full color para seguridad profesional… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ipc-t229ha-lu-color-vu",
+   "name": "Camara IP 2MP HiLook IPC-T229HA-LU Color VU",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook IPC-T229HA-LU Color VU",
+   "seoDescription": "Cámara IP HiLook 2MP con tecnología Color Vu para imágenes a color en oscuridad total. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ipc-t229ha-luf-srb-color-vu",
+   "name": "Camara IP 2MP HiLook IPC-T229HA-LUF/SRB Color VU",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook IPC-T229HA-LUF/SRB Color",
+   "seoDescription": "Cámara IP HILOOK 2MP con tecnología ColorVu para imágenes full color nocturnas, vigilancia profesional 24 horas… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ipc-t621h-z-varif",
+   "name": "Camara IP 2MP HiLook IPC-T621H-Z Varif",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook IPC-T621H-Z Varif",
+   "seoDescription": "Cámara IP HiLook 2MP con lente varifocal, ideal para videovigilancia profesional con alta definición y zoom ajustable. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ptz-n2204i-de-4x-h265-ik10",
+   "name": "Camara IP 2MP HiLook PTZ-N2204I-DE 4X H265+ IK10",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook PTZ-N2204I-DE 4X H265+",
+   "seoDescription": "Cámara IP PTZ HiLook 2MP con zoom 4X, resistencia IK10, compresión H265+ para vigilancia exterior profesional de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-2mp-hilook-ptz-n4225i-de-25x-h265-ir100",
+   "name": "Camara IP 2MP HiLook PTZ-N4225I-DE 25X H265+ IR100",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 2MP HiLook PTZ-N4225I-DE 25X H265+",
+   "seoDescription": "Camara IP 2MP HiLook PTZ-N4225I-DE 25X H265+ IR100. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 2MP HiLook PTZ-N4225I-DE 25X H265+ IR100. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-3mp-ezviz-h9c-dual-lens-2k-exterior",
+   "seoTitle": "Camara IP 3MP Ezviz H9C Dual Lens 2K Exterior",
+   "seoDescription": "Cámara IP de Seguridad Ezviz H9c Dual Lens 2K (3MP + 3MP) Exterior La solución de vigilancia definitiva para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-4mp-ezviz-h3c-color-2-8mm-exterior",
+   "name": "Camara IP 4MP Ezviz H3C Color 2.8MM Exterior",
+   "brand": "Ezviz",
+   "seoTitle": "Camara IP 4MP Ezviz H3C Color 2.8MM Exterior",
+   "seoDescription": "Camara IP 4MP Ezviz H3C Color 2.8MM Exterior. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 4MP Ezviz H3C Color 2.8MM Exterior. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-4mp-ezviz-h6c-4mm-360-interior",
+   "name": "Camara IP 4MP Ezviz H6C 4MM 360° Interior",
+   "brand": "Ezviz",
+   "seoTitle": "Camara IP 4MP Ezviz H6C 4MM 360° Interior",
+   "seoDescription": "Camara IP 4MP Ezviz H6C 4MM 360° Interior. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 4MP Ezviz H6C 4MM 360° Interior. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-4mp-ezviz-h7c-dual-lens-cam-2k-interior-2",
+   "name": "Camara IP 4MP Ezviz H7C Dual Lens CAM 2K+ Interior",
+   "brand": "Ezviz",
+   "seoTitle": "Camara IP 4MP Ezviz H7C Dual Lens CAM 2K+",
+   "seoDescription": "Camara IP 4MP Ezviz H7C Dual Lens CAM 2K+ Interior. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 4MP Ezviz H7C Dual Lens CAM 2K+ Interior. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-4mp-ezviz-hb8-exteriorpanel-solar",
+   "name": "Camara IP 4MP Ezviz HB8 Exterior+panel Solar",
+   "brand": "Ezviz",
+   "seoTitle": "Camara IP 4MP Ezviz HB8 Exterior+panel Solar",
+   "seoDescription": "Camara IP 4MP Ezviz HB8 Exterior+panel Solar. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 4MP Ezviz HB8 Exterior+panel Solar. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ipc-b140ha-luf-sl-h265-ip67",
+   "name": "Camara IP 4MP HiLook IPC-B140HA-LUF/SL H265+ IP67",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook IPC-B140HA-LUF/SL H265+",
+   "seoDescription": "Cámara IP HiLook 4MP con tecnología H265+, resistencia IP67 para exterior y calidad profesional de videovigilancia… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ipc-b141h-c-h265-ip67",
+   "name": "Camara IP 4MP HiLook IPC-B141H-C H265+ IP67",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook IPC-B141H-C H265+ IP67",
+   "seoDescription": "Camara IP 4MP HiLook IPC-B141H-C H265+ IP67. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 4MP HiLook IPC-B141H-C H265+ IP67. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ipc-b149ha-colorvu",
+   "name": "Camara IP 4MP HiLook IPC-B149HA Colorvu",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook IPC-B149HA Colorvu",
+   "seoDescription": "Cámara IP HiLook 4MP con tecnología ColorVu para vigilancia nocturna a color, resolución Full HD y conectividad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ipc-b149ha-luf-srbcolorvu",
+   "name": "Camara IP 4MP HiLook IPC-B149HA-LUF/Srbcolorvu",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook",
+   "seoDescription": "Cámara IP HiLook 4MP con tecnología ColorVu para grabación nocturna a todo color y vigilancia profesional 24/7. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ipc-b640ha-lzu-varif-h265-2",
+   "name": "Camara IP 4MP HiLook IPC-B640HA-LZU Varif H265+",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook IPC-B640HA-LZU Varif",
+   "seoDescription": "Camara IP 4MP HiLook IPC-B640HA-LZU Varif H265+. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 4MP HiLook IPC-B640HA-LZU Varif H265+. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ipc-d140ha-luc-h265-mic-2",
+   "name": "Camara IP 4MP HiLook IPC-D140HA-LUC H265+ MIC",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook IPC-D140HA-LUC H265+ MIC",
+   "seoDescription": "Cámara IP 4MP HiLook IPC-D140HA-LUC con H.265+ y micrófono integrado para una vigilancia de alta calidad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ipc-d140ha-lufc-h265-mic",
+   "name": "Camara IP 4MP HiLook IPC-D140HA-LUFC H265+ MIC",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook IPC-D140HA-LUFC H265+",
+   "seoDescription": "Cámara IP domo 4MP HiLook con micrófono integrado, compresión H265+ y audio bidireccional para vigilancia… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ipc-d141h-c-h265",
+   "name": "Camara IP 4MP HiLook IPC-D141H-C H265+",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook IPC-D141H-C H265+",
+   "seoDescription": "Cámara IP 4MP HiLook IPC-D141H-C H265+ con visión nítida y tecnología avanzada para seguridad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ipc-d149ha-lu-colorvu",
+   "name": "Camara IP 4MP HiLook IPC-D149HA-LU Colorvu",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook IPC-D149HA-LU Colorvu",
+   "seoDescription": "Cámara IP 4MP HiLook ColorVu con visión nocturna a todo color, audio bidireccional y tecnología avanzada para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ipc-d640ha-lzu-varif-h265",
+   "name": "Camara IP 4MP HiLook IPC-D640HA-LZU Varif H265+",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook IPC-D640HA-LZU Varif",
+   "seoDescription": "Camara IP 4MP HiLook IPC-D640HA-LZU Varif H265+. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 4MP HiLook IPC-D640HA-LZU Varif H265+. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ipc-t240hap-luf-sl",
+   "name": "Camara IP 4MP HiLook IPC-T240HAP-LUF/SL",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook IPC-T240HAP-LUF/SL",
+   "seoDescription": "Cámara IP 4MP HiLook con resolución ultra HD, visión nocturna avanzada, audio bidireccional y tecnología… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ipc-t249ha-lu-colorvu",
+   "name": "Camara IP 4MP HiLook IPC-T249HA-LU Colorvu",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook IPC-T249HA-LU Colorvu",
+   "seoDescription": "Cámara IP 4MP HiLook ColorVu con visión nocturna a color, resolución ultra HD y tecnología avanzada para vigilancia… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ipc-t249ha-luf-srb-colorvu",
+   "name": "Camara IP 4MP HiLook IPC-T249HA-LUF/SRB Colorvu",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook IPC-T249HA-LUF/SRB",
+   "seoDescription": "Cámara IP HiLook 4MP con tecnología ColorVu para imágenes nocturnas a todo color y grabación ultra HD profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ipc-t640ha-z-varif",
+   "name": "Camara IP 4MP HiLook IPC-T640HA-Z Varif",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook IPC-T640HA-Z Varif",
+   "seoDescription": "Cámara IP HiLook 4MP con lente varifocal, tecnología avanzada de videovigilancia para seguridad profesional y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ptz-n2404i-de3-4x-h265-ik10",
+   "name": "Camara IP 4MP HiLook PTZ-N2404I-DE3 4X H265+ IK10",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook PTZ-N2404I-DE3 4X H265+",
+   "seoDescription": "Cámara IP PTZ 4MP HiLook con zoom 4X, codificación H.265+, resistencia IK10 y control motorizado para vigilancia… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ptz-n2c400m-de-h265",
+   "name": "Camara IP 4MP HiLook PTZ-N2C400M-DE H265+",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook PTZ-N2C400M-DE H265+",
+   "seoDescription": "Cámara IP PTZ 4MP HiLook con tecnología H265+ para videovigilancia profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-4mp-hilook-ptz-n2d400m-de-14-tandemvu",
+   "name": "Camara IP 4MP HiLook PTZ-N2D400M-DE/14 Tandemvu",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 4MP HiLook PTZ-N2D400M-DE/14",
+   "seoDescription": "Cámara IP PTZ 4MP HiLook con tecnología TandemVu, zoom óptico 14x, visión nocturna infrarroja y control remoto para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-5mp-ezviz-h3c-color-4mm-exterior-2",
+   "name": "Camara IP 5MP Ezviz H3C Color 4MM Exterior",
+   "brand": "Ezviz",
+   "seoTitle": "Camara IP 5MP Ezviz H3C Color 4MM Exterior",
+   "seoDescription": "Camara IP 5MP Ezviz H3C Color 4MM Exterior. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 5MP Ezviz H3C Color 4MM Exterior. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-5mp-ezviz-h8c-4mm-pt-360-exterior-3k",
+   "name": "Camara IP 5MP Ezviz H8C 4MM PT 360° Exterior 3K",
+   "brand": "Ezviz",
+   "seoTitle": "Camara IP 5MP Ezviz H8C 4MM PT 360° Exterior",
+   "seoDescription": "Camara IP 5MP Ezviz H8C 4MM PT 360° Exterior 3K. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 5MP Ezviz H8C 4MM PT 360° Exterior 3K. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-6mp-hilook-ipc-b160ha-lu-h265-ip67",
+   "name": "Camara IP 6MP HiLook IPC-B160HA-LU H265+ IP67",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 6MP HiLook IPC-B160HA-LU H265+ IP67",
+   "seoDescription": "Cámara IP HiLook 6MP con tecnología H265+, resistencia IP67 y visión nocturna para videovigilancia profesional… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-6mp-hilook-ipc-b160hap-luf-sl-h265-ip67",
+   "name": "Camara IP 6MP HiLook IPC-B160HAP-LUF/SL H265+ IP67",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 6MP HiLook IPC-B160HAP-LUF/SL H265+",
+   "seoDescription": "Cámara IP HiLook 6MP con compresión H265+, resistencia IP67 y tecnología avanzada para vigilancia profesional… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-6mp-hilook-ipc-b169ha-colorvu",
+   "name": "Camara IP 6MP HiLook IPC-B169HA Colorvu",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 6MP HiLook IPC-B169HA Colorvu",
+   "seoDescription": "Cámara IP HiLook 6MP con tecnología ColorVu para imágenes nocturnas a color, vigilancia profesional 24/7 de alta… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-6mp-hilook-ipc-b169ha-luf-srb-colorvu",
+   "name": "Camara IP 6MP HiLook IPC-B169HA-LUF/SRB Colorvu",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 6MP HiLook IPC-B169HA-LUF/SRB",
+   "seoDescription": "Cámara IP HiLook 6MP con tecnología ColorVu para imágenes a color en total oscuridad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-6mp-hilook-ipc-b660ha-lzu-varif-h265",
+   "name": "Camara IP 6MP HiLook IPC-B660HA-LZU Varif H265+",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 6MP HiLook IPC-B660HA-LZU Varif",
+   "seoDescription": "Cámara IP HiLook 6MP con lente varifocal, compresión H265+ y tecnología avanzada para videovigilancia profesional de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-6mp-hilook-ipc-d160ha-l-h265-ip67-ik08",
+   "name": "Camara IP 6MP HiLook IPC-D160HA-L H265+ IP67 IK08",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 6MP HiLook IPC-D160HA-L H265+ IP67",
+   "seoDescription": "Camara IP 6MP HiLook IPC-D160HA-L H265+ IP67 IK08. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 6MP HiLook IPC-D160HA-L H265+ IP67 IK08. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-6mp-hilook-ipc-d169ha-lu-color-vu",
+   "name": "Camara IP 6MP HiLook IPC-D169HA-LU Color VU",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 6MP HiLook IPC-D169HA-LU Color VU",
+   "seoDescription": "Cámara IP 6MP HiLook ColorVu con visión nocturna a color, tecnología avanzada para vigilancia profesional las 24… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-6mp-hilook-ipc-d660ha-lzu-varif-h265",
+   "name": "Camara IP 6MP HiLook IPC-D660HA-LZU Varif H265+",
+   "brand": "HiLook",
+   "seoTitle": "Camara IP 6MP HiLook IPC-D660HA-LZU Varif",
+   "seoDescription": "Camara IP 6MP HiLook IPC-D660HA-LZU Varif H265+. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP 6MP HiLook IPC-D660HA-LZU Varif H265+. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-cloud-tp-link-nc260-hd-720p-caja-danada",
+   "name": "Camara IP Cloud TP-Link NC260 HD 720P Caja Dañada",
+   "brand": "TP-Link",
+   "seoTitle": "Camara IP Cloud TP-Link NC260 HD 720P Caja",
+   "seoDescription": "Camara IP Cloud TP-Link NC260 HD 720P Caja Dañada. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP Cloud TP-Link NC260 HD 720P Caja Dañada. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-cloud-tp-link-tapo-c100-full-hd-1080p",
+   "name": "Camara IP Cloud TP-Link TP-Link C100 Full HD 1080P",
+   "brand": "TP-Link",
+   "seoTitle": "Camara IP Cloud TP-Link TP-Link C100 Full HD",
+   "seoDescription": "Camara IP Cloud TP-Link TP-Link C100 Full HD 1080P. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP Cloud TP-Link TP-Link C100 Full HD 1080P. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-cloud-tp-link-tapo-c200-full-hd-1080p",
+   "seoTitle": "Camara IP Tp-Link Tapo C200 PTZ Full HD 1080P",
+   "seoDescription": "Cámara IP de Seguridad TP-Link Tapo C200 Interior 360° Full HD Monitoreá cada rincón de tu hogar con total… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-cloud-tp-link-tapo-c320ws-2k-qhd-color-2",
+   "name": "Camara IP Cloud TP-Link TP-Link C320WS 2K QHD Color",
+   "brand": "TP-Link",
+   "seoTitle": "Camara IP Cloud TP-Link TP-Link C320WS 2K QHD",
+   "seoDescription": "Camara IP Cloud TP-Link TP-Link C320WS 2K QHD Color. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP Cloud TP-Link TP-Link C320WS 2K QHD Color. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-cloud-tp-link-tapo-c325wb-2k-qhd-color-2",
+   "name": "Camara IP Cloud TP-Link TP-Link C325WB 2K QHD Color",
+   "brand": "TP-Link",
+   "seoTitle": "Camara IP Cloud TP-Link TP-Link C325WB 2K QHD",
+   "seoDescription": "Camara IP Cloud TP-Link TP-Link C325WB 2K QHD Color. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP Cloud TP-Link TP-Link C325WB 2K QHD Color. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-cloud-tp-link-tapo-c500-ptz-exterior-360",
+   "name": "Camara IP Cloud TP-Link TP-Link C500 PTZ Exterior 360",
+   "brand": "TP-Link",
+   "seoTitle": "Camara IP Cloud TP-Link TP-Link C500 PTZ",
+   "seoDescription": "Cámara IP exterior TP-Link Tapo C500 con rotación 360°, tecnología PTZ, conectividad cloud y resistencia intemperie… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-ezviz-cs-c6n-motorizada-2-full-hd-wifi",
+   "brand": "Ezviz",
+   "seoTitle": "Camara ip Ezviz C6N Motorizada Full HD WIFI",
+   "seoDescription": "Resolución full HD Audio Bi-direccional App EZVIZ (Android y iOS) permite Visualización en vivo, Grabaciones y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-nexxt-nhc-f410-luz-exterior",
+   "name": "Camara IP Nexxt NHC-F410 Luz Exterior",
+   "seoTitle": "Camara IP Nexxt NHC-F410 Luz Exterior",
+   "seoDescription": "Camara IP Nexxt NHC-F410 Luz Exterior. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP Nexxt NHC-F410 Luz Exterior. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-nexxt-nhc-i710-2k-interior",
+   "name": "Camara IP Nexxt NHC-I710 2K Interior",
+   "seoTitle": "Camara IP Nexxt NHC-I710 2K Interior",
+   "seoDescription": "Camara IP Nexxt NHC-I710 2K Interior. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP Nexxt NHC-I710 2K Interior. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-nexxt-nhc-o612-360-ptz-exterior",
+   "name": "Camara IP Nexxt NHC-O612 360° PTZ Exterior",
+   "seoTitle": "Camara IP Nexxt NHC-O612 360° PTZ Exterior",
+   "seoDescription": "Camara IP Nexxt NHC-O612 360° PTZ Exterior. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP Nexxt NHC-O612 360° PTZ Exterior. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-nexxt-nhc-o640-interior-exterior-bateria",
+   "name": "Camara IP Nexxt NHC-O640 Interior-exterior Bateria",
+   "seoTitle": "Camara IP Nexxt NHC-O640 Interior-exterior",
+   "seoDescription": "Camara IP Nexxt NHC-O640 Interior-exterior Bateria. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Camara IP Nexxt NHC-O640 Interior-exterior Bateria. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "camara-ip-tp-link-tapo-c201-ptz-full-hd-1080p",
+   "seoTitle": "Camara IP Tp-Link Tapo C201 PTZ Full HD 1080P",
+   "seoDescription": "Cámara IP de Seguridad TP-Link Tapo C201 Interior 360° Full HD Monitoreá cada rincón de tu hogar con total… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-ip-tp-link-tapo-c246d-ptz-doble-lente",
+   "brand": "TP-Link",
+   "seoTitle": "Camara IP Tp-Link Tapo C246D PTZ Doble Lente",
+   "seoDescription": "Cámara de Seguridad TP-Link Tapo C246D Doble Lente 2K Máxima cobertura sin puntos ciegos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-sony-cinema-line-fx3-body",
+   "seoTitle": "Sony Cinema Line FX3 Body",
+   "seoDescription": "Sony Cinema Line FX3 Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-sony-compacta-cinema-line-fx30-body-e-mount-hand-xlr",
+   "seoTitle": "Cámara Sony Compacta Cinema Line FX30 Body",
+   "seoDescription": "Sensor CMOS Exmor R tipo APS-C (23,3 x 15,5 mm) LCD Tipo de 7,5 cm (tipo 3,0) PÍXELES Aprox. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "camara-sony-zve10-kit-16-50mm",
+   "seoTitle": "Sony Alpha ZVE10 kit 16-50mm",
+   "seoDescription": "Sony Alpha ZVE10 kit 16-50mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cambium-epmp-force-425-antena-cfte-llc-4910-6135-con-antena-de-25-dbi",
+   "name": "Cambium Epmp Force 425 + Antena Cfte LLC 4910-6135 con Antena de 25 DBI",
+   "seoTitle": "Cambium Epmp Force 425 + Antena Cfte LLC",
+   "seoDescription": "Cambium Epmp Force 425 + Antena Cfte LLC 4910-6135 con Antena de 25 DBI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cambium Epmp Force 425 + Antena Cfte LLC 4910-6135 con Antena de 25 DBI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "canon-5d-mark-iv",
+   "seoTitle": "Canon EOS 5D Mark IV Body",
+   "seoDescription": "Canon EOS 5D Mark IV Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-ef-16-35mm-f-2-8l-iii-usm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon EF 16-35mm f/2.8L III USM",
+   "seoDescription": "El EF 16-35 mm f/2,8L III USM es un objetivo zoom ultra gran angular de calidad superior, con una abertura máxima de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-5d-mark-iv-24-105mm-is-usm",
+   "seoTitle": "Canon EOS 5D Mark IV 24-105mm IS USM",
+   "seoDescription": "Canon EOS 5D Mark IV 24-105mm IS USM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r10-kit-18-45mm-f-4-5-6-3-is-stm",
+   "seoTitle": "Canon EOS R10 kit 18-45mm",
+   "seoDescription": "Sensor CMOS APS‑C de 24,2 MP CMOS AF II de doble píxel Vídeo 4K30, 4K60 con recorte; HDR-PQ 23 fps E. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r100-doble-kit-18-45mm-55-210mm",
+   "seoTitle": "Canon EOS R100 Doble kit 18-45mm 55-210mm",
+   "seoDescription": "Canon EOS R100 Doble kit 18-45mm 55-210mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r100-kit-18-45mm",
+   "seoTitle": "Canon EOS R100 kit 18-45mm",
+   "seoDescription": "Canon EOS R100 kit 18-45mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r5-body",
+   "seoTitle": "Canon EOS R5 Body",
+   "seoDescription": "Canon EOS R5 Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r5-c-body",
+   "seoTitle": "Canon EOS R5 C Body",
+   "seoDescription": "Canon EOS R5 C Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r5-mark-ii-body",
+   "seoTitle": "Canon EOS R5 Mark II Body",
+   "seoDescription": "Canon EOS R5 Mark II Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r50-kit-18-45mm-f-4-5-6-3-is-stm",
+   "seoTitle": "Canon EOS R50 kit 18-45mm",
+   "seoDescription": "Canon EOS R50 kit 18-45mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r50-kit-18-45mm-f-4-5-6-3-is-stm-55-210mm-f-5-7-1-is-stm",
+   "seoTitle": "Canon EOS R50 kit 18-45mm + 55-210mm",
+   "seoDescription": "Canon EOS R50 kit 18-45mm + 55-210mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r50-v-kit-14-30mm",
+   "seoTitle": "Canon EOS R50 V Kit 14-30mm",
+   "seoDescription": "Objetivos intercambiables para gozar de mayor control creativo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r6-body-markii",
+   "seoTitle": "Canon EOS R6 Mark II Body",
+   "seoDescription": "Resolución 24,2mp. Estabilización IS de 5 ejes incorporado en el cuerpo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r6-mark-iii-body",
+   "seoTitle": "Canon EOS R6 Mark III Body",
+   "seoDescription": "Cámara mirrorless Canon EOS R6 Mark III Body profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r6-mark-iii-kit-24-105mm-f-4-7-1-stm",
+   "seoTitle": "Canon EOS R6 Mark III kit 24-105mm f/4-7.1",
+   "seoDescription": "Cámara mirrorless Canon EOS R6 Mark III con lente 24-105mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r7-body",
+   "seoTitle": "Canon EOS R7 Body",
+   "seoDescription": "Sensor CMOS APS-C de 32.5 megapíxeles con hasta 15 cps cuando se usa obturador mecánico. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r7-kit-18-150mm-is-stm",
+   "seoTitle": "Canon EOS R7 kit 18-150mm IS STM",
+   "seoDescription": "Sensor CMOS APS-C de 32.5 megapíxeles con hasta 15 cps cuando se usa obturador mecánico. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r8-body",
+   "seoTitle": "Canon EOS R8 Body",
+   "seoDescription": "Sensor Full Frame de 24,2 megapíxeles Rendimiento sensible con baja iluminación Vídeo hasta 4K a 60p Captura metraje… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-r8-kit-24-50",
+   "seoTitle": "Canon EOS R8 kit 24-50mm",
+   "seoDescription": "Sensor Full Frame de 24,2 megapíxeles Rendimiento sensible con baja iluminación Vídeo hasta 4K a 60p Captura metraje… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-rebel-rp-24-105mm",
+   "seoTitle": "Canon EOS Rebel RP 24-105mm IS STM",
+   "seoDescription": "Canon EOS Rebel RP 24-105mm IS STM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-rebel-rp-body",
+   "seoTitle": "Canon EOS Rebel RP Body",
+   "seoDescription": "Canon EOS Rebel RP Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-rebel-sl3-kit-18-55mm",
+   "seoTitle": "Canon EOS Rebel 250D (SL3) kit 18-55mm",
+   "seoDescription": "Canon EOS Rebel 250D (SL3) kit 18-55mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-eos-rebel-t7-kit-18-55mm",
+   "seoTitle": "Canon EOS Rebel T7 Kit 18-55mm II",
+   "seoDescription": "Canon EOS Rebel T7 Kit 18-55mm II. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-powershot-g7-x-mark-iii",
+   "brand": "Canon",
+   "seoTitle": "Canon PowerShot G7 X Mark III Black",
+   "seoDescription": "Canon PowerShot G7 X Mark III Black. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-powershot-g7-x-mark-iii-silver",
+   "brand": "Canon",
+   "seoTitle": "Canon PowerShot G7 X Mark III Silver",
+   "seoDescription": "Canon PowerShot G7 X Mark III Silver. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-powershot-gx7-mark-iii",
+   "seoTitle": "Canon Powershot GX7 Mark III",
+   "seoDescription": "La cámara definitiva para creadores de contenido y vlogging. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-powershot-sx740-hs",
+   "brand": "Canon",
+   "seoTitle": "Canon Powershot Sx740 HS",
+   "seoDescription": "Canon Powershot Sx740 HS. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-powershot-v1",
+   "brand": "Canon",
+   "seoTitle": "Canon PowerShot V1",
+   "seoDescription": "Canon PowerShot V1. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-r1-body",
+   "brand": "Canon",
+   "seoTitle": "Canon R1 Body",
+   "seoDescription": "Canon R1 Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-r10-body",
+   "seoTitle": "Canon R10 Body",
+   "seoDescription": "La Canon R10 Body es una cámara mirrorless compacta y ligera, ideal para fotógrafos y videógrafos que buscan calidad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-10-20-f-4-stm",
+   "name": "Canon RF 10-20 F/4 STM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 10-20 F/4 STM",
+   "seoDescription": "Objetivo ultra gran angular Canon RF 10-20mm F/4 STM con estabilización óptica, ideal para paisajes, arquitectura y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-100-400-5-6-8-is-usm",
+   "name": "Canon RF 100-400 5.6-8 IS USM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 100-400 5.6-8 IS USM",
+   "seoDescription": "Teleobjetivo Canon RF 100-400mm con estabilización óptica, enfoque ultrasilencioso USM y diseño compacto para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-100-500-4-5-7-1l-is-usm",
+   "name": "Canon RF 100-500 4.5-7.1L IS USM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 100-500 4.5-7.1L IS USM",
+   "seoDescription": "Teleobjetivo Canon RF 100-500mm f/4.5-7.1L IS USM con estabilización óptica, enfoque ultrarrápido y calidad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-14-35-f-4-l-is-usm",
+   "name": "Canon RF 14-35 F/4 L IS USM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 14-35 F/4 L IS USM",
+   "seoDescription": "Objetivo gran angular profesional Canon RF 14-35mm f/4L con estabilización de imagen, construcción sellada y calidad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-15-30-f-4-5-5-6",
+   "name": "Canon RF 15-30 F/4.5-5.6",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 15-30 F/4.5-5.6",
+   "seoDescription": "Objetivo Canon RF 15-30mm f/4.5-5.6 gran angular para cámaras mirrorless. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-15-35-f-2-8-is-usm",
+   "name": "Canon RF 15-35 F/2.8 IS USM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 15-35 F/2.8 IS USM",
+   "seoDescription": "Objetivo gran angular profesional Canon RF 15-35mm f/2.8L con estabilización óptica, construcción resistente y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-16-28-f-2-8-is-stm",
+   "name": "Canon RF 16-28 F/2.8 IS STM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 16-28 F/2.8 IS STM",
+   "seoDescription": "Objetivo gran angular Canon RF 16-28mm f/2.8 con estabilización óptica, motor STM silencioso y apertura constante… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-16m-f-2-8-stm",
+   "name": "Canon RF 16M F/2.8 STM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 16M F/2.8 STM",
+   "seoDescription": "Canon RF 16M F/2.8 STM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-200-800-f6-3-9-is-usm",
+   "name": "Canon RF 200-800 F6.3-9 IS USM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 200-800 F6.3-9 IS USM",
+   "seoDescription": "Teleobjetivo Canon RF 200-800mm con estabilización IS USM, ideal para fotografía de naturaleza, deportes y wildlife… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-20m-f-1-4",
+   "name": "Canon RF 20M F/1.4",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 20M F/1.4",
+   "seoDescription": "Objetivo Canon RF 20mm f/1.4 gran angular profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-24-105-f-2-8-is-usm",
+   "name": "Canon RF 24-105 F/2.8 IS USM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 24-105 F/2.8 IS USM",
+   "seoDescription": "Objetivo zoom profesional Canon RF 24-105mm F/2.8 con estabilización óptica, motor USM y construcción resistente… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-24-105-f-4-7-1-is-stm",
+   "name": "Canon RF 24-105 F/4-7.1 IS STM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 24-105 F/4-7.1 IS STM",
+   "seoDescription": "Objetivo zoom Canon RF 24-105mm con estabilización óptica, enfoque silencioso STM y apertura f/4-7.1, ideal para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-24-105-f-4-is-usm",
+   "name": "Canon RF 24-105 F/4 IS USM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 24-105 F/4 IS USM",
+   "seoDescription": "Objetivo zoom profesional Canon RF 24-105mm f/4L IS USM con estabilización óptica, ideal para fotografía versátil en… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-24-240-4-6-3-is-usm",
+   "name": "Canon RF 24-240 4-6.3 IS USM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 24-240 4-6.3 IS USM",
+   "seoDescription": "Objetivo Canon RF 24-240mm con estabilización óptica, motor USM silencioso y rango zoom 10x ideal para fotografía… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-24-70-f-2-8-is-usm",
+   "seoTitle": "Lente Canon RF 24-70mm f/2.8 IS USM",
+   "seoDescription": "Objetivo Canon RF 24-70mm f/2.8L IS USM con estabilización de imagen, apertura constante f/2.8 y enfoque… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-24m-1-8-f-macro-is-stm",
+   "name": "Canon RF 24M 1.8 F/Macro IS STM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 24M 1.8 F/Macro IS STM",
+   "seoDescription": "Objetivo Canon RF 24mm f/1.8 macro con estabilización óptica, enfoque STM silencioso y construcción premium para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-24mm-f-1-4-vcm",
+   "name": "Canon RF 24MM F/1.4 VCM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 24MM F/1.4 VCM",
+   "seoDescription": "Objetivo Canon RF 24mm f/1.4 VCM con gran apertura, ideal para fotografía profesional, paisajes y retratos con… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-28-70-f2-l-usm",
+   "name": "Canon RF 28-70 F2 L USM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 28-70 F2 L USM",
+   "seoDescription": "Objetivo Canon RF 28-70mm F2 L USM con apertura constante f/2, diseño profesional serie L y enfoque ultrarrápido… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-28m-f-2-8",
+   "seoTitle": "Lente Canon RF 28mm f/2.8 STM",
+   "seoDescription": "Objetivo Canon RF 28mm f/2.8 STM ultracompacto y ligero, ideal para fotografía callejera, paisajes y uso diario en… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-35m-f-1-4-l-vcm",
+   "name": "Canon RF 35M F/1.4 L VCM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 35M F/1.4 L VCM",
+   "seoDescription": "Objetivo Canon RF 35mm f/1.4L con motor VCM, ideal para fotografía profesional con máxima nitidez y bokeh excepcional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-35m-f-1-8-macro-is-stm",
+   "name": "Canon RF 35M F/1.8 Macro IS STM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 35M F/1.8 Macro IS STM",
+   "seoDescription": "Objetivo macro Canon RF 35mm f/1.8 con estabilización óptica, enfoque silencioso STM y capacidad macro 1:2 para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-600-f-11l-is-stm",
+   "name": "Canon RF 600 F/11L IS STM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 600 F/11L IS STM",
+   "seoDescription": "Teleobjetivo Canon RF 600mm f/11L IS STM con estabilización óptica, motor STM silencioso y diseño compacto para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-70-200-2-8-is-usm-z-black",
+   "name": "Canon RF 70-200 2.8 IS USM Z Black",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 70-200 2.8 IS USM Z Black",
+   "seoDescription": "Objetivo Canon RF 70-200mm f/2.8L IS USM profesional con estabilización óptica, autofoco ultrarrápido y construcción… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-70-200-2-8-is-usm-z-white",
+   "name": "Canon RF 70-200 2.8 IS USM Z White",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 70-200 2.8 IS USM Z White",
+   "seoDescription": "Objetivo Canon RF 70-200mm f/2.8L IS USM Z en exclusivo color blanco. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-70-200-2-8-l-is",
+   "name": "Canon RF 70-200 2.8 L IS",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 70-200 2.8 L IS",
+   "seoDescription": "Teleobjetivo profesional Canon RF 70-200mm f/2.8 con estabilización óptica, construcción resistente y enfoque… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-70-200-f4-l-is",
+   "name": "Canon RF 70-200 F4 L IS",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 70-200 F4 L IS",
+   "seoDescription": "Objetivo teleobjetivo Canon RF 70-200mm f/4L IS USM con estabilización óptica, calidad profesional serie L para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-75-300-f4-5-6",
+   "name": "Canon RF 75-300 F4-5.6",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 75-300 F4-5.6",
+   "seoDescription": "Teleobjetivo Canon RF 75-300mm f/4.5-5.6 con estabilización óptica, motor STM silencioso y diseño compacto para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rf-800-f-11-is-stm",
+   "name": "Canon RF 800 F/11 IS STM",
+   "brand": "Canon",
+   "seoTitle": "Canon RF 800 F/11 IS STM",
+   "seoDescription": "Teleobjetivo Canon RF 800mm f/11 IS STM con estabilización de imagen, motor STM silencioso y diseño compacto para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-rfs-10-18-f-45-63-caja-blanca",
+   "brand": "Canon",
+   "seoTitle": "CANON RFS 10-18 F/4,5-6,3 (caja blanca)",
+   "seoDescription": "Objetivo gran angular Canon RF-S 10-18mm f/4.5-6.3 con estabilización de imagen. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "canon-t100-4000d-18-55mm",
+   "seoTitle": "Canon EOS Rebel 4000D (T100) kit 18-55mm III",
+   "seoDescription": "Canon EOS Rebel 4000D (T100) kit 18-55mm III. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cargador-auto-12v-usb-3-2a-rapido",
+   "seoTitle": "Cargador Auto 12v USB 3.2A Rápido",
+   "seoDescription": "Cuenta 2 salidas tipo de conector USB A. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cargador-auto-dekkin-doble-puerto-usb-2-1a",
+   "brand": "Dekkin",
+   "seoTitle": "Cargador Auto Dekkin Doble Puerto USB 2.1A",
+   "seoDescription": "Cargador Auto Dekkin Doble Puerto USB 2.1A. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cargador Auto Dekkin Doble Puerto USB 2.1A. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cargador-auto-general-electric-12v-1-5a-7w",
+   "seoTitle": "Cargador Auto General Electric 12v 1.5A 7W",
+   "seoDescription": "Cargador Auto General Electric 12v 1.5A 7W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cargador Auto General Electric 12v 1.5A 7W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cargador-auto-general-electric-usb-2-puerto-2-4a",
+   "seoTitle": "Cargador Auto General Electric USB 2 Puerto",
+   "seoDescription": "Cargador 12V 2.4A Doble salida USB Carga Rápida. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cargador-dekkin-duo-usb-a-usb-c-20w",
+   "brand": "Dekkin",
+   "seoTitle": "Cargador Dekkin Duo USB-A USB-C 20W",
+   "seoDescription": "Doble puerto de entrada USB Frecuencia: 50 Hz - 60 Hz Entrada: 240V - 0.35 A Salida: 5V - 2.0 A. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cargador-inalambrico-samsung-super-fast-max-15w",
+   "brand": "Samsung",
+   "seoTitle": "Cargador Inalámbrico Samsung Super Fast Max",
+   "seoDescription": "Cargador Inalámbrico Samsung Super Fast Max 15W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cargador-rapido-p-baterias-daihatsu",
+   "seoTitle": "Cargador Rapido p/ Baterias Daihatsu",
+   "seoDescription": "Cargador rápido de 21,5V. Modelo HI-CA2024. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cargador-samsung-12v-duo-40w-rapido",
+   "brand": "Samsung",
+   "seoTitle": "Cargador Samsung 12V Duo 40W Original Carga",
+   "seoDescription": "El voltaje de entrada es de 12V. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cargador-samsung-12v-duo-original",
+   "brand": "Samsung",
+   "seoTitle": "Cargador Samsung 12V Duo Original",
+   "seoDescription": "Características Dual Fast Charge Port Interfaz USB-A x2ea. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cargador-samsung-15w-power-adapter",
+   "brand": "Samsung",
+   "seoTitle": "Cargador Samsung 15W Original Power Adapter",
+   "seoDescription": "Cargador Samsung 15W Original Power Adapter. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cargador-samsung-25w-original-low-standby",
+   "brand": "Samsung",
+   "seoTitle": "Cargador Samsung 25W Original Low Standby",
+   "seoDescription": "Cargador USB tipo C Carga súper rápida de 25 W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cava-de-vinos-w433",
+   "seoTitle": "Cava de Vinos W433",
+   "seoDescription": "Cava de Vinos W433. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cctv-camara-ke2300-ir-1-3m-ip-poe",
+   "name": "CCTV Camara KE2300 IR 1.3M IP (POE)",
+   "seoTitle": "CCTV Camara KE2300 IR 1.3M IP (POE)",
+   "seoDescription": "CCTV Camara KE2300 IR 1.3M IP (POE). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CCTV Camara KE2300 IR 1.3M IP (POE). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "celular-samsung-galaxy-s25-plus-5g-256gb-12gb",
+   "seoTitle": "Samsung Galaxy S25 Plus 5G 256gb 12gb",
+   "seoDescription": "Samsung Galaxy S25 Plus 5G 256gb 12gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cerradura-ezviz-smart-home-dl03-huella",
+   "name": "Cerradura Ezviz Smart Home DL03 Huella",
+   "brand": "Ezviz",
+   "seoTitle": "Cerradura Ezviz Smart Home DL03 Huella",
+   "seoDescription": "Cerradura inteligente EZVIZ DL03 con huella dactilar para máxima seguridad en tu hogar. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cerradura-ezviz-smart-home-dl05-huella",
+   "name": "Cerradura Ezviz Smart Home DL05 Huella",
+   "brand": "Ezviz",
+   "seoTitle": "Cerradura Ezviz Smart Home DL05 Huella",
+   "seoDescription": "Descubre la cerradura inteligente EZVIZ DL05 con reconocimiento de huella. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cisco-sb-switch-adm-8-sfp-giga-2-sfp-g",
+   "name": "Cisco SB Switch ADM 8 SFP Giga + 2 SFP G",
+   "brand": "Cisco",
+   "seoTitle": "Cisco SB Switch ADM 8 SFP Giga + 2 SFP G",
+   "seoDescription": "Cisco SB Switch ADM 8 SFP Giga + 2 SFP G. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cisco SB Switch ADM 8 SFP Giga + 2 SFP G. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cisco-sb-switch-adm-l2-24-sfp-4-sfp-g",
+   "name": "Cisco SB Switch ADM L2 24 SFP + 4 SFP G",
+   "brand": "Cisco",
+   "seoTitle": "Cisco SB Switch ADM L2 24 SFP + 4 SFP G",
+   "seoDescription": "Cisco SB Switch ADM L2 24 SFP + 4 SFP G. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cisco SB Switch ADM L2 24 SFP + 4 SFP G. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cisco-sb-switch-web-adm-48-giga-4-sfp",
+   "name": "Cisco SB Switch WEB ADM 48 Giga + 4 SFP",
+   "brand": "Cisco",
+   "seoTitle": "Cisco SB Switch WEB ADM 48 Giga + 4 SFP",
+   "seoDescription": "Cisco SB Switch WEB ADM 48 Giga + 4 SFP. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cisco SB Switch WEB ADM 48 Giga + 4 SFP. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cisco-sb-switch-web-adm-48-giga-poe4sfp-2",
+   "name": "Cisco SB Switch WEB ADM 48 Giga POE+4SFP",
+   "brand": "Cisco",
+   "seoTitle": "Cisco SB Switch WEB ADM 48 Giga POE+4SFP",
+   "seoDescription": "Cisco SB Switch WEB ADM 48 Giga POE+4SFP. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cisco SB Switch WEB ADM 48 Giga POE+4SFP. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "coem-windows-11-home",
+   "name": "Coem Windows 11 Home",
+   "seoTitle": "Coem Windows 11 Home",
+   "seoDescription": "Coem Windows 11 Home. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Coem Windows 11 Home. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "combo-teclado-y-mouse-gaming-xtrike-me-mk-503",
+   "seoTitle": "Combo Teclado y Mouse Gaming Xtrike Me MK-503",
+   "seoDescription": "Diseño de alto perfil con soporte completo para la palma y el pulgar. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "conector-fibra-proclick-50gm-hubbel-x-12-unidades",
+   "name": "Conector Fibra Proclick 50GM Hubbel X 12 Unidades",
+   "seoTitle": "Conector Fibra Proclick 50GM Hubbel X 12",
+   "seoDescription": "Conector Fibra Proclick 50GM Hubbel X 12 Unidades. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Conector Fibra Proclick 50GM Hubbel X 12 Unidades. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "conector-fibra-proclick-62m1-om2-hubbel-x12-uni",
+   "name": "Conector Fibra Proclick 62M1 OM2 Hubbel X12 UNI",
+   "seoTitle": "Conector Fibra Proclick 62M1 OM2 Hubbel X12",
+   "seoDescription": "Conector Fibra Proclick 62M1 OM2 Hubbel X12 UNI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Conector Fibra Proclick 62M1 OM2 Hubbel X12 UNI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "conector-fibra-sc-multimodo-2-quick-hubbell-x-12",
+   "name": "Conector Fibra SC Multimodo 2 Quick Hubbell X 12",
+   "seoTitle": "Conector Fibra SC Multimodo 2 Quick Hubbell X",
+   "seoDescription": "Conector Fibra SC Multimodo 2 Quick Hubbell X 12. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Conector Fibra SC Multimodo 2 Quick Hubbell X 12. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "control-gynoid-mini-hub-smart-wifi",
+   "seoTitle": "Control Gynoid Mini Hub Smart Wifi",
+   "seoDescription": "Mini HUB Conexión Wifi Hasta 50 periféricos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "controlador-acceso-tp-link-cloud-omada-oc300-2",
+   "name": "Controlador Acceso TP-Link Cloud Omada OC300",
+   "brand": "TP-Link",
+   "seoTitle": "Controlador Acceso TP-Link Cloud Omada OC300",
+   "seoDescription": "Controlador Acceso TP-Link Cloud Omada OC300. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Controlador Acceso TP-Link Cloud Omada OC300. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "controladora-raid-lenovo-520i-sas-sata-td350-i-2",
+   "name": "Controladora Raid Lenovo 520I SAS/SATA TD350 (I)",
+   "brand": "Lenovo",
+   "seoTitle": "Controladora Raid Lenovo 520I SAS/SATA TD350",
+   "seoDescription": "Controladora Raid Lenovo 520I SAS/SATA TD350 (I). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Controladora Raid Lenovo 520I SAS/SATA TD350 (I). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "convector-eiffel-color-blanco-220v",
+   "seoTitle": "Calefactor Eléctrico de Convección Eiffel",
+   "seoDescription": "Calefactor Eléctrico de Convección Eiffel. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cooler-fan-aerocool-duo-12-pro-3-x-120mm-argb-fans-hub-h66f-control-remoto-kit",
+   "name": "Cooler FAN Aerocool DUO 12 PRO (3 x 120MM ARGB Fans + HUB H66F + Control Remoto) Kit",
+   "brand": "Aerocool",
+   "seoTitle": "Cooler FAN Aerocool DUO 12 PRO (3 x 120MM",
+   "seoDescription": "Kit Aerocool Duo 12 Pro: 3 ventiladores ARGB 120mm, hub H66F y control remoto para refrigeración gaming profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cooler-fan-aerocool-frost-14-frgb-molex-3-pin-140mm-x-140mm",
+   "name": "Cooler FAN Aerocool Frost 14 Frgb/Molex +3 PIN/ 140MM X 140MM",
+   "brand": "Aerocool",
+   "seoTitle": "Cooler FAN Aerocool Frost 14 Frgb/Molex +3",
+   "seoDescription": "Ventilador Aerocool Frost 14 FRGB de 140mm con iluminación RGB, conectores Molex y 3 pin para refrigeración óptima… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cortadora-de-pelo-winco-w3000",
+   "brand": "Winco",
+   "seoTitle": "Cortadora de Pelo Winco W3000",
+   "seoDescription": "Cortadora de Pelo Winco W3000. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpe-tp-link-cpe220-300mbps-2-4ghz-12dbi-exterior",
+   "name": "CPE TP-Link CPE220 300MBPS 2.4GHZ 12dBi Exterior",
+   "brand": "TP-Link",
+   "seoTitle": "CPE TP-Link CPE220 300MBPS 2.4GHZ 12dBi",
+   "seoDescription": "CPE TP-Link CPE220 300MBPS 2.4GHZ 12dBi Exterior. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPE TP-Link CPE220 300MBPS 2.4GHZ 12dBi Exterior. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpe-tp-link-cpe510-300mbps-5ghz-13dbi-exterior",
+   "name": "CPE TP-Link CPE510 300MBPS 5GHz 13dBi Exterior",
+   "brand": "TP-Link",
+   "seoTitle": "CPE TP-Link CPE510 300MBPS 5GHz 13dBi",
+   "seoDescription": "CPE TP-Link CPE510 300MBPS 5GHz 13dBi Exterior. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPE TP-Link CPE510 300MBPS 5GHz 13dBi Exterior. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpe-tp-link-cpe610-300mbps-5ghz-23dbi-exterior-2",
+   "name": "CPE TP-Link CPE610 300MBPS 5GHZ 23dBi Exterior",
+   "brand": "TP-Link",
+   "seoTitle": "CPE TP-Link CPE610 300MBPS 5GHZ 23dBi",
+   "seoDescription": "CPE TP-Link CPE610 300MBPS 5GHZ 23dBi Exterior. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPE TP-Link CPE610 300MBPS 5GHZ 23dBi Exterior. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpe-tp-link-cpe710-867mbps-5ghz-23dbi-exterior-2",
+   "name": "CPE TP-Link CPE710 867MBPS 5GHZ 23dBi Exterior",
+   "brand": "TP-Link",
+   "seoTitle": "CPE TP-Link CPE710 867MBPS 5GHZ 23dBi",
+   "seoDescription": "CPE TP-Link CPE710 867MBPS 5GHZ 23dBi Exterior. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPE TP-Link CPE710 867MBPS 5GHZ 23dBi Exterior. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-amd-athlon-3000g-2-core-am4-3-5ghz-4mb-35w",
+   "name": "CPU AMD Athlon 3000G 2 Core AM4 3.5Ghz 4MB 35W",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Athlon 3000G 2 Core AM4 3.5Ghz 4MB",
+   "seoDescription": "CPU AMD Athlon 3000G 2 Core AM4 3.5Ghz 4MB 35W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU AMD Athlon 3000G 2 Core AM4 3.5Ghz 4MB 35W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-amd-ryzen-3-3200g-4-0ghz-am4-box",
+   "name": "CPU AMD Ryzen 3 3200G 4.0GHZ AM4 (BOX)",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 3 3200G 4.0GHZ AM4 (BOX)",
+   "seoDescription": "Procesador AMD Ryzen 3 3200G con 4 núcleos, frecuencia boost 4.0GHz, gráficos Radeon Vega 8 integrados y socket AM4. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-amd-ryzen-3-5300g-4-2ghz-am4-box",
+   "name": "CPU AMD Ryzen 3 5300G 4.2GHZ AM4 (BOX)",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 3 5300G 4.2GHZ AM4 (BOX)",
+   "seoDescription": "Procesador AMD Ryzen 3 5300G con 4 núcleos, frecuencia máxima 4.2GHz, gráficos Radeon integrados y socket AM4… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-amd-ryzen-5-5500-4-2ghz-am4-box",
+   "name": "CPU AMD Ryzen 5 5500 4.2GHZ AM4 (BOX)",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 5 5500 4.2GHZ AM4 (BOX)",
+   "seoDescription": "Procesador AMD Ryzen 5 5500 de 6 núcleos, 4.2GHz boost, socket AM4, ideal para gaming y productividad profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-amd-ryzen-5-5600gt-4-6ghz-am4-box",
+   "name": "CPU AMD Ryzen 5 5600GT 4.6GHZ AM4 (BOX)",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 5 5600GT 4.6GHZ AM4 (BOX)",
+   "seoDescription": "Procesador AMD RYZEN 5 5600GT con gráficos integrados, frecuencia hasta 4.6GHz, socket AM4, perfecto para gaming y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-amd-ryzen-5-7600-am5-65w-32mb-with-wraith",
+   "name": "CPU AMD Ryzen 5 7600 AM5 65W 32MB With Wraith",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 5 7600 AM5 65W 32MB With Wraith",
+   "seoDescription": "CPU AMD Ryzen 5 7600 AM5 65W 32MB With Wraith. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU AMD Ryzen 5 7600 AM5 65W 32MB With Wraith. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-amd-ryzen-5-7600x-am5-105w-38mb-sin-cooler",
+   "name": "CPU AMD Ryzen 5 7600X AM5 105W 38MB sin Cooler",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 5 7600X AM5 105W 38MB",
+   "seoDescription": "CPU AMD Ryzen 5 7600X AM5 105W 38MB sin Cooler. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU AMD Ryzen 5 7600X AM5 105W 38MB sin Cooler. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-amd-ryzen-5-7600x-am5-105w-38mb-sin-cooler-i",
+   "name": "CPU AMD Ryzen 5 7600X AM5 105W 38MB sin Cooler (I)",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 5 7600X AM5 105W 38MB",
+   "seoDescription": "Procesador AMD Ryzen 5 7600X AM5, 6 núcleos, arquitectura Zen 4, 105W TDP, 38MB caché, ideal para gaming y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-amd-ryzen-5-8400f-am5",
+   "name": "CPU AMD Ryzen 5 8400F AM5",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 5 8400F AM5",
+   "seoDescription": "CPU AMD Ryzen 5 8400F AM5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU AMD Ryzen 5 8400F AM5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-amd-ryzen-5-8500g-5-0ghz-am5-box",
+   "name": "CPU AMD Ryzen 5 8500G 5.0GHZ AM5 (BOX)",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 5 8500G 5.0GHZ AM5 (BOX)",
+   "seoDescription": "Procesador AMD Ryzen 5 8500G con frecuencia de 5.0GHz, socket AM5 y gráficos integrados. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-amd-ryzen-5-8500g-am5-65w-32mb",
+   "name": "CPU AMD Ryzen 5 8500G AM5 65W 32MB",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 5 8500G AM5 65W 32MB",
+   "seoDescription": "Procesador AMD Ryzen 5 8500G con socket AM5, consumo eficiente de 65W y 32MB caché para gaming y multitarea… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-amd-ryzen-5-8600g-5-0ghz-am5-box",
+   "name": "CPU AMD Ryzen 5 8600G 5.0GHZ AM5 (BOX)",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 5 8600G 5.0GHZ AM5 (BOX)",
+   "seoDescription": "Procesador AMD Ryzen 5 8600G con frecuencia 5.0GHz, socket AM5 y gráficos integrados. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-amd-ryzen-5-8600g-am5-65w-32mb",
+   "name": "CPU AMD Ryzen 5 8600G AM5 65W 32MB",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 5 8600G AM5 65W 32MB",
+   "seoDescription": "CPU AMD Ryzen 5 8600G AM5 65W 32MB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU AMD Ryzen 5 8600G AM5 65W 32MB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-amd-ryzen-5-9600x-am5-65w-38mb-sin-cooler",
+   "name": "CPU AMD Ryzen 5 9600X AM5 65W 38MB sin Cooler",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 5 9600X AM5 65W 38MB sin Cooler",
+   "seoDescription": "CPU AMD Ryzen 5 9600X AM5 65W 38MB sin Cooler. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU AMD Ryzen 5 9600X AM5 65W 38MB sin Cooler. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-amd-ryzen-5-9600x-am5-65w-38mb-sin-cooler-i",
+   "name": "CPU AMD Ryzen 5 9600X AM5 65W 38MB sin Cooler (I)",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 5 9600X AM5 65W 38MB sin Cooler",
+   "seoDescription": "Procesador AMD RYZEN 5 9600X con socket AM5, 65W de consumo, 38MB de caché total, ideal para gaming y aplicaciones… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-amd-ryzen-7-5700g-4-6ghz-am4-box",
+   "name": "CPU AMD Ryzen 7 5700G 4.6GHZ AM4 (BOX)",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 7 5700G 4.6GHZ AM4 (BOX)",
+   "seoDescription": "Procesador AMD Ryzen 7 5700G 8 núcleos, 4.6GHz, socket AM4, gráficos Radeon integrados. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-amd-ryzen-7-5700g-am4-65w-wraith-stealth",
+   "name": "CPU AMD Ryzen 7 5700G AM4 65W Wraith Stealth",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 7 5700G AM4 65W Wraith Stealth",
+   "seoDescription": "CPU AMD Ryzen 7 5700G AM4 65W Wraith Stealth. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU AMD Ryzen 7 5700G AM4 65W Wraith Stealth. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-amd-ryzen-7-7700x-am5-105w-32mb",
+   "name": "CPU AMD Ryzen 7 7700X AM5 105W 32MB",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 7 7700X AM5 105W 32MB",
+   "seoDescription": "CPU AMD Ryzen 7 7700X AM5 105W 32MB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU AMD Ryzen 7 7700X AM5 105W 32MB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-amd-ryzen-7-7800x3d-am5-120w-96mb-sin-cooler",
+   "name": "CPU AMD Ryzen 7 7800X3D AM5 120W 96MB sin Cooler",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 7 7800X3D AM5 120W 96MB",
+   "seoDescription": "CPU AMD Ryzen 7 7800X3D AM5 120W 96MB sin Cooler. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU AMD Ryzen 7 7800X3D AM5 120W 96MB sin Cooler. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-amd-ryzen-7-8700f-5-0ghz-am5-box",
+   "name": "CPU AMD Ryzen 7 8700F 5.0GHZ AM5 (BOX)",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 7 8700F 5.0GHZ AM5 (BOX)",
+   "seoDescription": "Procesador AMD RYZEN 7 8700F 5.0GHz socket AM5, 8 núcleos y 16 hilos para gaming extremo y multitarea profesional… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-amd-ryzen-7-8700f-am5-65w-32mb",
+   "name": "CPU AMD Ryzen 7 8700F AM5 65W 32MB",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 7 8700F AM5 65W 32MB",
+   "seoDescription": "CPU AMD Ryzen 7 8700F AM5 65W 32MB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU AMD Ryzen 7 8700F AM5 65W 32MB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-amd-ryzen-7-8700g-5-1ghz-am5-box",
+   "name": "CPU AMD Ryzen 7 8700G 5.1GHZ AM5 (BOX)",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 7 8700G 5.1GHZ AM5 (BOX)",
+   "seoDescription": "Procesador AMD Ryzen 7 8700G con 5.1GHz, socket AM5 y presentación BOX. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-amd-ryzen-7-8700g-am5-65w-32mb",
+   "name": "CPU AMD Ryzen 7 8700G AM5 65W 32MB",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 7 8700G AM5 65W 32MB",
+   "seoDescription": "CPU AMD Ryzen 7 8700G AM5 65W 32MB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU AMD Ryzen 7 8700G AM5 65W 32MB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-amd-ryzen-7-9700x-am5-65w-40mb-sin-cooler",
+   "name": "CPU AMD Ryzen 7 9700X AM5 65W 40MB sin Cooler",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 7 9700X AM5 65W 40MB sin Cooler",
+   "seoDescription": "CPU AMD Ryzen 7 9700X AM5 65W 40MB sin Cooler. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU AMD Ryzen 7 9700X AM5 65W 40MB sin Cooler. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-amd-ryzen-7-9800x3d-5-2ghz-am5-box-sin-cooler",
+   "name": "CPU AMD Ryzen 7 9800X3D 5.2GHZ AM5 (BOX) (sin Cooler)",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 7 9800X3D 5.2GHZ AM5 (BOX)",
+   "seoDescription": "Procesador AMD Ryzen 7 9800X3D de última generación con 5.2GHz, socket AM5, tecnología 3D V-Cache para gaming… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-amd-ryzen-7-9800x3d-am5-120w-105mb-sin-cooler",
+   "name": "CPU AMD Ryzen 7 9800X3D AM5 120W 105MB sin Cooler",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 7 9800X3D AM5 120W 105MB",
+   "seoDescription": "CPU AMD Ryzen 7 9800X3D AM5 120W 105MB sin Cooler. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU AMD Ryzen 7 9800X3D AM5 120W 105MB sin Cooler. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-amd-ryzen-9-9900x-5-6ghz-am5-box-sin-cooler",
+   "name": "CPU AMD Ryzen 9 9900X 5.6GHZ AM5 (BOX) (sin Cooler)",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 9 9900X 5.6GHZ AM5 (BOX)",
+   "seoDescription": "Procesador AMD Ryzen 9 9900X 5.6GHz AM5 sin cooler. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-amd-ryzen-9-9900x3d-2",
+   "name": "CPU AMD Ryzen 9 9900X3D",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 9 9900X3D",
+   "seoDescription": "CPU AMD Ryzen 9 9900X3D. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU AMD Ryzen 9 9900X3D. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-amd-ryzen-9-9950x3d-2",
+   "name": "CPU AMD Ryzen 9 9950X3D",
+   "brand": "AMD",
+   "seoTitle": "CPU AMD Ryzen 9 9950X3D",
+   "seoDescription": "CPU AMD Ryzen 9 9950X3D. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU AMD Ryzen 9 9950X3D. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-cooler-aerocool-oasis-l240-argb-2x-120mm-fan-liquida-suport-soket-1700-am5",
+   "name": "CPU Cooler Aerocool Oasis L240 ARGB/2X 120MM FAN/ Liquida (suport Soket 1700/AM5)",
+   "brand": "Aerocool",
+   "seoTitle": "CPU Cooler Aerocool Oasis L240 ARGB/2X 120MM",
+   "seoDescription": "** Refrigeración líquida Aerocool Oasis L240 con iluminación ARGB, doble ventilador 120mm y compatibilidad total con… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-cooler-coolermaster-ma620m",
+   "name": "CPU Cooler Coolermaster MA620M",
+   "seoTitle": "CPU Cooler Coolermaster MA620M",
+   "seoDescription": "CPU Cooler Coolermaster MA620M. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Cooler Coolermaster MA620M. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-cooler-liquido-aerocool-abyss-l360r-digi-3x-120mm-fan-argb-suport-soket-1851-1700-1200-115x-a",
+   "name": "CPU Cooler Liquido Aerocool Abyss L360R Digi /3X 120MM FAN ARGB/ (suport Soket 1851-1700-1200-115X-A",
+   "brand": "Aerocool",
+   "seoTitle": "CPU Cooler Liquido Aerocool Abyss L360R Digi",
+   "seoDescription": "** Refrigeración líquida AeroCool Abyss L360R con 3 ventiladores ARGB 120mm, compatible sockets Intel/AMD… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-cooler-liquido-aerocool-abyss-l360r-digi-white-3x-120mm-fan-argb-suport-soket-1851-1700-1200",
+   "name": "CPU Cooler Liquido Aerocool Abyss L360R Digi White /3X 120MM FAN ARGB/ (suport Soket 1851-1700-1200-",
+   "brand": "Aerocool",
+   "seoTitle": "CPU Cooler Liquido Aerocool Abyss L360R Digi",
+   "seoDescription": "Sistema de refrigeración líquida AeroCool Abyss L360R DIGI con triple ventilador 120mm ARGB, diseño blanco elegante… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-dell-intel-xeon-sil-4309y-2-8g-8c-16t-12m",
+   "brand": "Dell",
+   "seoTitle": "CPU DELL Intel Xeon Sil 4309Y 2.8G, 8C/16T",
+   "seoDescription": "CPU DELL Intel Xeon Sil 4309Y 2.8G, 8C/16T 12M. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU DELL Intel Xeon Sil 4309Y 2.8G, 8C/16T 12M. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-hpe-dl360-dl380-gen10-xeon-s-4310-kit",
+   "brand": "HPE",
+   "seoTitle": "CPU HPE DL360/DL380 Gen10+ Xeon-S 4310 Kit",
+   "seoDescription": "CPU HPE DL360/DL380 Gen10+ Xeon-S 4310 Kit. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU HPE DL360/DL380 Gen10+ Xeon-S 4310 Kit. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-hpe-dl360-gen10-xeon-s-4314-kit",
+   "brand": "HPE",
+   "seoTitle": "CPU HPE DL360 Gen10+ Xeon-S 4314 Kit",
+   "seoDescription": "CPU HPE DL360 Gen10+ Xeon-S 4314 Kit. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU HPE DL360 Gen10+ Xeon-S 4314 Kit. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-hpe-dl385-gen10-v2-amd-epyc-7313-kit",
+   "brand": "HPE",
+   "seoTitle": "CPU HPE DL385 Gen10+ v2 AMD EPYC 7313 Kit",
+   "seoDescription": "CPU HPE DL385 Gen10+ v2 AMD EPYC 7313 Kit. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU HPE DL385 Gen10+ v2 AMD EPYC 7313 Kit. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-hpe-intel-xeon-silver-4510-12c-2",
+   "brand": "HPE",
+   "seoTitle": "CPU HPE Intel Xeon-Silver 4510 12C",
+   "seoDescription": "Procesador HPE Intel Xeon-Silver 4510 de 12 núcleos diseñado para servidores empresariales de alto rendimiento y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-hpe-ml350-gen10-xeon-s-4210-kit",
+   "brand": "HPE",
+   "seoTitle": "CPU HPE ML350 Gen10 Xeon-S 4210 Kit",
+   "seoDescription": "CPU HPE ML350 Gen10 Xeon-S 4210 Kit. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU HPE ML350 Gen10 Xeon-S 4210 Kit. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-hpe-ml350-gen10-xeon-s-4210r-10c-kit",
+   "brand": "HPE",
+   "seoTitle": "CPU HPE ML350 Gen10 Xeon-S 4210R 10C Kit",
+   "seoDescription": "CPU HPE ML350 Gen10 Xeon-S 4210R 10C Kit. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU HPE ML350 Gen10 Xeon-S 4210R 10C Kit. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-ibm-e5-2407-x3300-4c-22ghz-1066mhz-10mb",
+   "name": "CPU IBM E5-2407 X3300 4C 2,2GHz/1066MHz/10MB",
+   "seoTitle": "CPU IBM E5-2407 X3300 4C 2,2GHz/1066MHz/10MB",
+   "seoDescription": "CPU IBM E5-2407 X3300 4C 2,2GHz/1066MHz/10MB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU IBM E5-2407 X3300 4C 2,2GHz/1066MHz/10MB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-ibm-e5-2420-x3630-6c-19ghz-1333mhzw-fan",
+   "seoTitle": "CPU IBM E5-2420 X3630 6C 1,9GHz/1333MHzW/Fan",
+   "seoDescription": "CPU IBM E5-2420 X3630 6C 1,9GHz/1333MHzW/Fan. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU IBM E5-2420 X3630 6C 1,9GHz/1333MHzW/Fan. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-ibm-e5-2650-x3650-8c-2-0ghz-1600mhzw-fan",
+   "seoTitle": "CPU IBM E5-2650 X3650 8C 2.0GHz/1600MHzW/Fan",
+   "seoDescription": "CPU IBM E5-2650 X3650 8C 2.0GHz/1600MHzW/Fan. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU IBM E5-2650 X3650 8C 2.0GHz/1600MHzW/Fan. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-intel-celeron-g6900-3-40ghz-s1700",
+   "name": "CPU Intel Celeron G6900 3.40GHZ S1700",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Celeron G6900 3.40GHZ S1700",
+   "seoDescription": "CPU Intel Celeron G6900 3.40GHZ S1700. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-core-i3-10100-3-60ghz-s1200",
+   "name": "CPU Intel Core I3-10100 3.60GHZ S1200",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core I3-10100 3.60GHZ S1200",
+   "seoDescription": "Procesador Intel Core i3-10100 de cuatro núcleos, 3.60GHz, socket 1200, ideal para gaming básico y tareas ofimáticas… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-core-i3-10105-3-70ghz-s1200-2",
+   "name": "CPU Intel Core I3-10105 3.70GHZ S1200",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core I3-10105 3.70GHZ S1200",
+   "seoDescription": "Procesador Intel Core i3-10105 de cuarta generación, 3.70GHz, socket 1200, ideal para equipos de oficina y gaming… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-core-i3-12100-alderlake-s1700-box",
+   "name": "Procesador Intel Core I3 12100 LGA 1700",
+   "brand": "Intel",
+   "seoTitle": "Procesador Intel Core I3 12100 LGA 1700",
+   "seoDescription": "Procesador Intel Core I3 12100 LGA 1700. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador Intel Core I3 12100 LGA 1700. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-intel-core-i3-12100-alderlake-s1700-box-2",
+   "name": "CPU Intel Core I3-12100 Alderlake S1700 BOX",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core I3-12100 Alderlake S1700 BOX",
+   "seoDescription": "Procesador Intel Core i3-12100 Alder Lake, socket 1700, 4 núcleos/8 hilos, arquitectura híbrida de 12ª generación… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-core-i3-14100f-3-5ghz-s1700-2",
+   "name": "CPU Intel Core I3-14100F 3.5GHZ S1700",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core I3-14100F 3.5GHZ S1700",
+   "seoDescription": "CPU Intel Core I3-14100F 3.5GHZ S1700. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-core-i5-12400f-4-40ghzs1700-s-video",
+   "name": "CPU Intel Core I5-12400F 4.40GHZS1700 S/Video",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core I5-12400F 4.40GHZS1700 S/Video",
+   "seoDescription": "Procesador Intel Core i5-12400F de 4.40GHz, socket 1700, sin gráficos integrados. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-core-i7-12700-3-60ghz-s1700",
+   "name": "CPU Intel Core I7-12700 3.60GHZ S1700",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core I7-12700 3.60GHZ S1700",
+   "seoDescription": "Procesador Intel Core i7-12700 de 12va generación, 3.60GHz base, socket 1700, 12 núcleos, 20 hilos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-core-i7-12700-alderlake-s1700-box-2",
+   "name": "CPU Intel Core I7-12700 Alderlake S1700 BOX",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core I7-12700 Alderlake S1700 BOX",
+   "seoDescription": "CPU Intel Core I7-12700 Alderlake S1700 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Intel Core I7-12700 Alderlake S1700 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-intel-core-i7-12700f-4-40ghz-s1700-s-video-2",
+   "name": "CPU Intel Core I7-12700F 4.40GHZ S1700 S/Video",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core I7-12700F 4.40GHZ S1700",
+   "seoDescription": "Procesador Intel Core i7-12700F de 12va generación, 4.40GHz, socket LGA1700, sin gráficos integrados, ideal para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-core-i7-14700-5-40ghz-s1700",
+   "name": "CPU Intel Core I7-14700 5.40GHZ S1700",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core I7-14700 5.40GHZ S1700",
+   "seoDescription": "Procesador Intel Core i7-14700 de 14ª generación, 5.40GHz máximo, socket LGA1700. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-core-i7-14700-raptorlake-s1700-box-2",
+   "name": "CPU Intel Core I7-14700 Raptorlake S1700 BOX",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core I7-14700 Raptorlake S1700 BOX",
+   "seoDescription": "CPU Intel Core I7-14700 Raptorlake S1700 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Intel Core I7-14700 Raptorlake S1700 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-intel-core-i7-14700k-raptorlake-s1700-box-2",
+   "name": "CPU Intel Core I7-14700K Raptorlake S1700 BOX",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core I7-14700K Raptorlake S1700 BOX",
+   "seoDescription": "CPU Intel Core I7-14700K Raptorlake S1700 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Intel Core I7-14700K Raptorlake S1700 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-intel-core-i9-14900-raptorlake-s1700-box",
+   "name": "Procesador Intel Core I9 14900",
+   "brand": "Intel",
+   "seoTitle": "Procesador Intel Core I9 14900",
+   "seoDescription": "Procesador Intel Core I9 14900. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador Intel Core I9 14900. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-intel-core-i9-14900-raptorlake-s1700-box-2",
+   "name": "CPU Intel Core I9-14900 Raptorlake S1700 BOX",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core I9-14900 Raptorlake S1700 BOX",
+   "seoDescription": "CPU Intel Core I9-14900 Raptorlake S1700 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Intel Core I9-14900 Raptorlake S1700 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-intel-core-i9-14900k-5-6ghz-s1700-2",
+   "name": "CPU Intel Core I9-14900K 5.6GHZ S1700",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core I9-14900K 5.6GHZ S1700",
+   "seoDescription": "Procesador Intel Core i9-14900K de 24 núcleos, frecuencia turbo 5.6GHz, socket LGA1700 para gaming extremo y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-core-i9-14900k-raptorlake-s1700-box",
+   "name": "CPU Intel Core I9-14900K Raptorlake S1700 BOX",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core I9-14900K Raptorlake S1700 BOX",
+   "seoDescription": "Procesador Intel Core i9-14900K Raptor Lake Socket 1700, máximo rendimiento gaming y productividad profesional, 14va… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-core-ultra-5-235-arrow-lake-s1851-box-2",
+   "name": "CPU Intel Core Ultra 5 235 Arrow Lake S1851 BOX",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core Ultra 5 235 Arrow Lake S1851",
+   "seoDescription": "CPU Intel Core Ultra 5 235 Arrow Lake S1851 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Intel Core Ultra 5 235 Arrow Lake S1851 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-intel-core-ultra-5-245k-arrow-lake-s1851-box-2",
+   "name": "CPU Intel Core Ultra 5 245K Arrow Lake S1851 BOX",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core Ultra 5 245K Arrow Lake S1851",
+   "seoDescription": "CPU Intel Core Ultra 5 245K Arrow Lake S1851 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Intel Core Ultra 5 245K Arrow Lake S1851 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-intel-core-ultra-7-265-arrow-lake-s1851-box",
+   "name": "CPU Intel Core Ultra 7 265 Arrow Lake S1851 BOX",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core Ultra 7 265 Arrow Lake S1851",
+   "seoDescription": "Procesador Intel Core Ultra 7 265 Arrow Lake con socket S1851, arquitectura avanzada y tecnología híbrida para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-core-ultra-7-265k-arrow-lake-s1851-box",
+   "name": "CPU Intel Core Ultra 7 265K Arrow Lake S1851 BOX",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core Ultra 7 265K Arrow Lake S1851",
+   "seoDescription": "CPU Intel Core Ultra 7 265K Arrow Lake S1851 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Intel Core Ultra 7 265K Arrow Lake S1851 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-intel-core-ultra-9-285-arrow-lake-s1851-box-2",
+   "name": "CPU Intel Core Ultra 9 285 Arrow Lake S1851 BOX",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core Ultra 9 285 Arrow Lake S1851",
+   "seoDescription": "Procesador Intel Core Ultra 9 285 Arrow Lake, socket 1851, tecnología avanzada para gaming y productividad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-core-ultra-9-285k-arrow-lake-s1851-box",
+   "name": "CPU Intel Core Ultra 9 285K Arrow Lake S1851 BOX",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Core Ultra 9 285K Arrow Lake S1851",
+   "seoDescription": "CPU Intel Core Ultra 9 285K Arrow Lake S1851 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Intel Core Ultra 9 285K Arrow Lake S1851 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-intel-g6900-celeron-alderlake-s1700-box",
+   "name": "CPU Intel G6900 Celeron Alderlake S1700 BOX",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel G6900 Celeron Alderlake S1700 BOX",
+   "seoDescription": "CPU Intel G6900 Celeron Alderlake S1700 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Intel G6900 Celeron Alderlake S1700 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-intel-pent-g6400-cometlake-s1200-box-2",
+   "name": "CPU Intel Pent G6400 Cometlake S1200 BOX",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Pent G6400 Cometlake S1200 BOX",
+   "seoDescription": "CPU Intel Pent G6400 Cometlake S1200 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Intel Pent G6400 Cometlake S1200 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-intel-pent-g7400-alderlake-s1700-box-2",
+   "name": "CPU Intel Pent G7400 Alderlake S1700 BOX",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Pent G7400 Alderlake S1700 BOX",
+   "seoDescription": "CPU Intel Pent G7400 Alderlake S1700 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Intel Pent G7400 Alderlake S1700 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-intel-pentium-dc-g4400-3-3-ghz-s1151-traycooler",
+   "name": "CPU Intel Pentium DC G4400 3.3 GHz S1151 (tray+cooler)",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Pentium DC G4400 3.3 GHz S1151",
+   "seoDescription": "Procesador Intel Pentium G4400 Dual Core 3.3GHz, socket LGA1151, incluye cooler original. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-pentium-gold-g6400-4-00ghz-s1200",
+   "name": "CPU Intel Pentium Gold G6400 4.00GHZ S1200",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Pentium Gold G6400 4.00GHZ S1200",
+   "seoDescription": "Procesador Intel Pentium Gold G6400 de 4.0GHz con socket LGA1200, ideal para equipos básicos y de oficina con… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-pentium-gold-g6405-4-10ghz-s1200",
+   "name": "CPU Intel Pentium Gold G6405 4.10GHZ S1200",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Pentium Gold G6405 4.10GHZ S1200",
+   "seoDescription": "Procesador Intel Pentium Gold G6405 4.10GHz Socket 1200, dual core con tecnología avanzada para computadoras de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-intel-pentium-gold-g7400-3-70ghz-s1700",
+   "name": "CPU Intel Pentium Gold G7400 3.70GHZ S1700",
+   "brand": "Intel",
+   "seoTitle": "CPU Intel Pentium Gold G7400 3.70GHZ S1700",
+   "seoDescription": "Procesador Intel Pentium Gold G7400 de 3.70GHz con socket 1700, dual core perfecto para equipos básicos y oficina… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "cpu-lenovo-e5-2609v4-rd350-8c-17ghz-20mb-w-f-2",
+   "name": "CPU Lenovo E5-2609v4 RD350 8C 1,7GHz/20MB W/F",
+   "brand": "Lenovo",
+   "seoTitle": "CPU Lenovo E5-2609v4 RD350 8C 1,7GHz/20MB W/F",
+   "seoDescription": "CPU Lenovo E5-2609v4 RD350 8C 1,7GHz/20MB W/F. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Lenovo E5-2609v4 RD350 8C 1,7GHz/20MB W/F. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-lenovo-e5-2609v4-rd450-8c-17ghz-20mb-2",
+   "name": "CPU Lenovo E5-2609v4 RD450 8C 1,7GHz/20MB",
+   "brand": "Lenovo",
+   "seoTitle": "CPU Lenovo E5-2609v4 RD450 8C 1,7GHz/20MB",
+   "seoDescription": "CPU Lenovo E5-2609v4 RD450 8C 1,7GHz/20MB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Lenovo E5-2609v4 RD450 8C 1,7GHz/20MB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-lenovo-e5-2620v2-x3550-6c-21ghz-15mb-2",
+   "name": "CPU Lenovo E5-2620v2 X3550 6C 2,1GHz/15MB",
+   "brand": "Lenovo",
+   "seoTitle": "CPU Lenovo E5-2620v2 X3550 6C 2,1GHz/15MB",
+   "seoDescription": "CPU Lenovo E5-2620v2 X3550 6C 2,1GHz/15MB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Lenovo E5-2620v2 X3550 6C 2,1GHz/15MB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-lenovo-e5-2630v2-x3650-6c-26ghz-15mb-2",
+   "name": "CPU Lenovo E5-2630v2 X3650 6C 2,6GHz/15MB",
+   "brand": "Lenovo",
+   "seoTitle": "CPU Lenovo E5-2630v2 X3650 6C 2,6GHz/15MB",
+   "seoDescription": "CPU Lenovo E5-2630v2 X3650 6C 2,6GHz/15MB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Lenovo E5-2630v2 X3650 6C 2,6GHz/15MB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-lenovo-e5-2650v2-x3650-8c-26ghz-20mb-oem-2",
+   "name": "CPU Lenovo E5-2650v2 X3650 8C 2,6GHz/20MB OEM",
+   "brand": "Lenovo",
+   "seoTitle": "CPU Lenovo E5-2650v2 X3650 8C 2,6GHz/20MB OEM",
+   "seoDescription": "CPU Lenovo E5-2650v2 X3650 8C 2,6GHz/20MB OEM. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Lenovo E5-2650v2 X3650 8C 2,6GHz/20MB OEM. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cpu-lenovo-e7-8870-10c-x3850x5-24ghz-30mb-2",
+   "name": "CPU Lenovo E7-8870 10C X3850X5 2,4GHz/30MB",
+   "brand": "Lenovo",
+   "seoTitle": "CPU Lenovo E7-8870 10C X3850X5 2,4GHz/30MB",
+   "seoDescription": "CPU Lenovo E7-8870 10C X3850X5 2,4GHz/30MB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "CPU Lenovo E7-8870 10C X3850X5 2,4GHz/30MB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "cuchilla-p-fibra-optica-hubbell-multi-singlem",
+   "name": "Cuchilla P/Fibra Optica Hubbell Multi-singlem",
+   "seoTitle": "Cuchilla P/Fibra Optica Hubbell Multi-singlem",
+   "seoDescription": "Cuchilla P/Fibra Optica Hubbell Multi-singlem. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cuchilla P/Fibra Optica Hubbell Multi-singlem. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr3-4gb-hiksemi-1600mhz-1-35v",
+   "name": "DDR3 4GB Hiksemi 1600MHZ 1.35V",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR3 4GB Hiksemi 1600MHZ 1.35V",
+   "seoDescription": "DDR3 4GB Hiksemi 1600MHZ 1.35V. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DDR3 4GB Hiksemi 1600MHZ 1.35V. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr4-16-gb-3200mhz-basic-c16-netac",
+   "name": "DDR4 16 GB 3200MHZ Basic C16 Netac",
+   "seoTitle": "DDR4 16 GB 3200MHZ Basic C16 Netac",
+   "seoDescription": "Memoria RAM DDR4 NETAC de 16GB a 3200MHz con latencia CL16. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-16-gb-3200mhz-basic-sodimm-c22-netac",
+   "name": "DDR4 16 GB 3200MHZ Basic SODIMM C22 Netac",
+   "seoTitle": "DDR4 16 GB 3200MHZ Basic SODIMM C22 Netac",
+   "seoDescription": "Memoria RAM DDR4 16GB 3200MHz SODIMM Netac C22 Basic. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-16-gb-3200mhz-fury-beast-blk-kingston-2",
+   "name": "DDR4 16 GB 3200MHZ Fury Beast BLK Kingston",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 16 GB 3200MHZ Fury Beast BLK Kingston",
+   "seoDescription": "Memoria RAM DDR4 16GB 3200MHz Kingston FURY Beast negra. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-16-gb-3200mhz-fury-beast-rgb-kingston-2",
+   "name": "DDR4 16 GB 3200MHZ Fury Beast RGB Kingston",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 16 GB 3200MHZ Fury Beast RGB Kingston",
+   "seoDescription": "Memoria RAM DDR4 16GB 3200MHz Kingston FURY Beast RGB con iluminación LED para gaming y overclock de alto… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-16-gb-3200mhz-hiksemi-armor-disipador",
+   "name": "DDR4 16 GB 3200MHZ Hiksemi Armor (disipador)",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 16 GB 3200MHZ Hiksemi Armor (disipador)",
+   "seoDescription": "Memoria RAM DDR4 HIKSEMI ARMOR 16GB 3200MHz con disipador avanzado. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-16-gb-3200mhz-hiksemi-hiker-2",
+   "name": "DDR4 16 GB 3200MHZ Hiksemi Hiker",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 16 GB 3200MHZ Hiksemi Hiker",
+   "seoDescription": "Memoria RAM DDR4 HIKSEMI HIKER 16GB 3200MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-16-gb-3200mhz-hiksemi-hiker-bulk-2",
+   "name": "DDR4 16 GB 3200MHZ Hiksemi Hiker Bulk",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 16 GB 3200MHZ Hiksemi Hiker Bulk",
+   "seoDescription": "Memoria RAM DDR4 16GB 3200MHz HIKSEMI HIKER BULK. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-16-gb-3200mhz-patriot-2",
+   "name": "DDR4 16 GB 3200MHZ Patriot",
+   "brand": "Patriot",
+   "seoTitle": "DDR4 16 GB 3200MHZ Patriot",
+   "seoDescription": "Memoria RAM DDR4 Patriot 16GB 3200MHz para gaming y multitarea. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-16-gb-3200mhz-patriot-viper-elit-2-red-black",
+   "name": "DDR4 16 GB 3200MHZ Patriot Viper Elit 2 Red/Black",
+   "brand": "Patriot",
+   "seoTitle": "DDR4 16 GB 3200MHZ Patriot Viper Elit 2",
+   "seoDescription": "Memoria RAM DDR4 16GB 3200MHz Patriot Viper Elite II Red/Black. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-16-gb-3200mhz-shadow-rgb-c16-netac",
+   "name": "DDR4 16 GB 3200MHZ Shadow RGB C16 Netac",
+   "seoTitle": "DDR4 16 GB 3200MHZ Shadow RGB C16 Netac",
+   "seoDescription": "Memoria DDR4 NETAC Shadow RGB 16GB 3200MHz C16, iluminación RGB personalizable, ideal para gaming y rendimiento… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-16-gb-3200mhz-shadow-s-white-c16-netac",
+   "name": "DDR4 16 GB 3200MHZ Shadow S White C16 Netac",
+   "seoTitle": "DDR4 16 GB 3200MHZ Shadow S White C16 Netac",
+   "seoDescription": "Memoria RAM DDR4 16GB 3200MHz NETAC Shadow S White. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-16-gb-3200mhz-sodimm-pny",
+   "name": "DDR4 16 GB 3200MHZ SODIMM PNY",
+   "brand": "PNY",
+   "seoTitle": "DDR4 16 GB 3200MHZ SODIMM PNY",
+   "seoDescription": "Memoria RAM DDR4 PNY 16GB 3200MHz SODIMM para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-16gb-adata-3200mhz",
+   "name": "DDR4 16GB Adata 3200MHZ",
+   "brand": "Adata",
+   "seoTitle": "DDR4 16GB Adata 3200MHZ",
+   "seoDescription": "DDR4 16GB Adata 3200MHZ. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-16gb-adata-3200mhz-caja-abierta",
+   "name": "DDR4 16GB Adata 3200MHZ Caja Abierta",
+   "brand": "Adata",
+   "seoTitle": "DDR4 16GB Adata 3200MHZ Caja Abierta",
+   "seoDescription": "DDR4 16GB Adata 3200MHZ Caja Abierta. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-16gb-hiksemi-3200mhz-armor-black",
+   "name": "DDR4 16GB Hiksemi 3200MHZ Armor Black",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 16GB Hiksemi 3200MHZ Armor Black",
+   "seoDescription": "DDR4 16GB Hiksemi 3200MHZ Armor Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DDR4 16GB Hiksemi 3200MHZ Armor Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr4-16gb-hiksemi-3200mhz-future-black",
+   "name": "DDR4 16GB Hiksemi 3200MHZ Future Black",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 16GB Hiksemi 3200MHZ Future Black",
+   "seoDescription": "DDR4 16GB Hiksemi 3200MHZ Future Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DDR4 16GB Hiksemi 3200MHZ Future Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr4-16gb-hiksemi-3200mhz-future-rgb",
+   "name": "DDR4 16GB Hiksemi 3200MHZ Future RGB",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 16GB Hiksemi 3200MHZ Future RGB",
+   "seoDescription": "DDR4 16GB Hiksemi 3200MHZ Future RGB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DDR4 16GB Hiksemi 3200MHZ Future RGB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr4-16gb-hiksemi-3200mhz-single-tray",
+   "name": "DDR4 16GB Hiksemi 3200MHZ Single Tray",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 16GB Hiksemi 3200MHZ Single Tray",
+   "seoDescription": "DDR4 16GB Hiksemi 3200MHZ Single Tray. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DDR4 16GB Hiksemi 3200MHZ Single Tray. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr4-16gb-hiksemi-3200mhz-sword",
+   "name": "DDR4 16GB Hiksemi 3200MHZ Sword",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 16GB Hiksemi 3200MHZ Sword",
+   "seoDescription": "DDR4 16GB Hiksemi 3200MHZ Sword. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DDR4 16GB Hiksemi 3200MHZ Sword. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr4-16gb-kingston-3200mhz-cl16-fury-beast-black",
+   "name": "DDR4 16GB Kingston 3200MHZ CL16 Fury Beast Black",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 16GB Kingston 3200MHZ CL16 Fury Beast",
+   "seoDescription": "DDR4 16GB Kingston 3200MHZ CL16 Fury Beast Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DDR4 16GB Kingston 3200MHZ CL16 Fury Beast Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr4-16gb-kingston-3200mhz-cl16-fury-beast-rgb",
+   "name": "DDR4 16GB Kingston 3200MHZ CL16 Fury Beast RGB",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 16GB Kingston 3200MHZ CL16 Fury Beast",
+   "seoDescription": "DDR4 16GB Kingston 3200MHZ CL16 Fury Beast RGB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DDR4 16GB Kingston 3200MHZ CL16 Fury Beast RGB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr4-16gb-kingston-3200mhz-cl22-kvr",
+   "name": "DDR4 16GB Kingston 3200MHZ CL22 KVR",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 16GB Kingston 3200MHZ CL22 KVR",
+   "seoDescription": "DDR4 16GB Kingston 3200MHZ CL22 KVR. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DDR4 16GB Kingston 3200MHZ CL22 KVR. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr4-16gb-kingston-3600mhz-fury-beast-black",
+   "name": "DDR4 16GB Kingston 3600MHZ Fury Beast Black",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 16GB Kingston 3600MHZ Fury Beast Black",
+   "seoDescription": "DDR4 16GB Kingston 3600MHZ Fury Beast Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DDR4 16GB Kingston 3600MHZ Fury Beast Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr4-16gb-kingston-3600mhz-fury-beast-rgb",
+   "name": "DDR4 16GB Kingston 3600MHZ Fury Beast RGB",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 16GB Kingston 3600MHZ Fury Beast RGB",
+   "seoDescription": "DDR4 16GB Kingston 3600MHZ Fury Beast RGB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DDR4 16GB Kingston 3600MHZ Fury Beast RGB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr4-16gb-memox-3200mhz",
+   "name": "DDR4 16GB Memox 3200MHZ",
+   "brand": "Memox",
+   "seoTitle": "DDR4 16GB Memox 3200MHZ",
+   "seoDescription": "DDR4 16GB Memox 3200MHZ. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-16gb-xpg-3200mhz-gammix-d35-black",
+   "name": "DDR4 16GB XPG 3200MHZ Gammix D35 Black",
+   "brand": "XPG",
+   "seoTitle": "DDR4 16GB XPG 3200MHZ Gammix D35 Black",
+   "seoDescription": "DDR4 16GB XPG 3200MHZ Gammix D35 Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DDR4 16GB XPG 3200MHZ Gammix D35 Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr4-16gb-xpg-3200mhz-spectrx-d35g-white-rgb",
+   "name": "DDR4 16GB XPG 3200MHZ Spectrx D35G White RGB",
+   "brand": "XPG",
+   "seoTitle": "DDR4 16GB XPG 3200MHZ Spectrx D35G White RGB",
+   "seoDescription": "DDR4 16GB XPG 3200MHZ Spectrx D35G White RGB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DDR4 16GB XPG 3200MHZ Spectrx D35G White RGB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr4-32-gb-3200mhz-basic-c22-netac",
+   "name": "DDR4 32 GB 3200MHZ Basic C22 Netac",
+   "seoTitle": "DDR4 32 GB 3200MHZ Basic C22 Netac",
+   "seoDescription": "Memoria RAM DDR4 32GB Netac Basic a 3200MHz CL22. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32-gb-3200mhz-crucial-cl22-udimm",
+   "name": "DDR4 32 GB 3200MHZ Crucial CL22 Udimm",
+   "brand": "Crucial",
+   "seoTitle": "DDR4 32 GB 3200MHZ Crucial CL22 Udimm",
+   "seoDescription": "Memoria RAM DDR4 32GB 3200MHz Crucial CL22 UDIMM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32-gb-3200mhz-sodimm-kingston",
+   "name": "DDR4 32 GB 3200MHZ SODIMM Kingston",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 32 GB 3200MHZ SODIMM Kingston",
+   "seoDescription": "Memoria RAM DDR4 Kingston 32GB 3200MHz SODIMM para laptops y mini PCs. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32gb-3200mhz-fury-beast-rgb-kingston",
+   "name": "DDR4 32GB 3200MHZ Fury Beast RGB Kingston",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 32GB 3200MHZ Fury Beast RGB Kingston",
+   "seoDescription": "Memoria RAM DDR4 Kingston Fury Beast RGB 32GB 3200MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32gb-adata-3200mhz",
+   "name": "DDR4 32GB Adata 3200MHZ",
+   "brand": "Adata",
+   "seoTitle": "DDR4 32GB Adata 3200MHZ",
+   "seoDescription": "Memoria RAM DDR4 ADATA 32GB 3200MHz para gaming extremo, edición profesional y multitarea pesada. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32gb-hiksemi-3200mhz-future-black",
+   "name": "DDR4 32GB Hiksemi 3200MHZ Future Black",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 32GB Hiksemi 3200MHZ Future Black",
+   "seoDescription": "Memoria RAM DDR4 32GB HIKSEMI 3200MHz Future Black. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32gb-hiksemi-3200mhz-future-rgb",
+   "name": "DDR4 32GB Hiksemi 3200MHZ Future RGB",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 32GB Hiksemi 3200MHZ Future RGB",
+   "seoDescription": "Memoria RAM DDR4 32GB HIKSEMI 3200MHz con iluminación RGB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32gb-hiksemi-3200mhz-single-tray",
+   "name": "DDR4 32GB Hiksemi 3200MHZ Single Tray",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 32GB Hiksemi 3200MHZ Single Tray",
+   "seoDescription": "Memoria RAM DDR4 HIKSEMI 32GB 3200MHz formato single tray. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32gb-hiksemi-3200mhz-single-tray-2",
+   "name": "DDR4 32GB Hiksemi 3200MHZ Single Tray",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 32GB Hiksemi 3200MHZ Single Tray",
+   "seoDescription": "Memoria RAM DDR4 32GB HIKSEMI 3200MHz formato single tray. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32gb-kingston-3200mhz-cl16-fury-beast-black",
+   "name": "DDR4 32GB Kingston 3200MHZ CL16 Fury Beast Black",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 32GB Kingston 3200MHZ CL16 Fury Beast",
+   "seoDescription": "Memoria RAM DDR4 32GB Kingston Fury Beast Black 3200MHz CL16. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32gb-kingston-3200mhz-cl16-fury-beast-rgb",
+   "name": "DDR4 32GB Kingston 3200MHZ CL16 Fury Beast RGB",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 32GB Kingston 3200MHZ CL16 Fury Beast",
+   "seoDescription": "Memoria DDR4 32GB Kingston Fury Beast RGB 3200MHz CL16. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32gb-kingston-3200mhz-cl22-kvr",
+   "name": "DDR4 32GB Kingston 3200MHZ CL22 KVR",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 32GB Kingston 3200MHZ CL22 KVR",
+   "seoDescription": "Memoria RAM DDR4 Kingston 32GB 3200MHz CL22 KVR para gaming y profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32gb-kingston-3600mhz-fury-renegade",
+   "name": "DDR4 32GB Kingston 3600MHZ Fury Renegade",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 32GB Kingston 3600MHZ Fury Renegade",
+   "seoDescription": "Memoria RAM DDR4 32GB Kingston Fury Renegade 3600MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32gb-kingston-3600mhz-fury-renegade-rgb",
+   "name": "DDR4 32GB Kingston 3600MHZ Fury Renegade RGB",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 32GB Kingston 3600MHZ Fury Renegade RGB",
+   "seoDescription": "Memoria RAM DDR4 32GB Kingston Fury Renegade RGB 3600MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32gb-lexar-3200mhz",
+   "name": "DDR4 32GB Lexar 3200MHZ",
+   "brand": "Lexar",
+   "seoTitle": "DDR4 32GB Lexar 3200MHZ",
+   "seoDescription": "Memoria RAM DDR4 32GB Lexar 3200MHz para máximo rendimiento. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32gb-memox-3200mhz",
+   "name": "DDR4 32GB Memox 3200MHZ",
+   "brand": "Memox",
+   "seoTitle": "DDR4 32GB Memox 3200MHZ",
+   "seoDescription": "Memoria RAM DDR4 de 32GB MEMOX a 3200MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32gb-xpg-3200mhz-gammix-d35-black-3",
+   "name": "DDR4 32GB XPG 3200MHZ Gammix D35 Black",
+   "brand": "XPG",
+   "seoTitle": "DDR4 32GB XPG 3200MHZ Gammix D35 Black",
+   "seoDescription": "Memoria RAM DDR4 32GB XPG GAMMIX D35 Black 3200MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-32gb-xpg-3200mhz-spectrx-d35g-black-rgb",
+   "name": "DDR4 32GB XPG 3200MHZ Spectrx D35G Black RGB",
+   "brand": "XPG",
+   "seoTitle": "DDR4 32GB XPG 3200MHZ Spectrx D35G Black RGB",
+   "seoDescription": "Memoria RAM DDR4 32GB XPG SPECTRIX D35G con iluminación RGB, frecuencia 3200MHz y diseño gaming black para máximo… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-4-gb-2666mhz-pny-udimm-1-2v",
+   "name": "DDR4 4 GB 2666MHZ PNY Udimm 1.2V",
+   "brand": "PNY",
+   "seoTitle": "DDR4 4 GB 2666MHZ PNY Udimm 1.2V",
+   "seoDescription": "Memoria RAM DDR4 4GB 2666MHz PNY UDIMM 1.2V. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8-gb-2666mhz-basic-sodimm-c19-netac",
+   "name": "DDR4 8 GB 2666MHZ Basic SODIMM C19 Netac",
+   "seoTitle": "DDR4 8 GB 2666MHZ Basic SODIMM C19 Netac",
+   "seoDescription": "Memoria RAM DDR4 Netac 8GB 2666MHz SODIMM CL19. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8-gb-3200mhz-basic-c16-netac-2",
+   "name": "DDR4 8 GB 3200MHZ Basic C16 Netac",
+   "seoTitle": "DDR4 8 GB 3200MHZ Basic C16 Netac",
+   "seoDescription": "Memoria RAM DDR4 NETAC 8GB 3200MHz CL16 Basic. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8-gb-3200mhz-cl22-kingston-2",
+   "name": "DDR4 8 GB 3200MHZ CL22 Kingston",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 8 GB 3200MHZ CL22 Kingston",
+   "seoDescription": "Memoria RAM Kingston DDR4 8GB 3200MHz CL22, ideal para gaming y multitarea. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8-gb-3200mhz-fury-beast-blk-kingston-2",
+   "name": "DDR4 8 GB 3200MHZ Fury Beast BLK Kingston",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 8 GB 3200MHZ Fury Beast BLK Kingston",
+   "seoDescription": "Memoria RAM DDR4 8GB 3200MHz Kingston FURY Beast Black. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8-gb-3200mhz-fury-beast-rgb-kingston",
+   "name": "DDR4 8 GB 3200MHZ Fury Beast RGB Kingston",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 8 GB 3200MHZ Fury Beast RGB Kingston",
+   "seoDescription": "Memoria RAM DDR4 8GB 3200MHz Kingston FURY Beast RGB con iluminación personalizable. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8-gb-3200mhz-hiksemi-hiker-bulk-2",
+   "name": "DDR4 8 GB 3200MHZ Hiksemi Hiker Bulk",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 8 GB 3200MHZ Hiksemi Hiker Bulk",
+   "seoDescription": "Memoria RAM DDR4 8GB 3200MHz HIKSEMI HIKER formato BULK. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8-gb-3200mhz-kingston-low-profile-1-2v-2",
+   "name": "DDR4 8 GB 3200MHZ Kingston LOW Profile 1.2v",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 8 GB 3200MHZ Kingston LOW Profile 1.2v",
+   "seoDescription": "Memoria RAM DDR4 8GB 3200MHz Kingston Low Profile 1.2V para equipos compactos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8-gb-3200mhz-pny-gaming-retail-xlr8-rgb-2",
+   "name": "DDR4 8 GB 3200MHZ PNY Gaming Retail XLR8 RGB",
+   "brand": "PNY",
+   "seoTitle": "DDR4 8 GB 3200MHZ PNY Gaming Retail XLR8 RGB",
+   "seoDescription": "Memoria RAM DDR4 PNY XLR8 RGB de 8GB a 3200MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8-gb-3200mhz-shadow-rgb-c16-netac-2",
+   "name": "DDR4 8 GB 3200MHZ Shadow RGB C16 Netac",
+   "seoTitle": "DDR4 8 GB 3200MHZ Shadow RGB C16 Netac",
+   "seoDescription": "Memoria RAM DDR4 8GB 3200MHz NETAC Shadow RGB con iluminación LED, latencia CAS 16, ideal para gaming y aplicaciones… Garantía oficial y envíos a todo el país."
+  }
+ ]
+}

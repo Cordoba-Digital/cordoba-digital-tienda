@@ -1,0 +1,1212 @@
+{
+  "lote": "catalogo-B-08",
+  "productos": [
+    {
+      "slug": "camara-ip-4mp-hilook-ipc-d640ha-lzu-varif-h265",
+      "name": "Cámara IP 4 MP Hilook IPC-D640HA-LZU Varif H265+",
+      "brand": "Hilook",
+      "model": "IPC-D640HA-LZU",
+      "seoTitle": "Cámara IP 4 MP Hilook IPC-D640HA-LZU",
+      "seoDescription": "Cámara IP Hilook IPC-D640HA-LZU de 4 MP con compresión H265+. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cámara IP Hilook de 4 MP con compresión H265+, para sistemas de videovigilancia.",
+      "highlights": [
+        "Resolución de 4 MP",
+        "Compresión H265+",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cámara IP"
+        },
+        {
+          "label": "Resolución",
+          "value": "4 MP"
+        },
+        {
+          "label": "Compresión de video",
+          "value": "H265+"
+        }
+      ],
+      "descriptionHtml": "<p>La Hilook IPC-D640HA-LZU es una cámara IP de 4 MP con compresión H265+. Sirve para sistemas de videovigilancia.</p><h3>Datos del producto</h3><ul><li>Resolución: 4 MP.</li><li>Compresión de video: H265+.</li><li>Modelo: IPC-D640HA-LZU.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "La descripción original es genérica: no trae lente, visión nocturna, IP ni alimentación. Completar con la ficha del fabricante.",
+        "El nombre dice 'Varif' (probablemente varifocal): no lo confirmé y no lo publiqué."
+      ]
+    },
+    {
+      "slug": "camara-ip-5mp-ezviz-h3c-color-4mm-exterior-2",
+      "name": "Cámara IP 5 MP EZVIZ H3C color 4 mm exterior",
+      "brand": "EZVIZ",
+      "model": "H3C",
+      "seoTitle": "Cámara IP EZVIZ H3C 5 MP color exterior",
+      "seoDescription": "Cámara IP EZVIZ H3C de 5 MP, con lente de 4 mm y visión en color, pensada para exterior. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cámara IP EZVIZ de 5 MP con lente de 4 mm y visión en color, pensada para exterior.",
+      "highlights": [
+        "Resolución de 5 MP",
+        "Lente de 4 mm",
+        "Imagen en color",
+        "Pensada para exterior"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cámara IP"
+        },
+        {
+          "label": "Resolución",
+          "value": "5 MP"
+        },
+        {
+          "label": "Lente",
+          "value": "4 mm"
+        },
+        {
+          "label": "Imagen",
+          "value": "Color"
+        },
+        {
+          "label": "Uso",
+          "value": "Exterior"
+        }
+      ],
+      "descriptionHtml": "<p>La EZVIZ H3C es una cámara IP de 5 MP con lente de 4 mm. Tiene imagen en color y está pensada para exterior.</p><h3>Datos del producto</h3><ul><li>Resolución: 5 MP.</li><li>Lente: 4 mm.</li><li>Imagen: color.</li><li>Uso: exterior.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "La descripción original es genérica: no trae IP, visión nocturna, compresión ni alimentación. Completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "camara-ip-5mp-ezviz-h8c-4mm-pt-360-exterior-3k",
+      "name": "Cámara IP EZVIZ H8C PT 360° 4 mm exterior",
+      "brand": "EZVIZ",
+      "model": "H8C",
+      "seoTitle": "Cámara IP EZVIZ H8C PT 360° exterior",
+      "seoDescription": "Cámara IP EZVIZ H8C con rotación pan/tilt de 360° y lente de 4 mm, para exterior. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cámara IP EZVIZ H8C con rotación pan/tilt de 360° y lente de 4 mm, pensada para exterior.",
+      "highlights": [
+        "Rotación pan/tilt de 360°",
+        "Lente de 4 mm",
+        "Pensada para exterior"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cámara IP"
+        },
+        {
+          "label": "Movimiento",
+          "value": "Pan/tilt de 360°"
+        },
+        {
+          "label": "Lente",
+          "value": "4 mm"
+        },
+        {
+          "label": "Uso",
+          "value": "Exterior"
+        }
+      ],
+      "descriptionHtml": "<p>La EZVIZ H8C es una cámara IP con rotación pan/tilt de 360° y lente de 4 mm. Está pensada para exterior.</p><h3>Datos del producto</h3><ul><li>Movimiento: pan/tilt de 360°.</li><li>Lente: 4 mm.</li><li>Uso: exterior.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "El nombre dice '5MP' y '3K': son cifras distintas, así que no publiqué resolución. Confirmar.",
+        "La descripción original es genérica: completar IP, visión nocturna y compresión con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "camara-ip-6mp-hilook-ipc-d160ha-l-h265-ip67-ik08",
+      "name": "Cámara IP 6 MP Hilook IPC-D160HA-L H265+ IP67 IK08",
+      "brand": "Hilook",
+      "model": "IPC-D160HA-L",
+      "seoTitle": "Cámara IP 6 MP Hilook IPC-D160HA-L",
+      "seoDescription": "Cámara IP Hilook IPC-D160HA-L de 6 MP, con compresión H265+ y certificaciones IP67 e IK08. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cámara IP Hilook de 6 MP con compresión H265+ y certificaciones IP67 e IK08.",
+      "highlights": [
+        "Resolución de 6 MP",
+        "Compresión H265+",
+        "Certificaciones IP67 e IK08"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cámara IP"
+        },
+        {
+          "label": "Resolución",
+          "value": "6 MP"
+        },
+        {
+          "label": "Compresión de video",
+          "value": "H265+"
+        },
+        {
+          "label": "Certificación",
+          "value": "IP67 e IK08"
+        }
+      ],
+      "descriptionHtml": "<p>La Hilook IPC-D160HA-L es una cámara IP de 6 MP con compresión H265+. Tiene certificaciones IP67 e IK08.</p><h3>Datos del producto</h3><ul><li>Resolución: 6 MP.</li><li>Compresión de video: H265+.</li><li>Certificaciones: IP67 e IK08.</li><li>Modelo: IPC-D160HA-L.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "La descripción original es genérica. Faltan lente, visión nocturna y alimentación: completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "camara-ip-6mp-hilook-ipc-d660ha-lzu-varif-h265",
+      "name": "Cámara IP 6 MP Hilook IPC-D660HA-LZU Varif H265+",
+      "brand": "Hilook",
+      "model": "IPC-D660HA-LZU",
+      "seoTitle": "Cámara IP 6 MP Hilook IPC-D660HA-LZU",
+      "seoDescription": "Cámara IP Hilook IPC-D660HA-LZU de 6 MP con compresión H265+. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cámara IP Hilook de 6 MP con compresión H265+, para sistemas de videovigilancia.",
+      "highlights": [
+        "Resolución de 6 MP",
+        "Compresión H265+",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cámara IP"
+        },
+        {
+          "label": "Resolución",
+          "value": "6 MP"
+        },
+        {
+          "label": "Compresión de video",
+          "value": "H265+"
+        }
+      ],
+      "descriptionHtml": "<p>La Hilook IPC-D660HA-LZU es una cámara IP de 6 MP con compresión H265+. Sirve para sistemas de videovigilancia.</p><h3>Datos del producto</h3><ul><li>Resolución: 6 MP.</li><li>Compresión de video: H265+.</li><li>Modelo: IPC-D660HA-LZU.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "El nombre dice 'Varif' (probablemente varifocal): no lo confirmé y no lo publiqué.",
+        "La descripción original es genérica: completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "camara-ip-cloud-tp-link-tapo-c100-full-hd-1080p",
+      "name": "Cámara IP TP-Link Tapo C100 Full HD 1080p",
+      "brand": "TP-Link",
+      "model": "Tapo C100",
+      "seoTitle": "Cámara IP TP-Link Tapo C100 Full HD",
+      "seoDescription": "Cámara IP TP-Link Tapo C100 con resolución Full HD 1080p y acceso en la nube. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cámara IP TP-Link Tapo C100 Full HD 1080p con acceso en la nube.",
+      "highlights": [
+        "Resolución Full HD 1080p",
+        "Acceso en la nube (cloud)",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cámara IP"
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD 1080p"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Cloud"
+        }
+      ],
+      "descriptionHtml": "<p>La TP-Link Tapo C100 es una cámara IP con resolución Full HD 1080p y acceso en la nube.</p><h3>Datos del producto</h3><ul><li>Resolución: Full HD 1080p.</li><li>Conectividad: cloud.</li><li>Modelo: Tapo C100.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "La descripción original es genérica. Faltan visión nocturna, audio, almacenamiento e IP: completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "camara-ip-cloud-tp-link-tapo-c320ws-2k-qhd-color-2",
+      "name": "Cámara IP TP-Link Tapo C320WS 2K QHD color",
+      "brand": "TP-Link",
+      "model": "Tapo C320WS",
+      "seoTitle": "Cámara IP TP-Link Tapo C320WS 2K QHD",
+      "seoDescription": "Cámara IP TP-Link Tapo C320WS de 2K QHD, con imagen en color y acceso en la nube. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cámara IP TP-Link Tapo C320WS de 2K QHD con imagen en color y acceso en la nube.",
+      "highlights": [
+        "Resolución 2K QHD",
+        "Imagen en color",
+        "Acceso en la nube (cloud)"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cámara IP"
+        },
+        {
+          "label": "Resolución",
+          "value": "2K QHD"
+        },
+        {
+          "label": "Imagen",
+          "value": "Color"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Cloud"
+        }
+      ],
+      "descriptionHtml": "<p>La TP-Link Tapo C320WS es una cámara IP de 2K QHD con imagen en color y acceso en la nube.</p><h3>Datos del producto</h3><ul><li>Resolución: 2K QHD.</li><li>Imagen: color.</li><li>Conectividad: cloud.</li><li>Modelo: Tapo C320WS.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "La descripción original es genérica. Faltan visión nocturna, audio, almacenamiento e IP: completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "camara-ip-cloud-tp-link-tapo-c325wb-2k-qhd-color-2",
+      "name": "Cámara IP TP-Link Tapo C325WB 2K QHD color",
+      "brand": "TP-Link",
+      "model": "Tapo C325WB",
+      "seoTitle": "Cámara IP TP-Link Tapo C325WB 2K QHD",
+      "seoDescription": "Cámara IP TP-Link Tapo C325WB de 2K QHD, con imagen en color y acceso en la nube. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cámara IP TP-Link Tapo C325WB de 2K QHD con imagen en color y acceso en la nube.",
+      "highlights": [
+        "Resolución 2K QHD",
+        "Imagen en color",
+        "Acceso en la nube (cloud)"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cámara IP"
+        },
+        {
+          "label": "Resolución",
+          "value": "2K QHD"
+        },
+        {
+          "label": "Imagen",
+          "value": "Color"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Cloud"
+        }
+      ],
+      "descriptionHtml": "<p>La TP-Link Tapo C325WB es una cámara IP de 2K QHD con imagen en color y acceso en la nube.</p><h3>Datos del producto</h3><ul><li>Resolución: 2K QHD.</li><li>Imagen: color.</li><li>Conectividad: cloud.</li><li>Modelo: Tapo C325WB.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "La descripción original es genérica. Faltan visión nocturna, audio, almacenamiento e IP: completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "camara-ip-tp-link-tapo-c201-ptz-full-hd-1080p",
+      "name": "Cámara IP TP-Link Tapo C201 PTZ Full HD 1080p",
+      "model": "Tapo C201",
+      "seoTitle": "Cámara IP TP-Link Tapo C201 Full HD",
+      "seoDescription": "Cámara IP TP-Link Tapo C201 para interior, con rotación de 360°, Full HD 1080p y visión nocturna. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cámara IP interior TP-Link Tapo C201 con rotación de 360°, Full HD 1080p, visión nocturna y audio bidireccional.",
+      "highlights": [
+        "Full HD 1080p a 15 fps",
+        "Rotación de 360° horizontal y 114° vertical",
+        "Visión nocturna infrarroja de hasta 9 m",
+        "Audio bidireccional y alarma de luz y sonido",
+        "Compatible con app Tapo, Google Assistant y Alexa"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cámara IP interior"
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD 1080p (1920 × 1080 px) a 15 fps"
+        },
+        {
+          "label": "Movimiento",
+          "value": "Pan/tilt de 360° horizontal y 114° vertical"
+        },
+        {
+          "label": "Visión nocturna",
+          "value": "LED IR de 850 nm, hasta 9 m"
+        },
+        {
+          "label": "Detección",
+          "value": "Movimiento, con notificaciones en la app"
+        },
+        {
+          "label": "Audio",
+          "value": "Bidireccional, con micrófono y parlante integrados"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "MicroSD de hasta 128 GB o nube Tapo Care"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 2.4 GHz (802.11b/g/n)"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "App Tapo (iOS y Android), Google Assistant y Amazon Alexa"
+        }
+      ],
+      "descriptionHtml": "<p>La TP-Link Tapo C201 es una cámara IP para interior con rotación de 360° y resolución Full HD 1080p. Sirve para vigilar habitaciones, salas o comercios, y para cuidar niños y mascotas desde el celular.</p><h3>Imagen y visión nocturna</h3><p>Captura en Full HD 1080p a 15 fps. Con la visión nocturna infrarroja de 850 nm ve hasta 9 metros en la oscuridad.</p><h3>Alertas y comunicación</h3><ul><li>Detección de movimiento con notificaciones en la app.</li><li>Audio bidireccional: hablás y escuchás desde el celular.</li><li>Alarma de luz y sonido para disuadir visitas no deseadas.</li><li>Modo privacidad: bloqueás la lente de forma remota.</li></ul><h3>Conectividad</h3><p>Se conecta por Wi-Fi de 2.4 GHz. Es compatible con la app Tapo para iOS y Android, Google Assistant y Amazon Alexa.</p><h3>Antes de comprar</h3><ul><li>Solo funciona con redes Wi-Fi de 2.4 GHz.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "La descripción dice 'Tapo C200' en el título y 'C201' en el resto. Publiqué C201, que coincide con el nombre y el SKU."
+      ]
+    },
+    {
+      "slug": "camara-ip-tp-link-tapo-c246d-ptz-doble-lente",
+      "name": "Cámara IP TP-Link Tapo C246D PTZ doble lente",
+      "model": "Tapo C246D",
+      "seoTitle": "Cámara TP-Link Tapo C246D doble lente 2K",
+      "seoDescription": "Cámara IP TP-Link Tapo C246D de doble lente 2K, con IP65 y detección por IA. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cámara IP TP-Link Tapo C246D con doble lente 2K, Pan/Tilt de 360° y certificación IP65 para interior y exterior.",
+      "highlights": [
+        "Doble lente 2K: fija gran angular y Pan/Tilt",
+        "Seguimiento automático sincronizado",
+        "Detección por IA de personas, vehículos y mascotas",
+        "Infrarrojo de hasta 12 m y visión en color",
+        "Certificación IP65 para interior y exterior"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cámara IP de doble lente"
+        },
+        {
+          "label": "Resolución",
+          "value": "Doble 2K de 3 MP (2304 × 1296 px)"
+        },
+        {
+          "label": "Lente fija",
+          "value": "Gran angular de 125°"
+        },
+        {
+          "label": "Lente Pan/Tilt",
+          "value": "Teleobjetivo de 6 mm, rotación de 360° horizontal"
+        },
+        {
+          "label": "Protección",
+          "value": "IP65, apta para interior y exterior"
+        },
+        {
+          "label": "Visión nocturna",
+          "value": "Infrarroja de hasta 12 m y color con reflectores LED"
+        },
+        {
+          "label": "Detección",
+          "value": "IA para personas, vehículos, mascotas y llanto de bebé"
+        },
+        {
+          "label": "Audio",
+          "value": "Bidireccional, con micrófono y parlante integrados"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "MicroSD de hasta 512 GB o Tapo Care Cloud Storage"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 2.4 GHz"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Alexa, Google Assistant y SmartThings"
+        }
+      ],
+      "descriptionHtml": "<p>La TP-Link Tapo C246D combina una lente gran angular fija con una lente Pan/Tilt. Así ves una vista panorámica y la lente motorizada sigue el movimiento en tiempo real.</p><h3>Doble lente 2K</h3><p>La lente fija tiene 125° de campo de visión. La motorizada tiene 6 mm y rota 360° en horizontal: cuando la fija detecta una presencia, la giratoria la sigue sola.</p><h3>Detección por IA y visión nocturna</h3><ul><li>Detecta personas, vehículos, mascotas y llanto de bebé.</li><li>Visión infrarroja de hasta 12 m o color con reflectores LED.</li><li>Modo automático que elige entre infrarrojo y color.</li></ul><h3>Uso interior y exterior</h3><p>Tiene certificación IP65 y audio bidireccional. Acepta microSD de hasta 512 GB o el plan Tapo Care.</p><h3>Antes de comprar</h3><ul><li>Solo conecta a redes Wi-Fi de 2.4 GHz.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": []
+    },
+    {
+      "slug": "cerradura-ezviz-smart-home-dl03-huella",
+      "name": "Cerradura EZVIZ Smart Home DL03 con huella",
+      "brand": "EZVIZ",
+      "model": "DL03",
+      "seoTitle": "Cerradura EZVIZ Smart Home DL03 huella",
+      "seoDescription": "Cerradura inteligente EZVIZ DL03 con acceso por huella dactilar y control desde la app EZVIZ. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cerradura inteligente EZVIZ DL03 con acceso por huella dactilar y control desde la app EZVIZ.",
+      "highlights": [
+        "Acceso por huella dactilar",
+        "Control remoto desde la app EZVIZ",
+        "Pensada para la mayoría de las puertas",
+        "Acabado moderno"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cerradura inteligente"
+        },
+        {
+          "label": "Acceso",
+          "value": "Huella dactilar"
+        },
+        {
+          "label": "Control",
+          "value": "Remoto, desde la app EZVIZ"
+        },
+        {
+          "label": "Instalación",
+          "value": "Pensada para la mayoría de las puertas"
+        },
+        {
+          "label": "Acabado",
+          "value": "Moderno"
+        }
+      ],
+      "descriptionHtml": "<p>La cerradura EZVIZ DL03 usa huella dactilar para abrir la puerta de forma rápida. También se controla desde la app EZVIZ, así que podés gestionar el acceso desde cualquier lugar.</p><h3>Seguridad y control</h3><ul><li>Acceso por huella dactilar.</li><li>Control remoto desde la app EZVIZ.</li></ul><h3>Instalación</h3><p>Está diseñada para adaptarse a la mayoría de las puertas.</p><h3>Diseño</h3><p>Tiene un acabado moderno que combina con cualquier decoración.</p><h3>Antes de comprar</h3><ul><li>La ficha no trae medidas ni el tipo de puerta compatible.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "La descripción no trae medidas, batería ni cantidad de huellas. Completar con la ficha del fabricante.",
+        "DL03 y DL05 tienen descripciones casi iguales: no publiqué diferencias entre ambos."
+      ]
+    },
+    {
+      "slug": "cerradura-ezviz-smart-home-dl05-huella",
+      "name": "Cerradura EZVIZ Smart Home DL05 con huella",
+      "brand": "EZVIZ",
+      "model": "DL05",
+      "seoTitle": "Cerradura EZVIZ Smart Home DL05 huella",
+      "seoDescription": "Cerradura inteligente EZVIZ DL05 con reconocimiento de huella y alertas en tiempo real. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cerradura inteligente EZVIZ DL05 con reconocimiento de huella y control desde la app EZVIZ.",
+      "highlights": [
+        "Reconocimiento de huella dactilar",
+        "Control desde la app EZVIZ",
+        "Alertas de estado en tiempo real",
+        "Instalación sencilla, sin herramientas complicadas"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cerradura inteligente"
+        },
+        {
+          "label": "Acceso",
+          "value": "Reconocimiento de huella dactilar"
+        },
+        {
+          "label": "Control",
+          "value": "Remoto, desde la app EZVIZ"
+        },
+        {
+          "label": "Alertas",
+          "value": "Notificaciones en tiempo real sobre el estado de la cerradura"
+        },
+        {
+          "label": "Instalación",
+          "value": "Sencilla, sin herramientas complicadas"
+        },
+        {
+          "label": "Diseño",
+          "value": "Moderno"
+        }
+      ],
+      "descriptionHtml": "<p>La cerradura EZVIZ DL05 abre con reconocimiento de huella dactilar y se controla desde la app EZVIZ.</p><h3>Control y alertas</h3><ul><li>Gestión de la cerradura desde el celular.</li><li>Notificaciones en tiempo real sobre el estado de la cerradura.</li></ul><h3>Instalación y diseño</h3><p>Se instala sin herramientas complicadas y tiene un estilo moderno que se adapta a cualquier puerta.</p><h3>Antes de comprar</h3><ul><li>La ficha no trae medidas ni el tipo de puerta compatible.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "La descripción no trae medidas, batería ni cantidad de huellas. Completar con la ficha del fabricante.",
+        "No dice en qué se diferencia del DL03: no publiqué diferencias."
+      ]
+    },
+    {
+      "slug": "control-gynoid-mini-hub-smart-wifi",
+      "name": "Gynoid Mini Hub Smart Wi-Fi",
+      "brand": "Gynoid",
+      "model": "GY2-102",
+      "seoTitle": "Gynoid Mini Hub Smart Wi-Fi domótica",
+      "seoDescription": "Hub Gynoid Mini para domótica: conecta hasta 50 periféricos ZigBee y se conecta por Wi-Fi. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Hub Gynoid Mini con Wi-Fi para conectar hasta 50 periféricos ZigBee y armar tu casa inteligente.",
+      "highlights": [
+        "Conecta hasta 50 periféricos a la vez",
+        "Protocolo ZigBee con alcance de hasta 30 m",
+        "Se conecta al módem Wi-Fi de tu casa",
+        "Vincula sensores, cámaras y otros periféricos"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Hub para domótica"
+        },
+        {
+          "label": "Protocolo",
+          "value": "ZigBee"
+        },
+        {
+          "label": "Conexión",
+          "value": "Wi-Fi al módem"
+        },
+        {
+          "label": "Alimentación",
+          "value": "Corriente eléctrica"
+        },
+        {
+          "label": "Periféricos",
+          "value": "Hasta 50 a la vez"
+        },
+        {
+          "label": "Alcance con periféricos",
+          "value": "Hasta 30 m"
+        }
+      ],
+      "descriptionHtml": "<p>El Hub Gynoid Mini es el centro de una casa inteligente. Vincula sensores, cámaras y otros periféricos para que trabajen juntos.</p><h3>Cómo funciona</h3><p>Se conecta a tu módem Wi-Fi y a la corriente eléctrica. Los dispositivos se comunican por ZigBee, un protocolo de bajo consumo que activa cada aparato solo cuando está en uso.</p><h3>Capacidad</h3><ul><li>Controla hasta 50 periféricos al mismo tiempo.</li><li>Conecta dispositivos a hasta 30 m de distancia y arma redes entre ellos.</li></ul><h3>Antes de comprar</h3><ul><li>Necesita un módem Wi-Fi y corriente eléctrica para funcionar.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "El nombre decía 'Control'; la descripción solo habla del HUB. Lo saqué del nombre. Confirmar.",
+        "La descripción no dice qué app usa ni con qué dispositivos de otras marcas es compatible."
+      ]
+    },
+    {
+      "slug": "maquina-contadora-de-billetes-gadnic-mc-01-profesional",
+      "name": "Máquina contadora de billetes Bic-05",
+      "brand": "Kidoo",
+      "model": "Bic-05",
+      "seoTitle": "Contadora de billetes Kidoo Bic-05",
+      "seoDescription": "Contadora de billetes Kidoo Bic-05, de 1000 billetes por minuto, con detección UV y de magnetismo. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Contadora de billetes Kidoo Bic-05 de 1000 billetes por minuto, con detección de billetes falsos por UV y magnetismo.",
+      "highlights": [
+        "Cuenta hasta 1000 billetes por minuto",
+        "Detecta billetes falsos por UV y magnetismo",
+        "Moneda nacional y extranjera, incluida la nueva generación",
+        "Homologada por la Secretaría de Comercio y norma IRAM",
+        "Cuenta por lotes y arma fajos automáticamente"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Contadora de billetes"
+        },
+        {
+          "label": "Velocidad",
+          "value": "1000 billetes por minuto"
+        },
+        {
+          "label": "Bandeja",
+          "value": "Ajustable, con capacidad para 200 billetes"
+        },
+        {
+          "label": "Tamaño de billetes",
+          "value": "De 110 × 50 mm a 190 × 90 mm"
+        },
+        {
+          "label": "Detección",
+          "value": "Billetes falsos por UV y magnetismo; moneda nacional y extranjera"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Display LED de funciones y agrupación de 4 dígitos"
+        },
+        {
+          "label": "Controles",
+          "value": "Teclado numérico"
+        },
+        {
+          "label": "Homologación",
+          "value": "Secretaría de Comercio y norma IRAM"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "33,5 × 32 × 22 cm"
+        },
+        {
+          "label": "Peso",
+          "value": "5 kg"
+        },
+        {
+          "label": "En la caja",
+          "value": "Visor extra, 6 engranajes, cepillo de limpieza, accesorio motor, accesorio tolva y manual en español"
+        }
+      ],
+      "descriptionHtml": "<p>La contadora Kidoo Bic-05 cuenta billetes con precisión y a alta velocidad: hasta 1000 por minuto. Es un equipo comercial pensado para negocios y locales que manejan efectivo.</p><h3>Conteo y detección</h3><ul><li>Cuenta por lotes y arma fajos de forma automática.</li><li>Detecta billetes falsos por UV y magnetismo.</li><li>Trabaja con moneda nacional y extranjera, incluida la nueva generación de billetes.</li></ul><h3>Uso</h3><p>Tiene bandeja ajustable con capacidad para 200 billetes, display LED y teclado numérico. Incluye visor extra, cepillo de limpieza y manual en español.</p><h3>Homologación</h3><p>Está homologada por la Secretaría de Comercio y cumple la norma IRAM.</p><h3>Antes de comprar</h3><ul><li>Acepta billetes de 110 × 50 mm a 190 × 90 mm.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "El slug dice 'gadnic-mc-01' y la descripción dice 'Kidoo Bic-05'. Publiqué Kidoo Bic-05 según la descripción: confirmar marca.",
+        "La descripción dice 'Garantía: 12 meses'. No lo publiqué porque la tienda da 6 meses.",
+        "La categoría actual es 'sistemas de seguridad'; probablemente no corresponde."
+      ]
+    },
+    {
+      "slug": "nvr-4ch-hilook-nvr-208mh-c-8p-h265-8poe",
+      "name": "NVR 4 canales Hilook NVR-208MH-C/8P H265+ 8 PoE",
+      "brand": "Hilook",
+      "model": "NVR-208MH-C/8P",
+      "seoTitle": "NVR 4 canales Hilook NVR-208MH-C/8P",
+      "seoDescription": "NVR Hilook de 4 canales con 8 puertos PoE, compresión H265+ y resolución de hasta 4K. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Grabador de video en red Hilook de 4 canales, con 8 puertos PoE integrados y compresión H265+.",
+      "highlights": [
+        "4 canales de grabación",
+        "8 puertos PoE integrados para cámaras IP",
+        "Compresión H265+ para ahorrar almacenamiento",
+        "Resolución de hasta 4K",
+        "Monitoreo remoto"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "NVR (grabador de video en red)"
+        },
+        {
+          "label": "Canales",
+          "value": "4"
+        },
+        {
+          "label": "Puertos PoE",
+          "value": "8 integrados"
+        },
+        {
+          "label": "Alimentación de cámaras",
+          "value": "Por cable de red (PoE)"
+        },
+        {
+          "label": "Compresión de video",
+          "value": "H265+"
+        },
+        {
+          "label": "Resolución máxima",
+          "value": "Hasta 4K"
+        }
+      ],
+      "descriptionHtml": "<p>El NVR Hilook NVR-208MH-C/8P graba 4 canales de video y tiene 8 puertos PoE integrados. Alimenta las cámaras IP por el mismo cable de red.</p><h3>Grabación</h3><ul><li>4 canales con compresión H265+, que ahorra espacio de almacenamiento.</li><li>Compatible con resoluciones de hasta 4K.</li></ul><h3>Instalación</h3><p>Los 8 puertos PoE alimentan las cámaras por el cable de red, lo que simplifica la instalación.</p><h3>Uso</h3><p>Es para pequeñas y medianas empresas, hogares y comercios que quieren un sistema de seguridad fácil de gestionar. Permite monitoreo remoto.</p><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "La descripción no trae capacidad de disco ni salidas de video: completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "nvr-8ch-2k-ezviz-x5s-wifi",
+      "name": "NVR 8 canales 2K EZVIZ X5S Wi-Fi",
+      "brand": "EZVIZ",
+      "model": "X5S",
+      "seoTitle": "NVR EZVIZ X5S 8 canales 2K Wi-Fi",
+      "seoDescription": "NVR EZVIZ X5S de 8 canales, con resolución 2K y conexión Wi-Fi para tus cámaras. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Grabador de video en red EZVIZ X5S de 8 canales, con resolución 2K y conexión Wi-Fi.",
+      "highlights": [
+        "8 canales de grabación",
+        "Resolución 2K",
+        "Conexión Wi-Fi"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "NVR (grabador de video en red)"
+        },
+        {
+          "label": "Canales",
+          "value": "8"
+        },
+        {
+          "label": "Resolución",
+          "value": "2K"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        }
+      ],
+      "descriptionHtml": "<p>El NVR EZVIZ X5S tiene 8 canales de grabación con resolución 2K y se conecta por Wi-Fi.</p><h3>Características</h3><ul><li>8 canales de grabación.</li><li>Resolución 2K.</li><li>Conexión Wi-Fi.</li></ul><h3>Antes de comprar</h3><ul><li>La ficha no trae capacidad de disco ni cantidad de puertos PoE.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "La descripción es genérica. Faltan capacidad de disco y compresión: completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "sensor-de-movimiento-gynoid-wifi",
+      "name": "Sensor de movimiento Gynoid GY2-201",
+      "brand": "Gynoid",
+      "model": "GY2-201",
+      "seoTitle": "Sensor de movimiento Gynoid GY2-201",
+      "seoDescription": "Sensor de movimiento Gynoid GY2-201 con infrarrojo, rango de detección de 10 m y protocolo ZigBee. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Sensor de movimiento Gynoid GY2-201 con infrarrojo para detectar calor y movimiento. Funciona con el HUB Gynoid.",
+      "highlights": [
+        "Detecta calor y movimiento con infrarrojo",
+        "Rango de detección de 10 m",
+        "Funciona con el HUB Gynoid por ZigBee",
+        "Alimentado con 2 pilas AA",
+        "Crea escenas con otros dispositivos"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Sensor de movimiento infrarrojo"
+        },
+        {
+          "label": "Alimentación",
+          "value": "2 pilas AA"
+        },
+        {
+          "label": "Rango de detección",
+          "value": "10 m"
+        },
+        {
+          "label": "Protocolo",
+          "value": "ZigBee HA, 2.4 GHz"
+        },
+        {
+          "label": "Encriptación",
+          "value": "AES-128"
+        },
+        {
+          "label": "Material",
+          "value": "ABS"
+        },
+        {
+          "label": "Temperatura de operación",
+          "value": "-10 °C a 50 °C"
+        },
+        {
+          "label": "Humedad de operación",
+          "value": "10% a 90% HR"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "52,6 × 63,6 mm"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "iOS 8.0 o superior y Android 4.0 o superior"
+        }
+      ],
+      "descriptionHtml": "<p>El sensor Gynoid GY2-201 detecta calor y movimiento en el área que cubre. Se vincula al HUB Gynoid y funciona con la app Gynoid Home.</p><h3>Cómo detecta</h3><p>Usa tecnología de infrarrojo y crea una cuadrícula protectora. Si un objeto en movimiento bloquea varias zonas y cambia el nivel de infrarrojo, el sensor se activa.</p><h3>Conexión</h3><ul><li>Protocolo ZigBee HA, frecuencia 2.4 GHz y encriptación AES-128.</li><li>Compatible con iOS 8.0 o superior y Android 4.0 o superior.</li></ul><h3>Escenas</h3><p>Podés crear escenas con otros dispositivos del sistema.</p><h3>Antes de comprar</h3><ul><li>Para usarlo en el sistema necesita el HUB Gynoid, que controla hasta 50 periféricos.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "El nombre y la descripción corta dicen 'Wifi', pero la ficha dice ZigBee con HUB. Saqué 'Wifi' del nombre y publiqué ZigBee. Confirmar.",
+        "La ficha dice 'Rango de detección 10m/110': no queda claro si 110 son grados. Solo publiqué 10 m."
+      ]
+    },
+    {
+      "slug": "tp-link-tapo-camara-ip-wifi-c500-ext",
+      "name": "Cámara IP TP-Link Tapo C500 PTZ exterior",
+      "brand": "TP-Link",
+      "model": "Tapo C500",
+      "seoTitle": "Cámara IP TP-Link Tapo C500 exterior 360°",
+      "seoDescription": "Cámara IP TP-Link Tapo C500 para exterior, con Full HD 1080p, rotación de 360° e IP65. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cámara IP TP-Link Tapo C500 para exterior, con rotación Pan/Tilt de 360°, Full HD 1080p, IA para personas y certificación IP65.",
+      "highlights": [
+        "Rotación Pan/Tilt de 360° y 130° en vertical",
+        "Full HD 1080p",
+        "Seguimiento automático de personas con IA",
+        "Visión nocturna infrarroja de hasta 30 m",
+        "Certificación IP65 para lluvia y polvo"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cámara IP exterior PTZ"
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD 1080p (1920 × 1080 px) a 15 fps"
+        },
+        {
+          "label": "Movimiento",
+          "value": "Pan/tilt de 360° horizontal y 130° vertical"
+        },
+        {
+          "label": "Protección",
+          "value": "IP65"
+        },
+        {
+          "label": "Visión nocturna",
+          "value": "LED IR de 850 nm, hasta 30 m"
+        },
+        {
+          "label": "Detección",
+          "value": "IA para personas, con seguimiento automático"
+        },
+        {
+          "label": "Audio",
+          "value": "Bidireccional, con alarma sonora personalizable"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "MicroSD de hasta 512 GB o nube Tapo Care"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 2.4 GHz (802.11b/g/n)"
+        }
+      ],
+      "descriptionHtml": "<p>La TP-Link Tapo C500 es una cámara para exterior con rotación Pan/Tilt de 360°. Cubre patios, entradas y comercios sin puntos ciegos.</p><h3>Seguimiento con IA</h3><p>Identifica cuando una persona entra en el área de cobertura y la sigue de forma automática.</p><h3>Visión nocturna</h3><p>Los LED infrarrojos dan una imagen nítida en blanco y negro hasta 30 metros.</p><h3>Resistencia y audio</h3><ul><li>Certificación IP65 para lluvia, sol e intemperie.</li><li>Audio bidireccional desde la app Tapo.</li><li>Alarma sonora personalizable para disuadir intrusos.</li></ul><h3>Antes de comprar</h3><ul><li>Solo conecta a redes Wi-Fi de 2.4 GHz.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": []
+    },
+    {
+      "slug": "pen-drive-64gb-hiksemi-2-0-rnb",
+      "name": "Pen drive 64 GB Hiksemi 2.0 RNB",
+      "brand": "Hiksemi",
+      "model": "RNB",
+      "seoTitle": "Pen drive 64 GB Hiksemi 2.0 RNB",
+      "seoDescription": "Pen drive Hiksemi de 64 GB, versión 2.0 y modelo RNB, para guardar y transportar archivos. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Pen drive Hiksemi de 64 GB, versión 2.0, para guardar y transportar archivos.",
+      "highlights": [
+        "Capacidad de 64 GB",
+        "Interfaz USB 2.0",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Pen drive"
+        },
+        {
+          "label": "Capacidad",
+          "value": "64 GB"
+        },
+        {
+          "label": "Interfaz",
+          "value": "USB 2.0"
+        }
+      ],
+      "descriptionHtml": "<p>El pen drive Hiksemi RNB tiene 64 GB de capacidad y es versión 2.0. Sirve para guardar y transportar archivos.</p><h3>Datos del producto</h3><ul><li>Capacidad: 64 GB.</li><li>Versión: 2.0.</li><li>Modelo: RNB.</li></ul><h3>Antes de comprar</h3><ul><li>La ficha no trae velocidades de lectura ni de escritura.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "Tomé '2.0' del nombre como USB 2.0. Confirmar.",
+        "La descripción original es genérica: faltan velocidades y otros datos técnicos."
+      ]
+    },
+    {
+      "slug": "pen-drive-64gb-sandisk-2-0-cruzerblade",
+      "name": "Pen drive 64 GB SanDisk Cruzer Blade 2.0",
+      "brand": "SanDisk",
+      "model": "Cruzer Blade",
+      "seoTitle": "Pen drive 64 GB SanDisk Cruzer Blade",
+      "seoDescription": "Pen drive SanDisk Cruzer Blade de 64 GB, versión 2.0, para guardar y transportar archivos. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Pen drive SanDisk Cruzer Blade de 64 GB, versión 2.0, para guardar y transportar archivos.",
+      "highlights": [
+        "Capacidad de 64 GB",
+        "Interfaz USB 2.0",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Pen drive"
+        },
+        {
+          "label": "Capacidad",
+          "value": "64 GB"
+        },
+        {
+          "label": "Interfaz",
+          "value": "USB 2.0"
+        }
+      ],
+      "descriptionHtml": "<p>El pen drive SanDisk Cruzer Blade tiene 64 GB de capacidad y es versión 2.0. Sirve para guardar y transportar archivos.</p><h3>Datos del producto</h3><ul><li>Capacidad: 64 GB.</li><li>Versión: 2.0.</li><li>Modelo: Cruzer Blade.</li></ul><h3>Antes de comprar</h3><ul><li>La ficha no trae velocidades de lectura ni de escritura.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "Tomé '2.0' del nombre como USB 2.0. Confirmar.",
+        "La descripción original es genérica: faltan velocidades y otros datos técnicos."
+      ]
+    },
+    {
+      "slug": "pen-drive-64gb-sandisk-3-2-ultra-shift",
+      "name": "Pen drive 64 GB SanDisk Ultra Shift 3.2",
+      "brand": "SanDisk",
+      "model": "Ultra Shift",
+      "seoTitle": "Pen drive 64 GB SanDisk Ultra Shift 3.2",
+      "seoDescription": "Pen drive SanDisk Ultra Shift de 64 GB, versión 3.2, para guardar y transportar archivos. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Pen drive SanDisk Ultra Shift de 64 GB, versión 3.2, para guardar y transportar archivos.",
+      "highlights": [
+        "Capacidad de 64 GB",
+        "Interfaz USB 3.2",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Pen drive"
+        },
+        {
+          "label": "Capacidad",
+          "value": "64 GB"
+        },
+        {
+          "label": "Interfaz",
+          "value": "USB 3.2"
+        }
+      ],
+      "descriptionHtml": "<p>El pen drive SanDisk Ultra Shift tiene 64 GB de capacidad y es versión 3.2. Sirve para guardar y transportar archivos.</p><h3>Datos del producto</h3><ul><li>Capacidad: 64 GB.</li><li>Versión: 3.2.</li><li>Modelo: Ultra Shift.</li></ul><h3>Antes de comprar</h3><ul><li>La ficha no trae velocidades de lectura ni de escritura.</li></ul><p>Tiene garantía oficial. Enviamos a todo el país y podés retirar en Córdoba.</p>",
+      "revisar": [
+        "Tomé '3.2' del nombre como USB 3.2. Confirmar.",
+        "La descripción original es genérica: faltan velocidades y otros datos técnicos."
+      ]
+    },
+    {
+      "slug": "mate-acero-inoxidable-outdoors-blanco",
+      "name": "Mate térmico Outdoors Professional acero inoxidable 236 ml Blanco",
+      "brand": "Outdoors",
+      "seoTitle": "Mate térmico Outdoors 236 ml Blanco",
+      "seoDescription": "Mate térmico Outdoors de acero inoxidable 18/8 de 236 ml, con doble pared al vacío y tecnología Hands Protected. Envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mate térmico Outdoors de acero inoxidable de 236 ml en blanco, con doble pared al vacío y tecnología Hands Protected.",
+      "highlights": [
+        "Mantiene el calor hasta 30 minutos",
+        "Acero inoxidable 18/8 sin BPA",
+        "Hands Protected: el exterior no llega a temperaturas altas",
+        "Capacidad de 236 ml"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mate térmico"
+        },
+        {
+          "label": "Capacidad",
+          "value": "236 ml"
+        },
+        {
+          "label": "Material",
+          "value": "Acero inoxidable 18/8"
+        },
+        {
+          "label": "Aislamiento",
+          "value": "Doble pared al vacío"
+        },
+        {
+          "label": "Temperatura",
+          "value": "Mantiene el calor hasta 30 minutos"
+        },
+        {
+          "label": "Alto",
+          "value": "10,5 cm"
+        },
+        {
+          "label": "Diámetro",
+          "value": "8 cm"
+        },
+        {
+          "label": "Sin BPA",
+          "value": "Sí"
+        },
+        {
+          "label": "Tecnología",
+          "value": "Hands Protected"
+        },
+        {
+          "label": "Color",
+          "value": "Blanco"
+        }
+      ],
+      "descriptionHtml": "<p>El mate térmico Outdoors Professional es de acero inoxidable de 236 ml. Mantiene el calor hasta 30 minutos y sirve para disfrutar tu yerba favorita.</p><h3>Diseño</h3><p>Tiene doble pared con aislamiento al vacío. Mide 10,5 cm de alto por 8 cm de diámetro.</p><h3>Hands Protected</h3><p>La tecnología Hands Protected evita que la parte exterior del mate llegue a temperaturas altas.</p><h3>Materiales</h3><ul><li>Acero inoxidable 18/8.</li><li>Sin BPA.</li></ul><p>Envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La ficha no menciona garantía: no la puse."
+      ]
+    },
+    {
+      "slug": "mate-acero-inoxidable-outdoors-lila",
+      "name": "Mate térmico Outdoors Professional acero inoxidable 236 ml Lila",
+      "brand": "Outdoors",
+      "seoTitle": "Mate térmico Outdoors 236 ml Lila",
+      "seoDescription": "Mate térmico Outdoors de acero inoxidable 18/8 de 236 ml, con doble pared al vacío y tecnología Hands Protected. Envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mate térmico Outdoors de acero inoxidable de 236 ml en lila, con doble pared al vacío y tecnología Hands Protected.",
+      "highlights": [
+        "Mantiene el calor hasta 30 minutos",
+        "Acero inoxidable 18/8 sin BPA",
+        "Hands Protected: el exterior no llega a temperaturas altas",
+        "Capacidad de 236 ml"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mate térmico"
+        },
+        {
+          "label": "Capacidad",
+          "value": "236 ml"
+        },
+        {
+          "label": "Material",
+          "value": "Acero inoxidable 18/8"
+        },
+        {
+          "label": "Aislamiento",
+          "value": "Doble pared al vacío"
+        },
+        {
+          "label": "Temperatura",
+          "value": "Mantiene el calor hasta 30 minutos"
+        },
+        {
+          "label": "Alto",
+          "value": "10,5 cm"
+        },
+        {
+          "label": "Diámetro",
+          "value": "8 cm"
+        },
+        {
+          "label": "Sin BPA",
+          "value": "Sí"
+        },
+        {
+          "label": "Tecnología",
+          "value": "Hands Protected"
+        },
+        {
+          "label": "Color",
+          "value": "Lila"
+        }
+      ],
+      "descriptionHtml": "<p>El mate térmico Outdoors Professional es de acero inoxidable de 236 ml. Mantiene el calor hasta 30 minutos y sirve para disfrutar tu yerba favorita.</p><h3>Diseño</h3><p>Tiene doble pared con aislamiento al vacío. Mide 10,5 cm de alto por 8 cm de diámetro.</p><h3>Hands Protected</h3><p>La tecnología Hands Protected evita que la parte exterior del mate llegue a temperaturas altas.</p><h3>Materiales</h3><ul><li>Acero inoxidable 18/8.</li><li>Sin BPA.</li></ul><p>Envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La ficha no menciona garantía: no la puse."
+      ]
+    },
+    {
+      "slug": "mate-acero-inoxidable-outdoors-lila-gris",
+      "name": "Mate térmico Outdoors Professional acero inoxidable 236 ml Gris",
+      "brand": "Outdoors",
+      "seoTitle": "Mate térmico Outdoors 236 ml Gris",
+      "seoDescription": "Mate térmico Outdoors de acero inoxidable 18/8 de 236 ml, con doble pared al vacío y tecnología Hands Protected. Envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mate térmico Outdoors de acero inoxidable de 236 ml en gris, con doble pared al vacío y tecnología Hands Protected.",
+      "highlights": [
+        "Mantiene el calor hasta 30 minutos",
+        "Acero inoxidable 18/8 sin BPA",
+        "Hands Protected: el exterior no llega a temperaturas altas",
+        "Capacidad de 236 ml"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mate térmico"
+        },
+        {
+          "label": "Capacidad",
+          "value": "236 ml"
+        },
+        {
+          "label": "Material",
+          "value": "Acero inoxidable 18/8"
+        },
+        {
+          "label": "Aislamiento",
+          "value": "Doble pared al vacío"
+        },
+        {
+          "label": "Temperatura",
+          "value": "Mantiene el calor hasta 30 minutos"
+        },
+        {
+          "label": "Alto",
+          "value": "10,5 cm"
+        },
+        {
+          "label": "Diámetro",
+          "value": "8 cm"
+        },
+        {
+          "label": "Sin BPA",
+          "value": "Sí"
+        },
+        {
+          "label": "Tecnología",
+          "value": "Hands Protected"
+        },
+        {
+          "label": "Color",
+          "value": "Gris"
+        }
+      ],
+      "descriptionHtml": "<p>El mate térmico Outdoors Professional es de acero inoxidable de 236 ml. Mantiene el calor hasta 30 minutos y sirve para disfrutar tu yerba favorita.</p><h3>Diseño</h3><p>Tiene doble pared con aislamiento al vacío. Mide 10,5 cm de alto por 8 cm de diámetro.</p><h3>Hands Protected</h3><p>La tecnología Hands Protected evita que la parte exterior del mate llegue a temperaturas altas.</p><h3>Materiales</h3><ul><li>Acero inoxidable 18/8.</li><li>Sin BPA.</li></ul><p>Envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "El slug dice 'lila-gris' y el nombre 'Gris'. Publiqué Gris: confirmar el color.",
+        "La ficha no menciona garantía: no la puse."
+      ]
+    },
+    {
+      "slug": "mate-acero-inoxidable-outdoors-silver",
+      "name": "Mate térmico Outdoors Professional acero inoxidable 236 ml Silver",
+      "brand": "Outdoors",
+      "seoTitle": "Mate térmico Outdoors 236 ml Silver",
+      "seoDescription": "Mate térmico Outdoors de acero inoxidable 18/8 de 236 ml, con doble pared al vacío y tecnología Hands Protected. Envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mate térmico Outdoors de acero inoxidable de 236 ml en silver, con doble pared al vacío y tecnología Hands Protected.",
+      "highlights": [
+        "Mantiene el calor hasta 30 minutos",
+        "Acero inoxidable 18/8 sin BPA",
+        "Hands Protected: el exterior no llega a temperaturas altas",
+        "Capacidad de 236 ml"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mate térmico"
+        },
+        {
+          "label": "Capacidad",
+          "value": "236 ml"
+        },
+        {
+          "label": "Material",
+          "value": "Acero inoxidable 18/8"
+        },
+        {
+          "label": "Aislamiento",
+          "value": "Doble pared al vacío"
+        },
+        {
+          "label": "Temperatura",
+          "value": "Mantiene el calor hasta 30 minutos"
+        },
+        {
+          "label": "Alto",
+          "value": "10,5 cm"
+        },
+        {
+          "label": "Diámetro",
+          "value": "8 cm"
+        },
+        {
+          "label": "Sin BPA",
+          "value": "Sí"
+        },
+        {
+          "label": "Tecnología",
+          "value": "Hands Protected"
+        },
+        {
+          "label": "Color",
+          "value": "Silver"
+        }
+      ],
+      "descriptionHtml": "<p>El mate térmico Outdoors Professional es de acero inoxidable de 236 ml. Mantiene el calor hasta 30 minutos y sirve para disfrutar tu yerba favorita.</p><h3>Diseño</h3><p>Tiene doble pared con aislamiento al vacío. Mide 10,5 cm de alto por 8 cm de diámetro.</p><h3>Hands Protected</h3><p>La tecnología Hands Protected evita que la parte exterior del mate llegue a temperaturas altas.</p><h3>Materiales</h3><ul><li>Acero inoxidable 18/8.</li><li>Sin BPA.</li></ul><p>Envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La ficha no menciona garantía: no la puse."
+      ]
+    },
+    {
+      "slug": "mate-acero-inoxidable-outdoors-verde",
+      "name": "Mate térmico Outdoors Professional acero inoxidable 236 ml Verde",
+      "brand": "Outdoors",
+      "seoTitle": "Mate térmico Outdoors 236 ml Verde",
+      "seoDescription": "Mate térmico Outdoors de acero inoxidable 18/8 de 236 ml, con doble pared al vacío y tecnología Hands Protected. Envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mate térmico Outdoors de acero inoxidable de 236 ml en verde, con doble pared al vacío y tecnología Hands Protected.",
+      "highlights": [
+        "Mantiene el calor hasta 30 minutos",
+        "Acero inoxidable 18/8 sin BPA",
+        "Hands Protected: el exterior no llega a temperaturas altas",
+        "Capacidad de 236 ml"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mate térmico"
+        },
+        {
+          "label": "Capacidad",
+          "value": "236 ml"
+        },
+        {
+          "label": "Material",
+          "value": "Acero inoxidable 18/8"
+        },
+        {
+          "label": "Aislamiento",
+          "value": "Doble pared al vacío"
+        },
+        {
+          "label": "Temperatura",
+          "value": "Mantiene el calor hasta 30 minutos"
+        },
+        {
+          "label": "Alto",
+          "value": "10,5 cm"
+        },
+        {
+          "label": "Diámetro",
+          "value": "8 cm"
+        },
+        {
+          "label": "Sin BPA",
+          "value": "Sí"
+        },
+        {
+          "label": "Tecnología",
+          "value": "Hands Protected"
+        },
+        {
+          "label": "Color",
+          "value": "Verde"
+        }
+      ],
+      "descriptionHtml": "<p>El mate térmico Outdoors Professional es de acero inoxidable de 236 ml. Mantiene el calor hasta 30 minutos y sirve para disfrutar tu yerba favorita.</p><h3>Diseño</h3><p>Tiene doble pared con aislamiento al vacío. Mide 10,5 cm de alto por 8 cm de diámetro.</p><h3>Hands Protected</h3><p>La tecnología Hands Protected evita que la parte exterior del mate llegue a temperaturas altas.</p><h3>Materiales</h3><ul><li>Acero inoxidable 18/8.</li><li>Sin BPA.</li></ul><p>Envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La ficha no menciona garantía: no la puse."
+      ]
+    }
+  ]
+}

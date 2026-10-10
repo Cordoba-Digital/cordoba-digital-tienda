@@ -1,0 +1,2349 @@
+{
+  "lote": "catalogo-B-03",
+  "productos": [
+    {
+      "slug": "router-2p-mercusys-mb130-4g-ac1200",
+      "name": "Router 4G Mercusys MB130-4G AC1200",
+      "brand": "Mercusys",
+      "model": "MB130-4G",
+      "seoTitle": "Router 4G Mercusys MB130 AC1200",
+      "seoDescription": "Router 4G Mercusys MB130 AC1200 con ranura para SIM, WiFi dual band de hasta 1200 Mbps y 2 puertos LAN. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Router 4G Mercusys MB130 AC1200 con ranura para tarjeta SIM, WiFi dual band y 2 puertos LAN. Sirve de respaldo de internet cuando no hay banda ancha fija.",
+      "highlights": [
+        "Conexión 4G LTE con ranura para tarjeta SIM",
+        "WiFi AC1200: 300 Mbps en 2.4 GHz y 867 Mbps en 5 GHz",
+        "2 puertos LAN Ethernet para equipos cableados",
+        "Antenas externas para mejorar la cobertura",
+        "Configuración sencilla desde una app móvil",
+        "Pensado para oficinas remotas o zonas rurales"
+      ],
+      "specs": [
+        {
+          "label": "Conectividad",
+          "value": "4G LTE y WiFi dual band"
+        },
+        {
+          "label": "Velocidad WiFi",
+          "value": "AC1200: 300 Mbps (2.4 GHz) y 867 Mbps (5 GHz)"
+        },
+        {
+          "label": "Puertos",
+          "value": "2 LAN Ethernet"
+        },
+        {
+          "label": "Antenas",
+          "value": "Externas"
+        },
+        {
+          "label": "Seguridad WiFi",
+          "value": "WPA3"
+        },
+        {
+          "label": "Configuración",
+          "value": "Desde aplicación móvil"
+        }
+      ],
+      "descriptionHtml": "<p>El Router 4G Mercusys MB130 AC1200 combina conectividad móvil y WiFi dual band en un solo equipo. Sirve para tener internet cuando no hay banda ancha fija.</p><h3>Conexión 4G</h3><p>Tiene ranura para tarjeta SIM. Con una línea de datos móviles, el router entrega internet a todos los equipos de la red.</p><h3>WiFi dual band</h3><p>Trabaja en 2.4 GHz, hasta 300 Mbps, para tareas cotidianas, y en 5 GHz, hasta 867 Mbps, para streaming y videollamadas. Combinadas suman hasta 1200 Mbps.</p><h3>Uso</h3><ul><li>Oficinas remotas y puestos de trabajo temporales.</li><li>Respaldo de internet si cae la conexión fija.</li><li>Zonas rurales o lugares sin banda ancha.</li></ul><p>Incluye 2 puertos LAN para conectar equipos por cable y seguridad WPA3.</p>",
+      "revisar": [
+        "La descripción no indica la cobertura 4G por banda ni los tipos de tarjeta SIM compatibles."
+      ]
+    },
+    {
+      "slug": "router-4p-tenda-f3",
+      "name": "Router 4P Tenda F3",
+      "brand": "Tenda",
+      "model": "F3",
+      "seoTitle": "Router Tenda F3 N300 de 300 Mbps",
+      "seoDescription": "Router Tenda F3 N300 de 300 Mbps con 3 antenas de 5 dBi, 1 puerto WAN y 3 LAN. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Router Tenda F3 N300 de 300 Mbps con 3 antenas de 5 dBi, 1 puerto WAN y 3 puertos LAN para conectar equipos por cable.",
+      "highlights": [
+        "Velocidad N300 de hasta 300 Mbps",
+        "3 antenas de 5 dBi para la señal WiFi",
+        "1 puerto WAN y 3 puertos LAN"
+      ],
+      "specs": [
+        {
+          "label": "Velocidad",
+          "value": "N300, hasta 300 Mbps"
+        },
+        {
+          "label": "Antenas",
+          "value": "3 de 5 dBi"
+        },
+        {
+          "label": "Puertos",
+          "value": "1 WAN y 3 LAN"
+        }
+      ],
+      "descriptionHtml": "<p>El Router Tenda F3 es un equipo N300 de 300 Mbps con cuatro puertos: uno WAN para conectar el módem y tres LAN para equipos cableados.</p><h3>Señal WiFi</h3><p>Tiene 3 antenas de 5 dBi para repartir la señal dentro de la casa u oficina.</p><h3>Conexión</h3><p>El puerto WAN va al módem y los tres LAN sirven para computadoras, consolas o TV.</p>",
+      "revisar": [
+        "La descripción original no trae datos de seguridad, modo de operación ni alcance. Completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "router-4p-tp-link-archer-c24-ac750",
+      "name": "Router 4P TP-Link Archer C24 AC750 Dual Band 433 Mbps",
+      "brand": "TP-Link",
+      "model": "Archer C24",
+      "seoTitle": "Router TP-Link Archer C24 AC750",
+      "seoDescription": "Router TP-Link Archer C24 AC750 dual band de 433 Mbps, con 4 antenas externas, 5 puertos y firewall integrado. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Router TP-Link Archer C24 AC750 con doble banda 2.4 GHz y 5 GHz, 433 Mbps, 4 antenas externas, 5 puertos y firewall integrado.",
+      "highlights": [
+        "Doble banda: 2.4 GHz y 5 GHz",
+        "Velocidad de 433 Mbps",
+        "4 antenas externas para mejor señal",
+        "Firewall integrado",
+        "5 puertos para conectar equipos"
+      ],
+      "specs": [
+        {
+          "label": "Bandas",
+          "value": "2.4 GHz y 5 GHz"
+        },
+        {
+          "label": "Velocidad",
+          "value": "433 Mbps"
+        },
+        {
+          "label": "Antenas",
+          "value": "4 externas"
+        },
+        {
+          "label": "Puertos",
+          "value": "5"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Firewall integrado"
+        },
+        {
+          "label": "Medidas",
+          "value": "115 × 24,3 × 106,7 mm (ancho × alto × profundidad)"
+        }
+      ],
+      "descriptionHtml": "<p>El Router TP-Link Archer C24 AC750 es un equipo de doble banda, con 433 Mbps y 5 puertos para armar la red.</p><h3>Doble banda</h3><p>Trabaja en 2.4 GHz y 5 GHz. Con dos bandas, el alcance y la estabilidad de la señal mejoran frente a una sola banda.</p><h3>Más antenas, mejor señal</h3><p>Cuatro antenas externas ayudan a cubrir mejor paredes y ambientes con interferencias.</p><h3>Seguridad</h3><p>Firewall integrado para proteger la red.</p>",
+      "revisar": [
+        "El nombre dice AC750 y la descripción indica 433 Mbps. Confirmar la velocidad en la ficha del fabricante.",
+        "La descripción original lo llama access point; se publicó como router según el nombre."
+      ]
+    },
+    {
+      "slug": "router-4p-tp-link-wr850n-11n-300mbps-2x5dbi",
+      "name": "Router 4P TP-Link WR850N 300 Mbps 2 x 5 dBi",
+      "brand": "TP-Link",
+      "model": "WR850N",
+      "seoTitle": "Router TP-Link WR850N 300 Mbps",
+      "seoDescription": "Router TP-Link WR850N de 300 Mbps en 2.4 GHz, con 2 antenas de 5 dBi, 5 puertos y control parental. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Router TP-Link WR850N de 300 Mbps en banda de 2.4 GHz, con 2 antenas externas de 5 dBi, 5 puertos, firewall y control parental.",
+      "highlights": [
+        "Velocidad de 300 Mbps en 2.4 GHz",
+        "2 antenas externas de 5 dBi",
+        "Firewall integrado y control parental",
+        "5 puertos para conectar equipos"
+      ],
+      "specs": [
+        {
+          "label": "Banda",
+          "value": "2.4 GHz (banda única)"
+        },
+        {
+          "label": "Velocidad",
+          "value": "300 Mbps"
+        },
+        {
+          "label": "Antenas",
+          "value": "2 externas de 5 dBi"
+        },
+        {
+          "label": "Puertos",
+          "value": "5"
+        },
+        {
+          "label": "Seguridad",
+          "value": "WPA, WPA2, WPS y firewall SPI"
+        },
+        {
+          "label": "Control",
+          "value": "Control parental"
+        },
+        {
+          "label": "Medidas",
+          "value": "182 × 35 × 128 mm (ancho × alto × profundidad)"
+        }
+      ],
+      "descriptionHtml": "<p>El Router TP-Link WR850N es un equipo de 300 Mbps en la banda de 2.4 GHz, con 2 antenas externas y 5 puertos.</p><h3>Señal</h3><p>Las dos antenas externas de 5 dBi ayudan a mejorar la señal en lugares con paredes o interferencias.</p><h3>Control y seguridad</h3><ul><li>Control parental para administrar el acceso de los equipos.</li><li>Firewall integrado y protocolos WPA, WPA2 y WPS.</li></ul><h3>Conexión</h3><p>Tiene 5 puertos para conectar equipos por cable.</p>",
+      "revisar": [
+        "La descripción original dice access point y el nombre dice router; se presentó como router."
+      ]
+    },
+    {
+      "slug": "sistema-wi-fi-mesh-e4-ac1200-2-pack-copia",
+      "name": "Sistema Wi-Fi Mesh TP-Link Deco E4 AC1200 (2 pack)",
+      "model": "Deco E4",
+      "seoTitle": "Sistema Mesh TP-Link Deco E4 x2",
+      "seoDescription": "Kit Wi-Fi mesh TP-Link Deco E4 AC1200 de 2 unidades: una red para toda la casa, doble banda y control parental. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Kit de 2 unidades TP-Link Deco E4 que forman una sola red Wi-Fi mesh en toda la casa u oficina. Doble banda AC1200 de hasta 1200 Mbps combinados.",
+      "highlights": [
+        "Una sola red Wi-Fi para toda la casa",
+        "Doble banda AC1200: hasta 1200 Mbps combinados",
+        "Cambio automático a la unidad con mejor señal",
+        "Control parental por perfiles desde la app Deco",
+        "Soporta más de 100 dispositivos conectados"
+      ],
+      "specs": [
+        {
+          "label": "Unidades",
+          "value": "2"
+        },
+        {
+          "label": "Estándar Wi-Fi",
+          "value": "802.11ac/n/a en 5 GHz y 802.11b/g/n en 2.4 GHz"
+        },
+        {
+          "label": "Velocidad",
+          "value": "5 GHz: 867 Mbps; 2.4 GHz: 300 Mbps"
+        },
+        {
+          "label": "Puertos por unidad",
+          "value": "2 Ethernet 10/100 Mbps"
+        },
+        {
+          "label": "Modos",
+          "value": "Router o access point"
+        },
+        {
+          "label": "Seguridad",
+          "value": "WPA-PSK / WPA2-PSK y firewall SPI"
+        },
+        {
+          "label": "Dispositivos",
+          "value": "Hasta 100 conectados"
+        }
+      ],
+      "descriptionHtml": "<p>El Deco E4 AC1200 es un sistema Wi-Fi mesh: las dos unidades trabajan juntas bajo un único nombre de red y cubren las zonas con poca señal.</p><h3>Cobertura en toda la casa</h3><p>Los dispositivos cambian solos a la unidad con mejor señal, sin cortes al moverse por la casa o el departamento.</p><h3>Doble banda</h3><p>La banda de 5 GHz llega hasta 867 Mbps para streaming y videollamadas. La de 2.4 GHz llega hasta 300 Mbps para tareas diarias y dispositivos de domótica.</p><h3>Control y configuración</h3><ul><li>Control parental por perfiles: bloqueo de contenido, límite de tiempo y pausa de internet.</li><li>Configuración desde la app Deco.</li></ul>",
+      "revisar": [
+        "El slug termina en '-copia'. No se cambió porque es la URL; conviene revisar si es un duplicado.",
+        "La descripción es la misma que la del pack de 3: la cantidad de unidades sale solo del nombre."
+      ]
+    },
+    {
+      "slug": "sistema-wi-fi-mesh-tp-link-deco-e4-ac1200-3-pack",
+      "name": "Sistema Wi-Fi Mesh TP-Link Deco E4 AC1200 (3 pack)",
+      "model": "Deco E4",
+      "seoTitle": "Sistema Mesh TP-Link Deco E4 x3",
+      "seoDescription": "Kit Wi-Fi mesh TP-Link Deco E4 AC1200 de 3 unidades: una red para toda la casa, doble banda y control parental. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Kit de 3 unidades TP-Link Deco E4 que forman una sola red Wi-Fi mesh en toda la casa u oficina. Doble banda AC1200 de hasta 1200 Mbps combinados.",
+      "highlights": [
+        "Una sola red Wi-Fi para toda la casa",
+        "Doble banda AC1200: hasta 1200 Mbps combinados",
+        "Cambio automático a la unidad con mejor señal",
+        "Control parental por perfiles desde la app Deco",
+        "Soporta más de 100 dispositivos conectados"
+      ],
+      "specs": [
+        {
+          "label": "Unidades",
+          "value": "3"
+        },
+        {
+          "label": "Estándar Wi-Fi",
+          "value": "802.11ac/n/a en 5 GHz y 802.11b/g/n en 2.4 GHz"
+        },
+        {
+          "label": "Velocidad",
+          "value": "5 GHz: 867 Mbps; 2.4 GHz: 300 Mbps"
+        },
+        {
+          "label": "Puertos por unidad",
+          "value": "2 Ethernet 10/100 Mbps"
+        },
+        {
+          "label": "Modos",
+          "value": "Router o access point"
+        },
+        {
+          "label": "Seguridad",
+          "value": "WPA-PSK / WPA2-PSK y firewall SPI"
+        },
+        {
+          "label": "Dispositivos",
+          "value": "Hasta 100 conectados"
+        }
+      ],
+      "descriptionHtml": "<p>El Deco E4 AC1200 es un sistema Wi-Fi mesh: las unidades trabajan juntas bajo un único nombre de red y cubren las zonas con poca señal.</p><h3>Cobertura en toda la casa</h3><p>Los dispositivos cambian solos a la unidad con mejor señal, sin cortes al moverse por la casa o el departamento.</p><h3>Doble banda</h3><p>La banda de 5 GHz llega hasta 867 Mbps para streaming y videollamadas. La de 2.4 GHz llega hasta 300 Mbps para tareas diarias y dispositivos de domótica.</p><h3>Control y configuración</h3><ul><li>Control parental por perfiles: bloqueo de contenido, límite de tiempo y pausa de internet.</li><li>Configuración desde la app Deco.</li></ul>",
+      "revisar": [
+        "La descripción es la misma que la del pack de 2: la cantidad de unidades (3) sale solo del nombre."
+      ]
+    },
+    {
+      "slug": "switch-tp-link-l-sf1005d-10-100-mbps-5-puertos",
+      "name": "Switch TP-Link TL-SF1005D 10/100 Mbps 5 puertos",
+      "brand": "TP-Link",
+      "model": "TL-SF1005D",
+      "seoTitle": "Switch TP-Link TL-SF1005D 5 puertos",
+      "seoDescription": "Switch TP-Link TL-SF1005D de sobremesa con 5 puertos de 10/100 Mbps, plug and play y sin configuración. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Switch TP-Link TL-SF1005D de sobremesa con 5 puertos RJ-45 de 10/100 Mbps. Plug and play, sin configuración, con detección automática de velocidad.",
+      "highlights": [
+        "5 puertos RJ-45 de 10/100 Mbps",
+        "Plug and play: no necesita configuración",
+        "MDI/MDIX automático en todos los puertos",
+        "Control de flujo IEEE 802.3x",
+        "Ahorro de energía de hasta 60%"
+      ],
+      "specs": [
+        {
+          "label": "Puertos",
+          "value": "5 RJ-45 de 10/100 Mbps"
+        },
+        {
+          "label": "Instalación",
+          "value": "Plug and play, sin configuración"
+        },
+        {
+          "label": "Modo",
+          "value": "Full duplex"
+        },
+        {
+          "label": "Conmutación",
+          "value": "Store and forward"
+        },
+        {
+          "label": "Control de flujo",
+          "value": "IEEE 802.3x"
+        },
+        {
+          "label": "Ahorro de energía",
+          "value": "Hasta 60%"
+        },
+        {
+          "label": "Carcasa",
+          "value": "Plástico, de sobremesa"
+        }
+      ],
+      "descriptionHtml": "<p>El TL-SF1005D es un switch de sobremesa con 5 puertos de 10/100 Mbps para ampliar una red por cable.</p><h3>Conexión sin configurar</h3><p>Es plug and play: se conecta y funciona. Todos los puertos detectan solos la velocidad y el tipo de cable (MDI/MDIX automático).</p><h3>Ahorro de energía</h3><p>Su tecnología de ahorro reduce el consumo de energía hasta un 60%, según el fabricante.</p><h3>Transmisión</h3><p>Trabaja a dúplex completo y con control de flujo IEEE 802.3x para una transmisión confiable.</p>",
+      "revisar": [
+        "El nombre decía 'L-SF1005D'; se usó TL-SF1005D según el SKU y la descripción.",
+        "La capacidad de conmutación (10 Gbps) viene de la ficha corta, y la descripción menciona 200 Mbps de procesamiento. Confirmar antes de publicar la cifra."
+      ]
+    },
+    {
+      "slug": "amazon-fire-tv-stick-4k-wifi-6-black",
+      "name": "Amazon Fire TV Stick 4K Wi-Fi 6 Negro",
+      "brand": "Amazon",
+      "model": "Fire TV Stick 4K",
+      "seoTitle": "Amazon Fire TV Stick 4K Wi-Fi 6",
+      "seoDescription": "Amazon Fire TV Stick 4K con Wi-Fi 6, video 4K Ultra HD con HDR y control por voz con Alexa. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Amazon Fire TV Stick 4K con Wi-Fi 6 en color negro. Video 4K Ultra HD con HDR10 y Dolby Vision, control por voz con Alexa y acceso a Netflix, Prime Video y Disney+.",
+      "highlights": [
+        "Video 4K Ultra HD con HDR10 y Dolby Vision",
+        "Audio Dolby Atmos compatible",
+        "Wi-Fi 6 para un streaming fluido",
+        "Control remoto con Alexa por voz",
+        "Acceso a Netflix, Prime Video, Disney+ y YouTube"
+      ],
+      "specs": [
+        {
+          "label": "Resolución",
+          "value": "4K Ultra HD"
+        },
+        {
+          "label": "HDR",
+          "value": "HDR, HDR10 y Dolby Vision"
+        },
+        {
+          "label": "Audio",
+          "value": "Dolby Atmos"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6"
+        },
+        {
+          "label": "Procesador",
+          "value": "Quad-core de 1,7 GHz"
+        },
+        {
+          "label": "Control",
+          "value": "Remoto con Alexa (comandos de voz)"
+        },
+        {
+          "label": "Conexión",
+          "value": "Puerto HDMI"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        }
+      ],
+      "descriptionHtml": "<p>El Amazon Fire TV Stick 4K convierte un TV con HDMI en un centro de streaming con Wi-Fi 6 y control por voz.</p><h3>Imagen 4K</h3><p>Reproduce contenido en 4K Ultra HD con soporte para HDR, HDR10 y Dolby Vision.</p><h3>Audio y conectividad</h3><p>Compatible con audio Dolby Atmos. El Wi-Fi 6 ayuda a tener un streaming fluido.</p><h3>Contenido y control</h3><ul><li>Acceso a Netflix, Prime Video, Disney+, YouTube y otras aplicaciones.</li><li>Control remoto con Alexa para buscar por voz y manejar dispositivos del hogar inteligente.</li></ul><h3>Instalación</h3><p>Se conecta al puerto HDMI de cualquier TV que lo tenga.</p>",
+      "revisar": [
+        "La descripción menciona más de 500.000 películas y series. Es una cifra no verificada: no se publicó."
+      ]
+    },
+    {
+      "slug": "cortadora-de-pelo-winco-w3000",
+      "name": "Cortadora de Pelo Winco W3000",
+      "brand": "Winco",
+      "model": "W3000",
+      "seoTitle": "Cortadora de Pelo Winco W3000",
+      "seoDescription": "Cortadora de pelo Winco W3000 con 4 posiciones de peine, cuchillas de acero inoxidable y motor potente. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cortadora de pelo Winco W3000 con 4 posiciones de peine, cuchillas de acero inoxidable y motor potente.",
+      "highlights": [
+        "4 posiciones de peine",
+        "Cuchillas de acero inoxidable",
+        "Motor potente"
+      ],
+      "specs": [
+        {
+          "label": "Posiciones de peine",
+          "value": "4"
+        },
+        {
+          "label": "Cuchillas",
+          "value": "Acero inoxidable"
+        },
+        {
+          "label": "Medidas del producto",
+          "value": "4,8 × 22,4 × 11,5 cm"
+        },
+        {
+          "label": "Medidas de la caja",
+          "value": "18 × 24,3 × 6 cm"
+        }
+      ],
+      "descriptionHtml": "<p>La cortadora de pelo Winco W3000 tiene 4 posiciones de peine para elegir la longitud del corte.</p><h3>Cuchillas y motor</h3><p>Las cuchillas son de acero inoxidable y el motor es potente.</p><h3>Medidas</h3><p>El producto mide 4,8 × 22,4 × 11,5 cm y la caja, 18 × 24,3 × 6 cm.</p>",
+      "revisar": [
+        "La descripción no indica si funciona a batería o a red, ni el tiempo de uso.",
+        "Las medidas vienen sin unidad en la fuente: se asumieron cm."
+      ]
+    },
+    {
+      "slug": "ssd-240gb-adata-su630-blister",
+      "name": "SSD 240 GB ADATA SU630",
+      "brand": "ADATA",
+      "model": "SU630",
+      "seoTitle": "SSD 240 GB ADATA SU630",
+      "seoDescription": "SSD ADATA SU630 de 240 GB en presentación blister, con garantía oficial. Envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "SSD ADATA SU630 de 240 GB en presentación blister. Almacenamiento de estado sólido, con garantía oficial.",
+      "highlights": [
+        "Capacidad de 240 GB",
+        "Almacenamiento de estado sólido",
+        "Presentación en blister"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "240 GB"
+        },
+        {
+          "label": "Tipo",
+          "value": "SSD (estado sólido)"
+        },
+        {
+          "label": "Presentación",
+          "value": "Blister"
+        }
+      ],
+      "descriptionHtml": "<p>El SSD ADATA SU630 tiene 240 GB de capacidad y viene en presentación blister.</p><h3>Almacenamiento</h3><p>Es un disco de estado sólido de la marca ADATA, modelo SU630.</p><h3>Antes de elegirlo</h3><p>Consultá la interfaz y las velocidades del modelo para confirmar que se adapta a tu equipo.</p>",
+      "revisar": [
+        "La descripción original no trae velocidades, interfaz (SATA o NVMe) ni formato. Completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "ssd-240gb-hiksemi-wave-s",
+      "name": "SSD 240 GB HIKSEMI Wave S",
+      "brand": "HIKSEMI",
+      "model": "Wave S",
+      "seoTitle": "SSD 240 GB HIKSEMI Wave S",
+      "seoDescription": "SSD HIKSEMI Wave S de 240 GB, de estado sólido, con garantía oficial. Envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "SSD HIKSEMI Wave S de 240 GB, de estado sólido, con garantía oficial.",
+      "highlights": [
+        "Capacidad de 240 GB",
+        "Almacenamiento de estado sólido",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "240 GB"
+        },
+        {
+          "label": "Tipo",
+          "value": "SSD (estado sólido)"
+        }
+      ],
+      "descriptionHtml": "<p>El SSD HIKSEMI Wave S tiene 240 GB de capacidad y es un disco de estado sólido.</p><h3>Compra</h3><p>Se vende con garantía oficial, con envíos a todo el país o retiro en Córdoba.</p><p>Para ver velocidades, interfaz y formato completos, consultá la ficha técnica del fabricante.</p>",
+      "revisar": [
+        "La descripción original no trae velocidades, interfaz ni formato (2.5 pulgadas o M.2). Completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "ssd-2tb-hiksemi-v300x-p-nvr-dvr",
+      "name": "SSD 2 TB HIKSEMI V300X para NVR y DVR",
+      "brand": "HIKSEMI",
+      "model": "V300X",
+      "seoTitle": "SSD 2 TB HIKSEMI V300X para NVR",
+      "seoDescription": "SSD HIKSEMI V300X de 2 TB pensado para grabar videovigilancia en NVR y DVR, de forma continua 24/7. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "SSD HIKSEMI V300X de 2 TB para NVR y DVR de videovigilancia, con grabación continua 24/7 y construcción robusta.",
+      "highlights": [
+        "Pensado para grabación continua 24/7",
+        "Diseñado para NVR y DVR de videovigilancia",
+        "Construcción robusta para uso intensivo",
+        "Tecnología NAND Flash avanzada"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "2 TB"
+        },
+        {
+          "label": "Uso",
+          "value": "Videovigilancia: NVR y DVR"
+        },
+        {
+          "label": "Funcionamiento",
+          "value": "Grabación continua 24/7"
+        },
+        {
+          "label": "Tecnología",
+          "value": "NAND Flash"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Principales fabricantes de equipos de seguridad"
+        },
+        {
+          "label": "Eficiencia",
+          "value": "Bajo consumo y menor generación de calor"
+        }
+      ],
+      "descriptionHtml": "<p>El SSD HIKSEMI V300X de 2 TB está pensado para los equipos de videovigilancia NVR y DVR.</p><h3>Grabación continua</h3><p>Está diseñado para grabar 24/7, con almacenamiento de alta capacidad y un rendimiento pensado para esa carga de trabajo.</p><h3>Construcción para uso intensivo</h3><p>Su construcción robusta soporta operaciones intensivas. La eficiencia energética reduce el consumo y la generación de calor.</p><h3>Compatibilidad</h3><p>Según la descripción, es compatible con los principales fabricantes de equipos de seguridad.</p>",
+      "revisar": [
+        "La descripción no indica velocidades de lectura y escritura ni la durabilidad del equipo. No se publicaron cifras.",
+        "Confirmar la compatibilidad con los modelos de NVR y DVR que vende la tienda."
+      ]
+    },
+    {
+      "slug": "ssd-480gb-hiksemi-wave-s",
+      "name": "SSD 480 GB HIKSEMI Wave S",
+      "brand": "HIKSEMI",
+      "model": "Wave S",
+      "seoTitle": "SSD 480 GB HIKSEMI Wave S",
+      "seoDescription": "SSD HIKSEMI Wave S de 480 GB, de estado sólido, con garantía oficial. Envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "SSD HIKSEMI Wave S de 480 GB, de estado sólido, con garantía oficial.",
+      "highlights": [
+        "Capacidad de 480 GB",
+        "Almacenamiento de estado sólido",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "480 GB"
+        },
+        {
+          "label": "Tipo",
+          "value": "SSD (estado sólido)"
+        }
+      ],
+      "descriptionHtml": "<p>El SSD HIKSEMI Wave S tiene 480 GB de capacidad y es un disco de estado sólido.</p><h3>Compra</h3><p>Se vende con garantía oficial, con envíos a todo el país o retiro en Córdoba.</p><p>Para ver velocidades, interfaz y formato completos, consultá la ficha técnica del fabricante.</p>",
+      "revisar": [
+        "La descripción original no trae velocidades, interfaz ni formato (2.5 pulgadas o M.2). Completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "ssd-512gb-kingston-kc600-sataiii-2-5",
+      "name": "SSD 512 GB Kingston KC600 SATA III 2,5 pulgadas",
+      "brand": "Kingston",
+      "model": "KC600",
+      "seoTitle": "SSD 512 GB Kingston KC600 SATA III",
+      "seoDescription": "SSD Kingston KC600 de 512 GB con interfaz SATA III y formato de 2,5 pulgadas. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "SSD Kingston KC600 de 512 GB con interfaz SATA III y formato de 2,5 pulgadas, con garantía oficial.",
+      "highlights": [
+        "Capacidad de 512 GB",
+        "Interfaz SATA III",
+        "Formato de 2,5 pulgadas"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "512 GB"
+        },
+        {
+          "label": "Interfaz",
+          "value": "SATA III"
+        },
+        {
+          "label": "Formato",
+          "value": "2,5 pulgadas"
+        }
+      ],
+      "descriptionHtml": "<p>El SSD Kingston KC600 tiene 512 GB de capacidad, con interfaz SATA III y formato de 2,5 pulgadas.</p><h3>Compra</h3><p>Se vende con garantía oficial, con envíos a todo el país o retiro en Córdoba.</p><p>Para ver velocidades, interfaz y formato completos, consultá la ficha técnica del fabricante.</p>",
+      "revisar": [
+        "La descripción original no trae velocidades de lectura y escritura. Completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "ssd-m-2-nvme-1tb-g3-wd-green-sn350-2",
+      "name": "SSD M.2 NVMe 1 TB WD Green SN350",
+      "brand": "WD",
+      "model": "Green SN350",
+      "seoTitle": "SSD M.2 NVMe 1 TB WD Green SN350",
+      "seoDescription": "SSD WD Green SN350 M.2 NVMe de 1 TB con interfaz PCIe Gen3, para laptops y PCs de escritorio. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "SSD WD Green SN350 M.2 NVMe de 1 TB con interfaz PCIe Gen3 y formato M.2 2280, para laptops y PCs de escritorio.",
+      "highlights": [
+        "Interfaz NVMe con PCIe Gen3",
+        "Formato M.2 2280 compacto",
+        "Pensado para laptops y PCs de escritorio",
+        "Para gaming, edición y tareas exigentes"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "1 TB"
+        },
+        {
+          "label": "Interfaz",
+          "value": "NVMe, PCIe Gen3"
+        },
+        {
+          "label": "Formato",
+          "value": "M.2 2280"
+        },
+        {
+          "label": "Uso",
+          "value": "Laptops y PCs de escritorio"
+        }
+      ],
+      "descriptionHtml": "<p>El SSD WD Green SN350 M.2 NVMe de 1 TB busca acelerar el arranque del sistema y la carga de programas.</p><h3>Interfaz NVMe</h3><p>Usa interfaz PCIe Gen3 con tecnología NVMe para transferencias de datos rápidas.</p><h3>Formato compacto</h3><p>Formato M.2 2280, pensado para laptops ultradelgadas y PCs de escritorio modernas.</p><h3>Uso</h3><p>Pensado para gaming, edición de contenido y tareas profesionales exigentes.</p>",
+      "revisar": [
+        "La descripción no trae velocidades de lectura y escritura. Completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "189029",
+      "name": "Balanza de Cocina Yelmo BL-7001",
+      "brand": "Yelmo",
+      "model": "BL-7001",
+      "seoTitle": "Balanza de Cocina Yelmo BL-7001 3 kg",
+      "seoDescription": "Balanza de cocina Yelmo BL-7001 de hasta 3 kg, con graduación de 1 g, función tara y pantalla LCD. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Balanza de cocina Yelmo BL-7001 de hasta 3 kg, con graduación de 1 g, función tara y pantalla LCD retroiluminada. Funciona con 2 pilas AAA.",
+      "highlights": [
+        "Capacidad de 3 kg con graduación de 1 g",
+        "Función tara para preparar recetas",
+        "Pantalla LCD retroiluminada",
+        "Apagado automático y aviso de batería baja",
+        "Acero inoxidable y plástico de alta resistencia"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "3 kg"
+        },
+        {
+          "label": "Graduación",
+          "value": "1 g"
+        },
+        {
+          "label": "Unidades",
+          "value": "Gramos y kilogramos"
+        },
+        {
+          "label": "Funciones",
+          "value": "Pesa y tara"
+        },
+        {
+          "label": "Pantalla",
+          "value": "LCD retroiluminada"
+        },
+        {
+          "label": "Material",
+          "value": "Acero inoxidable y plástico"
+        },
+        {
+          "label": "Alimentación",
+          "value": "2 pilas AAA"
+        },
+        {
+          "label": "Peso",
+          "value": "0,61 kg"
+        },
+        {
+          "label": "Medidas",
+          "value": "180 × 220 × 30 mm (ancho × alto × profundidad)"
+        },
+        {
+          "label": "Montaje",
+          "value": "Sobre mesa, con orificio para colgar"
+        }
+      ],
+      "descriptionHtml": "<p>La balanza de cocina Yelmo BL-7001 pesa hasta 3 kg con graduación de 1 g. Sirve para recetas de cocina y repostería.</p><h3>Función tara</h3><p>Descontá el peso del recipiente y pesá solo el ingrediente.</p><h3>Pantalla y apagado</h3><ul><li>Pantalla LCD retroiluminada.</li><li>Se enciende con una tecla y se apaga sola.</li><li>Aviso de sobrecarga y de batería baja.</li></ul><h3>Diseño</h3><p>Construcción en acero inoxidable y plástico de alta resistencia. Tiene orificio para colgarla cuando no se usa.</p>",
+      "revisar": [
+        "La descripción original tenía un plazo de garantía que no se publicó (regla de la tienda)."
+      ]
+    },
+    {
+      "slug": "189045",
+      "name": "Cafetera de Filtro Winco W1930",
+      "brand": "Winco",
+      "model": "W1930",
+      "seoTitle": "Cafetera de Filtro Winco W1930",
+      "seoDescription": "Cafetera de filtro Winco W1930 de hasta 12 tazas, compacta y de uso sencillo para casa u oficina. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cafetera de filtro Winco W1930 para preparar hasta 12 tazas por ciclo. Diseño compacto y de uso sencillo, para casa u oficina.",
+      "highlights": [
+        "Hasta 12 tazas por ciclo",
+        "Diseño compacto para cocina u oficina",
+        "Sistema de filtrado para resaltar el aroma del café"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "12 tazas"
+        },
+        {
+          "label": "Tipo",
+          "value": "Cafetera de filtro"
+        }
+      ],
+      "descriptionHtml": "<p>La cafetera de filtro Winco W1930 prepara hasta 12 tazas en un solo ciclo.</p><h3>Diseño compacto</h3><p>Entra en la cocina de casa o en una oficina sin ocupar mucho espacio.</p><h3>Sistema de filtrado</h3><p>El filtrado está pensado para resaltar el sabor y el aroma del café.</p><h3>Uso</h3><p>Funcionamiento simple: se carga el agua, se pone el café y se enciende.</p>",
+      "revisar": [
+        "La descripción no indica potencia, material de la jarra ni consumo. Completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "anafe-electrico-1000w-jahro-blanco",
+      "name": "Anafe Eléctrico 1000 W Jahro Blanco",
+      "brand": "Jahro",
+      "model": "JH-010A",
+      "seoTitle": "Anafe Eléctrico Jahro 1000 W Blanco",
+      "seoDescription": "Anafe eléctrico Jahro JH-010A de 1000 W, con placa de 155 mm y termostato automático. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Anafe eléctrico Jahro de 1000 W con 1 placa de 155 mm, termostato automático y protección por sobrecalentamiento. Apoyo para distintas superficies.",
+      "highlights": [
+        "1000 W con placa calentadora de 155 mm",
+        "Termostato automático y regulador de temperatura",
+        "Protección por sobrecalentamiento",
+        "Indicador luminoso de encendido",
+        "Se puede usar en cocina, casa rodante o mueble"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "1000 W"
+        },
+        {
+          "label": "Placas",
+          "value": "1 de 155 mm de diámetro"
+        },
+        {
+          "label": "Control",
+          "value": "Regulador de temperatura con termostato automático"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Protección por sobrecalentamiento"
+        },
+        {
+          "label": "Indicador",
+          "value": "Luz de encendido"
+        },
+        {
+          "label": "Color",
+          "value": "Blanco"
+        },
+        {
+          "label": "Medidas",
+          "value": "21 × 24 × 5 cm"
+        }
+      ],
+      "descriptionHtml": "<p>El anafe eléctrico Jahro JH-010A tiene una placa de 1000 W para cocinar en distintas superficies.</p><h3>Control de temperatura</h3><p>Tiene regulador de temperatura y termostato automático, que mantiene la temperatura elegida.</p><h3>Seguridad</h3><p>Protección por sobrecalentamiento e indicador luminoso de encendido.</p><h3>Dónde usarlo</h3><p>Es de apoyo: se puede ubicar en la cocina, en una casa rodante o sobre un mueble.</p>",
+      "revisar": []
+    },
+    {
+      "slug": "anafe-electrico-1000w-w1040",
+      "name": "Anafe Eléctrico 1000 W Jahro Negro",
+      "brand": "Jahro",
+      "model": "JH-010B",
+      "seoTitle": "Anafe Eléctrico Jahro 1000 W Negro",
+      "seoDescription": "Anafe eléctrico Jahro JH-010B de 1000 W en color negro, con placa de 155 mm y termostato automático. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Anafe eléctrico Jahro de 1000 W en color negro, con 1 placa de 155 mm, termostato automático y protección por sobrecalentamiento.",
+      "highlights": [
+        "1000 W con placa calentadora de 155 mm",
+        "Termostato automático y regulador de temperatura",
+        "Protección por sobrecalentamiento",
+        "Indicador luminoso de encendido",
+        "Se puede usar en cocina, casa rodante o mueble"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "1000 W"
+        },
+        {
+          "label": "Placas",
+          "value": "1 de 155 mm de diámetro"
+        },
+        {
+          "label": "Control",
+          "value": "Regulador de temperatura con termostato automático"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Protección por sobrecalentamiento"
+        },
+        {
+          "label": "Indicador",
+          "value": "Luz de encendido"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        },
+        {
+          "label": "Medidas",
+          "value": "21 × 24 × 5 cm"
+        }
+      ],
+      "descriptionHtml": "<p>El anafe eléctrico Jahro JH-010B tiene una placa de 1000 W para cocinar en distintas superficies.</p><h3>Control de temperatura</h3><p>Tiene regulador de temperatura y termostato automático, que mantiene la temperatura elegida.</p><h3>Seguridad</h3><p>Protección por sobrecalentamiento e indicador luminoso de encendido.</p><h3>Dónde usarlo</h3><p>Es de apoyo: se puede ubicar en la cocina, en una casa rodante o sobre un mueble.</p>",
+      "revisar": [
+        "El slug dice 'w1040' y el SKU es JH-010B. El slug no se cambió porque es la URL."
+      ]
+    },
+    {
+      "slug": "anafe-electrico-dual-2000w-jahro-blanco",
+      "name": "Anafe Eléctrico Dual 2000 W Jahro Blanco",
+      "brand": "Jahro",
+      "model": "JH-020A",
+      "seoTitle": "Anafe Dual Jahro 2000 W Blanco",
+      "seoDescription": "Anafe eléctrico dual Jahro JH-020A de 2000 W, con 2 placas de 1000 W cada una y termostato automático. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Anafe eléctrico Jahro de 2 placas, con 1000 W por placa (2000 W en total), termostato automático y protección por sobrecalentamiento.",
+      "highlights": [
+        "2 placas de 1000 W cada una",
+        "Termostato automático y regulador de temperatura",
+        "Protección por sobrecalentamiento",
+        "Indicador luminoso de encendido",
+        "Se puede usar en cocina, casa rodante o mueble"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "2000 W (1000 W por placa)"
+        },
+        {
+          "label": "Placas",
+          "value": "2 de 155 mm de diámetro"
+        },
+        {
+          "label": "Control",
+          "value": "Regulador de temperatura con termostato automático"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Protección por sobrecalentamiento"
+        },
+        {
+          "label": "Indicador",
+          "value": "Luz de encendido"
+        },
+        {
+          "label": "Color",
+          "value": "Blanco"
+        }
+      ],
+      "descriptionHtml": "<p>El anafe eléctrico dual Jahro JH-020A tiene 2 placas de 1000 W cada una, para cocinar en distintas superficies.</p><h3>Control de temperatura</h3><p>Tiene regulador de temperatura y termostato automático, que mantiene la temperatura elegida.</p><h3>Seguridad</h3><p>Protección por sobrecalentamiento e indicador luminoso de encendido.</p><h3>Dónde usarlo</h3><p>Es de apoyo: se puede ubicar en la cocina, en una casa rodante o sobre un mueble.</p>",
+      "revisar": [
+        "La descripción no trae medidas ni peso del anafe."
+      ]
+    },
+    {
+      "slug": "anafe-electrico-dual-2000w-w41",
+      "name": "Anafe Eléctrico Dual 2000 W Jahro Negro",
+      "brand": "Jahro",
+      "model": "JH-020B",
+      "seoTitle": "Anafe Dual Jahro 2000 W Negro",
+      "seoDescription": "Anafe eléctrico dual Jahro JH-020B de 2000 W en color negro, con 2 placas de 1000 W cada una y termostato automático. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Anafe eléctrico Jahro de 2 placas en color negro, con 1000 W por placa (2000 W en total), termostato automático y protección por sobrecalentamiento.",
+      "highlights": [
+        "2 placas de 1000 W cada una",
+        "Termostato automático y regulador de temperatura",
+        "Protección por sobrecalentamiento",
+        "Indicador luminoso de encendido",
+        "Se puede usar en cocina, casa rodante o mueble"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "2000 W (1000 W por placa)"
+        },
+        {
+          "label": "Placas",
+          "value": "2 de 155 mm de diámetro"
+        },
+        {
+          "label": "Control",
+          "value": "Regulador de temperatura con termostato automático"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Protección por sobrecalentamiento"
+        },
+        {
+          "label": "Indicador",
+          "value": "Luz de encendido"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        }
+      ],
+      "descriptionHtml": "<p>El anafe eléctrico dual Jahro JH-020B tiene 2 placas de 1000 W cada una, para cocinar en distintas superficies.</p><h3>Control de temperatura</h3><p>Tiene regulador de temperatura y termostato automático, que mantiene la temperatura elegida.</p><h3>Seguridad</h3><p>Protección por sobrecalentamiento e indicador luminoso de encendido.</p><h3>Dónde usarlo</h3><p>Es de apoyo: se puede ubicar en la cocina, en una casa rodante o sobre un mueble.</p>",
+      "revisar": [
+        "El slug dice 'w41' y el SKU es Jahro JH-020B. El slug no se cambió porque es la URL.",
+        "La descripción no trae medidas ni peso del anafe."
+      ]
+    },
+    {
+      "slug": "anafe-electrico-dual-2000w-winco",
+      "name": "Anafe Eléctrico Dual 2000 W Winco",
+      "brand": "Winco",
+      "model": "W41",
+      "seoTitle": "Anafe Eléctrico Dual 2000 W Winco",
+      "seoDescription": "Anafe eléctrico dual Winco W41 de 2000 W, con 2 placas de 155 mm y termostato automático. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Anafe eléctrico Winco de 2 placas de 155 mm y 2000 W de potencia, con termostato automático y protección por sobrecalentamiento.",
+      "highlights": [
+        "2 placas de 155 mm de diámetro",
+        "2000 W de potencia total",
+        "Termostato automático y regulador de temperatura",
+        "Protección por sobrecalentamiento",
+        "Indicador luminoso de encendido"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "2000 W"
+        },
+        {
+          "label": "Placas",
+          "value": "2 de 155 mm"
+        },
+        {
+          "label": "Control",
+          "value": "Regulador de temperatura con termostato automático"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Protección por sobrecalentamiento"
+        },
+        {
+          "label": "Indicador",
+          "value": "Luz de encendido"
+        },
+        {
+          "label": "Medidas",
+          "value": "48 × 7 × 24 cm (ancho × alto × profundidad)"
+        }
+      ],
+      "descriptionHtml": "<p>El anafe eléctrico dual Winco W41 tiene 2 placas calentadoras de 155 mm y 2000 W de potencia.</p><h3>Control de temperatura</h3><p>Tiene regulador de temperatura y termostato automático para elegir la temperatura de trabajo.</p><h3>Seguridad</h3><p>Protección contra sobrecalentamiento e indicador luminoso de encendido.</p><h3>Medidas</h3><p>Mide 48 cm de ancho, 24 cm de profundidad y 7 cm de altura.</p>",
+      "revisar": [
+        "Medidas sin unidad en la fuente: se asumieron cm.",
+        "La descripción original es genérica: no trae color ni uso."
+      ]
+    },
+    {
+      "slug": "aspiradora-de-auto-winco-w550",
+      "name": "Aspiradora de Auto Winco W550",
+      "brand": "Winco",
+      "model": "W550",
+      "seoTitle": "Aspiradora de Auto Winco W550 12 V",
+      "seoDescription": "Aspiradora de auto Winco W550 de conexión directa a 12 V, con filtro HEPA y cepillo incluido. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Aspiradora de auto Winco W550 de conexión directa a 12 V, con filtro HEPA y cepillo incluido.",
+      "highlights": [
+        "Conexión directa a 12 V",
+        "Filtro HEPA",
+        "Cepillo incluido"
+      ],
+      "specs": [
+        {
+          "label": "Alimentación",
+          "value": "12 V (conexión directa)"
+        },
+        {
+          "label": "Filtro",
+          "value": "HEPA"
+        },
+        {
+          "label": "Accesorios",
+          "value": "Cepillo"
+        }
+      ],
+      "descriptionHtml": "<p>La aspiradora de auto Winco W550 se conecta de forma directa a 12 V. Funciona solo con esa tensión.</p><h3>Filtro HEPA</h3><p>El filtro HEPA ayuda a retener el polvo fino dentro del equipo.</p><h3>Accesorio</h3><p>Viene con cepillo para la limpieza del interior del auto.</p>",
+      "revisar": [
+        "La descripción no indica potencia, capacidad del depósito ni largo del cable."
+      ]
+    },
+    {
+      "slug": "aspiradora-inalambrica-winco-2-en-1",
+      "name": "Aspiradora Inalámbrica Winco 2 en 1",
+      "brand": "Winco",
+      "model": "W511",
+      "seoTitle": "Aspiradora Inalámbrica Winco W511 2 en 1",
+      "seoDescription": "Aspiradora inalámbrica Winco W511 2 en 1: liviana, con filtro HEPA, batería de litio y hasta 40 minutos de autonomía. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Aspiradora inalámbrica Winco W511 2 en 1 con 2 niveles de succión, filtro HEPA de fácil limpieza y hasta 40 minutos de autonomía.",
+      "highlights": [
+        "Inalámbrica y liviana para llegar a los rincones",
+        "Hasta 40 minutos de autonomía",
+        "2 niveles de succión",
+        "Filtro HEPA de fácil limpieza",
+        "Batería de litio y soporte para colgar en la pared"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Inalámbrica 2 en 1"
+        },
+        {
+          "label": "Batería",
+          "value": "Litio"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 40 minutos"
+        },
+        {
+          "label": "Succión",
+          "value": "2 niveles (9 kPa)"
+        },
+        {
+          "label": "Tanque colector",
+          "value": "0,4 litros"
+        },
+        {
+          "label": "Filtro",
+          "value": "HEPA de fácil limpieza"
+        },
+        {
+          "label": "Cepillo",
+          "value": "Plano para pisos"
+        },
+        {
+          "label": "Montaje",
+          "value": "Soporte para colgar en la pared"
+        }
+      ],
+      "descriptionHtml": "<p>La aspiradora inalámbrica Winco W511 se mueve sin cable a cualquier ambiente, para llegar a los rincones más difíciles.</p><h3>Batería de litio</h3><p>La batería es de litio y se carga de forma veloz. Tiene hasta 40 minutos de autonomía.</p><h3>Succión y filtro</h3><p>Dos niveles de succión y filtro HEPA de fácil limpieza. El tanque colector es de 0,4 litros.</p><h3>Almacenamiento</h3><p>Trae soporte para colgarla en la pared y es ultraliviana.</p>",
+      "revisar": [
+        "La descripción no indica el tiempo de carga ni el peso del equipo."
+      ]
+    },
+    {
+      "slug": "aspiradora-robot-ultracomb-as-6061",
+      "name": "Aspiradora Robot Ultracomb AS-6061",
+      "brand": "Ultracomb",
+      "model": "AS-6061",
+      "seoTitle": "Aspiradora Robot Ultracomb AS-6061",
+      "seoDescription": "Aspiradora robot Ultracomb AS-6061 con 1600 Pa de succión, filtro HEPA, sensor anticaída y control remoto. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Aspiradora robot Ultracomb AS-6061 con 1600 Pa de succión, filtro HEPA, sensor anticaída, detección de obstáculos y control remoto.",
+      "highlights": [
+        "1600 Pa de succión",
+        "Filtro HEPA que retiene polvo y alérgenos",
+        "Sensor anticaída y detección de obstáculos",
+        "Hasta 60 minutos de batería",
+        "Control remoto y paño limpiador incluidos"
+      ],
+      "specs": [
+        {
+          "label": "Succión",
+          "value": "1600 Pa"
+        },
+        {
+          "label": "Filtro",
+          "value": "HEPA"
+        },
+        {
+          "label": "Batería",
+          "value": "Litio de 2600 mAh"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 60 minutos"
+        },
+        {
+          "label": "Tiempo de carga",
+          "value": "2 a 3 horas"
+        },
+        {
+          "label": "Depósito",
+          "value": "650 ml"
+        },
+        {
+          "label": "Ancho de limpieza",
+          "value": "80 mm por pasada"
+        },
+        {
+          "label": "Ruido",
+          "value": "60 dB"
+        },
+        {
+          "label": "Peso",
+          "value": "1,8 kg"
+        },
+        {
+          "label": "Color",
+          "value": "Antracita / negro"
+        }
+      ],
+      "descriptionHtml": "<p>El AS-6061 es un robot aspirador con 1600 Pa de succión y filtro HEPA, pensado para pisos como madera, cerámica y mármol.</p><h3>Limpieza automática</h3><p>Detecta obstáculos y cambia de trayectoria. Tiene sensor anticaída, cepillos esquineros y dos modos: automático y punto fijo.</p><h3>Batería y carga</h3><p>Batería de litio de 2600 mAh con hasta 60 minutos de uso. La carga demora de 2 a 3 horas y avisa cuando la batería está baja.</p><h3>Uso y mantenimiento</h3><p>Depósito de 650 ml de fácil descarga y limpieza. Incluye control remoto, escobillas, paño, peine y cargador.</p>",
+      "revisar": [
+        "La descripción dice 'perfil de 84 mm' y 'dimensiones 31 x 31 x 84 cm'. Son datos que no coinciden: no se publicó la altura."
+      ]
+    },
+    {
+      "slug": "aspiradora-sin-bolsa-midea-direct-cyclone-1400w",
+      "name": "Aspiradora sin Bolsa Midea Direct Cyclone 1400 W",
+      "brand": "Midea",
+      "model": "VS-S214TAR4",
+      "seoTitle": "Aspiradora Midea Cyclone 1400 W sin bolsa",
+      "seoDescription": "Aspiradora Midea Direct Cyclone de 1400 W sin bolsa, con depósito de 1,5 litros, cable de 5 m y filtro HEPA. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Aspiradora Midea Direct Cyclone sin bolsa de 1400 W, con depósito de 1,5 litros, cable de 5 m, filtro HEPA y control de potencia.",
+      "highlights": [
+        "1400 W de potencia",
+        "Sin bolsa: depósito de 1,5 litros",
+        "Cable de 5 m con enrollado automático",
+        "Filtro HEPA y control de potencia",
+        "Cepillo de piso de doble altura y boca fina 2 en 1"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "1400 W"
+        },
+        {
+          "label": "Bolsa",
+          "value": "No (depósito de 1,5 litros)"
+        },
+        {
+          "label": "Cable",
+          "value": "5 m con enrollado automático"
+        },
+        {
+          "label": "Tubo",
+          "value": "Metálico"
+        },
+        {
+          "label": "Filtro",
+          "value": "HEPA"
+        },
+        {
+          "label": "Control de potencia",
+          "value": "Sí"
+        },
+        {
+          "label": "Inalámbrica",
+          "value": "No"
+        },
+        {
+          "label": "Accesorios",
+          "value": "Cepillo de piso de doble altura y boca fina 2 en 1"
+        },
+        {
+          "label": "Medidas",
+          "value": "270 × 300 × 370 mm (ancho × alto × profundidad)"
+        },
+        {
+          "label": "Peso",
+          "value": "3,7 kg"
+        },
+        {
+          "label": "Origen",
+          "value": "China"
+        }
+      ],
+      "descriptionHtml": "<p>La aspiradora Midea Direct Cyclone de 1400 W funciona sin bolsa: el polvo va a un depósito de 1,5 litros.</p><h3>Potencia y control</h3><p>Tiene 1400 W y control de potencia para regularla según la superficie.</p><h3>Accesorios</h3><p>Cepillo para piso con cerdas de doble altura y cepillo de boca fina 2 en 1. El tubo es metálico.</p><h3>Cable y filtro</h3><p>Cable de 5 m con enrollado automático y filtro HEPA.</p><h3>Antes de comprar</h3><p>Es una aspiradora con cable: no es inalámbrica.</p>",
+      "revisar": [
+        "La ficha corta dice 14000 W y la descripción 1400 W. Se publicó 1400 W, que coincide con el nombre.",
+        "Se omitió el plazo de garantía del fabricante (regla de la tienda)."
+      ]
+    },
+    {
+      "slug": "balanza-comercial-eiffel-30kg-5grs",
+      "name": "Balanza Comercial Eiffel 30 kg, 5 g",
+      "brand": "Eiffel",
+      "model": "E-1030",
+      "seoTitle": "Balanza Comercial Eiffel 30 kg 5 g",
+      "seoDescription": "Balanza comercial Eiffel E-1030 de 30 kg con precisión de 5 g, batería recargable y cálculo de precio. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Balanza comercial Eiffel E-1030 para pesar hasta 30 kg con precisión de 5 g. Calcula peso, precio e importe y tiene batería recargable.",
+      "highlights": [
+        "Pesa hasta 30 kg con precisión de 5 g",
+        "Calcula peso, precio e importe",
+        "Batería recargable para usar sin corriente",
+        "Plataforma de acero inoxidable"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "30 kg"
+        },
+        {
+          "label": "Precisión",
+          "value": "5 g"
+        },
+        {
+          "label": "Funciones",
+          "value": "Peso, precio e importe"
+        },
+        {
+          "label": "Batería",
+          "value": "Recargable"
+        },
+        {
+          "label": "Plataforma",
+          "value": "Acero inoxidable"
+        }
+      ],
+      "descriptionHtml": "<p>La balanza comercial Eiffel E-1030 pesa hasta 30 kg con precisión de 5 g.</p><h3>Peso, precio e importe</h3><p>Con la función de precio calculás el importe de cada peso. Sirve para llevar la cuenta de la mercadería.</p><h3>Batería recargable</h3><p>Se puede usar en lugares sin acceso a corriente eléctrica.</p><h3>Plataforma</h3><p>Plataforma de acero inoxidable, resistente a la corrosión y fácil de limpiar.</p>",
+      "revisar": [
+        "La descripción no indica la autonomía de la batería ni el tiempo de carga."
+      ]
+    },
+    {
+      "slug": "batidora-de-inmersion-oster-stick-mixer-2802",
+      "name": "Batidora de Inmersión Oster Stick Mixer 2802",
+      "brand": "Oster",
+      "model": "2802",
+      "seoTitle": "Batidora de Inmersión Oster 2802",
+      "seoDescription": "Batidora de inmersión Oster Stick Mixer 2802 con cuchilla quad blade de acero inoxidable y velocidad variable. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Batidora de inmersión Oster Stick Mixer 2802 con cuchilla quad blade de acero inoxidable, control de velocidad variable y vaso medidor.",
+      "highlights": [
+        "Cuchilla quad blade de acero inoxidable",
+        "Control de velocidad variable",
+        "Protector contra rayones",
+        "Vaso medidor para batir y medir"
+      ],
+      "specs": [
+        {
+          "label": "Cuchilla",
+          "value": "Quad blade de acero inoxidable"
+        },
+        {
+          "label": "Velocidad",
+          "value": "Variable"
+        },
+        {
+          "label": "Accesorios",
+          "value": "Vaso medidor"
+        },
+        {
+          "label": "Protección",
+          "value": "Protector contra rayones"
+        }
+      ],
+      "descriptionHtml": "<p>La batidora de inmersión Oster Stick Mixer 2802 sirve para preparar sopas, puré de tomate, licuados y batidos.</p><h3>Batidor</h3><p>La cuchilla quad blade es de acero inoxidable y mezcla de forma rápida y pareja.</p><h3>Velocidad</h3><p>El control de velocidad variable permite elegir la intensidad del batido.</p><h3>Accesorios</h3><p>Incluye un vaso medidor para batir jugos, batidos y aderezos, y un protector contra rayones.</p>",
+      "revisar": [
+        "La ficha no indica la potencia del motor ni el SKU. Confirmar con el fabricante.",
+        "La descripción es casi igual a la del modelo 2803: solo cambia el orden de los puntos."
+      ]
+    },
+    {
+      "slug": "batidora-de-inmersion-oster-stick-mixer-2803",
+      "name": "Batidora de Inmersión Oster Stick Mixer 2803",
+      "brand": "Oster",
+      "model": "2803",
+      "seoTitle": "Batidora de Inmersión Oster 2803",
+      "seoDescription": "Batidora de inmersión Oster Stick Mixer 2803 con cuchilla quad blade de acero inoxidable y velocidad variable. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Batidora de inmersión Oster Stick Mixer 2803 con cuchilla quad blade de acero inoxidable, control de velocidad variable y vaso medidor.",
+      "highlights": [
+        "Cuchilla quad blade de acero inoxidable",
+        "Control de velocidad variable",
+        "Protector contra rayones",
+        "Vaso medidor para batir y medir"
+      ],
+      "specs": [
+        {
+          "label": "Cuchilla",
+          "value": "Quad blade de acero inoxidable"
+        },
+        {
+          "label": "Velocidad",
+          "value": "Variable"
+        },
+        {
+          "label": "Accesorios",
+          "value": "Vaso medidor"
+        },
+        {
+          "label": "Protección",
+          "value": "Protector contra rayones"
+        }
+      ],
+      "descriptionHtml": "<p>La batidora de inmersión Oster Stick Mixer 2803 sirve para preparar sopas, puré de tomate, licuados y batidos.</p><h3>Batidor</h3><p>La cuchilla quad blade es de acero inoxidable y mezcla de forma rápida y pareja.</p><h3>Velocidad</h3><p>El control de velocidad variable permite elegir la intensidad del batido.</p><h3>Accesorios</h3><p>Incluye un vaso medidor para batir jugos, batidos y aderezos, y un protector contra rayones.</p>",
+      "revisar": [
+        "La ficha no indica la potencia del motor ni el SKU. Confirmar con el fabricante.",
+        "Misma descripción que el modelo 2802: solo cambia el número en el nombre."
+      ]
+    },
+    {
+      "slug": "cafetera-automatica-eiffel-expreso-multicapsula-para-dolce-gusto",
+      "name": "Cafetera Automática Eiffel Expreso Multicápsula Dolce Gusto",
+      "brand": "Eiffel",
+      "model": "E-255",
+      "seoTitle": "Cafetera Eiffel E-255 multicápsula",
+      "seoDescription": "Cafetera automática Eiffel E-255 expreso multicápsula de 1500 W y 19 bar, para cápsulas Dolce Gusto. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cafetera expreso Eiffel E-255 multicápsula de 1500 W y 19 bar de presión, con depósito de 0,8 litros y bandeja removible.",
+      "highlights": [
+        "Expreso multicápsula para Dolce Gusto",
+        "Potencia de 1500 W y presión de 19 bar",
+        "Depósito de 0,8 litros",
+        "Bandeja removible"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Expreso multicápsula"
+        },
+        {
+          "label": "Potencia",
+          "value": "1500 W"
+        },
+        {
+          "label": "Presión",
+          "value": "19 bar"
+        },
+        {
+          "label": "Capacidad",
+          "value": "0,8 litros"
+        },
+        {
+          "label": "Cápsulas",
+          "value": "Dolce Gusto, Nespresso y otras"
+        },
+        {
+          "label": "Bandeja",
+          "value": "Removible"
+        },
+        {
+          "label": "Voltaje",
+          "value": "220 V"
+        }
+      ],
+      "descriptionHtml": "<p>La cafetera automática Eiffel E-255 es un expreso multicápsula de 1500 W y 19 bar de presión. Prepara café con cápsulas.</p><h3>Presión y depósito</h3><p>Tiene 1500 W y 19 bar de presión. El depósito de agua es de 0,8 litros.</p><h3>Cápsulas</h3><p>Pensada para cápsulas Dolce Gusto, Nespresso y otras compatibles.</p><h3>Practicidad</h3><p>Incluye bandeja removible para juntar el goteo. Funciona con 220 V.</p>",
+      "revisar": [
+        "Confirmar la compatibilidad con cápsulas Nespresso, que figura en la descripción original."
+      ]
+    },
+    {
+      "slug": "cafetera-de-filtro-winco-w1932",
+      "name": "Cafetera de Filtro Winco W1932",
+      "brand": "Winco",
+      "model": "W1932",
+      "seoTitle": "Cafetera de Filtro Winco W1932 1,2 L",
+      "seoDescription": "Cafetera de filtro Winco W1932 de 1,2 litros, con jarra de vidrio, control automático de temperatura y anti goteo. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cafetera de filtro Winco W1932 de 1,2 litros, con jarra cónica de vidrio, control automático de temperatura y sistema anti goteo.",
+      "highlights": [
+        "Capacidad de 1,2 litros",
+        "Jarra cónica de vidrio",
+        "Mantiene el café a 75 °C",
+        "Filtro plástico lavable, apto para filtro descartable",
+        "Sistema anti goteo e indicador de nivel de agua"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "1,2 litros"
+        },
+        {
+          "label": "Jarra",
+          "value": "Vidrio cónico"
+        },
+        {
+          "label": "Filtro",
+          "value": "Plástico lavable; apto para filtro descartable"
+        },
+        {
+          "label": "Temperatura",
+          "value": "Control automático, mantiene 75 °C"
+        },
+        {
+          "label": "Anti goteo",
+          "value": "Sí"
+        },
+        {
+          "label": "Indicador",
+          "value": "Nivel de agua"
+        }
+      ],
+      "descriptionHtml": "<p>La cafetera de filtro Winco W1932 tiene capacidad de 1,2 litros y una jarra cónica de vidrio.</p><h3>Temperatura</h3><p>Mantiene el café a 75 °C con control automático de temperatura.</p><h3>Filtro</h3><p>El filtro de plástico es lavable y también admite filtro descartable.</p><h3>Practicidad</h3><p>Tiene dispositivo anti goteo para servir sin dejar caer café en la mesada, y un indicador de nivel de agua.</p>",
+      "revisar": [
+        "La descripción original no trae potencia ni consumo. Completar con la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "cafetera-electrica-yelmo-1-8-lts-ca-7115-900w-18-pocillos",
+      "name": "Cafetera Eléctrica Yelmo 1,8 L CA-7115 900 W 18 pocillos",
+      "brand": "Yelmo",
+      "model": "CA-7115",
+      "seoTitle": "Cafetera Yelmo CA-7115 1,8 L 18 pocillos",
+      "seoDescription": "Cafetera eléctrica Yelmo CA-7115 de 1,8 litros y 900 W, con base calefaccionada, filtro lavable y 18 pocillos. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cafetera eléctrica Yelmo CA-7115 de 1,8 litros y 900 W, con base calefaccionada, filtro permanente lavable y sistema anti goteo.",
+      "highlights": [
+        "Capacidad de 1,8 litros (18 pocillos)",
+        "Base calefaccionada que mantiene el café caliente",
+        "Filtro permanente removible y lavable",
+        "Admite filtro de papel",
+        "Visor de nivel de agua y anti goteo"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "1,8 litros (18 pocillos)"
+        },
+        {
+          "label": "Potencia",
+          "value": "900 W"
+        },
+        {
+          "label": "Base",
+          "value": "Calefaccionada"
+        },
+        {
+          "label": "Filtro",
+          "value": "Permanente, removible y lavable; admite filtro de papel"
+        },
+        {
+          "label": "Visor",
+          "value": "Nivel de agua"
+        },
+        {
+          "label": "Anti goteo",
+          "value": "Sí"
+        },
+        {
+          "label": "Terminación",
+          "value": "Acero inoxidable"
+        }
+      ],
+      "descriptionHtml": "<p>La cafetera eléctrica Yelmo CA-7115 tiene 1,8 litros de capacidad, 18 pocillos y 900 W de potencia.</p><h3>Base calefaccionada</h3><p>La base mantiene el café a la temperatura ideal después de la preparación.</p><h3>Filtro</h3><p>Filtro permanente removible y lavable. También se puede usar con filtro de papel.</p><h3>Diseño</h3><p>Detalles en acero inoxidable y visor para ver el nivel de agua.</p><h3>Sin goteo</h3><p>Sistema anti goteo para servir sin derramar.</p>",
+      "revisar": []
+    },
+    {
+      "slug": "cafetera-nescafe-dolce-gusto-piccolo-xs",
+      "name": "Cafetera Moulinex Nescafé Dolce Gusto Piccolo XS",
+      "brand": "Moulinex",
+      "model": "Piccolo XS",
+      "seoTitle": "Cafetera Dolce Gusto Piccolo XS Moulinex",
+      "seoDescription": "Cafetera Moulinex Dolce Gusto Piccolo XS para cápsulas: 1500 W, 15 bar y depósito de 0,8 litros con apagado automático. Envíos a todo el país.",
+      "shortDescription": "Cafetera Moulinex para cápsulas Nescafé Dolce Gusto Piccolo XS, de 1500 W, 15 bar de presión y depósito de 0,8 litros con apagado automático.",
+      "highlights": [
+        "Sistema de cápsulas Nescafé Dolce Gusto",
+        "1500 W y 15 bar de presión",
+        "Depósito de 0,8 litros",
+        "Apagado automático"
+      ],
+      "specs": [
+        {
+          "label": "Sistema",
+          "value": "Cápsulas Nescafé Dolce Gusto"
+        },
+        {
+          "label": "Potencia",
+          "value": "1500 W"
+        },
+        {
+          "label": "Presión",
+          "value": "15 bar"
+        },
+        {
+          "label": "Capacidad",
+          "value": "0,8 litros"
+        },
+        {
+          "label": "Apagado automático",
+          "value": "Sí"
+        }
+      ],
+      "descriptionHtml": "<p>La cafetera Moulinex para cápsulas Nescafé Dolce Gusto Piccolo XS prepara café y otras bebidas con cápsulas.</p><h3>Variedad de bebidas</h3><p>Con las cápsulas podés elegir entre distintos cafés y bebidas, como chocolate caliente.</p><h3>Potencia y presión</h3><p>Tiene 1500 W y 15 bar de presión, con depósito de agua de 0,8 litros.</p><h3>Apagado</h3><p>Se apaga sola de forma automática.</p>",
+      "revisar": [
+        "El SKU PV1A0858 no se usó como modelo. Confirmar si corresponde al Piccolo XS."
+      ]
+    },
+    {
+      "slug": "calefactor-de-mica-peabody",
+      "name": "Calefactor de Mica Peabody 2000 W Blanco",
+      "brand": "Peabody",
+      "model": "PE-CM20B",
+      "seoTitle": "Calefactor de Mica Peabody 2000 W",
+      "seoDescription": "Calefactor de mica Peabody PE-CM20B de 2000 W con 2 niveles, termostato regulable y apagado automático. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Calefactor de mica Peabody de 2 niveles, 1000 W y 2000 W, con termostato regulable, sin humo ni olor y apagado automático ante sobrecalentamiento.",
+      "highlights": [
+        "2 niveles de potencia: 1000 W y 2000 W",
+        "Paneles de mica con calefacción eficiente",
+        "Termostato regulable",
+        "No produce humo ni olor",
+        "Apagado automático ante vuelcos y sobrecalentamiento"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "1000 W y 2000 W"
+        },
+        {
+          "label": "Tipo",
+          "value": "Paneles de mica"
+        },
+        {
+          "label": "Termostato",
+          "value": "Regulable"
+        },
+        {
+          "label": "Rendimiento",
+          "value": "60 m³"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Apagado automático por sobrecalentamiento y vuelco"
+        },
+        {
+          "label": "Color",
+          "value": "Blanco"
+        },
+        {
+          "label": "Voltaje",
+          "value": "220 V"
+        }
+      ],
+      "descriptionHtml": "<p>El calefactor de mica Peabody PE-CM20B tiene dos niveles de potencia para elegir cuánto calor necesitás.</p><h3>Calefacción por mica</h3><p>Usa paneles de mica que dan calor sin humo ni olor, y no consume oxígeno.</p><h3>Termostato</h3><p>Termostato regulable para seleccionar la temperatura que querés.</p><h3>Seguridad</h3><p>Se apaga automáticamente ante sobrecalentamiento o vuelco.</p>",
+      "revisar": []
+    },
+    {
+      "slug": "calefactor-de-mica-peabody-2000w-negro",
+      "name": "Calefactor de Mica Peabody 2000 W Negro",
+      "brand": "Peabody",
+      "model": "PE-CM20N",
+      "seoTitle": "Calefactor Mica Peabody 2000 W Negro",
+      "seoDescription": "Calefactor de mica Peabody PE-CM20N de 2000 W negro, con 2 niveles, termostato regulable y apagado automático. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Calefactor de mica Peabody negro de 2 niveles, 1000 W y 2000 W, con termostato regulable, sin humo ni olor y apagado automático ante sobrecalentamiento.",
+      "highlights": [
+        "2 niveles de potencia: 1000 W y 2000 W",
+        "Paneles de mica con calefacción eficiente",
+        "Termostato regulable",
+        "No produce humo ni olor",
+        "Apagado automático ante vuelcos y sobrecalentamiento"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "1000 W y 2000 W"
+        },
+        {
+          "label": "Tipo",
+          "value": "Paneles de mica"
+        },
+        {
+          "label": "Termostato",
+          "value": "Regulable"
+        },
+        {
+          "label": "Rendimiento",
+          "value": "60 m³"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Apagado automático por sobrecalentamiento y vuelco"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        },
+        {
+          "label": "Voltaje",
+          "value": "220 V"
+        }
+      ],
+      "descriptionHtml": "<p>El calefactor de mica Peabody PE-CM20N tiene dos niveles de potencia para elegir cuánto calor necesitás.</p><h3>Calefacción por mica</h3><p>Usa paneles de mica que dan calor sin humo ni olor, y no consume oxígeno.</p><h3>Termostato</h3><p>Termostato regulable para seleccionar la temperatura que querés.</p><h3>Seguridad</h3><p>Se apaga automáticamente ante sobrecalentamiento o vuelco.</p>",
+      "revisar": []
+    },
+    {
+      "slug": "calefactor-electrico-liliana-tecnohot-2200w",
+      "name": "Calefactor Eléctrico Liliana Tecnohot 2200 W",
+      "brand": "Liliana",
+      "model": "TCV100",
+      "seoTitle": "Calefactor Liliana Tecnohot 2200 W",
+      "seoDescription": "Calefactor eléctrico Liliana Tecnohot de 2200 W y 1100 W, con turbina tangencial, termostato regulable y kit de pared. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Calefactor eléctrico Liliana Tecnohot de 2200 W o 1100 W, con turbina tangencial silenciosa, termostato regulable y corte por sobrecalentamiento.",
+      "highlights": [
+        "2200 W o 1100 W en dos niveles",
+        "Turbina tangencial silenciosa de altas RPM",
+        "Termostato regulable que ahorra energía",
+        "Kit para pared o patas para usar en el piso",
+        "Corte de seguridad por caída y sobrecalentamiento"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "2200 W o 1100 W"
+        },
+        {
+          "label": "Calor",
+          "value": "1900 kcal (2200 W) y 950 kcal (1100 W)"
+        },
+        {
+          "label": "Turbina",
+          "value": "Tangencial de altas RPM"
+        },
+        {
+          "label": "Termostato",
+          "value": "Regulable"
+        },
+        {
+          "label": "Instalación",
+          "value": "Kit de pared o patas para piso"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Corte por caída y sobrecalentamiento"
+        },
+        {
+          "label": "Medidas",
+          "value": "61 × 14 × 40,9 cm (base × altura × profundidad)"
+        }
+      ],
+      "descriptionHtml": "<p>El calefactor eléctrico Liliana Tecnohot tiene dos niveles: 2200 W para el máximo calor y 1100 W para el nivel bajo.</p><h3>Calor forzado</h3><p>La turbina tangencial recircula el aire y lo calienta rápido. Es silenciosa.</p><h3>Termostato</h3><p>Corta cuando se alcanza la temperatura elegida, así se ahorra energía.</p><h3>Instalación</h3><p>Trae kit para fijar en la pared o patas para usarlo sobre el piso.</p><h3>Seguridad</h3><p>Corte de seguridad por caída y por sobrecalentamiento.</p>",
+      "revisar": [
+        "La descripción indica garantía de 2 años: no se publicó por la regla de la tienda.",
+        "El modelo TCV100 sale del SKU; la descripción no trae número de modelo."
+      ]
+    },
+    {
+      "slug": "caloventor-philco-2000w",
+      "name": "Caloventor Philco 2000 W Negro",
+      "brand": "Philco",
+      "model": "PHCF2023NP",
+      "seoTitle": "Caloventor Philco 2000 W Negro",
+      "seoDescription": "Caloventor Philco PHCF2023NP de 2000 W con 2 niveles de calor, modo ventilación y termostato regulable. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Caloventor Philco de 2000 W con 2 niveles de calor, modo ventilación y termostato regulable. Protección por sobrecalentamiento con fusible térmico.",
+      "highlights": [
+        "2000 W con 2 niveles de calor",
+        "Modo ventilación",
+        "Termostato regulable",
+        "Corte por sobrecalentamiento con rearme automático",
+        "Fusible térmico de seguridad"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "2000 W"
+        },
+        {
+          "label": "Niveles",
+          "value": "2 de calor y modo ventilación"
+        },
+        {
+          "label": "Termostato",
+          "value": "Regulable"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Corte por sobrecalentamiento con rearme automático y fusible térmico"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        }
+      ],
+      "descriptionHtml": "<p>El caloventor Philco PHCF2023NP tiene 2000 W y dos niveles de calor.</p><h3>Calor y ventilación</h3><p>Podés elegir entre dos niveles de calor o usarlo solo para ventilar.</p><h3>Termostato</h3><p>Termostato regulable para elegir la temperatura del ambiente.</p><h3>Seguridad</h3><p>Corte por sobrecalentamiento con rearme automático y fusible térmico.</p>",
+      "revisar": [
+        "La descripción original solo repite el nombre: los datos salen de la ficha corta."
+      ]
+    },
+    {
+      "slug": "caloventor-split-de-pared-peabody-blanco",
+      "name": "Caloventor Split de Pared Peabody 2000 W Blanco",
+      "brand": "Peabody",
+      "model": "PE-CV20B",
+      "seoTitle": "Caloventor Split Peabody 2000 W Blanco",
+      "seoDescription": "Caloventor split de pared Peabody PE-CV20B de 2000 W, con display táctil LED, control remoto, modo ECO y oscilación. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Caloventor split de pared Peabody de 2000 W con display táctil LED, control remoto, modo ECO a 1000 W y oscilación del calor.",
+      "highlights": [
+        "Display táctil LED con control de temperatura",
+        "Control remoto incluido",
+        "Modo ECO a 1000 W para ahorrar energía",
+        "Oscilación para direccionar el calor",
+        "Placa de vidrio curvo templado"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "2000 W (modo ECO a 1000 W)"
+        },
+        {
+          "label": "Display",
+          "value": "Táctil LED"
+        },
+        {
+          "label": "Placa",
+          "value": "Vidrio curvo templado"
+        },
+        {
+          "label": "Funciones",
+          "value": "ECO, solo viento, viento con resistencia mínima y máxima"
+        },
+        {
+          "label": "Oscilación",
+          "value": "Sí"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Apagado automático por sobrecalentamiento"
+        },
+        {
+          "label": "Montaje",
+          "value": "De pared, con espacio guardacable"
+        },
+        {
+          "label": "Control",
+          "value": "Remoto"
+        },
+        {
+          "label": "Origen",
+          "value": "Argentina"
+        }
+      ],
+      "descriptionHtml": "<p>El caloventor split de pared Peabody PE-CV20B tiene 2000 W y un display táctil LED para controlar la temperatura.</p><h3>Funciones</h3><p>Modo ECO, solo viento, y viento con resistencia en mínimo o en máximo. El modo de ahorro funciona a 1000 W.</p><h3>Oscilación</h3><p>La oscilación reparte el calor hacia distintos lugares del ambiente.</p><h3>Instalación</h3><p>Se instala en la pared y tiene espacio para guardar el cable.</p>",
+      "revisar": []
+    },
+    {
+      "slug": "caloventor-split-liliana-de-pared-2000w",
+      "name": "Caloventor Split Liliana de Pared 2000 W",
+      "brand": "Liliana",
+      "model": "CWD900",
+      "seoTitle": "Caloventor Split Liliana 2000 W",
+      "seoDescription": "Caloventor split Liliana CWD900 de pared de 1000 W y 2000 W, con display digital, control remoto y timer. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Caloventor split Liliana de pared con 1000 W y 2000 W, display digital, control remoto con timer y termostato ambiental.",
+      "highlights": [
+        "Turbina tangencial para calor más rápido",
+        "Display digital y control remoto",
+        "Timer programable de ½ a 7,5 horas",
+        "Termostato ambiental que corta al llegar a la temperatura",
+        "Oscilación del deflector de aire"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "1000 W y 2000 W"
+        },
+        {
+          "label": "Turbina",
+          "value": "Tangencial"
+        },
+        {
+          "label": "Display",
+          "value": "Digital"
+        },
+        {
+          "label": "Control",
+          "value": "Remoto con selector de temperatura y timer"
+        },
+        {
+          "label": "Temperatura",
+          "value": "Selector de 15 °C a 35 °C"
+        },
+        {
+          "label": "Timer",
+          "value": "De ½ a 7,5 horas"
+        },
+        {
+          "label": "Placa",
+          "value": "Cerámica PTC de alta seguridad"
+        },
+        {
+          "label": "Oscilación",
+          "value": "Sí"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Corte por sobrecalentamiento"
+        },
+        {
+          "label": "Medidas",
+          "value": "64 × 25 × 17 cm (base × altura × profundidad)"
+        }
+      ],
+      "descriptionHtml": "<p>El caloventor split de pared Liliana CWD900 tiene dos potencias, 1000 W y 2000 W, y control remoto.</p><h3>Calor rápido</h3><p>La turbina tangencial distribuye el calor de forma más rápida y reduce el consumo.</p><h3>Control de temperatura</h3><p>Termostato ambiental que corta al llegar a la temperatura elegida, entre 15 °C y 35 °C.</p><h3>Timer</h3><p>Timer programable desde media hora hasta 7 horas y media, desde el control remoto.</p><h3>Instalación</h3><p>Es de pared y tiene oscilación del deflector de aire.</p>",
+      "revisar": [
+        "El modelo es CWD900 en la descripción y CW900 en el SKU: se usó CWD900.",
+        "La descripción original tenía un plazo de garantía que no se publicó (regla de la tienda)."
+      ]
+    },
+    {
+      "slug": "caloventor-split-whitenblack-2000w-cpwb01",
+      "name": "Caloventor Split Whitenblack 2000 W CPWB01",
+      "brand": "Whitenblack",
+      "model": "CPWB01",
+      "seoTitle": "Caloventor Whitenblack CPWB01 2000 W",
+      "seoDescription": "Caloventor Whitenblack CPWB01 de 1000 W y 2000 W, con turbina de 1500 RPM y timer de hasta 7,5 horas. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Caloventor Whitenblack CPWB01 de 1000 W y 2000 W, con turbina tangencial de 1500 RPM, timer programable y control remoto.",
+      "highlights": [
+        "Turbina tangencial de 1500 RPM",
+        "Timer de 30 minutos a 7 horas y 30 minutos",
+        "Placa PTC de alta seguridad",
+        "Oscilación del deflector de aire",
+        "Control remoto y comando digital"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "1000 W y 2000 W"
+        },
+        {
+          "label": "Turbina",
+          "value": "Tangencial de 1500 RPM"
+        },
+        {
+          "label": "Timer",
+          "value": "De 30 min a 7 h 30 min"
+        },
+        {
+          "label": "Placa",
+          "value": "PTC de alta seguridad"
+        },
+        {
+          "label": "Control",
+          "value": "Remoto y comando digital"
+        },
+        {
+          "label": "Temperatura",
+          "value": "Regulable"
+        },
+        {
+          "label": "Oscilación",
+          "value": "Sí"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Protección contra sobrecalentamiento"
+        }
+      ],
+      "descriptionHtml": "<p>El caloventor Whitenblack CPWB01 calefacciona ambientes chicos con 1000 W o 2000 W.</p><h3>Calor</h3><p>La turbina tangencial de 1500 RPM reparte el aire caliente. La temperatura es regulable.</p><h3>Control</h3><p>Se maneja con control remoto o con el comando digital. El timer va desde 30 minutos hasta 7 horas y 30 minutos.</p><h3>Seguridad</h3><p>Placa PTC de alta seguridad y protección contra sobrecalentamiento.</p>",
+      "revisar": [
+        "La descripción dice que es portátil y no necesita instalación; la ficha corta dice montaje en pared. Confirmar antes de publicar."
+      ]
+    },
+    {
+      "slug": "caloventor-winco-1800w-w114",
+      "name": "Caloventor Winco 1800 W W114 Gris",
+      "brand": "Winco",
+      "model": "W114",
+      "seoTitle": "Caloventor Winco W114 1800 W Gris",
+      "seoDescription": "Caloventor vertical Winco W114 gris de 900 W a 1800 W, con termostato regulable y protección por sobrecalentamiento. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Caloventor vertical Winco W114 gris, de 900 W a 1800 W en 2 niveles, con termostato regulable, LED indicador y auto apagado.",
+      "highlights": [
+        "2 niveles de potencia: 900 W y 1800 W",
+        "Termostato regulable",
+        "Auto apagado y protección por sobrecalentamiento",
+        "Gran caudal de aire",
+        "LED indicador de encendido"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "900 W y 1800 W (2 niveles)"
+        },
+        {
+          "label": "Diseño",
+          "value": "Vertical"
+        },
+        {
+          "label": "Termostato",
+          "value": "Regulable"
+        },
+        {
+          "label": "Indicador",
+          "value": "LED"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Auto apagado y protección por sobrecalentamiento"
+        },
+        {
+          "label": "Color",
+          "value": "Gris"
+        }
+      ],
+      "descriptionHtml": "<p>El caloventor vertical Winco W114 tiene dos niveles de potencia, de 900 W a 1800 W.</p><h3>Calor</h3><p>Tiene termostato regulable para elegir la temperatura y gran caudal de aire.</p><h3>Seguridad</h3><p>Se apaga solo y tiene protección por sobrecalentamiento.</p><h3>Señalización</h3><p>Un LED indica cuando está encendido.</p>",
+      "revisar": [
+        "La descripción original solo dice 'Modelo W114': los datos salen de la ficha corta."
+      ]
+    },
+    {
+      "slug": "caloventor-winco-2000w-w116",
+      "name": "Caloventor Winco 2000 W W116 Blanco",
+      "brand": "Winco",
+      "model": "W116",
+      "seoTitle": "Caloventor Winco W116 2000 W Blanco",
+      "seoDescription": "Caloventor Winco W116 blanco de 1000 W y 2000 W, para uso vertical u horizontal. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Caloventor Winco W116 blanco de 1000 W y 2000 W, con modo ventilación, uso vertical u horizontal y protección contra sobrecalentamiento.",
+      "highlights": [
+        "2 niveles de potencia: 1000 W y 2000 W",
+        "Uso vertical u horizontal",
+        "Modo ventilación y temperatura regulable",
+        "Protección contra sobrecalentamiento",
+        "Fabricado en Argentina"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "1000 W y 2000 W"
+        },
+        {
+          "label": "Uso",
+          "value": "Vertical u horizontal"
+        },
+        {
+          "label": "Funciones",
+          "value": "Ventilación y temperatura regulable"
+        },
+        {
+          "label": "Indicador",
+          "value": "Luminoso de encendido"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Protección contra sobrecalentamiento"
+        },
+        {
+          "label": "Medidas",
+          "value": "27 × 23 × 13 cm"
+        },
+        {
+          "label": "Color",
+          "value": "Blanco"
+        },
+        {
+          "label": "Origen",
+          "value": "Industria argentina"
+        }
+      ],
+      "descriptionHtml": "<p>El caloventor Winco W116 blanco tiene 2 niveles de potencia: 1000 W y 2000 W.</p><h3>Versatilidad</h3><p>Se puede usar en forma vertical u horizontal. Tiene función de ventilación y temperatura regulable.</p><h3>Seguridad</h3><p>Protección contra sobrecalentamiento e indicador luminoso de encendido.</p><h3>Fabricación</h3><p>Producto de industria argentina.</p>",
+      "revisar": [
+        "Medidas sin unidad en la fuente: se asumieron cm.",
+        "La descripción original solo dice 'Modelo W116': los datos salen de la ficha corta."
+      ]
+    },
+    {
+      "slug": "caloventor-winco-2000w-w116-negro",
+      "name": "Caloventor Winco 2000 W W116 Negro",
+      "brand": "Winco",
+      "model": "W116N",
+      "seoTitle": "Caloventor Winco W116N 2000 W Negro",
+      "seoDescription": "Caloventor Winco W116N negro de 1000 W y 2000 W, para uso vertical u horizontal. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Caloventor Winco W116 negro de 1000 W y 2000 W, con modo ventilación, uso vertical u horizontal y protección contra sobrecalentamiento.",
+      "highlights": [
+        "2 niveles de potencia: 1000 W y 2000 W",
+        "Uso vertical u horizontal",
+        "Modo ventilación y temperatura regulable",
+        "Protección contra sobrecalentamiento",
+        "Fabricado en Argentina"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "1000 W y 2000 W"
+        },
+        {
+          "label": "Uso",
+          "value": "Vertical u horizontal"
+        },
+        {
+          "label": "Funciones",
+          "value": "Ventilación y temperatura regulable"
+        },
+        {
+          "label": "Indicador",
+          "value": "Luminoso de encendido"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Protección contra sobrecalentamiento"
+        },
+        {
+          "label": "Medidas",
+          "value": "27 × 23 × 13 cm"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        },
+        {
+          "label": "Origen",
+          "value": "Industria argentina"
+        }
+      ],
+      "descriptionHtml": "<p>El caloventor Winco W116 negro tiene 2 niveles de potencia: 1000 W y 2000 W.</p><h3>Versatilidad</h3><p>Se puede usar en forma vertical u horizontal. Tiene función de ventilación y temperatura regulable.</p><h3>Seguridad</h3><p>Protección contra sobrecalentamiento e indicador luminoso de encendido.</p><h3>Fabricación</h3><p>Producto de industria argentina.</p>",
+      "revisar": [
+        "Medidas sin unidad en la fuente: se asumieron cm.",
+        "La descripción original solo dice 'Modelo W116n': los datos salen de la ficha corta."
+      ]
+    },
+    {
+      "slug": "cava-de-vinos-w433",
+      "name": "Cava de Vinos W433",
+      "brand": "General",
+      "model": "W433",
+      "seoTitle": "Cava de Vinos W433 para 12 botellas",
+      "seoDescription": "Cava de vinos W433 de 33 litros para 12 botellas, termoeléctrica, sin vibraciones y con luz LED interior. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cava de vinos W433 de 33 litros para 12 botellas, con control de temperatura ajustable, luz LED interior y bajo nivel de ruido.",
+      "highlights": [
+        "Capacidad de 33 litros para 12 botellas",
+        "Control de temperatura ajustable",
+        "Tecnología termoeléctrica sin vibraciones",
+        "Luz LED interior",
+        "Bajo nivel de ruido y bajo consumo"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "33 litros (12 botellas)"
+        },
+        {
+          "label": "Tecnología",
+          "value": "Termoeléctrica"
+        },
+        {
+          "label": "Temperatura",
+          "value": "Ajustable"
+        },
+        {
+          "label": "Vibraciones",
+          "value": "Sin vibraciones"
+        },
+        {
+          "label": "Iluminación",
+          "value": "LED interior"
+        },
+        {
+          "label": "Ruido",
+          "value": "Bajo nivel"
+        },
+        {
+          "label": "Consumo",
+          "value": "Bajo consumo eléctrico"
+        }
+      ],
+      "descriptionHtml": "<p>La cava de vinos W433 guarda hasta 12 botellas en 33 litros.</p><h3>Temperatura</h3><p>El control de temperatura es ajustable para conservar el vino a la temperatura elegida.</p><h3>Funcionamiento</h3><p>Es termoeléctrica y no genera vibraciones. Funciona con bajo nivel de ruido y bajo consumo.</p><h3>Iluminación</h3><p>Tiene luz LED interior para ver las botellas.</p>",
+      "revisar": [
+        "La marca figura como 'General' y no aparece en el nombre ni en la descripción. Confirmar la marca."
+      ]
+    },
+    {
+      "slug": "convector-eiffel-color-blanco-220v",
+      "name": "Calefactor Eléctrico de Convección Eiffel 2000 W Blanco",
+      "brand": "Eiffel",
+      "model": "E-544",
+      "seoTitle": "Calefactor Convección Eiffel 2000 W",
+      "seoDescription": "Calefactor eléctrico de convección Eiffel E-544 de 2000 W y 220 V, con termostato y 60 cm de largo. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Calefactor eléctrico de convección Eiffel E-544 de 2000 W máximos, 220 V, con termostato para mantener la temperatura del ambiente.",
+      "highlights": [
+        "2000 W de potencia máxima",
+        "Termostato para mantener la temperatura",
+        "Alimentación de 220 V",
+        "60 cm de largo y 35 cm de alto"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "2000 W máxima"
+        },
+        {
+          "label": "Voltaje",
+          "value": "220 V"
+        },
+        {
+          "label": "Termostato",
+          "value": "Sí"
+        },
+        {
+          "label": "Tipo",
+          "value": "Convección"
+        },
+        {
+          "label": "Color",
+          "value": "Blanco"
+        },
+        {
+          "label": "Medidas",
+          "value": "60 × 35 × 10 cm (largo × alto × ancho)"
+        }
+      ],
+      "descriptionHtml": "<p>El calefactor eléctrico de convección Eiffel E-544 tiene una potencia máxima de 2000 W y funciona con 220 V.</p><h3>Termostato</h3><p>Tiene termostato para mantener la temperatura agradable en los ambientes.</p><h3>Medidas</h3><p>Mide 60 cm de largo, 35 cm de alto y 10 cm de ancho.</p>",
+      "revisar": [
+        "El color blanco sale del slug; la descripción no lo indica.",
+        "La descripción es genérica: no trae niveles de potencia ni tipo de montaje."
+      ]
+    },
+    {
+      "slug": "estufa-calefactor-con-turbo-termoconvector",
+      "name": "Estufa Calefactor Termoconvector Embassy con Turbo",
+      "brand": "Embassy",
+      "model": "EM-T2000",
+      "seoTitle": "Estufa Termoconvector Embassy con Turbo",
+      "seoDescription": "Estufa termoconvector Embassy EM-T2000 con turbo y 3 niveles: 750 W, 1250 W y 2000 W. Termostato y protector térmico. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Estufa termoconvector Embassy con turbo y 3 niveles de potencia: 750 W, 1250 W y 2000 W. Termostato regulable y protector térmico de seguridad.",
+      "highlights": [
+        "3 niveles: 750 W, 1250 W y 2000 W",
+        "Función turbo para calentar más rápido",
+        "Termostato que apaga al llegar a la temperatura",
+        "Protector térmico de seguridad",
+        "Se puede usar de pie o colgada"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "750 W, 1250 W y 2000 W"
+        },
+        {
+          "label": "Función",
+          "value": "Turbo"
+        },
+        {
+          "label": "Termostato",
+          "value": "Incorporado y regulable"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Protector térmico y por sobrecarga"
+        },
+        {
+          "label": "Montaje",
+          "value": "De pie o para colgar"
+        }
+      ],
+      "descriptionHtml": "<p>La estufa termoconvector Embassy con turbo tiene 3 niveles de potencia para elegir cuánto calor necesitás.</p><h3>Turbo y niveles</h3><p>Los niveles van de 750 W a 2000 W. La función turbo sirve para calentar un espacio en poco tiempo.</p><h3>Termostato</h3><p>Al llegar a la temperatura elegida, la estufa se apaga. Se vuelve a encender cuando el ambiente se enfría.</p><h3>Seguridad</h3><p>Tiene protector térmico y protección por sobrecarga que la apaga ante sobretemperatura.</p><h3>Montaje</h3><p>Se puede usar de pie o para colgar.</p>",
+      "revisar": []
+    },
+    {
+      "slug": "estufa-calefactor-termoconvector-winco",
+      "name": "Estufa Calefactor Termoconvector Winco W182",
+      "brand": "Winco",
+      "model": "W182",
+      "seoTitle": "Estufa Termoconvector Winco W182",
+      "seoDescription": "Estufa termoconvector Winco W182 de 3 niveles: 750 W, 1250 W y 2000 W, con termostato regulable y protector térmico. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Estufa termoconvector Winco W182 de 3 niveles de potencia: 750 W, 1250 W y 2000 W, con termostato regulable y protector térmico.",
+      "highlights": [
+        "3 niveles: 750 W, 1250 W y 2000 W",
+        "Termostato regulable",
+        "Protector térmico de seguridad",
+        "Calor sin humedecer el aire",
+        "Portátil: no necesita instalación"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "750 W, 1250 W y 2000 W"
+        },
+        {
+          "label": "Termostato",
+          "value": "Regulable"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Protector térmico"
+        },
+        {
+          "label": "Tipo",
+          "value": "Termoconvector portátil"
+        }
+      ],
+      "descriptionHtml": "<p>La estufa termoconvector Winco W182 calienta el ambiente con 3 niveles de potencia, de 750 W a 2000 W.</p><h3>Calor sin humedad</h3><p>El termoconvector eleva la temperatura del ambiente sin humedecer el aire.</p><h3>Portátil</h3><p>Es portátil: no necesita instalación, así que se mueve de un ambiente a otro.</p><h3>Seguridad</h3><p>Tiene protector térmico que previene daños por altas temperaturas.</p>",
+      "revisar": []
+    },
+    {
+      "slug": "etermo-termo-electrico-auto-peabody-onroad-500ml-negro",
+      "name": "Termo Eléctrico Auto Peabody Onroad 500 ml Negro",
+      "brand": "Peabody",
+      "model": "PE-ETL500N",
+      "seoTitle": "Termo Eléctrico Peabody Onroad 500 ml",
+      "seoDescription": "Termo eléctrico para auto Peabody Onroad de 500 ml, de 12/24 V, con 3 temperaturas y doble capa de acero inoxidable. Envíos a todo el país.",
+      "shortDescription": "Termo eléctrico para auto Peabody Onroad de 500 ml, con 3 temperaturas (40 °C, 75 °C y 90 °C) y conexión de 12/24 V.",
+      "highlights": [
+        "3 temperaturas: 40 °C, 75 °C y 90 °C",
+        "Doble capa de acero inoxidable con aislación de vacío",
+        "Conexión de 12/24 V para auto, tractor o lancha",
+        "Tapa mate térmica y bombilla integrada",
+        "Pico cebador con cierre antigoteo"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "500 ml"
+        },
+        {
+          "label": "Potencia",
+          "value": "95 W"
+        },
+        {
+          "label": "Voltaje",
+          "value": "12/24 V"
+        },
+        {
+          "label": "Temperaturas",
+          "value": "40 °C, 75 °C y 90 °C"
+        },
+        {
+          "label": "Material",
+          "value": "Acero inoxidable 18/8, doble capa"
+        },
+        {
+          "label": "Aislación",
+          "value": "Vacío"
+        },
+        {
+          "label": "Bombilla",
+          "value": "Acero inoxidable integrada en la agarradera de silicona"
+        },
+        {
+          "label": "Tapa",
+          "value": "Mate térmica"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        },
+        {
+          "label": "Medidas",
+          "value": "27 × 9 × 9 cm (alto × ancho × profundidad)"
+        },
+        {
+          "label": "Origen",
+          "value": "China"
+        }
+      ],
+      "descriptionHtml": "<p>El termo eléctrico Peabody Onroad de 500 ml calienta agua para el mate desde el auto, el tractor o la lancha.</p><h3>Temperaturas</h3><p>Tres puntos de corte: 40 °C para leche, 75 °C para mate y 90 °C para café e infusiones. Tiene indicador luminoso de temperatura.</p><h3>Termo y bombilla</h3><p>Doble capa de acero inoxidable con aislación de vacío. La tapa mate térmica mantiene el agua caliente y la bombilla no se tapa.</p><h3>Calentamiento</h3><p>Desde agua a 25 °C, llega a 75 °C en unos 25 minutos, según el fabricante.</p><h3>Conexión</h3><p>Cable de alimentación extraíble con toma de 12/24 V.</p>",
+      "revisar": [
+        "La fuente no menciona garantía: confirmar si corresponde 'garantía oficial' en la ficha."
+      ]
+    },
+    {
+      "slug": "etermo-termo-electrico-auto-peabody-onroad-500ml-silver",
+      "name": "Termo Eléctrico Auto Peabody Onroad 500 ml Silver",
+      "brand": "Peabody",
+      "model": "PE-ETL500S",
+      "seoTitle": "Termo Eléctrico Peabody Onroad 500 ml",
+      "seoDescription": "Termo eléctrico para auto Peabody Onroad de 500 ml en color silver, de 12/24 V, con 3 temperaturas y doble capa de acero inoxidable. Envíos a todo el país.",
+      "shortDescription": "Termo eléctrico para auto Peabody Onroad de 500 ml en color silver, con 3 temperaturas (40 °C, 75 °C y 90 °C) y conexión de 12/24 V.",
+      "highlights": [
+        "3 temperaturas: 40 °C, 75 °C y 90 °C",
+        "Doble capa de acero inoxidable con aislación de vacío",
+        "Conexión de 12/24 V para auto, tractor o lancha",
+        "Tapa mate térmica y bombilla integrada",
+        "Pico cebador con cierre antigoteo"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "500 ml"
+        },
+        {
+          "label": "Potencia",
+          "value": "95 W"
+        },
+        {
+          "label": "Voltaje",
+          "value": "12/24 V"
+        },
+        {
+          "label": "Temperaturas",
+          "value": "40 °C, 75 °C y 90 °C"
+        },
+        {
+          "label": "Material",
+          "value": "Acero inoxidable 18/8, doble capa"
+        },
+        {
+          "label": "Aislación",
+          "value": "Vacío"
+        },
+        {
+          "label": "Bombilla",
+          "value": "Acero inoxidable integrada en la agarradera de silicona"
+        },
+        {
+          "label": "Tapa",
+          "value": "Mate térmica"
+        },
+        {
+          "label": "Color",
+          "value": "Silver"
+        },
+        {
+          "label": "Medidas",
+          "value": "27 × 9 × 9 cm (alto × ancho × profundidad)"
+        },
+        {
+          "label": "Origen",
+          "value": "China"
+        }
+      ],
+      "descriptionHtml": "<p>El termo eléctrico Peabody Onroad de 500 ml calienta agua para el mate desde el auto, el tractor o la lancha.</p><h3>Temperaturas</h3><p>Tres puntos de corte: 40 °C para leche, 75 °C para mate y 90 °C para café e infusiones. Tiene indicador luminoso de temperatura.</p><h3>Termo y bombilla</h3><p>Doble capa de acero inoxidable con aislación de vacío. La tapa mate térmica mantiene el agua caliente y la bombilla no se tapa.</p><h3>Calentamiento</h3><p>Desde agua a 25 °C, llega a 75 °C en unos 25 minutos, según el fabricante.</p><h3>Conexión</h3><p>Cable de alimentación extraíble con toma de 12/24 V.</p>",
+      "revisar": [
+        "La fuente no menciona garantía: confirmar si corresponde 'garantía oficial' en la ficha."
+      ]
+    },
+    {
+      "slug": "etermo-termo-electrico-peabody-1lt-celeste",
+      "name": "Termo Eléctrico Peabody 1 L Celeste",
+      "brand": "Peabody",
+      "model": "PE-ET1000C",
+      "seoTitle": "Termo Eléctrico Peabody 1 L Celeste",
+      "seoDescription": "Termo eléctrico Peabody de 1 litro celeste, todo en uno: calentador de 700 W, bombilla de acero inoxidable y cable extraíble. Envíos a todo el país.",
+      "shortDescription": "Termo eléctrico Peabody celeste de 1 litro, todo en uno: calentador, bombilla de acero inoxidable y tapa mate térmica. Potencia de 700 W.",
+      "highlights": [
+        "Todo en uno: termo, calentador y bombilla",
+        "2 temperaturas: mate (75 °C) y alta (94 °C)",
+        "Listo para mate en 6 minutos",
+        "Alarma sonora al llegar a la temperatura",
+        "Protección por falta de agua y por sobrecalentamiento"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "1 litro"
+        },
+        {
+          "label": "Potencia",
+          "value": "700 W"
+        },
+        {
+          "label": "Temperaturas",
+          "value": "Mate (75 °C) y alta (94 °C)"
+        },
+        {
+          "label": "Calentamiento",
+          "value": "6 minutos hasta temperatura mate"
+        },
+        {
+          "label": "Material",
+          "value": "Acero inoxidable"
+        },
+        {
+          "label": "Luz indicadora",
+          "value": "Azul en espera, verde en modo mate, rojo en alta temperatura"
+        },
+        {
+          "label": "Accesorios",
+          "value": "Bombilla, tapa de bombilla y cable de alimentación extraíble"
+        },
+        {
+          "label": "Color",
+          "value": "Celeste"
+        },
+        {
+          "label": "Medidas",
+          "value": "33 × 12 × 12 cm (alto × ancho × profundidad)"
+        }
+      ],
+      "descriptionHtml": "<p>El termo eléctrico Peabody de 1 litro es todo en uno: termo, calentador, bombilla de acero inoxidable y tapa mate térmica.</p><h3>Temperaturas</h3><p>Dos modos: mate, con corte a 75 °C, y alta temperatura, con corte a 94 °C. Una luz indica el estado: azul en espera, verde en modo mate y rojo en alta temperatura.</p><h3>Protecciones</h3><ul><li>Protección por falta de agua.</li><li>Triple protección electrónica contra sobrecalentamiento.</li><li>Alarma sonora al llegar a la temperatura.</li></ul><h3>Accesorios</h3><p>Trae bombilla, tapa de bombilla y cable de alimentación extraíble. El tapón cebador tiene cierre antigoteo.</p>",
+      "revisar": [
+        "La ficha corta incluye 'contado 10% descuento': no se publicó, porque precios y promociones no van en la ficha.",
+        "La garantía de 12 meses de la descripción original no se publicó (regla de la tienda)."
+      ]
+    }
+  ]
+}

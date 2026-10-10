@@ -1,0 +1,3301 @@
+{
+ "lote": "limpieza-5",
+ "soloSinCurar": true,
+ "nota": "Limpieza automática sin redactar: nombre, marca, título y descripción para Google.",
+ "productos": [
+  {
+   "slug": "sierra-circular-daihatsu-1250w-185mm",
+   "seoTitle": "Sierra Circular Daihatsu 1250W 185mm",
+   "seoDescription": "Sierra circular con láser de 1250W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-10-18-f-2-8-c-canon-2",
+   "name": "Sigma 10-18 F/2.8 C Canon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 10-18 F/2.8 C Canon",
+   "seoDescription": "Objetivo ultra gran angular Sigma 10-18mm f/2.8 para Canon EF-M. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-10-18-f2-8-dc-dn-contemp-sony-2",
+   "name": "Sigma 10-18 f2.8 DC DN Contemp Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 10-18 f2.8 DC DN Contemp Sony",
+   "seoDescription": "Objetivo Sigma 10-18mm f/2.8 DC DN Contemporary para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-10-18-f2-8-dc-dn-contemp-sony-usado-2",
+   "brand": "Sigma",
+   "seoTitle": "SIGMA 10-18 f2.8 DC DN CONTEMP SONY (usado)",
+   "seoDescription": "Objetivo Sigma 10-18mm f2.8 DC DN Contemporary usado para Sony E-mount. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-10-20-f-3-5-ex-dc-hsm-eld-sld-canon",
+   "brand": "Sigma",
+   "seoTitle": "SIGMA 10-20 F/3.5 ex dc hsm eld sld CANON",
+   "seoDescription": "Objetivo Sigma 10-20mm f/3.5 ultra gran angular para Canon APS-C. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-100-400-f5-6-3-dg-hsm-contem-sony",
+   "name": "Sigma 100-400 f5-6.3 DG HSM Contem Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 100-400 f5-6.3 DG HSM Contem Sony",
+   "seoDescription": "Teleobjetivo zoom SIGMA 100-400mm f/5-6.3 DG DN OS Contemporary para Sony E-mount. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-105mm-f2-8-dg-dn-art-maco-sony-2",
+   "name": "Sigma 105MM F2.8 DG DN ART Maco Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 105MM F2.8 DG DN ART Maco Sony",
+   "seoDescription": "Objetivo macro SIGMA 105MM F2.8 DG DN ART para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-12-24-f4-hsm-art-canon",
+   "name": "Sigma 12-24 f4 HSM ART Canon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 12-24 f4 HSM ART Canon",
+   "seoDescription": "Objetivo ultra gran angular SIGMA 12-24mm f/4 DG HSM Art para Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-12-24mm-f-4-dg-hsm-art-nikon",
+   "name": "Sigma 12-24mm f/4 DG HSM ART Nikon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 12-24mm f/4 DG HSM ART Nikon",
+   "seoDescription": "Objetivo Sigma 12-24mm f/4 DG HSM Art para Nikon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-12mm-f1-4-contemporary-canon-rf",
+   "name": "Sigma 12MM F1.4 Contemporary Canon RF",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 12MM F1.4 Contemporary Canon RF",
+   "seoDescription": "Objetivo ultra gran angular SIGMA 12mm f/1.4 Contemporary para Canon RF. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-12mm-f1-4-dc-dn-contem-sony-2",
+   "name": "Sigma 12MM F1.4 DC DN Contem Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 12MM F1.4 DC DN Contem Sony",
+   "seoDescription": "Objetivo Sigma 12mm f/1.4 ultra gran angular para Sony E-mount. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-14-24-f2-8-dg-hsm-canon",
+   "name": "Sigma 14-24 f2.8 DG HSM Canon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 14-24 f2.8 DG HSM Canon",
+   "seoDescription": "Objetivo ultra gran angular SIGMA 14-24mm f/2.8 para Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-150-600-f5-6-3-dg-dn-os-sport-sony-2",
+   "name": "Sigma 150-600 f5-6.3 DG DN OS Sport Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 150-600 f5-6.3 DG DN OS Sport Sony",
+   "seoDescription": "Teleobjetivo Sigma 150-600mm f/5-6.3 DG DN OS Sport para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-150-600-f5-6-3-dg-os-hsm-contempo-nikon",
+   "name": "Sigma 150-600 F5-6.3 DG OS HSM Contempo Nikon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 150-600 F5-6.3 DG OS HSM Contempo Nikon",
+   "seoDescription": "Teleobjetivo SIGMA 150-600mm para Nikon con estabilización óptica, enfoque silencioso HSM y construcción Contemporary. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-150-600-f5-6-3-dg-os-hsm-sport-nikon",
+   "name": "Sigma 150-600 F5-6.3 DG OS HSM Sport Nikon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 150-600 F5-6.3 DG OS HSM Sport Nikon",
+   "seoDescription": "Teleobjetivo Sigma 150-600mm F5-6.3 DG OS HSM Sport para Nikon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-16-28-f2-8-dg-contemp-2",
+   "name": "Sigma 16-28 F2.8 DG Contemp",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 16-28 F2.8 DG Contemp",
+   "seoDescription": "Objetivo gran angular Sigma 16-28mm f/2.8 DG DN Contemporary. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-16-300-contemporary-canon",
+   "name": "Sigma 16-300 Contemporary Canon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 16-300 Contemporary Canon",
+   "seoDescription": "Objetivo SIGMA 16-300mm Contemporary para Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-16-300-f-3-5-6-7-contemporary-sony-2",
+   "name": "Sigma 16-300 F/3.5-6.7 Contemporary Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 16-300 F/3.5-6.7 Contemporary Sony",
+   "seoDescription": "Objetivo Sigma 16-300mm f/3.5-6.7 Contemporary para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-16mm-f1-4-contemporary-dc-dn-canon-ef-m-mount",
+   "name": "Sigma 16MM F1.4 Contemporary DC DN Canon Ef-m Mount",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 16MM F1.4 Contemporary DC DN Canon Ef-m",
+   "seoDescription": "Objetivo SIGMA 16mm f/1.4 DC DN Contemporary para Canon EF-M. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-16mm-f1-4-dc-dn-contem-sony-2",
+   "name": "Sigma 16MM F1.4 DC DN Contem Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 16MM F1.4 DC DN Contem Sony",
+   "seoDescription": "Objetivo Sigma 16mm f/1.4 DC DN Contemporary para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-17-40-1-8-art-canon-aps-c",
+   "name": "Sigma 17-40 1.8 ART Canon Aps-c",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 17-40 1.8 ART Canon Aps-c",
+   "seoDescription": "Objetivo Sigma 17-40mm f/1.8 Art para Canon APS-C. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-17mm-f-4-dg-dn-contem-sony",
+   "name": "Sigma 17MM F/4 DG DN Contem Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 17MM F/4 DG DN Contem Sony",
+   "seoDescription": "Objetivo gran angular Sigma 17mm f/4 DG DN Contemporary para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-18-35m-f-1-8-hsm-canon",
+   "name": "Sigma 18-35M F/1.8 HSM Canon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 18-35M F/1.8 HSM Canon",
+   "seoDescription": "Objetivo Sigma 18-35mm f/1.8 DC HSM para Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-18-35mm-f-1-8-hsm-nikon",
+   "name": "Sigma 18-35mm F/1.8 HSM Nikon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 18-35mm F/1.8 HSM Nikon",
+   "seoDescription": "Objetivo SIGMA 18-35mm F/1.8 HSM para Nikon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-18-50m-f-2-8-contemporary-canon-rf",
+   "name": "Sigma 18-50M F/2.8 Contemporary Canon RF",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 18-50M F/2.8 Contemporary Canon RF",
+   "seoDescription": "Sigma 18-50M F/2.8 Contemporary Canon RF. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-20-2000-f3-5-6-3-contemporary-e-sony-2",
+   "name": "Sigma 20-2000 f3.5-6.3 Contemporary E Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 20-2000 f3.5-6.3 Contemporary E Sony",
+   "seoDescription": "Objetivo SIGMA 20-2000mm f3.5-6.3 CONTEMPORARY para Sony E-mount. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-20mm-f1-4-art-sony",
+   "name": "Sigma 20MM F1.4 ART Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 20MM F1.4 ART Sony",
+   "seoDescription": "Objetivo gran angular SIGMA 20mm f/1.4 Art para Sony E-mount. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-24-35-f2-dg-hsm-art-canon-ef",
+   "name": "Sigma 24-35 f2 DG HSM ART Canon EF",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 24-35 f2 DG HSM ART Canon EF",
+   "seoDescription": "Objetivo zoom SIGMA 24-35mm f/2 Art para Canon EF. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-24-70-f2-8-dg-dn-ii-art-sony-2",
+   "name": "Sigma 24-70 f2.8 DG DN II ART Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 24-70 f2.8 DG DN II ART Sony",
+   "seoDescription": "Objetivo SIGMA 24-70mm f/2.8 DG DN II ART para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-24-70-f2-8-dg-hsm-art-nikon",
+   "name": "Sigma 24-70 f2.8 DG HSM ART Nikon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 24-70 f2.8 DG HSM ART Nikon",
+   "seoDescription": "Objetivo zoom profesional SIGMA 24-70mm f/2.8 Art para Nikon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-24mm-f1-4-art-sony",
+   "name": "Sigma 24MM F1.4 ART Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 24MM F1.4 ART Sony",
+   "seoDescription": "Objetivo gran angular Sigma 24mm f/1.4 Art para Sony E-mount. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-28-105-f2-8-dg-dn-art-sony",
+   "name": "Sigma 28-105 f2.8 DG DN ART Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 28-105 f2.8 DG DN ART Sony",
+   "seoDescription": "Objetivo SIGMA 28-105mm f/2.8 DG DN ART para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-28-45-f1-8-dg-dn-art-sony-2",
+   "name": "Sigma 28-45 f1.8 DG DN ART Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 28-45 f1.8 DG DN ART Sony",
+   "seoDescription": "Objetivo SIGMA 28-45mm f/1.8 DG DN ART para Sony E-mount. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-28-70-f2-8-dg-dn-contemporary-sony-2",
+   "name": "Sigma 28-70 f2.8 DG DN Contemporary Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 28-70 f2.8 DG DN Contemporary Sony",
+   "seoDescription": "Lente zoom SIGMA 28-70mm f/2.8 DG DN Contemporary para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-28-f1-4-art-dg-hsm-nikon-2",
+   "name": "Sigma 28 F1.4 ART DG HSM Nikon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 28 F1.4 ART DG HSM Nikon",
+   "seoDescription": "Objetivo Sigma 28mm f/1.4 Art para Nikon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-28mm-f1-4-dg-hsm-art-sony",
+   "name": "Sigma 28MM F1.4 DG HSM ART Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 28MM F1.4 DG HSM ART Sony",
+   "seoDescription": "Objetivo Sigma 28mm f/1.4 Art para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-30-f1-4-dc-dn-contemp-sony",
+   "name": "Sigma 30 F1.4 DC DN Contemp Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 30 F1.4 DC DN Contemp Sony",
+   "seoDescription": "Objetivo Sigma 30mm f/1.4 DC DN Contemporary para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-30-f1-4-dc-dn-hsm-nikon-z-2",
+   "name": "Sigma 30 F1.4 DC DN HSM Nikon Z",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 30 F1.4 DC DN HSM Nikon Z",
+   "seoDescription": "Lente SIGMA 30mm F1.4 DC DN HSM montura Nikon Z. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-30mm-f1-4-dc-hsm-art-canon-m",
+   "name": "Sigma 30MM F1.4 DC HSM ART Canon M",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 30MM F1.4 DC HSM ART Canon M",
+   "seoDescription": "Lente Sigma 30mm f1.4 DC HSM Art para Canon M. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-35-f1-4-art-dg-hsm-nikon-2",
+   "name": "Sigma 35 F1.4 ART DG HSM Nikon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 35 F1.4 ART DG HSM Nikon",
+   "seoDescription": "Objetivo Sigma 35mm f/1.4 Art DG HSM para Nikon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-35-f1-4-dg-dn-art-sony",
+   "name": "Sigma 35 F1.4 DG DN ART Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 35 F1.4 DG DN ART Sony",
+   "seoDescription": "Objetivo Sigma 35mm f/1.4 DG DN Art para Sony E. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-35mm-f1-4-dg-art-hsm-canon",
+   "name": "Sigma 35MM F1.4 DG ART HSM Canon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 35MM F1.4 DG ART HSM Canon",
+   "seoDescription": "Objetivo SIGMA 35mm f/1.4 DG Art HSM para Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-50-100mm-f-1-8-hsm-dc-art-canon",
+   "name": "Sigma 50-100MM f/1.8 HSM DC ART Canon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 50-100MM f/1.8 HSM DC ART Canon",
+   "seoDescription": "Objetivo zoom SIGMA 50-100mm f/1.8 HSM DC ART para Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-50-f1-4-art-dg-hsm-nikon-2",
+   "name": "Sigma 50 F1.4 ART DG HSM Nikon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 50 F1.4 ART DG HSM Nikon",
+   "seoDescription": "Objetivo Sigma 50mm f/1.4 Art DG HSM para Nikon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-50mm-f1-4-dc-hsm-art-canon-2",
+   "name": "Sigma 50MM F1.4 DC HSM ART Canon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 50MM F1.4 DC HSM ART Canon",
+   "seoDescription": "Objetivo Sigma 50mm f/1.4 DC HSM Art para Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-50mm-f1-4-dg-dn-art-sony",
+   "name": "Sigma 50MM F1.4 DG DN ART Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 50MM F1.4 DG DN ART Sony",
+   "seoDescription": "Lente Sigma 50mm f/1.4 DG DN Art para Sony mirrorless. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-56-f1-4-dc-dn-contemporary-nikon-z-2",
+   "name": "Sigma 56 F1.4 DC DN Contemporary Nikon Z",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 56 F1.4 DC DN Contemporary Nikon Z",
+   "seoDescription": "Lente SIGMA 56mm F1.4 DC DN Contemporary para Nikon Z. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-56mm-f1-4-dc-dn-contemp-canon",
+   "name": "Sigma 56MM F1.4 DC DN Contemp Canon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 56MM F1.4 DC DN Contemp Canon",
+   "seoDescription": "Objetivo Sigma 56mm f/1.4 DC DN Contemporary para Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-56mm-f1-4-dg-dn-sony",
+   "name": "Sigma 56MM F1.4 DG DN Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 56MM F1.4 DG DN Sony",
+   "seoDescription": "Objetivo Sigma 56mm f/1.4 DG DN para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-60-600-45-6-3-dg-hsm-sport-sony",
+   "name": "Sigma 60-600 4,5-6.3 DG HSM Sport Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 60-600 4,5-6.3 DG HSM Sport Sony",
+   "seoDescription": "Teleobjetivo SIGMA 60-600mm f/4.5-6.3 DG HSM Sport para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-70-200-f2-8-dg-dn-os-sports-sony",
+   "name": "Sigma 70-200 f2.8 DG DN OS Sports Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 70-200 f2.8 DG DN OS Sports Sony",
+   "seoDescription": "Teleobjetivo profesional Sigma 70-200mm f/2.8 para Sony con estabilización óptica, construcción resistente y calidad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-70-200-f2-8-dg-os-hsm-sport-nikon",
+   "name": "Sigma 70-200 F2.8 DG OS HSM Sport Nikon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 70-200 F2.8 DG OS HSM Sport Nikon",
+   "seoDescription": "Teleobjetivo profesional SIGMA 70-200mm F2.8 con estabilización óptica, enfoque rápido HSM y construcción resistente… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-70mm-f2-8-dg-macro-art",
+   "name": "Sigma 70MM F2.8 DG Macro ART",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 70MM F2.8 DG Macro ART",
+   "seoDescription": "Objetivo macro profesional Sigma 70mm f/2.8 DG Macro Art. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-70mm-f2-8-dg-macro-art-canon-2",
+   "name": "Sigma 70MM F2.8 DG Macro ART Canon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 70MM F2.8 DG Macro ART Canon",
+   "seoDescription": "Objetivo macro SIGMA 70mm f/2.8 DG Art para Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-85-f1-4-ex-dg-nikon",
+   "name": "Sigma 85 F1.4 EX DG Nikon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 85 F1.4 EX DG Nikon",
+   "seoDescription": "Objetivo Sigma 85mm f/1.4 EX DG para Nikon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-85mm-f1-4-dg-dn-art-sony-2",
+   "name": "Sigma 85MM F1.4 DG DN ART Sony",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 85MM F1.4 DG DN ART Sony",
+   "seoDescription": "Objetivo Sigma 85mm f/1.4 DG DN Art para Sony E-mount. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-85mm-f1-4-dg-hsm-art-ef-canon-2",
+   "name": "Sigma 85MM F1.4 DG HSM ART EF Canon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 85MM F1.4 DG HSM ART EF Canon",
+   "seoDescription": "Objetivo SIGMA 85MM F1.4 DG HSM ART para Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sigma-85mm-f1-4-ex-dg-af-canon-2",
+   "name": "Sigma 85MM F1.4 EX DG AF Canon",
+   "brand": "Sigma",
+   "seoTitle": "Sigma 85MM F1.4 EX DG AF Canon",
+   "seoDescription": "Objetivo Sigma 85mm f1.4 para Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "silla-gamer-xtrike-me-gc-803-roja",
+   "seoTitle": "Silla Gamer Xtrike Me GC-803 Roja",
+   "seoDescription": "Diseño Ergonómico Soporta 150Kg. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sistema-de-videoconferencia-camara-motorizada-y-audio-microprocesado",
+   "seoTitle": "Sistema de Videoconferencia Puas Cámara",
+   "seoDescription": "Sistema de Videoconferencia Puas Cámara Motorizada y Audio Microprocesado. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sistema-wi-fi-mesh-e4-ac1200-2-pack-copia",
+   "seoTitle": "Sistema Wi-Fi Mesh Tp-Link Deco E4 AC1200",
+   "seoDescription": "Sistema Wi-Fi Mesh TP-Link Deco E4 AC1200 Doble Banda Chau a las zonas sin señal. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sistema-wi-fi-mesh-tp-link-deco-e4-ac1200-3-pack",
+   "seoTitle": "Sistema Wi-Fi Mesh Tp-Link Deco E4 AC1200",
+   "seoDescription": "Sistema Wi-Fi Mesh TP-Link Deco E4 AC1200 Doble Banda Chau a las zonas sin señal. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "smart-tv-bgh-32-hd",
+   "brand": "BGH",
+   "seoTitle": "Smart TV LED BGH 32″ HD",
+   "seoDescription": "Cuenta con wi-fi y puerto de red. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "smart-tv-bgh-43-full-hd",
+   "brand": "BGH",
+   "seoTitle": "Smart TV LED BGH 43″ Full HD",
+   "seoDescription": "Smart TV LED BGH 43″ Full HD. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Smart TV LED BGH 43″ Full HD. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "smart-tv-quint-32-hd-google-tv",
+   "seoTitle": "Smart Tv Qüint 32″ HD Google Tv",
+   "seoDescription": "Smart Tv Qüint 32″ HD Google Tv. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Smart Tv Qüint 32″ HD Google Tv. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "smartwatch-dekkin-air",
+   "brand": "Dekkin",
+   "seoTitle": "Smartwatch Dekkin Air",
+   "seoDescription": "Smartwatch Dekkin Air. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr3-4gb-hiksemi-1600mhz",
+   "name": "SODIMM DDR3 4GB Hiksemi 1600MHZ",
+   "brand": "Hiksemi",
+   "seoTitle": "SODIMM DDR3 4GB Hiksemi 1600MHZ",
+   "seoDescription": "Memoria RAM SODIMM DDR3 4GB HIKSEMI 1600MHz para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr4-16gb-adata-3200mhz-2",
+   "name": "SODIMM DDR4 16GB Adata 3200MHZ",
+   "brand": "Adata",
+   "seoTitle": "SODIMM DDR4 16GB Adata 3200MHZ",
+   "seoDescription": "SODIMM DDR4 16GB Adata 3200MHZ. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SODIMM DDR4 16GB Adata 3200MHZ. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "sodimm-ddr4-16gb-hiksemi-3200mhz-2",
+   "name": "SODIMM DDR4 16GB Hiksemi 3200MHZ",
+   "brand": "Hiksemi",
+   "seoTitle": "SODIMM DDR4 16GB Hiksemi 3200MHZ",
+   "seoDescription": "SODIMM DDR4 16GB Hiksemi 3200MHZ. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SODIMM DDR4 16GB Hiksemi 3200MHZ. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "sodimm-ddr4-16gb-kingston-3200-cl19-kcp-2",
+   "name": "SODIMM DDR4 16GB Kingston 3200 CL19 KCP",
+   "brand": "Kingston",
+   "seoTitle": "SODIMM DDR4 16GB Kingston 3200 CL19 KCP",
+   "seoDescription": "SODIMM DDR4 16GB Kingston 3200 CL19 KCP. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SODIMM DDR4 16GB Kingston 3200 CL19 KCP. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "sodimm-ddr4-16gb-kingston-3200mhz-cl22-kvr-3",
+   "name": "SODIMM DDR4 16GB Kingston 3200MHZ CL22 KVR",
+   "brand": "Kingston",
+   "seoTitle": "SODIMM DDR4 16GB Kingston 3200MHZ CL22 KVR",
+   "seoDescription": "Memoria RAM SODIMM DDR4 Kingston 16GB 3200MHz CL22 para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr4-16gb-memox-3200mhz",
+   "name": "SODIMM DDR4 16GB Memox 3200MHZ",
+   "brand": "Memox",
+   "seoTitle": "SODIMM DDR4 16GB Memox 3200MHZ",
+   "seoDescription": "SODIMM DDR4 16GB Memox 3200MHZ. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SODIMM DDR4 16GB Memox 3200MHZ. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "sodimm-ddr4-32gb-adata-3200mhz",
+   "name": "SODIMM DDR4 32GB Adata 3200MHZ",
+   "brand": "Adata",
+   "seoTitle": "SODIMM DDR4 32GB Adata 3200MHZ",
+   "seoDescription": "Memoria RAM SODIMM DDR4 32GB ADATA 3200MHz para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr4-32gb-hiksemi-3200mhz",
+   "name": "SODIMM DDR4 32GB Hiksemi 3200MHZ",
+   "brand": "Hiksemi",
+   "seoTitle": "SODIMM DDR4 32GB Hiksemi 3200MHZ",
+   "seoDescription": "Memoria RAM SODIMM DDR4 32GB HIKSEMI 3200MHz para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr4-32gb-kingston-3200-kcp",
+   "name": "SODIMM DDR4 32GB Kingston 3200 KCP",
+   "brand": "Kingston",
+   "seoTitle": "SODIMM DDR4 32GB Kingston 3200 KCP",
+   "seoDescription": "Memoria RAM SODIMM DDR4 32GB Kingston 3200MHz KCP. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr4-32gb-kingston-3200mhz-cl22-kvr",
+   "name": "SODIMM DDR4 32GB Kingston 3200MHZ CL22 KVR",
+   "brand": "Kingston",
+   "seoTitle": "SODIMM DDR4 32GB Kingston 3200MHZ CL22 KVR",
+   "seoDescription": "Memoria SODIMM DDR4 32GB Kingston 3200MHz CL22 para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr4-32gb-memox-3200mhz",
+   "name": "SODIMM DDR4 32GB Memox 3200MHZ",
+   "brand": "Memox",
+   "seoTitle": "SODIMM DDR4 32GB Memox 3200MHZ",
+   "seoDescription": "Memoria RAM SODIMM DDR4 32GB MEMOX 3200MHz para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr4-8gb-adata-3200mhz",
+   "name": "SODIMM DDR4 8GB Adata 3200MHZ",
+   "brand": "Adata",
+   "seoTitle": "SODIMM DDR4 8GB Adata 3200MHZ",
+   "seoDescription": "Memoria RAM SODIMM DDR4 8GB ADATA 3200MHZ para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr4-8gb-hiksemi-2666mhz",
+   "name": "SODIMM DDR4 8GB Hiksemi 2666MHZ",
+   "brand": "Hiksemi",
+   "seoTitle": "SODIMM DDR4 8GB Hiksemi 2666MHZ",
+   "seoDescription": "Memoria RAM SODIMM DDR4 8GB HIKSEMI 2666MHz ideal para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr4-8gb-hiksemi-3200mhz",
+   "name": "SODIMM DDR4 8GB Hiksemi 3200MHZ",
+   "brand": "Hiksemi",
+   "seoTitle": "SODIMM DDR4 8GB Hiksemi 3200MHZ",
+   "seoDescription": "Memoria RAM SODIMM DDR4 8GB HIKSEMI 3200MHz para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr4-8gb-kingston-3200-cl19-kcp",
+   "name": "SODIMM DDR4 8GB Kingston 3200 CL19 KCP",
+   "brand": "Kingston",
+   "seoTitle": "SODIMM DDR4 8GB Kingston 3200 CL19 KCP",
+   "seoDescription": "Memoria RAM SODIMM DDR4 8GB Kingston 3200MHz CL19 KCP para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr4-8gb-kingston-3200mhz-cl22",
+   "name": "SODIMM DDR4 8GB Kingston 3200MHZ CL22",
+   "brand": "Kingston",
+   "seoTitle": "SODIMM DDR4 8GB Kingston 3200MHZ CL22",
+   "seoDescription": "Memoria RAM SODIMM DDR4 Kingston 8GB 3200MHz CL22. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr4-8gb-kingston-3200mhz-cl22-kvr",
+   "name": "SODIMM DDR4 8GB Kingston 3200MHZ CL22 KVR",
+   "brand": "Kingston",
+   "seoTitle": "SODIMM DDR4 8GB Kingston 3200MHZ CL22 KVR",
+   "seoDescription": "Memoria RAM SODIMM DDR4 8GB Kingston 3200MHz CL22 para laptop y mini PC. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr4-8gb-lexar-3200mhz",
+   "name": "SODIMM DDR4 8GB Lexar 3200MHZ",
+   "brand": "Lexar",
+   "seoTitle": "SODIMM DDR4 8GB Lexar 3200MHZ",
+   "seoDescription": "Memoria RAM SODIMM DDR4 8GB Lexar 3200MHz para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr4-8gb-memox-3200mhz",
+   "name": "SODIMM DDR4 8GB Memox 3200MHZ",
+   "brand": "Memox",
+   "seoTitle": "SODIMM DDR4 8GB Memox 3200MHZ",
+   "seoDescription": "Memoria RAM SODIMM DDR4 8GB MEMOX 3200MHz para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr4-8gb-micron-2666mhz-bulk",
+   "name": "SODIMM DDR4 8GB Micron 2666MHZ (bulk)",
+   "seoTitle": "SODIMM DDR4 8GB Micron 2666MHZ (bulk)",
+   "seoDescription": "Memoria SODIMM DDR4 8GB Micron 2666MHz formato bulk. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr5-16gb-adata-5600mhz",
+   "name": "SODIMM DDR5 16GB Adata 5600MHZ",
+   "brand": "Adata",
+   "seoTitle": "SODIMM DDR5 16GB Adata 5600MHZ",
+   "seoDescription": "Memoria SODIMM DDR5 16GB ADATA 5600MHz para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr5-16gb-hiksemi-5600mhz",
+   "name": "SODIMM DDR5 16GB Hiksemi 5600MHZ",
+   "brand": "Hiksemi",
+   "seoTitle": "SODIMM DDR5 16GB Hiksemi 5600MHZ",
+   "seoDescription": "Memoria RAM SODIMM DDR5 16GB HIKSEMI 5600MHz para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr5-16gb-kingston-5600-kcp",
+   "name": "SODIMM DDR5 16GB Kingston 5600 KCP",
+   "brand": "Kingston",
+   "seoTitle": "SODIMM DDR5 16GB Kingston 5600 KCP",
+   "seoDescription": "SODIMM DDR5 16GB Kingston 5600 KCP. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SODIMM DDR5 16GB Kingston 5600 KCP. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "sodimm-ddr5-32gb-adata-5600mhz",
+   "name": "SODIMM DDR5 32GB Adata 5600MHZ",
+   "brand": "Adata",
+   "seoTitle": "SODIMM DDR5 32GB Adata 5600MHZ",
+   "seoDescription": "Memoria RAM SODIMM DDR5 32GB ADATA 5600MHz para laptops gaming y profesionales. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr5-32gb-kingston-5600-kcp",
+   "name": "SODIMM DDR5 32GB Kingston 5600 KCP",
+   "brand": "Kingston",
+   "seoTitle": "SODIMM DDR5 32GB Kingston 5600 KCP",
+   "seoDescription": "Memoria RAM SODIMM DDR5 32GB Kingston 5600MHz KCP. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr5-32gb-memox-5600mhz",
+   "name": "SODIMM DDR5 32GB Memox 5600MHZ",
+   "brand": "Memox",
+   "seoTitle": "SODIMM DDR5 32GB Memox 5600MHZ",
+   "seoDescription": "Memoria RAM SODIMM DDR5 32GB MEMOX 5600MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sodimm-ddr5-8gb-adata-5600mhz",
+   "name": "SODIMM DDR5 8GB Adata 5600MHZ",
+   "brand": "Adata",
+   "seoTitle": "SODIMM DDR5 8GB Adata 5600MHZ",
+   "seoDescription": "SODIMM DDR5 8GB Adata 5600MHZ. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SODIMM DDR5 8GB Adata 5600MHZ. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "sodimm-ddr5-8gb-hiksemi-5600mhz",
+   "name": "SODIMM DDR5 8GB Hiksemi 5600MHZ",
+   "brand": "Hiksemi",
+   "seoTitle": "SODIMM DDR5 8GB Hiksemi 5600MHZ",
+   "seoDescription": "SODIMM DDR5 8GB Hiksemi 5600MHZ. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SODIMM DDR5 8GB Hiksemi 5600MHZ. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "sodimm-ddr5-8gb-kingston-5600-kcp-3",
+   "name": "SODIMM DDR5 8GB Kingston 5600 KCP",
+   "brand": "Kingston",
+   "seoTitle": "SODIMM DDR5 8GB Kingston 5600 KCP",
+   "seoDescription": "Memoria RAM SODIMM DDR5 8GB Kingston 5600MHz KCP. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "soldadora-daihatsu-180a",
+   "seoTitle": "Soldadora Daihatsu 180A",
+   "seoDescription": "Soldadora de arco por electrodos de corriente alterna. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "soldadora-mig-daihatsu-180a",
+   "seoTitle": "Soldadora MIG Daihatsu 180A",
+   "seoDescription": "Soldadora de arco MIG de corriente alterna. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-7c-ii-body",
+   "brand": "Sony",
+   "seoTitle": "Sony Alpha 7C II Body",
+   "seoDescription": "Sony Alpha 7C II Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-7cr-body",
+   "seoTitle": "Sony Alpha A7CR Body",
+   "seoDescription": "Sony Alpha A7CR Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-a6400-kit-16-50mm",
+   "seoTitle": "Sony Alpha A6400 kit 16-50mm II",
+   "seoDescription": "Sony Alpha A6400 kit 16-50mm II. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-a6700-body",
+   "seoTitle": "Sony Alpha A6700 Body",
+   "seoDescription": "Sony Alpha A6700 Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-a6700-kit-16-50mm",
+   "seoTitle": "Sony Alpha A6700 Kit 16-50mm II",
+   "seoDescription": "Sony Alpha A6700 Kit 16-50mm II. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-a7-iii-28-70mm",
+   "seoTitle": "Sony Alpha A7 III Kit 28-70mm",
+   "seoDescription": "Sony Alpha A7 III Kit 28-70mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-a7-iii-body",
+   "seoTitle": "Sony Alpha A7 III Body",
+   "seoDescription": "Sony Alpha A7 III Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-a7-iv-body-2",
+   "seoTitle": "Sony Alpha A7 IV Body",
+   "seoDescription": "Formato FX Full Frame 35mm Sensor 33mp Procesador de imagen BIONZ XR Grabación de Video 4K en 60p. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-a7-iv-kit-28-70",
+   "seoTitle": "Sony Alpha A7 IV kit 28-70mm",
+   "seoDescription": "Formato FX Full Frame 35mm Sensor 33mp Procesador de imagen BIONZ XR Grabación de Video 4K en 60p. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-a7r-iii-mirrorless",
+   "seoTitle": "Sony Alpha A7R III Body",
+   "seoDescription": "Sony Alpha A7R III Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-a7r-iv-body",
+   "seoTitle": "Sony Alpha A7R IV Body",
+   "seoDescription": "Definición de imagen sin precedentes en formato Full-Frame. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-a7r-v-body",
+   "seoTitle": "Sony Alpha A7R V Body",
+   "seoDescription": "Sony Alpha A7R V Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-a7r-vi-body",
+   "seoTitle": "Sony Alpha A7R VI Body",
+   "seoDescription": "La cima absoluta de la resolución, la velocidad y la inteligencia artificial. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-zve10-ii-body-white",
+   "seoTitle": "Sony Alpha ZVE10 II Body White",
+   "seoDescription": "Sony Alpha ZVE10 II Body White. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-zve10-ii-kit-16-50mm",
+   "seoTitle": "Sony Alpha ZVE10 II kit 16-50mm",
+   "seoDescription": "Sony Alpha ZVE10 II kit 16-50mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-zve10-ii-kit-16-50mm-55-210mm",
+   "seoTitle": "Sony Alpha ZVE10 II kit 16-50mm + 55-210mm",
+   "seoDescription": "Sony Alpha ZVE10 II kit 16-50mm + 55-210mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-alpha-zve10-kit-16-50mm-55-210mm",
+   "seoTitle": "Sony Alpha ZVE10 kit 16-50mm + 55-210mm",
+   "seoDescription": "Sony Alpha ZVE10 kit 16-50mm + 55-210mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-dsc-rx100",
+   "brand": "Sony",
+   "seoTitle": "Sony DSC Rx100 VII",
+   "seoDescription": "Sony DSC Rx100 VII. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-e-70-350-f4-5-6-3-g-2",
+   "name": "Sony E 70-350 f4.5-6.3 G",
+   "brand": "Sony",
+   "seoTitle": "Sony E 70-350 f4.5-6.3 G",
+   "seoDescription": "Teleobjetivo Sony E 70-350mm f/4.5-6.3 G OSS con estabilización óptica, enfoque silencioso y construcción resistente… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-100-400-4-5-5-6-gm-2",
+   "name": "Sony FE 100-400 4.5-5.6 GM",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 100-400 4.5-5.6 GM",
+   "seoDescription": "Teleobjetivo Sony FE 100-400mm f/4.5-5.6 GM OSS con estabilización óptica, enfoque rápido y calidad G Master para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-16-35-2-8-gm-ii",
+   "name": "Sony FE 16-35 2.8 GM II",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 16-35 2.8 GM II",
+   "seoDescription": "Objetivo Sony FE 16-35mm f/2.8 GM II de apertura constante, diseño compacto y calidad G Master para fotografía… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-20-70-f4-gm",
+   "name": "Sony FE 20-70 F4 GM",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 20-70 F4 GM",
+   "seoDescription": "Objetivo zoom Sony FE 20-70mm f/4 G Master para cámaras full frame. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-200-600-f5-6-6-3-g-oss-2",
+   "name": "Sony FE 200-600 f5.6.6.3 G OSS",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 200-600 f5.6.6.3 G OSS",
+   "seoDescription": "Teleobjetivo Sony FE 200-600mm f/5.6-6.3 G OSS con estabilización óptica, ideal para fotografía de vida silvestre y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-24-105-f4-g-2",
+   "name": "Sony FE 24-105 F4 G",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 24-105 F4 G",
+   "seoDescription": "Objetivo zoom profesional Sony FE 24-105mm F4 G con estabilización óptica, ideal para fotografía versátil en cámaras… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-24-50-f2-8-g",
+   "name": "Sony FE 24-50 F2.8 G",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 24-50 F2.8 G",
+   "seoDescription": "Objetivo zoom compacto Sony FE 24-50mm f/2.8 G para cámaras full frame. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-24-70-2-8-gm-2",
+   "name": "Sony FE 24-70 2.8 GM",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 24-70 2.8 GM",
+   "seoDescription": "Objetivo zoom profesional Sony FE 24-70mm f/2.8 GM para cámaras full frame. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-24-70-2-8-gm-ii-lens-2",
+   "name": "Sony FE 24-70 2.8 GM II Lens",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 24-70 2.8 GM II Lens",
+   "seoDescription": "Objetivo Sony FE 24-70mm f/2.8 GM II profesional para cámaras full frame. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-24-70-f-4-za-oss-vario-tessar-2",
+   "name": "Sony FE 24-70 F/4 ZA OSS Vario Tessar",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 24-70 F/4 ZA OSS Vario Tessar",
+   "seoDescription": "Objetivo Sony FE 24-70mm f/4 con estabilización OSS y óptica Zeiss Vario-Tessar para cámaras mirrorless full frame… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-28-70-f-2-gm-2",
+   "name": "Sony FE 28-70 F 2 GM",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 28-70 F 2 GM",
+   "seoDescription": "Objetivo zoom profesional Sony FE 28-70mm F2 GM con apertura constante f/2, calidad G Master y compatibilidad full… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-28-70mm-f-3-5-5-6-lens-2",
+   "seoTitle": "Lente Sony FE 28-70mm f/3.5-5.6",
+   "seoDescription": "Objetivo Sony FE 28-70mm f/3.5-5.6 con montura E, ideal para fotografía versátil en cámaras mirrorless full frame… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-400-800-f6-3-8-g-oss-2",
+   "name": "Sony FE 400-800 f6.3-8 G OSS",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 400-800 f6.3-8 G OSS",
+   "seoDescription": "Teleobjetivo zoom Sony FE 400-800mm f/6.3-8 G OSS con estabilización óptica para fotografía deportiva y vida salvaje… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-50-150-f2-gm-2",
+   "name": "Sony FE 50-150 F2 GM",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 50-150 F2 GM",
+   "seoDescription": "Teleobjetivo zoom profesional Sony FE 50-150mm f/2.8 GM con óptica premium, enfoque rápido y construcción resistente… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-55-210-f4-5-6-3-caja-blanca-2",
+   "brand": "Sony",
+   "seoTitle": "SONY FE 55-210 f4.5-6.3 (caja blanca)",
+   "seoDescription": "Teleobjetivo Sony FE 55-210mm f/4.5-6.3 OSS con estabilización óptica, ideal para retratos y fotografía deportiva en… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-70-200-f2-8-gm-ii-2",
+   "name": "Sony FE 70-200 F2.8 GM II",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 70-200 F2.8 GM II",
+   "seoDescription": "Objetivo zoom profesional Sony FE 70-200mm f/2.8 GM II para cámaras mirrorless. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-70-200-f4-macro-g-oss-ii-2",
+   "name": "Sony FE 70-200 F4 Macro G OSS II",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 70-200 F4 Macro G OSS II",
+   "seoDescription": "Objetivo Sony FE 70-200mm f/4 con estabilización óptica, capacidad macro 0.5x y diseño G Series para cámaras… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-70-350-f4-5-6-3-g-oss-2",
+   "name": "Sony FE 70-350 F4.5-6.3 G OSS",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 70-350 F4.5-6.3 G OSS",
+   "seoDescription": "Teleobjetivo Sony FE 70-350mm con estabilización óptica, ideal para fotografía de naturaleza, deportes y retratos… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-fe-85mm-f-1-8",
+   "brand": "Sony",
+   "seoTitle": "Sony FE 85mm f/1.8",
+   "seoDescription": "Sony FE 85mm f/1.8. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-playstation-5-digital-825gb",
+   "seoTitle": "Sony Playstation 5 Digital 825gb",
+   "seoDescription": "PlayStation 5 Digital 825GB: experiencia gaming revolucionaria, carga ultrarrápida, gráficos 4K, audio 3D. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-playstation-5-pro-2tb",
+   "seoTitle": "Sony Playstation 5 Pro 2TB",
+   "seoDescription": "Sony PlayStation 5 Pro 2TB: máximo rendimiento gaming con 4K, ray tracing avanzado y almacenamiento ampliado para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-playstation-5-slim-1tb-lectora",
+   "seoTitle": "Sony Playstation 5 Slim 1TB Standard",
+   "seoDescription": "Nuevo modelo Slim 1TB Versión Standard (con lectora) Incluye 1 Joystick. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sony-pxw-z200",
+   "seoTitle": "Sony PXW-Z200",
+   "seoDescription": "Cámara profesional Sony PXW-Z200 con grabación 4K Ultra HD, zoom óptico 20x y conectividad avanzada para producción… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "soporte-celular-cargador-inalambrico-samsung-original",
+   "brand": "Samsung",
+   "seoTitle": "Soporte Celular Cargador Inalambrico Samsung",
+   "seoDescription": "Ideal para múltiples smartphones que admiten carga inalámbrica - ¡incluso los plegables! Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "soporte-de-escritorio-nakan-inclinable-10-a-26-monitores-spl-510f",
+   "brand": "Nakan",
+   "seoTitle": "Soporte de Escritorio Nakan Inclinable 10”",
+   "seoDescription": "Soporte de Escritorio Nakan Inclinable 10” A 26” Monitores SPL-510f. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "soporte-de-escritorio-nakan-spl-520e-para-monitores-de-10-a-26",
+   "brand": "Nakan",
+   "seoTitle": "Soporte de Escritorio Nakan SPL-520e de 10″",
+   "seoDescription": "Soporte de Escritorio Nakan SPL-520e de 10″ A 26″ Extensible para monitores. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "soporte-nakan-fijo-con-inclinacion-de-40-a-100",
+   "brand": "Nakan",
+   "seoTitle": "Soporte Nakan Fijo con inclinación de 40″",
+   "seoDescription": "Distancia a pared: 7cm. Nivel Burbuja + kit de fijación. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "soporte-nakan-spl-375-de-pared-para-tv-monitor-de-26-a-60-negro",
+   "brand": "Nakan",
+   "seoTitle": "Soporte Nakan SPL-375 de 26″ A 60″ Negro",
+   "seoDescription": "Soporta 1 pantalla. Inclinable y articulado. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "soporte-nakan-spl-780e-de-pared-para-tv-monitor-de-32-a-65-negro",
+   "brand": "Nakan",
+   "seoTitle": "Soporte Nakan SPL-780E de 32″ a 65″ Negro",
+   "seoDescription": "Soporte Nakan SPL-780E para TV/Monitor de 32″ a 65″, color negro, ideal para montaje en pared, con diseño robusto y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "soporte-tv-jahro-fijo-32-a-55",
+   "brand": "Jahro",
+   "seoTitle": "Soporte TV Jahro Fijo 32″ a 55″",
+   "seoDescription": "Vesa compatible 200×200, 300×300, 400×200, 400×400 Nivel TV 32″ a 55″ Soporta 40 Kg/88 Lbs Peso. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ssd-1tb-hiksemi-v300x-p-nvr-dvr",
+   "name": "SSD 1TB Hiksemi V300X P/Nvr-dvr",
+   "brand": "Hiksemi",
+   "seoTitle": "SSD 1TB Hiksemi V300X P/Nvr-dvr",
+   "seoDescription": "SSD HIKSEMI V300X 1TB NVMe, diseñado específicamente para sistemas NVR/DVR de videovigilancia. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ssd-1tb-kingston-kc600-sataiii-2-5",
+   "name": "SSD 1TB Kingston KC600 Sataiii 2.5",
+   "brand": "Kingston",
+   "seoTitle": "SSD 1TB Kingston KC600 Sataiii 2.5",
+   "seoDescription": "SSD 1TB Kingston KC600 Sataiii 2.5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD 1TB Kingston KC600 Sataiii 2.5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-1tb-memox-sata-2-5",
+   "name": "SSD 1TB Memox SATA 2.5",
+   "brand": "Memox",
+   "seoTitle": "SSD 1TB Memox SATA 2.5",
+   "seoDescription": "SSD 1TB Memox SATA 2.5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD 1TB Memox SATA 2.5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-1tb-wd-green-2-5-sata-545mb-s",
+   "name": "SSD 1TB Western Digital Green 2.5 SATA 545MB/S",
+   "brand": "Western Digital",
+   "seoTitle": "SSD 1TB Western Digital Green 2.5 SATA",
+   "seoDescription": "SSD 1TB Western Digital Green 2.5 SATA 545MB/S. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD 1TB Western Digital Green 2.5 SATA 545MB/S. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-240gb-adata-su630-blister",
+   "name": "SSD 240GB Adata SU630 Blister",
+   "brand": "Adata",
+   "seoTitle": "SSD 240GB Adata SU630 Blister",
+   "seoDescription": "SSD 240GB Adata SU630 Blister. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD 240GB Adata SU630 Blister. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-240gb-hiksemi-wave-s",
+   "name": "SSD 240GB Hiksemi Wave S",
+   "brand": "Hiksemi",
+   "seoTitle": "SSD 240GB Hiksemi Wave S",
+   "seoDescription": "SSD 240GB Hiksemi Wave S. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD 240GB Hiksemi Wave S. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-240gb-kingston-a400-sataiii-2-5",
+   "name": "SSD 240GB Kingston A400 Sataiii 2.5",
+   "brand": "Kingston",
+   "seoTitle": "SSD 240GB Kingston A400 Sataiii 2.5",
+   "seoDescription": "SSD Kingston A400 240GB SATA III 2.5 pulgadas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ssd-2tb-adata-su650ss-blister",
+   "name": "SSD 2TB Adata SU650SS Blister",
+   "brand": "Adata",
+   "seoTitle": "SSD 2TB Adata SU650SS Blister",
+   "seoDescription": "SSD 2TB Adata SU650SS Blister. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD 2TB Adata SU650SS Blister. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-2tb-hiksemi-v300x-p-nvr-dvr",
+   "name": "SSD 2TB Hiksemi V300X P/Nvr-dvr",
+   "brand": "Hiksemi",
+   "seoTitle": "SSD 2TB Hiksemi V300X P/Nvr-dvr",
+   "seoDescription": "SSD HIKSEMI V300X 2TB diseñado específicamente para sistemas NVR y DVR, garantizando almacenamiento confiable y alto… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ssd-2tb-kingston-kc600-sataiii-2-5",
+   "name": "SSD 2TB Kingston KC600 Sataiii 2.5",
+   "brand": "Kingston",
+   "seoTitle": "SSD 2TB Kingston KC600 Sataiii 2.5",
+   "seoDescription": "Disco sólido Kingston KC600 de 2TB con interfaz SATA III, formato 2.5 pulgadas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ssd-480gb-hiksemi-wave-s",
+   "name": "SSD 480GB Hiksemi Wave S",
+   "brand": "Hiksemi",
+   "seoTitle": "SSD 480GB Hiksemi Wave S",
+   "seoDescription": "SSD 480GB Hiksemi Wave S. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD 480GB Hiksemi Wave S. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-480gb-kingston-a400-sataiii-2-5-3",
+   "name": "SSD 480GB Kingston A400 Sataiii 2.5",
+   "brand": "Kingston",
+   "seoTitle": "SSD 480GB Kingston A400 Sataiii 2.5",
+   "seoDescription": "SSD Kingston A400 480GB SATA III 2.5 pulgadas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ssd-480gb-kingston-dc600-sataiii-2-5-p-server",
+   "name": "SSD 480GB Kingston DC600 Sataiii 2.5 P/Server",
+   "brand": "Kingston",
+   "seoTitle": "SSD 480GB Kingston DC600 Sataiii 2.5 P/Server",
+   "seoDescription": "SSD 480GB Kingston DC600 Sataiii 2.5 P/Server. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD 480GB Kingston DC600 Sataiii 2.5 P/Server. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-480gb-msi-spatium-s270-sata-6-0gb-s",
+   "name": "SSD 480GB MSI Spatium S270 SATA 6.0GB/S",
+   "brand": "MSI",
+   "seoTitle": "SSD 480GB MSI Spatium S270 SATA 6.0GB/S",
+   "seoDescription": "SSD 480GB MSI Spatium S270 SATA 6.0GB/S. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD 480GB MSI Spatium S270 SATA 6.0GB/S. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-480gb-wd-green-2-5-545mb-s",
+   "name": "SSD 480GB Western Digital Green 2.5 545MB/S",
+   "brand": "Western Digital",
+   "seoTitle": "SSD 480GB Western Digital Green 2.5 545MB/S",
+   "seoDescription": "SSD 480GB Western Digital Green 2.5 545MB/S. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD 480GB Western Digital Green 2.5 545MB/S. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-4tb-kingston-dc600-sataiii-2-5-p-server",
+   "name": "SSD 4TB Kingston DC600 Sataiii 2.5 P/Server",
+   "brand": "Kingston",
+   "seoTitle": "SSD 4TB Kingston DC600 Sataiii 2.5 P/Server",
+   "seoDescription": "SSD 4TB Kingston DC600 Sataiii 2.5 P/Server. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD 4TB Kingston DC600 Sataiii 2.5 P/Server. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-500gb-hiksemi-v300x-p-nvr-dvr",
+   "name": "SSD 500GB Hiksemi V300X P/Nvr-dvr",
+   "brand": "Hiksemi",
+   "seoTitle": "SSD 500GB Hiksemi V300X P/Nvr-dvr",
+   "seoDescription": "SSD HIKSEMI V300X 500GB diseñado específicamente para sistemas NVR/DVR, garantizando rendimiento óptimo en… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ssd-512gb-kingston-kc600-sataiii-2-5",
+   "name": "SSD 512GB Kingston KC600 Sataiii 2.5",
+   "brand": "Kingston",
+   "seoTitle": "SSD 512GB Kingston KC600 Sataiii 2.5",
+   "seoDescription": "SSD 512GB Kingston KC600 Sataiii 2.5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD 512GB Kingston KC600 Sataiii 2.5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-960gb-adata-su630-blister",
+   "name": "SSD 960GB Adata SU630 Blister",
+   "brand": "Adata",
+   "seoTitle": "SSD 960GB Adata SU630 Blister",
+   "seoDescription": "SSD 960GB Adata SU630 Blister. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD 960GB Adata SU630 Blister. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-960gb-hiksemi-wave-s",
+   "name": "SSD 960GB Hiksemi Wave S",
+   "brand": "Hiksemi",
+   "seoTitle": "SSD 960GB Hiksemi Wave S",
+   "seoDescription": "SSD 960GB Hiksemi Wave S. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD 960GB Hiksemi Wave S. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-960gb-kingston-a400-sataiii-2-5",
+   "name": "SSD 960GB Kingston A400 Sataiii 2.5",
+   "brand": "Kingston",
+   "seoTitle": "SSD 960GB Kingston A400 Sataiii 2.5",
+   "seoDescription": "SSD 960GB Kingston A400 Sataiii 2.5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD 960GB Kingston A400 Sataiii 2.5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-externo-1tb-adata-sc750",
+   "name": "SSD Externo 1TB Adata SC750",
+   "brand": "Adata",
+   "seoTitle": "SSD Externo 1TB Adata SC750",
+   "seoDescription": "SSD Externo 1TB Adata SC750. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD Externo 1TB Adata SC750. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-externo-1tb-hiksemi-shield-2",
+   "name": "SSD Externo 1TB Hiksemi Shield",
+   "brand": "Hiksemi",
+   "seoTitle": "SSD Externo 1TB Hiksemi Shield",
+   "seoDescription": "SSD Externo 1TB Hiksemi Shield. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD Externo 1TB Hiksemi Shield. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-externo-1tb-kingston-xs1000-2",
+   "name": "SSD Externo 1TB Kingston XS1000",
+   "brand": "Kingston",
+   "seoTitle": "SSD Externo 1TB Kingston XS1000",
+   "seoDescription": "SSD Externo 1TB Kingston XS1000. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD Externo 1TB Kingston XS1000. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-externo-2tb-hiksemi-shield",
+   "name": "SSD Externo 2TB Hiksemi Shield",
+   "brand": "Hiksemi",
+   "seoTitle": "SSD Externo 2TB Hiksemi Shield",
+   "seoDescription": "SSD Externo 2TB Hiksemi Shield. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD Externo 2TB Hiksemi Shield. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-externo-2tb-kingston-xs1000",
+   "name": "SSD Externo 2TB Kingston XS1000",
+   "brand": "Kingston",
+   "seoTitle": "SSD Externo 2TB Kingston XS1000",
+   "seoDescription": "SSD Externo 2TB Kingston XS1000. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD Externo 2TB Kingston XS1000. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-externo-m-2-nvme-480gb-usb-tipo-c",
+   "name": "SSD Externo M.2 NVME 480GB USB Tipo C",
+   "seoTitle": "SSD Externo M.2 NVME 480GB USB Tipo C",
+   "seoDescription": "SSD Externo M.2 NVME 480GB USB Tipo C. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD Externo M.2 NVME 480GB USB Tipo C. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-1tb-g3-adata-legend-710",
+   "name": "SSD M.2 NVME 1TB G3 Adata Legend 710",
+   "brand": "Adata",
+   "seoTitle": "SSD M.2 NVME 1TB G3 Adata Legend 710",
+   "seoDescription": "SSD M.2 NVME 1TB G3 Adata Legend 710. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 1TB G3 Adata Legend 710. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-1tb-g3-hiksemi-wave",
+   "name": "SSD M.2 NVME 1TB G3 Hiksemi Wave",
+   "brand": "Hiksemi",
+   "seoTitle": "SSD M.2 NVME 1TB G3 Hiksemi Wave",
+   "seoDescription": "SSD M.2 NVME 1TB G3 Hiksemi Wave. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 1TB G3 Hiksemi Wave. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-1tb-g3-wd-green-sn350-2",
+   "name": "SSD M.2 NVME 1TB G3 Western Digital Green SN350",
+   "brand": "Western Digital",
+   "seoTitle": "SSD M.2 NVME 1TB G3 Western Digital Green",
+   "seoDescription": "SSD M.2 NVMe de 1TB WD Green SN350, almacenamiento ultrarrápido y eficiente energéticamente para tu PC o laptop. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ssd-m-2-nvme-1tb-g4-kingston-fury",
+   "name": "SSD M.2 NVME 1TB G4 Kingston Fury",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 1TB G4 Kingston Fury",
+   "seoDescription": "SSD M.2 NVME 1TB G4 Kingston Fury. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 1TB G4 Kingston Fury. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-1tb-g4-kingston-fury-c-disipador",
+   "name": "SSD M.2 NVME 1TB G4 Kingston Fury C/Disipador",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 1TB G4 Kingston Fury C/Disipador",
+   "seoDescription": "SSD M.2 NVME 1TB G4 Kingston Fury C/Disipador. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 1TB G4 Kingston Fury C/Disipador. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-1tb-g4-kingston-kc3000",
+   "name": "SSD M.2 NVME 1TB G4 Kingston KC3000",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 1TB G4 Kingston KC3000",
+   "seoDescription": "SSD M.2 NVME 1TB G4 Kingston KC3000. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 1TB G4 Kingston KC3000. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-1tb-g4-kingston-nv3",
+   "name": "SSD M.2 NVME 1TB G4 Kingston NV3",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 1TB G4 Kingston NV3",
+   "seoDescription": "SSD M.2 NVME 1TB G4 Kingston NV3. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 1TB G4 Kingston NV3. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-1tb-g4-xpg-gammix-s70-blade",
+   "name": "SSD M.2 NVME 1TB G4 XPG Gammix S70 Blade",
+   "brand": "XPG",
+   "seoTitle": "SSD M.2 NVME 1TB G4 XPG Gammix S70 Blade",
+   "seoDescription": "SSD M.2 NVME 1TB G4 XPG Gammix S70 Blade. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 1TB G4 XPG Gammix S70 Blade. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-1tb-g5-kingston-fury-renegade",
+   "name": "SSD M.2 NVME 1TB G5 Kingston Fury Renegade",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 1TB G5 Kingston Fury Renegade",
+   "seoDescription": "SSD M.2 NVME 1TB G5 Kingston Fury Renegade. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 1TB G5 Kingston Fury Renegade. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-1tb-g5-xpg-mars-980-storm-water-cool",
+   "name": "SSD M.2 NVME 1TB G5 XPG Mars 980 Storm Water Cool",
+   "brand": "XPG",
+   "seoTitle": "SSD M.2 NVME 1TB G5 XPG Mars 980 Storm Water",
+   "seoDescription": "SSD M.2 NVME 1TB G5 XPG Mars 980 Storm Water Cool. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 1TB G5 XPG Mars 980 Storm Water Cool. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-250gb-g3-wd-green-sn350",
+   "name": "SSD M.2 NVME 250GB G3 Western Digital Green SN350",
+   "brand": "Western Digital",
+   "seoTitle": "SSD M.2 NVME 250GB G3 Western Digital Green",
+   "seoDescription": "SSD M.2 NVME 250GB G3 Western Digital Green SN350. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 250GB G3 Western Digital Green SN350. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-2tb-g3-adata-legend-710",
+   "name": "SSD M.2 NVME 2TB G3 Adata Legend 710",
+   "brand": "Adata",
+   "seoTitle": "SSD M.2 NVME 2TB G3 Adata Legend 710",
+   "seoDescription": "SSD M.2 NVME 2TB G3 Adata Legend 710. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 2TB G3 Adata Legend 710. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-2tb-g3-hiksemi-wave-pro-2",
+   "name": "SSD M.2 NVME 2TB G3 Hiksemi Wave PRO",
+   "brand": "Hiksemi",
+   "seoTitle": "SSD M.2 NVME 2TB G3 Hiksemi Wave PRO",
+   "seoDescription": "SSD M.2 NVME 2TB G3 Hiksemi Wave PRO. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 2TB G3 Hiksemi Wave PRO. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-2tb-g3-wd-green-sn350",
+   "name": "SSD M.2 NVME 2TB G3 Western Digital Green SN350",
+   "brand": "Western Digital",
+   "seoTitle": "SSD M.2 NVME 2TB G3 Western Digital Green",
+   "seoDescription": "SSD M.2 NVMe WD Green SN350 de 2TB, almacenamiento de alta velocidad PCIe Gen3 para gaming y productividad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ssd-m-2-nvme-2tb-g4-hiksemi-future-lite",
+   "name": "SSD M.2 NVME 2TB G4 Hiksemi Future Lite",
+   "brand": "Hiksemi",
+   "seoTitle": "SSD M.2 NVME 2TB G4 Hiksemi Future Lite",
+   "seoDescription": "SSD M.2 NVME 2TB G4 Hiksemi Future Lite. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 2TB G4 Hiksemi Future Lite. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-2tb-g4-hiksemi-future-x-lite",
+   "name": "SSD M.2 NVME 2TB G4 Hiksemi Future X Lite",
+   "brand": "Hiksemi",
+   "seoTitle": "SSD M.2 NVME 2TB G4 Hiksemi Future X Lite",
+   "seoDescription": "SSD M.2 NVME 2TB G4 Hiksemi Future X Lite. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 2TB G4 Hiksemi Future X Lite. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-2tb-g4-kingston-fury",
+   "name": "SSD M.2 NVME 2TB G4 Kingston Fury",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 2TB G4 Kingston Fury",
+   "seoDescription": "SSD M.2 NVME 2TB G4 Kingston Fury. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 2TB G4 Kingston Fury. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-2tb-g4-kingston-fury-c-disipador",
+   "name": "SSD M.2 NVME 2TB G4 Kingston Fury C/Disipador",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 2TB G4 Kingston Fury C/Disipador",
+   "seoDescription": "SSD M.2 NVME 2TB G4 Kingston Fury C/Disipador. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 2TB G4 Kingston Fury C/Disipador. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-2tb-g4-kingston-kc3000",
+   "name": "SSD M.2 NVME 2TB G4 Kingston KC3000",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 2TB G4 Kingston KC3000",
+   "seoDescription": "SSD M.2 NVME 2TB G4 Kingston KC3000. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 2TB G4 Kingston KC3000. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-2tb-g4-kingston-nv3",
+   "name": "SSD M.2 NVME 2TB G4 Kingston NV3",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 2TB G4 Kingston NV3",
+   "seoDescription": "SSD M.2 NVME 2TB G4 Kingston NV3. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 2TB G4 Kingston NV3. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-2tb-g4-wd-black-sn-7100",
+   "name": "SSD M.2 NVME 2TB G4 Western Digital Black SN 7100",
+   "brand": "Western Digital",
+   "seoTitle": "SSD M.2 NVME 2TB G4 Western Digital Black SN",
+   "seoDescription": "SSD M.2 NVME 2TB G4 Western Digital Black SN 7100. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 2TB G4 Western Digital Black SN 7100. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-2tb-g4-xpg-gammix-s70-blade",
+   "name": "SSD M.2 NVME 2TB G4 XPG Gammix S70 Blade",
+   "brand": "XPG",
+   "seoTitle": "SSD M.2 NVME 2TB G4 XPG Gammix S70 Blade",
+   "seoDescription": "SSD M.2 NVME 2TB G4 XPG Gammix S70 Blade. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 2TB G4 XPG Gammix S70 Blade. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-2tb-g5-kingston-fury-renegade",
+   "name": "SSD M.2 NVME 2TB G5 Kingston Fury Renegade",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 2TB G5 Kingston Fury Renegade",
+   "seoDescription": "SSD M.2 NVME 2TB G5 Kingston Fury Renegade. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 2TB G5 Kingston Fury Renegade. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-480gb-g4-kingston-dc2000b-2",
+   "name": "SSD M.2 NVME 480GB G4 Kingston DC2000B",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 480GB G4 Kingston DC2000B",
+   "seoDescription": "SSD M.2 NVME 480GB G4 Kingston DC2000B. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 480GB G4 Kingston DC2000B. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-4tb-g4-kingston-kc3000-2",
+   "name": "SSD M.2 NVME 4TB G4 Kingston KC3000",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 4TB G4 Kingston KC3000",
+   "seoDescription": "SSD M.2 NVME 4TB G4 Kingston KC3000. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 4TB G4 Kingston KC3000. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-4tb-g4-kingston-nv3-3",
+   "name": "SSD M.2 NVME 4TB G4 Kingston NV3",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 4TB G4 Kingston NV3",
+   "seoDescription": "SSD M.2 NVMe Kingston NV3 de 4TB con interfaz PCIe Gen 4, velocidades extremas y confiabilidad profesional para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ssd-m-2-nvme-500gb-g3-wd-green-sn350",
+   "name": "SSD M.2 NVME 500GB G3 Western Digital Green SN350",
+   "brand": "Western Digital",
+   "seoTitle": "SSD M.2 NVME 500GB G3 Western Digital Green",
+   "seoDescription": "SSD M.2 NVME 500GB G3 Western Digital Green SN350. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 500GB G3 Western Digital Green SN350. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-500gb-g4-kingston-nv3",
+   "name": "SSD M.2 NVME 500GB G4 Kingston NV3",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 500GB G4 Kingston NV3",
+   "seoDescription": "SSD M.2 NVME 500GB G4 Kingston NV3. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 500GB G4 Kingston NV3. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-512gb-g3-adata-legend-710",
+   "name": "SSD M.2 NVME 512GB G3 Adata Legend 710",
+   "brand": "Adata",
+   "seoTitle": "SSD M.2 NVME 512GB G3 Adata Legend 710",
+   "seoDescription": "SSD M.2 NVME 512GB G3 Adata Legend 710. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 512GB G3 Adata Legend 710. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-512gb-g3-memox",
+   "name": "SSD M.2 NVME 512GB G3 Memox",
+   "brand": "Memox",
+   "seoTitle": "SSD M.2 NVME 512GB G3 Memox",
+   "seoDescription": "SSD M.2 NVME 512GB G3 Memox. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 512GB G3 Memox. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-512gb-g4-kingston-kc3000",
+   "name": "SSD M.2 NVME 512GB G4 Kingston KC3000",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 512GB G4 Kingston KC3000",
+   "seoDescription": "SSD M.2 NVME 512GB G4 Kingston KC3000. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 512GB G4 Kingston KC3000. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-512gb-g4-xpg-gammix-s70-blade",
+   "name": "SSD M.2 NVME 512GB G4 XPG Gammix S70 Blade",
+   "brand": "XPG",
+   "seoTitle": "SSD M.2 NVME 512GB G4 XPG Gammix S70 Blade",
+   "seoDescription": "SSD M.2 NVME 512GB G4 XPG Gammix S70 Blade. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD M.2 NVME 512GB G4 XPG Gammix S70 Blade. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ssd-m-2-nvme-960gb-g4-kingston-dc2000b",
+   "name": "SSD M.2 NVME 960GB G4 Kingston DC2000B",
+   "brand": "Kingston",
+   "seoTitle": "SSD M.2 NVME 960GB G4 Kingston DC2000B",
+   "seoDescription": "SSD Kingston DC2000B 960GB M.2 NVMe empresarial con tecnología 3D TLC NAND, ideal para servidores y aplicaciones… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ssd-sata-dell-480gb-ri-6gbps-512-35-ck-t160",
+   "name": "SSD SATA Dell 480GB RI 6GBPS 512 3,5` CK (T160)",
+   "brand": "Dell",
+   "seoTitle": "SSD SATA Dell 480GB RI 6GBPS 512 3,5` CK",
+   "seoDescription": "SSD SATA Dell 480GB RI 6GBPS 512 3,5` CK (T160). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SSD SATA Dell 480GB RI 6GBPS 512 3,5` CK (T160). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-10p-tp-link-omada-sg2210mp-giga-8-poe-admi",
+   "name": "Switch 10P TP-Link Omada SG2210MP Giga 8 POE+ Admi",
+   "brand": "TP-Link",
+   "seoTitle": "Switch 10P TP-Link Omada SG2210MP Giga 8 POE+",
+   "seoDescription": "Switch 10P TP-Link Omada SG2210MP Giga 8 POE+ Admi. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "switch-16p-tp-link-omada-sx3016f-16-sfp-adm",
+   "name": "Switch 16P TP-Link Omada SX3016F 16 SFP Adm.",
+   "brand": "TP-Link",
+   "seoTitle": "Switch 16P TP-Link Omada SX3016F 16 SFP Adm.",
+   "seoDescription": "Switch 16P TP-Link Omada SX3016F 16 SFP Adm.. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "switch-24p-huawei-ekit-s220-24t4x-l2-4sfp",
+   "name": "Switch 24P Huawei Ekit S220-24T4X L2+ 4SFP+",
+   "brand": "Huawei",
+   "seoTitle": "Switch 24P Huawei Ekit S220-24T4X L2+ 4SFP+",
+   "seoDescription": "Switch 24P Huawei Ekit S220-24T4X L2+ 4SFP+. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Switch 24P Huawei Ekit S220-24T4X L2+ 4SFP+. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-24p-huawei-ekit-s310-24p4s-poe-4sfp-l3",
+   "name": "Switch 24P Huawei Ekit S310-24P4S POE+ 4SFP L3",
+   "brand": "Huawei",
+   "seoTitle": "Switch 24P Huawei Ekit S310-24P4S POE+ 4SFP",
+   "seoDescription": "Switch 24P Huawei Ekit S310-24P4S POE+ 4SFP L3. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Switch 24P Huawei Ekit S310-24P4S POE+ 4SFP L3. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-24p-huawei-ekit-s310-24p4x-poe-4sfp-l3",
+   "name": "Switch 24P Huawei Ekit S310-24P4X POE+ 4SFP+ L3",
+   "brand": "Huawei",
+   "seoTitle": "Switch 24P Huawei Ekit S310-24P4X POE+ 4SFP+",
+   "seoDescription": "Switch 24P Huawei Ekit S310-24P4X POE+ 4SFP+ L3. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Switch 24P Huawei Ekit S310-24P4X POE+ 4SFP+ L3. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-24p-huawei-ekit-s310-24t4x-4sfp-10ge-l3",
+   "name": "Switch 24P Huawei Ekit S310-24T4X 4SFP+ 10GE L3",
+   "brand": "Huawei",
+   "seoTitle": "Switch 24P Huawei Ekit S310-24T4X 4SFP+ 10GE",
+   "seoDescription": "Switch 24P Huawei Ekit S310-24T4X 4SFP+ 10GE L3. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Switch 24P Huawei Ekit S310-24T4X 4SFP+ 10GE L3. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-24p-tp-link-omada-sg3428x-m2-adm-4-sfp",
+   "name": "Switch 24P TP-Link Omada SG3428X-M2 Adm. 4 SFP",
+   "brand": "TP-Link",
+   "seoTitle": "Switch 24P TP-Link Omada SG3428X-M2 Adm. 4",
+   "seoDescription": "Switch 24P TP-Link Omada SG3428X-M2 Adm. 4 SFP. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "switch-24p-tp-link-omada-tl-sg3428xpp-m2-sfp-l2",
+   "name": "Switch 24P TP-Link Omada TL-SG3428XPP-M2 Sfp+ L2+",
+   "brand": "TP-Link",
+   "seoTitle": "Switch 24P TP-Link Omada TL-SG3428XPP-M2 Sfp+",
+   "seoDescription": "Switch administrable de 24 puertos Gigabit TP-Link Omada con 4 puertos SFP+ 10G, ideal para redes empresariales… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "switch-24p-tp-link-tl-sf1024-10-100-2",
+   "name": "Switch 24P TP-Link TL-SF1024 10/100",
+   "brand": "TP-Link",
+   "seoTitle": "Switch 24P TP-Link TL-SF1024 10/100",
+   "seoDescription": "Switch 24P TP-Link TL-SF1024 10/100. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Switch 24P TP-Link TL-SF1024 10/100. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-24p-tp-link-tl-sf1024d-10-100",
+   "name": "TP-Link Switch 24 Port 10/100 Desktop",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Switch 24 Port 10/100 Desktop",
+   "seoDescription": "TP-Link Switch 24 Port 10/100 Desktop. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Switch 24 Port 10/100 Desktop. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-24p-tp-link-tl-sf1024d-10-100-2",
+   "name": "Switch 24P TP-Link TL-SF1024D 10/100",
+   "brand": "TP-Link",
+   "seoTitle": "Switch 24P TP-Link TL-SF1024D 10/100",
+   "seoDescription": "Switch 24P TP-Link TL-SF1024D 10/100. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Switch 24P TP-Link TL-SF1024D 10/100. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-24p-tp-link-tl-sg3428xpp-m2-sfp-l2-poe",
+   "name": "Switch 24P TP-Link TL-SG3428XPP-M2 Sfp+ L2+ Poe++",
+   "brand": "TP-Link",
+   "seoTitle": "Switch 24P TP-Link TL-SG3428XPP-M2 Sfp+ L2+",
+   "seoDescription": "Switch 24P TP-Link TL-SG3428XPP-M2 Sfp+ L2+ Poe++. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Switch 24P TP-Link TL-SG3428XPP-M2 Sfp+ L2+ Poe++. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-4p-tp-link-omada-sx3206hpp-adm-2-sfp-poe",
+   "name": "Switch 4P TP-Link Omada SX3206HPP Adm. 2 SFP Poe++",
+   "brand": "TP-Link",
+   "seoTitle": "Switch 4P TP-Link Omada SX3206HPP Adm. 2 SFP",
+   "seoDescription": "Switch 4P TP-Link Omada SX3206HPP Adm. 2 SFP Poe++. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Switch 4P TP-Link Omada SX3206HPP Adm. 2 SFP Poe++. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-5p-tp-link-sx3206hpp-4x10g-poe-2x10g-sfp",
+   "name": "Switch 5P TP-Link SX3206HPP 4X10G Poe++ 2X10G SFP",
+   "brand": "TP-Link",
+   "seoTitle": "Switch 5P TP-Link SX3206HPP 4X10G Poe++ 2X10G",
+   "seoDescription": "Switch TP-Link SX3206HPP con 4 puertos 10G PoE++ y 2 puertos SFP, ideal para redes empresariales de alto rendimiento. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "switch-8p-huawei-ekit-s110-8p2st-gb-poe-1-sfp",
+   "name": "Switch 8P Huawei Ekit S110-8P2ST GB POE+ 1 Sfp+",
+   "brand": "Huawei",
+   "seoTitle": "Switch 8P Huawei Ekit S110-8P2ST GB POE+ 1",
+   "seoDescription": "Switch 8P Huawei Ekit S110-8P2ST GB POE+ 1 Sfp+. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Switch 8P Huawei Ekit S110-8P2ST GB POE+ 1 Sfp+. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-8p-huawei-ekit-s110-8t2st-gb-1sfp",
+   "name": "Switch 8P Huawei Ekit S110-8T2ST GB 1SFP+",
+   "brand": "Huawei",
+   "seoTitle": "Switch 8P Huawei Ekit S110-8T2ST GB 1SFP+",
+   "seoDescription": "Switch 8P Huawei Ekit S110-8T2ST GB 1SFP+. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Switch 8P Huawei Ekit S110-8T2ST GB 1SFP+. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-8p-tp-link-omada-sx3008f-8-sfp-adm",
+   "name": "Switch 8P TP-Link Omada SX3008F 8 SFP Adm.",
+   "brand": "TP-Link",
+   "seoTitle": "Switch 8P TP-Link Omada SX3008F 8 SFP Adm.",
+   "seoDescription": "Switch 8P TP-Link Omada SX3008F 8 SFP Adm.. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "switch-8p-tp-link-tl-sf1008lp-10-100-4p-poe-desk",
+   "name": "Switch 8P TP-Link TL-SF1008LP 10/100 4P POE Desk.",
+   "brand": "TP-Link",
+   "seoTitle": "Switch 8P TP-Link TL-SF1008LP 10/100 4P POE",
+   "seoDescription": "Switch 8P TP-Link TL-SF1008LP 10/100 4P POE Desk.. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "switch-administrable-l2-de-8-puertos-gigabit-con-2-ranuras-sfp-jetstream",
+   "name": "Switch Administrable L2 de 8 Puertos Gigabit con 2 Ranuras SFP Jetstream",
+   "seoTitle": "Switch Administrable L2 de 8 Puertos Gigabit",
+   "seoDescription": "Switch administrable L2 JetStream con 8 puertos Gigabit Ethernet y 2 ranuras SFP para redes empresariales de alto… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "switch-hpe-6gb-sas-bl-switch-single-pack",
+   "brand": "HPE",
+   "seoTitle": "SWITCH HPE 6Gb SAS BL Switch Single Pack",
+   "seoDescription": "SWITCH HPE 6Gb SAS BL Switch Single Pack. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SWITCH HPE 6Gb SAS BL Switch Single Pack. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-lenovo-flex-fc3052-8gb-2p",
+   "name": "Switch Lenovo Flex FC3052 8GB 2p",
+   "brand": "Lenovo",
+   "seoTitle": "Switch Lenovo Flex FC3052 8GB 2p",
+   "seoDescription": "Switch Lenovo Flex FC3052 8GB 2p. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Switch Lenovo Flex FC3052 8GB 2p. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-lenovo-flex-fc3171-8gb",
+   "name": "Switch Lenovo Flex FC3171 8GB",
+   "brand": "Lenovo",
+   "seoTitle": "Switch Lenovo Flex FC3171 8GB",
+   "seoDescription": "Switch Lenovo Flex FC3171 8GB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Switch Lenovo Flex FC3171 8GB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-lenovo-flex-fc5022-16gb",
+   "name": "Switch Lenovo Flex FC5022 16GB",
+   "brand": "Lenovo",
+   "seoTitle": "Switch Lenovo Flex FC5022 16GB",
+   "seoDescription": "Switch Lenovo Flex FC5022 16GB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Switch Lenovo Flex FC5022 16GB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-mikrotik-crs304-4xg-in-sin-f",
+   "name": "Switch MikroTik CRS304-4XG-IN sin F",
+   "brand": "MikroTik",
+   "seoTitle": "Switch MikroTik CRS304-4XG-IN sin F",
+   "seoDescription": "Switch MikroTik CRS304-4XG-IN sin F. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Switch MikroTik CRS304-4XG-IN sin F. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-mikrotik-css610-8p-2sin-con-fte-8-poe-140-w-56-gbps",
+   "name": "Switch MikroTik CSS610-8P-2S+IN con FTE 8 POE 140 W 56 Gbps",
+   "brand": "MikroTik",
+   "seoTitle": "Switch MikroTik CSS610-8P-2S+IN con FTE 8 POE",
+   "seoDescription": "Switch MikroTik CSS610-8P-2S+IN con FTE 8 POE 140 W 56 Gbps. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Switch MikroTik CSS610-8P-2S+IN con FTE 8 POE 140 W 56 Gbps. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "switch-tp-link-l-sf1005d-10-100-mbps-5-puertos",
+   "seoTitle": "Switch TP Link L-SF1005D 10/100 Mbps 5",
+   "seoDescription": "Switch TP Link L-SF1005D 10/100 Mbps 5 puertos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-amazon-fire-hd-10-32gb-3gb-black",
+   "seoTitle": "Tablet Amazon Fire HD 10″ 32GB 3GB Black",
+   "seoDescription": "Tablet Amazon Fire HD 10″ 32GB 3GB Black. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-amazon-fire-hd-10-32gb-3gb-denim",
+   "seoTitle": "Tablet Amazon Fire HD 10″ 32GB 3GB Denim",
+   "seoDescription": "Tablet Amazon Fire HD 10″ 32GB 3GB Denim. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-amazon-fire-hd-10-32gb-3gb-olive",
+   "seoTitle": "Tablet Amazon Fire HD 10″ 32GB 3GB Olive",
+   "seoDescription": "Tablet Amazon Fire HD 10″ 32GB 3GB Olive. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-kassel-kids-7-32gb-2gb-amarilla",
+   "brand": "Kassel",
+   "seoTitle": "Tablet Kassel Kids 7″ 32gb 2gb Yellow",
+   "seoDescription": "Memoria 32gb / 2gb Ram Pantalla 7″ HD IPS Bateria 3.000mAh Android 10 Go Edition. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-kassel-kids-7-32gb-2gb-green",
+   "brand": "Kassel",
+   "seoTitle": "Tablet Kassel Kids 7″ 32gb 2gb Green",
+   "seoDescription": "Memoria 32gb / 2gb Ram Pantalla 7″ HD IPS Bateria 3.000mAh Android 10 Go Edition. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-samsung-tab-s10-fe-128gb-8gb-109%e2%80%b3-5g-pen",
+   "seoTitle": "Tablet Samsung Tab S10 FE 128gb 8gb 10,9″ 5G",
+   "seoDescription": "Conectividad móvil total y creatividad en movimiento. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-samsung-tab-s10-fe-128gb-8gb-109-pen",
+   "seoTitle": "Tablet Samsung Tab S10 FE 128gb 8gb 10,9″ +",
+   "seoDescription": "Tablet Samsung Galaxy Tab S10 FE con 128GB almacenamiento, 8GB RAM, pantalla 10.9 pulgadas y S Pen incluido para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-samsung-tab-s10-fe-128gb-8gb-131-pen",
+   "seoTitle": "Tablet Samsung Tab S10 FE+ 128gb 8gb 13,1″ +",
+   "seoDescription": "Productividad sin límites en una pantalla de gran formato. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-sky-pad-8-pro-8-64gb-3gb-lte",
+   "seoTitle": "Tablet Sky PAD 8 Pro 8″ 64GB 3GB LTE",
+   "seoDescription": "Conexión 4G LTE Pantalla 8″ IPS Memoria 64gb / 3gb Android 13. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-xiaomi-mi-pad-7-128gb-8gb-112",
+   "brand": "Xiaomi",
+   "seoTitle": "Tablet Xiaomi Mi Pad 7 128gb 8gb 11,2″",
+   "seoDescription": "Potencia de última generación y pantalla 3.2K ultra nítida. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-xiaomi-mi-pad-7-256gb-12gb-112",
+   "seoTitle": "Tablet Xiaomi Mi Pad 7 256gb 12gb 11,2″",
+   "seoDescription": "Tablet Xiaomi Mi Pad 7 con 256GB almacenamiento, 12GB RAM y pantalla 11,2″. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-xiaomi-mi-pad-7-256gb-8gb-112%e2%80%b3",
+   "brand": "Xiaomi",
+   "seoTitle": "Tablet Xiaomi Mi Pad 7 256gb 8gb 11,2″",
+   "seoDescription": "Potencia de última generación y almacenamiento holgado. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-xiaomi-mi-pad-7-pro-256gb-8gb-112%e2%80%b3",
+   "seoTitle": "Tablet Xiaomi Mi Pad 7 Pro 256gb 8gb 11,2″",
+   "seoDescription": "Xiaomi Pad 7 Pro 11.2″ (8GB RAM / 256GB Storage) Potencia de nivel insignia y calidad visual impresionante. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-xiaomi-mi-pad-7-pro-512gb-12gb-112%e2%80%b3",
+   "brand": "Xiaomi",
+   "seoTitle": "Tablet Xiaomi Mi Pad 7 Pro 512gb 12gb 11,2″",
+   "seoDescription": "Potencia de nivel insignia y capacidad masiva. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-xiaomi-poco-pad-m1-256gb-8gb-12-1",
+   "seoTitle": "Tablet Xiaomi Poco Pad M1 256gb 8gb 12.1″",
+   "seoDescription": "Pantalla de gran formato y potencia para entretenimiento y gaming. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-xiaomi-poco-pad-x1-512gb-8gb-11-2",
+   "seoTitle": "Tablet Xiaomi Poco Pad X1 512gb 8gb 11.2″",
+   "seoDescription": "Rendimiento de nivel superior, funciones de Inteligencia Artificial y espacio masivo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-xiaomi-redmi-pad-2-128gb-4gb-11",
+   "seoTitle": "Tablet Xiaomi Redmi Pad 2 128gb 4gb 11″",
+   "seoDescription": "Tablet Xiaomi Redmi Pad 2 con 128GB almacenamiento, 4GB RAM y pantalla 11 pulgadas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-xiaomi-redmi-pad-2-256gb-4gb-11",
+   "seoTitle": "Tablet Xiaomi Redmi Pad 2 256gb 4gb 11″",
+   "seoDescription": "Tablet Xiaomi Redmi Pad 2 con 256GB almacenamiento, 4GB RAM y pantalla 11 pulgadas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-xiaomi-redmi-pad-2-pro-128gb-6gb-121",
+   "seoTitle": "Tablet Xiaomi Redmi Pad 2 Pro 128gb 6gb 12,1″",
+   "seoDescription": "Pantalla gigante y potencia de nivel Pro. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-xiaomi-redmi-pad-2-pro-256gb-8gb-121%e2%80%b3",
+   "seoTitle": "Tablet Xiaomi Redmi Pad 2 Pro 256gb 8gb 12,1″",
+   "seoDescription": "Máxima capacidad y rendimiento Pro en pantalla gigante. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-xiaomi-redmi-pad-pro-5g-256gb-8gb-121%e2%80%b3",
+   "seoTitle": "Tablet Xiaomi Redmi Pad Pro 5G 256gb 8gb",
+   "seoDescription": "Tablet Xiaomi Redmi Pad Pro 5G con pantalla 12.1″, 256GB almacenamiento, 8GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tablet-xiaomi-redmi-pad-se-256gb-8gb",
+   "seoTitle": "Tablet Xiaomi Redmi Pad Se 256gb 8gb 11″",
+   "seoDescription": "Diversión, estudio y entretenimiento en un diseño liviano de aluminio. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "taladro-atornillador-inalambrico-daihatsu-7-2v",
+   "seoTitle": "Taladro Atornillador Inalambrico Daihatsu",
+   "seoDescription": "Taladro Atornillador Inalambrico Daihatsu 7.2V. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "taladro-de-impacto-daihatsu-13mm-500w",
+   "seoTitle": "Taladro de Impacto Daihatsu 13mm 500W",
+   "seoDescription": "Taladro de Impacto Daihatsu 13mm 500W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "taladro-de-impacto-gamma-10mm-650w-kit-maletin",
+   "seoTitle": "Taladro de Impacto Gamma 10mm 650W Kit",
+   "seoDescription": "Motor 650 W. Acepta mechas de hasta 10 mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "taladro-de-impacto-inalambrico-daihatsu-20v",
+   "seoTitle": "Taladro de Impacto Inalambrico Daihatsu 20V",
+   "seoDescription": "Taladro de Impacto Inalambrico Daihatsu 20V (sin Batería). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "taladro-inalambrico-hyundai-14-4v",
+   "seoTitle": "Taladro Inalámbrico Hyundai 14.4V",
+   "seoDescription": "Taladro atornillador de 14.4 V. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-11-20-f-2-8-iii-canon",
+   "name": "Tamron 11-20 F/2.8 III Canon",
+   "brand": "Tamron",
+   "seoTitle": "Tamron 11-20 F/2.8 III Canon",
+   "seoDescription": "Objetivo gran angular Tamron 11-20mm F/2.8 para Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-11-20-f2-8-di-iii-a-rxd-sony-e-2",
+   "name": "Tamron 11-20 F2.8 DI III a RXD Sony E",
+   "brand": "Tamron",
+   "seoTitle": "Tamron 11-20 F2.8 DI III a RXD Sony E",
+   "seoDescription": "Objetivo ultra gran angular Tamron 11-20mm f/2.8 para Sony E-mount. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-150-500-f5-6-7-di-iii-vxd-sony-2",
+   "name": "Tamron 150-500 F5-6.7 DI III VXD Sony",
+   "brand": "Tamron",
+   "seoTitle": "Tamron 150-500 F5-6.7 DI III VXD Sony",
+   "seoDescription": "Teleobjetivo Tamron 150-500mm f/5-6.7 Di III VXD para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-16-30-f2-8-iii-g2-nikon",
+   "name": "Tamron 16-30 f2.8 III G2 Nikon",
+   "brand": "Tamron",
+   "seoTitle": "Tamron 16-30 f2.8 III G2 Nikon",
+   "seoDescription": "Objetivo Tamron 16-300mm f/2.8 para Nikon con estabilización VC, enfoque rápido VXD y construcción resistente al… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-16-30-f2-8-iii-g2-sony-2",
+   "name": "Tamron 16-30 f2.8 III G2 Sony",
+   "brand": "Tamron",
+   "seoTitle": "Tamron 16-30 f2.8 III G2 Sony",
+   "seoDescription": "Objetivo gran angular TAMRON 16-30mm f/2.8 para Sony E-mount. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-17-28-f2-8-iii-di-rxd-sony-2",
+   "name": "Tamron 17-28 F2.8 III DI RXD Sony",
+   "brand": "Tamron",
+   "seoTitle": "Tamron 17-28 F2.8 III DI RXD Sony",
+   "seoDescription": "Objetivo gran angular Tamron 17-28mm f/2.8 para cámaras Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-17-50-f4-di-iii-sony-2",
+   "name": "Tamron 17-50 F4 DI III Sony",
+   "brand": "Tamron",
+   "seoTitle": "Tamron 17-50 F4 DI III Sony",
+   "seoDescription": "Objetivo zoom Tamron 17-50mm F4 para Sony E-mount. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-17-70-f2-8-di-iii-sony-2",
+   "seoTitle": "Lente Tamron 17-70mm F2.8 DI III Sony",
+   "seoDescription": "Objetivo zoom TAMRON 17-70mm F2.8 para Sony APS-C. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-18-300-f3-5-6-3-di-ii-vxd-vc-sony-2",
+   "seoTitle": "Lente Tamron 18-300mm f/3.5-6.3 DI II VXD VC",
+   "seoDescription": "Objetivo TAMRON 18-300mm F3.5-6.3 para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-20-40-f-2-8-di-iii-contemporary-sony-2",
+   "name": "Tamron 20-40 F/2.8 DI III Contemporary Sony",
+   "brand": "Tamron",
+   "seoTitle": "Tamron 20-40 F/2.8 DI III Contemporary Sony",
+   "seoDescription": "Lente gran angular TAMRON 20-40mm F/2.8 Di III VXD Contemporary para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-24-70-f-2-8-g2-nikon",
+   "name": "Tamron 24-70 F/2.8 G2 Nikon",
+   "brand": "Tamron",
+   "seoTitle": "Tamron 24-70 F/2.8 G2 Nikon",
+   "seoDescription": "Lente TAMRON 24-70mm F/2.8 G2 para Nikon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-24-70-f2-8-g2-canon-ef",
+   "name": "Tamron 24-70 F2.8 G2 Canon EF",
+   "brand": "Tamron",
+   "seoTitle": "Tamron 24-70 F2.8 G2 Canon EF",
+   "seoDescription": "Objetivo zoom profesional TAMRON 24-70mm f/2.8 G2 para Canon EF. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-28-300-f4-7-1-di-iii-sony-2",
+   "name": "Tamron 28-300 F4-7.1 DI III Sony",
+   "brand": "Tamron",
+   "seoTitle": "Tamron 28-300 F4-7.1 DI III Sony",
+   "seoDescription": "Objetivo zoom versátil Tamron 28-300mm para cámaras Sony mirrorless. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-35-150-f2-2-8-di-iii-vxd-nikon-z",
+   "name": "Tamron 35-150 F2-2.8 DI III VXD Nikon Z",
+   "brand": "Tamron",
+   "seoTitle": "Tamron 35-150 F2-2.8 DI III VXD Nikon Z",
+   "seoDescription": "Objetivo zoom profesional TAMRON 35-150mm F2-2.8 Di III VXD para Nikon Z. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-35-150-f2-2-8-di-iii-vxd-sony-e-2",
+   "seoTitle": "Lente Tamron 35-150mm f/2-2.8 DI III VXD Sony",
+   "seoDescription": "Objetivo zoom profesional Tamron 35-150mm con apertura constante F2-2.8, motor VXD y montura Sony E para fotografía… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-50-400-f4-5-6-3-di-iii-vc-vxd-sony-2",
+   "name": "Tamron 50-400 f4.5-6.3 DI III VC VXD Sony",
+   "brand": "Tamron",
+   "seoTitle": "Tamron 50-400 f4.5-6.3 DI III VC VXD Sony",
+   "seoDescription": "Teleobjetivo zoom TAMRON 50-400mm f4.5-6.3 para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-70-180-f2-8-g2-iii-sony-2",
+   "name": "Tamron 70-180 F2.8 G2 III Sony",
+   "brand": "Tamron",
+   "seoTitle": "Tamron 70-180 F2.8 G2 III Sony",
+   "seoDescription": "Teleobjetivo profesional TAMRON 70-180mm f/2.8 G2 para Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-70-300-f4-5-6-3-di-iii-rxd-nikon-linea-z",
+   "name": "Tamron 70-300 F4.5-6.3 DI III RXD Nikon Linea Z",
+   "brand": "Tamron",
+   "seoTitle": "Tamron 70-300 F4.5-6.3 DI III RXD Nikon Linea",
+   "seoDescription": "Teleobjetivo Tamron 70-300mm f/4.5-6.3 Di III RXD para cámaras Nikon Z. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tamron-70-300-f4-5-6-3-di-iii-rxd-sony-2",
+   "seoTitle": "Lente Tamron 70-300mm f/4.5-6.3 DI III RXD",
+   "seoDescription": "Teleobjetivo zoom TAMRON 70-300mm f/4.5-6.3 para cámaras Sony mirrorless. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "targus-funda-versavu-p-ipad10-109-azul",
+   "name": "Targus Funda Versavu P/IPAD10 10,9″ Azul",
+   "brand": "Targus",
+   "seoTitle": "Targus Funda Versavu P/IPAD10 10,9″ Azul",
+   "seoDescription": "Targus Funda Versavu P/IPAD10 10,9″ Azul. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Targus Funda Versavu P/IPAD10 10,9″ Azul. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "targus-maletin-pulse-16-negra-violeta",
+   "name": "Targus Maletin Pulse 16″ Negra/Violeta",
+   "brand": "Targus",
+   "seoTitle": "Targus Maletin Pulse 16″ Negra/Violeta",
+   "seoDescription": "Targus Maletin Pulse 16″ Negra/Violeta. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Targus Maletin Pulse 16″ Negra/Violeta. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "targus-mochila-c-ruedas-15-16black",
+   "name": "Targus Mochila C/Ruedas 15/ 16″BLACK",
+   "brand": "Targus",
+   "seoTitle": "Targus Mochila C/Ruedas 15/ 16″BLACK",
+   "seoDescription": "Targus Mochila C/Ruedas 15/ 16″BLACK. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Targus Mochila C/Ruedas 15/ 16″BLACK. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "targus-mochila-city-15-6",
+   "name": "Targus Mochila City 15.6″",
+   "brand": "Targus",
+   "seoTitle": "Targus Mochila City 15.6″",
+   "seoDescription": "Targus Mochila City 15.6″. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Targus Mochila City 15.6″. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tarjeta-de-red-lenovo-ciov-blade-center",
+   "name": "Tarjeta de Red Lenovo (ciov) Blade Center",
+   "brand": "Lenovo",
+   "seoTitle": "Tarjeta de Red Lenovo (ciov) Blade Center",
+   "seoDescription": "Tarjeta de Red Lenovo (ciov) Blade Center. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Tarjeta de Red Lenovo (ciov) Blade Center. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "teclado-gamemax-rampage-x1-mecanico",
+   "name": "Teclado Gamemax Rampage X1 Mecanico",
+   "brand": "Gamemax",
+   "seoTitle": "Teclado Gamemax Rampage X1 Mecanico",
+   "seoDescription": "Descubre el Teclado Gamemax Rampage X1 Mecánico, la herramienta perfecta para gamers que buscan precisión y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "teclado-gamer-mecanico-sentey-gs530-rgb-outemu",
+   "seoTitle": "Teclado Gamer Mecánico Sentey GS530 RGB",
+   "seoDescription": "Teclado Gamer Mecánico Sentey GS530 RGB Outemu. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "teclado-gamer-mecanico-xtrike-me-gk-979-87-keys",
+   "seoTitle": "Teclado Gamer Mecánico Xtrike Me Gk 979 87",
+   "seoDescription": "Teclado Gamer Mecánico Xtrike Me Gk 979 87 Keys. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "teclado-gamer-rgb-jahro-jh-cb01-mouse-4d",
+   "brand": "Jahro",
+   "seoTitle": "Teclado Teclado y Mouse Gamer Jahro RGB",
+   "seoDescription": "Color de la retroiluminación del teclado: RGB Tipo de sensor del mouse: Óptico. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "teclado-genius-slimstar-820-usb-black-retroilumina",
+   "name": "Teclado Genius Slimstar 820 USB Black Retroilumina",
+   "brand": "Genius",
+   "seoTitle": "Teclado Genius Slimstar 820 USB Black",
+   "seoDescription": "Teclado Genius Slimstar 820 USB Black Retroilumina. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "teclado-genius-slimstar-m200-usb-black",
+   "name": "Teclado Genius Slimstar M200 USB Black",
+   "brand": "Genius",
+   "seoTitle": "Teclado Genius Slimstar M200 USB Black",
+   "seoDescription": "Teclado Genius Slimstar M200 USB Black. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "teclado-kanji-inalambrico",
+   "brand": "Kanji",
+   "seoTitle": "Teclado Kanji Inalámbrico",
+   "seoDescription": "PLUG AND PLAY Compatible Windows y MAC. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "teclado-kanji-usb-multimedia",
+   "brand": "Kanji",
+   "seoTitle": "Teclado Kanji USB Multimedia",
+   "seoDescription": "Diseño Compacto y Durabilidad Teclas Multimedia USB Compatible Windows y MAC. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "teclado-logitech-k120",
+   "brand": "Logitech",
+   "seoTitle": "Teclado Logitech K120",
+   "seoDescription": "Teclado Logitech K120. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Teclado Logitech K120. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "teclado-logitech-k120-usb-black-latino",
+   "name": "Teclado Logitech K120 USB Black Latino",
+   "brand": "Logitech",
+   "seoTitle": "Teclado Logitech K120 USB Black Latino",
+   "seoDescription": "Teclado Logitech K120 USB Black Latino. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "teclado-mecanico-gamer-marvo-compacto-rgb",
+   "seoTitle": "Teclado Mecánico Gamer Marvo Compacto RGB",
+   "seoDescription": "Teclado Mecánico Gamer Marvo Compacto RGB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tecmouse-logitech-mk120-usb-black-latino",
+   "name": "Tec+mouse Logitech MK120 USB Black Latino",
+   "brand": "Logitech",
+   "seoTitle": "Tec+mouse Logitech MK120 USB Black Latino",
+   "seoDescription": "Combo Logitech MK120: teclado y mouse USB con distribución latina, resistente a líquidos, silencioso y duradero para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tecmouse-logitech-mk345-wireless-black-latino-2",
+   "name": "Tec+mouse Logitech MK345 Wireless Black Latino",
+   "brand": "Logitech",
+   "seoTitle": "Tec+mouse Logitech MK345 Wireless Black",
+   "seoDescription": "Tec+mouse Logitech MK345 Wireless Black Latino. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tecmouse-logitech-pop-icon-w-black-wireless-2",
+   "name": "Tec+mouse Logitech POP Icon W Black Wireless",
+   "brand": "Logitech",
+   "seoTitle": "Tec+mouse Logitech POP Icon W Black Wireless",
+   "seoDescription": "Tec+mouse Logitech POP Icon W Black Wireless. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tecmouse-thermaltake-esports-challenger-combo-esp-2",
+   "name": "Tec+mouse Thermaltake Esports Challenger Combo ESP",
+   "brand": "Thermaltake",
+   "seoTitle": "Tec+mouse Thermaltake Esports Challenger",
+   "seoDescription": "Tec+mouse Thermaltake Esports Challenger Combo ESP. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tecmouse-wireless-dell-km7321w-black",
+   "name": "Tec+mouse Wireless Dell KM7321W Black",
+   "brand": "Dell",
+   "seoTitle": "Tec+mouse Wireless Dell KM7321W Black",
+   "seoDescription": "Tec+mouse Wireless Dell KM7321W Black. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "termo-acero-inoxidable-outdoors-1-4l-manija-24hs",
+   "seoTitle": "Termo Acero Inoxidable Outdoors 1.4L Manija",
+   "seoDescription": "Capacidad: 1.4 Litro. Material: Acero inoxidable 24 hs tu bebida fria. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "termo-acero-inoxidable-outdoors-1-4l-manija-blanco",
+   "seoTitle": "Termo Acero Inoxidable Outdoors 1.4L Manija",
+   "seoDescription": "Capacidad: 1.4 Litro. Material: Acero inoxidable 24 hs tu bebida fria. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "termo-acero-inoxidable-outdoors-1-4l-manija-combo-mate",
+   "seoTitle": "Combo Termo Acero Inoxidable con Mate",
+   "seoDescription": "Capacidad: 1.4 Litro. Material: Acero inoxidable 24 hs tu bebida fria. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "termo-acero-inoxidable-outdoors-1-4l-manija-negro",
+   "seoTitle": "Termo Acero Inoxidable Outdoors 1.4L Manija",
+   "seoDescription": "Capacidad: 1.4 Litro. Material: Acero inoxidable 24 hs tu bebida fria. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "termo-stanley-adventure-1l-tigerlily-original",
+   "brand": "Stanley",
+   "seoTitle": "Termo Stanley Adventure 1L Tigerlily ORIGINAL",
+   "seoDescription": "Termo Stanley Adventure 1L Tigerlily ORIGINAL. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "termo-stanley-clasico-1-4l-lava-original",
+   "brand": "Stanley",
+   "seoTitle": "Termo Stanley Clásico 1.4L Lava ORIGINAL",
+   "seoDescription": "Termo Stanley Clásico 1.4L Lava ORIGINAL. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tl-link-ap-ax1800-wifi-6-out-hd-giga",
+   "name": "Tl-link AP AX1800 WIFI 6 OUT HD Giga",
+   "seoTitle": "Tl-link AP AX1800 WIFI 6 OUT HD Giga",
+   "seoDescription": "Tl-link AP AX1800 WIFI 6 OUT HD Giga. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Tl-link AP AX1800 WIFI 6 OUT HD Giga. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tl-link-ap-be9300-tri-band-wifi-7-in",
+   "name": "Tl-link AP BE9300 Tri-band WIFI 7 IN",
+   "seoTitle": "Tl-link AP BE9300 Tri-band WIFI 7 IN",
+   "seoDescription": "Tl-link AP BE9300 Tri-band WIFI 7 IN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Tl-link AP BE9300 Tri-band WIFI 7 IN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tl-link-ap-be9300-tri-band-wifi-7-out",
+   "name": "Tl-link AP BE9300 Tri-band WIFI 7 OUT",
+   "seoTitle": "Tl-link AP BE9300 Tri-band WIFI 7 OUT",
+   "seoDescription": "Tl-link AP BE9300 Tri-band WIFI 7 OUT. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Tl-link AP BE9300 Tri-band WIFI 7 OUT. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tomacorriente-etheos-smart-wifi-tsw-010a",
+   "seoTitle": "Tomacorriente Etheos Smart Wifi Tsw-010A",
+   "seoDescription": "Tomacorriente con interruptor inteligente WIFI Control de iluminación y/o dispositivos en forma remota, a través de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "torno-para-unas-waggs",
+   "seoTitle": "Torno para Uñas Waggs",
+   "seoDescription": "Torno para Uñas Waggs. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tostadora-midea-acero-inoxidable",
+   "brand": "Midea",
+   "seoTitle": "Tostadora Midea Acero Inoxidable",
+   "seoDescription": "Tostadora Midea Acero Inoxidable. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Tostadora Midea Acero Inoxidable. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tostadora-winco-2-cavidades-xl-850w",
+   "brand": "Winco",
+   "seoTitle": "Tostadora Winco 2 Cavidades XL 850W",
+   "seoDescription": "Tostadora Winco 2 Cavidades XL 850W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tostadora-winco-750w",
+   "brand": "Winco",
+   "seoTitle": "Tostadora Winco 750W",
+   "seoDescription": "Tostadora Winco 750W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tp-link-adaptador-de-usb-a-red-ethernet-rj45-gigabit-3-port-usb-3-0",
+   "name": "TP-Link Adaptador de USB a Red Ethernet RJ45 Gigabit 3 Port USB 3.0",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Adaptador de USB a Red Ethernet RJ45",
+   "seoDescription": "TP-Link Adaptador de USB a Red Ethernet RJ45 Gigabit 3 Port USB 3.0. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Adaptador de USB a Red Ethernet RJ45 Gigabit 3 Port USB 3.0. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-ap-24ghz-5ghz-ac1750-6-ant",
+   "name": "TP-Link AP 2,4GHZ/5GHZ AC1750 6 ANT",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link AP 2,4GHZ/5GHZ AC1750 6 ANT",
+   "seoDescription": "TP-Link AP 2,4GHZ/5GHZ AC1750 6 ANT. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link AP 2,4GHZ/5GHZ AC1750 6 ANT. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-ap-ac1200-out-in",
+   "name": "TP-Link AP AC1200 OUT/IN",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link AP AC1200 OUT/IN",
+   "seoDescription": "TP-Link AP AC1200 OUT/IN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link AP AC1200 OUT/IN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-ap-ax1800-hd-indoor",
+   "name": "TP-Link AP AX1800 HD Indoor",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link AP AX1800 HD Indoor",
+   "seoDescription": "TP-Link AP AX1800 HD Indoor. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link AP AX1800 HD Indoor. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-ap-ax3600-hd-indoor",
+   "name": "TP-Link AP AX3600 HD Indoor",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link AP AX3600 HD Indoor",
+   "seoDescription": "El TP-LINK AP AX3600 HD Indoor es un punto de acceso de alto rendimiento que ofrece conectividad Wi-Fi 6, ideal para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tp-link-ap-ax5400-indoor",
+   "name": "TP-Link AP AX5400 Indoor",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link AP AX5400 Indoor",
+   "seoDescription": "TP-Link AP AX5400 Indoor. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link AP AX5400 Indoor. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-p-red-pci-e-10gb",
+   "name": "TP-Link P.red PCI-E 10GB",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link P.red PCI-E 10GB",
+   "seoDescription": "TP-LINK P.RED PCI-E 10GB es una tarjeta de red de alto rendimiento que ofrece velocidades de hasta 10 Gbps, ideal… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tp-link-p-red-usb-2-0-10-100",
+   "name": "TP-Link P.red USB 2.0 10/100",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link P.red USB 2.0 10/100",
+   "seoDescription": "TP-Link P.red USB 2.0 10/100. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link P.red USB 2.0 10/100. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-p-red-usb-ax1800-tx20u-nano",
+   "name": "TP-Link P.red USB AX1800 TX20U Nano",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link P.red USB AX1800 TX20U Nano",
+   "seoDescription": "TP-Link P.red USB AX1800 TX20U Nano. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link P.red USB AX1800 TX20U Nano. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-p-red-usb-axe3000-wifi-6e-archer-txe50uh",
+   "name": "TP-Link P.red USB AXE3000 WIFI 6E Archer TXE50UH",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link P.red USB AXE3000 WIFI 6E Archer",
+   "seoDescription": "TP-Link P.red USB AXE3000 WIFI 6E Archer TXE50UH. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link P.red USB AXE3000 WIFI 6E Archer TXE50UH. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-p-red-wireless-ac1300-usb-3-0",
+   "name": "TP-Link P.red Wireless AC1300 USB 3.0",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link P.red Wireless AC1300 USB 3.0",
+   "seoDescription": "TP-Link P.red Wireless AC1300 USB 3.0. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link P.red Wireless AC1300 USB 3.0. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-placa-de-red-pci-e-2-5gb",
+   "name": "TP-Link Placa de Red PCI-E 2.5GB",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red PCI-E 2.5GB",
+   "seoDescription": "TP-Link Placa de Red PCI-E 2.5GB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Placa de Red PCI-E 2.5GB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-placa-de-red-pci-e-ac1200",
+   "name": "TP-Link Placa de Red PCI-E AC1200",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red PCI-E AC1200",
+   "seoDescription": "TP-Link Placa de Red PCI-E AC1200. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Placa de Red PCI-E AC1200. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-placa-de-red-usb-3-0-giga",
+   "name": "TP-Link Placa de Red USB 3.0 Giga",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red USB 3.0 Giga",
+   "seoDescription": "TP-Link Placa de Red USB 3.0 Giga. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Placa de Red USB 3.0 Giga. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-placa-de-red-usb-3-0-tipo-c-giga",
+   "name": "TP-Link Placa de Red USB 3.0 Tipo C Giga",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red USB 3.0 Tipo C Giga",
+   "seoDescription": "TP-Link Placa de Red USB 3.0 Tipo C Giga. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Placa de Red USB 3.0 Tipo C Giga. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-placa-de-red-wifi-usb-ac1300-plu",
+   "name": "TP-Link Placa de Red WIFI USB AC1300 PLU",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red WIFI USB AC1300 PLU",
+   "seoDescription": "Mejora tu conexión a Internet con la TP-LINK Placa de Red WiFi USB AC1300 PLU, que ofrece velocidades rápidas y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tp-link-placa-de-red-wifi-usb-ac1300-plus",
+   "name": "TP-Link Placa de Red WIFI USB AC1300 Plus",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red WIFI USB AC1300 Plus",
+   "seoDescription": "TP-Link Placa de Red WIFI USB AC1300 Plus. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Placa de Red WIFI USB AC1300 Plus. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-placa-de-red-wifi-usb-ac600",
+   "name": "TP-Link Placa de Red WIFI USB AC600",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red WIFI USB AC600",
+   "seoDescription": "TP-Link Placa de Red WIFI USB AC600. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Placa de Red WIFI USB AC600. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-placa-de-red-wifi-usb-ac600-bt-nano",
+   "name": "TP-Link Placa de Red WIFI USB AC600 BT Nano",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red WIFI USB AC600 BT Nano",
+   "seoDescription": "TP-Link Placa de Red WIFI USB AC600 BT Nano. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Placa de Red WIFI USB AC600 BT Nano. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-placa-de-red-wifi-usb-ac600-nano",
+   "name": "TP-Link Placa de Red WIFI USB AC600 Nano",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red WIFI USB AC600 Nano",
+   "seoDescription": "TP-Link Placa de Red WIFI USB AC600 Nano. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Placa de Red WIFI USB AC600 Nano. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-placa-red-pcie-archer-t2e-ac600-dual-band",
+   "name": "TP-Link Placa Red PCIE Archer T2E AC600 / Dual Band",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa Red PCIE Archer T2E AC600",
+   "seoDescription": "Tarjeta de red WiFi PCIe TP-Link Archer T2E AC600 con tecnología dual band para conexión inalámbrica de alta… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tp-link-switch-8-port-giga-4xport-poe",
+   "name": "TP-Link Switch 8 Port Giga 4XPORT POE+",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Switch 8 Port Giga 4XPORT POE+",
+   "seoDescription": "TP-Link Switch 8 Port Giga 4XPORT POE+. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Switch 8 Port Giga 4XPORT POE+. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-tapo-camara-c-bateria-c420-pack2",
+   "name": "TP-Link TP-Link Camara C/Bateria C420 PACK2",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link TP-Link Camara C/Bateria C420 PACK2",
+   "seoDescription": "TP-Link TP-Link Camara C/Bateria C420 PACK2. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link TP-Link Camara C/Bateria C420 PACK2. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-tapo-camara-ip-wifi-c100-int",
+   "name": "TP-Link TP-Link Camara IP WIFI C100 INT",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link TP-Link Camara IP WIFI C100 INT",
+   "seoDescription": "TP-Link TP-Link Camara IP WIFI C100 INT. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link TP-Link Camara IP WIFI C100 INT. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-tapo-camara-ip-wifi-c310-ext",
+   "name": "TP-Link TP-Link Camara IP WIFI C310 EXT",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link TP-Link Camara IP WIFI C310 EXT",
+   "seoDescription": "TP-Link TP-Link Camara IP WIFI C310 EXT. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link TP-Link Camara IP WIFI C310 EXT. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-tapo-camara-ip-wifi-c320ws-ext",
+   "name": "TP-Link TP-Link Camara IP WIFI C320WS EXT",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link TP-Link Camara IP WIFI C320WS EXT",
+   "seoDescription": "TP-Link TP-Link Camara IP WIFI C320WS EXT. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link TP-Link Camara IP WIFI C320WS EXT. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-tapo-camara-ip-wifi-c425-con-bateria",
+   "name": "TP-Link TP-Link Camara IP WIFI C425 con Bateria",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link TP-Link Camara IP WIFI C425",
+   "seoDescription": "TP-Link TP-Link Camara IP WIFI C425 con Bateria. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link TP-Link Camara IP WIFI C425 con Bateria. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-tapo-camara-ip-wifi-c500-ext",
+   "seoTitle": "Camara IP Tp-Link Tapo C500 PTZ Exterior",
+   "seoDescription": "Cámara IP de Seguridad TP-Link Tapo C500 Exterior 360° Full HD Monitoreo inteligente y cobertura total para tu hogar… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tp-link-tapo-sensor-temp-hum-t310",
+   "name": "TP-Link TP-Link Sensor Temp HUM T310",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link TP-Link Sensor Temp HUM T310",
+   "seoDescription": "TP-Link TP-Link Sensor Temp HUM T310. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link TP-Link Sensor Temp HUM T310. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "tp-link-wifi-router-300-n-tl-wr820n",
+   "name": "TP-Link WIFI Router 300 N TL-WR820N",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link WIFI Router 300 N TL-WR820N",
+   "seoDescription": "Router TP-LINK WiFi 300N TL-WR820N ofrece conexión inalámbrica estable, fácil configuración y cobertura amplia para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tp-link-wifi-router-300-n-tl-wr840n",
+   "name": "TP-Link WIFI Router 300 N TL-WR840N",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link WIFI Router 300 N TL-WR840N",
+   "seoDescription": "Router WiFi TP-LINK TL-WR840N 300Mbps con tecnología N, ideal para hogares y oficinas pequeñas con conexión estable. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tp-link-wifi-router-300-n-tl-wr841hp",
+   "name": "TP-Link WIFI Router 300 N TL-WR841HP",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link WIFI Router 300 N TL-WR841HP",
+   "seoDescription": "Router WiFi TP-LINK TL-WR841HP 300Mbps con alta potencia de transmisión, antenas de 9dBi y cobertura extendida para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tp-link-wifi-router-archer-c20-ac750-dual-band-tl-archerc20",
+   "name": "TP-Link WIFI Router Archer C20 AC750 /Dual Band/ TL-ARCHERC20",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link WIFI Router Archer C20 AC750 /Dual",
+   "seoDescription": "Router WiFi TP-Link Archer C20 AC750 con tecnología dual band para conexión inalámbrica rápida, estable y confiable… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tp-link-wifi-router-archer-c24-ac750-dual-band-tl-archerc24",
+   "name": "TP-Link WIFI Router Archer C24 AC750 / Dual Band / TL-ARCHERC24",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link WIFI Router Archer C24 AC750 / Dual",
+   "seoDescription": "Router WiFi TP-Link Archer C24 AC750 con tecnología dual band para conexión rápida, estable y cobertura completa en… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "tp-link-wifi-router-archer-tl-ec220-f5-ac1200-dual-band",
+   "name": "TP-Link WIFI Router Archer TL-EC220-F5 AC1200 /Dual Band",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link WIFI Router Archer TL-EC220-F5 AC1200",
+   "seoDescription": "Router WiFi TP-Link Archer TL-EC220-F5 AC1200 con tecnología dual band para conexión rápida y estable en tu hogar u… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "transceiver-hpe-blc-10g-sfp-sr",
+   "brand": "HPE",
+   "seoTitle": "Transceiver HPE BLc 10G SFP+ SR",
+   "seoDescription": "Transceiver HPE BLc 10G SFP+ SR. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Transceiver HPE BLc 10G SFP+ SR. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "transceiver-hpe-blc-10g-sfp-sr-caja-abierta",
+   "brand": "HPE",
+   "seoTitle": "Transceiver HPE BLc 10G SFP+ SR CAJA ABIERTA",
+   "seoDescription": "Transceiver HPE BLc 10G SFP+ SR caja abierta. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "transceiver-hpe-msa-2040-8gb-sw-fc-sfp-4-pk",
+   "name": "Transceiver HPE MSA 2040 8Gb SW FC SFP 4 Pk",
+   "brand": "HPE",
+   "seoTitle": "Transceiver HPE MSA 2040 8Gb SW FC SFP 4 Pk",
+   "seoDescription": "Transceiver HPE MSA 2040 8Gb SW FC SFP 4 Pk. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Transceiver HPE MSA 2040 8Gb SW FC SFP 4 Pk. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "transceiver-hpe-x130-10g-xfp-lc-sr-l",
+   "name": "Transceiver HPE X130 10G XFP LC SR (L)",
+   "brand": "HPE",
+   "seoTitle": "Transceiver HPE X130 10G XFP LC SR (L)",
+   "seoDescription": "Transceiver HPE X130 10G XFP LC SR (L). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Transceiver HPE X130 10G XFP LC SR (L). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "transceiver-ibm-sfp-sw-8gb-2",
+   "name": "Transceiver IBM SFP SW 8GB",
+   "seoTitle": "Transceiver IBM SFP SW 8GB",
+   "seoDescription": "Transceiver IBM SFP SW 8GB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Transceiver IBM SFP SW 8GB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "transceiver-tp-link-sfp-sm321a-wdm-bidirec-10km",
+   "name": "Transceiver TP-Link SFP SM321A WDM Bidirec 10KM",
+   "brand": "TP-Link",
+   "seoTitle": "Transceiver TP-Link SFP SM321A WDM Bidirec",
+   "seoDescription": "Transceiver TP-Link SFP SM321A WDM Bidirec 10KM. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Transceiver TP-Link SFP SM321A WDM Bidirec 10KM. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "transceiver-tp-link-sfp-sm321b-wdm-bidirec-10km",
+   "name": "Transceiver TP-Link SFP SM321B WDM Bidirec 10KM",
+   "brand": "TP-Link",
+   "seoTitle": "Transceiver TP-Link SFP SM321B WDM Bidirec",
+   "seoDescription": "Transceiver TP-Link SFP SM321B WDM Bidirec 10KM. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Transceiver TP-Link SFP SM321B WDM Bidirec 10KM. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ubiquiti-xr2-minipci-802-11b-g-2-4ghz-600mw",
+   "name": "Ubiquiti XR2 Minipci 802.11B/G 2.4GHZ 600MW",
+   "brand": "Ubiquiti",
+   "seoTitle": "Ubiquiti XR2 Minipci 802.11B/G 2.4GHZ 600MW",
+   "seoDescription": "Ubiquiti XR2 Minipci 802.11B/G 2.4GHZ 600MW. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Ubiquiti XR2 Minipci 802.11B/G 2.4GHZ 600MW. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ups-apc-back-1200va-230v-tomas-iram",
+   "name": "UPS APC Back 1200VA 230V (tomas Iram)",
+   "brand": "APC",
+   "seoTitle": "UPS APC Back 1200VA 230V (tomas Iram)",
+   "seoDescription": "Protege tus dispositivos con el UPS APC BACK 1200VA 230V, ideal para cortes de energía. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-back-1600va-230v-tomas-iram",
+   "name": "UPS APC Back 1600VA 230V (tomas Iram)",
+   "brand": "APC",
+   "seoTitle": "UPS APC Back 1600VA 230V (tomas Iram)",
+   "seoDescription": "Protege tus dispositivos con el UPS APC BACK 1600VA 230V. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-back-2200va-230v-tomas-iram",
+   "name": "UPS APC Back 2200VA 230V (tomas Iram)",
+   "brand": "APC",
+   "seoTitle": "UPS APC Back 2200VA 230V (tomas Iram)",
+   "seoDescription": "Protege tus dispositivos con el UPS APC BACK 2200VA 230V. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-back-easy-bv-1000va",
+   "name": "UPS APC Back Easy BV 1000VA",
+   "brand": "APC",
+   "seoTitle": "UPS APC Back Easy BV 1000VA",
+   "seoDescription": "UPS APC Back Easy BV 1000VA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-back-easy-bv-500va",
+   "name": "UPS APC Back Easy BV 500VA",
+   "brand": "APC",
+   "seoTitle": "UPS APC Back Easy BV 500VA",
+   "seoDescription": "UPS APC Back Easy BV 500VA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-back-easy-bv-650va",
+   "name": "UPS APC Back Easy BV 650VA",
+   "brand": "APC",
+   "seoTitle": "UPS APC Back Easy BV 650VA",
+   "seoDescription": "UPS APC Back Easy BV 650VA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-back-easy-bv-800va",
+   "name": "UPS APC Back Easy BV 800VA",
+   "brand": "APC",
+   "seoTitle": "UPS APC Back Easy BV 800VA",
+   "seoDescription": "UPS APC Back Easy BV 800VA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-back-pro-1200va-230v-tomas-iram",
+   "name": "UPS APC Back PRO 1200VA 230V (tomas Iram)",
+   "brand": "APC",
+   "seoTitle": "UPS APC Back PRO 1200VA 230V (tomas Iram)",
+   "seoDescription": "Protege tus dispositivos con el UPS APC Back Pro 1200VA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-back-pro-900va-230v-tomas-iram",
+   "name": "UPS APC Back PRO 900VA 230V (tomas Iram)",
+   "brand": "APC",
+   "seoTitle": "UPS APC Back PRO 900VA 230V (tomas Iram)",
+   "seoDescription": "Protege tus dispositivos con el UPS APC Back Pro 900VA, ideal para cortes de energía y picos de voltaje. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-easy-ups-3s-de-10-kva-8aut33",
+   "brand": "APC",
+   "seoTitle": "UPS APC Easy UPS 3S de 10 Kva 8Aut(3:3)",
+   "seoDescription": "UPS APC Easy UPS 3S de 10 Kva 8Aut(3:3). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-online-easy-srv-10000-230v-expand-2cajas",
+   "name": "UPS APC Online Easy SRV 10000/230V Expand (2CAJAS)",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Easy SRV 10000/230V Expand",
+   "seoDescription": "UPS APC Online Easy SRV 10000/230V Expand (2CAJAS). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-online-easy-srv-10000va-220v",
+   "name": "UPS APC Online Easy SRV 10000VA/220V",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Easy SRV 10000VA/220V",
+   "seoDescription": "UPS APC Online Easy SRV 10000VA/220V. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-online-easy-srv-1000va-230v-expan-2cajas",
+   "name": "UPS APC Online Easy SRV 1000VA/230V Expan (2CAJAS)",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Easy SRV 1000VA/230V Expan",
+   "seoDescription": "UPS APC Online Easy SRV 1000VA/230V Expan (2CAJAS). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-online-easy-srv-1000va-230v-rac-exp-4caja",
+   "name": "UPS APC Online Easy SRV 1000VA/230V Rac-exp (4CAJA",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Easy SRV 1000VA/230V Rac-exp",
+   "seoDescription": "UPS APC ONLINE EASY SRV 1000VA/230V RAC-EXP para protección y respaldo de energía. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-online-easy-srv-1000va-230v-torre",
+   "name": "UPS APC Online Easy SRV 1000VA/230V Torre",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Easy SRV 1000VA/230V Torre",
+   "seoDescription": "UPS APC Online Easy SRV 1000VA/230V Torre. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-online-easy-srv-2000va-230v-expand-2cajas",
+   "name": "UPS APC Online Easy SRV 2000VA/230V Expand (2CAJAS",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Easy SRV 2000VA/230V Expand",
+   "seoDescription": "UPS APC Online Easy SRV 2000VA/230V Expand (2CAJAS. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-online-easy-srv-2000va-230v-rac-exp-4caja",
+   "name": "UPS APC Online Easy SRV 2000VA/230V Rac-exp (4CAJA",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Easy SRV 2000VA/230V Rac-exp",
+   "seoDescription": "UPS APC Online Easy SRV 2000VA/230V Rac-exp (4CAJA. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "UPS APC Online Easy SRV 2000VA/230V Rac-exp (4CAJA. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ups-apc-online-easy-srv-2000va-230v-rack-2cajas",
+   "name": "UPS APC Online Easy SRV 2000VA/230V Rack (2CAJAS)",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Easy SRV 2000VA/230V Rack",
+   "seoDescription": "UPS APC Online Easy SRV 2000VA/230V Rack (2CAJAS). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-online-easy-srv-3000va-230v-expand-2cajas",
+   "name": "UPS APC Online Easy SRV 3000VA/230V Expand (2CAJAS",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Easy SRV 3000VA/230V Expand",
+   "seoDescription": "UPS APC Online Easy SRV 3000VA/230V Expand (2CAJAS. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "UPS APC Online Easy SRV 3000VA/230V Expand (2CAJAS. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ups-apc-online-easy-srv-3000va-230v-rac-exp-4caja",
+   "name": "UPS APC Online Easy SRV 3000VA/230V Rac-exp (4CAJA",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Easy SRV 3000VA/230V Rac-exp",
+   "seoDescription": "UPS APC ONLINE EASY SRV 3000VA/230V RAC-EXP (4CAJA) - Protección y respaldo de energía confiable para tu equipo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-online-easy-srv-3000va-230v-rack-2cajas",
+   "name": "UPS APC Online Easy SRV 3000VA/230V Rack (2CAJAS)",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Easy SRV 3000VA/230V Rack",
+   "seoDescription": "UPS APC Online Easy SRV 3000VA/230V Rack (2CAJAS). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "UPS APC Online Easy SRV 3000VA/230V Rack (2CAJAS). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ups-apc-online-easy-srv-3000va-230v-torre",
+   "name": "UPS APC Online Easy SRV 3000VA/230V Torre",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Easy SRV 3000VA/230V Torre",
+   "seoDescription": "UPS APC Online Easy SRV 3000VA/230V Torre. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-online-easy-srv-6000va-230v-torre",
+   "name": "UPS APC Online Easy SRV 6000VA/230V Torre",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Easy SRV 6000VA/230V Torre",
+   "seoDescription": "UPS APC Online Easy SRV 6000VA/230V Torre. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-online-smart-rtg-6000va-230v-2-cajas",
+   "name": "UPS APC Online Smart RTG 6000VA 230V (2 Cajas)",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Smart RTG 6000VA 230V",
+   "seoDescription": "UPS APC Online Smart RTG 6000VA 230V (2 Cajas). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-online-smart-srt-2200va-230v",
+   "name": "UPS APC Online Smart SRT 2200VA 230V",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Smart SRT 2200VA 230V",
+   "seoDescription": "UPS APC Online Smart SRT 2200VA 230V. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-online-smart-srt-5000va-230v",
+   "name": "UPS APC Online Smart SRT 5000VA 230V",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Smart SRT 5000VA 230V",
+   "seoDescription": "UPS APC Online Smart SRT 5000VA 230V. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-apc-online-smart-srt-6000va-230v",
+   "name": "UPS APC Online Smart SRT 6000VA 230V",
+   "brand": "APC",
+   "seoTitle": "UPS APC Online Smart SRT 6000VA 230V",
+   "seoDescription": "UPS APC Online Smart SRT 6000VA 230V. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-eaton-online-9e-10000va-230v-9e-t-exp-s-bat",
+   "name": "UPS Eaton Online 9E 10000VA/230V 9E T-exp (S/BAT)",
+   "brand": "Eaton",
+   "seoTitle": "UPS Eaton Online 9E 10000VA/230V 9E T-exp",
+   "seoDescription": "UPS Eaton Online 9E 10000VA/230V 9E T-exp (S/BAT). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-eaton-online-9e-20000va-230v-torre",
+   "name": "UPS Eaton Online 9E 20000VA/230V Torre",
+   "brand": "Eaton",
+   "seoTitle": "UPS Eaton Online 9E 20000VA/230V Torre",
+   "seoDescription": "UPS Eaton Online 9E 20000VA/230V Torre. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-eaton-online-9px-1000va-230va-torre-rack-2u",
+   "brand": "Eaton",
+   "seoTitle": "UPS EATON ONLINE 9PX 1000VA/230VA Torre/Rack",
+   "seoDescription": "UPS EATON ONLINE 9PX 1000VA/230VA Torre/Rack 2U. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-eaton-online-9px-6000va-230v-netpack",
+   "name": "UPS Eaton Online 9PX 6000VA/230V (netpack)",
+   "brand": "Eaton",
+   "seoTitle": "UPS Eaton Online 9PX 6000VA/230V (netpack)",
+   "seoDescription": "UPS Eaton Online 9PX 6000VA/230V (netpack). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "UPS Eaton Online 9PX 6000VA/230V (netpack). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ups-eaton-online-9sx-20kw-solo-ups-rt-s-kit",
+   "name": "UPS Eaton Online 9SX 20kW (solo UPS), RT, s/Kit",
+   "brand": "Eaton",
+   "seoTitle": "UPS Eaton Online 9SX 20kW (solo UPS), RT",
+   "seoDescription": "UPS Eaton Online 9SX 20kW (solo UPS), RT, s/Kit. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-eaton-online-dx-1000va-230v-torre",
+   "name": "UPS Eaton Online DX 1000VA/230V Torre",
+   "brand": "Eaton",
+   "seoTitle": "UPS Eaton Online DX 1000VA/230V Torre",
+   "seoDescription": "UPS Eaton Online DX 1000VA/230V Torre. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-eaton-online-dx-2000va-230v-torre-ch-2",
+   "name": "UPS Eaton Online DX 2000VA/230V Torre (CH)",
+   "brand": "Eaton",
+   "seoTitle": "UPS Eaton Online DX 2000VA/230V Torre (CH)",
+   "seoDescription": "UPS Eaton Online DX 2000VA/230V Torre (CH). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-hikvision-ds-1000va",
+   "name": "UPS Hikvision DS 1000VA",
+   "brand": "Hikvision",
+   "seoTitle": "UPS Hikvision DS 1000VA",
+   "seoDescription": "UPS Hikvision DS 1000VA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-hikvision-ds-2000va",
+   "name": "UPS Hikvision DS 2000VA",
+   "brand": "Hikvision",
+   "seoTitle": "UPS Hikvision DS 2000VA",
+   "seoDescription": "UPS Hikvision DS 2000VA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-hikvision-ds-3000va",
+   "name": "UPS Hikvision DS 3000VA",
+   "brand": "Hikvision",
+   "seoTitle": "UPS Hikvision DS 3000VA",
+   "seoDescription": "UPS Hikvision DS 3000VA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-hikvision-ds-600va",
+   "name": "UPS Hikvision DS 600VA",
+   "brand": "Hikvision",
+   "seoTitle": "UPS Hikvision DS 600VA",
+   "seoDescription": "UPS Hikvision DS 600VA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-lyonn-ctb-800ap-display-2",
+   "name": "UPS Lyonn CTB-800AP (display)",
+   "brand": "Lyonn",
+   "seoTitle": "UPS Lyonn CTB-800AP (display)",
+   "seoDescription": "UPS LYONN CTB-800AP con display digital, protección confiable de 800VA para equipos electrónicos contra cortes de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-lyonn-desire-500ap-display-2",
+   "name": "UPS Lyonn DESIRE-500AP (display)",
+   "brand": "Lyonn",
+   "seoTitle": "UPS Lyonn DESIRE-500AP (display)",
+   "seoDescription": "UPS LYONN DESIRE-500AP con display LCD integrado. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-lyonn-gamer-ctb-2000ap-display-2",
+   "name": "UPS Lyonn Gamer CTB-2000AP (display)",
+   "brand": "Lyonn",
+   "seoTitle": "UPS Lyonn Gamer CTB-2000AP (display)",
+   "seoDescription": "UPS LYONN GAMER CTB-2000AP con display digital, protección confiable para equipos gaming y computadoras con respaldo… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-trv-650a-neo-4-tomas",
+   "brand": "TRV",
+   "seoTitle": "UPS TRV 650A Neo 4 Tomas",
+   "seoDescription": "UPS TRV 650A Neo 4 Tomas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-trv-850a-neo-4-tomas",
+   "brand": "TRV",
+   "seoTitle": "UPS TRV 850A Neo 4 Tomas",
+   "seoDescription": "Voltaje monovolt. Tiene 4 tomas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-trv-dc-9-12v-vdc-12w-portatil",
+   "name": "UPS TRV DC - 9/12V VDC - 12W Portatil",
+   "brand": "TRV",
+   "seoTitle": "UPS TRV DC - 9/12V VDC - 12W Portatil",
+   "seoDescription": "UPS TRV DC - 9/12V VDC - 12W PORTÁTIL: energía confiable para tus dispositivos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-trv-dc-9-12v-vdc-12w-usb-portatil",
+   "name": "UPS TRV DC - 9/12V VDC - 12W USB Portatil",
+   "brand": "TRV",
+   "seoTitle": "UPS TRV DC - 9/12V VDC - 12W USB Portatil",
+   "seoDescription": "UPS TRV DC - 9/12V VDC - 12W USB Portatil. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-trv-neo-1500-5t-c-soft-y-usb",
+   "brand": "TRV",
+   "seoTitle": "UPS TRV Neo 1500 c/soft y usb",
+   "seoDescription": "UPS TRV Neo 1500 c/soft y usb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-trv-neo-2000-4t-c-soft-y-usb",
+   "brand": "TRV",
+   "seoTitle": "UPS TRV Neo 2000 4T c/soft y usb",
+   "seoDescription": "UPS TRV Neo 2000 4T c/soft y usb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ups-trv-neo1200-5t-c-soft-y-usb",
+   "brand": "TRV",
+   "seoTitle": "UPS TRV Neo 1200 5T c/soft y usb",
+   "seoDescription": "ENTRADA Factor potencia: 0,6 Tensión nominal: 220 Vac Rango de Tensión: 165 – 275 Vac Frecuencia: 50 Hz +/- 10%… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "valija-de-viaje-chica-elf-azul",
+   "seoTitle": "Valija de Viaje Chica ELF Azul",
+   "seoDescription": "Ruedas dobles reforzadas giran 360º Carro metálico Regulable Interior Forrado Cintas ajustables para sujetar tus… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "valija-de-viaje-grande-elf-azul",
+   "seoTitle": "Valija de Viaje Grande ELF Azul 28A",
+   "seoDescription": "Ruedas dobles reforzadas giran 360º Carro metalico Regulable Interior Forrado Cintas ajustables para sujetar tus… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "valija-de-viaje-grande-elf-beige",
+   "seoTitle": "Valija de Viaje Grande ELF Beige",
+   "seoDescription": "Ruedas dobles reforzadas giran 360º Carro metalico Regulable Interior Forrado Cintas ajustables para sujetar tus… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "valija-everlast-27392-20-rojo",
+   "seoTitle": "Valija Everlast Chica 27392 20″",
+   "seoDescription": "Valija Everlast Chica 27392 20″. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "valija-everlast-27392-24-rojo",
+   "seoTitle": "Valija Everlast Mediana 27392 24″",
+   "seoDescription": "Valija Everlast Mediana 27392 24″. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "valija-everlast-27393-20",
+   "seoTitle": "Valija Everlast Chica 20″",
+   "seoDescription": "Valija Everlast Chica 20″. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "valija-everlast-27393-24-amarilla",
+   "seoTitle": "Valija Everlast Mediana 27393 24″",
+   "seoDescription": "Valija Everlast Mediana 27393 24″. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "valija-everlast-27393-28",
+   "seoTitle": "Valija Everlast Grande 27393 28″ AMARILLA",
+   "seoDescription": "Valija Everlast Grande 27393 28″ AMARILLA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-3-en-1-embassy-18-90w-aspas-metalicas",
+   "seoTitle": "Ventilador 3 en 1 Embassy 18″ 90W Aspas",
+   "seoDescription": "Frecuencia: 50Hz Cantidad de aspas: 5 Material de las aspas: Metal Voltaje: 220V Color de las aspas: Plateado Color… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-3-en-1-oryx-18",
+   "seoTitle": "Ventilador 3 en 1 Oryx 18″ 90W",
+   "seoDescription": "Ventilador 3 en 1 Rotativo 5 aspas de aluminio Motor 90W Uso: pie, pared y mesa. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-de-pie-embassy-3-velocidades",
+   "seoTitle": "Ventilador de Pie Embassy 18″ 3 Velocidades",
+   "seoDescription": "Ventilador de Pie Embassy EM-1070. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-de-pie-industrial-30",
+   "seoTitle": "Ventilador de Pie Industrial 30″ Peabody",
+   "seoDescription": "Ventilador de Pie Industrial 30″ Peabody. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-de-pie-liliana-orbital-18",
+   "seoTitle": "Ventilador de Pie Liliana Orbital 18″",
+   "seoDescription": "Barral telescópico extensible metálico. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-de-pie-liliana-parrilla-cromada-digital-20",
+   "seoTitle": "Ventilador de Pie Liliana 20″ Parrilla",
+   "seoDescription": "Barral telescópico extensible metálico. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-de-techo-embassy-retractil-con-luz-led",
+   "seoTitle": "Ventilador de Techo Retráctil Embassy con luz",
+   "seoDescription": "Ventilador de techo con luz Diámetro 42 pulgadas Potente motor de 70W Con control remoto para encendido del motor… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-de-techo-liliana-4-aspas-65w-c-luz",
+   "seoTitle": "Ventilador de Techo Liliana 4 Aspas 65W c/Luz",
+   "seoDescription": "Ventilador de Techo Liliana 4 Aspas 65W c/Luz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-de-techo-peabody-retractil-con-luz-led-blanco",
+   "seoTitle": "Ventilador de Techo Peabody Retráctil con Luz",
+   "seoDescription": "Aspas invisibles y retráctiles Bajo consumo y SUPER silencioso Control Remoto Lampara LED 3 tonos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-de-techo-retractil-daihatsu",
+   "seoTitle": "Ventilador de Techo Retractil Daihatsu",
+   "seoDescription": "Motor de 70 Wts de Potencia. 6 Niveles de Potencia. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-turbo-18-alpaca",
+   "seoTitle": "Ventilador Turbo 18″ Alpaca",
+   "seoDescription": "Ventilador turbo 18 ” 75w . Alpaca VK-40 Control de 3 velocidades. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-turbo-embassy-2-en-1-piso-pared",
+   "seoTitle": "Ventilador Turbo Embassy 18″ 2 En 1 Piso",
+   "seoDescription": "Ventilador turbo de piso. 3 Velocidades. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-turbo-liliana-3-aspas-35w-10-cabezal-reclinable",
+   "seoTitle": "Ventilador Turbo Liliana 3 Aspas 35W 10″",
+   "seoDescription": "3 opciones de uso: piso, mesa y pared. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-turbo-liliana-5-aspas-16-65w",
+   "seoTitle": "Ventilador Turbo Liliana 5 Aspas 16″ 65W",
+   "seoDescription": "Nueva base antideslizante. Cabezal reclinable. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-turbo-liliana-5-aspas-20-90w",
+   "seoTitle": "Ventilador Turbo Liliana 5 Aspas 18″ 75W",
+   "seoDescription": "Nueva base antideslizante. Cabezal reclinable. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ventilador-turbo-liliana-5-aspas-20-90w-2",
+   "seoTitle": "Ventilador Turbo Liliana 5 Aspas 20″ 90W",
+   "seoDescription": "Nueva base antideslizante. Cabezal reclinable. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "videocamara-panasonic-profesional-4k-hc-x1500",
+   "brand": "Panasonic",
+   "seoTitle": "Videocámara Panasonic HC-X1500 Profesional 4K",
+   "seoDescription": "Grabación 4K de 10 bits a 60p - Nuevo códec HEVC a 200 Mbps Gran angular de 25 mm Zoom óptico de 24x Detección de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "videocamara-profesional-4k-hc-x2000-4k",
+   "brand": "Panasonic",
+   "seoTitle": "Videocámara Panasonic HC-X2000 Profesional 4K",
+   "seoDescription": "Grabación 4K de 10 bits a 60p - Nuevo códec HEVC a 200 Mbps Gran angular de 25 mm Zoom óptico de 24x Detección de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "videoportero-analogico-kit-hilook-k13p",
+   "name": "Videoportero Analogico Kit HiLook K13P",
+   "brand": "HiLook",
+   "seoTitle": "Videoportero Analogico Kit HiLook K13P",
+   "seoDescription": "Kit videoportero analógico Hilook K13P completo para intercomunicación doméstica. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "videoportero-ip-2mp-ezviz-ep7-solar",
+   "name": "Videoportero IP 2MP Ezviz EP7 Solar",
+   "brand": "Ezviz",
+   "seoTitle": "Videoportero IP 2MP Ezviz EP7 Solar",
+   "seoDescription": "Videoportero inteligente EZVIZ EP7 con panel solar integrado, cámara 2MP, conectividad WiFi y comunicación… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "videoportero-ip-2mp-ezviz-hp4",
+   "name": "Videoportero IP 2MP Ezviz HP4",
+   "brand": "Ezviz",
+   "seoTitle": "Videoportero IP 2MP Ezviz HP4",
+   "seoDescription": "Videoportero IP 2MP Ezviz HP4. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Videoportero IP 2MP Ezviz HP4. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "videoportero-ip-tp-link-tapo-d230s1-2k-5mp",
+   "name": "Videoportero IP TP-Link TP-Link D230S1 2K 5MP",
+   "brand": "TP-Link",
+   "seoTitle": "Videoportero IP TP-Link TP-Link D230S1 2K 5MP",
+   "seoDescription": "Videoportero IP TP-Link TP-Link D230S1 2K 5MP. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Videoportero IP TP-Link TP-Link D230S1 2K 5MP. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "vigi-cam-is-s345zi-4mp-out-bullet-moto-varifocal",
+   "name": "Vigi CAM IS S345ZI 4MP OUT Bullet Moto Varifocal",
+   "seoTitle": "Vigi CAM IS S345ZI 4MP OUT Bullet Moto",
+   "seoDescription": "Vigi CAM IS S345ZI 4MP OUT Bullet Moto Varifocal. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Vigi CAM IS S345ZI 4MP OUT Bullet Moto Varifocal. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "vigi-cam-is-s355-5mp-out-bullet-2-8mm",
+   "name": "Vigi CAM IS S355 5MP OUT Bullet 2.8MM",
+   "seoTitle": "Vigi CAM IS S355 5MP OUT Bullet 2.8MM",
+   "seoDescription": "Cámara de vigilancia VIGI CAM IS S355, 5MP, tipo bullet, lente de 2.8mm, ideal para monitoreo exterior con alta… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "vigi-cam-is-s355-5mp-out-bullet-4mm",
+   "name": "Vigi CAM IS S355 5MP OUT Bullet 4MM",
+   "seoTitle": "Vigi CAM IS S355 5MP OUT Bullet 4MM",
+   "seoDescription": "Vigi CAM IS S355 5MP OUT Bullet 4MM. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Vigi CAM IS S355 5MP OUT Bullet 4MM. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "vigi-cam-is-s385pi-8mp-out-bullet-ir-panoramica",
+   "name": "Vigi CAM IS S385PI 8MP OUT Bullet IR Panoramica",
+   "seoTitle": "Vigi CAM IS S385PI 8MP OUT Bullet IR",
+   "seoDescription": "Vigi CAM IS S385PI 8MP OUT Bullet IR Panoramica. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Vigi CAM IS S385PI 8MP OUT Bullet IR Panoramica. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "vigi-cam-is-s445zi-4mp-out-turret-moto-varifocal",
+   "name": "Vigi CAM IS S445ZI 4MP OUT Turret Moto Varifocal",
+   "seoTitle": "Vigi CAM IS S445ZI 4MP OUT Turret Moto",
+   "seoDescription": "Vigi CAM IS S445ZI 4MP OUT Turret Moto Varifocal. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Vigi CAM IS S445ZI 4MP OUT Turret Moto Varifocal. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "voip-grandstream-ht801-1fxs",
+   "name": "Voip Grandstream HT801 1FXS",
+   "brand": "Grandstream",
+   "seoTitle": "Voip Grandstream HT801 1FXS",
+   "seoDescription": "Voip Grandstream HT801 1FXS. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Voip Grandstream HT801 1FXS. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "volante-genius-speedmaster-x1-2",
+   "name": "Volante Genius Speedmaster X1",
+   "brand": "Genius",
+   "seoTitle": "Volante Genius Speedmaster X1",
+   "seoDescription": "Volante Genius Speedmaster X1. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Volante Genius Speedmaster X1. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "volante-genius-speedmaster-x2-2",
+   "name": "Volante Genius Speedmaster X2",
+   "brand": "Genius",
+   "seoTitle": "Volante Genius Speedmaster X2",
+   "seoDescription": "Volante Genius Speedmaster X2. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Volante Genius Speedmaster X2. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "volante-logitech-g29-racing-pc-ps3-ps4-ps5",
+   "seoTitle": "Volante Logitech G29 Racing PC PS3 PS4 PS5",
+   "seoDescription": "Siente cada curva, derrape y terreno como si estuvieras en la pista real. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "x-shot-excel-caliber",
+   "brand": "X-Shot",
+   "seoTitle": "X-Shot Excel Caliber",
+   "seoDescription": "Dispara hasta 22 metros Incluye 16 Dardos Carga hasta 6 dardos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "x-shot-excel-fury-4",
+   "brand": "X-Shot",
+   "seoTitle": "X-Shot Excel Fury 4",
+   "seoDescription": "Dispara hasta 27 metros Cañon giratorio Incluye 16 dardos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "x-shot-kickback-o-recoil",
+   "brand": "X-Shot",
+   "seoTitle": "X-Shot Kickback ó Recoil",
+   "seoDescription": "Dispara hasta 27 metros Incluye 8 dardos Recarga Fácil. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "x-shot-mk3",
+   "brand": "X-Shot",
+   "seoTitle": "X-Shot MK3",
+   "seoDescription": "Dispara hasta 24 metros Tambor giratorio Incluye 8 dardos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "x-shot-pro-series-1-sinister",
+   "brand": "X-Shot",
+   "seoTitle": "X-Shot Pro Series 1 Sinister",
+   "seoDescription": "Dispara hasta 43 metros Incluye 40 Dardos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "x-shot-skin-flux",
+   "brand": "X-Shot",
+   "seoTitle": "X-Shot Skin Flux",
+   "seoDescription": "Dispara hasta 27 metros Incluye 8 dardos Mecanismo de recarga simple. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "x-shot-skin-menace",
+   "brand": "X-Shot",
+   "seoTitle": "X-Shot Skin Menace",
+   "seoDescription": "Incluye 8 Dardos. Almacena dardos en la parte inferior. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "x-shot-vigilante-excel",
+   "brand": "X-Shot",
+   "seoTitle": "X-Shot Vigilante Excel",
+   "seoDescription": "Dispara hasta 20 metros Incluye 24 Dardos Sistema de carga de quiebre. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-15-5g-512gb-12gb",
+   "seoTitle": "Xiaomi 15 5G 512gb 12gb Slim",
+   "seoDescription": "Xiaomi 15 5G con 512GB almacenamiento, 12GB RAM y diseño ultra delgado. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-15-5g-512gb-12gb-2",
+   "seoTitle": "Xiaomi 15 5G 512gb 12gb",
+   "seoDescription": "Xiaomi 15 5G con 512GB almacenamiento y 12GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-15t-pro-512tb-12gb-copia",
+   "seoTitle": "Xiaomi 15T Pro 512gb 12gb",
+   "seoDescription": "Xiaomi 15T Pro 512gb 12gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-17-5g-512gb-12gb",
+   "seoTitle": "Xiaomi 17 5G 512gb 12gb",
+   "seoDescription": "Máxima potencia en formato compacto. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-17t-5g-256gb-12gb-slim",
+   "seoTitle": "Xiaomi 17T 5G 256gb 12gb Slim",
+   "seoDescription": "Potencia de gama alta y fotografía profesional Leica. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-17t-5g-512gb-12gb",
+   "seoTitle": "Xiaomi 17T 5G 512gb 12gb",
+   "seoDescription": "Fotografía profesional Leica y rendimiento de gama alta. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-17t-pro-5g-512gb-12gb-2",
+   "seoTitle": "Xiaomi 17T Pro 5G 512gb 12gb",
+   "seoDescription": "El verdadero buque insignia en rendimiento y fotografía. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-mi-band-9-active",
+   "seoTitle": "Xiaomi Mi Band 9 Active",
+   "seoDescription": "Smartwatch Xiaomi Mi Band 9 Active con monitoreo 24/7, resistencia al agua, múltiples modos deportivos y batería… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-f7-5g-256gb-12gb",
+   "seoTitle": "Xiaomi Poco F7 5G 256gb 12gb",
+   "seoDescription": "Xiaomi Poco F7 5G con 256GB almacenamiento y 12GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-f7-5g-512gb-12gb",
+   "seoTitle": "Xiaomi Poco F7 5G 512gb 12gb",
+   "seoDescription": "Xiaomi Poco F7 5G con 512GB almacenamiento y 12GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-f7-ultra-5g-512gb-16gb",
+   "seoTitle": "Xiaomi Poco F7 Ultra 5G 512gb 16gb",
+   "seoDescription": "Xiaomi Poco F7 Ultra 5G 512gb 16gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-f8-pro-5g-512gb-12gb",
+   "seoTitle": "Xiaomi Poco F8 Pro 5G 512gb 12gb",
+   "seoDescription": "Xiaomi Poco F8 Pro 5G con 512GB almacenamiento y 12GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-f9-ultra-5g-512gb-12gb",
+   "seoTitle": "Xiaomi Poco F9 Ultra 5G 512gb 12gb",
+   "seoDescription": "Máxima capacidad de almacenamiento para un rendimiento gaming sin límites. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-m7-128gb-6gb",
+   "seoTitle": "Xiaomi Poco M7 128gb 6gb",
+   "seoDescription": "Xiaomi Poco M7 con 128GB almacenamiento y 6GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-m7-256gb-8gb",
+   "seoTitle": "Xiaomi Poco M7 256gb 8gb",
+   "seoDescription": "Xiaomi Poco M7 con 256GB almacenamiento y 8GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-m8-512gb-8gb",
+   "seoTitle": "Xiaomi Poco M8 512gb 8gb",
+   "seoDescription": "Xiaomi POCO M8 5G Velocidad, eficiencia y gran pantalla multimedia. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-m8-pro-5g-256gb-8gb",
+   "seoTitle": "Xiaomi Poco M8 Pro 5G 256gb 8gb",
+   "seoDescription": "Xiaomi POCO M8 Pro 5G Potencia, autonomía extrema y resistencia de grado superior. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-m8-pro-5g-512gb-12gb",
+   "seoTitle": "Xiaomi Poco M8 Pro 5G 512gb 12gb",
+   "seoDescription": "Xiaomi POCO M8 Pro 5G Potencia, autonomía extrema y resistencia de grado superior. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-x7-pro-5g-256gb-12gb",
+   "seoTitle": "Xiaomi Poco X7 Pro 5G 256gb 12gb",
+   "seoDescription": "Xiaomi Poco X7 Pro 5G 256gb 12gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-x7-pro-5g-256gb-8gb",
+   "seoTitle": "Xiaomi Poco X7 Pro 5G 256gb 8gb",
+   "seoDescription": "Xiaomi Poco X7 Pro 5G 256gb 8gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-x8-pro-5g-256gb-8gb",
+   "seoTitle": "Xiaomi Poco X8 Pro 5G 256gb 8gb",
+   "seoDescription": "Xiaomi POCO X8 Pro 5G Velocidad al máximo y rendimiento de nivel flagship. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-x8-pro-5g-512gb-12gb",
+   "seoTitle": "Xiaomi Poco X8 Pro 5G 512gb 12gb",
+   "seoDescription": "Xiaomi POCO X8 Pro 5G Velocidad al máximo y rendimiento de nivel flagship. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-x8-pro-5g-512gb-8gb",
+   "seoTitle": "Xiaomi Poco X8 Pro 5G 512gb 8gb",
+   "seoDescription": "Xiaomi POCO X8 Pro 5G Velocidad al máximo y rendimiento de nivel flagship. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-x8-pro-max-5g-256gb-12gb",
+   "seoTitle": "Xiaomi Poco X8 Pro Max 5G 256gb 12gb",
+   "seoDescription": "Xiaomi POCO X8 Pro Max 5G Potencia sin límites y una autonomía colosal. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-poco-x8-pro-max-5g-512gb-12gb",
+   "seoTitle": "Xiaomi Poco X8 Pro Max 5G 512gb 12gb",
+   "seoDescription": "Xiaomi POCO X8 Pro Max 5G Potencia sin límites y una autonomía colosal. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-15c-128gb-4gb",
+   "seoTitle": "Xiaomi Redmi 15c 128gb 4gb",
+   "seoDescription": "Xiaomi Redmi 15c 128gb 4gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-15c-128gb-6gb",
+   "seoTitle": "Xiaomi Redmi 15c 128gb 6gb",
+   "seoDescription": "Xiaomi Redmi 15c 128gb 6gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-15c-256gb-4gb",
+   "seoTitle": "Xiaomi Redmi 15c 256gb 4gb",
+   "seoDescription": "Xiaomi Redmi 15c 256gb 4gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-17-128gb-4gb",
+   "seoTitle": "Xiaomi Redmi 17 128gb 4gb",
+   "seoDescription": "Xiaomi Redmi 17 128gb 4gb. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Xiaomi Redmi 17 128gb 4gb. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "xiaomi-redmi-17-256gb-4gb",
+   "seoTitle": "Xiaomi Redmi 17 256gb 4gb",
+   "seoDescription": "Autonomía monstruosa y almacenamiento sin límites. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-17-256gb-6gb",
+   "seoTitle": "Xiaomi Redmi 17 256gb 6gb",
+   "seoDescription": "Autonomía monstruosa y almacenamiento sin límites. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-buds-6-play",
+   "seoTitle": "Xiaomi Redmi Buds 6 Play",
+   "seoDescription": "Xiaomi Redmi Buds 6 Play: auriculares inalámbricos con audio superior, cancelación de ruido, batería duradera y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-note-14-256gb-8gb",
+   "seoTitle": "Xiaomi Redmi Note 14 256gb 8gb",
+   "seoDescription": "Procesador Octa-Core Helio G99 Memoria 256gb / Ram 8gb Camara 108mp Bateria 5.500mAh. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-note-14-5g-256gb-8gb-2",
+   "seoTitle": "Xiaomi Redmi Note 14 5G 256gb 8gb",
+   "seoDescription": "Xiaomi Redmi Note 14 5G 256gb 8gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-note-14-pro-5g-256gb-12gb",
+   "seoTitle": "Xiaomi Redmi Note 14 Pro 5G 256gb 12gb",
+   "seoDescription": "Procesador MediaTek Dimensity 7300-Ultra Memoria 256gb/ RAM 12gb Camara 200mp Bateria 5.110mAh. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-note-14-pro-5g-256gb-8gb",
+   "seoTitle": "Xiaomi Redmi Note 14 Pro 5G 256gb 8gb",
+   "seoDescription": "Procesador MediaTek Dimensity 7300-Ultra Memoria 256gb/ RAM 8gb Camara 200mp Bateria 5.110mAh. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-note-14s-256gb-8gb",
+   "seoTitle": "Xiaomi Redmi Note 14s 256gb 8gb",
+   "seoDescription": "Xiaomi Redmi Note 14s con 256GB almacenamiento y 8GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-note-14s-512gb-12gb",
+   "seoTitle": "Xiaomi Redmi Note 14s 512gb 12gb",
+   "seoDescription": "Xiaomi Redmi Note 14s con 512GB almacenamiento y 12GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-note-15-256gb-8gb",
+   "seoTitle": "Xiaomi Redmi Note 15 256gb 8gb",
+   "seoDescription": "Xiaomi Redmi Note 15 (8GB RAM / 256GB Storage) Fotografía de alta resolución y autonomía para varios días. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-note-15-5g-256gb-8gb",
+   "seoTitle": "Xiaomi Redmi Note 15 5G 256gb 8gb",
+   "seoDescription": "Xiaomi Redmi Note 15 5G (8GB RAM / 256GB Storage) Velocidad 5G, cámara con estabilización óptica y gran autonomía. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-note-15-pro-256gb-8gb",
+   "seoTitle": "Xiaomi Redmi Note 15 Pro 5G 256gb 8gb",
+   "seoDescription": "Rendimiento Pro y fotografía de nivel superior. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-note-15-pro-5g-256gb-8gb",
+   "seoTitle": "Xiaomi Redmi Note 15 Pro+ 5G 256gb 8gb",
+   "seoDescription": "Xiaomi Redmi Note 15 Pro+ 5G Potencia sin compromisos, carga ultrarrápida y durabilidad máxima. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-note-15-pro-5g-512gb-12gb",
+   "seoTitle": "Xiaomi Redmi Note 15 Pro+ 5G 512gb 12gb",
+   "seoDescription": "Xiaomi Redmi Note 15 Pro+ 5G Potencia sin compromisos, carga ultrarrápida y durabilidad máxima. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-note-15-pro-5g-512gb-12gb-2",
+   "seoTitle": "Xiaomi Redmi Note 15 Pro 5G 512gb 12gb",
+   "seoDescription": "Rendimiento Pro y fotografía de nivel superior. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-note-17-256gb-8gb",
+   "seoTitle": "Xiaomi Redmi Note 17 256gb 8gb",
+   "seoDescription": "Autonomía récord y una pantalla gigante para máxima inmersión. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-note-17-5g-256gb-6gb",
+   "seoTitle": "Xiaomi Redmi Note 17 5G 256gb 6gb",
+   "seoDescription": "Gran pantalla inmersiva, autonomía sobresaliente y conectividad 5G. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-redmi-note-17-pro-max-5g-512gb-12gb",
+   "seoTitle": "Xiaomi Redmi Note 17 Pro Max 5G 512gb 8gb",
+   "seoDescription": "El exponente máximo de autonomía, velocidad y almacenamiento en la gama media. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "xiaomi-robot-vacuum-e10",
+   "brand": "Xiaomi",
+   "seoTitle": "Xiaomi Robot Vacuum Trapeador E10",
+   "seoDescription": "Xiaomi Robot Vacuum Trapeador E10. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Xiaomi Robot Vacuum Trapeador E10. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "xiaomi-robot-vacuum-e5",
+   "brand": "Xiaomi",
+   "seoTitle": "Xiaomi Robot Vacuum E5",
+   "seoDescription": "Xiaomi Robot Vacuum E5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Xiaomi Robot Vacuum E5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  }
+ ]
+}

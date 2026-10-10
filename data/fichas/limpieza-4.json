@@ -1,0 +1,3295 @@
+{
+ "lote": "limpieza-4",
+ "soloSinCurar": true,
+ "nota": "Limpieza automática sin redactar: nombre, marca, título y descripción para Google.",
+ "productos": [
+  {
+   "slug": "netmak-soporte-tv-moni-32-60-brazo-articulado-nm-st36",
+   "name": "Netmak Soporte TV/Moni 32″- 60″ Brazo Articulado NM-ST36",
+   "brand": "Netmak",
+   "seoTitle": "Netmak Soporte TV/Moni 32″- 60″ Brazo",
+   "seoDescription": "Soporte TV Netmak con brazo articulado para pantallas 32″-60″. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-teclado-gamer-mecanico-retroiluminado-usb-apoya-muneca-nm-legend",
+   "name": "Netmak Teclado Gamer Mecanico Retroiluminado USB + Apoya Muñeca Nm-legend",
+   "brand": "Netmak",
+   "seoTitle": "Netmak Teclado Gamer Mecanico Retroiluminado",
+   "seoDescription": "Teclado gamer mecánico NETMAK LEGEND con retroiluminación RGB, conexión USB resistente y cómodo apoya muñecas… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-teclado-gamer-mecanico-retroiluminado-usb-nm-alliance",
+   "name": "Netmak Teclado Gamer Mecanico Retroiluminado USB Nm-alliance",
+   "brand": "Netmak",
+   "seoTitle": "Netmak Teclado Gamer Mecanico Retroiluminado",
+   "seoDescription": "Teclado mecánico gaming NETMAK NM-ALLIANCE con retroiluminación RGB, switches mecánicos de alta precisión y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-teclado-y-mouse-minimalista-led-usb-nm-tm34",
+   "name": "Netmak Teclado y Mouse Minimalista LED USB NM-TM34",
+   "brand": "Netmak",
+   "seoTitle": "Netmak Teclado y Mouse Minimalista LED USB",
+   "seoDescription": "Combo NETMAK NM-TM34 con teclado y mouse minimalista, iluminación LED, conexión USB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-af-12-24-af-dx-f-4-if",
+   "name": "Nikon AF 12-24 AF DX F/4 IF",
+   "brand": "Nikon",
+   "seoTitle": "Nikon AF 12-24 AF DX F/4 IF",
+   "seoDescription": "Objetivo Nikon AF 12-24mm f/4 DX IF gran angular profesional para cámaras DSLR formato DX con enfoque automático y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-af-s-35-1-8g",
+   "name": "Nikon AF-S 35 1.8G",
+   "brand": "Nikon",
+   "seoTitle": "Nikon AF-S 35 1.8G",
+   "seoDescription": "Objetivo Nikon AF-S 35mm f/1.8G con gran apertura, enfoque automático silencioso y construcción óptica superior para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-af-s-35mm-f18g-dx",
+   "brand": "Nikon",
+   "seoTitle": "Lente Nikon AF-S 35mm f/1.8G DX",
+   "seoDescription": "Lente Nikon AF-S 35mm f/1.8G DX. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-af-s-50-1-8g",
+   "name": "Nikon AF-S 50 1.8G",
+   "brand": "Nikon",
+   "seoTitle": "Nikon AF-S 50 1.8G",
+   "seoDescription": "Objetivo Nikon AF-S 50mm f/1.8G con apertura luminosa f/1.8, enfoque automático silencioso y calidad óptica… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-af-s-50mm-f18g",
+   "brand": "Nikon",
+   "seoTitle": "Lente Nikon AF-S 50mm f/1.8G",
+   "seoDescription": "Lente Nikon AF-S 50mm f/1.8G. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-coolpix-p1100",
+   "seoTitle": "Nikon Coolpix P1100",
+   "seoDescription": "Llega más lejos que nunca con el zoom óptico de 125x más potente del mundo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-coolpix-p950",
+   "seoTitle": "Nikon Coolpix P950",
+   "seoDescription": "Nikon Coolpix P950. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-d750",
+   "seoTitle": "Nikon D750 Body",
+   "seoDescription": "Sensor de formato FX de 24,3 MP EXPEED 4 Grabe vídeos de máxima definición (Full HD, 1080p) a 50p/60p. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-d7500-18-140mm-vr",
+   "seoTitle": "Nikon D7500 Kit 18-140mm",
+   "seoDescription": "Nikon D7500 Kit 18-140mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-d7500-body",
+   "seoTitle": "Nikon D7500 Body",
+   "seoDescription": "Nikon D7500 Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-d850",
+   "seoTitle": "Nikon D850 Body",
+   "seoDescription": "Nikon D850 Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-d850-kit-24-120mm",
+   "seoTitle": "Nikon D850 Kit 24-120mm",
+   "seoDescription": "Nikon D850 Kit 24-120mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-12-28-dx-f3-5-5-6-pz-vr",
+   "name": "Nikon Linea Z 12-28 DX F3.5-5.6 PZ VR",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 12-28 DX F3.5-5.6 PZ VR",
+   "seoDescription": "Objetivo gran angular compacto Nikon Z DX 12-28mm con estabilización VR y motor paso a paso silencioso para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-12-28-f3-5-5-6-pz-vr",
+   "name": "Nikon Linea Z 12-28 F3.5-5.6 PZ VR",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 12-28 F3.5-5.6 PZ VR",
+   "seoDescription": "Lente Nikon Z 12-28mm f/3.5-5.6 PZ VR ultra gran angular compacto con estabilización VR y enfoque silencioso para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-135-f1-8-s-planar-2",
+   "name": "Nikon Linea Z 135 F1.8 S Planar",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 135 F1.8 S Planar",
+   "seoDescription": "Objetivo Nikon Z 135mm f/1.8 S para retratos profesionales. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-14-24-f2-8s",
+   "name": "Nikon Linea Z 14-24 F2.8S",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 14-24 F2.8S",
+   "seoDescription": "Objetivo gran angular profesional Nikon Z 14-24mm f/2.8 S para fotografía paisajística, arquitectónica y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-14-30-f4-s",
+   "name": "Nikon Linea Z 14-30 F4 S",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 14-30 F4 S",
+   "seoDescription": "Objetivo Nikon Z 14-30mm f/4 S ultra gran angular con montura Z nativa, diseño compacto y calidad óptica profesional… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-16-50-dx-f3-5-6-3-vr",
+   "name": "Nikon Linea Z 16-50 DX F3.5-6.3 VR",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 16-50 DX F3.5-6.3 VR",
+   "seoDescription": "Lente Nikon Z DX 16-50mm con estabilización VR, ideal para fotografía versátil desde gran angular hasta retrato en… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-18-140-dx-f3-5-63-vr",
+   "name": "Nikon Linea Z 18-140 DX F3.5-6,3 VR",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 18-140 DX F3.5-6,3 VR",
+   "seoDescription": "Objetivo zoom versátil Nikon Z 18-140mm DX con estabilización VR, perfecto para fotografía cotidiana y viajes con… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-180-600-f5-6-6-3-2",
+   "seoTitle": "Lente Nikon Z 180-600mm f/5.6-6.3 VR",
+   "seoDescription": "Teleobjetivo Nikon Z 180-600mm f/5.6-6.3 VR con estabilización avanzada, ideal para fotografía de naturaleza… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-20-f1-8-s",
+   "name": "Nikon Linea Z 20 F1.8 S",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 20 F1.8 S",
+   "seoDescription": "Objetivo gran angular Nikon Z 20mm f/1.8 S con óptica premium, ideal para paisajes, arquitectura y fotografía… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-24-200-f4-6-3-vr",
+   "seoTitle": "Lente Nikon Z 24-200mm f/4-6.3 VR",
+   "seoDescription": "Objetivo zoom todo-en-uno Nikon Z 24-200mm f/4-6.3 VR con estabilización óptica, perfecto para fotografía de viaje y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-24-70-f2-8-s",
+   "name": "Nikon Linea Z 24-70 F2.8 S",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 24-70 F2.8 S",
+   "seoDescription": "Lente Nikon Z 24-70mm f/2.8 S profesional con apertura constante, estabilización óptica y construcción resistente… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-24-70-f4s",
+   "name": "Nikon Linea Z 24-70 F4S",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 24-70 F4S",
+   "seoDescription": "Objetivo Nikon Z 24-70mm f/4 S con montura Z nativa, estabilización óptica VR y construcción resistente para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-24-dx-f1-7-dx",
+   "name": "Nikon Linea Z 24 DX F1.7 DX",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 24 DX F1.7 DX",
+   "seoDescription": "Objetivo Nikon Z 24mm f/1.7 DX format, diseñado específicamente para cámaras mirrorless Z. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-24-f1-8",
+   "name": "Nikon Linea Z 24 F1.8",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 24 F1.8",
+   "seoDescription": "Lente Nikon Z 24mm f/1.8 S gran angular premium con apertura luminosa, enfoque silencioso y calidad óptica… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-26-f2-8",
+   "name": "Nikon Linea Z 26 F2.8",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 26 F2.8",
+   "seoDescription": "Objetivo Nikon Z 26mm f/2.8 ultra compacto y ligero, ideal para fotografía callejera, paisajes y uso diario con… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-28-135-f4-pz",
+   "name": "Nikon Linea Z 28-135 F4 PZ",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 28-135 F4 PZ",
+   "seoDescription": "Lente zoom profesional Nikon Z 28-135mm f/4 PZ con enfoque automático silencioso, ideal para video y fotografía… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-28-75-f2-8",
+   "name": "Nikon Linea Z 28-75 F2.8",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 28-75 F2.8",
+   "seoDescription": "Lente Nikon Z 28-75mm f/2.8 de apertura constante para fotografía profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-28-f2-8",
+   "name": "Nikon Linea Z 28 F2.8",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 28 F2.8",
+   "seoDescription": "Lente Nikon Z 28mm f/2.8 gran angular compacto, ideal para fotografía callejera, paisajes y retratos con excelente… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-35-f1-2s-2",
+   "name": "Nikon Linea Z 35 F1.2S",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 35 F1.2S",
+   "seoDescription": "Objetivo Nikon Z 35mm f/1.2 S de máxima calidad profesional con apertura ultra luminosa para fotografía artística y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-35-f1-4-2",
+   "name": "Nikon Linea Z 35 F1.4",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 35 F1.4",
+   "seoDescription": "Objetivo Nikon Z 35mm f/1.4 de apertura ultra amplia para fotografía profesional con nitidez excepcional y bokeh… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-35-f1-8s",
+   "name": "Nikon Linea Z 35 F1.8S",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 35 F1.8S",
+   "seoDescription": "Objetivo Nikon Z 35mm f/1.8 S de alta calidad para fotografía profesional con montura Z y apertura luminosa constante. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-40-f2-se-2",
+   "name": "Nikon Linea Z 40 f2 SE",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 40 f2 SE",
+   "seoDescription": "Objetivo macro Nikon Z 40mm f/2.8 SE: compacto, versátil y perfecto para retratos, macro y fotografía cotidiana con… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-50-f1-2-s-2",
+   "name": "Nikon Linea Z 50 F1.2 S",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 50 F1.2 S",
+   "seoDescription": "Objetivo Nikon Z 50mm f/1.2 S premium con apertura ultra amplia para retratos profesionales y fotografía artística… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-50-f1-4-2",
+   "name": "Nikon Linea Z 50 F1.4",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 50 F1.4",
+   "seoDescription": "Objetivo Nikon Z 50mm f/1.4 con apertura luminosa, enfoque silencioso y calidad profesional para retratos perfectos… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-50-f1-8-s-2",
+   "name": "Nikon Linea Z 50 F1.8 S",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 50 F1.8 S",
+   "seoDescription": "Lente Nikon Z 50mm f/1.8 S para retratos profesionales. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-600-f6-3-vr-s",
+   "name": "Nikon Linea Z 600 F6.3 VR S",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 600 F6.3 VR S",
+   "seoDescription": "Teleobjetivo Nikon Z 600mm f/6.3 VR S con estabilización avanzada, ideal para fotografía profesional de fauna… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-70-200-f2-8-vr-s-2",
+   "name": "Nikon Linea Z 70-200 F2.8 VR S",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 70-200 F2.8 VR S",
+   "seoDescription": "Teleobjetivo profesional Nikon Z 70-200mm f/2.8 VR S con estabilización avanzada, enfoque rápido y calidad óptica… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-85-f1-2-2",
+   "name": "Nikon Linea Z 85 F1.2",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 85 F1.2",
+   "seoDescription": "Objetivo Nikon Z 85mm f/1.2 S profesional para retratos excepcionales. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-85-f1-8-s-lens-2",
+   "name": "Nikon Linea Z 85 F1.8 S Lens",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z 85 F1.8 S Lens",
+   "seoDescription": "Objetivo Nikon Z 85mm f/1.8 S para retratos profesionales. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-linea-z-dx-50-250-f4-5-6-3-vr",
+   "name": "Nikon Linea Z DX 50-250 F4.5-6.3 VR",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Linea Z DX 50-250 F4.5-6.3 VR",
+   "seoDescription": "Teleobjetivo Nikon Z DX 50-250mm f/4.5-6.3 VR para cámaras mirrorless. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z-teleconverter-tc-1-4x",
+   "name": "Nikon Z Teleconverter TC-1.4X",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Z Teleconverter TC-1.4X",
+   "seoDescription": "Teleconverter Nikon Z TC-1.4x aumenta distancia focal 1.4x, compatible con lentes Z mount, mantiene calidad óptica… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z-teleconverter-tc-2x",
+   "name": "Nikon Z Teleconverter TC-2X",
+   "brand": "Nikon",
+   "seoTitle": "Nikon Z Teleconverter TC-2X",
+   "seoDescription": "Teleconverter Nikon Z TC-2X duplica la distancia focal de objetivos compatibles, manteniendo calidad óptica… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z30-body",
+   "seoTitle": "Nikon Z30 Body",
+   "seoDescription": "Sensor CMOS de formato DX de 20,9 MP Grabación de video UHD 4K y Full HD Wi-Fi y Bluetooth integrados. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z30-doble-kit-16-50mm-f-3-5-5-6",
+   "seoTitle": "Nikon Z30 doble kit 16-50mm + 50-250mm VR II",
+   "seoDescription": "Sensor CMOS de formato DX de 20,9 MP Grabación de video UHD 4K y Full HD Wi-Fi y Bluetooth integrados. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z30-kit",
+   "seoTitle": "Nikon Z30 kit 18-140mm f/3.5-5.6 VR",
+   "seoDescription": "Sensor CMOS de formato DX de 20,9 MP Grabación de video UHD 4K y Full HD Wi-Fi y Bluetooth integrados. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z30-kit-16-28mm-vr",
+   "seoTitle": "Nikon Z30 Kit 12-28mm VR",
+   "seoDescription": "Nikon Z30 Kit 12-28mm VR. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z30-kit-16-50mm-f-3-5-5-6-vr",
+   "seoTitle": "Nikon Z30 kit 16-50mm f/3.5-5.6",
+   "seoDescription": "Sensor CMOS de formato DX de 20,9 MP Grabación de video UHD 4K y Full HD Wi-Fi y Bluetooth integrados. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z5-ii-body",
+   "seoTitle": "Nikon Z5 II Body Inglés",
+   "seoDescription": "Nikon Z5 II Body Inglés. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z5-ii-kit-16-50mm-ingles",
+   "seoTitle": "Nikon Z5 II Kit 16-50mm Ingles",
+   "seoDescription": "Nikon Z5 II Kit 16-50mm Ingles. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z5-ii-kit-24-200mm-f-4-6-3-vr",
+   "seoTitle": "Nikon Z5 II Kit 24-200mm f/4-6.3 VR",
+   "seoDescription": "Nikon Z5 II Kit 24-200mm f/4-6.3 VR. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z5-ii-kit-24-50mm-f4-6-3",
+   "seoTitle": "Nikon Z5 II Kit 24-50mm F4-6.3",
+   "seoDescription": "Nikon Z5 II Kit 24-50mm F4-6.3. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z5-ii-kit-24-70mm-f4",
+   "seoTitle": "Nikon Z5 II Kit 24-70mm F4",
+   "seoDescription": "Nikon Z5 II Kit 24-70mm F4. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z50-ii-kit-16-50mm",
+   "seoTitle": "Nikon Z50 II Kit 16-50mm",
+   "seoDescription": "Píxeles efectivos 20.9 millones Formato DX Velocidad máxima de obturación 1/4000 sec. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z50-ii-kit-16-50mm-55-250mm",
+   "seoTitle": "Nikon Z50 II Kit 16-50mm + 55-250mm",
+   "seoDescription": "Píxeles efectivos 20.9 millones Formato DX Velocidad máxima de obturación 1/4000 sec. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z50-kit-16-50",
+   "seoTitle": "Nikon Z50 Kit 16-50mm",
+   "seoDescription": "Nikon Z50 Kit 16-50mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z6-ii-body",
+   "seoTitle": "Nikon Z6 II Body Ingles",
+   "seoDescription": "Montura Z de Nikon 24.5 MP FOTOGRAMA COMPLETO DUAL EXPEED ISO 10-51.200 14 FPS Video 4K UHD. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z6-ii-kit-24-70mm-f-4",
+   "seoTitle": "Nikon Z6 II Kit 24-70mm f/4",
+   "seoDescription": "Montura Z de Nikon 24.5 MP FOTOGRAMA COMPLETO DUAL EXPEED ISO 10-51.200 14 FPS Video 4K UHD. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z6-iii-body",
+   "seoTitle": "Nikon Z6 III Body",
+   "seoDescription": "24.5 MEGAPIXELES VIDEO RAW 6K EVF luminoso de Alta Resolución Video 120 fps Expeed 7 Velocidad de grabación de 20… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z6-iii-kit-24-105mm-f-4-7-1",
+   "seoTitle": "Nikon Z6 III Kit 24-105mm f/4-7.1",
+   "seoDescription": "24.5 MEGAPIXELES VIDEO RAW 6K EVF luminoso de Alta Resolución Video 120 fps Expeed 7 Velocidad de grabación de 20… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z6-iii-kit-24-120mm-f-4",
+   "seoTitle": "Nikon Z6 III Kit 24-120mm F/4 Inglés",
+   "seoDescription": "24.5 MEGAPIXELES VIDEO RAW 6K EVF luminoso de Alta Resolución Video 120 fps Expeed 7 Velocidad de grabación de 20… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z6-iii-kit-24-200mm-f-4-6-3-vr",
+   "seoTitle": "Nikon Z6 III Kit 24-200mm F/4-6.3 VR Español",
+   "seoDescription": "24.5 MEGAPIXELES VIDEO RAW 6K EVF luminoso de Alta Resolución Video 120 fps Expeed 7 Velocidad de grabación de 20… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z7-body",
+   "seoTitle": "Nikon Z7 II Body",
+   "seoDescription": "Formato FX Sensor CMOS 45,7 Megapixel TFT inclinable Pantalla LCD táctil Video 4K. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z7-kit-2470",
+   "seoTitle": "Nikon Z7 II kit 24-70mm",
+   "seoDescription": "Formato FX Sensor CMOS 45,7 Megapixel TFT inclinable Pantalla LCD táctil Video 4K. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z8-body",
+   "seoTitle": "Nikon Z8 Body",
+   "seoDescription": "Full Frame CMOS FX Ranura de tarjetas dual Visor electrónico OLED 1,27 cm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z8-kit-24-120mm-f4-s2",
+   "seoTitle": "Nikon Z8 Kit 24-120mm F4 S2",
+   "seoDescription": "Full Frame CMOS FX Ranura de tarjetas dual Visor electrónico OLED 1,27 cm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-z9-body",
+   "seoTitle": "Nikon Z9 Body",
+   "seoDescription": "Nikon Z9 Body. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-zf-body",
+   "seoTitle": "Nikon ZF Body",
+   "seoDescription": "24.5 MP Sensor de fotograma completo Pantalla abatible VR de 8 Puntos Diseño clásico. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-zfc-16-50mm",
+   "seoTitle": "Nikon Zfc Kit 16-50mm",
+   "seoDescription": "DX de 20.9MP Hasta 11 FPS Vídeo en 4K Pantalla Abatible Wi-fi/ Bluetooth AF Puntos de enfoque 209. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nikon-zr-6k-cinema",
+   "seoTitle": "Nikon ZR 6K Cinema",
+   "seoDescription": "La fusión histórica entre la ingeniería de Nikon y la ciencia de color de RED Digital Cinema. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nintendo-switch-oled-64gb",
+   "seoTitle": "Nintendo Switch Oled 64gb",
+   "seoDescription": "Incluye 2 controles. Resolución de 1920px x 1080px. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-asus-tuf-ryzen-7-170-16gb-ssd-512gb-16-144hz-rtx-4050-6gb-w11",
+   "seoTitle": "Notebook Asus TUF Ryzen 7-170 16gb SSD 512gb",
+   "seoDescription": "Notebook Asus TUF Gaming 16″ (Ryzen 7 / 16GB RAM / 512GB SSD / RTX 4050 6GB / 144Hz / W11) Potencia pura para gaming… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-cx-156%e2%80%b3-i5-1235u-16gb-ssd-512gb",
+   "seoTitle": "Notebook CX 15,6″ i5-1235U 16GB SSD 512GB",
+   "seoDescription": "Multitarea intensiva de 10 núcleos, almacenamiento masivo de 512 GB y pantalla Full HD. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-cx-156%e2%80%b3-i5-1235u-8gb-ssd-256gb",
+   "seoTitle": "Notebook CX 15,6″ i5-1235U 8GB SSD 256GB",
+   "seoDescription": "Procesamiento de 10 núcleos de 12.ª Generación, pantalla Full HD y diseño ultra portátil. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-cx-156%e2%80%b3-ultra-5-115u-16gb-ssd-512gb",
+   "seoTitle": "Notebook CX 15,6″ Ultra 5-115U 16GB SSD 512GB",
+   "seoDescription": "Arquitectura Intel Core Ultra de última generación, aceleración por IA integrada y pantalla Full HD IPS. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-cx-156-ryzen-5-3500u-8gb-ssd-256gb",
+   "seoTitle": "Notebook CX 15,6″ Ryzen 5-3500U 8GB SSD 256GB",
+   "seoDescription": "Rendimiento multinúcleo ágil, conectividad Wi-Fi 6 y pantalla Full HD en un diseño ultraliviano. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-cx-156-ryzen-5-7430u-8gb-ssd-256gb",
+   "seoTitle": "Notebook CX 15,6″ Ryzen 5-7430U 8GB SSD 256GB",
+   "seoDescription": "Rendimiento de última generación de 6 núcleos, almacenamiento ultrarrápido y pantalla Full HD. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-dell-i7-1355u-16gb-ssd-512gb-156-fhd-touchscreen",
+   "seoTitle": "Notebook Dell i7-1355U 16gb SSD 512gb 15,6″",
+   "seoDescription": "Potencia, versatilidad e interacción táctil en un diseño moderno. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-dell-inspiron-15-i5-1334u-8gb-ssd-512gb-156-fhd-touchscreen-w11",
+   "seoTitle": "Notebook Dell Inspiron 15 i5-1334U 8gb SSD",
+   "seoDescription": "Productividad ágil e interacción táctil intuitiva. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-dell-inspiron-15-i5-1334u-8gb-ssd-512gb-156-fhd-win-11",
+   "seoTitle": "Notebook Dell Inspiron 15 i5-1334U 8gb SSD",
+   "seoDescription": "Aparece al lado de la imagen del producto y el botón de compra. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-dell-inspiron-15-ryzen-3-7320u-8gb-ssd-512gb-156-fhd-w11",
+   "seoTitle": "Notebook Dell Inspiron 15 Ryzen 3-7320U 8gb",
+   "seoDescription": "La combinación perfecta entre rendimiento diario y eficiencia energética. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-dell-inspiron-15255-ryzen-7-7730u-16gb-ssd-1tb-15-6-fhd-win-11",
+   "seoTitle": "Notebook Dell Inspiron 15255 Ryzen 7-7730U",
+   "seoDescription": "Potencia multinúcleo, almacenamiento masivo y pantalla táctil para la máxima productividad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-gateway-pentium-n5030-4gb-ssd-128gb-156-fhd",
+   "seoTitle": "Notebook Gateway Pentium N5030 4GB SSD 128GB",
+   "seoDescription": "Windows 10 Home (S mode) Intel® Pentium® Silver N5030 Processor (1.10GHz, Up to 3.10GHz, 4M Cache) Pantalla 15.6”… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-hp-14-i5-120u-16gb-ssd-1tb-14-fhd-w11",
+   "seoTitle": "Notebook Hp 14 i5-120U 16gb SSD 1tb 14″ FHD",
+   "seoDescription": "Potencia de última generación y almacenamiento masivo en un formato portátil. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-hp-14-intel-celeron-4gb-128gb-14-hd",
+   "seoTitle": "Notebook Hp 14 Intel Celeron 4gb 128gb 14″ HD",
+   "seoDescription": "Notebook Hp 14 Intel Celeron 4gb 128gb 14″ HD. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-hp-15-i5-1334u-8gb-ssd-256gb-156-hd-w11",
+   "seoTitle": "Notebook Hp 15 i5-1334U 8gb SSD 256gb 15,6″",
+   "seoDescription": "Rendimiento confiable y diseño estilizado. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-hp-440-g11-ultra-5-8gb-512-win-pro",
+   "seoTitle": "Notebook Hp 440 G11 Ultra-5 8GB SSD 512GB Win",
+   "seoDescription": "Notebook Hp 440 G11 Ultra-5 8GB SSD 512GB Win Pro. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Notebook Hp 440 G11 Ultra-5 8GB SSD 512GB Win Pro. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "notebook-hp-440-g11-ultra-7-155u-16gb-512-ssd-win-pro",
+   "seoTitle": "Notebook Hp 440 G11 Ultra-7 155U 16GB SSD",
+   "seoDescription": "Notebook Hp 440 G11 Ultra-7 155U 16GB SSD 512GB SSD WIN PRO. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Notebook Hp 440 G11 Ultra-7 155U 16GB SSD 512GB SSD WIN PRO. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "notebook-hp-460-g11-ultra-7-155u-16gb-1tb-ssd-win-pro",
+   "seoTitle": "Notebook Hp 460 G11 Ultra-7 155U 16GB SSD 1TB",
+   "seoDescription": "Notebook Hp 460 G11 Ultra-7 155U 16GB SSD 1TB Win Pro. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Notebook Hp 460 G11 Ultra-7 155U 16GB SSD 1TB Win Pro. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "notebook-hp-645g11-r5-7535u-16gb-512-windows-pro",
+   "seoTitle": "Notebook Hp 645 G11 R5-7535U 16GB SSD 512GB",
+   "seoDescription": "Notebook Hp 645 G11 R5-7535U 16GB SSD 512GB Windows Pro. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Notebook Hp 645 G11 R5-7535U 16GB SSD 512GB Windows Pro. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "notebook-hp-660-g11-ultra-5-135u-16gb-1tb-ssd-win-pro",
+   "seoTitle": "Notebook Hp 660 G11 Ultra-5 135U 16GB SSD 1TB",
+   "seoDescription": "Notebook Hp 660 G11 Ultra-5 135U 16GB SSD 1TB WIN PRO. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Notebook Hp 660 G11 Ultra-5 135U 16GB SSD 1TB WIN PRO. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "notebook-hp-ebxg1i14-u7-258v-32gb-1tb-wp",
+   "name": "Notebook HP EBXG1I14 U7 258V 32GB/1TB WP",
+   "seoTitle": "Notebook HP EBXG1I14 U7 258V 32GB/1TB WP",
+   "seoDescription": "Notebook HP EBXG1I14 U7 258V 32GB/1TB WP. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Notebook HP EBXG1I14 U7 258V 32GB/1TB WP. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "notebook-hp-i7-150u-16gb-ssd-512gb-156-fhd-touchscreen-w11",
+   "seoTitle": "Notebook Hp i7-150U 16gb SSD 512gb 15,6″ FHD",
+   "seoDescription": "Potencia de nivel profesional e interacción intuitiva. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-hp-victus-ryzen-7-5800h-16gb-ssd-512gb-15-6-fhd-144hz-rtx-3050-ti-4gb",
+   "seoTitle": "Notebook Hp Victus Ryzen 7-5800H 16GB SSD",
+   "seoDescription": "Rendimiento gamer de alto impacto y procesamiento multinúcleo en un diseño moderno. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-hp-victus-ryzen-7-7445hs-16gb-ssd-512gb-15-6-fhd-144hz-rtx-4050-6gb",
+   "seoTitle": "Notebook Hp Victus Ryzen 7-7445HS 16GB SSD",
+   "seoDescription": "Gráficos de nueva generación Ada Lovelace, memoria ultra rápida DDR5 y rendimiento gamer elevado. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-lenovo-ideapad-ryzen-5-40-8gb-256gb-ssd-15-6%e2%80%b3-fhd-w11-abyss-blue",
+   "seoTitle": "Notebook Lenovo Ideapad Ryzen 5 40 8GB 256GB",
+   "seoDescription": "Diseño delgado, resistencia de grado militar y rendimiento multitarea. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-lenovo-thinkbook-14-c7-16gb-512-free",
+   "seoTitle": "Notebook Lenovo ThinkBook 14 C7 16GB 512 FREE",
+   "seoDescription": "Notebook Lenovo ThinkBook 14 C7 16GB 512 FREE. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Notebook Lenovo ThinkBook 14 C7 16GB 512 FREE. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "notebook-lenovo-thinkbook-16-ryzen-7-7735hs-16gb-ssd-512-16",
+   "seoTitle": "Notebook Lenovo ThinkBook 16 R7 16GB 512 FREE",
+   "seoDescription": "Notebook Lenovo ThinkBook 16 R7 16GB 512 FREE. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-lenovo-thinkbook-c5-8gb-512-w11p",
+   "seoTitle": "Notebook Lenovo ThinkBook Core 5-210H 8GB SSD",
+   "seoDescription": "Diseño profesional en aluminio, procesador híbrido Intel Core de última generación y conectividad Thunderbolt™ 4. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-lenovo-v15-i3-8gb-512-free",
+   "seoTitle": "Notebook Lenovo V15 i3-1315U 8GB SSD 512GB",
+   "seoDescription": "Eficiencia cotidiana, diseño portátil ultra resistente y seguridad corporativa. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-lenovov14-i7-13620h-16gb-ssd-512gb-ssd-14-fhd-w11",
+   "seoTitle": "Notebook Lenovo V14 i7-13620H 16GB SSD 512GB",
+   "seoDescription": "Potencia móvil de nivel empresarial, diseño portátil ultra resistente y seguridad ThinkShield. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "notebook-sky-celeron-j-128gb-4gb",
+   "seoTitle": "Notebook Sky Celeron J4125 128gb 6gb 14.1″",
+   "seoDescription": "Notebook Sky Celeron J4125 128gb 6gb 14.1″ FHD. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nvr-16ch-hilook-nvr-216mh-c-16p-h265-4k-16poe",
+   "name": "NVR 16CH HiLook NVR-216MH-C/16P H265+ 4K 16POE",
+   "brand": "HiLook",
+   "seoTitle": "NVR 16CH HiLook NVR-216MH-C/16P H265+ 4K",
+   "seoDescription": "NVR 16CH HiLook NVR-216MH-C/16P H265+ 4K 16POE. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "NVR 16CH HiLook NVR-216MH-C/16P H265+ 4K 16POE. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "nvr-16ch-hilook-nvr-216mh-c-h265-4k-2hd",
+   "name": "NVR 16CH HiLook NVR-216MH-C H265+ 4K 2HD",
+   "brand": "HiLook",
+   "seoTitle": "NVR 16CH HiLook NVR-216MH-C H265+ 4K 2HD",
+   "seoDescription": "NVR 16CH HiLook NVR-216MH-C H265+ 4K 2HD. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "NVR 16CH HiLook NVR-216MH-C H265+ 4K 2HD. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "nvr-4ch-2k-ezviz-x5s-wifi",
+   "name": "NVR 4CH 2K Ezviz X5S WIFI",
+   "brand": "Ezviz",
+   "seoTitle": "NVR 4CH 2K Ezviz X5S WIFI",
+   "seoDescription": "NVR 4CH 2K Ezviz X5S WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "NVR 4CH 2K Ezviz X5S WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "nvr-4ch-hilook-nvr-104h-d-4p-h265-4-poe",
+   "name": "NVR 4CH HiLook NVR-104H-D/4P H265+ 4 POE",
+   "brand": "HiLook",
+   "seoTitle": "NVR 4CH HiLook NVR-104H-D/4P H265+ 4 POE",
+   "seoDescription": "NVR 4CH HiLook NVR-104H-D/4P H265+ 4 POE. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "NVR 4CH HiLook NVR-104H-D/4P H265+ 4 POE. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "nvr-4ch-hilook-nvr-104h-d-4p-h265-4poe",
+   "name": "NVR 4CH HiLook NVR-104H-D/4P H265+ 4POE",
+   "brand": "HiLook",
+   "seoTitle": "NVR 4CH HiLook NVR-104H-D/4P H265+ 4POE",
+   "seoDescription": "Grabador de video en red HILOOK 4 canales con tecnología H265+ y 4 puertos POE integrados para cámaras IP… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nvr-4ch-hilook-nvr-108mh-d-8p-h265-8poe",
+   "name": "NVR 4CH HiLook NVR-108MH-D/8P H265+ 8POE",
+   "brand": "HiLook",
+   "seoTitle": "NVR 4CH HiLook NVR-108MH-D/8P H265+ 8POE",
+   "seoDescription": "Grabador NVR HILOOK 4 canales con tecnología H265+, 8 puertos PoE integrados para cámaras IP, ideal seguridad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nvr-4ch-hilook-nvr-108mh-d-h265",
+   "name": "NVR 4CH HiLook NVR-108MH-D H265+",
+   "brand": "HiLook",
+   "seoTitle": "NVR 4CH HiLook NVR-108MH-D H265+",
+   "seoDescription": "Grabador NVR 4 canales HILOOK NVR-108MH-D con compresión H265+, ideal para sistemas de videovigilancia profesional y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nvr-4ch-hilook-nvr-208mh-c-8p-h265-8poe",
+   "name": "NVR 4CH HiLook NVR-208MH-C/8P H265+ 8POE",
+   "brand": "HiLook",
+   "seoTitle": "NVR 4CH HiLook NVR-208MH-C/8P H265+ 8POE",
+   "seoDescription": "Grabador de video en red NVR HILOOK 4 canales con tecnología H265+, 8 puertos POE integrados para cámaras IP… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nvr-4ch-hilook-nvr-208mh-c-h265",
+   "name": "NVR 4CH HiLook NVR-208MH-C H265+",
+   "brand": "HiLook",
+   "seoTitle": "NVR 4CH HiLook NVR-208MH-C H265+",
+   "seoDescription": "Grabador de video en red HILOOK de 4 canales con tecnología H.265+ para videovigilancia profesional y almacenamiento… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "nvr-8ch-2k-ezviz-x5s-wifi",
+   "name": "NVR 8CH 2K Ezviz X5S WIFI",
+   "brand": "Ezviz",
+   "seoTitle": "NVR 8CH 2K Ezviz X5S WIFI",
+   "seoDescription": "NVR 8CH 2K Ezviz X5S WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "NVR 8CH 2K Ezviz X5S WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "nvr-8ch-hilook-nvr-108h-d-8p-h265-8poe",
+   "name": "NVR 8CH HiLook NVR-108H-D/8P H265+ 8POE",
+   "brand": "HiLook",
+   "seoTitle": "NVR 8CH HiLook NVR-108H-D/8P H265+ 8POE",
+   "seoDescription": "NVR 8CH HiLook NVR-108H-D/8P H265+ 8POE. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "NVR 8CH HiLook NVR-108H-D/8P H265+ 8POE. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "nvr-8ch-hilook-nvr-108h-d-h265",
+   "name": "NVR 8CH HiLook NVR-108H-D H265+",
+   "brand": "HiLook",
+   "seoTitle": "NVR 8CH HiLook NVR-108H-D H265+",
+   "seoDescription": "NVR 8CH HiLook NVR-108H-D H265+. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "NVR 8CH HiLook NVR-108H-D H265+. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "nvr-8ch-hilook-nvr-108mh-c-8p-h265-4k-poe",
+   "name": "NVR 8CH HiLook NVR-108MH-C/8P H265+ 4K POE",
+   "brand": "HiLook",
+   "seoTitle": "NVR 8CH HiLook NVR-108MH-C/8P H265+ 4K POE",
+   "seoDescription": "NVR 8CH HiLook NVR-108MH-C/8P H265+ 4K POE. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "NVR 8CH HiLook NVR-108MH-C/8P H265+ 4K POE. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "olt-4p-tp-link-ds-p7001-04-fibra-optica",
+   "name": "OLT 4P TP-Link DS-P7001-04 Fibra Optica",
+   "brand": "TP-Link",
+   "seoTitle": "OLT 4P TP-Link DS-P7001-04 Fibra Optica",
+   "seoDescription": "OLT 4P TP-Link DS-P7001-04 Fibra Optica. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "OLT 4P TP-Link DS-P7001-04 Fibra Optica. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "olt-8p-tp-link-ds-p7001-08-fibra-optica-2",
+   "name": "OLT 8P TP-Link DS-P7001-08 Fibra Optica",
+   "brand": "TP-Link",
+   "seoTitle": "OLT 8P TP-Link DS-P7001-08 Fibra Optica",
+   "seoDescription": "OLT 8P TP-Link DS-P7001-08 Fibra Optica. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "OLT 8P TP-Link DS-P7001-08 Fibra Optica. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "onu-tp-link-gpon-xc220-g3v-ac1200-giga-voip-fibra-2",
+   "name": "ONU TP-Link Gpon XC220-G3V AC1200 Giga Voip Fibra",
+   "brand": "TP-Link",
+   "seoTitle": "ONU TP-Link Gpon XC220-G3V AC1200 Giga Voip",
+   "seoDescription": "ONU TP-Link Gpon XC220-G3V AC1200 Giga Voip Fibra. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "ONU TP-Link Gpon XC220-G3V AC1200 Giga Voip Fibra. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pachera-pand-nk-descargada-24p-mod-1u",
+   "name": "Pachera Pand NK Descargada 24P MOD 1U",
+   "seoTitle": "Pachera Pand NK Descargada 24P MOD 1U",
+   "seoDescription": "Pachera Pand NK Descargada 24P MOD 1U. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Pachera Pand NK Descargada 24P MOD 1U. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "panasonic-ag-cx20",
+   "seoTitle": "Panasonic AG-CX20",
+   "seoDescription": "Cámara profesional Panasonic AG-CX20 con grabación 4K, zoom óptico 20x, estabilización avanzada y conectividad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "panasonic-ag-cx350",
+   "seoTitle": "Panasonic AG-CX350",
+   "seoDescription": "Cámara profesional Panasonic AG-CX350 con grabación 4K UHD, zoom óptico 20x, streaming integrado y conectividad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "panasonic-hc-vx3-uhd-4k",
+   "seoTitle": "Panasonic HC-VX3 UHD 4K",
+   "seoDescription": "Grabación UHD 4K Nativa: Calidad de imagen ultra nítida con sensor de alta sensibilidad para un rendimiento… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "panasonic-hc-x1200",
+   "seoTitle": "Panasonic HC-X1200",
+   "seoDescription": "Cámara profesional Panasonic HC-X1200 con grabación 4K, zoom óptico 20x, estabilización avanzada y conectividad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "panasonic-hc-x2100",
+   "seoTitle": "Panasonic HC-X2100",
+   "seoDescription": "Cámara profesional Panasonic HC-X2100 con grabación 4K, zoom óptico 24x, estabilización avanzada y conectividad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "panel-convector-vitroceramico-yelmo-blanco-pv-9001b",
+   "seoTitle": "Panel Convector Vitrocerámico Yelmo Blanco",
+   "seoDescription": "Panel Convector Vitrocerámico Yelmo Blanco Pv-9001b. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "panel-convector-vitroceramico-yelmo-negro-pv-9001n",
+   "seoTitle": "Panel Convector Vitrocerámico Yelmo Negro",
+   "seoDescription": "Panel Convector Vitrocerámico Yelmo Negro Pv-9001n. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "panel-de-tv-flotante-delos-32-a-50-roble-negro",
+   "seoTitle": "Panel de TV Flotante Delos 32″ a 50″ Roble",
+   "seoDescription": "Soporta TV hasta 50″ Melamina en 15mm 2 estantes. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "panel-de-tv-flotante-delos-32-a-50-roble-negro-rng",
+   "seoTitle": "Panel de TV Flotante Delos 32″ a 50″ Roble",
+   "seoDescription": "Soporta TV hasta 50″ Melamina en 15mm 2 estantes. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "panel-radiante-liliana-neoheat-2000w",
+   "brand": "Liliana",
+   "seoTitle": "Panel Radiante Liliana Neoheat 2000W",
+   "seoDescription": "Panel Radiante Liliana Neoheat 2000W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Panel Radiante Liliana Neoheat 2000W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pantalla-interactiva-tactil-75-uhd-4k-core-i7-8gb-ssd-256gb-android",
+   "seoTitle": "Pantalla Interactiva Tactil 75″ UHD 4K Core",
+   "seoDescription": "Pantalla Interactiva Tactil 75″ UHD 4K Core i7 8GB SSD 256GB Android. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pantalla-interactiva-tactil-85-uhd-4k-core-i7-8gb-ssd-256gb-android",
+   "seoTitle": "Pantalla Interactiva Tactil 85″ UHD 4K Core",
+   "seoDescription": "Pantalla Interactiva Tactil 85″ UHD 4K Core i7 8GB SSD 256GB Android. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pantalla-led-uhd-4k-65-core-i7-8gb-ssd-256gb-android",
+   "seoTitle": "Pantalla Interactiva Tactil 65″ UHD 4K Core",
+   "seoDescription": "Pantalla Interactiva Tactil 65″ UHD 4K Core i7 8GB SSD 256GB Android. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pantalla-samsung-om32d-semioutdoor-2000",
+   "name": "Pantalla Samsung OM32D Semioutdoor 2000",
+   "brand": "Samsung",
+   "seoTitle": "Pantalla Samsung OM32D Semioutdoor 2000",
+   "seoDescription": "Pantalla Samsung OM32D Semioutdoor 2000. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Pantalla Samsung OM32D Semioutdoor 2000. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pantalla-samsung-om55b-semioutdoor-3000",
+   "name": "Pantalla Samsung OM55B Semioutdoor 3000",
+   "brand": "Samsung",
+   "seoTitle": "Pantalla Samsung OM55B Semioutdoor 3000",
+   "seoDescription": "Pantalla Samsung OM55B Semioutdoor 3000. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Pantalla Samsung OM55B Semioutdoor 3000. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pantalla-samsung-qec-98-serie-smart-sign",
+   "name": "Pantalla Samsung QEC 98″ Serie Smart Sign",
+   "brand": "Samsung",
+   "seoTitle": "Pantalla Samsung QEC 98″ Serie Smart Sign",
+   "seoDescription": "Pantalla Samsung QEC 98″ Serie Smart Sign. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Pantalla Samsung QEC 98″ Serie Smart Sign. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pantalla-samsung-qmc-32-smart-signage",
+   "name": "Pantalla Samsung QMC 32″ Smart Signage",
+   "brand": "Samsung",
+   "seoTitle": "Pantalla Samsung QMC 32″ Smart Signage",
+   "seoDescription": "Pantalla Samsung QMC 32″ Smart Signage. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Pantalla Samsung QMC 32″ Smart Signage. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pantalla-samsung-qmc-50-serie-smart-sign",
+   "name": "Pantalla Samsung QMC 50″ Serie Smart Sign",
+   "brand": "Samsung",
+   "seoTitle": "Pantalla Samsung QMC 50″ Serie Smart Sign",
+   "seoDescription": "Pantalla Samsung QMC 50″ Serie Smart Sign. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Pantalla Samsung QMC 50″ Serie Smart Sign. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pantalla-samsung-qmc-65-serie-smart-sign",
+   "name": "Pantalla Samsung QMC 65″ Serie Smart Sign",
+   "brand": "Samsung",
+   "seoTitle": "Pantalla Samsung QMC 65″ Serie Smart Sign",
+   "seoDescription": "Pantalla Samsung QMC 65″ Serie Smart Sign. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Pantalla Samsung QMC 65″ Serie Smart Sign. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pantalla-samsung-stretch-shc-37",
+   "name": "Pantalla Samsung Stretch SHC 37″",
+   "brand": "Samsung",
+   "seoTitle": "Pantalla Samsung Stretch SHC 37″",
+   "seoDescription": "Pantalla Samsung Stretch SHC 37″. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Pantalla Samsung Stretch SHC 37″. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pantalla-samsung-vmb-u46serie-videowall",
+   "name": "Pantalla Samsung VMB-U46″SERIE Videowall",
+   "brand": "Samsung",
+   "seoTitle": "Pantalla Samsung VMB-U46″SERIE Videowall",
+   "seoDescription": "Pantalla Samsung VMB-U46″SERIE Videowall. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Pantalla Samsung VMB-U46″SERIE Videowall. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pantalla-samsung-vmb-u55serie-videowall",
+   "name": "Pantalla Samsung VMB-U55″SERIE Videowall",
+   "brand": "Samsung",
+   "seoTitle": "Pantalla Samsung VMB-U55″SERIE Videowall",
+   "seoDescription": "Pantalla Samsung VMB-U55″SERIE Videowall. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Pantalla Samsung VMB-U55″SERIE Videowall. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "papel-de-pelicula-fujifilm-instax-film-mini-simple-10-pk",
+   "brand": "Fujifilm",
+   "seoTitle": "Papel de Pelicula Fujifilm Instax Film Mini",
+   "seoDescription": "Papel de Pelicula Fujifilm Instax Film Mini Simple (10/PK). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "papel-de-pelicula-fujifilm-instax-film-mini-simple-black-10-pk",
+   "brand": "Fujifilm",
+   "seoTitle": "Papel de Pelicula Fujifilm Instax Film Mini",
+   "seoDescription": "Papel de Pelicula Fujifilm Instax Film Mini Simple Black (10/PK). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "papel-de-pelicula-fujifilm-instax-film-mini-simple-rainbow-10-pk",
+   "brand": "Fujifilm",
+   "seoTitle": "Papel de Pelicula Fujifilm Instax Film Mini",
+   "seoDescription": "Papel de Pelicula Fujifilm Instax Film Mini Simple Rainbow (10/PK). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "papel-de-pelicula-fujifilm-instax-film-mini-simple-soft-lavender-10-pk",
+   "brand": "Fujifilm",
+   "seoTitle": "Papel de Pelicula Fujifilm Instax Film Mini",
+   "seoDescription": "Papel de Pelicula Fujifilm Instax Film Mini Simple Soft Lavender (10/PK). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-bluetooth-jahro-jh-cx12d",
+   "brand": "Jahro",
+   "seoTitle": "Parlante Bluetooth Jahro JH-CX12D",
+   "seoDescription": "Potencia 150W R.M.S Control de Graves y Agudos Batería interna. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-bluetooth-jahro-jh-f8m",
+   "brand": "Jahro",
+   "seoTitle": "Parlante Bluetooth Jahro JH-F8M",
+   "seoDescription": "Woofer de 8″ y driver. Conexión Bluetooth. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-bluetooth-kassel-party-speaker-8-20w",
+   "brand": "Kassel",
+   "seoTitle": "Parlante Bluetooth Kassel Party Speaker 8″",
+   "seoDescription": "Parlante 8″ Tweeter 1,5″ Luces RGB Función TWS (sincroniza con otro parlante igual). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-bluetooth-kioto-tw1500-80w-luces-led-usb-bateria",
+   "seoTitle": "Parlante Bluetooth Kioto TW1500 80w Luces Led",
+   "seoDescription": "POTENCIA (RMS) 80W PULGADAS 10 PARLANTES 2 PESO (Kg) 8.6 MEDIDAS (cm) 76x34x31. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-bluetooth-kioto-tw2808-crystal-20800w-pmpo-luces-led-bateria",
+   "seoTitle": "Parlante Bluetooth Kioto TW2808 Crystal",
+   "seoDescription": "Parlantes 2×8″ Batería Micrófono inalámbrico Control remoto Entrada auxiliar/usb/tf Bluetooth Luces Rítmicas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-bluetooth-moonki-party-box",
+   "seoTitle": "Parlante Bluetooth Moonki Party Box 900W",
+   "seoDescription": "Parlante Bluetooth Moonki Party Box 900W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-bluetooth-moonki-pb265-100w-r-m-s",
+   "seoTitle": "Parlante Bluetooth Moonki PB265 100W R.M.S",
+   "seoDescription": "Potencia RMS 2 x 50w Woofer 1×6″ Tweeter 2×2″. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-bluetooth-philips-party-speaker-12-40w",
+   "brand": "Philips",
+   "seoTitle": "Parlante Bluetooth Philips Party Speaker 12″",
+   "seoDescription": "Parlante Bluetooth Philips Party Speaker 12″ 40W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-bluetooth-philips-party-speaker-40w",
+   "brand": "Philips",
+   "seoTitle": "Parlante Bluetooth Philips Party Speaker 10″",
+   "seoDescription": "Parlante Bluetooth Philips Party Speaker 10″ 40W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-bluetooth-philips-s7505-30w",
+   "brand": "Philips",
+   "seoTitle": "Parlante Bluetooth Philips S7505 30w",
+   "seoDescription": "Potencia 30W RMS Bluetooth 5.0 Bateria 20hs de reproducción Cargá tu celular. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-bluetooth-smartlife-party-box-2x8",
+   "seoTitle": "Parlante Bluetooth Smartlife Party Box 2×8″",
+   "seoDescription": "2 Woofer 8″ Luces RGB Micrófono Batería incorporada. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-harman-kardon-aura-studio-3",
+   "seoTitle": "Parlante Harman Kardon Aura Studio 3",
+   "seoDescription": "Parlante Harman Kardon Aura Studio 3. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-harrison-punch",
+   "seoTitle": "Parlante Harrison Punch 600W Sp-kja25a",
+   "seoDescription": "Potencia 600W pmpo Entrada USB-SD-BT Ecualizador Radio FM Batería Interna Control remoto Modelo sp-kja25a. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-hp-dhe-6000-luz-led",
+   "brand": "HP",
+   "seoTitle": "Parlante HP DHE-6000 Luz Led",
+   "seoDescription": "Tiene luces led. Potencia de 6W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-jahro-8-1200w-pmpo",
+   "brand": "Jahro",
+   "seoTitle": "Parlante Portatil Jahro 8″",
+   "seoDescription": "Bluetooth Batería recargable, hasta 3 horas de uso continuo Inyectado, ultra liviano Luces LED RG. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-jahro-bazooka-40w-r-m-s",
+   "brand": "Jahro",
+   "seoTitle": "Parlante Jahro Bazooka 25W R.M.S",
+   "seoDescription": "Parlante Jahro Bazooka 25W R.M.S. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-jahro-s-521",
+   "brand": "Jahro",
+   "seoTitle": "Parlante Jahro S-521",
+   "seoDescription": "Parlante Jahro S-521. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-jbl-boombox-4",
+   "seoTitle": "Parlante JBL Boombox 4",
+   "seoDescription": "El parlante portátil más potente y avanzado de JBL. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-jbl-flip-7",
+   "brand": "JBL",
+   "seoTitle": "Parlante JBL Flip 7",
+   "seoDescription": "Parlante JBL Flip 7. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-jbl-partybox-710",
+   "brand": "JBL",
+   "seoTitle": "Parlante JBL PartyBox 710",
+   "seoDescription": "Parlante JBL PartyBox 710 con 800W de potencia, luces LED sincronizadas, batería de 18 horas y conectividad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-jbl-xtreme-4",
+   "seoTitle": "Parlante JBL Xtreme 4",
+   "seoDescription": "Sonido dinámico masivo y graves profundos para llevar a cualquier parte. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-kanji-harrison-sintex-verde-bluetooth",
+   "name": "Parlante Kanji Harrison Sintex Verde Bluetooth",
+   "brand": "Kanji",
+   "seoTitle": "Parlante Kanji Harrison Sintex Verde",
+   "seoDescription": "Parlante Bluetooth Kanji Harrison Sintex en vibrante color verde. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-kioto-tw1200",
+   "seoTitle": "Parlante Bluetooth Kioto TW1200 50W RMS",
+   "seoDescription": "POTENCIA (RMS) 50W PULGADAS 10 PARLANTES 2 PESO (Kg) 8.2 MEDIDAS (cm) 83x36x34. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-nakamichi-thrill-rojo",
+   "seoTitle": "Parlante Nakamichi Thrill Negro",
+   "seoDescription": "Parlante Portátil Bluetooth Potencia:20 W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-portatil-kioto-tw2604",
+   "seoTitle": "Parlante Portátil Kioto TW2604",
+   "seoDescription": "Parlante Portátil Kioto TW2604: sonido potente y diseño compacto, ideal para llevar a cualquier lugar. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-stromberg-bump",
+   "seoTitle": "Parlante Stromberg Bump 12″ 60W R.M.S",
+   "seoDescription": "Duración batería 4 Hs 60w RMS potencia real Bluetooth TWS Parlante Woofer 12″. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-stromberg-jiggy-60w-r-m-s",
+   "seoTitle": "Parlante Stromberg Jiggy 12″ 60W R.M.S",
+   "seoDescription": "Control de bajos y agudos Duración batería 14 Hs 60w RMS potencia real Parlante Woofer 12″. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "parlante-xiaomi-mi-portable-bt",
+   "brand": "Xiaomi",
+   "seoTitle": "Parlante Xiaomi Mi Portable BT",
+   "seoDescription": "Parlante Xiaomi Mi Portable BT. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Parlante Xiaomi Mi Portable BT. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "parlantes-genius-2-1-gamer-sw1250",
+   "brand": "Genius",
+   "seoTitle": "Parlantes Genius 2.1 Gamer SW1250",
+   "seoDescription": "Parlantes Genius 2.1 Gamer SW1250. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-eiffel-e-601-acero-inoxidable-corte-mate-y-cafe",
+   "seoTitle": "Pava Eléctrica Eiffel Corte Mate Acero",
+   "seoDescription": "Voltaje: 220V Con capacidad para 1.8 litros. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-eiffel-e-603-acero-inoxidable-1-7lts",
+   "seoTitle": "Pava Eléctrica Eiffel Acero Inoxidable",
+   "seoDescription": "Pava Eléctrica Eiffel Acero Inoxidable 1.7Lts.. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-liliana-corte-mate",
+   "brand": "Liliana",
+   "seoTitle": "Pava Eléctrica Liliana Corte Mate",
+   "seoDescription": "Selector de temperatura regulable. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-liliana-infustyle-2000w-1-7lt",
+   "brand": "Liliana",
+   "seoTitle": "Pava Eléctrica Liliana Infustyle 2000W 1.7LT",
+   "seoDescription": "Selector de temperatura entre 50ºC y 100ºC Cuerpo de acero inoxidable. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-liliana-modern-mate",
+   "brand": "Liliana",
+   "seoTitle": "Pava Eléctrica Liliana Modern Mate",
+   "seoDescription": "Capacidad de 1,7 Lts. Control digital de temperaturas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-midea-acero-inoxidable-1-7-lt",
+   "brand": "Midea",
+   "seoTitle": "Pava Eléctrica Midea Acero Inoxidable 1.7 Lt.",
+   "seoDescription": "Pava eléctrica Midea de acero inoxidable de 1.7 litros, ideal para hervir agua rápidamente con un diseño elegante y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-midea-acero-inoxidable-con-control-17l",
+   "brand": "Midea",
+   "seoTitle": "Pava Eléctrica Midea Acero Inoxidable",
+   "seoDescription": "Pava Eléctrica Midea Acero Inoxidable con control de temperatura 1,7L. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-peabody-1-7l-acero-inoxidable",
+   "brand": "Peabody",
+   "seoTitle": "Pava Eléctrica Peabody 1.7L Acero Inoxidable",
+   "seoDescription": "Pava Eléctrica Peabody 1.7L Acero Inoxidable. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-peabody-vintage-1-7l-roja",
+   "brand": "Peabody",
+   "seoTitle": "Pava eléctrica Peabody Vintage 1.7L Roja",
+   "seoDescription": "Cuerpo de acero inoxidable. 1,7 Litros de capacidad 2200W de potencia Base con espacio guarda cable y giro 360°… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-sibiu-1-5lts-pantalla-led-2",
+   "seoTitle": "Pava Eléctrica Sibiu 1.5Lts. Pantalla Led",
+   "seoDescription": "Pava Eléctrica Sibiu 1.5Lts. Pantalla Led. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-sibiu-1-7lts-pantalla-led",
+   "seoTitle": "Pava Eléctrica Sibiu 1.7Lts. Pantalla Led",
+   "seoDescription": "Pava Eléctrica Sibiu 1.7Lts. Pantalla Led. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-smartlife-1-5-litros-sl-ek1510ix",
+   "seoTitle": "Pava Eléctrica Smartlife 1.5L Acero",
+   "seoDescription": "Pava Eléctrica Smartlife 1.5L Acero Inoxidable. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-smartlife-17l-blanca",
+   "seoTitle": "Pava eléctrica Smartlife 1,7L Blanca",
+   "seoDescription": "Regulador de Temperatura / 1.7lts. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-ultracomb-pe-4907",
+   "brand": "Ultracomb",
+   "seoTitle": "Pava Eléctrica Ultracomb PE 4907",
+   "seoDescription": "Jarra desmontable de 2 litros de capacidad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-ultracomb-pe-4909-1-7lts-2200w",
+   "brand": "Ultracomb",
+   "seoTitle": "Pava Eléctrica Ultracomb PE 4909 1.7Lts.",
+   "seoDescription": "Pava Eléctrica Ultracomb PE 4909 1.7Lts. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-winco17l-w708",
+   "brand": "Winco",
+   "seoTitle": "Pava eléctrica Winco 1,7L W708 Negra",
+   "seoDescription": "Capacidad 1,7L Corte automático al hervir Termostato de seguridad Iluminación LED brillante Base inalámbrica con… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-winco17l-w708-blanca",
+   "brand": "Winco",
+   "seoTitle": "Pava eléctrica Winco 1,7L W708 Blanca",
+   "seoDescription": "Capacidad 1,7L Corte automático al hervir Termostato de seguridad Iluminación LED brillante Base inalámbrica con… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pava-electrica-yelmo-pe-3901",
+   "seoTitle": "Pava Eléctrica Yelmo PE 3901",
+   "seoDescription": "Pava Eléctrica Yelmo PE 3901. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-air-intel-core-i5-14400-raptorlake",
+   "name": "PC AIR Intel Core I5 14400 Raptorlake",
+   "brand": "Intel",
+   "seoTitle": "PC AIR Intel Core I5 14400 Raptorlake",
+   "seoDescription": "PC AIR Intel Core I5 14400 Raptorlake. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC AIR Intel Core I5 14400 Raptorlake. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-air-intel-pentium-g6405-cometlake",
+   "name": "PC AIR Intel Pentium G6405 Cometlake",
+   "brand": "Intel",
+   "seoTitle": "PC AIR Intel Pentium G6405 Cometlake",
+   "seoDescription": "PC AIR Intel Pentium G6405 Cometlake. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC AIR Intel Pentium G6405 Cometlake. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-all-in-one-hp-ryzen-3-8gb-ssd-256gb-21-5-fhd-w11",
+   "brand": "HP",
+   "seoTitle": "Pc All in One Hp 22 Ryzen 3 8GB SSD 256GB FHD",
+   "seoDescription": "Pc All in One Hp 22 Ryzen 3 8GB SSD 256GB FHD W11H. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-cx-amd-athlon-3000g8gssd240-bio",
+   "name": "PC CX AMD Athlon 3000G+8G+SSD240 (BIO)",
+   "brand": "AMD",
+   "seoTitle": "PC CX AMD Athlon 3000G+8G+SSD240 (BIO)",
+   "seoDescription": "PC CX AMD Athlon 3000G+8G+SSD240 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX AMD Athlon 3000G+8G+SSD240 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-cx-amd-ryzen-3-5300g16gssd480-bio",
+   "name": "PC CX AMD Ryzen 3 5300G+16G+SSD480 (BIO)",
+   "brand": "AMD",
+   "seoTitle": "PC CX AMD Ryzen 3 5300G+16G+SSD480 (BIO)",
+   "seoDescription": "PC CX AMD Ryzen 3 5300G+16G+SSD480 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX AMD Ryzen 3 5300G+16G+SSD480 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-cx-amd-ryzen-5-5600gt8gssd240-bio",
+   "name": "PC CX AMD Ryzen 5 5600GT+8G+SSD240 (BIO)",
+   "brand": "AMD",
+   "seoTitle": "PC CX AMD Ryzen 5 5600GT+8G+SSD240 (BIO)",
+   "seoDescription": "PC CX AMD Ryzen 5 5600GT+8G+SSD240 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX AMD Ryzen 5 5600GT+8G+SSD240 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-cx-amd-ryzen-5-8500g16gssd512-bio",
+   "name": "PC CX AMD Ryzen 5 8500G+16G+SSD512 (BIO)",
+   "brand": "AMD",
+   "seoTitle": "PC CX AMD Ryzen 5 8500G+16G+SSD512 (BIO)",
+   "seoDescription": "PC CX AMD Ryzen 5 8500G+16G+SSD512 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX AMD Ryzen 5 8500G+16G+SSD512 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-cx-amd-ryzen-5-8600g16gssd480-giga",
+   "name": "PC CX AMD Ryzen 5 8600G+16G+SSD480 (giga)",
+   "brand": "AMD",
+   "seoTitle": "PC CX AMD Ryzen 5 8600G+16G+SSD480 (giga)",
+   "seoDescription": "PC CX AMD Ryzen 5 8600G+16G+SSD480 (giga). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-cx-amd-ryzen-5-8600g16gssd512-bio",
+   "name": "PC CX AMD Ryzen 5 8600G+16G+SSD512 (BIO)",
+   "brand": "AMD",
+   "seoTitle": "PC CX AMD Ryzen 5 8600G+16G+SSD512 (BIO)",
+   "seoDescription": "PC CX AMD Ryzen 5 8600G+16G+SSD512 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX AMD Ryzen 5 8600G+16G+SSD512 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-cx-amd-ryzen-7-5700g16g256ghd2tb-asus",
+   "name": "PC CX AMD Ryzen 7 5700G+16G+256G+HD2TB (Asus)",
+   "brand": "AMD",
+   "seoTitle": "PC CX AMD Ryzen 7 5700G+16G+256G+HD2TB (Asus)",
+   "seoDescription": "PC completa AMD Ryzen 7 5700G con 16GB RAM, SSD 256GB, HDD 2TB y motherboard ASUS. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-cx-amd-ryzen-7-5700g16gssd480-bio",
+   "name": "PC CX AMD Ryzen 7 5700G+16G+SSD480 (BIO)",
+   "brand": "AMD",
+   "seoTitle": "PC CX AMD Ryzen 7 5700G+16G+SSD480 (BIO)",
+   "seoDescription": "PC CX AMD Ryzen 7 5700G+16G+SSD480 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX AMD Ryzen 7 5700G+16G+SSD480 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-cx-amd-ryzen-7-8700g16gssd480-bio",
+   "name": "PC CX AMD Ryzen 7 8700G+16G+SSD480 (BIO)",
+   "brand": "AMD",
+   "seoTitle": "PC CX AMD Ryzen 7 8700G+16G+SSD480 (BIO)",
+   "seoDescription": "PC CX AMD Ryzen 7 8700G+16G+SSD480 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX AMD Ryzen 7 8700G+16G+SSD480 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-cx-amd-ryzen-7-8700g16gssd512-bio",
+   "name": "PC CX AMD Ryzen 7 8700G+16G+SSD512 (BIO)",
+   "brand": "AMD",
+   "seoTitle": "PC CX AMD Ryzen 7 8700G+16G+SSD512 (BIO)",
+   "seoDescription": "PC CX AMD Ryzen 7 8700G+16G+SSD512 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX AMD Ryzen 7 8700G+16G+SSD512 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-cx-intel-g59058gssd240g-bio",
+   "name": "PC CX Intel G5905+8G+SSD240G (BIO)",
+   "brand": "Intel",
+   "seoTitle": "PC CX Intel G5905+8G+SSD240G (BIO)",
+   "seoDescription": "PC CX Intel G5905+8G+SSD240G (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX Intel G5905+8G+SSD240G (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-cx-intel-g64058gssd240g-bio",
+   "name": "PC CX Intel G6405+8G+SSD240G (BIO)",
+   "brand": "Intel",
+   "seoTitle": "PC CX Intel G6405+8G+SSD240G (BIO)",
+   "seoDescription": "PC CX Intel G6405+8G+SSD240G (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX Intel G6405+8G+SSD240G (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-cx-intel-i3-1010516gssd480-bio",
+   "name": "PC CX Intel I3 10105+16G+SSD480 (BIO)",
+   "brand": "Intel",
+   "seoTitle": "PC CX Intel I3 10105+16G+SSD480 (BIO)",
+   "seoDescription": "PC CX Intel I3 10105+16G+SSD480 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX Intel I3 10105+16G+SSD480 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-cx-intel-i3-101058gssd240-bio",
+   "name": "PC CX Intel I3 10105+8G+SSD240 (BIO)",
+   "brand": "Intel",
+   "seoTitle": "PC CX Intel I3 10105+8G+SSD240 (BIO)",
+   "seoDescription": "PC CX Intel I3 10105+8G+SSD240 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX Intel I3 10105+8G+SSD240 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-cx-intel-i3-121008gssd240-bio",
+   "name": "PC CX Intel I3 12100+8G+SSD240 (BIO)",
+   "brand": "Intel",
+   "seoTitle": "PC CX Intel I3 12100+8G+SSD240 (BIO)",
+   "seoDescription": "PC CX Intel I3 12100+8G+SSD240 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX Intel I3 12100+8G+SSD240 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-cx-intel-i5-1240016gssd480-bio",
+   "name": "PC CX Intel I5 12400+16G+SSD480 (BIO)",
+   "brand": "Intel",
+   "seoTitle": "PC CX Intel I5 12400+16G+SSD480 (BIO)",
+   "seoDescription": "PC CX Intel I5 12400+16G+SSD480 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX Intel I5 12400+16G+SSD480 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-cx-intel-i5-124008gssd240-bio",
+   "name": "PC CX Intel I5 12400+8G+SSD240 (BIO)",
+   "brand": "Intel",
+   "seoTitle": "PC CX Intel I5 12400+8G+SSD240 (BIO)",
+   "seoDescription": "PC CX Intel I5 12400+8G+SSD240 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX Intel I5 12400+8G+SSD240 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-cx-intel-i7-1270016gssd480-bio",
+   "name": "PC CX Intel I7 12700+16G+SSD480 (BIO)",
+   "brand": "Intel",
+   "seoTitle": "PC CX Intel I7 12700+16G+SSD480 (BIO)",
+   "seoDescription": "PC CX Intel I7 12700+16G+SSD480 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC CX Intel I7 12700+16G+SSD480 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-dell-pro-mff-i5-14500t-16-512g-w11pro",
+   "name": "PC Dell PRO MFF I5 14500T 16 512G W11PRO",
+   "brand": "Dell",
+   "seoTitle": "PC Dell PRO MFF I5 14500T 16 512G W11PRO",
+   "seoDescription": "PC Dell PRO MFF I5 14500T 16 512G W11PRO. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Dell PRO MFF I5 14500T 16 512G W11PRO. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-dell-pro-mff-i7-14700t-16-512gb-w11pro",
+   "name": "PC Dell PRO MFF I7-14700T 16 512GB W11PRO",
+   "brand": "Dell",
+   "seoTitle": "PC Dell PRO MFF I7-14700T 16 512GB W11PRO",
+   "seoDescription": "PC Dell PRO MFF I7-14700T 16 512GB W11PRO. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Dell PRO MFF I7-14700T 16 512GB W11PRO. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-dell-pro-sff-ultra-5-235-16g-512gb-w11pro",
+   "name": "PC Dell PRO SFF Ultra 5 235 16G 512GB W11PRO",
+   "brand": "Dell",
+   "seoTitle": "PC Dell PRO SFF Ultra 5 235 16G 512GB W11PRO",
+   "seoDescription": "PC Dell PRO SFF Ultra 5 235 16G 512GB W11PRO. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Dell PRO SFF Ultra 5 235 16G 512GB W11PRO. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-dell-pro-sff-ultra7-265-16-512-w11pro",
+   "name": "PC Dell PRO SFF ULTRA7 265 16 512 W11PRO",
+   "brand": "Dell",
+   "seoTitle": "PC Dell PRO SFF ULTRA7 265 16 512 W11PRO",
+   "seoDescription": "PC Dell Pro SFF con procesador Ultra7 265, 16GB RAM, 512GB SSD y Windows 11 Pro. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-gamemax-amd-r5-5600gt16g500g500w-80",
+   "name": "PC Gamemax AMD R5 5600GT+16G+500G+500W 80+",
+   "brand": "Gamemax",
+   "seoTitle": "PC Gamemax AMD R5 5600GT+16G+500G+500W 80+",
+   "seoDescription": "PC Gaming completa con AMD Ryzen 5 5600GT, 16GB RAM, 500GB SSD y fuente 80+ Bronze para juegos fluidos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-gamemax-amd-ryzen-5-5600gt16gssd500500w",
+   "name": "PC Gamemax AMD Ryzen 5 5600GT+16G+SSD500+500W",
+   "brand": "Gamemax",
+   "seoTitle": "PC Gamemax AMD Ryzen 5 5600GT+16G+SSD500+500W",
+   "seoDescription": "PC Gamemax AMD Ryzen 5 5600GT+16G+SSD500+500W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Gamemax AMD Ryzen 5 5600GT+16G+SSD500+500W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-gamemax-amd-ryzen-5-7600x16gssd512650w-giga",
+   "name": "PC Gamemax AMD Ryzen 5 7600X+16G+SSD512+650W (giga",
+   "brand": "Gamemax",
+   "seoTitle": "PC Gamemax AMD Ryzen 5 7600X+16G+SSD512+650W",
+   "seoDescription": "PC Gamemax AMD Ryzen 5 7600X+16G+SSD512+650W (giga. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Gamemax AMD Ryzen 5 7600X+16G+SSD512+650W (giga. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-gamemax-amd-ryzen-5-7600x16gssd512650w-gold",
+   "name": "PC Gamemax AMD Ryzen 5 7600X+16G+SSD512+650W Gold",
+   "brand": "Gamemax",
+   "seoTitle": "PC Gamemax AMD Ryzen 5 7600X+16G+SSD512+650W",
+   "seoDescription": "PC Gaming potente con procesador AMD Ryzen 5 7600X, 16GB RAM, SSD 512GB y fuente certificada 650W Gold para máximo… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-gamemax-amd-ryzen-5-7600x32gssd512v5060750w",
+   "name": "PC Gamemax AMD Ryzen 5 7600X+32G+SSD512+V5060+750W",
+   "brand": "Gamemax",
+   "seoTitle": "PC Gamemax AMD Ryzen 5",
+   "seoDescription": "PC Gamemax AMD Ryzen 5 7600X+32G+SSD512+V5060+750W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Gamemax AMD Ryzen 5 7600X+32G+SSD512+V5060+750W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-gamemax-amd-ryzen-7-5700g16gssd500500w",
+   "name": "PC Gamemax AMD Ryzen 7 5700G+16G+SSD500+500W",
+   "brand": "Gamemax",
+   "seoTitle": "PC Gamemax AMD Ryzen 7 5700G+16G+SSD500+500W",
+   "seoDescription": "PC Gamemax AMD Ryzen 7 5700G+16G+SSD500+500W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Gamemax AMD Ryzen 7 5700G+16G+SSD500+500W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-gamer-amd-athlon-3000g-16gb-ddr4-ssd-240gb",
+   "brand": "AMD",
+   "seoTitle": "PC Gamer AMD Athlon 3000G 16GB DDR4 SSD 240GB",
+   "seoDescription": "PC Gamer AMD Athlon 3000G 16GB DDR4 SSD 240GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-gamer-amd-athlon-3000g-8gb-ddr4-ssd-240gb",
+   "brand": "AMD",
+   "seoTitle": "PC Gamer AMD Athlon 3000G 8GB DDR4 SSD 240GB",
+   "seoDescription": "PC Gamer AMD Athlon 3000G 8GB DDR4 SSD 240GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-gamer-amd-ryzen-3-3200g-8gb-ddr4-ssd-240gb",
+   "brand": "AMD",
+   "seoTitle": "PC Gamer AMD Ryzen 3 3200G 8GB DDR4 SSD 240GB",
+   "seoDescription": "PC Gamer AMD Ryzen 3 3200G 8GB DDR4 SSD 240GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-gamer-amd-ryzen-5-5600g-16gb-ddr4-ssd-240gb-w10",
+   "brand": "AMD",
+   "seoTitle": "Pc Gamer AMD Ryzen 5 5600GT 16GB DDR4 SSD",
+   "seoDescription": "Pc Gamer AMD Ryzen 5 5600GT 16GB DDR4 SSD 240GB W10. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-gamer-amd-ryzen-5-5600g-am4-8gb-ddr4-ssd-240gb-w10",
+   "brand": "AMD",
+   "seoTitle": "Pc Gamer AMD Ryzen 5 5600GT 8GB DDR4 SSD",
+   "seoDescription": "Pc Gamer AMD Ryzen 5 5600GT 8GB DDR4 SSD 240GB W10. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-gamer-amd-ryzen-5-8600g-16gb-ddr5-ssd-240gb-w11",
+   "brand": "AMD",
+   "seoTitle": "Pc Gamer AMD Ryzen 5 8600G 16GB DDR5 SSD",
+   "seoDescription": "Pc Gamer AMD Ryzen 5 8600G 16GB DDR5 SSD 240GB W11. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-gamer-amd-ryzen-5-8600g-8gb-ddr5-ssd-240gb-w11-2",
+   "brand": "AMD",
+   "seoTitle": "Pc Gamer AMD Ryzen 5 8600G 8GB DDR5 SSD 240GB",
+   "seoDescription": "Pc Gamer AMD Ryzen 5 8600G 8GB DDR5 SSD 240GB W11. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-gamer-amd-ryzen-7-5700g-16gb-ddr4-ssd-240gb-w10",
+   "brand": "AMD",
+   "seoTitle": "Pc Gamer AMD Ryzen 7 5700G 16GB DDR4 SSD",
+   "seoDescription": "Pc Gamer AMD Ryzen 7 5700G 16GB DDR4 SSD 240GB W10. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-gamer-amd-ryzen-7-5700g-am4-8gb-ddr4-ssd-240gb-w10",
+   "brand": "AMD",
+   "seoTitle": "Pc Gamer AMD Ryzen 7 5700G 8GB DDR4 SSD 240GB",
+   "seoDescription": "Pc Gamer AMD Ryzen 7 5700G 8GB DDR4 SSD 240GB W10. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-gamer-amd-ryzen-7-8700g-16gb-ddr5-ssd-240gb-w11",
+   "brand": "AMD",
+   "seoTitle": "Pc Gamer AMD Ryzen 7 8700G 16GB DDR5 SSD",
+   "seoDescription": "Pc Gamer AMD Ryzen 7 8700G 16GB DDR5 SSD 240GB W11. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-gamer-amd-ryzen-7-8700g-8gb-ddr5-ssd-240gb-w11",
+   "brand": "AMD",
+   "seoTitle": "Pc Gamer AMD Ryzen 7 8700G 8GB DDR5 SSD 240GB",
+   "seoDescription": "Pc Gamer AMD Ryzen 7 8700G 8GB DDR5 SSD 240GB W11. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-gamer-giga-i5-13600k16gssd480gvga8g650w",
+   "name": "PC Gamer Giga I5 13600K+16G+SSD480G+VGA8G+650W",
+   "seoTitle": "PC Gamer Giga I5",
+   "seoDescription": "PC Gamer Giga I5 13600K+16G+SSD480G+VGA8G+650W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Gamer Giga I5 13600K+16G+SSD480G+VGA8G+650W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-gfast-core-i5-10400-ssd-240gb-16gb",
+   "seoTitle": "PC Gfast Core i5-10400 SSD 240GB 16GB",
+   "seoDescription": "PC Gfast Core i5-10400 SSD 240GB 16GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-gfast-intel-celeron-g5905-4gb-120gb-w11h-sl",
+   "brand": "Intel",
+   "seoTitle": "PC GFast Intel Celeron G5905 4gb 120gb",
+   "seoDescription": "PC GFast Intel Celeron G5905 4gb 120gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-hp-280-sff-i5-13500-16gb-ssd512gb",
+   "name": "PC HP 280 SFF I5-13500 16GB SSD512GB",
+   "brand": "HP",
+   "seoTitle": "PC HP 280 SFF I5-13500 16GB SSD512GB",
+   "seoDescription": "PC HP 280 SFF I5-13500 16GB SSD512GB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC HP 280 SFF I5-13500 16GB SSD512GB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-intel-celeron-4gb-ssd-120gb-gfast-slim",
+   "brand": "Intel",
+   "seoTitle": "PC Gfast Intel Celeron 4GB SSD 120GB Slim",
+   "seoDescription": "PC Gfast Intel Celeron 4GB SSD 120GB Slim. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-intel-core-i3-10105",
+   "brand": "Intel",
+   "seoTitle": "PC Intel Core i3-10100 8GB SSD 240GB",
+   "seoDescription": "PC Intel Core i3-10100 8GB SSD 240GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-intel-core-i3-10105-16gb-ssd-240gb",
+   "brand": "Intel",
+   "seoTitle": "PC Intel Core i3-10100 16GB SSD 240GB",
+   "seoDescription": "PC Intel Core i3-10100 16GB SSD 240GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-intel-i3-12100-16gb-ssd-240gb-w10",
+   "brand": "Intel",
+   "seoTitle": "PC Intel i3 12100 16GB SSD 240GB W10",
+   "seoDescription": "PC Intel i3 12100 16GB SSD 240GB W10. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-intel-i3-anderlake-12100-ssd-240gb-8gb-ram",
+   "brand": "Intel",
+   "seoTitle": "PC Intel i3 12100 8GB SSD 240GB W10",
+   "seoDescription": "PC Intel i3 12100 8GB SSD 240GB W10. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-intel-i5-10400-ssd240gb-8gb",
+   "seoTitle": "PC Gfast Core i5-10400 SSD 240GB 8GB",
+   "seoDescription": "PC Gfast Core i5-10400 SSD 240GB 8GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-intel-i7-12700-ssd-240gb-16gb-ram-w10",
+   "brand": "Intel",
+   "seoTitle": "PC Intel i7-12700 SSD 240GB 16GB RAM W10",
+   "seoDescription": "PC Intel i7-12700 SSD 240GB 16GB RAM W10. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-intel-i7-12700-ssd-240gb-8gb-ram-w10",
+   "brand": "Intel",
+   "seoTitle": "PC Intel i7-12700 SSD 240GB 8GB RAM W10",
+   "seoDescription": "PC Intel i7-12700 SSD 240GB 8GB RAM W10. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-lenovo-m75s-r5-pro-3400u-8gb-ssd256-dvdrw-l",
+   "name": "PC Lenovo M75S R5 PRO 3400U 8GB SSD256 Dvdrw (L)",
+   "brand": "Lenovo",
+   "seoTitle": "PC Lenovo M75S R5 PRO 3400U 8GB SSD256 Dvdrw",
+   "seoDescription": "PC Lenovo M75S R5 PRO 3400U 8GB SSD256 Dvdrw (L). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Lenovo M75S R5 PRO 3400U 8GB SSD256 Dvdrw (L). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-lenovo-neo-50s-i5-14400-8gb-ssd512-dvrw-g3os",
+   "name": "PC Lenovo NEO 50S I5 14400 8GB SSD512 Dvrw G3OS",
+   "brand": "Lenovo",
+   "seoTitle": "PC Lenovo NEO 50S I5 14400 8GB SSD512 Dvrw",
+   "seoDescription": "PC Lenovo Neo 50S con procesador Intel i5-14400, 8GB RAM, SSD 512GB y grabadora DVD para máximo rendimiento… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-lenovo-neo-50s-i7-16gb-512-free",
+   "name": "PC Lenovo NEO 50S I7 16GB 512 Free",
+   "brand": "Lenovo",
+   "seoTitle": "PC Lenovo NEO 50S I7 16GB 512 Free",
+   "seoDescription": "PC Lenovo Neo 50S con procesador Intel i7, 16GB RAM, 512GB SSD y FreeDOS. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-lenovo-neo-55s-r5-220-8gb-ssd256-g3os-2",
+   "name": "PC Lenovo NEO 55S R5 220 8GB SSD256 G3OS",
+   "brand": "Lenovo",
+   "seoTitle": "PC Lenovo NEO 55S R5 220 8GB SSD256 G3OS",
+   "seoDescription": "PC Lenovo Neo 55S con procesador AMD Ryzen 5, 8GB RAM, SSD 256GB y sistema operativo preinstalado para máximo… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-lenovo-neo-55s-r7-250-16gb-ssd512-g3os",
+   "name": "PC Lenovo NEO 55S R7 250 16GB SSD512 G3OS",
+   "brand": "Lenovo",
+   "seoTitle": "PC Lenovo NEO 55S R7 250 16GB SSD512 G3OS",
+   "seoDescription": "PC Lenovo NEO 55S R7 250 16GB SSD512 G3OS. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Lenovo NEO 55S R7 250 16GB SSD512 G3OS. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-performance-amd-athlon-3000g8gssd240-bio",
+   "name": "PC Performance AMD Athlon 3000G+8G+SSD240 (BIO",
+   "brand": "AMD",
+   "seoTitle": "PC Performance AMD Athlon 3000G+8G+SSD240",
+   "seoDescription": "PC Performance AMD Athlon 3000G+8G+SSD240 (BIO. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Performance AMD Athlon 3000G+8G+SSD240 (BIO. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-performance-amd-athlon-3000g8gssd240-msi",
+   "name": "PC Performance AMD Athlon 3000G+8G+SSD240 (MSI)",
+   "brand": "AMD",
+   "seoTitle": "PC Performance AMD Athlon 3000G+8G+SSD240",
+   "seoDescription": "PC Performance AMD Athlon 3000G+8G+SSD240 (MSI). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Performance AMD Athlon 3000G+8G+SSD240 (MSI). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-performance-amd-ryzen-3-3200g16gssd480-bio",
+   "name": "PC Performance AMD Ryzen 3 3200G+16G+SSD480 (BIO)",
+   "brand": "AMD",
+   "seoTitle": "PC Performance AMD Ryzen 3 3200G+16G+SSD480",
+   "seoDescription": "PC Performance AMD Ryzen 3 3200G+16G+SSD480 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Performance AMD Ryzen 3 3200G+16G+SSD480 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-performance-amd-ryzen-5-5600gt16gssd480-bio",
+   "name": "PC Performance AMD Ryzen 5 5600GT+16G+SSD480 (BIO",
+   "brand": "AMD",
+   "seoTitle": "PC Performance AMD Ryzen 5 5600GT+16G+SSD480",
+   "seoDescription": "PC Performance AMD Ryzen 5 5600GT+16G+SSD480 (BIO. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Performance AMD Ryzen 5 5600GT+16G+SSD480 (BIO. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-performance-amd-ryzen-7-5700g16gssd480-bio",
+   "name": "PC Performance AMD Ryzen 7 5700G+16G+SSD480 (BIO)",
+   "brand": "AMD",
+   "seoTitle": "PC Performance AMD Ryzen 7 5700G+16G+SSD480",
+   "seoDescription": "PC Performance AMD Ryzen 7 5700G+16G+SSD480 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Performance AMD Ryzen 7 5700G+16G+SSD480 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-performance-intel-g64058gssd240g-bio",
+   "name": "PC Performance Intel G6405+8G+SSD240G (BIO)",
+   "brand": "Intel",
+   "seoTitle": "PC Performance Intel G6405+8G+SSD240G (BIO)",
+   "seoDescription": "PC Performance Intel G6405+8G+SSD240G (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Performance Intel G6405+8G+SSD240G (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-performance-intel-i3-101058gssd240-asus",
+   "name": "PC Performance Intel I3 10105+8G+SSD240 (Asus)",
+   "brand": "Intel",
+   "seoTitle": "PC Performance Intel I3 10105+8G+SSD240",
+   "seoDescription": "PC Performance Intel I3 10105+8G+SSD240 (Asus). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pc-performance-intel-i3-121008gssd240-bio",
+   "name": "PC Performance Intel I3 12100+8G+SSD240 (BIO)",
+   "brand": "Intel",
+   "seoTitle": "PC Performance Intel I3 12100+8G+SSD240 (BIO)",
+   "seoDescription": "PC Performance Intel I3 12100+8G+SSD240 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Performance Intel I3 12100+8G+SSD240 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-performance-intel-i3-13100f8gssd240vga1g-bio",
+   "name": "PC Performance Intel I3 13100F+8G+SSD240+VGA1G BIO",
+   "brand": "Intel",
+   "seoTitle": "PC Performance Intel I3",
+   "seoDescription": "PC Performance Intel I3 13100F+8G+SSD240+VGA1G BIO. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Performance Intel I3 13100F+8G+SSD240+VGA1G BIO. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-performance-intel-i5-1240016gssd480-bio",
+   "name": "PC Performance Intel I5 12400+16G+SSD480 (BIO)",
+   "brand": "Intel",
+   "seoTitle": "PC Performance Intel I5 12400+16G+SSD480",
+   "seoDescription": "PC Performance Intel I5 12400+16G+SSD480 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Performance Intel I5 12400+16G+SSD480 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-performance-intel-i5-124008gssd240-bio",
+   "name": "PC Performance Intel I5 12400+8G+SSD240 (BIO)",
+   "brand": "Intel",
+   "seoTitle": "PC Performance Intel I5 12400+8G+SSD240 (BIO)",
+   "seoDescription": "PC Performance Intel I5 12400+8G+SSD240 (BIO). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Performance Intel I5 12400+8G+SSD240 (BIO). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pc-performance-slim-amd-apu-e1-60108gssd240-giga",
+   "name": "PC Performance Slim AMD APU E1-6010+8G+SSD240 Giga",
+   "brand": "AMD",
+   "seoTitle": "PC Performance Slim AMD APU E1-6010+8G+SSD240",
+   "seoDescription": "PC Performance Slim AMD APU E1-6010+8G+SSD240 Giga. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PC Performance Slim AMD APU E1-6010+8G+SSD240 Giga. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pen-drive-256-gb-netac-u182-3-0-red-black-retractil-2",
+   "name": "PEN Drive 256 GB Netac U182 3.0 Red/Black Retractil",
+   "seoTitle": "PEN Drive 256 GB Netac U182 3.0 Red/Black",
+   "seoDescription": "Pen Drive Netac U182 256GB USB 3.0 retráctil en rojo y negro. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pen-drive-256-gb-netac-u182-3-0-white-blue-retractil-2",
+   "name": "PEN Drive 256 GB Netac U182 3.0 White/Blue Retractil",
+   "seoTitle": "PEN Drive 256 GB Netac U182 3.0 White/Blue",
+   "seoDescription": "Pen Drive Netac U182 256GB USB 3.0 retráctil en blanco y azul. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pen-drive-256gb-sandisk-3-2-ultra-shift",
+   "name": "PEN Drive 256GB SanDisk 3.2 Ultra Shift",
+   "brand": "SanDisk",
+   "seoTitle": "PEN Drive 256GB SanDisk 3.2 Ultra Shift",
+   "seoDescription": "PEN Drive 256GB SanDisk 3.2 Ultra Shift. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PEN Drive 256GB SanDisk 3.2 Ultra Shift. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pen-drive-64gb-hiksemi-2-0-rnb",
+   "name": "PEN Drive 64GB Hiksemi 2.0 RNB",
+   "brand": "Hiksemi",
+   "seoTitle": "PEN Drive 64GB Hiksemi 2.0 RNB",
+   "seoDescription": "PEN Drive 64GB Hiksemi 2.0 RNB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PEN Drive 64GB Hiksemi 2.0 RNB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pen-drive-64gb-sandisk-2-0-cruzerblade",
+   "name": "PEN Drive 64GB SanDisk 2.0 Cruzerblade",
+   "brand": "SanDisk",
+   "seoTitle": "PEN Drive 64GB SanDisk 2.0 Cruzerblade",
+   "seoDescription": "PEN Drive 64GB SanDisk 2.0 Cruzerblade. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PEN Drive 64GB SanDisk 2.0 Cruzerblade. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pen-drive-64gb-sandisk-3-2-ultra-shift",
+   "name": "PEN Drive 64GB SanDisk 3.2 Ultra Shift",
+   "brand": "SanDisk",
+   "seoTitle": "PEN Drive 64GB SanDisk 3.2 Ultra Shift",
+   "seoDescription": "PEN Drive 64GB SanDisk 3.2 Ultra Shift. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "PEN Drive 64GB SanDisk 3.2 Ultra Shift. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "pendrive-hiksemi-64gb-usb-2-0",
+   "brand": "Hiksemi",
+   "seoTitle": "Pendrive Hiksemi 64gb USB 2.0",
+   "seoDescription": "Diseño metálico compacto, resistente y confiable. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pendrive-sandisk-fit-64gb-usb-3-1",
+   "brand": "SanDisk",
+   "seoTitle": "Pendrive Sandisk Fit 64gb USB 3.1",
+   "seoDescription": "Pendrive Sandisk Fit 64gb USB 3.1. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "placa-de-red-usb-wifi-tp-link-822n-300mbps-2-antenas-3dbi",
+   "seoTitle": "Placa de red USB Wifi TP Link 822n 300mbps 2",
+   "seoDescription": "Placa de red USB Wifi TP Link 822n 300mbps 2 Antenas 3dbi. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "placa-de-red-wifi-tp-link-tl-wn823n-300-mbps",
+   "name": "TP-Link Placa de Red WIFI USB Nano 300MBPS 2.4GHZ",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red WIFI USB Nano 300MBPS",
+   "seoDescription": "TP-Link Placa de Red WIFI USB Nano 300MBPS 2.4GHZ. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "placa-de-video-afox-radeon-rx-580-8gb",
+   "seoTitle": "Placa de Video AFOX Radeon RX 580 8GB Bulk",
+   "seoDescription": "Placa de Video AFOX Radeon RX 580 8GB Bulk. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "placa-madre-asus-prime-b660m-a-d4-lga1700",
+   "name": "Placa Madre Asus Prime B660M-A D4 LGA1700",
+   "brand": "Asus",
+   "seoTitle": "Placa Madre Asus Prime B660M-A D4 LGA1700",
+   "seoDescription": "Socket Intel® LGA 1700: Listo para procesadores Intel® de 12a Gen. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "placa-red-pci-e-tp-link-archer-tx20e-ax1800-wifi-6",
+   "name": "Placa Red PCI-E TP-Link Archer TX20E AX1800 WIFI 6",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red PCI-E TP-Link Archer TX20E AX1800",
+   "seoDescription": "Placa Red PCI-E TP-Link Archer TX20E AX1800 WIFI 6. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red PCI-E TP-Link Archer TX20E AX1800 WIFI 6. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-pci-e-tp-link-archer-tx55e-wifi-6-blueto",
+   "name": "Placa Red PCI-E TP-Link Archer TX55E WIFI 6 Blueto",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red PCI-E TP-Link Archer TX55E WIFI 6",
+   "seoDescription": "Placa Red PCI-E TP-Link Archer TX55E WIFI 6 Blueto. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red PCI-E TP-Link Archer TX55E WIFI 6 Blueto. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-pci-e-tp-link-tg-3468-10-100-1000",
+   "name": "TP-Link Placa de Red PCI-E Giga",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red PCI-E Giga",
+   "seoDescription": "TP-Link Placa de Red PCI-E Giga. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Placa de Red PCI-E Giga. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-pci-e-tp-link-tg-3468-10-100-1000-2",
+   "name": "Placa Red PCI-E TP-Link TG-3468 10/100/1000",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red PCI-E TP-Link TG-3468 10/100/1000",
+   "seoDescription": "Tarjeta de red PCI-E TP-Link TG-3468 Gigabit Ethernet 10/100/1000 Mbps. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "placa-red-pci-e-tp-link-tx201-2-5-gigabit",
+   "name": "Placa Red PCI-E TP-Link TX201 2.5 Gigabit",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red PCI-E TP-Link TX201 2.5 Gigabit",
+   "seoDescription": "Placa Red PCI-E TP-Link TX201 2.5 Gigabit. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red PCI-E TP-Link TX201 2.5 Gigabit. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-pci-e-tp-link-tx401-10-gigabit",
+   "name": "Placa Red PCI-E TP-Link TX401 10 Gigabit",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red PCI-E TP-Link TX401 10 Gigabit",
+   "seoDescription": "Placa Red PCI-E TP-Link TX401 10 Gigabit. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red PCI-E TP-Link TX401 10 Gigabit. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-pci-e-tp-link-wn781nd-11n-150mbps-2dbi",
+   "name": "TP-Link Placa de Red WIFI PCI-E 150MBPS 2.4GHZ",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red WIFI PCI-E 150MBPS",
+   "seoDescription": "TP-Link Placa de Red WIFI PCI-E 150MBPS 2.4GHZ. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Placa de Red WIFI PCI-E 150MBPS 2.4GHZ. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-pci-e-tp-link-wn781nd-11n-150mbps-2dbi-2",
+   "name": "Placa Red PCI-E TP-Link WN781ND 11N 150MBPS 2DBI",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red PCI-E TP-Link WN781ND 11N 150MBPS",
+   "seoDescription": "Placa Red PCI-E TP-Link WN781ND 11N 150MBPS 2DBI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red PCI-E TP-Link WN781ND 11N 150MBPS 2DBI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-pci-e-tp-link-wn881nd-11n-300mbps-2x2dbi",
+   "name": "TP-Link Placa de Red WIFI PCI-E 300MBPS 2.4GHZ",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red WIFI PCI-E 300MBPS",
+   "seoDescription": "TP-Link Placa de Red WIFI PCI-E 300MBPS 2.4GHZ. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Placa de Red WIFI PCI-E 300MBPS 2.4GHZ. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-pci-e-tp-link-wn881nd-11n-300mbps-2x2dbi-2",
+   "name": "Placa Red PCI-E TP-Link WN881ND 11N 300MBPS 2X2DBI",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red PCI-E TP-Link WN881ND 11N 300MBPS",
+   "seoDescription": "Placa Red PCI-E TP-Link WN881ND 11N 300MBPS 2X2DBI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red PCI-E TP-Link WN881ND 11N 300MBPS 2X2DBI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-mercusys-mw300uh-300mbps",
+   "name": "Placa Red USB Mercusys MW300UH 300MBPS",
+   "brand": "Mercusys",
+   "seoTitle": "Placa Red USB Mercusys MW300UH 300MBPS",
+   "seoDescription": "Adaptador WiFi USB Mercusys MW300UH de 300Mbps para conexión inalámbrica estable y rápida en PC y portátiles con… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-archer-t2u-ac600-dual-band",
+   "seoTitle": "Adaptador Wi-Fi USB TP-Link Archer T2U AC600",
+   "seoDescription": "Actualizá tu PC o laptop con la velocidad de Wi-Fi 5 de Doble Banda . Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-archer-t2u-plus-high-gain",
+   "name": "Placa Red USB TP-Link Archer T2U Plus High Gain",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link Archer T2U Plus High",
+   "seoDescription": "Placa Red USB TP-Link Archer T2U Plus High Gain. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red USB TP-Link Archer T2U Plus High Gain. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-archer-t3u-ac1300-mu-mimo-db",
+   "name": "Placa Red USB TP-Link Archer T3U AC1300 MU-MIMO DB",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link Archer T3U AC1300",
+   "seoDescription": "Adaptador USB WiFi TP-Link Archer T3U AC1300 con tecnología MU-MIMO y doble banda para conexión inalámbrica de alta… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-archer-t3u-nano-ac1300-db",
+   "name": "Placa Red USB TP-Link Archer T3U Nano AC1300 DB",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link Archer T3U Nano AC1300",
+   "seoDescription": "Placa Red USB TP-Link Archer T3U Nano AC1300 DB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red USB TP-Link Archer T3U Nano AC1300 DB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-archer-t4u-ac1300-dual-band",
+   "name": "Placa Red USB TP-Link Archer T4U AC1300 Dual Band",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link Archer T4U AC1300 Dual",
+   "seoDescription": "Placa Red USB TP-Link Archer T4U AC1300 Dual Band. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red USB TP-Link Archer T4U AC1300 Dual Band. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-archer-t4u-plus-ac1300-hg-db",
+   "name": "Placa Red USB TP-Link Archer T4U Plus AC1300 HG DB",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link Archer T4U Plus AC1300",
+   "seoDescription": "Placa Red USB TP-Link Archer T4U Plus AC1300 HG DB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red USB TP-Link Archer T4U Plus AC1300 HG DB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-archer-tx1u-nano-ax300",
+   "seoTitle": "Adaptador Wi-Fi USB Tp-Link Archer TX1U Nano",
+   "seoDescription": "Adaptador Wi-Fi 6 USB Nano TP-Link Archer TX1U (AX300) Actualizá tu PC o notebook a la velocidad y eficiencia de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-archer-tx20u-ax1800-wifi-6",
+   "name": "Placa Red USB TP-Link Archer TX20U AX1800 WIFI 6",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link Archer TX20U AX1800",
+   "seoDescription": "Placa Red USB TP-Link Archer TX20U AX1800 WIFI 6. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red USB TP-Link Archer TX20U AX1800 WIFI 6. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-archer-tx20u-nano-ax1800-wf6",
+   "name": "Placa Red USB TP-Link Archer TX20U Nano AX1800 WF6",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link Archer TX20U Nano",
+   "seoDescription": "Placa Red USB TP-Link Archer TX20U Nano AX1800 WF6. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red USB TP-Link Archer TX20U Nano AX1800 WF6. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-archer-tx20uh-ax1800-high-ga",
+   "name": "Placa Red USB TP-Link Archer TX20UH AX1800 High GA",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link Archer TX20UH AX1800",
+   "seoDescription": "Placa Red USB TP-Link Archer TX20UH AX1800 High GA. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red USB TP-Link Archer TX20UH AX1800 High GA. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-archer-tx35u-plus-hg-ax1800",
+   "name": "Placa Red USB TP-Link Archer TX35U Plus HG AX1800",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link Archer TX35U Plus HG",
+   "seoDescription": "Placa Red USB TP-Link Archer TX35U Plus HG AX1800. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red USB TP-Link Archer TX35U Plus HG AX1800. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-archer-tx50uh-ax3000-high-ga-2",
+   "name": "Placa Red USB TP-Link Archer TX50UH AX3000 High GA",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link Archer TX50UH AX3000",
+   "seoDescription": "Placa Red USB TP-Link Archer TX50UH AX3000 High GA. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red USB TP-Link Archer TX50UH AX3000 High GA. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-archer-txe50uh-axe3000-hg-2",
+   "name": "Placa Red USB TP-Link Archer TXE50UH AXE3000 HG",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link Archer TXE50UH AXE3000",
+   "seoDescription": "Placa Red USB TP-Link Archer TXE50UH AXE3000 HG. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red USB TP-Link Archer TXE50UH AXE3000 HG. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-archer-txe70uh-axe5400-hg-2",
+   "name": "Placa Red USB TP-Link Archer TXE70UH AXE5400 HG",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link Archer TXE70UH AXE5400",
+   "seoDescription": "Placa Red USB TP-Link Archer TXE70UH AXE5400 HG. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red USB TP-Link Archer TXE70UH AXE5400 HG. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-tx10ub-nano-ax900-wifi6-2",
+   "name": "Placa Red USB TP-Link TX10UB Nano AX900 WIFI6",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link TX10UB Nano AX900 WIFI6",
+   "seoDescription": "Placa Red USB TP-Link TX10UB Nano AX900 WIFI6. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red USB TP-Link TX10UB Nano AX900 WIFI6. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-wn722n-11n-150mbps-4dbi",
+   "name": "TP-Link Placa de Red WIFI USB 150MBPS 2.4Ghz",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red WIFI USB 150MBPS 2.4Ghz",
+   "seoDescription": "TP-Link Placa de Red WIFI USB 150MBPS 2.4Ghz. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Placa de Red WIFI USB 150MBPS 2.4Ghz. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-wn722n-11n-150mbps-4dbi-2",
+   "name": "Placa Red USB TP-Link WN722N 11N 150MBPS 4DBI",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link WN722N 11N 150MBPS 4DBI",
+   "seoDescription": "Placa Red USB TP-Link WN722N 11N 150MBPS 4DBI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red USB TP-Link WN722N 11N 150MBPS 4DBI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-wn725n-11n-150mbps-nano",
+   "name": "TP-Link Placa de Red WIFI USB Nano 150MBPS 2.4GHZ",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red WIFI USB Nano 150MBPS",
+   "seoDescription": "TP-Link Placa de Red WIFI USB Nano 150MBPS 2.4GHZ. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Placa de Red WIFI USB Nano 150MBPS 2.4GHZ. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-wn725n-11n-150mbps-nano-2",
+   "name": "Placa Red USB TP-Link WN725N 11N 150MBPS Nano",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link WN725N 11N 150MBPS Nano",
+   "seoDescription": "Placa Red USB TP-Link WN725N 11N 150MBPS Nano. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red USB TP-Link WN725N 11N 150MBPS Nano. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-wn8200nd-11n-300mbps-2x5dbi",
+   "name": "TP-Link Placa de Red WIFI USB 300MBPS HP 2.4GHZ",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Placa de Red WIFI USB 300MBPS HP",
+   "seoDescription": "TP-Link Placa de Red WIFI USB 300MBPS HP 2.4GHZ. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Placa de Red WIFI USB 300MBPS HP 2.4GHZ. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-wn8200nd-11n-300mbps-2x5dbi-2",
+   "name": "Placa Red USB TP-Link WN8200ND 11N 300MBPS 2X5DBI",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link WN8200ND 11N 300MBPS",
+   "seoDescription": "Placa Red USB TP-Link WN8200ND 11N 300MBPS 2X5DBI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Red USB TP-Link WN8200ND 11N 300MBPS 2X5DBI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-red-usb-tp-link-wn823n-11n-300mbps-mini",
+   "name": "Placa Red USB TP-Link WN823N 11N 300MBPS Mini",
+   "brand": "TP-Link",
+   "seoTitle": "Placa Red USB TP-Link WN823N 11N 300MBPS Mini",
+   "seoDescription": "Adaptador USB WiFi TP-Link WN823N mini con tecnología 11N, velocidad 300Mbps para conexión inalámbrica rápida y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "placa-video-msi-geforce-gtx-1630-aero-itx-4gb-oc",
+   "name": "Placa Video MSI Geforce GTX 1630 Aero ITX 4GB OC",
+   "brand": "MSI",
+   "seoTitle": "Placa Video MSI Geforce GTX 1630 Aero ITX 4GB",
+   "seoDescription": "Placa Video MSI Geforce GTX 1630 Aero ITX 4GB OC. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Placa Video MSI Geforce GTX 1630 Aero ITX 4GB OC. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "placa-video-msi-geforce-rtx-3070-ti-gaming-x-trio-8gb-ddr6",
+   "brand": "MSI",
+   "seoTitle": "Placa de Video MSI GeForce RTX 3070 TI Gaming",
+   "seoDescription": "Placa de Video MSI GeForce RTX 3070 TI Gaming X Trio 8GB DDR6. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "plafon-led-cuadrado-12w-frio-etheos",
+   "seoTitle": "Plafon LED Cuadrado 12W Frio Etheos",
+   "seoDescription": "Plafon LED Cuadrado 12W Frio Etheos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "plafon-led-cuadrado-18w-calida-etheos",
+   "seoTitle": "Plafon LED Cuadrado 18W Calida Etheos",
+   "seoDescription": "Plafon LED Cuadrado 18W Calida Etheos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "plancha-a-vapor-winco",
+   "brand": "Winco",
+   "seoTitle": "Plancha a Vapor Winco Base Cerámica",
+   "seoDescription": "Guardacable retractil Base antiadherente Selector de temperatura Golpe de vapor extra Vapor: 10/20 grs./min. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "plancha-peabody-a-vapor",
+   "brand": "Peabody",
+   "seoTitle": "Plancha Peabody a Vapor",
+   "seoDescription": "Plancha Peabody a Vapor, ideal para eliminar arrugas de manera eficiente. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "plotter-epson-surecolor-t3170-61cm-wifi-ethernet",
+   "name": "Plotter Epson Surecolor T3170 61CM WIFI Ethernet",
+   "brand": "Epson",
+   "seoTitle": "Plotter Epson Surecolor T3170 61CM WIFI",
+   "seoDescription": "Plotter Epson SureColor T3170 de 61cm con conectividad WiFi y Ethernet para impresión profesional de gran formato y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "plotter-epson-surecolor-t3170x-61cm-wifi-sist-cont",
+   "name": "Plotter Epson Surecolor T3170X 61CM WIFI Sist Cont",
+   "brand": "Epson",
+   "seoTitle": "Plotter Epson Surecolor T3170X 61CM WIFI Sist",
+   "seoDescription": "Plotter Epson SureColor T3170X de 61cm con conectividad WiFi y sistema continuo para impresión profesional de gran… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "plotter-epson-t3170x-sist-cont-61cm-24-wifi",
+   "brand": "Epson",
+   "seoTitle": "Plotter Epson T3170x Sist. Cont. 61cm 24″",
+   "seoDescription": "Plotter Epson T3170x Sist. Cont. 61cm 24″ Wifi. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "plotter-hp-t250-designjet-wifi-61cm-24-5hb06d",
+   "name": "HP Plotter Designjet T250 24″ (solo Impresion)",
+   "brand": "HP",
+   "seoTitle": "HP Plotter Designjet T250 24″",
+   "seoDescription": "HP Plotter Designjet T250 24″ (solo Impresion). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HP Plotter Designjet T250 24″ (solo Impresion). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "plotter-hp-t250-designjet-wifi-61cm-24-5hb06d-2",
+   "seoTitle": "Plotter Hp T250 DESIGNJET WIFI 61CM (24)",
+   "seoDescription": "El plotter más compacto del mundo, diseñado para adaptarse a tu estudio, presupuesto y ritmo de trabajo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "poly-mini-pc-mtr-i713700-sin-tc10",
+   "name": "Poly Mini PC MTR I713700 sin TC10",
+   "brand": "Poly",
+   "seoTitle": "Poly Mini PC MTR I713700 sin TC10",
+   "seoDescription": "Poly Mini PC MTR I713700 sin TC10. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Poly Mini PC MTR I713700 sin TC10. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "poly-studio-x70-vesa",
+   "brand": "Poly",
+   "seoTitle": "Poly Studio X70 VESA",
+   "seoDescription": "Poly Studio X70 VESA. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Poly Studio X70 VESA. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "poly-studiox52-v52-vesa-mount",
+   "brand": "Poly",
+   "seoTitle": "Poly StudioX52/V52 VESA Mount",
+   "seoDescription": "Poly StudioX52/V52 VESA Mount. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Poly StudioX52/V52 VESA Mount. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "poly-trio-c60-micr-de-exp",
+   "name": "Poly Trio C60 Micr de Exp.",
+   "brand": "Poly",
+   "seoTitle": "Poly Trio C60 Micr de Exp.",
+   "seoDescription": "Poly Trio C60 Micr de Exp.. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Poly Trio C60 Micr de Exp.. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "poly-voyager-focus-2-msft-teams-certified-usb-c-c-headset-usb-c-a-adapter-charging-stand-no-locali",
+   "brand": "Poly",
+   "seoTitle": "Poly Voyager Focus 2 Msft Teams Certified",
+   "seoDescription": "Poly Voyager Focus 2 Msft Teams Certified USB-C-C Headset +USB-C/A Adapter +Charging Stand No locali. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Poly Voyager Focus 2 Msft Teams Certified USB-C-C Headset +USB-C/A Adapter +Charging Stand No locali. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "portafolio-elf-portanotebook-2110",
+   "seoTitle": "Maletin Porta Notebook ELF 2110",
+   "seoDescription": "Portanotebook de 15.6″ Compartimiento especial portanotebook. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "portafolio-portanotebook-2105",
+   "seoTitle": "Maletin Porta Notebook ELF 2105",
+   "seoDescription": "Maletin Portanotebook. Compartimiento especial portanotebook. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "pos-prox-motherboard-repuesto-p-pa6322",
+   "name": "POS Prox Motherboard Repuesto P/ PA6322",
+   "seoTitle": "POS Prox Motherboard Repuesto P/ PA6322",
+   "seoDescription": "POS Prox Motherboard Repuesto P/ PA6322. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "POS Prox Motherboard Repuesto P/ PA6322. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-amd-athlon-3000g",
+   "name": "Procesador AMD Athlon 3000G",
+   "brand": "AMD",
+   "seoTitle": "Procesador AMD Athlon 3000G",
+   "seoDescription": "Procesador AMD Athlon 3000G. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador AMD Athlon 3000G. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-amd-ryzen-3-3200g",
+   "name": "Procesador AMD Ryzen 3 3200G",
+   "brand": "AMD",
+   "seoTitle": "Procesador AMD Ryzen 3 3200G",
+   "seoDescription": "Procesador AMD Ryzen 3 3200G. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador AMD Ryzen 3 3200G. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-amd-ryzen-5-5600g",
+   "name": "Procesador AMD Ryzen 5 5600G",
+   "brand": "AMD",
+   "seoTitle": "Procesador AMD Ryzen 5 5600G",
+   "seoDescription": "Procesador AMD Ryzen 5 5600G. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador AMD Ryzen 5 5600G. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-amd-ryzen-5-7600x-am5",
+   "name": "Procesador AMD Ryzen 5 7600X AM5",
+   "brand": "AMD",
+   "seoTitle": "Procesador AMD Ryzen 5 7600X AM5",
+   "seoDescription": "Procesador AMD Ryzen 5 7600X AM5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador AMD Ryzen 5 7600X AM5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-amd-ryzen-5-8500g-am5",
+   "name": "Procesador AMD Ryzen 5 8500G AM5",
+   "brand": "AMD",
+   "seoTitle": "Procesador AMD Ryzen 5 8500G AM5",
+   "seoDescription": "Procesador AMD Ryzen 5 8500G AM5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador AMD Ryzen 5 8500G AM5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-amd-ryzen-7-5700g-am4",
+   "name": "Procesador AMD Ryzen 7 5700G AM4",
+   "brand": "AMD",
+   "seoTitle": "Procesador AMD Ryzen 7 5700G AM4",
+   "seoDescription": "Procesador AMD Ryzen 7 5700G AM4. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador AMD Ryzen 7 5700G AM4. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-amd-ryzen-7-7800x3d-am5-sin-cooler",
+   "name": "Procesador AMD Ryzen 7 7800X3D AM5 sin Cooler",
+   "brand": "AMD",
+   "seoTitle": "Procesador AMD Ryzen 7 7800X3D AM5 sin Cooler",
+   "seoDescription": "Procesador AMD Ryzen 7 7800X3D AM5 sin Cooler. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador AMD Ryzen 7 7800X3D AM5 sin Cooler. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-amd-ryzen-7-9700x-am5-sin-cooler",
+   "name": "Procesador AMD Ryzen 7 9700X AM5 sin Cooler",
+   "brand": "AMD",
+   "seoTitle": "Procesador AMD Ryzen 7 9700X AM5 sin Cooler",
+   "seoDescription": "Procesador AMD Ryzen 7 9700X AM5 sin Cooler. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador AMD Ryzen 7 9700X AM5 sin Cooler. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-amd-ryzen-9-9900x-am5-sin-cooler",
+   "name": "Procesador AMD Ryzen 9 9900X AM5 sin Cooler",
+   "brand": "AMD",
+   "seoTitle": "Procesador AMD Ryzen 9 9900X AM5 sin Cooler",
+   "seoDescription": "Procesador AMD Ryzen 9 9900X AM5 sin Cooler. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador AMD Ryzen 9 9900X AM5 sin Cooler. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-amd-ryzen-9-9950x-am5-sin-cooler",
+   "name": "Procesador AMD Ryzen 9 9950X AM5 sin Cooler",
+   "brand": "AMD",
+   "seoTitle": "Procesador AMD Ryzen 9 9950X AM5 sin Cooler",
+   "seoDescription": "Procesador AMD Ryzen 9 9950X AM5 sin Cooler. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador AMD Ryzen 9 9950X AM5 sin Cooler. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-intel-core-i3-12100f-lga-1700",
+   "name": "Procesador Intel Core I3 12100F LGA 1700",
+   "brand": "Intel",
+   "seoTitle": "Procesador Intel Core I3 12100F LGA 1700",
+   "seoDescription": "Procesador Intel Core I3 12100F LGA 1700. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador Intel Core I3 12100F LGA 1700. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-intel-core-i3-13100f-lga1700",
+   "name": "Procesador Intel Core I3 13100F LGA1700",
+   "brand": "Intel",
+   "seoTitle": "Procesador Intel Core I3 13100F LGA1700",
+   "seoDescription": "Procesador Intel Core I3 13100F LGA1700. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador Intel Core I3 13100F LGA1700. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-intel-core-i5-13400-lga1700",
+   "name": "Procesador Intel Core I5 13400 LGA1700",
+   "brand": "Intel",
+   "seoTitle": "Procesador Intel Core I5 13400 LGA1700",
+   "seoDescription": "Procesador Intel Core I5 13400 LGA1700. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador Intel Core I5 13400 LGA1700. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-intel-core-i5-13400f",
+   "name": "Procesador Intel Core I5 13400F",
+   "brand": "Intel",
+   "seoTitle": "Procesador Intel Core I5 13400F",
+   "seoDescription": "Procesador Intel Core I5 13400F. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador Intel Core I5 13400F. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-intel-core-i7-14700kf-lga1700",
+   "name": "Procesador Intel Core I7 14700KF LGA1700",
+   "brand": "Intel",
+   "seoTitle": "Procesador Intel Core I7 14700KF LGA1700",
+   "seoDescription": "Procesador Intel Core I7 14700KF LGA1700. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador Intel Core I7 14700KF LGA1700. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "procesador-intel-core-i9-12900-lga1700",
+   "name": "Procesador Intel Core I9 12900 LGA1700",
+   "brand": "Intel",
+   "seoTitle": "Procesador Intel Core I9 12900 LGA1700",
+   "seoDescription": "Procesador Intel Core I9 12900 LGA1700. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Procesador Intel Core I9 12900 LGA1700. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre",
+   "name": "Intel BX8071514400F",
+   "brand": "Intel",
+   "seoTitle": "Intel BX8071514400F",
+   "seoDescription": "Intel BX8071514400F. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Intel BX8071514400F. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-12",
+   "name": "Asus 90MB1F40-M0EAYC",
+   "brand": "Asus",
+   "seoTitle": "Asus 90MB1F40-M0EAYC",
+   "seoDescription": "Asus 90MB1F40-M0EAYC. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Asus 90MB1F40-M0EAYC. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-13",
+   "name": "Asus 90MB1J80-M0EAY0",
+   "brand": "Asus",
+   "seoTitle": "Asus 90MB1J80-M0EAY0",
+   "seoDescription": "Asus 90MB1J80-M0EAY0. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Asus 90MB1J80-M0EAY0. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-15",
+   "name": "Asus 90MP03N0-BMAA00",
+   "brand": "Asus",
+   "seoTitle": "Asus 90MP03N0-BMAA00",
+   "seoDescription": "Asus 90MP03N0-BMAA00. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Asus 90MP03N0-BMAA00. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-18",
+   "name": "Asus 90MP036A-BKAA20",
+   "brand": "Asus",
+   "seoTitle": "Asus 90MP036A-BKAA20",
+   "seoDescription": "Asus 90MP036A-BKAA20. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Asus 90MP036A-BKAA20. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-19",
+   "name": "MSI 306-7G24R25-HH9",
+   "brand": "MSI",
+   "seoTitle": "MSI 306-7G24R25-HH9",
+   "seoDescription": "MSI 306-7G24R25-HH9. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MSI 306-7G24R25-HH9. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-2",
+   "name": "MikroTik CRS309-1G-8S+IN",
+   "brand": "MikroTik",
+   "seoTitle": "MikroTik CRS309-1G-8S+IN",
+   "seoDescription": "MikroTik CRS309-1G-8S+IN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MikroTik CRS309-1G-8S+IN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-21",
+   "brand": "MSI",
+   "seoTitle": "MSI 911-7D46-221",
+   "seoDescription": "MSI 911-7D46-221. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MSI 911-7D46-221. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-22",
+   "brand": "MSI",
+   "seoTitle": "MSI 911-7D48-049",
+   "seoDescription": "MSI 911-7D48-049. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MSI 911-7D48-049. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-23",
+   "brand": "MSI",
+   "seoTitle": "MSI 911-7E12-008",
+   "seoDescription": "MSI 911-7E12-008. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MSI 911-7E12-008. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-24",
+   "brand": "MSI",
+   "seoTitle": "MSI 911-7E47-005",
+   "seoDescription": "MSI 911-7E47-005. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MSI 911-7E47-005. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-25",
+   "brand": "MSI",
+   "seoTitle": "MSI 911-7E49-005",
+   "seoDescription": "MSI 911-7E49-005. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MSI 911-7E49-005. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-26",
+   "brand": "MSI",
+   "seoTitle": "MSI 911-7E56-002",
+   "seoDescription": "MSI 911-7E56-002. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MSI 911-7E56-002. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-28",
+   "name": "MSI 306-7ZW5E17-C2",
+   "brand": "MSI",
+   "seoTitle": "MSI 306-7ZW5E17-C2",
+   "seoDescription": "MSI 306-7ZW5E17-C2. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MSI 306-7ZW5E17-C2. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-29",
+   "name": "MSI 306-7ZW5E52-C24",
+   "brand": "MSI",
+   "seoTitle": "MSI 306-7ZW5E52-C24",
+   "seoDescription": "MSI 306-7ZW5E52-C24. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MSI 306-7ZW5E52-C24. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-3",
+   "name": "MikroTik CRS3101G5S4S+IN",
+   "brand": "MikroTik",
+   "seoTitle": "MikroTik CRS3101G5S4S+IN",
+   "seoDescription": "MikroTik CRS3101G5S4S+IN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MikroTik CRS3101G5S4S+IN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-30",
+   "name": "MSI 306-7ZW6E17-C24",
+   "brand": "MSI",
+   "seoTitle": "MSI 306-7ZW6E17-C24",
+   "seoDescription": "MSI 306-7ZW6E17-C24. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MSI 306-7ZW6E17-C24. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-31",
+   "name": "MSI 306-7ZWAA11-L80",
+   "brand": "MSI",
+   "seoTitle": "MSI 306-7ZWAA11-L80",
+   "seoDescription": "MSI 306-7ZWAA11-L80. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MSI 306-7ZWAA11-L80. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-32",
+   "name": "MSI 306-7ZWCA21-L80",
+   "brand": "MSI",
+   "seoTitle": "MSI 306-7ZWCA21-L80",
+   "seoDescription": "MSI 306-7ZWCA21-L80. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MSI 306-7ZWCA21-L80. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-36",
+   "name": "Cooler Master CMA-NEST16XXWWT",
+   "seoTitle": "Cooler Master CMA-NEST16XXWWT",
+   "seoDescription": "Cooler Master CMA-NEST16XXWWT. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master CMA-NEST16XXWWT. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-37",
+   "name": "Cooler Master CMA-NEST16XXBK1",
+   "seoTitle": "Cooler Master CMA-NEST16XXBK1",
+   "seoDescription": "Cooler Master CMA-NEST16XXBK1. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master CMA-NEST16XXBK1. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-39",
+   "name": "Cooler Master MPE-6502-ACAAG-",
+   "seoTitle": "Cooler Master MPE-6502-ACAAG-",
+   "seoDescription": "Cooler Master MPE-6502-ACAAG-. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master MPE-6502-ACAAG-. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-40",
+   "name": "Cooler Master MPE7501ACAAW3BW",
+   "seoTitle": "Cooler Master MPE7501ACAAW3BW",
+   "seoDescription": "Cooler Master MPE7501ACAAW3BW. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master MPE7501ACAAW3BW. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-41",
+   "name": "Cooler Master MPE-7502-ACAAG-",
+   "seoTitle": "Cooler Master MPE-7502-ACAAG-",
+   "seoDescription": "Cooler Master MPE-7502-ACAAG-. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master MPE-7502-ACAAG-. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-42",
+   "name": "Cooler Master MPE-7501-ACAAW-",
+   "seoTitle": "Cooler Master MPE-7501-ACAAW-",
+   "seoDescription": "Cooler Master MPE-7501-ACAAW-. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master MPE-7501-ACAAW-. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-43",
+   "name": "Cooler Master MPW-6001AVBWBAR",
+   "seoTitle": "Cooler Master MPW-6001AVBWBAR",
+   "seoDescription": "Cooler Master MPW-6001AVBWBAR. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master MPW-6001AVBWBAR. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-44",
+   "name": "Cooler Master MPW-7001ACBWBAR",
+   "seoTitle": "Cooler Master MPW-7001ACBWBAR",
+   "seoDescription": "Cooler Master MPW-7001ACBWBAR. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master MPW-7001ACBWBAR. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-45",
+   "name": "Cooler Master CP510-KGNN-S00",
+   "seoTitle": "Cooler Master CP510-KGNN-S00",
+   "seoDescription": "Cooler Master CP510-KGNN-S00. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master CP510-KGNN-S00. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-48",
+   "name": "Cooler Master MCB-NR200P-KGNN",
+   "seoTitle": "Cooler Master MCB-NR200P-KGNN",
+   "seoDescription": "Cooler Master MCB-NR200P-KGNN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master MCB-NR200P-KGNN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-49",
+   "name": "Cooler Master MCB-NR200P-WGNN",
+   "seoTitle": "Cooler Master MCB-NR200P-WGNN",
+   "seoDescription": "Cooler Master MCB-NR200P-WGNN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master MCB-NR200P-WGNN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-50",
+   "name": "Cooler Master MCF-MF700-KGNN-",
+   "seoTitle": "Cooler Master MCF-MF700-KGNN-",
+   "seoDescription": "Cooler Master MCF-MF700-KGNN-. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master MCF-MF700-KGNN-. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-54",
+   "name": "Cooler Master MLY-D36M-A24PZ-",
+   "seoTitle": "Cooler Master MLY-D36M-A24PZ-",
+   "seoDescription": "Cooler Master MLY-D36M-A24PZ-. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master MLY-D36M-A24PZ-. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-55",
+   "name": "Cooler Master SK-653-SKTL1-US",
+   "seoTitle": "Cooler Master SK-653-SKTL1-US",
+   "seoDescription": "Cooler Master SK-653-SKTL1-US. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master SK-653-SKTL1-US. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-69",
+   "name": "Grandstream Networks GWN7700P",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream Networks GWN7700P",
+   "seoDescription": "Grandstream Networks GWN7700P. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream Networks GWN7700P. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-82",
+   "name": "TP-Link Technologies TL-ARTX20E",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Technologies TL-ARTX20E",
+   "seoDescription": "TP-Link Technologies TL-ARTX20E. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Technologies TL-ARTX20E. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "producto-sin-nombre-83",
+   "name": "TP-Link Technologies TL-ARTXE70UH",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Technologies TL-ARTXE70UH",
+   "seoDescription": "TP-Link Technologies TL-ARTXE70UH. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Technologies TL-ARTXE70UH. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "prolongador-trv-4-enchufes-2-usb",
+   "seoTitle": "Prolongador TRV 4 enchufes + 2 USB",
+   "seoDescription": "PROLONGADOR MULTIPLE X4 + 2USB: Llave con limitador de sobre corriente. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "prolongador-trv-5-enchufes",
+   "seoTitle": "Prolongador TRV 5 Enchufes",
+   "seoDescription": "PROLONGADOR MULTIPLE X5: Llave con limitador de sobre corriente. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "protector-de-tension-smart-20-pro",
+   "seoTitle": "Protector de tensión SMART 20 PRO",
+   "seoDescription": "Protector de tensión SMART 20 PRO. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "protector-de-tension-trv-protech-e",
+   "brand": "TRV",
+   "seoTitle": "Protector de Tensión Trv Protech E",
+   "seoDescription": "Su eficaz circuito electrónico de protección con microprocesador monitorea la tensión de la red eléctrica. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "protector-de-tension-trv-protech-f",
+   "brand": "TRV",
+   "seoTitle": "Protector de Tensión Trv Protech F",
+   "seoDescription": "Su eficaz circuito electrónico de protección con microprocesador monitorea la tensión de la red eléctrica. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "protector-de-tension-trv-protech-f-smart",
+   "brand": "TRV",
+   "seoTitle": "Protector de Tensión Trv SMART F",
+   "seoDescription": "La familia SMART está diseñada para proteger dispositivos como TV TRC, LCD, LED, decodificadores de TV equipos… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "proyector-benq-mw560-4-000lm",
+   "brand": "BenQ",
+   "seoTitle": "Proyector BenQ MW560 4.000LM WXGA",
+   "seoDescription": "Proyector BenQ MW560 4.000LM WXGA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "proyector-benq-mx560-4-000lm",
+   "brand": "BenQ",
+   "seoTitle": "Proyector BenQ MX560 4.000LM",
+   "seoDescription": "Proyector BenQ MX560 4.000LM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "proyector-epson-powerlite-e20",
+   "brand": "Epson",
+   "seoTitle": "Proyector Epson Powerlite E20 3400 Lumenes",
+   "seoDescription": "Proyector Epson Powerlite E20 3400 Lumenes. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "proyector-epson-powerlite-e24-3600-ansi-xga",
+   "name": "Proyector Epson Powerlite E24 3600 Ansi XGA",
+   "brand": "Epson",
+   "seoTitle": "Proyector Epson Powerlite E24 3600 Ansi XGA",
+   "seoDescription": "Descubre el proyector Epson PowerLite E24 con 3600 ANSI lúmenes y resolución XGA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "proyector-epson-powerlite-l210w-4500l-wxga-laser",
+   "name": "Proyector Epson Powerlite L210W 4500L Wxga Laser",
+   "brand": "Epson",
+   "seoTitle": "Proyector Epson Powerlite L210W 4500L Wxga",
+   "seoDescription": "Descubre el proyector Epson PowerLite L210W, ideal para presentaciones impactantes con 4500 lúmenes y resolución WXGA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "proyector-epson-powerlite-w49-3800-ansi-wxga-2",
+   "name": "Proyector Epson Powerlite W49 3800 Ansi Wxga",
+   "brand": "Epson",
+   "seoTitle": "Proyector Epson Powerlite W49 3800 Ansi Wxga",
+   "seoDescription": "Descubre el proyector Epson PowerLite W49, ideal para presentaciones brillantes y de alta calidad con 3800 ANSI… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "proyector-epson-powerlite-x49-3600-ansi-xga-2",
+   "name": "Proyector Epson Powerlite X49 3600 Ansi XGA",
+   "brand": "Epson",
+   "seoTitle": "Proyector Epson Powerlite X49 3600 Ansi XGA",
+   "seoDescription": "Descubre el proyector Epson PowerLite X49, ideal para presentaciones brillantes con 3600 ANSI lúmenes y resolución… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "proyector-mini-portatil-4k-performance-android",
+   "name": "Proyector Mini Portatil 4K Performance Android",
+   "seoTitle": "Proyector Mini Portatil 4K Performance",
+   "seoDescription": "Proyector mini portátil 4K con Android integrado. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "proyector-viewsonic-ls630w-laser-wxga-4-500-lumenes",
+   "brand": "ViewSonic",
+   "seoTitle": "Proyector Viewsonic LS630W Láser WXGA 4.500",
+   "seoDescription": "Voltaje: 220V. Brillo de 4500 lúmenes para imágenes nítidas y vibrantes. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "proyector-viewsonic-px701-4k-3-200-lumens",
+   "brand": "ViewSonic",
+   "seoTitle": "Proyector ViewSonic PX701-4K 3.200 Lumens",
+   "seoDescription": "Proyector ViewSonic PX701-4K 3.200 Lumens. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Proyector ViewSonic PX701-4K 3.200 Lumens. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "rack-delos-tv-60%e2%80%b3-1-puerta-y-1-estante",
+   "seoTitle": "Rack Delos TV 60″ 1 puerta y 1 estante",
+   "seoDescription": "Rack Delos TV 60″ 1 puerta y 1 estante. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Rack Delos TV 60″ 1 puerta y 1 estante. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "rack-delos-tv-60%e2%80%b3-1-puerta-y-1-estante-laca",
+   "seoTitle": "Rack Delos TV 60″ 1 Puerta y 1 Estante Laca",
+   "seoDescription": "Rack Delos TV 60″ 1 Puerta y 1 Estante Laca. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Rack Delos TV 60″ 1 Puerta y 1 Estante Laca. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "rack-delos-tv-varillado-2-puertas-corredizas-y-un-estante-laca",
+   "seoTitle": "Rack Delos TV 65″ Varillado 2 puertas",
+   "seoDescription": "Rack Delos TV 65″ Varillado 2 puertas corredizas y un estante Laca. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Rack Delos TV 65″ Varillado 2 puertas corredizas y un estante Laca. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "rack-mesa-tv-delos-65-nebraska-negro",
+   "seoTitle": "Rack Mesa TV Delos 65″ Nebraska Negro",
+   "seoDescription": "Para TV hasta 65″ 2 Puertas 2 Estantes Melamina 15mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "rack-mesa-tv-delos-65-roble-natural",
+   "seoTitle": "Rack Mesa TV Delos 65″ Roble Natural",
+   "seoDescription": "Para TV hasta 65″ 2 Puertas 2 Estantes Melamina 15mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "rack-steel-delos-tv-42%e2%80%b3",
+   "seoTitle": "Rack Steel Delos TV 42″ Roble Nebraska",
+   "seoDescription": "Rack Steel Delos TV 42″ en Roble Nebraska Natural, diseño moderno y funcional, ideal para cualquier sala de estar. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "rack-steel-delos-tv-42%e2%80%b3-2-puertas-roble-nebraska-natural",
+   "seoTitle": "Rack Steel Delos TV 42″ 2 Puertas Roble",
+   "seoDescription": "Rack Steel Delos TV 42″ 2 Puertas Roble Nebraska Natural. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "rack-steel-delos-tv-50%e2%80%b3-1-puerta-2-cajones",
+   "seoTitle": "Rack Steel Delos TV 50″ 1 Puerta 2 Cajones",
+   "seoDescription": "Rack Steel Delos TV 50″ 1 Puerta 2 Cajones Roble Nebraska Natural. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "rack-steel-delos-tv-65%e2%80%b3-2-puertas-2-cajones",
+   "seoTitle": "Rack Steel Delos TV 65″ 2 Puertas 2 Cajones",
+   "seoDescription": "Rack Steel Delos TV 65″ 2 Puertas 2 Cajones. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "rack-steel-delos-tv-65%e2%80%b3-2-puertas-2-cajones-dst05-roble-nebraska-natural",
+   "seoTitle": "Rack Steel Delos TV 65″ 2 Puertas 2 Cajones",
+   "seoDescription": "Peso 37 kg Dimensiones 37 × 183 × 59 cm Bultos 2 Línea Steel - Estructura de hierro Material Melamina 15mm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ray-ban-meta-gen-2-headliner",
+   "seoTitle": "Ray-Ban Meta Gen 2 Headliner",
+   "seoDescription": "El diseño híbrido redondeado de Ray-Ban combinado con la Inteligencia Artificial de Meta. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ray-ban-meta-wayfarer-gen-2-rw4012",
+   "seoTitle": "Ray-Ban Meta Wayfarer Gen 2 RW4012",
+   "seoDescription": "El estilo icónico de Ray-Ban potenciado con la Inteligencia Artificial de Meta. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "realme-gt3-5g-1tb-16gb",
+   "seoTitle": "Realme GT3 5G 1TB 16GB",
+   "seoDescription": "Smartphone Realme GT3 5G con 1TB de almacenamiento, 16GB RAM, conectividad 5G ultra rápida y rendimiento excepcional… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "realme-note-70-128gb-4gb-8gb",
+   "seoTitle": "Realme Note 70 128gb 4gb (+8gb)",
+   "seoDescription": "Realme Note 70 128gb 4gb (+8gb). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Realme Note 70 128gb 4gb (+8gb). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "regleta-powerstrip-66-vertical-rack-mou-hubbell",
+   "seoTitle": "REGLETA PowerStrip 66 Vertical, Rack Mou",
+   "seoDescription": "REGLETA PowerStrip 66 Vertical, Rack Mou HUBBELL. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "REGLETA PowerStrip 66 Vertical, Rack Mou HUBBELL. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "rele-ezviz-smart-home-t35w",
+   "name": "Rele Ezviz Smart Home T35W",
+   "brand": "Ezviz",
+   "seoTitle": "Rele Ezviz Smart Home T35W",
+   "seoDescription": "Rele Ezviz Smart Home T35W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Rele Ezviz Smart Home T35W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "rele-ezviz-smart-home-t35wd",
+   "name": "Rele Ezviz Smart Home T35WD",
+   "brand": "Ezviz",
+   "seoTitle": "Rele Ezviz Smart Home T35WD",
+   "seoDescription": "Rele Ezviz Smart Home T35WD. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Rele Ezviz Smart Home T35WD. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "rele-ezviz-smart-home-t35wm",
+   "name": "Rele Ezviz Smart Home T35WM",
+   "brand": "Ezviz",
+   "seoTitle": "Rele Ezviz Smart Home T35WM",
+   "seoDescription": "Rele Ezviz Smart Home T35WM. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Rele Ezviz Smart Home T35WM. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "rele-ezviz-smart-home-t36wm",
+   "name": "Rele Ezviz Smart Home T36WM",
+   "brand": "Ezviz",
+   "seoTitle": "Rele Ezviz Smart Home T36WM",
+   "seoDescription": "Rele Ezviz Smart Home T36WM. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Rele Ezviz Smart Home T36WM. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "reloj-despertador-con-parlante-bluetooth-portatil",
+   "seoTitle": "Reloj Despertador con Parlante Bluetooth",
+   "seoDescription": "Pantalla LED LCD Reloj despertador con alarma dual Rango de funcionamiento: 10 mts. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "reloj-despertador-con-parlante-portatil-bluetooth",
+   "seoTitle": "Reloj Despertador con Parlante Portatil",
+   "seoDescription": "Bluetooth 4.2 Potencia de salida 3W Radio FM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "reloj-smartband-huawei-band-9",
+   "brand": "Huawei",
+   "seoTitle": "Reloj Smartwatch Band Huawei Band 9",
+   "seoDescription": "Reloj Smartwatch Band Huawei Band 9. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "reloj-smartband-samsung-galaxy-fit-3-dark-gray",
+   "brand": "Samsung",
+   "seoTitle": "Reloj Smartwatch Band Samsung Galaxy Fit 3",
+   "seoDescription": "Reloj Smartwatch Band Samsung Galaxy Fit 3 Dark Gray. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "reloj-smartband-samsung-galaxy-fit-3-silver",
+   "brand": "Samsung",
+   "seoTitle": "Reloj Smartwatch Band Samsung Galaxy Fit 3",
+   "seoDescription": "Reloj Smartwatch Band Samsung Galaxy Fit 3 Silver. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "reloj-smartband-xiaomi-buds-9",
+   "brand": "Xiaomi",
+   "seoTitle": "Reloj Smartwatch Band Xiaomi Band 9",
+   "seoDescription": "Reloj Smartwatch Band Xiaomi Band 9. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "reloj-smartwatch-dekkin-shine",
+   "brand": "Dekkin",
+   "seoTitle": "Reloj Smartwatch Dekkin Shine",
+   "seoDescription": "Reloj Smartwatch Dekkin Shine. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "reloj-smartwatch-dekkin-urban-sport-gps",
+   "brand": "Dekkin",
+   "seoTitle": "Reloj Smartwatch Dekkin Urban Sport Gps",
+   "seoDescription": "Reloj Smartwatch Dekkin Urban Sport Gps. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "reloj-smartwatch-mibro-t2-rosa",
+   "seoTitle": "Reloj Smartwatch Mibro T2 Light Gold",
+   "seoDescription": "Reloj Smartwatch Mibro T2 Light Gold. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "reloj-smartwatch-samsung-galaxy-watch-4-classic-r890-46mm-negro",
+   "brand": "Samsung",
+   "seoTitle": "Reloj Smartwatch Samsung Galaxy Watch 4",
+   "seoDescription": "Diseño clásico y prémium Presión arterial y ECG Seguimiento diario de actividad y estado físico Elegí entre esferas… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "robot-de-cocina-rc10",
+   "seoTitle": "Robot de Cocina Sibiú RC10",
+   "seoDescription": "Robot de Cocina Sibiú RC10. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "router-2p-mercusys-mb110-4g-300mbps",
+   "name": "Router 2P Mercusys MB110-4G 300MBPS",
+   "brand": "Mercusys",
+   "seoTitle": "Router 2P Mercusys MB110-4G 300MBPS",
+   "seoDescription": "Router 4G Mercusys MB110-4G con velocidad 300Mbps, 2 puertos Ethernet, conexión móvil estable para hogar y oficina. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "router-2p-mercusys-mb130-4g-ac1200",
+   "name": "Router 2P Mercusys MB130-4G AC1200",
+   "brand": "Mercusys",
+   "seoTitle": "Router 2P Mercusys MB130-4G AC1200",
+   "seoDescription": "Router 4G Mercusys MB130 AC1200 con conectividad móvil, WiFi dual band, 2 puertos LAN y soporte para tarjeta SIM… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "router-2p-mercusys-mr50g-ac1900",
+   "name": "Router 2P Mercusys MR50G AC1900",
+   "brand": "Mercusys",
+   "seoTitle": "Router 2P Mercusys MR50G AC1900",
+   "seoDescription": "Router Mercusys MR50G AC1900 con WiFi dual band, 2 puertos gigabit, tecnología MU-MIMO para conexiones ultrarrápidas… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "router-2p-tp-link-wr820n-11n-300mbps-2x5dbi",
+   "name": "Router 2P TP-Link WR820N 11N 300MBPS 2X5DBI",
+   "brand": "TP-Link",
+   "seoTitle": "Router 2P TP-Link WR820N 11N 300MBPS 2X5DBI",
+   "seoDescription": "Router 2P TP-Link WR820N 11N 300MBPS 2X5DBI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router 2P TP-Link WR820N 11N 300MBPS 2X5DBI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-3p-mercusys-mr25be-be3600",
+   "name": "Router 3P Mercusys MR25BE BE3600",
+   "brand": "Mercusys",
+   "seoTitle": "Router 3P Mercusys MR25BE BE3600",
+   "seoDescription": "Router WiFi 6E Mercusys MR25BE con velocidad BE3600, triple banda y tecnología avanzada para conectividad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "router-3p-mercusys-mr70x-ax1800",
+   "name": "Router 3P Mercusys MR70X AX1800",
+   "brand": "Mercusys",
+   "seoTitle": "Router 3P Mercusys MR70X AX1800",
+   "seoDescription": "Router WiFi 6 Mercusys MR70X AX1800 con triple puerto, tecnología avanzada para conexiones ultra rápidas y cobertura… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "router-3p-mercusys-mw305r-300mbps",
+   "name": "Router 3P Mercusys MW305R 300MBPS",
+   "brand": "Mercusys",
+   "seoTitle": "Router 3P Mercusys MW305R 300MBPS",
+   "seoDescription": "Router WiFi Mercusys MW305R 300Mbps con 3 puertos ethernet, conexión inalámbrica estable y fácil configuración para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "router-3p-mercusys-mw325r-300mbps",
+   "name": "Router 3P Mercusys MW325R 300MBPS",
+   "brand": "Mercusys",
+   "seoTitle": "Router 3P Mercusys MW325R 300MBPS",
+   "seoDescription": "Router WiFi Mercusys MW325R 300Mbps con 3 puertos Ethernet. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "router-4p-ezviz-rt1-ax3000-wifi-6-mesh",
+   "name": "Router 4P Ezviz RT1 AX3000 WIFI 6 Mesh",
+   "brand": "Ezviz",
+   "seoTitle": "Router 4P Ezviz RT1 AX3000 WIFI 6 Mesh",
+   "seoDescription": "Router 4P Ezviz RT1 AX3000 WIFI 6 Mesh. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router 4P Ezviz RT1 AX3000 WIFI 6 Mesh. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-4p-mercusys-mr27be-be3600",
+   "name": "Router 4P Mercusys MR27BE BE3600",
+   "brand": "Mercusys",
+   "seoTitle": "Router 4P Mercusys MR27BE BE3600",
+   "seoDescription": "Router WiFi 6E Mercusys MR27BE con velocidad BE3600 Mbps, 4 puertos gigabit y tecnología avanzada para conectividad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "router-4p-tenda-f3",
+   "seoTitle": "Router 4P Tenda F3",
+   "seoDescription": "3 antenas * 5 dBi N300 300Mbps 1 WAN port 3 Lan ports. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "router-4p-tp-link-archer-ax23-ax1800-wifi-6",
+   "name": "Router 4P TP-Link Archer AX23 AX1800 WIFI 6",
+   "brand": "TP-Link",
+   "seoTitle": "Router 4P TP-Link Archer AX23 AX1800 WIFI 6",
+   "seoDescription": "Router 4P TP-Link Archer AX23 AX1800 WIFI 6. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router 4P TP-Link Archer AX23 AX1800 WIFI 6. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-4p-tp-link-archer-ax55-ax3000-wifi-6",
+   "name": "Router 4P TP-Link Archer AX55 AX3000 WIFI 6",
+   "brand": "TP-Link",
+   "seoTitle": "Router 4P TP-Link Archer AX55 AX3000 WIFI 6",
+   "seoDescription": "Router 4P TP-Link Archer AX55 AX3000 WIFI 6. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router 4P TP-Link Archer AX55 AX3000 WIFI 6. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-4p-tp-link-archer-ax73-ax5400-wifi-6-db",
+   "name": "Router 4P TP-Link Archer AX73 AX5400 WIFI 6 DB",
+   "brand": "TP-Link",
+   "seoTitle": "Router 4P TP-Link Archer AX73 AX5400 WIFI 6",
+   "seoDescription": "Router 4P TP-Link Archer AX73 AX5400 WIFI 6 DB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router 4P TP-Link Archer AX73 AX5400 WIFI 6 DB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-4p-tp-link-archer-be550-wifi7-tband-be9300",
+   "name": "Router 4P TP-Link Archer BE550 WIFI7 Tband BE9300",
+   "brand": "TP-Link",
+   "seoTitle": "Router 4P TP-Link Archer BE550 WIFI7 Tband",
+   "seoDescription": "Router 4P TP-Link Archer BE550 WIFI7 Tband BE9300. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router 4P TP-Link Archer BE550 WIFI7 Tband BE9300. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-4p-tp-link-archer-be700-wifi7-tband-be15000",
+   "name": "Router 4P TP-Link Archer BE700 WIFI7 Tband BE15000",
+   "brand": "TP-Link",
+   "seoTitle": "Router 4P TP-Link Archer BE700 WIFI7 Tband",
+   "seoDescription": "Router TP-Link Archer BE700 con WiFi 7 tri-banda BE15000, 4 puertos Ethernet. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "router-4p-tp-link-archer-c24-ac750",
+   "brand": "TP-Link",
+   "seoTitle": "Router 4P TP-Link Archer C24 AC750 Dual Band",
+   "seoDescription": "Ofrece una velocidad de 433Mbps. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "router-4p-tp-link-archer-c6-ac1200-dual-band",
+   "name": "Router 4P TP-Link Archer C6 AC1200 Dual Band",
+   "brand": "TP-Link",
+   "seoTitle": "Router 4P TP-Link Archer C6 AC1200 Dual Band",
+   "seoDescription": "Router 4P TP-Link Archer C6 AC1200 Dual Band. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router 4P TP-Link Archer C6 AC1200 Dual Band. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-4p-tp-link-archer-c64-ac1200-mu-mimo",
+   "name": "Router 4P TP-Link Archer C64 AC1200 MU-MIMO",
+   "brand": "TP-Link",
+   "seoTitle": "Router 4P TP-Link Archer C64 AC1200 MU-MIMO",
+   "seoDescription": "Router 4P TP-Link Archer C64 AC1200 MU-MIMO. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router 4P TP-Link Archer C64 AC1200 MU-MIMO. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-4p-tp-link-archer-c80-ac1900-dual-band",
+   "name": "Router 4P TP-Link Archer C80 AC1900 Dual Band",
+   "brand": "TP-Link",
+   "seoTitle": "Router 4P TP-Link Archer C80 AC1900 Dual Band",
+   "seoDescription": "Router 4P TP-Link Archer C80 AC1900 Dual Band. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router 4P TP-Link Archer C80 AC1900 Dual Band. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-4p-tp-link-archer-c86-ac1900-dual-band",
+   "name": "Router 4P TP-Link Archer C86 AC1900 Dual Band",
+   "brand": "TP-Link",
+   "seoTitle": "Router 4P TP-Link Archer C86 AC1900 Dual Band",
+   "seoDescription": "Router 4P TP-Link Archer C86 AC1900 Dual Band. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router 4P TP-Link Archer C86 AC1900 Dual Band. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-4p-tp-link-wr840n-11n-300mbps-2x5dbi",
+   "name": "Router 4P TP-Link WR840N 11N 300MBPS 2X5DBI",
+   "brand": "TP-Link",
+   "seoTitle": "Router 4P TP-Link WR840N 11N 300MBPS 2X5DBI",
+   "seoDescription": "Router 4P TP-Link WR840N 11N 300MBPS 2X5DBI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router 4P TP-Link WR840N 11N 300MBPS 2X5DBI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-4p-tp-link-wr850n-11n-300mbps-2x5dbi",
+   "brand": "TP-Link",
+   "seoTitle": "Router 4P TP-Link WR850N 11N 300MBPS 2X5DBI",
+   "seoDescription": "Ofrece una velocidad de 300Mbps. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "router-5p-tp-link-r470t-10-100-1p-wan-4p-lan",
+   "name": "Router 5P TP-Link R470T+ 10/100 1P WAN +4P LAN",
+   "brand": "TP-Link",
+   "seoTitle": "Router 5P TP-Link R470T+ 10/100 1P WAN +4P",
+   "seoDescription": "Router 5P TP-Link R470T+ 10/100 1P WAN +4P LAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router 5P TP-Link R470T+ 10/100 1P WAN +4P LAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-5p-tp-link-r480t-10-100-1p-wan-4p-lan",
+   "name": "Router 5P TP-Link R480T+ 10/100 1P WAN +4P LAN",
+   "brand": "TP-Link",
+   "seoTitle": "Router 5P TP-Link R480T+ 10/100 1P WAN +4P",
+   "seoDescription": "Router 5P TP-Link R480T+ 10/100 1P WAN +4P LAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router 5P TP-Link R480T+ 10/100 1P WAN +4P LAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-ap-mikrotik-rbd25g-5hpacqd2hpnd-sin-fuente",
+   "name": "Router-ap MikroTik RBD25G-5HPACQD2HPND sin Fuente",
+   "brand": "MikroTik",
+   "seoTitle": "Router-ap MikroTik RBD25G-5HPACQD2HPND",
+   "seoDescription": "Router-ap MikroTik RBD25G-5HPACQD2HPND sin Fuente. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router-ap MikroTik RBD25G-5HPACQD2HPND sin Fuente. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-huawei-wifi-6-ax3s-psdn-ax30",
+   "brand": "Huawei",
+   "seoTitle": "Router Huawei Wifi 6 Ax3s Psdn-ax30",
+   "seoDescription": "Router Huawei Wifi 6 Ax3s Psdn-ax30. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router Huawei Wifi 6 Ax3s Psdn-ax30. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-mikrotik-ccr2004-16g-2s-con-fuente",
+   "name": "Router MikroTik CCR2004-16G-2S+ con Fuente",
+   "brand": "MikroTik",
+   "seoTitle": "Router MikroTik CCR2004-16G-2S+ con Fuente",
+   "seoDescription": "Router MikroTik CCR2004-16G-2S+ con Fuente. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router MikroTik CCR2004-16G-2S+ con Fuente. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-mikrotik-ccr2004-1g-12s2xs-con-fuente",
+   "name": "Router MikroTik CCR2004-1G-12S+2XS con Fuente",
+   "brand": "MikroTik",
+   "seoTitle": "Router MikroTik CCR2004-1G-12S+2XS con Fuente",
+   "seoDescription": "Router MikroTik CCR2004-1G-12S+2XS con Fuente. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router MikroTik CCR2004-1G-12S+2XS con Fuente. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-mikrotik-sw-crs317-1g-16srm",
+   "name": "Router MikroTik SW CRS317-1G-16S+RM",
+   "brand": "MikroTik",
+   "seoTitle": "Router MikroTik SW CRS317-1G-16S+RM",
+   "seoDescription": "Router MikroTik SW CRS317-1G-16S+RM. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router MikroTik SW CRS317-1G-16S+RM. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-mikrotik-sw-crs318-16p-2sout",
+   "name": "Router MikroTik SW CRS318-16P-2S+OUT",
+   "brand": "MikroTik",
+   "seoTitle": "Router MikroTik SW CRS318-16P-2S+OUT",
+   "seoDescription": "Router MikroTik SW CRS318-16P-2S+OUT. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router MikroTik SW CRS318-16P-2S+OUT. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "router-mikrotik-sw-crs354-48p-4s2qrm-con-fuente",
+   "name": "Router MikroTik SW CRS354-48P-4S+2Q+RM con Fuente",
+   "brand": "MikroTik",
+   "seoTitle": "Router MikroTik SW CRS354-48P-4S+2Q+RM",
+   "seoDescription": "Router MikroTik SW CRS354-48P-4S+2Q+RM con Fuente. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Router MikroTik SW CRS354-48P-4S+2Q+RM con Fuente. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "samsung-galaxy-a07-128gb-6gb",
+   "seoTitle": "Samsung Galaxy A07 128gb 6gb",
+   "seoDescription": "Samsung Galaxy A07 con 128GB almacenamiento, 6GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-a07-64gb-4gb",
+   "seoTitle": "Samsung Galaxy A07 64gb 4gb",
+   "seoDescription": "Samsung Galaxy A07 con 64GB almacenamiento y 4GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-a17-128gb-4gb",
+   "seoTitle": "Samsung Galaxy A17 128gb 4gb",
+   "seoDescription": "Samsung Galaxy A17 con 128GB almacenamiento y 4GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-a17-128gb-6gb",
+   "seoTitle": "Samsung Galaxy A17 128gb 6gb",
+   "seoDescription": "Samsung Galaxy A17 con 128GB almacenamiento, 6GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-a17-5g-128gb-6gb",
+   "seoTitle": "Samsung Galaxy A17 5G 128gb 6gb",
+   "seoDescription": "Samsung Galaxy A17 5G 128gb 6gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-a36-5g-128gb-6gb",
+   "seoTitle": "Samsung Galaxy A36 5G 128gb 6gb",
+   "seoDescription": "Samsung Galaxy A36 5G 128gb 6gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-a36-5g-8gb-128gb",
+   "seoTitle": "Samsung Galaxy A36 5G 128gb 8gb",
+   "seoDescription": "Rendimiento de nivel superior, diseño resistente y fotografía profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-a56-5g-128gb-8gb",
+   "seoTitle": "Samsung Galaxy A56 5G 128gb 8gb",
+   "seoDescription": "Samsung Galaxy A56 5G 128gb 8gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-a56-5g-256gb-12gb",
+   "seoTitle": "Samsung Galaxy A56 5G 256gb 12gb",
+   "seoDescription": "Samsung Galaxy A56 5G 256gb 12gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-a56-5g-256gb-8gb-2",
+   "seoTitle": "Samsung Galaxy A56 5G 256gb 8gb",
+   "seoDescription": "Samsung Galaxy A56 5G 256gb 8gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-a57-5g-256gb-8gb",
+   "seoTitle": "Samsung Galaxy A57 5G 256gb 8gb",
+   "seoDescription": "El referente en la gama media alta con rendimiento, diseño ultradelgado y herramientas inteligentes. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-s26-5g-256gb-12gb",
+   "seoTitle": "Samsung Galaxy S26 5G 256gb 12gb",
+   "seoDescription": "Samsung Galaxy S26 5G con 256GB almacenamiento y 12GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-s26-5g-512gb-12gb",
+   "seoTitle": "Samsung Galaxy S26 5G 512gb 12gb",
+   "seoDescription": "Samsung Galaxy S26 5G con 512GB almacenamiento y 12GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-s26-plus-5g-256gb-12gb",
+   "seoTitle": "Samsung Galaxy S26 Plus 5G 256gb 12gb",
+   "seoDescription": "Samsung Galaxy S26 Plus 5G con 256GB almacenamiento y 12GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-s26-plus-5g-512gb-12gb",
+   "seoTitle": "Infinix Note 50 Pro 256gb 8gb",
+   "seoDescription": "Infinix Note 50 Pro con 256GB almacenamiento y 8GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-s26-plus-5g-512gb-12gb-2",
+   "seoTitle": "Samsung Galaxy S26 Plus 5G 512gb 12gb",
+   "seoDescription": "Samsung Galaxy S26 Plus 5G con 512GB almacenamiento y 12GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "samsung-galaxy-tab-a9-87-lte-4g",
+   "seoTitle": "Samsung Galaxy Tab A9 8,7″ LTE 4G",
+   "seoDescription": "Tablet Samsung Galaxy Tab A9 con pantalla 8.7 pulgadas, conectividad LTE 4G, ideal para productividad y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "scanner-brother-ads-1250w-25ppm-duplex",
+   "name": "Scanner Brother ADS-1250W 25PPM Duplex",
+   "brand": "Brother",
+   "seoTitle": "Scanner Brother ADS-1250W 25PPM Duplex",
+   "seoDescription": "Scanner Brother ADS-1250W 25PPM Duplex. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Scanner Brother ADS-1250W 25PPM Duplex. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "scanner-brother-ads-3100-40-ppm-duplex",
+   "name": "Scanner Brother ADS-3100 40 PPM Duplex",
+   "brand": "Brother",
+   "seoTitle": "Scanner Brother ADS-3100 40 PPM Duplex",
+   "seoDescription": "Scanner Brother ADS-3100 40 PPM Duplex. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Scanner Brother ADS-3100 40 PPM Duplex. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "scanner-brother-ads-4300n-40-ppm-duplex-red",
+   "name": "Scanner Brother ADS-4300N 40 PPM Duplex Red",
+   "brand": "Brother",
+   "seoTitle": "Scanner Brother ADS-4300N 40 PPM Duplex Red",
+   "seoDescription": "Scanner Brother ADS-4300N 40 PPM Duplex Red. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Scanner Brother ADS-4300N 40 PPM Duplex Red. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "scanner-brother-ads-4700w-40-ppm-duplex-red",
+   "name": "Scanner Brother ADS-4700W 40 PPM Duplex Red",
+   "brand": "Brother",
+   "seoTitle": "Scanner Brother ADS-4700W 40 PPM Duplex Red",
+   "seoDescription": "Scanner Brother ADS-4700W 40 PPM Duplex Red. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Scanner Brother ADS-4700W 40 PPM Duplex Red. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "scanner-brother-ds-640-portatil-color-600dpi",
+   "name": "Scanner Brother DS-640 Portatil Color 600DPI",
+   "brand": "Brother",
+   "seoTitle": "Scanner Brother DS-640 Portatil Color 600DPI",
+   "seoDescription": "Scanner Brother DS-640 Portatil Color 600DPI. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "scanner-epson-doc-workforce-ds-c330-30-ppm-duplex",
+   "name": "Scanner Epson DOC Workforce DS-C330 30 PPM Duplex",
+   "brand": "Epson",
+   "seoTitle": "Scanner Epson DOC Workforce DS-C330 30 PPM",
+   "seoDescription": "Scanner Epson DOC Workforce DS-C330 30 PPM Duplex. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Scanner Epson DOC Workforce DS-C330 30 PPM Duplex. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "scanner-kodak-730ex-scan-station-plus-70-ppm-red",
+   "name": "Scanner Kodak 730EX Scan Station Plus 70 PPM Red",
+   "brand": "Kodak",
+   "seoTitle": "Scanner Kodak 730EX Scan Station Plus 70 PPM",
+   "seoDescription": "Scanner Kodak 730EX Scan Station Plus 70 PPM Red. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Scanner Kodak 730EX Scan Station Plus 70 PPM Red. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "scanner-kodak-alaris-e1030-30-ppm-adf-80-duplex",
+   "name": "Scanner Kodak Alaris E1030 30 PPM ADF 80 Duplex",
+   "brand": "Kodak",
+   "seoTitle": "Scanner Kodak Alaris E1030 30 PPM ADF 80",
+   "seoDescription": "Scanner profesional Kodak Alaris E1030 con velocidad 30 PPM, alimentador automático 80 hojas y escaneo dúplex para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "scanner-kodak-alaris-e1040-40-ppm-adf-80-duplex",
+   "name": "Scanner Kodak - E1040 Duplex 40PPM",
+   "brand": "Kodak",
+   "seoTitle": "Scanner Kodak - E1040 Duplex 40PPM",
+   "seoDescription": "Scanner Kodak - E1040 Duplex 40PPM. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Scanner Kodak - E1040 Duplex 40PPM. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "scanner-kodak-alaris-i940-20ppm-oficio-duplex",
+   "name": "Scanner Kodak I940 Duplex 20PPM, A4/Oficio",
+   "brand": "Kodak",
+   "seoTitle": "Scanner Kodak I940 Duplex 20PPM, A4/Oficio",
+   "seoDescription": "Scanner Kodak I940 Duplex 20PPM, A4/Oficio. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Scanner Kodak I940 Duplex 20PPM, A4/Oficio. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "scanner-kodak-alaris-s2060w-60-ppm-wifi-duplex",
+   "name": "Scanner Kodak Alaris S2060W 60 PPM WIFI Duplex",
+   "brand": "Kodak",
+   "seoTitle": "Scanner Kodak Alaris S2060W 60 PPM WIFI",
+   "seoDescription": "Scanner profesional Kodak Alaris S2060W con conectividad WiFi, velocidad 60 PPM y función dúplex automática para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "scanner-kodak-alaris-s2070-70-ppm-adf-80-duplex",
+   "name": "Scanner Kodak - S2070 Duplex 70PPM ADF80",
+   "brand": "Kodak",
+   "seoTitle": "Scanner Kodak - S2070 Duplex 70PPM ADF80",
+   "seoDescription": "Scanner Kodak - S2070 Duplex 70PPM ADF80. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Scanner Kodak - S2070 Duplex 70PPM ADF80. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "scanner-kodak-alaris-s2070-70-ppm-adf-80-duplex-2",
+   "name": "Scanner Kodak Alaris S2070 70 PPM ADF 80 Duplex",
+   "brand": "Kodak",
+   "seoTitle": "Scanner Kodak Alaris S2070 70 PPM ADF 80",
+   "seoDescription": "Scanner profesional Kodak Alaris S2070 con velocidad 70 PPM, alimentador automático 80 hojas y escaneo dúplex para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "scanner-kodak-alaris-s3100-100-ppm-adf300-a3duplex",
+   "name": "Scanner Kodak Alaris S3100 100 PPM ADF300 A3DUPLEX",
+   "brand": "Kodak",
+   "seoTitle": "Scanner Kodak Alaris S3100 100 PPM ADF300",
+   "seoDescription": "Scanner Kodak Alaris S3100 100 PPM ADF300 A3DUPLEX. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "scanner-kodak-kit-consumibles-extra-large-i4000",
+   "name": "Scanner Kodak Kit Consumibles Extra Large i4000",
+   "brand": "Kodak",
+   "seoTitle": "Scanner Kodak Kit Consumibles Extra Large",
+   "seoDescription": "Scanner Kodak Kit Consumibles Extra Large i4000. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Scanner Kodak Kit Consumibles Extra Large i4000. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "scanner-kodak-s3060-duplex-a3-60ppm",
+   "name": "Scanner Kodak - S3060 Duplex A3 60PPM",
+   "brand": "Kodak",
+   "seoTitle": "Scanner Kodak - S3060 Duplex A3 60PPM",
+   "seoDescription": "Scanner profesional Kodak S3060 con capacidad A3, escaneo duplex automático y velocidad de 60 páginas por minuto… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "secador-de-pelo-profesional-winco",
+   "brand": "Winco",
+   "seoTitle": "Secador de Pelo Profesional Winco",
+   "seoDescription": "Potencia de 2000W. Funciona con 3 niveles de temperatura. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "sensor-de-movimiento-gynoid-wifi",
+   "seoTitle": "Sensor de Movimiento Gynoid Wifi",
+   "seoDescription": "Puede detectar calor y movimiento en las áreas circundantes Conexión Wifi. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "set-back-box-pin-sbb-d32cv2-smart-signage-lfd",
+   "name": "SET Back BOX (PIN) SBB-D32CV2 Smart Signage LFD",
+   "seoTitle": "SET Back BOX (PIN) SBB-D32CV2 Smart Signage",
+   "seoDescription": "SET BACK BOX (PIN) SBB-D32CV2 SMART SIGNAGE LFD — características clave y especificaciones. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "set-back-box-samsung-sbb-ss08nu1xzb",
+   "name": "SET Back BOX Samsung SBB-SS08NU1XZB",
+   "brand": "Samsung",
+   "seoTitle": "SET Back BOX Samsung SBB-SS08NU1XZB",
+   "seoDescription": "SET Back BOX Samsung SBB-SS08NU1XZB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "SET Back BOX Samsung SBB-SS08NU1XZB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "sierra-caladora-daihatsu-400w",
+   "seoTitle": "Sierra Caladora Daihatsu 400W",
+   "seoDescription": "Sierra Caladora Daihatsu 400W. Garantía oficial y envíos a todo el país."
+  }
+ ]
+}

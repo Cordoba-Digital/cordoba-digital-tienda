@@ -1,0 +1,2321 @@
+{
+  "lote": "catalogo-A-12",
+  "productos": [
+    {
+      "slug": "pc-gamer-amd-ryzen-5-8600g-8gb-ddr5-ssd-240gb-w11-2",
+      "name": "PC Gamer AMD Ryzen 5 8600G 8 GB DDR5 SSD 240 GB Windows 11",
+      "model": "Ryzen 5 8600G",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC Gamer Ryzen 5 8600G 8 GB SSD 240 GB",
+      "seoDescription": "PC gamer con AMD Ryzen 5 8600G, 8 GB de RAM DDR5, SSD de 240 GB y Windows 11. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "PC de escritorio con AMD Ryzen 5 8600G a 4,3 GHz (socket AM5), 8 GB de RAM DDR5 a 4800 MHz y SSD de 240 GB. Placa MSI PRO A620M-E y Windows 11.",
+      "highlights": [
+        "AMD Ryzen 5 8600G de 4,3 GHz con gráficos integrados",
+        "Se usa sin placa de video aparte",
+        "8 GB de RAM DDR5 a 4800 MHz",
+        "SSD de 240 GB para arrancar y abrir programas rápido",
+        "Placa MSI PRO A620M-E con ranura M.2",
+        "Windows 11 y gabinete incluidos"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 5 8600G, 4,3 GHz, socket AM5"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Integrados en el procesador"
+        },
+        {
+          "label": "Placa madre",
+          "value": "MSI PRO A620M-E (M.2, DDR5)"
+        },
+        {
+          "label": "Tipo de RAM",
+          "value": "DDR5 a 4800 MHz"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "Disco sólido (SSD)"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11"
+        },
+        {
+          "label": "Gabinete",
+          "value": "Incluido"
+        }
+      ],
+      "descriptionHtml": "<p>Esta PC de escritorio se arma alrededor del AMD Ryzen 5 8600G, un procesador con gráficos integrados. Es una base para jugar y trabajar sin comprar una placa de video aparte.</p><h3>Qué trae</h3><ul><li>AMD Ryzen 5 8600G sobre una placa MSI PRO A620M-E.</li><li>8 GB de RAM DDR5 a 4800 MHz.</li><li>SSD de 240 GB y Windows 11.</li><li>Gabinete incluido.</li></ul><h3>Rendimiento</h3><p>Los Ryzen trabajan con procesamiento de subprocesos múltiples, útil cuando jugás y tenés otros programas abiertos al mismo tiempo.</p><h3>Cómo se usa</h3><p>Como el video va dentro del procesador, la PC funciona sin placa de video dedicada. La placa madre tiene ranura M.2 para el disco.</p><h3>Antes de comprar</h3><p>La PC se arma e instala antes de la entrega. La foto del gabinete es ilustrativa.</p>",
+      "revisar": [
+        "La descripción dice gráficos 'Radeon RX Vega 11' pero es texto genérico de Ryzen con video: no puse el modelo de video integrado. Confirmar y completar si hace falta.",
+        "Se sacó el aviso de 'demora de armado e instalación 48 hs hábiles' (es un plazo) y 'foto a modo ilustrativo': confirmar qué gabinete y fuente se entregan."
+      ]
+    },
+    {
+      "slug": "pc-gamer-amd-ryzen-7-5700g-16gb-ddr4-ssd-240gb-w10",
+      "name": "PC Gamer AMD Ryzen 7 5700G 16 GB DDR4 SSD 240 GB Windows 10",
+      "model": "Ryzen 7 5700G",
+      "storage": "240 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC Gamer Ryzen 7 5700G 16 GB SSD 240 GB",
+      "seoDescription": "PC gamer con AMD Ryzen 7 5700G, 16 GB de RAM DDR4, SSD de 240 GB y Windows 10. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "PC de escritorio con AMD Ryzen 7 5700G (socket AM4), 16 GB de RAM DDR4 a 3200 MHz y SSD de 240 GB. Placa A520M-HDV y Windows 10.",
+      "highlights": [
+        "AMD Ryzen 7 5700G con gráficos integrados",
+        "Se usa sin placa de video aparte",
+        "16 GB de RAM DDR4 a 3200 MHz",
+        "SSD de 240 GB para arrancar y abrir programas rápido",
+        "Placa A520M-HDV con ranura M.2",
+        "Windows 10 y gabinete incluidos"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 7 5700G, socket AM4"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Integrados en el procesador"
+        },
+        {
+          "label": "Placa madre",
+          "value": "A520M-HDV (M.2, DDR4)"
+        },
+        {
+          "label": "Tipo de RAM",
+          "value": "DDR4 a 3200 MHz"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "Disco sólido (SSD)"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10"
+        },
+        {
+          "label": "Gabinete",
+          "value": "Incluido"
+        }
+      ],
+      "descriptionHtml": "<p>Esta PC de escritorio se arma alrededor del AMD Ryzen 7 5700G, un procesador con gráficos integrados. Es una base para jugar y trabajar sin comprar una placa de video aparte.</p><h3>Qué trae</h3><ul><li>AMD Ryzen 7 5700G sobre una placa A520M-HDV.</li><li>16 GB de RAM DDR4 a 3200 MHz.</li><li>SSD de 240 GB y Windows 10.</li><li>Gabinete incluido.</li></ul><h3>Rendimiento</h3><p>Los Ryzen trabajan con procesamiento de subprocesos múltiples, útil cuando jugás y tenés otros programas abiertos al mismo tiempo.</p><h3>Cómo se usa</h3><p>Como el video va dentro del procesador, la PC funciona sin placa de video dedicada. La placa madre tiene ranura M.2 para el disco.</p><h3>Antes de comprar</h3><p>La PC se arma e instala antes de la entrega. La foto del gabinete es ilustrativa.</p>",
+      "revisar": [
+        "La descripción dice gráficos 'Radeon RX Vega 11' pero es texto genérico de Ryzen con video: no puse el modelo de video integrado. Confirmar y completar si hace falta.",
+        "Se sacó el aviso de 'demora de armado e instalación 48 hs hábiles' (es un plazo) y 'foto a modo ilustrativo': confirmar qué gabinete y fuente se entregan."
+      ]
+    },
+    {
+      "slug": "pc-gamer-amd-ryzen-7-5700g-am4-8gb-ddr4-ssd-240gb-w10",
+      "name": "PC Gamer AMD Ryzen 7 5700G 8 GB DDR4 SSD 240 GB Windows 10",
+      "model": "Ryzen 7 5700G",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC Gamer Ryzen 7 5700G 8 GB SSD 240 GB",
+      "seoDescription": "PC gamer con AMD Ryzen 7 5700G, 8 GB de RAM DDR4, SSD de 240 GB y Windows 10. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "PC de escritorio con AMD Ryzen 7 5700G (socket AM4), 8 GB de RAM DDR4 a 3200 MHz y SSD de 240 GB. Placa A520M-HDV y Windows 10.",
+      "highlights": [
+        "AMD Ryzen 7 5700G con gráficos integrados",
+        "Se usa sin placa de video aparte",
+        "8 GB de RAM DDR4 a 3200 MHz",
+        "SSD de 240 GB para arrancar y abrir programas rápido",
+        "Placa A520M-HDV con ranura M.2",
+        "Windows 10 y gabinete incluidos"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 7 5700G, socket AM4"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Integrados en el procesador"
+        },
+        {
+          "label": "Placa madre",
+          "value": "A520M-HDV (M.2, DDR4)"
+        },
+        {
+          "label": "Tipo de RAM",
+          "value": "DDR4 a 3200 MHz"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "Disco sólido (SSD)"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10"
+        },
+        {
+          "label": "Gabinete",
+          "value": "Incluido"
+        }
+      ],
+      "descriptionHtml": "<p>Esta PC de escritorio se arma alrededor del AMD Ryzen 7 5700G, un procesador con gráficos integrados. Es una base para jugar y trabajar sin comprar una placa de video aparte.</p><h3>Qué trae</h3><ul><li>AMD Ryzen 7 5700G sobre una placa A520M-HDV.</li><li>8 GB de RAM DDR4 a 3200 MHz.</li><li>SSD de 240 GB y Windows 10.</li><li>Gabinete incluido.</li></ul><h3>Rendimiento</h3><p>Los Ryzen trabajan con procesamiento de subprocesos múltiples, útil cuando jugás y tenés otros programas abiertos al mismo tiempo.</p><h3>Cómo se usa</h3><p>Como el video va dentro del procesador, la PC funciona sin placa de video dedicada. La placa madre tiene ranura M.2 para el disco.</p><h3>Antes de comprar</h3><p>La PC se arma e instala antes de la entrega. La foto del gabinete es ilustrativa.</p>",
+      "revisar": [
+        "La descripción dice gráficos 'Radeon RX Vega 11' pero es texto genérico de Ryzen con video: no puse el modelo de video integrado. Confirmar y completar si hace falta.",
+        "Se sacó el aviso de 'demora de armado e instalación 48 hs hábiles' (es un plazo) y 'foto a modo ilustrativo': confirmar qué gabinete y fuente se entregan."
+      ]
+    },
+    {
+      "slug": "pc-gamer-amd-ryzen-7-8700g-16gb-ddr5-ssd-240gb-w11",
+      "name": "PC Gamer AMD Ryzen 7 8700G 16 GB DDR5 SSD 240 GB Windows 11",
+      "model": "Ryzen 7 8700G",
+      "storage": "240 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC Gamer Ryzen 7 8700G 16 GB SSD 240 GB",
+      "seoDescription": "PC gamer con AMD Ryzen 7 8700G, 16 GB de RAM DDR5, SSD de 240 GB y Windows 11. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "PC de escritorio con AMD Ryzen 7 8700G a 4,2 GHz (socket AM5), 16 GB de RAM DDR5 a 4800 MHz y SSD de 240 GB. Placa MSI PRO A620M-E y Windows 11.",
+      "highlights": [
+        "AMD Ryzen 7 8700G de 4,2 GHz con gráficos integrados",
+        "Se usa sin placa de video aparte",
+        "16 GB de RAM DDR5 a 4800 MHz",
+        "SSD de 240 GB para arrancar y abrir programas rápido",
+        "Placa MSI PRO A620M-E con ranura M.2",
+        "Windows 11 y gabinete incluidos"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 7 8700G, 4,2 GHz, socket AM5"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Integrados en el procesador"
+        },
+        {
+          "label": "Placa madre",
+          "value": "MSI PRO A620M-E (M.2, DDR5)"
+        },
+        {
+          "label": "Tipo de RAM",
+          "value": "DDR5 a 4800 MHz"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "Disco sólido (SSD)"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11"
+        },
+        {
+          "label": "Gabinete",
+          "value": "Incluido"
+        }
+      ],
+      "descriptionHtml": "<p>Esta PC de escritorio se arma alrededor del AMD Ryzen 7 8700G, un procesador con gráficos integrados. Es una base para jugar y trabajar sin comprar una placa de video aparte.</p><h3>Qué trae</h3><ul><li>AMD Ryzen 7 8700G sobre una placa MSI PRO A620M-E.</li><li>16 GB de RAM DDR5 a 4800 MHz.</li><li>SSD de 240 GB y Windows 11.</li><li>Gabinete incluido.</li></ul><h3>Rendimiento</h3><p>Los Ryzen trabajan con procesamiento de subprocesos múltiples, útil cuando jugás y tenés otros programas abiertos al mismo tiempo.</p><h3>Cómo se usa</h3><p>Como el video va dentro del procesador, la PC funciona sin placa de video dedicada. La placa madre tiene ranura M.2 para el disco.</p><h3>Antes de comprar</h3><p>La PC se arma e instala antes de la entrega. La foto del gabinete es ilustrativa.</p>",
+      "revisar": [
+        "La descripción dice gráficos 'Radeon RX Vega 11' pero es texto genérico de Ryzen con video: no puse el modelo de video integrado. Confirmar y completar si hace falta.",
+        "Se sacó el aviso de 'demora de armado e instalación 48 hs hábiles' (es un plazo) y 'foto a modo ilustrativo': confirmar qué gabinete y fuente se entregan."
+      ]
+    },
+    {
+      "slug": "pc-gamer-amd-ryzen-7-8700g-8gb-ddr5-ssd-240gb-w11",
+      "name": "PC Gamer AMD Ryzen 7 8700G 8 GB DDR5 SSD 240 GB Windows 11",
+      "model": "Ryzen 7 8700G",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC Gamer Ryzen 7 8700G 8 GB SSD 240 GB",
+      "seoDescription": "PC gamer con AMD Ryzen 7 8700G, 8 GB de RAM DDR5, SSD de 240 GB y Windows 11. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "PC de escritorio con AMD Ryzen 7 8700G a 4,2 GHz (socket AM5), 8 GB de RAM DDR5 a 4800 MHz y SSD de 240 GB. Placa MSI PRO A620M-E y Windows 11.",
+      "highlights": [
+        "AMD Ryzen 7 8700G de 4,2 GHz con gráficos integrados",
+        "Se usa sin placa de video aparte",
+        "8 GB de RAM DDR5 a 4800 MHz",
+        "SSD de 240 GB para arrancar y abrir programas rápido",
+        "Placa MSI PRO A620M-E con ranura M.2",
+        "Windows 11 y gabinete incluidos"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 7 8700G, 4,2 GHz, socket AM5"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Integrados en el procesador"
+        },
+        {
+          "label": "Placa madre",
+          "value": "MSI PRO A620M-E (M.2, DDR5)"
+        },
+        {
+          "label": "Tipo de RAM",
+          "value": "DDR5 a 4800 MHz"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "Disco sólido (SSD)"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11"
+        },
+        {
+          "label": "Gabinete",
+          "value": "Incluido"
+        }
+      ],
+      "descriptionHtml": "<p>Esta PC de escritorio se arma alrededor del AMD Ryzen 7 8700G, un procesador con gráficos integrados. Es una base para jugar y trabajar sin comprar una placa de video aparte.</p><h3>Qué trae</h3><ul><li>AMD Ryzen 7 8700G sobre una placa MSI PRO A620M-E.</li><li>8 GB de RAM DDR5 a 4800 MHz.</li><li>SSD de 240 GB y Windows 11.</li><li>Gabinete incluido.</li></ul><h3>Rendimiento</h3><p>Los Ryzen trabajan con procesamiento de subprocesos múltiples, útil cuando jugás y tenés otros programas abiertos al mismo tiempo.</p><h3>Cómo se usa</h3><p>Como el video va dentro del procesador, la PC funciona sin placa de video dedicada. La placa madre tiene ranura M.2 para el disco.</p><h3>Antes de comprar</h3><p>La PC se arma e instala antes de la entrega. La foto del gabinete es ilustrativa.</p>",
+      "revisar": [
+        "La descripción dice gráficos 'Radeon RX Vega 11' pero es texto genérico de Ryzen con video: no puse el modelo de video integrado. Confirmar y completar si hace falta.",
+        "Se sacó el aviso de 'demora de armado e instalación 48 hs hábiles' (es un plazo) y 'foto a modo ilustrativo': confirmar qué gabinete y fuente se entregan."
+      ]
+    },
+    {
+      "slug": "pc-gfast-core-i5-10400-ssd-240gb-16gb",
+      "name": "PC Gfast Core i5-10400 16 GB SSD 240 GB",
+      "brand": "Gfast",
+      "model": "Core i5-10400",
+      "storage": "240 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC Gfast Core i5-10400 16 GB SSD 240 GB",
+      "seoDescription": "PC Gfast con Intel Core i5-10400, 16 GB de RAM DDR4 y SSD de 240 GB con Windows 10. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "PC de escritorio Gfast con procesador Intel Core i5-10400, placa Gigabyte H510M-H, 16 GB de RAM DDR4 a 3200 MHz y SSD Gigabyte de 240 GB. Gabinete con kit de 500 W.",
+      "highlights": [
+        "Procesador Intel Core i5-10400",
+        "16 GB de RAM DDR4 a 3200 MHz",
+        "SSD Gigabyte de 240 GB",
+        "Placa madre Gigabyte H510M-H",
+        "Gabinete Gfast con kit de 500 W",
+        "Se entrega con Windows 10"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i5-10400"
+        },
+        {
+          "label": "Placa madre",
+          "value": "Gigabyte H510M-H"
+        },
+        {
+          "label": "Tipo de RAM",
+          "value": "DDR4 a 3200 MHz"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD Gigabyte"
+        },
+        {
+          "label": "Gabinete",
+          "value": "Kit Gfast de 500 W"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10"
+        }
+      ],
+      "descriptionHtml": "<p>La PC Gfast con Core i5-10400 es un equipo de escritorio armado para trabajo, estudio y uso diario. Esta versión tiene 16 GB de RAM y un SSD de 240 GB. La placa madre y el SSD son los dos de Gigabyte, una marca conocida de componentes.</p><h3>Qué incluye</h3><ul><li>Procesador Intel Core i5-10400 sobre placa Gigabyte H510M-H.</li><li>16 GB de memoria DDR4 a 3200 MHz.</li><li>SSD Gigabyte de 240 GB con Windows 10.</li><li>Gabinete Gfast con kit de 500 W.</li></ul><h3>Para qué te sirve</h3><p>Con un SSD el sistema arranca y abre los programas más rápido que con un disco a platos. Sirve para oficina, clases virtuales, navegación y tareas de todos los días.</p><h3>Antes de comprar</h3><p>La descripción no menciona monitor ni periféricos. La foto del gabinete es ilustrativa.</p>",
+      "revisar": [
+        "La foto del gabinete es ilustrativa: confirmar qué gabinete y fuente se entregan. Se quitó '10% descuento' del texto original.",
+        "El texto original solo dice 'w10' para el sistema operativo: confirmar la versión. No se aclara si incluye monitor o periféricos."
+      ]
+    },
+    {
+      "slug": "pc-gfast-intel-celeron-g5905-4gb-120gb-w11h-sl",
+      "name": "PC Gfast Intel Celeron G5905 4 GB SSD 120 GB",
+      "brand": "Gfast",
+      "model": "Celeron G5905",
+      "storage": "120 GB",
+      "ram": "4 GB",
+      "seoTitle": "PC Gfast Celeron G5905 4 GB SSD 120 GB",
+      "seoDescription": "PC Gfast con Intel Celeron G5905, 4 GB de RAM DDR4, SSD de 120 GB y Windows 11 Home SL. Incluye parlantes, mouse y teclado. Garantía y envíos a todo el país.",
+      "shortDescription": "PC Gfast con Intel Celeron G5905, 4 GB de RAM DDR4 y SSD de 120 GB. Viene con Windows 11 Home SL y kit de parlantes, mouse y teclado.",
+      "highlights": [
+        "Procesador Intel Celeron G5905",
+        "4 GB de RAM DDR4",
+        "SSD de 120 GB",
+        "Windows 11 Home SL",
+        "Incluye kit de parlantes, mouse y teclado"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Celeron G5905"
+        },
+        {
+          "label": "Tipo de RAM",
+          "value": "DDR4"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11 Home SL"
+        },
+        {
+          "label": "Incluye",
+          "value": "Parlantes, mouse y teclado"
+        }
+      ],
+      "descriptionHtml": "<p>Esta PC Gfast con Celeron G5905 es un equipo básico de escritorio para tareas simples de casa o de oficina. Viene con SSD y con el kit de periféricos incluido.</p><h3>Qué incluye</h3><ul><li>Intel Celeron G5905, 4 GB de RAM DDR4 y SSD de 120 GB.</li><li>Windows 11 Home SL.</li><li>Kit de parlantes, mouse y teclado.</li></ul><h3>Para qué te sirve</h3><p>Es un equipo de entrada: navegar, mirar videos, escribir documentos y clases virtuales. El SSD hace que el sistema arranque rápido. Con el kit de parlantes, mouse y teclado podés empezar a usarla con solo sumar un monitor.</p><h3>Antes de comprar</h3><p>La descripción no menciona monitor, así que consultá antes si lo necesitás. Con 4 GB de RAM conviene no abrir muchos programas a la vez.</p>",
+      "revisar": [
+        "Texto original casi vacío (relleno). Se quitó '10% descuento contado'. 'Home SL' viene del slug y de la ficha corta.",
+        "Confirmar si incluye monitor y qué placa madre y gabinete trae."
+      ]
+    },
+    {
+      "slug": "pc-intel-celeron-4gb-ssd-120gb-gfast-slim",
+      "name": "PC Gfast Intel Celeron 4 GB SSD 120 GB Slim",
+      "brand": "Gfast",
+      "model": "H-150i4120w",
+      "storage": "120 GB",
+      "ram": "4 GB",
+      "seoTitle": "PC Gfast Celeron 4 GB SSD 120 GB Slim",
+      "seoDescription": "PC de escritorio Gfast slim con Intel Celeron, 4 GB de RAM DDR4, SSD de 120 GB y Windows 11. Con teclado, mouse y parlantes. Garantía y envíos a todo el país.",
+      "shortDescription": "PC Gfast con gabinete slim, Intel Celeron, 4 GB de RAM DDR4 y SSD de 120 GB. Viene con Windows 11, teclado, mouse y parlantes. No incluye monitor.",
+      "highlights": [
+        "Gabinete slim con fuente de 300 W",
+        "Intel Celeron, 4 GB de RAM DDR4 y SSD de 120 GB",
+        "Windows 11 y aplicaciones instaladas",
+        "Incluye teclado, mouse y parlantes",
+        "Salida HDMI, red RJ45 y 6 puertos USB"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Celeron"
+        },
+        {
+          "label": "Tipo de RAM",
+          "value": "DDR4"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11"
+        },
+        {
+          "label": "Gabinete",
+          "value": "Slim, fuente de 300 W"
+        },
+        {
+          "label": "Puertos",
+          "value": "1 HDMI, 1 LAN RJ45, 2 USB frontales, 4 USB 2.0 traseros, 3 jacks de audio"
+        },
+        {
+          "label": "Peso",
+          "value": "4,95 kg aprox."
+        },
+        {
+          "label": "Incluye",
+          "value": "Teclado, mouse y parlantes"
+        }
+      ],
+      "descriptionHtml": "<p>Esta PC de escritorio Gfast tiene un gabinete slim que ocupa poco lugar. Es un equipo para el hogar o la oficina, con SSD y periféricos incluidos.</p><h3>Qué incluye</h3><ul><li>Intel Celeron, 4 GB de RAM DDR4 y SSD de 120 GB.</li><li>Windows 11 y paquete de aplicaciones instaladas.</li><li>Teclado, mouse y parlantes.</li></ul><h3>Listo para usar</h3><p>El SSD le da más velocidad al equipo, y el procesador Celeron permite varias tareas a la vez. Se entrega con el sistema operativo y las aplicaciones ya instaladas.</p><h3>Conexiones</h3><p>Un puerto HDMI para el monitor, una placa de red RJ45, dos USB en el frente y cuatro USB 2.0 atrás. Tiene tres jacks de audio para parlantes, micrófono y auxiliar.</p><h3>Antes de comprar</h3><p>No incluye monitor. Con 4 GB de RAM es un equipo para tareas livianas.</p>",
+      "revisar": [
+        "Se quitó 'Garantía 12 meses' del texto original (la garantía de la tienda es de 6 meses).",
+        "Dimensiones originales '31.5mm x 13.5mm x 39.5mm' son evidentemente cm: no las publiqué. Falta el modelo exacto del Celeron.",
+        "Número de parte H-150i4120w en el original; lo usé como modelo."
+      ]
+    },
+    {
+      "slug": "pc-intel-i3-12100-16gb-ssd-240gb-w10",
+      "name": "PC Intel Core i3-12100 16 GB SSD 240 GB Windows 10",
+      "model": "Core i3-12100",
+      "storage": "240 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC Intel Core i3-12100 16 GB SSD 240 GB",
+      "seoDescription": "PC con Intel Core i3-12100, 16 GB de RAM DDR4 3200 MHz, SSD de 240 GB y Windows 10. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "PC de escritorio con Intel Core i3-12100 de 4 núcleos y 8 hilos, turbo de hasta 4,30 GHz, 16 GB (2 x 8 GB) DDR4 3200 MHz y SSD de 240 GB. Socket 1700.",
+      "highlights": [
+        "Intel Core i3-12100: 4 núcleos y 8 hilos",
+        "Turbo de hasta 4,30 GHz y 12 MB de caché",
+        "16 GB de RAM DDR4 a 3200 MHz",
+        "SSD de 240 GB",
+        "Gráficos integrados Intel UHD 730",
+        "Placa de socket 1700 y gabinete con kit de 600 W"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i3-12100, 4 núcleos y 8 hilos"
+        },
+        {
+          "label": "Frecuencia",
+          "value": "Base 3,30 GHz, turbo hasta 4,30 GHz"
+        },
+        {
+          "label": "Caché",
+          "value": "12 MB Intel Smart Cache"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD Graphics 730 integrados"
+        },
+        {
+          "label": "Placa madre",
+          "value": "Socket 1700 (Gigabyte, Asus, ASRock o MSI)"
+        },
+        {
+          "label": "Tipo de RAM",
+          "value": "16 GB (2 x 8 GB) DDR4 3200 MHz"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "Disco sólido (SSD)"
+        },
+        {
+          "label": "Gabinete",
+          "value": "Kit de 600 W"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10"
+        }
+      ],
+      "descriptionHtml": "<p>Esta PC de escritorio usa el Intel Core i3-12100, un procesador de 4 núcleos y 8 hilos con video integrado. Esta versión tiene 16 GB de RAM y SSD de 240 GB.</p><h3>Rendimiento</h3><p>El i3-12100 llega a 4,30 GHz en turbo y tiene 12 MB de caché. Alcanza para oficina, estudio, navegación y multitarea normal sin placa de video aparte.</p><h3>Video</h3><p>Los gráficos Intel UHD 730 vienen dentro del procesador, que soporta hasta 4 pantallas. Los puertos de video dependen de la placa madre.</p><h3>Qué incluye</h3><ul><li>16 GB (2 x 8 GB) DDR4 a 3200 MHz y SSD de 240 GB.</li><li>Placa madre de socket 1700.</li><li>Gabinete con kit de 600 W y Windows 10.</li></ul><h3>Antes de comprar</h3><p>La marca de la placa madre puede ser Gigabyte, Asus, ASRock o MSI. La foto del gabinete es ilustrativa.</p>",
+      "revisar": [
+        "La marca de la placa madre figura como 'Gigabyte/Asus/Asrock/Msi': confirmar cuál se entrega. Foto del gabinete ilustrativa.",
+        "El original llama al procesador 'Anderlake' (es Alder Lake); no lo usé. Los datos del CPU vienen de la tabla de especificaciones pegada en la descripción.",
+        "La salida de video depende de la placa madre; confirmar puertos.",
+        "Windows 10 viene solo del nombre ('W10')."
+      ]
+    },
+    {
+      "slug": "pc-intel-i3-anderlake-12100-ssd-240gb-8gb-ram",
+      "name": "PC Intel Core i3-12100 8 GB SSD 240 GB Windows 10",
+      "model": "Core i3-12100",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC Intel Core i3-12100 8 GB SSD 240 GB",
+      "seoDescription": "PC con Intel Core i3-12100, 8 GB de RAM DDR4 3200 MHz, SSD de 240 GB y Windows 10. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "PC de escritorio con Intel Core i3-12100 de 4 núcleos y 8 hilos, turbo de hasta 4,30 GHz, 8 GB DDR4 3200 MHz y SSD de 240 GB. Socket 1700.",
+      "highlights": [
+        "Intel Core i3-12100: 4 núcleos y 8 hilos",
+        "Turbo de hasta 4,30 GHz y 12 MB de caché",
+        "8 GB de RAM DDR4 a 3200 MHz",
+        "SSD de 240 GB",
+        "Gráficos integrados Intel UHD 730",
+        "Placa de socket 1700 y gabinete con kit de 600 W"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i3-12100, 4 núcleos y 8 hilos"
+        },
+        {
+          "label": "Frecuencia",
+          "value": "Base 3,30 GHz, turbo hasta 4,30 GHz"
+        },
+        {
+          "label": "Caché",
+          "value": "12 MB Intel Smart Cache"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD Graphics 730 integrados"
+        },
+        {
+          "label": "Placa madre",
+          "value": "Socket 1700 (Gigabyte, Asus, ASRock o MSI)"
+        },
+        {
+          "label": "Tipo de RAM",
+          "value": "8 GB DDR4 3200 MHz"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "Disco sólido (SSD)"
+        },
+        {
+          "label": "Gabinete",
+          "value": "Kit de 600 W"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10"
+        }
+      ],
+      "descriptionHtml": "<p>Esta PC de escritorio usa el Intel Core i3-12100, un procesador de 4 núcleos y 8 hilos con video integrado. Esta versión tiene 8 GB de RAM y SSD de 240 GB.</p><h3>Rendimiento</h3><p>El i3-12100 llega a 4,30 GHz en turbo y tiene 12 MB de caché. Alcanza para oficina, estudio, navegación y multitarea normal sin placa de video aparte.</p><h3>Video</h3><p>Los gráficos Intel UHD 730 vienen dentro del procesador, que soporta hasta 4 pantallas. Los puertos de video dependen de la placa madre.</p><h3>Qué incluye</h3><ul><li>8 GB DDR4 a 3200 MHz y SSD de 240 GB.</li><li>Placa madre de socket 1700.</li><li>Gabinete con kit de 600 W y Windows 10.</li></ul><h3>Antes de comprar</h3><p>La marca de la placa madre puede ser Gigabyte, Asus, ASRock o MSI. La foto del gabinete es ilustrativa.</p>",
+      "revisar": [
+        "La marca de la placa madre figura como 'Gigabyte/Asus/Asrock/Msi': confirmar cuál se entrega. Foto del gabinete ilustrativa.",
+        "El original llama al procesador 'Anderlake' (es Alder Lake); no lo usé. Los datos del CPU vienen de la tabla de especificaciones pegada en la descripción.",
+        "La salida de video depende de la placa madre; confirmar puertos.",
+        "Windows 10 viene solo del nombre ('W10')."
+      ]
+    },
+    {
+      "slug": "pc-intel-i5-10400-ssd240gb-8gb",
+      "name": "PC Gfast Core i5-10400 8 GB SSD 240 GB",
+      "brand": "Gfast",
+      "model": "Core i5-10400",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC Gfast Core i5-10400 8 GB SSD 240 GB",
+      "seoDescription": "PC Gfast con Intel Core i5-10400, 8 GB de RAM DDR4 y SSD de 240 GB con Windows 10. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "PC de escritorio Gfast con procesador Intel Core i5-10400, placa Gigabyte H510M-H, 8 GB de RAM DDR4 a 3200 MHz y SSD Gigabyte de 240 GB. Gabinete con kit de 500 W.",
+      "highlights": [
+        "Procesador Intel Core i5-10400",
+        "8 GB de RAM DDR4 a 3200 MHz",
+        "SSD Gigabyte de 240 GB",
+        "Placa madre Gigabyte H510M-H",
+        "Gabinete Gfast con kit de 500 W",
+        "Se entrega con Windows 10"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i5-10400"
+        },
+        {
+          "label": "Placa madre",
+          "value": "Gigabyte H510M-H"
+        },
+        {
+          "label": "Tipo de RAM",
+          "value": "DDR4 a 3200 MHz"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD Gigabyte"
+        },
+        {
+          "label": "Gabinete",
+          "value": "Kit Gfast de 500 W"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10"
+        }
+      ],
+      "descriptionHtml": "<p>La PC Gfast con Core i5-10400 es un equipo de escritorio armado para trabajo, estudio y uso diario. Esta versión tiene 8 GB de RAM y un SSD de 240 GB. La placa madre y el SSD son los dos de Gigabyte, una marca conocida de componentes.</p><h3>Qué incluye</h3><ul><li>Procesador Intel Core i5-10400 sobre placa Gigabyte H510M-H.</li><li>8 GB de memoria DDR4 a 3200 MHz.</li><li>SSD Gigabyte de 240 GB con Windows 10.</li><li>Gabinete Gfast con kit de 500 W.</li></ul><h3>Para qué te sirve</h3><p>Con un SSD el sistema arranca y abre los programas más rápido que con un disco a platos. Sirve para oficina, clases virtuales, navegación y tareas de todos los días.</p><h3>Antes de comprar</h3><p>La descripción no menciona monitor ni periféricos. La foto del gabinete es ilustrativa.</p>",
+      "revisar": [
+        "La foto del gabinete es ilustrativa: confirmar qué gabinete y fuente se entregan. Se quitó '10% descuento' del texto original.",
+        "El texto original solo dice 'w10' para el sistema operativo: confirmar la versión. No se aclara si incluye monitor o periféricos."
+      ]
+    },
+    {
+      "slug": "pc-performance-amd-athlon-3000g8gssd240-msi",
+      "name": "PC Performance AMD Athlon 3000G 8 GB SSD 240 GB (MSI)",
+      "model": "Athlon 3000G",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC Performance AMD Athlon 3000G 8 GB SSD",
+      "seoDescription": "PC de escritorio Performance con AMD Athlon 3000G, 8 GB de RAM y SSD de 240 GB. Equipo de escritorio básico con garantía oficial y envíos a todo el país.",
+      "shortDescription": "PC Performance con procesador AMD Athlon 3000G, 8 GB de RAM y SSD de 240 GB. Equipo de escritorio básico.",
+      "highlights": [
+        "Procesador AMD Athlon 3000G",
+        "8 GB de RAM",
+        "SSD de 240 GB"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Athlon 3000G"
+        }
+      ],
+      "descriptionHtml": "<p>Esta PC Performance con Athlon 3000G es un equipo de escritorio de entrada. El nombre indica 8 GB de RAM y un SSD de 240 GB, y menciona MSI.</p><h3>Qué se sabe</h3><p>Procesador AMD Athlon 3000G, 8 GB de RAM, SSD de 240 GB y MSI. Para el resto de los componentes, el sistema operativo y los periféricos, consultanos antes de comprar.</p>",
+      "revisar": [
+        "Casi sin información: solo el nombre 'PC PERFORMANCE AMD ATHLON 3000G+8G+SSD240 (MSI)'. Interpreté 8G como 8 GB de RAM y SSD240 como 240 GB; confirmar.",
+        "No sé qué lleva MSI (placa madre?), ni gabinete, fuente, sistema operativo ni periféricos. Texto original era relleno genérico.",
+        "SKU PF73526."
+      ]
+    },
+    {
+      "slug": "pendrive-hiksemi-64gb-usb-2-0",
+      "name": "Pendrive Hiksemi M200 64 GB USB 2.0",
+      "brand": "Hiksemi",
+      "model": "HS-USB-M200",
+      "seoTitle": "Pendrive Hiksemi M200 64 GB USB 2.0",
+      "seoDescription": "Pendrive Hiksemi M200 de 64 GB con USB 2.0, carcasa metálica sin tapa y orificio para llavero. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Pendrive Hiksemi M200 de 64 GB con USB 2.0. Carcasa de aleación metálica sin tapa, con orificio para llavero y uso Plug & Play.",
+      "highlights": [
+        "64 GB para documentos, fotos, música y videos",
+        "Carcasa metálica que protege contra golpes",
+        "Diseño sin tapa con orificio para llavero",
+        "Plug & Play: sin drivers ni instalación",
+        "Funciona con Windows, macOS, Linux y Smart TV"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "64 GB"
+        },
+        {
+          "label": "Interfaz",
+          "value": "USB 2.0"
+        },
+        {
+          "label": "Carcasa",
+          "value": "Aleación de zinc, acabado mate"
+        },
+        {
+          "label": "Diseño",
+          "value": "Unibody sin tapa, con orificio para llavero"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Windows 11, 10, 8 y 7, macOS, Linux, Android (con adaptador OTG), Smart TV y audio de auto"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "38 x 12 x 4,5 mm aprox."
+        },
+        {
+          "label": "Peso",
+          "value": "8 g aprox."
+        }
+      ],
+      "descriptionHtml": "<p>El Hiksemi M200 es un pendrive de 64 GB con cuerpo metálico y sin tapa, pensado para llevar archivos de una computadora a otra sin complicaciones.</p><h3>Resistencia</h3><p>La carcasa de aleación metálica protege los componentes internos de golpes y del desgaste diario. El orificio integrado te deja colgarlo del llavero o de la mochila.</p><h3>Uso</h3><p>No necesita controladores: lo enchufás y funciona. Sirve en computadoras, Smart TV, equipos de audio, estéreos de auto y consolas. Es práctico para estudiantes y para quienes mueven archivos todos los días.</p><h3>Capacidad</h3><p>Con 64 GB entran documentos, presentaciones, fotos, canciones en MP3 y videos.</p><h3>Antes de comprar</h3><p>La interfaz es USB 2.0: funciona en puertos 3.0 o 3.1, pero a velocidad 2.0. Para usarlo en Android hace falta un adaptador OTG, que no está incluido.</p>",
+      "revisar": [
+        "Compatibilidad con 'estéreos de auto' y consolas viene del texto original; no verifiqué el listado.",
+        "No hay datos de velocidad de lectura o escritura."
+      ]
+    },
+    {
+      "slug": "pendrive-sandisk-fit-64gb-usb-3-1",
+      "name": "Pendrive SanDisk Fit 64 GB USB 3.1",
+      "brand": "SanDisk",
+      "model": "SDCZ430-064G-G46",
+      "seoTitle": "Pendrive SanDisk Fit 64 GB USB 3.1",
+      "seoDescription": "Pendrive SanDisk Fit de 64 GB con USB 3.1 y diseño ultracompacto para dejar conectado. Software de contraseña y recuperación. Garantía y envíos a todo el país.",
+      "shortDescription": "Pendrive SanDisk Fit de 64 GB con USB 3.1 y diseño ultracompacto para dejarlo conectado. Incluye software para proteger con contraseña y recuperar archivos.",
+      "highlights": [
+        "64 GB en un formato ultracompacto",
+        "USB 3.1, compatible con puertos 3.0 y 2.0",
+        "Pensado para dejarlo conectado",
+        "Protección con contraseña por software descargable",
+        "Software de recuperación de archivos eliminados"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "64 GB"
+        },
+        {
+          "label": "Interfaz",
+          "value": "USB 3.1 (compatible con 3.0 y 2.0)"
+        },
+        {
+          "label": "Formato",
+          "value": "Ultracompacto, para dejar conectado"
+        },
+        {
+          "label": "Software",
+          "value": "Protección con contraseña (descargable) y recuperación RescuePRO Deluxe"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Portátiles, tabletas, televisores y videoconsolas"
+        }
+      ],
+      "descriptionHtml": "<p>El pendrive SanDisk Fit tiene un diseño tan chico que podés dejarlo conectado todo el tiempo. Sirve para sumar almacenamiento a una notebook, un televisor o una consola.</p><h3>Para dejarlo puesto</h3><p>Es una unidad compacta pensada como almacenamiento fijo: la enchufás y queda ahí. Funciona con notebooks, tabletas, televisores, videoconsolas y el sistema de sonido del auto.</p><h3>Protección</h3><p>Con el software descargable podés ponerle contraseña a los archivos. El software RescuePRO Deluxe ayuda a recuperar archivos borrados por error.</p><h3>Compatibilidad</h3><p>Es retrocompatible: se conecta a puertos USB 3.0 y 2.0, así que lo podés usar también en equipos más viejos.</p><h3>Antes de comprar</h3><p>Las velocidades de transferencia dependen del puerto USB al que lo conectes. Para sacarle el máximo conviene un puerto 3.0 o superior.</p>",
+      "revisar": [
+        "El nombre dice USB 3.1 y la descripción dice 'USB 3.2 Gen 1': dejé USB 3.1 (gana el nombre). El texto habla de 'SanDisk Ultra Fit' y el nombre solo 'Fit'; confirmar modelo (SKU SDCZ430-064G-G46).",
+        "No puse velocidad de lectura (el texto dice hasta 400 MB/s pero es del texto de toda la familia) ni capacidades máximas (512 GB y 1 TB aparecen en distintos textos)."
+      ]
+    },
+    {
+      "slug": "placa-video-msi-geforce-gtx-1630-aero-itx-4gb-oc",
+      "name": "Placa de video MSI GeForce GTX 1630 Aero ITX 4 GB OC",
+      "brand": "MSI",
+      "model": "GeForce GTX 1630 Aero ITX OC",
+      "seoTitle": "Placa de video MSI GTX 1630 Aero ITX 4 GB",
+      "seoDescription": "Placa de video MSI GeForce GTX 1630 Aero ITX OC con 4 GB GDDR6, PCIe 3.0 y salidas DisplayPort, HDMI y DVI. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Placa de video MSI GeForce GTX 1630 Aero ITX OC con 4 GB GDDR6 y bus de 64 bits. Boost de 1815 MHz, consumo de 75 W y salidas DisplayPort, HDMI y DVI-D.",
+      "highlights": [
+        "4 GB de memoria GDDR6 con bus de 64 bits",
+        "Boost de núcleo de 1815 MHz (versión OC)",
+        "Consumo de 75 W; fuente recomendada de 300 W",
+        "Salidas DisplayPort, HDMI 2.0b y DVI-D",
+        "Hasta 3 pantallas simultáneas"
+      ],
+      "specs": [
+        {
+          "label": "Chip gráfico",
+          "value": "NVIDIA GeForce GTX 1630"
+        },
+        {
+          "label": "Memoria de video",
+          "value": "4 GB GDDR6, bus de 64 bits, 12 Gbps"
+        },
+        {
+          "label": "Reloj de núcleo",
+          "value": "Boost de 1815 MHz"
+        },
+        {
+          "label": "Bus",
+          "value": "PCI Express x16 3.0"
+        },
+        {
+          "label": "Salidas",
+          "value": "1 DisplayPort 1.4a, 1 HDMI 2.0b (4K a 60 Hz), 1 DL-DVI-D"
+        },
+        {
+          "label": "Pantallas",
+          "value": "Hasta 3"
+        },
+        {
+          "label": "Resolución máxima digital",
+          "value": "7680 x 4320"
+        },
+        {
+          "label": "Consumo",
+          "value": "75 W (fuente recomendada: 300 W)"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "170 x 112 x 39 mm"
+        },
+        {
+          "label": "API",
+          "value": "DirectX 12, OpenGL 4.6"
+        }
+      ],
+      "descriptionHtml": "<p>La MSI GTX 1630 Aero ITX OC es una placa de video de formato compacto, con 4 GB de memoria GDDR6 y salidas para conectar hasta tres pantallas.</p><h3>Formato</h3><p>Las dimensiones son de 170 x 112 x 39 mm, un tamaño chico para gabinetes compactos. El consumo es de 75 W y se recomienda una fuente de 300 W.</p><h3>Conexiones</h3><ul><li>1 DisplayPort 1.4a.</li><li>1 HDMI que soporta 4K a 60 Hz según la norma 2.0b.</li><li>1 DVI-D de doble enlace.</li></ul><h3>Compatibilidad</h3><p>Usa bus PCI Express x16 3.0 y soporta DirectX 12 y OpenGL 4.6.</p><h3>Antes de comprar</h3><p>Revisá que tu fuente tenga la potencia recomendada, que el gabinete tenga lugar para una placa de 170 mm de largo y que tu monitor use alguna de estas tres entradas.</p>",
+      "revisar": [
+        "La descripción da dos pesos '388 g / 598 g' (probablemente placa y embalaje): no lo publiqué.",
+        "La descripción también cita una resolución 'display (max)' de 2560x1600 (seguramente la del DVI) además de 7680x4320 digital; publiqué solo la digital.",
+        "Sin datos de frecuencia base ni cantidad de ventiladores."
+      ]
+    },
+    {
+      "slug": "placa-video-msi-geforce-rtx-3070-ti-gaming-x-trio-8gb-ddr6",
+      "name": "Placa de video MSI GeForce RTX 3070 Ti Gaming X Trio 8 GB",
+      "brand": "MSI",
+      "model": "GeForce RTX 3070 Ti Gaming X Trio",
+      "seoTitle": "Placa de video MSI RTX 3070 Ti Gaming X Trio",
+      "seoDescription": "Placa de video MSI GeForce RTX 3070 Ti Gaming X Trio de 8 GB con PCIe Gen 4, G-SYNC y salidas HDMI 2.1 y DisplayPort. Garantía y envíos a todo el país.",
+      "shortDescription": "Placa de video MSI GeForce RTX 3070 Ti Gaming X Trio con 8 GB y bus de 256 bits. Boost de 1830 MHz, PCIe Gen 4, G-SYNC, HDMI 2.1 y 3 DisplayPort.",
+      "highlights": [
+        "Chip NVIDIA GeForce RTX 3070 Ti con 8 GB de memoria",
+        "Bus de memoria de 256 bits a 19 Gbps",
+        "Boost de núcleo de 1830 MHz",
+        "HDMI 2.1 (4K a 120 Hz) y 3 DisplayPort 1.4",
+        "Compatible con G-SYNC y listo para realidad virtual"
+      ],
+      "specs": [
+        {
+          "label": "Chip gráfico",
+          "value": "NVIDIA GeForce RTX 3070 Ti"
+        },
+        {
+          "label": "Memoria de video",
+          "value": "8 GB, bus de 256 bits, 19 Gbps"
+        },
+        {
+          "label": "Reloj de núcleo",
+          "value": "Boost de 1830 MHz"
+        },
+        {
+          "label": "Bus",
+          "value": "PCI Express Gen 4"
+        },
+        {
+          "label": "Salidas",
+          "value": "3 DisplayPort 1.4, 1 HDMI 2.1 (4K a 120 Hz)"
+        },
+        {
+          "label": "Pantallas",
+          "value": "Hasta 4"
+        },
+        {
+          "label": "Resolución máxima digital",
+          "value": "7680 x 4320"
+        },
+        {
+          "label": "Consumo",
+          "value": "310 W (fuente recomendada: 750 W)"
+        },
+        {
+          "label": "Tecnologías",
+          "value": "G-SYNC, Adaptive Vertical Sync, HDCP, Realidad Virtual"
+        }
+      ],
+      "descriptionHtml": "<p>La MSI RTX 3070 Ti Gaming X Trio es una placa de video con chip NVIDIA GeForce RTX 3070 Ti, 8 GB de memoria y soporte para hasta cuatro pantallas. Está pensada para jugar con calidad alta.</p><h3>Conexiones</h3><ul><li>3 salidas DisplayPort 1.4.</li><li>1 HDMI 2.1, que soporta 4K a 120 Hz.</li><li>Hasta 4 pantallas simultáneas y resolución digital máxima de 7680 x 4320.</li></ul><h3>Tecnologías</h3><p>Es compatible con G-SYNC, Adaptive Vertical Sync y HDCP, y está lista para realidad virtual. Usa bus PCI Express Gen 4.</p><h3>Rendimiento</h3><p>El bus de memoria de 256 bits trabaja a 19 Gbps y el núcleo llega a 1830 MHz en modo boost.</p><h3>Antes de comprar</h3><p>Consume 310 W y se recomienda una fuente de 750 W. Revisá la potencia de tu fuente y el espacio de tu gabinete antes de comprarla.</p>",
+      "revisar": [
+        "El nombre dice '8GB DDR6'; no es un tipo de memoria válido y la descripción no lo aclara. Publiqué solo '8 GB'. Confirmar el tipo de memoria (GDDR6 o GDDR6X).",
+        "El texto original se corta en 'CONECTORES DE ALIMENTACIÓN 8-p': falta el detalle de los conectores. La descripción larga estaba vacía.",
+        "Faltan dimensiones y peso."
+      ]
+    },
+    {
+      "slug": "protector-de-tension-trv-protech-e",
+      "name": "Protector de tensión TRV Protech E",
+      "brand": "TRV",
+      "model": "Protech E",
+      "seoTitle": "Protector de tensión TRV Protech E",
+      "seoDescription": "Protector de tensión TRV Protech E con microprocesador y tiempo de espera. Para PC, TV, audio, router y consolas. Garantía y envíos a todo el país.",
+      "shortDescription": "Protector de tensión TRV Protech E. Un microprocesador monitorea la red, desconecta el equipo si la tensión sube o baja de más y lo reconecta con un tiempo de espera.",
+      "highlights": [
+        "Corta ante tensión alta o baja y reconecta solo",
+        "Tiempo de espera antes de reconectar el equipo",
+        "LED indicador de estado normal, baja y alta",
+        "Para PC, TV LED/LCD, audio, router y consolas",
+        "Se enchufa a la pared y conecta el equipo a la salida"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Protector de tensión con microprocesador"
+        },
+        {
+          "label": "Protección",
+          "value": "Por tensión alta y por tensión baja"
+        },
+        {
+          "label": "Indicadores",
+          "value": "LED Normal/Espera, Baja y Alta"
+        },
+        {
+          "label": "Reconexión",
+          "value": "Con tiempo de espera"
+        },
+        {
+          "label": "Equipos indicados",
+          "value": "PC, TV LED/LCD, equipos de audio, microondas, módem, routers y consolas de juego"
+        }
+      ],
+      "descriptionHtml": "<p>El Protech E de TRV protege equipos electrónicos de la casa ante subas y bajas de tensión. Un microprocesador controla la red todo el tiempo.</p><h3>Cómo funciona</h3><p>Cuando la tensión pasa el valor de corte, por arriba o por abajo, el protector desconecta el equipo y enciende el LED BAJA o ALTA. Cuando la tensión vuelve a valores seguros, espera un tiempo y lo reconecta.</p><h3>Tiempo de espera</h3><p>La demora evita los disturbios eléctricos que se producen justo cuando vuelve la luz. Mientras espera, el LED verde NORMAL/ESPERA destella más rápido a medida que se acerca el final.</p><h3>Instalación</h3><p>Enchufalo a un tomacorriente de pared, esperá a que el LED NORMAL quede fijo y recién ahí conectá el equipo a proteger.</p><h3>Antes de comprar</h3><p>El protector no corrige la tensión de la red: solo desconecta el equipo cuando está fuera de rango. Para desconectarlo del todo hay que desenchufarlo del tomacorriente.</p>",
+      "revisar": [
+        "No figuran los valores de corte (voltajes), potencia máxima ni cantidad de tomas: no los publiqué.",
+        "La ficha corta del original estaba cortada a mitad de frase."
+      ]
+    },
+    {
+      "slug": "protector-de-tension-trv-protech-f",
+      "name": "Protector de tensión TRV Protech F",
+      "brand": "TRV",
+      "model": "Protech F",
+      "seoTitle": "Protector de tensión TRV Protech F",
+      "seoDescription": "Protector de tensión TRV Protech F con microprocesador, para heladeras, aires, lavarropas y lavavajillas. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Protector de tensión TRV Protech F, indicado para heladeras, aire acondicionado, lavarropas y lavavajillas. Desconecta ante tensión alta o baja y reconecta con espera.",
+      "highlights": [
+        "Indicado para heladeras, aires, lavarropas y lavavajillas",
+        "Corta ante tensión alta o baja y reconecta solo",
+        "Tiempo de espera antes de reconectar el equipo",
+        "LED de estado normal, baja y alta",
+        "Microprocesador que monitorea la red"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Protector de tensión con microprocesador"
+        },
+        {
+          "label": "Protección",
+          "value": "Por tensión alta y por tensión baja"
+        },
+        {
+          "label": "Indicadores",
+          "value": "LED Normal/Espera, Baja y Alta"
+        },
+        {
+          "label": "Reconexión",
+          "value": "Con tiempo de espera"
+        },
+        {
+          "label": "Equipos indicados",
+          "value": "Heladeras, aire acondicionado, lavarropas y lavavajillas"
+        }
+      ],
+      "descriptionHtml": "<p>El Protech F de TRV es la versión pensada para electrodomésticos grandes: heladeras, aires acondicionados, lavarropas y lavavajillas.</p><h3>Cómo funciona</h3><p>Un microprocesador monitorea la tensión de la red. Si está por encima o por debajo de los valores de corte, desconecta el equipo y enciende el LED ALTA o BAJA. Cuando la tensión se normaliza, espera un tiempo y lo reconecta.</p><h3>Tiempo de espera</h3><p>La demora evita los disturbios que se producen en el instante en que vuelve el suministro y que dañan al equipo protegido.</p><h3>Instalación</h3><p>Enchufalo a un tomacorriente de pared, esperá a que el LED NORMAL quede fijo y después conectá el equipo.</p><h3>Antes de comprar</h3><p>El protector no corrige la tensión de la red: solo desconecta el equipo cuando está fuera de rango. Para desconectarlo del todo hay que desenchufarlo del tomacorriente.</p>",
+      "revisar": [
+        "No figuran los valores de corte, la potencia máxima ni la cantidad de tomas: no los publiqué. Ver diferencia con el Protech E antes de aprobar (solo cambia el uso indicado en el texto).",
+        "La ficha corta del original estaba cortada a mitad de frase."
+      ]
+    },
+    {
+      "slug": "protector-de-tension-trv-protech-f-smart",
+      "name": "Protector de tensión TRV Smart F",
+      "brand": "TRV",
+      "model": "Smart F",
+      "seoTitle": "Protector de tensión TRV Smart F",
+      "seoDescription": "Protector de tensión TRV Smart F con microprocesador, memoria E2PROM y display LED con voltaje en tiempo real. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Protector de tensión TRV Smart F con display LED que muestra el voltaje en tiempo real. Para heladera, freezer y aire acondicionado, con parámetros que guarda en memoria.",
+      "highlights": [
+        "Display LED con voltaje de la red en tiempo real",
+        "Para heladera, freezer y aire acondicionado",
+        "Parámetros de usuario guardados en memoria E2PROM",
+        "Microprocesador de alta velocidad de respuesta",
+        "También protege TV, audio y lavarropas"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Protector de tensión con microprocesador"
+        },
+        {
+          "label": "Display",
+          "value": "LED con voltaje en tiempo real"
+        },
+        {
+          "label": "Memoria de parámetros",
+          "value": "E2PROM para guardar parámetros del usuario"
+        },
+        {
+          "label": "Equipos indicados",
+          "value": "Heladera, freezer, aire acondicionado, TV, equipos de audio, reproductores de video, lavarropas y decodificadores"
+        }
+      ],
+      "descriptionHtml": "<p>El Smart F de TRV es un protector de tensión con display LED que muestra el voltaje de la red en tiempo real. Está pensado para heladeras, freezers y aires acondicionados.</p><h3>Cómo funciona</h3><p>Un microprocesador mide las variaciones de la tensión y las compara con los parámetros que definís vos. Con esa comparación decide si el equipo sigue conectado o se desconecta.</p><h3>Parámetros guardados</h3><p>La memoria E2PROM guarda los parámetros más comunes del usuario, así no tenés que volver a cargarlos.</p><h3>Uso</h3><p>Se enchufa a la pared y el equipo a proteger se conecta a la salida del protector. El display te deja ver el voltaje sin tener que medirlo.</p><h3>Antes de comprar</h3><p>El texto original no detalla los valores de corte ni la potencia máxima. Consultanos si necesitás esos datos para tu equipo.</p>",
+      "revisar": [
+        "Texto original cortado a mitad de frase y sin valores de corte, potencia máxima ni tomas. 'Smart F' viene del nombre y del SKU; el slug dice 'protech-f-smart'. Confirmar el nombre comercial."
+      ]
+    },
+    {
+      "slug": "router-huawei-wifi-6-ax3s-psdn-ax30",
+      "name": "Router Huawei Wi-Fi 6 AX3S PSDN-AX30",
+      "brand": "Huawei",
+      "model": "AX3S (PSDN-AX30)",
+      "seoTitle": "Router Huawei Wi-Fi 6 AX3S PSDN-AX30",
+      "seoDescription": "Router Huawei Wi-Fi 6 AX3S clase AX3000 con doble banda, 4 puertos Gigabit y EasyMesh. Garantía oficial y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "Router Huawei Wi-Fi 6 AX3S (PSDN-AX30), clase AX3000. Doble banda simultánea, canales de 160 MHz, 4 puertos Gigabit con WAN/LAN automático y EasyMesh.",
+      "highlights": [
+        "Wi-Fi 6 clase AX3000 con doble banda 2,4 y 5 GHz",
+        "Canales de 160 MHz y modulación 1024-QAM",
+        "4 puertos Gigabit Ethernet con WAN/LAN automático",
+        "Compatible con EasyMesh para armar red en malla",
+        "Control parental"
+      ],
+      "specs": [
+        {
+          "label": "Estándar",
+          "value": "Wi-Fi 6 (802.11ax), clase AX3000"
+        },
+        {
+          "label": "Bandas",
+          "value": "2,4 GHz y 5 GHz simultáneas"
+        },
+        {
+          "label": "Velocidad teórica",
+          "value": "Hasta 574 Mbps en 2,4 GHz y 2042 Mbps en 5 GHz"
+        },
+        {
+          "label": "Ancho de canal",
+          "value": "Hasta 160 MHz"
+        },
+        {
+          "label": "Modulación",
+          "value": "1024-QAM"
+        },
+        {
+          "label": "Puertos",
+          "value": "4 Gigabit Ethernet con adaptación WAN/LAN automática"
+        },
+        {
+          "label": "Red en malla",
+          "value": "EasyMesh"
+        },
+        {
+          "label": "Control parental",
+          "value": "Sí"
+        }
+      ],
+      "descriptionHtml": "<p>El Huawei AX3S es un router Wi-Fi 6 de doble banda para la casa. Tiene cuatro puertos Gigabit y soporta redes en malla con otros equipos compatibles.</p><h3>Wi-Fi 6</h3><ul><li>Trabaja en las bandas de 2,4 GHz y 5 GHz a la vez.</li><li>Cambia los dispositivos de una banda a la otra para mantener la mejor conexión.</li><li>Los 160 MHz de ancho de canal ayudan a los equipos que lo soportan, como celulares, tablets y notebooks.</li></ul><h3>Conexión cableada</h3><p>Los cuatro puertos Gigabit eligen solos si funcionan como WAN o LAN, así que no hace falta distinguirlos al instalar.</p><h3>Red en malla</h3><p>Con EasyMesh podés sumar otros equipos compatibles para ampliar la cobertura de la casa.</p><h3>Antes de comprar</h3><p>Las velocidades son teóricas y dependen de tus dispositivos y del servicio de internet que tengas.</p>",
+      "revisar": [
+        "La descripción dice 'hasta 3000 Mbps' pero la suma de las bandas (574 + 2042) da 2616: no publiqué el total, solo las velocidades por banda y la clase AX3000 del nombre. Confirmar.",
+        "El texto original está cortado en 'Control parental...'. Faltan antenas, procesador y dimensiones. 'Mesh' se limita a EasyMesh."
+      ]
+    },
+    {
+      "slug": "silla-gamer-xtrike-me-gc-803-roja",
+      "name": "Silla gamer Xtrike Me GC-803 roja",
+      "brand": "Xtrike Me",
+      "model": "GC-803",
+      "seoTitle": "Silla gamer Xtrike Me GC-803 roja",
+      "seoDescription": "Silla gamer ergonómica Xtrike Me GC-803 roja con respaldo reclinable, apoyacabezas, apoyabrazos y soporte de hasta 150 kg. Garantía y envíos a todo el país.",
+      "shortDescription": "Silla gamer ergonómica Xtrike Me GC-803 en rojo. Respaldo reclinable de 90° a 135°, altura ajustable, apoyabrazos, apoyacabezas y soporte lumbar dinámico. Aguanta hasta 150 kg.",
+      "highlights": [
+        "Respaldo reclinable de 90° a 135°",
+        "Altura ajustable y giro de 360° sobre ruedas",
+        "Apoyabrazos y apoyacabezas incluidos",
+        "Soporte lumbar dinámico",
+        "Soporta hasta 150 kg"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Roja"
+        },
+        {
+          "label": "Inclinación del respaldo",
+          "value": "De 90° a 135°"
+        },
+        {
+          "label": "Altura total",
+          "value": "De 104 a 114 cm"
+        },
+        {
+          "label": "Asiento",
+          "value": "50 cm de ancho x 46 cm de profundidad"
+        },
+        {
+          "label": "Respaldo",
+          "value": "65 cm de alto x 48 cm de ancho"
+        },
+        {
+          "label": "Soporte lumbar",
+          "value": "Dinámico"
+        },
+        {
+          "label": "Apoyabrazos / apoyacabezas",
+          "value": "Sí / Sí"
+        },
+        {
+          "label": "Apoyapiés",
+          "value": "No"
+        },
+        {
+          "label": "Peso de la silla",
+          "value": "12 kg"
+        },
+        {
+          "label": "Peso máximo soportado",
+          "value": "150 kg"
+        }
+      ],
+      "descriptionHtml": "<p>La Xtrike Me GC-803 es una silla gamer ergonómica en color rojo, pensada para quienes pasan muchas horas frente a la computadora, jugando, trabajando o estudiando.</p><h3>Comodidad</h3><ul><li>El respaldo se reclina de 90° a 135°.</li><li>Altura ajustable del asiento para quedar a la medida de tu escritorio.</li><li>Soporte lumbar dinámico y apoyacabezas para la zona dorsal y cervical.</li><li>Apoyabrazos que ayudan a mantener la postura al escribir.</li></ul><h3>Movimiento</h3><p>Las ruedas y el giro de 360° te permiten moverte sin levantarte y limpiar el lugar con facilidad.</p><h3>Antes de comprar</h3><p>No trae apoyapiés. Tiene capacidad para 150 kg y pesa 12 kg. Medí el espacio: la altura total va de 104 a 114 cm según el ajuste.</p>",
+      "revisar": [
+        "La descripción tiene frases genéricas de silla de oficina; usé solo la tabla de datos.",
+        "Faltan materiales del tapizado y de la base, y tipo de pistón: no los publiqué. P/N GC-803-RD."
+      ]
+    },
+    {
+      "slug": "sistema-de-videoconferencia-camara-motorizada-y-audio-microprocesado",
+      "name": "Sistema de videoconferencia Puas con cámara motorizada y audio microprocesado",
+      "brand": "Puas",
+      "model": "PUS-U210 / PUS-M210W",
+      "seoTitle": "Sistema de videoconferencia Puas con cámara",
+      "seoDescription": "Sistema de videoconferencia Puas con cámara Full HD motorizada con zoom óptico 10x y micrófono con parlante inalámbrico. Garantía y envíos a todo el país.",
+      "shortDescription": "Sistema de videoconferencia con cámara Full HD 1080p a 30 fps motorizada, zoom óptico 10x y control remoto. Incluye micrófono omnidireccional con parlante integrado.",
+      "highlights": [
+        "Cámara Full HD 1080p a 30 fps",
+        "Zoom óptico 10x con paneo y cabeceo motorizados",
+        "Memoria de hasta 255 posiciones preajustadas",
+        "Micrófono omnidireccional con cancelación de eco y ruido",
+        "Parlante integrado y enlace inalámbrico con la PC"
+      ],
+      "specs": [
+        {
+          "label": "Cámara",
+          "value": "PUS-U210, Full HD 1920 x 1080 a 30 fps"
+        },
+        {
+          "label": "Zoom",
+          "value": "Óptico 10x"
+        },
+        {
+          "label": "Movimientos",
+          "value": "Paneo, cabeceo y zoom motorizados"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Foco y balance de blancos automáticos"
+        },
+        {
+          "label": "Preajustes",
+          "value": "Hasta 255 condiciones de enfoque"
+        },
+        {
+          "label": "Control",
+          "value": "Remoto inalámbrico"
+        },
+        {
+          "label": "Micrófono",
+          "value": "PUS-M210W omnidireccional, 100 Hz a 22 kHz"
+        },
+        {
+          "label": "Rango de acción",
+          "value": "3 metros"
+        },
+        {
+          "label": "Audio",
+          "value": "Parlante y amplificador integrados"
+        },
+        {
+          "label": "Conexión con la PC",
+          "value": "Enlace inalámbrico"
+        }
+      ],
+      "descriptionHtml": "<p>Este sistema de videoconferencia junta una cámara motorizada Full HD con un equipo de audio microprocesado. Sirve para reuniones y clases a distancia.</p><h3>Cámara</h3><ul><li>Imagen de 1920 x 1080 a 30 cuadros por segundo.</li><li>Zoom óptico 10x, con paneo y cabeceo motorizados y control remoto.</li><li>Guarda hasta 255 posiciones de enfoque para volver a una vista con un botón.</li><li>Ajusta foco y balance de blancos solo.</li></ul><h3>Audio</h3><p>El micrófono omnidireccional procesa el sonido para reducir ruido, cancelar ecos y reverberancias, y mantener el volumen parejo aunque la gente se acerque o se aleje. Tiene un alcance de 3 metros y parlante integrado.</p><h3>Compatibilidad</h3><p>Funciona con los principales sistemas operativos y con muchas aplicaciones de videoconferencia.</p><h3>Antes de comprar</h3><p>Consultá qué cables y accesorios vienen incluidos: el texto del fabricante no los detalla.</p>",
+      "revisar": [
+        "La descripción dice 'parlante hasta 85 dBm' (unidad dudosa, probablemente dB): no lo publiqué.",
+        "Marca 'Puas' tomada del nombre; los códigos son PUS-U210 y PUS-M210W. Confirmar marca y si cámara y micrófono vienen en el mismo paquete.",
+        "No dice cómo se conecta la cámara a la PC ni qué incluye la caja."
+      ]
+    },
+    {
+      "slug": "soporte-de-escritorio-nakan-inclinable-10-a-26-monitores-spl-510f",
+      "name": "Soporte de escritorio Nakan SPL-510F inclinable para monitores de 10\" a 26\"",
+      "brand": "Nakan",
+      "model": "SPL-510F",
+      "seoTitle": "Soporte de escritorio Nakan SPL-510F",
+      "seoDescription": "Soporte de escritorio Nakan SPL-510F para monitores de 10\" a 26\", con inclinación de 25°, rotación de 180° y VESA 75x75 y 100x100. Garantía y envíos.",
+      "shortDescription": "Soporte de escritorio Nakan SPL-510F para monitores de 10\" a 26\". Inclinación de 25°, rotación de 180°, hasta 8 kg y compatible con VESA 75x75 y 100x100.",
+      "highlights": [
+        "Para monitores de 10\" a 26\"",
+        "Inclinación de 25° y rotación de 180°",
+        "Soporta hasta 8 kg",
+        "Compatible con VESA 75x75 y 100x100"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de monitor",
+          "value": "De 10\" a 26\""
+        },
+        {
+          "label": "Inclinación",
+          "value": "25°"
+        },
+        {
+          "label": "Rotación",
+          "value": "180°"
+        },
+        {
+          "label": "Peso máximo",
+          "value": "Hasta 8 kg"
+        },
+        {
+          "label": "VESA",
+          "value": "75 x 75 y 100 x 100"
+        }
+      ],
+      "descriptionHtml": "<p>El Nakan SPL-510F es un soporte de escritorio inclinable para monitores de 10\" a 26\". Libera lugar en el escritorio y te deja ajustar la posición de la pantalla.</p><h3>Ajustes</h3><p>La inclinación de 25° y la rotación de 180° te sirven para acomodar la pantalla según cómo te sentás y la luz del lugar.</p><h3>Compatibilidad</h3><p>Tu monitor tiene que tener agujeros VESA de 75 x 75 mm o de 100 x 100 mm. Fijate también que pese menos de 8 kg.</p><h3>Antes de comprar</h3><p>Revisá la medida de tu monitor y el patrón VESA que figura en su parte trasera.</p>",
+      "revisar": [
+        "La ficha corta del original es idéntica a la del SPL-520E (incluso 'Soporta hasta 8Kg'). Confirmar qué diferencia a este modelo (el 520E es extensible).",
+        "La descripción del original es de relleno."
+      ]
+    },
+    {
+      "slug": "soporte-de-escritorio-nakan-spl-520e-para-monitores-de-10-a-26",
+      "name": "Soporte de escritorio Nakan SPL-520E extensible para monitores de 10\" a 26\"",
+      "brand": "Nakan",
+      "model": "SPL-520E",
+      "seoTitle": "Soporte de escritorio Nakan SPL-520E",
+      "seoDescription": "Soporte de escritorio Nakan SPL-520E extensible para monitores de 10\" a 26\", inclinable y rotativo, con VESA 75x75 y 100x100. Garantía y envíos.",
+      "shortDescription": "Soporte de escritorio Nakan SPL-520E, extensible, inclinable y rotativo, para monitores de 10\" a 26\". Hasta 8 kg y compatible con VESA 75x75 y 100x100.",
+      "highlights": [
+        "Extensible, inclinable y rotativo",
+        "Para monitores de 10\" a 26\"",
+        "Inclinación de 25° y rotación de 180°",
+        "Soporta hasta 8 kg",
+        "Compatible con VESA 75x75 y 100x100"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de monitor",
+          "value": "De 10\" a 26\""
+        },
+        {
+          "label": "Inclinación",
+          "value": "25°"
+        },
+        {
+          "label": "Rotación",
+          "value": "180°"
+        },
+        {
+          "label": "Peso máximo",
+          "value": "Hasta 8 kg"
+        },
+        {
+          "label": "VESA",
+          "value": "75 x 75 y 100 x 100"
+        }
+      ],
+      "descriptionHtml": "<p>El Nakan SPL-520E es un soporte de escritorio extensible, inclinable y rotativo para monitores de 10\" a 26\". Te permite acercar o alejar la pantalla y acomodarla a tu postura.</p><h3>Ajustes</h3><p>Además de inclinarse 25° y rotar 180°, el brazo es extensible: podés llevar el monitor más cerca o más lejos según lo que estés haciendo.</p><h3>Compatibilidad</h3><p>Tu monitor tiene que tener agujeros VESA de 75 x 75 mm o de 100 x 100 mm y pesar menos de 8 kg.</p><h3>Antes de comprar</h3><p>Revisá la medida de tu monitor y el patrón VESA que figura en su parte trasera.</p>",
+      "revisar": [
+        "La ficha corta del original es idéntica a la del SPL-510F. Confirmar el alcance de la extensión (no figura).",
+        "El nombre largo del original decía 'Extensible' solo en el título."
+      ]
+    },
+    {
+      "slug": "tablet-amazon-fire-hd-10-32gb-3gb-black",
+      "name": "Tablet Amazon Fire HD 10\" 32 GB 3 GB RAM Black",
+      "brand": "Amazon",
+      "model": "Fire HD 10",
+      "storage": "32 GB",
+      "ram": "3 GB",
+      "seoTitle": "Tablet Amazon Fire HD 10\" 32 GB Black",
+      "seoDescription": "Tablet Amazon Fire HD 10 de 10,1\" Full HD con 32 GB, 3 GB de RAM, procesador de ocho núcleos y Alexa. Color Black. Garantía y envíos a todo el país.",
+      "shortDescription": "Tablet Amazon Fire HD 10 en color Black, con pantalla Full HD de 10,1\", 32 GB ampliables con microSD, 3 GB de RAM, USB-C y hasta 12 horas de batería.",
+      "highlights": [
+        "Pantalla de 10,1\" Full HD 1080p",
+        "Procesador de ocho núcleos a 2,0 GHz y 3 GB de RAM",
+        "32 GB, ampliables hasta 512 GB con microSD",
+        "Hasta 12 horas de batería",
+        "Alexa con manos libres y carga por USB-C"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Black"
+        },
+        {
+          "label": "Pantalla",
+          "value": "10,1\" Full HD 1080p"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa Core de 2,0 GHz"
+        },
+        {
+          "label": "Expansión",
+          "value": "MicroSD de hasta 512 GB"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 12 horas de lectura, navegación, video y música"
+        },
+        {
+          "label": "Cámaras",
+          "value": "Frontal y trasera de 2 MP, video HD 720p"
+        },
+        {
+          "label": "Conector",
+          "value": "USB-C"
+        },
+        {
+          "label": "Asistente",
+          "value": "Alexa con manos libres"
+        }
+      ],
+      "descriptionHtml": "<p>La Fire HD 10 de Amazon es una tablet de 10,1\" para ver series, leer, navegar y hacer videollamadas. Esta versión viene en color Black.</p><h3>Para qué sirve</h3><ul><li>Pantalla Full HD de 10,1\" para ver películas y series.</li><li>Alexa con manos libres para consultas y recordatorios.</li><li>Aplicaciones como Zoom, Outlook y Evernote para trabajar o estudiar.</li><li>Cámaras frontal y trasera de 2 MP para videollamadas.</li></ul><h3>Memoria</h3><p>Trae 32 GB y 3 GB de RAM. Si necesitás más espacio, le podés sumar una tarjeta microSD de hasta 512 GB.</p><h3>Batería y carga</h3><p>Dura hasta 12 horas de lectura, navegación, video y música. Carga por USB-C.</p><h3>Antes de comprar</h3><p>Consultanos qué viene en la caja antes de comprar.</p>",
+      "revisar": [
+        "CONTRADICCIÓN en el original: dice 'incluye cable USB-C y adaptador de 9 W en la caja' y también 'No incluye cargador'. No publiqué ninguna de las dos; confirmar qué trae la caja (igual en las tres fichas hermanas, Black, Denim y Olive).",
+        "No figura el sistema operativo (Fire OS) ni el peso. Se quitó '10% descuento contado' y '30% más rápido' (comparación con otro modelo)."
+      ]
+    },
+    {
+      "slug": "tablet-amazon-fire-hd-10-32gb-3gb-denim",
+      "name": "Tablet Amazon Fire HD 10\" 32 GB 3 GB RAM Denim",
+      "brand": "Amazon",
+      "model": "Fire HD 10",
+      "storage": "32 GB",
+      "ram": "3 GB",
+      "seoTitle": "Tablet Amazon Fire HD 10\" 32 GB Denim",
+      "seoDescription": "Tablet Amazon Fire HD 10 de 10,1\" Full HD con 32 GB, 3 GB de RAM, procesador de ocho núcleos y Alexa. Color Denim. Garantía y envíos a todo el país.",
+      "shortDescription": "Tablet Amazon Fire HD 10 en color Denim, con pantalla Full HD de 10,1\", 32 GB ampliables con microSD, 3 GB de RAM, USB-C y hasta 12 horas de batería.",
+      "highlights": [
+        "Pantalla de 10,1\" Full HD 1080p",
+        "Procesador de ocho núcleos a 2,0 GHz y 3 GB de RAM",
+        "32 GB, ampliables hasta 512 GB con microSD",
+        "Hasta 12 horas de batería",
+        "Alexa con manos libres y carga por USB-C"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Denim"
+        },
+        {
+          "label": "Pantalla",
+          "value": "10,1\" Full HD 1080p"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa Core de 2,0 GHz"
+        },
+        {
+          "label": "Expansión",
+          "value": "MicroSD de hasta 512 GB"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 12 horas de lectura, navegación, video y música"
+        },
+        {
+          "label": "Cámaras",
+          "value": "Frontal y trasera de 2 MP, video HD 720p"
+        },
+        {
+          "label": "Conector",
+          "value": "USB-C"
+        },
+        {
+          "label": "Asistente",
+          "value": "Alexa con manos libres"
+        }
+      ],
+      "descriptionHtml": "<p>La Fire HD 10 de Amazon es una tablet de 10,1\" para ver series, leer, navegar y hacer videollamadas. Esta versión viene en color Denim.</p><h3>Para qué sirve</h3><ul><li>Pantalla Full HD de 10,1\" para ver películas y series.</li><li>Alexa con manos libres para consultas y recordatorios.</li><li>Aplicaciones como Zoom, Outlook y Evernote para trabajar o estudiar.</li><li>Cámaras frontal y trasera de 2 MP para videollamadas.</li></ul><h3>Memoria</h3><p>Trae 32 GB y 3 GB de RAM. Si necesitás más espacio, le podés sumar una tarjeta microSD de hasta 512 GB.</p><h3>Batería y carga</h3><p>Dura hasta 12 horas de lectura, navegación, video y música. Carga por USB-C.</p><h3>Antes de comprar</h3><p>Consultanos qué viene en la caja antes de comprar.</p>",
+      "revisar": [
+        "CONTRADICCIÓN en el original: dice 'incluye cable USB-C y adaptador de 9 W en la caja' y también 'No incluye cargador'. No publiqué ninguna de las dos; confirmar qué trae la caja (igual en las tres fichas hermanas, Black, Denim y Olive).",
+        "No figura el sistema operativo (Fire OS) ni el peso. Se quitó '10% descuento contado' y '30% más rápido' (comparación con otro modelo)."
+      ]
+    },
+    {
+      "slug": "tablet-amazon-fire-hd-10-32gb-3gb-olive",
+      "name": "Tablet Amazon Fire HD 10\" 32 GB 3 GB RAM Olive",
+      "brand": "Amazon",
+      "model": "Fire HD 10",
+      "storage": "32 GB",
+      "ram": "3 GB",
+      "seoTitle": "Tablet Amazon Fire HD 10\" 32 GB Olive",
+      "seoDescription": "Tablet Amazon Fire HD 10 de 10,1\" Full HD con 32 GB, 3 GB de RAM, procesador de ocho núcleos y Alexa. Color Olive. Garantía y envíos a todo el país.",
+      "shortDescription": "Tablet Amazon Fire HD 10 en color Olive, con pantalla Full HD de 10,1\", 32 GB ampliables con microSD, 3 GB de RAM, USB-C y hasta 12 horas de batería.",
+      "highlights": [
+        "Pantalla de 10,1\" Full HD 1080p",
+        "Procesador de ocho núcleos a 2,0 GHz y 3 GB de RAM",
+        "32 GB, ampliables hasta 512 GB con microSD",
+        "Hasta 12 horas de batería",
+        "Alexa con manos libres y carga por USB-C"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Olive"
+        },
+        {
+          "label": "Pantalla",
+          "value": "10,1\" Full HD 1080p"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa Core de 2,0 GHz"
+        },
+        {
+          "label": "Expansión",
+          "value": "MicroSD de hasta 512 GB"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 12 horas de lectura, navegación, video y música"
+        },
+        {
+          "label": "Cámaras",
+          "value": "Frontal y trasera de 2 MP, video HD 720p"
+        },
+        {
+          "label": "Conector",
+          "value": "USB-C"
+        },
+        {
+          "label": "Asistente",
+          "value": "Alexa con manos libres"
+        }
+      ],
+      "descriptionHtml": "<p>La Fire HD 10 de Amazon es una tablet de 10,1\" para ver series, leer, navegar y hacer videollamadas. Esta versión viene en color Olive.</p><h3>Para qué sirve</h3><ul><li>Pantalla Full HD de 10,1\" para ver películas y series.</li><li>Alexa con manos libres para consultas y recordatorios.</li><li>Aplicaciones como Zoom, Outlook y Evernote para trabajar o estudiar.</li><li>Cámaras frontal y trasera de 2 MP para videollamadas.</li></ul><h3>Memoria</h3><p>Trae 32 GB y 3 GB de RAM. Si necesitás más espacio, le podés sumar una tarjeta microSD de hasta 512 GB.</p><h3>Batería y carga</h3><p>Dura hasta 12 horas de lectura, navegación, video y música. Carga por USB-C.</p><h3>Antes de comprar</h3><p>Consultanos qué viene en la caja antes de comprar.</p>",
+      "revisar": [
+        "CONTRADICCIÓN en el original: dice 'incluye cable USB-C y adaptador de 9 W en la caja' y también 'No incluye cargador'. No publiqué ninguna de las dos; confirmar qué trae la caja (igual en las tres fichas hermanas, Black, Denim y Olive).",
+        "No figura el sistema operativo (Fire OS) ni el peso. Se quitó '10% descuento contado' y '30% más rápido' (comparación con otro modelo)."
+      ]
+    },
+    {
+      "slug": "tablet-kassel-kids-7-32gb-2gb-amarilla",
+      "name": "Tablet Kassel Kids 7\" 32 GB 2 GB RAM Amarilla",
+      "brand": "Kassel",
+      "model": "Kassel Kids 7\"",
+      "storage": "32 GB",
+      "ram": "2 GB",
+      "seoTitle": "Tablet Kassel Kids 7\" 32 GB Amarilla",
+      "seoDescription": "Tablet Kassel Kids de 7\" con 32 GB, 2 GB de RAM, Android 10 Go y funda protectora con manija, color amarilla. Garantía y envíos a todo el país.",
+      "shortDescription": "Tablet Kassel Kids de 7\" IPS con 32 GB, 2 GB de RAM y Android 10 Go Edition. Viene con funda protectora con manija, color amarilla. Se carga por microUSB.",
+      "highlights": [
+        "Pantalla IPS HD de 7\"",
+        "32 GB, ampliables hasta 128 GB con SD",
+        "2 GB de RAM y Android 10 Go Edition",
+        "Funda protectora con manija",
+        "Batería de 3000 mAh"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Amarilla"
+        },
+        {
+          "label": "Pantalla",
+          "value": "7\" HD IPS"
+        },
+        {
+          "label": "Procesador",
+          "value": "RK3326 Quad-Core de 1,5 GHz"
+        },
+        {
+          "label": "Expansión",
+          "value": "SD de hasta 128 GB (no incluida)"
+        },
+        {
+          "label": "Cámaras",
+          "value": "Frontal de 2 MP y principal de 2 MP"
+        },
+        {
+          "label": "Batería",
+          "value": "3000 mAh"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 802.11 b/g/n y Bluetooth"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android 10 Go Edition"
+        },
+        {
+          "label": "Carga",
+          "value": "Por microUSB (sin fuente)"
+        }
+      ],
+      "descriptionHtml": "<p>La Kassel Kids es una tablet de 7\" pensada para chicos. Viene con una funda protectora con manija y refuerzo en las puntas para aguantar golpes. Esta versión es amarilla.</p><h3>Pensada para chicos</h3><ul><li>Funda con manija para llevarla a todos lados.</li><li>Puntas protegidas para soportar mejor los golpes.</li><li>32 GB para descargar juegos y aplicaciones.</li></ul><h3>Rendimiento</h3><p>Tiene 2 GB de RAM y un procesador de cuatro núcleos a 1,5 GHz, con Android 10 Go Edition, una versión liviana del sistema. Sirve para juegos simples, videos y clases.</p><h3>Antes de comprar</h3><p>No incluye fuente de carga: se carga por microUSB. La tarjeta SD para ampliar la memoria tampoco está incluida.</p>",
+      "revisar": [
+        "Sistema operativo y procesador copiados del original; el texto trae 'Cortex-35' y una GPU con nombre mal escrito: no los publiqué.",
+        "Una variante es amarilla y la otra verde (por slug y nombre); confirmar colores con la foto."
+      ]
+    },
+    {
+      "slug": "tablet-kassel-kids-7-32gb-2gb-green",
+      "name": "Tablet Kassel Kids 7\" 32 GB 2 GB RAM Verde",
+      "brand": "Kassel",
+      "model": "Kassel Kids 7\"",
+      "storage": "32 GB",
+      "ram": "2 GB",
+      "seoTitle": "Tablet Kassel Kids 7\" 32 GB Verde",
+      "seoDescription": "Tablet Kassel Kids de 7\" con 32 GB, 2 GB de RAM, Android 10 Go y funda protectora con manija, color verde. Garantía y envíos a todo el país.",
+      "shortDescription": "Tablet Kassel Kids de 7\" IPS con 32 GB, 2 GB de RAM y Android 10 Go Edition. Viene con funda protectora con manija, color verde. Se carga por microUSB.",
+      "highlights": [
+        "Pantalla IPS HD de 7\"",
+        "32 GB, ampliables hasta 128 GB con SD",
+        "2 GB de RAM y Android 10 Go Edition",
+        "Funda protectora con manija",
+        "Batería de 3000 mAh"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Verde"
+        },
+        {
+          "label": "Pantalla",
+          "value": "7\" HD IPS"
+        },
+        {
+          "label": "Procesador",
+          "value": "RK3326 Quad-Core de 1,5 GHz"
+        },
+        {
+          "label": "Expansión",
+          "value": "SD de hasta 128 GB (no incluida)"
+        },
+        {
+          "label": "Cámaras",
+          "value": "Frontal de 2 MP y principal de 2 MP"
+        },
+        {
+          "label": "Batería",
+          "value": "3000 mAh"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 802.11 b/g/n y Bluetooth"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android 10 Go Edition"
+        },
+        {
+          "label": "Carga",
+          "value": "Por microUSB (sin fuente)"
+        }
+      ],
+      "descriptionHtml": "<p>La Kassel Kids es una tablet de 7\" pensada para chicos. Viene con una funda protectora con manija y refuerzo en las puntas para aguantar golpes. Esta versión es verde.</p><h3>Pensada para chicos</h3><ul><li>Funda con manija para llevarla a todos lados.</li><li>Puntas protegidas para soportar mejor los golpes.</li><li>32 GB para descargar juegos y aplicaciones.</li></ul><h3>Rendimiento</h3><p>Tiene 2 GB de RAM y un procesador de cuatro núcleos a 1,5 GHz, con Android 10 Go Edition, una versión liviana del sistema. Sirve para juegos simples, videos y clases.</p><h3>Antes de comprar</h3><p>No incluye fuente de carga: se carga por microUSB. La tarjeta SD para ampliar la memoria tampoco está incluida.</p>",
+      "revisar": [
+        "Sistema operativo y procesador copiados del original; el texto trae 'Cortex-35' y una GPU con nombre mal escrito: no los publiqué.",
+        "Una variante es amarilla y la otra verde (por slug y nombre); confirmar colores con la foto."
+      ]
+    },
+    {
+      "slug": "tablet-sky-pad-8-pro-8-64gb-3gb-lte",
+      "name": "Tablet Sky Pad 8 Pro 8\" 64 GB 3 GB RAM LTE",
+      "brand": "Sky",
+      "model": "Sky Pad 8 Pro",
+      "storage": "64 GB",
+      "ram": "3 GB",
+      "seoTitle": "Tablet Sky Pad 8 Pro 8\" 64 GB 3 GB LTE",
+      "seoDescription": "Tablet Sky Pad 8 Pro de 8\" con 64 GB, 3 GB de RAM, 4G LTE, Android 13 y batería de 4000 mAh. Incluye funda. Garantía y envíos a todo el país.",
+      "shortDescription": "Tablet Sky Pad 8 Pro de 8\" IPS HD con 64 GB, 3 GB de RAM, conexión 4G LTE y Android 13. Batería de 4000 mAh y funda protectora incluida.",
+      "highlights": [
+        "Pantalla IPS HD de 8\" multitouch",
+        "64 GB y 3 GB de RAM con Android 13",
+        "Conexión 4G LTE, además de Wi-Fi y Bluetooth",
+        "Batería de 4000 mAh",
+        "Incluye funda protectora y parlantes"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Negro"
+        },
+        {
+          "label": "Pantalla",
+          "value": "8\" IPS HD (800 x 1280) multitouch"
+        },
+        {
+          "label": "Procesador",
+          "value": "MTK8766 Quad-core de 2 GHz"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "5 MP"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "2 MP"
+        },
+        {
+          "label": "Batería",
+          "value": "4000 mAh"
+        },
+        {
+          "label": "Conectividad",
+          "value": "4G LTE, Wi-Fi y Bluetooth"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android 13"
+        },
+        {
+          "label": "Peso",
+          "value": "0,33 kg"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "20 x 12,45 x 1,5 cm"
+        },
+        {
+          "label": "En la caja",
+          "value": "Funda protectora"
+        }
+      ],
+      "descriptionHtml": "<p>La Sky Pad 8 Pro es una tablet de 8\" con conexión 4G LTE, pensada para entretenimiento y tareas de todos los días. Viene con funda protectora.</p><h3>Uso diario</h3><ul><li>Pantalla multitouch IPS HD de 800 x 1280.</li><li>Cámara trasera de 5 MP y frontal de 2 MP para videollamadas.</li><li>Parlantes incluidos y batería de 4000 mAh.</li></ul><h3>Rendimiento</h3><p>Con 3 GB de RAM, 64 GB de memoria y un procesador de cuatro núcleos a 2 GHz, alcanza para navegar, ver videos y usar aplicaciones. Trae Android 13.</p><h3>Conectividad</h3><p>Además de Wi-Fi y Bluetooth, la versión LTE suma conexión 4G.</p><h3>Antes de comprar</h3><p>No tiene sintonizador digital, HDMI ni salida Ethernet.</p>",
+      "revisar": [
+        "Se quitó 'Meses de Garantía: 6' de la ficha técnica original. El original dice 'USB: No'; no lo publiqué porque contradice la carga de la tablet.",
+        "La conexión 4G LTE sale del nombre y de la ficha corta; el texto largo habla solo de Wi-Fi y Bluetooth. Confirmar si usa chip y la ranura.",
+        "Color negro tomado de la ficha técnica."
+      ]
+    },
+    {
+      "slug": "tablet-xiaomi-redmi-pad-2-256gb-4gb-11",
+      "name": "Tablet Xiaomi Redmi Pad 2 11\" 256 GB 4 GB RAM",
+      "model": "Redmi Pad 2",
+      "storage": "256 GB",
+      "ram": "4 GB",
+      "seoTitle": "Tablet Xiaomi Redmi Pad 2 11\" 256 GB",
+      "seoDescription": "Tablet Xiaomi Redmi Pad 2 con pantalla de 11\", 256 GB de almacenamiento, 4 GB de RAM y Wi-Fi. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Tablet Xiaomi Redmi Pad 2 con pantalla de 11\", 256 GB de almacenamiento y 4 GB de RAM. Para ver contenido, estudiar y trabajar.",
+      "highlights": [
+        "Pantalla de 11\"",
+        "256 GB de almacenamiento",
+        "4 GB de RAM",
+        "Conexión Wi-Fi"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "11\""
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        }
+      ],
+      "descriptionHtml": "<p>La Xiaomi Redmi Pad 2 es una tablet de 11\" con 256 GB de almacenamiento y 4 GB de RAM. Sirve para ver contenido, estudiar y trabajar.</p><h3>Qué se sabe</h3><p>Pantalla de 11\", 256 GB, 4 GB de RAM y conexión Wi-Fi. La información del fabricante que tenemos cargada es limitada: para procesador, batería y cámaras, consultanos antes de comprar.</p>",
+      "revisar": [
+        "Texto original genérico, sin procesador, resolución, batería, cámaras ni sistema operativo. Se quitó 'consulta disponibilidad y precio por WhatsApp' y 'stock'.",
+        "El original dice '256 GB de almacenamiento ampliable' sin aclarar el máximo: no lo publiqué. Pide completar con ficha oficial de Xiaomi."
+      ]
+    },
+    {
+      "slug": "teclado-gamer-mecanico-sentey-gs530-rgb-outemu",
+      "name": "Teclado gamer mecánico Sentey GS530 RGB Outemu Red",
+      "brand": "Sentey",
+      "model": "GS530",
+      "seoTitle": "Teclado gamer mecánico Sentey GS530 RGB",
+      "seoDescription": "Teclado gamer mecánico Sentey GS530 con switches Outemu Red, retroiluminación RGB con 11 efectos y estructura metálica. Garantía y envíos a todo el país.",
+      "shortDescription": "Teclado gamer mecánico Sentey GS530 con switches Outemu Red y retroiluminación LED RGB con 11 efectos. Estructura interna metálica, anti-ghost y conector USB.",
+      "highlights": [
+        "Switches mecánicos Outemu Red (MX)",
+        "Retroiluminación LED RGB con 11 efectos de luz",
+        "Keycaps de doble inyección con marcado láser",
+        "Anti-ghost y patas antideslizantes",
+        "Estructura interna metálica sólida"
+      ],
+      "specs": [
+        {
+          "label": "Switches",
+          "value": "Outemu Red (MX), mecánicos"
+        },
+        {
+          "label": "Iluminación",
+          "value": "LED RGB, 11 efectos de luz"
+        },
+        {
+          "label": "Keycaps",
+          "value": "Doble inyección con marcado láser"
+        },
+        {
+          "label": "Anti-ghost",
+          "value": "Sí"
+        },
+        {
+          "label": "Conector",
+          "value": "USB 3.0 bañado en oro"
+        },
+        {
+          "label": "Estructura",
+          "value": "Interna metálica"
+        },
+        {
+          "label": "Patas",
+          "value": "Antideslizantes"
+        }
+      ],
+      "descriptionHtml": "<p>El Sentey GS530 es un teclado mecánico para jugar, con switches Outemu Red y retroiluminación RGB. Está pensado para sesiones largas.</p><h3>Teclas</h3><ul><li>Switches mecánicos Outemu Red (MX).</li><li>Keycaps de doble inyección con marcado láser.</li><li>Función anti-ghost para registrar varias teclas a la vez.</li></ul><h3>Iluminación</h3><p>La retroiluminación LED RGB ofrece 11 efectos de luz y se nota bien en lugares con poca luz.</p><h3>Construcción</h3><p>Tiene estructura interna metálica y patas antideslizantes. El conector USB está bañado en oro.</p>",
+      "revisar": [
+        "No figura cantidad de teclas, largo del cable, ni si tiene teclado numérico. Se quitó '10% descuento contado'.",
+        "El nombre del original dice 'GS530' y el SKU 'GS-530'."
+      ]
+    },
+    {
+      "slug": "teclado-gamer-mecanico-xtrike-me-gk-979-87-keys",
+      "name": "Teclado gamer mecánico Xtrike Me GK-979 87 teclas",
+      "brand": "Xtrike Me",
+      "model": "GK-979",
+      "seoTitle": "Teclado mecánico Xtrike Me GK-979 87 teclas",
+      "seoDescription": "Teclado gamer mecánico Xtrike Me GK-979 sin pad numérico, 87 teclas, switches blue y luz rainbow de 5 colores. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Teclado gamer mecánico Xtrike Me GK-979 sin pad numérico, de 87 teclas. Switches blue, luz de fondo rainbow con 8 modos, anti-ghosting de 29 teclas y USB.",
+      "highlights": [
+        "Compacto, de 87 teclas y sin pad numérico",
+        "Switches blue mecánicos con respuesta táctil y sonido clicky",
+        "Retroiluminación rainbow de 5 colores y 8 modos",
+        "Anti-ghosting de 29 teclas",
+        "Cable USB de 1,5 m y uso Plug & Play"
+      ],
+      "specs": [
+        {
+          "label": "Teclas",
+          "value": "87, sin pad numérico"
+        },
+        {
+          "label": "Switches",
+          "value": "Mecánicos, blue (táctiles, clicky)"
+        },
+        {
+          "label": "Vida útil de switches",
+          "value": "50 millones de pulsaciones"
+        },
+        {
+          "label": "Iluminación",
+          "value": "Rainbow de 5 colores con 8 modos"
+        },
+        {
+          "label": "Anti-ghosting",
+          "value": "29 teclas en rollover"
+        },
+        {
+          "label": "Interfaz",
+          "value": "USB 2.0"
+        },
+        {
+          "label": "Cable",
+          "value": "1,5 m"
+        },
+        {
+          "label": "Funciones",
+          "value": "Teclas FN multimedia; FN+WIN bloquea la tecla Windows"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Windows 7 o posterior"
+        }
+      ],
+      "descriptionHtml": "<p>El Xtrike Me GK-979 es un teclado mecánico compacto, de 87 teclas y sin pad numérico, con retroiluminación rainbow. Ocupa poco lugar en el escritorio.</p><h3>Switches</h3><ul><li>Switches blue mecánicos: tienen respuesta táctil y hacen clic al presionar.</li><li>Vida útil de 50 millones de pulsaciones.</li><li>Anti-ghosting de 29 teclas para leer bien varias pulsaciones a la vez.</li></ul><h3>Iluminación</h3><p>La luz de fondo mezcla 5 colores en efecto arcoíris y tiene 8 modos de iluminación.</p><h3>Conexión y uso</h3><p>Funciona Plug & Play por USB con un cable de 1,5 m. Las teclas FN dan acceso a funciones multimedia y FN+WIN bloquea la tecla de Windows.</p><h3>Antes de comprar</h3><p>No tiene teclado numérico. Es compatible con Windows 7 o posterior.</p>",
+      "revisar": [
+        "La ficha corta traía 'Ruta clave: 4,0 a 0,4 MM' y 'Fuerza: 60 a 5 G', datos que parecen mal traducidos; no los publiqué.",
+        "Switches 'blue' sale de la descripción larga; la ficha corta no los menciona."
+      ]
+    },
+    {
+      "slug": "teclado-gamer-rgb-jahro-jh-cb01-mouse-4d",
+      "name": "Combo teclado y mouse gamer Jahro JH-CB01 RGB",
+      "brand": "Jahro",
+      "model": "JH-CB01",
+      "seoTitle": "Combo teclado y mouse gamer Jahro JH-CB01",
+      "seoDescription": "Combo gamer Jahro JH-CB01 con teclado retroiluminado RGB en español latinoamericano y mouse con sensor óptico. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Combo gamer Jahro JH-CB01 con teclado retroiluminado RGB en español latinoamericano y mouse óptico.",
+      "highlights": [
+        "Teclado con retroiluminación RGB",
+        "Mouse con sensor óptico",
+        "Teclado en español latinoamericano"
+      ],
+      "specs": [
+        {
+          "label": "Retroiluminación del teclado",
+          "value": "RGB"
+        },
+        {
+          "label": "Sensor del mouse",
+          "value": "Óptico"
+        },
+        {
+          "label": "Idioma del teclado",
+          "value": "Español latinoamericano"
+        }
+      ],
+      "descriptionHtml": "<p>El Jahro JH-CB01 es un combo gamer que incluye teclado y mouse. El teclado tiene retroiluminación RGB y el mouse un sensor óptico.</p><h3>Qué incluye</h3><p>Un teclado en español latinoamericano con iluminación RGB y un mouse óptico. Para otros datos como el tipo de teclas, la conexión o los botones del mouse, consultanos antes de comprar.</p>",
+      "revisar": [
+        "Casi sin información: solo idioma, color de iluminación y tipo de sensor. Faltan conexión, tipo de teclas, DPI y botones.",
+        "El slug dice 'mouse-4d' (¿mouse de 4 botones/4D?). No lo publiqué; confirmar. El nombre original tenía 'Teclado' repetido."
+      ]
+    },
+    {
+      "slug": "teclado-kanji-inalambrico",
+      "brand": "Kanji",
+      "model": "KJ-TECINA003",
+      "seoTitle": "Teclado inalámbrico Kanji",
+      "seoDescription": "Teclado inalámbrico Kanji con instalación Plug and Play, compatible con Windows y Mac. Garantía oficial y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "Teclado inalámbrico Kanji, Plug and Play y compatible con Windows y Mac.",
+      "highlights": [
+        "Inalámbrico",
+        "Plug and Play",
+        "Compatible con Windows y Mac"
+      ],
+      "specs": [
+        {
+          "label": "Conexión",
+          "value": "Inalámbrica, Plug and Play"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Windows y Mac"
+        }
+      ],
+      "descriptionHtml": "<p>El teclado inalámbrico Kanji se conecta sin cables y es de uso inmediato (Plug and Play). Funciona en computadoras con Windows y Mac.</p><h3>Qué se sabe</h3><p>Es un teclado inalámbrico. Para tipo de conexión, pilas y distribución, consultanos antes de comprar.</p>",
+      "revisar": [
+        "Casi sin información: 'Teclado Inalámbrico', Plug and Play, Windows y Mac. Faltan tipo de conexión (receptor USB o Bluetooth), pilas, distribución y si tiene teclado numérico. SKU KJ-TECINA003."
+      ]
+    },
+    {
+      "slug": "teclado-kanji-usb-multimedia",
+      "brand": "Kanji",
+      "model": "KJ-TECMULT001",
+      "seoTitle": "Teclado USB multimedia Kanji",
+      "seoDescription": "Teclado USB multimedia Kanji de diseño compacto con teclas multimedia y cable de 1,5 m. Compatible con Windows y Mac. Garantía y envíos a todo el país.",
+      "shortDescription": "Teclado USB multimedia Kanji de diseño compacto, con teclas multimedia, cable de 1,5 m y uso Plug & Play. Compatible con Windows y Mac.",
+      "highlights": [
+        "Diseño compacto",
+        "Teclas multimedia",
+        "Cable USB de 1,5 m",
+        "Plug & Play, compatible con Windows y Mac"
+      ],
+      "specs": [
+        {
+          "label": "Conexión",
+          "value": "USB, cable de 1,5 m"
+        },
+        {
+          "label": "Teclas",
+          "value": "Multimedia"
+        },
+        {
+          "label": "Instalación",
+          "value": "Plug & Play"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Windows y Mac"
+        }
+      ],
+      "descriptionHtml": "<p>El teclado Kanji USB Multimedia es compacto y se conecta por cable. Funciona apenas lo enchufás, sin instalar nada.</p><h3>Qué tiene</h3><p>Teclas multimedia, cable de 1,5 m y compatibilidad con Windows y Mac. Para la distribución y si incluye teclado numérico, consultanos antes de comprar.</p>",
+      "revisar": [
+        "Información limitada. Faltan distribución, teclado numérico y materiales. SKU KJ-TECMULT001."
+      ]
+    },
+    {
+      "slug": "teclado-logitech-k120",
+      "model": "K120",
+      "seoTitle": "Teclado Logitech K120",
+      "seoDescription": "Teclado Logitech K120 con cable USB, tamaño completo con sección numérica, resistente a salpicaduras y Plug and Play. Garantía y envíos a todo el país.",
+      "shortDescription": "Teclado Logitech K120 con cable USB, de tamaño normal y con sección numérica. Plug and Play, resistente a salpicaduras y con patas ajustables.",
+      "highlights": [
+        "Tamaño normal con sección numérica",
+        "Conexión USB Plug and Play",
+        "Resistente a salpicaduras",
+        "Teclas fáciles de leer y patas ajustables"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño",
+          "value": "Normal, con sección numérica"
+        },
+        {
+          "label": "Conexión",
+          "value": "USB con cable"
+        },
+        {
+          "label": "Instalación",
+          "value": "Plug and Play, sin software"
+        },
+        {
+          "label": "Resistencia",
+          "value": "A salpicaduras"
+        },
+        {
+          "label": "Patas",
+          "value": "Ajustables"
+        },
+        {
+          "label": "Barra espaciadora",
+          "value": "Curvada"
+        }
+      ],
+      "descriptionHtml": "<p>El Logitech K120 es un teclado de tamaño normal con cable USB. Se enchufa y funciona, sin descargas ni configuraciones.</p><h3>Comodidad</h3><p>Tiene sección numérica integrada, útil para cargar datos y hacer cálculos. La barra espaciadora es curvada y las teclas son fáciles de leer.</p><h3>Resistencia</h3><p>El diseño resiste salpicaduras. Las teclas son firmes y las patas se ajustan.</p><h3>Uso</h3><p>Lo conectás a un puerto USB y listo: funciona tal cual sale de la caja.</p>",
+      "revisar": [
+        "La descripción original traía al final un texto de otro producto (pantalla de 6,83\" con resolución 1,5K); lo saqué.",
+        "El original dice 'salpicaduras*' con asterisco: la nota no se incluyó, confirmar el alcance de la resistencia."
+      ]
+    },
+    {
+      "slug": "teclado-mecanico-gamer-marvo-compacto-rgb",
+      "name": "Teclado mecánico gamer Marvo KG901 compacto RGB",
+      "brand": "Marvo",
+      "model": "KG901",
+      "seoTitle": "Teclado mecánico gamer Marvo KG901",
+      "seoDescription": "Teclado mecánico gamer Marvo KG901 compacto de 87 teclas con switches azules, retroiluminación RGB y 5 teclas macro. Garantía y envíos a todo el país.",
+      "shortDescription": "Teclado mecánico gamer Marvo KG901 compacto (TKL) de 87 teclas con switches azules, retroiluminación de 5 colores con 21 modos y cinco teclas macro programables.",
+      "highlights": [
+        "Formato compacto TKL de 87 teclas",
+        "Switches azules de 50 millones de pulsaciones",
+        "Retroiluminación de 5 colores y 21 modos",
+        "5 teclas macro programables sin controlador",
+        "Panel frontal metálico y chasis ABS"
+      ],
+      "specs": [
+        {
+          "label": "Formato",
+          "value": "Compacto TKL, 87 teclas"
+        },
+        {
+          "label": "Switches",
+          "value": "Azules, 50 millones de pulsaciones"
+        },
+        {
+          "label": "Iluminación",
+          "value": "Retroiluminación de 5 colores con 21 modos"
+        },
+        {
+          "label": "Anti-ghosting",
+          "value": "Completo, N-key rollover"
+        },
+        {
+          "label": "Macros",
+          "value": "5 teclas programables sin controlador"
+        },
+        {
+          "label": "Construcción",
+          "value": "Panel frontal de metal y chasis ABS"
+        },
+        {
+          "label": "Cable",
+          "value": "1,5 m"
+        },
+        {
+          "label": "Medidas",
+          "value": "363 x 140 x 37 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "758 g"
+        },
+        {
+          "label": "Software",
+          "value": "Sí, de personalización"
+        }
+      ],
+      "descriptionHtml": "<p>El Marvo KG901 es un teclado mecánico compacto de 87 teclas, sin pad numérico, con retroiluminación RGB y marco delgado.</p><h3>Juego</h3><ul><li>Anti-ghosting completo con N-key rollover.</li><li>Cinco teclas de macro programables sin necesidad de controlador.</li><li>Switches azules con 50 millones de pulsaciones de vida útil.</li></ul><h3>Iluminación y software</h3><p>Tiene más de 20 esquemas de luz seleccionables. El software de personalización permite ajustar las funciones.</p><h3>Construcción</h3><p>Panel frontal de metal y chasis ABS. Mide 363 x 140 x 37 mm y pesa 758 g.</p><h3>Antes de comprar</h3><p>Es un teclado sin sección numérica. Usa cable de 1,5 m.</p>",
+      "revisar": [
+        "La ficha corta dice 21 modos de luz y la descripción 'más de 20 esquemas': coinciden; usé 21.",
+        "'Teclas de doble disparo' del original es ambiguo; no lo publiqué. Falta la interfaz (USB)."
+      ]
+    },
+    {
+      "slug": "ups-trv-650a-neo-4-tomas",
+      "name": "UPS TRV Neo 650A 4 tomas",
+      "brand": "TRV",
+      "model": "Neo 650A",
+      "seoTitle": "UPS TRV Neo 650A con estabilizador, 4 tomas",
+      "seoDescription": "UPS TRV Neo 650A off-line con estabilizador, 4 tomas, fusible con reposición y software UPSMON por USB. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS TRV Neo 650A off-line con estabilizador incorporado y 4 tomas: 3 con respaldo de batería y 1 con protección contra sobretensión. Interfaz USB con software UPSMON.",
+      "highlights": [
+        "UPS off-line con estabilizador de 3 pasos",
+        "4 tomas: 3 con batería y 1 solo contra sobretensión",
+        "Control por microprocesador y arranque en frío",
+        "Fusible con reposición manual",
+        "Software UPSMON por USB para apagar la PC sin perder datos"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "UPS off-line con estabilizador"
+        },
+        {
+          "label": "Control",
+          "value": "Por microprocesador"
+        },
+        {
+          "label": "Estabilización",
+          "value": "3 pasos"
+        },
+        {
+          "label": "Tomas",
+          "value": "4 (3 con UPS y 1 solo con protección contra sobretensión)"
+        },
+        {
+          "label": "Batería",
+          "value": "Electrolito absorbido, libre de mantenimiento"
+        },
+        {
+          "label": "Protección",
+          "value": "Supresor de picos y fusible con reposición manual"
+        },
+        {
+          "label": "Interfaz",
+          "value": "USB con software UPSMON"
+        },
+        {
+          "label": "Función",
+          "value": "Ahorro de energía y arranque en frío"
+        },
+        {
+          "label": "Equipo indicado",
+          "value": "1 PC de escritorio"
+        }
+      ],
+      "descriptionHtml": "<p>El UPS TRV Neo 650A protege tu equipo de variaciones de tensión y de cortes de luz por un tiempo acotado. Tiene estabilizador incorporado y 4 tomas.</p><h3>Cómo funciona</h3><p>Cuando hay tensión de red, el UPS la estabiliza y carga la batería. Si la tensión es anormal o se corta, pasa a batería de inmediato. La autonomía depende de los equipos conectados.</p><h3>Qué lo diferencia</h3><ul><li>Estabilizador incorporado: tiene un rango de trabajo amplio.</li><li>Supresores de picos de tensión.</li><li>Función de ahorro de energía: si la carga está apagada durante un corte, el UPS se apaga solo y guarda la batería.</li><li>Arranque en frío: se puede encender sin tensión de red.</li></ul><h3>Antes de comprar</h3><p>Está indicado para una PC de escritorio. Tres de las cuatro tomas tienen respaldo de batería; la cuarta solo protege contra sobretensión.</p>",
+      "revisar": [
+        "CONTRADICCIÓN: la ficha corta dice 'autonomía 7 minutos' y la descripción dice 'aproximadamente 10 minutos' (PC con monitor LED de 17\"). No publiqué la autonomía.",
+        "No figura potencia en VA (el '650A' del nombre puede referirse a 650 VA) ni tensión de entrada/salida. Confirmar."
+      ]
+    },
+    {
+      "slug": "ups-trv-850a-neo-4-tomas",
+      "name": "UPS TRV Neo 850A 4 tomas",
+      "brand": "TRV",
+      "model": "Neo 850A",
+      "seoTitle": "UPS TRV Neo 850A 4 tomas",
+      "seoDescription": "UPS TRV Neo 850A de 850 VA con 4 tomas, indicador LED, alarma sonora y 11 minutos de autonomía estimada. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS TRV Neo 850A de 850 VA con 4 tomas e indicador LED. Autonomía estimada de 11 minutos, carga completa en hasta 4 horas y alarma sonora de batería baja y sobrecarga.",
+      "highlights": [
+        "Potencia de 850 VA y 4 tomas",
+        "Autonomía estimada de 11 minutos",
+        "Carga de la batería en un máximo de 4 horas",
+        "Indicador LED y alarma sonora",
+        "Rango de voltaje de entrada de 165 V a 275 V"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "850 VA"
+        },
+        {
+          "label": "Tomas",
+          "value": "4"
+        },
+        {
+          "label": "Voltaje",
+          "value": "Monovolt, entrada y salida de 220 V"
+        },
+        {
+          "label": "Rango de entrada",
+          "value": "165 V a 275 V"
+        },
+        {
+          "label": "Autonomía",
+          "value": "11 minutos estimados"
+        },
+        {
+          "label": "Tiempo de carga",
+          "value": "Hasta 4 horas"
+        },
+        {
+          "label": "Alarma sonora",
+          "value": "Modo batería, batería baja y sobrecarga"
+        },
+        {
+          "label": "Indicador",
+          "value": "LED"
+        },
+        {
+          "label": "Ruido",
+          "value": "Hasta 40 dB"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "100 x 278 x 140 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "4,8 kg"
+        }
+      ],
+      "descriptionHtml": "<p>El UPS TRV Neo 850A te da energía por un tiempo acotado cuando hay un corte, para que puedas guardar el trabajo y apagar el equipo. Tiene 4 tomas y 850 VA.</p><h3>Aviso y control</h3><p>El indicador LED muestra el estado del equipo, y la alarma sonora avisa cuando pasa a modo batería, cuando la batería está baja o cuando hay sobrecarga. Tiene botón de encendido y apagado.</p><h3>Qué conectar</h3><p>Está indicado para equipos de video y computadoras. TRV Electronics fabrica equipos pensados para el uso racional de la energía.</p><h3>Antes de comprar</h3><p>La autonomía de 11 minutos es una estimación y cambia según lo que conectes.</p>",
+      "revisar": [
+        "La ficha corta decía 'apto para varios dispositivos'; usé 'equipos de video y computadoras' de la ficha técnica.",
+        "Falta el tipo de onda en modo batería y si trae estabilizador."
+      ]
+    },
+    {
+      "slug": "ups-trv-neo-1500-5t-c-soft-y-usb",
+      "name": "UPS TRV Neo 1500 con software y USB",
+      "brand": "TRV",
+      "model": "Neo 1500",
+      "seoTitle": "UPS TRV Neo 1500 con software y USB",
+      "seoDescription": "UPS TRV Neo 1500 de 1500 VA con estabilizador, puerto USB y software, protección para módem y red. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS TRV Neo 1500 de 1500 VA con estabilizador incorporado, protección contra picos y para módem y red. Puerto USB con software y autonomía de 10 a 20 minutos.",
+      "highlights": [
+        "1500 VA con estabilizador incorporado",
+        "Autonomía de 10 a 20 minutos según equipos",
+        "Protección contra picos y para módem y red",
+        "Puerto USB con software",
+        "Fusible con reposición y función ahorro de energía"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad",
+          "value": "1500 VA"
+        },
+        {
+          "label": "Estabilizador",
+          "value": "Incorporado"
+        },
+        {
+          "label": "Batería",
+          "value": "Interna"
+        },
+        {
+          "label": "Autonomía",
+          "value": "10 a 20 minutos, según modelo y equipos protegidos"
+        },
+        {
+          "label": "Protección",
+          "value": "Picos de tensión, módem y red, fusible con reposición"
+        },
+        {
+          "label": "Interfaz",
+          "value": "Puerto USB y software"
+        },
+        {
+          "label": "Función",
+          "value": "Ahorro de energía y pulsador multifunción"
+        },
+        {
+          "label": "Equipos indicados",
+          "value": "TV LCD, audio, consolas, PC y CCTV"
+        }
+      ],
+      "descriptionHtml": "<p>El UPS TRV Neo 1500 protege equipos como PC, televisores, consolas y sistemas de seguridad de variaciones y cortes de tensión. Tiene estabilizador y batería interna.</p><h3>Qué trae</h3><ul><li>Estabilizador incorporado y protección contra picos de tensión.</li><li>Protección para módem y red.</li><li>Puerto USB con software para controlarlo desde la PC.</li><li>Pulsador multifunción y función ahorro de energía.</li></ul><h3>Qué protege</h3><p>TV LCD, equipos de audio, consolas de juegos, PC y sistemas de seguridad (CCTV).</p><h3>Antes de comprar</h3><p>La autonomía va de 10 a 20 minutos y depende de lo que tengas conectado.</p>",
+      "revisar": [
+        "No publiqué la cantidad de tomas: la ficha corta dice '4 salidas' y el slug dice '5t'. Confirmar.",
+        "Descripción larga vacía. Faltan tensión de entrada/salida, dimensiones y peso."
+      ]
+    },
+    {
+      "slug": "ups-trv-neo-2000-4t-c-soft-y-usb",
+      "name": "UPS TRV Neo 2000 4 tomas con software y USB",
+      "brand": "TRV",
+      "model": "Neo 2000",
+      "seoTitle": "UPS TRV Neo 2000 4 tomas con software y USB",
+      "seoDescription": "UPS TRV Neo 2000 de 2000 VA con 4 tomas, puerto USB, estabilización del 15% y 30 minutos de autonomía máxima. Garantía y envíos a todo el país.",
+      "shortDescription": "UPS TRV Neo 2000 de 2000 VA con 4 tomas, un puerto USB y autonomía máxima de 30 minutos. Entrada de 165 a 275 V y rango de estabilización de salida del 15%.",
+      "highlights": [
+        "2000 VA de potencia con 4 tomas",
+        "Autonomía máxima de 30 minutos",
+        "Puerto USB y software",
+        "Entrada de 165 V a 275 V",
+        "Rango de estabilización de salida del 15%"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "2000 VA (pico y nominal)"
+        },
+        {
+          "label": "Tomas",
+          "value": "4"
+        },
+        {
+          "label": "Puerto USB",
+          "value": "1"
+        },
+        {
+          "label": "Voltaje",
+          "value": "Monovolt, entrada y salida de 220 V"
+        },
+        {
+          "label": "Rango de entrada",
+          "value": "165 V a 275 V"
+        },
+        {
+          "label": "Estabilización de salida",
+          "value": "15%"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 30 minutos"
+        },
+        {
+          "label": "Tiempo de carga",
+          "value": "Hasta 4 horas"
+        }
+      ],
+      "descriptionHtml": "<p>El UPS TRV Neo 2000 tiene 2000 VA de potencia, 4 tomas y un puerto USB para conectarlo a la PC.</p><h3>Datos eléctricos</h3><p>Trabaja con 220 V de entrada y de salida, con un rango de entrada de 165 V a 275 V. Estabiliza la salida dentro de un rango del 15%.</p><h3>Autonomía y carga</h3><p>La batería da hasta 30 minutos como máximo y tarda hasta 4 horas en cargarse.</p><h3>Antes de comprar</h3><p>La autonomía depende de los equipos conectados. Consultanos qué accesorios trae.</p>",
+      "revisar": [
+        "La ficha corta se corta en 'Accesorios incl...': no sé qué accesorios trae. La descripción larga estaba vacía."
+      ]
+    },
+    {
+      "slug": "ups-trv-neo1200-5t-c-soft-y-usb",
+      "name": "UPS TRV Neo 1200 5T con software y USB",
+      "brand": "TRV",
+      "model": "Neo 1200",
+      "seoTitle": "UPS TRV Neo 1200 5T con software y USB",
+      "seoDescription": "UPS TRV Neo 1200 off-line con estabilizador, 5T, batería sin mantenimiento y software UPSMON por USB. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS TRV Neo 1200 5T off-line con estabilizador incorporado, batería sin mantenimiento y software UPSMON por USB para apagar la PC de forma ordenada.",
+      "highlights": [
+        "Off-line con estabilizador y amplio rango de trabajo",
+        "Entrada de 165 a 275 Vac",
+        "Software UPSMON por USB para cierre ordenado",
+        "Batería de electrolito absorbido sin mantenimiento",
+        "Recarga en 4 horas para el 90% de la capacidad"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "UPS off-line con estabilizador"
+        },
+        {
+          "label": "Tensión nominal de entrada",
+          "value": "220 Vac, rango de 165 a 275 Vac"
+        },
+        {
+          "label": "Frecuencia de entrada",
+          "value": "50 Hz ±10%"
+        },
+        {
+          "label": "Salida en modo batería",
+          "value": "Senoidal modificada, 220 Vac ±5%, 50 Hz ±1%"
+        },
+        {
+          "label": "Batería",
+          "value": "Electrolito absorbido, libre de mantenimiento"
+        },
+        {
+          "label": "Interfaz",
+          "value": "USB con software UPSMON"
+        },
+        {
+          "label": "Recarga",
+          "value": "4 horas para el 90% de la capacidad"
+        },
+        {
+          "label": "Función",
+          "value": "Ahorro de energía"
+        },
+        {
+          "label": "Ruido",
+          "value": "Menos de 40 dBA a 1 m"
+        }
+      ],
+      "descriptionHtml": "<p>El UPS TRV Neo 1200 protege la carga de variaciones de tensión y de cortes de luz por un tiempo acotado. Es de tipo off-line con estabilizador incorporado.</p><h3>Cómo funciona</h3><p>Con tensión de red, acondiciona la entrada y carga la batería. Si la tensión es anormal o se corta, abastece los equipos desde la batería. Con el software UPSMON por USB podés hacer un cierre ordenado del sistema y evitar perder archivos.</p><h3>Ahorro de energía</h3><p>Si la carga está apagada durante un corte, el UPS se apaga solo para guardar la batería y se enciende cuando vuelve la energía.</p><h3>Condiciones de uso</h3><p>Opera hasta 0–40 °C y 0–95% de humedad sin condensación.</p><h3>Antes de comprar</h3><p>La autonomía depende de lo que conectes.</p>",
+      "revisar": [
+        "No publiqué autonomía, peso ni corrientes: el texto original mezcla valores de tres modelos (1200, 1500 y 2000) en columnas sin identificar, y dice '40 minutos' con otra tabla de 20-30/30-35/40-45. Confirmar cuáles son los del Neo 1200.",
+        "Falta potencia en VA y cantidad de tomas ('5T' viene del nombre)."
+      ]
+    },
+    {
+      "slug": "volante-logitech-g29-racing-pc-ps3-ps4-ps5",
+      "name": "Volante Logitech G29 Driving Force para PC, PS3, PS4 y PS5",
+      "model": "G29 Driving Force",
+      "seoTitle": "Volante Logitech G29 Driving Force",
+      "seoDescription": "Volante Logitech G29 Driving Force con force feedback de dos motores, giro de 900°, pedalera y compatibilidad con PS5, PS4, PS3 y PC. Garantía y envíos.",
+      "shortDescription": "Volante Logitech G29 Driving Force para PS5, PS4, PS3 y PC. Force feedback de dos motores, giro de 900°, aro de cuero cosido a mano, paletas de acero y pedalera independiente.",
+      "highlights": [
+        "Force feedback de dos motores con engranajes helicoidales",
+        "Giro de 900° de bloqueo a bloqueo",
+        "Aro de cuero cosido a mano y paletas de acero inoxidable",
+        "Pedalera independiente con freno no lineal y embrague",
+        "Compatible con PS5, PS4, PS3 y PC"
+      ],
+      "specs": [
+        {
+          "label": "Compatibilidad",
+          "value": "PlayStation 5, 4 y 3, y PC (Windows 11 y 10)"
+        },
+        {
+          "label": "Ángulo de giro",
+          "value": "900° de bloqueo a bloqueo (ajustable por software)"
+        },
+        {
+          "label": "Force feedback",
+          "value": "Dos motores, con protección contra sobrecalentamiento"
+        },
+        {
+          "label": "Aro",
+          "value": "Cuero cosido a mano"
+        },
+        {
+          "label": "Eje y paletas",
+          "value": "Acero inoxidable"
+        },
+        {
+          "label": "Pedales",
+          "value": "Acelerador, freno no lineal y embrague, en acero cepillado"
+        },
+        {
+          "label": "Controles",
+          "value": "D-pad, botones de consola PS, dial de 24 posiciones y botones +/-"
+        },
+        {
+          "label": "Indicadores",
+          "value": "LED de RPM y cambio de marcha"
+        },
+        {
+          "label": "Fijación",
+          "value": "Abrazaderas integradas y puntos de montaje con tornillos"
+        }
+      ],
+      "descriptionHtml": "<p>El Logitech G29 Driving Force es un volante de carreras para PlayStation y PC, con force feedback de dos motores y pedalera independiente.</p><h3>Force feedback</h3><p>Dos motores y engranajes helicoidales reproducen la transferencia de peso, la pérdida de adherencia y las vueltas de la pista. El giro de 900° equivale a dos vueltas y media de bloqueo a bloqueo.</p><h3>Construcción</h3><ul><li>Aro de cuero cosido a mano.</li><li>Cojinetes de bolas de acero en el eje.</li><li>Paletas de cambio de acero inoxidable.</li></ul><h3>Pedales</h3><p>La unidad independiente incluye acelerador, embrague y un freno no lineal. Trae sistema de agarre retráctil para alfombras y pies de goma ajustables.</p><h3>Juegos</h3><p>El fabricante lo menciona para juegos como Gran Turismo, Assetto Corsa, iRacing, F1 y Euro Truck Simulator.</p><h3>Antes de comprar</h3><p>Se sujeta al escritorio con abrazaderas o con tornillos. Revisá que el juego sea compatible con tu consola.</p>",
+      "revisar": [
+        "La compatibilidad con Windows 11 y 10 sale de la tabla del original.",
+        "Se corrigió 'antirholgura' a 'helicoidales'. Falta qué trae en la caja (fuente, etc.)."
+      ]
+    },
+    {
+      "slug": "mini-pc-cx-amd-ryzen-3-3250u16gssd480gb",
+      "name": "Mini PC CX AMD Ryzen 3 3250U 16 GB SSD 480 GB",
+      "model": "Ryzen 3 3250U",
+      "storage": "480 GB",
+      "ram": "16 GB",
+      "seoTitle": "Mini PC CX AMD Ryzen 3 3250U 16 GB SSD 480 GB",
+      "seoDescription": "Mini PC CX con AMD Ryzen 3 3250U, 16 GB de RAM y SSD de 480 GB. Equipo compacto de escritorio con garantía oficial y envíos a todo el país.",
+      "shortDescription": "Mini PC CX con procesador AMD Ryzen 3 3250U, 16 GB de RAM y SSD de 480 GB. Equipo compacto de escritorio.",
+      "highlights": [
+        "Procesador AMD Ryzen 3 3250U",
+        "16 GB de RAM",
+        "SSD de 480 GB",
+        "Formato mini PC"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 3 3250U"
+        }
+      ],
+      "descriptionHtml": "<p>Esta mini PC CX tiene un procesador AMD Ryzen 3 3250U, 16 GB de RAM y un SSD de 480 GB, según el nombre del producto.</p><h3>Qué se sabe</h3><p>Es un equipo de escritorio compacto. Para puertos, sistema operativo y accesorios incluidos, consultanos antes de comprar.</p>",
+      "revisar": [
+        "Casi sin información: solo el nombre 'MINI PC CX AMD RYZEN 3 3250U+16G+SSD480GB'. Interpreté 16G como 16 GB de RAM y SSD480GB como 480 GB; confirmar.",
+        "Faltan puertos, sistema operativo, tipo de RAM y accesorios. SKU CX54714. Texto original era relleno genérico."
+      ]
+    }
+  ]
+}

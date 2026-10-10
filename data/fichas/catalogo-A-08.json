@@ -1,0 +1,2454 @@
+{
+  "lote": "catalogo-A-08",
+  "productos": [
+    {
+      "slug": "sony-alpha-a7-iii-body",
+      "model": "Alpha A7 III",
+      "seoTitle": "Sony Alpha A7 III Body (solo cuerpo)",
+      "seoDescription": "Cámara mirrorless Sony Alpha A7 III, solo cuerpo: sensor full-frame de 24,2 MP, ráfaga de 10 fps y video 4K HDR. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cámara mirrorless Sony Alpha A7 III, solo cuerpo. Sensor full-frame CMOS Exmor R de 24,2 MP, ráfaga de hasta 10 fps con seguimiento de AF/AE y video 4K HDR.",
+      "highlights": [
+        "Sensor full-frame retroiluminado de 24,2 MP",
+        "Ráfaga de hasta 10 fps con seguimiento de AF/AE",
+        "693 puntos de enfoque por fases y 425 por contraste",
+        "Grabación de video 4K HDR",
+        "Rango ISO 100-51.200, ampliable a 50-204.800 en fotos",
+        "Hasta 610 fotos por carga con el visor"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mirrorless, solo cuerpo"
+        },
+        {
+          "label": "Sensor",
+          "value": "Full-frame CMOS Exmor R de 35 mm (35,6 x 23,8 mm), retroiluminado"
+        },
+        {
+          "label": "Resolución efectiva",
+          "value": "Aprox. 24,2 MP"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Sensibilidad ISO",
+          "value": "100-51.200 (ampliable a 50-204.800 en fotos)"
+        },
+        {
+          "label": "Enfoque automático",
+          "value": "Híbrido: 693 puntos de fase y 425 de contraste"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "Hasta 10 fps con seguimiento de AF/AE"
+        },
+        {
+          "label": "Video",
+          "value": "4K HDR"
+        },
+        {
+          "label": "Visor",
+          "value": "Electrónico OLED XGA de 1,3 cm (tipo 0,5)"
+        },
+        {
+          "label": "Monitor",
+          "value": "TFT de 7,5 cm (tipo 3,0)"
+        },
+        {
+          "label": "Batería (CIPA)",
+          "value": "Aprox. 610 fotos con visor / 710 con monitor"
+        }
+      ],
+      "descriptionHtml": "<p>La Alpha A7 III es una cámara mirrorless full-frame de Sony con sensor de 24,2 MP, enfoque híbrido y video 4K HDR. Se vende como solo cuerpo, sin objetivo.</p><h3>Imagen</h3><ul><li>Sensor CMOS Exmor R retroiluminado de 35 mm y 24,2 MP.</li><li>Sensibilidad hasta ISO 51.200, ampliable a ISO 50-204.800 para fotos.</li></ul><h3>Enfoque y velocidad</h3><ul><li>Enfoque híbrido con 693 puntos de detección de fases y 425 de contraste.</li><li>Captura continua de hasta 10 fps con seguimiento de AF/AE.</li></ul><h3>Video</h3><p>Graba video 4K HDR. Es compatible con los objetivos de montura E de Sony.</p><h3>Visor y pantalla</h3><p>Visor electrónico OLED de 1,3 cm y monitor TFT de 7,5 cm. La batería rinde unas 610 fotos con el visor y 710 con el monitor, según el estándar CIPA.</p><h3>Antes de comprar</h3><ul><li>Es solo cuerpo: necesitás un objetivo de montura E.</li></ul>",
+      "revisar": [
+        "La descripción no detalla qué trae en la caja (batería, cargador, correa). Confirmar antes de publicar.",
+        "SKU ILCE-7M3."
+      ]
+    },
+    {
+      "slug": "sony-alpha-a7-iv-kit-28-70",
+      "model": "Alpha A7 IV",
+      "seoTitle": "Sony Alpha A7 IV kit 28-70 mm",
+      "seoDescription": "Cámara mirrorless Sony Alpha A7 IV en kit con objetivo 28-70 mm: sensor full-frame de 33 MP, BIONZ XR y video 4K 60p 10 bits. Garantía y envíos a todo el país.",
+      "shortDescription": "Sony Alpha A7 IV en kit con objetivo 28-70 mm. Sensor full-frame de 33 MP, procesador BIONZ XR, Eye AF en tiempo real y video 4K a 60p en 4:2:2 de 10 bits.",
+      "highlights": [
+        "Sensor full-frame retroiluminado de 33 MP",
+        "Procesador BIONZ XR, hasta 8 veces más rápido que el anterior",
+        "Eye AF en tiempo real: personas, animales y pájaros",
+        "Video 4K a 60p en 4:2:2 de 10 bits",
+        "Modo Activo y compensación de la variación de longitud focal",
+        "Incluye objetivo de 28-70 mm"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mirrorless en kit con objetivo 28-70 mm"
+        },
+        {
+          "label": "Sensor",
+          "value": "Full-frame Exmor R CMOS retroiluminado (35,9 x 23,9 mm)"
+        },
+        {
+          "label": "Resolución efectiva",
+          "value": "Aprox. 33 MP"
+        },
+        {
+          "label": "Procesador",
+          "value": "BIONZ XR"
+        },
+        {
+          "label": "Sensibilidad ISO",
+          "value": "100-51.200 (ampliable a 50-204.800 en fotos)"
+        },
+        {
+          "label": "Enfoque automático",
+          "value": "Eye AF en tiempo real para personas, animales y pájaros"
+        },
+        {
+          "label": "Video",
+          "value": "4K a 60p, 4:2:2 de 10 bits"
+        },
+        {
+          "label": "Visor",
+          "value": "Electrónico OLED Quad-VGA de 1,3 cm (tipo 0,5)"
+        },
+        {
+          "label": "Monitor",
+          "value": "TFT de 7,5 cm (tipo 3,0)"
+        },
+        {
+          "label": "Medidas del cuerpo",
+          "value": "131,3 x 96,4 x 79,8 mm (ancho x alto x profundidad)"
+        }
+      ],
+      "descriptionHtml": "<p>La Alpha A7 IV es una cámara híbrida full-frame para foto y video. Este kit viene con un objetivo de 28-70 mm para que arranques sin comprar nada más.</p><h3>Imagen y procesador</h3><ul><li>Sensor Exmor R CMOS retroiluminado de 33 MP.</li><li>Motor BIONZ XR con un rendimiento hasta 8 veces superior al del procesador anterior.</li></ul><h3>Enfoque</h3><p>Eye AF en tiempo real para personas, animales y pájaros.</p><h3>Video</h3><ul><li>4K a 60p en 4:2:2 de 10 bits.</li><li>Modo Activo, compensación de la variación de longitud focal y ayuda de enfoque.</li></ul><h3>Visor y pantalla</h3><p>Visor OLED Quad-VGA de 1,3 cm y monitor TFT de 7,5 cm.</p><h3>Antes de comprar</h3><ul><li>Las especificaciones del objetivo 28-70 mm no figuran en la descripción.</li></ul>",
+      "revisar": [
+        "La descripción solo habla del cuerpo; no detalla el objetivo del kit (apertura, estabilizador) ni el contenido de la caja.",
+        "SKU ILCE-7M4-2-1: confirmar que el kit es el 28-70 mm del nombre."
+      ]
+    },
+    {
+      "slug": "sony-alpha-a7r-iii-mirrorless",
+      "model": "Alpha A7R III",
+      "seoTitle": "Sony Alpha A7R III Body (solo cuerpo)",
+      "seoDescription": "Cámara mirrorless Sony Alpha A7R III, solo cuerpo: sensor full-frame de 42,4 MP, 10 fps y enfoque de 399 puntos. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cámara mirrorless full-frame Sony Alpha A7R III, solo cuerpo. Sensor retroiluminado de 42,4 MP, procesador BIONZ X, ráfaga de hasta 10 fps y enfoque con 399 puntos de fase.",
+      "highlights": [
+        "Sensor full-frame retroiluminado de 42,4 MP",
+        "Ráfaga de hasta 10 fps",
+        "Enfoque con 399 puntos de fase y 425 de contraste",
+        "Salida RAW de 14 bits, también en captura silenciosa",
+        "ISO hasta 32.000, ampliable a 50-102.400 en fotos",
+        "Cuerpo sólido y compacto"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mirrorless full-frame, solo cuerpo"
+        },
+        {
+          "label": "Sensor",
+          "value": "CMOS Exmor R full-frame de 35 mm, retroiluminado"
+        },
+        {
+          "label": "Resolución efectiva",
+          "value": "42,4 MP"
+        },
+        {
+          "label": "Procesador",
+          "value": "BIONZ X"
+        },
+        {
+          "label": "Sensibilidad ISO",
+          "value": "Hasta 32.000 (ampliable a 50-102.400 en fotos)"
+        },
+        {
+          "label": "Enfoque automático",
+          "value": "399 puntos de fase y 425 de contraste"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "Hasta 10 fps"
+        },
+        {
+          "label": "Formato RAW",
+          "value": "14 bits, también en captura silenciosa y continua"
+        }
+      ],
+      "descriptionHtml": "<p>La Alpha A7R III apunta a la máxima resolución: 42,4 MP en un cuerpo full-frame compacto. Se vende sin objetivo.</p><h3>Imagen</h3><ul><li>Sensor retroiluminado con diseño de lente en chip sin espacios y revestimiento antirreflejo en el vidrio.</li><li>Procesamiento mejorado: menos ruido y más rango dinámico en un rango de sensibilidad amplio.</li><li>Mejor reproducción del color de piel, útil para retratos.</li></ul><h3>Enfoque</h3><p>Enfoque con detección de fases de 399 puntos y de contraste de 425 puntos. Sony indica una velocidad y un seguimiento de enfoque aproximadamente el doble de rápidos que en el modelo anterior.</p><h3>Uso</h3><p>Captura continua de hasta 10 fps y cuerpo sólido, pensado para trabajar en forma profesional.</p><h3>Antes de comprar</h3><ul><li>Es solo cuerpo: necesitás un objetivo compatible.</li></ul>",
+      "revisar": [
+        "La descripción original está cortada y no menciona video, visor, batería ni medidas. Completar si hace falta.",
+        "No indica la montura (se asume Sony E por la línea Alpha, no confirmado en el texto). No la puse en specs.",
+        "La descripción original traía \"Garantía y entrega 48-72 horas\": se eliminó."
+      ]
+    },
+    {
+      "slug": "sony-alpha-a7r-iv-body",
+      "model": "Alpha A7R IV",
+      "seoTitle": "Sony Alpha A7R IV Body (solo cuerpo)",
+      "seoDescription": "Cámara mirrorless Sony Alpha A7R IV, solo cuerpo: sensor full-frame de 61 MP, 10 fps y 567 puntos de fase. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cámara mirrorless Sony Alpha A7R IV, solo cuerpo. Sensor full-frame BSI de 61 MP, ráfaga de 10 fps con AF/AE, Eye AF en tiempo real, video 4K HDR y estabilización de 5 ejes.",
+      "highlights": [
+        "Sensor full-frame retroiluminado de 61 MP",
+        "Disparo Multi Pixel Shift de 240 MP",
+        "Ráfaga de 10 fps con AF/AE, hasta 68 cuadros seguidos",
+        "567 puntos de fase y Eye AF en tiempo real",
+        "Video 4K HDR con perfiles S-Log2, S-Log3 y HLG",
+        "Estabilización de 5 ejes de 5,5 pasos"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mirrorless full-frame, solo cuerpo"
+        },
+        {
+          "label": "Sensor",
+          "value": "CMOS Exmor R BSI full-frame de 61 MP efectivos"
+        },
+        {
+          "label": "Procesador",
+          "value": "BIONZ X con chip LSI frontal"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Enfoque automático",
+          "value": "567 puntos de detección de fase (74 % del área de imagen)"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "10 fps con AF/AE, hasta 68 cuadros"
+        },
+        {
+          "label": "Modo recorte",
+          "value": "APS-C de 26,2 MP"
+        },
+        {
+          "label": "Video",
+          "value": "4K HDR, sobremuestreo desde 6K en Super 35 mm"
+        },
+        {
+          "label": "Perfiles de video",
+          "value": "S-Log2, S-Log3 y HLG"
+        },
+        {
+          "label": "Estabilización",
+          "value": "5 ejes en el cuerpo, 5,5 pasos"
+        },
+        {
+          "label": "Rango dinámico",
+          "value": "15 pasos"
+        }
+      ],
+      "descriptionHtml": "<p>La Alpha A7R IV es la cámara de la serie R con sensor de 61 MP. Está pensada para quienes necesitan detalle: moda, retrato, estudio, paisaje y trabajo comercial. Se vende sin objetivo.</p><h3>Imagen</h3><ul><li>Sensor retroiluminado de 61 MP con un rango dinámico de 15 pasos.</li><li>Multi Pixel Shift: combina hasta 16 fotos y genera imágenes de 240 MP.</li><li>Modo de recorte APS-C de 26,2 MP para ganar alcance con teleobjetivos.</li></ul><h3>Enfoque y ráfaga</h3><ul><li>567 puntos de detección de fase.</li><li>Eye AF en tiempo real para personas y animales, en foto y en video.</li><li>Ráfaga de 10 fps con AF/AE, hasta 68 cuadros seguidos.</li></ul><h3>Video</h3><p>Graba 4K HDR sobremuestreado desde 6K. Incluye perfiles S-Log2, S-Log3 y HLG para corrección de color.</p><h3>Antes de comprar</h3><ul><li>Es solo cuerpo: necesitás un objetivo de montura E.</li></ul>",
+      "revisar": [
+        "La descripción cita ILCE-7RM4A en el texto, el SKU es solo \"A7R IV\".",
+        "Texto original cortado: no hay datos de pantalla, visor, batería ni medidas."
+      ]
+    },
+    {
+      "slug": "sony-alpha-a7r-v-body",
+      "model": "Alpha A7R V",
+      "seoTitle": "Sony Alpha A7R V Body (solo cuerpo)",
+      "seoDescription": "Cámara mirrorless Sony Alpha A7R V, solo cuerpo: sensor full-frame de 61 MP, BIONZ XR con IA y video 8K. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cámara mirrorless Sony Alpha A7R V, solo cuerpo. Sensor full-frame de 61 MP, procesador BIONZ XR con unidad de IA, video 8K a 24p y 4K a 60p.",
+      "highlights": [
+        "Sensor full-frame retroiluminado de 61 MP",
+        "Unidad de procesamiento con IA para reconocer sujetos",
+        "Reconoce personas, animales, aves, insectos, coches, trenes y aviones",
+        "BIONZ XR: hasta 8 veces más potencia de procesamiento",
+        "Video 8K a 24p y 4K a 60p",
+        "Balance de blancos asistido por IA"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mirrorless full-frame, solo cuerpo"
+        },
+        {
+          "label": "Sensor",
+          "value": "CMOS Exmor R retroiluminado full-frame de 35 mm, sin filtro de paso bajo"
+        },
+        {
+          "label": "Resolución efectiva",
+          "value": "61 MP"
+        },
+        {
+          "label": "Procesador",
+          "value": "BIONZ XR + unidad de procesamiento con IA"
+        },
+        {
+          "label": "Reconocimiento de sujetos",
+          "value": "Humanos, animales, aves, insectos, coches, trenes y aviones"
+        },
+        {
+          "label": "Video",
+          "value": "8K a 24p (25p) y 4K a 60p (50p)"
+        }
+      ],
+      "descriptionHtml": "<p>La Alpha A7R V suma una unidad de procesamiento con IA a un sensor full-frame de 61 MP. Reconoce más tipos de sujetos y mejora el seguimiento. Se vende sin objetivo.</p><h3>Inteligencia artificial</h3><ul><li>Estima la postura humana: reconoce ojos, cabezas y cuerpos, y sigue al sujeto aunque esté de espaldas o con mascarilla.</li><li>Reconoce animales, aves, insectos, coches, trenes y aviones.</li><li>El balance de blancos usa la IA y el sensor de luz visible e infrarroja para ser más preciso con luz desfavorable.</li></ul><h3>Imagen</h3><p>Sensor de 61 MP sin filtro de paso bajo, con estructura retroiluminada y vidrio antirreflejo. El motor BIONZ XR tiene hasta 8 veces más potencia de procesamiento que su predecesor.</p><h3>Video</h3><p>Graba en 8K a 24p (25p) y en 4K a 60p (50p).</p><h3>Antes de comprar</h3><ul><li>Es solo cuerpo: necesitás un objetivo compatible.</li></ul>",
+      "revisar": [
+        "La descripción está cortada: no hay datos de montura, ráfaga, visor, pantalla ni batería.",
+        "El nombre no tiene modelo de SKU claro (ILCE-7RM5 en el campo SKU)."
+      ]
+    },
+    {
+      "slug": "sony-alpha-a7r-vi-body",
+      "model": "Alpha A7R VI",
+      "seoTitle": "Sony Alpha A7R VI Body (solo cuerpo)",
+      "seoDescription": "Cámara mirrorless Sony Alpha A7R VI, solo cuerpo: sensor apilado de 66,8 MP, ráfaga de 30 fps y video 8K. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cámara mirrorless Sony Alpha A7R VI, solo cuerpo. Sensor full-frame apilado de 66,8 MP, BIONZ XR2 con unidad de IA, ráfaga de 30 fps y video interno 8K a 30p.",
+      "highlights": [
+        "Sensor full-frame apilado Exmor RS de 66,8 MP",
+        "Ráfaga de 30 fps con AF/AE y sin apagón del visor",
+        "Video interno 8K a 30p y 4K a 120p en 10 bits 4:2:2",
+        "Estabilización en cuerpo de 8,5 pasos",
+        "Pantalla multiángulo de 4 ejes y visor OLED de 9,44 M de puntos",
+        "Doble ranura CFexpress Tipo A / SDXC UHS-II"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mirrorless full-frame, solo cuerpo"
+        },
+        {
+          "label": "Sensor",
+          "value": "Exmor RS BSI apilado full-frame, 66,8 MP efectivos"
+        },
+        {
+          "label": "Procesador",
+          "value": "BIONZ XR2 con unidad de IA"
+        },
+        {
+          "label": "Rango dinámico",
+          "value": "16 pasos"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "30 fps con AF/AE, sin apagón"
+        },
+        {
+          "label": "Video",
+          "value": "8K a 30p y 4K a 120p, 10 bits 4:2:2"
+        },
+        {
+          "label": "Estabilización",
+          "value": "En cuerpo, 8,5 pasos"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Táctil, abatible y articulada de 3,2 pulgadas (4 ejes)"
+        },
+        {
+          "label": "Visor",
+          "value": "OLED de 9,44 millones de puntos, 120 Hz"
+        },
+        {
+          "label": "Tarjetas",
+          "value": "Doble ranura: CFexpress Tipo A / SDXC UHS-II"
+        },
+        {
+          "label": "Construcción",
+          "value": "Aleación de magnesio, sellado contra polvo y humedad"
+        }
+      ],
+      "descriptionHtml": "<p>La Alpha A7R VI junta la alta resolución de la serie R con un sensor apilado de lectura rápida. Está pensada para fotografía comercial, de paisaje y de fauna, y para video. Se vende sin objetivo.</p><h3>Sensor y procesador</h3><ul><li>Sensor apilado Exmor RS de 66,8 MP con lectura 5,6 veces más rápida.</li><li>Procesador BIONZ XR2 con unidad de IA para reconocer sujetos y ajustar el balance de blancos.</li></ul><h3>Velocidad</h3><ul><li>Ráfaga de 30 fps con AF/AE sin parpadeo del visor.</li><li>Funciones de Pre-Captura y Speed Boost.</li></ul><h3>Video</h3><p>Video interno 8K a 30p y 4K a 120p, con perfiles S-Cinetone y S-Log3 y salida HDMI RAW de 16 bits.</p><h3>Cuerpo</h3><p>Aleación de magnesio con sellado completo, pantalla multiángulo y doble ranura de tarjetas.</p><h3>Antes de comprar</h3><ul><li>Es solo cuerpo: necesitás un objetivo compatible.</li></ul>",
+      "revisar": [
+        "La descripción está cortada en la tabla técnica; no hay montura, batería ni peso.",
+        "El texto cita ILCE-7RM6; el SKU es solo \"A7R VI\".",
+        "El shortDescription original tenía frases de marketing que no se usaron (\"la cima absoluta\")."
+      ]
+    },
+    {
+      "slug": "sony-alpha-zve10-ii-body-white",
+      "name": "Sony Alpha ZV-E10 II Body Blanca",
+      "model": "Alpha ZV-E10 II",
+      "seoTitle": "Sony Alpha ZV-E10 II Body blanca",
+      "seoDescription": "Cámara mirrorless Sony Alpha ZV-E10 II blanca, solo cuerpo: sensor APS-C de 26 MP, video 4K 60p y 759 puntos de enfoque. Garantía y envíos a todo el país.",
+      "shortDescription": "Cámara mirrorless Sony Alpha ZV-E10 II blanca, solo cuerpo. Sensor APS-C de 26 MP, BIONZ XR, video 4K de hasta 60p, configuración de vlog y lentes intercambiables.",
+      "highlights": [
+        "Sensor Exmor R CMOS APS-C de 26 MP",
+        "Video 4K de hasta 60p con BIONZ XR",
+        "Enfoque por fases con 759 puntos",
+        "Configuración de vlog y disparo vertical",
+        "Wi-Fi de 5 GHz para compartir fotos",
+        "Batería NP-FZ100: aprox. 610 fotos"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Blanco"
+        },
+        {
+          "label": "Tipo",
+          "value": "Mirrorless, solo cuerpo"
+        },
+        {
+          "label": "Sensor",
+          "value": "Exmor R CMOS APS-C"
+        },
+        {
+          "label": "Resolución efectiva",
+          "value": "Aprox. 26 MP en fotos (aprox. 27 MP totales)"
+        },
+        {
+          "label": "Procesador",
+          "value": "BIONZ XR"
+        },
+        {
+          "label": "Sensibilidad ISO",
+          "value": "100-32.000 (ampliable a 50-102.400 en fotos)"
+        },
+        {
+          "label": "Enfoque automático",
+          "value": "Detección de fases en plano focal, 759 puntos"
+        },
+        {
+          "label": "Video",
+          "value": "4K de hasta 60p"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi de 5 GHz"
+        },
+        {
+          "label": "Batería",
+          "value": "NP-FZ100, aprox. 610 fotos (CIPA, monitor LCD)"
+        },
+        {
+          "label": "Monitor",
+          "value": "TFT de 7,5 cm (tipo 3,0)"
+        }
+      ],
+      "descriptionHtml": "<p>La ZV-E10 II es una cámara de lentes intercambiables pensada para vloggers y creadores de contenido. Esta versión es blanca y viene solo con el cuerpo.</p><h3>Imagen y video</h3><ul><li>Sensor Exmor R CMOS APS-C de 26 MP.</li><li>Motor BIONZ XR para video 4K de hasta 60p.</li><li>Configuraciones de vlog dedicadas y aspecto cinematográfico.</li></ul><h3>Enfoque</h3><p>Detección de fases en plano focal con 759 puntos de alta densidad.</p><h3>Uso diario</h3><p>Es ligera y portátil. Tiene disparo vertical, interfaz intuitiva y Wi-Fi de 5 GHz para compartir. La batería NP-FZ100 rinde unas 610 fotos con el monitor, según el estándar CIPA.</p><h3>Antes de comprar</h3><ul><li>Es solo cuerpo: necesitás un objetivo. Hay otra versión en kit con 16-50 mm.</li></ul>",
+      "revisar": [
+        "El slug y el SKU dicen \"White\"; confirmar que la foto sea la cámara blanca.",
+        "La descripción no aclara si trae batería y cargador en la caja."
+      ]
+    },
+    {
+      "slug": "sony-alpha-zve10-ii-kit-16-50mm",
+      "name": "Sony Alpha ZV-E10 II kit 16-50 mm",
+      "model": "Alpha ZV-E10 II",
+      "seoTitle": "Sony Alpha ZV-E10 II kit 16-50 mm",
+      "seoDescription": "Cámara mirrorless Sony Alpha ZV-E10 II con objetivo 16-50 mm: sensor APS-C de 26 MP, video 4K 60p y enfoque de 759 puntos. Garantía y envíos a todo el país.",
+      "shortDescription": "Cámara mirrorless Sony Alpha ZV-E10 II en kit con objetivo 16-50 mm. Sensor APS-C de 26 MP, BIONZ XR, video 4K de hasta 60p y configuración de vlog.",
+      "highlights": [
+        "Sensor Exmor R CMOS APS-C de 26 MP",
+        "Video 4K de hasta 60p con BIONZ XR",
+        "Enfoque por fases con 759 puntos",
+        "Configuración de vlog y disparo vertical",
+        "Wi-Fi de 5 GHz para compartir fotos",
+        "Incluye objetivo 16-50 mm"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mirrorless en kit con objetivo 16-50 mm"
+        },
+        {
+          "label": "Sensor",
+          "value": "Exmor R CMOS APS-C"
+        },
+        {
+          "label": "Resolución efectiva",
+          "value": "Aprox. 26 MP en fotos (aprox. 27 MP totales)"
+        },
+        {
+          "label": "Procesador",
+          "value": "BIONZ XR"
+        },
+        {
+          "label": "Sensibilidad ISO",
+          "value": "100-32.000 (ampliable a 50-102.400 en fotos)"
+        },
+        {
+          "label": "Enfoque automático",
+          "value": "Detección de fases en plano focal, 759 puntos"
+        },
+        {
+          "label": "Video",
+          "value": "4K de hasta 60p"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi de 5 GHz"
+        },
+        {
+          "label": "Batería",
+          "value": "NP-FZ100, aprox. 610 fotos (CIPA, monitor LCD)"
+        },
+        {
+          "label": "Monitor",
+          "value": "TFT de 7,5 cm (tipo 3,0)"
+        }
+      ],
+      "descriptionHtml": "<p>La ZV-E10 II es una cámara de lentes intercambiables pensada para vloggers y creadores de contenido. Este kit incluye un objetivo de 16-50 mm para empezar a grabar y sacar fotos.</p><h3>Imagen y video</h3><ul><li>Sensor Exmor R CMOS APS-C de 26 MP.</li><li>Motor BIONZ XR para video 4K de hasta 60p.</li><li>Configuraciones de vlog dedicadas y aspecto cinematográfico.</li></ul><h3>Enfoque</h3><p>Detección de fases en plano focal con 759 puntos de alta densidad.</p><h3>Uso diario</h3><p>Es ligera y portátil. Tiene disparo vertical, interfaz intuitiva y Wi-Fi de 5 GHz para compartir. La batería NP-FZ100 rinde unas 610 fotos con el monitor, según el estándar CIPA.</p><h3>Antes de comprar</h3><ul><li>Las especificaciones del objetivo 16-50 mm no figuran en la descripción.</li></ul>",
+      "revisar": [
+        "La descripción es la misma que la del cuerpo solo; no detalla el objetivo del kit ni la caja. No aclara el color del kit."
+      ]
+    },
+    {
+      "slug": "sony-dsc-rx100",
+      "name": "Sony DSC-RX100 VII",
+      "brand": "Sony",
+      "model": "DSC-RX100 VII",
+      "seoTitle": "Sony DSC-RX100 VII compacta",
+      "seoDescription": "Cámara compacta Sony DSC-RX100 VII: zoom Zeiss 24-200 mm f/2,8-4,5, enfoque de 0,02 s, 20 fps y video 4K HDR. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cámara compacta Sony DSC-RX100 VII con zoom ZEISS 24-200 mm f/2,8-4,5, sensor de 1,0 pulgada apilado, enfoque de 0,02 s, ráfaga de 20 fps y video 4K HDR.",
+      "highlights": [
+        "Zoom ZEISS Vario-Sonnar T* 24-200 mm f/2,8-4,5",
+        "Enfoque automático de 0,02 s con 357 puntos de fase",
+        "Ráfaga sin apagón de hasta 20 fps con seguimiento",
+        "Video 4K HDR (HLG) y entrada para micrófono externo",
+        "Pantalla táctil plegable 180°",
+        "Sensor Exmor RS apilado tipo 1,0"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Compacta con zoom fijo"
+        },
+        {
+          "label": "Objetivo",
+          "value": "ZEISS Vario-Sonnar T* 24-200 mm f/2,8-4,5"
+        },
+        {
+          "label": "Sensor",
+          "value": "Exmor RS CMOS apilado tipo 1,0"
+        },
+        {
+          "label": "Procesador",
+          "value": "BIONZ X"
+        },
+        {
+          "label": "Enfoque automático",
+          "value": "0,02 s, 357 puntos de fase y 425 de contraste"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "Hasta 20 fps sin apagón con seguimiento de AF/AE; ráfaga única de hasta 90 fps"
+        },
+        {
+          "label": "Video",
+          "value": "4K HDR (HLG)"
+        },
+        {
+          "label": "Audio",
+          "value": "Entrada para micrófono externo"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Táctil, plegable 180°"
+        }
+      ],
+      "descriptionHtml": "<p>La RX100 VII es una compacta de bolsillo con un zoom 24-200 mm y funciones de cámara profesional. Sirve tanto para fotos de acción como para grabar video.</p><h3>Zoom</h3><p>El objetivo ZEISS de 24-200 mm cubre lo que harían dos zooms estándar (24-70 mm y 70-200 mm). Tiene ocho elementos asféricos con 13 caras asféricas y cuatro elementos AA.</p><h3>Sensor y velocidad</h3><ul><li>Sensor Exmor RS apilado tipo 1,0 con procesador BIONZ X.</li><li>Captura sin apagón de hasta 20 fps con seguimiento de AF/AE.</li><li>Modo de ráfaga única de hasta 90 fps: siete fotos en rápida sucesión.</li></ul><h3>Enfoque</h3><p>Enfoque de 0,02 s, con seguimiento en tiempo real y Eye AF en tiempo real.</p><h3>Video</h3><p>Graba en 4K HDR (HLG) y tiene entrada para micrófono externo. La pantalla táctil se pliega 180°.</p>",
+      "revisar": [
+        "La marca figuraba como \"General\": se corrigió a Sony.",
+        "El shortDescription original decía \"Contado 10% descuento\": se eliminó.",
+        "El nombre original era \"Sony DSC Rx100 VII\"; se ajustó a la grafía DSC-RX100 VII. La descripción no menciona la batería ni las medidas."
+      ]
+    },
+    {
+      "slug": "sony-e-70-350-f4-5-6-3-g-2",
+      "name": "Sony E 70-350 mm f/4.5-6.3 G",
+      "brand": "Sony",
+      "model": "E 70-350 mm f/4.5-6.3 G OSS",
+      "seoTitle": "Sony E 70-350 mm f/4.5-6.3 G",
+      "seoDescription": "Teleobjetivo Sony E 70-350 mm f/4.5-6.3 G OSS con estabilización óptica y enfoque silencioso, para naturaleza y deportes. Garantía y envíos a todo el país.",
+      "shortDescription": "Teleobjetivo zoom Sony E 70-350 mm f/4.5-6.3 G OSS. Estabilización óptica SteadyShot, motor de enfoque lineal silencioso y sellado contra polvo y humedad.",
+      "highlights": [
+        "Zoom de 70 a 350 mm con apertura f/4.5-6.3",
+        "Estabilización óptica SteadyShot (OSS)",
+        "Motor de enfoque lineal silencioso",
+        "Resistente al polvo y la humedad",
+        "Montura Sony E",
+        "Diseño compacto para viajes"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Teleobjetivo zoom"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "70-350 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/4.5-6.3"
+        },
+        {
+          "label": "Serie",
+          "value": "G"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica SteadyShot (OSS)"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "Lineal, silencioso"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente al polvo y la humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony E 70-350 mm f/4.5-6.3 G OSS es un teleobjetivo zoom de la serie G. Llega a 350 mm y sirve para fotografiar naturaleza, deportes y retratos a distancia.</p><h3>Óptica</h3><ul><li>Rango focal de 70 a 350 mm con apertura variable f/4.5-6.3.</li><li>Compacto para el alcance que ofrece, pensado para viajes y sesiones largas.</li></ul><h3>Enfoque y estabilización</h3><ul><li>Estabilización óptica SteadyShot (OSS) para tomas más nítidas a mano alzada.</li><li>Motor de enfoque lineal, silencioso, útil para foto y video.</li><li>Construcción resistente al polvo y la humedad.</li></ul><h3>Para qué sirve</h3><p>Vida silvestre, deportes, retratos y eventos. Es compatible con cámaras Sony de montura E.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "El nombre dice \"E 70-350\" y es el mismo objetivo que sony-fe-70-350-f4-5-6-3-g-oss-2 (que dice \"FE\"); puede ser un duplicado.",
+        "La descripción dice compatible con full frame y APS-C; no lo puse porque no es seguro para este modelo."
+      ]
+    },
+    {
+      "slug": "sony-fe-100-400-4-5-5-6-gm-2",
+      "name": "Sony FE 100-400 mm f/4.5-5.6 GM",
+      "brand": "Sony",
+      "model": "FE 100-400 mm f/4.5-5.6 GM OSS",
+      "seoTitle": "Sony FE 100-400 mm f/4.5-5.6 GM",
+      "seoDescription": "Teleobjetivo Sony FE 100-400 mm f/4.5-5.6 GM OSS para cámaras full-frame, con estabilización de 5 pasos y sellado. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Teleobjetivo zoom Sony FE 100-400 mm f/4.5-5.6 GM OSS de la serie G Master para cámaras mirrorless full-frame. Estabilización óptica de hasta 5 pasos y motores lineales.",
+      "highlights": [
+        "Zoom de 100 a 400 mm con apertura f/4.5-5.6",
+        "Serie G Master para cámaras full-frame",
+        "Elementos ED y Super ED contra aberración cromática",
+        "Estabilización óptica de hasta 5 pasos",
+        "Enfoque rápido y silencioso con motores lineales",
+        "Sellado contra polvo y humedad"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Teleobjetivo zoom"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "100-400 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/4.5-5.6"
+        },
+        {
+          "label": "Serie",
+          "value": "G Master (GM)"
+        },
+        {
+          "label": "Formato",
+          "value": "Cámaras mirrorless full-frame de Sony"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica SteadyShot (OSS), hasta 5 pasos"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "Lineales, rápido y silencioso"
+        },
+        {
+          "label": "Construcción",
+          "value": "Sellado contra polvo y humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 100-400 mm f/4.5-5.6 GM OSS es un teleobjetivo zoom de la serie G Master. Está diseñado para cámaras mirrorless full-frame de Sony.</p><h3>Óptica</h3><ul><li>Elementos ED y Super ED que reducen las aberraciones cromáticas.</li><li>Rango de 100 a 400 mm con apertura f/4.5-5.6.</li></ul><h3>Enfoque y estabilización</h3><ul><li>Estabilización óptica SteadyShot con hasta 5 pasos de compensación.</li><li>Enfoque automático rápido y silencioso con motores lineales.</li><li>Sellado contra polvo y humedad.</li></ul><h3>Para qué sirve</h3><p>Fauna, deportes y retratos a distancia.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "El nombre no dice OSS ni los 5 pasos; salen de la descripción."
+      ]
+    },
+    {
+      "slug": "sony-fe-16-35-2-8-gm-ii",
+      "name": "Sony FE 16-35 mm f/2.8 GM II",
+      "brand": "Sony",
+      "model": "FE 16-35 mm f/2.8 GM II",
+      "seoTitle": "Sony FE 16-35 mm f/2.8 GM II",
+      "seoDescription": "Objetivo gran angular Sony FE 16-35 mm f/2.8 GM II con apertura constante, motor XD Linear y tratamiento Nano AR. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Gran angular Sony FE 16-35 mm f/2.8 GM II de la serie G Master. Apertura constante f/2.8, más compacto y liviano que su predecesor, con motor XD Linear y recubrimiento Nano AR.",
+      "highlights": [
+        "Zoom gran angular de 16 a 35 mm",
+        "Apertura constante f/2.8",
+        "Serie G Master, montura E full-frame",
+        "Más compacto y liviano que el modelo anterior",
+        "Motor XD Linear de enfoque silencioso",
+        "Recubrimiento Nano AR contra reflejos"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom gran angular"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "16-35 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Serie",
+          "value": "G Master II (GM II)"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E, full-frame"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "XD Linear Motor"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "Nano AR"
+        },
+        {
+          "label": "Vidrio",
+          "value": "Elementos ED y Super ED"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 16-35 mm f/2.8 GM II es la segunda generación del gran angular profesional de Sony. Mantiene la apertura f/2.8 constante y es más compacto y liviano que su predecesor.</p><h3>Óptica</h3><ul><li>Nitidez del centro a los bordes del encuadre.</li><li>Elementos de vidrio ED y Super ED contra aberraciones cromáticas.</li><li>Recubrimiento Nano AR que reduce los reflejos.</li></ul><h3>Enfoque y estabilización</h3><ul><li>Motor XD Linear: enfoque preciso y silencioso.</li></ul><h3>Para qué sirve</h3><p>Paisajes, arquitectura, bodas y video profesional en cámaras Sony E full-frame.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "sony-fe-20-70-f4-gm",
+      "name": "Sony FE 20-70 mm f/4 G Master",
+      "brand": "Sony",
+      "model": "FE 20-70 mm f/4 G",
+      "seoTitle": "Sony FE 20-70 mm f/4 G Master",
+      "seoDescription": "Objetivo zoom Sony FE 20-70 mm f/4 G Master para cámaras full-frame de montura E, compacto y versátil. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom Sony FE 20-70 mm f/4 G Master para cámaras full-frame de montura E. Va de gran angular a retrato medio, con diseño compacto y liviano.",
+      "highlights": [
+        "Rango de 20 a 70 mm: del gran angular al retrato",
+        "Apertura constante f/4",
+        "Serie G Master, montura E full-frame",
+        "Elementos ED y Super ED",
+        "Recubrimiento Nano AR",
+        "Compacto y liviano"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar gran angular"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "20-70 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/4"
+        },
+        {
+          "label": "Serie",
+          "value": "G Master"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E, full-frame"
+        },
+        {
+          "label": "Vidrio",
+          "value": "Elementos ED y Super ED"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "Nano AR"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 20-70 mm f/4 G Master cubre desde gran angular hasta retrato medio con un solo objetivo. Es para cámaras full-frame de montura E.</p><h3>Óptica</h3><ul><li>Elementos ED y Super ED que reducen las aberraciones cromáticas.</li><li>Recubrimiento Nano AR que baja los reflejos.</li></ul><h3>Para qué sirve</h3><p>Paisajes, arquitectura, retratos y fotografía callejera. Su tamaño compacto lo hace fácil de llevar.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "La descripción dice que es el zoom más versátil de la serie G Master: no se usó."
+      ]
+    },
+    {
+      "slug": "sony-fe-200-600-f5-6-6-3-g-oss-2",
+      "name": "Sony FE 200-600 mm f/5.6-6.3 G OSS",
+      "brand": "Sony",
+      "model": "FE 200-600 mm f/5.6-6.3 G OSS",
+      "seoTitle": "Sony FE 200-600 mm f/5.6-6.3 G OSS",
+      "seoDescription": "Teleobjetivo Sony FE 200-600 mm f/5.6-6.3 G OSS con estabilización SteadyShot de 5 pasos y enfoque Direct Drive SSM. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Teleobjetivo zoom Sony FE 200-600 mm f/5.6-6.3 G OSS de montura E. Estabilización óptica de hasta 5 pasos, enfoque Direct Drive SSM y sellado contra polvo y humedad.",
+      "highlights": [
+        "Zoom de 200 a 600 mm, apertura f/5.6-6.3",
+        "Estabilización SteadyShot de hasta 5 pasos",
+        "Enfoque Direct Drive SSM rápido y silencioso",
+        "Sellado contra polvo y humedad",
+        "Serie G, montura E",
+        "Mínima aberración cromática"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Súper teleobjetivo zoom"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "200-600 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/5.6-6.3"
+        },
+        {
+          "label": "Serie",
+          "value": "G"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica SteadyShot (OSS), hasta 5 pasos"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "Direct Drive SSM"
+        },
+        {
+          "label": "Construcción",
+          "value": "Sellado contra polvo y humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 200-600 mm f/5.6-6.3 G OSS es un súper teleobjetivo de montura E para fotografiar a gran distancia.</p><h3>Óptica</h3><ul><li>Alcance de 200 a 600 mm.</li><li>Poca aberración cromática y buena resolución en todo el rango.</li></ul><h3>Enfoque y estabilización</h3><ul><li>SteadyShot compensa hasta 5 pasos: imágenes nítidas con poca luz.</li><li>Direct Drive SSM: enfoque rápido y silencioso.</li><li>Sellado contra polvo y humedad.</li></ul><h3>Para qué sirve</h3><p>Vida silvestre, deportes y eventos.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "sony-fe-24-105-f4-g-2",
+      "name": "Sony FE 24-105 mm f/4 G",
+      "brand": "Sony",
+      "model": "FE 24-105 mm f/4 G OSS",
+      "seoTitle": "Sony FE 24-105 mm f/4 G OSS",
+      "seoDescription": "Objetivo zoom Sony FE 24-105 mm f/4 G OSS todo en uno para cámaras full-frame, con estabilización SteadyShot. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom Sony FE 24-105 mm f/4 G OSS para cámaras mirrorless full-frame. Apertura constante f/4, estabilización SteadyShot y sellado contra polvo y humedad.",
+      "highlights": [
+        "Zoom versátil de 24 a 105 mm",
+        "Apertura constante f/4",
+        "Estabilización óptica SteadyShot integrada",
+        "Elementos ED y Super ED",
+        "Recubrimiento Nano AR para más contraste",
+        "Resistente al polvo y la humedad"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar todo en uno"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "24-105 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/4 constante"
+        },
+        {
+          "label": "Serie",
+          "value": "G"
+        },
+        {
+          "label": "Formato",
+          "value": "Cámaras Sony Alpha full-frame"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica SteadyShot (OSS)"
+        },
+        {
+          "label": "Vidrio",
+          "value": "Elementos ED y Super ED"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "Nano AR"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente al polvo y la humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 24-105 mm f/4 G OSS cubre de gran angular a teleobjetivo corto con apertura constante. Es una opción todo en uno para cámaras Sony Alpha full-frame.</p><h3>Óptica</h3><ul><li>Elementos ED y Super ED que minimizan las aberraciones cromáticas.</li><li>Recubrimiento Nano AR para más contraste.</li></ul><h3>Enfoque y estabilización</h3><ul><li>Estabilización óptica SteadyShot integrada.</li></ul><h3>Para qué sirve</h3><p>Paisajes, retratos, eventos y viajes.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "sony-fe-24-50-f2-8-g",
+      "name": "Sony FE 24-50 mm f/2.8 G",
+      "brand": "Sony",
+      "model": "FE 24-50 mm f/2.8 G",
+      "seoTitle": "Sony FE 24-50 mm f/2.8 G",
+      "seoDescription": "Objetivo zoom compacto Sony FE 24-50 mm f/2.8 G para cámaras full-frame de montura E, con apertura constante. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom compacto Sony FE 24-50 mm f/2.8 G para cámaras full-frame de montura E. Apertura constante f/2.8 en todo el rango, con enfoque rápido y silencioso.",
+      "highlights": [
+        "Zoom de 24 a 50 mm",
+        "Apertura constante f/2.8",
+        "Compacto y versátil",
+        "Elementos ED y asféricos",
+        "Enfoque automático rápido y silencioso",
+        "Montura E, cámaras full-frame"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar compacto"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "24-50 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Serie",
+          "value": "G"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E, full-frame"
+        },
+        {
+          "label": "Vidrio",
+          "value": "Elementos ED y asféricos"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Automático, rápido y silencioso"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 24-50 mm f/2.8 G es un zoom compacto con apertura f/2.8 fija en todo el rango. Es para cámaras full-frame de montura E.</p><h3>Óptica</h3><ul><li>Elementos ED y asféricos que reducen aberraciones cromáticas y distorsiones.</li><li>La apertura f/2.8 rinde bien con poca luz y permite desenfocar el fondo.</li></ul><h3>Enfoque y estabilización</h3><ul><li>Enfoque automático rápido y silencioso, útil en foto y video.</li></ul><h3>Para qué sirve</h3><p>Viajes, fotografía callejera y uso diario.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "sony-fe-24-70-2-8-gm-2",
+      "name": "Sony FE 24-70 mm f/2.8 GM",
+      "brand": "Sony",
+      "model": "FE 24-70 mm f/2.8 GM",
+      "seoTitle": "Sony FE 24-70 mm f/2.8 GM",
+      "seoDescription": "Objetivo zoom Sony FE 24-70 mm f/2.8 GM para cámaras full-frame, con motor XD Linear y sellado contra polvo y humedad. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom Sony FE 24-70 mm f/2.8 GM de la serie G Master para cámaras mirrorless full-frame. Apertura constante f/2.8, motor XD Linear y recubrimiento Nano AR.",
+      "highlights": [
+        "Zoom estándar de 24 a 70 mm",
+        "Apertura constante f/2.8",
+        "Serie G Master para mirrorless full-frame",
+        "Motor XD Linear: enfoque rápido y silencioso",
+        "Recubrimiento Nano AR contra reflejos",
+        "Sellado contra polvo y humedad"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar profesional"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "24-70 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Serie",
+          "value": "G Master"
+        },
+        {
+          "label": "Formato",
+          "value": "Cámaras mirrorless full-frame de Sony"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "XD Linear Motor"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "Nano AR"
+        },
+        {
+          "label": "Construcción",
+          "value": "Sellado contra polvo y humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 24-70 mm f/2.8 GM es el zoom estándar de la serie G Master para cámaras mirrorless full-frame de Sony.</p><h3>Óptica</h3><ul><li>Apertura constante f/2.8 en todo el rango, con desenfoque suave.</li><li>Recubrimiento Nano AR que reduce los reflejos.</li></ul><h3>Enfoque y estabilización</h3><ul><li>Enfoque directo con motor XD Linear: rápido, preciso y silencioso.</li><li>Sellado contra polvo y humedad.</li></ul><h3>Para qué sirve</h3><p>Retratos, paisajes y eventos. Es compatible con los sistemas de estabilización de imagen de las cámaras Sony.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "La descripción no aclara si es la versión I o II; el nombre del producto relacionado (sony-fe-24-70-2-8-gm-ii-lens-2) es la II."
+      ]
+    },
+    {
+      "slug": "sony-fe-24-70-2-8-gm-ii-lens-2",
+      "name": "Sony FE 24-70 mm f/2.8 GM II",
+      "brand": "Sony",
+      "model": "FE 24-70 mm f/2.8 GM II",
+      "seoTitle": "Sony FE 24-70 mm f/2.8 GM II",
+      "seoDescription": "Objetivo zoom Sony FE 24-70 mm f/2.8 GM II para cámaras full-frame, con elementos XA y Super ED y motor XD Linear. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom Sony FE 24-70 mm f/2.8 GM II, segunda generación de la serie G Master. Apertura constante f/2.8, elementos XA y Super ED, motor XD Linear y sellado.",
+      "highlights": [
+        "Zoom estándar de 24 a 70 mm",
+        "Apertura constante f/2.8",
+        "Segunda generación de la serie G Master",
+        "Elementos XA y Super ED",
+        "Motor de enfoque XD Linear",
+        "Sellado contra polvo y humedad"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar profesional"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "24-70 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Serie",
+          "value": "G Master II (GM II)"
+        },
+        {
+          "label": "Formato",
+          "value": "Cámaras Sony Alpha full-frame"
+        },
+        {
+          "label": "Vidrio",
+          "value": "Elementos XA y Super ED"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "XD Linear"
+        },
+        {
+          "label": "Construcción",
+          "value": "Sellado contra polvo y humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 24-70 mm f/2.8 GM II es la segunda generación del zoom estándar de la serie G Master, para cámaras Sony Alpha full-frame.</p><h3>Óptica</h3><ul><li>Elementos XA y Super ED que minimizan aberraciones y distorsiones.</li><li>Apertura f/2.8 constante: buen rendimiento con cualquier iluminación.</li></ul><h3>Enfoque y estabilización</h3><ul><li>Motor XD Linear para enfoque silencioso, útil en foto y video.</li><li>Construcción sellada contra polvo y humedad.</li></ul><h3>Para qué sirve</h3><p>Retratos, paisajes y eventos, con bokeh suave y buena nitidez.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "El nombre termina en \"LENS\"; se simplificó. Descripción: se omitieron superlativos como \"el más rápido del mercado\"."
+      ]
+    },
+    {
+      "slug": "sony-fe-24-70-f-4-za-oss-vario-tessar-2",
+      "name": "Sony FE 24-70 mm f/4 ZA OSS Vario-Tessar",
+      "brand": "Sony",
+      "model": "FE 24-70 mm f/4 ZA OSS",
+      "seoTitle": "Sony FE 24-70 mm f/4 ZA OSS Vario-Tessar",
+      "seoDescription": "Objetivo zoom Sony FE 24-70 mm f/4 ZA OSS Vario-Tessar T* con óptica Zeiss y estabilización, para mirrorless full-frame. Garantía y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom estándar Sony FE 24-70 mm f/4 ZA OSS Vario-Tessar T* con óptica Zeiss, apertura constante f/4 y estabilización óptica, para mirrorless full-frame.",
+      "highlights": [
+        "Zoom estándar de 24 a 70 mm",
+        "Apertura constante f/4",
+        "Óptica Zeiss Vario-Tessar T*",
+        "Estabilización óptica OSS",
+        "Compacto y liviano",
+        "Resistente al polvo y la humedad"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "24-70 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/4 constante"
+        },
+        {
+          "label": "Óptica",
+          "value": "Zeiss Vario-Tessar T* (ZA)"
+        },
+        {
+          "label": "Formato",
+          "value": "Mirrorless Sony de formato completo"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica OSS"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente al polvo y la humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 24-70 mm f/4 ZA OSS es un zoom estándar con óptica Zeiss Vario-Tessar T*, para cámaras mirrorless Sony de formato completo.</p><h3>Óptica</h3><ul><li>Óptica certificada Zeiss.</li><li>Apertura constante f/4: exposición pareja en todo el rango.</li></ul><h3>Enfoque y estabilización</h3><ul><li>La estabilización óptica OSS compensa las vibraciones.</li></ul><h3>Para qué sirve</h3><p>Viajes y sesiones largas: es compacto y liviano. Su construcción resiste el polvo y la humedad.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "sony-fe-28-70-f-2-gm-2",
+      "name": "Sony FE 28-70 mm f/2 GM",
+      "brand": "Sony",
+      "model": "FE 28-70 mm f/2 GM",
+      "seoTitle": "Sony FE 28-70 mm f/2 GM",
+      "seoDescription": "Objetivo zoom Sony FE 28-70 mm f/2 GM con apertura constante f/2 y calidad G Master, para cámaras full-frame de montura E. Garantía y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom Sony FE 28-70 mm f/2 GM de la serie G Master. Apertura constante f/2 en todo el rango, para cámaras Sony de montura E full-frame.",
+      "highlights": [
+        "Zoom de 28 a 70 mm",
+        "Apertura constante f/2 en todo el rango",
+        "Serie G Master",
+        "Pensado para poca luz y poca profundidad de campo",
+        "Montura Sony E, cámaras full-frame"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "28-70 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2 constante"
+        },
+        {
+          "label": "Serie",
+          "value": "G Master"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E, full-frame"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 28-70 mm f/2 GM es un zoom estándar de la serie G Master con apertura constante f/2. Es compatible con cámaras Sony de montura E full-frame.</p><h3>Óptica</h3><ul><li>Apertura f/2 en todo el rango focal: buen rendimiento con poca luz.</li><li>Control de la profundidad de campo para separar al sujeto del fondo.</li></ul><h3>Para qué sirve</h3><p>Fotografía profesional en condiciones de poca luz.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "La descripción original está cortada; no hay datos de enfoque, estabilización ni sellado."
+      ]
+    },
+    {
+      "slug": "sony-fe-28-70mm-f-3-5-5-6-lens-2",
+      "model": "FE 28-70 mm f/3.5-5.6",
+      "seoTitle": "Sony FE 28-70 mm f/3.5-5.6",
+      "seoDescription": "Objetivo zoom Sony FE 28-70 mm f/3.5-5.6 de montura E, liviano y compacto, para cámaras mirrorless full-frame. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom estándar Sony FE 28-70 mm f/3.5-5.6 de montura E para cámaras mirrorless full-frame. Liviano, compacto y con elementos asféricos.",
+      "highlights": [
+        "Zoom de 28 a 70 mm con apertura f/3.5-5.6",
+        "Montura E para cámaras full-frame",
+        "Elementos asféricos para imágenes nítidas",
+        "Liviano y compacto",
+        "Sirve para foto y video 4K"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "28-70 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/3.5-5.6"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E, full-frame"
+        },
+        {
+          "label": "Óptica",
+          "value": "Elementos asféricos"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 28-70 mm f/3.5-5.6 es un zoom estándar para cámaras Sony mirrorless de montura E y sensor full-frame. Va de gran angular a teleobjetivo moderado.</p><h3>Óptica</h3><ul><li>Elementos asféricos que reducen aberraciones y dan imágenes nítidas en todo el rango.</li><li>Diseño liviano y compacto.</li></ul><h3>Para qué sirve</h3><p>Paisajes, retratos y uso diario, en foto y en video 4K.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "Descripción genérica: no menciona estabilización propia, solo \"compatible con la estabilización interna de las cámaras\"."
+      ]
+    },
+    {
+      "slug": "sony-fe-400-800-f6-3-8-g-oss-2",
+      "name": "Sony FE 400-800 mm f/6.3-8 G OSS",
+      "brand": "Sony",
+      "model": "FE 400-800 mm f/6.3-8 G OSS",
+      "seoTitle": "Sony FE 400-800 mm f/6.3-8 G OSS",
+      "seoDescription": "Súper teleobjetivo Sony FE 400-800 mm f/6.3-8 G OSS con estabilización óptica y construcción resistente. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Súper teleobjetivo zoom Sony FE 400-800 mm f/6.3-8 G OSS con estabilización óptica SteadyShot, vidrio ED y Super ED y construcción resistente a la intemperie.",
+      "highlights": [
+        "Zoom de 400 a 800 mm, apertura f/6.3-8",
+        "Estabilización óptica SteadyShot (OSS)",
+        "Elementos ED y Super ED",
+        "Resistente a la intemperie",
+        "Compatible con teleconvertidores Sony"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Súper teleobjetivo zoom"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "400-800 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/6.3-8"
+        },
+        {
+          "label": "Serie",
+          "value": "G"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica SteadyShot (OSS)"
+        },
+        {
+          "label": "Vidrio",
+          "value": "Elementos ED y Super ED"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente a la intemperie"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 400-800 mm f/6.3-8 G OSS es un teleobjetivo zoom de alcance extremo para fotógrafos que trabajan a gran distancia.</p><h3>Óptica</h3><ul><li>Alcance de 400 a 800 mm.</li><li>Elementos ED y Super ED que reducen la aberración cromática.</li></ul><h3>Enfoque y estabilización</h3><ul><li>Estabilización óptica SteadyShot para imágenes nítidas con poca luz.</li><li>Compatible con teleconvertidores Sony.</li></ul><h3>Para qué sirve</h3><p>Deportes, vida silvestre y eventos donde la distancia es clave.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "La descripción dice que con teleconvertidores llega a 1600 mm equivalentes; no lo puse.",
+        "Brand \"General\" en origen: corregido a Sony."
+      ]
+    },
+    {
+      "slug": "sony-fe-50-150-f2-gm-2",
+      "name": "Sony FE 50-150 mm f/2 GM",
+      "brand": "Sony",
+      "model": "FE 50-150 mm f/2 GM",
+      "seoTitle": "Sony FE 50-150 mm f/2 GM",
+      "seoDescription": "Teleobjetivo zoom Sony FE 50-150 mm f/2 GM de la serie G Master para cámaras full-frame, con motor lineal XD y sellado. Garantía y envíos a todo el país.",
+      "shortDescription": "Teleobjetivo zoom Sony FE 50-150 mm f/2 GM de la serie G Master para cámaras full-frame de montura E. Motor lineal XD, recubrimiento Nano AR y sellado contra polvo y humedad.",
+      "highlights": [
+        "Zoom de 50 a 150 mm",
+        "Serie G Master para full-frame con montura E",
+        "Motor lineal XD: seguimiento preciso y silencioso",
+        "Elementos ED y Super ED",
+        "Recubrimiento Nano AR",
+        "Sellado contra polvo y humedad"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Teleobjetivo zoom"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "50-150 mm"
+        },
+        {
+          "label": "Serie",
+          "value": "G Master"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E, full-frame"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "Lineal XD"
+        },
+        {
+          "label": "Vidrio",
+          "value": "Elementos ED y Super ED"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "Nano AR"
+        },
+        {
+          "label": "Construcción",
+          "value": "Sellado contra polvo y humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 50-150 mm GM es un teleobjetivo zoom de la serie G Master para cámaras full-frame de montura E.</p><h3>Óptica</h3><ul><li>Elementos de vidrio ED y Super ED contra las aberraciones cromáticas.</li><li>Recubrimiento Nano AR que reduce los reflejos.</li></ul><h3>Enfoque y estabilización</h3><ul><li>Motor de enfoque lineal XD: seguimiento preciso y silencioso.</li><li>Sellado contra polvo y humedad.</li></ul><h3>Para qué sirve</h3><p>Fotografía deportiva, retratos y vida silvestre.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "El nombre dice F2 y la descripción dice f/2.8 constante: gana el nombre, pero no puse la apertura en specs ni en highlights. Confirmar el valor.",
+        "Si es f/2, agregar apertura y revisar el título."
+      ]
+    },
+    {
+      "slug": "sony-fe-55-210-f4-5-6-3-caja-blanca-2",
+      "name": "Sony FE 55-210 mm f/4.5-6.3 (caja blanca)",
+      "brand": "Sony",
+      "model": "FE 55-210 mm f/4.5-6.3 OSS",
+      "seoTitle": "Sony FE 55-210 mm f/4.5-6.3 caja blanca",
+      "seoDescription": "Teleobjetivo Sony FE 55-210 mm f/4.5-6.3 OSS en caja blanca, con estabilización óptica y montura E. Garantía y envíos a todo el país.",
+      "shortDescription": "Teleobjetivo zoom Sony 55-210 mm f/4.5-6.3 OSS en caja blanca, con estabilización óptica integrada. Compacto y liviano, para cámaras mirrorless de montura E.",
+      "highlights": [
+        "Zoom de 55 a 210 mm con apertura f/4.5-6.3",
+        "Estabilización óptica integrada (OSS)",
+        "Compacto y liviano",
+        "Montura E para cámaras mirrorless Sony",
+        "Equivale a 82,5-315 mm en formato APS-C"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Teleobjetivo zoom"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "55-210 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/4.5-6.3"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica integrada (OSS)"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Equivalente en APS-C",
+          "value": "82,5-315 mm"
+        },
+        {
+          "label": "Presentación",
+          "value": "Caja blanca"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony 55-210 mm f/4.5-6.3 OSS es un teleobjetivo zoom para cámaras mirrorless de montura E. Se vende en caja blanca.</p><h3>Óptica</h3><ul><li>Rango de 55 a 210 mm.</li><li>En formato APS-C equivale a un rango de 82,5 a 315 mm.</li></ul><h3>Enfoque y estabilización</h3><ul><li>La estabilización óptica integrada (OSS) ayuda con poca luz y distancias focales largas.</li></ul><h3>Para qué sirve</h3><p>Retratos, deportes y vida silvestre.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li><li>Se presenta en caja blanca (sin el empaque de venta tradicional).</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "La descripción dice que la caja blanca es \"versión importada con garantía internacional\": no lo puse; confirmar qué garantía lleva y ajustar el texto.",
+        "No puse \"oficial\" en la garantía por ese motivo.",
+        "Dice compatible con Full Frame y APS-C; no lo incluí porque no es seguro para este modelo."
+      ]
+    },
+    {
+      "slug": "sony-fe-70-200-f2-8-gm-ii-2",
+      "name": "Sony FE 70-200 mm f/2.8 GM II",
+      "brand": "Sony",
+      "model": "FE 70-200 mm f/2.8 GM II",
+      "seoTitle": "Sony FE 70-200 mm f/2.8 GM II",
+      "seoDescription": "Objetivo zoom telefoto Sony FE 70-200 mm f/2.8 GM II para mirrorless full-frame, con estabilización de 5 pasos y sellado. Garantía y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom telefoto Sony FE 70-200 mm f/2.8 GM II para cámaras mirrorless full-frame. Estabilización óptica de hasta 5 pasos, vidrio ED y Super ED, tratamiento Nano AR y sellado.",
+      "highlights": [
+        "Zoom de 70 a 200 mm con apertura f/2.8",
+        "Estabilización óptica de hasta 5 pasos",
+        "Elementos ED y Super ED",
+        "Revestimiento Nano AR contra reflejos y destellos",
+        "Resistente al polvo y la humedad",
+        "Segunda generación de la serie G Master"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom telefoto"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "70-200 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8"
+        },
+        {
+          "label": "Serie",
+          "value": "G Master II (GM II)"
+        },
+        {
+          "label": "Formato",
+          "value": "Cámaras mirrorless full-frame"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica, hasta 5 pasos"
+        },
+        {
+          "label": "Vidrio",
+          "value": "Elementos ED y Super ED"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "Nano AR"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente al polvo y la humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 70-200 mm f/2.8 GM II es un zoom telefoto profesional para cámaras mirrorless full-frame.</p><h3>Óptica</h3><ul><li>Elementos ED y Super ED contra las aberraciones cromáticas.</li><li>El revestimiento Nano AR reduce los reflejos y los destellos.</li></ul><h3>Enfoque y estabilización</h3><ul><li>El sistema de estabilización óptica llega a 5 pasos de compensación.</li><li>Construcción resistente al polvo y la humedad.</li></ul><h3>Para qué sirve</h3><p>Fotografía deportiva, retratos y vida silvestre.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "sony-fe-70-200-f4-macro-g-oss-ii-2",
+      "name": "Sony FE 70-200 mm f/4 Macro G OSS II",
+      "brand": "Sony",
+      "model": "FE 70-200 mm f/4 Macro G OSS II",
+      "seoTitle": "Sony FE 70-200 mm f/4 Macro G OSS II",
+      "seoDescription": "Objetivo telefoto Sony FE 70-200 mm f/4 Macro G OSS II con capacidad macro 0,5x y estabilización OSS, para full-frame. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo telefoto Sony FE 70-200 mm f/4 Macro G OSS II con apertura constante f/4, macro 0,5x y estabilización OSS. Para mirrorless full-frame, compacto y liviano.",
+      "highlights": [
+        "Zoom de 70 a 200 mm, apertura constante f/4",
+        "Capacidad macro de 0,5x",
+        "Estabilización óptica OSS",
+        "Elementos ED y Super ED",
+        "Resistente al polvo y la humedad",
+        "Compacto y liviano"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom telefoto con macro"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "70-200 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/4 constante"
+        },
+        {
+          "label": "Serie",
+          "value": "G"
+        },
+        {
+          "label": "Aumento macro",
+          "value": "0,5x"
+        },
+        {
+          "label": "Formato",
+          "value": "Cámaras Sony mirrorless full-frame"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica OSS"
+        },
+        {
+          "label": "Vidrio",
+          "value": "Elementos ED y Super ED"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente al polvo y la humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 70-200 mm f/4 Macro G OSS II es un telefoto que además permite fotografía macro de 0,5x. Está pensado para cámaras Sony mirrorless full-frame.</p><h3>Óptica</h3><ul><li>Apertura constante f/4 en todo el rango.</li><li>Elementos ED y Super ED contra las aberraciones cromáticas.</li></ul><h3>Enfoque y estabilización</h3><ul><li>Estabilización óptica OSS: imágenes nítidas a mano alzada.</li></ul><h3>Para qué sirve</h3><p>Desde retratos hasta macro de detalle. Es resistente al polvo y la humedad.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "sony-fe-70-350-f4-5-6-3-g-oss-2",
+      "name": "Sony FE 70-350 mm f/4.5-6.3 G OSS",
+      "brand": "Sony",
+      "model": "FE 70-350 mm f/4.5-6.3 G OSS",
+      "seoTitle": "Sony FE 70-350 mm f/4.5-6.3 G OSS",
+      "seoDescription": "Teleobjetivo Sony FE 70-350 mm f/4.5-6.3 G OSS con estabilización SteadyShot y enfoque rápido y silencioso. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Teleobjetivo zoom Sony FE 70-350 mm f/4.5-6.3 G OSS con estabilización óptica SteadyShot, vidrio ED y Super ED y enfoque automático rápido y silencioso.",
+      "highlights": [
+        "Zoom de 70 a 350 mm con apertura f/4.5-6.3",
+        "Estabilización óptica SteadyShot (OSS)",
+        "Elementos ED y Super ED",
+        "Enfoque automático rápido y silencioso",
+        "Peso compacto para su rango"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Teleobjetivo zoom"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "70-350 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/4.5-6.3"
+        },
+        {
+          "label": "Serie",
+          "value": "G"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica SteadyShot (OSS)"
+        },
+        {
+          "label": "Vidrio",
+          "value": "Elementos ED y Super ED"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Automático, rápido y silencioso"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 70-350 mm f/4.5-6.3 G OSS es un teleobjetivo zoom con un rango focal extenso y peso compacto.</p><h3>Óptica</h3><ul><li>Elementos ED y Super ED contra las aberraciones cromáticas.</li></ul><h3>Enfoque y estabilización</h3><ul><li>SteadyShot da imágenes nítidas incluso con poca luz.</li><li>Enfoque automático rápido y silencioso, útil para video y foto.</li></ul><h3>Para qué sirve</h3><p>Vida silvestre, deportes, retratos y eventos.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "La descripción dice \"formato completo\"; el mismo objetivo figura como \"E 70-350\" (sony-e-70-350-f4-5-6-3-g-2). Posible duplicado, confirmar montura/formato."
+      ]
+    },
+    {
+      "slug": "sony-fe-85mm-f-1-8",
+      "name": "Sony FE 85 mm f/1.8",
+      "brand": "Sony",
+      "model": "FE 85 mm f/1.8",
+      "seoTitle": "Sony FE 85 mm f/1.8",
+      "seoDescription": "Objetivo Sony FE 85 mm f/1.8 de montura E para cámaras full-frame: motor AF lineal doble, nueve hojas y sellado contra polvo. Garantía y envíos a todo el país.",
+      "shortDescription": "Objetivo fijo Sony FE 85 mm f/1.8 de montura E para cámaras sin espejo full-frame. Motor AF lineal doble, diafragma de nueve cuchillas y sellado contra polvo y humedad.",
+      "highlights": [
+        "Focal fija de 85 mm, ideal para retratos",
+        "Apertura máxima f/1.8 (hasta f/22)",
+        "Motor AF lineal doble, rápido y silencioso",
+        "Diafragma redondeado de nueve cuchillas",
+        "Botón de retención de enfoque e interruptor AF/MF",
+        "Resistente al polvo y la humedad"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Objetivo fijo (prime), teleobjetivo corto"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "85 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/1.8 a f/22"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E, full-frame"
+        },
+        {
+          "label": "Construcción óptica",
+          "value": "9 elementos en 8 grupos, 1 elemento de dispersión extra baja"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "Lineal doble"
+        },
+        {
+          "label": "Diafragma",
+          "value": "9 cuchillas redondeadas"
+        },
+        {
+          "label": "Equivalente en APS-C",
+          "value": "127,5 mm"
+        },
+        {
+          "label": "En la caja",
+          "value": "Parasol ALC-SH150, tapa frontal de 67 mm ALC-F67S y tapa trasera ALC-R1EM"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 85 mm f/1.8 es un objetivo fijo de focal de retrato, para cámaras sin espejo de montura E full-frame. También se puede usar en APS-C, donde equivale a 127,5 mm.</p><h3>Óptica</h3><ul><li>La apertura f/1.8 ayuda con poca luz y da control sobre la profundidad de campo.</li><li>Un elemento de dispersión extra baja limita las franjas de color y las aberraciones cromáticas.</li><li>El diafragma de nueve cuchillas redondeadas da un bokeh agradable.</li></ul><h3>Enfoque y estabilización</h3><ul><li>Motor AF lineal doble: enfoque suave, preciso y casi silencioso, para foto y video.</li><li>Botón de retención de enfoque personalizable e interruptor AF/MF.</li><li>Diseño resistente al polvo y la humedad.</li></ul><h3>Para qué sirve</h3><p>Retratos y técnicas de enfoque selectivo.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "Accesorios incluidos tomados de la descripción; confirmar contenido real de la caja.",
+        "Se ajustó \"Sony Fe 85mm\" del SKU en el nombre."
+      ]
+    },
+    {
+      "slug": "tamron-11-20-f-2-8-iii-canon",
+      "name": "Tamron 11-20 mm f/2.8 Di III-A RXD para Canon",
+      "brand": "Tamron",
+      "model": "11-20 mm f/2.8 Di III-A RXD",
+      "seoTitle": "Tamron 11-20 mm f/2.8 Di III-A RXD Canon",
+      "seoDescription": "Objetivo gran angular Tamron 11-20 mm f/2.8 Di III-A RXD para Canon, con apertura constante y enfoque RXD silencioso. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo gran angular Tamron 11-20 mm f/2.8 Di III-A RXD para Canon. Apertura constante f/2.8, enfoque RXD rápido y silencioso, diseño compacto y liviano.",
+      "highlights": [
+        "Zoom gran angular de 11 a 20 mm",
+        "Apertura constante f/2.8",
+        "Motor RXD: enfoque rápido y silencioso",
+        "Imágenes nítidas de borde a borde",
+        "Compacto y liviano",
+        "Para cámaras Canon"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom gran angular"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "11-20 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Línea",
+          "value": "Di III-A RXD"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Canon"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "RXD"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 11-20 mm f/2.8 Di III-A RXD para Canon es un gran angular con apertura constante f/2.8. Es compacto y liviano.</p><h3>Óptica</h3><ul><li>Su construcción óptica minimiza las aberraciones y las distorsiones.</li><li>Imágenes nítidas de borde a borde.</li></ul><h3>Enfoque y estabilización</h3><ul><li>El motor RXD enfoca rápido y en silencio, algo útil para video.</li></ul><h3>Para qué sirve</h3><p>Paisajes, arquitectura, interiores y astrofotografía.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li><li>Confirmá que la montura Canon de tu cámara sea la correcta antes de comprar.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "La descripción no dice qué montura Canon es (RF, EF-M, etc.). Confirmar y agregar."
+      ]
+    },
+    {
+      "slug": "tamron-11-20-f2-8-di-iii-a-rxd-sony-e-2",
+      "name": "Tamron 11-20 mm f/2.8 Di III-A RXD Sony E",
+      "brand": "Tamron",
+      "model": "11-20 mm f/2.8 Di III-A RXD",
+      "seoTitle": "Tamron 11-20 mm f/2.8 Di III-A RXD Sony E",
+      "seoDescription": "Objetivo ultra gran angular Tamron 11-20 mm f/2.8 Di III-A RXD para Sony E APS-C, con enfoque RXD silencioso. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo ultra gran angular Tamron 11-20 mm f/2.8 Di III-A RXD para cámaras Sony E APS-C. Apertura constante, elementos LD, enfoque RXD y resistente a la humedad.",
+      "highlights": [
+        "Ultra gran angular de 11 a 20 mm",
+        "Apertura constante f/2.8",
+        "Elementos LD contra aberración cromática",
+        "Motor RXD rápido y silencioso",
+        "Resistente a la humedad",
+        "Para cámaras Sony E APS-C"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom ultra gran angular"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "11-20 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Línea",
+          "value": "Di III-A RXD"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E (APS-C)"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "RXD"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente a la humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 11-20 mm f/2.8 Di III-A RXD es un ultra gran angular para cámaras Sony E APS-C.</p><h3>Óptica</h3><ul><li>Elementos de dispersión ultra baja (LD) que minimizan las aberraciones cromáticas.</li><li>Imágenes nítidas del centro a los bordes.</li></ul><h3>Enfoque y estabilización</h3><ul><li>El motor RXD enfoca rápido y en silencio.</li><li>Construcción resistente a la humedad.</li></ul><h3>Para qué sirve</h3><p>Paisajes, arquitectura y astrofotografía, en exteriores o interior.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li><li>Es para cámaras Sony E con sensor APS-C.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "tamron-150-500-f5-6-7-di-iii-vxd-sony-2",
+      "name": "Tamron 150-500 mm f/5-6.7 Di III VXD Sony",
+      "brand": "Tamron",
+      "model": "150-500 mm f/5-6.7 Di III VXD",
+      "seoTitle": "Tamron 150-500 mm f/5-6.7 Di III VXD Sony",
+      "seoDescription": "Teleobjetivo Tamron 150-500 mm f/5-6.7 Di III VXD para Sony, con estabilización VC y enfoque VXD. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Teleobjetivo zoom Tamron 150-500 mm f/5-6.7 Di III VXD para Sony mirrorless. Estabilización VC de 4,5 pasos, enfoque VXD silencioso y compatible con teleconvertidores.",
+      "highlights": [
+        "Zoom de 150 a 500 mm con apertura f/5-6.7",
+        "Estabilización VC de 4,5 pasos",
+        "Motor de enfoque VXD rápido y silencioso",
+        "Resistente a la humedad",
+        "Compatible con teleconvertidores Tamron 1.4x y 2.0x",
+        "Incluye parasol y estuche (según descripción)"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Teleobjetivo zoom"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "150-500 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/5-6.7"
+        },
+        {
+          "label": "Línea",
+          "value": "Di III VXD"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Cámaras Sony mirrorless"
+        },
+        {
+          "label": "Estabilización",
+          "value": "VC (Vibration Compensation), 4,5 pasos"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "VXD"
+        },
+        {
+          "label": "Diámetro",
+          "value": "93 mm"
+        },
+        {
+          "label": "Teleconvertidores",
+          "value": "Tamron 1.4x y 2.0x"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 150-500 mm f/5-6.7 Di III VXD es un teleobjetivo zoom para cámaras Sony mirrorless.</p><h3>Óptica</h3><ul><li>Elementos de baja dispersión (LD) que minimizan las aberraciones cromáticas.</li><li>Construcción resistente a la humedad.</li></ul><h3>Enfoque y estabilización</h3><ul><li>Estabilización VC de 4,5 pasos para compensar vibraciones.</li><li>Motor VXD ultra silencioso y rápido.</li></ul><h3>Para qué sirve</h3><p>Vida salvaje, deportes y retratos a distancia. La descripción dice que incluye parasol desmontable y estuche de transporte.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "Confirmar si incluye parasol y estuche (dato de la descripción).",
+        "No dice la montura exacta (se asume Sony E por \"mirrorless\"); no la puse como dato."
+      ]
+    },
+    {
+      "slug": "tamron-16-30-f2-8-iii-g2-nikon",
+      "name": "Tamron 16-30 mm f/2.8 Di III VXD G2 Nikon",
+      "brand": "Tamron",
+      "model": "16-30 mm f/2.8 Di III VXD G2",
+      "seoTitle": "Tamron 16-30 mm f/2.8 Di III VXD G2 Nikon",
+      "seoDescription": "Objetivo gran angular Tamron 16-30 mm f/2.8 Di III VXD G2 para Nikon, con enfoque VXD y sellado contra humedad. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo gran angular Tamron 16-30 mm f/2.8 Di III VXD G2 para Nikon. Apertura constante f/2.8, enfoque VXD, elementos de dispersión ultra baja y sellado contra humedad y polvo.",
+      "highlights": [
+        "Zoom gran angular de 16 a 30 mm",
+        "Apertura constante f/2.8",
+        "Enfoque VXD silencioso y preciso",
+        "Elementos de dispersión ultra baja",
+        "Sellado contra humedad y polvo",
+        "Para cámaras Nikon"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom gran angular"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "16-30 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Línea",
+          "value": "Di III VXD G2"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Nikon"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "VXD"
+        },
+        {
+          "label": "Construcción",
+          "value": "Sellado contra humedad y polvo"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 16-30 mm f/2.8 Di III VXD G2 para Nikon es un gran angular con apertura constante f/2.8.</p><h3>Óptica</h3><ul><li>Elementos de dispersión ultra baja que reducen las aberraciones cromáticas.</li></ul><h3>Enfoque y estabilización</h3><ul><li>Motor VXD (Voice-coil eXtreme-torque Drive): enfoque silencioso y preciso.</li><li>Construcción sellada contra humedad y polvo.</li></ul><h3>Para qué sirve</h3><p>Paisajes, arquitectura y reportaje con poca luz.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li><li>Confirmá que la montura Nikon de tu cámara sea compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "La descripción dice 16-300 mm y estabilización VC; el nombre dice 16-30. Gana el nombre y no puse la estabilización.",
+        "No aclara la montura Nikon (Z o F). Confirmar. Dice compatible con full frame y APS-C; no lo incluí."
+      ]
+    },
+    {
+      "slug": "tamron-16-30-f2-8-iii-g2-sony-2",
+      "name": "Tamron 16-30 mm f/2.8 Di III VXD G2 Sony",
+      "brand": "Tamron",
+      "model": "16-30 mm f/2.8 Di III VXD G2",
+      "seoTitle": "Tamron 16-30 mm f/2.8 Di III VXD G2 Sony",
+      "seoDescription": "Objetivo gran angular Tamron 16-30 mm f/2.8 Di III VXD G2 para Sony E, con apertura constante y sellado en montura. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo gran angular Tamron 16-30 mm f/2.8 Di III VXD G2 para Sony E. Apertura constante, enfoque VXD silencioso, recubrimientos BBAR-G2 y sellado en la montura.",
+      "highlights": [
+        "Zoom gran angular de 16 a 30 mm",
+        "Apertura constante f/2.8",
+        "Enfoque VXD silencioso y preciso",
+        "Recubrimientos BBAR-G2 contra reflejos",
+        "Sellado en la montura",
+        "Compacto y liviano"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom gran angular"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "16-30 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Línea",
+          "value": "Di III VXD G2"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "VXD"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "BBAR-G2"
+        },
+        {
+          "label": "Construcción",
+          "value": "Sellado en la montura, resistente a la humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 16-30 mm f/2.8 Di III VXD G2 es un gran angular para cámaras Sony con montura E.</p><h3>Óptica</h3><ul><li>Elementos de dispersión extra baja y recubrimientos BBAR-G2 que minimizan aberraciones y reflejos.</li></ul><h3>Enfoque y estabilización</h3><ul><li>El motor VXD da un autoenfoque silencioso y preciso, útil para foto y video.</li><li>Sellado en la montura y resistencia a la humedad.</li></ul><h3>Para qué sirve</h3><p>Paisajes, arquitectura, astrofotografía y reportajes.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "tamron-17-28-f2-8-iii-di-rxd-sony-2",
+      "name": "Tamron 17-28 mm f/2.8 Di III RXD Sony",
+      "brand": "Tamron",
+      "model": "17-28 mm f/2.8 Di III RXD",
+      "seoTitle": "Tamron 17-28 mm f/2.8 Di III RXD Sony",
+      "seoDescription": "Objetivo gran angular Tamron 17-28 mm f/2.8 Di III RXD para Sony E full-frame, con apertura constante y enfoque RXD. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo gran angular Tamron 17-28 mm f/2.8 Di III RXD para cámaras Sony E full-frame. Apertura constante f/2.8, enfoque RXD silencioso y diseño compacto y liviano.",
+      "highlights": [
+        "Zoom gran angular de 17 a 28 mm",
+        "Apertura constante f/2.8",
+        "Motor RXD: enfoque silencioso y preciso",
+        "Diseñado para el sistema Sony E",
+        "Para cámaras full-frame",
+        "Compacto y liviano"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom gran angular"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "17-28 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Línea",
+          "value": "Di III RXD"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E, full-frame"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "RXD"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 17-28 mm f/2.8 Di III RXD es un gran angular para cámaras Sony E full-frame.</p><h3>Óptica</h3><ul><li>Construcción óptica que minimiza las aberraciones y busca más nitidez en todo el rango.</li><li>La apertura f/2.8 rinde bien con poca luz.</li></ul><h3>Enfoque y estabilización</h3><ul><li>El motor RXD ofrece enfoque automático silencioso y preciso.</li></ul><h3>Para qué sirve</h3><p>Paisajes, arquitectura, interiores y astrofotografía. Es liviano para sesiones largas.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "tamron-17-50-f4-di-iii-sony-2",
+      "name": "Tamron 17-50 mm f/4 Di III VXD Sony",
+      "brand": "Tamron",
+      "model": "17-50 mm f/4 Di III VXD",
+      "seoTitle": "Tamron 17-50 mm f/4 Di III VXD Sony",
+      "seoDescription": "Objetivo zoom Tamron 17-50 mm f/4 Di III VXD para Sony E, con apertura constante, enfoque VXD y sellado. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom estándar Tamron 17-50 mm f/4 Di III VXD para cámaras Sony con montura E. Apertura constante f/4, enfoque VXD rápido y silencioso y construcción sellada.",
+      "highlights": [
+        "Zoom de 17 a 50 mm",
+        "Apertura constante f/4",
+        "Motor VXD rápido y silencioso",
+        "Elementos de baja dispersión",
+        "Construcción sellada contra humedad y polvo",
+        "Montura Sony E"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "17-50 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/4 constante"
+        },
+        {
+          "label": "Línea",
+          "value": "Di III VXD"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "VXD"
+        },
+        {
+          "label": "Construcción",
+          "value": "Sellada contra humedad y polvo"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 17-50 mm f/4 Di III VXD es un zoom estándar para cámaras Sony con montura E.</p><h3>Óptica</h3><ul><li>Elementos de baja dispersión que minimizan las aberraciones cromáticas.</li><li>Imágenes nítidas y colores precisos.</li></ul><h3>Enfoque y estabilización</h3><ul><li>El motor VXD ofrece enfoque rápido y silencioso, útil para foto y video.</li><li>Construcción sellada contra humedad y polvo.</li></ul><h3>Para qué sirve</h3><p>Paisajes, retratos y uso general.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "El nombre no dice VXD; sale de la descripción. Se omitió la mención \"full frame\" de la descripción corta."
+      ]
+    },
+    {
+      "slug": "tamron-17-70-f2-8-di-iii-sony-2",
+      "model": "17-70 mm f/2.8 Di III-A VC RXD",
+      "seoTitle": "Tamron 17-70 mm f/2.8 Di III-A VC RXD Sony",
+      "seoDescription": "Objetivo zoom Tamron 17-70 mm f/2.8 Di III-A VC RXD para Sony E APS-C, con estabilización VC y apertura constante. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom Tamron 17-70 mm f/2.8 Di III-A VC RXD para cámaras Sony E APS-C. Apertura constante, estabilización VC, enfoque RXD silencioso y sellado contra humedad.",
+      "highlights": [
+        "Zoom de 17 a 70 mm",
+        "Apertura constante f/2.8",
+        "Estabilización VC (Vibration Compensation)",
+        "Enfoque RXD silencioso, bueno para video",
+        "Sellado contra humedad",
+        "Para cámaras Sony E APS-C"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "17-70 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Línea",
+          "value": "Di III-A VC RXD"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E (APS-C)"
+        },
+        {
+          "label": "Estabilización",
+          "value": "VC (Vibration Compensation)"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "RXD"
+        },
+        {
+          "label": "Construcción",
+          "value": "Sellada contra humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 17-70 mm f/2.8 Di III-A VC RXD es un zoom para cámaras Sony APS-C con montura E. Mantiene f/2.8 en todo el rango.</p><h3>Óptica</h3><ul><li>La apertura f/2.8 constante rinde bien con poca luz.</li><li>Es compacto y liviano.</li></ul><h3>Enfoque y estabilización</h3><ul><li>La estabilización VC ayuda a lograr imágenes nítidas.</li><li>El motor RXD enfoca de forma silenciosa y precisa.</li></ul><h3>Para qué sirve</h3><p>Viajes, retratos, paisajes y creación de contenido.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li><li>Es para cámaras Sony E con sensor APS-C.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "tamron-18-300-f3-5-6-3-di-ii-vxd-vc-sony-2",
+      "model": "18-300 mm f/3.5-6.3 VC VXD",
+      "seoTitle": "Tamron 18-300 mm f/3.5-6.3 VC VXD Sony",
+      "seoDescription": "Objetivo zoom todo en uno Tamron 18-300 mm f/3.5-6.3 para Sony E, con estabilización VC y enfoque VXD. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo todo en uno Tamron 18-300 mm f/3.5-6.3 para cámaras Sony con montura E. Estabilización VC y motor VXD silencioso, en un diseño compacto y liviano.",
+      "highlights": [
+        "Zoom todo en uno de 18 a 300 mm",
+        "Apertura f/3.5-6.3",
+        "Estabilización VC para tomas nítidas",
+        "Motor VXD rápido y silencioso",
+        "Montura Sony E",
+        "Compacto y liviano"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom todo en uno"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "18-300 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/3.5-6.3"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Estabilización",
+          "value": "VC (Vibration Compensation)"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "VXD"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 18-300 mm f/3.5-6.3 es un zoom todo en uno para cámaras Sony con montura E. Cubre de gran angular a teleobjetivo sin cambiar de lente.</p><h3>Óptica</h3><ul><li>Es compacto y liviano.</li><li>La construcción óptica busca buena calidad de imagen en todo el rango focal.</li></ul><h3>Enfoque y estabilización</h3><ul><li>La estabilización VC compensa vibraciones, también con poca luz.</li><li>El motor VXD enfoca rápido y en silencio, para foto y video.</li></ul><h3>Para qué sirve</h3><p>Viajes, fotografía callejera, retratos y paisajes.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "El nombre dice \"DI II\" y la descripción \"Di III-A\"; en el título usé el nombre original sin esa parte. Revisar la sigla exacta."
+      ]
+    },
+    {
+      "slug": "tamron-20-40-f-2-8-di-iii-contemporary-sony-2",
+      "name": "Tamron 20-40 mm f/2.8 Di III VXD Contemporary Sony",
+      "brand": "Tamron",
+      "model": "20-40 mm f/2.8 Di III VXD Contemporary",
+      "seoTitle": "Tamron 20-40 mm f/2.8 Di III VXD Sony",
+      "seoDescription": "Objetivo gran angular Tamron 20-40 mm f/2.8 Di III VXD Contemporary para Sony FE, compacto y con enfoque VXD. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo gran angular Tamron 20-40 mm f/2.8 Di III VXD Contemporary para Sony FE. Apertura constante, diseño ultracompacto, enfoque VXD silencioso y resistente al clima.",
+      "highlights": [
+        "Zoom gran angular de 20 a 40 mm",
+        "Apertura constante f/2.8",
+        "Diseño ultracompacto",
+        "Motor VXD silencioso y preciso",
+        "Resistente a condiciones climáticas adversas",
+        "Para Sony FE"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom gran angular"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "20-40 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Línea",
+          "value": "Di III VXD Contemporary"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony FE"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "VXD"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "Antirreflejos"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 20-40 mm f/2.8 Di III VXD Contemporary combina apertura constante f/2.8 con un diseño muy compacto. Es para cámaras Sony FE.</p><h3>Óptica</h3><ul><li>Elementos de dispersión extra baja y recubrimientos antirreflejos para nitidez y contraste.</li></ul><h3>Enfoque y estabilización</h3><ul><li>El motor VXD da un enfoque automático silencioso y preciso, útil para video 4K.</li><li>Resistente a condiciones climáticas adversas.</li></ul><h3>Para qué sirve</h3><p>Paisajes, arquitectura y fotografía documental.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "tamron-24-70-f-2-8-g2-nikon",
+      "name": "Tamron 24-70 mm f/2.8 G2 Nikon",
+      "brand": "Tamron",
+      "model": "24-70 mm f/2.8 G2",
+      "seoTitle": "Tamron 24-70 mm f/2.8 G2 Nikon",
+      "seoDescription": "Objetivo zoom Tamron 24-70 mm f/2.8 G2 para Nikon, con estabilización VC de hasta 5 pasos y construcción resistente. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom Tamron 24-70 mm f/2.8 G2 para Nikon. Apertura constante, estabilización VC de hasta 5 pasos, dispersión ultra baja y construcción resistente a la intemperie.",
+      "highlights": [
+        "Zoom estándar de 24 a 70 mm",
+        "Apertura constante f/2.8",
+        "Estabilización VC de hasta 5 pasos",
+        "Elementos de dispersión ultra baja",
+        "Resistente a la intemperie",
+        "Para cámaras Nikon"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "24-70 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Línea",
+          "value": "G2"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Nikon"
+        },
+        {
+          "label": "Estabilización",
+          "value": "VC (Vibration Compensation), hasta 5 pasos"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente a la intemperie"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 24-70 mm f/2.8 G2 para Nikon es un zoom estándar con apertura constante y estabilización óptica.</p><h3>Óptica</h3><ul><li>Elementos de dispersión ultra baja y recubrimientos multicapa para imágenes nítidas con mínimas aberraciones.</li></ul><h3>Enfoque y estabilización</h3><ul><li>Estabilización VC que reduce el movimiento de la cámara hasta 5 pasos.</li><li>Enfoque rápido y silencioso.</li></ul><h3>Para qué sirve</h3><p>Retratos, paisajes, eventos y fotografía callejera.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li><li>Confirmá que la montura Nikon de tu cámara sea compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "No aclara la montura (F o Z). Confirmar."
+      ]
+    },
+    {
+      "slug": "tamron-24-70-f2-8-g2-canon-ef",
+      "name": "Tamron 24-70 mm f/2.8 G2 Canon EF",
+      "brand": "Tamron",
+      "model": "24-70 mm f/2.8 G2",
+      "seoTitle": "Tamron 24-70 mm f/2.8 G2 Canon EF",
+      "seoDescription": "Objetivo zoom Tamron 24-70 mm f/2.8 G2 para Canon EF, con estabilización VC y resistencia a la humedad y el polvo. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom profesional Tamron 24-70 mm f/2.8 G2 para Canon EF. Apertura constante, estabilización VC y construcción resistente a la humedad y el polvo.",
+      "highlights": [
+        "Zoom estándar de 24 a 70 mm",
+        "Apertura constante f/2.8",
+        "Estabilización VC para disparar sin trípode",
+        "Resistente a la humedad y el polvo",
+        "Montura Canon EF"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "24-70 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Línea",
+          "value": "G2"
+        },
+        {
+          "label": "Montura",
+          "value": "Canon EF"
+        },
+        {
+          "label": "Estabilización",
+          "value": "VC (Vibration Compensation)"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente a la humedad y el polvo"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 24-70 mm f/2.8 G2 para Canon EF es un zoom estándar con estabilización VC y apertura constante.</p><h3>Óptica</h3><ul><li>La apertura f/2.8 rinde bien con poca luz y da desenfoque de fondo.</li></ul><h3>Enfoque y estabilización</h3><ul><li>La estabilización VC permite capturas nítidas sin trípode.</li><li>Construcción resistente a la humedad y el polvo.</li></ul><h3>Para qué sirve</h3><p>Retratos, paisajes y eventos.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li><li>Es para cámaras con montura Canon EF.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "tamron-28-300-f4-7-1-di-iii-sony-2",
+      "name": "Tamron 28-300 mm f/4-7.1 Di III RXD Sony",
+      "brand": "Tamron",
+      "model": "28-300 mm f/4-7.1 Di III RXD",
+      "seoTitle": "Tamron 28-300 mm f/4-7.1 Di III RXD Sony",
+      "seoDescription": "Objetivo zoom todo en uno Tamron 28-300 mm f/4-7.1 Di III RXD para Sony E, con enfoque RXD silencioso. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom todo en uno Tamron 28-300 mm f/4-7.1 Di III RXD para cámaras Sony con montura E. Va de gran angular a teleobjetivo, con enfoque RXD silencioso.",
+      "highlights": [
+        "Zoom todo en uno de 28 a 300 mm",
+        "Apertura f/4-7.1",
+        "Motor RXD: autofoco rápido y silencioso",
+        "Montura Sony E",
+        "Compacto y liviano",
+        "Evita cambiar de objetivo"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom todo en uno"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "28-300 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/4-7.1"
+        },
+        {
+          "label": "Línea",
+          "value": "Di III RXD"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "RXD"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 28-300 mm f/4-7.1 Di III RXD es un zoom todo en uno para cámaras Sony con montura E. Evita cambiar de objetivo en viajes y eventos.</p><h3>Óptica</h3><ul><li>Rango focal desde gran angular hasta teleobjetivo.</li><li>Construcción óptica pensada para imágenes nítidas en todo el rango.</li></ul><h3>Enfoque y estabilización</h3><ul><li>El motor RXD ofrece autofoco rápido y silencioso.</li></ul><h3>Para qué sirve</h3><p>Viajes, eventos y fotografía cotidiana.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre.",
+        "Descripción corta del producto dice \"estabilización óptica\"; la larga no. No la puse."
+      ]
+    },
+    {
+      "slug": "tamron-35-150-f2-2-8-di-iii-vxd-nikon-z",
+      "name": "Tamron 35-150 mm f/2-2.8 Di III VXD Nikon Z",
+      "brand": "Tamron",
+      "model": "35-150 mm f/2-2.8 Di III VXD",
+      "seoTitle": "Tamron 35-150 mm f/2-2.8 Di III VXD Nikon Z",
+      "seoDescription": "Objetivo zoom Tamron 35-150 mm f/2-2.8 Di III VXD para Nikon Z, con apertura constante y enfoque VXD silencioso. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom Tamron 35-150 mm f/2-2.8 Di III VXD para Nikon Z. Gran apertura, motor VXD ultrarrápido y silencioso, en un diseño compacto y robusto.",
+      "highlights": [
+        "Zoom de 35 a 150 mm",
+        "Apertura f/2-2.8",
+        "Motor VXD ultrarrápido y silencioso",
+        "Montura Nikon Z",
+        "Desenfoque de fondo marcado (bokeh)",
+        "Compacto y robusto"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar-telefoto"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "35-150 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2-2.8"
+        },
+        {
+          "label": "Línea",
+          "value": "Di III VXD"
+        },
+        {
+          "label": "Montura",
+          "value": "Nikon Z"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "VXD"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 35-150 mm f/2-2.8 Di III VXD para Nikon Z cubre desde un angular medio hasta un telefoto corto con una apertura muy abierta.</p><h3>Óptica</h3><ul><li>Buen rendimiento con poca luz y bokeh pronunciado.</li><li>Construcción óptica pensada para imágenes nítidas y colores vivos.</li></ul><h3>Enfoque y estabilización</h3><ul><li>El motor VXD enfoca en forma ultrarrápida y silenciosa.</li></ul><h3>Para qué sirve</h3><p>Retratos, eventos y vida silvestre.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "tamron-35-150-f2-2-8-di-iii-vxd-sony-e-2",
+      "model": "35-150 mm f/2-2.8 Di III VXD",
+      "seoTitle": "Tamron 35-150 mm f/2-2.8 Di III VXD Sony E",
+      "seoDescription": "Objetivo zoom Tamron 35-150 mm f/2-2.8 Di III VXD para Sony E, con enfoque VXD y construcción resistente a la intemperie. Garantía y envíos a todo el país.",
+      "shortDescription": "Objetivo zoom Tamron 35-150 mm f/2-2.8 Di III VXD para cámaras mirrorless Sony de montura E. Gran apertura, motor VXD rápido y silencioso y diseño compacto.",
+      "highlights": [
+        "Zoom de 35 a 150 mm",
+        "Apertura f/2-2.8",
+        "Motor VXD rápido y silencioso",
+        "Montura Sony E",
+        "Resistente a la intemperie",
+        "Diseño compacto"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar-telefoto"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "35-150 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2-2.8"
+        },
+        {
+          "label": "Línea",
+          "value": "Di III VXD"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "VXD"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente a la intemperie"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 35-150 mm f/2-2.8 Di III VXD para Sony E combina versatilidad y calidad en un diseño compacto.</p><h3>Óptica</h3><ul><li>La apertura f/2-2.8 rinde bien con poca luz.</li><li>Óptica avanzada que minimiza las aberraciones.</li></ul><h3>Enfoque y estabilización</h3><ul><li>El motor VXD ofrece enfoque automático rápido y silencioso.</li><li>Construcción resistente a la intemperie.</li></ul><h3>Para qué sirve</h3><p>Retratos, paisajes y eventos.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "tamron-50-400-f4-5-6-3-di-iii-vc-vxd-sony-2",
+      "name": "Tamron 50-400 mm f/4.5-6.3 Di III VC VXD Sony",
+      "brand": "Tamron",
+      "model": "50-400 mm f/4.5-6.3 Di III VC VXD",
+      "seoTitle": "Tamron 50-400 mm f/4.5-6.3 Di III VC VXD Sony",
+      "seoDescription": "Teleobjetivo Tamron 50-400 mm f/4.5-6.3 Di III VC VXD para Sony E, con estabilización VC de 5 pasos y enfoque VXD. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Teleobjetivo zoom Tamron 50-400 mm f/4.5-6.3 Di III VC VXD para cámaras mirrorless Sony de montura E. Estabilización VC de hasta 5 pasos y enfoque VXD silencioso.",
+      "highlights": [
+        "Zoom de 50 a 400 mm con apertura f/4.5-6.3",
+        "Estabilización VC de hasta 5 pasos",
+        "Motor VXD ultrarrápido y silencioso",
+        "Elementos de dispersión ultra baja",
+        "Resistente a la intemperie",
+        "Montura Sony E"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Teleobjetivo zoom"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "50-400 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/4.5-6.3"
+        },
+        {
+          "label": "Línea",
+          "value": "Di III VC VXD"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Estabilización",
+          "value": "VC (Vibration Compensation), hasta 5 pasos"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "VXD"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente a la intemperie"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 50-400 mm f/4.5-6.3 Di III VC VXD cubre de primeros planos a telefoto extremo en un solo objetivo para cámaras Sony mirrorless de montura E.</p><h3>Óptica</h3><ul><li>Elementos de dispersión ultra baja que minimizan las aberraciones cromáticas.</li></ul><h3>Enfoque y estabilización</h3><ul><li>Estabilización VC con hasta 5 pasos de compensación.</li><li>Motor VXD de enfoque ultrarrápido y silencioso.</li></ul><h3>Para qué sirve</h3><p>Fotografía de naturaleza, deportes y retratos.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    },
+    {
+      "slug": "tamron-70-180-f2-8-g2-iii-sony-2",
+      "name": "Tamron 70-180 mm f/2.8 Di III VXD G2 Sony",
+      "brand": "Tamron",
+      "model": "70-180 mm f/2.8 Di III VXD G2",
+      "seoTitle": "Tamron 70-180 mm f/2.8 Di III VXD G2 Sony",
+      "seoDescription": "Teleobjetivo Tamron 70-180 mm f/2.8 Di III VXD G2 para Sony E, con apertura constante y enfoque VXD silencioso. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Teleobjetivo Tamron 70-180 mm f/2.8 Di III VXD G2 para cámaras Sony E-Mount. Segunda generación con apertura constante, enfoque VXD silencioso y resistencia a la humedad.",
+      "highlights": [
+        "Zoom telefoto de 70 a 180 mm",
+        "Apertura constante f/2.8",
+        "Segunda generación (G2)",
+        "Motor VXD ultrarrápido y silencioso",
+        "Resistente a la humedad",
+        "Compacto y liviano"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom telefoto"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "70-180 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Línea",
+          "value": "Di III VXD G2"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "VXD"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "Antirreflejos"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente a la humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Tamron 70-180 mm f/2.8 Di III VXD G2 es un teleobjetivo con apertura constante para cámaras Sony E-Mount.</p><h3>Óptica</h3><ul><li>Elementos ópticos de baja dispersión y recubrimiento antirreflejos.</li><li>Bokeh cremoso y buen rendimiento con poca luz.</li></ul><h3>Enfoque y estabilización</h3><ul><li>El motor VXD proporciona enfoque silencioso y ultrarrápido.</li><li>Resistente a la humedad.</li></ul><h3>Para qué sirve</h3><p>Deportes, vida silvestre y retratos.</p><h3>Antes de comprar</h3><ul><li>Es solo el objetivo: necesitás una cámara compatible.</li></ul>",
+      "revisar": [
+        "La descripción original parece generada y puede tener errores; se usó solo lo que coincide con el nombre."
+      ]
+    }
+  ]
+}

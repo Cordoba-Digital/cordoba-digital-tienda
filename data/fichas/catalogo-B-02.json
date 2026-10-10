@@ -1,0 +1,2683 @@
+{
+  "lote": "catalogo-B-02",
+  "productos": [
+    {
+      "slug": "estabilizador-de-tension-forza-1200va",
+      "brand": "Dekkin",
+      "seoTitle": "Auricular Dekkin con micrófono",
+      "seoDescription": "Auricular Dekkin con micrófono para llamadas manos libres. Conector de 3.5 mm y cable plano de 1,2 metros. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Auricular Dekkin con micrófono para manos libres. Conector de 3.5 mm, cable plano de 1,2 metros y respuesta de 20 Hz a 20 kHz.",
+      "highlights": [
+        "Micrófono para llamadas manos libres",
+        "Conector de 3.5 mm",
+        "Cable plano de 1,2 metros",
+        "Respuesta de frecuencia de 20 Hz a 20 kHz"
+      ],
+      "specs": [
+        {
+          "label": "Conector",
+          "value": "3.5 mm"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Sí, para manos libres"
+        },
+        {
+          "label": "Cable",
+          "value": "Plano, 1,2 metros"
+        },
+        {
+          "label": "Respuesta de frecuencia",
+          "value": "20 Hz a 20 kHz"
+        }
+      ],
+      "descriptionHtml": "<p>El Auricular Dekkin con micrófono tiene conector de 3.5 mm y micrófono para llamadas manos libres.</p><h3>Cable</h3><p>El cable es plano y mide 1,2 metros.</p><h3>Garantía y envíos</h3><p>Tiene garantía oficial. Hacemos envíos a todo el país y también podés retirarlo en Córdoba.</p><h3>Antes de comprar</h3><p>Verificá que tu equipo tenga entrada de 3.5 mm. La ficha original no detalla otras especificaciones.</p>",
+      "revisar": [
+        "El slug dice estabilizador-de-tension-forza-1200va, pero el nombre, el resumen y la descripción son de un auricular Dekkin. El slug no se cambió: confirmar que la ficha corresponde al producto.",
+        "La garantía oficial sale del texto genérico de la descripción original: confirmar."
+      ]
+    },
+    {
+      "slug": "garmin-forerunner-55",
+      "model": "Forerunner 55",
+      "seoTitle": "Garmin Forerunner 55 con GPS",
+      "seoDescription": "Garmin Forerunner 55: reloj de running con GPS, monitoreo de salud 24/7 y hasta 14 días de batería en modo smartwatch. Garantía y envíos a todo el país.",
+      "shortDescription": "Garmin Forerunner 55, reloj deportivo con GPS para correr. Incluye PacePro, planes de entrenamiento adaptativos y monitoreo de salud 24/7, con hasta 14 días de batería en modo smartwatch.",
+      "highlights": [
+        "GPS, GLONASS y Galileo para seguir cada ruta",
+        "Planes de entrenamiento adaptativos Garmin Coach",
+        "Estrategia de ritmo PacePro para la carrera",
+        "Frecuencia cardíaca en la muñeca 24/7",
+        "Hasta 14 días de batería en modo smartwatch",
+        "Hasta 20 horas con GPS activado"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "1,04″ (26,3 mm), 208 x 208 píxeles, MIP transflectiva, visible a la luz del sol"
+        },
+        {
+          "label": "Cristal y bisel",
+          "value": "Vidrio reforzado químicamente y bisel de polímero reforzado"
+        },
+        {
+          "label": "Satélites",
+          "value": "GPS, GLONASS y Galileo"
+        },
+        {
+          "label": "Salud",
+          "value": "Frecuencia cardíaca en la muñeca 24/7, estrés, Body Battery y respiración guiada"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 14 días en modo smartwatch; hasta 20 horas con GPS"
+        },
+        {
+          "label": "Entrenamiento",
+          "value": "PacePro, Garmin Coach y pronosticador de carrera con tiempo de recuperación"
+        },
+        {
+          "label": "Seguimiento",
+          "value": "Ciclo menstrual y embarazo"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "iOS y Android, con notificaciones de mensajes, correos y alertas"
+        }
+      ],
+      "descriptionHtml": "<p>El Garmin Forerunner 55 es un reloj deportivo con GPS para corredores de todos los niveles. Combina seguimiento de ritmo, recomendaciones diarias de entrenamiento y monitoreo de salud.</p><h3>Funciones para correr</h3><ul><li>GPS, GLONASS y Galileo para registrar ruta, velocidad, ritmo y distancia sin depender del celular.</li><li>PacePro para planificar el ritmo según la pendiente de la ruta.</li><li>Pronosticador de carrera para 5K, 10K, media maratón y maratón.</li><li>Sugerencias de entrenamiento diarias según tu historial y tiempo de recuperación.</li></ul><h3>Salud las 24 horas</h3><p>Mide la frecuencia cardíaca en la muñeca y avisa si queda muy alta o muy baja en reposo. También muestra el estrés y las reservas de energía con Body Battery.</p><h3>Batería y notificaciones</h3><p>Dura hasta 14 días en modo smartwatch y hasta 20 horas con GPS. Al vincularlo con el celular muestra mensajes, correos y alertas.</p><h3>Antes de comprar</h3><p>La descripción original llega cortada. No pudimos confirmar la resistencia al agua ni el resto de la tabla técnica.</p>",
+      "revisar": [
+        "La descripción original viene cortada: no se confirman resistencia al agua, peso ni el resto de la tabla técnica. Completar desde la ficha del fabricante."
+      ]
+    },
+    {
+      "slug": "headset-targus-con-cable-usb",
+      "name": "Headset Targus con cable USB",
+      "brand": "Targus",
+      "seoTitle": "Headset Targus con cable USB",
+      "seoDescription": "Headset Targus con cable USB-A, micrófono con cancelación de ruido y altavoces de 40 mm. Control de volumen en el cable. Garantía y envíos a todo el país.",
+      "shortDescription": "Headset Targus con cable USB-A, micrófono omnidireccional con cancelación de ruido y altavoces de 40 mm. Diadema acolchada y control de volumen en el cable.",
+      "highlights": [
+        "Altavoces de 40 mm con sonido estéreo",
+        "Micrófono giratorio con cancelación de ruido",
+        "Control de volumen integrado en el cable",
+        "Diadema ajustable y acolchada",
+        "Peso de 0,20 kg"
+      ],
+      "specs": [
+        {
+          "label": "Conexión",
+          "value": "USB-A con cable"
+        },
+        {
+          "label": "Altavoces",
+          "value": "Estéreo, de 40 mm"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Omnidireccional y giratorio, con cancelación de ruido"
+        },
+        {
+          "label": "Control",
+          "value": "Volumen en el cable"
+        },
+        {
+          "label": "Diadema",
+          "value": "Ajustable y acolchada"
+        },
+        {
+          "label": "Aislamiento",
+          "value": "Cancelación de ruido pasiva en los auriculares"
+        },
+        {
+          "label": "Peso",
+          "value": "0,20 kg"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "17,50 x 17,80 x 7,50 cm"
+        }
+      ],
+      "descriptionHtml": "<p>El headset Targus con cable USB es un auricular estéreo para videollamadas, reuniones y tareas en la computadora.</p><h3>Micrófono</h3><p>El micrófono omnidireccional gira para encontrar la mejor posición. Tiene cancelación de ruido direccional para que la voz se escuche clara en la llamada.</p><h3>Comodidad</h3><p>La diadema es ajustable y acolchada, y las almohadillas de tacto suave descansan sobre la oreja. Pesa 0,20 kg. El control de volumen está en el cable, así que no hace falta quitarse los auriculares para ajustar el sonido.</p><h3>Sonido</h3><p>Dos altavoces estéreo de 40 mm con cancelación de ruido pasiva. También sirve para escuchar música.</p><h3>Antes de comprar</h3><p>Se conecta solo con USB-A. Si tu equipo tiene únicamente USB-C, necesitás un adaptador.</p>",
+      "revisar": [
+        "El SKU AEH102 no aparece en el nombre. Confirmar que es el código del modelo.",
+        "La descripción original es un texto largo de la marca: se resumió y se quitaron las frases de venta."
+      ]
+    },
+    {
+      "slug": "hub-targus-adaptador-usb-a-4-puertos-3-0-5gpbs",
+      "name": "Hub Targus Adaptador USB-A 4 Puertos 3.0 5 Gbps",
+      "brand": "Targus",
+      "seoTitle": "Hub Targus USB 3.0 de 4 puertos",
+      "seoDescription": "Hub Targus USB-A con 4 puertos USB 3.0 de hasta 5 Gbps y protección contra sobrecorriente. Compatible con Windows y Mac. Garantía y envíos a todo el país.",
+      "shortDescription": "Hub Targus USB-A de 4 puertos USB 3.0 para conectar mouse, teclado, pendrives y discos externos. Velocidad de hasta 5 Gbps y protección contra sobrecorriente.",
+      "highlights": [
+        "4 puertos USB 3.0 desde un solo puerto",
+        "Hasta 5 Gbps, hasta 10 veces más que USB 2.0",
+        "Conecta mouse, teclado, pendrives y discos externos",
+        "Protección contra sobrecorriente",
+        "Compacto: 2,99 x 1,54 x 0,51 pulgadas"
+      ],
+      "specs": [
+        {
+          "label": "Puertos",
+          "value": "4 x USB 3.0 (tipo A)"
+        },
+        {
+          "label": "Conexión",
+          "value": "USB-A, a un puerto USB 3.0 de la computadora"
+        },
+        {
+          "label": "Velocidad",
+          "value": "Hasta 5 Gbps"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "PC y Mac (Windows y Mac OS)"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "2,99 x 1,54 x 0,51 pulgadas"
+        },
+        {
+          "label": "Peso",
+          "value": "0,08 lb (unos 36 g)"
+        }
+      ],
+      "descriptionHtml": "<p>El hub Targus convierte un puerto USB en cuatro. Sirve para conectar varios periféricos a la vez sin quedarte sin puertos en la computadora.</p><h3>Velocidad</h3><p>Con USB 3.0 transfiere hasta 10 veces más rápido que USB 2.0, con un máximo de 5 Gbps. Si lo conectás a un puerto USB 2.0, funciona a la velocidad de ese puerto.</p><h3>Uso</h3><ul><li>Mouse, teclado y pendrives.</li><li>Discos externos.</li><li>Carga de celular desde uno de los puertos.</li></ul><h3>Diseño</h3><p>Compacto y liviano para llevarlo en la mochila. Tiene protección contra sobrecorriente para evitar cortocircuitos.</p><h3>Antes de comprar</h3><p>La ficha no aclara si necesita alimentación externa para dispositivos de alto consumo, como algunos discos externos.</p>",
+      "revisar": [
+        "La ficha no aclara si el hub necesita alimentación externa para discos de alto consumo. Confirmar."
+      ]
+    },
+    {
+      "slug": "hub-targus-tipo-c-multipuerto-2-usb-c-y-2-usb-a",
+      "brand": "Targus",
+      "seoTitle": "Hub Targus USB-C con 2 USB-C y 2 USB-A",
+      "seoDescription": "Hub Targus con 2 puertos USB-C y 2 USB-A, paso de carga de hasta 100 W y transferencia de 5 Gbps por puerto. Garantía y envíos a todo el país.",
+      "shortDescription": "Hub Targus USB-C con 2 puertos USB-C y 2 USB-A. Paso de carga de hasta 100 W para mantener la notebook cargada y transferencia de hasta 5 Gbps por puerto.",
+      "highlights": [
+        "Entrada USB-C con paso de carga de hasta 100 W",
+        "2 puertos USB-A para periféricos",
+        "2 puertos USB-C",
+        "Hasta 5 Gbps por puerto",
+        "Compacto y liviano para llevar"
+      ],
+      "specs": [
+        {
+          "label": "Conexión",
+          "value": "USB-C, a un puerto de la computadora"
+        },
+        {
+          "label": "Puertos",
+          "value": "2 x USB-A y 2 x USB-C"
+        },
+        {
+          "label": "Carga",
+          "value": "Paso de carga de hasta 100 W (20 V / 5 A)"
+        },
+        {
+          "label": "Transferencia",
+          "value": "Hasta 5 Gbps por puerto"
+        },
+        {
+          "label": "Capacidad",
+          "value": "Hasta cuatro dispositivos conectados"
+        }
+      ],
+      "descriptionHtml": "<p>El hub Targus convierte un puerto USB-C en dos puertos USB-A y dos USB-C. Es útil para notebooks que tienen un solo puerto USB-C.</p><h3>Carga de la notebook</h3><p>Podés conectar el cargador de la notebook al hub, que deja pasar la carga. Soporta hasta 100 W (20 V / 5 A), así que la notebook sigue cargándose mientras usás los periféricos.</p><h3>Periféricos</h3><ul><li>Mouse, teclado y memorias flash.</li><li>Discos duros y otros dispositivos USB-A o USB-C.</li><li>Hasta cuatro dispositivos en total.</li></ul><h3>Velocidad</h3><p>Transfiere hasta 5 Gbps por puerto.</p><h3>Antes de comprar</h3><p>Para cargar la notebook necesitás un cargador compatible de hasta 100 W.</p>",
+      "revisar": [
+        "La ficha no aclara cuál de los dos puertos USB-C es el de carga (pass-through). Confirmar antes de publicar."
+      ]
+    },
+    {
+      "slug": "hub-usb-targus-4-puertos-2-0",
+      "brand": "Targus",
+      "seoTitle": "Hub USB Targus 4 puertos 2.0",
+      "seoDescription": "Hub USB Targus de 4 puertos USB 2.0 con velocidad de hasta 480 Mbps para conectar varios periféricos a la computadora. Garantía y envíos a todo el país.",
+      "shortDescription": "Hub USB Targus con 4 puertos USB 2.0 para conectar periféricos a la computadora. Velocidad de hasta 480 Mbps.",
+      "highlights": [
+        "4 puertos USB 2.0",
+        "Velocidad de hasta 480 Mbps",
+        "Varios periféricos conectados a un solo puerto"
+      ],
+      "specs": [
+        {
+          "label": "Puertos",
+          "value": "4 x USB 2.0"
+        },
+        {
+          "label": "Velocidad",
+          "value": "Hasta 480 Mbps"
+        }
+      ],
+      "descriptionHtml": "<p>El Hub USB Targus de 4 puertos USB 2.0 permite conectar varios periféricos a una sola entrada USB de la computadora.</p><h3>Puertos</h3><p>Tiene 4 puertos USB 2.0 con velocidad de hasta 480 Mbps.</p><h3>Antes de comprar</h3><p>La descripción original no informa compatibilidad, dimensiones ni color. Consultanos antes de comprarlo si necesitás alguno de esos datos.</p>",
+      "revisar": [
+        "La descripción original es genérica. Faltan compatibilidad (Windows, Mac), dimensiones, color y si necesita alimentación externa.",
+        "El resumen decía '480 MBPSacc' (texto cortado): se usó 480 Mbps."
+      ]
+    },
+    {
+      "slug": "microfono-inalambrico-boya-boyalink",
+      "name": "Micrófono inalámbrico Boya BoyaLink",
+      "model": "BoyaLink A1",
+      "seoTitle": "Micrófono inalámbrico Boya BoyaLink",
+      "seoDescription": "Micrófono inalámbrico Boya BoyaLink A1 para cámaras y smartphones. Transmisor y receptor, cancelación de ruido y configuración sin apps. Envíos a todo el país.",
+      "shortDescription": "Micrófono inalámbrico Boya BoyaLink A1 con transmisor y receptor. Conexión con smartphones y cámaras, cancelación de ruido ambiente y configuración sin apps.",
+      "highlights": [
+        "Transmisor y receptor sincronizados",
+        "Compatible con smartphones y cámaras DSLR",
+        "Cancelación de ruido ambiente",
+        "Configuración plug and play, sin apps",
+        "Batería de larga duración"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Sistema inalámbrico con transmisor y receptor"
+        },
+        {
+          "label": "Conexión",
+          "value": "Smartphones, cámaras DSLR y dispositivos de grabación"
+        },
+        {
+          "label": "Configuración",
+          "value": "Plug and play, sin apps adicionales"
+        },
+        {
+          "label": "Procesamiento",
+          "value": "Cancelación de ruido ambiente"
+        },
+        {
+          "label": "Batería",
+          "value": "Larga duración (la ficha no informa horas)"
+        }
+      ],
+      "descriptionHtml": "<p>El Boya BoyaLink A1 es un micrófono inalámbrico para grabar audio sin cables. Sirve para entrevistas, vlogs, podcasts y producciones audiovisuales.</p><h3>Conexión</h3><p>Funciona con smartphones, cámaras DSLR y otros dispositivos de grabación. El transmisor y el receptor se sincronizan y no necesita apps adicionales.</p><h3>Audio</h3><p>Incluye cancelación de ruido ambiente para que la voz se escuche más clara.</p><h3>Batería</h3><p>La ficha habla de batería de larga duración, pero no informa las horas de uso.</p><h3>Antes de comprar</h3><p>La ficha no informa el alcance de transmisión ni el tipo de conector. Confirmalo antes de comprarlo para tu equipo.</p>",
+      "revisar": [
+        "La descripción original es publicitaria. No trae alcance, horas de batería, tipo de conector ni contenido de la caja.",
+        "Se quitó de la descripción original la frase de consulta de stock por WhatsApp."
+      ]
+    },
+    {
+      "slug": "parlante-bluetooth-kassel-party-speaker-8-20w",
+      "name": "Parlante Bluetooth Kassel Party Speaker 8″ 20 W",
+      "brand": "Kassel",
+      "seoTitle": "Parlante Kassel Party Speaker 8″ 20 W",
+      "seoDescription": "Parlante Kassel Party Speaker de 8″ y 20 W RMS con Bluetooth, luces RGB, micrófono con cable y modo TWS. Garantía y envíos a todo el país.",
+      "shortDescription": "Parlante Bluetooth Kassel de 8″ con 20 W RMS, tweeter de 1,5″, luces RGB, control remoto y micrófono con cable. Se puede sincronizar con otro igual en modo TWS.",
+      "highlights": [
+        "Woofer de 8″ y tweeter de 1,5″",
+        "Hasta 6 horas de uso al 50% de volumen",
+        "Entradas AUX, USB, microSD, FM y Bluetooth",
+        "Luces RGB y pantalla LED",
+        "Modo TWS para sincronizar con otro igual"
+      ],
+      "specs": [
+        {
+          "label": "Parlantes",
+          "value": "Woofer de 8″ y tweeter de 1,5″"
+        },
+        {
+          "label": "Potencia",
+          "value": "20 W RMS"
+        },
+        {
+          "label": "Batería",
+          "value": "3,7 V, 4500 mAh"
+        },
+        {
+          "label": "Autonomía",
+          "value": "6 h al 50% de volumen; 4 h al 100%"
+        },
+        {
+          "label": "Carga",
+          "value": "5 V por USB"
+        },
+        {
+          "label": "Conectividad",
+          "value": "AUX, USB, tarjeta TF (microSD), FM, Bluetooth y TWS"
+        },
+        {
+          "label": "Grabación",
+          "value": "Grabación por USB"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Entrada para micrófono y micrófono con cable incluido"
+        },
+        {
+          "label": "Iluminación",
+          "value": "Luces RGB y pantalla LED"
+        },
+        {
+          "label": "Control",
+          "value": "Control remoto"
+        },
+        {
+          "label": "Incluye",
+          "value": "Cable de carga USB, control remoto, micrófono con cable y manual"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "25,5 x 20 x 57 cm"
+        }
+      ],
+      "descriptionHtml": "<p>El Kassel Party Speaker es un parlante Bluetooth de 8″ con 20 W RMS, pensado para fiestas y reuniones.</p><h3>Sonido y potencia</h3><p>Woofer de 8″ y tweeter de 1,5″. Tiene 20 W RMS y se puede conectar por Bluetooth, AUX, USB, tarjeta microSD o FM.</p><h3>Batería</h3><p>Batería de 3,7 V y 4500 mAh. Dura unas 6 horas al 50% de volumen y 4 horas al 100%. Se carga con el cable USB incluido.</p><h3>Karaoke y luces</h3><p>Incluye micrófono con cable y entrada para micrófono. Tiene luces RGB, pantalla LED y grabación por USB.</p><h3>Antes de comprar</h3><p>Por sus medidas, 25,5 x 20 x 57 cm, conviene ubicarlo en un lugar fijo.</p>",
+      "revisar": [
+        "La marca Kassel sale del nombre del producto: confirmar.",
+        "La medida de la ficha original dice '25,5X20,X57 Cm' con un dato cortado. Se usó 25,5 x 20 x 57 cm."
+      ]
+    },
+    {
+      "slug": "parlante-bluetooth-moonki-pb265-100w-r-m-s",
+      "name": "Parlante Bluetooth Moonki PB265 100 W RMS",
+      "brand": "Moonki",
+      "model": "PB265",
+      "seoTitle": "Parlante Moonki PB265 100 W RMS",
+      "seoDescription": "Parlante Moonki PB265 de 100 W RMS (2 x 50 W) con Bluetooth, DSP, pantalla LED y entradas para micrófono y guitarra. Garantía y envíos a todo el país.",
+      "shortDescription": "Parlante activo Moonki PB265 con Bluetooth, 2 x 50 W RMS, woofers de 6″ y entradas para micrófono y guitarra. Batería recargable de 12 V.",
+      "highlights": [
+        "100 W RMS en total (2 x 50 W)",
+        "Woofers de 6″ y tweeters de 2″",
+        "Entradas para micrófono y guitarra",
+        "Ecualización independiente de agudos y bajos",
+        "Bluetooth, AUX y conexión TWS",
+        "Batería recargable de 12 V"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Activo, con Bluetooth"
+        },
+        {
+          "label": "Potencia",
+          "value": "2 x 50 W RMS (1500 W PMPO)"
+        },
+        {
+          "label": "Parlantes",
+          "value": "Woofer de 6″ x 2 y tweeter de 2″ x 2"
+        },
+        {
+          "label": "Procesamiento",
+          "value": "DSP, ecualización independiente de agudos y bajos, función ex-bass"
+        },
+        {
+          "label": "Pantalla",
+          "value": "LED con anillo de iluminación dinámico"
+        },
+        {
+          "label": "Entradas",
+          "value": "AUX, micrófono y guitarra"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Prioridad de micrófono, control de eco y ecualizador del mic"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Bluetooth y TWS (conexión entre unidades)"
+        },
+        {
+          "label": "Batería",
+          "value": "Recargable 12 V, 7 A"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "285 x 285 x 620 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "10,6 kg (unidad); 12,6 kg (caja)"
+        }
+      ],
+      "descriptionHtml": "<p>El Moonki PB265 es un parlante activo de 100 W RMS, con dos woofers de 6″ y dos tweeters de 2″. Sirve para reproducir música y para usarlo con micrófono o guitarra.</p><h3>Potencia y sonido</h3><p>Tiene 2 x 50 W RMS, que la ficha informa como 1500 W PMPO. Incluye DSP, ecualización independiente de agudos y bajos, y función ex-bass.</p><h3>Entradas y karaoke</h3><ul><li>Entrada de micrófono y de guitarra.</li><li>Prioridad de micrófono.</li><li>Control de eco, volumen y ecualizador del micrófono.</li></ul><h3>Conectividad</h3><p>Bluetooth y AUX. Dos unidades pueden conectarse entre sí en modo TWS.</p><h3>Antes de comprar</h3><p>Pesa 10,6 kg, así que conviene ubicarlo en un lugar fijo o transportarlo con cuidado.</p>",
+      "revisar": [
+        "La potencia de 1500 W es PMPO. La potencia real es 2 x 50 W RMS: no mostrar solo la cifra PMPO.",
+        "La batería figura como '12V 7A' sin aclarar si son amperios o amperios-hora. Confirmar."
+      ]
+    },
+    {
+      "slug": "parlante-bluetooth-philips-s7505-30w",
+      "name": "Parlante Bluetooth Philips S7505 30 W",
+      "brand": "Philips",
+      "model": "S7505",
+      "seoTitle": "Parlante Philips S7505 30 W Bluetooth",
+      "seoDescription": "Parlante Philips S7505 de 30 W RMS con Bluetooth 5.0, 20 horas de reproducción, IPX7 y USB-A para cargar el celular. Garantía y envíos a todo el país.",
+      "shortDescription": "Parlante Philips S7505 de 30 W RMS con Bluetooth 5.0 y hasta 20 horas de reproducción. Tela Kvadrat, resistencia IPX7 y puerto USB-A para cargar otro dispositivo.",
+      "highlights": [
+        "30 W RMS, con 60 W de potencia máxima",
+        "Hasta 20 horas de reproducción con una carga",
+        "Bluetooth 5.0 con alcance de 20 m",
+        "Resistencia IPX7",
+        "Puerto USB-A para cargar el celular",
+        "Tela Kvadrat y conexión con otro parlante igual"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "30 W RMS (60 W máx.)"
+        },
+        {
+          "label": "Driver",
+          "value": "Full range de 90 mm"
+        },
+        {
+          "label": "Respuesta de frecuencia",
+          "value": "20 Hz a 20 kHz"
+        },
+        {
+          "label": "Bluetooth",
+          "value": "5.0 (A2DP y AVRCP), alcance de 20 m en línea visual"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 20 horas"
+        },
+        {
+          "label": "Carga",
+          "value": "USB-C, 4,5 horas para carga completa"
+        },
+        {
+          "label": "Batería portátil",
+          "value": "Puerto USB-A para cargar otro dispositivo"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IPX7"
+        },
+        {
+          "label": "Varios parlantes",
+          "value": "Sí, en estéreo con otro igual (TWS)"
+        },
+        {
+          "label": "Controles",
+          "value": "Botones en relieve y control de volumen digital"
+        },
+        {
+          "label": "Tela",
+          "value": "Kvadrat, diseñada para dejar pasar el sonido"
+        }
+      ],
+      "descriptionHtml": "<p>El Philips S7505 es un parlante Bluetooth de 30 W RMS para llevar de la mañana a la noche. Tiene botones en relieve y tela Kvadrat.</p><h3>Sonido</h3><p>Tiene un controlador de rango completo de 90 mm y un radiador pasivo para graves. La ficha indica 30 W RMS y 60 W de potencia máxima.</p><h3>Batería</h3><p>Dura hasta 20 horas con una sola carga y se carga por USB-C en unas 4,5 horas. También puede cargar otro dispositivo por su puerto USB-A.</p><h3>Conexión</h3><p>Bluetooth 5.0 con alcance de 20 metros en línea visual. Recuerda el último dispositivo al que se conectó. Se pueden unir dos parlantes iguales para estéreo.</p><h3>Antes de comprar</h3><p>No tiene micrófono integrado, pantalla ni aplicación.</p>",
+      "revisar": [
+        "La ficha no incluye SKU. El nombre solo dice S7505: confirmar el código del modelo."
+      ]
+    },
+    {
+      "slug": "parlante-bluetooth-smartlife-party-box-2x8",
+      "name": "Parlante Bluetooth Smartlife Party Box 2 x 8″",
+      "brand": "Smartlife",
+      "seoTitle": "Parlante Smartlife Party Box 2 x 8″",
+      "seoDescription": "Parlante Smartlife Party Box con 2 woofers de 8″, 15 W RMS, Bluetooth, TWS, batería integrada y micrófono con cable para karaoke. Envíos a todo el país.",
+      "shortDescription": "Parlante Smartlife Party Box con 2 woofers de 8″, 15 W RMS y batería integrada. Incluye micrófono con cable, luces RGB y función TWS.",
+      "highlights": [
+        "2 woofers de 8″ en dos vías",
+        "Micrófono con cable para karaoke",
+        "Batería integrada de 3,7 V y 3600 mAh",
+        "Luces LED dinámicas RGB",
+        "Bluetooth, USB, microSD, FM, AUX y TWS"
+      ],
+      "specs": [
+        {
+          "label": "Parlantes",
+          "value": "2 woofers de 8″, sistema de 2 vías"
+        },
+        {
+          "label": "Potencia",
+          "value": "15 W RMS"
+        },
+        {
+          "label": "Batería",
+          "value": "Integrada, 3,7 V, 3600 mAh"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Bluetooth, TWS, USB, tarjeta TF, FM y AUX"
+        },
+        {
+          "label": "Karaoke",
+          "value": "Entrada para micrófono y micrófono con cable"
+        },
+        {
+          "label": "Efectos",
+          "value": "Eco integral para karaoke"
+        },
+        {
+          "label": "Iluminación",
+          "value": "Luces LED dinámicas RGB"
+        },
+        {
+          "label": "Carga",
+          "value": "USB"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "23,6 x 57,1 x 20,2 cm"
+        },
+        {
+          "label": "Peso",
+          "value": "3,3 kg"
+        }
+      ],
+      "descriptionHtml": "<p>El Smartlife Party Box es un parlante con 2 woofers de 8″ y 15 W RMS, pensado para reuniones y karaoke.</p><h3>Sonido</h3><p>Sistema de 2 vías con dos woofers de 8″. Tiene 15 W RMS y eco integral para karaoke.</p><h3>Karaoke</h3><p>Incluye micrófono con cable y entrada para micrófono, para cantar con la música del parlante.</p><h3>Conexión y batería</h3><ul><li>Bluetooth, TWS, USB, tarjeta TF, FM y AUX.</li><li>Batería integrada de 3,7 V y 3600 mAh.</li><li>Se carga por USB.</li></ul><h3>Luces</h3><p>Luces LED dinámicas RGB.</p><h3>Antes de comprar</h3><p>Pesa 3,3 kg y mide 23,6 x 57,1 x 20,2 cm.</p>",
+      "revisar": [
+        "La ficha no informa la autonomía de la batería ni el tipo de conector de carga."
+      ]
+    },
+    {
+      "slug": "parlante-harman-kardon-aura-studio-3",
+      "brand": "Harman Kardon",
+      "model": "Aura Studio 3",
+      "seoTitle": "Harman Kardon Aura Studio 3 de 130 W",
+      "seoDescription": "Parlante Harman Kardon Aura Studio 3 de 130 W RMS, con sonido de 360 grados, luz ambiente y Bluetooth 4.2. Garantía de 12 meses y envíos a todo el país.",
+      "shortDescription": "Parlante Harman Kardon Aura Studio 3 con 130 W RMS y sonido de 360 grados. Diseño en cúpula con luz ambiente de efecto ondulante y Bluetooth 4.2.",
+      "highlights": [
+        "130 W RMS con subwoofer",
+        "Sonido de 360 grados",
+        "Luz ambiente con efecto de ondas",
+        "Diseño en cúpula para cualquier ambiente",
+        "Bluetooth 4.2 con A2DP y AVRCP",
+        "Garantía de 12 meses"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "130 W RMS (2 x 15 W + 100 W de subwoofer)"
+        },
+        {
+          "label": "Sonido",
+          "value": "360 grados con subwoofer"
+        },
+        {
+          "label": "Respuesta de frecuencia",
+          "value": "45 Hz a 20 kHz (-6 dB)"
+        },
+        {
+          "label": "Relación señal/ruido",
+          "value": "80 dB"
+        },
+        {
+          "label": "Bluetooth",
+          "value": "4.2 (A2DP 1.3, AVRCP 1.6)"
+        },
+        {
+          "label": "Iluminación",
+          "value": "Luz ambiente con efecto de ondas"
+        },
+        {
+          "label": "Alimentación",
+          "value": "100 a 240 V, 50/60 Hz"
+        },
+        {
+          "label": "Diseño",
+          "value": "Cúpula, con materiales premium"
+        },
+        {
+          "label": "Origen",
+          "value": "China"
+        },
+        {
+          "label": "En la caja",
+          "value": "Parlante, cable de alimentación, guía de inicio rápido, hoja de seguridad y tarjeta de garantía"
+        }
+      ],
+      "descriptionHtml": "<p>El Harman Kardon Aura Studio 3 es un parlante Bluetooth de diseño en cúpula, con sonido de 360 grados y luz ambiente. Se integra a la decoración del living o de cualquier cuarto.</p><h3>Sonido</h3><p>Tiene 130 W RMS en total: dos altavoces de 15 W y un subwoofer de 100 W. El sonido sale en todas las direcciones.</p><h3>Luz ambiente</h3><p>Una luz recorre la base con efecto de ondas de agua. Sirve para crear un ambiente tranquilo mientras escuchás música.</p><h3>Conexión</h3><p>Bluetooth 4.2 con compatibilidad A2DP 1.3 y AVRCP 1.6.</p><h3>Antes de comprar</h3><p>La ficha indica alimentación de red, de 100 a 240 V, y no menciona batería. Garantía de 12 meses según la ficha.</p>",
+      "revisar": [
+        "La fuente traía 'CONTADO 10% DESCUENTO' en el resumen corto: se quitó porque es precio y promoción."
+      ]
+    },
+    {
+      "slug": "parlante-harrison-punch",
+      "name": "Parlante Harrison Punch 600 W SP-KJA25A",
+      "brand": "Harrison",
+      "model": "SP-KJA25A",
+      "seoTitle": "Parlante Harrison Punch 600 W",
+      "seoDescription": "Parlante Harrison Punch SP-KJA25A de 600 W PMPO con Bluetooth, USB, SD, radio FM, batería interna y control remoto. Garantía y envíos a todo el país.",
+      "shortDescription": "Parlante Harrison Punch de 600 W PMPO con Bluetooth, entradas USB y SD, radio FM, ecualizador y batería interna. Incluye control remoto.",
+      "highlights": [
+        "600 W PMPO",
+        "Bluetooth, USB y lector de tarjeta SD",
+        "Radio FM y ecualizador",
+        "Batería interna",
+        "Control remoto incluido"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "600 W PMPO"
+        },
+        {
+          "label": "Entradas",
+          "value": "Bluetooth, USB y SD"
+        },
+        {
+          "label": "Radio",
+          "value": "FM"
+        },
+        {
+          "label": "Ecualizador",
+          "value": "Sí"
+        },
+        {
+          "label": "Batería",
+          "value": "Interna"
+        },
+        {
+          "label": "Control",
+          "value": "Remoto"
+        }
+      ],
+      "descriptionHtml": "<p>El Harrison Punch es un parlante portátil de 600 W PMPO, con Bluetooth, entrada USB y SD, radio FM y batería interna.</p><h3>Conectividad</h3><p>Se conecta por Bluetooth, USB o tarjeta SD. También tiene radio FM.</p><h3>Sonido</h3><p>Incluye ecualizador. La ficha indica 600 W PMPO.</p><h3>Uso</h3><p>Tiene batería interna y control remoto para manejarlo a distancia.</p><h3>Antes de comprar</h3><p>La potencia está expresada en PMPO, que no es lo mismo que RMS. La ficha no detalla autonomía ni dimensiones.</p>",
+      "revisar": [
+        "La potencia está en PMPO (600 W), que no es comparable con RMS. Confirmar si el fabricante informa RMS.",
+        "La descripción original es genérica: faltan autonomía, dimensiones y peso."
+      ]
+    },
+    {
+      "slug": "parlante-jahro-8-1200w-pmpo",
+      "name": "Parlante Portátil Jahro 8″ 1200 W PMPO",
+      "brand": "Jahro",
+      "model": "SG-801B",
+      "seoTitle": "Parlante Jahro 8″ 1200 W PMPO",
+      "seoDescription": "Parlante portátil Jahro SG-801B con woofer de 8″, 1200 W PMPO, Bluetooth, radio FM, luces RGB y micrófono con cable. Envíos a todo el país.",
+      "shortDescription": "Parlante portátil Jahro SG-801B con woofer de 8″, Bluetooth, radio FM, luces LED RGB y micrófono de mano con cable. Batería recargable de hasta 3 horas.",
+      "highlights": [
+        "Woofer de 8″ y 1200 W PMPO",
+        "Hasta 3 horas de uso continuo con batería",
+        "Bluetooth, USB, tarjeta SD, AUX y FM",
+        "Micrófono de mano con cable y control de volumen",
+        "Función TWS para conectar dos iguales"
+      ],
+      "specs": [
+        {
+          "label": "Parlante",
+          "value": "Woofer de 8″"
+        },
+        {
+          "label": "Potencia",
+          "value": "1200 W PMPO"
+        },
+        {
+          "label": "Batería",
+          "value": "Recargable, hasta 3 horas de uso continuo"
+        },
+        {
+          "label": "Entradas",
+          "value": "USB, tarjeta SD, auxiliar y micrófono"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Bluetooth y TWS (dos unidades en estéreo)"
+        },
+        {
+          "label": "Radio",
+          "value": "FM"
+        },
+        {
+          "label": "Luces",
+          "value": "LED RGB"
+        },
+        {
+          "label": "Micrófono",
+          "value": "De mano, con cable y control de volumen"
+        },
+        {
+          "label": "Carga",
+          "value": "Cable USB incluido; cargador de 5 V no incluido"
+        },
+        {
+          "label": "Medidas",
+          "value": "Parlante 330 x 230 x 170 mm; embalaje 235 x 200 x 365 mm"
+        }
+      ],
+      "descriptionHtml": "<p>El Jahro SG-801B es un parlante portátil de 8″ con 1200 W PMPO, batería recargable y luces RGB. Tiene manija plegable y es liviano para llevar.</p><h3>Sonido y entradas</h3><p>Tiene woofer de 8″ y entradas USB, tarjeta SD, auxiliar y micrófono. Con la función TWS se conectan dos unidades iguales en estéreo.</p><h3>Batería</h3><p>Batería recargable para hasta 3 horas de uso continuo. Se carga con el cable USB incluido.</p><h3>Micrófono</h3><p>Incluye micrófono de mano con cable y control de volumen.</p><h3>Antes de comprar</h3><p>El cargador de 5 V no viene en la caja: podés usar un cargador de celular. La potencia está en PMPO.</p>",
+      "revisar": [
+        "La potencia figura en PMPO, no en RMS. Confirmar si el fabricante informa RMS."
+      ]
+    },
+    {
+      "slug": "parlante-jahro-bazooka-40w-r-m-s",
+      "name": "Parlante Jahro Bazooka 25 W RMS",
+      "brand": "Jahro",
+      "model": "JH-1777A",
+      "seoTitle": "Parlante Jahro Bazooka 25 W RMS",
+      "seoDescription": "Parlante Jahro Bazooka JH-1777A de 25 W RMS con 2 parlantes, Bluetooth, radio FM, luces LED y batería de hasta 5 horas. Garantía y envíos a todo el país.",
+      "shortDescription": "Parlante Jahro Bazooka de 25 W RMS con 2 parlantes, batería recargable de hasta 5 horas, Bluetooth, radio FM y luces LED. Entrada para micrófono de karaoke.",
+      "highlights": [
+        "25 W RMS con 2 parlantes",
+        "Batería recargable de hasta 5 horas",
+        "Bluetooth y radio FM",
+        "Entrada para micrófono de karaoke",
+        "Uso en interior y exterior"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "25 W RMS"
+        },
+        {
+          "label": "Configuración",
+          "value": "2.1, con woofer y tweeter"
+        },
+        {
+          "label": "Parlantes",
+          "value": "2, tipo caja activa"
+        },
+        {
+          "label": "Batería",
+          "value": "Recargable e incluida, hasta 5 horas de música"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Bluetooth"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Entrada para micrófono; 1 incluido"
+        },
+        {
+          "label": "Radio",
+          "value": "FM"
+        },
+        {
+          "label": "Luces",
+          "value": "LED"
+        },
+        {
+          "label": "Efectos",
+          "value": "Efecto de voz"
+        },
+        {
+          "label": "Uso",
+          "value": "Interior y exterior, portátil e inalámbrico"
+        }
+      ],
+      "descriptionHtml": "<p>El Jahro Bazooka es un parlante portátil de 25 W RMS con dos parlantes, batería recargable y entrada para micrófono. Sirve para reuniones, karaoke y para usarlo en interior o exterior.</p><h3>Sonido</h3><p>Configuración 2.1, con woofer y tweeter. Tiene 25 W RMS de potencia.</p><h3>Batería</h3><p>Batería recargable incluida, con hasta 5 horas de música.</p><h3>Karaoke</h3><p>Incluye un micrófono y tiene efecto de voz.</p><h3>Conectividad y extras</h3><p>Bluetooth y radio FM. Tiene luces LED.</p><h3>Antes de comprar</h3><p>La ficha no aclara el peso ni las dimensiones.</p>",
+      "revisar": [
+        "El slug dice 40 W, pero el nombre y la descripción dicen 25 W RMS. Se usó 25 W: confirmar la potencia y el slug.",
+        "La descripción dice 1 micrófono incluido y el resumen dice 2 entradas para micrófono. Confirmar."
+      ]
+    },
+    {
+      "slug": "parlante-jbl-boombox-4",
+      "model": "Boombox 4",
+      "seoTitle": "JBL Boombox 4 parlante 210 W IP68",
+      "seoDescription": "JBL Boombox 4: parlante de 210 W pico con IP68, hasta 34 horas de batería, Auracast y Bluetooth 5.4. Powerbank USB-C. Garantía y envíos a todo el país.",
+      "shortDescription": "JBL Boombox 4 con sonido JBL Original Pro Sound, AI Sound Boost y hasta 34 horas de reproducción. Certificación IP68, Bluetooth 5.4 con Auracast y powerbank por USB-C.",
+      "highlights": [
+        "Hasta 210 W pico en modo CA",
+        "Hasta 34 horas de reproducción",
+        "Certificación IP68 contra polvo y agua",
+        "Bluetooth 5.4 con Auracast para enlazar parlantes",
+        "USB-C bidireccional con función powerbank",
+        "AI Sound Boost con mínima distorsión"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "Hasta 210 W pico (modo CA)"
+        },
+        {
+          "label": "Tecnología de audio",
+          "value": "JBL Original Pro Sound de 3 vías, AI Sound Boost y Bass Boost dual"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 34 h (28 h + 6 h con Playtime Boost)"
+        },
+        {
+          "label": "Carga completa",
+          "value": "3 horas"
+        },
+        {
+          "label": "Protección",
+          "value": "IP68 (polvo e inmersión accidental en agua dulce o salada)"
+        },
+        {
+          "label": "Bluetooth",
+          "value": "5.4 con Auracast"
+        },
+        {
+          "label": "Puerto USB-C",
+          "value": "Bidireccional: carga, powerbank y audio lossless"
+        },
+        {
+          "label": "Construcción",
+          "value": "Asa metálica con agarre de silicona; tejidos y plásticos reciclados"
+        }
+      ],
+      "descriptionHtml": "<p>El JBL Boombox 4 es un parlante de alta potencia para eventos al aire libre, viajes y fiestas. Tiene una estructura robusta y asa de transporte ergonómica.</p><h3>Sonido</h3><p>Sistema de 3 vías con subwoofer, altavoces de medios y tweeters. AI Sound Boost analiza el audio en tiempo real para optimizar la respuesta de los transductores. El Bass Boost dual permite elegir entre graves intensos o profundos.</p><h3>Batería</h3><p>Hasta 34 horas: 28 horas estándar más 6 con Playtime Boost. Se carga completo en 3 horas.</p><h3>Resistencia</h3><p>Certificación IP68: resistente al polvo y a inmersiones accidentales en agua dulce o salada.</p><h3>Conectividad</h3><p>Bluetooth 5.4 con Auracast para enlazar varios parlantes compatibles. El puerto USB-C sirve para cargar el parlante y para cargar otros dispositivos como powerbank.</p><h3>Antes de comprar</h3><p>La potencia de 210 W es de pico, no RMS.</p>",
+      "revisar": [
+        "La potencia de 210 W es de pico (en modo CA). La ficha no informa RMS."
+      ]
+    },
+    {
+      "slug": "parlante-jbl-flip-7",
+      "brand": "JBL",
+      "model": "Flip 7",
+      "seoTitle": "JBL Flip 7 parlante portátil IP68",
+      "seoDescription": "JBL Flip 7: parlante Bluetooth 5.4 con woofer de 25 W, IP68, hasta 16 horas de batería y conexión con otro Flip 7. Garantía y envíos a todo el país.",
+      "shortDescription": "JBL Flip 7 con sonido JBL Pro y AI Sound Boost, hasta 16 horas de reproducción y certificación IP68. Bluetooth 5.4, carga USB-C y conexión con otro Flip 7.",
+      "highlights": [
+        "Hasta 16 horas de reproducción",
+        "IP68 contra agua, polvo y caídas",
+        "Bluetooth 5.4 y hasta dos teléfonos o tablets conectados",
+        "AI Sound Boost para graves más potentes",
+        "Conexión con otro Flip 7 para más sonido",
+        "Dimensiones compactas: 18,3 x 7 x 7,2 cm"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "25 W RMS (woofer) y 10 W RMS (tweeter)"
+        },
+        {
+          "label": "Sonido",
+          "value": "JBL Pro con AI Sound Boost"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 16 h (14 h + 2 h con Playtime Boost)"
+        },
+        {
+          "label": "Protección",
+          "value": "IP68"
+        },
+        {
+          "label": "Bluetooth",
+          "value": "5.4"
+        },
+        {
+          "label": "Conexiones",
+          "value": "Hasta 2 teléfonos o tablets; conexión con otro Flip 7"
+        },
+        {
+          "label": "Carga",
+          "value": "USB-C con protección de carga"
+        },
+        {
+          "label": "App",
+          "value": "JBL Portable"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "18,3 x 7 x 7,2 cm"
+        },
+        {
+          "label": "Embalaje",
+          "value": "Ecológico"
+        }
+      ],
+      "descriptionHtml": "<p>El JBL Flip 7 es un parlante portátil compacto con sonido JBL Pro, AI Sound Boost y resistencia IP68. Sirve para llevarlo a la playa, a la terraza o a cualquier salida.</p><h3>Sonido</h3><p>Tiene 25 W RMS en el woofer y 10 W RMS en el tweeter. AI Sound Boost analiza la música en tiempo real para dar más potencia con menos distorsión.</p><h3>Batería</h3><p>Dura hasta 16 horas. Con Playtime Boost se suman 2 horas más.</p><h3>Resistencia</h3><p>IP68: resistente al agua, al polvo y a las caídas.</p><h3>Conexión</h3><p>Conecta hasta dos teléfonos o tablets a la vez. También se puede unir con otro Flip 7 para tener un sonido más amplio. Se carga por USB-C.</p><h3>Antes de comprar</h3><p>La ficha no informa el peso del parlante.</p>",
+      "revisar": [
+        "El resumen menciona PartyBoost y la descripción menciona Auracast para unir dos Flip 7. Confirmar cuál aplica."
+      ]
+    },
+    {
+      "slug": "parlante-jbl-xtreme-4",
+      "brand": "JBL",
+      "model": "Xtreme 4",
+      "seoTitle": "JBL Xtreme 4 con batería intercambiable",
+      "seoDescription": "JBL Xtreme 4: parlante con 2 woofers y 2 tweeters, IP67, hasta 24 horas de batería intercambiable y Auracast. Garantía y envíos a todo el país.",
+      "shortDescription": "JBL Xtreme 4 con 2 woofers, 2 tweeters y radiadores pasivos dobles. Hasta 24 horas de reproducción con batería intercambiable, certificación IP67 y Auracast.",
+      "highlights": [
+        "2 woofers y 2 tweeters con radiadores pasivos",
+        "Hasta 24 horas, con batería intercambiable",
+        "Certificación IP67, sumergible en agua dulce",
+        "Bluetooth 5.3 con Auracast y conexión multipunto",
+        "USB-C con función powerbank",
+        "Correa de hombro con destapador de botellas"
+      ],
+      "specs": [
+        {
+          "label": "Configuración",
+          "value": "2 woofers de 70 mm, 2 tweeters de 20 mm y radiadores pasivos dobles"
+        },
+        {
+          "label": "Potencia",
+          "value": "2 x 30 W RMS (woofers) y 2 x 20 W RMS (tweeters) en modo CA"
+        },
+        {
+          "label": "Sonido",
+          "value": "JBL Original Pro Sound con AI Sound Boost"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 24 h, +6 h con Playtime Boost; intercambiable (se vende aparte)"
+        },
+        {
+          "label": "Protección",
+          "value": "IP67"
+        },
+        {
+          "label": "Bluetooth",
+          "value": "5.3 con Auracast y conexión multipunto"
+        },
+        {
+          "label": "Puerto USB-C",
+          "value": "Entrada de carga y salida powerbank"
+        },
+        {
+          "label": "Accesorios",
+          "value": "Correa de transporte con destapador de botellas"
+        },
+        {
+          "label": "App",
+          "value": "JBL Portable (EQ y actualización de firmware)"
+        }
+      ],
+      "descriptionHtml": "<p>El JBL Xtreme 4 es un parlante portátil de alta potencia para interior y exterior, con estructura reforzada y amortiguadores de goma.</p><h3>Sonido</h3><p>Tiene dos woofers de 70 mm, dos tweeters de 20 mm y dos radiadores pasivos. Con AI Sound Boost se reduce la distorsión a volúmenes altos.</p><h3>Batería</h3><p>Hasta 24 horas de música, con 6 horas extra en Playtime Boost. La batería es extraíble e intercambiable, pero se vende por separado.</p><h3>Resistencia</h3><p>Certificación IP67: resistente al polvo y sumergible en agua dulce. Trae correa de hombro y destapador de botellas.</p><h3>Conexión</h3><p>Bluetooth 5.3 con Auracast para enlazar varios parlantes JBL compatibles. El puerto USB-C carga el parlante y también sirve como powerbank para tu celular.</p><h3>Antes de comprar</h3><p>La batería de repuesto no viene en la caja. Si necesitás más de 24 horas, tenés que comprarla aparte.</p>",
+      "revisar": [
+        "La batería intercambiable se vende aparte y no viene en la caja. Confirmar si la tienda la ofrece."
+      ]
+    },
+    {
+      "slug": "parlante-nakamichi-thrill-rojo",
+      "name": "Parlante Nakamichi Thrill Negro",
+      "brand": "Nakamichi",
+      "model": "Thrill",
+      "seoTitle": "Parlante Nakamichi Thrill negro 20 W",
+      "seoDescription": "Parlante Nakamichi Thrill negro de 20 W (2 x 10 W) con Bluetooth 5.0, IPX7, batería de 3000 mAh y modo TWS. Garantía y envíos a todo el país.",
+      "shortDescription": "Parlante Bluetooth Nakamichi Thrill negro de 20 W (2 x 10 W), con resistencia IPX7, batería de 3000 mAh y modo TWS. Entrada de audio de 3,5 mm.",
+      "highlights": [
+        "20 W en total: 2 parlantes de 10 W",
+        "Resistencia al agua IPX7",
+        "Batería de 3000 mAh, de 2 a 6 horas de música",
+        "Bluetooth 5.0 y entrada de 3,5 mm",
+        "Modo TWS para conectar otro parlante"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "2 x 10 W (20 W en total)"
+        },
+        {
+          "label": "Parlantes",
+          "value": "Formato 2.0, de 45 mm"
+        },
+        {
+          "label": "Bluetooth",
+          "value": "5.0 (A2DP, AVRCP, HFP y HSP)"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IPX7"
+        },
+        {
+          "label": "Batería",
+          "value": "3000 mAh, de 2 a 6 horas de reproducción"
+        },
+        {
+          "label": "Carga",
+          "value": "USB-C, de 3 a 5 horas"
+        },
+        {
+          "label": "Entradas",
+          "value": "3,5 mm (cable de audio incluido)"
+        },
+        {
+          "label": "Funciones",
+          "value": "TWS y apagado automático"
+        },
+        {
+          "label": "Asistente de voz",
+          "value": "No"
+        }
+      ],
+      "descriptionHtml": "<p>El Nakamichi Thrill es un parlante Bluetooth portátil de 20 W, con dos parlantes de 45 mm, resistencia IPX7 y batería de 3000 mAh.</p><h3>Sonido</h3><p>Formato 2.0 con dos parlantes de 10 W cada uno.</p><h3>Batería</h3><p>Dura entre 2 y 6 horas de música según el volumen. Se carga por USB-C en 3 a 5 horas.</p><h3>Resistencia</h3><p>Protección IPX7 contra el agua.</p><h3>Conexión</h3><p>Bluetooth 5.0, entrada de 3,5 mm y modo TWS. Incluye cable de audio de 3,5 mm.</p><h3>Antes de comprar</h3><p>No tiene asistente de voz.</p>",
+      "revisar": [
+        "El slug dice rojo, pero el nombre y la descripción dicen negro. Se usó negro: confirmar el color y el slug."
+      ]
+    },
+    {
+      "slug": "parlante-xiaomi-mi-portable-bt",
+      "brand": "Xiaomi",
+      "seoTitle": "Parlante Xiaomi Mi Portable Bluetooth",
+      "seoDescription": "Parlante Xiaomi Mi Portable BT con certificación IP55, Bluetooth 5.0 de bajo consumo, batería de 2000 mAh y carga USB-C. Garantía y envíos a todo el país.",
+      "shortDescription": "Parlante Xiaomi Mi Portable BT con certificación IP55 para exteriores, Bluetooth 5.0 de bajo consumo y hasta 10 horas de autonomía con una carga.",
+      "highlights": [
+        "Certificación IP55 contra salpicaduras y polvo",
+        "Hasta 10 horas con volumen al 60%",
+        "Bluetooth 5.0 de bajo consumo",
+        "Alcance de hasta 10 metros en espacio abierto",
+        "Batería de 2000 mAh con carga USB-C"
+      ],
+      "specs": [
+        {
+          "label": "Protección",
+          "value": "IP55 (salpicaduras y polvo)"
+        },
+        {
+          "label": "Bluetooth",
+          "value": "5.0 de bajo consumo"
+        },
+        {
+          "label": "Alcance",
+          "value": "Hasta 10 m en espacio abierto"
+        },
+        {
+          "label": "Batería",
+          "value": "2000 mAh"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 10 h con volumen al 60% y uso continuado"
+        },
+        {
+          "label": "Carga",
+          "value": "USB-C, en uno de los laterales"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Smartphones, tablets, TV, laptops y más"
+        }
+      ],
+      "descriptionHtml": "<p>El Mi Portable BT de Xiaomi es un parlante Bluetooth con certificación IP55, pensado para usar en exteriores.</p><h3>Resistencia</h3><p>Está protegido contra salpicaduras de agua y contra el polvo.</p><h3>Conexión</h3><p>Bluetooth 5.0 de bajo consumo, con alcance de hasta 10 metros en espacio abierto. Compatible con smartphones, tablets, televisores y laptops.</p><h3>Batería</h3><p>Batería de 2000 mAh con hasta 10 horas de autonomía. Esa cifra se logra con uso continuado y el volumen al 60%. Se carga por USB-C desde un lateral.</p><h3>Antes de comprar</h3><p>La autonomía de 10 horas depende de usarlo al 60% de volumen.</p>",
+      "revisar": [
+        "El nombre comercial es 'Mi Portable BT', pero el SKU es QBH4141-EU y la descripción original menciona 'Mi Portable Speaker'. Confirmar el nombre."
+      ]
+    },
+    {
+      "slug": "reloj-despertador-con-parlante-bluetooth-portatil",
+      "name": "Reloj Despertador con Parlante Bluetooth Portátil",
+      "model": "Nemo",
+      "seoTitle": "Reloj despertador con parlante Nemo",
+      "seoDescription": "Reloj despertador con parlante Bluetooth Nemo: pantalla LED, alarma doble, radio FM, lector microSD y función manos libres. Garantía y envíos a todo el país.",
+      "shortDescription": "Parlante portátil Bluetooth con reloj despertador digital, pantalla LED, alarma doble, radio FM y lector microSD. Función manos libres y temperatura en tiempo real.",
+      "highlights": [
+        "Reloj despertador con alarma doble",
+        "Bluetooth 5.0 y función manos libres",
+        "Radio FM y lector microSD",
+        "Batería de 1200 mAh, hasta 6 horas de reproducción",
+        "Temperatura en tiempo real en la pantalla"
+      ],
+      "specs": [
+        {
+          "label": "Bluetooth",
+          "value": "5.0"
+        },
+        {
+          "label": "Potencia",
+          "value": "3 W RMS"
+        },
+        {
+          "label": "Parlante",
+          "value": "50 mm; respuesta de 60 Hz a 20 kHz"
+        },
+        {
+          "label": "Batería",
+          "value": "3,7 V, 1200 mAh; hasta 6 h de reproducción; carga en 2 h"
+        },
+        {
+          "label": "Pantalla",
+          "value": "LED LCD con reloj, alarma dual y temperatura"
+        },
+        {
+          "label": "Entradas",
+          "value": "microSD y AUX"
+        },
+        {
+          "label": "Radio",
+          "value": "FM"
+        },
+        {
+          "label": "Alcance",
+          "value": "10 m sin obstáculos"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "145 x 68,5 x 54,5 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "315 g"
+        },
+        {
+          "label": "Superficie",
+          "value": "Antideslizante"
+        }
+      ],
+      "descriptionHtml": "<p>El Nemo es un parlante Bluetooth con reloj despertador digital. Sirve para escuchar música y para despertarte con dos alarmas.</p><h3>Reloj y alarma</h3><p>Pantalla LED LCD con reloj, alarma doble y temperatura en tiempo real. El bisel permite ver la pantalla desde dos lados.</p><h3>Audio</h3><p>Bluetooth 5.0, entrada AUX y radio FM. Tiene función manos libres y lector microSD para reproducir música. El parlante es de 50 mm y entrega 3 W RMS.</p><h3>Batería</h3><p>Batería de 1200 mAh con hasta 6 horas de reproducción. Se carga en unas 2 horas.</p><h3>Antes de comprar</h3><p>Pesa 315 g y mide 145 x 68,5 x 54,5 mm. El alcance Bluetooth es de 10 metros sin obstáculos.</p>",
+      "revisar": [
+        "La marca no figura en el nombre. El SKU dice 'Ken Brown Nemo': confirmar la marca."
+      ]
+    },
+    {
+      "slug": "reloj-despertador-con-parlante-portatil-bluetooth",
+      "name": "Reloj Despertador con Parlante Portátil Bluetooth",
+      "model": "Wake BT",
+      "seoTitle": "Reloj despertador con parlante Wake BT",
+      "seoDescription": "Reloj despertador con parlante portátil Bluetooth Wake BT: 3 W, pantalla LED, radio FM, lector microSD y USB, y hasta 6 horas de batería. Envíos a todo el país.",
+      "shortDescription": "Parlante portátil Bluetooth 4.2 con reloj despertador digital, pantalla LED y radio FM. Potencia de 3 W, batería de 1200 mAh y lectores de microSD y USB.",
+      "highlights": [
+        "Bluetooth 4.2 y función manos libres",
+        "Potencia de salida de 3 W",
+        "Hasta 6 horas de batería",
+        "Radio FM y lectores de microSD y USB (hasta 32 GB)",
+        "Superficies antideslizante y textil"
+      ],
+      "specs": [
+        {
+          "label": "Bluetooth",
+          "value": "4.2"
+        },
+        {
+          "label": "Potencia",
+          "value": "3 W"
+        },
+        {
+          "label": "Batería",
+          "value": "1200 mAh, hasta 6 horas"
+        },
+        {
+          "label": "Pantalla",
+          "value": "LED"
+        },
+        {
+          "label": "Lectores",
+          "value": "microSD y USB (hasta 32 GB)"
+        },
+        {
+          "label": "Radio",
+          "value": "FM"
+        },
+        {
+          "label": "Entrada",
+          "value": "AUX de 3,5 mm"
+        },
+        {
+          "label": "Superficie",
+          "value": "Antideslizante y textil"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "108 x 36 x 108 mm (ancho x profundidad x alto)"
+        }
+      ],
+      "descriptionHtml": "<p>El Wake BT es un parlante portátil Bluetooth con reloj despertador digital y pantalla LED. Sirve para despertarte con música o con la radio.</p><h3>Audio</h3><p>Bluetooth 4.2 y entrada AUX de 3,5 mm. Tiene radio FM y función manos libres. Su potencia de salida es de 3 W.</p><h3>Almacenamiento</h3><p>Lee tarjetas microSD y dispositivos USB de hasta 32 GB.</p><h3>Batería</h3><p>Batería de 1200 mAh con hasta 6 horas de duración.</p><h3>Diseño</h3><p>Superficie antideslizante y textil. Mide 108 x 36 x 108 mm.</p><h3>Antes de comprar</h3><p>La ficha no dice cuánto tarda en cargar ni si incluye cable de carga.</p>",
+      "revisar": [
+        "El SKU dice 'CROWN MUSTANG WAKE BT'. La ficha no confirma si Crown es la marca ni si Mustang forma parte del modelo: se usó 'Wake BT' como modelo y la marca quedó General. Confirmar."
+      ]
+    },
+    {
+      "slug": "reloj-smartband-huawei-band-9",
+      "name": "Reloj Smartwatch Huawei Band 9 Negro",
+      "brand": "Huawei",
+      "model": "Band 9",
+      "seoTitle": "Huawei Band 9 smartwatch negro",
+      "seoDescription": "Huawei Band 9 negro: smartwatch de 14 g con monitoreo de sueño y signos vitales, análisis de arritmia y 2 semanas de batería. Envíos a todo el país.",
+      "shortDescription": "Smartwatch Huawei Band 9 negro, de 14 g y 8,99 mm de grosor. Hasta dos semanas de batería, monitoreo de sueño, signos vitales y análisis de arritmia.",
+      "highlights": [
+        "Hasta 2 semanas de batería",
+        "Monitoreo de sueño y de signos vitales",
+        "Análisis de arritmia por ondas de pulso",
+        "Informe de salud y funciones de salud femenina",
+        "Esferas personalizables con Always on Display",
+        "Peso de 14 g y grosor de 8,99 mm"
+      ],
+      "specs": [
+        {
+          "label": "Peso",
+          "value": "14 g"
+        },
+        {
+          "label": "Grosor",
+          "value": "8,99 mm"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 2 semanas"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Always on Display (AOD)"
+        },
+        {
+          "label": "Salud",
+          "value": "Sueño, signos vitales, análisis de arritmia, informe de salud y funciones de salud femenina"
+        },
+        {
+          "label": "Entrenamiento",
+          "value": "Seguimiento de entrenamiento con precisión"
+        },
+        {
+          "label": "Acabado",
+          "value": "Bisel con recubrimiento de 10 capas y grabado láser; cuerpo mate"
+        },
+        {
+          "label": "Esferas",
+          "value": "Galería de esferas temáticas"
+        },
+        {
+          "label": "Color",
+          "value": "Negro (según el SKU)"
+        }
+      ],
+      "descriptionHtml": "<p>La Huawei Band 9 es un smartwatch liviano, de 14 gramos y 8,99 mm de grosor, pensado para usar todo el día.</p><h3>Salud</h3><p>Monitorea el sueño y los signos vitales, analiza arritmias por ondas de pulso y genera un informe de salud. También incluye funciones de salud femenina.</p><h3>Batería y pantalla</h3><p>Dura hasta dos semanas. Tiene Always on Display, para ver la hora sin encender toda la pantalla.</p><h3>Diseño</h3><p>El bisel tiene un recubrimiento de 10 capas y grabado láser. El cuerpo es de acabado mate. La galería ofrece esferas temáticas para cambiar cuando quieras.</p><h3>Antes de comprar</h3><p>La ficha no informa el tamaño de la pantalla ni la resistencia al agua.</p>",
+      "revisar": [
+        "La descripción muestra varios colores (negro estelar, blanco arena, rosa, amarillo y azul). El SKU dice negro: confirmar el color.",
+        "La ficha no informa el tamaño de la pantalla ni la resistencia al agua."
+      ]
+    },
+    {
+      "slug": "reloj-smartband-samsung-galaxy-fit-3-dark-gray",
+      "name": "Reloj Smartwatch Samsung Galaxy Fit 3 Dark Gray",
+      "brand": "Samsung",
+      "model": "Galaxy Fit3 (SM-R390)",
+      "seoTitle": "Samsung Galaxy Fit3 Dark Gray",
+      "seoDescription": "Samsung Galaxy Fit3 Dark Gray: pantalla de 1,6″, 5ATM e IP68, hasta 13 días de batería y más de 100 entrenamientos. Garantía y envíos a todo el país.",
+      "shortDescription": "Smartwatch Samsung Galaxy Fit3 en color dark gray, con pantalla de 1,6″, cuerpo de aluminio de 18,5 g, resistencia 5ATM e IP68 y hasta 13 días de batería.",
+      "highlights": [
+        "Pantalla de 1,6″",
+        "Hasta 13 días de batería",
+        "Más de 100 entrenamientos con detección automática",
+        "Seguimiento de sueño y oxígeno en sangre",
+        "Resistencia 5ATM e IP68",
+        "Detección de caídas"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "1,6″ (40 mm)"
+        },
+        {
+          "label": "Peso",
+          "value": "18,5 g sin la banda"
+        },
+        {
+          "label": "Material",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Resistencia",
+          "value": "5ATM e IP68"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 13 días"
+        },
+        {
+          "label": "Entrenamiento",
+          "value": "Más de 100 ejercicios; detecta correr, elíptica, remo y natación"
+        },
+        {
+          "label": "Salud",
+          "value": "Latidos, oxígeno en sangre y sueño (etapas, ronquidos y puntuación)"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Detección de caídas"
+        },
+        {
+          "label": "Sensores",
+          "value": "Luz y monitoreo de latidos"
+        },
+        {
+          "label": "App",
+          "value": "Samsung Health"
+        },
+        {
+          "label": "Funciones",
+          "value": "Música, llamadas y mensajes desde la muñeca"
+        }
+      ],
+      "descriptionHtml": "<p>El Galaxy Fit3 es un smartwatch liviano de aluminio, con pantalla de 1,6″ y seguimiento de entrenamientos, sueño y salud diaria.</p><h3>Entrenamientos</h3><p>Tiene más de 100 ejercicios y reconoce automáticamente correr, elíptica, remo y natación. Para un entrenamiento rápido, se presiona dos veces el botón de inicio.</p><h3>Sueño y salud</h3><p>Monitorea las etapas del sueño, los ronquidos y el oxígeno en sangre. Con la app Samsung Health ves tu puntuación de sueño y tu progreso.</p><h3>Uso diario</h3><p>Podés reproducir música, ver llamadas y enviar mensajes desde la muñeca. Con gestos deslizando el dedo ves notificaciones, ventanas y el panel rápido.</p><h3>Antes de comprar</h3><p>Pesa 18,5 g sin la banda. La ficha no informa la compatibilidad con cada tipo de teléfono.</p>",
+      "revisar": [
+        "Este SKU (SM-R390NZSAARO) es el mismo código base que la variante silver, que tiene la misma descripción. Confirmar que cada color tenga su código.",
+        "La ficha no informa compatibilidad con iOS ni con Android."
+      ]
+    },
+    {
+      "slug": "reloj-smartband-samsung-galaxy-fit-3-silver",
+      "name": "Reloj Smartwatch Samsung Galaxy Fit 3 Silver",
+      "brand": "Samsung",
+      "model": "Galaxy Fit3 (SM-R390)",
+      "seoTitle": "Samsung Galaxy Fit3 Silver",
+      "seoDescription": "Samsung Galaxy Fit3 Silver: pantalla de 1,6″, 5ATM e IP68, hasta 13 días de batería y más de 100 entrenamientos. Garantía y envíos a todo el país.",
+      "shortDescription": "Smartwatch Samsung Galaxy Fit3 en color silver, con pantalla de 1,6″, cuerpo de aluminio de 18,5 g, resistencia 5ATM e IP68 y hasta 13 días de batería.",
+      "highlights": [
+        "Pantalla de 1,6″",
+        "Hasta 13 días de batería",
+        "Más de 100 entrenamientos con detección automática",
+        "Seguimiento de sueño y oxígeno en sangre",
+        "Resistencia 5ATM e IP68",
+        "Detección de caídas"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "1,6″ (40 mm)"
+        },
+        {
+          "label": "Peso",
+          "value": "18,5 g sin la banda"
+        },
+        {
+          "label": "Material",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Resistencia",
+          "value": "5ATM e IP68"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 13 días"
+        },
+        {
+          "label": "Entrenamiento",
+          "value": "Más de 100 ejercicios; detecta correr, elíptica, remo y natación"
+        },
+        {
+          "label": "Salud",
+          "value": "Latidos, oxígeno en sangre y sueño (etapas, ronquidos y puntuación)"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Detección de caídas"
+        },
+        {
+          "label": "Sensores",
+          "value": "Luz y monitoreo de latidos"
+        },
+        {
+          "label": "App",
+          "value": "Samsung Health"
+        },
+        {
+          "label": "Funciones",
+          "value": "Música, llamadas y mensajes desde la muñeca"
+        }
+      ],
+      "descriptionHtml": "<p>El Galaxy Fit3 es un smartwatch liviano de aluminio, con pantalla de 1,6″ y seguimiento de entrenamientos, sueño y salud diaria.</p><h3>Entrenamientos</h3><p>Tiene más de 100 ejercicios y reconoce automáticamente correr, elíptica, remo y natación. Para un entrenamiento rápido, se presiona dos veces el botón de inicio.</p><h3>Sueño y salud</h3><p>Monitorea las etapas del sueño, los ronquidos y el oxígeno en sangre. Con la app Samsung Health ves tu puntuación de sueño y tu progreso.</p><h3>Uso diario</h3><p>Podés reproducir música, ver llamadas y enviar mensajes desde la muñeca. Con gestos deslizando el dedo ves notificaciones, ventanas y el panel rápido.</p><h3>Antes de comprar</h3><p>Pesa 18,5 g sin la banda. La ficha no informa la compatibilidad con cada tipo de teléfono.</p>",
+      "revisar": [
+        "El SKU (SM-R390NZSAARO-1) y la descripción son iguales a la variante dark gray. Confirmar el color silver y el código del modelo.",
+        "La ficha no informa compatibilidad con iOS ni con Android."
+      ]
+    },
+    {
+      "slug": "reloj-smartband-xiaomi-buds-9",
+      "name": "Reloj Smartwatch Xiaomi Band 9",
+      "brand": "Xiaomi",
+      "model": "Band 9",
+      "seoTitle": "Xiaomi Band 9 smartwatch",
+      "seoDescription": "Xiaomi Band 9 smartwatch con pantalla AMOLED de 1,62″, hasta 21 días de batería, más de 150 modos deportivos y marco metálico. Garantía y envíos a todo el país.",
+      "shortDescription": "Smartwatch Xiaomi Band 9 con pantalla AMOLED de 1,62″, marco metálico y hasta 21 días de batería. Más de 150 modos deportivos y respuesta háptica.",
+      "highlights": [
+        "Pantalla AMOLED de 1,62″",
+        "Hasta 21 días de batería",
+        "Más de 150 modos deportivos",
+        "Marco metálico con accesorios intercambiables",
+        "Respuesta háptica del motor lineal"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED de 1,62″"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 21 días"
+        },
+        {
+          "label": "Deportes",
+          "value": "Más de 150 modos"
+        },
+        {
+          "label": "Marco",
+          "value": "Metálico, con accesorios para distintas situaciones"
+        },
+        {
+          "label": "Vibración",
+          "value": "Motor lineal con respuesta háptica"
+        }
+      ],
+      "descriptionHtml": "<p>El Xiaomi Band 9 es un smartwatch con pantalla AMOLED de 1,62″ y marco metálico. Sirve para entrenar, medir la actividad y recibir avisos en la muñeca.</p><h3>Batería</h3><p>Dura hasta 21 días con una carga.</p><h3>Deportes</h3><p>Tiene más de 150 modos deportivos para registrar distintas actividades.</p><h3>Diseño</h3><p>Marco metálico multicolor con accesorios para distintas situaciones. La respuesta háptica del motor lineal da avisos más claros.</p><h3>Antes de comprar</h3><p>La descripción original no detalla los sensores de salud ni la compatibilidad con teléfonos.</p>",
+      "revisar": [
+        "El slug dice buds-9, pero el nombre, el resumen y la descripción son del Xiaomi Band 9. El slug no se cambió: confirmar que corresponde.",
+        "La descripción original es genérica: faltan sensores de salud y compatibilidad."
+      ]
+    },
+    {
+      "slug": "reloj-smartwatch-dekkin-shine",
+      "brand": "Dekkin",
+      "model": "Shine",
+      "seoTitle": "Smartwatch Dekkin Shine con strass",
+      "seoDescription": "Smartwatch Dekkin Shine con marco de strass, pantalla de 1,12″, 2 mallas de silicona, monitoreo de salud y resistencia IP67. Garantía y envíos a todo el país.",
+      "shortDescription": "Smartwatch Dekkin Shine con marco decorado con strass, pantalla de 1,12″ y 2 mallas de silicona intercambiables. Monitoreo de salud y resistencia IP67.",
+      "highlights": [
+        "Marco decorado con strass",
+        "Pantalla de 1,12″ personalizable",
+        "2 mallas de silicona intercambiables",
+        "Ritmo cardíaco y oxígeno en sangre",
+        "Resistencia al agua IP67",
+        "Llamadas desde la muñeca y modos deportivos"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "1,12″, táctil y personalizable"
+        },
+        {
+          "label": "Marco",
+          "value": "Con strass"
+        },
+        {
+          "label": "Correas",
+          "value": "2 mallas de silicona intercambiables"
+        },
+        {
+          "label": "Salud",
+          "value": "Ritmo cardíaco, oxígeno en sangre y salud femenina"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP67"
+        },
+        {
+          "label": "Deportes",
+          "value": "Múltiples modos deportivos"
+        },
+        {
+          "label": "Funciones",
+          "value": "Llamadas desde la muñeca"
+        }
+      ],
+      "descriptionHtml": "<p>El Dekkin Shine combina un marco con strass y una pantalla de 1,12″. Sirve para usar a diario y seguir la salud.</p><h3>Diseño</h3><p>Marco decorado con strass y dos mallas de silicona intercambiables para cambiar el look.</p><h3>Salud</h3><p>Mide ritmo cardíaco y oxígeno en sangre, y tiene seguimiento de salud femenina.</p><h3>Funciones</h3><p>Tiene múltiples modos deportivos y permite hacer llamadas desde la muñeca. La pantalla es táctil y se puede personalizar.</p><h3>Resistencia</h3><p>Protección IP67.</p><h3>Antes de comprar</h3><p>La ficha no informa la batería ni la compatibilidad con teléfonos.</p>",
+      "revisar": [
+        "La ficha no trae batería, compatibilidad ni tipo de conexión. Confirmar antes de publicar."
+      ]
+    },
+    {
+      "slug": "reloj-smartwatch-dekkin-urban-sport-gps",
+      "name": "Reloj Smartwatch Dekkin Urban Sport GPS",
+      "brand": "Dekkin",
+      "model": "Urban Sport",
+      "seoTitle": "Dekkin Urban Sport GPS AMOLED",
+      "seoDescription": "Smartwatch Dekkin Urban Sport con GPS, pantalla AMOLED de 1,43″, IP68, Wi-Fi, Bluetooth 5.3 y base de carga inalámbrica. Garantía y envíos a todo el país.",
+      "shortDescription": "Smartwatch Dekkin Urban Sport con GPS, pantalla AMOLED de 1,43″ (466 x 466 píxeles), resistencia IP68 y compatibilidad con Android e iOS. Incluye malla extra y base inalámbrica.",
+      "highlights": [
+        "GPS y Wi-Fi integrados",
+        "Pantalla AMOLED de 1,43″, 466 x 466 píxeles",
+        "Resistencia al agua IP68",
+        "Micrófono para llamadas",
+        "Brújula digital y barómetro",
+        "Incluye malla extra y base de carga inalámbrica"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED de 1,43″, 466 x 466 píxeles"
+        },
+        {
+          "label": "Conectividad",
+          "value": "GPS, Wi-Fi y Bluetooth 5.3"
+        },
+        {
+          "label": "Batería",
+          "value": "450 mAh"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Android e iOS"
+        },
+        {
+          "label": "Protección",
+          "value": "IP68"
+        },
+        {
+          "label": "Sensores",
+          "value": "Brújula digital y barómetro"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Sí"
+        },
+        {
+          "label": "Peso",
+          "value": "80,8 g"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        },
+        {
+          "label": "Funciones",
+          "value": "Control de cámara a distancia, control de música y seguimiento de ciclo"
+        },
+        {
+          "label": "Incluye",
+          "value": "Malla extra de silicona y base de carga inalámbrica"
+        }
+      ],
+      "descriptionHtml": "<p>El Dekkin Urban Sport es un smartwatch con GPS, pantalla AMOLED de 1,43″ y resistencia IP68. Sirve para entrenar y usar funciones del celular desde la muñeca.</p><h3>GPS y sensores</h3><p>Tiene GPS, brújula digital y barómetro. Se conecta por Wi-Fi y Bluetooth 5.3.</p><h3>Funciones</h3><ul><li>Control de cámara a distancia.</li><li>Control de música.</li><li>Seguimiento de ciclo.</li><li>Micrófono para llamadas.</li></ul><h3>Resistencia y carga</h3><p>Protección IP68. Se carga en la base inalámbrica que viene en la caja, y trae una malla de silicona extra.</p><h3>Antes de comprar</h3><p>Pesa 80,8 g. Su batería es de 450 mAh y la ficha no informa la autonomía.</p>",
+      "revisar": [
+        "La ficha no informa la autonomía de la batería (450 mAh)."
+      ]
+    },
+    {
+      "slug": "reloj-smartwatch-mibro-t2-rosa",
+      "brand": "Mibro",
+      "model": "T2",
+      "seoTitle": "Mibro T2 smartwatch AMOLED con GPS",
+      "seoDescription": "Mibro T2: smartwatch de 1,75″ AMOLED con GPS de cinco sistemas, Bluetooth 5.3, hasta 45 días en espera y resistencia 2 ATM. Garantía y envíos a todo el país.",
+      "shortDescription": "Smartwatch Mibro T2 con pantalla AMOLED de 1,75″, GPS de cinco sistemas, hasta 45 días en espera y carga magnética. Incluye monitoreo de sueño REM y altímetro.",
+      "highlights": [
+        "Pantalla AMOLED de 1,75″, 340 PPI",
+        "GPS, Beidou, GLONASS, Galileo y QZSS",
+        "Hasta 45 días en espera y 11 horas con GPS",
+        "Sensores de movimiento de 6 ejes y altímetro",
+        "Monitoreo de sueño REM",
+        "Tarjeta de acceso digital para abrir puertas"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED de 1,75″, 390 x 450 píxeles, 340 PPI"
+        },
+        {
+          "label": "Bluetooth",
+          "value": "5.3"
+        },
+        {
+          "label": "GPS",
+          "value": "GPS, Beidou, GLONASS, Galileo y QZSS"
+        },
+        {
+          "label": "Batería",
+          "value": "Espera 45 días; uso diario 10 días; música 4 h; llamada Bluetooth 6 h; GPS 11 h"
+        },
+        {
+          "label": "Carga",
+          "value": "Magnética"
+        },
+        {
+          "label": "Sensores",
+          "value": "Movimiento de 6 ejes (BOSCH BMI270A), altitud, barómetro y frecuencia cardíaca"
+        },
+        {
+          "label": "Resistencia",
+          "value": "2 ATM (uso diario, no apto para buceo ni aguas termales)"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "50,95 x 36,67 x 11,3 mm (sin el saliente del sensor)"
+        },
+        {
+          "label": "Peso",
+          "value": "53,7 g con correa de silicona; 51,5 g con correa de cuero"
+        },
+        {
+          "label": "Correa",
+          "value": "22 mm de ancho; 254 mm sin plegar"
+        },
+        {
+          "label": "Materiales",
+          "value": "Metal, PA+GF y gel de sílice o cuero"
+        },
+        {
+          "label": "Salud",
+          "value": "Monitoreo de sueño REM"
+        }
+      ],
+      "descriptionHtml": "<p>El Mibro T2 es un smartwatch con pantalla AMOLED de 1,75″, GPS de cinco sistemas y corona de acero inoxidable.</p><h3>Pantalla y diseño</h3><p>Pantalla AMOLED HD de 340 PPI, con dial dinámico. La corona de acero se cambia girándola. Correa de 22 mm.</p><h3>GPS y sensores</h3><p>Usa GPS, Beidou, GLONASS, Galileo y QZSS para seguir el recorrido. Tiene sensores de movimiento de 6 ejes, altímetro y barómetro, y registra la fase REM del sueño.</p><h3>Batería</h3><p>Hasta 45 días en espera y 10 días de uso diario. Con GPS activo dura unas 11 horas. Se carga con cable magnético.</p><h3>Resistencia y extras</h3><p>Resiste 2 ATM para el uso diario, pero no es apto para buceo ni aguas termales. Puede abrir puertas con una etiqueta digital.</p><h3>Antes de comprar</h3><p>Pesa 53,7 g con correa de silicona.</p>",
+      "revisar": [
+        "El nombre dice 'Light Gold', pero el slug y el SKU dicen 'rosa'. Se usó el nombre: confirmar el color."
+      ]
+    },
+    {
+      "slug": "reloj-smartwatch-samsung-galaxy-watch-4-classic-r890-46mm-negro",
+      "name": "Reloj Smartwatch Samsung Galaxy Watch4 Classic R890 46 mm Negro",
+      "brand": "Samsung",
+      "model": "Galaxy Watch4 Classic (SM-R890)",
+      "seoTitle": "Samsung Galaxy Watch4 Classic 46 mm",
+      "seoDescription": "Samsung Galaxy Watch4 Classic R890 de 46 mm negro: bisel giratorio de acero, IP68, más de 90 ejercicios y GPS. Garantía y envíos a todo el país.",
+      "shortDescription": "Samsung Galaxy Watch4 Classic de 46 mm en negro, con bisel giratorio de acero inoxidable, IP68, GPS y más de 90 ejercicios. Mide composición corporal con dos dedos.",
+      "highlights": [
+        "Bisel giratorio de acero inoxidable",
+        "Composición corporal en unos 15 segundos",
+        "Más de 90 ejercicios con GPS",
+        "IP68: hasta 1,5 m de agua dulce por 30 minutos",
+        "Esferas analógicas y digitales",
+        "Emojis AR y gráficos animados en la esfera"
+      ],
+      "specs": [
+        {
+          "label": "Diámetro",
+          "value": "46 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Acero inoxidable, con bisel giratorio"
+        },
+        {
+          "label": "Correa",
+          "value": "Ridge Sports Band de fluoroelastómero"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP68 (hasta 1,5 m de agua dulce, 30 minutos)"
+        },
+        {
+          "label": "Sensor",
+          "value": "Bioactivo Samsung: composición corporal por BIA"
+        },
+        {
+          "label": "Entrenamiento",
+          "value": "Más de 90 ejercicios, con GPS"
+        },
+        {
+          "label": "Salud",
+          "value": "Composición corporal, presión arterial y ECG (según el resumen)"
+        },
+        {
+          "label": "Personalización",
+          "value": "Esferas analógicas y digitales, emojis AR"
+        }
+      ],
+      "descriptionHtml": "<p>El Galaxy Watch4 Classic es un reloj inteligente de 46 mm con bisel giratorio de acero inoxidable. Combina diseño clásico con seguimiento de salud y entrenamientos.</p><h3>Diseño</h3><p>Caja de acero con bisel giratorio. Usa la correa Ridge Sports Band, de fluoroelastómero, que resiste el sudor.</p><h3>Salud</h3><p>El sensor bioactivo Samsung mide la composición corporal: porcentaje de grasa, músculo esquelético y agua. Con dos dedos toma la medición en unos 15 segundos. Según el resumen, también mide presión arterial y tiene ECG.</p><h3>Entrenamientos</h3><p>Admite más de 90 ejercicios y detecta la actividad física para registrar las rutinas. Tiene GPS para seguir el recorrido.</p><h3>Esferas</h3><p>Podés elegir esferas analógicas o digitales, con fondos, fuentes y colores. Tiene emojis AR y gráficos animados.</p><h3>Antes de comprar</h3><p>La resistencia IP68 se prueba en agua dulce, hasta 1,5 m, durante 30 minutos.</p>",
+      "revisar": [
+        "La batería y la conectividad no figuran en la descripción original.",
+        "La presión arterial y el ECG solo aparecen en el resumen corto: confirmar antes de publicar."
+      ]
+    },
+    {
+      "slug": "smartwatch-dekkin-air",
+      "brand": "Dekkin",
+      "model": "Air",
+      "seoTitle": "Smartwatch Dekkin Air redondo IPX7",
+      "seoDescription": "Smartwatch Dekkin Air con pantalla redonda de 1,83″, frecuencia cardíaca, oxigenación, batería de 7 días y IPX7. Garantía y envíos a todo el país.",
+      "shortDescription": "Smartwatch Dekkin Air con pantalla redonda de 1,83″, medición de frecuencia cardíaca y oxigenación, Bluetooth, batería de hasta 7 días y resistencia IPX7.",
+      "highlights": [
+        "Pantalla redonda de 1,83″",
+        "Frecuencia cardíaca y oxigenación",
+        "Batería de hasta 7 días",
+        "Realiza y recibe llamadas desde la muñeca",
+        "Notificaciones de mensajes y control de música",
+        "Resistencia IPX7 y modo ejercicio"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Redonda, de 1,83″"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 7 días"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IPX7"
+        },
+        {
+          "label": "Salud",
+          "value": "Frecuencia cardíaca y oxigenación"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Bluetooth"
+        },
+        {
+          "label": "Llamadas",
+          "value": "Realiza y recibe, con micrófono"
+        },
+        {
+          "label": "Funciones",
+          "value": "Notificaciones de mensajes, control de música y obturador de cámara"
+        },
+        {
+          "label": "Deportes",
+          "value": "Modo ejercicio"
+        }
+      ],
+      "descriptionHtml": "<p>El Dekkin Air es un smartwatch redondo con Bluetooth, pantalla de 1,83″ y medición de frecuencia cardíaca y oxigenación.</p><h3>Salud y ejercicio</h3><p>Mide la frecuencia cardíaca y la oxigenación. Tiene un modo ejercicio para seguir el rendimiento físico.</p><h3>Llamadas y mensajes</h3><p>Realiza y recibe llamadas desde la muñeca gracias al micrófono. También muestra notificaciones de mensajes.</p><h3>Música y cámara</h3><p>Controla la música y funciona como obturador de la cámara del celular.</p><h3>Batería y resistencia</h3><p>Batería de hasta 7 días. Resistencia IPX7 al agua.</p><h3>Antes de comprar</h3><p>La ficha no indica compatibilidad con Android o iOS.</p>",
+      "revisar": [
+        "La ficha es breve: no informa compatibilidad, peso ni el detalle de los sensores. Confirmar la batería de 7 días."
+      ]
+    },
+    {
+      "slug": "soporte-celular-cargador-inalambrico-samsung-original",
+      "name": "Soporte para celular con cargador inalámbrico para auto Samsung",
+      "brand": "Samsung",
+      "model": "EP-H5300",
+      "seoTitle": "Soporte con carga inalámbrica Samsung",
+      "seoDescription": "Soporte para auto con carga inalámbrica Samsung EP-H5300: sujeción automática, giratorio y fijación en rejillas. Garantía y envíos a todo el país.",
+      "shortDescription": "Soporte para auto con carga inalámbrica Samsung. Sujeta y libera el celular automáticamente, gira para ver la pantalla y se fija en las rejillas de ventilación.",
+      "highlights": [
+        "Sujeción automática al colocar el celular",
+        "Carga inalámbrica Qi de hasta 5 W",
+        "Compatible con Galaxy y iPhone de la lista",
+        "Se fija en rejillas horizontales o verticales",
+        "Gira para ver la pantalla en horizontal o vertical",
+        "Cable USB-A a USB-C de 1 metro incluido"
+      ],
+      "specs": [
+        {
+          "label": "Carga",
+          "value": "Inalámbrica, hasta 5 W (Qi); Samsung Galaxy y hasta 7,5 W para iPhone según la ficha"
+        },
+        {
+          "label": "Conector",
+          "value": "USB Type-C"
+        },
+        {
+          "label": "Cable",
+          "value": "USB-A a USB-C de 1 m, incluido"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Galaxy de las series S, Note y Z; iPhone de la serie 8 a 11 Pro Max (lista de la ficha)"
+        },
+        {
+          "label": "Sujeción",
+          "value": "Automática; se libera al apagar el auto"
+        },
+        {
+          "label": "Fijación",
+          "value": "Rejillas de ventilación horizontales o verticales"
+        },
+        {
+          "label": "Movimiento",
+          "value": "Giratorio"
+        },
+        {
+          "label": "Carcasas",
+          "value": "Hasta 3 mm de grosor"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "155 x 104 x 128 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "291 g"
+        },
+        {
+          "label": "Entrada",
+          "value": "9 V, 1,67 A (carga máxima)"
+        }
+      ],
+      "descriptionHtml": "<p>El Samsung EP-H5300 es un soporte para auto con carga inalámbrica. Se fija en las rejillas de ventilación y sostiene el celular con un sujetador automático.</p><h3>Carga</h3><p>Carga inalámbrica de hasta 5 W para celulares Qi. Según la ficha, admite carga en dispositivos Samsung Galaxy y hasta 7,5 W en iPhone.</p><h3>Sujeción</h3><p>Al colocar el celular, el sujetador se cierra solo. Cuando apagás el auto, lo libera. Gira para ver la pantalla en horizontal o vertical.</p><h3>Instalación</h3><p>Se adapta a rejillas de ventilación de distintos tamaños y formas, horizontales o verticales. Soporta carcasas de hasta 3 mm.</p><h3>Antes de comprar</h3><p>La compatibilidad está en una lista de modelos Samsung y iPhone: confirmá que tu celular figure. Para otros Android, la ficha no informa la potencia de carga.</p>",
+      "revisar": [
+        "La compatibilidad es una lista larga de Galaxy e iPhone. Se resumió en la ficha: confirmar el listado final.",
+        "El SKU es EP-H5300CBSGAR; el modelo usado en la ficha es EP-H5300."
+      ]
+    },
+    {
+      "slug": "xiaomi-mi-band-9-active",
+      "model": "Mi Band 9 Active",
+      "seoTitle": "Xiaomi Mi Band 9 Active con batería",
+      "seoDescription": "Xiaomi Mi Band 9 Active con pantalla AMOLED, monitoreo 24/7, más de 100 actividades y hasta 21 días de batería. Resistente al agua. Garantía y envíos al país.",
+      "shortDescription": "Xiaomi Mi Band 9 Active con monitoreo de salud 24/7, pantalla AMOLED, resistencia al agua y hasta 21 días de batería. Más de 100 actividades deportivas.",
+      "highlights": [
+        "Hasta 21 días con una carga",
+        "Frecuencia cardíaca, sueño, estrés y oxígeno 24/7",
+        "Más de 100 actividades físicas",
+        "Pantalla AMOLED",
+        "Resistente al agua",
+        "Notificaciones y control de música desde la muñeca"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 21 días"
+        },
+        {
+          "label": "Salud",
+          "value": "Frecuencia cardíaca, sueño, estrés y saturación de oxígeno, 24/7"
+        },
+        {
+          "label": "Deportes",
+          "value": "Más de 100 actividades, desde running hasta natación"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Resistente al agua"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Android e iOS"
+        },
+        {
+          "label": "Funciones",
+          "value": "Notificaciones inteligentes y control de música"
+        }
+      ],
+      "descriptionHtml": "<p>La Xiaomi Mi Band 9 Active es una pulsera inteligente liviana para entrenar y seguir la salud todos los días.</p><h3>Salud 24/7</h3><p>Registra la frecuencia cardíaca, la calidad del sueño, el estrés y la saturación de oxígeno en sangre.</p><h3>Deportes</h3><p>Tiene más de 100 actividades físicas, desde running hasta natación. Es resistente al agua.</p><h3>Pantalla y batería</h3><p>Pantalla AMOLED que se ve bien incluso con luz solar directa. Batería de hasta 21 días con una carga.</p><h3>Conexión</h3><p>Compatible con Android e iOS. Recibe notificaciones y controla la música desde la muñeca.</p><h3>Antes de comprar</h3><p>La ficha no informa el tamaño de la pantalla ni el grado de resistencia al agua.</p>",
+      "revisar": [
+        "La ficha no informa tamaño de pantalla, grado de resistencia al agua (IP) ni peso."
+      ]
+    },
+    {
+      "slug": "xiaomi-redmi-buds-6-play",
+      "model": "Redmi Buds 6 Play",
+      "seoTitle": "Xiaomi Redmi Buds 6 Play in-ear",
+      "seoDescription": "Xiaomi Redmi Buds 6 Play: auriculares in-ear con Bluetooth 5.4, driver de 10 mm, hasta 36 horas con el estuche e IPX4. Garantía y envíos a todo el país.",
+      "shortDescription": "Auriculares inalámbricos Xiaomi Redmi Buds 6 Play in-ear, con Bluetooth 5.4, driver dinámico de 10 mm, hasta 36 horas con el estuche e IPX4 contra sudor.",
+      "highlights": [
+        "Hasta 7,5 horas por carga y 36 con el estuche",
+        "Driver dinámico de 10 mm",
+        "Bluetooth 5.4 con Google Fast Pair",
+        "Reducción de ruido y viento en llamadas con IA",
+        "Certificación IPX4 contra sudor y salpicaduras",
+        "Perfiles de audio con la app Xiaomi Earphones"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "In-ear inalámbricos"
+        },
+        {
+          "label": "Driver",
+          "value": "Dinámico de 10 mm"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 7,5 h por carga; hasta 36 h con el estuche"
+        },
+        {
+          "label": "Bluetooth",
+          "value": "5.4, con Google Fast Pair"
+        },
+        {
+          "label": "Protección",
+          "value": "IPX4 (sudor y salpicaduras)"
+        },
+        {
+          "label": "Llamadas",
+          "value": "Reducción de ruido y viento con IA"
+        },
+        {
+          "label": "App",
+          "value": "Xiaomi Earphones (perfiles de audio, batería y actualizaciones)"
+        },
+        {
+          "label": "Estuche",
+          "value": "Compacto, de esquinas redondeadas"
+        }
+      ],
+      "descriptionHtml": "<p>Los Redmi Buds 6 Play son auriculares inalámbricos in-ear, livianos y compactos, pensados para viajes, entrenamientos y el día a día.</p><h3>Audio</h3><p>Driver dinámico de 10 mm que entrega graves, medios y agudos equilibrados. El ajuste en el oído aísla el ruido de forma pasiva.</p><h3>Llamadas</h3><p>Un algoritmo de IA reduce el ruido ambiente y el viento para que la voz se escuche clara.</p><h3>Batería</h3><p>Hasta 7,5 horas de reproducción por carga y hasta 36 horas con el estuche.</p><h3>Conexión y resistencia</h3><p>Bluetooth 5.4 con Google Fast Pair para conectar en un toque. Tiene certificación IPX4, resistente al sudor y las salpicaduras.</p><h3>Antes de comprar</h3><p>La reducción de ruido se aplica a las llamadas. El aislamiento del resto del ambiente es pasivo.</p>",
+      "revisar": [
+        "El resumen habla de cancelación de ruido en general; la descripción la limita a las llamadas. Se usó la versión de la descripción."
+      ]
+    },
+    {
+      "slug": "caloventor-liliana-heatsense-3-en-1",
+      "brand": "Liliana",
+      "model": "CWD960",
+      "seoTitle": "Caloventor Liliana Heatsense CWD960",
+      "seoDescription": "Caloventor de pared Liliana Heatsense CWD960: frente de vidrio, display touch, 1000 W o 2000 W, IP24 y garantía de 2 años. Envíos a todo el país.",
+      "shortDescription": "Caloventor Liliana Heatsense CWD960 de pared, mesa o piso, con frente de vidrio templado blanco, display touch, control remoto y potencia de 1000 W o 2000 W.",
+      "highlights": [
+        "Potencia regulable de 1000 W o 2000 W",
+        "Frente de vidrio templado blanco",
+        "Display táctil y control remoto",
+        "Timer de hasta 9 horas y programación semanal",
+        "Modos Confort, ECO y Anti-Frost",
+        "Protección IP24 y garantía de 2 años"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "1000 W / 2000 W regulable"
+        },
+        {
+          "label": "Calefacción",
+          "value": "Placa cerámica PTC con corte por sobrecalentamiento"
+        },
+        {
+          "label": "Frente",
+          "value": "Vidrio templado blanco"
+        },
+        {
+          "label": "Display",
+          "value": "Digital touch"
+        },
+        {
+          "label": "Control",
+          "value": "Remoto, con selector de temperatura y timer"
+        },
+        {
+          "label": "Timer",
+          "value": "2, 4, 8 h o de 0 a 9 h; programación semanal"
+        },
+        {
+          "label": "Modos",
+          "value": "Confort, ECO y Anti-Frost (se activa si la temperatura baja de 7 °C)"
+        },
+        {
+          "label": "Protección",
+          "value": "IP24"
+        },
+        {
+          "label": "Instalación",
+          "value": "Pared, mesa o piso"
+        },
+        {
+          "label": "Extras",
+          "value": "Barral toallero de aluminio"
+        }
+      ],
+      "descriptionHtml": "<p>El Heatsense CWD960 es un caloventor de pared con frente de vidrio blanco y placa cerámica PTC. Calienta ambientes y se puede usar en pared, mesa o piso.</p><h3>Control</h3><p>Display digital touch y control remoto con selector de temperatura y timer. El timer va de 2, 4 u 8 horas o de 0 a 9 horas, y admite programación semanal.</p><h3>Modos inteligentes</h3><ul><li>Confort: se activa cuando la temperatura elegida supera la del ambiente, entre 10 °C y 35 °C.</li><li>ECO: optimiza el consumo cuando la temperatura elegida supera la del ambiente, entre 6 °C y 31 °C.</li><li>Anti-Frost: se activa si la temperatura baja de 7 °C.</li></ul><h3>Seguridad</h3><p>Corte automático por sobrecalentamiento. Protección IP24 contra agua, humedad y polvo.</p><h3>Antes de comprar</h3><p>Tiene dos niveles de potencia, 1000 W y 2000 W. Revisá el circuito del ambiente antes de usarlo al máximo.</p>",
+      "revisar": [
+        "El nombre dice Liliana y la descripción atribuye el diseño a Heatsense. Se usó Liliana como marca: confirmar."
+      ]
+    },
+    {
+      "slug": "caloventor-liliana-de-pared-smartheat-2000w",
+      "name": "Caloventor Liliana de Pared Smartheat 2000 W",
+      "brand": "Liliana",
+      "model": "CWD951",
+      "seoTitle": "Caloventor Liliana Smartheat CWD951 WiFi",
+      "seoDescription": "Caloventor de pared Liliana Smartheat CWD951 con WiFi, control remoto, 1000 W o 2000 W y modos ECO y Anti-Frost. Garantía y envíos a todo el país.",
+      "shortDescription": "Caloventor de pared tipo split Liliana Smartheat CWD951 con comando WiFi, control remoto y frente de vidrio blanco. Potencia de 1000 W o 2000 W y protección IP22.",
+      "highlights": [
+        "Control WiFi desde el celular",
+        "Potencia de 1000 W o 2000 W",
+        "Frente de vidrio templado blanco",
+        "Timer y programación semanal",
+        "Modos Confort, ECO y Anti-Frost",
+        "Oscilación del deflector para repartir el calor"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "1000 W / 2000 W regulable"
+        },
+        {
+          "label": "Control",
+          "value": "Comando WiFi, control remoto y display digital touch"
+        },
+        {
+          "label": "Temperatura",
+          "value": "Selector de 15 a 35 °C"
+        },
+        {
+          "label": "Calefacción",
+          "value": "Placa cerámica PTC con corte por sobrecalentamiento"
+        },
+        {
+          "label": "Timer",
+          "value": "2, 4, 8 h o de 0 a 9 h; programación semanal"
+        },
+        {
+          "label": "Modos",
+          "value": "Confort, ECO y Anti-Frost (se activa si la temperatura baja de 7 °C)"
+        },
+        {
+          "label": "Distribución",
+          "value": "Oscilación del deflector de aire"
+        },
+        {
+          "label": "Protección",
+          "value": "IP22"
+        },
+        {
+          "label": "Instalación",
+          "value": "De pared, tipo split"
+        },
+        {
+          "label": "Frente",
+          "value": "Vidrio templado blanco"
+        }
+      ],
+      "descriptionHtml": "<p>El Smartheat CWD951 es un caloventor de pared tipo split con comando WiFi, control remoto y frente de vidrio templado blanco.</p><h3>Control desde el celular</h3><p>Con el comando WiFi lo manejás desde el smartphone. También tiene control remoto y display digital touch, con selector de temperatura de 15 a 35 °C.</p><h3>Programación</h3><p>Timer de 2, 4, 8 horas o de 0 a 9 horas, y programación semanal para ajustar el uso.</p><h3>Modos</h3><ul><li>Confort: se activa cuando la temperatura elegida supera la del ambiente.</li><li>ECO: reduce el consumo cuando la temperatura elegida supera la del ambiente.</li><li>Anti-Frost: se activa si la temperatura baja de 7 °C.</li></ul><h3>Calor y seguridad</h3><p>Placa cerámica PTC con corte por sobrecalentamiento. La oscilación del deflector reparte el calor. Protección IP22.</p><h3>Antes de comprar</h3><p>Tiene dos potencias, 1000 W y 2000 W. Revisá el circuito del ambiente antes de usar el máximo. Para el control WiFi necesitás red WiFi en el lugar.</p>",
+      "revisar": [
+        "La categoría actual es calefactores-estufas. Este caloventor de pared es de la misma familia que el CWD960, que está en calefaccion-y-caloventores. Confirmar la categoría."
+      ]
+    },
+    {
+      "slug": "tp-link-tapo-camara-ip-wifi-c100-int",
+      "name": "Cámara IP Wi-Fi TP-Link Tapo C100 interior",
+      "brand": "TP-Link",
+      "model": "Tapo C100",
+      "seoTitle": "Cámara IP Wi-Fi TP-Link Tapo C100",
+      "seoDescription": "Cámara IP Wi-Fi TP-Link Tapo C100 para uso en interior, con conexión inalámbrica. Ideal para vigilar el hogar. Garantía y envíos a todo el país.",
+      "shortDescription": "Cámara IP Wi-Fi TP-Link Tapo C100 para uso en interior, con conexión inalámbrica por Wi-Fi.",
+      "highlights": [
+        "Cámara IP Wi-Fi para interior",
+        "Modelo Tapo C100 de TP-Link",
+        "Conexión inalámbrica por Wi-Fi"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cámara IP Wi-Fi"
+        },
+        {
+          "label": "Uso",
+          "value": "Interior"
+        },
+        {
+          "label": "Conexión",
+          "value": "Wi-Fi"
+        }
+      ],
+      "descriptionHtml": "<p>La TP-Link Tapo C100 es una cámara IP Wi-Fi para uso en interior, con conexión inalámbrica a la red del hogar.</p><p>Tiene garantía y envíos a todo el país.</p><h3>Antes de comprar</h3><p>La ficha no informa resolución, visión nocturna, audio ni almacenamiento. Si necesitás alguno de esos datos, consultanos antes de comprar.</p>",
+      "revisar": [
+        "La descripción original es genérica. Faltan resolución, visión nocturna, audio, almacenamiento y compatibilidad: completarlos desde la ficha del fabricante antes de publicar."
+      ]
+    },
+    {
+      "slug": "tp-link-tapo-camara-ip-wifi-c310-ext",
+      "name": "Cámara IP Wi-Fi TP-Link Tapo C310 exterior",
+      "brand": "TP-Link",
+      "model": "Tapo C310",
+      "seoTitle": "Cámara IP Wi-Fi TP-Link Tapo C310",
+      "seoDescription": "Cámara IP Wi-Fi TP-Link Tapo C310 para uso en exterior, con conexión inalámbrica. Ideal para vigilar el frente de la casa. Garantía y envíos a todo el país.",
+      "shortDescription": "Cámara IP Wi-Fi TP-Link Tapo C310 para uso en exterior, con conexión inalámbrica por Wi-Fi.",
+      "highlights": [
+        "Cámara IP Wi-Fi para exterior",
+        "Modelo Tapo C310 de TP-Link",
+        "Conexión inalámbrica por Wi-Fi"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cámara IP Wi-Fi"
+        },
+        {
+          "label": "Uso",
+          "value": "Exterior"
+        },
+        {
+          "label": "Conexión",
+          "value": "Wi-Fi"
+        }
+      ],
+      "descriptionHtml": "<p>La TP-Link Tapo C310 es una cámara IP Wi-Fi para uso en exterior, con conexión inalámbrica a la red del hogar.</p><p>Tiene garantía y envíos a todo el país.</p><h3>Antes de comprar</h3><p>Para exterior conviene conocer el grado de protección. La ficha no lo informa, así que consultalo antes de comprar.</p>",
+      "revisar": [
+        "La descripción original es genérica. Faltan resolución, visión nocturna, audio, almacenamiento y compatibilidad.",
+        "El nombre dice EXT (exterior), pero la ficha no informa el grado de protección IP. Completar antes de publicar."
+      ]
+    },
+    {
+      "slug": "tp-link-tapo-camara-ip-wifi-c320ws-ext",
+      "name": "Cámara IP Wi-Fi TP-Link Tapo C320WS exterior",
+      "brand": "TP-Link",
+      "model": "Tapo C320WS",
+      "seoTitle": "Cámara IP Wi-Fi TP-Link Tapo C320WS",
+      "seoDescription": "Cámara IP Wi-Fi TP-Link Tapo C320WS para uso en exterior, con conexión inalámbrica por Wi-Fi. Garantía y envíos a todo el país.",
+      "shortDescription": "Cámara IP Wi-Fi TP-Link Tapo C320WS para uso en exterior, con conexión inalámbrica por Wi-Fi.",
+      "highlights": [
+        "Cámara IP Wi-Fi para exterior",
+        "Modelo Tapo C320WS de TP-Link",
+        "Conexión inalámbrica por Wi-Fi"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cámara IP Wi-Fi"
+        },
+        {
+          "label": "Uso",
+          "value": "Exterior"
+        },
+        {
+          "label": "Conexión",
+          "value": "Wi-Fi"
+        }
+      ],
+      "descriptionHtml": "<p>La TP-Link Tapo C320WS es una cámara IP Wi-Fi para uso en exterior, con conexión inalámbrica a la red del hogar.</p><p>Tiene garantía y envíos a todo el país.</p><h3>Antes de comprar</h3><p>La ficha no informa resolución, grado de protección IP ni audio. Consultalos antes de comprar si los necesitás.</p>",
+      "revisar": [
+        "La descripción original es genérica. Faltan resolución, visión nocturna, audio, almacenamiento y compatibilidad.",
+        "El nombre dice EXT (exterior), pero la ficha no informa el grado de protección IP."
+      ]
+    },
+    {
+      "slug": "tp-link-tapo-camara-ip-wifi-c425-con-bateria",
+      "name": "Cámara IP Wi-Fi TP-Link Tapo C425 con batería",
+      "brand": "TP-Link",
+      "model": "Tapo C425",
+      "seoTitle": "Cámara IP Wi-Fi TP-Link Tapo C425",
+      "seoDescription": "Cámara IP Wi-Fi TP-Link Tapo C425 con batería y conexión inalámbrica por Wi-Fi. Garantía y envíos a todo el país para toda la línea de cámaras Tapo.",
+      "shortDescription": "Cámara IP Wi-Fi TP-Link Tapo C425 con batería, con conexión inalámbrica por Wi-Fi.",
+      "highlights": [
+        "Cámara IP Wi-Fi con batería",
+        "Modelo Tapo C425 de TP-Link",
+        "Conexión inalámbrica por Wi-Fi"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Cámara IP Wi-Fi"
+        },
+        {
+          "label": "Alimentación",
+          "value": "Con batería (según el nombre del producto)"
+        },
+        {
+          "label": "Conexión",
+          "value": "Wi-Fi"
+        }
+      ],
+      "descriptionHtml": "<p>La TP-Link Tapo C425 es una cámara IP Wi-Fi con batería y conexión inalámbrica a la red del hogar.</p><p>Tiene garantía y envíos a todo el país.</p><h3>Antes de comprar</h3><p>La ficha no informa si es para interior o exterior ni cuánto dura la batería. Consultalo antes de comprar.</p>",
+      "revisar": [
+        "La descripción original es genérica. No indica uso en interior o exterior, autonomía de la batería, resolución ni almacenamiento."
+      ]
+    },
+    {
+      "slug": "access-point-tp-link-tl-cpe510-5ghz-300mbps-13dbi-64mb",
+      "name": "Access Point TP-Link TL-CPE510 5 GHz 300 Mbps 13 dBi 64 MB",
+      "brand": "TP-Link",
+      "model": "TL-CPE510",
+      "seoTitle": "Access point TP-Link TL-CPE510 exterior",
+      "seoDescription": "Access point y repetidor exterior TP-Link TL-CPE510 de 5 GHz, 300 Mbps y antena de 13 dBi, con 2 puertos LAN. Garantía y envíos a todo el país.",
+      "shortDescription": "Access point exterior TP-Link TL-CPE510 para 5 GHz, con velocidad de 300 Mbps, antena de 13 dBi y función de repetidor. Tiene 2 puertos LAN.",
+      "highlights": [
+        "Access point exterior y repetidor",
+        "Banda de 5 GHz a 300 Mbps",
+        "Antena de 13 dBi",
+        "2 puertos LAN",
+        "Alimentación de 100 V a 240 V"
+      ],
+      "specs": [
+        {
+          "label": "Funciones",
+          "value": "Access point exterior y repetidor"
+        },
+        {
+          "label": "Velocidad",
+          "value": "300 Mbps"
+        },
+        {
+          "label": "Frecuencia",
+          "value": "5 GHz"
+        },
+        {
+          "label": "Estándares",
+          "value": "IEEE 802.11a/n"
+        },
+        {
+          "label": "Antena",
+          "value": "13 dBi (según el nombre del producto)"
+        },
+        {
+          "label": "Puertos",
+          "value": "2 LAN"
+        },
+        {
+          "label": "Seguridad",
+          "value": "WEP (único protocolo mencionado en la ficha)"
+        },
+        {
+          "label": "Voltaje",
+          "value": "100 V a 240 V"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "224 x 79 x 60 mm"
+        },
+        {
+          "label": "Humedad de funcionamiento",
+          "value": "10 % a 90 %"
+        },
+        {
+          "label": "Línea",
+          "value": "Pharos"
+        }
+      ],
+      "descriptionHtml": "<p>El TP-Link TL-CPE510 es un access point para exterior que también funciona como repetidor. Trabaja en 5 GHz a 300 Mbps.</p><h3>Conexión</h3><p>Tiene 2 puertos LAN para conectar equipos por cable. Funciona con alimentación de 100 V a 240 V y opera con humedad de 10 % a 90 %.</p><h3>Antena</h3><p>Antena de 13 dBi, según el nombre del producto.</p><h3>Antes de comprar</h3><p>La ficha solo menciona WEP como protocolo de seguridad. Si tu red usa WPA2, consultá la compatibilidad antes de comprar.</p>",
+      "revisar": [
+        "La ficha no informa cifrado WPA2 ni WPA3, solo WEP. Confirmar antes de publicar.",
+        "La ficha no informa grado de protección IP ni datos de montaje, que son importantes en un equipo de exterior."
+      ]
+    },
+    {
+      "slug": "adaptador-usb-inalambrico-tenda-u18-dual-band",
+      "name": "Adaptador USB inalámbrico Tenda U18 AX1800 Dual Band",
+      "brand": "Tenda",
+      "model": "U18",
+      "seoTitle": "Adaptador USB Tenda U18 AX1800 Wi-Fi 6",
+      "seoDescription": "Adaptador USB Tenda U18 AX1800 con Wi-Fi 6 y doble banda: hasta 1201 Mbps en 5 GHz y 574 Mbps en 2,4 GHz, con USB 3.0. Garantía y envíos a todo el país.",
+      "shortDescription": "Adaptador USB Wi-Fi 6 Tenda U18 AX1800 de doble banda. Hasta 1201 Mbps en 5 GHz y 574 Mbps en 2,4 GHz, con interfaz USB 3.0.",
+      "highlights": [
+        "Wi-Fi 6 de doble banda AX1800",
+        "Hasta 1201 Mbps en 5 GHz",
+        "Hasta 574 Mbps en 2,4 GHz",
+        "Interfaz USB 3.0",
+        "Instalación sin drivers en Windows 10"
+      ],
+      "specs": [
+        {
+          "label": "Estándar",
+          "value": "Wi-Fi 6"
+        },
+        {
+          "label": "Bandas",
+          "value": "Doble banda"
+        },
+        {
+          "label": "Velocidad",
+          "value": "Hasta 1201 Mbps en 5 GHz y 574 Mbps en 2,4 GHz"
+        },
+        {
+          "label": "Interfaz",
+          "value": "USB 3.0"
+        },
+        {
+          "label": "Instalación",
+          "value": "Sin drivers en Windows 10 (según la ficha)"
+        }
+      ],
+      "descriptionHtml": "<p>El Tenda U18 es un adaptador USB Wi-Fi 6 de doble banda, con AX1800. Sirve para sumar Wi-Fi 6 a una PC de escritorio o una notebook.</p><h3>Velocidad</h3><p>Hasta 1201 Mbps en 5 GHz y 574 Mbps en 2,4 GHz. La interfaz USB 3.0 da mejor rendimiento que el Wi-Fi 5, según la ficha.</p><h3>Uso</h3><p>Según la ficha, sirve para ver video 4K y jugar en línea con más fluidez. Para aprovecharlo al máximo necesitás un router Wi-Fi 6.</p><h3>Instalación</h3><p>Según la ficha, no necesita drivers en Windows 10.</p><h3>Antes de comprar</h3><p>Las velocidades son las máximas de la ficha. El rendimiento real depende del router y de la distancia.</p>",
+      "revisar": [
+        "La ficha solo menciona Windows 10 para la instalación. Confirmar compatibilidad con Windows 11 y macOS."
+      ]
+    },
+    {
+      "slug": "adaptador-wi-fi-usb-nano-mercusys",
+      "name": "Adaptador Wi-Fi USB Nano Mercusys MW150US N150",
+      "brand": "Mercusys",
+      "model": "MW150US",
+      "seoTitle": "Adaptador Wi-Fi USB Mercusys MW150US N150",
+      "seoDescription": "Adaptador Wi-Fi USB nano Mercusys MW150US N150: hasta 150 Mbps en 2,4 GHz, Wi-Fi 4, formato miniatura y modo Soft AP. Garantía y envíos a todo el país.",
+      "shortDescription": "Adaptador Wi-Fi USB nano Mercusys MW150US N150 de 150 Mbps en 2,4 GHz. Formato miniatura plug and play y modo Soft AP para compartir internet por Wi-Fi.",
+      "highlights": [
+        "Hasta 150 Mbps en 2,4 GHz",
+        "Formato nano que se puede dejar conectado",
+        "Modo Soft AP: hotspot desde la PC",
+        "Compatible con WPA y WPA2",
+        "Plug and play"
+      ],
+      "specs": [
+        {
+          "label": "Estándar",
+          "value": "Wi-Fi 4 (802.11b/g/n)"
+        },
+        {
+          "label": "Velocidad",
+          "value": "Hasta 150 Mbps"
+        },
+        {
+          "label": "Frecuencia",
+          "value": "2,4 GHz"
+        },
+        {
+          "label": "Interfaz",
+          "value": "USB 2.0 tipo A"
+        },
+        {
+          "label": "Formato",
+          "value": "Nano, 18,9 x 14,8 x 6,8 mm"
+        },
+        {
+          "label": "Antena",
+          "value": "Interna"
+        },
+        {
+          "label": "Seguridad",
+          "value": "WPA/WPA2 y WEP (64/128 bit)"
+        },
+        {
+          "label": "Sistemas",
+          "value": "Windows 11, 10, 8.1, 8, 7 y XP"
+        },
+        {
+          "label": "Función",
+          "value": "Soft AP"
+        }
+      ],
+      "descriptionHtml": "<p>El Mercusys MW150US es un adaptador Wi-Fi USB nano de 150 Mbps para PC de escritorio o notebook.</p><h3>Conexión</h3><p>Trabaja en la banda de 2,4 GHz con Wi-Fi 4. Sirve para navegar, enviar correos, tomar clases virtuales y hacer videollamadas.</p><h3>Formato</h3><p>Es tan chico que puede quedar conectado al puerto USB sin molestar. Mide 18,9 x 14,8 x 6,8 mm.</p><h3>Soft AP</h3><p>Puede convertir la conexión cableada de la PC en un hotspot Wi-Fi para celulares y tablets.</p><h3>Antes de comprar</h3><p>La ficha lista solo sistemas Windows. Si usás macOS o Linux, consultá antes de comprar.</p>",
+      "revisar": [
+        "La ficha no menciona macOS ni Linux."
+      ]
+    },
+    {
+      "slug": "extensor-de-rango-wi-fi-tp-link-tl-wa850re-inalambrico",
+      "name": "Extensor de rango Wi-Fi TP-Link TL-WA850RE",
+      "brand": "TP-Link",
+      "model": "TL-WA850RE",
+      "seoTitle": "Extensor Wi-Fi TP-Link TL-WA850RE 300 Mbps",
+      "seoDescription": "Extensor de rango Wi-Fi TP-Link TL-WA850RE de 300 Mbps en 2,4 GHz, con puerto Ethernet y 5 luces de señal. Garantía y envíos a todo el país.",
+      "shortDescription": "Extensor de rango Wi-Fi TP-Link TL-WA850RE de 300 Mbps en 2,4 GHz. Tiene un puerto Ethernet que funciona como adaptador inalámbrico y 5 luces para ubicarlo.",
+      "highlights": [
+        "Repetidor Wi-Fi de 300 Mbps",
+        "Puerto Ethernet como adaptador inalámbrico",
+        "5 luces de señal para ubicarlo mejor",
+        "Reduce interferencias en la red",
+        "2 antenas internas"
+      ],
+      "specs": [
+        {
+          "label": "Funciones",
+          "value": "Repetidor y adaptador Ethernet inalámbrico"
+        },
+        {
+          "label": "Velocidad",
+          "value": "300 Mbps"
+        },
+        {
+          "label": "Banda",
+          "value": "2,4 GHz (banda única)"
+        },
+        {
+          "label": "Estándares",
+          "value": "IEEE 802.11b/g/n"
+        },
+        {
+          "label": "Antenas",
+          "value": "2 internas"
+        },
+        {
+          "label": "Puertos",
+          "value": "1 Ethernet"
+        },
+        {
+          "label": "Indicadores",
+          "value": "5 luces de señal"
+        },
+        {
+          "label": "Color",
+          "value": "Blanco"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "67 x 110 x 66 mm"
+        }
+      ],
+      "descriptionHtml": "<p>El TL-WA850RE es un extensor de rango Wi-Fi que amplía la señal a los sectores donde el internet no llega.</p><h3>Adaptador Ethernet</h3><p>Su puerto Ethernet funciona como adaptador inalámbrico. Así podés conectar por cable un televisor o una consola de videojuegos y compartir la red.</p><h3>Señal</h3><p>Las 5 luces indican la intensidad de la señal, para encontrar la ubicación correcta del repetidor. Según la ficha, reduce la interferencia para una red más estable.</p><h3>Antes de comprar</h3><p>Opera solo en 2,4 GHz, con una velocidad de hasta 300 Mbps.</p>",
+      "revisar": []
+    },
+    {
+      "slug": "netmak-adaptador-wifi-usb-150-mbs-nm-cs150",
+      "name": "Adaptador Wi-Fi USB Netmak NM-CS150 150 Mbps",
+      "brand": "Netmak",
+      "model": "NM-CS150",
+      "seoTitle": "Adaptador Wi-Fi USB Netmak NM-CS150",
+      "seoDescription": "Adaptador Wi-Fi USB Netmak NM-CS150 de 150 Mbps con antena interna y plug and play, compatible con Windows, macOS y Linux. Garantía y envíos a todo el país.",
+      "shortDescription": "Adaptador Wi-Fi USB Netmak NM-CS150 de 150 Mbps. Conexión inalámbrica con antena interna, instalación plug and play y compatibilidad con Windows, Mac y Linux.",
+      "highlights": [
+        "Hasta 150 Mbps",
+        "Conexión USB con antena interna",
+        "Instalación plug and play",
+        "Compatible con Windows, Mac y Linux"
+      ],
+      "specs": [
+        {
+          "label": "Velocidad",
+          "value": "Hasta 150 Mbps"
+        },
+        {
+          "label": "Conexión",
+          "value": "USB"
+        },
+        {
+          "label": "Antena",
+          "value": "Interna"
+        },
+        {
+          "label": "Instalación",
+          "value": "Plug and play"
+        },
+        {
+          "label": "Sistemas",
+          "value": "Windows, macOS y Linux (según la descripción)"
+        }
+      ],
+      "descriptionHtml": "<p>El Netmak NM-CS150 es un adaptador Wi-Fi USB de 150 Mbps para equipos que no tienen Wi-Fi integrado.</p><h3>Conexión</h3><p>Se conecta a un puerto USB y usa una antena interna para recibir la señal.</p><h3>Instalación</h3><p>Es plug and play: se conecta y queda listo para usar en Windows, Mac y Linux.</p><h3>Uso</h3><p>Sirve para computadoras de escritorio y notebooks que necesitan Wi-Fi.</p><h3>Antes de comprar</h3><p>La ficha no informa el estándar Wi-Fi ni las dimensiones.</p>",
+      "revisar": [
+        "La ficha no informa estándar Wi-Fi (4, 5 o 6), banda ni dimensiones. Confirmar antes de publicar."
+      ]
+    },
+    {
+      "slug": "placa-de-red-usb-wifi-tp-link-822n-300mbps-2-antenas-3dbi",
+      "name": "Placa de red USB Wi-Fi TP-Link TL-WN822N 300 Mbps",
+      "brand": "TP-Link",
+      "model": "TL-WN822N",
+      "seoTitle": "Placa de red USB TP-Link TL-WN822N",
+      "seoDescription": "Placa de red USB TP-Link TL-WN822N de 300 Mbps con 2 antenas de 3 dBi, botón WPS e indicador LED. Garantía y envíos a todo el país.",
+      "shortDescription": "Placa de red USB Wi-Fi TP-Link TL-WN822N de 300 Mbps en 2,4 GHz, con 2 antenas omnidireccionales de 3 dBi, botón WPS e indicador LED.",
+      "highlights": [
+        "Hasta 300 Mbps en 2,4 GHz",
+        "2 antenas omnidireccionales de 3 dBi",
+        "Botón WPS para conexión rápida",
+        "Indicador LED",
+        "Seguridad WEP, WPA y WPA2"
+      ],
+      "specs": [
+        {
+          "label": "Estándares",
+          "value": "IEEE 802.11n, g y b"
+        },
+        {
+          "label": "Velocidad",
+          "value": "Hasta 300 Mbps"
+        },
+        {
+          "label": "Frecuencia",
+          "value": "2,4 GHz (2,4 a 2,4835 GHz)"
+        },
+        {
+          "label": "Antenas",
+          "value": "2 omnidireccionales de 3 dBi"
+        },
+        {
+          "label": "Interfaz",
+          "value": "USB"
+        },
+        {
+          "label": "Botón",
+          "value": "WPS"
+        },
+        {
+          "label": "Indicador",
+          "value": "LED"
+        },
+        {
+          "label": "Seguridad",
+          "value": "WEP, WPA, WPA-PSK y WPA2"
+        },
+        {
+          "label": "Modos",
+          "value": "Ad hoc e infraestructura"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "90 x 68 x 16,8 mm"
+        }
+      ],
+      "descriptionHtml": "<p>El TP-Link TL-WN822N es una placa de red USB Wi-Fi de 300 Mbps, con dos antenas omnidireccionales de 3 dBi.</p><h3>Conexión</h3><p>Trabaja en 2,4 GHz con los estándares 802.11n, g y b. Tiene botón WPS para conectar a la red sin escribir la clave y un LED indicador.</p><h3>Seguridad</h3><p>Compatible con WEP, WPA y WPA2.</p><h3>Medidas</h3><p>Mide 90 x 68 x 16,8 mm.</p><h3>Antes de comprar</h3><p>Trabaja solo en 2,4 GHz, así que no se conecta a redes de 5 GHz.</p>",
+      "revisar": [
+        "La ficha dice 300 MB/s y el nombre dice 300 Mbps. Se usó 300 Mbps: confirmar."
+      ]
+    },
+    {
+      "slug": "placa-red-pci-e-tp-link-tg-3468-10-100-1000-2",
+      "name": "Placa de red PCI Express TP-Link TG-3468 Gigabit",
+      "brand": "TP-Link",
+      "model": "TG-3468",
+      "seoTitle": "Placa de red PCI Express TP-Link TG-3468",
+      "seoDescription": "Placa de red PCI Express TP-Link TG-3468 Gigabit 10/100/1000 Mbps para escritorio, con Wake-on-LAN y control de flujo 802.3x. Garantía y envíos a todo el país.",
+      "shortDescription": "Placa de red PCI Express TP-Link TG-3468 con Gigabit Ethernet 10/100/1000 Mbps. Instalación plug and play, con Wake-on-LAN y control de flujo IEEE 802.3x.",
+      "highlights": [
+        "Gigabit Ethernet 10/100/1000 Mbps",
+        "Interfaz PCI Express",
+        "Wake-on-LAN",
+        "Control de flujo IEEE 802.3x",
+        "Compatible con Windows y Linux"
+      ],
+      "specs": [
+        {
+          "label": "Interfaz",
+          "value": "PCI Express"
+        },
+        {
+          "label": "Velocidad",
+          "value": "10/100/1000 Mbps (Gigabit Ethernet)"
+        },
+        {
+          "label": "Funciones",
+          "value": "Wake-on-LAN y control de flujo IEEE 802.3x"
+        },
+        {
+          "label": "Sistemas",
+          "value": "Windows y Linux"
+        },
+        {
+          "label": "Instalación",
+          "value": "Plug and play, con drivers automáticos"
+        },
+        {
+          "label": "Uso",
+          "value": "Equipos de escritorio"
+        }
+      ],
+      "descriptionHtml": "<p>La TP-Link TG-3468 es una placa de red PCI Express para PC de escritorio que necesitan Ethernet de alta velocidad.</p><h3>Velocidad</h3><p>Soporta 10/100/1000 Mbps, para transferir archivos y navegar con una conexión cableada estable.</p><h3>Funciones</h3><p>Incluye Wake-on-LAN, que permite encender el equipo desde la red, y control de flujo IEEE 802.3x.</p><h3>Compatibilidad</h3><p>Funciona en Windows y Linux, con instalación plug and play y drivers automáticos.</p><h3>Antes de comprar</h3><p>Para instalarla necesitás un slot PCI Express libre en la placa madre.</p>",
+      "revisar": [
+        "La ficha no informa la cantidad de puertos ni el perfil de la placa (estándar o bajo perfil). Confirmar."
+      ]
+    },
+    {
+      "slug": "placa-red-usb-tp-link-archer-t2u-ac600-dual-band",
+      "brand": "TP-Link",
+      "model": "Archer T2U",
+      "seoTitle": "TP-Link Archer T2U AC600 doble banda",
+      "seoDescription": "Adaptador Wi-Fi USB TP-Link Archer T2U AC600 de doble banda: hasta 433 Mbps en 5 GHz y 150 Mbps en 2,4 GHz. Garantía y envíos a todo el país.",
+      "shortDescription": "Adaptador Wi-Fi USB TP-Link Archer T2U AC600 de doble banda, con Wi-Fi 5. Hasta 433 Mbps en 5 GHz y 150 Mbps en 2,4 GHz, en un formato compacto.",
+      "highlights": [
+        "Wi-Fi 5 de doble banda AC600",
+        "Hasta 433 Mbps en 5 GHz",
+        "150 Mbps en 2,4 GHz",
+        "Formato miniatura y compacto",
+        "Cifrado WPA y WPA2"
+      ],
+      "specs": [
+        {
+          "label": "Estándar",
+          "value": "Wi-Fi 5 (802.11ac, n y a en 5 GHz; 802.11b, g y n en 2,4 GHz)"
+        },
+        {
+          "label": "Velocidad",
+          "value": "Hasta 433 Mbps en 5 GHz y 150 Mbps en 2,4 GHz"
+        },
+        {
+          "label": "Interfaz",
+          "value": "USB 2.0 tipo A"
+        },
+        {
+          "label": "Antena",
+          "value": "Omnidireccional interna"
+        },
+        {
+          "label": "Seguridad",
+          "value": "WEP, WPA y WPA2 (PSK)"
+        },
+        {
+          "label": "Sistemas",
+          "value": "Windows 11, 10, 8.1, 8, 7 y XP; macOS"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "41 x 19,5 x 8,7 mm"
+        }
+      ],
+      "descriptionHtml": "<p>El Archer T2U es un adaptador Wi-Fi USB de doble banda que lleva la conexión de tu PC o notebook a Wi-Fi 5.</p><h3>Doble banda</h3><p>Podés elegir la banda: 5 GHz a 433 Mbps para streaming en HD, videollamadas y juegos en línea, o 2,4 GHz a 150 Mbps para navegar y tareas cotidianas.</p><h3>Diseño</h3><p>Formato miniatura de 41 x 19,5 x 8,7 mm, más chico que la mayoría de los adaptadores AC del mercado. Antena omnidireccional interna.</p><h3>Seguridad y sistemas</h3><p>Compatible con WPA/WPA2 y con Windows y macOS.</p><h3>Antes de comprar</h3><p>Los 600 Mbps son la suma de las dos bandas: en cada una se conecta a la velocidad de esa banda, no a las dos a la vez.</p>",
+      "revisar": []
+    },
+    {
+      "slug": "placa-red-usb-tp-link-archer-tx1u-nano-ax300",
+      "brand": "TP-Link",
+      "model": "Archer TX1U",
+      "seoTitle": "TP-Link Archer TX1U Nano AX300 Wi-Fi 6",
+      "seoDescription": "Adaptador Wi-Fi 6 USB nano TP-Link Archer TX1U AX300: hasta 287 Mbps en 2,4 GHz, MU-MIMO, WPA3 y formato miniatura. Garantía y envíos a todo el país.",
+      "shortDescription": "Adaptador Wi-Fi 6 USB nano TP-Link Archer TX1U (AX300) con velocidad de hasta 287 Mbps en 2,4 GHz, MU-MIMO y formato miniatura para dejar conectado.",
+      "highlights": [
+        "Wi-Fi 6 con hasta 287 Mbps en 2,4 GHz",
+        "Formato nano para dejar conectado",
+        "MU-MIMO y OFDMA",
+        "Cifrado WPA3",
+        "Función hotspot desde la PC",
+        "Plug and play con drivers integrados"
+      ],
+      "specs": [
+        {
+          "label": "Estándar",
+          "value": "Wi-Fi 6 (802.11ax, n, b y g)"
+        },
+        {
+          "label": "Velocidad",
+          "value": "Hasta 287 Mbps en 2,4 GHz (AX300)"
+        },
+        {
+          "label": "Tecnologías",
+          "value": "MU-MIMO, OFDMA y roaming fluido"
+        },
+        {
+          "label": "Seguridad",
+          "value": "WPA3, WPA2-PSK, WPA-PSK y WEP"
+        },
+        {
+          "label": "Interfaz",
+          "value": "USB 2.0 tipo A, formato nano"
+        },
+        {
+          "label": "Antena",
+          "value": "Interna"
+        },
+        {
+          "label": "Sistemas",
+          "value": "Windows 11 y Windows 10"
+        },
+        {
+          "label": "Función",
+          "value": "Hotspot desde una conexión cableada de la PC"
+        }
+      ],
+      "descriptionHtml": "<p>El TP-Link Archer TX1U es un adaptador Wi-Fi 6 USB nano. Mejora la conexión de una PC de escritorio o notebook sin ocupar espacio en el puerto USB.</p><h3>Velocidad</h3><p>Hasta 287 Mbps en la banda de 2,4 GHz. MU-MIMO y OFDMA ayudan a reducir la latencia cuando hay varios dispositivos conectados al router.</p><h3>Seguridad</h3><p>Soporta WPA3, además de WPA2 y WPA.</p><h3>Instalación</h3><p>Trae drivers integrados y es plug and play en Windows 10 y 11. Puede funcionar como hotspot si la PC está conectada por cable.</p><h3>Antes de comprar</h3><p>Según la ficha, trabaja en 2,4 GHz. La ficha no menciona macOS ni Linux.</p>",
+      "revisar": [
+        "La ficha no informa dimensiones exactas: solo dice diseño nano miniatura."
+      ]
+    },
+    {
+      "slug": "router-2p-mercusys-mb110-4g-300mbps",
+      "name": "Router 4G Mercusys MB110-4G 300 Mbps",
+      "brand": "Mercusys",
+      "model": "MB110-4G",
+      "seoTitle": "Router 4G Mercusys MB110-4G 300 Mbps",
+      "seoDescription": "Router 4G Mercusys MB110-4G con Wi-Fi de hasta 300 Mbps y 2 puertos Ethernet, para internet móvil en casa, oficina o como respaldo. Garantía y envíos al país.",
+      "shortDescription": "Router 4G Mercusys MB110-4G con conexión LTE y Wi-Fi de hasta 300 Mbps. Tiene 2 puertos Ethernet para equipos con cable y sirve como respaldo de internet.",
+      "highlights": [
+        "Conexión 4G LTE",
+        "Wi-Fi de hasta 300 Mbps",
+        "2 puertos Ethernet",
+        "Sirve para zonas sin línea fija",
+        "Respaldo de internet para oficinas"
+      ],
+      "specs": [
+        {
+          "label": "Conexión móvil",
+          "value": "4G LTE"
+        },
+        {
+          "label": "Wi-Fi",
+          "value": "Hasta 300 Mbps"
+        },
+        {
+          "label": "Puertos",
+          "value": "2 Ethernet"
+        },
+        {
+          "label": "Uso",
+          "value": "Hogar, oficina o respaldo de internet"
+        }
+      ],
+      "descriptionHtml": "<p>El Mercusys MB110-4G es un router 4G que da internet inalámbrico sin depender de la línea fija. Tiene Wi-Fi de hasta 300 Mbps.</p><h3>Conectividad</h3><p>Usa tecnología 4G LTE y tiene 2 puertos Ethernet para equipos conectados por cable. Permite conectar varios dispositivos a la vez.</p><h3>Usos</h3><p>Sirve para hogares, oficinas temporales, zonas rurales o como respaldo si se corta la línea fija.</p><h3>Diseño</h3><p>Compacto y de configuración sencilla.</p><h3>Antes de comprar</h3><p>Depende de la cobertura 4G del lugar: sin señal móvil no hay internet. La ficha no detalla las bandas de 4G ni los operadores compatibles.</p>",
+      "revisar": [
+        "Faltan la banda Wi-Fi, las bandas 4G, si tiene antenas externas o batería, y el listado de operadores compatibles. La descripción dice solo 'principales operadores móviles'."
+      ]
+    }
+  ]
+}

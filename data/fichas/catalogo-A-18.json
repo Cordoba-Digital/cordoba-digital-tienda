@@ -1,0 +1,835 @@
+{
+  "lote": "catalogo-A-18",
+  "productos": [
+    {
+      "slug": "macbook-pro-m5-pro-14%e2%80%b3-24gb-2tb-space",
+      "name": "MacBook Pro M5 Pro 14″ 24 GB RAM 2 TB",
+      "model": "MacBook Pro 14″ M5 Pro (MJLW4)",
+      "storage": "2 TB",
+      "ram": "24 GB",
+      "seoTitle": "MacBook Pro 14″ M5 Pro 24 GB RAM 2 TB",
+      "seoDescription": "MacBook Pro de 14″ con chip M5 Pro, 24 GB de RAM y SSD de 2 TB. Pantalla Liquid Retina XDR y Thunderbolt 4. Garantía y envíos a todo el país.",
+      "shortDescription": "MacBook Pro de 14″ con chip M5 Pro, 24 GB de memoria unificada y SSD de 2 TB. Pantalla Liquid Retina XDR y puertos Thunderbolt 4, HDMI y lector SD.",
+      "highlights": [
+        "Chip M5 Pro con 24 GB de memoria unificada",
+        "SSD de 2 TB para proyectos y archivos pesados",
+        "Pantalla Liquid Retina XDR de 14″",
+        "Puertos Thunderbolt 4, HDMI y lector de tarjetas SD",
+        "Pensada para edición de video, diseño y desarrollo"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Liquid Retina XDR de 14″"
+        },
+        {
+          "label": "Procesador",
+          "value": "Apple M5 Pro"
+        },
+        {
+          "label": "Memoria unificada",
+          "value": "24 GB"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 2 TB"
+        },
+        {
+          "label": "Puertos",
+          "value": "Thunderbolt 4, HDMI, lector de tarjetas SD"
+        }
+      ],
+      "descriptionHtml": "<p>La MacBook Pro de 14″ con chip M5 Pro está pensada para trabajo profesional: edición de video, diseño gráfico y desarrollo de software. Esta versión trae 24 GB de memoria unificada y 2 TB de SSD.</p><h3>Rendimiento</h3><p>Con 24 GB de memoria unificada podés tener abiertas varias aplicaciones profesionales a la vez sin que el equipo se ralentice.</p><h3>Almacenamiento</h3><p>El SSD de 2 TB te da lugar para proyectos grandes y archivos multimedia, con acceso rápido a todo.</p><h3>Pantalla y conexiones</h3><ul><li>Pantalla Liquid Retina XDR de 14″, con colores intensos y negros profundos.</li><li>Puertos Thunderbolt 4 y HDMI.</li><li>Ranura para tarjetas SD.</li></ul><h3>Antes de comprar</h3><p>Consultanos por el color disponible. Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "El nombre dice solo 'Space' y la descripción dice 'Space Gray'; la ficha hermana (MGDR4) dice 'Space Black'. No publiqué el color en ninguna de las dos: confirmar el color real de cada SKU.",
+        "La descripción original no da autonomía, nits ni peso: no los puse.",
+        "Se sacó 'Space' del nombre hasta confirmar el color."
+      ]
+    },
+    {
+      "slug": "macbook-pro-m5-pro-14-24gb-1tb-space",
+      "name": "MacBook Pro M5 Pro 14″ 24 GB RAM 1 TB",
+      "model": "MacBook Pro 14″ M5 Pro (MGDR4)",
+      "storage": "1 TB",
+      "ram": "24 GB",
+      "seoTitle": "MacBook Pro 14″ M5 Pro 24 GB RAM 1 TB",
+      "seoDescription": "MacBook Pro de 14″ con chip M5 Pro, 24 GB de RAM y SSD de 1 TB. Pantalla mini-LED de hasta 1600 nits. Garantía y envíos a todo el país.",
+      "shortDescription": "MacBook Pro de 14″ con chip M5 Pro, 24 GB de memoria unificada y SSD de 1 TB. Pantalla Liquid Retina XDR mini-LED, batería de hasta 18 horas y MagSafe 3.",
+      "highlights": [
+        "Chip M5 Pro con 24 GB de memoria unificada",
+        "SSD de 1 TB",
+        "Pantalla Liquid Retina XDR mini-LED de 14,2″ y hasta 1600 nits",
+        "Batería de hasta 18 horas",
+        "Thunderbolt 4, HDMI, lector SD y MagSafe 3"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Liquid Retina XDR mini-LED de 14,2″, hasta 1600 nits"
+        },
+        {
+          "label": "Procesador",
+          "value": "Apple M5 Pro"
+        },
+        {
+          "label": "Memoria unificada",
+          "value": "24 GB"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 1 TB"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 18 horas"
+        },
+        {
+          "label": "Puertos",
+          "value": "Thunderbolt 4, HDMI, lector de tarjetas SD, MagSafe 3"
+        }
+      ],
+      "descriptionHtml": "<p>La MacBook Pro de 14″ con chip M5 Pro está pensada para creativos, desarrolladores y profesionales que trabajan con archivos pesados. Esta versión trae 24 GB de memoria unificada y 1 TB de SSD.</p><h3>Rendimiento</h3><p>Los 24 GB de memoria unificada permiten usar varias aplicaciones profesionales al mismo tiempo. El sistema de refrigeración mantiene el rendimiento en tareas intensivas.</p><h3>Pantalla</h3><p>Liquid Retina XDR de 14,2″ con tecnología mini-LED y brillo de hasta 1600 nits. Buena para edición de video 4K y diseño gráfico.</p><h3>Batería y conexiones</h3><ul><li>Hasta 18 horas de batería.</li><li>Puertos Thunderbolt 4 y HDMI.</li><li>Lector de tarjetas SD y carga MagSafe 3.</li></ul><h3>Antes de comprar</h3><p>Consultanos por el color disponible. Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "El nombre dice solo 'Space'; la descripción dice 'Space Black' pero la ficha hermana (MJLW4) dice 'Space Gray'. No publiqué el color en ninguna: confirmar.",
+        "Se sacó 'Space' del nombre hasta confirmar el color.",
+        "La descripción afirma que el acabado resiste mejor las huellas: no lo puse."
+      ]
+    },
+    {
+      "slug": "macbook-pro-m5-pro-max-16-36gb-2tb-silver",
+      "name": "MacBook Pro M5 Pro Max 16″ 36 GB RAM 2 TB Silver",
+      "model": "MacBook Pro 16″ M5 Pro Max (MGE74)",
+      "storage": "2 TB",
+      "ram": "36 GB",
+      "seoTitle": "MacBook Pro 16″ M5 Pro Max 36 GB 2 TB",
+      "seoDescription": "MacBook Pro de 16″ con chip M5 Pro Max, 36 GB de RAM y SSD de 2 TB en Silver. Pantalla ProMotion de 120 Hz. Garantía y envíos a todo el país.",
+      "shortDescription": "MacBook Pro de 16″ en Silver con chip M5 Pro Max, 36 GB de memoria unificada y SSD de 2 TB. Pantalla Liquid Retina XDR con ProMotion de 120 Hz y hasta 22 horas de batería.",
+      "highlights": [
+        "Chip M5 Pro Max con 36 GB de memoria unificada",
+        "SSD de 2 TB",
+        "Pantalla Liquid Retina XDR de 16″ con ProMotion 120 Hz",
+        "Batería de hasta 22 horas",
+        "Para video, renderizado 3D y desarrollo"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Silver"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Liquid Retina XDR de 16″, ProMotion 120 Hz"
+        },
+        {
+          "label": "Procesador",
+          "value": "Apple M5 Pro Max"
+        },
+        {
+          "label": "Memoria unificada",
+          "value": "36 GB"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 2 TB"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 22 horas"
+        }
+      ],
+      "descriptionHtml": "<p>La MacBook Pro de 16″ en Silver combina el chip M5 Pro Max con 36 GB de memoria unificada y 2 TB de SSD. Es una máquina para trabajo profesional exigente.</p><h3>Rendimiento</h3><p>Los 36 GB de memoria unificada ayudan en edición de video, renderizado 3D, desarrollo de software complejo y multitarea intensiva.</p><h3>Pantalla</h3><p>Liquid Retina XDR de 16″ con ProMotion de 120 Hz, con colores vivos y buena precisión cromática para diseño y video.</p><h3>Almacenamiento y batería</h3><ul><li>SSD de 2 TB para proyectos grandes.</li><li>Hasta 22 horas de batería.</li></ul><h3>Antes de comprar</h3><p>Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original nombra el chip 'M5 Pro Max'; confirmar el nombre exacto del chip (puede ser M5 Pro o M5 Max).",
+        "No puse 'edición 8K' ni conectividad: la descripción no da puertos."
+      ]
+    },
+    {
+      "slug": "macbook-pro-m5-pro-max-16-36gb-2tb-space",
+      "name": "MacBook Air M5 15″ 16 GB RAM 512 GB Midnight",
+      "model": "MacBook Air 15″ M5 (MGED4)",
+      "storage": "512 GB",
+      "ram": "16 GB",
+      "seoTitle": "MacBook Air 15″ M5 16 GB RAM 512 GB",
+      "seoDescription": "MacBook Air de 15″ con chip M5, 16 GB de RAM y SSD de 512 GB en Midnight. Diseño ultradelgado y hasta 18 horas de batería. Garantía y envíos a todo el país.",
+      "shortDescription": "MacBook Air de 15″ en Midnight con chip M5, 16 GB de RAM y SSD de 512 GB. Pantalla Liquid Retina de 15,3″, diseño ultradelgado y hasta 18 horas de batería.",
+      "highlights": [
+        "Chip M5 con 16 GB de RAM",
+        "SSD de 512 GB",
+        "Pantalla Liquid Retina de 15,3″",
+        "Hasta 18 horas de autonomía",
+        "Diseño ultradelgado en color Midnight"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Midnight"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Liquid Retina de 15,3″"
+        },
+        {
+          "label": "Procesador",
+          "value": "Apple M5"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 18 horas"
+        }
+      ],
+      "descriptionHtml": "<p>La MacBook Air de 15″ en Midnight es una notebook ultradelgada con chip M5, 16 GB de RAM y 512 GB de SSD. Pensada para quien necesita portabilidad sin resignar rendimiento.</p><h3>Rendimiento</h3><p>Con 16 GB de RAM y el chip M5 rinde bien en multitarea, edición de video 4K y desarrollo de aplicaciones. Es compatible con las aplicaciones de Adobe, Final Cut Pro y Xcode.</p><h3>Pantalla y batería</h3><ul><li>Pantalla Liquid Retina de 15,3″ con colores vivos y detalle nítido.</li><li>Hasta 18 horas de autonomía.</li></ul><h3>Antes de comprar</h3><p>Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "ERROR DE SLUG: el slug dice 'macbook-pro-m5-pro-max-16-36gb-2tb-space' pero el nombre, el SKU MGED4 y la descripción son de una MacBook Air M5 15″ 16 GB / 512 GB Midnight. Gana el nombre; revisar si el producto está mal cargado y el slug (no se cambia).",
+        "No hay puertos ni peso en la descripción."
+      ]
+    },
+    {
+      "slug": "notebook-dell-inspiron-15-i5-1334u-8gb-ssd-512gb-156-fhd-win-11",
+      "name": "Notebook Dell Inspiron 15 Core i5-1334U 8 GB RAM 512 GB SSD 15,6″ FHD Windows 11",
+      "model": "Inspiron 15 3530 (DEL-DC15250)",
+      "storage": "512 GB SSD",
+      "ram": "8 GB DDR4",
+      "seoTitle": "Notebook Dell Inspiron 15 i5 8 GB 512 GB",
+      "seoDescription": "Notebook Dell Inspiron 15 con Intel Core i5-1334U, 8 GB de RAM, SSD de 512 GB y pantalla Full HD de 15,6″. Garantía y envíos a todo el país.",
+      "shortDescription": "Notebook Dell Inspiron 15 (3530) con Intel Core i5-1334U de 13.ª generación, 8 GB de RAM y SSD de 512 GB. Pantalla Full HD antirreflejo de 15,6″ y Windows 11 Home.",
+      "highlights": [
+        "Intel Core i5-1334U de 13.ª gen, 10 núcleos y hasta 4,6 GHz",
+        "8 GB de RAM DDR4 y SSD NVMe de 512 GB",
+        "Pantalla Full HD antirreflejo de 15,6″",
+        "Teclado numérico y bisagra elevadora",
+        "Windows 11 Home, USB-C, HDMI y lector SD"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Carbon Black"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6″ Full HD (1920 x 1080), antirreflejo"
+        },
+        {
+          "label": "Procesador",
+          "value": "Intel Core i5-1334U, 10 núcleos, hasta 4,6 GHz"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Integrados"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11 Home de 64 bits"
+        },
+        {
+          "label": "Puertos",
+          "value": "1 USB-C 3.2 Gen 1, 1 USB-A 3.2 Gen 1, 1 USB-A 2.0, HDMI 1.4, lector SD, audio 3,5 mm"
+        }
+      ],
+      "descriptionHtml": "<p>La Dell Inspiron 15 (3530) es una notebook para oficina, estudio y tareas del día a día. Trae procesador Intel Core i5-1334U, 8 GB de RAM y SSD de 512 GB, en color Carbon Black.</p><h3>Rendimiento</h3><p>El Core i5-1334U de 13.ª generación tiene 10 núcleos y 12 hilos, con frecuencias de hasta 4,6 GHz. Maneja navegación con muchas pestañas, ofimática y videollamadas.</p><h3>Memoria y almacenamiento</h3><p>8 GB de RAM DDR4 y un SSD NVMe de 512 GB para que el equipo arranque y abra programas rápido.</p><h3>Pantalla y teclado</h3><ul><li>Pantalla de 15,6″ Full HD con recubrimiento antirreflejo.</li><li>Teclado numérico dedicado.</li><li>Bisagra elevadora que inclina el teclado para escribir más cómodo.</li></ul><h3>Conexiones</h3><p>USB-C, USB-A, HDMI 1.4, lector de tarjetas SD y entrada de audio de 3,5 mm.</p><p>Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción dice 'Wi-Fi 6 / Wi-Fi 5' y 'Intel UHD / Iris Xe': no lo publiqué (ambiguo). Confirmar versión de Wi-Fi y gráficos.",
+        "Dice 'RAM expandible': no confirmado, no lo puse.",
+        "El nombre dice 'Win 11' y la descripción 'Windows 11 Home': usé Home."
+      ]
+    },
+    {
+      "slug": "notebook-dell-inspiron-15-ryzen-3-7320u-8gb-ssd-512gb-156-fhd-w11",
+      "name": "Notebook Dell Inspiron 15 Ryzen 3 7320U 8 GB RAM 512 GB SSD 15,6″ FHD Windows 11",
+      "model": "Inspiron 15 3535 (DEL-DC15255)",
+      "storage": "512 GB SSD",
+      "ram": "8 GB LPDDR5",
+      "seoTitle": "Notebook Dell Inspiron 15 Ryzen 3 512 GB",
+      "seoDescription": "Notebook Dell Inspiron 15 con AMD Ryzen 3 7320U, 8 GB de RAM LPDDR5, SSD de 512 GB y pantalla Full HD de 15,6″. Garantía y envíos a todo el país.",
+      "shortDescription": "Notebook Dell Inspiron 15 (3535) con AMD Ryzen 3 7320U, 8 GB de RAM LPDDR5 y SSD de 512 GB. Pantalla Full HD antirreflejo de 15,6″ y Windows 11 Home.",
+      "highlights": [
+        "AMD Ryzen 3 7320U de 4 núcleos y 8 hilos, hasta 4,1 GHz",
+        "8 GB de RAM LPDDR5 y SSD NVMe de 512 GB",
+        "Pantalla Full HD antirreflejo de 15,6″",
+        "Teclado numérico integrado",
+        "Windows 11 Home, USB-C, HDMI y lector SD"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Carbon Black"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6″ Full HD (1920 x 1080), antirreflejo"
+        },
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 3 7320U, 4 núcleos, 8 hilos, hasta 4,1 GHz"
+        },
+        {
+          "label": "Gráficos",
+          "value": "AMD Radeon 610M"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11 Home de 64 bits"
+        },
+        {
+          "label": "Puertos",
+          "value": "USB-C, USB-A, HDMI 1.4, lector de tarjetas SD"
+        }
+      ],
+      "descriptionHtml": "<p>La Dell Inspiron 15 (3535) es una notebook para clases, reuniones virtuales y trabajo administrativo. Combina un AMD Ryzen 3 7320U con 8 GB de RAM LPDDR5 y 512 GB de SSD.</p><h3>Rendimiento</h3><p>El Ryzen 3 7320U tiene 4 núcleos y 8 hilos, con frecuencias de 2,4 a 4,1 GHz. Alcanza para documentos, navegación con varias pestañas y video en alta definición. Los gráficos son AMD Radeon 610M integrados.</p><h3>Almacenamiento</h3><p>El SSD NVMe de 512 GB acelera el arranque de Windows 11 y la apertura de programas.</p><h3>Pantalla y teclado</h3><ul><li>Pantalla Full HD de 15,6″ con tratamiento antirreflejo.</li><li>Teclado numérico integrado.</li></ul><h3>Conexiones</h3><p>USB-C, USB-A, HDMI 1.4 y lector de tarjetas SD, además de Wi-Fi y Bluetooth.</p><p>Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción no indica versión de Wi-Fi ni de Bluetooth: no las puse."
+      ]
+    },
+    {
+      "slug": "notebook-hp-14-i5-120u-16gb-ssd-1tb-14-fhd-w11",
+      "name": "Notebook HP 14 Intel Core 5 120U 16 GB RAM 1 TB SSD 14″ FHD Windows 11",
+      "brand": "HP",
+      "model": "HP 14-ep0355cl (B97LQUA-ABA)",
+      "storage": "1 TB SSD",
+      "ram": "16 GB DDR4",
+      "seoTitle": "Notebook HP 14 Core 5 120U 16 GB 1 TB",
+      "seoDescription": "Notebook HP 14 con Intel Core 5 120U, 16 GB de RAM, SSD de 1 TB y pantalla Full HD de 14″. Wi-Fi 6 y Bluetooth 5.3. Garantía y envíos a todo el país.",
+      "shortDescription": "Notebook HP 14 (14-ep0355cl) con Intel Core 5 120U de 10 núcleos, 16 GB de RAM y SSD de 1 TB. Pantalla Full HD antirreflejo de 14″ y Windows 11 Home.",
+      "highlights": [
+        "Intel Core 5 120U de 10 núcleos y 12 hilos, hasta 5 GHz",
+        "16 GB de RAM DDR4 y SSD NVMe de 1 TB",
+        "Pantalla Full HD antirreflejo de 14″ con bordes finos",
+        "Wi-Fi 6 y Bluetooth 5.3",
+        "USB-C, 2 USB-A y HDMI"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Modern Gray"
+        },
+        {
+          "label": "Pantalla",
+          "value": "14″ Full HD (1920 x 1080), micro-edge, antirreflejo"
+        },
+        {
+          "label": "Procesador",
+          "value": "Intel Core 5 120U, 10 núcleos, 12 hilos, hasta 5 GHz"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel Graphics integrados"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11 Home"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6, Bluetooth 5.3"
+        },
+        {
+          "label": "Puertos",
+          "value": "1 USB-C 3.2 Gen 1, 2 USB-A 3.2 Gen 1, HDMI 1.4, audio 3,5 mm"
+        }
+      ],
+      "descriptionHtml": "<p>La HP 14-ep0355cl es una notebook portátil con 16 GB de RAM y 1 TB de SSD, pensada para multitarea, viajes de trabajo y estudio.</p><h3>Rendimiento</h3><p>El Intel Core 5 120U tiene 10 núcleos y 12 hilos, con hasta 5 GHz. Reparte las tareas entre eficiencia y rendimiento para navegar, trabajar con aplicaciones de oficina y hacer videollamadas.</p><h3>Memoria y almacenamiento</h3><ul><li>16 GB de RAM DDR4-3200.</li><li>SSD NVMe de 1 TB para guardar documentos, videos y proyectos sin discos externos.</li></ul><h3>Pantalla y conexiones</h3><p>Pantalla de 14″ Full HD con bordes finos y tratamiento antirreflejo. Tiene USB-C, dos USB-A, HDMI, Wi-Fi 6 y Bluetooth 5.3.</p><p>Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "El nombre original decía 'i5-120U' pero la descripción dice 'Intel Core 5 120U': usé el de la descripción. Confirmar.",
+        "Brand venía 'Hp'; lo normalicé a HP.",
+        "El SKU B97LQUA-ABA sugiere versión de EE.UU.: confirmar idioma del teclado (no figura en la descripción)."
+      ]
+    },
+    {
+      "slug": "notebook-hp-15-i5-1334u-8gb-ssd-256gb-156-hd-w11",
+      "name": "Notebook HP 15 Core i5-1334U 8 GB RAM 256 GB SSD 15,6″ HD Windows 11",
+      "brand": "HP",
+      "model": "HP 15-fd0054nr",
+      "storage": "256 GB SSD",
+      "ram": "8 GB DDR4",
+      "seoTitle": "Notebook HP 15 Core i5 8 GB RAM 256 GB",
+      "seoDescription": "Notebook HP 15 con Intel Core i5-1334U, 8 GB de RAM, SSD de 256 GB y pantalla de 15,6″ con lector de huella. Garantía y envíos a todo el país.",
+      "shortDescription": "Notebook HP 15-fd0054nr con Intel Core i5-1334U de 13.ª generación, 8 GB de RAM y SSD de 256 GB. Pantalla antirreflejo de 15,6″, lector de huella y Windows 11 Home.",
+      "highlights": [
+        "Intel Core i5-1334U de 13.ª gen, 10 núcleos, hasta 4,6 GHz",
+        "8 GB de RAM DDR4 y SSD NVMe de 256 GB",
+        "Pantalla HD antirreflejo de 15,6″",
+        "Lector de huella dactilar",
+        "Teclado numérico, USB-C, 2 USB-A y HDMI"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Natural Silver"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6″ HD (1366 x 768), micro-edge, antirreflejo"
+        },
+        {
+          "label": "Procesador",
+          "value": "Intel Core i5-1334U, 10 núcleos, hasta 4,6 GHz"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel Iris Xe"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11 Home"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Lector de huellas dactilares"
+        },
+        {
+          "label": "Puertos",
+          "value": "1 USB-C (5 Gbps), 2 USB-A (5 Gbps), HDMI 1.4b, audio 3,5 mm"
+        },
+        {
+          "label": "Teclado",
+          "value": "En inglés, tamaño completo con pad numérico"
+        }
+      ],
+      "descriptionHtml": "<p>La HP 15-fd0054nr es una notebook para tareas laborales, clases virtuales y gestión diaria. Tiene Intel Core i5-1334U, 8 GB de RAM y 256 GB de SSD, en color Natural Silver.</p><h3>Rendimiento</h3><p>El Core i5-1334U de 13.ª generación tiene 10 núcleos y llega a 4,6 GHz. Sirve para ofimática, videollamadas y varias tareas a la vez. Con el SSD NVMe de 256 GB el sistema arranca rápido.</p><h3>Comodidad y seguridad</h3><ul><li>Lector de huella para iniciar sesión sin contraseña.</li><li>Pantalla de 15,6″ HD antirreflejo.</li><li>Teclado de tamaño completo con pad numérico.</li></ul><h3>Antes de comprar</h3><p>La pantalla es HD (1366 x 768), no Full HD. El teclado es en inglés.</p><p>Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción dice 'teclado en inglés' (ficha corta). Confirmar antes de publicar.",
+        "Brand venía 'Hp'; normalizado a HP.",
+        "El nombre original ya decía 'HD' y la descripción confirma 1366 x 768."
+      ]
+    },
+    {
+      "slug": "notebook-hp-i7-150u-16gb-ssd-512gb-156-fhd-touchscreen-w11",
+      "name": "Notebook HP 15 Core i7-150U 16 GB RAM 512 GB SSD 15,6″ FHD Táctil Windows 11",
+      "brand": "HP",
+      "model": "HP 15-fd0127dx",
+      "storage": "512 GB SSD",
+      "ram": "16 GB",
+      "seoTitle": "Notebook HP 15 Core i7 16 GB 512 GB táctil",
+      "seoDescription": "Notebook HP 15 con Intel Core i7-150U, 16 GB de RAM, SSD de 512 GB y pantalla táctil Full HD de 15,6″. Garantía y envíos a todo el país.",
+      "shortDescription": "Notebook HP 15-fd0127dx con Intel Core i7-150U, 16 GB de RAM y SSD de 512 GB. Pantalla táctil Full HD IPS de 15,6″, Wi-Fi 6, Bluetooth 5.3 y Windows 11 Home.",
+      "highlights": [
+        "Intel Core i7-150U de 10 núcleos, hasta 5,4 GHz",
+        "16 GB de RAM y SSD NVMe de 512 GB",
+        "Pantalla táctil Full HD IPS de 15,6″",
+        "Wi-Fi 6 y Bluetooth 5.3",
+        "USB-C, 2 USB-A y HDMI"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Natural Silver"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6″ Full HD (1920 x 1080) táctil, IPS, micro-edge"
+        },
+        {
+          "label": "Procesador",
+          "value": "Intel Core i7-150U, 10 núcleos, 12 hilos, hasta 5,4 GHz"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11 Home"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6, Bluetooth 5.3"
+        },
+        {
+          "label": "Puertos",
+          "value": "1 USB-C, 2 USB-A, HDMI, audio/micrófono 3,5 mm"
+        }
+      ],
+      "descriptionHtml": "<p>La HP 15-fd0127dx es una notebook con pantalla táctil, Intel Core i7-150U, 16 GB de RAM y 512 GB de SSD. Está pensada para diseño, programación y trabajo con muchas aplicaciones abiertas.</p><h3>Rendimiento</h3><p>El Core i7-150U tiene 10 núcleos y 12 hilos, con picos de hasta 5,4 GHz. Con 16 GB de RAM trabajás con muchas pestañas y programas de diseño a la vez.</p><h3>Pantalla táctil</h3><p>Panel IPS Full HD de 15,6″ con función táctil, para usar Windows 11 con gestos directamente en pantalla.</p><h3>Almacenamiento y conexiones</h3><ul><li>SSD NVMe de 512 GB.</li><li>USB-C, dos USB-A y HDMI.</li><li>Wi-Fi 6 y Bluetooth 5.3.</li></ul><p>Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción dice RAM 'DDR5 / DDR4' y gráficos 'Intel Graphics / Iris Xe': no publiqué tipo de RAM ni gráficos.",
+        "No se confirma el idioma del teclado (la ficha corta menciona teclado numérico). Confirmar.",
+        "Brand venía 'Hp'; normalizado a HP."
+      ]
+    },
+    {
+      "slug": "proyector-epson-powerlite-e24-3600-ansi-xga",
+      "name": "Proyector Epson PowerLite E24 3600 lúmenes ANSI XGA",
+      "brand": "Epson",
+      "model": "PowerLite E24 (V11HB51021)",
+      "seoTitle": "Proyector Epson PowerLite E24 XGA 3600 lm",
+      "seoDescription": "Proyector Epson PowerLite E24 con 3600 lúmenes ANSI y resolución XGA, para presentaciones y clases. Garantía y envíos a todo el país.",
+      "shortDescription": "Proyector Epson PowerLite E24 con 3600 lúmenes ANSI y resolución XGA. Pensado para presentaciones en oficinas y aulas.",
+      "highlights": [
+        "3600 lúmenes ANSI para ambientes con luz",
+        "Resolución XGA",
+        "Liviano y compacto, fácil de trasladar"
+      ],
+      "specs": [
+        {
+          "label": "Brillo",
+          "value": "3600 lúmenes ANSI"
+        },
+        {
+          "label": "Resolución",
+          "value": "XGA"
+        }
+      ],
+      "descriptionHtml": "<p>El Epson PowerLite E24 es un proyector de 3600 lúmenes ANSI y resolución XGA, pensado para presentaciones de trabajo y proyecciones educativas.</p><h3>Brillo y uso</h3><p>El brillo de 3600 lúmenes ayuda a que la imagen se vea clara incluso con luz en la sala. Es liviano y compacto, así que se lleva fácil de una sala a otra.</p><p>Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original no da puertos, contraste ni vida útil de la lámpara; no los puse.",
+        "Brand venía 'General'; es Epson según el nombre."
+      ]
+    },
+    {
+      "slug": "proyector-epson-powerlite-l210w-4500l-wxga-laser",
+      "name": "Proyector Epson PowerLite L210W 4500 lúmenes WXGA láser",
+      "brand": "Epson",
+      "model": "PowerLite L210W (V11HA70020)",
+      "seoTitle": "Proyector Epson PowerLite L210W WXGA láser",
+      "seoDescription": "Proyector Epson PowerLite L210W láser: 4500 lúmenes y resolución WXGA de 1280 x 800, para presentaciones. Garantía y envíos a todo el país.",
+      "shortDescription": "Proyector láser Epson PowerLite L210W con 4500 lúmenes y resolución WXGA de 1280 x 800. Para presentaciones y videos en salas de reunión o aulas.",
+      "highlights": [
+        "Fuente de luz láser, con menos mantenimiento",
+        "4500 lúmenes de brillo",
+        "Resolución WXGA de 1280 x 800",
+        "Diseño compacto y liviano"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Láser"
+        },
+        {
+          "label": "Brillo",
+          "value": "4500 lúmenes"
+        },
+        {
+          "label": "Resolución",
+          "value": "WXGA (1280 x 800)"
+        }
+      ],
+      "descriptionHtml": "<p>El Epson PowerLite L210W es un proyector láser de 4500 lúmenes con resolución WXGA de 1280 x 800. Sirve para presentaciones y videos en oficinas y aulas.</p><h3>Láser y brillo</h3><p>La fuente de luz láser reduce el mantenimiento y mantiene el rendimiento con el tiempo. Los 4500 lúmenes dan imágenes claras en distintos ambientes.</p><h3>Instalación</h3><p>Es compacto y liviano, y se conecta a laptops, tablets y celulares.</p><p>Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción no detalla qué conexiones tiene (dice 'compatible con laptops, tablets y smartphones'). No puse puertos.",
+        "Brand venía 'General'; es Epson según el nombre."
+      ]
+    },
+    {
+      "slug": "proyector-epson-powerlite-w49-3800-ansi-wxga-2",
+      "name": "Proyector Epson PowerLite W49 3800 lúmenes ANSI WXGA",
+      "brand": "Epson",
+      "model": "PowerLite W49 (V11H983020)",
+      "seoTitle": "Proyector Epson PowerLite W49 WXGA 3800 lm",
+      "seoDescription": "Proyector Epson PowerLite W49 con 3800 lúmenes ANSI y resolución WXGA de 1280 x 800, con HDMI y USB. Garantía y envíos a todo el país.",
+      "shortDescription": "Proyector Epson PowerLite W49 con 3800 lúmenes ANSI y resolución WXGA de 1280 x 800. Entradas HDMI y USB, para aulas y salas de reuniones.",
+      "highlights": [
+        "3800 lúmenes ANSI para ambientes iluminados",
+        "Resolución WXGA de 1280 x 800",
+        "Conexión por HDMI y USB",
+        "Compacto y liviano"
+      ],
+      "specs": [
+        {
+          "label": "Brillo",
+          "value": "3800 lúmenes ANSI"
+        },
+        {
+          "label": "Resolución",
+          "value": "WXGA (1280 x 800)"
+        },
+        {
+          "label": "Conexiones",
+          "value": "HDMI y USB"
+        }
+      ],
+      "descriptionHtml": "<p>El Epson PowerLite W49 es un proyector de 3800 lúmenes ANSI y resolución WXGA de 1280 x 800. Está pensado para empresas y educación.</p><h3>Imagen</h3><p>Con 3800 lúmenes la imagen se ve bien aun con luz en la sala. La resolución WXGA da buen detalle en presentaciones y videos.</p><h3>Conexión</h3><p>Se conecta por HDMI y USB. Es compacto y liviano, por lo que se instala rápido.</p><p>Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción no menciona VGA ni otras entradas; no puse más puertos que HDMI y USB.",
+        "Brand venía 'General'; es Epson según el nombre."
+      ]
+    },
+    {
+      "slug": "proyector-epson-powerlite-x49-3600-ansi-xga-2",
+      "name": "Proyector Epson PowerLite X49 3600 lúmenes ANSI XGA",
+      "brand": "Epson",
+      "model": "PowerLite X49 (V11H982020)",
+      "seoTitle": "Proyector Epson PowerLite X49 XGA 3600 lm",
+      "seoDescription": "Proyector Epson PowerLite X49 con 3600 lúmenes ANSI y resolución XGA. Entradas HDMI, VGA y USB. Garantía y envíos a todo el país.",
+      "shortDescription": "Proyector Epson PowerLite X49 con 3600 lúmenes ANSI y resolución XGA. Conexiones HDMI, VGA y USB, para aulas, oficinas y presentaciones.",
+      "highlights": [
+        "3600 lúmenes ANSI de brillo",
+        "Resolución XGA",
+        "Entradas HDMI, VGA y USB",
+        "Compacto y liviano"
+      ],
+      "specs": [
+        {
+          "label": "Brillo",
+          "value": "3600 lúmenes ANSI"
+        },
+        {
+          "label": "Resolución",
+          "value": "XGA"
+        },
+        {
+          "label": "Conexiones",
+          "value": "HDMI, VGA y USB"
+        }
+      ],
+      "descriptionHtml": "<p>El Epson PowerLite X49 es un proyector de 3600 lúmenes ANSI y resolución XGA, para aulas, oficinas y presentaciones itinerantes.</p><h3>Imagen y conexión</h3><p>El brillo da imágenes claras y la resolución XGA alcanza para presentaciones y proyecciones educativas. Tiene entradas HDMI, VGA y USB para conectar distintos equipos.</p><h3>Uso</h3><p>Es compacto y liviano, y sus controles son sencillos.</p><p>Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "Brand venía 'General'; es Epson según el nombre."
+      ]
+    },
+    {
+      "slug": "apple-reloj-iwatch-serie-7-45mm-blue-open-box",
+      "name": "Reloj Apple Watch Serie 7 45 mm Azul Open Box",
+      "brand": "Apple",
+      "model": "Watch Serie 7 (MKN83LL/A)",
+      "seoTitle": "Apple Watch Serie 7 45 mm Azul Open Box",
+      "seoDescription": "Apple Watch Serie 7 de 45 mm en color azul, versión Open Box. Consultá su estado por WhatsApp. Garantía y envíos a todo el país.",
+      "shortDescription": "Apple Watch Serie 7 con caja de 45 mm en color azul. Versión Open Box (caja abierta).",
+      "highlights": [
+        "Apple Watch Serie 7 de 45 mm",
+        "Color azul",
+        "Versión Open Box (caja abierta)"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de caja",
+          "value": "45 mm"
+        },
+        {
+          "label": "Color",
+          "value": "Azul"
+        }
+      ],
+      "descriptionHtml": "<p>El Apple Watch Serie 7 de 45 mm en color azul está disponible en versión Open Box: el producto viene de una caja abierta.</p><p>Si querés saber en qué estado está o qué incluye, consultanos por WhatsApp antes de comprar. Compra con garantía, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "Descripción original sin datos técnicos. Solo hay modelo, tamaño y color (según el nombre).",
+        "Open Box: confirmar qué significa (caja abierta, usado, sin sellar) y qué incluye; la ficha no promete estado.",
+        "Confirmar si es GPS o GPS + celular (no figura).",
+        "Si la garantía de un Open Box es la de siempre."
+      ]
+    },
+    {
+      "slug": "apple-reloj-iwatch-serie-7-45mm-gree-open-box",
+      "name": "Reloj Apple Watch Serie 7 45 mm Verde Open Box",
+      "brand": "Apple",
+      "model": "Watch Serie 7 (MKN73LL/A)",
+      "seoTitle": "Apple Watch Serie 7 45 mm Verde Open Box",
+      "seoDescription": "Apple Watch Serie 7 de 45 mm en color verde, versión Open Box. Consultá su estado por WhatsApp. Garantía y envíos a todo el país.",
+      "shortDescription": "Apple Watch Serie 7 con caja de 45 mm en color verde. Versión Open Box (caja abierta).",
+      "highlights": [
+        "Apple Watch Serie 7 de 45 mm",
+        "Color verde",
+        "Versión Open Box (caja abierta)"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de caja",
+          "value": "45 mm"
+        },
+        {
+          "label": "Color",
+          "value": "Verde"
+        }
+      ],
+      "descriptionHtml": "<p>El Apple Watch Serie 7 de 45 mm en color verde está disponible en versión Open Box: el producto viene de una caja abierta.</p><p>Si querés saber en qué estado está o qué incluye, consultanos por WhatsApp antes de comprar. Compra con garantía, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "Descripción original sin datos técnicos. Solo hay modelo, tamaño y color.",
+        "El nombre decía 'GREE': interpreté 'Green' = Verde. Confirmar color.",
+        "Open Box: confirmar qué significa y qué incluye.",
+        "Confirmar si es GPS o GPS + celular (no figura)."
+      ]
+    },
+    {
+      "slug": "netmak-soporte-tv-moni-23-43-brazo-articulado-nm-st34",
+      "name": "Soporte Netmak para TV o monitor de 23″ a 43″ con brazo articulado NM-ST34",
+      "brand": "Netmak",
+      "model": "NM-ST34",
+      "seoTitle": "Soporte Netmak NM-ST34 brazo articulado",
+      "seoDescription": "Soporte de pared Netmak NM-ST34 con brazo articulado para TV y monitores de 23″ a 43″. Compatible con VESA. Garantía y envíos a todo el país.",
+      "shortDescription": "Soporte de pared Netmak NM-ST34 con brazo articulado para TV y monitores de 23″ a 43″. Permite regular posición y ángulo.",
+      "highlights": [
+        "Para pantallas de 23″ a 43″",
+        "Brazo articulado: extensión, retracción e inclinación",
+        "Montaje universal compatible con VESA comunes",
+        "Libera espacio en el mueble"
+      ],
+      "specs": [
+        {
+          "label": "Compatibilidad",
+          "value": "TV y monitores de 23″ a 43″"
+        },
+        {
+          "label": "Tipo",
+          "value": "De pared, brazo articulado"
+        },
+        {
+          "label": "Movimientos",
+          "value": "Extensión, retracción e inclinación"
+        },
+        {
+          "label": "Montaje",
+          "value": "Universal, estándares VESA más comunes"
+        }
+      ],
+      "descriptionHtml": "<p>El soporte Netmak NM-ST34 es un brazo articulado de pared para televisores y monitores de 23″ a 43″. Sirve en el hogar o la oficina para ganar espacio y ajustar la pantalla.</p><h3>Movimientos</h3><p>El brazo se extiende, se retrae y permite inclinar la pantalla, así que encontrás el ángulo de visión que necesitás.</p><h3>Instalación</h3><p>Usa un sistema de montaje universal compatible con los estándares VESA más comunes. Antes de comprar, verificá la medida VESA de tu pantalla.</p><p>Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción no da peso máximo, medidas VESA ni largo del brazo. No los puse.",
+        "Categoría 'televisores': revisar si debería ir en accesorios."
+      ]
+    },
+    {
+      "slug": "netmak-soporte-tv-moni-32-55c-inclinacion-nm-st09-2",
+      "name": "Soporte Netmak para TV o monitor de 32″ a 55″ con inclinación NM-ST09",
+      "brand": "Netmak",
+      "model": "NM-ST09",
+      "seoTitle": "Soporte Netmak NM-ST09 con inclinación",
+      "seoDescription": "Soporte de pared Netmak NM-ST09 con inclinación ajustable para TV y monitores de 32″ a 55″. Incluye kit de montaje. Garantía y envíos a todo el país.",
+      "shortDescription": "Soporte de pared Netmak NM-ST09 con inclinación ajustable para TV y monitores de 32″ a 55″. Montaje universal con kit incluido.",
+      "highlights": [
+        "Para pantallas de 32″ a 55″",
+        "Inclinación ajustable",
+        "Diseño universal, compatible con la mayoría de las marcas",
+        "Kit de montaje completo incluido"
+      ],
+      "specs": [
+        {
+          "label": "Compatibilidad",
+          "value": "TV y monitores de 32″ a 55″"
+        },
+        {
+          "label": "Tipo",
+          "value": "De pared, con inclinación ajustable"
+        },
+        {
+          "label": "En la caja",
+          "value": "Kit de montaje"
+        }
+      ],
+      "descriptionHtml": "<p>El soporte Netmak NM-ST09 es un soporte de pared con inclinación ajustable para televisores y monitores de 32″ a 55″.</p><h3>Inclinación</h3><p>Podés regular el ángulo de la pantalla para ver mejor según dónde te sentás.</p><h3>Instalación</h3><p>Su diseño universal es compatible con la mayoría de las marcas de TV y monitores. Trae un kit de montaje completo. Antes de comprar, verificá la medida VESA de tu pantalla.</p><p>Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción no da peso máximo, medidas VESA ni grados de inclinación. No los puse.",
+        "El nombre original decía '55″C/INCLINACION'; lo expandí a 'con inclinación'."
+      ]
+    },
+    {
+      "slug": "netmak-soporte-tv-moni-32-60-brazo-articulado-nm-st36",
+      "name": "Soporte Netmak para TV o monitor de 32″ a 60″ con brazo articulado NM-ST36",
+      "brand": "Netmak",
+      "model": "NM-ST36",
+      "seoTitle": "Soporte Netmak NM-ST36 brazo articulado",
+      "seoDescription": "Soporte de pared Netmak NM-ST36 con brazo articulado para TV y monitores de 32″ a 60″. Compatible con VESA. Garantía y envíos a todo el país.",
+      "shortDescription": "Soporte de pared Netmak NM-ST36 con brazo articulado para TV y monitores de 32″ a 60″. Giro horizontal, inclinación vertical y extensión.",
+      "highlights": [
+        "Para pantallas de 32″ a 60″",
+        "Giro horizontal, inclinación vertical y extensión",
+        "Compatible con estándar VESA",
+        "Incluye elementos de fijación"
+      ],
+      "specs": [
+        {
+          "label": "Compatibilidad",
+          "value": "TV y monitores de 32″ a 60″"
+        },
+        {
+          "label": "Tipo",
+          "value": "De pared, brazo articulado"
+        },
+        {
+          "label": "Movimientos",
+          "value": "Giro horizontal, inclinación vertical y extensión"
+        },
+        {
+          "label": "Montaje",
+          "value": "Compatible con VESA"
+        },
+        {
+          "label": "En la caja",
+          "value": "Elementos de fijación"
+        }
+      ],
+      "descriptionHtml": "<p>El soporte Netmak NM-ST36 es un brazo articulado de pared para televisores y monitores de 32″ a 60″. Va bien en salas, dormitorios y oficinas.</p><h3>Movimientos</h3><p>Gira en horizontal, se inclina en vertical y se extiende, con movimientos suaves.</p><h3>Instalación</h3><p>Trae los elementos de fijación para distintos tipos de pared y es compatible con VESA. Antes de comprar, verificá la medida VESA de tu pantalla.</p><p>Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción no da peso máximo ni medidas VESA. No los puse.",
+        "Texto original ofrecía 'opciones de entrega': no lo puse."
+      ]
+    },
+    {
+      "slug": "soporte-nakan-fijo-con-inclinacion-de-40-a-100",
+      "name": "Soporte Nakan fijo con inclinación para TV de 40″ a 90″ SPL-697i",
+      "brand": "Nakan",
+      "model": "SPL-697i",
+      "seoTitle": "Soporte Nakan SPL-697i fijo con inclinación",
+      "seoDescription": "Soporte de pared Nakan SPL-697i fijo con inclinación de 14°, resiste hasta 80 kg y es universal VESA. Garantía y envíos a todo el país.",
+      "shortDescription": "Soporte de pared Nakan SPL-697i, fijo con inclinación de 14°. Resiste hasta 80 kg, a 7 cm de la pared, con nivel de burbuja y kit de fijación.",
+      "highlights": [
+        "Resiste hasta 80 kg",
+        "Inclinación de 14°",
+        "Universal VESA, de 50 x 50 a 800 x 500",
+        "Distancia a la pared de 7 cm",
+        "Incluye nivel de burbuja, kit de fijación y traba de seguridad"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Fijo con inclinación"
+        },
+        {
+          "label": "Inclinación",
+          "value": "14°"
+        },
+        {
+          "label": "Distancia a la pared",
+          "value": "7 cm"
+        },
+        {
+          "label": "Carga máxima",
+          "value": "80 kg"
+        },
+        {
+          "label": "Compatibilidad VESA",
+          "value": "50 x 50 a 800 x 500"
+        },
+        {
+          "label": "Incluye",
+          "value": "Nivel de burbuja, kit de fijación, traba de seguridad"
+        }
+      ],
+      "descriptionHtml": "<p>El soporte Nakan SPL-697i es un soporte de pared fijo con inclinación para televisores grandes. Resiste hasta 80 kg y es universal VESA.</p><h3>Características</h3><ul><li>Inclinación de 14°.</li><li>Queda a 7 cm de la pared.</li><li>Compatible VESA de 50 x 50 a 800 x 500.</li><li>Traba de seguridad.</li><li>Incluye nivel de burbuja y kit de fijación.</li></ul><p>Antes de comprar, verificá la medida VESA y el peso de tu TV. Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "El slug dice 'de 40 a 100' pero el nombre dice '40″ a 90″'. Gana el nombre (el slug no se cambia). Confirmar el rango real de pulgadas.",
+        "Descripción original vacía; todo sale de la ficha corta."
+      ]
+    },
+    {
+      "slug": "soporte-tv-jahro-fijo-32-a-55",
+      "name": "Soporte Jahro fijo para TV de 32″ a 55″ JHR-3444F",
+      "brand": "Jahro",
+      "model": "JHR-3444F",
+      "seoTitle": "Soporte Jahro fijo para TV 32″ a 55″",
+      "seoDescription": "Soporte de pared Jahro JHR-3444F fijo para TV de 32″ a 55″. Soporta hasta 40 kg y es compatible con VESA hasta 400 x 400. Garantía y envíos a todo el país.",
+      "shortDescription": "Soporte de pared fijo Jahro JHR-3444F para TV de 32″ a 55″. Soporta hasta 40 kg y es compatible con varias medidas VESA, hasta 400 x 400.",
+      "highlights": [
+        "Para TV de 32″ a 55″",
+        "Soporta hasta 40 kg",
+        "Compatible VESA 200 x 200, 300 x 300, 400 x 200 y 400 x 400"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Fijo"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "TV de 32″ a 55″"
+        },
+        {
+          "label": "Carga máxima",
+          "value": "40 kg"
+        },
+        {
+          "label": "Compatibilidad VESA",
+          "value": "200 x 200, 300 x 300, 400 x 200, 400 x 400"
+        }
+      ],
+      "descriptionHtml": "<p>El soporte Jahro JHR-3444F es un soporte de pared fijo para televisores de 32″ a 55″. Soporta hasta 40 kg y es compatible con medidas VESA de 200 x 200 hasta 400 x 400.</p><p>Antes de comprar, verificá la medida VESA y el peso de tu TV. Compra con garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "Descripción original solo con texto de relleno; todo sale de la ficha corta.",
+        "No se confirma qué trae en la caja; la ficha corta dice 'Nivel TV 32″ a 55″', no queda claro si incluye nivel de burbuja: no lo puse."
+      ]
+    }
+  ]
+}

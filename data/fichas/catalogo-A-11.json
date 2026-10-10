@@ -1,0 +1,1986 @@
+{
+  "lote": "catalogo-A-11",
+  "productos": [
+    {
+      "slug": "notebook-cx-156-ryzen-5-7430u-8gb-ssd-256gb",
+      "name": "Notebook CX 15,6\" Ryzen 5 7430U 8 GB RAM 256 GB SSD",
+      "storage": "256 GB",
+      "ram": "8 GB",
+      "seoTitle": "Notebook CX 15,6\" Ryzen 5 7430U 8 GB 256 GB",
+      "seoDescription": "Notebook CX de 15,6\" Full HD con Ryzen 5 7430U, 8 GB de RAM y SSD NVMe de 256 GB. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Notebook CX de 15,6\" Full HD con AMD Ryzen 5 7430U de 6 núcleos, 8 GB de RAM DDR4 ampliable y SSD NVMe de 256 GB. Teclado en español con bloque numérico y Wi-Fi 6.",
+      "highlights": [
+        "AMD Ryzen 5 7430U de 6 núcleos y 12 hilos, hasta 4,3 GHz",
+        "8 GB de RAM DDR4 con ranura SODIMM para ampliar",
+        "SSD M.2 NVMe de 256 GB para arrancar rápido",
+        "Pantalla Full HD de 15,6\" antirreflejo",
+        "Wi-Fi 6, Bluetooth, HDMI, USB-C y puerto de red RJ-45"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 5 7430U, 6 núcleos / 12 hilos, 2,3 a 4,3 GHz, 16 MB de caché L3"
+        },
+        {
+          "label": "Gráficos",
+          "value": "AMD Radeon integrados"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR4-3200 SODIMM, ampliable"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD M.2 NVMe PCIe"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6\" Full HD (1920 x 1080), antirreflejo"
+        },
+        {
+          "label": "Teclado",
+          "value": "En español, con bloque numérico"
+        },
+        {
+          "label": "Cámara y audio",
+          "value": "Webcam HD 720p con micrófono dual y parlantes estéreo"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6 (802.11ax) y Bluetooth 5.2"
+        },
+        {
+          "label": "Puertos",
+          "value": "HDMI, USB-C, USB 3.0, RJ-45, lector SD / microSD"
+        }
+      ],
+      "descriptionHtml": "<p>La notebook CX de 15,6\" combina un Ryzen 5 de 6 núcleos con 8 GB de RAM y SSD NVMe. Es una opción para trabajo de oficina, estudio y videollamadas.</p><h3>Rendimiento</h3><p>El AMD Ryzen 5 7430U tiene 6 núcleos y 12 hilos, y llega a 4,3 GHz. Alcanza para planillas, navegación con muchas pestañas y reuniones por video. La RAM DDR4 se puede ampliar porque usa un módulo SODIMM.</p><h3>Pantalla y teclado</h3><p>Pantalla Full HD de 15,6\" antirreflejo. El teclado está en español e incluye bloque numérico, útil para cargar datos.</p><h3>Conectividad</h3><ul><li>Wi-Fi 6 y Bluetooth 5.2.</li><li>HDMI, USB-C, USB 3.0 y puerto de red RJ-45.</li><li>Lector de tarjetas SD / microSD.</li><li>Webcam HD con micrófono dual.</li></ul><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original no menciona sistema operativo: no lo puse. Confirmar si viene con Windows o sin sistema.",
+        "Las fichas están cortadas al final (puertos y batería no se leen completos); no puse batería ni peso."
+      ]
+    },
+    {
+      "slug": "notebook-dell-i7-1355u-16gb-ssd-512gb-156-fhd-touchscreen",
+      "name": "Notebook Dell 15 DC15250 Core i7-1355U 16 GB RAM 512 GB SSD táctil 15,6\"",
+      "model": "15 DC15250",
+      "storage": "512 GB",
+      "ram": "16 GB",
+      "seoTitle": "Notebook Dell 15 DC15250 i7 16 GB 512 GB",
+      "seoDescription": "Notebook Dell 15 DC15250 con Core i7-1355U, 16 GB de RAM, SSD de 512 GB y pantalla táctil Full HD. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Dell 15 DC15250 con Intel Core i7-1355U de 13.ª generación, 16 GB de RAM, SSD NVMe de 512 GB y pantalla táctil Full HD de 15,6\". Viene con Windows 11 Home.",
+      "highlights": [
+        "Core i7-1355U de 13.ª generación, 10 núcleos, hasta 5,0 GHz",
+        "16 GB de RAM y SSD NVMe de 512 GB",
+        "Pantalla táctil Full HD de 15,6\" antirreflejo",
+        "Windows 11 Home preinstalado",
+        "Wi-Fi 6, USB-C, HDMI y lector de tarjetas SD"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i7-1355U, 10 núcleos (2 P + 8 E) y 12 hilos, hasta 5,0 GHz, 12 MB de caché"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel Iris Xe integrados"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD NVMe M.2 PCIe"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6\" Full HD (1920 x 1080), táctil, antirreflejo"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11 Home 64 bits"
+        },
+        {
+          "label": "Teclado",
+          "value": "Con bloque numérico"
+        },
+        {
+          "label": "Cámara y audio",
+          "value": "Webcam HD 720p con micrófono y parlantes estéreo"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6 (802.11ax) y Bluetooth"
+        },
+        {
+          "label": "Puertos",
+          "value": "USB-C, 2 x USB-A, HDMI 1.4, lector SD, jack de 3,5 mm"
+        },
+        {
+          "label": "Batería",
+          "value": "3 celdas, 41 Wh, con carga rápida ExpressCharge"
+        }
+      ],
+      "descriptionHtml": "<p>La Dell 15 DC15250 suma un Core i7 de 13.ª generación, 16 GB de RAM y una pantalla táctil Full HD. Sirve para oficina exigente, estudio y videollamadas.</p><h3>Rendimiento</h3><p>El Intel Core i7-1355U tiene 10 núcleos: 2 de alto rendimiento y 8 eficientes, con picos de hasta 5,0 GHz. Con 16 GB de RAM y SSD NVMe de 512 GB, abre programas rápido y maneja varias pestañas y planillas a la vez.</p><h3>Pantalla táctil</h3><p>Panel Full HD de 15,6\" antirreflejo con soporte táctil: podés navegar, firmar o presentar tocando la pantalla. La bisagra eleva un poco el teclado para escribir más cómodo.</p><h3>Conectividad</h3><ul><li>Wi-Fi 6 y Bluetooth.</li><li>USB-C, dos USB-A, HDMI 1.4 y lector SD.</li><li>Webcam HD 720p con micrófono.</li></ul><h3>Antes de comprar</h3><p>El idioma del teclado depende del lote. Consultanos cuál tenemos disponible.</p>",
+      "revisar": [
+        "La descripción dice \"Teclado Español / Inglés (según lote)\" y el SKU termina en PUS: confirmar idioma real del teclado. Lo dejé aclarado en la ficha.",
+        "Bluetooth figuraba como 5.2/5.3: no puse versión.",
+        "Modelo según la descripción: Dell 15 DC15250."
+      ]
+    },
+    {
+      "slug": "notebook-dell-inspiron-15255-ryzen-7-7730u-16gb-ssd-1tb-15-6-fhd-win-11",
+      "name": "Notebook Dell Inspiron 15 DC15255 Ryzen 7 7730U 16 GB RAM 1 TB SSD táctil",
+      "model": "Inspiron 15 DC15255",
+      "storage": "1 TB",
+      "ram": "16 GB",
+      "seoTitle": "Notebook Dell Inspiron 15 Ryzen 7 16 GB 1 TB",
+      "seoDescription": "Dell Inspiron 15 DC15255 con Ryzen 7 7730U, 16 GB de RAM, SSD de 1 TB y pantalla táctil Full HD. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Dell Inspiron 15 DC15255 con AMD Ryzen 7 7730U de 8 núcleos, 16 GB de RAM DDR4, SSD NVMe de 1 TB y pantalla táctil IPS Full HD de 15,6\". Con Windows 11.",
+      "highlights": [
+        "Ryzen 7 7730U de 8 núcleos y 16 hilos, hasta 4,5 GHz",
+        "16 GB de RAM DDR4 y SSD NVMe de 1 TB",
+        "Pantalla táctil IPS Full HD de 15,6\" antirreflejo",
+        "Windows 11 incluido",
+        "Teclado con bloque numérico y webcam HD"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 7 7730U, 8 núcleos / 16 hilos, 2,0 a 4,5 GHz, 20 MB de caché"
+        },
+        {
+          "label": "Gráficos",
+          "value": "AMD Radeon integrados"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR4-3200"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD M.2 NVMe PCIe"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6\" Full HD (1920 x 1080), IPS, táctil, antirreflejo, 60 Hz"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11"
+        },
+        {
+          "label": "Cámara y audio",
+          "value": "Webcam HD 720p con micrófono y parlantes estéreo"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 5 y Bluetooth"
+        },
+        {
+          "label": "Puertos",
+          "value": "USB-C, USB 3.2 Gen 1, USB 2.0, HDMI 1.4, lector SD"
+        }
+      ],
+      "descriptionHtml": "<p>La Dell Inspiron 15 DC15255 tiene un Ryzen 7 de 8 núcleos, 16 GB de RAM y 1 TB de SSD, con pantalla táctil Full HD. Está pensada para trabajo, estudio y mucho almacenamiento.</p><h3>Rendimiento</h3><p>El AMD Ryzen 7 7730U tiene 8 núcleos y 16 hilos, con picos de hasta 4,5 GHz. Junto con 16 GB de RAM DDR4, mueve planillas grandes, muchas pestañas y edición liviana sin demoras. El SSD NVMe de 1 TB te da lugar para archivos y programas.</p><h3>Pantalla táctil</h3><p>Panel IPS Full HD de 15,6\" con filtro antirreflejo y función táctil, con buenos ángulos de visión.</p><h3>Conectividad y teclado</h3><ul><li>USB-C, USB 3.2 Gen 1, USB 2.0, HDMI 1.4 y lector SD.</li><li>Wi-Fi 5 y Bluetooth.</li><li>Teclado de tamaño completo con bloque numérico.</li></ul><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "El nombre dice \"Inspiron 15255\" y la descripción \"Dell 15 DC15255\": confirmar nombre comercial."
+      ]
+    },
+    {
+      "slug": "notebook-gateway-pentium-n5030-4gb-ssd-128gb-156-fhd",
+      "name": "Notebook Gateway 15,6\" Pentium Silver N5030 4 GB RAM 128 GB",
+      "storage": "128 GB",
+      "ram": "4 GB",
+      "seoTitle": "Notebook Gateway 15,6\" Pentium N5030 4 GB",
+      "seoDescription": "Notebook Gateway ultradelgada de 15,6\" Full HD IPS con Pentium Silver N5030, 4 GB de RAM y 128 GB. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Notebook Gateway ultradelgada de 15,6\" con pantalla IPS Full HD, Intel Pentium Silver N5030, 4 GB de RAM y 128 GB de almacenamiento eMMC. Audio Tuned by THX.",
+      "highlights": [
+        "Intel Pentium Silver N5030, hasta 3,1 GHz",
+        "4 GB de RAM y 128 GB de almacenamiento eMMC",
+        "Pantalla IPS Full HD de 15,6\"",
+        "Diseño ultradelgado",
+        "Audio Tuned by THX"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Pentium Silver N5030, 1,10 GHz base, hasta 3,10 GHz, 4 MB de caché"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "Memoria flash eMMC"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6\" IPS Full HD (1920 x 1080)"
+        },
+        {
+          "label": "Audio",
+          "value": "Tuned by THX"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10 Home en modo S"
+        },
+        {
+          "label": "Diseño",
+          "value": "Ultradelgado"
+        }
+      ],
+      "descriptionHtml": "<p>La Gateway de 15,6\" es una notebook ultradelgada para tareas diarias: navegar, escribir documentos, ver videos y estudiar.</p><h3>Rendimiento</h3><p>Usa un Intel Pentium Silver N5030, con 4 GB de RAM y 128 GB de almacenamiento eMMC. Es un equipo básico, pensado para uso liviano.</p><h3>Pantalla y audio</h3><p>Panel IPS Full HD de 15,6\" con buena nitidez para trabajar y ver contenido. El audio viene calibrado Tuned by THX.</p><h3>Antes de comprar</h3><ul><li>Viene con Windows 10 Home en modo S, que instala solo aplicaciones de la tienda de Microsoft.</li><li>El almacenamiento eMMC es más lento que un SSD.</li></ul>",
+      "revisar": [
+        "El nombre dice SSD 128 GB pero la descripción dice eMMC: saqué \"SSD\" del nombre. Confirmar.",
+        "Figura Windows 10 Home en modo S, Microsoft 365 por 1 año y actualización gratis a Windows 11: no los puse como promesa, confirmar con proveedor.",
+        "No hay modelo exacto, solo el procesador en el SKU."
+      ]
+    },
+    {
+      "slug": "notebook-hp-14-intel-celeron-4gb-128gb-14-hd",
+      "name": "Notebook HP 14 Celeron N4120 4 GB RAM 128 GB SSD 14\" HD",
+      "brand": "HP",
+      "model": "14-dq0536la",
+      "storage": "128 GB",
+      "ram": "4 GB",
+      "seoTitle": "Notebook HP 14 Celeron N4120 4 GB 128 GB",
+      "seoDescription": "Notebook HP 14\" con Intel Celeron N4120, 4 GB de RAM, SSD NVMe de 128 GB y Windows 11 Home. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Notebook HP de 14\" delgada y liviana con Intel Celeron N4120 de 4 núcleos, 4 GB de RAM DDR4 y SSD NVMe de 128 GB. Viene con Windows 11 Home.",
+      "highlights": [
+        "Intel Celeron N4120 de 4 núcleos, hasta 2,6 GHz",
+        "4 GB de RAM DDR4 y SSD NVMe de 128 GB",
+        "Pantalla HD de 14\" con bordes finos y antirreflejo",
+        "Windows 11 Home",
+        "USB-C, 2 x USB-A, HDMI y lector SD"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Celeron N4120, 4 núcleos / 4 hilos, hasta 2,6 GHz, 4 MB de caché L2"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD 600"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR4-2400"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD M.2 PCIe NVMe"
+        },
+        {
+          "label": "Pantalla",
+          "value": "14\" HD (1366 x 768), bordes finos, antirreflejo, 220 nits"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11 Home"
+        },
+        {
+          "label": "Cámara y audio",
+          "value": "Cámara HP TrueVision HD 720p y dos parlantes"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi ac (802.11a/b/g/n/ac) y Bluetooth 4.2"
+        },
+        {
+          "label": "Puertos",
+          "value": "1 USB-C, 2 USB-A, 1 HDMI 1.4b, audio combo, lector SD"
+        }
+      ],
+      "descriptionHtml": "<p>La HP de 14\" es una notebook liviana para el día a día: navegar, transmitir y resolver tareas de oficina o estudio.</p><h3>Rendimiento</h3><p>Tiene un Intel Celeron N4120 de 4 núcleos, 4 GB de RAM DDR4 y un SSD NVMe de 128 GB, que arranca Windows 11 Home rápido. Es un equipo para uso liviano.</p><h3>Pantalla y diseño</h3><p>Pantalla HD de 14\" con bordes de microborde y tratamiento antirreflejo. Es delgada y fácil de llevar.</p><h3>Conectividad</h3><ul><li>Un USB-C y dos USB-A.</li><li>Salida HDMI 1.4b y lector de tarjetas SD.</li><li>Wi-Fi y Bluetooth 4.2.</li><li>Cámara HD 720p con micrófonos.</li></ul><h3>Antes de comprar</h3><p>Es un equipo de entrada: con 4 GB de RAM no está pensado para tareas pesadas.</p>",
+      "revisar": [
+        "Modelo tomado del SKU (14-dq0536la)."
+      ]
+    },
+    {
+      "slug": "notebook-hp-victus-ryzen-7-5800h-16gb-ssd-512gb-15-6-fhd-144hz-rtx-3050-ti-4gb",
+      "name": "Notebook HP Victus 15 Ryzen 7 5800H 16 GB RAM 512 GB SSD 15,6\" FHD 144 Hz RTX 3050 Ti 4 GB",
+      "brand": "HP",
+      "model": "Victus 15-FB0028NR",
+      "storage": "512 GB",
+      "ram": "16 GB",
+      "seoTitle": "Notebook HP Victus 15 Ryzen 7 RTX 3050 Ti",
+      "seoDescription": "HP Victus 15 con Ryzen 7 5800H, RTX 3050 Ti de 4 GB, 16 GB de RAM, SSD de 512 GB y pantalla de 144 Hz. Garantía y envíos a todo el país.",
+      "shortDescription": "Notebook gamer HP Victus 15 con AMD Ryzen 7 5800H, NVIDIA GeForce RTX 3050 Ti de 4 GB, 16 GB de RAM, SSD de 512 GB y pantalla IPS Full HD de 15,6\" a 144 Hz.",
+      "highlights": [
+        "Ryzen 7 5800H de 8 núcleos y 16 hilos, hasta 4,4 GHz",
+        "GeForce RTX 3050 Ti de 4 GB GDDR6 con DLSS y Ray Tracing",
+        "Pantalla IPS Full HD de 15,6\" a 144 Hz",
+        "16 GB de RAM DDR4 y SSD NVMe de 512 GB",
+        "Teclado retroiluminado y audio Bang & Olufsen"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 7 5800H, 8 núcleos / 16 hilos, 3,2 a 4,4 GHz, 16 MB de caché L3"
+        },
+        {
+          "label": "Placa de video",
+          "value": "NVIDIA GeForce RTX 3050 Ti Laptop, 4 GB GDDR6"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR4-3200"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD NVMe M.2"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6\" IPS Full HD (1920 x 1080), 144 Hz"
+        },
+        {
+          "label": "Teclado",
+          "value": "Tamaño completo, retroiluminado, con bloque numérico"
+        },
+        {
+          "label": "Cámara y audio",
+          "value": "HP Wide Vision 720p y parlantes duales Bang & Olufsen"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6 y Bluetooth 5.2"
+        },
+        {
+          "label": "Puertos",
+          "value": "USB-C SuperSpeed, HDMI 2.1, lector SD"
+        },
+        {
+          "label": "Color",
+          "value": "Mica Silver"
+        }
+      ],
+      "descriptionHtml": "<p>La HP Victus 15 es una notebook gamer con Ryzen 7 5800H y placa de video GeForce RTX 3050 Ti. Combina 16 GB de RAM, SSD NVMe y pantalla de 144 Hz.</p><h3>Gráficos</h3><p>La RTX 3050 Ti Laptop tiene 4 GB de memoria GDDR6 y arquitectura Ampere, con núcleos RT para Ray Tracing y soporte de NVIDIA DLSS. Sirve para jugar en Full HD y para acelerar programas de edición y diseño.</p><h3>Procesador y memoria</h3><p>El Ryzen 7 5800H tiene 8 núcleos y 16 hilos, con picos de 4,4 GHz. Lo acompañan 16 GB de RAM DDR4 y un SSD NVMe de 512 GB.</p><h3>Pantalla y audio</h3><ul><li>Panel IPS Full HD de 15,6\" a 144 Hz.</li><li>Teclado retroiluminado con bloque numérico.</li><li>Parlantes duales con calibración Bang & Olufsen.</li><li>Wi-Fi 6, Bluetooth 5.2, USB-C y HDMI 2.1.</li></ul>",
+      "revisar": [
+        "La ficha corta tenía un resto \"[ cite: 1]\" que no copié.",
+        "No figura sistema operativo: no lo puse. Modelo tomado del SKU (15-FB0028NR)."
+      ]
+    },
+    {
+      "slug": "notebook-hp-victus-ryzen-7-7445hs-16gb-ssd-512gb-15-6-fhd-144hz-rtx-4050-6gb",
+      "name": "Notebook HP Victus 15 Ryzen 7 7445HS 16 GB RAM 512 GB SSD 15,6\" FHD 144 Hz RTX 4050 6 GB",
+      "brand": "HP",
+      "model": "Victus 15 (BM4X8UA-ABA)",
+      "storage": "512 GB",
+      "ram": "16 GB",
+      "seoTitle": "Notebook HP Victus 15 Ryzen 7 RTX 4050",
+      "seoDescription": "HP Victus 15 con Ryzen 7 7445HS, RTX 4050 de 6 GB, 16 GB de RAM DDR5, SSD de 512 GB y pantalla de 144 Hz. Garantía y envíos a todo el país.",
+      "shortDescription": "Notebook gamer HP Victus 15 con AMD Ryzen 7 7445HS, NVIDIA GeForce RTX 4050 de 6 GB, 16 GB de RAM DDR5 y SSD de 512 GB. Pantalla IPS Full HD de 15,6\" a 144 Hz.",
+      "highlights": [
+        "Ryzen 7 7445HS de 6 núcleos y 12 hilos, hasta 4,7 GHz",
+        "GeForce RTX 4050 de 6 GB GDDR6 con DLSS 3",
+        "16 GB de RAM DDR5-5600 y SSD NVMe Gen4 de 512 GB",
+        "Pantalla IPS Full HD de 15,6\" a 144 Hz y 300 nits",
+        "Wi-Fi 6, HDMI 2.1 y audio Bang & Olufsen"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 7 7445HS, 6 núcleos / 12 hilos, 3,2 a 4,7 GHz, 16 MB de caché L3"
+        },
+        {
+          "label": "Placa de video",
+          "value": "NVIDIA GeForce RTX 4050 Laptop, 6 GB GDDR6, DLSS 3"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR5-5600"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD NVMe PCIe Gen4"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6\" IPS Full HD, 144 Hz, 300 nits, antirreflejo"
+        },
+        {
+          "label": "Teclado",
+          "value": "Tamaño completo, retroiluminado, con bloque numérico"
+        },
+        {
+          "label": "Cámara y audio",
+          "value": "HP Wide Vision 720p y parlantes duales Bang & Olufsen"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6 y Bluetooth 5.3"
+        },
+        {
+          "label": "Puertos",
+          "value": "USB-C, HDMI 2.1, lector SD"
+        },
+        {
+          "label": "Color",
+          "value": "Mica Silver"
+        }
+      ],
+      "descriptionHtml": "<p>La HP Victus 15 con Ryzen 7 7445HS y GeForce RTX 4050 es una notebook gamer con memoria DDR5 y pantalla de 144 Hz.</p><h3>Gráficos</h3><p>La RTX 4050 Laptop tiene 6 GB de memoria GDDR6 y arquitectura Ada Lovelace. Soporta DLSS 3 con generación de fotogramas y Ray Tracing, para jugar en Full HD con buena fluidez.</p><h3>Procesador y memoria</h3><p>El Ryzen 7 7445HS tiene 6 núcleos y 12 hilos, con picos de 4,7 GHz. Trae 16 GB de RAM DDR5-5600 y un SSD NVMe PCIe Gen4 de 512 GB.</p><h3>Pantalla y audio</h3><ul><li>Panel IPS Full HD de 15,6\" a 144 Hz y 300 nits.</li><li>Teclado retroiluminado con bloque numérico.</li><li>Parlantes duales Bang & Olufsen.</li><li>Wi-Fi 6, Bluetooth 5.3, USB-C y HDMI 2.1.</li></ul>",
+      "revisar": [
+        "La ficha corta tenía un resto \"[ cite: 1]\" que no copié.",
+        "No figura sistema operativo. Modelo tomado del SKU (BM4X8UA-ABA)."
+      ]
+    },
+    {
+      "slug": "notebook-lenovo-ideapad-ryzen-5-40-8gb-256gb-ssd-15-6%e2%80%b3-fhd-w11-abyss-blue",
+      "name": "Notebook Lenovo IdeaPad Slim 3 15AMN8 Ryzen 5 8 GB RAM 256 GB SSD 15,6\" Abyss Blue",
+      "model": "IdeaPad Slim 3 15AMN8 (82XQ012GUS)",
+      "storage": "256 GB",
+      "ram": "8 GB",
+      "seoTitle": "Notebook Lenovo IdeaPad Slim 3 Ryzen 5 8 GB",
+      "seoDescription": "Lenovo IdeaPad Slim 3 15AMN8 en Abyss Blue con Ryzen 5, 8 GB de RAM, SSD de 256 GB y Windows 11. Garantía y envíos a todo el país.",
+      "shortDescription": "Lenovo IdeaPad Slim 3 15AMN8 con AMD Ryzen 5, 8 GB de RAM LPDDR5, SSD NVMe de 256 GB y pantalla Full HD de 15,6\" antirreflejo. Windows 11 Home y color Abyss Blue.",
+      "highlights": [
+        "AMD Ryzen 5 de 4 núcleos y 8 hilos, hasta 4,3 GHz",
+        "8 GB de RAM LPDDR5 y SSD NVMe de 256 GB",
+        "Pantalla Full HD de 15,6\" antirreflejo",
+        "Parlantes con Dolby Audio y cámara con obturador de privacidad",
+        "Resistencia MIL-STD-810H"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 5, 4 núcleos / 8 hilos, 2,8 a 4,3 GHz, 2 MB L2 / 4 MB L3"
+        },
+        {
+          "label": "Gráficos",
+          "value": "AMD Radeon 610M integrados"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "LPDDR5-5500, soldada"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD M.2 2242 NVMe PCIe 4.0 x4"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6\" Full HD (1920 x 1080), antirreflejo, bordes finos"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11 Home 64 bits"
+        },
+        {
+          "label": "Cámara y audio",
+          "value": "HD 720p con obturador de privacidad y parlantes con Dolby Audio"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6 y Bluetooth"
+        },
+        {
+          "label": "Puertos",
+          "value": "USB-C 3.2 Gen 1, 2 x USB 3.2 Gen 1, HDMI 1.4b, lector SD, audio combo"
+        },
+        {
+          "label": "Batería",
+          "value": "47 Wh con carga rápida Rapid Charge Boost"
+        },
+        {
+          "label": "Color",
+          "value": "Abyss Blue"
+        }
+      ],
+      "descriptionHtml": "<p>La Lenovo IdeaPad Slim 3 15AMN8 es una notebook delgada y liviana para estudio, oficina y uso diario. Viene en color Abyss Blue.</p><h3>Rendimiento</h3><p>Tiene un procesador AMD Ryzen 5 de 4 núcleos y 8 hilos, con hasta 4,3 GHz, 8 GB de RAM LPDDR5 y un SSD NVMe de 256 GB. Arranca Windows 11 en pocos segundos.</p><h3>Pantalla y sonido</h3><p>Pantalla Full HD de 15,6\" antirreflejo con marcos delgados. Los parlantes frontales con Dolby Audio se escuchan claros en llamadas y música.</p><h3>Resistencia y seguridad</h3><ul><li>Cumple el estándar militar MIL-STD-810H.</li><li>Cámara HD con obturador físico de privacidad.</li><li>Carga rápida Rapid Charge Boost.</li></ul><h3>Antes de comprar</h3><p>La RAM está soldada y no se puede ampliar.</p>",
+      "revisar": [
+        "El nombre y la descripción dicen \"Ryzen 5 40\" / \"Ryzen 40\": el modelo exacto del procesador no figura, no lo inventé.",
+        "Tipo de panel figuraba como \"TN / IPS\": no lo puse.",
+        "Bluetooth figuraba como 5.1 / 5.2: no puse versión."
+      ]
+    },
+    {
+      "slug": "notebook-lenovo-thinkbook-c5-8gb-512-w11p",
+      "name": "Notebook Lenovo ThinkBook 16 G8 IRL Core 5 210H 8 GB RAM 512 GB SSD",
+      "model": "ThinkBook 16 G8 IRL (21SH0022AC)",
+      "storage": "512 GB",
+      "ram": "8 GB",
+      "seoTitle": "Notebook Lenovo ThinkBook 16 G8 Core 5 8 GB",
+      "seoDescription": "Lenovo ThinkBook 16 G8 IRL con Core 5 210H, 8 GB de RAM DDR5, SSD de 512 GB y pantalla WUXGA de 16\". Garantía y envíos a todo el país.",
+      "shortDescription": "Lenovo ThinkBook 16 G8 IRL con Intel Core 5 210H, 8 GB de RAM DDR5 ampliable, SSD NVMe de 512 GB y pantalla WUXGA de 16\". Chasis de aluminio y Thunderbolt 4.",
+      "highlights": [
+        "Intel Core 5 210H de 8 núcleos, hasta 4,8 GHz",
+        "8 GB de RAM DDR5-5600, ampliable hasta 64 GB",
+        "SSD NVMe PCIe 4.0 de 512 GB con una segunda ranura M.2",
+        "Pantalla WUXGA de 16\" en formato 16:10 antirreflejo",
+        "Chasis de aluminio, Thunderbolt 4 y resistencia MIL-STD-810H"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core 5 210H, 8 núcleos / 12 hilos, hasta 4,8 GHz, 12 MB de caché"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR5-5600, 2 ranuras SO-DIMM, hasta 64 GB"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD NVMe PCIe 4.0 x4, con segunda ranura M.2"
+        },
+        {
+          "label": "Pantalla",
+          "value": "16\" WUXGA (1920 x 1200), 16:10, IPS, antirreflejo"
+        },
+        {
+          "label": "Cámara",
+          "value": "FHD 1080p con obturador de privacidad y micrófono dual"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6 y Bluetooth 5.2"
+        },
+        {
+          "label": "Puertos",
+          "value": "Thunderbolt 4 / USB4, USB-C 10 Gbps, HDMI 2.1, RJ-45 Gigabit, lector SD"
+        },
+        {
+          "label": "Construcción",
+          "value": "Aluminio anodizado Arctic Grey, MIL-STD-810H"
+        },
+        {
+          "label": "Peso",
+          "value": "Desde 1,7 kg"
+        }
+      ],
+      "descriptionHtml": "<p>La Lenovo ThinkBook 16 G8 IRL es una notebook de trabajo con chasis de aluminio, pantalla de 16\" y memoria ampliable.</p><h3>Rendimiento</h3><p>El Intel Core 5 210H tiene 8 núcleos (4 de rendimiento y 4 eficientes) y llega a 4,8 GHz. Trae 8 GB de RAM DDR5-5600 con dos ranuras SO-DIMM para llegar a 64 GB, y un SSD NVMe de 512 GB con una segunda ranura M.2 libre.</p><h3>Pantalla</h3><p>Panel WUXGA de 16\" en formato 16:10, con más alto que una pantalla 16:9 y tratamiento antirreflejo.</p><h3>Conectividad y seguridad</h3><ul><li>Thunderbolt 4, USB-C, HDMI 2.1 y red RJ-45.</li><li>Lector de tarjetas SD, Wi-Fi 6 y Bluetooth 5.2.</li><li>Cámara FHD con obturador físico de privacidad.</li><li>Certificación MIL-STD-810H.</li></ul>",
+      "revisar": [
+        "No figura el sistema operativo (el slug dice w11p pero la descripción no lo confirma): no lo puse.",
+        "La descripción está cortada al final: faltan batería y otros datos, no los inventé."
+      ]
+    },
+    {
+      "slug": "notebook-lenovo-v15-i3-8gb-512-free",
+      "name": "Notebook Lenovo V15 G4 IRU Core i3-1315U 8 GB RAM 512 GB SSD",
+      "model": "V15 G4 IRU (83GW004SAC)",
+      "storage": "512 GB",
+      "ram": "8 GB",
+      "seoTitle": "Notebook Lenovo V15 G4 IRU i3 8 GB 512 GB",
+      "seoDescription": "Lenovo V15 G4 IRU con Core i3-1315U, 8 GB de RAM, SSD de 512 GB y pantalla Full HD de 15,6\". Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lenovo V15 G4 IRU con Intel Core i3-1315U de 13.ª generación, 8 GB de RAM, SSD NVMe de 512 GB y pantalla Full HD antirreflejo de 15,6\". Teclado numérico y MIL-STD-810H.",
+      "highlights": [
+        "Core i3-1315U de 13.ª generación, 6 núcleos, hasta 4,5 GHz",
+        "8 GB de RAM DDR5 y SSD NVMe de 512 GB",
+        "Pantalla Full HD de 15,6\" antirreflejo, certificada TÜV Low Blue Light",
+        "Cámara con obturador de privacidad y TPM 2.0",
+        "Puerto de red RJ-45, USB-C y HDMI"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i3-1315U, 6 núcleos / 8 hilos, hasta 4,5 GHz, 10 MB de caché"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD integrados"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR5-5200, ampliable con ranura SODIMM"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD M.2 NVMe PCIe"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6\" Full HD (1920 x 1080), antirreflejo, 250 nits"
+        },
+        {
+          "label": "Teclado",
+          "value": "Tamaño completo con bloque numérico"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Cámara HD 720p con obturador, TPM 2.0"
+        },
+        {
+          "label": "Resistencia",
+          "value": "MIL-STD-810H"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6 y Bluetooth 5.1"
+        },
+        {
+          "label": "Puertos",
+          "value": "RJ-45, USB-C 3.2 Gen 1, USB 3.2 Gen 1, USB 2.0, HDMI 1.4b"
+        }
+      ],
+      "descriptionHtml": "<p>La Lenovo V15 G4 IRU es una notebook de trabajo para oficina, estudio y gestión diaria. Tiene teclado numérico y certificación de resistencia militar.</p><h3>Rendimiento</h3><p>El Intel Core i3-1315U de 13.ª generación tiene 6 núcleos y llega a 4,5 GHz. Con 8 GB de RAM DDR5 y SSD NVMe de 512 GB, alcanza para navegar, usar planillas, software contable y videollamadas.</p><h3>Pantalla</h3><p>Panel Full HD de 15,6\" antirreflejo con certificación TÜV Rheinland Low Blue Light para cansar menos la vista.</p><h3>Seguridad y conectividad</h3><ul><li>Cámara con obturador físico y módulo TPM 2.0.</li><li>Puerto de red RJ-45, USB-C, USB 3.2 y HDMI 1.4b.</li><li>Wi-Fi 6 y Bluetooth 5.1.</li></ul>",
+      "revisar": [
+        "La tabla dice modelo 83A1 y el SKU es 83GW004SAC: confirmar que corresponden al mismo equipo.",
+        "El slug sugiere que viene sin sistema operativo (\"free\"); la descripción no lo aclara. No lo puse.",
+        "Panel figuraba como \"TN / IPS\": no lo puse."
+      ]
+    },
+    {
+      "slug": "notebook-lenovov14-i7-13620h-16gb-ssd-512gb-ssd-14-fhd-w11",
+      "name": "Notebook Lenovo V14 G4 IRU Core i7-13620H 16 GB RAM 512 GB SSD 14\" FHD",
+      "model": "V14 G4 IRU (83A000PCUS)",
+      "storage": "512 GB",
+      "ram": "16 GB",
+      "seoTitle": "Notebook Lenovo V14 G4 i7 16 GB 512 GB",
+      "seoDescription": "Lenovo V14 G4 IRU con Core i7-13620H, 16 GB de RAM, SSD de 512 GB y pantalla Full HD de 14\". Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lenovo V14 G4 IRU con Intel Core i7-13620H de 10 núcleos, 16 GB de RAM, SSD NVMe de 512 GB y pantalla Full HD antirreflejo de 14\". Windows 11 y MIL-STD-810H.",
+      "highlights": [
+        "Core i7-13620H de 10 núcleos y 16 hilos, hasta 4,9 GHz",
+        "16 GB de RAM ampliable hasta 40 GB y SSD NVMe de 512 GB",
+        "Pantalla Full HD de 14\" antirreflejo, TÜV Low Blue Light",
+        "Cámara con obturador de privacidad y TPM 2.0",
+        "Puerto RJ-45, USB-C y HDMI"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i7-13620H, 10 núcleos (6 P + 4 E) / 16 hilos, hasta 4,9 GHz, 24 MB de caché L3"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD integrados"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR4-3200, ampliable hasta 40 GB"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD M.2 NVMe PCIe"
+        },
+        {
+          "label": "Pantalla",
+          "value": "14\" Full HD (1920 x 1080), antirreflejo, 250 nits"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Cámara HD con obturador, TPM 2.0, ThinkShield"
+        },
+        {
+          "label": "Resistencia",
+          "value": "MIL-STD-810H"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6 y Bluetooth 5.2"
+        },
+        {
+          "label": "Puertos",
+          "value": "RJ-45, USB-C 3.2 Gen 1, USB 3.2 Gen 1, USB 2.0, HDMI 1.4b"
+        }
+      ],
+      "descriptionHtml": "<p>La Lenovo V14 G4 IRU junta un procesador Core i7 serie H con 16 GB de RAM en un equipo de 14\". Está pensada para trabajo profesional y movilidad.</p><h3>Rendimiento</h3><p>El Intel Core i7-13620H tiene 10 núcleos (6 de rendimiento y 4 eficientes) y 16 hilos, con picos de hasta 4,9 GHz. Con 16 GB de RAM DDR4 y SSD NVMe de 512 GB, mueve varios programas, planillas grandes y máquinas virtuales.</p><h3>Pantalla</h3><p>Panel Full HD de 14\" antirreflejo con certificación TÜV Rheinland Low Blue Light.</p><h3>Seguridad y conectividad</h3><ul><li>Obturador físico en la cámara y TPM 2.0.</li><li>Certificación de resistencia MIL-STD-810H.</li><li>Puerto de red RJ-45, USB-C, USB 3.2, USB 2.0 y HDMI 1.4b.</li><li>Wi-Fi 6 y Bluetooth 5.2.</li></ul>",
+      "revisar": [
+        "El nombre repetía \"SSD\" dos veces; lo limpié.",
+        "La descripción original no aclara el tipo de panel: no lo puse."
+      ]
+    },
+    {
+      "slug": "notebook-sky-celeron-j-128gb-4gb",
+      "name": "Notebook Sky 14,1\" Celeron J4125 6 GB RAM 128 GB SSD FHD",
+      "brand": "Sky",
+      "storage": "128 GB",
+      "ram": "6 GB",
+      "seoTitle": "Notebook Sky 14,1\" Celeron J4125 6 GB 128 GB",
+      "seoDescription": "Notebook Sky de 14,1\" IPS Full HD con Intel Celeron J4125, 6 GB de RAM y SSD de 128 GB. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Notebook Sky de 14,1\" con pantalla IPS Full HD, Intel Celeron J4125, 6 GB de RAM, SSD de 128 GB y batería de 5000 mAh. Pesa 1,3 kg.",
+      "highlights": [
+        "Intel Celeron J4125 con gráficos UHD 600",
+        "6 GB de RAM y SSD de 128 GB",
+        "Pantalla IPS Full HD de 14,1\"",
+        "Batería de 5000 mAh y 1,3 kg de peso"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Celeron J4125"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel UHD Graphics 600"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD"
+        },
+        {
+          "label": "Pantalla",
+          "value": "14,1\" IPS Full HD (1920 x 1080), relación 16:9"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "2 MP"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 5 GHz"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Peso",
+          "value": "1,3 kg"
+        }
+      ],
+      "descriptionHtml": "<p>La notebook Sky de 14,1\" es un equipo básico y liviano para tareas diarias, estudio y navegación.</p><h3>Qué ofrece</h3><ul><li>Procesador Intel Celeron J4125 con gráficos UHD 600.</li><li>6 GB de RAM y SSD de 128 GB.</li><li>Pantalla IPS Full HD de 14,1\" en formato 16:9.</li><li>Cámara frontal de 2 MP y Wi-Fi de 5 GHz.</li></ul><h3>Portabilidad</h3><p>Pesa 1,3 kg y tiene batería de 5000 mAh, así que se lleva fácil a clase o al trabajo.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "El slug dice 4 GB de RAM, el nombre y la ficha dicen 6 GB: gana el nombre (6 GB).",
+        "No figura sistema operativo, puertos ni modelo exacto. La descripción larga venía vacía.",
+        "Marca puesta como Sky según el nombre; confirmar."
+      ]
+    },
+    {
+      "slug": "parlante-hp-dhe-6000-luz-led",
+      "name": "Parlante HP DHE-6000 con luz LED",
+      "brand": "HP",
+      "model": "DHE-6000",
+      "seoTitle": "Parlante HP DHE-6000 con luz LED",
+      "seoDescription": "Parlante HP DHE-6000 de mesa con luces LED, 6 W de potencia y conexión USB y miniplug. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Parlante de mesa HP DHE-6000 con luces LED y 6 W de potencia. Se conecta por USB y miniplug.",
+      "highlights": [
+        "Potencia de 6 W",
+        "Luces LED",
+        "Conexión USB y miniplug",
+        "Compacto, de mesa: 78 x 175 x 99 mm"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "6 W"
+        },
+        {
+          "label": "Cantidad de parlantes",
+          "value": "2"
+        },
+        {
+          "label": "Conectores de entrada",
+          "value": "USB y miniplug"
+        },
+        {
+          "label": "Iluminación",
+          "value": "Luces LED"
+        },
+        {
+          "label": "Ubicación",
+          "value": "De mesa"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "78 mm de ancho x 175 mm de alto x 99 mm de profundidad"
+        }
+      ],
+      "descriptionHtml": "<p>El HP DHE-6000 es un parlante de mesa con luces LED. Sirve para sumar sonido a una PC o notebook en el escritorio.</p><h3>Conexión</h3><p>Tiene entrada USB y miniplug, así que lo conectás a la mayoría de las computadoras y equipos con salida de audio.</p><h3>Tamaño</h3><ul><li>Dos parlantes y 6 W de potencia.</li><li>78 mm de ancho, 175 mm de alto y 99 mm de profundidad.</li><li>Pensado para apoyar sobre una mesa.</li></ul><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción no aclara la alimentación (USB o enchufe) ni la respuesta de frecuencia.",
+        "Marca HP tomada del nombre; el modelo DHE-6000 no figura con sku."
+      ]
+    },
+    {
+      "slug": "parlante-jahro-s-521",
+      "name": "Parlante Jahro S-521 2.0 con LED RGB",
+      "brand": "Jahro",
+      "model": "S-521",
+      "seoTitle": "Parlante Jahro S-521 2.0 con LED RGB",
+      "seoDescription": "Sistema de baffles 2.0 Jahro S-521 para PC: 2 altavoces de 2\" de 3 W cada uno, alimentación USB y luz LED RGB. Garantía y envíos al país.",
+      "shortDescription": "Baffles 2.0 Jahro S-521 para computadora. Dos altavoces de 2\" con 3 W cada uno, alimentación por USB e iluminación LED RGB.",
+      "highlights": [
+        "Sistema 2.0 con dos altavoces de 2\"",
+        "3 W de potencia por parlante",
+        "Alimentación por USB",
+        "Iluminación LED RGB",
+        "Compactos: 440 g en total"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Negro"
+        },
+        {
+          "label": "Tipo",
+          "value": "Sistema de baffles 2.0"
+        },
+        {
+          "label": "Altavoces",
+          "value": "2 de 2\""
+        },
+        {
+          "label": "Potencia de salida",
+          "value": "3 W cada uno"
+        },
+        {
+          "label": "Alimentación",
+          "value": "Por USB"
+        },
+        {
+          "label": "Respuesta en frecuencia",
+          "value": "150 Hz a 20 kHz"
+        },
+        {
+          "label": "Sensibilidad de entrada",
+          "value": "700 mV ± 50 mV"
+        },
+        {
+          "label": "Iluminación",
+          "value": "LED RGB"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "15,4 cm de alto x 13 cm de ancho x 5 cm de largo"
+        },
+        {
+          "label": "Peso",
+          "value": "440 g"
+        }
+      ],
+      "descriptionHtml": "<p>El Jahro S-521 es un sistema de baffles 2.0 para computadora. Tiene luz LED RGB y se alimenta por USB.</p><h3>Sonido</h3><p>Dos altavoces de 2\" con 3 W cada uno. La respuesta en frecuencia va de 150 Hz a 20 kHz y el grado de separación es de 36 dB o más.</p><h3>Tamaño</h3><ul><li>15,4 cm de alto, 13 cm de ancho y 5 cm de largo.</li><li>Peso de 440 g.</li><li>Color negro.</li></ul><h3>Antes de comprar</h3><p>Es un equipo básico de escritorio, pensado para PC y notebook.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción indica \"Voltaje 220V\" y a la vez alimentación por USB: no publiqué el voltaje.",
+        "Marca Jahro tomada del nombre y de la descripción."
+      ]
+    },
+    {
+      "slug": "pc-air-intel-core-i5-14400-raptorlake",
+      "name": "PC Air Intel Core i5 14400 Raptor Lake",
+      "seoTitle": "PC Air Intel Core i5 14400",
+      "seoDescription": "PC Air con procesador Intel Core i5 14400 de la familia Raptor Lake. Garantía oficial, soporte técnico y envíos a todo el país.",
+      "shortDescription": "PC Air con procesador Intel Core i5 14400 (Raptor Lake). La ficha original no detalla memoria, almacenamiento ni placa.",
+      "highlights": [
+        "Procesador Intel Core i5 14400",
+        "Familia Raptor Lake",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i5 14400 (Raptor Lake)"
+        }
+      ],
+      "descriptionHtml": "<p>PC Air con procesador Intel Core i5 14400, de la familia Raptor Lake. Es la única característica técnica que indica el proveedor.</p><h3>Antes de comprar</h3><p>Consultanos por la memoria RAM, el almacenamiento, la placa y el gabinete antes de elegirla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "Solo hay nombre: no hay RAM, disco, placa, fuente ni sistema operativo. Pedir la configuración completa.",
+        "\"AIR\" parece ser la marca o línea; no la usé como brand."
+      ]
+    },
+    {
+      "slug": "pc-all-in-one-hp-ryzen-3-8gb-ssd-256gb-21-5-fhd-w11",
+      "name": "All in One HP 22 Ryzen 3 8 GB RAM 256 GB SSD Full HD Windows 11",
+      "brand": "HP",
+      "model": "22-dd0541la",
+      "storage": "256 GB",
+      "ram": "8 GB",
+      "seoTitle": "All in One HP 22 Ryzen 3 8 GB 256 GB",
+      "seoDescription": "All in One HP 22 con Ryzen 3 3250U, 8 GB de RAM, SSD de 256 GB y pantalla Full HD de 21,5\". Garantía oficial y envíos a todo el país.",
+      "shortDescription": "All in One HP 22-dd0541la con AMD Ryzen 3 3250U, 8 GB de RAM DDR4, SSD NVMe de 256 GB y pantalla Full HD de 21,5\". Viene con Windows 11 Home y teclado y mouse inalámbricos.",
+      "highlights": [
+        "AMD Ryzen 3 3250U, hasta 3,5 GHz",
+        "8 GB DDR4 y SSD NVMe de 256 GB",
+        "Pantalla Full HD de 21,5\" antirreflectante",
+        "Windows 11 Home Single Language",
+        "Teclado y mouse inalámbricos incluidos"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 3 3250U, 2 núcleos, 2,6 GHz base y hasta 3,5 GHz, 4 MB de caché"
+        },
+        {
+          "label": "Gráficos",
+          "value": "AMD Radeon"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR4-2400, 1 x 8 GB, 2 ranuras SODIMM"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD PCIe NVMe M.2"
+        },
+        {
+          "label": "Pantalla",
+          "value": "21,5\" Full HD (1920 x 1080), VA, antirreflectante, 250 nits"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11 Home Single Language"
+        },
+        {
+          "label": "Cámara y audio",
+          "value": "Webcam HD 720p con doble micrófono y parlantes de 2 W"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 802.11ac, Bluetooth 4.2 y LAN Gigabit"
+        },
+        {
+          "label": "Puertos",
+          "value": "2 USB-A 5 Gb/s, 2 USB 2.0, HDMI 1.4, audio combinado y RJ-45"
+        },
+        {
+          "label": "En la caja",
+          "value": "Teclado y mouse inalámbricos HP 230 y adaptador de 65 W"
+        }
+      ],
+      "descriptionHtml": "<p>El HP All in One 22 junta pantalla y computadora en un solo equipo. Trae Ryzen 3, 8 GB de RAM y SSD de 256 GB.</p><h3>Rendimiento</h3><p>El Ryzen 3 3250U tiene 2 núcleos y llega a 3,5 GHz. La RAM es DDR4 y hay 2 ranuras SODIMM. El SSD NVMe agiliza el arranque de Windows 11 Home.</p><h3>Pantalla y cámara</h3><p>Pantalla Full HD de 21,5\" antirreflectante, con inclinación ajustable. Incluye webcam HD de 720p con doble micrófono.</p><h3>Conexiones</h3><ul><li>2 USB-A de 5 Gb/s y 2 USB 2.0.</li><li>Salida HDMI 1.4 y puerto de red RJ-45.</li><li>Lector de tarjetas 3 en 1.</li></ul><h3>Antes de comprar</h3><p>No trae unidad óptica.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original menciona garantía del fabricante, descuento por pago al contado y 25 GB de Dropbox por 12 meses: no los publiqué.",
+        "El nombre dice 22 y la pantalla es de 21,5\" (diagonal): usé 21,5\"."
+      ]
+    },
+    {
+      "slug": "pc-cx-amd-athlon-3000g8gssd240-bio",
+      "name": "PC CX AMD Athlon 3000G 8 GB RAM SSD 240 GB (BIO)",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC CX Athlon 3000G 8 GB 240 GB (BIO)",
+      "seoDescription": "PC CX con AMD Athlon 3000G, 8 GB de RAM y SSD de 240 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con AMD Athlon 3000G, 8 GB de RAM y SSD de 240 GB. Versión BIO.",
+      "highlights": [
+        "AMD Athlon 3000G",
+        "8 GB de RAM",
+        "SSD de 240 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Athlon 3000G"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 240 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con AMD Athlon 3000G, 8 GB de RAM y SSD de 240 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador AMD Athlon 3000G.</li><li>8 GB de memoria RAM.</li><li>SSD de 240 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"8G\" como RAM y \"SSD240\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-amd-ryzen-3-5300g16gssd480-bio",
+      "name": "PC CX AMD Ryzen 3 5300G 16 GB RAM SSD 480 GB (BIO)",
+      "storage": "480 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC CX Ryzen 3 5300G 16 GB 480 GB (BIO)",
+      "seoDescription": "PC CX con AMD Ryzen 3 5300G, 16 GB de RAM y SSD de 480 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con AMD Ryzen 3 5300G, 16 GB de RAM y SSD de 480 GB. Versión BIO.",
+      "highlights": [
+        "AMD Ryzen 3 5300G",
+        "16 GB de RAM",
+        "SSD de 480 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 3 5300G"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 480 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con AMD Ryzen 3 5300G, 16 GB de RAM y SSD de 480 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador AMD Ryzen 3 5300G.</li><li>16 GB de memoria RAM.</li><li>SSD de 480 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"16G\" como RAM y \"SSD480\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-amd-ryzen-5-5600gt8gssd240-bio",
+      "name": "PC CX AMD Ryzen 5 5600GT 8 GB RAM SSD 240 GB (BIO)",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC CX Ryzen 5 5600GT 8 GB 240 GB (BIO)",
+      "seoDescription": "PC CX con AMD Ryzen 5 5600GT, 8 GB de RAM y SSD de 240 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con AMD Ryzen 5 5600GT, 8 GB de RAM y SSD de 240 GB. Versión BIO.",
+      "highlights": [
+        "AMD Ryzen 5 5600GT",
+        "8 GB de RAM",
+        "SSD de 240 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 5 5600GT"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 240 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con AMD Ryzen 5 5600GT, 8 GB de RAM y SSD de 240 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador AMD Ryzen 5 5600GT.</li><li>8 GB de memoria RAM.</li><li>SSD de 240 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"8G\" como RAM y \"SSD240\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-amd-ryzen-5-8500g16gssd512-bio",
+      "name": "PC CX AMD Ryzen 5 8500G 16 GB RAM SSD 512 GB (BIO)",
+      "storage": "512 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC CX Ryzen 5 8500G 16 GB 512 GB (BIO)",
+      "seoDescription": "PC CX con AMD Ryzen 5 8500G, 16 GB de RAM y SSD de 512 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con AMD Ryzen 5 8500G, 16 GB de RAM y SSD de 512 GB. Versión BIO.",
+      "highlights": [
+        "AMD Ryzen 5 8500G",
+        "16 GB de RAM",
+        "SSD de 512 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 5 8500G"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 512 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con AMD Ryzen 5 8500G, 16 GB de RAM y SSD de 512 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador AMD Ryzen 5 8500G.</li><li>16 GB de memoria RAM.</li><li>SSD de 512 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"16G\" como RAM y \"SSD512\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-amd-ryzen-5-8600g16gssd480-giga",
+      "name": "PC CX AMD Ryzen 5 8600G 16 GB RAM SSD 480 GB (GIGA)",
+      "storage": "480 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC CX Ryzen 5 8600G 16 GB 480 GB (GIGA)",
+      "seoDescription": "PC CX con AMD Ryzen 5 8600G, 16 GB de RAM y SSD de 480 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con AMD Ryzen 5 8600G, 16 GB de RAM y SSD de 480 GB. Versión GIGA.",
+      "highlights": [
+        "AMD Ryzen 5 8600G",
+        "16 GB de RAM",
+        "SSD de 480 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 5 8600G"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 480 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con AMD Ryzen 5 8600G, 16 GB de RAM y SSD de 480 GB. Es la versión GIGA.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador AMD Ryzen 5 8600G.</li><li>16 GB de memoria RAM.</li><li>SSD de 480 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"16G\" como RAM y \"SSD480\" como SSD en GB; confirmar. \"(GIGA)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-amd-ryzen-5-8600g16gssd512-bio",
+      "name": "PC CX AMD Ryzen 5 8600G 16 GB RAM SSD 512 GB (BIO)",
+      "storage": "512 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC CX Ryzen 5 8600G 16 GB 512 GB (BIO)",
+      "seoDescription": "PC CX con AMD Ryzen 5 8600G, 16 GB de RAM y SSD de 512 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con AMD Ryzen 5 8600G, 16 GB de RAM y SSD de 512 GB. Versión BIO.",
+      "highlights": [
+        "AMD Ryzen 5 8600G",
+        "16 GB de RAM",
+        "SSD de 512 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 5 8600G"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 512 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con AMD Ryzen 5 8600G, 16 GB de RAM y SSD de 512 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador AMD Ryzen 5 8600G.</li><li>16 GB de memoria RAM.</li><li>SSD de 512 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"16G\" como RAM y \"SSD512\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-amd-ryzen-7-5700g16g256ghd2tb-asus",
+      "name": "PC CX AMD Ryzen 7 5700G 16 GB RAM SSD 256 GB + HDD 2 TB (ASUS)",
+      "storage": "256 GB SSD + 2 TB HDD",
+      "ram": "16 GB",
+      "seoTitle": "PC CX Ryzen 7 5700G 16 GB 256 GB + 2 TB",
+      "seoDescription": "PC CX con AMD Ryzen 7 5700G, 16 GB de RAM, SSD de 256 GB, disco de 2 TB y placa ASUS. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "PC CX con AMD Ryzen 7 5700G y gráficos Radeon integrados, 16 GB de RAM, SSD de 256 GB, disco de 2 TB y placa madre ASUS.",
+      "highlights": [
+        "AMD Ryzen 7 5700G con gráficos Radeon integrados",
+        "16 GB de RAM",
+        "SSD de 256 GB más disco de 2 TB",
+        "Placa madre ASUS"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 7 5700G"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Radeon integrados al procesador"
+        },
+        {
+          "label": "Almacenamiento principal",
+          "value": "SSD de 256 GB"
+        },
+        {
+          "label": "Almacenamiento secundario",
+          "value": "Disco duro de 2 TB"
+        },
+        {
+          "label": "Placa madre",
+          "value": "ASUS"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX con Ryzen 7 5700G, 16 GB de RAM y dos unidades de almacenamiento: un SSD de 256 GB para el sistema y un disco de 2 TB para archivos.</p><h3>Qué incluye</h3><ul><li>AMD Ryzen 7 5700G con gráficos Radeon integrados.</li><li>16 GB de memoria RAM.</li><li>SSD de 256 GB y disco duro de 2 TB.</li><li>Placa madre ASUS.</li></ul><h3>Antes de comprar</h3><p>Al usar los gráficos integrados, no trae placa de video dedicada. Consultanos por la fuente y el sistema operativo.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "El nombre dice \"PC CX\" y entre paréntesis (ASUS): tomé ASUS como la placa madre, según la descripción.",
+        "No hay datos de fuente, gabinete ni sistema operativo. \"G\" en 256G tomado como GB."
+      ]
+    },
+    {
+      "slug": "pc-cx-amd-ryzen-7-5700g16gssd480-bio",
+      "name": "PC CX AMD Ryzen 7 5700G 16 GB RAM SSD 480 GB (BIO)",
+      "storage": "480 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC CX Ryzen 7 5700G 16 GB 480 GB (BIO)",
+      "seoDescription": "PC CX con AMD Ryzen 7 5700G, 16 GB de RAM y SSD de 480 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con AMD Ryzen 7 5700G, 16 GB de RAM y SSD de 480 GB. Versión BIO.",
+      "highlights": [
+        "AMD Ryzen 7 5700G",
+        "16 GB de RAM",
+        "SSD de 480 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 7 5700G"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 480 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con AMD Ryzen 7 5700G, 16 GB de RAM y SSD de 480 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador AMD Ryzen 7 5700G.</li><li>16 GB de memoria RAM.</li><li>SSD de 480 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"16G\" como RAM y \"SSD480\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-amd-ryzen-7-8700g16gssd480-bio",
+      "name": "PC CX AMD Ryzen 7 8700G 16 GB RAM SSD 480 GB (BIO)",
+      "storage": "480 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC CX Ryzen 7 8700G 16 GB 480 GB (BIO)",
+      "seoDescription": "PC CX con AMD Ryzen 7 8700G, 16 GB de RAM y SSD de 480 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con AMD Ryzen 7 8700G, 16 GB de RAM y SSD de 480 GB. Versión BIO.",
+      "highlights": [
+        "AMD Ryzen 7 8700G",
+        "16 GB de RAM",
+        "SSD de 480 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 7 8700G"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 480 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con AMD Ryzen 7 8700G, 16 GB de RAM y SSD de 480 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador AMD Ryzen 7 8700G.</li><li>16 GB de memoria RAM.</li><li>SSD de 480 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"16G\" como RAM y \"SSD480\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-amd-ryzen-7-8700g16gssd512-bio",
+      "name": "PC CX AMD Ryzen 7 8700G 16 GB RAM SSD 512 GB (BIO)",
+      "storage": "512 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC CX Ryzen 7 8700G 16 GB 512 GB (BIO)",
+      "seoDescription": "PC CX con AMD Ryzen 7 8700G, 16 GB de RAM y SSD de 512 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con AMD Ryzen 7 8700G, 16 GB de RAM y SSD de 512 GB. Versión BIO.",
+      "highlights": [
+        "AMD Ryzen 7 8700G",
+        "16 GB de RAM",
+        "SSD de 512 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 7 8700G"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 512 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con AMD Ryzen 7 8700G, 16 GB de RAM y SSD de 512 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador AMD Ryzen 7 8700G.</li><li>16 GB de memoria RAM.</li><li>SSD de 512 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"16G\" como RAM y \"SSD512\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-intel-g59058gssd240g-bio",
+      "name": "PC CX Intel G5905 8 GB RAM SSD 240 GB (BIO)",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC CX G5905 8 GB 240 GB (BIO)",
+      "seoDescription": "PC CX con Intel G5905, 8 GB de RAM y SSD de 240 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con Intel G5905, 8 GB de RAM y SSD de 240 GB. Versión BIO.",
+      "highlights": [
+        "Intel G5905",
+        "8 GB de RAM",
+        "SSD de 240 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel G5905"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 240 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con Intel G5905, 8 GB de RAM y SSD de 240 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador Intel G5905.</li><li>8 GB de memoria RAM.</li><li>SSD de 240 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"8G\" como RAM y \"SSD240\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-intel-g64058gssd240g-bio",
+      "name": "PC CX Intel G6405 8 GB RAM SSD 240 GB (BIO)",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC CX G6405 8 GB 240 GB (BIO)",
+      "seoDescription": "PC CX con Intel G6405, 8 GB de RAM y SSD de 240 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con Intel G6405, 8 GB de RAM y SSD de 240 GB. Versión BIO.",
+      "highlights": [
+        "Intel G6405",
+        "8 GB de RAM",
+        "SSD de 240 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel G6405"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 240 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con Intel G6405, 8 GB de RAM y SSD de 240 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador Intel G6405.</li><li>8 GB de memoria RAM.</li><li>SSD de 240 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"8G\" como RAM y \"SSD240\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-intel-i3-1010516gssd480-bio",
+      "name": "PC CX Intel Core i3 10105 16 GB RAM SSD 480 GB (BIO)",
+      "storage": "480 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC CX Core i3 10105 16 GB 480 GB (BIO)",
+      "seoDescription": "PC CX con Intel Core i3 10105, 16 GB de RAM y SSD de 480 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con Intel Core i3 10105, 16 GB de RAM y SSD de 480 GB. Versión BIO.",
+      "highlights": [
+        "Intel Core i3 10105",
+        "16 GB de RAM",
+        "SSD de 480 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i3 10105"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 480 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con Intel Core i3 10105, 16 GB de RAM y SSD de 480 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador Intel Core i3 10105.</li><li>16 GB de memoria RAM.</li><li>SSD de 480 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"16G\" como RAM y \"SSD480\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-intel-i3-101058gssd240-bio",
+      "name": "PC CX Intel Core i3 10105 8 GB RAM SSD 240 GB (BIO)",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC CX Core i3 10105 8 GB 240 GB (BIO)",
+      "seoDescription": "PC CX con Intel Core i3 10105, 8 GB de RAM y SSD de 240 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con Intel Core i3 10105, 8 GB de RAM y SSD de 240 GB. Versión BIO.",
+      "highlights": [
+        "Intel Core i3 10105",
+        "8 GB de RAM",
+        "SSD de 240 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i3 10105"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 240 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con Intel Core i3 10105, 8 GB de RAM y SSD de 240 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador Intel Core i3 10105.</li><li>8 GB de memoria RAM.</li><li>SSD de 240 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"8G\" como RAM y \"SSD240\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-intel-i3-121008gssd240-bio",
+      "name": "PC CX Intel Core i3 12100 8 GB RAM SSD 240 GB (BIO)",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC CX Core i3 12100 8 GB 240 GB (BIO)",
+      "seoDescription": "PC CX con Intel Core i3 12100, 8 GB de RAM y SSD de 240 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con Intel Core i3 12100, 8 GB de RAM y SSD de 240 GB. Versión BIO.",
+      "highlights": [
+        "Intel Core i3 12100",
+        "8 GB de RAM",
+        "SSD de 240 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i3 12100"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 240 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con Intel Core i3 12100, 8 GB de RAM y SSD de 240 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador Intel Core i3 12100.</li><li>8 GB de memoria RAM.</li><li>SSD de 240 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"8G\" como RAM y \"SSD240\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-intel-i5-1240016gssd480-bio",
+      "name": "PC CX Intel Core i5 12400 16 GB RAM SSD 480 GB (BIO)",
+      "storage": "480 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC CX Core i5 12400 16 GB 480 GB (BIO)",
+      "seoDescription": "PC CX con Intel Core i5 12400, 16 GB de RAM y SSD de 480 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con Intel Core i5 12400, 16 GB de RAM y SSD de 480 GB. Versión BIO.",
+      "highlights": [
+        "Intel Core i5 12400",
+        "16 GB de RAM",
+        "SSD de 480 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i5 12400"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 480 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con Intel Core i5 12400, 16 GB de RAM y SSD de 480 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador Intel Core i5 12400.</li><li>16 GB de memoria RAM.</li><li>SSD de 480 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"16G\" como RAM y \"SSD480\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-intel-i5-124008gssd240-bio",
+      "name": "PC CX Intel Core i5 12400 8 GB RAM SSD 240 GB (BIO)",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC CX Core i5 12400 8 GB 240 GB (BIO)",
+      "seoDescription": "PC CX con Intel Core i5 12400, 8 GB de RAM y SSD de 240 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con Intel Core i5 12400, 8 GB de RAM y SSD de 240 GB. Versión BIO.",
+      "highlights": [
+        "Intel Core i5 12400",
+        "8 GB de RAM",
+        "SSD de 240 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i5 12400"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 240 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con Intel Core i5 12400, 8 GB de RAM y SSD de 240 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador Intel Core i5 12400.</li><li>8 GB de memoria RAM.</li><li>SSD de 240 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"8G\" como RAM y \"SSD240\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-cx-intel-i7-1270016gssd480-bio",
+      "name": "PC CX Intel Core i7 12700 16 GB RAM SSD 480 GB (BIO)",
+      "storage": "480 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC CX Core i7 12700 16 GB 480 GB (BIO)",
+      "seoDescription": "PC CX con Intel Core i7 12700, 16 GB de RAM y SSD de 480 GB. Garantía oficial, soporte técnico y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC CX con Intel Core i7 12700, 16 GB de RAM y SSD de 480 GB. Versión BIO.",
+      "highlights": [
+        "Intel Core i7 12700",
+        "16 GB de RAM",
+        "SSD de 480 GB",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i7 12700"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 480 GB"
+        }
+      ],
+      "descriptionHtml": "<p>PC CX armada con Intel Core i7 12700, 16 GB de RAM y SSD de 480 GB. Es la versión BIO.</p><h3>Qué sabemos de este equipo</h3><ul><li>Procesador Intel Core i7 12700.</li><li>16 GB de memoria RAM.</li><li>SSD de 480 GB.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa, la fuente, el gabinete y el sistema operativo, porque el proveedor no los detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción solo repite el nombre: no hay datos de placa, fuente, gabinete, gráficos ni sistema operativo.",
+        "Interpreté \"16G\" como RAM y \"SSD480\" como SSD en GB; confirmar. \"(BIO)\" no se explica; lo dejé en el nombre."
+      ]
+    },
+    {
+      "slug": "pc-gamemax-amd-r5-5600gt16g500g500w-80",
+      "name": "PC Gamemax AMD Ryzen 5 5600GT 16 GB RAM SSD 500 GB fuente 500 W 80+ Bronze",
+      "brand": "Gamemax",
+      "storage": "500 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC Gamemax Ryzen 5 5600GT 16 GB 500 GB",
+      "seoDescription": "PC Gamemax con AMD Ryzen 5 5600GT, 16 GB de RAM, SSD de 500 GB y fuente de 500 W 80+ Bronze. Garantía oficial y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC Gamemax con AMD Ryzen 5 5600GT, 16 GB de RAM, SSD de 500 GB y fuente de 500 W 80+ Bronze.",
+      "highlights": [
+        "AMD Ryzen 5 5600GT",
+        "16 GB de RAM",
+        "SSD de 500 GB",
+        "Fuente de 500 W 80+ Bronze"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 5 5600GT"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 500 GB"
+        },
+        {
+          "label": "Fuente",
+          "value": "500 W, 80+ Bronze"
+        }
+      ],
+      "descriptionHtml": "<p>PC Gamemax con AMD Ryzen 5 5600GT, 16 GB de RAM, SSD de 500 GB y fuente de 500 W 80+ Bronze.</p><h3>Qué incluye</h3><ul><li>AMD Ryzen 5 5600GT.</li><li>16 GB de RAM.</li><li>SSD de 500 GB.</li><li>Fuente de 500 W 80+ Bronze.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa madre, el gabinete y el sistema operativo, que el proveedor no detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "No hay datos de placa madre, gabinete ni sistema operativo.",
+        "La ficha original dice que la fuente es 80+ Bronze; tomé ese dato. Descripción con frases genéricas (\"1080p\", \"gamers exigentes\") que no usé."
+      ]
+    },
+    {
+      "slug": "pc-gamemax-amd-ryzen-5-7600x16gssd512650w-giga",
+      "name": "PC Gamemax AMD Ryzen 5 7600X 16 GB RAM SSD 512 GB fuente 650 W",
+      "brand": "Gamemax",
+      "storage": "512 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC Gamemax Ryzen 5 7600X 16 GB 512 GB",
+      "seoDescription": "PC Gamemax con AMD Ryzen 5 7600X, 16 GB de RAM, SSD de 512 GB y fuente de 650 W. Garantía oficial y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC Gamemax con AMD Ryzen 5 7600X, 16 GB de RAM, SSD de 512 GB y fuente de 650 W.",
+      "highlights": [
+        "AMD Ryzen 5 7600X",
+        "16 GB de RAM",
+        "SSD de 512 GB",
+        "Fuente de 650 W"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 5 7600X"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 512 GB"
+        },
+        {
+          "label": "Fuente",
+          "value": "650 W"
+        }
+      ],
+      "descriptionHtml": "<p>PC Gamemax con AMD Ryzen 5 7600X, 16 GB de RAM, SSD de 512 GB y fuente de 650 W.</p><h3>Qué incluye</h3><ul><li>AMD Ryzen 5 7600X.</li><li>16 GB de RAM.</li><li>SSD de 512 GB.</li><li>Fuente de 650 W.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa madre, el gabinete y el sistema operativo, que el proveedor no detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "No hay datos de placa madre, gabinete ni sistema operativo.",
+        "\"(GIGA\" quedó cortado en el nombre original; es una variante frente a la versión GOLD: confirmar qué significa."
+      ]
+    },
+    {
+      "slug": "pc-gamemax-amd-ryzen-5-7600x16gssd512650w-gold",
+      "name": "PC Gamemax AMD Ryzen 5 7600X 16 GB RAM SSD 512 GB fuente 650 W Gold",
+      "brand": "Gamemax",
+      "storage": "512 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC Gamemax Ryzen 5 7600X 16 GB 512 GB Gold",
+      "seoDescription": "PC Gamemax con AMD Ryzen 5 7600X, 16 GB de RAM, SSD de 512 GB y fuente de 650 W Gold. Garantía oficial y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC Gamemax con AMD Ryzen 5 7600X, 16 GB de RAM, SSD de 512 GB y fuente de 650 W Gold.",
+      "highlights": [
+        "AMD Ryzen 5 7600X",
+        "16 GB de RAM",
+        "SSD de 512 GB",
+        "Fuente de 650 W Gold"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 5 7600X"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 512 GB"
+        },
+        {
+          "label": "Fuente",
+          "value": "650 W, Gold"
+        }
+      ],
+      "descriptionHtml": "<p>PC Gamemax con AMD Ryzen 5 7600X, 16 GB de RAM, SSD de 512 GB y fuente de 650 W Gold.</p><h3>Qué incluye</h3><ul><li>AMD Ryzen 5 7600X.</li><li>16 GB de RAM.</li><li>SSD de 512 GB.</li><li>Fuente de 650 W Gold.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa madre, el gabinete y el sistema operativo, que el proveedor no detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "No hay datos de placa madre, gabinete ni sistema operativo.",
+        "La descripción habla de fuente certificada 80+ Gold; la dejé como \"Gold\". Frases como \"máximo rendimiento\" no se usaron."
+      ]
+    },
+    {
+      "slug": "pc-gamemax-amd-ryzen-5-7600x32gssd512v5060750w",
+      "name": "PC Gamemax AMD Ryzen 5 7600X 32 GB RAM SSD 512 GB V5060 fuente 750 W",
+      "brand": "Gamemax",
+      "storage": "512 GB",
+      "ram": "32 GB",
+      "seoTitle": "PC Gamemax Ryzen 5 7600X 32 GB V5060",
+      "seoDescription": "PC Gamemax con AMD Ryzen 5 7600X, 32 GB de RAM, SSD de 512 GB y fuente de 750 W. Garantía oficial y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC Gamemax con AMD Ryzen 5 7600X, 32 GB de RAM, SSD de 512 GB y fuente de 750 W. Incluye placa de video V5060.",
+      "highlights": [
+        "AMD Ryzen 5 7600X",
+        "32 GB de RAM",
+        "SSD de 512 GB",
+        "Placa de video V5060",
+        "Fuente de 750 W"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 5 7600X"
+        },
+        {
+          "label": "Placa de video",
+          "value": "V5060"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 512 GB"
+        },
+        {
+          "label": "Fuente",
+          "value": "750 W"
+        }
+      ],
+      "descriptionHtml": "<p>PC Gamemax con AMD Ryzen 5 7600X, 32 GB de RAM, SSD de 512 GB y fuente de 750 W.</p><h3>Qué incluye</h3><ul><li>AMD Ryzen 5 7600X.</li><li>32 GB de RAM.</li><li>SSD de 512 GB.</li><li>Placa de video V5060.</li><li>Fuente de 750 W.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa madre, el gabinete y el sistema operativo, que el proveedor no detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "No hay datos de placa madre, gabinete ni sistema operativo.",
+        "\"V5060\" se interpreta como placa de video, pero no dice marca ni memoria: la dejé tal cual figura. Confirmar modelo exacto."
+      ]
+    },
+    {
+      "slug": "pc-gamemax-amd-ryzen-7-5700g16gssd500500w",
+      "name": "PC Gamemax AMD Ryzen 7 5700G 16 GB RAM SSD 500 GB fuente 500 W",
+      "brand": "Gamemax",
+      "storage": "500 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC Gamemax Ryzen 7 5700G 16 GB 500 GB",
+      "seoDescription": "PC Gamemax con AMD Ryzen 7 5700G, 16 GB de RAM, SSD de 500 GB y fuente de 500 W. Garantía oficial y envíos a todo el país con retiro en Córdoba.",
+      "shortDescription": "PC Gamemax con AMD Ryzen 7 5700G, 16 GB de RAM, SSD de 500 GB y fuente de 500 W.",
+      "highlights": [
+        "AMD Ryzen 7 5700G",
+        "16 GB de RAM",
+        "SSD de 500 GB",
+        "Fuente de 500 W"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 7 5700G"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "SSD de 500 GB"
+        },
+        {
+          "label": "Fuente",
+          "value": "500 W"
+        }
+      ],
+      "descriptionHtml": "<p>PC Gamemax con AMD Ryzen 7 5700G, 16 GB de RAM, SSD de 500 GB y fuente de 500 W.</p><h3>Qué incluye</h3><ul><li>AMD Ryzen 7 5700G.</li><li>16 GB de RAM.</li><li>SSD de 500 GB.</li><li>Fuente de 500 W.</li></ul><h3>Antes de comprar</h3><p>Consultanos por la placa madre, el gabinete y el sistema operativo, que el proveedor no detalla.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "No hay datos de placa madre, gabinete ni sistema operativo."
+      ]
+    },
+    {
+      "slug": "pc-gamer-amd-athlon-3000g-16gb-ddr4-ssd-240gb",
+      "name": "PC Kelyx AMD Athlon 3000G 16 GB RAM DDR4 SSD 240 GB",
+      "brand": "Kelyx",
+      "storage": "240 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC Kelyx Athlon 3000G 16 GB SSD 240 GB",
+      "seoDescription": "PC Kelyx con AMD Athlon 3000G, 16 GB de RAM DDR4 y SSD de 240 GB, placa MSI B450M-A PRO MAX y fuente de 500 W. Garantía y envíos al país.",
+      "shortDescription": "PC Kelyx con AMD Athlon 3000G de 3,5 GHz y gráficos Radeon Vega 3, 16 GB de RAM DDR4 de 3200 MHz, SSD SATA de 240 GB y fuente de 500 W en gabinete Kelyx LC727-14.",
+      "highlights": [
+        "AMD Athlon 3000G de 3,5 GHz, 2 núcleos y 4 hilos",
+        "Gráficos Radeon Vega 3 integrados",
+        "16 GB de RAM DDR4 de 3200 MHz",
+        "SSD SATA de 240 GB",
+        "Placa MSI B450M-A PRO MAX y fuente de 500 W"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Athlon 3000G, 2 núcleos / 4 hilos, 3,5 GHz base, socket AM4"
+        },
+        {
+          "label": "Caché",
+          "value": "L3 de 4 MB"
+        },
+        {
+          "label": "Consumo del procesador",
+          "value": "TDP de 35 W"
+        },
+        {
+          "label": "Gráficos",
+          "value": "AMD Radeon Vega 3 integrados"
+        },
+        {
+          "label": "Placa madre",
+          "value": "MSI B450M-A PRO MAX, DDR4, AM4"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR4 de 3200 MHz, 1,35 V (2 x 8 GB)"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD SATA interno"
+        },
+        {
+          "label": "Fuente",
+          "value": "500 W"
+        },
+        {
+          "label": "Gabinete",
+          "value": "Kit Kelyx LC727-14"
+        }
+      ],
+      "descriptionHtml": "<p>PC Kelyx armada sobre el AMD Athlon 3000G, con gráficos Radeon Vega 3 integrados y 16 GB de RAM DDR4.</p><h3>Componentes</h3><ul><li>Procesador AMD Athlon 3000G de 3,5 GHz, socket AM4.</li><li>Placa madre MSI B450M-A PRO MAX.</li><li>16 GB de RAM DDR4 de 3200 MHz.</li><li>SSD SATA de 240 GB.</li><li>Gabinete Kit Kelyx LC727-14 con fuente de 500 W.</li></ul><h3>Antes de comprar</h3><p>Usa los gráficos integrados del procesador, sin placa de video dedicada. La foto del gabinete es ilustrativa. No se indica sistema operativo.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción dice memoria máxima del procesador de 2667 MT/s y el kit de 3200 MHz: publiqué solo la del kit.",
+        "Texto original con restos (\"&gt;\", enlaces de otras categorías): no usados. Sin sistema operativo en la ficha.",
+        "Se vende como \"PC Gamer\" pero tiene gráficos integrados y un Athlon: revisar si conviene ese nombre."
+      ]
+    },
+    {
+      "slug": "pc-gamer-amd-athlon-3000g-8gb-ddr4-ssd-240gb",
+      "name": "PC Kelyx AMD Athlon 3000G 8 GB RAM DDR4 SSD 240 GB",
+      "brand": "Kelyx",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC Kelyx Athlon 3000G 8 GB SSD 240 GB",
+      "seoDescription": "PC Kelyx con AMD Athlon 3000G, 8 GB de RAM DDR4 y SSD de 240 GB, placa MSI B450M-A PRO MAX y fuente de 500 W. Garantía y envíos al país.",
+      "shortDescription": "PC Kelyx con AMD Athlon 3000G de 3,5 GHz y gráficos Radeon Vega 3, 8 GB de RAM DDR4 de 3200 MHz, SSD SATA de 240 GB y fuente de 500 W en gabinete Kelyx LC727-14.",
+      "highlights": [
+        "AMD Athlon 3000G de 3,5 GHz, 2 núcleos y 4 hilos",
+        "Gráficos Radeon Vega 3 integrados",
+        "8 GB de RAM DDR4 de 3200 MHz",
+        "SSD SATA de 240 GB",
+        "Placa MSI B450M-A PRO MAX y fuente de 500 W"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Athlon 3000G, 2 núcleos / 4 hilos, 3,5 GHz base, socket AM4"
+        },
+        {
+          "label": "Caché",
+          "value": "L3 de 4 MB"
+        },
+        {
+          "label": "Consumo del procesador",
+          "value": "TDP de 35 W"
+        },
+        {
+          "label": "Gráficos",
+          "value": "AMD Radeon Vega 3 integrados"
+        },
+        {
+          "label": "Placa madre",
+          "value": "MSI B450M-A PRO MAX, DDR4, AM4"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR4 de 3200 MHz, 1,35 V"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD SATA interno"
+        },
+        {
+          "label": "Fuente",
+          "value": "500 W"
+        },
+        {
+          "label": "Gabinete",
+          "value": "Kit Kelyx LC727-14"
+        }
+      ],
+      "descriptionHtml": "<p>PC Kelyx armada sobre el AMD Athlon 3000G, con gráficos Radeon Vega 3 integrados y 8 GB de RAM DDR4.</p><h3>Componentes</h3><ul><li>Procesador AMD Athlon 3000G de 3,5 GHz, socket AM4.</li><li>Placa madre MSI B450M-A PRO MAX.</li><li>8 GB de RAM DDR4 de 3200 MHz.</li><li>SSD SATA de 240 GB.</li><li>Gabinete Kit Kelyx LC727-14 con fuente de 500 W.</li></ul><h3>Antes de comprar</h3><p>Usa los gráficos integrados del procesador, sin placa de video dedicada. La foto del gabinete es ilustrativa. No se indica sistema operativo.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción dice memoria máxima del procesador de 2667 MT/s y el kit de 3200 MHz: publiqué solo la del kit.",
+        "Sin sistema operativo en la ficha.",
+        "Se vende como \"PC Gamer\" pero tiene gráficos integrados y un Athlon: revisar si conviene ese nombre."
+      ]
+    },
+    {
+      "slug": "pc-gamer-amd-ryzen-3-3200g-8gb-ddr4-ssd-240gb",
+      "name": "PC Kelyx AMD Ryzen 3 3200G 8 GB RAM DDR4 SSD 240 GB",
+      "brand": "Kelyx",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC Kelyx Ryzen 3 3200G 8 GB SSD 240 GB",
+      "seoDescription": "PC con AMD Ryzen 3 3200G con video integrado, 8 GB de RAM DDR4, SSD de 240 GB, placa MSI A520M-A PRO y fuente de 500 W. Garantía y envíos al país.",
+      "shortDescription": "PC con AMD Ryzen 3 3200G (3.ª generación, con video integrado), 8 GB de RAM DDR4 de 3200 MHz, SSD SATA de 240 GB, placa MSI A520M-A PRO y fuente de 500 W.",
+      "highlights": [
+        "AMD Ryzen 3 3200G de 3.ª generación, socket AM4",
+        "Video integrado en el procesador",
+        "8 GB de RAM DDR4 de 3200 MHz",
+        "SSD SATA de 240 GB",
+        "Placa MSI A520M-A PRO y fuente de 500 W"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 3 3200G, 3.ª generación, socket AM4, con video integrado"
+        },
+        {
+          "label": "Placa madre",
+          "value": "MSI A520M-A PRO, DDR4"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR4 de 3200 MHz, 1,35 V"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD SATA interno"
+        },
+        {
+          "label": "Fuente",
+          "value": "500 W"
+        }
+      ],
+      "descriptionHtml": "<p>PC armada con AMD Ryzen 3 3200G, 8 GB de RAM DDR4 y SSD de 240 GB. Usa el video integrado del procesador.</p><h3>Componentes</h3><ul><li>Procesador AMD Ryzen 3 3200G, socket AM4.</li><li>Placa madre MSI A520M-A PRO.</li><li>8 GB de RAM DDR4 de 3200 MHz.</li><li>SSD SATA de 240 GB.</li><li>Gabinete kit con fuente de 500 W.</li></ul><h3>Antes de comprar</h3><p>No tiene placa de video dedicada. La foto del gabinete es ilustrativa. No se indica sistema operativo.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original solo repite el nombre; todo sale de la ficha corta.",
+        "No se informa modelo de gabinete ni sistema operativo. Nombre de marca Kelyx tomado del sku \"PC Gamer Kelyx Ryzen 3 3200G\"."
+      ]
+    },
+    {
+      "slug": "pc-gamer-amd-ryzen-5-5600g-16gb-ddr4-ssd-240gb-w10",
+      "name": "PC AMD Ryzen 5 5600GT 16 GB RAM DDR4 SSD 240 GB Windows 10",
+      "storage": "240 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC Ryzen 5 5600GT 16 GB SSD 240 GB W10",
+      "seoDescription": "PC con AMD Ryzen 5 5600GT con video Vega 7, 16 GB de RAM DDR4, SSD de 240 GB, placa A520M-HDV y Windows 10. Garantía y envíos a todo el país.",
+      "shortDescription": "PC con AMD Ryzen 5 5600GT (socket AM4, video Vega 7 integrado), 16 GB de RAM DDR4 de 3200 MHz, SSD de 240 GB y placa A520M-HDV con ranura M.2. Windows 10 según el nombre.",
+      "highlights": [
+        "AMD Ryzen 5 5600GT con video Vega 7 integrado",
+        "16 GB de RAM DDR4 de 3200 MHz",
+        "SSD de 240 GB",
+        "Placa A520M-HDV con ranura M.2",
+        "Gabinete kit de 600 W"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 5 5600GT, socket AM4"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Vega 7 integrados"
+        },
+        {
+          "label": "Placa madre",
+          "value": "A520M-HDV con ranura M.2"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR4 de 3200 MHz"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD"
+        },
+        {
+          "label": "Gabinete",
+          "value": "Kit de 600 W"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10"
+        }
+      ],
+      "descriptionHtml": "<p>PC armada con el AMD Ryzen 5 5600GT, que trae video Vega 7 integrado, 16 GB de RAM DDR4 y SSD de 240 GB.</p><h3>Componentes</h3><ul><li>Procesador AMD Ryzen 5 5600GT, socket AM4.</li><li>Placa madre A520M-HDV con ranura M.2.</li><li>16 GB de RAM DDR4 de 3200 MHz.</li><li>SSD de 240 GB.</li><li>Gabinete kit de 600 W.</li></ul><h3>Antes de comprar</h3><p>Usa video integrado, sin placa de video dedicada. La foto del gabinete es ilustrativa.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "Windows 10 sale del nombre (\"W10\"); la descripción no dice licencia ni edición. Confirmar.",
+        "\"Kit 600W\" no aclara si es la fuente o el gabinete con fuente; lo dejé como gabinete kit de 600 W. Confirmar.",
+        "La descripción original es texto de marketing de AMD y menciona demora de armado: no publicado. El slug dice 5600G y el nombre 5600GT: gana el nombre."
+      ]
+    },
+    {
+      "slug": "pc-gamer-amd-ryzen-5-5600g-am4-8gb-ddr4-ssd-240gb-w10",
+      "name": "PC AMD Ryzen 5 5600GT 8 GB RAM DDR4 SSD 240 GB Windows 10",
+      "storage": "240 GB",
+      "ram": "8 GB",
+      "seoTitle": "PC Ryzen 5 5600GT 8 GB SSD 240 GB W10",
+      "seoDescription": "PC con AMD Ryzen 5 5600GT con video Vega 7, 8 GB de RAM DDR4, SSD de 240 GB, placa A520M-HDV y Windows 10. Garantía y envíos a todo el país.",
+      "shortDescription": "PC con AMD Ryzen 5 5600GT (socket AM4, video Vega 7 integrado), 8 GB de RAM DDR4 de 3200 MHz, SSD de 240 GB y placa A520M-HDV con ranura M.2. Windows 10 según el nombre.",
+      "highlights": [
+        "AMD Ryzen 5 5600GT con video Vega 7 integrado",
+        "8 GB de RAM DDR4 de 3200 MHz",
+        "SSD de 240 GB",
+        "Placa A520M-HDV con ranura M.2",
+        "Gabinete kit de 600 W"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 5 5600GT, socket AM4"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Vega 7 integrados"
+        },
+        {
+          "label": "Placa madre",
+          "value": "A520M-HDV con ranura M.2"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR4 de 3200 MHz"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD"
+        },
+        {
+          "label": "Gabinete",
+          "value": "Kit de 600 W"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 10"
+        }
+      ],
+      "descriptionHtml": "<p>PC armada con el AMD Ryzen 5 5600GT, que trae video Vega 7 integrado, 8 GB de RAM DDR4 y SSD de 240 GB.</p><h3>Componentes</h3><ul><li>Procesador AMD Ryzen 5 5600GT, socket AM4.</li><li>Placa madre A520M-HDV con ranura M.2.</li><li>8 GB de RAM DDR4 de 3200 MHz.</li><li>SSD de 240 GB.</li><li>Gabinete kit de 600 W.</li></ul><h3>Antes de comprar</h3><p>Usa video integrado, sin placa de video dedicada. La foto del gabinete es ilustrativa.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "Windows 10 sale del nombre (\"W10\"); la descripción no dice licencia ni edición. Confirmar.",
+        "\"Kit 600W\" no aclara si es la fuente o el gabinete con fuente; lo dejé como gabinete kit de 600 W. Confirmar.",
+        "La descripción original es texto de marketing de AMD y menciona demora de armado: no publicado. El slug dice 5600G y el nombre 5600GT: gana el nombre."
+      ]
+    },
+    {
+      "slug": "pc-gamer-amd-ryzen-5-8600g-16gb-ddr5-ssd-240gb-w11",
+      "name": "PC AMD Ryzen 5 8600G 16 GB RAM DDR5 SSD 240 GB Windows 11",
+      "storage": "240 GB",
+      "ram": "16 GB",
+      "seoTitle": "PC Ryzen 5 8600G 16 GB DDR5 SSD 240 GB W11",
+      "seoDescription": "PC con AMD Ryzen 5 8600G de 4,3 GHz, 16 GB de RAM DDR5, SSD de 240 GB, placa MSI PRO A620M-E y Windows 11. Garantía y envíos a todo el país.",
+      "shortDescription": "PC con AMD Ryzen 5 8600G de 4,3 GHz (socket AM5, video integrado), 16 GB de RAM DDR5 de 4800 MHz (2 x 8 GB), SSD de 240 GB y placa MSI PRO A620M-E. Windows 11 según el nombre.",
+      "highlights": [
+        "AMD Ryzen 5 8600G de 4,3 GHz, socket AM5",
+        "16 GB de RAM DDR5 de 4800 MHz (2 x 8 GB)",
+        "SSD de 240 GB con ranura M.2 en la placa",
+        "Placa MSI PRO A620M-E con salida de video",
+        "Video integrado en el procesador"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 5 8600G, 4,3 GHz, socket AM5"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Integrados en el procesador"
+        },
+        {
+          "label": "Placa madre",
+          "value": "MSI PRO A620M-E, AM5, DDR5, con ranura M.2"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR5 de 4800 MHz, 2 x 8 GB"
+        },
+        {
+          "label": "Tipo de disco",
+          "value": "SSD"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11"
+        }
+      ],
+      "descriptionHtml": "<p>PC armada con el AMD Ryzen 5 8600G sobre socket AM5, con 16 GB de RAM DDR5 y SSD de 240 GB.</p><h3>Componentes</h3><ul><li>Procesador AMD Ryzen 5 8600G de 4,3 GHz.</li><li>Placa madre MSI PRO A620M-E con ranura M.2.</li><li>16 GB de RAM DDR5 de 4800 MHz, en dos módulos de 8 GB.</li><li>SSD de 240 GB.</li></ul><h3>Antes de comprar</h3><p>Usa los gráficos integrados del procesador. La foto del gabinete es ilustrativa y no se indica la fuente.</p><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción dice \"Vega 11\", que no coincide con lo esperable del 8600G: no lo publiqué, dejé \"gráficos integrados\". Revisar.",
+        "Windows 11 sale del nombre (\"W11\"); confirmar licencia. Sin dato de fuente ni modelo de gabinete.",
+        "El sku es un código interno largo, no un modelo. Descripción de marketing y demora de armado no publicados."
+      ]
+    }
+  ]
+}

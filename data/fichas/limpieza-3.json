@@ -1,0 +1,3265 @@
+{
+ "lote": "limpieza-3",
+ "soloSinCurar": true,
+ "nota": "Limpieza automática sin redactar: nombre, marca, título y descripción para Google.",
+ "productos": [
+  {
+   "slug": "lente-canon-rf-24mm-f1-8-macro-is-stm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RF 24mm f/1.8 Macro IS STM",
+   "seoDescription": "Lente Canon RF 24mm f/1.8 Macro IS STM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-28-70mm-f2l-usm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RF 28-70mm F2L USM",
+   "seoDescription": "Lente Canon RF 28-70mm F2L USM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-35mm-f-1-8-macro-is-stm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RF 35mm f/1.8 Macro IS STM",
+   "seoDescription": "Estabilizador de imagen Inteligente 5 pasos Longitud focal y apertura máxima 35 mm f/1.8 Tipo de lente Estándar… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-50mm-f-1-8-stm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RF 50mm f/1.8 STM",
+   "seoDescription": "Lente Canon RF 50mm f/1.8 STM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-600mm-f11-is-stm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RF 600mm F11 IS STM",
+   "seoDescription": "Lente Canon RF 600mm F11 IS STM, ideal para fotografía de naturaleza y deportes, con estabilización de imagen y un… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-70-200mm-f-2-8l-is-usm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RF 70-200mm f/2.8L IS USM",
+   "seoDescription": "Lente Canon RF 70-200mm f/2.8L IS USM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-800mm-f-11-is-stm",
+   "brand": "Canon",
+   "seoTitle": "Lente CANON RF 800mm f/11 IS STM",
+   "seoDescription": "Lente Canon RF 800mm f/11 IS STM: un teleobjetivo ligero y compacto ideal para fotografía de naturaleza y deportes… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-85mm-f-1-2l-usm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RF 85mm f/1.2L USM",
+   "seoDescription": "Lente Canon RF 85mm f/1.2L USM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-85mm-macro-f-2-is-stm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RF 85mm Macro f/2 IS STM",
+   "seoDescription": "El objetivo Canon RF 85mm F2 Macro IS STM, es un objetivo compacto y ligero, ideal tanto para retratos como para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-s-55-210mm-f-5-7",
+   "seoTitle": "Lente Canon RF-S 55-210mm f/5-7 IS STM",
+   "seoDescription": "Extiende tu alcance con un teleobjetivo ultraligero, estabilizado y compacto. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rfs-3-9-f3-5-dual-fisheye-stm-caja-blanca-2",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RFS 3.9 F3.5 DUAL FISHEYE STM",
+   "seoDescription": "Lente Canon RFS 3.9 F3.5 DUAL FISHEYE STM para fotografía VR 180°. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rfs-7-8-f4-stm-dual-caja-blanca-2",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RFS 7.8 F4 STM DUAL (caja blanca)",
+   "seoDescription": "Lente Canon RFS 7.8 F4 STM DUAL en caja blanca. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-nikkor-z-28mm-f-2-8",
+   "brand": "Nikon",
+   "seoTitle": "Lente Nikon Z 28mm f/2.8",
+   "seoDescription": "Lente Nikon Z 28mm f/2.8, ideal para fotografía de paisajes y retratos, con un diseño compacto y ligero, ofrece una… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-nikon-z-24-70mm-f-4-s",
+   "brand": "Nikon",
+   "seoTitle": "Lente Nikon Z 24-70mm f/4 S",
+   "seoDescription": "Lente Nikon Z 24-70mm f/4 S. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-nikon-z-35mm-f-1-8-s",
+   "brand": "Nikon",
+   "seoTitle": "Lente Nikon Z 35mm f/1.8 S",
+   "seoDescription": "Lente Nikon Z 35mm f/1.8 S: óptica de alta calidad para capturas nítidas y brillantes, ideal para fotografía de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-nikon-z-50mm-f-1-8-s",
+   "brand": "Nikon",
+   "seoTitle": "Lente Nikon Z 50mm f/1.8 S",
+   "seoDescription": "Lente Nikon Z 50mm f/1.8 S, ideal para retratos y fotografía con poca luz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-10-18mm-f2-8-dc-dn-contemporary",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 10-18mm F2.8 DC DN Contemporary",
+   "seoDescription": "Lente Sigma 10-18mm F2.8 DC DN Contemporary p/Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-100-400mm-f5-6-3-dg-hsm-contemporary-p-sony",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 100-400mm F5-6.3 DG HSM",
+   "seoDescription": "Lente Sigma 100-400mm F5-6.3 DG HSM Contemporary p/Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-12-24mm-f4-dg-hsm-art-2",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 12-24mm F4 DG HSM ART p/Canon",
+   "seoDescription": "Lente Sigma 12-24mm F4 DG HSM ART para Canon, ideal para fotografía de paisajes y arquitectura, con calidad óptica… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-18-35mm-f-1-8-dc-hsm-art",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 18-35mm f/1.8 DC HSM ART p/Canon",
+   "seoDescription": "Lente Sigma 18-35mm f/1.8 DC HSM ART p/Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-18-50mm-f2-8-dc-dn-contemporary-p-sony",
+   "seoTitle": "Lente Sigma 18-50mm F2.8 DC DN Contemporary",
+   "seoDescription": "Lente Sigma 18-50mm F2.8 DC DN Contemporary p/Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-24-70mm-f2-8-dg-art",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 24-70mm F2.8 DG DN Art p/Sony",
+   "seoDescription": "Lente Sigma 24-70mm F2.8 DG DN Art p/Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-24-70mm-f2-8-dg-art-p-nikon",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 24-70mm F2.8 DG Art p/Nikon",
+   "seoDescription": "Lente Sigma 24-70mm F2.8 DG Art p/Nikon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-24-70mm-f2-8-dg-os-hsm-art-p-canon",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 24-70mm F2.8 DG OS HSM ART",
+   "seoDescription": "Lente Sigma 24-70mm F2.8 DG OS HSM ART p/Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-28mm-f1-4-dg-hsm-art-p-sony",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 28mm F1.4 DG HSM ART p/Sony",
+   "seoDescription": "Lente Sigma 28mm F1.4 DG HSM ART p/Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-30mm-f1-4-dc-dn-contemporary",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 30mm F1.4 DC DN Contemporary Sony",
+   "seoDescription": "Lente Sigma 30mm F1.4 DC DN Contemporary Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-35mm-f-1-4-dg-art-hsm-p-nikon",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 35mm f/1.4 DG ART HSM p/Nikon",
+   "seoDescription": "Lente Sigma 35mm f/1.4 DG ART HSM p/Nikon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-35mm-f-1-4-dg-art-p-sony",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 35mm f/1.4 DG DN ART p/Sony",
+   "seoDescription": "Lente Sigma 35mm f/1.4 DG DN ART p/Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-35mm-f1-4-dg-hsm-art",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 35mm F1.4 DC HSM ART p/Canon",
+   "seoDescription": "Lente Sigma 35mm F1.4 DC HSM ART p/Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-50-100mm-f1-8-dc-hsm-art-p-canon",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 50-100mm F1.8 DC HSM ART p/Canon",
+   "seoDescription": "Lente Sigma 50-100mm F1.8 DC HSM ART p/Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-50mm-f1-4-dg-hsm-art",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 50mm F1.4 DC HSM ART p/Canon",
+   "seoDescription": "Lente Sigma 50mm F1.4 DC HSM ART p/Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-56mm-f1-4-dc-dn-contemporary",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 56mm F1.4 DC DN Contemporary",
+   "seoDescription": "Lente Sigma 56mm F1.4 DC DN Contemporary p/Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-70mm-f2-8-dg-macro-art-p-sony",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 70mm F2.8 DG MACRO ART p/Sony",
+   "seoDescription": "Lente Sigma 70mm F2.8 DG MACRO ART p/Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-85mm-f-1-4-dg-hsm-art-p-sony",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 85mm f/1.4 DG DN ART p/Sony",
+   "seoDescription": "Lente Sigma 85mm f/1.4 DG DN ART p/Sony. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-p-canon-14-24mm-f2-8-dg-hsm-art",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 14-24mm F2.8 DG HSM ART p/Canon",
+   "seoDescription": "Lente Sigma 14-24mm F2.8 DG HSM ART p/Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-p-canon-30mm-f1-4-dc-hsm-art",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 30mm F1.4 DC HSM ART p/Canon",
+   "seoDescription": "Lente Sigma 30mm F1.4 DC HSM ART p/Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-p-canon-70mm-f2-8-dg-macro-art",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 70mm F2.8 DG MACRO ART p/Canon",
+   "seoDescription": "Lente Sigma 70mm F2.8 DG MACRO ART p/Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sigma-p-canon-85mm-f1-4-dc-hsm-art",
+   "brand": "Sigma",
+   "seoTitle": "Lente Sigma 85mm F1.4 DC HSM ART p/Canon",
+   "seoDescription": "Lente Sigma 85mm F1.4 DC HSM ART p/Canon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sony-fe-14mm-f1-8-gm",
+   "brand": "Sony",
+   "seoTitle": "Lente Sony FE 14mm F1.8 GM",
+   "seoDescription": "Lente Sony FE 14mm F1.8 GM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sony-fe-200-600mm-f5-6-6-3-g-oss",
+   "brand": "Sony",
+   "seoTitle": "Lente Sony FE 200-600MM F5.6-6.3 G OSS",
+   "seoDescription": "Lente Sony FE 200-600MM F5.6-6.3 G OSS. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sony-fe-24-70mm-f2-8-gm-ii",
+   "brand": "Sony",
+   "seoTitle": "Lente Sony FE 24-70mm F2.8 GM II",
+   "seoDescription": "Lente Sony FE 24-70mm F2.8 GM II. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sony-fe-24mm-1-4-gm",
+   "brand": "Sony",
+   "seoTitle": "Lente Sony FE 24MM 1.4 GM",
+   "seoDescription": "Lente Sony FE 24mm F1.4 GM de apertura amplia, ideal para fotografía profesional, paisajes, arquitectura y retratos… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sony-fe-24mm-f1-4-gm",
+   "brand": "Sony",
+   "seoTitle": "Lente Sony FE 24mm F1.4 GM",
+   "seoDescription": "Lente Sony FE 24mm F1.4 GM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sony-fe-2x-teleconverter",
+   "brand": "Sony",
+   "seoTitle": "Lente Sony FE 2X TELECONVERTER",
+   "seoDescription": "Teleconvertidor Sony FE 2X que duplica la distancia focal de tus lentes compatibles manteniendo excelente calidad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sony-fe-35mm-1-4-gm",
+   "brand": "Sony",
+   "seoTitle": "Lente Sony FE 35MM 1.4 GM",
+   "seoDescription": "Lente Sony FE 35mm f/1.4 GM de máxima calidad para fotografía profesional con bokeh excepcional y nitidez superior. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sony-fe-50mm-1-8-2",
+   "brand": "Sony",
+   "seoTitle": "Lente Sony FE 50MM 1.8",
+   "seoDescription": "Lente Sony FE 50mm f/1.8 con gran apertura para retratos profesionales y fotografía con bokeh espectacular en… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sony-fe-50mm-f1-4-gm",
+   "brand": "Sony",
+   "seoTitle": "Lente Sony FE 50mm F1.4 GM",
+   "seoDescription": "Lente Sony FE 50mm F1.4 GM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sony-fe-50mm-f1-8",
+   "brand": "Sony",
+   "seoTitle": "Lente Sony FE 50mm F1.8",
+   "seoDescription": "Lente Sony FE 50mm F1.8. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sony-fe-55mm-1-8-2",
+   "brand": "Sony",
+   "seoTitle": "Lente Sony FE 55MM 1.8",
+   "seoDescription": "Lente Sony FE 55mm f/1.8 ZA Zeiss Sonnar T*. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sony-fe-70-200mm-f4-macro-g-oss-%e2%85%b1",
+   "brand": "Sony",
+   "seoTitle": "Lente Sony FE 70-200mm F4 Macro G OSS Ⅱ",
+   "seoDescription": "Lente Sony FE 70-200mm F4 Macro G OSS Ⅱ. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sony-fe-85mm-1-8-2",
+   "brand": "Sony",
+   "seoTitle": "Lente Sony FE 85MM 1.8",
+   "seoDescription": "Objetivo Sony FE 85mm f/1.8 para retratos profesionales. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sony-fe-90mm-2-8-macro-g-oss-2",
+   "brand": "Sony",
+   "seoTitle": "Lente Sony FE 90MM 2.8 MACRO G OSS",
+   "seoDescription": "Lente macro profesional Sony FE 90mm f/2.8 G OSS con estabilización óptica, enfoque automático silencioso y calidad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-sony-fe-90mm-f28-macro-g-oss",
+   "brand": "Sony",
+   "seoTitle": "Lente Sony FE 90mm F2,8 Macro G OSS",
+   "seoDescription": "Lente Sony FE 90mm F2,8 Macro G OSS. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "licuadora-de-mano-smartlife-sl-sm5010fpn",
+   "seoTitle": "Licuadora de Mano Smartlife SL-SM5010FPN",
+   "seoDescription": "Licuadora de Mano Smartlife SL-SM5010FPN. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "licuadora-de-mano-smartlife-sl-sm5010pn",
+   "seoTitle": "Licuadora de Mano Smartlife SL-SM5010PN",
+   "seoDescription": "Licuadora de Mano Smartlife SL-SM5010PN. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "licuadora-de-mano-yelmo-lm-1535",
+   "seoTitle": "Licuadora de Mano Yelmo LM-1535",
+   "seoDescription": "Licuadora de Mano Yelmo LM-1535, potente y versátil, ideal para preparar batidos, sopas y salsas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "licuadora-embassy-em-600-600w-jarra-de-vidrio",
+   "brand": "Embassy",
+   "seoTitle": "Licuadora Embassy Em-600 600W Jarra de Vidrio",
+   "seoDescription": "Licuadora Embassy EM-600 de 600W con jarra de vidrio, ideal para preparar batidos y smoothies en casa. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "licuadora-midea-inoxidable-800w-jarra-de-vidrio-1-5-lt",
+   "brand": "Midea",
+   "seoTitle": "Licuadora Midea Inoxidable 800W Jarra",
+   "seoDescription": "2 velocidades Jarra de vidrio Función Pulsar Pica hielo Cuchilla de 4 hojas Apta Lavavajilla. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "licuadora-peabody-pe-ln610b-gris",
+   "brand": "Peabody",
+   "seoTitle": "Licuadora Peabody PE-LN610B Blanco",
+   "seoDescription": "Marca: Peabody Modelo: PE-LN610B Color: Blanca Potencia: 600 W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "licuadora-peabody-pe-ln610r-roja",
+   "brand": "Peabody",
+   "seoTitle": "Licuadora de Mesa Peabody 1.5 Litros 600w",
+   "seoDescription": "Marca: Peabody Modelo: PE-LN610R Color: Rojo Potencia: 600 W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "licuadora-smartlife-jarra-de-vidrio",
+   "seoTitle": "Licuadora Smartlife Jarra de Vidrio Blanca",
+   "seoDescription": "Licuadora Smartlife Jarra de Vidrio Blanca. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "licuadora-whitenblack-1-5-lt-400w",
+   "brand": "Whitenblack",
+   "seoTitle": "Licuadora Whitenblack 1.5 Lt. 400W",
+   "seoDescription": "Cuchilla de acero inoxidable. Tapa con pico vertedor. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "licuadora-whitenblack-350w-1lt-alwb100",
+   "brand": "Whitenblack",
+   "seoTitle": "Licuadora Whitenblack 350W 1Lt. ALWB100",
+   "seoDescription": "Licuadora Whitenblack 350W 1Lt. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lijadora-orbital-inalambrica-daihatsu-20v",
+   "seoTitle": "Lijadora Orbital Inalambrica Daihatsu 20V",
+   "seoDescription": "Lijadora Orbital Inalambrica Daihatsu 20V. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ln-brother-hl-1200-21ppm",
+   "name": "LN Brother HL-1200 21PPM",
+   "brand": "Brother",
+   "seoTitle": "LN Brother HL-1200 21PPM",
+   "seoDescription": "LN Brother HL-1200 21PPM. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "LN Brother HL-1200 21PPM. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ln-brother-hl-1212w-21ppm-wifi",
+   "name": "LN Brother HL-1212W 21PPM WIFI",
+   "brand": "Brother",
+   "seoTitle": "LN Brother HL-1212W 21PPM WIFI",
+   "seoDescription": "LN Brother HL-1212W 21PPM WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "LN Brother HL-1212W 21PPM WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ln-brother-hl-2320d-30ppm-duplex-2",
+   "seoTitle": "Impresora Láser Brother HL-2320D 30PPM DUPLEX",
+   "seoDescription": "Impresora láser monocromática Brother HL-2320D con impresión automática a doble cara, velocidad de 30 páginas por… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ln-brother-hl-l2360dw-32ppm-wifi-duplex",
+   "name": "LN Brother HL-L2360DW 32PPM WIFI Duplex",
+   "brand": "Brother",
+   "seoTitle": "LN Brother HL-L2360DW 32PPM WIFI Duplex",
+   "seoDescription": "LN Brother HL-L2360DW 32PPM WIFI Duplex. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "LN Brother HL-L2360DW 32PPM WIFI Duplex. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ln-brother-hl-l5210dw-48ppm-duplex-red",
+   "seoTitle": "Impresora Láser Brother HL-L5210DN 48PPM",
+   "seoDescription": "Impresora Láser Brother HL-L5210DN 48PPM DUPLEX RED. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Impresora Láser Brother HL-L5210DN 48PPM DUPLEX RED. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ln-brother-hl-l6415dw-50ppm-wifi-duplex-red",
+   "name": "LN Brother HL-L6415DW 50PPM WIFI Duplex Red",
+   "brand": "Brother",
+   "seoTitle": "LN Brother HL-L6415DW 50PPM WIFI Duplex Red",
+   "seoDescription": "Impresora láser LN BROTHER HL-L6415DW 50PPM con WiFi y duplex, ideal para oficinas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ln-hp-m111w-lj-21-ppm-7md68a-wifi",
+   "brand": "HP",
+   "seoTitle": "Impresora Láser Hp M111W Wi-fi",
+   "seoDescription": "Impresora Láser Hp M111W Wi-fi. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Impresora Láser Hp M111W Wi-fi. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ln-hp-m111w-lj-21-ppm-7md68a-wifi-2",
+   "brand": "HP",
+   "seoTitle": "Impresora Laser Hp M111W WIFI",
+   "seoDescription": "Impresora láser HP M111W con conectividad WiFi, velocidad 21 ppm, ideal para oficina y hogar con calidad profesional… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ln-hp-m501dn-lj-45ppm-eprint-j8h61a",
+   "seoTitle": "Impresora Laser Hp M501DN LJ 45PPM Red Duplex",
+   "seoDescription": "Impresora HP LaserJet Pro M501dn con velocidad 45PPM, conectividad ePrint, dúplex automático y calidad profesional… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lustradora-de-auto-daihatsu-120w",
+   "seoTitle": "Lustradora de Auto Daihatsu 120W",
+   "seoDescription": "Lustradora / pulidora orbital para autos de 120W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lustralijadora-rotativa-daihatsu-1200w-180mm",
+   "seoTitle": "Lustralijadora Rotativa Pro Daihatsu 1200W",
+   "seoDescription": "Lustralijadora rotativa de 1200W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "luz-de-emergencia-trv-28-led-8hs",
+   "seoTitle": "Luz de Emergencia TRV 28 LED 8HS",
+   "seoDescription": "28 Leds de Alta Performance. Hasta 8 horas de autonomía Sensor para control remoto de encendido y apagado a distancia. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "luz-de-emergencia-trv-56-led-8hs",
+   "seoTitle": "Luz de Emergencia TRV 56 LED 8HS",
+   "seoDescription": "56 Leds de Alta Performance. Hasta 8 horas de autonomía Sensor para control remoto de encendido y apagado a distancia. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-13-16gb-1tb-midnight",
+   "seoTitle": "MacBook Air M5 13” 16gb 1tb Midnight",
+   "seoDescription": "MacBook Air M5 13″ con 16GB RAM y 1TB SSD en color Midnight. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-13-16gb-1tb-silver",
+   "seoTitle": "MacBook Air M5 13” 16gb 1tb Silver",
+   "seoDescription": "MacBook Air M5 13 pulgadas con 16GB RAM, 1TB almacenamiento y acabado Silver. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-13-16gb-1tb-sky-blue",
+   "seoTitle": "MacBook Air M5 13” 16gb 1tb Sky Blue",
+   "seoDescription": "MacBook Air M5 13″ con 16GB RAM, 1TB almacenamiento en exclusivo color Sky Blue. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-13-16gb-1tb-starlight",
+   "seoTitle": "MacBook Air M5 13” 16gb 1tb Starlight",
+   "seoDescription": "MacBook Air M5 13 pulgadas con 16GB RAM, 1TB almacenamiento en elegante color Starlight. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-13-16gb-512gb-midnight",
+   "seoTitle": "MacBook Air M5 13” 16gb 512gb Midnight",
+   "seoDescription": "Nueva MacBook Air M5 de 13 pulgadas con 16GB RAM y 512GB SSD en elegante color Midnight. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-13-16gb-512gb-silver",
+   "seoTitle": "MacBook Air M5 13” 16gb 512gb Silver",
+   "seoDescription": "MacBook Air M5 13 pulgadas con 16GB RAM, 512GB SSD en color Silver. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-13-16gb-512gb-sky-blue",
+   "seoTitle": "MacBook Air M5 13” 16gb 512gb Sky Blue",
+   "seoDescription": "MacBook Air M5 13 pulgadas con 16GB RAM, 512GB almacenamiento en elegante Sky Blue. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-13-16gb-512gb-starlight",
+   "seoTitle": "MacBook Air M5 13” 16gb 512gb Starlight",
+   "seoDescription": "MacBook Air M5 13 pulgadas con 16GB RAM, 512GB SSD en color Starlight. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-15-16gb-1tb-midnight",
+   "seoTitle": "MacBook Air M5 15” 16gb 1tb Midnight",
+   "seoDescription": "MacBook Air M5 15 pulgadas con 16GB RAM y 1TB almacenamiento en elegante color Midnight. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-15-16gb-1tb-silver",
+   "seoTitle": "MacBook Air M5 15” 16gb 1tb Silver",
+   "seoDescription": "MacBook Air M5 15 pulgadas con 16GB RAM y 1TB almacenamiento en color Silver. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-15-16gb-1tb-sky-blue",
+   "seoTitle": "MacBook Air M5 15” 16gb 1tb Sky Blue",
+   "seoDescription": "Nueva MacBook Air M5 de 15 pulgadas con 16GB RAM y 1TB almacenamiento en elegante color Sky Blue. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-15-16gb-1tb-starlight",
+   "seoTitle": "MacBook Air M5 15” 16gb 1tb Starlight",
+   "seoDescription": "MacBook Air M5 15 pulgadas con 16GB RAM y 1TB almacenamiento en elegante color Starlight. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-15-16gb-512gb-midnight",
+   "seoTitle": "MacBook Air M5 15” 16gb 512gb Midnight",
+   "seoDescription": "MacBook Air M5 15 pulgadas con 16GB RAM y 512GB almacenamiento en elegante color Midnight. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-15-16gb-512gb-midnight-2",
+   "seoTitle": "MacBook Air M5 15” 16gb 512gb Midnight",
+   "seoDescription": "MacBook Air M5 15″ en Midnight con 16GB RAM y 512GB SSD. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-15-16gb-512gb-silver",
+   "seoTitle": "MacBook Air M5 15” 16gb 512gb Silver",
+   "seoDescription": "MacBook Air M5 15 pulgadas con 16GB RAM y 512GB SSD en elegante color Silver. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-15-16gb-512gb-silver-2",
+   "seoTitle": "MacBook Air M5 15” 16gb 512gb Silver",
+   "seoDescription": "MacBook Air M5 15 pulgadas con 16GB RAM y 512GB SSD en elegante acabado Silver. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-15-16gb-512gb-sky-blue",
+   "seoTitle": "MacBook Air M5 15” 16gb 512gb Sky Blue",
+   "seoDescription": "MacBook Air M5 15 pulgadas con 16GB RAM y 512GB almacenamiento en elegante color Sky Blue. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-15-16gb-512gb-sky-blue-2",
+   "seoTitle": "MacBook Air M5 15” 16gb 512gb Sky Blue",
+   "seoDescription": "MacBook Air M5 15 pulgadas con 16GB RAM y 512GB SSD en exclusivo color Sky Blue. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-air-m5-15-24gb-1tb-midnight",
+   "seoTitle": "MacBook Air M5 15” 24gb 1tb Midnight",
+   "seoDescription": "Diseño ultra delgado, pantalla expansiva de 15.3″ y la máxima potencia del chip M5. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-neo-13%e2%80%b3-8gb-512gb-citrus",
+   "seoTitle": "MacBook Neo 13″ 8gb 512gb Citrus",
+   "seoDescription": "MacBook Neo 13″ con 8GB RAM, 512GB SSD y vibrante color Citrus. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-neo-13%e2%80%b3-8gb-512gb-indigo",
+   "seoTitle": "MacBook Neo 13″ 8gb 512gb Indigo",
+   "seoDescription": "MacBook Neo 13″ con 8GB RAM y 512GB SSD en elegante color Indigo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-neo-13-8gb-256gb-citrus",
+   "seoTitle": "MacBook Neo 13″ 8gb 256gb Citrus",
+   "seoDescription": "MacBook Neo 13″ con 8GB RAM, 256GB SSD en vibrante color Citrus. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-neo-13-8gb-256gb-indigo",
+   "seoTitle": "MacBook Neo 13″ 8gb 256gb Indigo",
+   "seoDescription": "MacBook Neo 13 pulgadas con 8GB RAM, 256GB SSD en elegante color Indigo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-neo-13-8gb-256gb-silver",
+   "seoTitle": "MacBook Neo 13″ 8gb 256gb Silver",
+   "seoDescription": "MacBook Neo 13″ con 8GB RAM y 256GB SSD en elegante color Silver. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-neo-13-8gb-512gb-silver",
+   "seoTitle": "MacBook Neo 13″ 8gb 512gb Silver",
+   "seoDescription": "MacBook Neo 13″ con 8GB RAM, 512GB almacenamiento en elegante color Silver. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-pro-m5-14-16gb-1tb-silver",
+   "seoTitle": "MacBook Pro M5 14″ 16gb 1tb Silver",
+   "seoDescription": "MacBook Pro M5 14 pulgadas con 16GB RAM y 1TB SSD en elegante acabado Silver. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-pro-m5-14-16gb-1tb-space",
+   "seoTitle": "MacBook Pro M5 14″ 16gb 1tb Space",
+   "seoDescription": "MacBook Pro M5 14 pulgadas con 16GB RAM y 1TB almacenamiento en Space Gray. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-pro-m5-14-24gb-1tb-silver",
+   "seoTitle": "MacBook Pro M5 14″ 24gb 1tb silver",
+   "seoDescription": "MacBook Pro M5 14″ con chip revolucionario, 24GB RAM unificada, SSD 1TB ultrarrápido, pantalla Liquid Retina XDR y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-pro-m5-16-24gb-1tb-silver",
+   "seoTitle": "MacBook Pro M5 Pro 16″ 24gb 1tb Silver",
+   "seoDescription": "MacBook Pro M5 16 pulgadas con 24GB RAM y 1TB almacenamiento en color Silver. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-pro-m5-16-24gb-1tb-space",
+   "seoTitle": "MacBook Pro M5 Pro 16″ 24gb 1tb Space",
+   "seoDescription": "MacBook Pro M5 16 pulgadas con 24GB RAM y 1TB almacenamiento en elegante Space Gray. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-pro-m5-16-48gb-1tb-silver",
+   "seoTitle": "MacBook Pro M5 Pro 16″ 48gb 1tb Silver",
+   "seoDescription": "MacBook Pro M5 16 pulgadas con 48GB RAM y 1TB SSD en Silver. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-pro-m5-16-48gb-1tb-space",
+   "seoTitle": "MacBook Pro M5 Pro 16″ 48gb 1tb Space",
+   "seoDescription": "Nueva MacBook Pro M5 16 pulgadas con 48GB RAM y 1TB SSD en Space Gray. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-pro-m5-pro-14%e2%80%b3-24gb-1tb-silver",
+   "seoTitle": "MacBook Pro M5 Pro 14″ 24gb 1tb Silver",
+   "seoDescription": "La cima de la potencia portátil para profesionales exigentes. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-pro-m5-pro-14%e2%80%b3-24gb-2tb-silver",
+   "seoTitle": "MacBook Pro M5 Pro 14″ 24gb 2tb Silver",
+   "seoDescription": "MacBook Pro M5 Pro 14″ con 24GB RAM y 2TB SSD en Silver. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-pro-m5-pro-14%e2%80%b3-24gb-2tb-space",
+   "seoTitle": "MacBook Pro M5 Pro 14″ 24gb 2tb Space",
+   "seoDescription": "MacBook Pro M5 Pro 14 pulgadas con 24GB RAM y 2TB almacenamiento en Space Gray. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-pro-m5-pro-14-24gb-1tb-space",
+   "seoTitle": "MacBook Pro M5 Pro 14″ 24gb 1tb Space",
+   "seoDescription": "MacBook Pro M5 Pro 14″ en Space Black con máximo rendimiento. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-pro-m5-pro-max-16-36gb-2tb-silver",
+   "seoTitle": "MacBook Pro M5 Pro Max 16″ 36gb 2tb Silver",
+   "seoDescription": "MacBook Pro M5 Pro Max 16 pulgadas con 36GB RAM y 2TB SSD en color Silver. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "macbook-pro-m5-pro-max-16-36gb-2tb-space",
+   "seoTitle": "MacBook Air M5 15” 16gb 512gb Midnight",
+   "seoDescription": "MacBook Air M5 15 pulgadas con 16GB RAM, 512GB almacenamiento en color Midnight. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "maletin-porta-notebook-travel-tech-original-negro",
+   "seoTitle": "Maletin Porta Notebook Travel Tech Original",
+   "seoDescription": "Correa larga regulable para hombro. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "maquina-contadora-de-billetes-gadnic-mc-01-profesional",
+   "seoTitle": "Máquina Contadora de Billetes Bic-05",
+   "seoDescription": "Velocidad de conteo ultra rápida Funciones avanzadas de conteo y armado de fajos de dinero en forma automático. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mat-de-yoga-waggs-5mm-espesor-azul",
+   "seoTitle": "Tender Plegable Waggs Acero Inoxidable",
+   "seoDescription": "Altura plegado: 1.105 m. Ancho plegado: 55 cm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mate-acero-inoxidable-outdoors-blanco",
+   "seoTitle": "Mate Acero Inoxidable Outdoors Blanco",
+   "seoDescription": "Mantiene el calor y frio 30 minutos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mate-acero-inoxidable-outdoors-lila",
+   "seoTitle": "Mate Acero Inoxidable Outdoors Lila",
+   "seoDescription": "Mantiene el calor y frio 30 minutos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mate-acero-inoxidable-outdoors-lila-gris",
+   "seoTitle": "Mate Acero Inoxidable Outdoors Gris",
+   "seoDescription": "Mantiene el calor y frio 30 minutos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mate-acero-inoxidable-outdoors-silver",
+   "seoTitle": "Mate Acero Inoxidable Outdoors Silver",
+   "seoDescription": "Mantiene el calor y frio 30 minutos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mate-acero-inoxidable-outdoors-verde",
+   "seoTitle": "Mate Acero Inoxidable Outdoors Verde",
+   "seoDescription": "Mantiene el calor y frio 30 minutos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mate-stanley-verde-236-ml",
+   "brand": "Stanley",
+   "seoTitle": "Mate Stanley Verde 236 ml.",
+   "seoDescription": "Mate Stanley Verde 236 ml.. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mate Stanley Verde 236 ml.. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am4-prime-a520m-a-ii-box-ddr4-m-atx",
+   "name": "MB Asus AM4 Prime A520M-A II BOX DDR4 M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM4 Prime A520M-A II BOX DDR4 M-atx",
+   "seoDescription": "MB Asus AM4 Prime A520M-A II BOX DDR4 M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus AM4 Prime A520M-A II BOX DDR4 M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am4-prime-a520m-a-ii-box-ddr4-m-atx-2",
+   "name": "MB Asus AM4 Prime A520M-A II BOX DDR4 M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM4 Prime A520M-A II BOX DDR4 M-atx",
+   "seoDescription": "Motherboard ASUS PRIME A520M-A II con socket AM4, soporte DDR4, formato micro-ATX. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am4-prime-a520m-k-ddr4-box-m-atx",
+   "name": "Asus 90MB1500-M0EAY0",
+   "brand": "Asus",
+   "seoTitle": "Asus 90MB1500-M0EAY0",
+   "seoDescription": "Asus 90MB1500-M0EAY0. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Asus 90MB1500-M0EAY0. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am4-prime-a520m-k-ddr4-box-m-atx-2",
+   "name": "MB Asus AM4 Prime A520M-K DDR4 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM4 Prime A520M-K DDR4 BOX M-atx",
+   "seoDescription": "Motherboard ASUS Prime A520M-K AM4 con soporte DDR4, formato Micro-ATX ideal para equipos compactos y eficientes de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am4-prime-b550m-a-ac-box-m-atx",
+   "name": "Mother Asus Prime B550M-A AC AM4 (WIFI)",
+   "brand": "Asus",
+   "seoTitle": "Mother Asus Prime B550M-A AC AM4 (WIFI)",
+   "seoDescription": "Mother Asus Prime B550M-A AC AM4 (WIFI). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mother Asus Prime B550M-A AC AM4 (WIFI). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am4-prime-b550m-a-ac-box-m-atx-2",
+   "name": "MB Asus AM4 Prime B550M-A AC BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM4 Prime B550M-A AC BOX M-atx",
+   "seoDescription": "Placa base ASUS PRIME B550M-A AC con WiFi integrado, formato micro ATX, socket AM4 para procesadores AMD Ryzen. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am4-prime-b550m-k-argb-ddr4-box-m-atx",
+   "name": "MB Asus AM4 Prime B550M-K ARGB DDR4 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM4 Prime B550M-K ARGB DDR4 BOX M-atx",
+   "seoDescription": "MB Asus AM4 Prime B550M-K ARGB DDR4 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus AM4 Prime B550M-K ARGB DDR4 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am4-prime-b550m-k-ddr4-box-m-atx",
+   "name": "MB Asus AM4 Prime B550M-K DDR4 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM4 Prime B550M-K DDR4 BOX M-atx",
+   "seoDescription": "MB Asus AM4 Prime B550M-K DDR4 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus AM4 Prime B550M-K DDR4 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am4-tuf-gaming-a520m-plus-wifi-ddr4-box",
+   "name": "MB Asus AM4 TUF Gaming A520M-PLUS WIFI DDR4 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM4 TUF Gaming A520M-PLUS WIFI DDR4",
+   "seoDescription": "Motherboard ASUS TUF GAMING A520M-PLUS WIFI, socket AM4, DDR4, conexión WiFi integrada, diseño gaming resistente y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am4-tuf-gaming-b550m-plus-wifi-ii-ddr4-box",
+   "name": "Asus 90MB19Y0-M0EAY0",
+   "brand": "Asus",
+   "seoTitle": "Asus 90MB19Y0-M0EAY0",
+   "seoDescription": "Asus 90MB19Y0-M0EAY0. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Asus 90MB19Y0-M0EAY0. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am5-b650m-ayw-wifi-ddr5-box-m-atx",
+   "name": "MB Asus AM5 B650M-AYW WIFI DDR5 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 B650M-AYW WIFI DDR5 BOX M-atx",
+   "seoDescription": "Placa base ASUS B650M-AYW WIFI AM5 con soporte DDR5, conectividad inalámbrica integrada y formato micro-ATX compacto… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-prime-a620m-a-ddr5-box-m-atx",
+   "name": "MB Asus AM5 Prime A620M-A DDR5 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 Prime A620M-A DDR5 BOX M-atx",
+   "seoDescription": "MB Asus AM5 Prime A620M-A DDR5 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus AM5 Prime A620M-A DDR5 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am5-prime-a620m-k-ddr5-box-m-atx",
+   "name": "Asus 90MB1F40-M0EAY0",
+   "brand": "Asus",
+   "seoTitle": "Asus 90MB1F40-M0EAY0",
+   "seoDescription": "Asus 90MB1F40-M0EAY0. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Asus 90MB1F40-M0EAY0. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am5-prime-a620m-k-ddr5-box-m-atx-2",
+   "name": "MB Asus AM5 Prime A620M-K DDR5 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 Prime A620M-K DDR5 BOX M-atx",
+   "seoDescription": "Placa base ASUS PRIME A620M-K AM5 con soporte DDR5, formato micro-ATX ideal para builds compactos con procesadores… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-prime-b650em-a-box-ddr5-m-atx",
+   "name": "MB Asus AM5 Prime B650EM-A BOX DDR5 M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 Prime B650EM-A BOX DDR5 M-atx",
+   "seoDescription": "Motherboard ASUS PRIME B650EM-A socket AM5, compatible con DDR5, formato micro-ATX ideal para procesadores AMD Ryzen… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-prime-b650em-a-wifi-box-ddr5-m-atx",
+   "name": "MB Asus AM5 Prime B650EM-A WIFI BOX DDR5 M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 Prime B650EM-A WIFI BOX DDR5",
+   "seoDescription": "Placa base ASUS PRIME B650E-M-A WIFI con socket AM5, soporte DDR5, conectividad WiFi y formato micro-ATX para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-prime-b650m-a-ii-box-ddr5-m-atx",
+   "name": "MB Asus AM5 Prime B650M-A II DDR5 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 Prime B650M-A II DDR5 BOX M-atx",
+   "seoDescription": "MB Asus AM5 Prime B650M-A II DDR5 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus AM5 Prime B650M-A II DDR5 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am5-prime-b650m-f-ddr5-box-m-atx",
+   "name": "MB Asus AM5 Prime B650M-F DDR5 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 Prime B650M-F DDR5 BOX M-atx",
+   "seoDescription": "Motherboard ASUS PRIME B650M-F con socket AM5, soporte DDR5, formato Micro-ATX ideal para procesadores AMD Ryzen… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-prime-b840m-a-ddr5-box-2",
+   "name": "MB Asus AM5 Prime B840M-A DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 Prime B840M-A DDR5 BOX",
+   "seoDescription": "Placa base ASUS PRIME B650M-A con socket AM5, soporte DDR5, formato micro ATX ideal para procesadores AMD Ryzen… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-prime-b840m-a-wifi-ddr5-box-m-atx-2",
+   "name": "MB Asus AM5 Prime B840M-A WIFI DDR5 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 Prime B840M-A WIFI DDR5 BOX M-atx",
+   "seoDescription": "Motherboard ASUS PRIME B840M-A WIFI AM5 con soporte DDR5, conectividad inalámbrica integrada y formato compacto… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-prime-b850-plus-ddr5-box",
+   "name": "MB Asus AM5 Prime B850-PLUS DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 Prime B850-PLUS DDR5 BOX",
+   "seoDescription": "Placa base ASUS PRIME B850-PLUS socket AM5 con soporte DDR5, conectividad avanzada y diseño robusto para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-prime-b850m-a-ddr5-box",
+   "name": "MB Asus AM5 Prime B850M-A DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 Prime B850M-A DDR5 BOX",
+   "seoDescription": "Placa base ASUS PRIME B850M-A formato micro ATX, socket AM5, compatible DDR5, chipset B850, ideal procesadores AMD… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-prime-b850m-a-wifi-ddr5-box-2",
+   "name": "MB Asus AM5 Prime B850M-A WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 Prime B850M-A WIFI DDR5 BOX",
+   "seoDescription": "Placa madre ASUS PRIME B850M-A WIFI para socket AM5 con soporte DDR5, conectividad WiFi integrada y diseño micro ATX… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-prime-b850m-k-ddr5-box-2",
+   "name": "MB Asus AM5 Prime B850M-K DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 Prime B850M-K DDR5 BOX",
+   "seoDescription": "Motherboard ASUS PRIME B850M-K AM5 con soporte DDR5, formato micro-ATX ideal para builds compactos con procesadores… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-prime-x870-p-wifi-ddr5-box-atx",
+   "name": "MB Asus AM5 Prime X870-P WIFI DDR5 BOX ATX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 Prime X870-P WIFI DDR5 BOX ATX",
+   "seoDescription": "MB Asus AM5 Prime X870-P WIFI DDR5 BOX ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus AM5 Prime X870-P WIFI DDR5 BOX ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am5-proart-b650-creator-ddr5-box-atx",
+   "name": "MB Asus AM5 Proart B650-CREATOR DDR5 BOX ATX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 Proart B650-CREATOR DDR5 BOX ATX",
+   "seoDescription": "MB Asus AM5 Proart B650-CREATOR DDR5 BOX ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus AM5 Proart B650-CREATOR DDR5 BOX ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am5-rog-crosshair-x670e-hero-ddr5-box-atx",
+   "name": "MB Asus AM5 ROG Crosshair X670E Hero DDR5 BOX ATX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 ROG Crosshair X670E Hero DDR5 BOX",
+   "seoDescription": "Motherboard ASUS ROG Crosshair X670E Hero AM5 con soporte DDR5, chipset X670E, formato ATX para gaming extremo y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-rog-crosshair-x870e-hero-ddr5-box-atx",
+   "name": "MB Asus AM5 ROG Crosshair X870E Hero DDR5 BOX ATX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 ROG Crosshair X870E Hero DDR5 BOX",
+   "seoDescription": "Motherboard ASUS ROG Crosshair X870E Hero AM5 con soporte DDR5, formato ATX, perfecta para gaming y overclock extremo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-rog-strix-b650e-f-gaming-wifi-ddr5-box",
+   "name": "MB Asus AM5 ROG Strix B650E-F Gaming WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 ROG Strix B650E-F Gaming WIFI",
+   "seoDescription": "MB Asus AM5 ROG Strix B650E-F Gaming WIFI DDR5 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus AM5 ROG Strix B650E-F Gaming WIFI DDR5 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am5-rog-strix-b850-a-gaming-wifi-ddr5-box-2",
+   "name": "MB Asus AM5 ROG Strix B850-A Gaming WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 ROG Strix B850-A Gaming WIFI DDR5",
+   "seoDescription": "Motherboard ASUS ROG Strix B850-A Gaming WiFi con socket AM5, soporte DDR5, conectividad avanzada y diseño gaming… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-rog-strix-b850-e-gaming-wifi-ddr5-box",
+   "name": "Asus 90MB1J60-M0EAY0",
+   "brand": "Asus",
+   "seoTitle": "Asus 90MB1J60-M0EAY0",
+   "seoDescription": "Asus 90MB1J60-M0EAY0. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Asus 90MB1J60-M0EAY0. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am5-rog-strix-b850-e-gaming-wifi-ddr5-box-2",
+   "name": "MB Asus AM5 ROG Strix B850-E Gaming WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 ROG Strix B850-E Gaming WIFI DDR5",
+   "seoDescription": "Placa base ASUS ROG Strix B850-E Gaming con socket AM5, WiFi integrado, soporte DDR5 y diseño gamer premium… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-rog-strix-b850-f-gaming-wifi-ddr5-box",
+   "name": "MB Asus AM5 ROG Strix B850-F Gaming WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 ROG Strix B850-F Gaming WIFI DDR5",
+   "seoDescription": "MB Asus AM5 ROG Strix B850-F Gaming WIFI DDR5 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus AM5 ROG Strix B850-F Gaming WIFI DDR5 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am5-rog-strix-x870-a-gaming-wifi-ddr5-box-2",
+   "name": "MB Asus AM5 ROG Strix X870-A Gaming WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 ROG Strix X870-A Gaming WIFI DDR5",
+   "seoDescription": "Motherboard ASUS ROG Strix X870-A Gaming WiFi AM5 con soporte DDR5, conectividad avanzada y diseño optimizado para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-rog-strix-x870e-e-gaming-wifi-ddr5-box-2",
+   "name": "MB Asus AM5 ROG Strix X870E-E Gaming WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 ROG Strix X870E-E Gaming WIFI",
+   "seoDescription": "Motherboard ASUS ROG Strix X870E-E Gaming WiFi AM5 para procesadores AMD Ryzen, soporte DDR5, conectividad avanzada… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-tuf-gaming-a620m-plus-ddr5-box",
+   "name": "MB Asus AM5 TUF Gaming A620M-PLUS DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 TUF Gaming A620M-PLUS DDR5 BOX",
+   "seoDescription": "Motherboard ASUS TUF Gaming A620M-PLUS con socket AM5 para procesadores Ryzen 7000, memoria DDR5 y diseño micro-ATX… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-tuf-gaming-a620m-plus-wifi-ddr5-box",
+   "name": "MB Asus AM5 TUF Gaming A620M-PLUS WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 TUF Gaming A620M-PLUS WIFI DDR5",
+   "seoDescription": "Placa base ASUS TUF Gaming A620M-PLUS con socket AM5, WiFi integrado, memoria DDR5 y diseño resistente para gaming… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-tuf-gaming-b650em-e-wifi-ddr5-box",
+   "name": "MB Asus AM5 TUF Gaming B650EM-E WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 TUF Gaming B650EM-E WIFI DDR5 BOX",
+   "seoDescription": "Motherboard ASUS TUF Gaming B650E-M AM5 con soporte DDR5, WiFi integrado y conectividad avanzada para gaming de alto… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-tuf-gaming-b650em-plus-wifi-ddr5-box",
+   "name": "MB Asus AM5 TUF Gaming B650EM-PLUS WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 TUF Gaming B650EM-PLUS WIFI DDR5",
+   "seoDescription": "MB Asus AM5 TUF Gaming B650EM-PLUS WIFI DDR5 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus AM5 TUF Gaming B650EM-PLUS WIFI DDR5 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am5-tuf-gaming-b850-e-wifi-ddr5-box",
+   "name": "MB Asus AM5 TUF Gaming B850-E WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 TUF Gaming B850-E WIFI DDR5 BOX",
+   "seoDescription": "Motherboard ASUS TUF Gaming B850-E WiFi AM5 con soporte DDR5, conectividad avanzada y diseño robusto para gamers… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-tuf-gaming-b850-plus-wifi-ddr5-box",
+   "name": "MB Asus AM5 TUF Gaming B850-PLUS WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 TUF Gaming B850-PLUS WIFI DDR5",
+   "seoDescription": "MB Asus AM5 TUF Gaming B850-PLUS WIFI DDR5 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus AM5 TUF Gaming B850-PLUS WIFI DDR5 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am5-tuf-gaming-b850m-e-wifi-ddr5-box",
+   "name": "MB Asus AM5 TUF Gaming B850M-E WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 TUF Gaming B850M-E WIFI DDR5 BOX",
+   "seoDescription": "Motherboard ASUS TUF Gaming B850M-E WiFi AM5 con soporte DDR5, conectividad inalámbrica avanzada y diseño robusto… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-tuf-gaming-b850m-plus-wifi-ddr5-box",
+   "name": "Asus 90MB1IY0-M0EAY0",
+   "brand": "Asus",
+   "seoTitle": "Asus 90MB1IY0-M0EAY0",
+   "seoDescription": "Asus 90MB1IY0-M0EAY0. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Asus 90MB1IY0-M0EAY0. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-am5-tuf-gaming-b850m-plus-wifi-ddr5-box-2",
+   "name": "MB Asus AM5 TUF Gaming B850M-PLUS WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 TUF Gaming B850M-PLUS WIFI DDR5",
+   "seoDescription": "Placa base ASUS TUF Gaming B850M-Plus WiFi con socket AM5, soporte DDR5, conectividad inalámbrica y diseño micro ATX… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-am5-tuf-gaming-x870-plus-wifi-ddr5-box-atx",
+   "name": "MB Asus AM5 TUF Gaming X870-PLUS WIFI DDR5 BOX ATX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus AM5 TUF Gaming X870-PLUS WIFI DDR5",
+   "seoDescription": "MB Asus AM5 TUF Gaming X870-PLUS WIFI DDR5 BOX ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus AM5 TUF Gaming X870-PLUS WIFI DDR5 BOX ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-s1200-prime-h510m-r-r2-0-ddr4-box-m-atx",
+   "name": "MB Asus S1200 Prime H510M-R R2.0 DDR4 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus S1200 Prime H510M-R R2.0 DDR4 BOX",
+   "seoDescription": "MB Asus S1200 Prime H510M-R R2.0 DDR4 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus S1200 Prime H510M-R R2.0 DDR4 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-s1700-prime-b760m-a-d4-csm-ddr4-box-m-atx",
+   "name": "MB Asus S1700 Prime B760M-A D4-CSM DDR4 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus S1700 Prime B760M-A D4-CSM DDR4 BOX",
+   "seoDescription": "Motherboard ASUS PRIME B760M-A con chipset B760, socket 1700, DDR4, formato M-ATX. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-s1700-prime-b760m-k-d4-ddr4-box-m-atx",
+   "name": "MB Asus S1700 Prime B760M-K D4 DDR4 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus S1700 Prime B760M-K D4 DDR4 BOX M-atx",
+   "seoDescription": "MB Asus S1700 Prime B760M-K D4 DDR4 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus S1700 Prime B760M-K D4 DDR4 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-s1700-prime-b760m-k-d4-ddr4-box-m-atx-2",
+   "name": "MB Asus S1700 Prime B760M-K D4 DDR4 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus S1700 Prime B760M-K D4 DDR4 BOX M-atx",
+   "seoDescription": "Motherboard ASUS PRIME B760M-K con socket 1700, compatible DDR4, formato M-ATX. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-s1700-prime-b760m-k-ddr5-box-m-atx",
+   "name": "MB Asus S1700 Prime B760M-K DDR5 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus S1700 Prime B760M-K DDR5 BOX M-atx",
+   "seoDescription": "Motherboard ASUS PRIME B760M-K con chipset B760, socket LGA1700, soporte DDR5, formato micro-ATX. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-s1700-prime-h610m-k-ddr5-box-m-atx",
+   "name": "MB Asus S1700 Prime H610M-K DDR5 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus S1700 Prime H610M-K DDR5 BOX M-atx",
+   "seoDescription": "MB Asus S1700 Prime H610M-K DDR5 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus S1700 Prime H610M-K DDR5 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-s1700-rog-strix-b760-a-gaming-wifi-ddr5",
+   "name": "MB Asus S1700 ROG Strix B760-A Gaming WIFI DDR5",
+   "brand": "Asus",
+   "seoTitle": "MB Asus S1700 ROG Strix B760-A Gaming WIFI",
+   "seoDescription": "Motherboard ASUS ROG Strix B760-A Gaming WiFi con socket LGA1700, soporte DDR5, conectividad inalámbrica y diseño… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-s1851-prime-b860m-a-ddr5-box-m-atx",
+   "name": "MB Asus S1851 Prime B860M-A DDR5 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus S1851 Prime B860M-A DDR5 BOX M-atx",
+   "seoDescription": "Motherboard ASUS PRIME B860M-A con socket 1851, soporte DDR5, formato M-ATX. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-s1851-prime-b860m-k-ddr5-box-m-atx",
+   "name": "MB Asus S1851 Prime B860M-K DDR5 BOX M-atx",
+   "brand": "Asus",
+   "seoTitle": "MB Asus S1851 Prime B860M-K DDR5 BOX M-atx",
+   "seoDescription": "Motherboard ASUS PRIME B860M-K Socket 1851 con soporte DDR5, formato Micro-ATX ideal para builds compactos de alto… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-s1851-prime-z890-p-wifi-ddr5-box-atx",
+   "name": "MB Asus S1851 Prime Z890-P WIFI DDR5 BOX ATX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus S1851 Prime Z890-P WIFI DDR5 BOX ATX",
+   "seoDescription": "MB Asus S1851 Prime Z890-P WIFI DDR5 BOX ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus S1851 Prime Z890-P WIFI DDR5 BOX ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-s1851-rog-strix-z890-a-gaming-wifi-ddr5",
+   "name": "MB Asus S1851 ROG Strix Z890-A Gaming WIFI DDR5",
+   "brand": "Asus",
+   "seoTitle": "MB Asus S1851 ROG Strix Z890-A Gaming WIFI",
+   "seoDescription": "Motherboard ASUS ROG STRIX Z890-A Gaming WiFi S1851 con soporte DDR5, conectividad avanzada y diseño gaming premium… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-s1851-rog-strix-z890-e-gaming-wifi-ddr5",
+   "name": "MB Asus S1851 ROG Strix Z890-E Gaming WIFI DDR5",
+   "brand": "Asus",
+   "seoTitle": "MB Asus S1851 ROG Strix Z890-E Gaming WIFI",
+   "seoDescription": "MB Asus S1851 ROG Strix Z890-E Gaming WIFI DDR5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Asus S1851 ROG Strix Z890-E Gaming WIFI DDR5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-asus-s1851-tuf-gaming-b860-plus-wifi-ddr5-box",
+   "name": "MB Asus S1851 TUF Gaming B860-PLUS WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus S1851 TUF Gaming B860-PLUS WIFI DDR5",
+   "seoDescription": "Motherboard ASUS TUF Gaming B860-Plus WiFi con socket 1851, soporte DDR5, conectividad inalámbrica integrada y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-s1851-tuf-gaming-z890-plus-wifi-ddr5-box",
+   "name": "MB Asus S1851 TUF Gaming Z890-PLUS WIFI DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus S1851 TUF Gaming Z890-PLUS WIFI DDR5",
+   "seoDescription": "Motherboard ASUS TUF Gaming Z890-Plus WiFi con socket LGA1851, soporte DDR5, conectividad WiFi avanzada y diseño… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-asus-s1851-z890-ayw-gaming-wifi-w-ddr5-box",
+   "name": "MB Asus S1851 Z890 AYW Gaming WIFI W DDR5 BOX",
+   "brand": "Asus",
+   "seoTitle": "MB Asus S1851 Z890 AYW Gaming WIFI W DDR5 BOX",
+   "seoDescription": "MB Asus S1851 Z890 AYW Gaming WIFI W DDR5 BOX. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-biostar-am4-a520mhp-ddr4-box-m-atx",
+   "name": "MB Biostar AM4 A520MHP DDR4 BOX M-atx",
+   "brand": "Biostar",
+   "seoTitle": "MB Biostar AM4 A520MHP DDR4 BOX M-atx",
+   "seoDescription": "MB Biostar AM4 A520MHP DDR4 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Biostar AM4 A520MHP DDR4 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-biostar-am4-a520mt-ddr4-box-m-atx",
+   "name": "MB Biostar AM4 A520MT DDR4 BOX M-atx",
+   "brand": "Biostar",
+   "seoTitle": "MB Biostar AM4 A520MT DDR4 BOX M-atx",
+   "seoDescription": "Placa base BIOSTAR A520MT formato Micro-ATX con socket AM4, compatible DDR4, ideal para procesadores AMD Ryzen… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-biostar-am4-b450mhp-ddr4-box-m-atx",
+   "name": "MB Biostar AM4 B450MHP DDR4 BOX M-atx",
+   "brand": "Biostar",
+   "seoTitle": "MB Biostar AM4 B450MHP DDR4 BOX M-atx",
+   "seoDescription": "MB Biostar AM4 B450MHP DDR4 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Biostar AM4 B450MHP DDR4 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-biostar-am5-a620mh-aurora-ddr5-box-m-atx",
+   "name": "MB Biostar AM5 A620MH Aurora DDR5 BOX M-atx",
+   "brand": "Biostar",
+   "seoTitle": "MB Biostar AM5 A620MH Aurora DDR5 BOX M-atx",
+   "seoDescription": "MB Biostar AM5 A620MH Aurora DDR5 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Biostar AM5 A620MH Aurora DDR5 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-biostar-am5-a620ms-ddr5-box-m-atx-2",
+   "name": "MB Biostar AM5 A620MS DDR5 BOX M-atx",
+   "brand": "Biostar",
+   "seoTitle": "MB Biostar AM5 A620MS DDR5 BOX M-atx",
+   "seoDescription": "MB Biostar AM5 A620MS DDR5 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Biostar AM5 A620MS DDR5 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-biostar-s1200-h510mhp-2-0-ddr4-box-m-atx-2",
+   "name": "MB Biostar S1200 H510MHP 2.0 DDR4 BOX M-atx",
+   "brand": "Biostar",
+   "seoTitle": "MB Biostar S1200 H510MHP 2.0 DDR4 BOX M-atx",
+   "seoDescription": "MB Biostar S1200 H510MHP 2.0 DDR4 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Biostar S1200 H510MHP 2.0 DDR4 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-biostar-s1200-h510mhp-4-0-ddr4-box-m-atx",
+   "name": "MB Biostar S1200 H510MHP 4.0 DDR4 BOX M-atx",
+   "brand": "Biostar",
+   "seoTitle": "MB Biostar S1200 H510MHP 4.0 DDR4 BOX M-atx",
+   "seoDescription": "MB Biostar S1200 H510MHP 4.0 DDR4 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Biostar S1200 H510MHP 4.0 DDR4 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-biostar-s1700-h610mhc-2-0-ddr4-box-m-atx-2",
+   "name": "MB Biostar S1700 H610MHC 2.0 DDR4 BOX M-atx",
+   "brand": "Biostar",
+   "seoTitle": "MB Biostar S1700 H610MHC 2.0 DDR4 BOX M-atx",
+   "seoDescription": "Motherboard Biostar H610MHC 2.0 con socket LGA 1700, compatible con procesadores Intel 12va generación, memoria DDR4… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-gigabyte-am4-a520m-k-v2-ddr4-box-m-atx-2",
+   "name": "MB Gigabyte AM4 A520M K V2 DDR4 BOX M-atx",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte AM4 A520M K V2 DDR4 BOX M-atx",
+   "seoDescription": "MB Gigabyte AM4 A520M K V2 DDR4 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Gigabyte AM4 A520M K V2 DDR4 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-gigabyte-am4-b550m-k-ddr4-box-m-atx-2",
+   "name": "MB Gigabyte AM4 B550M K DDR4 BOX M-atx",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte AM4 B550M K DDR4 BOX M-atx",
+   "seoDescription": "MB Gigabyte AM4 B550M K DDR4 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Gigabyte AM4 B550M K DDR4 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-gigabyte-am5-a620m-h-ddr5-box-m-atx-2",
+   "name": "MB Gigabyte AM5 A620M H DDR5 BOX M-atx",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte AM5 A620M H DDR5 BOX M-atx",
+   "seoDescription": "MB Gigabyte AM5 A620M H DDR5 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Gigabyte AM5 A620M H DDR5 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-gigabyte-am5-b650m-d3hp-ddr5-box-m-atx",
+   "name": "MB Gigabyte AM5 B650M D3HP DDR5 BOX M-atx",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte AM5 B650M D3HP DDR5 BOX M-atx",
+   "seoDescription": "MB Gigabyte AM5 B650M D3HP DDR5 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Gigabyte AM5 B650M D3HP DDR5 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-gigabyte-am5-b650m-gaming-plus-wifi-ddr5-box",
+   "name": "MB Gigabyte AM5 B650M Gaming Plus WIFI DDR5 BOX",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte AM5 B650M Gaming Plus WIFI DDR5",
+   "seoDescription": "MB Gigabyte AM5 B650M Gaming Plus WIFI DDR5 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Gigabyte AM5 B650M Gaming Plus WIFI DDR5 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-gigabyte-am5-b650m-gaming-plus-wifi-ddr5-box-2",
+   "name": "MB Gigabyte AM5 B650M Gaming Plus WIFI DDR5 BOX",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte AM5 B650M Gaming Plus WIFI DDR5",
+   "seoDescription": "MB Gigabyte AM5 B650M Gaming Plus WIFI DDR5 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Gigabyte AM5 B650M Gaming Plus WIFI DDR5 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-gigabyte-am5-b840m-ds3h-ddr5-box-m-atx-2",
+   "name": "MB Gigabyte AM5 B840M DS3H DDR5 BOX M-atx",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte AM5 B840M DS3H DDR5 BOX M-atx",
+   "seoDescription": "MB Gigabyte AM5 B840M DS3H DDR5 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Gigabyte AM5 B840M DS3H DDR5 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-gigabyte-am5-b850m-eagle-wifi6e-ddr5-box",
+   "name": "MB Gigabyte AM5 B850M Eagle WIFI6E DDR5 BOX",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte AM5 B850M Eagle WIFI6E DDR5 BOX",
+   "seoDescription": "MB Gigabyte AM5 B850M Eagle WIFI6E DDR5 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Gigabyte AM5 B850M Eagle WIFI6E DDR5 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-gigabyte-am5-b850m-eagle-wifi6e-ddr5-box-2",
+   "name": "MB Gigabyte AM5 B850M Eagle WIFI6E DDR5 BOX",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte AM5 B850M Eagle WIFI6E DDR5 BOX",
+   "seoDescription": "MB Gigabyte AM5 B850M Eagle WIFI6E DDR5 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Gigabyte AM5 B850M Eagle WIFI6E DDR5 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-gigabyte-am5-b850m-eagle-wifi6e-ice-ddr5-box",
+   "name": "MB Gigabyte AM5 B850M Eagle WIFI6E ICE DDR5 BOX",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte AM5 B850M Eagle WIFI6E ICE DDR5",
+   "seoDescription": "MB Gigabyte AM5 B850M Eagle WIFI6E ICE DDR5 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Gigabyte AM5 B850M Eagle WIFI6E ICE DDR5 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-gigabyte-am5-b850m-eagle-wifi6e-ice-ddr5-box-2",
+   "name": "MB Gigabyte AM5 B850M Eagle WIFI6E ICE DDR5 BOX",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte AM5 B850M Eagle WIFI6E ICE DDR5",
+   "seoDescription": "MB Gigabyte AM5 B850M Eagle WIFI6E ICE DDR5 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Gigabyte AM5 B850M Eagle WIFI6E ICE DDR5 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-gigabyte-s1200-h510m-k-v2-ddr4-box-m-atx-2",
+   "name": "MB Gigabyte S1200 H510M K V2 DDR4 BOX M-atx",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte S1200 H510M K V2 DDR4 BOX M-atx",
+   "seoDescription": "MB Gigabyte S1200 H510M K V2 DDR4 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Gigabyte S1200 H510M K V2 DDR4 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-gigabyte-s1700-b760m-aorus-elite-ax-ddr5-box",
+   "name": "MB Gigabyte S1700 B760M Aorus Elite AX DDR5 BOX",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte S1700 B760M Aorus Elite AX DDR5",
+   "seoDescription": "Motherboard Gigabyte B760M Aorus Elite AX con chipset B760, socket LGA1700, soporte DDR5, Wi-Fi 6E integrado y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-gigabyte-s1700-h610m-k-v2-ddr5-box-m-atx",
+   "name": "MB Gigabyte S1700 H610M K V2 DDR5 BOX M-atx",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte S1700 H610M K V2 DDR5 BOX M-atx",
+   "seoDescription": "MB Gigabyte S1700 H610M K V2 DDR5 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Gigabyte S1700 H610M K V2 DDR5 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-gigabyte-s1851-b860i-aorus-pro-ice-ddr5-m-itx",
+   "name": "MB Gigabyte S1851 B860I Aorus PRO ICE DDR5 M-itx",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte S1851 B860I Aorus PRO ICE DDR5",
+   "seoDescription": "MB Gigabyte S1851 B860I Aorus PRO ICE DDR5 M-itx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Gigabyte S1851 B860I Aorus PRO ICE DDR5 M-itx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-gigabyte-s1851-z890m-a-elite-wifi7-ddr5-box",
+   "name": "MB Gigabyte S1851 Z890M a Elite WIFI7 DDR5 BOX",
+   "brand": "Gigabyte",
+   "seoTitle": "MB Gigabyte S1851 Z890M a Elite WIFI7 DDR5",
+   "seoDescription": "MB Gigabyte S1851 Z890M a Elite WIFI7 DDR5 BOX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB Gigabyte S1851 Z890M a Elite WIFI7 DDR5 BOX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-msi-am4-a520m-a-pro-ddr4-bulk-m-atx",
+   "name": "MB MSI AM4 A520M-A PRO DDR4 Bulk M-atx",
+   "brand": "MSI",
+   "seoTitle": "MB MSI AM4 A520M-A PRO DDR4 Bulk M-atx",
+   "seoDescription": "MB MSI AM4 A520M-A PRO DDR4 Bulk M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB MSI AM4 A520M-A PRO DDR4 Bulk M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-msi-am5-b650m-project-zero-ddr5-box-m-atx-3",
+   "name": "MB MSI AM5 B650M Project Zero DDR5 BOX M-atx",
+   "brand": "MSI",
+   "seoTitle": "MB MSI AM5 B650M Project Zero DDR5 BOX M-atx",
+   "seoDescription": "MB MSI AM5 B650M Project Zero DDR5 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB MSI AM5 B650M Project Zero DDR5 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-msi-am5-pro-a620m-e-ddr5-box-m-atx",
+   "name": "MB MSI AM5 PRO A620M-E DDR5 BOX M-atx",
+   "brand": "MSI",
+   "seoTitle": "MB MSI AM5 PRO A620M-E DDR5 BOX M-atx",
+   "seoDescription": "MB MSI AM5 PRO A620M-E DDR5 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB MSI AM5 PRO A620M-E DDR5 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-msi-am5-x670e-gaming-plus-wifi-ddr5-box",
+   "name": "MB MSI AM5 X670E Gaming Plus WIFI DDR5 BOX",
+   "brand": "MSI",
+   "seoTitle": "MB MSI AM5 X670E Gaming Plus WIFI DDR5 BOX",
+   "seoDescription": "Placa base MSI X670E Gaming Plus WiFi AM5 con soporte DDR5, WiFi integrado y chipset X670E para procesadores AMD… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-msi-am5-x870-gaming-plus-wifi-ddr5-box-m-atx",
+   "name": "MB MSI AM5 X870 Gaming Plus WIFI DDR5 BOX M-atx",
+   "brand": "MSI",
+   "seoTitle": "MB MSI AM5 X870 Gaming Plus WIFI DDR5 BOX",
+   "seoDescription": "MB MSI AM5 X870 Gaming Plus WIFI DDR5 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB MSI AM5 X870 Gaming Plus WIFI DDR5 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-msi-s1200-pro-h510m-b-ii-ddr4-box-m-atx",
+   "name": "MB MSI S1200 PRO H510M-B II DDR4 BOX M-atx",
+   "brand": "MSI",
+   "seoTitle": "MB MSI S1200 PRO H510M-B II DDR4 BOX M-atx",
+   "seoDescription": "MB MSI S1200 PRO H510M-B II DDR4 BOX M-atx. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-msi-s1700-pro-h610m-g-ddr5-box-m-atx",
+   "name": "MB MSI S1700 PRO H610M-G DDR5 BOX M-atx",
+   "brand": "MSI",
+   "seoTitle": "MB MSI S1700 PRO H610M-G DDR5 BOX M-atx",
+   "seoDescription": "Motherboard MSI PRO H610M-G con socket LGA1700, soporte DDR5, formato micro-ATX. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-msi-s1700-pro-h610m-s-ddr4-box-m-atx",
+   "name": "MB MSI S1700 PRO H610M-S DDR4 BOX M-atx",
+   "brand": "MSI",
+   "seoTitle": "MB MSI S1700 PRO H610M-S DDR4 BOX M-atx",
+   "seoDescription": "MB MSI S1700 PRO H610M-S DDR4 BOX M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MB MSI S1700 PRO H610M-S DDR4 BOX M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mb-msi-s1851-b860m-gaming-plus-wifi-ddr5-box-m-atx",
+   "name": "MB MSI S1851 B860M Gaming Plus WIFI DDR5 BOX M-atx",
+   "brand": "MSI",
+   "seoTitle": "MB MSI S1851 B860M Gaming Plus WIFI DDR5 BOX",
+   "seoDescription": "Motherboard MSI B860M Gaming Plus WiFi con socket 1851, soporte DDR5, conectividad inalámbrica integrada y formato… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mb-msi-s1851-pro-h810m-b-ddr5-box-m-atx",
+   "name": "MB MSI S1851 PRO H810M-B DDR5 BOX M-atx",
+   "brand": "MSI",
+   "seoTitle": "MB MSI S1851 PRO H810M-B DDR5 BOX M-atx",
+   "seoDescription": "Placa base MSI PRO H810M-B con socket 1851, soporte DDR5, formato M-ATX ideal para builds compactos y rendimiento… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "media-connector-linksys-wumc710-802-11n-ac5ghz-2",
+   "name": "Media Connector Linksys WUMC710 802.11N & AC(5GHZ)",
+   "seoTitle": "Media Connector Linksys WUMC710 802.11N &",
+   "seoDescription": "Adaptador WiFi Linksys WUMC710 con tecnología 802.11n y AC dual band 5GHz para conectar dispositivos multimedia sin… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "media-converter-tp-link-mc100m-10-100-mm-sc-2km",
+   "name": "Media Converter TP-Link MC100M 10/100 MM SC 2KM",
+   "brand": "TP-Link",
+   "seoTitle": "Media Converter TP-Link MC100M 10/100 MM SC",
+   "seoDescription": "Media Converter TP-Link MC100M 10/100 MM SC 2KM. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Media Converter TP-Link MC100M 10/100 MM SC 2KM. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "media-converter-tp-link-mc110cs-10-100-sc-20-60km-2",
+   "name": "Media Converter TP-Link MC110CS 10/100 SC 20-60KM",
+   "brand": "TP-Link",
+   "seoTitle": "Media Converter TP-Link MC110CS 10/100 SC",
+   "seoDescription": "Media Converter TP-Link MC110CS 10/100 SC 20-60KM. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Media Converter TP-Link MC110CS 10/100 SC 20-60KM. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "memoria-ram-ddr4-so-dimm-2666hz-4gb",
+   "seoTitle": "Memoria Ram DDR4 SO-DIMM 2666MHz 4Gb",
+   "seoDescription": "Memoria RAM DDR4 SO-DIMM 2666MHz de 4GB ideal para mejorar el rendimiento de laptops y mini PCs. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "memoria-sodimm-ddr4-4gb-adata-2666-pc4-21300",
+   "brand": "Adata",
+   "seoTitle": "Memoria Sodimm DDR4 4Gb Adata 2666 PC4-21300",
+   "seoDescription": "Memoria Sodimm DDR4 4Gb Adata 2666 PC4-21300. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Memoria Sodimm DDR4 4Gb Adata 2666 PC4-21300. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mercusys-wi-fi-router-300-mw305r-3-antenas",
+   "name": "Mercusys WI-FI Router 300 MW305R /3 Antenas",
+   "brand": "Mercusys",
+   "seoTitle": "Mercusys WI-FI Router 300 MW305R /3 Antenas",
+   "seoDescription": "Router WiFi Mercusys MW305R 300Mbps con 3 antenas externas para cobertura amplia, conexión estable y configuración… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mercusys-wi-fi-router-300-mw325r-4-antenas",
+   "name": "Mercusys WI-FI Router 300 MW325R /4 Antenas",
+   "brand": "Mercusys",
+   "seoTitle": "Mercusys WI-FI Router 300 MW325R /4 Antenas",
+   "seoDescription": "Router Wi-Fi Mercusys MW325R con 4 antenas, velocidad 300Mbps, cobertura amplia, fácil instalación y conexión… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mercusys-wi-fi-router-mr20-ac750-2-antenas-doble-banda",
+   "name": "Mercusys WI-FI Router MR20 AC750 /2 Antenas /Doble Banda",
+   "brand": "Mercusys",
+   "seoTitle": "Mercusys WI-FI Router MR20 AC750 /2 Antenas",
+   "seoDescription": "Router WiFi MERCUSYS MR20 AC750 con tecnología doble banda, 2 antenas externas y velocidades de hasta 750 Mbps para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mercusys-wi-fi-router-mr30g-ac1200-4-antenas-doble-banda",
+   "name": "Mercusys WI-FI Router MR30G AC1200 /4 Antenas / Doble Banda",
+   "brand": "Mercusys",
+   "seoTitle": "Mercusys WI-FI Router MR30G AC1200 /4 Antenas",
+   "seoDescription": "Router WiFi MERCUSYS MR30G AC1200 con doble banda y 4 antenas para conexión estable y rápida en toda tu casa. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mercusys-wifi-extender-3-antena-mw300re",
+   "name": "Mercusys WIFI Extender 3-ANTENA MW300RE",
+   "brand": "Mercusys",
+   "seoTitle": "Mercusys WIFI Extender 3-ANTENA MW300RE",
+   "seoDescription": "Extensor WiFi MERCUSYS MW300RE con 3 antenas, amplifica señal hasta 300Mbps para eliminar zonas muertas en tu hogar. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mesa-de-computacion-piro-blanca",
+   "seoTitle": "Mesa de Computación Piro Blanca",
+   "seoDescription": "Mesa de Computación Piro Blanca. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mesa-de-luz-delos-reflex",
+   "seoTitle": "Mesa de Luz Delos Reflex",
+   "seoDescription": "Peso 166 kg Dimensiones 35 × 55 × 60 cm Bultos 1 Línea Reflex Material Melamina 15mm Marca Delos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "meta-quest-3-512gb",
+   "seoTitle": "Meta Quest 3 512gb",
+   "seoDescription": "Memoria 512gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "meta-quest-3s-256gb",
+   "seoTitle": "Meta Quest 3s 256gb",
+   "seoDescription": "Sumérgete en la realidad mixta de nueva generación sin pagar de más. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mf-brother-dcp-t230-27-11ppm-sist-continuo",
+   "seoTitle": "Multifunción Brother DCP-T230 27/11PPM",
+   "seoDescription": "Multifunción Brother DCP-T230 27/11PPM Sistema Continuo. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Multifunción Brother DCP-T230 27/11PPM Sistema Continuo. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mf-brother-dcp-t430w-28-11ppm-sist-continuo",
+   "seoTitle": "Multifunción Brother DCP-T430W 28/11PPM",
+   "seoDescription": "Multifunción Brother DCP-T430W 28/11PPM Sistema Continuo. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Multifunción Brother DCP-T430W 28/11PPM Sistema Continuo. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mf-brother-dcp-t530dw-28-11ppm-sist-continuo",
+   "seoTitle": "Multifunción Brother DCP-T530DW 28/11PPM",
+   "seoDescription": "Multifunción Brother DCP-T530DW 28/11PPM Sistema Continuo. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Multifunción Brother DCP-T530DW 28/11PPM Sistema Continuo. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mf-brother-dcp-t730dw-28-11ppm-sist-continuo",
+   "seoTitle": "Multifunción Brother DCP-T730DW Sistema",
+   "seoDescription": "Rendimiento de impresión excepcional y máximo ahorro por página. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mf-brother-dcp-t830dw-28-11ppm-sist-continuo",
+   "seoTitle": "Multifunción Brother DCP-T830DW 28/11PPM",
+   "seoDescription": "Multifunción Brother DCP-T830DW 28/11PPM Sistema Continuo Duplex. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Multifunción Brother DCP-T830DW 28/11PPM Sistema Continuo Duplex. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mf-brother-mfc-j5340dw-28ppm-wifi-fax-red-a3",
+   "seoTitle": "Multifunción Brother MFC-J5340DW 28PPM WIFI",
+   "seoDescription": "Multifunción Brother MFC-J5340DW 28PPM WIFI FAX RED A3. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Multifunción Brother MFC-J5340DW 28PPM WIFI FAX RED A3. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mf-brother-mfc-j6955dw-30ppm-wifi-fax-a3",
+   "seoTitle": "Multifunción Brother MFC-J6955DW 30PPM WIFI",
+   "seoDescription": "Multifunción Brother MFC-J6955DW 30PPM WIFI FAX A3. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Multifunción Brother MFC-J6955DW 30PPM WIFI FAX A3. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mf-brother-mfc-t4500dw-35-27-ppm-sist-continuo-a3",
+   "seoTitle": "Multifunción Brother MFC-T4500DW 35/27 PPM",
+   "seoDescription": "Impresora multifuncional Brother MFC-T4500DW con sistema de tinta continua, impresión A3, 35 PPM y conectividad WiFi… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mf-hp-2375-advantage-20ppm-7wq01a",
+   "name": "MF HP 2375 Advantage 20PPM 7WQ01A",
+   "seoTitle": "MF HP 2375 Advantage 20PPM 7WQ01A",
+   "seoDescription": "MF HP 2375 Advantage 20PPM 7WQ01A. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MF HP 2375 Advantage 20PPM 7WQ01A. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mf-hp-smart-tank-520-aio-printer-1f3w2a",
+   "brand": "HP",
+   "seoTitle": "Multifunción Hp SMART TANK 520 AIO PRINTER",
+   "seoDescription": "Multifunción Hp SMART TANK 520 AIO PRINTER Sistema continuo. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Multifunción Hp SMART TANK 520 AIO PRINTER Sistema continuo. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mf-hp-smart-tank-530-aio-printer-4sb24a-wifi",
+   "name": "MF HP Smart Tank 530 AIO Printer 4SB24A WIFI",
+   "brand": "HP",
+   "seoTitle": "MF HP Smart Tank 530 AIO Printer 4SB24A WIFI",
+   "seoDescription": "MF HP Smart Tank 530 AIO Printer 4SB24A WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MF HP Smart Tank 530 AIO Printer 4SB24A WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mf-hp-smart-tank-530-aio-printer-4sb24a-wifi-expo",
+   "name": "MF HP Smart Tank 530 AIO Printer 4SB24A WIFI Expo",
+   "brand": "HP",
+   "seoTitle": "MF HP Smart Tank 530 AIO Printer 4SB24A WIFI",
+   "seoDescription": "Impresora multifuncional HP Smart Tank 530 con WiFi, tanque de tinta recargable, imprime, escanea y copia… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mf-hp-smart-tank-580-aio-printer-1f3y2a-wifi",
+   "name": "MF HP Smart Tank 580 AIO Printer 1F3Y2A WIFI",
+   "brand": "HP",
+   "seoTitle": "MF HP Smart Tank 580 AIO Printer 1F3Y2A WIFI",
+   "seoDescription": "MF HP Smart Tank 580 AIO Printer 1F3Y2A WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MF HP Smart Tank 580 AIO Printer 1F3Y2A WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mf-hp-smart-tank-583-aio-printer-4a8d7a-wifi",
+   "name": "MF HP Smart Tank 583 AIO Printer 4A8D7A WIFI",
+   "brand": "HP",
+   "seoTitle": "MF HP Smart Tank 583 AIO Printer 4A8D7A WIFI",
+   "seoDescription": "MF HP Smart Tank 583 AIO Printer 4A8D7A WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MF HP Smart Tank 583 AIO Printer 4A8D7A WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mf-hp-smart-tank-720-aio-printer-6uu46a-wifi",
+   "name": "MF HP Smart Tank 720 AIO Printer 6UU46A WIFI",
+   "brand": "HP",
+   "seoTitle": "MF HP Smart Tank 720 AIO Printer 6UU46A WIFI",
+   "seoDescription": "MF HP Smart Tank 720 AIO Printer 6UU46A WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MF HP Smart Tank 720 AIO Printer 6UU46A WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mf-hp-smart-tank-750-aio-printer-6uu47a-wifi",
+   "name": "MF HP Smart Tank 750 AIO Printer 6UU47A WIFI",
+   "brand": "HP",
+   "seoTitle": "MF HP Smart Tank 750 AIO Printer 6UU47A WIFI",
+   "seoDescription": "MF HP Smart Tank 750 AIO Printer 6UU47A WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MF HP Smart Tank 750 AIO Printer 6UU47A WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mfl-brother-dcp-1617nw-21ppm-wifi",
+   "seoTitle": "Multifunción Láser Brother DCP-1617NW 21PPM",
+   "seoDescription": "Multifuncional Brother DCP-1617NW con WiFi, impresión láser monocromática a 21 páginas por minuto, ideal para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mfl-brother-dcp-l2540dw-30ppm-wifi-duplex",
+   "seoTitle": "Multifunción Láser Brother DCP-L2540DW 30PPM",
+   "seoDescription": "Multifunción Láser Brother DCP-L2540DW 30PPM WIFI DUPLEX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Multifunción Láser Brother DCP-L2540DW 30PPM WIFI DUPLEX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mfl-brother-dcp-l2660dw-34ppm-wifi-duplex",
+   "seoTitle": "Multifunción Láser Brother DCP-L2660DW 34PPM",
+   "seoDescription": "Multifunción Láser Brother DCP-L2660DW 34PPM WIFI DUPLEX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Multifunción Láser Brother DCP-L2660DW 34PPM WIFI DUPLEX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mfl-brother-mfc-l5915dw-50ppm-wifi-duplex",
+   "seoTitle": "Multifunción Láser Brother MFC-L5915DW 50PPM",
+   "seoDescription": "Multifunción Láser Brother MFC-L5915DW 50PPM WIFI DUPLEX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Multifunción Láser Brother MFC-L5915DW 50PPM WIFI DUPLEX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mfl-brother-mfc-l6915dw-50ppm-wifi-duplex",
+   "brand": "Brother",
+   "seoTitle": "Multifunción Láser Brother MFC-L6915DW 50PPM",
+   "seoDescription": "Multifunción Láser Brother MFC-L6915DW 50PPM WIFI DUPLEX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Multifunción Láser Brother MFC-L6915DW 50PPM WIFI DUPLEX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mfl-hp-m137fnw-21ppm-4zb84a",
+   "name": "HP Laser M137FNW Monocromatica (multifuncion)",
+   "brand": "HP",
+   "seoTitle": "HP Laser M137FNW Monocromatica (multifuncion)",
+   "seoDescription": "HP Laser M137FNW Monocromatica (multifuncion). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HP Laser M137FNW Monocromatica (multifuncion). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mfl-hp-m141w-lj-21ppm-7md74a",
+   "brand": "HP",
+   "seoTitle": "Multifunción Láser Hp M141W",
+   "seoDescription": "Multifunción Láser Hp M141W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Multifunción Láser Hp M141W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mfl-hp-m141w-lj-21ppm-7md74a-2",
+   "brand": "HP",
+   "seoTitle": "Multifunción Láser Hp M141W LJ 21PPM 7MD74A",
+   "seoDescription": "Impresora multifunción HP LaserJet M141W con WiFi, imprime/copia/escanea a 21ppm, ideal para oficina y hogar, modelo… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mfl-hp-m236sdw-29ppm-9yg09a",
+   "brand": "HP",
+   "seoTitle": "Multifunción Láser Hp M236SDW Doble Faz",
+   "seoDescription": "Multifunción Láser Hp M236SDW Doble Faz. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Multifunción Láser Hp M236SDW Doble Faz. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mfl-hp-m236sdw-29ppm-9yg09a-2",
+   "seoTitle": "Multifunción Láser Hp M236SDW 29PPM Duplex",
+   "seoDescription": "Multifuncional HP M236sdw láser monocromático 29ppm con WiFi, impresión móvil, escáner y copiadora para oficina y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mfl-hp-m4103fdw-lj-40ppm-wifi-eprint-2z629a",
+   "name": "MFL HP M4103FDW LJ 40PPM WIFI Eprint 2Z629A",
+   "brand": "HP",
+   "seoTitle": "MFL HP M4103FDW LJ 40PPM WIFI Eprint 2Z629A",
+   "seoDescription": "MFL HP M4103FDW LJ 40PPM WIFI Eprint 2Z629A. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mflc-brother-dcp-l3560cdw-26ppm-duplex-red-wifi",
+   "seoTitle": "Multifunción Láser Color Brother DCP-L3560CDW",
+   "seoDescription": "Multifunción Láser Color Brother DCP-L3560CDW 26PPM DUPLEX RED WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Multifunción Láser Color Brother DCP-L3560CDW 26PPM DUPLEX RED WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mflc-brother-mfc-l8900cdw-33ppm-wifi-duplex",
+   "seoTitle": "Multifunción Láser Color Brother MFC-L8900CDW",
+   "seoDescription": "Multifunción Láser Color Brother MFC-L8900CDW 33PPM WIFI DUPLEX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Multifunción Láser Color Brother MFC-L8900CDW 33PPM WIFI DUPLEX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mflc-hp-pro-4303fdw-35-ppm-5hh67a-local-2",
+   "name": "Mflc HP PRO 4303FDW 35 PPM 5HH67A Local",
+   "brand": "HP",
+   "seoTitle": "Mflc HP PRO 4303FDW 35 PPM 5HH67A Local",
+   "seoDescription": "Impresora multifuncional HP Pro 4303FDW láser monocromática, 35 páginas por minuto, WiFi, escáner, copiadora, fax… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "micro-sd-128gb-hiksemi-clase-10-c10",
+   "name": "Micro SD 128GB Hiksemi Clase 10 C1",
+   "brand": "Hiksemi",
+   "seoTitle": "Micro SD 128GB Hiksemi Clase 10 C1",
+   "seoDescription": "Grabación en Full HD: Certificación V30 que asegura velocidades de escritura constantes de 30 MB/s para videos en… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "micro-sd-512gb-kingston-canvas-go-plus-g4",
+   "name": "Micro SD 512GB Kingston Canvas GO Plus G4",
+   "brand": "Kingston",
+   "seoTitle": "Micro SD 512GB Kingston Canvas GO Plus G4",
+   "seoDescription": "Micro SD 512GB Kingston Canvas GO Plus G4. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Micro SD 512GB Kingston Canvas GO Plus G4. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "microfono-asus-rog-carnyx-c501",
+   "name": "Microfono Asus ROG Carnyx C501",
+   "brand": "Asus",
+   "seoTitle": "Microfono Asus ROG Carnyx C501",
+   "seoDescription": "Microfono Asus ROG Carnyx C501. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Microfono Asus ROG Carnyx C501. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "microfono-corbatero-waggs-inalambrico-lightning-y-usb-c",
+   "seoTitle": "Micrófono Corbatero Waggs Inalámbrico",
+   "seoDescription": "Recomendado para entrevistas. Es inalámbrico. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "microfono-inalambrico-boya-boyalink",
+   "seoTitle": "Microfono Inalambrico Boya Boyalink",
+   "seoDescription": "Micrófono inalámbrico Boya BoyaLink de alta calidad para grabaciones profesionales. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "microfono-waggs-omnidireccional",
+   "seoTitle": "Micrófono Waggs Omnidireccional",
+   "seoDescription": "Fácil instalación y uso. Calidad de sonido excepcional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "microondas-hitplus-29lt-digital-c-grill",
+   "seoTitle": "Microondas HitPlus 29LT Digital C/ Grill",
+   "seoDescription": "Potencia 900W Capacidad 29 Litros 9 Programas de Cocción. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "microondas-samsung-23lt-c-grill-ceramico",
+   "brand": "Samsung",
+   "seoTitle": "Microondas Samsung 23LT C/ Grill Cerámico",
+   "seoDescription": "Microondas Samsung 23LT C/ Grill Cerámico. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mikrotik-placa-netmetalax-l23ugsr-5haxd-sin-fuente-no-es-ap-es-solo-la-placa",
+   "name": "MikroTik Placa Netmetalax L23UGSR-5HAXD sin Fuente (NO ES AP ES Solo la Placa)",
+   "brand": "MikroTik",
+   "seoTitle": "MikroTik Placa Netmetalax L23UGSR-5HAXD",
+   "seoDescription": "MikroTik Placa Netmetalax L23UGSR-5HAXD sin Fuente (NO ES AP ES Solo la Placa). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MikroTik Placa Netmetalax L23UGSR-5HAXD sin Fuente (NO ES AP ES Solo la Placa). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-asus-cel-n4500-pn41-s1-bbf4000x-barebone-2",
+   "name": "Mini PC Asus CEL N4500 PN41-S1-BBF4000X (barebone)",
+   "brand": "Asus",
+   "seoTitle": "Mini PC Asus CEL N4500 PN41-S1-BBF4000X",
+   "seoDescription": "Mini PC Asus CEL N4500 PN41-S1-BBF4000X (barebone). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC Asus CEL N4500 PN41-S1-BBF4000X (barebone). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-asus-cel-n4505-pn41-s1-bbf4000x-barebone-2",
+   "name": "Mini PC Asus CEL N4505 PN41-S1-BBF4000X (barebone)",
+   "brand": "Asus",
+   "seoTitle": "Mini PC Asus CEL N4505 PN41-S1-BBF4000X",
+   "seoDescription": "Mini PC Asus CEL N4505 PN41-S1-BBF4000X (barebone). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC Asus CEL N4505 PN41-S1-BBF4000X (barebone). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-asus-i3-1220p-ddr5-pn64-bb3000-barebone",
+   "name": "Mini PC Asus I3-1220P DDR5 PN64-BB3000 (barebone)",
+   "brand": "Asus",
+   "seoTitle": "Mini PC Asus I3-1220P DDR5 PN64-BB3000",
+   "seoDescription": "Mini PC Asus I3-1220P DDR5 PN64-BB3000 (barebone). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC Asus I3-1220P DDR5 PN64-BB3000 (barebone). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-asus-i5-12500h-ddr5-pn64-bb5000-barebone",
+   "name": "Mini PC Asus I5-12500H DDR5 PN64-BB5000 (barebone)",
+   "brand": "Asus",
+   "seoTitle": "Mini PC Asus I5-12500H DDR5 PN64-BB5000",
+   "seoDescription": "Mini PC Asus I5-12500H DDR5 PN64-BB5000 (barebone). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC Asus I5-12500H DDR5 PN64-BB5000 (barebone). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-asus-i7-12700h-ddr5-pn64-bb7000-barebone",
+   "name": "Mini PC Asus I7-12700H DDR5 PN64-BB7000 (barebone)",
+   "brand": "Asus",
+   "seoTitle": "Mini PC Asus I7-12700H DDR5 PN64-BB7000",
+   "seoDescription": "MINI PC ASUS PN64-BB7000 con procesador Intel i7-12700H de 12ª generación, compatible con DDR5. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mini-pc-asus-ryzen-5-5600h-pn52-b-1s-barebone-3",
+   "name": "Mini PC Asus Ryzen 5 5600H PN52-B 1S (barebone)",
+   "brand": "Asus",
+   "seoTitle": "Mini PC Asus Ryzen 5 5600H PN52-B 1S",
+   "seoDescription": "Mini PC ASUS PN52-B con procesador AMD Ryzen 5 5600H. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mini-pc-asus-ryzen-5-7535h-pn53-b-2s-barebone",
+   "name": "Mini PC Asus Ryzen 5 7535H PN53-B 2S (barebone)",
+   "brand": "Asus",
+   "seoTitle": "Mini PC Asus Ryzen 5 7535H PN53-B 2S",
+   "seoDescription": "Mini PC ASUS barebone con procesador AMD Ryzen 5 7535H, diseño compacto PN53-B para configuración personalizada y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mini-pc-asus-ryzen-7-5800h-pn52-b-1s-barebone",
+   "name": "Mini PC Asus Ryzen 7 5800H PN52-B 1S (barebone)",
+   "brand": "Asus",
+   "seoTitle": "Mini PC Asus Ryzen 7 5800H PN52-B 1S",
+   "seoDescription": "Mini PC Asus Ryzen 7 5800H PN52-B 1S (barebone). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC Asus Ryzen 7 5800H PN52-B 1S (barebone). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-cx-amd-ryzen-3-3250u16gssd480gb",
+   "name": "Mini PC CX AMD Ryzen 3 3250U+16G+SSD480GB",
+   "brand": "AMD",
+   "seoTitle": "Mini PC CX AMD Ryzen 3 3250U+16G+SSD480GB",
+   "seoDescription": "Mini PC CX AMD Ryzen 3 3250U+16G+SSD480GB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC CX AMD Ryzen 3 3250U+16G+SSD480GB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-cx-amd-ryzen-3-3250u16gssd512gb",
+   "name": "Mini PC CX AMD Ryzen 3 3250U+16G+SSD512GB",
+   "brand": "AMD",
+   "seoTitle": "Mini PC CX AMD Ryzen 3 3250U+16G+SSD512GB",
+   "seoDescription": "Mini PC CX AMD Ryzen 3 3250U+16G+SSD512GB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC CX AMD Ryzen 3 3250U+16G+SSD512GB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-cx-amd-ryzen-3-3250u8gssd240gb",
+   "name": "Mini PC CX AMD Ryzen 3 3250U+8G+SSD240GB",
+   "brand": "AMD",
+   "seoTitle": "Mini PC CX AMD Ryzen 3 3250U+8G+SSD240GB",
+   "seoDescription": "Mini PC CX AMD Ryzen 3 3250U+8G+SSD240GB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC CX AMD Ryzen 3 3250U+8G+SSD240GB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-cx-amd-ryzen-5-5500h8gssd240gb",
+   "name": "Mini PC CX AMD Ryzen 5 5500H+8G+SSD240GB",
+   "brand": "AMD",
+   "seoTitle": "Mini PC CX AMD Ryzen 5 5500H+8G+SSD240GB",
+   "seoDescription": "MINI PC CX con procesador AMD Ryzen 5 5500H, 8GB RAM y SSD 240GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mini-pc-cx-amd-ryzen-7-6800h16gssd512gb",
+   "name": "Mini PC CX AMD Ryzen 7 6800H+16G+SSD512GB",
+   "brand": "AMD",
+   "seoTitle": "Mini PC CX AMD Ryzen 7 6800H+16G+SSD512GB",
+   "seoDescription": "Mini PC CX AMD Ryzen 7 6800H+16G+SSD512GB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC CX AMD Ryzen 7 6800H+16G+SSD512GB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-cx-intel-i3-10110u16gssd480gb",
+   "name": "Mini PC CX Intel I3 10110U+16G+SSD480GB",
+   "brand": "Intel",
+   "seoTitle": "Mini PC CX Intel I3 10110U+16G+SSD480GB",
+   "seoDescription": "Mini PC CX Intel I3 10110U+16G+SSD480GB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC CX Intel I3 10110U+16G+SSD480GB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-cx-intel-i3-10110u8gssd240gb-2",
+   "name": "Mini PC CX Intel I3 10110U+8G+SSD240GB",
+   "brand": "Intel",
+   "seoTitle": "Mini PC CX Intel I3 10110U+8G+SSD240GB",
+   "seoDescription": "Mini PC CX Intel I3 10110U+8G+SSD240GB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC CX Intel I3 10110U+8G+SSD240GB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-cx-intel-i3-1215u8gssd240gb",
+   "name": "Mini PC CX Intel I3 1215U+8G+SSD240GB",
+   "brand": "Intel",
+   "seoTitle": "Mini PC CX Intel I3 1215U+8G+SSD240GB",
+   "seoDescription": "Mini PC CX Intel I3 1215U+8G+SSD240GB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC CX Intel I3 1215U+8G+SSD240GB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-cx-intel-i5-1240p16gssd480gb",
+   "name": "Mini PC CX Intel I5 1240P+16G+SSD480GB",
+   "brand": "Intel",
+   "seoTitle": "Mini PC CX Intel I5 1240P+16G+SSD480GB",
+   "seoDescription": "Mini PC CX con procesador Intel i5 1240P, 16GB RAM y SSD 480GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mini-pc-cx-intel-i5-1240p16gssd512gb",
+   "name": "Mini PC CX Intel I5 1240P+16G+SSD512GB",
+   "brand": "Intel",
+   "seoTitle": "Mini PC CX Intel I5 1240P+16G+SSD512GB",
+   "seoDescription": "Mini PC CX Intel I5 1240P+16G+SSD512GB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC CX Intel I5 1240P+16G+SSD512GB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-cx-intel-i5-1240p8gssd240gb",
+   "name": "Mini PC CX Intel I5 1240P+8G+SSD240GB",
+   "brand": "Intel",
+   "seoTitle": "Mini PC CX Intel I5 1240P+8G+SSD240GB",
+   "seoDescription": "Mini PC CX Intel I5 1240P+8G+SSD240GB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC CX Intel I5 1240P+8G+SSD240GB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-cx-ryzen-5-5500h-16gb-ssd-512gb",
+   "name": "Mini PC CX AMD Ryzen 5 5500H+16G+SSD512GB",
+   "brand": "AMD",
+   "seoTitle": "Mini PC CX AMD Ryzen 5 5500H+16G+SSD512GB",
+   "seoDescription": "Mini PC CX AMD Ryzen 5 5500H+16G+SSD512GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mini-pc-cx-ryzen-7-6800h-16gb-ssd-480gb",
+   "name": "Mini PC CX AMD Ryzen 7 6800H+16G+SSD480GB",
+   "brand": "AMD",
+   "seoTitle": "Mini PC CX AMD Ryzen 7 6800H+16G+SSD480GB",
+   "seoDescription": "Mini PC CX AMD Ryzen 7 6800H+16G+SSD480GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mini-pc-ecs-liva-z3-n5100-4gb-128-gb-ssd-win11",
+   "name": "Mini PC ECS Liva Z3 N5100/4GB/128 GB SSD WIN11",
+   "seoTitle": "Mini PC ECS Liva Z3 N5100/4GB/128 GB SSD",
+   "seoDescription": "MINI PC ECS LIVA Z3 con procesador Intel N5100, 4GB RAM, 128GB SSD y Windows 11. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mini-pc-hp-200-i5-1334u-8gb-ssd512gb",
+   "name": "Mini PC HP 200 I5-1334U 8GB SSD512GB",
+   "brand": "HP",
+   "seoTitle": "Mini PC HP 200 I5-1334U 8GB SSD512GB",
+   "seoDescription": "MINI PC HP 200 con procesador Intel i5-1334U, 8GB RAM y SSD 512GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mini-pc-lenovo-neo-50q-core7-240h-16gb-ssd512-g3os",
+   "name": "Mini PC Lenovo NEO 50Q CORE7 240H 16GB SSD512 G3OS",
+   "brand": "Lenovo",
+   "seoTitle": "Mini PC Lenovo NEO 50Q CORE7 240H 16GB SSD512",
+   "seoDescription": "Mini PC Lenovo NEO 50Q CORE7 240H 16GB SSD512 G3OS. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mini-pc-msi-i3-1215u-ddr4-12m-086bus-barebone",
+   "name": "Mini PC MSI I3-1215U DDR4 12M-086BUS (barebone)",
+   "brand": "MSI",
+   "seoTitle": "Mini PC MSI I3-1215U DDR4 12M-086BUS",
+   "seoDescription": "Mini PC MSI I3-1215U DDR4 12M-086BUS (barebone). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC MSI I3-1215U DDR4 12M-086BUS (barebone). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-msi-i5-1235u-ddr4-12m-015bus-barebone",
+   "name": "Mini PC MSI I5-1235U DDR4 12M-015BUS (barebone)",
+   "brand": "MSI",
+   "seoTitle": "Mini PC MSI I5-1235U DDR4 12M-015BUS",
+   "seoDescription": "Mini PC MSI I5-1235U DDR4 12M-015BUS (barebone). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC MSI I5-1235U DDR4 12M-015BUS (barebone). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mini-pc-performance-amd-ryzen-3-3200u8gssd240",
+   "name": "Mini PC Performance AMD Ryzen 3 3200U+8G+SSD240",
+   "brand": "AMD",
+   "seoTitle": "Mini PC Performance AMD Ryzen 3",
+   "seoDescription": "Mini PC con procesador AMD Ryzen 3 3200U, 8GB RAM y SSD 240GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mini-pc-performance-amd-ryzen-5-3500u16gssd512",
+   "name": "Mini PC Performance AMD Ryzen 5 3500U+16G+SSD512",
+   "brand": "AMD",
+   "seoTitle": "Mini PC Performance AMD Ryzen 5",
+   "seoDescription": "Mini PC Performance AMD Ryzen 5 3500U+16G+SSD512. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mini PC Performance AMD Ryzen 5 3500U+16G+SSD512. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mochila-targus-para-notebook-ascend-16-black-2",
+   "name": "Mochila Targus para Notebook / Ascend / 16″ / Black",
+   "brand": "Targus",
+   "seoTitle": "Mochila Targus para Notebook / Ascend / 16″",
+   "seoDescription": "Mochila Targus Ascend 16″ negra para notebook. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mochila-targus-para-notebook-intellect-advanced-15-6",
+   "name": "Mochila Targus para Notebook / Intellect Advanced / 15.6″",
+   "brand": "Targus",
+   "seoTitle": "Mochila Targus para Notebook / Intellect",
+   "seoDescription": "Mochila Targus Intellect Advanced para laptop 15.6″. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mochila-targus-para-notebook-motor-laptop-16-black-2",
+   "name": "Mochila Targus para Notebook / Motor Laptop / 16″ / Black",
+   "brand": "Targus",
+   "seoTitle": "Mochila Targus para Notebook / Motor Laptop",
+   "seoDescription": "Mochila Targus negra para laptop 16 pulgadas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "modulo-mikrotik-sfp-1-25g-mm-550m-850nm",
+   "name": "Modulo MikroTik SFP 1.25G MM 550M 850NM",
+   "brand": "MikroTik",
+   "seoTitle": "Modulo MikroTik SFP 1.25G MM 550M 850NM",
+   "seoDescription": "Modulo MikroTik SFP 1.25G MM 550M 850NM. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Modulo MikroTik SFP 1.25G MM 550M 850NM. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "modulo-tranceptor-lenovo-sfp",
+   "name": "Modulo Tranceptor Lenovo Sfp+",
+   "brand": "Lenovo",
+   "seoTitle": "Modulo Tranceptor Lenovo Sfp+",
+   "seoDescription": "Modulo Tranceptor Lenovo Sfp+. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Modulo Tranceptor Lenovo Sfp+. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-15-6-asus-portatil-mb169ck-usb-fullhd",
+   "name": "Monitor 15.6 Asus Portatil MB169CK USB Fullhd",
+   "brand": "Asus",
+   "seoTitle": "Monitor 15.6 Asus Portatil MB169CK USB Fullhd",
+   "seoDescription": "Monitor portátil ASUS MB169CK de 15.6 pulgadas con conexión USB, resolución Full HD y diseño ultradelgado para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-19-cx-185h-vga-hdmi-vesa-expo",
+   "name": "Monitor 19 CX 185H VGA/HDMI Vesa Expo",
+   "seoTitle": "Monitor 19 CX 185H VGA/HDMI Vesa Expo",
+   "seoDescription": "Monitor LED 19″ CX 185H con conexiones VGA/HDMI, soporte VESA y tecnología EXPO para oficina y entretenimiento… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-19-led-hd-eview-1851axa-hdmi-vga",
+   "brand": "E-View",
+   "seoTitle": "Monitor 19″ LED E-view HD HDMI Vga",
+   "seoDescription": "Monitor 19″ LED E-view HD HDMI Vga. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-19-philips-vga-hdmi-vesa-2",
+   "name": "Monitor 19 Philips VGA HDMI Vesa",
+   "brand": "Philips",
+   "seoTitle": "Monitor 19 Philips VGA HDMI Vesa",
+   "seoDescription": "Monitor 19 Philips VGA HDMI Vesa. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-22-asus-vp227hf-j-black-fhd-100hz-hdmi-vga",
+   "name": "Monitor 22 Asus VP227HF-J Black FHD 100HZ HDMI/VGA",
+   "brand": "Asus",
+   "seoTitle": "Monitor 22 Asus VP227HF-J Black FHD 100HZ",
+   "seoDescription": "Monitor 22 Asus VP227HF-J Black FHD 100HZ HDMI/VGA. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor 22 Asus VP227HF-J Black FHD 100HZ HDMI/VGA. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-22-asus-vy229hf-j-black-ips-100hz-hdmi-vga",
+   "name": "Monitor 22 Asus VY229HF-J Black IPS 100HZ HDMI/VGA",
+   "brand": "Asus",
+   "seoTitle": "Monitor 22 Asus VY229HF-J Black IPS 100HZ",
+   "seoDescription": "Monitor 22 Asus VY229HF-J Black IPS 100HZ HDMI/VGA. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor 22 Asus VY229HF-J Black IPS 100HZ HDMI/VGA. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-22-cx-215h-hdmi-vga-vesa",
+   "name": "Monitor 22 CX 215H HDMI / VGA Vesa",
+   "seoTitle": "Monitor 22 CX 215H HDMI / VGA Vesa",
+   "seoDescription": "MONITOR 22 CX 215H HDMI / VGA VESA — características clave y especificaciones. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-22-cx-215u-hdmi-vga-vesa",
+   "name": "Monitor 22 CX 215U HDMI / VGA Vesa",
+   "seoTitle": "Monitor 22 CX 215U HDMI / VGA Vesa",
+   "seoDescription": "Monitor 22 CX 215U HDMI / VGA Vesa. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-22-dell-e2222h-vgadport-fhd",
+   "name": "Monitor 22 Dell E2222H Vga+dport FHD",
+   "brand": "Dell",
+   "seoTitle": "Monitor 22 Dell E2222H Vga+dport FHD",
+   "seoDescription": "Monitor 22 Dell E2222H Vga+dport FHD. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor 22 Dell E2222H Vga+dport FHD. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-22-hikvision-ds-d5022fn-c-vga-hdmi",
+   "name": "Monitor 22 Hikvision DS-D5022FN-C VGA/HDMI",
+   "brand": "Hikvision",
+   "seoTitle": "Monitor 22 Hikvision DS-D5022FN-C VGA/HDMI",
+   "seoDescription": "Monitor profesional Hikvision 22 pulgadas DS-D5022FN-C con conectores VGA y HDMI. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-22-hp-322pe-hdmi-fhd-ci",
+   "name": "Monitor 22 HP 322PE HDMI FHD (CI)",
+   "brand": "HP",
+   "seoTitle": "Monitor 22 HP 322PE HDMI FHD (CI)",
+   "seoDescription": "Monitor 22 HP 322PE HDMI FHD (CI). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor 22 HP 322PE HDMI FHD (CI). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-22-hp-322pe-hdmi-fhd-si",
+   "name": "Monitor 22 HP 322PE HDMI FHD (SI)",
+   "brand": "HP",
+   "seoTitle": "Monitor 22 HP 322PE HDMI FHD (SI)",
+   "seoDescription": "Monitor HP 322PE de 22 pulgadas Full HD con conexión HDMI, ideal para trabajo, gaming y entretenimiento multimedia… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-22-philips-hdmi-vga-221v8-77",
+   "name": "Monitor 22 Philips HDMI /VGA 221V8/77",
+   "brand": "Philips",
+   "seoTitle": "Monitor 22 Philips HDMI /VGA 221V8/77",
+   "seoDescription": "Monitor Philips 22 pulgadas 221V8/77 con conectividad HDMI y VGA, ideal para trabajo y entretenimiento diario. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-24-asus-va24ehf-j-black-ips-100hz-hdmi",
+   "name": "Monitor 24 Asus VA24EHF-J Black IPS 100HZ HDMI",
+   "brand": "Asus",
+   "seoTitle": "Monitor 24 Asus VA24EHF-J Black IPS 100HZ",
+   "seoDescription": "Monitor 24 Asus VA24EHF-J Black IPS 100HZ HDMI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor 24 Asus VA24EHF-J Black IPS 100HZ HDMI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-24-asus-vg249ql3a-j-tuf-gaming-180hz-hdmi",
+   "name": "Monitor 24 Asus VG249QL3A-J TUF Gaming 180HZ HDMI",
+   "brand": "Asus",
+   "seoTitle": "Monitor 24 Asus VG249QL3A-J TUF Gaming 180HZ",
+   "seoDescription": "Monitor 24 Asus VG249QL3A-J TUF Gaming 180HZ HDMI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor 24 Asus VG249QL3A-J TUF Gaming 180HZ HDMI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-24-cx-236f-hdmi-vga-vesa",
+   "name": "Monitor 24 CX 236F HDMI / VGA Vesa",
+   "seoTitle": "Monitor 24 CX 236F HDMI / VGA Vesa",
+   "seoDescription": "MONITOR 24 CX 236F HDMI / VGA VESA — características clave y especificaciones. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-24-cx-236u-hdmi-vga-vesa",
+   "name": "Monitor 24 CX 236U HDMI / VGA Vesa",
+   "seoTitle": "Monitor 24 CX 236U HDMI / VGA Vesa",
+   "seoDescription": "Monitor 24 CX 236U HDMI / VGA Vesa. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-24-cx-m2453dkj-vga-hdmi-frameless",
+   "name": "Monitor 24 CX M2453DKJ VGA/HDMI Frameless",
+   "seoTitle": "Monitor 24 CX M2453DKJ VGA/HDMI Frameless",
+   "seoDescription": "MONITOR 24 CX M2453DKJ VGA/HDMI FRAMELESS — características clave y especificaciones. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-24-dell-p2425he-vga-hdmi-dportrj45",
+   "name": "Monitor 24 Dell P2425HE VGA + HDMI + DPORT+RJ45",
+   "brand": "Dell",
+   "seoTitle": "Monitor 24 Dell P2425HE VGA + HDMI +",
+   "seoDescription": "Monitor Dell P2425HE 24 pulgadas con conectividad VGA, HDMI, DisplayPort y RJ45. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-24-gamemax-100hz-ips-fhd-hdmi-pixel",
+   "name": "Monitor 24 Gamemax 100HZ IPS FHD HDMI (pixel)",
+   "brand": "Gamemax",
+   "seoTitle": "Monitor 24 Gamemax 100HZ IPS FHD HDMI (pixel)",
+   "seoDescription": "MONITOR 24 GAMEMAX 100HZ IPS FHD HDMI (PIXEL) — características clave y especificaciones. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-24-gamemax-100hz-ips-fhd-hdmi-vga",
+   "name": "Monitor 24 Gamemax 100HZ IPS FHD HDMI/VGA",
+   "brand": "Gamemax",
+   "seoTitle": "Monitor 24 Gamemax 100HZ IPS FHD HDMI/VGA",
+   "seoDescription": "Monitor gaming GameMax 24 pulgadas con tecnología IPS, 100Hz, resolución Full HD y conectividad HDMI/VGA para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-24-gamemax-180hz-ips-fhd-hdmi-d-port",
+   "name": "Monitor 24 Gamemax 180HZ IPS FHD HDMI D Port",
+   "brand": "Gamemax",
+   "seoTitle": "Monitor 24 Gamemax 180HZ IPS FHD HDMI D Port",
+   "seoDescription": "MONITOR 24 GAMEMAX 180HZ IPS FHD HDMI D PORT — características clave y especificaciones. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-24-gamemax-180hz-ips-fhd-hdmi-dport-pixel",
+   "name": "Monitor 24 Gamemax 180HZ IPS FHD HDMI Dport (pixel",
+   "brand": "Gamemax",
+   "seoTitle": "Monitor 24 Gamemax 180HZ IPS FHD HDMI Dport",
+   "seoDescription": "Monitor gaming GameMax 24 pulgadas con tecnología IPS, 180Hz de frecuencia, resolución Full HD y conectores… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-24-philips-hdmi-vga-241v8l-77",
+   "name": "Monitor 24 Philips HDMI /VGA 241V8L/77",
+   "brand": "Philips",
+   "seoTitle": "Monitor 24 Philips HDMI /VGA 241V8L/77",
+   "seoDescription": "Monitor Philips 24 pulgadas Full HD con conectividad HDMI y VGA, ideal para trabajo profesional y entretenimiento… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-25-arkham-gamer-210hz-ips-fhd-1ms-hdmi-dp",
+   "name": "Monitor 25 Arkham Gamer 210HZ IPS FHD 1MS HDMI/ DP",
+   "seoTitle": "Monitor 25 Arkham Gamer 210HZ IPS FHD 1MS",
+   "seoDescription": "Monitor gaming 25″ ARKHAM con panel IPS 210Hz, resolución Full HD, tiempo respuesta 1ms y conectividad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-25-msi-pro-mp251l-e2-fhd-120hz-hdmi-vga-2",
+   "name": "Monitor 25 MSI PRO MP251L E2 FHD 120HZ HDMI VGA",
+   "brand": "MSI",
+   "seoTitle": "Monitor 25 MSI PRO MP251L E2 FHD 120HZ HDMI",
+   "seoDescription": "Monitor MSI Pro MP251L E2 de 25 pulgadas, resolución Full HD 1080p, frecuencia 120Hz, conexiones HDMI y VGA para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-27-asus-pa278qv-j-proart-ips-75hz-hdmi-dp-2",
+   "name": "Monitor 27 Asus PA278QV-J Proart IPS 75HZ HDMI/DP",
+   "brand": "Asus",
+   "seoTitle": "Monitor 27 Asus PA278QV-J Proart IPS 75HZ",
+   "seoDescription": "Monitor profesional ASUS ProArt 27 pulgadas IPS 75Hz con conectividad HDMI y DisplayPort, ideal para diseño gráfico… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-27-asus-va27ehf-black-ips-100hz-hdmi",
+   "name": "Monitor 27 Asus VA27EHF Black IPS 100HZ HDMI",
+   "brand": "Asus",
+   "seoTitle": "Monitor 27 Asus VA27EHF Black IPS 100HZ HDMI",
+   "seoDescription": "Monitor ASUS VA27EHF de 27 pulgadas con panel IPS, frecuencia 100Hz, conectividad HDMI y diseño elegante en color… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-27-asus-va27ehf-j-black-ips-100hz-hdmi",
+   "name": "Monitor 27 Asus VA27EHF-J Black IPS 100HZ HDMI",
+   "brand": "Asus",
+   "seoTitle": "Monitor 27 Asus VA27EHF-J Black IPS 100HZ",
+   "seoDescription": "Monitor 27 Asus VA27EHF-J Black IPS 100HZ HDMI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor 27 Asus VA27EHF-J Black IPS 100HZ HDMI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-27-asus-vg279q3a-j-tuf-gaming-180hz-hdmi-d",
+   "name": "Monitor 27 Asus VG279Q3A-J TUF Gaming 180HZ HDMI/D",
+   "brand": "Asus",
+   "seoTitle": "Monitor 27 Asus VG279Q3A-J TUF Gaming 180HZ",
+   "seoDescription": "Monitor 27 Asus VG279Q3A-J TUF Gaming 180HZ HDMI/D. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor 27 Asus VG279Q3A-J TUF Gaming 180HZ HDMI/D. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-27-asus-xg27ucs-j-rog-s-caja-danada",
+   "name": "Monitor 27 Asus XG27UCS-J ROG S **caja Dañada",
+   "brand": "Asus",
+   "seoTitle": "Monitor 27 Asus XG27UCS-J ROG S **caja Dañada",
+   "seoDescription": "Monitor gaming ASUS ROG Strix XG27UCS 27 pulgadas, resolución 4K, 160Hz, tecnología HDR. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-27-asus-xg27ucs-j-rog-strix-160hz-hd-dp-4k",
+   "name": "Monitor 27 Asus XG27UCS-J ROG Strix 160HZ HD/DP 4K",
+   "brand": "Asus",
+   "seoTitle": "Monitor 27 Asus XG27UCS-J ROG Strix 160HZ",
+   "seoDescription": "Monitor gaming ASUS ROG Strix 27″ 4K con frecuencia 160Hz, conectividad HDMI/DisplayPort para experiencia visual… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-27-asus-xg27ucs-j-rog-strix-160hz-hdmi-dp",
+   "name": "Monitor 27 Asus XG27UCS-J ROG Strix 160HZ HDMI/DP",
+   "brand": "Asus",
+   "seoTitle": "Monitor 27 Asus XG27UCS-J ROG Strix 160HZ",
+   "seoDescription": "Monitor 27 Asus XG27UCS-J ROG Strix 160HZ HDMI/DP. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor 27 Asus XG27UCS-J ROG Strix 160HZ HDMI/DP. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-27-gamemax-100hz-ips-fhd-hdmi-vga",
+   "name": "Monitor 27 Gamemax 100HZ IPS FHD HDMI/VGA",
+   "brand": "Gamemax",
+   "seoTitle": "Monitor 27 Gamemax 100HZ IPS FHD HDMI/VGA",
+   "seoDescription": "Monitor 27 Gamemax 100HZ IPS FHD HDMI/VGA. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-27-gamemax-100hz-ips-fhd-hdmi-vga-pixel",
+   "name": "Monitor 27 Gamemax 100HZ IPS FHD HDMI/VGA (pixel)",
+   "brand": "Gamemax",
+   "seoTitle": "Monitor 27 Gamemax 100HZ IPS FHD HDMI/VGA",
+   "seoDescription": "Monitor gaming GameMax 27 pulgadas, panel IPS 100Hz, resolución Full HD, conectores HDMI/VGA para experiencia visual… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-27-gamemax-180hz-ips-fhd-hdmi-d-port",
+   "name": "Monitor 27 Gamemax 180HZ IPS FHD HDMI D Port",
+   "brand": "Gamemax",
+   "seoTitle": "Monitor 27 Gamemax 180HZ IPS FHD HDMI D Port",
+   "seoDescription": "Monitor 27 Gamemax 180HZ IPS FHD HDMI D Port. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor 27 Gamemax 180HZ IPS FHD HDMI D Port. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-27-gamemax-180hz-ips-fhd-hdmi-dport-pixel",
+   "name": "Monitor 27 Gamemax 180HZ IPS FHD HDMI/Dport (pixel",
+   "brand": "Gamemax",
+   "seoTitle": "Monitor 27 Gamemax 180HZ IPS FHD HDMI/Dport",
+   "seoDescription": "Monitor gaming 27 pulgadas GameMax con panel IPS, 180Hz, resolución Full HD y conectividad HDMI/DisplayPort para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-27-msi-g275l-e14-ips-144hz-hdmi-dp",
+   "name": "Monitor 27 MSI G275L E14 IPS 144HZ HDMI DP",
+   "brand": "MSI",
+   "seoTitle": "Monitor 27 MSI G275L E14 IPS 144HZ HDMI DP",
+   "seoDescription": "Monitor 27 MSI G275L E14 IPS 144HZ HDMI DP. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor 27 MSI G275L E14 IPS 144HZ HDMI DP. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-27-noblex-hdmi-vga-nxsm2700-2",
+   "name": "Monitor 27 Noblex HDMI/VGA NXSM2700",
+   "brand": "Noblex",
+   "seoTitle": "Monitor 27 Noblex HDMI/VGA NXSM2700",
+   "seoDescription": "MONITOR 27 NOBLEX HDMI/VGA NXSM2700 — características clave y especificaciones. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-27-philips-hdmi-vga-272v8la-55",
+   "name": "Monitor 27 Philips HDMI /VGA 272V8LA/55",
+   "brand": "Philips",
+   "seoTitle": "Monitor 27 Philips HDMI /VGA 272V8LA/55",
+   "seoDescription": "Monitor Philips 27 pulgadas Full HD con conectividad HDMI y VGA, ideal para gaming, trabajo y entretenimiento… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-32-asus-pa329cv-j-proart-ips-60hz-hdmi-dp",
+   "name": "Monitor 32 Asus PA329CV-J Proart IPS 60HZ HDMI/DP",
+   "brand": "Asus",
+   "seoTitle": "Monitor 32 Asus PA329CV-J Proart IPS 60HZ",
+   "seoDescription": "Monitor profesional ASUS ProArt 32 pulgadas con panel IPS, resolución 4K, conectividad HDMI/DisplayPort y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-32-cx-pf236m-vga-hdmi-frameless",
+   "name": "Monitor 32 CX PF236M VGA/HDMI Frameless",
+   "seoTitle": "Monitor 32 CX PF236M VGA/HDMI Frameless",
+   "seoDescription": "Monitor 32 CX PF236M VGA/HDMI Frameless. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor 32 CX PF236M VGA/HDMI Frameless. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-32-gigabyte-gs32qca-gaming-curvo-180hz",
+   "name": "Monitor 32 Gigabyte GS32QCA Gaming Curvo 180HZ",
+   "brand": "Gigabyte",
+   "seoTitle": "Monitor 32 Gigabyte GS32QCA Gaming Curvo",
+   "seoDescription": "MONITOR 32 GIGABYTE GS32QCA GAMING CURVO 180HZ — características clave y especificaciones. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-34-asus-vg34vql3a-j-tuf-gaming-180hz-hdmi",
+   "name": "Monitor 34 Asus VG34VQL3A-J TUF Gaming 180HZ HDMI",
+   "brand": "Asus",
+   "seoTitle": "Monitor 34 Asus VG34VQL3A-J TUF Gaming 180HZ",
+   "seoDescription": "Monitor gaming ASUS TUF 34 pulgadas ultrawide curvo, 180Hz, conectividad HDMI, diseñado para experiencia gaming… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-gamer-curvo-msi-24-mag-242c-va-180-hz-full-hd",
+   "brand": "MSI",
+   "seoTitle": "Monitor Gamer Curvo MSI 24″ MAG 242C VA 180",
+   "seoDescription": "Pantalla VA – Proporciona un tiempo de respuesta de 1ms (MPRT), optimiza los colores y el brillo de la pantalla. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-gamer-curvo-msi-27-mag-276cxf-va-280-hz-full-hd",
+   "brand": "MSI",
+   "seoTitle": "Monitor Gamer Curvo MSI 27″ MAG 276CXF VA 280",
+   "seoDescription": "Pantalla VA – Proporciona un tiempo de respuesta de 1ms (MPRT), optimiza los colores y el brillo de la pantalla. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-gamer-msi-24-mag-244f-200-hz-ips-full-hd",
+   "brand": "MSI",
+   "seoTitle": "Monitor Gamer MSI 24″ MAG 244F 200 Hz IPS",
+   "seoDescription": "Panel Rapid IPS – Proporciona un tiempo de respuesta de 0,5ms (GtG, mín.), optimiza los colores y el brillo de la… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-gamer-msi-27-mag-274f-200-hz-ips-full-hd",
+   "brand": "MSI",
+   "seoTitle": "Monitor Gamer MSI 27″ MAG 274F 200 Hz IPS",
+   "seoDescription": "Panel Rapid IPS – Proporciona un tiempo de respuesta de 0,5ms (GtG, mín.), optimiza los colores y el brillo de la… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-led-20-e-view-1951axa",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 22″ E-View 2151AXA VGA/HDMI 75HZ",
+   "seoDescription": "Monitor LED 22″ E-View 2151AXA VGA/HDMI 75HZ. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor LED 22″ E-View 2151AXA VGA/HDMI 75HZ. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-led-20-e-view-1951axa-vga-hdmi-1600x900-2",
+   "name": "Monitor LED 20 E-View 1951AXA VGA/HDMI (1600×900)",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 20 E-View 1951AXA VGA/HDMI",
+   "seoDescription": "Monitor LED E-View 20 pulgadas con resolución 1600×900, conectividad VGA y HDMI. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-led-20-e-view-1951axa-vga-hdmi-60hz",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 20″ E-View 1951AXA VGA/HDMI 60HZ",
+   "seoDescription": "Monitor LED 20″ E-View 1951AXA VGA/HDMI 60HZ. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-led-22-e-view-2151ray-hdmi-dp-100hz",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 22″ E-View 2151RAY HDMI/DP 100HZ",
+   "seoDescription": "Monitor LED 22″ E-View 2151RAY HDMI/DP 100HZ. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-led-22-e-view-2151ray-hdmi-dp-100hz-1920x1080-2",
+   "name": "Monitor LED 22 E-View 2151RAY HDMI/DP 100HZ (1920×1080)",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 22 E-View 2151RAY HDMI/DP 100HZ",
+   "seoDescription": "Monitor LED 22 pulgadas E-VIEW 2151RAY con resolución Full HD, conectividad HDMI/DisplayPort y frecuencia de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-led-22-samsung-t350-fhd-ips-5ms-hdmi-vga-75hz",
+   "brand": "Samsung",
+   "seoTitle": "Monitor LED 22″ Samsung FHD IPS 5MS HDMI VGA",
+   "seoDescription": "Monitor LED 22″ Samsung FHD IPS 5MS HDMI VGA 75HZ. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-led-24-curvo-e-view-2351cur-hdmi-dp-165hz",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 24″ Curvo E-view 2351CUR Hdmi/Dp",
+   "seoDescription": "Monitor LED 24″ Curvo E-view 2351CUR Hdmi/Dp 165HZ. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor LED 24″ Curvo E-view 2351CUR Hdmi/Dp 165HZ. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-led-24-curvo-e-view-2351cur-hdmi-dp-165hz-1920x1080-2",
+   "name": "Monitor LED 24 Curvo E-View 2351CUR HDMI/DP 165HZ (1920×1080)",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 24 Curvo E-View 2351CUR HDMI/DP",
+   "seoDescription": "Monitor gaming curvo 24 pulgadas E-VIEW 2351CUR con 165Hz, resolución Full HD 1920×1080, conexiones HDMI y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-led-24-e-view-2351axa-vga-hdmi-75hz",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 24″ E-View 2351AXA VGA/HDMI 75HZ",
+   "seoDescription": "Monitor LED 24″ E-View 2351AXA VGA/HDMI 75HZ. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-led-24-e-view-2351ray-hdmi-dp-100hz-1920x1080-2",
+   "name": "Monitor LED 24 E-View 2351RAY HDMI/DP 100HZ (1920×1080)",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 24 E-View 2351RAY HDMI/DP 100HZ",
+   "seoDescription": "Monitor LED 24 pulgadas E-VIEW 2351RAY con resolución Full HD 1920×1080, frecuencia 100Hz, conectores HDMI y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-led-24-gaming-e-view-235gam-2k-hdmi-dp-165hz-2560x1440-ips-2",
+   "name": "Monitor LED 24 Gaming E-View 235GAM-2K HDMI/DP 165HZ (2560X1440) IPS",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 24 Gaming E-View 235GAM-2K",
+   "seoDescription": "Monitor gaming E-VIEW 24″ QHD 2560×1440, panel IPS, 165Hz, conectividad HDMI/DisplayPort para experiencia gaming… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-led-24-gaming-e-view-235gam-hd-hdmi-dp-180hz-1920x1080-ips-2",
+   "name": "Monitor LED 24 Gaming E-View 235GAM-HD HDMI/DP 180HZ (1920×1080) IPS",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 24 Gaming E-View 235GAM-HD",
+   "seoDescription": "Monitor gaming 24″ E-VIEW 180Hz con tecnología IPS, resolución Full HD 1920×1080, conectores HDMI/DisplayPort para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-led-24-gfast-full-hd-hdmi-60hz",
+   "seoTitle": "Monitor LED 24″ GFast Full HD HDMI 60Hz",
+   "seoDescription": "Monitor LED 24″ GFast Full HD HDMI 60Hz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-led-27-curvo-e-view-cur275gam-2k-hdmi-dp-165hz-2560x1440-2",
+   "name": "Monitor LED 27 Curvo E-View CUR275GAM-2K HDMI/DP 165HZ (2560X1440)",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 27 Curvo E-View CUR275GAM-2K",
+   "seoDescription": "Monitor gaming curvo 27″ E-View CUR275GAM-2K con resolución 2K QHD, frecuencia 165Hz, conectores HDMI/DisplayPort… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-led-27-e-view-2351ray-hdmi-dp-100hz",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 27″ Gaming E-view 275GAM-HD",
+   "seoDescription": "Monitor LED 27″ Gaming E-view 275GAM-HD Hdmi/Dp 180HZ. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor LED 27″ Gaming E-view 275GAM-HD Hdmi/Dp 180HZ. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-led-27-e-view-2751ray-vga-hdmi-75hz-1920x1080-2",
+   "name": "Monitor LED 27 E-View 2751RAY VGA/HDMI 75HZ (1920×1080)",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 27 E-View 2751RAY VGA/HDMI 75HZ",
+   "seoDescription": "Monitor LED E-View 27 pulgadas Full HD 1920×1080, frecuencia 75Hz, conexiones VGA y HDMI para gaming y oficina. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-led-27-gaming-e-view-275gam-2k-hdmi-dp-165hz-2560x1440-2",
+   "name": "Monitor LED 27 Gaming E-View 275GAM-2K HDMI/DP 165HZ (2560X1440)",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 27 Gaming E-View 275GAM-2K",
+   "seoDescription": "Monitor gaming E-View 27 pulgadas QHD 2560×1440, frecuencia 165Hz, conectividad HDMI/DisplayPort para experiencia… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-led-27-gaming-e-view-275gam-hd-hdmi-dp-180hz-1920x1080-ips-2",
+   "name": "Monitor LED 27 Gaming E-View 275GAM-HD HDMI/DP 180HZ (1920×1080) IPS",
+   "brand": "E-View",
+   "seoTitle": "Monitor LED 27 Gaming E-View 275GAM-HD",
+   "seoDescription": "Monitor gaming E-VIEW 27″ con panel IPS, 180Hz, resolución Full HD 1920×1080 y conectividad HDMI/DisplayPort para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-msi-21-5-pro-mp225v-1920x1080-va-100hz-2",
+   "name": "Monitor MSI 21.5″ PRO MP225V (1920X1080) VA 100HZ",
+   "brand": "MSI",
+   "seoTitle": "Monitor MSI 21.5″ PRO MP225V (1920X1080) VA",
+   "seoDescription": "Monitor MSI Pro MP225V de 21.5 pulgadas con resolución Full HD, panel VA, frecuencia 100Hz ideal para trabajo y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-msi-24-5-pro-mp251l-e2-1920x1080-ips-120hz-s-cable-interlock-2",
+   "name": "Monitor MSI 24.5″ PRO MP251L E2 (1920X1080) IPS 120HZ (S/Cable Interlock)",
+   "brand": "MSI",
+   "seoTitle": "Monitor MSI 24.5″ PRO MP251L E2 (1920X1080)",
+   "seoDescription": "Monitor gaming MSI 24.5″ Full HD IPS con 120Hz de frecuencia de actualización para experiencia visual fluida y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-msi-24-mag-244f-1920x1080-ips-200hz-2",
+   "name": "Monitor MSI 24″ MAG 244F (1920X1080) IPS 200HZ",
+   "brand": "MSI",
+   "seoTitle": "Monitor MSI 24″ MAG 244F (1920X1080) IPS",
+   "seoDescription": "Monitor gaming MSI MAG 244F 24 pulgadas, panel IPS Full HD 1920×1080, frecuencia 200Hz para experiencia fluida y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-msi-24-pro-mp242l-1920x1080-ips-100hz-2",
+   "name": "Monitor MSI 24″ PRO MP242L (1920X1080) IPS 100HZ",
+   "brand": "MSI",
+   "seoTitle": "Monitor MSI 24″ PRO MP242L (1920X1080) IPS",
+   "seoDescription": "Monitor MSI Pro MP242L 24 pulgadas con panel IPS, resolución Full HD 1920×1080 y frecuencia de actualización de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-msi-24-pro-mp243l-e14-1920x1080-ips-144hz-2",
+   "name": "Monitor MSI 24″ PRO MP243L E14 (1920X1080) IPS 144HZ",
+   "brand": "MSI",
+   "seoTitle": "Monitor MSI 24″ PRO MP243L E14 (1920X1080)",
+   "seoDescription": "Monitor gaming MSI 24 pulgadas, resolución Full HD 1920×1080, panel IPS con 144Hz de frecuencia para experiencia… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-msi-27-mag-274f-1920x1080-ips-200hz-2",
+   "name": "Monitor MSI 27″ MAG 274F (1920X1080) IPS 200HZ",
+   "brand": "MSI",
+   "seoTitle": "Monitor MSI 27″ MAG 274F (1920X1080) IPS",
+   "seoDescription": "Monitor gaming MSI MAG274F de 27 pulgadas con panel IPS, resolución Full HD 1920×1080 y frecuencia de actualización… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-msi-curvo-24-mag-242c-1500r-1920x1080-va-180hz-2",
+   "name": "Monitor MSI Curvo 24″ MAG 242C 1500R (1920X1080) VA 180HZ",
+   "brand": "MSI",
+   "seoTitle": "Monitor MSI Curvo 24″ MAG 242C 1500R",
+   "seoDescription": "Monitor gaming MSI curvo 24″ con panel VA, resolución Full HD 1920×1080, curvatura 1500R y frecuencia de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-msi-curvo-27-mag-276cxf-1500r-1920x1080-va-280hz",
+   "name": "Monitor MSI Curvo 27″ MAG 276CXF 1500R (1920X1080) VA 280HZ",
+   "brand": "MSI",
+   "seoTitle": "Monitor MSI Curvo 27″ MAG 276CXF 1500R",
+   "seoDescription": "Monitor gaming MSI curvo 27 pulgadas, resolución Full HD, panel VA, frecuencia 280Hz, curvatura 1500R para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-portable-ips-156-e-view-1560port-usb-c-hdmi",
+   "brand": "E-View",
+   "seoTitle": "Monitor Portable IPS 15,6″ E-View 1560PORT",
+   "seoDescription": "Monitor Portable IPS 15,6″ E-View 1560PORT USB-C/HDMI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor Portable IPS 15,6″ E-View 1560PORT USB-C/HDMI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-portatil-ips-156-e-view-1560port-usb-c-hdmi-vesa-1920x1080-2",
+   "name": "Monitor Portatil IPS 15,6″ E-View 1560PORT Usb-c/HDMI/ Vesa (1920×1080)",
+   "brand": "E-View",
+   "seoTitle": "Monitor Portatil IPS 15,6″ E-View 1560PORT",
+   "seoDescription": "Monitor portátil IPS de 15.6 pulgadas Full HD con conectividad USB-C y HDMI. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monitor-samsung-flat-22-ips-100hz",
+   "name": "Monitor Samsung Flat 22″ IPS 100HZ",
+   "brand": "Samsung",
+   "seoTitle": "Monitor Samsung Flat 22″ IPS 100HZ",
+   "seoDescription": "Monitor Samsung Flat 22″ IPS 100HZ. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Monitor Samsung Flat 22″ IPS 100HZ. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "monitor-smart-samsung-32%e2%80%b3-m5-fhd-60hz-wi-fi-bt",
+   "brand": "Samsung",
+   "seoTitle": "Monitor Smart Samsung 32″ M5 FHD 60Hz Wi-Fi",
+   "seoDescription": "Monitor Smart Samsung 32″ M5 FHD 60Hz Wi-Fi BT. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monopatin-electrico-daihatsu-v100",
+   "brand": "Daihatsu",
+   "seoTitle": "Monopatin Electrico Daihatsu V100",
+   "seoDescription": "Movilidad rápida, ágil y sustentable para la ciudad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monopatin-electrico-daihatsu-v101",
+   "brand": "Daihatsu",
+   "seoTitle": "Monopatin Electrico Daihatsu V101",
+   "seoDescription": "Mayor autonomía y estabilidad para tus recorridos diarios. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monopatin-electrico-daihatsu-v200",
+   "brand": "Daihatsu",
+   "seoTitle": "Monopatin Electrico Daihatsu V200",
+   "seoDescription": "El salto definitivo en potencia, comodidad y autonomía urbana. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monopatin-electrico-daihatsu-v201",
+   "brand": "Daihatsu",
+   "seoTitle": "Monopatin Electrico Daihatsu V201",
+   "seoDescription": "Elegancia, mayor autonomía y andar ultrasuave. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monopatin-electrico-daihatsu-v300",
+   "brand": "Daihatsu",
+   "seoTitle": "Monopatin Electrico Daihatsu V300",
+   "seoDescription": "El tope de gama en confort y seguridad para tus traslados diarios. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monopatin-electrico-daihatsu-v301",
+   "brand": "Daihatsu",
+   "seoTitle": "Monopatin Electrico Daihatsu V301",
+   "seoDescription": "El equilibrio perfecto entre rendimiento, confort de marcha y durabilidad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monopatin-electrico-daihatsu-v400",
+   "brand": "Daihatsu",
+   "seoTitle": "Monopatin Electrico Daihatsu V400",
+   "seoDescription": "Máximo confort, potencia y absorción de impactos para la ciudad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monopatin-electrico-daihatsu-v401",
+   "brand": "Daihatsu",
+   "seoTitle": "Monopatin Electrico Daihatsu V401",
+   "seoDescription": "El máximo nivel de autonomía, confort y potencia urbana. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monopatin-xiaomi-electric-scooter-4-pro-black-10",
+   "seoTitle": "Monopatin Xiaomi Electric Scooter 4 Pro Black",
+   "seoDescription": "Monopatín eléctrico Xiaomi 4 Pro Black con ruedas 10″, máxima potencia, autonomía extendida y diseño premium para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monopatin-xiaomi-electric-scooter-5-pro-black",
+   "seoTitle": "Monopatin Xiaomi Electric Scooter 5 Pro Black",
+   "seoDescription": "Monopatín Eléctrico Xiaomi Electric Scooter 5 Pro (1000W / 60 km) Potencia, confort y autonomía extendida para tus… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monopatin-xiaomi-electric-scooter-6-black",
+   "seoTitle": "Monopatin Xiaomi Electric Scooter 6 Black",
+   "seoDescription": "Una nueva era en movilidad urbana. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monopatin-xiaomi-electric-scooter-6-max-grey",
+   "seoTitle": "Monopatin Xiaomi Electric Scooter 6 Max Grey",
+   "seoDescription": "Monopatín eléctrico Xiaomi 6 Max Grey con máxima potencia, gran autonomía y diseño resistente para tus… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monopatin-xiaomi-electric-scooter-6-pro",
+   "seoTitle": "Monopatin Xiaomi Electric Scooter 6 Pro",
+   "seoDescription": "Monopatín Eléctrico Xiaomi Electric Scooter 6 Pro (1000W / 70 km) Potencia de nivel Pro y confort absoluto en todo… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monopatin-xiaomi-electric-scooter-6-ultra",
+   "seoTitle": "Monopatin Xiaomi Electric Scooter 6 Ultra",
+   "seoDescription": "Domina cualquier terreno con el rey de la movilidad urbana. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "monopatin-xiaomi-scooter-5-plus",
+   "seoTitle": "Monopatin Xiaomi Scooter 5 Plus",
+   "seoDescription": "Monopatín Eléctrico Xiaomi Electric Scooter 5 Plus (900W / Ruedas 12″) Estabilidad superior y conducción… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mopa-centrifuga-compacta-smart-kassel",
+   "seoTitle": "Mopa Centrífuga Compacta Smart Kassel",
+   "seoDescription": "Mopa Centrífuga Compacta Smart Kassel. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mother-asrock-b660m-hdv-1700-h-dp-v-m-2-ddr4",
+   "name": "Mother Asrock B660M-HDV 1700 H/DP/V M.2 DDR4",
+   "seoTitle": "Mother Asrock B660M-HDV 1700 H/DP/V M.2 DDR4",
+   "seoDescription": "Placa madre ASROCK B660M-HDV para Intel socket 1700 con triple salida de video, ranura M.2 y soporte DDR4 máximo… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mother-asrock-q270-pro-btc-mining-board-1151",
+   "name": "Mother Asrock Q270 PRO Btc+ Mining Board 1151",
+   "seoTitle": "Mother Asrock Q270 PRO Btc+ Mining Board 1151",
+   "seoDescription": "Motherboard ASROCK Q270 PRO BTC+ socket 1151 especializada para minería de criptomonedas con múltiples slots PCIe y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mother-asus-prime-a520m-k-csm-am4",
+   "name": "Mother Asus Prime A520M-K CSM AM4",
+   "brand": "Asus",
+   "seoTitle": "Mother Asus Prime A520M-K CSM AM4",
+   "seoDescription": "Mother Asus Prime A520M-K CSM AM4. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mother Asus Prime A520M-K CSM AM4. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mother-asus-prime-b650m-a-wifi-ii",
+   "name": "Mother Asus Prime B650M-A WIFI II",
+   "brand": "Asus",
+   "seoTitle": "Mother Asus Prime B650M-A WIFI II",
+   "seoDescription": "Mother Asus Prime B650M-A WIFI II. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mother Asus Prime B650M-A WIFI II. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mother-asus-prime-h610m-k-d4",
+   "name": "Mother Asus Prime H610M-K D4",
+   "brand": "Asus",
+   "seoTitle": "Mother Asus Prime H610M-K D4",
+   "seoDescription": "Mother Asus Prime H610M-K D4. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mother Asus Prime H610M-K D4. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mother-asus-prime-z490-p-1200-h-dp-m-2-sin-chapa",
+   "name": "Mother Asus Prime Z490-P 1200 H/DP M.2 (sin Chapa)",
+   "brand": "Asus",
+   "seoTitle": "Mother Asus Prime Z490-P 1200 H/DP M.2",
+   "seoDescription": "Motherboard ASUS PRIME Z490-P socket 1200 con salidas HDMI/DisplayPort, slot M.2 para SSD, ideal para gaming y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mother-asus-pro-h410m-c2-csm-lga1200",
+   "name": "Mother Asus PRO H410M-C2/CSM LGA1200",
+   "brand": "Asus",
+   "seoTitle": "Mother Asus PRO H410M-C2/CSM LGA1200",
+   "seoDescription": "Mother Asus PRO H410M-C2/CSM LGA1200. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mother Asus PRO H410M-C2/CSM LGA1200. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mother-asus-rog-crosshair-x670e-hero",
+   "name": "Mother Asus ROG Crosshair X670E Hero",
+   "brand": "Asus",
+   "seoTitle": "Mother Asus ROG Crosshair X670E Hero",
+   "seoDescription": "Mother Asus ROG Crosshair X670E Hero. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mother Asus ROG Crosshair X670E Hero. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mother-ecs-a520am4-m3d-h-v-am4",
+   "name": "Mother ECS A520AM4-M3D H/V AM4",
+   "seoTitle": "Mother ECS A520AM4-M3D H/V AM4",
+   "seoDescription": "Motherboard ASUS A520AM4-M3D con socket AM4, compatible con procesadores Ryzen, ideal para builds equilibrados de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mother-ecs-h610h7-m2-h-v-dp-ddr4-1700-bulk",
+   "name": "Mother ECS H610H7-M2 H/V/DP DDR4 1700 (bulk)",
+   "seoTitle": "Mother ECS H610H7-M2 H/V/DP DDR4 1700 (bulk)",
+   "seoDescription": "Motherboard ECS H610H7-M2 con chipset H610, socket 1700, DDR4, salidas HDMI/VGA/DisplayPort. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mother-ecs-nforce-570-slit-a-lga775",
+   "name": "Mother ECS Nforce 570 Slit-a LGA775",
+   "seoTitle": "Mother ECS Nforce 570 Slit-a LGA775",
+   "seoDescription": "Placa madre ECS NFORCE 570 SLIT-A socket LGA775 para procesadores Intel. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mother-msi-a520m-a-pro-am4-h-dvi-m-2",
+   "name": "Mother MSI A520M-A PRO AM4 H/DVI M.2",
+   "brand": "MSI",
+   "seoTitle": "Mother MSI A520M-A PRO AM4 H/DVI M.2",
+   "seoDescription": "Placa base MSI A520M-A PRO AM4 formato micro ATX con conectividad HDMI/DVI, soporte M.2 NVMe y compatibilidad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mother-msi-a620m-e-pro-ddr5-am5",
+   "name": "Mother MSI A620M-E PRO DDR5 AM5",
+   "brand": "MSI",
+   "seoTitle": "Mother MSI A620M-E PRO DDR5 AM5",
+   "seoDescription": "Mother MSI A620M-E PRO DDR5 AM5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mother MSI A620M-E PRO DDR5 AM5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mother-msi-b550m-pro-vdh-am4-h-dp-v-m-2-ddr4",
+   "name": "Mother MSI B550M Pro-vdh AM4 H/DP/V M.2 / DDR4",
+   "brand": "MSI",
+   "seoTitle": "Mother MSI B550M Pro-vdh AM4 H/DP/V M.2",
+   "seoDescription": "Motherboard MSI B550M PRO-VDH AM4 con soporte DDR4, conectores M.2, salidas HDMI/DisplayPort y diseño micro-ATX para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mother-msi-b550m-pro-vdh-wifi-am4-h-dp-v-m-2",
+   "name": "Mother MSI B550M Pro-vdh WIFI AM4 H/DP/V M.2",
+   "brand": "MSI",
+   "seoTitle": "Mother MSI B550M Pro-vdh WIFI AM4 H/DP/V M.2",
+   "seoDescription": "Motherboard MSI B550M PRO-VDH WiFi AM4 micro ATX con conectividad inalámbrica, slot M.2, HDMI/DisplayPort y soporte… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mother-msi-b760m-g-pro-ddr4",
+   "name": "Mother MSI B760M-G PRO DDR4",
+   "brand": "MSI",
+   "seoTitle": "Mother MSI B760M-G PRO DDR4",
+   "seoDescription": "Mother MSI B760M-G PRO DDR4. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mother MSI B760M-G PRO DDR4. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mother-msi-b840-p-pro-wifi-ddr5",
+   "name": "Mother MSI B840-P PRO WIFI DDR5",
+   "brand": "MSI",
+   "seoTitle": "Mother MSI B840-P PRO WIFI DDR5",
+   "seoDescription": "Mother MSI B840-P PRO WIFI DDR5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mother MSI B840-P PRO WIFI DDR5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mother-msi-b850-gaming-plus-wifi-ddr5",
+   "name": "Mother MSI B850 Gaming Plus WIFI DDR5",
+   "brand": "MSI",
+   "seoTitle": "Mother MSI B850 Gaming Plus WIFI DDR5",
+   "seoDescription": "Mother MSI B850 Gaming Plus WIFI DDR5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mother MSI B850 Gaming Plus WIFI DDR5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mother-msi-h610m-g-pro-ddr5",
+   "name": "Mother MSI H610M-G PRO DDR5",
+   "brand": "MSI",
+   "seoTitle": "Mother MSI H610M-G PRO DDR5",
+   "seoDescription": "Mother MSI H610M-G PRO DDR5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mother MSI H610M-G PRO DDR5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mother-msi-pro-b660m-g-1700-h-dp-v-m-2-ddr4",
+   "name": "Mother MSI PRO B660M-G 1700 H/DP/V M.2 DDR4",
+   "brand": "MSI",
+   "seoTitle": "Mother MSI PRO B660M-G 1700 H/DP/V M.2 DDR4",
+   "seoDescription": "Placa base MSI PRO B660M-G socket LGA 1700 para procesadores Intel 12va gen, formato micro ATX con conectividad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mother-msi-pro-b760m-e-h-v-1700-m-2-ddr4",
+   "name": "Mother MSI PRO B760M-E H/V 1700 M.2 DDR4",
+   "brand": "MSI",
+   "seoTitle": "Mother MSI PRO B760M-E H/V 1700 M.2 DDR4",
+   "seoDescription": "Placa madre MSI PRO B760M-E con socket 1700, soporte DDR4, slot M.2 NVMe y compatibilidad Intel 13va generación. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mother-msi-pro-h510m-plus-ii-h-v-m-2-1200-10ma-11va-gen-en-equipo-11va-gen-kit",
+   "name": "Mother MSI PRO H510M Plus II H/V M.2 1200 (10ma/11va GEN) (en Equipo 11VA GEN /Kit)",
+   "brand": "MSI",
+   "seoTitle": "Mother MSI PRO H510M Plus II H/V M.2 1200",
+   "seoDescription": "Motherboard MSI PRO H510M PLUS II con socket 1200, compatible con procesadores Intel 10ma y 11va generación, incluye… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mother-msi-pro-h610m-g-1700-h-dp-v-m-2-ddr4-2",
+   "name": "Mother MSI PRO H610M-G 1700 H/DP/V M.2 DDR4",
+   "brand": "MSI",
+   "seoTitle": "Mother MSI PRO H610M-G 1700 H/DP/V M.2 DDR4",
+   "seoDescription": "Placa base MSI PRO H610M-G con socket 1700, soporte DDR4, conectores HDMI/DisplayPort, slot M.2 y diseño micro-ATX… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mother-msi-pro-h610m-s-1700-h-m-2-ddr4-2",
+   "name": "Mother MSI PRO H610M-S 1700 H/M.2 DDR4",
+   "brand": "MSI",
+   "seoTitle": "Mother MSI PRO H610M-S 1700 H/M.2 DDR4",
+   "seoDescription": "Motherboard MSI PRO H610M-S socket 1700, compatible Intel 12va generación, memoria DDR4, slot M.2, micro-ATX… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mother-msi-x670e-mag-gaming-plus-wifi",
+   "name": "Mother MSI X670E MAG Gaming Plus WIFI",
+   "brand": "MSI",
+   "seoTitle": "Mother MSI X670E MAG Gaming Plus WIFI",
+   "seoDescription": "Mother MSI X670E MAG Gaming Plus WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mother MSI X670E MAG Gaming Plus WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "moto-edge-60-pro-5g-256gb-8gb-slim",
+   "seoTitle": "Moto Edge 60 Pro 5G 256gb 8gb Slim",
+   "seoDescription": "Velocidad de procesador 3.35 GHz Sistema Operativo Android 15 Almacenamiento 256GB Memoria RAM 8GB Cámara Trasera/s… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "moto-edge-60-pro-5g-512gb-12gb",
+   "seoTitle": "Moto Edge 60 Pro 5G 512gb 12gb",
+   "seoDescription": "Moto Edge 60 Pro 5G 512gb 12gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "moto-g86-power-5g-256gb-8gb",
+   "seoTitle": "Moto G86 Power 5G 256gb 8gb",
+   "seoDescription": "Moto G86 Power 5G 256gb 8gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "moto-g86-power-5g-512gb-8gb",
+   "seoTitle": "Moto G86 Power 5G 512gb 8gb",
+   "seoDescription": "Moto G86 Power 5G 512gb 8gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-edge-50-fusion-256gb-8gb",
+   "seoTitle": "Motorola Moto Edge 50 Fusion 5G 256gb 8gb",
+   "seoDescription": "Motorola Moto Edge 50 Fusion 5G 256gb 8gb Slim. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-edge-60-fusion-5g-256gb-8gb-slim",
+   "seoTitle": "Motorola Moto Edge 60 Fusion 5G 256gb 8gb",
+   "seoDescription": "Diseño curvo premium, colores Pantone® y fotografía avanzada. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-edge-70-5g-256gb-8gb-slim",
+   "seoTitle": "Motorola Moto Edge 70 5G 256gb 8gb Slim",
+   "seoDescription": "Motorola Moto Edge 70 5G con 512GB almacenamiento y 12GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-edge-70-5g-512gb-12gb",
+   "seoTitle": "Motorola Moto Edge 70 5G 512gb 12gb",
+   "seoDescription": "Motorola Moto Edge 70 5G con 512GB almacenamiento y 12GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-edge-70-fusion-5g-256gb-12gb",
+   "seoTitle": "Motorola Moto Edge 70 Fusion 5G 256gb 8gb",
+   "seoDescription": "Motorola Moto Edge 70 Fusion 5G con 256GB almacenamiento, 12GB RAM, conectividad 5G ultrarrápida, cámara de alta… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g06-128gb-4gb",
+   "seoTitle": "Motorola Moto G06 256gb 4gb",
+   "seoDescription": "Motorola Moto G06 con 256GB de almacenamiento y 4GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g06-64gb-4gb",
+   "seoTitle": "Motorola Moto G06 64gb 4gb",
+   "seoDescription": "Gran pantalla, fluidez total y una batería diseñada para durar. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g06-power-256gb-4gb",
+   "seoTitle": "Motorola Moto G06 Power 256gb 4gb",
+   "seoDescription": "Motorola Moto G06 Power con 256GB de almacenamiento, 4GB RAM y batería de larga duración para uso intensivo diario. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g15-128gb-4gb",
+   "seoTitle": "Motorola Moto G15 128gb 4gb",
+   "seoDescription": "Motorola Moto G15 128gb 4gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g15-128gb-4gb-slim",
+   "seoTitle": "Motorola Moto G15 128gb 4gb Slim",
+   "seoDescription": "Motorola Moto G15 128gb 4gb Slim. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g15-256gb-4gb",
+   "seoTitle": "Motorola Moto G15 256gb 4gb",
+   "seoDescription": "Motorola Moto G15 256gb 4gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g15-512gb-4gb",
+   "seoTitle": "Motorola Moto G15 512gb 4gb",
+   "seoDescription": "Motorola Moto G15 512gb 4gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g15-power-256gb-8gb-slim",
+   "seoTitle": "Motorola Moto G15 Power 256gb 8gb Slim",
+   "seoDescription": "Motorola Moto G15 Power con 256GB almacenamiento, 8GB RAM y diseño slim. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g15-power-512gb-8gb-slim",
+   "seoTitle": "Motorola Moto G15 Power 512gb 8gb Slim",
+   "seoDescription": "Motorola Moto G15 Power con 512GB almacenamiento, 8GB RAM y diseño slim. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g17-256gb-4gb",
+   "seoTitle": "Motorola Moto G17 256gb 4gb",
+   "seoDescription": "Motorola Moto G17 con 256GB de almacenamiento y 4GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g17-power-256gb-8gb",
+   "seoTitle": "Motorola Moto G17 Power 256gb 8gb",
+   "seoDescription": "Motorola Moto G17 Power con 256GB almacenamiento, 8GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g35-5g-256gb-4gb-slim",
+   "seoTitle": "Motorola Moto G35 5G 256gb 8gb Slim",
+   "seoDescription": "Motorola Moto G35 5G 256gb 8gb Slim. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g56-5g-256gb-12gb",
+   "seoTitle": "Motorola Moto G56 5G 256gb 12gb",
+   "seoDescription": "Motorola Moto G56 5G con 256GB almacenamiento y 12GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g56-5g-256gb-8gb",
+   "seoTitle": "Motorola Moto G56 5G 256gb 8gb",
+   "seoDescription": "Motorola Moto G56 5G con 256GB almacenamiento, 8GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g56-5g-256gb-8gb-slim",
+   "seoTitle": "Motorola Moto G56 5G 256gb 8gb Slim",
+   "seoDescription": "Motorola Moto G56 5G con 256GB almacenamiento, 8GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g77-256gb-8gb",
+   "seoTitle": "Motorola Moto G77 256gb 8gb",
+   "seoDescription": "Motorola Moto G77 con 256GB almacenamiento y 8GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g86-5g-256gb-8gb-slim",
+   "seoTitle": "Motorola Moto G86 5G 256gb 8gb Slim",
+   "seoDescription": "Motorola Moto G86 5G con 256GB almacenamiento, 8GB RAM y diseño slim. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motorola-moto-g96-5g-128gb-8gb",
+   "seoTitle": "Motorola Moto G96 5G 128gb 8gb",
+   "seoDescription": "Motorola Moto G96 5G con 128GB almacenamiento y 8GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "motosierra-a-explosion-daihatsu-45cc-18",
+   "seoTitle": "Motosierra a Explosion Daihatsu 45cc 18″",
+   "seoDescription": "Motosierra a explosión de 45cc. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mouse-dell-wm126-bk-wireless-black",
+   "name": "Mouse Dell WM126-BK Wireless Black",
+   "brand": "Dell",
+   "seoTitle": "Mouse Dell WM126-BK Wireless Black",
+   "seoDescription": "Mouse Dell WM126-BK Wireless Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mouse Dell WM126-BK Wireless Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mouse-gamer-logitech-g903-lightspeed",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Gamer Logitech G903 LIGHTSPEED",
+   "seoDescription": "Mouse para juegos supremo Tecnología LIGHTSPEED inalámbrica de baja latencia. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mouse-inalambrico-logitech-m170-black",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Inalambrico Logitech M170 Black",
+   "seoDescription": "El mouse se ha fabricado conforme a los estándares de alta calidad que han convertido a Logitech en el líder mundial… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mouse-inalambrico-logitech-m170-blue-grey",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Inalambrico Logitech M170 Blue Grey",
+   "seoDescription": "El mouse se ha fabricado conforme a los estándares de alta calidad que han convertido a Logitech en el líder mundial… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mouse-inalambrico-logitech-m170-red",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Inalambrico Logitech M170 Red",
+   "seoDescription": "El mouse se ha fabricado conforme a los estándares de alta calidad que han convertido a Logitech en el líder mundial… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mouse-inalambrico-logitech-m170-rose",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Inalambrico Logitech M170 Rose",
+   "seoDescription": "El mouse se ha fabricado conforme a los estándares de alta calidad que han convertido a Logitech en el líder mundial… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mouse-inalambrico-logitech-m170-white",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Inalambrico Logitech M170 White",
+   "seoDescription": "El mouse se ha fabricado conforme a los estándares de alta calidad que han convertido a Logitech en el líder mundial… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mouse-inalambrico-logitech-m280-comfort-plus",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Inalámbrico Logitech M280 Comfort Plus",
+   "seoDescription": "M280 es la síntesis perfecta de funcionalidad, estética y confort. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mouse-jahro-gaming-e-sport",
+   "brand": "Jahro",
+   "seoTitle": "Mouse Jahro Gaming E-Sport",
+   "seoDescription": "Mouse Jahro Gaming E-Sport: precisión y ergonomía para gamers. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mouse-logitech-bluetooth-m196-blanco",
+   "seoTitle": "Mouse Logitech Bluetooth M196 Blanco",
+   "seoDescription": "Mouse Logitech Bluetooth M196 Blanco. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mouse Logitech Bluetooth M196 Blanco. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mouse-logitech-bluetooth-m196-negro",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Logitech Bluetooth M196 Negro",
+   "seoDescription": "Mouse Logitech Bluetooth M196 Negro. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mouse Logitech Bluetooth M196 Negro. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mouse-logitech-g203-lightsync-gamer-white",
+   "name": "Mouse Logitech G203 Lightsync Gamer White",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Logitech G203 Lightsync Gamer White",
+   "seoDescription": "Mouse Logitech G203 Lightsync Gamer White. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mouse Logitech G203 Lightsync Gamer White. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mouse-logitech-g305-gamer-wireless-black",
+   "name": "Mouse Logitech G305 Gamer Wireless Black",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Logitech G305 Gamer Wireless Black",
+   "seoDescription": "Mouse Logitech G305 Gamer Wireless Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mouse Logitech G305 Gamer Wireless Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mouse-logitech-g305-gamer-wireless-blue",
+   "name": "Mouse Logitech G305 Gamer Wireless Blue",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Logitech G305 Gamer Wireless Blue",
+   "seoDescription": "Mouse Logitech G305 Gamer Wireless Blue. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mouse Logitech G305 Gamer Wireless Blue. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mouse-logitech-g305-gamer-wireless-white",
+   "name": "Mouse Logitech G305 Gamer Wireless White",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Logitech G305 Gamer Wireless White",
+   "seoDescription": "Mouse Logitech G305 Gamer Wireless White. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mouse Logitech G305 Gamer Wireless White. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mouse-logitech-m196-bluethooth-black",
+   "name": "Mouse Logitech M196 Bluethooth Black",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Logitech M196 Bluethooth Black",
+   "seoDescription": "Mouse Logitech M196 Bluethooth Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mouse Logitech M196 Bluethooth Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mouse-logitech-m196-bluethooth-white",
+   "name": "Mouse Logitech M196 Bluethooth White",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Logitech M196 Bluethooth White",
+   "seoDescription": "Mouse Logitech M196 Bluethooth White. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mouse Logitech M196 Bluethooth White. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mouse-optico-logitech-m100",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Optico Logitech M90",
+   "seoDescription": "Control preciso del cursor Diseñado para uso ambidiestro Sin complicaciones, sin configuración de software. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mouse-optico-logitech-m110",
+   "brand": "Logitech",
+   "seoTitle": "Mouse Optico Logitech M110 Silencioso",
+   "seoDescription": "Resolución: 1000 dpi. Longitud del cable: 180 cm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mouse-pad-logitech-studio",
+   "brand": "Logitech",
+   "seoTitle": "Mouse pad Logitech Studio",
+   "seoDescription": "Ésta es la suave alfombrilla de mouse antideslizante que mejora tu espacio de trabajo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mouse-targus-optico-usb",
+   "brand": "Targus",
+   "seoTitle": "Mouse Targus Optico USB",
+   "seoDescription": "Mouse Targus Optico USB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mouse Targus Optico USB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "mouse-vertical-netmak-inalambrico",
+   "brand": "Netmak",
+   "seoTitle": "Mouse Vertical Netmak Inalámbrico",
+   "seoDescription": "Mouse Vertical Netmak Inalámbrico. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "mouse-xpg-primer-gamer-rgb",
+   "name": "Mouse XPG Primer Gamer RGB",
+   "brand": "XPG",
+   "seoTitle": "Mouse XPG Primer Gamer RGB",
+   "seoDescription": "Mouse XPG Primer Gamer RGB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Mouse XPG Primer Gamer RGB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "msi-crosshair-ultra-9-275hx-32gb-512gb-ssd-18-qhd-rtx-5070-w11",
+   "name": "MSI Crosshair Ultra 9 275HX/32GB/512GB SSD/18″ QHD/RTX 5070 W11",
+   "seoTitle": "MSI Crosshair Ultra 9 275HX/32GB/512GB",
+   "seoDescription": "Laptop gaming MSI CROSSHAIR ULTRA con procesador Intel Ultra 9 275HX, RTX 5070, 32GB RAM, almacenamiento SSD 512GB y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "msi-cyborg-15-i7-13620h-16gb-512gb-ssd-15-6-fhd-144hz-rtx-4050-6gb-w11",
+   "name": "MSI Cyborg 15 I7-13620H/16GB/512GB SSD /15.6″ FHD 144Hz/RTX 4050 6GB/W11",
+   "seoTitle": "MSI Cyborg 15 I7-13620H/16GB/512GB SSD /15.6″",
+   "seoDescription": "Laptop gaming MSI Cyborg 15 con procesador Intel i7-13620H, 16GB RAM, RTX 4050, pantalla 144Hz para máximo… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "msi-cyborg-i7-240h-16gb-512gb-ssd-15-6-fhd-144hz-rtx-5060-6gb-w11",
+   "seoTitle": "Notebook MSI Cyborg i7-240H 16GB SSD 512GB",
+   "seoDescription": "Estética cyberpunk, procesamiento híbrido de última generación y gráficos revolucionarios con VRAM GDDR7. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "msi-katana-15-i7-14650hx-16gb-512gb-ssd-15-6-fhd-144hz-ips-rtx-5050-8gb-w11",
+   "seoTitle": "Notebook MSI Katana 15 i7-14650HX/ 16GB SSD",
+   "seoDescription": "Diseño inspirado en la precisión de una katana, potencia de escritorio de 14.ª Generación y gráficos con memoria… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "msi-raider-ge68-hx-14vgg-287-i9-14900hx-32gb-1tb-ssd-15-6-fhd-144hz-win11-rtx-4070-8gb",
+   "name": "MSI Raider GE68 HX 14VGG-287 I9-14900HX/32GB/1TB SSD /15.6″ FHD 144Hz/WIN11/RTX 4070 8GB",
+   "seoTitle": "MSI Raider GE68 HX 14VGG-287",
+   "seoDescription": "Laptop gaming MSI Raider GE68 HX con procesador Intel i9-14900HX, RTX 4070 8GB, 32GB RAM, SSD 1TB y pantalla 144Hz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-adaptador-carplay-inalambrico-nm-car14",
+   "name": "Netmak Adaptador Carplay Inalambrico NM-CAR14",
+   "brand": "Netmak",
+   "seoTitle": "Netmak Adaptador Carplay Inalambrico NM-CAR14",
+   "seoDescription": "Adaptador CarPlay inalámbrico NETMAK NM-CAR14. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-adaptador-wifi-usb-150-mbs-nm-cs150",
+   "seoTitle": "Adaptador WIFI USB 150mbs Netmak",
+   "seoDescription": "Adaptador WiFi USB NETMAK 150 Mbps para conexión inalámbrica estable y rápida. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-adaptador-wifi-usb-con-antena-150-mbs-nm-cs154",
+   "name": "Netmak Adaptador WIFI USB con Antena 150 MBS NM-CS154",
+   "brand": "Netmak",
+   "seoTitle": "Netmak Adaptador WIFI USB con Antena 150 MBS",
+   "seoDescription": "Adaptador WiFi USB Netmak con antena externa de 150 Mbps. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-base-notebook-doble-cooler-soporte-celular-gamer-nm-n134",
+   "name": "Netmak Base Notebook / Doble Cooler + Soporte Celular / Gamer NM-N134",
+   "brand": "Netmak",
+   "seoTitle": "Netmak Base Notebook / Doble Cooler + Soporte",
+   "seoDescription": "Base notebook gamer NETMAK con doble cooler de refrigeración y soporte para celular. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-cable-hdmi-4k-m-m-v2-0-15m-nm-c98",
+   "seoTitle": "Cable HDMI Netmak 4K M/M V2.0 1,5M NM-C98",
+   "seoDescription": "Cable HDMI 4K Netmak 1.5 metros, versión 2.0, conectores macho/macho para transmisión ultra HD de alta velocidad y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-cable-hdmi-4k-m-m-v2-0-3m-nm-c98-3",
+   "seoTitle": "Cable HDMI Netmak 4K M/M V2.0 3M NM-C98 3",
+   "seoDescription": "Cable HDMI 4K Netmak de 3 metros, versión 2.0, conectores macho/macho, ideal para transmisión de video Ultra HD con… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-cable-hdmi-m-m-v1-4-10m-nm-c47-10",
+   "seoTitle": "Cable HDMI Netmak M/M V1.4 10M NM-C47 10",
+   "seoDescription": "Cable HDMI Netmak 10 metros versión 1.4, conectores macho/macho, ideal para transmisión de video y audio en alta… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-cargador-rapido-usb-p-4-pilas-aa-aaa-nm-ch4",
+   "name": "Netmak Cargador Rapido USB P/4 Pilas AA/AAA NM-CH4",
+   "seoTitle": "Netmak Cargador Rapido USB P/4 Pilas AA/AAA",
+   "seoDescription": "Cargador rápido NETMAK USB para 4 pilas AA/AAA recargables. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-combo-teclado-mouse-inalambrico-ultra-slim-kids-azul-nm-kb401-b-2",
+   "name": "Netmak Combo Teclado-mouse /Inalambrico/Ultra Slim/Kids Azul NM-KB401-B",
+   "brand": "Netmak",
+   "seoTitle": "Netmak Combo Teclado-mouse /Inalambrico/Ultra",
+   "seoDescription": "Combo teclado y mouse inalámbrico ultra slim diseñado especialmente para niños en color azul vibrante y ergonómico. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-hub-4-en-1-usb-tipo-c-nm-4en1-usb-3-0-hdmi-vga-usb-tipo-c",
+   "name": "Hub 4 en 1 USB Tipo C (USB 3.0/HDMI/VGA/USB Tipo C)",
+   "seoTitle": "Hub 4 en 1 USB Tipo C (USB 3.0/HDMI/VGA/USB",
+   "seoDescription": "Hub NETMAK 4 en 1 USB Tipo C con conexiones USB 3.0, HDMI, VGA y USB-C para máxima conectividad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-hub-4-en-1-usb-tipo-c-nm-hubc-4-x-usb",
+   "name": "Netmak HUB 4 en 1 USB Tipo C Nm-hubc (4 X USB)",
+   "brand": "Netmak",
+   "seoTitle": "Netmak HUB 4 en 1 USB Tipo C Nm-hubc (4 X",
+   "seoDescription": "Hub USB-C NETMAK con 4 puertos USB para expandir conectividad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-hub-6-en-1-usb-tipo-c-nm-6en1-tipo-c-hdmi-microsd-sd-usb",
+   "name": "Netmak HUB 6 en 1 USB Tipo C NM-6EN1 (tipo C/HDMI/Microsd/SD/USB)",
+   "brand": "Netmak",
+   "seoTitle": "Netmak HUB 6 en 1 USB Tipo C NM-6EN1",
+   "seoDescription": "Hub USB-C multifuncional 6 en 1 con puertos HDMI, USB, MicroSD y SD. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-hub-8-en-1-usb-tipo-c-nm-8en1-2xtipo-c-hdmi-microsd-sd-2xusb-rj45",
+   "name": "Netmak HUB 8 en 1 USB Tipo C NM-8EN1 (2xTIPO C/HDMI/Microsd/SD/2xUSB/RJ45)",
+   "brand": "Netmak",
+   "seoTitle": "Netmak HUB 8 en 1 USB Tipo C NM-8EN1",
+   "seoDescription": "Hub USB-C multifuncional 8 en 1 con puertos HDMI, USB, Ethernet, lectores SD/MicroSD. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-jeringa-grasa-disip-term-x-10-cc-nm-gr10cc",
+   "name": "Netmak Jeringa Grasa Disip. Term.x 10 CC NM-GR10CC",
+   "brand": "Netmak",
+   "seoTitle": "Netmak Jeringa Grasa Disip. Term.x 10 CC",
+   "seoDescription": "Jeringa NETMAK 10cc para aplicación precisa de grasa disipatora térmica en componentes electrónicos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-mini-consola-4k-hdmi-tv-20-000-juegos-nm-m8-2",
+   "name": "Netmak Mini Consola 4K HDMI TV 20.000 Juegos NM-M8",
+   "seoTitle": "Netmak Mini Consola 4K HDMI TV 20.000 Juegos",
+   "seoDescription": "Mini consola NETMAK con 20.000 juegos clásicos, resolución 4K, conexión HDMI para TV. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-mini-consola-4k-hdmi-tv-40-000-juegos-nm-k10-2",
+   "name": "Netmak Mini Consola 4K HDMI TV 40.000 Juegos NM-K10",
+   "seoTitle": "Netmak Mini Consola 4K HDMI TV 40.000 Juegos",
+   "seoDescription": "Mini consola NETMAK NM-K10 con 40.000 juegos retro, resolución 4K HDMI, compatible con TV, experiencia gaming… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-mini-consola-4k-hdmi-tv-44-000-juegos-nm-m34-2",
+   "name": "Netmak Mini Consola 4K HDMI TV 44.000 Juegos NM-M34",
+   "seoTitle": "Netmak Mini Consola 4K HDMI TV 44.000 Juegos",
+   "seoDescription": "Mini consola retro NETMAK 4K con 44.000 juegos clásicos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-pad-mouse-gamer-grande-90x40cm-negro-nm-mp758",
+   "name": "Netmak PAD Mouse Gamer Grande 90X40CM / Negro/ NM-MP758",
+   "brand": "Netmak",
+   "seoTitle": "Netmak PAD Mouse Gamer Grande 90X40CM",
+   "seoDescription": "Pad mouse gamer NETMAK de 90x40cm en negro, superficie extra grande para gaming profesional con excelente… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-soporte-doble-monitor-10-32-dos-brazos-articulados-nm-st18-2",
+   "name": "Netmak Soporte Doble Monitor 10″-32″ DOS Brazos Articulados NM-ST18",
+   "brand": "Netmak",
+   "seoTitle": "Netmak Soporte Doble Monitor 10″-32″ DOS",
+   "seoDescription": "Soporte doble monitor NETMAK con brazos articulados para pantallas 10″-32″. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-soporte-tv-moni-23-43-brazo-articulado-nm-st34",
+   "name": "Netmak Soporte TV/Moni 23″- 43″ Brazo Articulado NM-ST34",
+   "brand": "Netmak",
+   "seoTitle": "Netmak Soporte TV/Moni 23″- 43″ Brazo",
+   "seoDescription": "Soporte NETMAK NM-ST34 para TV y monitores de 23″ a 43″ con brazo articulado regulable y montaje en pared robusto. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "netmak-soporte-tv-moni-32-55c-inclinacion-nm-st09-2",
+   "name": "Netmak Soporte TV/Moni 32″-55″C/Inclinacion NM-ST09",
+   "brand": "Netmak",
+   "seoTitle": "Netmak Soporte TV/Moni 32″-55″C/Inclinacion",
+   "seoDescription": "Soporte de pared NETMAK NM-ST09 para televisores y monitores de 32″ a 55″ pulgadas con sistema de inclinación… Garantía oficial y envíos a todo el país."
+  }
+ ]
+}

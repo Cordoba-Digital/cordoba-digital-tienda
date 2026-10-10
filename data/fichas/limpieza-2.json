@@ -1,0 +1,3331 @@
+{
+ "lote": "limpieza-2",
+ "soloSinCurar": true,
+ "nota": "Limpieza automática sin redactar: nombre, marca, título y descripción para Google.",
+ "productos": [
+  {
+   "slug": "ddr4-8-gb-3200mhz-sodimm-patriot-signature-line",
+   "name": "DDR4 8 GB 3200MHZ SODIMM Patriot Signature Line",
+   "brand": "Patriot",
+   "seoTitle": "DDR4 8 GB 3200MHZ SODIMM Patriot Signature",
+   "seoDescription": "Memoria RAM DDR4 8GB 3200MHz SODIMM Patriot Signature Line para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-adata-3200mhz-3",
+   "name": "DDR4 8GB Adata 3200MHZ",
+   "brand": "Adata",
+   "seoTitle": "DDR4 8GB Adata 3200MHZ",
+   "seoDescription": "Memoria RAM DDR4 8GB ADATA 3200MHz de alta velocidad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-hiksemi-2666mhz",
+   "name": "DDR4 8GB Hiksemi 2666MHZ",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 8GB Hiksemi 2666MHZ",
+   "seoDescription": "Memoria RAM DDR4 HIKSEMI 8GB 2666MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-hiksemi-3200mhz-armor-black-3",
+   "name": "DDR4 8GB Hiksemi 3200MHZ Armor Black",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 8GB Hiksemi 3200MHZ Armor Black",
+   "seoDescription": "Memoria RAM DDR4 8GB HIKSEMI 3200MHz Armor Black. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-hiksemi-3200mhz-future-black-3",
+   "name": "DDR4 8GB Hiksemi 3200MHZ Future Black",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 8GB Hiksemi 3200MHZ Future Black",
+   "seoDescription": "Memoria RAM DDR4 8GB HIKSEMI 3200MHz Future Black. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-hiksemi-3200mhz-future-rgb-3",
+   "name": "DDR4 8GB Hiksemi 3200MHZ Future RGB",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 8GB Hiksemi 3200MHZ Future RGB",
+   "seoDescription": "Memoria RAM DDR4 8GB HIKSEMI 3200MHz con iluminación RGB FUTURE para gaming y alto rendimiento en tu PC. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-hiksemi-3200mhz-single-tray-3",
+   "name": "DDR4 8GB Hiksemi 3200MHZ Single Tray",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR4 8GB Hiksemi 3200MHZ Single Tray",
+   "seoDescription": "Memoria RAM DDR4 8GB HIKSEMI 3200MHz de alto rendimiento para gaming, edición y multitarea. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-kingston-3200mhz-cl16-fury-beast-black",
+   "name": "DDR4 8GB Kingston 3200MHZ CL16 Fury Beast Black",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 8GB Kingston 3200MHZ CL16 Fury Beast",
+   "seoDescription": "Memoria DDR4 Kingston Fury Beast 8GB 3200MHz CL16, diseño negro elegante, overclocking automático XMP, compatible… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-kingston-3200mhz-cl16-fury-beast-rgb-2",
+   "name": "DDR4 8GB Kingston 3200MHZ CL16 Fury Beast RGB",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 8GB Kingston 3200MHZ CL16 Fury Beast RGB",
+   "seoDescription": "Memoria DDR4 8GB Kingston Fury Beast RGB 3200MHz CL16. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-kingston-3200mhz-cl16-fury-beast-rgb-3",
+   "name": "DDR4 8GB Kingston 3200MHZ CL16 Fury Beast RGB",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 8GB Kingston 3200MHZ CL16 Fury Beast RGB",
+   "seoDescription": "Memoria RAM DDR4 8GB Kingston Fury Beast RGB 3200MHz CL16 para gaming. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-kingston-3200mhz-cl16-fury-beast-rgb-4",
+   "name": "DDR4 8GB Kingston 3200MHZ CL16 Fury Beast RGB",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 8GB Kingston 3200MHZ CL16 Fury Beast RGB",
+   "seoDescription": "Memoria RAM DDR4 8GB Kingston Fury Beast RGB 3200MHz CL16, diseñada para gaming extremo con iluminación RGB… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-kingston-3200mhz-cl22-3",
+   "name": "DDR4 8GB Kingston 3200MHZ CL22",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 8GB Kingston 3200MHZ CL22",
+   "seoDescription": "Memoria RAM DDR4 Kingston 8GB 3200MHz CL22 para gaming y trabajo profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-kingston-3200mhz-cl22-kvr-3",
+   "name": "DDR4 8GB Kingston 3200MHZ CL22 KVR",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 8GB Kingston 3200MHZ CL22 KVR",
+   "seoDescription": "Memoria RAM DDR4 8GB Kingston 3200MHz CL22 KVR. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-kingston-3600mhz-cl17-fury-beast-rgb-3",
+   "name": "DDR4 8GB Kingston 3600MHZ CL17 Fury Beast RGB",
+   "brand": "Kingston",
+   "seoTitle": "DDR4 8GB Kingston 3600MHZ CL17 Fury Beast RGB",
+   "seoDescription": "Memoria DDR4 8GB Kingston Fury Beast RGB 3600MHz CL17, ideal para gaming y tareas exigentes con iluminación RGB… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-lexar-3200mhz-3",
+   "name": "DDR4 8GB Lexar 3200MHZ",
+   "brand": "Lexar",
+   "seoTitle": "DDR4 8GB Lexar 3200MHZ",
+   "seoDescription": "Memoria RAM DDR4 Lexar 8GB 3200MHz para gaming y multitarea. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-memox-3200mhz",
+   "name": "DDR4 8GB Memox 3200MHZ",
+   "brand": "Memox",
+   "seoTitle": "DDR4 8GB Memox 3200MHZ",
+   "seoDescription": "Memoria RAM DDR4 8GB MEMOX 3200MHz para máximo rendimiento. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-xpg-3200mhz-gammix-d35-black-3",
+   "name": "DDR4 8GB XPG 3200MHZ Gammix D35 Black",
+   "brand": "XPG",
+   "seoTitle": "DDR4 8GB XPG 3200MHZ Gammix D35 Black",
+   "seoDescription": "Memoria RAM DDR4 8GB XPG Gammix D35 Black 3200MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr4-8gb-xpg-3200mhz-spectrx-d35g-black-rgb-3",
+   "name": "DDR4 8GB XPG 3200MHZ Spectrx D35G Black RGB",
+   "brand": "XPG",
+   "seoTitle": "DDR4 8GB XPG 3200MHZ Spectrx D35G Black RGB",
+   "seoDescription": "Memoria RAM DDR4 8GB XPG Spectrix D35G con iluminación RGB personalizable, velocidad 3200MHz y diseño gaming premium… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16-gb-4800mhz-hiksemi-hiker",
+   "name": "DDR5 16 GB 4800MHZ Hiksemi Hiker",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR5 16 GB 4800MHZ Hiksemi Hiker",
+   "seoDescription": "Memoria RAM DDR5 HIKSEMI HIKER 16GB 4800MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16-gb-5600mhz-hiksemi-armor-black-disipador-2",
+   "name": "DDR5 16 GB 5600MHZ Hiksemi Armor Black (disipador)",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR5 16 GB 5600MHZ Hiksemi Armor Black",
+   "seoDescription": "Memoria RAM DDR5 16GB 5600MHz HikSemi Armor Black con disipador avanzado para gaming y productividad de alto… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16-gb-5600mhz-hiksemi-hiker-sodimm",
+   "name": "DDR5 16 GB 5600MHZ Hiksemi Hiker SODIMM",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR5 16 GB 5600MHZ Hiksemi Hiker SODIMM",
+   "seoDescription": "Memoria RAM DDR5 HIKSEMI HIKER SODIMM 16GB 5600MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16-gb-5600mhz-patriot-viper-elit-5-rgb-white",
+   "name": "DDR5 16 GB 5600MHZ Patriot Viper Elit 5 RGB White",
+   "brand": "Patriot",
+   "seoTitle": "DDR5 16 GB 5600MHZ Patriot Viper Elit 5 RGB",
+   "seoDescription": "Memoria RAM DDR5 16GB 5600MHz Patriot Viper Elite 5 RGB White. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16-gb-5600mhz-sodimm-mushkin",
+   "name": "DDR5 16 GB 5600MHZ SODIMM Mushkin",
+   "seoTitle": "DDR5 16 GB 5600MHZ SODIMM Mushkin",
+   "seoDescription": "Memoria RAM DDR5 Mushkin 16GB 5600MHz SODIMM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-adata-5600mhz",
+   "name": "DDR5 16GB Adata 5600MHZ",
+   "brand": "Adata",
+   "seoTitle": "DDR5 16GB Adata 5600MHZ",
+   "seoDescription": "Memoria RAM DDR5 16GB ADATA 5600MHz para gaming extremo y multitarea profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-hiksemi-5600mhz",
+   "name": "DDR5 16GB Hiksemi 5600MHZ",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR5 16GB Hiksemi 5600MHZ",
+   "seoDescription": "Memoria RAM DDR5 16GB HIKSEMI 5600MHz para gaming y workstations. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-hiksemi-6000mhz-armor-black",
+   "name": "DDR5 16GB Hiksemi 6000MHZ Armor Black",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR5 16GB Hiksemi 6000MHZ Armor Black",
+   "seoDescription": "Memoria RAM DDR5 HIKSEMI 16GB 6000MHz Armor Black. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-kingston-5600mhz-cl36-fury-beast-black-2",
+   "name": "DDR5 16GB Kingston 5600MHZ CL36 Fury Beast Black",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 16GB Kingston 5600MHZ CL36 Fury Beast",
+   "seoDescription": "Memoria RAM DDR5 Kingston Fury Beast 16GB 5600MHz CL36 negra. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-kingston-5600mhz-fury-beast-black-rgb-3",
+   "name": "DDR5 16GB Kingston 5600MHZ Fury Beast Black RGB",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 16GB Kingston 5600MHZ Fury Beast Black",
+   "seoDescription": "Memoria DDR5 Kingston Fury Beast 16GB 5600MHz con iluminación RGB negra para gaming extremo y máximo rendimiento. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-kingston-5600mhz-kvr-2",
+   "name": "DDR5 16GB Kingston 5600MHZ KVR",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 16GB Kingston 5600MHZ KVR",
+   "seoDescription": "Memoria RAM DDR5 Kingston 16GB 5600MHz KVR. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-kingston-6000mhz-cl36-fury-beast-black",
+   "name": "DDR5 16GB Kingston 6000MHZ CL36 Fury Beast Black",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 16GB Kingston 6000MHZ CL36 Fury Beast",
+   "seoDescription": "Memoria DDR5 Kingston Fury Beast 16GB 6000MHz CL36 negra. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-kingston-6000mhz-fury-beast-black-rgb-3",
+   "name": "DDR5 16GB Kingston 6000MHZ Fury Beast Black RGB",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 16GB Kingston 6000MHZ Fury Beast Black",
+   "seoDescription": "Memoria DDR5 Kingston Fury Beast 16GB 6000MHz con iluminación RGB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-kingston-6400mhz-cl32-fury-beast-black",
+   "name": "DDR5 16GB Kingston 6400MHZ CL32 Fury Beast Black",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 16GB Kingston 6400MHZ CL32 Fury Beast",
+   "seoDescription": "Memoria DDR5 Kingston Fury Beast 16GB 6400MHz CL32 negra. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-kingston-6400mhz-fury-beast-black-rgb-3",
+   "name": "DDR5 16GB Kingston 6400MHZ Fury Beast Black RGB",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 16GB Kingston 6400MHZ Fury Beast Black",
+   "seoDescription": "Memoria RAM DDR5 16GB Kingston Fury Beast Black RGB 6400MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-kingston-6800mhz-cl34-fury-beast-black-4",
+   "name": "DDR5 16GB Kingston 6800MHZ CL34 Fury Beast Black",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 16GB Kingston 6800MHZ CL34 Fury Beast",
+   "seoDescription": "Memoria DDR5 Kingston Fury Beast 16GB 6800MHz CL34, diseñada para gaming extremo y aplicaciones profesionales de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-memox-5600mhz",
+   "name": "DDR5 16GB Memox 5600MHZ",
+   "brand": "Memox",
+   "seoTitle": "DDR5 16GB Memox 5600MHZ",
+   "seoDescription": "Memoria RAM DDR5 16GB MEMOX 5600MHz para gaming extremo y trabajo profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-xpg-5600mhz-lancer-black",
+   "name": "DDR5 16GB XPG 5600MHZ Lancer Black",
+   "brand": "XPG",
+   "seoTitle": "DDR5 16GB XPG 5600MHZ Lancer Black",
+   "seoDescription": "Memoria RAM DDR5 XPG Lancer Black 16GB 5600MHz para gaming extremo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-xpg-6000mhz-cl-34-lancer-rgb",
+   "name": "DDR5 16GB XPG 6000MHZ CL 34 Lancer RGB",
+   "brand": "XPG",
+   "seoTitle": "DDR5 16GB XPG 6000MHZ CL 34 Lancer RGB",
+   "seoDescription": "Memoria DDR5 XPG Lancer RGB 16GB a 6000MHz con latencia CL34, perfecta para gaming y aplicaciones exigentes con… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-xpg-6000mhz-cl34-lancer-black",
+   "name": "DDR5 16GB XPG 6000MHZ CL34 Lancer Black",
+   "brand": "XPG",
+   "seoTitle": "DDR5 16GB XPG 6000MHZ CL34 Lancer Black",
+   "seoDescription": "Memoria RAM DDR5 16GB XPG Lancer Black 6000MHz CL34. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-xpg-6400mhz-lancer-black-rgb",
+   "name": "DDR5 16GB XPG 6400MHZ Lancer Black RGB",
+   "brand": "XPG",
+   "seoTitle": "DDR5 16GB XPG 6400MHZ Lancer Black RGB",
+   "seoDescription": "Memoria RAM DDR5 16GB XPG Lancer Black RGB a 6400MHz, diseñada para gaming extremo con iluminación RGB… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-16gb-xpg-6800mhz-lancer-black-rgb",
+   "name": "DDR5 16GB XPG 6800MHZ Lancer Black RGB",
+   "brand": "XPG",
+   "seoTitle": "DDR5 16GB XPG 6800MHZ Lancer Black RGB",
+   "seoDescription": "Memoria RAM DDR5 16GB XPG Lancer Black RGB 6800MHz para gaming extremo, overclocking avanzado y máximo rendimiento… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-32-gb-5600mhz-crucial",
+   "name": "DDR5 32 GB 5600MHZ Crucial",
+   "brand": "Crucial",
+   "seoTitle": "DDR5 32 GB 5600MHZ Crucial",
+   "seoDescription": "Memoria RAM DDR5 Crucial 32GB 5600MHz para gaming y workstations. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-32gb-adata-5600mhz",
+   "name": "DDR5 32GB Adata 5600MHZ",
+   "brand": "Adata",
+   "seoTitle": "DDR5 32GB Adata 5600MHZ",
+   "seoDescription": "Memoria RAM DDR5 ADATA 32GB 5600MHz para gaming extremo y trabajo profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-32gb-hiksemi-5600mhz",
+   "name": "DDR5 32GB Hiksemi 5600MHZ",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR5 32GB Hiksemi 5600MHZ",
+   "seoDescription": "Memoria RAM DDR5 32GB HIKSEMI 5600MHz para máximo rendimiento en gaming, edición y multitarea. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-32gb-hiksemi-5600mhz-2",
+   "name": "DDR5 32GB Hiksemi 5600MHZ",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR5 32GB Hiksemi 5600MHZ",
+   "seoDescription": "Memoria RAM DDR5 32GB HIKSEMI 5600MHz para gaming extremo y trabajo profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-32gb-hiksemi-5600mhz-armor",
+   "name": "DDR5 32GB Hiksemi 5600MHZ Armor",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR5 32GB Hiksemi 5600MHZ Armor",
+   "seoDescription": "Memoria RAM DDR5 HIKSEMI 32GB 5600MHz con diseño ARMOR. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-32gb-kingston-5600mhz-cl36-fury-beast-black",
+   "name": "DDR5 32GB Kingston 5600MHZ CL36 Fury Beast Black",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 32GB Kingston 5600MHZ CL36 Fury Beast",
+   "seoDescription": "Memoria RAM DDR5 Kingston Fury Beast 32GB 5600MHz CL36 negra. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-32gb-kingston-5600mhz-fury-beast-black-rgb",
+   "name": "DDR5 32GB Kingston 5600MHZ Fury Beast Black RGB",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 32GB Kingston 5600MHZ Fury Beast Black",
+   "seoDescription": "Memoria RAM DDR5 32GB Kingston Fury Beast Black RGB 5600MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-32gb-kingston-5600mhz-kvr",
+   "name": "DDR5 32GB Kingston 5600MHZ KVR",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 32GB Kingston 5600MHZ KVR",
+   "seoDescription": "Memoria RAM DDR5 32GB Kingston 5600MHz KVR. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-32gb-kingston-6000mhz-cl36-fury-beast-black",
+   "name": "DDR5 32GB Kingston 6000MHZ CL36 Fury Beast Black",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 32GB Kingston 6000MHZ CL36 Fury Beast",
+   "seoDescription": "Memoria DDR5 Kingston Fury Beast 32GB 6000MHz CL36, diseñada para gaming extremo y aplicaciones profesionales de… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-32gb-kingston-6000mhz-fury-beast-black-rgb",
+   "name": "DDR5 32GB Kingston 6000MHZ Fury Beast Black RGB",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 32GB Kingston 6000MHZ Fury Beast Black",
+   "seoDescription": "Memoria RAM DDR5 32GB Kingston Fury Beast Black con iluminación RGB y velocidad 6000MHz para gaming extremo y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-32gb-kingston-6400mhz-fury-beast-black-rgb",
+   "name": "DDR5 32GB Kingston 6400MHZ Fury Beast Black RGB",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 32GB Kingston 6400MHZ Fury Beast Black",
+   "seoDescription": "Memoria DDR5 32GB Kingston Fury Beast Black RGB 6400MHz para gaming extremo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-32gb-memox-5600mhz",
+   "name": "DDR5 32GB Memox 5600MHZ",
+   "brand": "Memox",
+   "seoTitle": "DDR5 32GB Memox 5600MHZ",
+   "seoDescription": "Memoria RAM DDR5 32GB MEMOX 5600MHz para gaming extremo y aplicaciones profesionales. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-32gb-xpg-5600mhz-lancer-black-cl46-3",
+   "name": "DDR5 32GB XPG 5600MHZ Lancer Black CL46",
+   "brand": "XPG",
+   "seoTitle": "DDR5 32GB XPG 5600MHZ Lancer Black CL46",
+   "seoDescription": "Memoria RAM DDR5 32GB XPG Lancer Black a 5600MHz con latencia CL46, ideal para gaming y workstations de alta… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-32gb-xpg-6000mhz-lancer-black-rgb",
+   "name": "DDR5 32GB XPG 6000MHZ Lancer Black RGB",
+   "brand": "XPG",
+   "seoTitle": "DDR5 32GB XPG 6000MHZ Lancer Black RGB",
+   "seoDescription": "Memoria DDR5 XPG Lancer Black RGB 32GB a 6000MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-48gb-kingston-5600mhz-kvr-3",
+   "name": "DDR5 48GB Kingston 5600MHZ KVR",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 48GB Kingston 5600MHZ KVR",
+   "seoDescription": "Memoria RAM DDR5 Kingston 48GB 5600MHz KVR. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-8-gb-5600mhz-adata",
+   "name": "DDR5 8 GB 5600MHZ Adata",
+   "brand": "Adata",
+   "seoTitle": "DDR5 8 GB 5600MHZ Adata",
+   "seoDescription": "Memoria RAM DDR5 ADATA 8GB 5600MHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-8-gb-5600mhz-crucial",
+   "name": "DDR5 8 GB 5600MHZ Crucial",
+   "brand": "Crucial",
+   "seoTitle": "DDR5 8 GB 5600MHZ Crucial",
+   "seoDescription": "Memoria RAM DDR5 8GB 5600MHz Crucial. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-8-gb-5600mhz-patriot-signature-line-cl46",
+   "name": "DDR5 8 GB 5600MHZ Patriot Signature Line CL46",
+   "brand": "Patriot",
+   "seoTitle": "DDR5 8 GB 5600MHZ Patriot Signature Line CL46",
+   "seoDescription": "Memoria RAM DDR5 Patriot Signature Line 8GB 5600MHz CL46. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-8-gb-5600mhz-sodimm-adata",
+   "name": "DDR5 8 GB 5600MHZ SODIMM Adata",
+   "brand": "Adata",
+   "seoTitle": "DDR5 8 GB 5600MHZ SODIMM Adata",
+   "seoDescription": "Memoria RAM DDR5 ADATA 8GB 5600MHz SODIMM para laptops. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-8-gb-5600mhz-sodimm-crucial",
+   "name": "DDR5 8 GB 5600MHZ SODIMM Crucial",
+   "brand": "Crucial",
+   "seoTitle": "DDR5 8 GB 5600MHZ SODIMM Crucial",
+   "seoDescription": "Memoria RAM DDR5 Crucial 8GB 5600MHz SODIMM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-8gb-adata-5600mhz",
+   "name": "DDR5 8GB Adata 5600MHZ",
+   "brand": "Adata",
+   "seoTitle": "DDR5 8GB Adata 5600MHZ",
+   "seoDescription": "DDR5 8GB Adata 5600MHZ. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DDR5 8GB Adata 5600MHZ. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr5-8gb-hiksemi-5600mhz",
+   "name": "DDR5 8GB Hiksemi 5600MHZ",
+   "brand": "Hiksemi",
+   "seoTitle": "DDR5 8GB Hiksemi 5600MHZ",
+   "seoDescription": "DDR5 8GB Hiksemi 5600MHZ. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DDR5 8GB Hiksemi 5600MHZ. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ddr5-8gb-kingston-5600mhz-kvr",
+   "name": "DDR5 8GB Kingston 5600MHZ KVR",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 8GB Kingston 5600MHZ KVR",
+   "seoDescription": "Memoria RAM DDR5 8GB Kingston 5600MHz KVR. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ddr5-8gb-kingston-6000mhz-cl36-fury-beast-black",
+   "name": "DDR5 8GB Kingston 6000MHZ CL36 Fury Beast Black",
+   "brand": "Kingston",
+   "seoTitle": "DDR5 8GB Kingston 6000MHZ CL36 Fury Beast",
+   "seoDescription": "Memoria RAM DDR5 8GB Kingston Fury Beast Black 6000MHz CL36. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dell-boss-controller-card-blade-ck",
+   "brand": "Dell",
+   "seoTitle": "DELL BOSS Controller Card, Blade, CK",
+   "seoDescription": "DELL BOSS Controller Card, Blade, CK. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "DELL BOSS Controller Card, Blade, CK. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "dell-red-broadcom-57416-dual-port-10gb-base-t",
+   "brand": "Dell",
+   "seoTitle": "DELL RED Broadcom 57416 Dual Port 10Gb",
+   "seoDescription": "Tarjeta de red DELL RED Broadcom 57416 con doble puerto 10Gb Base-T para máximo rendimiento y conectividad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "difusor-humificador-kanji-aromatizador",
+   "seoTitle": "Difusor Humificador Kanji Aromatizador",
+   "seoDescription": "Humidifica, Purifica, Luz de noche. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "digital-foto-sony-up-dr200",
+   "name": "Digital Foto Sony UP-DR200",
+   "brand": "Sony",
+   "seoTitle": "Digital Foto Sony UP-DR200",
+   "seoDescription": "Digital Foto Sony UP-DR200. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Digital Foto Sony UP-DR200. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "disco-duro-externo-adata-4tb-slim",
+   "brand": "Adata",
+   "seoTitle": "Disco Duro Externo Adata 4TB Slim",
+   "seoDescription": "Almacenamiento masivo de 4 TB en un diseño ultra delgado y elegante. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-externo-asus-tuf-gaming-as1000-1tb",
+   "name": "Disco Externo Asus TUF Gaming AS1000 1TB",
+   "brand": "Asus",
+   "seoTitle": "Disco Externo Asus TUF Gaming AS1000 1TB",
+   "seoDescription": "Disco Externo Asus TUF Gaming AS1000 1TB. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Disco Externo Asus TUF Gaming AS1000 1TB. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "disco-patriot-p300-256gb-m-2-pci-e",
+   "name": "Disco Patriot P300 256GB M.2 PCI-E",
+   "brand": "Patriot",
+   "seoTitle": "Disco Patriot P300 256GB M.2 PCI-E",
+   "seoDescription": "Disco Patriot P300 256GB M.2 PCI-E. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Disco Patriot P300 256GB M.2 PCI-E. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "disco-ssd-1-tb-m-2-nvme-netac-nv2000-2",
+   "name": "Disco SSD 1 TB M.2 NVME Netac NV2000",
+   "seoTitle": "Disco SSD 1 TB M.2 NVME Netac NV2000",
+   "seoDescription": "Disco SSD NETAC NV2000 1TB M.2 NVMe con tecnología avanzada para máximo rendimiento, velocidad de transferencia… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-1-tb-m-2-nvme-pcie-crucial",
+   "name": "Disco SSD 1 TB M.2 NVME PCIE Crucial",
+   "brand": "Crucial",
+   "seoTitle": "Disco SSD 1 TB M.2 NVME PCIE Crucial",
+   "seoDescription": "Disco SSD Crucial 1TB M.2 NVMe PCIe de alta velocidad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-1-tb-m-2-nvme-pcie-wd-green-sn350",
+   "name": "Disco SSD 1 TB M.2 NVME PCIE Western Digital Green SN350",
+   "brand": "Western Digital",
+   "seoTitle": "Disco SSD 1 TB M.2 NVME PCIE Western Digital",
+   "seoDescription": "Disco SSD M.2 NVMe PCIe WD Green SN350 de 1TB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-1-tb-m-2-nvme-vi5000-verbatim-2",
+   "name": "Disco SSD 1 TB M.2 NVME VI5000 Verbatim",
+   "seoTitle": "Disco SSD 1 TB M.2 NVME VI5000 Verbatim",
+   "seoDescription": "SSD NVMe Verbatim Vi5000 1TB M.2 con tecnología PCIe para máximo rendimiento, velocidades extremas y confiabilidad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-2-tb-m-2-nvme-netac-nv3000-2",
+   "name": "Disco SSD 2 TB M.2 NVME Netac NV3000",
+   "seoTitle": "Disco SSD 2 TB M.2 NVME Netac NV3000",
+   "seoDescription": "SSD NVMe NETAC NV3000 de 2TB con interfaz M.2, velocidades extremas de lectura/escritura para gaming, edición y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-2-tb-sata-iii-2-5-adata-su650",
+   "name": "Disco SSD 2 TB SATA III 2.5″ Adata SU650",
+   "brand": "Adata",
+   "seoTitle": "Disco SSD 2 TB SATA III 2.5″ Adata SU650",
+   "seoDescription": "SSD ADATA SU650 de 2TB con interfaz SATA III y formato 2.5 pulgadas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-2-tb-sata-iii-2-5-netac-sa500",
+   "name": "Disco SSD 2 TB SATA III 2.5″ Netac SA500",
+   "seoTitle": "Disco SSD 2 TB SATA III 2.5″ Netac SA500",
+   "seoDescription": "Disco SSD NETAC SA500 de 2TB con interfaz SATA III 2.5″, ofrece velocidad superior, durabilidad excepcional y amplio… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-256-gb-m-2-sata-iii-vi560-verbatim",
+   "name": "Disco SSD 256 GB M.2 SATA III VI560 Verbatim",
+   "seoTitle": "Disco SSD 256 GB M.2 SATA III VI560 Verbatim",
+   "seoDescription": "SSD Verbatim 256GB M.2 SATA III con velocidades de lectura hasta 560 MB/s para máximo rendimiento y confiabilidad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-480-gb-m-2-nvme-gen4-crucial",
+   "name": "Disco SSD 480 GB M.2 NVME GEN4 Crucial",
+   "brand": "Crucial",
+   "seoTitle": "Disco SSD 480 GB M.2 NVME GEN4 Crucial",
+   "seoDescription": "SSD M.2 NVMe Gen4 Crucial 480GB con velocidades de hasta 7000 MB/s. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-480-gb-sata-iii-2-5-msi-spatium-s270",
+   "name": "Disco SSD 480 GB SATA III 2.5″ MSI Spatium S270",
+   "brand": "MSI",
+   "seoTitle": "Disco SSD 480 GB SATA III 2.5″ MSI Spatium",
+   "seoDescription": "Disco SSD MSI SPATIUM S270 480GB SATA III 2.5″. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-480-gb-sata-iii-25-wd-green",
+   "name": "Disco SSD 480 GB SATA III 2,5″ Western Digital Green",
+   "brand": "Western Digital",
+   "seoTitle": "Disco SSD 480 GB SATA III 2,5″ Western",
+   "seoDescription": "Disco SSD WD Green 480GB SATA III 2.5″ ofrece velocidad, eficiencia energética y gran capacidad de almacenamiento… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-480gb-sata-iii-2-5-a400-kingston",
+   "name": "Disco SSD 480GB SATA III 2.5″ A400 Kingston",
+   "brand": "Kingston",
+   "seoTitle": "Disco SSD 480GB SATA III 2.5″ A400 Kingston",
+   "seoDescription": "SSD Kingston A400 480GB SATA III 2.5 pulgadas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-500-gb-sata-iii-25-wd-green",
+   "name": "Disco SSD 500 GB SATA III 2,5″ Western Digital Green",
+   "brand": "Western Digital",
+   "seoTitle": "Disco SSD 500 GB SATA III 2,5″ Western",
+   "seoDescription": "Disco SSD WD Green 500GB SATA III 2.5 pulgadas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-500gb-nv3-pcie-nvme-m-2-kingston",
+   "name": "Disco SSD 500GB NV3 PCIe NVME M.2 Kingston",
+   "brand": "Kingston",
+   "seoTitle": "Disco SSD 500GB NV3 PCIe NVME M.2 Kingston",
+   "seoDescription": "Disco SSD Kingston NV3 500GB PCIe NVMe M.2. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-500gb-sata-iii-2-5-pny-cs900-2",
+   "name": "Disco SSD 500GB SATA III 2.5″ PNY CS900",
+   "brand": "PNY",
+   "seoTitle": "Disco SSD 500GB SATA III 2.5″ PNY CS900",
+   "seoDescription": "Disco SSD PNY CS900 de 500GB con interfaz SATA III 2.5 pulgadas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-512-gb-m-2-sata-iii-vi560-verbatim",
+   "name": "Disco SSD 512 GB M.2 SATA III VI560 Verbatim",
+   "seoTitle": "Disco SSD 512 GB M.2 SATA III VI560 Verbatim",
+   "seoDescription": "SSD Verbatim 512GB M.2 SATA III con velocidades de hasta 560 MB/s. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-960-gb-sata-iii-2-5-adata-su650-2",
+   "name": "Disco SSD 960 GB SATA III 2.5″ Adata SU650",
+   "brand": "Adata",
+   "seoTitle": "Disco SSD 960 GB SATA III 2.5″ Adata SU650",
+   "seoDescription": "SSD ADATA SU650 de 960GB con interfaz SATA III y formato 2.5 pulgadas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-netac-960gb-sata-iii-2-5-6gb-s",
+   "seoTitle": "Disco Sólido SSD Netac 960Gb Sata III 2.5″",
+   "seoDescription": "Disco Sólido SSD Netac 960Gb Sata III 2.5″ 6Gb/s. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "disco-ssd-patriot-p210-1tb-sata-3-2-5",
+   "name": "Disco SSD Patriot P210 1TB SATA 3 2.5",
+   "brand": "Patriot",
+   "seoTitle": "Disco SSD Patriot P210 1TB SATA 3 2.5",
+   "seoDescription": "Disco SSD Patriot P210 1TB SATA 3 2.5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Disco SSD Patriot P210 1TB SATA 3 2.5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "disco-ssd-patriot-p400-1tb-m2-pci-e-lite",
+   "name": "Disco SSD Patriot P400 1TB M2 PCI-E Lite",
+   "brand": "Patriot",
+   "seoTitle": "Disco SSD Patriot P400 1TB M2 PCI-E Lite",
+   "seoDescription": "Disco SSD Patriot P400 1TB M2 PCI-E Lite. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Disco SSD Patriot P400 1TB M2 PCI-E Lite. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "divisor-3-vias-splitter",
+   "name": "Divisor 3 Vias Splitter",
+   "seoTitle": "Divisor 3 Vias Splitter",
+   "seoDescription": "Divisor 3 Vias Splitter. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Divisor 3 Vias Splitter. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "dji-osmo-360-adventure-combo",
+   "seoTitle": "DJI Osmo 360 Adventure Combo",
+   "seoDescription": "Captura aventuras épicas en 360° con el DJI Osmo Adventure Combo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dji-osmo-action-5-pro",
+   "seoTitle": "DJI Osmo Action 5 Pro",
+   "seoDescription": "Cámara de acción DJI Osmo Action 5 Pro con grabación 4K, estabilización superior, resistente al agua y pantallas… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dji-osmo-mobile-7",
+   "seoTitle": "Dji Osmo Mobile 7",
+   "seoDescription": "Estabilizador gimbal DJI Osmo Mobile 7 para smartphone con tecnología ActiveTrack, grabación 4K y diseño plegable… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dji-osmo-mobile-7p",
+   "seoTitle": "DJI Osmo Mobile 7P",
+   "seoDescription": "Estabilizador gimbal DJI Osmo Mobile 7P para smartphone. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dji-osmo-mobile-8p-creator-combo",
+   "seoTitle": "Dji Osmo Mobile 8P Creator Combo",
+   "seoDescription": "El kit definitivo de creación de contenido para smartphone. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dji-osmo-nano",
+   "seoTitle": "DJI Osmo Nano",
+   "seoDescription": "Cámara gimbal ultra compacta DJI Osmo Nano con estabilización profesional de 3 ejes, grabación 4K y diseño portátil… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dji-osmo-pocket-3-combo-capture",
+   "seoTitle": "DJI Osmo Pocket 3 Combo Capture",
+   "seoDescription": "Cámara ultra compacta DJI Osmo Pocket 3 Combo con grabación 4K profesional, estabilización avanzada y accesorios… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dji-osmo-pocket-3-creator-combo",
+   "seoTitle": "DJI Osmo Pocket 3 Creator Combo",
+   "seoDescription": "Cámara ultracompacta DJI Osmo Pocket 3 Creator Combo con grabación 4K, gimbal de 3 ejes y kit completo de accesorios… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dji-rs4-combo",
+   "seoTitle": "DJI RS4 Combo",
+   "seoDescription": "Estabilizador gimbal profesional DJI RS4 Combo de 3 ejes para filmaciones cinematográficas perfectas con cámaras… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dji-rs4-mini",
+   "seoTitle": "DJI RS4 Mini",
+   "seoDescription": "Estabilizador gimbal DJI RS4 Mini ultra compacto y ligero para cámaras DSLR y mirrorless. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dji-rs4-mini-combo",
+   "seoTitle": "DJI RS4 Mini Combo",
+   "seoDescription": "Estabilizador gimbal DJI RS4 Mini Combo ultracompacto y ligero, ideal para cámaras mirrorless y DSLR con tecnología… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dji-rs4-pro",
+   "seoTitle": "DJI RS4 Pro",
+   "seoDescription": "Estabilizador gimbal profesional DJI RS4 Pro para cámaras DSLR y mirrorless. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dron-dji-air-3s-fly-more-combo-rc2",
+   "seoTitle": "Dron Dji Air 3s Fly More Combo Rc2",
+   "seoDescription": "Dron Dji Air 3s Fly More Combo Rc2. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Dron Dji Air 3s Fly More Combo Rc2. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "dron-dji-flip-fly-more-combo-rc2",
+   "seoTitle": "Dron DJI Flip Fly More Combo RC2",
+   "seoDescription": "Dron DJI Flip Fly More Combo RC2 con control remoto avanzado, múltiples baterías y accesorios completos para vuelo… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dron-dji-lito-1-fly-more-combo-rc-n3",
+   "seoTitle": "Dron DJI Lito 1 Fly More Combo RC-N3",
+   "seoDescription": "El dron ultraligero perfecto para capturar tus viajes sin complicaciones. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dron-dji-lito-x1-fly-more-combo-rc-n3",
+   "seoTitle": "Dron DJI Lito X1 Fly More Combo RC-N3",
+   "seoDescription": "Portabilidad absoluta, seguridad total y calidad cinematográfica. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dron-dji-lito-x1-fly-more-combo-rc2",
+   "seoTitle": "Dron DJI Lito X1 Fly More Combo RC2",
+   "seoDescription": "Portabilidad sin límites, seguridad total y vuelo sin depender de tu smartphone. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dron-dji-mavic-4-pro-512gb-creator-combo",
+   "seoTitle": "Dron DJI Mavic 4 Pro 512gb Creator Combo",
+   "seoDescription": "La cúspide del cine aéreo profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dron-dji-mini-5-pro-fly-more-combo-plus-rc2-bateria-56-minutos",
+   "seoTitle": "Dron DJI Mini 5 Pro Fly More Combo Plus RC2",
+   "seoDescription": "Dron DJI Mini 5 Pro con control RC2, batería extendida de 56 minutos y kit Fly More Combo Plus completo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dron-dji-mini-5-pro-fly-more-combo-rc2",
+   "seoTitle": "Dron Dji Mini 5 Pro Fly More Combo RC2",
+   "seoDescription": "La cima de la fotografía aérea portátil. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dron-dji-mini-5-pro-rc2-bundle-4-baterias",
+   "seoTitle": "Dron DJI Mini 5 Pro RC2 Bundle 4 Baterias",
+   "seoDescription": "Autonomía extendida y calidad de imagen cinematográfica en la palma de tu mano. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "dron-dji-neo-2-fly-more-combo",
+   "seoTitle": "Dron DJI Neo 2 Fly More Combo",
+   "seoDescription": "Kit completo DJI Neo 2 con dron, baterías adicionales, cargador múltiple y accesorios premium para vuelos… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "drone-dji-avata-2-fly-more-combo-3-baterias",
+   "seoTitle": "Drone DJI Avata 2 Fly More Combo 3 Baterias",
+   "seoDescription": "Drone DJI Avata 2 Fly More Combo 3 Baterias. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "e-reader-amazon-kindle-11-6-16gb",
+   "seoTitle": "E-Reader Amazon Kindle 11va Gen 6″ 16gb",
+   "seoDescription": "Sistema operativo Linux. Soporta múltiples formatos de archivo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "eaton-placa-de-red-m3ups-9px-9sx-9e1gb-2",
+   "name": "Eaton Placa de Red (M3),UPS 9PX, 9SX, 9E,(1GB)",
+   "brand": "Eaton",
+   "seoTitle": "Eaton Placa de Red (M3),UPS 9PX, 9SX",
+   "seoDescription": "Placa de red EATON M3 de 1GB para UPS 9PX, 9SX y 9E. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "epson-fiscal-tm-t900fa-termica-nueva-generacion",
+   "name": "Epson Fiscal TM-T900FA Termica Nueva Generacion",
+   "brand": "Epson",
+   "seoTitle": "Epson Fiscal TM-T900FA Termica Nueva",
+   "seoDescription": "Epson Fiscal TM-T900FA Termica Nueva Generacion. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Epson Fiscal TM-T900FA Termica Nueva Generacion. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "escalera-plegable-2-escalones-smart-kassel",
+   "seoTitle": "Escalera Plegable 2 Escalones Smart Kassel",
+   "seoDescription": "Peso: 1,5 kg Escalones totales: 2 Capacidad máxima: 150 kg Práctica y compacta. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "escalera-telescopica-doble-26mt-smart-kassel",
+   "seoTitle": "Escalera Telescópica 2,6mt Smart Kassel",
+   "seoDescription": "Largo total desplegada 2,6 metros Material Aluminio Peso 7KG Compacta y Liviana. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "escalera-telescopica-doble-32mt-smart-kassel",
+   "seoTitle": "Escalera Telescópica Doble 3,2mt Smart Kassel",
+   "seoDescription": "Largo total desplegada 3,2 metros Material Aluminio Peso 12KG Compacta y Liviana. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "escritorio-estudio-delos-1-puerta",
+   "seoTitle": "Escritorio Estudio Delos 1 Puerta Azul",
+   "seoDescription": "Escritorio Estudio Delos 1 Puerta Azul, ideal para espacios modernos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "escritorio-estudio-delos-1-puerta-rosa",
+   "seoTitle": "Escritorio Estudio Delos 1 Puerta Rosa",
+   "seoDescription": "Escritorio Estudio Delos 1 Puerta Rosa, ideal para espacios modernos y funcionales. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "escritorio-gamer-delos-amarillo",
+   "seoTitle": "Escritorio Gamer Delos Amarillo",
+   "seoDescription": "Escritorio Gamer Delos Amarillo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "escritorio-gamer-xtrike-me-black-dk-02bk",
+   "seoTitle": "Escritorio Gamer Xtrike Me Black Dk-02bk",
+   "seoDescription": "Diseño Ergonómico Materiales Duraderos Portavasos Porta Auriculares. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "estabilizador-de-tension-forza-1200va",
+   "brand": "Dekkin",
+   "seoTitle": "Auricular Dekkin con Micrófono",
+   "seoDescription": "Conector de 3.5mm Micrófono manos libres Frecuencia 20Hz-20kHz Cable plao de 1.2 metros. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "estabilizador-de-tension-forza-2200va",
+   "seoTitle": "Estabilizador de Tensión Forza 2200Va",
+   "seoDescription": "Estabilizador de Tensión Forza 2200Va. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "estabilizador-de-tension-trv-powersafe-gamer",
+   "brand": "TRV",
+   "seoTitle": "Estabilizador De Tension Trv Powersafe Gamer",
+   "seoDescription": "Estabilizador De Tension Trv Powersafe Gamer. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "estabilizador-trv-powersafe-2i-2000va-6x220v-2",
+   "name": "Estabilizador TRV Powersafe 2I 2000VA 6X220V",
+   "brand": "TRV",
+   "seoTitle": "Estabilizador TRV Powersafe 2I 2000VA 6X220V",
+   "seoDescription": "Estabilizador de voltaje TRV PowerSafe 2000VA con 6 tomas 220V. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "estabilizador-trv-powersafe-3i-2000va-6x220v-2",
+   "name": "Estabilizador TRV Powersafe 3I 2000VA 6X220V",
+   "brand": "TRV",
+   "seoTitle": "Estabilizador TRV Powersafe 3I 2000VA 6X220V",
+   "seoDescription": "Estabilizador TRV PowerSafe 3I 2000VA con 6 tomas 220V. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "estabilizador-trv-powersafe-gamer-rj-45-port",
+   "name": "Estabilizador TRV Powersafe Gamer RJ-45 Port",
+   "brand": "TRV",
+   "seoTitle": "Estabilizador TRV Powersafe Gamer RJ-45 Port",
+   "seoDescription": "Estabilizador TRV Powersafe Gamer RJ-45 Port. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Estabilizador TRV Powersafe Gamer RJ-45 Port. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "estufa-calefactor-con-turbo-termoconvector",
+   "brand": "Embassy",
+   "seoTitle": "Estufa Calefactor con Turbo Termoconvector",
+   "seoDescription": "Estufa Calefactor con Turbo Termoconvector Embassy. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "estufa-calefactor-termoconvector-winco",
+   "brand": "Winco",
+   "seoTitle": "Estufa Calefactor Termoconvector Winco",
+   "seoDescription": "Termoconvector 3 niveles de potencia 750W / 1250W / 2000W Termostato regulable Protector térmico de seguridad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "etermo-termo-electrico-auto-peabody-onroad-500ml-negro",
+   "brand": "Peabody",
+   "seoTitle": "eTermo Termo Eléctrico Auto Peabody Onroad",
+   "seoDescription": "eTermo Termo Eléctrico Auto Peabody Onroad 500ml Negro. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "etermo-termo-electrico-auto-peabody-onroad-500ml-silver",
+   "brand": "Peabody",
+   "seoTitle": "eTermo Termo Eléctrico Auto Peabody Onroad",
+   "seoDescription": "eTermo Termo Eléctrico Auto Peabody Onroad 500ml Silver. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "etermo-termo-electrico-peabody-1lt-celeste",
+   "brand": "Peabody",
+   "seoTitle": "eTermo Termo Eléctrico Peabody 1LT Celeste",
+   "seoDescription": "eTermo Termo Eléctrico Peabody 1LT Celeste. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "etermo-termo-electrico-peabody-1lt-negro",
+   "brand": "Peabody",
+   "seoTitle": "eTermo Termo Eléctrico Peabody 1LT Negro",
+   "seoDescription": "eTermo Termo Eléctrico Peabody 1LT Negro. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "etermo-termo-electrico-peabody-1lt-rojo",
+   "brand": "Peabody",
+   "seoTitle": "eTermo Termo Eléctrico Peabody 1LT Rojo",
+   "seoDescription": "eTermo Termo Eléctrico Peabody 1LT Rojo. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "etermo-termo-electrico-peabody-1lt-rosa",
+   "brand": "Peabody",
+   "seoTitle": "eTermo Termo Eléctrico Peabody 1LT Rosa",
+   "seoDescription": "eTermo Termo Eléctrico Peabody 1LT Rosa. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "etermo-termo-electrico-peabody-1lt-rose-gold",
+   "brand": "Peabody",
+   "seoTitle": "eTermo Termo Eléctrico Peabody 1LT Rose Gold",
+   "seoDescription": "eTermo Termo Eléctrico Peabody 1LT Rose Gold. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "etermo-termo-electrico-peabody-1lt-verde",
+   "brand": "Peabody",
+   "seoTitle": "eTermo Termo Eléctrico Peabody 1LT Verde",
+   "seoDescription": "eTermo Termo Eléctrico Peabody 1LT Verde. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "evolve-10",
+   "seoTitle": "Evolve 10",
+   "seoDescription": "Evolve 10. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Evolve 10. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "evolve-2-30-se-usb-c-ms-duo",
+   "name": "Evolve 2 30 SE Usb-c MS DUO",
+   "seoTitle": "Evolve 2 30 SE Usb-c MS DUO",
+   "seoDescription": "Evolve 2 30 SE Usb-c MS DUO. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Evolve 2 30 SE Usb-c MS DUO. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "evolve-20-stereo-ms",
+   "name": "Evolve 20 Stereo MS",
+   "seoTitle": "Evolve 20 Stereo MS",
+   "seoDescription": "Evolve 20 Stereo MS. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Evolve 20 Stereo MS. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "evolve2-30-usb-a-ms-duo",
+   "name": "EVOLVE2 30 Usb-a MS DUO",
+   "seoTitle": "EVOLVE2 30 Usb-a MS DUO",
+   "seoDescription": "EVOLVE2 30 Usb-a MS DUO. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "EVOLVE2 30 Usb-a MS DUO. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "evolve2-40-usb-a-ms-duo",
+   "name": "EVOLVE2 40 Usb-a MS DUO",
+   "seoTitle": "EVOLVE2 40 Usb-a MS DUO",
+   "seoDescription": "EVOLVE2 40 Usb-a MS DUO. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "EVOLVE2 40 Usb-a MS DUO. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "evolve2-55-link380a-ms-black",
+   "name": "EVOLVE2 55 LINK380A MS Black",
+   "seoTitle": "EVOLVE2 55 LINK380A MS Black",
+   "seoDescription": "EVOLVE2 55 LINK380A MS Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "EVOLVE2 55 LINK380A MS Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "evolve2-65-link380a-ms-black",
+   "name": "EVOLVE2 65 LINK380A MS Black",
+   "seoTitle": "EVOLVE2 65 LINK380A MS Black",
+   "seoDescription": "EVOLVE2 65 LINK380A MS Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "EVOLVE2 65 LINK380A MS Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "evolve2-65-usb-c",
+   "name": "EVOLVE2 65 Usb-c",
+   "seoTitle": "EVOLVE2 65 Usb-c",
+   "seoDescription": "EVOLVE2 65 Usb-c. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "EVOLVE2 65 Usb-c. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "evolve2-75-link380a-ms-black",
+   "name": "EVOLVE2 75 LINK380A MS Black",
+   "seoTitle": "EVOLVE2 75 LINK380A MS Black",
+   "seoDescription": "EVOLVE2 75 LINK380A MS Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "EVOLVE2 75 LINK380A MS Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "evolve2-buds-con-base",
+   "name": "EVOLVE2 Buds con Base",
+   "seoTitle": "EVOLVE2 Buds con Base",
+   "seoDescription": "EVOLVE2 Buds con Base. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "EVOLVE2 Buds con Base. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "exprimidor-de-jugos-liliana-exprimy-1-2-l-40w",
+   "brand": "Liliana",
+   "seoTitle": "Exprimidor De Jugos Liliana Exprimy 1.2 L 40W",
+   "seoDescription": "Exprimidor De Jugos Liliana Exprimy 1.2 L 40W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "exprimidor-electrico-winco-1lt",
+   "brand": "Winco",
+   "seoTitle": "Exprimidor Eléctrico Winco 1LT",
+   "seoDescription": "Exprimidor Eléctrico Winco 1LT. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "extensor-de-rango-mercusys-mw300re",
+   "name": "Extensor de Rango Mercusys MW300RE",
+   "brand": "Mercusys",
+   "seoTitle": "Extensor de Rango Mercusys MW300RE",
+   "seoDescription": "Extensor WiFi Mercusys MW300RE amplifica tu señal hasta 300Mbps, elimina zonas muertas y mejora la cobertura… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "extensor-de-rango-tp-link-re200-ac750-dual-band",
+   "name": "Extensor de Rango TP-Link RE200 AC750 Dual Band",
+   "brand": "TP-Link",
+   "seoTitle": "Extensor de Rango TP-Link RE200 AC750 Dual",
+   "seoDescription": "Extensor WiFi TP-Link RE200 AC750 con doble banda para amplificar y mejorar la cobertura inalámbrica en todo tu hogar. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "extensor-de-rango-tp-link-wa850re-11n-300mbps",
+   "name": "TP-Link Extensor de Rango WIFI 300MPS",
+   "brand": "TP-Link",
+   "seoTitle": "TP-Link Extensor de Rango WIFI 300MPS",
+   "seoDescription": "TP-Link Extensor de Rango WIFI 300MPS. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "TP-Link Extensor de Rango WIFI 300MPS. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "extensor-de-rango-wi-fi-tp-link-tl-wa850re-inalambrico",
+   "seoTitle": "Extensor de rango Wi-fi TP LINK TL-WA850RE",
+   "seoDescription": "Modelo: TL-WA850RE Funciones: Repetidor Velocidad inalámbrica: 300 Mbps Frecuencias: 2.4 GHz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "extensor-wifi-tp-link-tl-wpa-4220kit-300-mbps",
+   "brand": "TP-Link",
+   "seoTitle": "Extensor WIFI TP-LINK TL-WPA 4220KIT 300 Mbps",
+   "seoDescription": "Extensor WIFI TP-LINK TL-WPA 4220KIT 300 Mbps. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "fibra-furukawa-dio-b48-kit-anclaje-y-acomoda",
+   "name": "Fibra Furukawa DIO B48 Kit Anclaje y Acomoda",
+   "seoTitle": "Fibra Furukawa DIO B48 Kit Anclaje y Acomoda",
+   "seoDescription": "Fibra Furukawa DIO B48 Kit Anclaje y Acomoda. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Fibra Furukawa DIO B48 Kit Anclaje y Acomoda. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "fibra-furukawa-odf-teralan-enterprise-48f",
+   "name": "Fibra Furukawa ODF Teralan Enterprise 48F",
+   "seoTitle": "Fibra Furukawa ODF Teralan Enterprise 48F",
+   "seoDescription": "Fibra Furukawa ODF Teralan Enterprise 48F. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Fibra Furukawa ODF Teralan Enterprise 48F. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "filmadora-panasonic-hc-v900-hd",
+   "seoTitle": "Filmadora Panasonic HC-V900 HD",
+   "seoDescription": "Calidad de imagen superior, nitidez impresionante y respuesta en entornos de poca luz. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "flash-canon-speedlite-430ex-iii-rt",
+   "brand": "Canon",
+   "seoTitle": "Flash Canon Speedlite 430EX III RT",
+   "seoDescription": "Flash Canon Speedlite 430EX III RT. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "flash-canon-speedlite-el-5",
+   "brand": "Canon",
+   "seoTitle": "Flash Canon Speedlite EL-5",
+   "seoDescription": "Flash Canon Speedlite EL-5. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "flash-speedlight-sb700",
+   "brand": "Nikon",
+   "seoTitle": "Flash Nikon Speedlight SB700",
+   "seoDescription": "Número de Guía 28 m (a ISO 100, posición del zoom de 35 mm, en formato FX, patrón de iluminación estándar, 20 °C) a… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "freidora-de-aire-midea-11-litros-de-2-zonas",
+   "brand": "Midea",
+   "seoTitle": "Freidora de Aire Midea 11 litros de 2 Zonas",
+   "seoDescription": "Freidora de Aire Midea 11 litros de 2 Zonas. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "freidora-de-aire-midea-2-5l-sin-aceite",
+   "brand": "Midea",
+   "seoTitle": "Freidora de aire Midea 2.5L (sin aceite)",
+   "seoDescription": "Freidora de aire Midea 2.5L (sin aceite). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "freidora-de-aire-midea-4l-sin-aceite",
+   "brand": "Midea",
+   "seoTitle": "Freidora de aire Midea 4L (sin aceite)",
+   "seoDescription": "Capacidad: 4 litros Potencia: 1375 W Material de la sartén: Antiadherente Dimensiones (Alto x An x Prof): 370 x 270… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "freidora-de-aire-midea-5-5l-sin-aceite",
+   "brand": "Midea",
+   "seoTitle": "Freidora de aire Midea 5.5L (sin aceite)",
+   "seoDescription": "Freidora de aire Midea 5.5L (sin aceite). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "freidora-de-aire-sibiu-1700w-8-lts",
+   "seoTitle": "Freidora de Aire Sibiú 1700W 8 Lts",
+   "seoDescription": "Freidora de Aire Sibiú 1700W 8 Lts. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "freidora-de-aire-vivify-4-6-lts",
+   "seoTitle": "Freidora de Aire Vivify 4.6 Lts.",
+   "seoDescription": "Freidora de Aire Vivify 4.6 Lts.. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "freidora-de-aire-yelmo-fr-7310-5-lts",
+   "seoTitle": "Freidora de Aire Yelmo 5L (sin aceite)",
+   "seoDescription": "Freidora de Aire Yelmo 5L (sin aceite). Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "freidora-moulinex-uno-1-kg-de-capacidad",
+   "seoTitle": "Freidora Moulinex Uno 1 Kg. de Capacidad",
+   "seoDescription": "Freidora Moulinex Uno 1 Kg. de Capacidad. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "fuente-aerocool-cylon-700w-rgb-80-bronce",
+   "name": "Fuente Aerocool Cylon 700W RGB/ 80+ Bronce",
+   "brand": "Aerocool",
+   "seoTitle": "Fuente Aerocool Cylon 700W RGB/ 80+ Bronce",
+   "seoDescription": "Fuente de alimentación Aerocool Cylon 700W con certificación 80+ Bronze, iluminación RGB personalizable y diseño… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "fuente-coolermaster-elite-v3-600w-sin-cable-power",
+   "name": "Fuente Coolermaster Elite V3 600W (sin Cable Power)",
+   "seoTitle": "Fuente Coolermaster Elite V3 600W (sin Cable",
+   "seoDescription": "Fuente de poder Cooler Master Elite V3 600W modular sin cables incluidos, ideal para builds personalizados y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "fuente-coolermaster-mwe-gold-v2-fm-850w-full-modular-80-gold-sin-cable-power",
+   "name": "Fuente Coolermaster MWE Gold V2 FM 850W Full-modular/ +80 Gold (sin Cable Power)",
+   "seoTitle": "Fuente Coolermaster MWE Gold V2 FM 850W",
+   "seoDescription": "Fuente modular Cooler Master MWE Gold V2 850W con certificación 80+ Gold, máxima eficiencia energética y diseño… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "fuente-coolermaster-v850-gold-v2-80-gold-850w-full-modular-cable-power-americano",
+   "name": "Fuente Coolermaster V850 GOLD-V2 / 80+ Gold 850W Full Modular (cable Power Americano)",
+   "seoTitle": "Fuente Coolermaster V850 GOLD-V2 / 80+ Gold",
+   "seoDescription": "Fuente de poder Cooler Master V850 Gold V2 850W, certificación 80+ Gold, completamente modular con cable americano… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "fuente-e-view-600w",
+   "name": "Fuente E-View 600W",
+   "brand": "E-View",
+   "seoTitle": "Fuente E-View 600W",
+   "seoDescription": "Fuente de poder E-VIEW 600W con certificación 80 Plus, protección múltiple y diseño silencioso para equipos gaming y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "fuente-e-view-650w-80-bronce",
+   "name": "Fuente E-View 650W 80+ Bronce",
+   "brand": "E-View",
+   "seoTitle": "Fuente E-View 650W 80+ Bronce",
+   "seoDescription": "Fuente de poder E-VIEW 650W con certificación 80+ Bronce. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "fuente-e-view-750w-80-bronce",
+   "name": "Fuente E-View 750W 80+ Bronce",
+   "brand": "E-View",
+   "seoTitle": "Fuente E-View 750W 80+ Bronce",
+   "seoDescription": "Fuente de alimentación E-View 750W con certificación 80+ Bronce. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "fuente-e-view-850w-80-gold-modular",
+   "name": "Fuente E-View 850W 80+ Gold /Modular",
+   "brand": "E-View",
+   "seoTitle": "Fuente E-View 850W 80+ Gold /Modular",
+   "seoDescription": "Fuente de poder E-View 850W certificación 80+ Gold, diseño modular para máxima eficiencia energética y gestión… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "fuente-msi-mag-a550bn-550w-atx-80-bronce-cable-power-americano",
+   "name": "Fuente MSI MAG A550BN 550W / ATX/ 80+ Bronce (cable Power Americano)",
+   "brand": "MSI",
+   "seoTitle": "Fuente MSI MAG A550BN 550W / ATX/ 80+ Bronce",
+   "seoDescription": "Fuente de poder MSI MAG A550BN 550W con certificación 80 Plus Bronce, formato ATX y cable de poder americano incluido. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "fuente-msi-mag-a600dn-600w-standard-80-cable-power-americano",
+   "name": "Fuente MSI MAG A600DN 600W / Standard 80+ (cable Power Americano)",
+   "brand": "MSI",
+   "seoTitle": "Fuente MSI MAG A600DN 600W / Standard 80+",
+   "seoDescription": "** Fuente MSI MAG A600DN 600W con certificación 80+ Standard. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "fuente-msi-mag-a750gl-750w-80-plus-gold-pcie5-modular-cable-power-americano",
+   "name": "Fuente MSI MAG A750GL 750W/80 Plus Gold/PCIE5/Modular (cable Power Americano)",
+   "brand": "MSI",
+   "seoTitle": "Fuente MSI MAG A750GL 750W/80 Plus",
+   "seoDescription": "Fuente de poder MSI MAG A750GL 750W con certificación 80 Plus Gold, diseño modular y compatibilidad PCIe 5.0 para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "fuente-msi-mag-a850gl-850w-80-plus-gold-pcie5-modular-cable-power-americano",
+   "name": "Fuente MSI MAG A850GL 850W/80 Plus Gold/PCIE5/Modular (cable Power Americano)",
+   "brand": "MSI",
+   "seoTitle": "Fuente MSI MAG A850GL 850W/80 Plus",
+   "seoDescription": "Fuente modular MSI MAG A850GL 850W con certificación 80 Plus Gold, conectores PCIe 5.0 y cable power americano… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "fujifilm-fuji-x-t5-body",
+   "seoTitle": "Fujifilm Fuji X-T5 Body",
+   "seoDescription": "Sensor CMOS 40MP APS-C X-Trans HR BSI Sensor Video 4K 120p, 6.2K 30p, FHD 240p 10-Bit Estabilizador de Imagen de 7… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "fujifilm-fuji-x-t5-kit-18-55mm",
+   "seoTitle": "Fujifilm Fuji X-T5 Kit 18-55mm",
+   "seoDescription": "Sensor CMOS 40MP APS-C X-Trans HR BSI Sensor Video 4K 120p, 6.2K 30p, FHD 240p 10-Bit Estabilizador de Imagen de 7… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "funda-para-notebook-targus-strata-13-14",
+   "brand": "Targus",
+   "seoTitle": "Funda para Notebook Targus Strata 13″-14″",
+   "seoDescription": "Funda para Notebook Targus Strata 13″-14″. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gab-650w-thermaltake-versa-h16tg-argb-fan3-m-atx",
+   "name": "Gabinete +650W Thermaltake Versa H16TG ARGB FAN*3 M-atx",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete +650W Thermaltake Versa H16TG ARGB",
+   "seoDescription": "Gabinete +650W Thermaltake Versa H16TG ARGB FAN*3 M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete +650W Thermaltake Versa H16TG ARGB FAN*3 M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-750w-thermaltake-h390-tg-argb-fan4-e-atx",
+   "name": "Gabinete +750W Thermaltake H390 TG ARGB FAN*4 E-atx",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete +750W Thermaltake H390 TG ARGB FAN*4",
+   "seoDescription": "Gabinete +750W Thermaltake H390 TG ARGB FAN*4 E-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete +750W Thermaltake H390 TG ARGB FAN*4 E-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-arkham-cancri-4fan-argb-atx",
+   "name": "Gabinete Arkham Cancri 4*FAN ARGB ATX",
+   "seoTitle": "Gabinete Arkham Cancri 4*FAN ARGB ATX",
+   "seoDescription": "Gabinete Arkham Cancri 4*FAN ARGB ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Arkham Cancri 4*FAN ARGB ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-arkham-cancri-eco-4fan-argb-atx",
+   "name": "Gabinete Arkham Cancri ECO 4*FAN ARGB ATX",
+   "seoTitle": "Gabinete Arkham Cancri ECO 4*FAN ARGB ATX",
+   "seoDescription": "Gabinete Arkham Cancri ECO 4*FAN ARGB ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Arkham Cancri ECO 4*FAN ARGB ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-arkham-cozu-4fan-argb-atx",
+   "name": "Gabinete Arkham Cozu 4*FAN ARGB ATX",
+   "seoTitle": "Gabinete Arkham Cozu 4*FAN ARGB ATX",
+   "seoDescription": "Gabinete Arkham Cozu 4*FAN ARGB ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Arkham Cozu 4*FAN ARGB ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-arkham-mel-4fan-argb-atx",
+   "name": "Gabinete Arkham MEL 4*FAN ARGB ATX",
+   "seoTitle": "Gabinete Arkham MEL 4*FAN ARGB ATX",
+   "seoDescription": "Gabinete Arkham MEL 4*FAN ARGB ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Arkham MEL 4*FAN ARGB ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-arkham-pygma-6fan-argb-e-atx",
+   "name": "Gabinete Arkham Pygma 6*FAN ARGB E-atx",
+   "seoTitle": "Gabinete Arkham Pygma 6*FAN ARGB E-atx",
+   "seoDescription": "Gabinete Arkham Pygma 6*FAN ARGB E-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Arkham Pygma 6*FAN ARGB E-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-arkham-vorus-eco-4fan-argb-atx",
+   "name": "Gabinete Arkham Vorus ECO 4*FAN ARGB ATX",
+   "seoTitle": "Gabinete Arkham Vorus ECO 4*FAN ARGB ATX",
+   "seoDescription": "Gabinete Arkham Vorus ECO 4*FAN ARGB ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Arkham Vorus ECO 4*FAN ARGB ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-asus-a31-plus-tg-argb-black-v-templado",
+   "name": "Gabinete Asus A31 Plus TG ARGB Black V Templado",
+   "brand": "Asus",
+   "seoTitle": "Gabinete Asus A31 Plus TG ARGB Black V",
+   "seoDescription": "Gabinete Asus A31 Plus TG ARGB Black V Templado. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Asus A31 Plus TG ARGB Black V Templado. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-asus-a31-plus-tg-argb-white-v-templado",
+   "name": "Gabinete Asus A31 Plus TG ARGB White V Templado",
+   "brand": "Asus",
+   "seoTitle": "Gabinete Asus A31 Plus TG ARGB White V",
+   "seoDescription": "Gabinete Asus A31 Plus TG ARGB White V Templado. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Asus A31 Plus TG ARGB White V Templado. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-asus-gr701-rog-hyperion-black-v-templado",
+   "name": "Gabinete Asus GR701 ROG Hyperion Black V Templado",
+   "brand": "Asus",
+   "seoTitle": "Gabinete Asus GR701 ROG Hyperion Black V",
+   "seoDescription": "Gabinete Asus GR701 ROG Hyperion Black V Templado. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Asus GR701 ROG Hyperion Black V Templado. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-asus-gr701-rog-hyperion-white-v-templado",
+   "name": "Asus 90DC00F3-B38000",
+   "brand": "Asus",
+   "seoTitle": "Asus 90DC00F3-B38000",
+   "seoDescription": "Asus 90DC00F3-B38000. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Asus 90DC00F3-B38000. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-asus-gr701-rog-hyperion-white-v-templado-2",
+   "name": "Gabinete Asus GR701 ROG Hyperion White V Templado",
+   "brand": "Asus",
+   "seoTitle": "Gabinete Asus GR701 ROG Hyperion White V",
+   "seoDescription": "Gabinete gaming ASUS ROG Hyperion GR701 en color blanco con panel de vidrio templado, diseño premium para PC gaming… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gab-asus-gt501-tuf-gaming-fan-rgb-grey-v-templado",
+   "name": "Gabinete Asus GT501 TUF Gaming FAN RGB Grey V Templado",
+   "brand": "Asus",
+   "seoTitle": "Gabinete Asus GT501 TUF Gaming FAN RGB Grey V",
+   "seoDescription": "Gabinete Asus GT501 TUF Gaming FAN RGB Grey V Templado. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Asus GT501 TUF Gaming FAN RGB Grey V Templado. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-asus-gx601-rog-strix-helios-rgb-black-v-temp",
+   "name": "Gabinete Asus ROG Strix Helios Black",
+   "brand": "Asus",
+   "seoTitle": "Gabinete Asus ROG Strix Helios Black",
+   "seoDescription": "Gabinete Asus ROG Strix Helios Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Asus ROG Strix Helios Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-asus-gx601-rog-strix-helios-rgb-black-v-temp-2",
+   "name": "Gabinete Asus GX601 ROG Strix Helios RGB Black V Temp",
+   "brand": "Asus",
+   "seoTitle": "Gabinete Asus GX601 ROG Strix Helios RGB",
+   "seoDescription": "Gabinete gaming ASUS ROG Strix Helios GX601 con iluminación RGB, cristal templado y refrigeración premium para… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gab-asus-gx601-rog-strix-helios-rgb-white-v-temp-2",
+   "name": "Gabinete Asus GX601 ROG Strix Helios RGB White V Temp",
+   "brand": "Asus",
+   "seoTitle": "Gabinete Asus GX601 ROG Strix Helios RGB",
+   "seoDescription": "Gabinete gaming ASUS ROG Strix Helios GX601 RGB blanco con vidrio templado, iluminación personalizable y excelente… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gab-asus-pa401-proart-wood-e-black-v-templado",
+   "name": "Gabinete Asus PA401 Proart Wood E Black V Templado",
+   "brand": "Asus",
+   "seoTitle": "Gabinete Asus PA401 Proart Wood E Black V",
+   "seoDescription": "Gabinete Asus PA401 Proart Wood E Black V Templado. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Asus PA401 Proart Wood E Black V Templado. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-asus-pa401-proart-wood-edition-metal-black",
+   "name": "Gabinete Asus PA401 Proart Wood Edition Metal Black",
+   "brand": "Asus",
+   "seoTitle": "Gabinete Asus PA401 Proart Wood Edition Metal",
+   "seoDescription": "Gabinete Asus PA401 Proart Wood Edition Metal Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Asus PA401 Proart Wood Edition Metal Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-asus-prime-ap202-tg-argb-black-v-templado",
+   "name": "Gabinete Asus Prime AP202 TG ARGB Black V Templado",
+   "brand": "Asus",
+   "seoTitle": "Gabinete Asus Prime AP202 TG ARGB Black V",
+   "seoDescription": "Gabinete Asus Prime AP202 TG ARGB Black V Templado. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Asus Prime AP202 TG ARGB Black V Templado. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-cooler-master-cmp-320-mini-tower-black",
+   "name": "Gabinete Cooler Master CMP 320 Mini Tower Black",
+   "seoTitle": "Gabinete Cooler Master CMP 320 Mini Tower",
+   "seoDescription": "Gabinete Cooler Master CMP 320 Mini Tower Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Cooler Master CMP 320 Mini Tower Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-cooler-master-cmp-520-mid-tower-black",
+   "name": "Gabinete Cooler Master CMP 520 MID Tower Black",
+   "seoTitle": "Gabinete Cooler Master CMP 520 MID Tower",
+   "seoDescription": "Gabinete Cooler Master CMP 520 MID Tower Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Cooler Master CMP 520 MID Tower Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-cooler-master-elite-301-mini-tower-white",
+   "name": "Gabinete Cooler Master Elite 301 Mini Tower White",
+   "seoTitle": "Gabinete Cooler Master Elite 301 Mini Tower",
+   "seoDescription": "Gabinete Cooler Master Elite 301 Mini Tower White. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Cooler Master Elite 301 Mini Tower White. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-cooler-master-haf-500-mid-tower-black",
+   "name": "Cooler Master H500-KGNN-S00",
+   "seoTitle": "Cooler Master H500-KGNN-S00",
+   "seoDescription": "Cooler Master H500-KGNN-S00. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master H500-KGNN-S00. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-cooler-master-haf-500-mid-tower-black-2",
+   "name": "Gabinete Cooler Master HAF 500 MID Tower Black",
+   "seoTitle": "Gabinete Cooler Master HAF 500 MID Tower",
+   "seoDescription": "Gabinete gaming Cooler Master HAF 500 Mid Tower negro con excelente flujo de aire, diseño modular y compatibilidad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gab-cooler-master-haf-500-mid-tower-white",
+   "name": "Cooler Master H500-WGNN-S00",
+   "seoTitle": "Cooler Master H500-WGNN-S00",
+   "seoDescription": "Cooler Master H500-WGNN-S00. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Cooler Master H500-WGNN-S00. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-cooler-master-haf-500-mid-tower-white-2",
+   "name": "Gabinete Cooler Master HAF 500 MID Tower White",
+   "seoTitle": "Gabinete Cooler Master HAF 500 MID Tower",
+   "seoDescription": "Gabinete gaming Cooler Master HAF 500 Mid Tower blanco, diseño ATX con excelente flujo de aire y espacio optimizado… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gab-cooler-master-haf-700-full-tower-titanium-grey",
+   "name": "Gabinete Cooler Master HAF 700 Full Tower Titanium Grey",
+   "seoTitle": "Gabinete Cooler Master HAF 700 Full Tower",
+   "seoDescription": "Gabinete Cooler Master HAF 700 Full Tower Titanium Grey. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Cooler Master HAF 700 Full Tower Titanium Grey. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-cooler-master-mb-520-mid-tower-black",
+   "name": "Gabinete Cooler Master MB 520 MID Tower Black",
+   "seoTitle": "Gabinete Cooler Master MB 520 MID Tower Black",
+   "seoDescription": "Gabinete Cooler Master MB 520 MID Tower Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Cooler Master MB 520 MID Tower Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-cooler-master-mb-520-mid-tower-white",
+   "name": "Gabinete Cooler Master MB 520 MID Tower White",
+   "seoTitle": "Gabinete Cooler Master MB 520 MID Tower White",
+   "seoDescription": "Gabinete Cooler Master MB 520 MID Tower White. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Cooler Master MB 520 MID Tower White. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-cooler-master-mb-600-mid-tower-black",
+   "name": "Gabinete Cooler Master MB 600 MID Tower Black",
+   "seoTitle": "Gabinete Cooler Master MB 600 MID Tower Black",
+   "seoDescription": "Gabinete Cooler Master MB 600 MID Tower Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Cooler Master MB 600 MID Tower Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-cooler-master-mb320l-mini-tower-black",
+   "name": "Gabinete Cooler Master MB320L Mini Tower Black",
+   "seoTitle": "Gabinete Cooler Master MB320L Mini Tower",
+   "seoDescription": "Gabinete Cooler Master MB320L Mini Tower Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Cooler Master MB320L Mini Tower Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-cooler-master-q300l-v2-mini-tower-black",
+   "name": "Gabinete Cooler Master Q300L V2 Mini Tower Black",
+   "seoTitle": "Gabinete Cooler Master Q300L V2 Mini Tower",
+   "seoDescription": "Gabinete Cooler Master Q300L V2 Mini Tower Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Cooler Master Q300L V2 Mini Tower Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-cooler-master-td-300-mesh-mini-tower-black",
+   "name": "Gabinete Cooler Master TD 300 Mesh Mini Tower Black",
+   "seoTitle": "Gabinete Cooler Master TD 300 Mesh Mini Tower",
+   "seoDescription": "Gabinete Cooler Master TD 300 Mesh Mini Tower Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Cooler Master TD 300 Mesh Mini Tower Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-cooler-master-td-500-mid-tower-white",
+   "name": "Gabinete Cooler Master TD 500 MID Tower White",
+   "seoTitle": "Gabinete Cooler Master TD 500 MID Tower White",
+   "seoDescription": "Gabinete Cooler Master TD 500 MID Tower White. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Cooler Master TD 500 MID Tower White. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-aero-mini-4fan-argb-m-atx",
+   "name": "Gabinete Gamemax Aero Mini 4*FAN ARGB M-atx",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Aero Mini 4*FAN ARGB M-atx",
+   "seoDescription": "Gabinete Gamemax Aero Mini 4*FAN ARGB M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Aero Mini 4*FAN ARGB M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-blade-concept-atx",
+   "name": "Gabinete Gamemax Blade Concept ATX",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Blade Concept ATX",
+   "seoDescription": "Gabinete Gamemax Blade Concept ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Blade Concept ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-dark-silent-5fan-atx",
+   "name": "Gabinete Gamemax Dark Silent 5*FAN ATX",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Dark Silent 5*FAN ATX",
+   "seoDescription": "Gabinete Gamemax Dark Silent 5*FAN ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Dark Silent 5*FAN ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-diamond-cp-bk-4fan-argb-atx",
+   "name": "Gabinete Gamemax Diamond CP BK 4*FAN ARGB ATX",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Diamond CP BK 4*FAN ARGB ATX",
+   "seoDescription": "Gabinete Gamemax Diamond CP BK 4*FAN ARGB ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Diamond CP BK 4*FAN ARGB ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-f46-bk-4fan-argb-atx",
+   "name": "Gabinete Gamemax F46 BK 4*FAN ARGB ATX",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax F46 BK 4*FAN ARGB ATX",
+   "seoDescription": "Gabinete Gamemax F46 BK 4*FAN ARGB ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax F46 BK 4*FAN ARGB ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-fortress-tg-3fan-atx",
+   "name": "Gabinete Gamemax Fortress TG 3*FAN ATX",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Fortress TG 3*FAN ATX",
+   "seoDescription": "Gabinete Gamemax Fortress TG 3*FAN ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Fortress TG 3*FAN ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-g561e-bk-1fan-argb-atx",
+   "name": "Gabinete Gamemax G561E-BK 1*FAN ARGB ATX",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax G561E-BK 1*FAN ARGB ATX",
+   "seoDescription": "Gabinete Gamemax G561E-BK 1*FAN ARGB ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax G561E-BK 1*FAN ARGB ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-h601-br-centauri-black-red-1-fan-blue",
+   "name": "Gabinete Gamemax H601 BR Centauri Black-red 1* FAN Blue",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax H601 BR Centauri Black-red",
+   "seoDescription": "Gabinete gaming GAB GAMEMAX H601 BR CENTAURI diseño negro-rojo con ventilador LED azul para PC gaming de alto… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gab-gamemax-infinity-mini-flex-atx-itx",
+   "name": "Gabinete Gamemax Infinity Mini Flex-atx / ITX",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Infinity Mini Flex-atx / ITX",
+   "seoDescription": "Gabinete Gamemax Infinity Mini Flex-atx / ITX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Infinity Mini Flex-atx / ITX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-leader-2-bk-4fan-e-atx",
+   "name": "Gabinete Gamemax Leader 2 BK 4*FAN E-atx",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Leader 2 BK 4*FAN E-atx",
+   "seoDescription": "Gabinete Gamemax Leader 2 BK 4*FAN E-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Leader 2 BK 4*FAN E-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-leader-2-wh-blanco-4fan-e-atx",
+   "name": "Gabinete Gamemax Leader 2 WH Blanco 4*FAN E-atx",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Leader 2 WH Blanco 4*FAN",
+   "seoDescription": "Gabinete Gamemax Leader 2 WH Blanco 4*FAN E-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Leader 2 WH Blanco 4*FAN E-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-nova-n5-1fan-frgb-atx",
+   "name": "Gabinete Gamemax Nova N5 1*FAN Frgb ATX",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Nova N5 1*FAN Frgb ATX",
+   "seoDescription": "Gabinete Gamemax Nova N5 1*FAN Frgb ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Nova N5 1*FAN Frgb ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-nova-n5-mid-tower-fan-rgb-expo",
+   "name": "Gabinete Gamemax Nova N5 Mid-tower FAN RGB Expo",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Nova N5 Mid-tower FAN RGB",
+   "seoDescription": "Gabinete Gamemax Nova N5 Mid-tower FAN RGB Expo. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Nova N5 Mid-tower FAN RGB Expo. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-nova-n6-1fan-argb-atx",
+   "name": "Gabinete Gamemax Nova N6 1*FAN ARGB ATX",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Nova N6 1*FAN ARGB ATX",
+   "seoDescription": "Gabinete Gamemax Nova N6 1*FAN ARGB ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Nova N6 1*FAN ARGB ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-prism-3fan-argb-atx",
+   "name": "Gabinete Gamemax Prism 3*FAN ARGB ATX",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Prism 3*FAN ARGB ATX",
+   "seoDescription": "Gabinete Gamemax Prism 3*FAN ARGB ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Prism 3*FAN ARGB ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-prism-3fan-argb-atx-expo",
+   "name": "Gabinete Gamemax Prism 3*FAN ARGB ATX Expo",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Prism 3*FAN ARGB ATX Expo",
+   "seoDescription": "Gabinete gaming GAMEMAX PRISM ATX con 3 ventiladores ARGB LED incluidos, diseño moderno, excelente flujo de aire y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gab-gamemax-silent-hill-h606-1fan-m-atx",
+   "name": "Gabinete Gamemax Silent Hill H606 1*FAN M-atx",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Silent Hill H606 1*FAN M-atx",
+   "seoDescription": "Gabinete Gamemax Silent Hill H606 1*FAN M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Silent Hill H606 1*FAN M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-spark-air-bk-m-atx",
+   "name": "Gabinete Gamemax Spark AIR BK M-atx",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Spark AIR BK M-atx",
+   "seoDescription": "Gabinete Gamemax Spark AIR BK M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Spark AIR BK M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-starlight-2-ab-6fan-argb-e-atx",
+   "name": "Gabinete Gamemax Starlight 2 AB 6*FAN ARGB E-atx",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Starlight 2 AB 6*FAN ARGB",
+   "seoDescription": "Gabinete Gamemax Starlight 2 AB 6*FAN ARGB E-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Starlight 2 AB 6*FAN ARGB E-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-starlight-2-aw-blanco-6fan-argb-e-atx",
+   "name": "Gabinete Gamemax Starlight 2 AW Blanco 6*FAN ARGB E-atx",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Starlight 2 AW Blanco 6*FAN",
+   "seoDescription": "Gabinete Gamemax Starlight 2 AW Blanco 6*FAN ARGB E-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Starlight 2 AW Blanco 6*FAN ARGB E-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-storm-2-ab-6fan-argb-atx",
+   "name": "Gabinete Gamemax Storm 2 AB 6*FAN ARGB ATX",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Storm 2 AB 6*FAN ARGB ATX",
+   "seoDescription": "Gabinete Gamemax Storm 2 AB 6*FAN ARGB ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Storm 2 AB 6*FAN ARGB ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-storm-2-aw-blanco-6fan-argb-atx",
+   "name": "Gabinete Gamemax Storm 2 AW Blanco 6*FAN ARGB ATX",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Storm 2 AW Blanco 6*FAN ARGB",
+   "seoDescription": "Gabinete Gamemax Storm 2 AW Blanco 6*FAN ARGB ATX. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Storm 2 AW Blanco 6*FAN ARGB ATX. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-titan-silent-2-3fan-e-atx",
+   "name": "Gabinete Gamemax Titan Silent 2 3*FAN E-atx",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Titan Silent 2 3*FAN E-atx",
+   "seoDescription": "Gabinete Gamemax Titan Silent 2 3*FAN E-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Titan Silent 2 3*FAN E-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-vista-ab-6fan-argb-e-atx",
+   "name": "Gabinete Gamemax Vista AB 6*FAN ARGB E-atx",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Vista AB 6*FAN ARGB E-atx",
+   "seoDescription": "Gabinete Gamemax Vista AB 6*FAN ARGB E-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Vista AB 6*FAN ARGB E-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-gamemax-vista-aw-6fan-argb-e-atx-blanco",
+   "name": "Gabinete Gamemax Vista AW 6*FAN ARGB E-atx Blanco",
+   "brand": "Gamemax",
+   "seoTitle": "Gabinete Gamemax Vista AW 6*FAN ARGB E-atx",
+   "seoDescription": "Gabinete Gamemax Vista AW 6*FAN ARGB E-atx Blanco. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Gamemax Vista AW 6*FAN ARGB E-atx Blanco. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-msi-mag-forge-m100a-fan-rgb-sin-fuente",
+   "brand": "MSI",
+   "seoTitle": "MSI 306-7G20A21-809",
+   "seoDescription": "MSI 306-7G20A21-809. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "MSI 306-7G20A21-809. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-msi-mag-forge-m100a-fan-rgb-sin-fuente-2",
+   "name": "Gabinete MSI MAG Forge M100A FAN RGB sin Fuente",
+   "brand": "MSI",
+   "seoTitle": "Gabinete MSI MAG Forge M100A FAN RGB",
+   "seoDescription": "Gabinete gaming MSI MAG Forge M100A con ventilador RGB incluido, diseño ATX, panel lateral transparente, sin fuente… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gab-msi-mag-shield-m301-fan-sin-fuente-m-atx-2",
+   "name": "Gabinete MSI MAG Shield M301 FAN sin Fuente M-atx",
+   "brand": "MSI",
+   "seoTitle": "Gabinete MSI MAG Shield M301 FAN sin Fuente",
+   "seoDescription": "Gabinete MSI MAG Shield M301 FAN sin Fuente M-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete MSI MAG Shield M301 FAN sin Fuente M-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-msi-pag-pano-m110a-black-fan-rgb-sin-fuente-2",
+   "name": "Gabinete MSI PAG Pano M110A Black FAN RGB sin Fuente",
+   "brand": "MSI",
+   "seoTitle": "Gabinete MSI PAG Pano M110A Black FAN RGB",
+   "seoDescription": "Gabinete MSI PAG Pano M110A Black FAN RGB sin Fuente. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete MSI PAG Pano M110A Black FAN RGB sin Fuente. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-msi-pro-shield-m100p-black-sin-fuente",
+   "name": "Gabinete MSI PRO Shield M100P Black sin Fuente",
+   "brand": "MSI",
+   "seoTitle": "Gabinete MSI PRO Shield M100P Black",
+   "seoDescription": "Gabinete MSI PRO Shield M100P Black sin Fuente. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete MSI PRO Shield M100P Black sin Fuente. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-perf-kitx3-6801-tecmou600w",
+   "name": "Gabinete Perf KITX3 6801 TEC+MOU+600W",
+   "seoTitle": "Gabinete Perf KITX3 6801 TEC+MOU+600W",
+   "seoDescription": "Gabinete Perf KITX3 6801 TEC+MOU+600W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Perf KITX3 6801 TEC+MOU+600W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-perf-kitx3-6810-tecmoupsu-500w",
+   "name": "Gabinete Perf KITX3 6810 Tec+mou+psu 500W",
+   "seoTitle": "Gabinete Perf KITX3 6810 Tec+mou+psu 500W",
+   "seoDescription": "Kit completo GAB PERF 6810 incluye teclado, mouse y fuente de poder 500W. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gab-perf-kitx3-6810-tecmoupsu-600w",
+   "name": "Gabinete Perf KITX3 6810 Tec+mou+psu 600W",
+   "seoTitle": "Gabinete Perf KITX3 6810 Tec+mou+psu 600W",
+   "seoDescription": "Gabinete Perf KITX3 6810 Tec+mou+psu 600W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Perf KITX3 6810 Tec+mou+psu 600W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-perf-kitx3-6813-tecmoucard-reader-600w",
+   "name": "Gabinete Perf KITX3 6813 Tec+mou+card Reader 600W",
+   "seoTitle": "Gabinete Perf KITX3 6813 Tec+mou+card Reader",
+   "seoDescription": "Gabinete Perf KITX3 6813 Tec+mou+card Reader 600W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Perf KITX3 6813 Tec+mou+card Reader 600W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-perf-kitx3-pf300-tecmoupsu-600w",
+   "name": "Gabinete Perf KITX3 PF300 Tec+mou+psu 600W",
+   "seoTitle": "Gabinete Perf KITX3 PF300 Tec+mou+psu 600W",
+   "seoDescription": "Gabinete Perf KITX3 PF300 Tec+mou+psu 600W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Perf KITX3 PF300 Tec+mou+psu 600W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-perf-kitx3-pf301-tecmoupsu-600w",
+   "name": "Gabinete Perf KITX3 PF301 Tec+mou+psu 600W",
+   "seoTitle": "Gabinete Perf KITX3 PF301 Tec+mou+psu 600W",
+   "seoDescription": "Gabinete Perf KITX3 PF301 Tec+mou+psu 600W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Perf KITX3 PF301 Tec+mou+psu 600W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-perf-slim-kitx3-5836-tecmou-600w",
+   "name": "Gabinete Perf Slim KITX3 5836 Tec+mou 600W",
+   "seoTitle": "Gabinete Perf Slim KITX3 5836 Tec+mou 600W",
+   "seoDescription": "Gabinete Perf Slim KITX3 5836 Tec+mou 600W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Perf Slim KITX3 5836 Tec+mou 600W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-perf-slim-kitx3-nsv2-tecmou-600w",
+   "name": "Gabinete Perf Slim KITX3 NSV2 Tec+mou 600W",
+   "seoTitle": "Gabinete Perf Slim KITX3 NSV2 Tec+mou 600W",
+   "seoDescription": "Gabinete Perf Slim KITX3 NSV2 Tec+mou 600W. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Perf Slim KITX3 NSV2 Tec+mou 600W. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-cte-e550-tg-black-e-atx",
+   "name": "Gabinete Thermaltake CTE E550 TG Black E-atx",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake CTE E550 TG Black E-atx",
+   "seoDescription": "Gabinete Thermaltake CTE E550 TG Black E-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake CTE E550 TG Black E-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-cte-e550-tg-matcha-green-e-atx-2",
+   "name": "Gabinete Thermaltake CTE E550 TG Matcha Green E-atx",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake CTE E550 TG Matcha Green",
+   "seoDescription": "Gabinete Thermaltake CTE E550 TG Matcha Green E-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake CTE E550 TG Matcha Green E-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-cte-e550-tg-white-e-atx",
+   "name": "Gabinete Thermaltake CTE E550 TG White E-atx",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake CTE E550 TG White E-atx",
+   "seoDescription": "Gabinete Thermaltake CTE E550 TG White E-atx. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake CTE E550 TG White E-atx. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-s200-tg-argb-black-4fan",
+   "name": "Gabinete Thermaltake S200 TG ARGB Black 4*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake S200 TG ARGB Black 4*FAN",
+   "seoDescription": "Gabinete Thermaltake S200 TG ARGB Black 4*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake S200 TG ARGB Black 4*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-s200-tg-argb-white-4fan",
+   "name": "Gabinete Thermaltake S200 TG ARGB White 4*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake S200 TG ARGB White 4*FAN",
+   "seoDescription": "Gabinete Thermaltake S200 TG ARGB White 4*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake S200 TG ARGB White 4*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-the-tower-300-black-2fan-2",
+   "name": "Gabinete Thermaltake THE Tower 300 Black 2*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake THE Tower 300 Black",
+   "seoDescription": "Gabinete Thermaltake THE Tower 300 Black 2*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake THE Tower 300 Black 2*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-the-tower-300-limestone-2fan",
+   "name": "Gabinete Thermaltake THE Tower 300 Limestone 2*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake THE Tower 300 Limestone",
+   "seoDescription": "Gabinete Thermaltake THE Tower 300 Limestone 2*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake THE Tower 300 Limestone 2*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-the-tower-300-matcha-green-2fan",
+   "name": "Gabinete Thermaltake THE Tower 300 Matcha Green 2*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake THE Tower 300 Matcha",
+   "seoDescription": "Gabinete Thermaltake THE Tower 300 Matcha Green 2*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake THE Tower 300 Matcha Green 2*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-the-tower-600-black-2fan",
+   "name": "Gabinete Thermaltake THE Tower 600 Black 2*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake THE Tower 600 Black",
+   "seoDescription": "Gabinete Thermaltake THE Tower 600 Black 2*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake THE Tower 600 Black 2*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-the-tower-600-bumblebee-2fan",
+   "name": "Gabinete Thermaltake THE Tower 600 Bumblebee 2*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake THE Tower 600 Bumblebee",
+   "seoDescription": "Gabinete Thermaltake THE Tower 600 Bumblebee 2*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake THE Tower 600 Bumblebee 2*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-the-tower-600-future-dusk-2fan",
+   "name": "Gabinete Thermaltake THE Tower 600 Future Dusk 2*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake THE Tower 600 Future",
+   "seoDescription": "Gabinete Thermaltake THE Tower 600 Future Dusk 2*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake THE Tower 600 Future Dusk 2*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-the-tower-600-matcha-green-2fan",
+   "name": "Gabinete Thermaltake THE Tower 600 Matcha Green 2*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake THE Tower 600 Matcha",
+   "seoDescription": "Gabinete Thermaltake THE Tower 600 Matcha Green 2*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake THE Tower 600 Matcha Green 2*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-the-tower-600-white-2fan",
+   "name": "Gabinete Thermaltake THE Tower 600 White 2*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake THE Tower 600 White",
+   "seoDescription": "Gabinete Thermaltake THE Tower 600 White 2*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake THE Tower 600 White 2*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-view-270-plus-tg-argb-black-3fan",
+   "name": "Gabinete Thermaltake View 270 Plus TG ARGB Black 3*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake View 270 Plus TG ARGB",
+   "seoDescription": "Gabinete Thermaltake View 270 Plus TG ARGB Black 3*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake View 270 Plus TG ARGB Black 3*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-view-270-plus-tg-argb-white-3fan",
+   "name": "Gabinete Thermaltake View 270 Plus TG ARGB White 3*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake View 270 Plus TG ARGB",
+   "seoDescription": "Gabinete Thermaltake View 270 Plus TG ARGB White 3*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake View 270 Plus TG ARGB White 3*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-view-380-tg-argb-black-4fan",
+   "name": "Gabinete Thermaltake View 380 TG ARGB Black 4*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake View 380 TG ARGB Black",
+   "seoDescription": "Gabinete Thermaltake View 380 TG ARGB Black 4*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake View 380 TG ARGB Black 4*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-view-380-tg-argb-matcha-4fan",
+   "name": "Gabinete Thermaltake View 380 TG ARGB Matcha 4*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake View 380 TG ARGB Matcha",
+   "seoDescription": "Gabinete Thermaltake View 380 TG ARGB Matcha 4*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake View 380 TG ARGB Matcha 4*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-view-380-tg-argb-white-4fan",
+   "name": "Gabinete Thermaltake View 380 TG ARGB White 4*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake View 380 TG ARGB White",
+   "seoDescription": "Gabinete Thermaltake View 380 TG ARGB White 4*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake View 380 TG ARGB White 4*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-view-380-xl-tg-argb-black-4fan",
+   "name": "Gabinete Thermaltake View 380 XL TG ARGB Black 4*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake View 380 XL TG ARGB",
+   "seoDescription": "Gabinete Thermaltake View 380 XL TG ARGB Black 4*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake View 380 XL TG ARGB Black 4*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-view-380-xl-tg-argb-white-4fan",
+   "name": "Gabinete Thermaltake View 380 XL TG ARGB White 4*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake View 380 XL TG ARGB",
+   "seoDescription": "Gabinete Thermaltake View 380 XL TG ARGB White 4*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake View 380 XL TG ARGB White 4*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-view-390-air-black-2fan",
+   "name": "Gabinete Thermaltake View 390 AIR Black 2*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake View 390 AIR Black 2*FAN",
+   "seoDescription": "Gabinete Thermaltake View 390 AIR Black 2*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake View 390 AIR Black 2*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-thermaltake-view-390-air-white-2fan",
+   "name": "Gabinete Thermaltake View 390 AIR White 2*FAN",
+   "brand": "Thermaltake",
+   "seoTitle": "Gabinete Thermaltake View 390 AIR White 2*FAN",
+   "seoDescription": "Gabinete Thermaltake View 390 AIR White 2*FAN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Thermaltake View 390 AIR White 2*FAN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-battlecrusier-iipst-negro-fan-argbx4-pb",
+   "name": "Gabinete XPG Battlecrusier Iipst Negro FAN ARGBX4 +pb",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Battlecrusier Iipst Negro FAN",
+   "seoDescription": "Gabinete XPG Battlecrusier Iipst Negro FAN ARGBX4 +pb. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Battlecrusier Iipst Negro FAN ARGBX4 +pb. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-battlecrusier-iist-negro-fan-argb-x4",
+   "name": "Gabinete XPG Battlecrusier Iist Negro FAN ARGB X4",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Battlecrusier Iist Negro FAN",
+   "seoDescription": "Gabinete XPG Battlecrusier Iist Negro FAN ARGB X4. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Battlecrusier Iist Negro FAN ARGB X4. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-defender-blanco",
+   "name": "Gabinete XPG Defender Blanco",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Defender Blanco",
+   "seoDescription": "Gabinete XPG Defender Blanco. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Defender Blanco. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-defender-negro",
+   "name": "Gabinete XPG Defender Negro",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Defender Negro",
+   "seoDescription": "Gabinete XPG Defender Negro. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Defender Negro. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-invader-x-btf-blanco-fan-argbx5",
+   "name": "Gabinete XPG Invader X BTF Blanco FAN ARGBX5",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Invader X BTF Blanco FAN ARGBX5",
+   "seoDescription": "Gabinete XPG Invader X BTF Blanco FAN ARGBX5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Invader X BTF Blanco FAN ARGBX5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-invader-x-btf-negro-fan-argb-x5",
+   "name": "Gabinete XPG Invader X BTF Negro FAN ARGB X5",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Invader X BTF Negro FAN ARGB X5",
+   "seoDescription": "Gabinete XPG Invader X BTF Negro FAN ARGB X5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Invader X BTF Negro FAN ARGB X5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-invader-x-mini-blanco-fan-argb-x5",
+   "name": "Gabinete XPG Invader X Mini Blanco FAN ARGB X5",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Invader X Mini Blanco FAN ARGB",
+   "seoDescription": "Gabinete XPG Invader X Mini Blanco FAN ARGB X5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Invader X Mini Blanco FAN ARGB X5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-invader-x-mini-negro-fan-argb-x5",
+   "name": "Gabinete XPG Invader X Mini Negro FAN ARGB X5",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Invader X Mini Negro FAN ARGB X5",
+   "seoDescription": "Gabinete XPG Invader X Mini Negro FAN ARGB X5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Invader X Mini Negro FAN ARGB X5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-invader-x-negro-fan-argb-x5",
+   "name": "Gabinete XPG Invader X Negro FAN ARGB X5",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Invader X Negro FAN ARGB X5",
+   "seoDescription": "Gabinete XPG Invader X Negro FAN ARGB X5. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Invader X Negro FAN ARGB X5. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-starker-air-blanco-fan-argbx1-fan-x1",
+   "name": "Gabinete XPG Starker AIR Blanco FAN ARGBX1 FAN X1",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Starker AIR Blanco FAN ARGBX1",
+   "seoDescription": "Gabinete XPG Starker AIR Blanco FAN ARGBX1 FAN X1. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Starker AIR Blanco FAN ARGBX1 FAN X1. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-starker-air-btf-blanco-fan-argb-x4",
+   "name": "Gabinete XPG Starker AIR BTF Blanco FAN ARGB X4",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Starker AIR BTF Blanco FAN ARGB",
+   "seoDescription": "Gabinete XPG Starker AIR BTF Blanco FAN ARGB X4. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Starker AIR BTF Blanco FAN ARGB X4. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-starker-air-btf-negro-fan-argb-x4",
+   "name": "Gabinete XPG Starker AIR BTF Negro FAN ARGB X4",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Starker AIR BTF Negro FAN ARGB",
+   "seoDescription": "Gabinete XPG Starker AIR BTF Negro FAN ARGB X4. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Starker AIR BTF Negro FAN ARGB X4. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-starker-air-negro-fan-argb-x1-fan-x1",
+   "name": "Gabinete XPG Starker AIR Negro FAN ARGB X1 FAN X1",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Starker AIR Negro FAN ARGB X1",
+   "seoDescription": "Gabinete XPG Starker AIR Negro FAN ARGB X1 FAN X1. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Starker AIR Negro FAN ARGB X1 FAN X1. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-valor-air-blanco-fans-x4",
+   "name": "Gabinete XPG Valor AIR Blanco Fans X4",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Valor AIR Blanco Fans X4",
+   "seoDescription": "Gabinete XPG Valor AIR Blanco Fans X4. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Valor AIR Blanco Fans X4. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-valor-air-negro-fans-x4",
+   "name": "Gabinete XPG Valor AIR Negro Fans X4",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Valor AIR Negro Fans X4",
+   "seoDescription": "Gabinete XPG Valor AIR Negro Fans X4. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Valor AIR Negro Fans X4. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-valor-air-plus-blanco-fans-argbx4",
+   "name": "Gabinete XPG Valor AIR Plus Blanco Fans ARGBX4",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Valor AIR Plus Blanco Fans",
+   "seoDescription": "Gabinete XPG Valor AIR Plus Blanco Fans ARGBX4. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Valor AIR Plus Blanco Fans ARGBX4. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-valor-air-plus-negro-fans-argbx4",
+   "name": "Gabinete XPG Valor AIR Plus Negro Fans ARGBX4",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Valor AIR Plus Negro Fans ARGBX4",
+   "seoDescription": "Gabinete XPG Valor AIR Plus Negro Fans ARGBX4. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Valor AIR Plus Negro Fans ARGBX4. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-valor-mesh-blanco-fans-x4",
+   "name": "Gabinete XPG Valor Mesh Blanco Fans X4",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Valor Mesh Blanco Fans X4",
+   "seoDescription": "Gabinete XPG Valor Mesh Blanco Fans X4. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Valor Mesh Blanco Fans X4. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gab-xpg-valor-mesh-negro-fans-x4",
+   "name": "Gabinete XPG Valor Mesh Negro Fans X4",
+   "brand": "XPG",
+   "seoTitle": "Gabinete XPG Valor Mesh Negro Fans X4",
+   "seoDescription": "Gabinete XPG Valor Mesh Negro Fans X4. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete XPG Valor Mesh Negro Fans X4. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gabinete-aerocool-designer-g-bk-v1-frgb-atx-micro-atx-mini-itx-4fan-vidrio-gpu-345mm",
+   "name": "Gabinete Aerocool DESIGNER-G-BK-V1 Frgb (ATX/Micro ATX/Mini ITX) (4FAN/Vidrio/GPU 345MM)",
+   "brand": "Aerocool",
+   "seoTitle": "Gabinete Aerocool DESIGNER-G-BK-V1 Frgb",
+   "seoDescription": "Gabinete gaming Aerocool Designer-G con iluminación FRGB, panel de vidrio templado, 4 ventiladores incluidos y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-aerocool-dryft-mini-g-bk-v3-micro-atx-mini-itxno-fan-controler-vidrio",
+   "name": "Gabinete Aerocool Dryft MINI-G-BK-V3 (micro-atx/Mini-itx)(no FAN Controler) (vidrio)",
+   "brand": "Aerocool",
+   "seoTitle": "Gabinete Aerocool Dryft MINI-G-BK-V3",
+   "seoDescription": "Gabinete compacto Aerocool Dryft Mini con panel de vidrio templado, compatible con placas Micro-ATX y Mini-ITX… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-aerocool-falcon-g-bk-v1-atx-micro-atx-mini-itx-4fan-vidrio-gpu-290mm",
+   "name": "Gabinete Aerocool FALCON-G-BK-V1 (ATX/Micro-atx/Mini-itx) (4FAN/Vidrio/GPU 290MM)",
+   "brand": "Aerocool",
+   "seoTitle": "Gabinete Aerocool FALCON-G-BK-V1",
+   "seoDescription": "Gabinete gaming Aerocool Falcon-G-BK-V1 con soporte ATX/Micro-ATX/Mini-ITX, 4 ventiladores incluidos, panel lateral… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-aerocool-ore-saturn-frgb-g-bk-v2-atx-micro-atx-mini-itx-3fan-vidrio-gpu-371mm",
+   "name": "Gabinete Aerocool ORE Saturn FRGB-G-BK-V2 (ATX/Micro-atx/Mini-itx) (3FAN/Vidrio/GPU 371MM)",
+   "brand": "Aerocool",
+   "seoTitle": "Gabinete Aerocool ORE Saturn FRGB-G-BK-V2",
+   "seoDescription": "Gabinete gaming AeroCool Ore Saturn con iluminación FRGB, compatible ATX/Micro-ATX/Mini-ITX, incluye 3 ventiladores… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-aerocool-ore-saturn-frgb-g-bk-v2-atx-micro-atx-mini-itx-4fan-vidrio-gpu-371mm",
+   "name": "Gabinete Aerocool ORE Saturn FRGB-G-BK-V2 (ATX/Micro-atx/Mini-itx) (4FAN/Vidrio/GPU 371MM)",
+   "brand": "Aerocool",
+   "seoTitle": "Gabinete Aerocool ORE Saturn FRGB-G-BK-V2",
+   "seoDescription": "Gabinete gaming Aerocool Ore Saturn con iluminación FRGB, 4 ventiladores incluidos, panel de vidrio templado y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-aerocool-tern-mini-g-bk-v1-micro-atx-mini-atx-3fan-vidrio-gpu-409mm",
+   "name": "Gabinete Aerocool Tern MINI-G-BK-V1 (micro-atx/Mini-atx) (3FAN/Vidrio/GPU 409MM)",
+   "brand": "Aerocool",
+   "seoTitle": "Gabinete Aerocool Tern MINI-G-BK-V1",
+   "seoDescription": "Gabinete gaming compacto Aerocool Tern Mini con panel de vidrio templado, 3 ventiladores incluidos, compatible… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-cooler-master-masterbox-q300l-white-edition-mini-tower-micro-atx-mini-atxacrylic",
+   "name": "Gabinete Cooler Master / Masterbox Q300L White Edition Mini-tower (micro-atx/Mini-atx)(acrylic)",
+   "seoTitle": "Gabinete Cooler Master / Masterbox Q300L",
+   "seoDescription": "Gabinete Cooler Master Q300L White Edition compacto, compatible Micro-ATX/Mini-ITX, panel acrílico transparente… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-e-view-kit-mf3301-600w-tecmou",
+   "name": "Gabinete E-View KIT-MF3301 600W (tec+mou)",
+   "brand": "E-View",
+   "seoTitle": "Gabinete E-View KIT-MF3301 600W (tec+mou)",
+   "seoDescription": "Gabinete E-View KIT-MF3301 600W completo con teclado y mouse incluidos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-e-view-kit-mf3302-600w-tecmou",
+   "name": "Gabinete E-View KIT-MF3302 600W (tec+mou)",
+   "brand": "E-View",
+   "seoTitle": "Gabinete E-View KIT-MF3302 600W (tec+mou)",
+   "seoDescription": "Gabinete E-View Kit-MF3302 de 600W incluye teclado y mouse. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-e-view-kit-mf609-600w-tecmou",
+   "name": "Gabinete E-View KIT-MF609 600W (tec+mou)",
+   "brand": "E-View",
+   "seoTitle": "Gabinete E-View KIT-MF609 600W (tec+mou)",
+   "seoDescription": "Gabinete E-View Kit-MF609 de 600W incluye teclado y mouse. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-gamer-sentey-f10-panel-transparente-rgb",
+   "seoTitle": "Gabinete Gamer Sentey F10 Panel Transparente",
+   "seoDescription": "Gabinete Gamer Sentey F10 Panel Transparente RGB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-gaming-e-view-kit-k1-rgb-atx-650w-80-tecmou-cooler-vidrio",
+   "name": "Gabinete Gaming E-View KIT-K1 RGB ATX-650W 80+ (tec+mou/Cooler/Vidrio)",
+   "brand": "E-View",
+   "seoTitle": "Gabinete Gaming E-View KIT-K1 RGB ATX-650W",
+   "seoDescription": "Gabinete gaming completo E-View Kit-K1 RGB con fuente 650W 80+, cooler RGB, mouse, teclado y panel de vidrio… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-gaming-e-view-kit-k2-rgb-atx-750w-80-tecmou-4-cooler-vidrio",
+   "name": "Gabinete Gaming E-View KIT-K2 RGB ATX-750W 80+ (tec+mou/4 Cooler/Vidrio)",
+   "brand": "E-View",
+   "seoTitle": "Gabinete Gaming E-View KIT-K2 RGB ATX-750W",
+   "seoDescription": "Gabinete gaming E-VIEW KIT-K2 RGB con fuente 750W 80+, vidrio templado, 4 coolers, teclado y mouse incluidos para PC… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-msi-mag-forge-321r-airflow-atx-micro-atx-mini-itx-4fan",
+   "name": "Gabinete MSI MAG Forge 321R Airflow (ATX/Micro-atx/Mini-itx) (4FAN)",
+   "brand": "MSI",
+   "seoTitle": "Gabinete MSI MAG Forge 321R Airflow",
+   "seoDescription": "Gabinete gaming MSI MAG Forge 321R con excelente flujo de aire, compatible ATX/Micro-ATX/Mini-ITX, incluye 4… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-msi-mag-forge-m100a-micro-atx-mini-atx-4fan-acrilico",
+   "name": "Gabinete MSI MAG Forge M100A (micro-atx/Mini-atx) (4FAN/Acrilico)",
+   "brand": "MSI",
+   "seoTitle": "Gabinete MSI MAG Forge M100A",
+   "seoDescription": "Gabinete gaming MSI MAG Forge M100A formato micro-ATX con 4 ventiladores incluidos, panel lateral acrílico… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-msi-mag-shield-m301-micro-atx-mini-atx-1fan",
+   "name": "Gabinete MSI MAG Shield M301 (micro-atx/Mini-atx) (1FAN)",
+   "brand": "MSI",
+   "seoTitle": "Gabinete MSI MAG Shield M301",
+   "seoDescription": "Gabinete MSI MAG Shield M301 compatible Micro-ATX/Mini-ITX, incluye ventilador, diseño compacto ideal para gaming y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gabinete-raptor-blaze-force-tg-mid-tower-rgb-fan-x1-w-button-control",
+   "seoTitle": "Gabinete Raptor Blaze Force TG Mid-Tower RGB",
+   "seoDescription": "Gabinete Raptor Blaze Force TG Mid-Tower RGB Fan x1 w/button control. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Raptor Blaze Force TG Mid-Tower RGB Fan x1 w/button control. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gabinete-raptor-nova-prime-tg-x2-mid-tower-rgb-fan-x3-black",
+   "seoTitle": "Gabinete Raptor Nova Prime TG x2 Mid-Tower",
+   "seoDescription": "Gabinete Raptor Nova Prime TG x2 Mid-Tower RGB Fan x3 Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Raptor Nova Prime TG x2 Mid-Tower RGB Fan x3 Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gabinete-raptor-thunder-strike-tg-x2-mid-tower-rgb-fan-x1-black",
+   "seoTitle": "Gabinete Raptor Thunder Strike TG x2",
+   "seoDescription": "Gabinete Raptor Thunder Strike TG x2 Mid-Tower RGB Fan x1 Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Raptor Thunder Strike TG x2 Mid-Tower RGB Fan x1 Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gabinete-raptor-thunder-strike-tg-x2-mid-tower-rgb-fan-x1-white",
+   "seoTitle": "Gabinete Raptor Thunder Strike TG x2",
+   "seoDescription": "Gabinete Raptor Thunder Strike TG x2 Mid-Tower RGB Fan x1 White. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Raptor Thunder Strike TG x2 Mid-Tower RGB Fan x1 White. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gabinete-raptor-vortex-tg-mid-tower-rgb-back-fan-x1-led-front-w-button-control",
+   "seoTitle": "Gabinete Raptor Vortex TG Mid-Tower RGB Back",
+   "seoDescription": "Gabinete Raptor Vortex TG Mid-Tower RGB Back Fan x1 + Led Front w/button control. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete Raptor Vortex TG Mid-Tower RGB Back Fan x1 + Led Front w/button control. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gabinete-tt-h16-micro-tower-tg-fan-argb-x3-black-c-fuente-650w-80-plus-bronze",
+   "seoTitle": "Gabinete TT H16 Micro Tower TG Fan ARGB x3",
+   "seoDescription": "Gabinete TT H16 Micro Tower TG Fan ARGB x3 Black c/Fuente 650W 80 Plus Bronze. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gabinete TT H16 Micro Tower TG Fan ARGB x3 Black c/Fuente 650W 80 Plus Bronze. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "garmin-forerunner-55",
+   "seoTitle": "Garmin Forerunner 55",
+   "seoDescription": "El aliado perfecto para mejorar tus marcas y correr de forma inteligente. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gateway-4p-hpe-networking-instant-gtwy-sg1004",
+   "brand": "HPE",
+   "seoTitle": "Gateway 4P HPE Networking Instant SG1004",
+   "seoDescription": "Gateway 4P HPE Networking Instant SG1004. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gateway 4P HPE Networking Instant SG1004. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "gateway-5p-hpe-networking-instant-2-5g-64w-sg2505p",
+   "brand": "HPE",
+   "seoTitle": "Gateway 5P HPE Networking Instant 2.5G 64W",
+   "seoDescription": "Gateway 5P HPE Networking Instant 2.5G 64W SG2505P. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Gateway 5P HPE Networking Instant 2.5G 64W SG2505P. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "go-pro-dual-battery-charger-hero13-black",
+   "seoTitle": "GO PRO Dual Battery Charger HERO13 Black",
+   "seoDescription": "GO PRO Dual Battery Charger HERO13 Black. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "GO PRO Dual Battery Charger HERO13 Black. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "go-pro-enduro-battery-x-2",
+   "brand": "GoPro",
+   "seoTitle": "Bateria GoPro Enduro Battery x 2 Hero 13",
+   "seoDescription": "Incluye 2 Baterías Compatibles con modelos Hero 9, Hero 10, Hero 11 y Hero 12. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "go-pro-hero-13-black",
+   "seoTitle": "Go Pro Hero 13 Black",
+   "seoDescription": "5.3K 27MP HyperSmooth 6.0 Sumergible 10mt. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "go-pro-light-mod-modulo-de-foco",
+   "seoTitle": "Go Pro Light Mod (Módulo de Foco)",
+   "seoDescription": "Potencia tu creatividad con el Go Pro Light Mod, un módulo de foco versátil que ilumina tus aventuras y mejora la… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "google-pixel-10-5g-256gb-12gb",
+   "seoTitle": "Google Pixel 10 5G 256gb 12gb",
+   "seoDescription": "Google Pixel 10 5G con 256GB almacenamiento, 12GB RAM, cámara IA avanzada, Android puro y conectividad 5G… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gopro-chesty-2-0",
+   "brand": "GoPro",
+   "seoTitle": "GoPro Chesty 2.0",
+   "seoDescription": "Captura la toma POV (punto de vista) perfecta. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "gopro-hero-12-black-enduro-bateria",
+   "brand": "GoPro",
+   "seoTitle": "GoPro Hero 12 Black Enduro Battery Bundle",
+   "seoDescription": "GoPro Hero 12 Black Enduro Battery Bundle. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "grabador-portatil-zoom-h4n-pro",
+   "seoTitle": "Grabador Portatil Zoom H4N Pro",
+   "seoDescription": "Grabador Portatil Zoom H4N Pro. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "grandstream-ap-ac-mimo4x4-175mts-200usu",
+   "name": "Grandstream AP AC MIMO4X4 175MTS 200USU",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream AP AC MIMO4X4 175MTS 200USU",
+   "seoDescription": "Grandstream AP AC MIMO4X4 175MTS 200USU. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream AP AC MIMO4X4 175MTS 200USU. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-ap-ac-wifi6-mimo2x2-175mts",
+   "name": "Grandstream AP AC WIFI6 MIMO2X2 175MTS",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream AP AC WIFI6 MIMO2X2 175MTS",
+   "seoDescription": "Grandstream AP AC WIFI6 MIMO2X2 175MTS. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream AP AC WIFI6 MIMO2X2 175MTS. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-ap-ax-wifi6-ax6000-in-175mts-4x4-mu-mimo-throughput-6gbps",
+   "brand": "Grandstream",
+   "seoTitle": "GRANDSTREAM AP AX WIFI6 AX6000 IN 175MTS 4×4",
+   "seoDescription": "GRANDSTREAM AP AX WIFI6 AX6000 IN 175MTS 4×4 MU-MIMO Throughput 6Gbps. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "GRANDSTREAM AP AX WIFI6 AX6000 IN 175MTS 4×4 MU-MIMO Throughput 6Gbps. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-ap-ext-ac-dual-band-wave-2-4x4-233-gbps-2-puertos-gigabit",
+   "name": "Grandstream AP EXT AC Dual Band Wave 2 4X4 2,33 Gbps 2 Puertos Gigabit",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream AP EXT AC Dual Band Wave 2 4X4",
+   "seoDescription": "Grandstream AP EXT AC Dual Band Wave 2 4X4 2,33 Gbps 2 Puertos Gigabit. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream AP EXT AC Dual Band Wave 2 4X4 2,33 Gbps 2 Puertos Gigabit. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-ap-ext-ac-mimo2x2-250mts-100usu",
+   "name": "Grandstream AP EXT AC MIMO2X2 250MTS 100USU",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream AP EXT AC MIMO2X2 250MTS 100USU",
+   "seoDescription": "Grandstream AP EXT AC MIMO2X2 250MTS 100USU. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream AP EXT AC MIMO2X2 250MTS 100USU. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-ap-ext-ax-wifi6-ax3000",
+   "name": "Grandstream AP EXT AX WIFI6 AX3000",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream AP EXT AX WIFI6 AX3000",
+   "seoDescription": "Grandstream AP EXT AX WIFI6 AX3000. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream AP EXT AX WIFI6 AX3000. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-gateway-ip-voip-2-fxs-v2",
+   "name": "Grandstream Gateway IP Voip 2 FXS V2",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream Gateway IP Voip 2 FXS V2",
+   "seoDescription": "Grandstream Gateway IP Voip 2 FXS V2. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream Gateway IP Voip 2 FXS V2. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-router-ac-giga-1wan-4lan-vpn",
+   "name": "Grandstream Router AC Giga 1WAN 4LAN VPN",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream Router AC Giga 1WAN 4LAN VPN",
+   "seoDescription": "Grandstream Router AC Giga 1WAN 4LAN VPN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream Router AC Giga 1WAN 4LAN VPN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-router-multiwan-6-portgigabit-con-vpn-firewall-1-port-usb-256-ram-50-tuneles-vpn",
+   "name": "Grandstream Router Multiwan 6 Portgigabit con VPN + Firewall 1 Port USB 256 RAM 50 Tuneles VPN",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream Router Multiwan 6 Portgigabit",
+   "seoDescription": "Grandstream Router Multiwan 6 Portgigabit con VPN + Firewall 1 Port USB 256 RAM 50 Tuneles VPN. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream Router Multiwan 6 Portgigabit con VPN + Firewall 1 Port USB 256 RAM 50 Tuneles VPN. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-sw-l2-16-port-poe-giga-4sfp",
+   "name": "Grandstream SW L2+ 16 Port POE Giga 4SFP",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream SW L2+ 16 Port POE Giga 4SFP",
+   "seoDescription": "Grandstream SW L2+ 16 Port POE Giga 4SFP. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream SW L2+ 16 Port POE Giga 4SFP. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-sw-l2-8-port-poe-giga-2sfp",
+   "name": "Grandstream SW L2+ 8 Port POE Giga 2SFP",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream SW L2+ 8 Port POE Giga 2SFP",
+   "seoDescription": "Grandstream SW L2+ 8 Port POE Giga 2SFP. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream SW L2+ 8 Port POE Giga 2SFP. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-switch-5port-2-5gb-con-4-poe-1-sfp-no-admin-57-w-total-capacidad-switching-4-5gbps-sin-fuente",
+   "name": "Grandstream Switch 5PORT 2.5GB con 4 POE + 1 SFP NO Admin 57 W Total Capacidad Switching 4.5GBPS sin Fuente",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream Switch 5PORT 2.5GB con 4 POE + 1",
+   "seoDescription": "Grandstream Switch 5PORT 2.5GB con 4 POE + 1 SFP NO Admin 57 W Total Capacidad Switching 4.5GBPS sin Fuente. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream Switch 5PORT 2.5GB con 4 POE + 1 SFP NO Admin 57 W Total Capacidad Switching 4.5GBPS sin Fuente. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-switch-adm-capa-2-lite-por-nubegdsm-4-giga-4-poe-60w-sin-fuente",
+   "name": "Grandstream Switch ADM Capa 2 Lite por Nube(gdsm) 4 Giga 4 POE 60W sin Fuente",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream Switch ADM Capa 2 Lite",
+   "seoDescription": "Grandstream Switch ADM Capa 2 Lite por Nube(gdsm) 4 Giga 4 POE 60W sin Fuente. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream Switch ADM Capa 2 Lite por Nube(gdsm) 4 Giga 4 POE 60W sin Fuente. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-tel-ip-1-linea-poe-con-fuente",
+   "name": "Grandstream TEL IP 1 Linea POE con Fuente",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream TEL IP 1 Linea POE con Fuente",
+   "seoDescription": "Grandstream TEL IP 1 Linea POE con Fuente. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream TEL IP 1 Linea POE con Fuente. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-tel-ip-12-lineas-wifi-bt-gb-6-cuentas-sip-no-vender-sin-consola-de-expacion-gbx20",
+   "name": "Grandstream TEL IP 12 Lineas WIFI BT GB 6 Cuentas SIP (NO Vender sin Consola de Expacion GBX20)",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream TEL IP 12 Lineas WIFI BT GB 6",
+   "seoDescription": "Grandstream TEL IP 12 Lineas WIFI BT GB 6 Cuentas SIP (NO Vender sin Consola de Expacion GBX20). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream TEL IP 12 Lineas WIFI BT GB 6 Cuentas SIP (NO Vender sin Consola de Expacion GBX20). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-tel-ip-2-lineas-2-sip-wifi",
+   "name": "Grandstream TEL IP 2 Lineas 2 SIP WIFI",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream TEL IP 2 Lineas 2 SIP WIFI",
+   "seoDescription": "Grandstream TEL IP 2 Lineas 2 SIP WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream TEL IP 2 Lineas 2 SIP WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-tel-ip-2-lineas-4-sip-wifi",
+   "name": "Grandstream TEL IP 2 Lineas 4 SIP WIFI",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream TEL IP 2 Lineas 4 SIP WIFI",
+   "seoDescription": "Grandstream TEL IP 2 Lineas 4 SIP WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream TEL IP 2 Lineas 4 SIP WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-telefono-ip-16-lineas-lcd-5",
+   "name": "Grandstream Telefono IP 16 Lineas LCD 5″",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream Telefono IP 16 Lineas LCD 5″",
+   "seoDescription": "Grandstream Telefono IP 16 Lineas LCD 5″. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream Telefono IP 16 Lineas LCD 5″. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-telefono-ip-16-lineas-video-16-cuentas-sip",
+   "name": "Grandstream Telefono IP 16 Lineas Video 16 Cuentas SIP",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream Telefono IP 16 Lineas Video 16",
+   "seoDescription": "Grandstream Telefono IP 16 Lineas Video 16 Cuentas SIP. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream Telefono IP 16 Lineas Video 16 Cuentas SIP. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-telefono-ip-2-lineas-2-sip",
+   "name": "Grandstream Telefono IP 2 Lineas 2 SIP",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream Telefono IP 2 Lineas 2 SIP",
+   "seoDescription": "Grandstream Telefono IP 2 Lineas 2 SIP. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream Telefono IP 2 Lineas 2 SIP. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-telefono-ip-2-lineas-2-sip-poe-sin-fuente",
+   "name": "Grandstream Telefono IP 2 Lineas 2 SIP POE sin Fuente",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream Telefono IP 2 Lineas 2 SIP POE",
+   "seoDescription": "Grandstream Telefono IP 2 Lineas 2 SIP POE sin Fuente. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream Telefono IP 2 Lineas 2 SIP POE sin Fuente. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-telefono-ip-2-lineas-4-sip-poe-sin-fuente-no-la-trabajamos",
+   "brand": "Grandstream",
+   "seoTitle": "GRANDSTREAM TELEFONO IP 2 LINEAS 4 SIP POE",
+   "seoDescription": "GRANDSTREAM TELEFONO IP 2 LINEAS 4 SIP POE SIN FUENTE (no la trabajamos). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "GRANDSTREAM TELEFONO IP 2 LINEAS 4 SIP POE SIN FUENTE (no la trabajamos). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grandstream-telefono-ip-inal-dect-p-base-dp755soporta-10-telefonos-dp752soporta-5-telefonos",
+   "name": "Grandstream Telefono IP Inal Dect P/Base DP755(SOPORTA 10 Telefonos) DP752(SOPORTA 5 Telefonos)",
+   "brand": "Grandstream",
+   "seoTitle": "Grandstream Telefono IP Inal Dect P/Base",
+   "seoDescription": "Grandstream Telefono IP Inal Dect P/Base DP755(SOPORTA 10 Telefonos) DP752(SOPORTA 5 Telefonos). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Grandstream Telefono IP Inal Dect P/Base DP755(SOPORTA 10 Telefonos) DP752(SOPORTA 5 Telefonos). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "grupo-electrogeno-gamma-elite-2200-e",
+   "seoTitle": "Grupo Electrogeno Gamma Elite 2200",
+   "seoDescription": "Grupo Electrogeno Gamma Elite 2200 E Generador. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "handy-baofeng-bf-888s-max-2",
+   "brand": "Baofeng",
+   "seoTitle": "Handy Baofeng BF-888S Bateria Tipo C",
+   "seoDescription": "UHF 400 ~ 470MHz 2W de potencia Subtonos 16 canales Ficha carga Tipo USB C. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "handy-baofeng-bf9700",
+   "brand": "Baofeng",
+   "seoTitle": "Handy Baofeng BF9700 8W",
+   "seoDescription": "Certificado IP67 Distancia alcance 10kms aprox. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "handy-baofeng-uv-5r-5w-2",
+   "brand": "Baofeng",
+   "seoTitle": "Handy Baofeng UV-5R 5W Bibanda UHF-VHF",
+   "seoDescription": "VHF/UHF 136 ~ 174MHz / 400 ~ 520MHz Doble display - doble recepción Potenciado: 5 Watts 128 canales de memoria. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "hd-20tb-seagate-ironwolf-sata-6gb-s-256mb-nas",
+   "name": "HD 20TB Seagate Ironwolf SATA 6GB/S 256MB NAS",
+   "brand": "Seagate",
+   "seoTitle": "HD 20TB Seagate Ironwolf SATA 6GB/S 256MB NAS",
+   "seoDescription": "Disco duro Seagate IronWolf 20TB optimizado para NAS, SATA 6GB/s, cache 256MB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "hdd-sata-hpe-1tb-6g-7-2k-2-5-sff-sc-mdl-2",
+   "name": "HDD SATA HPE 1TB 6G 7.2k 2.5/SFF SC MDL",
+   "brand": "HPE",
+   "seoTitle": "HDD SATA HPE 1TB 6G 7.2k 2.5/SFF SC MDL",
+   "seoDescription": "HDD SATA HPE 1TB 6G 7.2k 2.5/SFF SC MDL. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HDD SATA HPE 1TB 6G 7.2k 2.5/SFF SC MDL. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hdd-sata-hpe-1tb-7-2k-sff-bc-2",
+   "name": "HDD SATA HPE 1TB 7.2K SFF BC",
+   "brand": "HPE",
+   "seoTitle": "HDD SATA HPE 1TB 7.2K SFF BC",
+   "seoDescription": "HDD SATA HPE 1TB 7.2K SFF BC. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HDD SATA HPE 1TB 7.2K SFF BC. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "headset-biz-1500-duo-usb-nc-global",
+   "name": "Headset BIZ 1500 DUO USB NC Global",
+   "seoTitle": "Headset BIZ 1500 DUO USB NC Global",
+   "seoDescription": "Headset BIZ 1500 DUO USB NC Global. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Headset BIZ 1500 DUO USB NC Global. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "headset-poly-voy-4320-m-usb-a-hs-bt700",
+   "brand": "Poly",
+   "seoTitle": "Headset Poly VOY 4320 -M USB-A HS +BT700",
+   "seoDescription": "Headset Poly VOY 4320 -M USB-A HS +BT700. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Headset Poly VOY 4320 -M USB-A HS +BT700. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "headset-targus-con-cable-usb",
+   "brand": "Targus",
+   "seoTitle": "Headset Targus con Cable Usb",
+   "seoDescription": "Headset Targus con Cable Usb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "heladera-hside-by-side-hisense-no-frost-468lts-rs3n428nab",
+   "seoTitle": "Heladera Side By Side Hisense No Frost 428Lt.",
+   "seoDescription": "Iluminación LED Tecnología Total No Frost Multi Air Flow Control Preciso de la temperatura Super enfriamiento y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "hex-with-dual-core-880mhz-mhz-cpu-256mb-ram-5-gigabit-lan-wan-usb-routeros-l4-sin-fuente",
+   "seoTitle": "hEX with Dual Core 880MHz MHz CPU, 256MB RAM",
+   "seoDescription": "hEX with Dual Core 880MHz MHz CPU, 256MB RAM, 5 Gigabit LAN/WAN, USB, RouterOS L4 SIN FUENTE. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "hEX with Dual Core 880MHz MHz CPU, 256MB RAM, 5 Gigabit LAN/WAN, USB, RouterOS L4 SIN FUENTE. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hidrolavadora-daihatsu-1400w-110-bar",
+   "seoTitle": "Hidrolavadora Daihatsu HC1400 1400W 110 Bar",
+   "seoDescription": "Hidrolavadora de alta presión de 1400W Motor eléctrico a carbones Incluye manguera de alta presión. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "hidrolavadora-karcher-1200w-110-bar",
+   "seoTitle": "Hidrolavadora Karcher K2 Basic 1200W 110 Bar",
+   "seoDescription": "Hidrolavadora de alta presión de 1200W Manguera de alta presión de 3 m Filtro de agua integrado. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "hidrolavadora-karcher-k1",
+   "seoTitle": "Hidrolavadora Karcher K1 1200w 100 Bar",
+   "seoDescription": "Hidrolavadora Karcher K1 1200w 100 Bar. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "hik-cam-ip-dom2mp-ds-2cd2123g2-i2-8mm",
+   "name": "HIK CAM IP DOM2MP DS-2CD2123G2-I(2.8mm)",
+   "seoTitle": "HIK CAM IP DOM2MP DS-2CD2123G2-I(2.8mm)",
+   "seoDescription": "HIK CAM IP DOM2MP DS-2CD2123G2-I(2.8mm). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HIK CAM IP DOM2MP DS-2CD2123G2-I(2.8mm). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hik-control-acc-huella-ds-k1t804bmfo-std",
+   "name": "HIK Control ACC Huella DS-K1T804BMF(O-STD)",
+   "seoTitle": "HIK Control ACC Huella DS-K1T804BMF(O-STD)",
+   "seoDescription": "HIK Control ACC Huella DS-K1T804BMF(O-STD). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HIK Control ACC Huella DS-K1T804BMF(O-STD). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hik-controlador-acceso-ds-k2814o-std",
+   "name": "HIK Controlador Acceso DS-K2814(O-STD)",
+   "seoTitle": "HIK Controlador Acceso DS-K2814(O-STD)",
+   "seoDescription": "HIK Controlador Acceso DS-K2814(O-STD). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HIK Controlador Acceso DS-K2814(O-STD). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hik-kit-intercom-hibrido-ds-kis302-po-s",
+   "name": "HIK Kit Intercom Hibrido DS-KIS302-P(O-S",
+   "seoTitle": "HIK Kit Intercom Hibrido DS-KIS302-P(O-S",
+   "seoDescription": "HIK Kit Intercom Hibrido DS-KIS302-P(O-S. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HIK Kit Intercom Hibrido DS-KIS302-P(O-S. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hik-lector-tarjeta-ds-k1107amo-std",
+   "name": "HIK Lector Tarjeta DS-K1107AM(O-STD)",
+   "seoTitle": "HIK Lector Tarjeta DS-K1107AM(O-STD)",
+   "seoDescription": "HIK Lector Tarjeta DS-K1107AM(O-STD). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HIK Lector Tarjeta DS-K1107AM(O-STD). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hik-timbre-antiv-ds-kb8113-ime1bo-std",
+   "name": "HIK Timbre Antiv DS-KB8113-IME1(B)O-STD",
+   "seoTitle": "HIK Timbre Antiv DS-KB8113-IME1(B)O-STD",
+   "seoDescription": "HIK Timbre Antiv DS-KB8113-IME1(B)O-STD. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HIK Timbre Antiv DS-KB8113-IME1(B)O-STD. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "horno-electrico-neba-52l-con-anafe-negro",
+   "seoTitle": "Horno Eléctrico Neba 52L con Anafe Negro",
+   "seoDescription": "Capacidad de 52L. 3631 W de potencia con Anafe. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "horno-electrico-neba-70l-negro",
+   "seoTitle": "Horno Eléctrico Neba 70L Negro",
+   "seoDescription": "Capacidad de 70L. 2000 W de potencia Funciones de cocción: hornear, asar. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "horno-freidora-de-aire-16l-2500w-sokany",
+   "seoTitle": "Horno Freidora de Aire 16L 2500W Sokany",
+   "seoDescription": "Capacidad 16 Litros Potencia 2500W Control en Pantalla Táctil Digital 8 programas de cocción. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "horno-freidora-sin-aceite-multifuncion-digital-peabody-pe-hdm15n",
+   "brand": "Peabody",
+   "seoTitle": "Horno Freidora sin aceite Multifunción",
+   "seoDescription": "Horno Freidora sin aceite Multifunción Digital Peabody. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "hp-laserjet-enterprise-m611dn-monocromatica-solo-impresion",
+   "name": "HP Laserjet Enterprise M611DN Monocromatica (solo Impresion)",
+   "brand": "HP",
+   "seoTitle": "HP Laserjet Enterprise M611DN Monocromatica",
+   "seoDescription": "HP Laserjet Enterprise M611DN Monocromatica (solo Impresion). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HP Laserjet Enterprise M611DN Monocromatica (solo Impresion). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hp-laserjet-managed-e40040dn-monocromatica-solo-impresion",
+   "name": "HP Laserjet Managed E40040DN Monocromatica (solo Impresion)",
+   "brand": "HP",
+   "seoTitle": "HP Laserjet Managed E40040DN Monocromatica",
+   "seoDescription": "HP Laserjet Managed E40040DN Monocromatica (solo Impresion). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HP Laserjet Managed E40040DN Monocromatica (solo Impresion). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hp-laserjet-pro-3003dw-monocromatica-solo-impresion",
+   "brand": "HP",
+   "seoTitle": "Impresora Láser Hp LASERJET PRO 3003DW Duplex",
+   "seoDescription": "Impresora Láser Hp LASERJET PRO 3003DW Duplex. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Impresora Láser Hp LASERJET PRO 3003DW Duplex. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hp-laserjet-pro-3303fdw-color-multifuncion",
+   "name": "HP Laserjet PRO 3303FDW Color (multifuncion)",
+   "brand": "HP",
+   "seoTitle": "HP Laserjet PRO 3303FDW Color (multifuncion)",
+   "seoDescription": "HP Laserjet PRO 3303FDW Color (multifuncion). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HP Laserjet PRO 3303FDW Color (multifuncion). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hp-laserjet-pro-4003dw-monocromatica-solo-impresion",
+   "name": "HP Laserjet PRO 4003DW Monocromatica (solo Impresion)",
+   "brand": "HP",
+   "seoTitle": "HP Laserjet PRO 4003DW Monocromatica",
+   "seoDescription": "HP Laserjet PRO 4003DW Monocromatica (solo Impresion). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HP Laserjet PRO 4003DW Monocromatica (solo Impresion). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hp-omen-16-an0119nr-ultra-9-285h-16gb-1tb-ssd-16-240hz-rtx%c2%99-5070-8gb-w11",
+   "seoTitle": "Hp Omen Ultra 9-285H 16gb SSD 1tb 16″ 240HZ",
+   "seoDescription": "HP OMEN 16 (16-an0119nr) Gaming Laptop Potencia de nivel profesional para gaming extremo y creación de contenido. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "hp-plotter-designjet-t230-24-solo-impresion",
+   "name": "HP Plotter Designjet T230 24″ (solo Impresion)",
+   "brand": "HP",
+   "seoTitle": "HP Plotter Designjet T230 24″",
+   "seoDescription": "HP Plotter Designjet T230 24″ (solo Impresion). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HP Plotter Designjet T230 24″ (solo Impresion). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hp-plotter-designjet-t2600ps-36-multifuncion",
+   "name": "HP Plotter Designjet T2600PS 36″ (multifuncion)",
+   "brand": "HP",
+   "seoTitle": "HP Plotter Designjet T2600PS 36″",
+   "seoDescription": "HP Plotter Designjet T2600PS 36″ (multifuncion). Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HP Plotter Designjet T2600PS 36″ (multifuncion). Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hp-victus-15-fa2013dx-i5-13420h-8gb-512gb-15-6fhd-144hz-rtx-3050-6gb-win11",
+   "seoTitle": "Notebook Hp Victus i5-13420H 8GB 512GB",
+   "seoDescription": "El equilibrio perfecto entre rendimiento Intel y gráficos ray tracing. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "hp-victus-15-fa2787nr-i7-13620h-16gb-512gb-15-6fhd-144hz-rtx-5060-8gb-win11",
+   "seoTitle": "Notebook Hp Victus i7-13620H 16GB 512GB 15.6″",
+   "seoDescription": "Potencia de nivel profesional y gráficos de última generación. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "hp-victus-15-fb2063dx-ryzen-5-7535h-8gb-512gb-15-6fhd-144hz-rx-6550m-4gb-w11",
+   "seoTitle": "Notebook Hp Victus Ryzen 5-7535H 8GB SSD",
+   "seoDescription": "Tu puerta de entrada al gaming de alto rendimiento. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "hpe-480gb-sata-mu-sff-sc-mv-ssd",
+   "name": "HPE 480GB SATA MU SFF SC MV SSD",
+   "brand": "HPE",
+   "seoTitle": "HPE 480GB SATA MU SFF SC MV SSD",
+   "seoDescription": "HPE 480GB SATA MU SFF SC MV SSD. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "huawei-cbg-router-ax1-4ge-wifi5-53030clr",
+   "name": "Huawei CBG Router AX1 4GE WIFI5 (53030CLR)",
+   "seoTitle": "Huawei CBG Router AX1 4GE WIFI5 (53030CLR)",
+   "seoDescription": "Router HUAWEI AX1 con tecnología WiFi 5, 4 puertos Gigabit Ethernet para conexión estable y alto rendimiento en… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "huawei-cbg-router-mesh-ax2s-wifi6-4ant-53030bxe",
+   "name": "Huawei CBG Router Mesh AX2S WIFI6 4ANT (53030BXE)",
+   "seoTitle": "Huawei CBG Router Mesh AX2S WIFI6 4ANT",
+   "seoDescription": "Router mesh Huawei AX2S con WiFi 6, 4 antenas de alto rendimiento para cobertura completa y conexión ultrarrápida en… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "huawei-cbg-router-mesh-ax3s-wifi6-4ant-53030bxd",
+   "name": "Huawei CBG Router Mesh AX3S WIFI6+ 4ANT (53030BXD)",
+   "seoTitle": "Huawei CBG Router Mesh AX3S WIFI6+ 4ANT",
+   "seoDescription": "Router mesh HUAWEI AX3S con tecnología WiFi 6+ y 4 antenas para máxima velocidad y cobertura completa en todo el… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "huawei-wifi-ax2-kv",
+   "brand": "Huawei",
+   "seoTitle": "Router WiFi Huawei AX2 KV Gigabite",
+   "seoDescription": "Router WiFi Huawei AX2 KV Gigabite. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "hub-8p-3com-3c16753-10-100-220v",
+   "name": "HUB 8P 3COM 3C16753 10/100 220V.",
+   "seoTitle": "HUB 8P 3COM 3C16753 10/100 220V.",
+   "seoDescription": "HUB 8P 3COM 3C16753 10/100 220V.. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "HUB 8P 3COM 3C16753 10/100 220V.. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hub-targus-adaptador-usb-a-4-puertos-3-0-5gpbs",
+   "brand": "Targus",
+   "seoTitle": "HUB Targus Adaptador USB-A 4 Puertos 3.0",
+   "seoDescription": "• Convierta 1 puerto en 4 con los 4 puertos USB 3.0 • USB 3.0 proporciona velocidades de transferencia hasta 10… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "hub-targus-tipo-c-multipuerto-2-usb-c-y-2-usb-a",
+   "brand": "Targus",
+   "seoTitle": "Hub Targus Tipo C Multipuerto 2 USB-C y 2",
+   "seoDescription": "Hub Targus Tipo C Multipuerto 2 USB-C y 2 USB-A. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Hub Targus Tipo C Multipuerto 2 USB-C y 2 USB-A. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "hub-usb-targus-4-puertos-2-0",
+   "brand": "Targus",
+   "seoTitle": "Hub USB Targus 4 Puertos 2.0",
+   "seoDescription": "480 MBPSacc. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "imp-canon-g1110-sist-continuo-pixma",
+   "name": "IMP Canon G1110 Sist Continuo Pixma",
+   "brand": "Canon",
+   "seoTitle": "IMP Canon G1110 Sist Continuo Pixma",
+   "seoDescription": "IMP Canon G1110 Sist Continuo Pixma. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "IMP Canon G1110 Sist Continuo Pixma. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "impresora-3d-anet-n4-dlp-resina-tactil-resolucion-2k-ultra-rapida",
+   "seoTitle": "Impresora 3D Anet N4 DLP Resina Tactil",
+   "seoDescription": "Impresora 3D Anet N4 DLP Resina Tactil Resolución 2K Ultra Rapida. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "impresora-honeywell-pc42e-t-usbethernet-buje-1",
+   "name": "Impresora Honeywell PC42E-T Usb+ethernet Buje 1`",
+   "seoTitle": "Impresora Honeywell PC42E-T Usb+ethernet Buje",
+   "seoDescription": "Impresora Honeywell PC42E-T Usb+ethernet Buje 1`. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Impresora Honeywell PC42E-T Usb+ethernet Buje 1`. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "impresora-hp-smart-tank-210-3d4l3a-wifi",
+   "brand": "HP",
+   "seoTitle": "Impresora Hp Smart Tank 210 3D4L3A WIFI",
+   "seoDescription": "Impresora Hp Smart Tank 210 3D4L3A WIFI. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Impresora Hp Smart Tank 210 3D4L3A WIFI. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "impresora-laser-brother-hl-1212w-monocromatica-wifi",
+   "seoTitle": "Impresora Laser Brother HL-1212W",
+   "seoDescription": "Impresora Laser Monocromática con conectividad wifi de alto rendimiento y muy económica. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "impresora-laser-brother-monocromatica-hl-1200",
+   "seoTitle": "Impresora Laser Brother HL-1200 Monocromática",
+   "seoDescription": "Impresora Laser Brother HL-1200 Monocromática. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "impresora-laser-pantum-p2509w-laser-monocromatica",
+   "seoTitle": "Impresora Laser Pantum P2509W Laser",
+   "seoDescription": "Es monocromática. Impresión doble faz manual. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "impresora-multifuncion-brother-t420w-sistema-continuo-wifi",
+   "brand": "Brother",
+   "seoTitle": "Impresora Multifunción Brother T420W Sistema",
+   "seoDescription": "Impresora Multifunción Brother T420W Sistema Continuo Wifi. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "impresora-multifuncion-epson-l14150-ecotank-a3",
+   "brand": "Epson",
+   "seoTitle": "Impresora Multifunción Epson L14150 Ecotank",
+   "seoDescription": "Impresora Multifunción Epson L14150 Ecotank A3. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "impresora-multifuncion-hp-smart-tank-530",
+   "brand": "HP",
+   "seoTitle": "Impresora Multifuncion HP Smart Tank 530 Wifi",
+   "seoDescription": "Funciones: Impresora, escáner, copiadora Tipo de Impresión: Inyección de tinta a color, Sistema Continuo… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "impresora-multifuncion-laser-pantum-bm2300nw",
+   "seoTitle": "Impresora Multifunción Láser Pantum BM2300NW",
+   "seoDescription": "Impresora Multifunción Láser Pantum BM2300NW. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "impresora-term-honeywell-pd45-usb-ethernet-2",
+   "name": "Impresora Term. Honeywell PD45 USB Ethernet",
+   "seoTitle": "Impresora Term. Honeywell PD45 USB Ethernet",
+   "seoDescription": "Impresora térmica industrial Honeywell PD45 con conectividad USB y Ethernet. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "impresora-term-honeywell-pm65a-plus-usb-lan",
+   "name": "Impresora Term. Honeywell PM65A Plus USB LAN",
+   "seoTitle": "Impresora Term. Honeywell PM65A Plus USB LAN",
+   "seoDescription": "Impresora térmica industrial Honeywell PM65A Plus con conectividad USB y LAN para etiquetado profesional de alta… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "impresora-termica-ocom-80mm-usbrs232lan-p-cocina",
+   "name": "Impresora Termica Ocom 80MM USB+RS232+LAN P/Cocina",
+   "seoTitle": "Impresora Termica Ocom 80MM USB+RS232+LAN",
+   "seoDescription": "Impresora Termica Ocom 80MM USB+RS232+LAN P/Cocina. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "impresora-termica-ocom-80mm-usbrs232lanwifi-2",
+   "name": "Impresora Termica Ocom 80MM USB+RS232+LAN+WIFI",
+   "seoTitle": "Impresora Termica Ocom 80MM",
+   "seoDescription": "Impresora Termica Ocom 80MM USB+RS232+LAN+WIFI. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "infinix-gt30-pro-256gb-12gb",
+   "seoTitle": "Infinix GT30 Pro 256gb 12gb + kit cooler",
+   "seoDescription": "Infinix GT30 Pro 256gb 12gb + kit cooler. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "infinix-gt30-pro-256gb-12gb-2",
+   "seoTitle": "Infinix GT30 Pro 256gb 12gb",
+   "seoDescription": "Infinix GT30 Pro 256gb 12gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "infinix-hot-60-pro-256gb-8gb",
+   "seoTitle": "Infinix Hot 60 Pro+ 256gb 8gb",
+   "seoDescription": "Infinix Hot 60 Pro+ con 256GB almacenamiento y 8GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "infinix-hot-60-pro-256gb-8gb-2",
+   "seoTitle": "Infinix Hot 60 Pro 256gb 8gb",
+   "seoDescription": "Infinix Hot 60 Pro con 256GB almacenamiento y 8GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "infinix-hot-60i-256gb-8gb",
+   "seoTitle": "Infinix Hot 60i 256gb 8gb",
+   "seoDescription": "Infinix Hot 60i con 256GB almacenamiento y 8GB RAM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "infinix-zero-40-8gb-512gb",
+   "seoTitle": "Infinix Zero 40 512gb 8gb NFC",
+   "seoDescription": "Infinix Zero 40 512gb 8gb NFC. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "inflador-airbender-aire-portatil-6400-mah",
+   "seoTitle": "Inflador Airbender Aire Portátil 6400 mAh",
+   "seoDescription": "Inflador Airbender Aire Portátil 6400 mAh. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "inflador-inalambrico-daihatsu-20v",
+   "seoTitle": "Inflador Inalambrico Daihatsu 20V",
+   "seoDescription": "Inflador de 20V. Diseño ergonómico Alta presión de aire ideal para inflado de: piscinas, colchones de aire… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "inyector-poe-tp-link-tl-poe2412g-gigabit-2",
+   "name": "Inyector POE TP-Link TL-POE2412G Gigabit",
+   "brand": "TP-Link",
+   "seoTitle": "Inyector POE TP-Link TL-POE2412G Gigabit",
+   "seoDescription": "Inyector POE TP-Link TL-POE2412G Gigabit. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Inyector POE TP-Link TL-POE2412G Gigabit. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "ionizador-solar-waggs-anti-sarro-y-anti-bacterias-150-000-lts",
+   "seoTitle": "Ionizador Solar Waggs Anti-sarro y Anti",
+   "seoDescription": "Color azul atractivo que se integra perfectamente en cualquier entorno de piscina. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ip-cam-d-link-dcs-6510l-11n-vga-d-n-ptz-exterior",
+   "name": "IP CAM D-Link DCS-6510L 11N VGA D/N PTZ Exterior",
+   "brand": "D-Link",
+   "seoTitle": "IP CAM D-Link DCS-6510L 11N VGA D/N PTZ",
+   "seoDescription": "IP CAM D-LINK DCS-6510L: Vigilancia exterior PTZ con calidad VGA y conectividad 11N. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ipad-11-128gb",
+   "seoTitle": "iPad 11 128gb",
+   "seoDescription": "Apple iPad 11.ª Generación (Chip A16) 128 GB Wi-Fi Rendimiento fluido y versatilidad diaria. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ipad-11-256gb",
+   "seoTitle": "iPad 11 256gb",
+   "seoDescription": "Apple iPad 11.ª Generación (Chip A16) 256 GB Wi-Fi Potencia, fluidez y doble de capacidad para todos tus proyectos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ipad-air-m4-11-128gb",
+   "seoTitle": "iPad Air M4 11″ 128gb",
+   "seoDescription": "Apple iPad Air 11″ Chip M4 128 GB Wi-Fi Potencia de última generación en un diseño ultraliviano. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ipad-air-m4-11-256gb",
+   "seoTitle": "iPad Air M4 11″ 256gb",
+   "seoDescription": "Apple iPad Air 11″ Chip M4 256 GB Wi-Fi Alto rendimiento y el doble de almacenamiento en un diseño ultraliviano. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ipad-air-m4-13-128gb",
+   "seoTitle": "iPad Air M4 13″ 128gb",
+   "seoDescription": "Apple iPad Air 13″ Chip M4 Pantalla de gran formato y potencia excepcional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ipad-pro-m5-11-256gb",
+   "seoTitle": "iPad Pro M5 11″ 256gb",
+   "seoDescription": "iPad Pro M5 11″ con 256GB de almacenamiento. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ipad-pro-m5-11-256gb-5g",
+   "seoTitle": "iPad Pro M5 11″ 256gb 5G",
+   "seoDescription": "Apple iPad Pro 11″ Chip M5 256 GB 5G Wi-Fi + Cellular Rendimiento profesional sin límites de ubicación. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ipad-pro-m5-11-512gb",
+   "seoTitle": "iPad Pro M5 11″ 512gb",
+   "seoDescription": "Apple iPad Pro 11″ Chip M5 512 GB Potencia extrema y portabilidad absoluta. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "ipad-pro-m5-11-512gb-5g",
+   "seoTitle": "iPad Pro M5 11″ 512gb 5G",
+   "seoDescription": "Apple iPad Pro 11″ Chip M5 512 GB 5G Wi-Fi + Cellular Potencia profesional y capacidad de almacenamiento sin… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "iphone-11-64gb",
+   "seoTitle": "iPhone 11 64gb CPO",
+   "seoDescription": "iPhone 11 64gb CPO. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "iphone-15-pro-128gb",
+   "seoTitle": "iPhone 15 Pro 128gb CPO",
+   "seoDescription": "iPhone 15 Pro 128gb CPO. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "iphone-15-pro-max-256gb",
+   "seoTitle": "iPhone 15 Pro Max 256gb CPO",
+   "seoDescription": "iPhone 15 Pro Max 256gb CPO. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "iphone-16-pro-max-1tb-natural",
+   "seoTitle": "iPhone 16 Pro Max 256gb",
+   "seoDescription": "iPhone 16 Pro Max 256gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "iphone-17-pro-512gb",
+   "seoTitle": "Iphone 17 Pro 512gb",
+   "seoDescription": "Iphone 17 Pro 512gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "iphone-17-pro-max-1tb",
+   "seoTitle": "Iphone 17 Pro Max 1TB",
+   "seoDescription": "Iphone 17 Pro Max 1TB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "iphone-18-pro-256gb",
+   "seoTitle": "iPhone 18 Pro 256gb",
+   "seoDescription": "La cima de la innovación móvil y el rendimiento profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "jabra-evolve-65-te",
+   "name": "Jabra Evolve 65 TE",
+   "seoTitle": "Jabra Evolve 65 TE",
+   "seoDescription": "Jabra Evolve 65 TE. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Jabra Evolve 65 TE. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "jabra-evolve2-65-flex",
+   "seoTitle": "Jabra Evolve2 65 Flex",
+   "seoDescription": "Jabra Evolve2 65 Flex. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Jabra Evolve2 65 Flex. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "jbl-auricular-e35-on-ear-diseno-plegable-black-wired",
+   "name": "JBL Auricular E35 On-ear /Diseño Plegable/ Black Wired",
+   "brand": "JBL",
+   "seoTitle": "JBL Auricular E35 On-ear /Diseño Plegable",
+   "seoDescription": "Auriculares JBL E35 on-ear plegables en negro con cable. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "jbl-auricular-reflect-aware-noise-cancel-in-ear-black-p-iphone",
+   "name": "JBL Auricular Reflect Aware Noise Cancel In-ear Black P/iPhone",
+   "brand": "JBL",
+   "seoTitle": "JBL Auricular Reflect Aware Noise Cancel",
+   "seoDescription": "Auriculares JBL Reflect Aware con cancelación activa de ruido, diseño in-ear ergonómico, compatibles exclusivamente… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "jbl-auricular-reflect-aware-noise-cancel-in-ear-blue-p-iphone",
+   "name": "JBL Auricular Reflect Aware Noise Cancel In-ear Blue P/iPhone",
+   "brand": "JBL",
+   "seoTitle": "JBL Auricular Reflect Aware Noise Cancel",
+   "seoDescription": "Auriculares JBL Reflect Aware in-ear azules con cancelación activa de ruido, diseñados específicamente para iPhone… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "jbl-auricular-reflect-aware-noise-cancel-in-ear-red-p-iphone",
+   "name": "JBL Auricular Reflect Aware Noise Cancel In-ear Red P/iPhone",
+   "brand": "JBL",
+   "seoTitle": "JBL Auricular Reflect Aware Noise Cancel",
+   "seoDescription": "Auriculares JBL Reflect Aware rojos con cancelación de ruido activa, diseño in-ear deportivo y conectividad… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "jbl-auriculares-tune-buds-true-wl-white",
+   "name": "JBL Auriculares Tune Buds True WL White",
+   "brand": "JBL",
+   "seoTitle": "JBL Auriculares Tune Buds True WL White",
+   "seoDescription": "JBL Auriculares Tune Buds True WL White. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "JBL Auriculares Tune Buds True WL White. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "joystick-p-pc-ps3-y-ps4-level-up",
+   "seoTitle": "Joystick P/ PC PS3 y PS4 Level Up",
+   "seoDescription": "Joystick P/ PC PS3 y PS4 Level Up. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "joystick-sony-playstation-5-white",
+   "seoTitle": "Joystick Sony Playstation 5 White",
+   "seoDescription": "Respuesta háptica Gatillos adaptativos Batería recargable integrada Altavoz integrado Sensor de movimiento. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "key-upgrade-lenovo-raid-5-m1200-zero-cache",
+   "name": "KEY Upgrade Lenovo Raid 5 M1200 Zero Cache",
+   "brand": "Lenovo",
+   "seoTitle": "KEY Upgrade Lenovo Raid 5 M1200 Zero Cache",
+   "seoDescription": "KEY Upgrade Lenovo Raid 5 M1200 Zero Cache. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "KEY Upgrade Lenovo Raid 5 M1200 Zero Cache. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "key-upgrade-lenovo-raid-5-m5100-zero-cache",
+   "name": "KEY Upgrade Lenovo Raid 5 M5100 Zero Cache",
+   "brand": "Lenovo",
+   "seoTitle": "KEY Upgrade Lenovo Raid 5 M5100 Zero Cache",
+   "seoDescription": "KEY Upgrade Lenovo Raid 5 M5100 Zero Cache. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "KEY Upgrade Lenovo Raid 5 M5100 Zero Cache. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "kit-2x-handy-baofeng-bf-888s-bateria-tipo-c-copia",
+   "brand": "Baofeng",
+   "seoTitle": "Kit 2x Handy Baofeng BF-888S Bateria Tipo C",
+   "seoDescription": "UHF 400 ~ 470MHz 2W de potencia Subtonos 16 canales Ficha carga Tipo USB C. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-2x-handy-baofeng-uv-5r-5w-bibanda-uhf-vhf",
+   "brand": "Baofeng",
+   "seoTitle": "Kit 2x Handy Baofeng UV-5R 5W Bibanda UHF-VHF",
+   "seoDescription": "VHF/UHF 136 ~ 174MHz / 400 ~ 520MHz Doble display - doble recepción Potenciado: 5 Watts 128 canales de memoria. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-4x-handy-baofeng-bf-888s-bateria-tipo-c",
+   "brand": "Baofeng",
+   "seoTitle": "Kit 4x Handy Baofeng BF-888S Bateria Tipo C",
+   "seoDescription": "UHF 400 ~ 470MHz 2W de potencia Subtonos 16 canales Ficha carga Tipo USB C. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-de-actualizacion-amd-atlhon-3000-4gb",
+   "brand": "AMD",
+   "seoTitle": "Kit de Actualización AMD Atlhon 3000 4GB",
+   "seoDescription": "Kit de Actualización AMD Atlhon 3000 4GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-de-actualizacion-amd-atlhon-3000-8gb",
+   "brand": "AMD",
+   "seoTitle": "Kit de Actualización AMD Atlhon 3000 8GB",
+   "seoDescription": "Kit de Actualización AMD Atlhon 3000 8GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-de-actualizacion-amd-ryzen-5-5600g-8gb",
+   "brand": "AMD",
+   "seoTitle": "Kit de Actualización AMD Ryzen 5 5600GT 8GB",
+   "seoDescription": "Kit de Actualización AMD Ryzen 5 5600GT 8GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-de-actualizacion-amd-ryzen-7-5700g-8gb",
+   "brand": "AMD",
+   "seoTitle": "Kit de Actualización AMD Ryzen 7 5700G 8GB",
+   "seoDescription": "Kit de Actualización AMD Ryzen 7 5700G 8GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-de-actualizacion-amd-ryzen3-3200g-8gb",
+   "brand": "AMD",
+   "seoTitle": "Kit de Actualización AMD Ryzen 3 3200G 8GB",
+   "seoDescription": "Kit de Actualización AMD Ryzen 3 3200G 8GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-de-actualizacion-intel-core-i3-12va-8gb",
+   "brand": "Intel",
+   "seoTitle": "Kit de Actualización Intel Core i3 12va 8gb",
+   "seoDescription": "Kit de Actualización Intel Core i3 12va 8gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-de-actualizacion-intel-core-i3-8gb",
+   "brand": "Intel",
+   "seoTitle": "Kit de Actualización Intel Core i3 8gb",
+   "seoDescription": "Kit de Actualización Intel Core i3 8gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-de-actualizacion-intel-core-i5-8gb",
+   "brand": "Intel",
+   "seoTitle": "Kit de Actualización Intel Core i5 8gb",
+   "seoDescription": "Kit de Actualización Intel Core i5 8gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-de-actualizacion-intel-core-i7-8gb",
+   "brand": "Intel",
+   "seoTitle": "Kit de Actualización Intel Core i7 8gb",
+   "seoDescription": "Kit de Actualización Intel Core i7 8gb. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-de-actualizacion-intel-pentium-4gb",
+   "brand": "Intel",
+   "seoTitle": "Kit de Actualización Intel Pentium Gold 8GB",
+   "seoDescription": "Kit de Actualización Intel Pentium Gold 8GB. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-montaje-ap540-series",
+   "name": "Kit Montaje AP540 Series",
+   "seoTitle": "Kit Montaje AP540 Series",
+   "seoDescription": "Kit Montaje AP540 Series. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Kit Montaje AP540 Series. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "kit-teclado-y-mouse-inalambrico-logitech-mk220",
+   "brand": "Logitech",
+   "seoTitle": "Kit Teclado y Mouse Inalambrico Logitech",
+   "seoDescription": "Combo inalámbrico ahorrador de espacio. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-teclado-y-mouse-inalambrico-logitech-mk235",
+   "brand": "Logitech",
+   "seoTitle": "Kit Teclado y Mouse Inalambrico Logitech",
+   "seoDescription": "Teclado Español Altura de teclado ajustable. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-teclado-y-mouse-inalambrico-logitech-mk295",
+   "brand": "Logitech",
+   "seoTitle": "Kit Teclado y Mouse Inalámbrico Logitech",
+   "seoDescription": "Kit Teclado y Mouse Inalámbrico Logitech Mk295. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Kit Teclado y Mouse Inalámbrico Logitech Mk295. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "kit-teclado-y-mouse-inalambrico-logitech-pop-icon-negro",
+   "brand": "Logitech",
+   "seoTitle": "Kit Teclado y Mouse Inalámbrico Logitech POP",
+   "seoDescription": "Combo inalámbrico Pop Icon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-teclado-y-mouse-inalambrico-logitech-pop-icon-rosa",
+   "brand": "Logitech",
+   "seoTitle": "Kit Teclado y Mouse Inalámbrico Logitech POP",
+   "seoDescription": "Combo inalámbrico Pop Icon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-teclado-y-mouse-logitech-mk120",
+   "brand": "Logitech",
+   "seoTitle": "Kit Teclado y Mouse Logitech MK120",
+   "seoDescription": "Teclado Español Conexión USB Silencioso. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "kit-x2-handy-baofeng-bf9700-8w",
+   "brand": "Baofeng",
+   "seoTitle": "Kit x2 Handy Baofeng BF9700 8W",
+   "seoDescription": "Certificado IP67 Distancia alcance 10kms aprox. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lavarropas-philco-carga-superior-9-5kg-600-rpm-blanco",
+   "brand": "Philco",
+   "seoTitle": "Lavarropas Philco Carga Superior 9.5Kg 600",
+   "seoDescription": "Lavarropas Philco Carga Superior 9.5Kg 600 RPM Blanco. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lavarropas-philco-frontal-6-5-kg-1000rpm",
+   "brand": "Philco",
+   "seoTitle": "Lavarropas Philco Frontal 6.5 Kg 1000rpm",
+   "seoDescription": "Lavarropas Philco Frontal 6.5 Kg 1000rpm. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lc-brother-hl-l8360cdw-33ppm-wifi-duplex",
+   "seoTitle": "Impresora Láser Color Brother HL-L8360CDW",
+   "seoDescription": "Impresora láser color Brother HL-L8360CDW con WiFi, impresión dúplex automática, velocidad 33 páginas por minuto y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lector-codigo-de-barras-netmak-1d-usb-base-nm-lc401-s",
+   "name": "Lector Codigo de Barras Netmak / 1D USB + Base NM-LC401-S",
+   "brand": "Netmak",
+   "seoTitle": "Lector Codigo de Barras Netmak / 1D USB +",
+   "seoDescription": "Lector código de barras NETMAK NM-LC401-S 1D USB con base incluida. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lector-codigo-de-barras-qr-1d-2d-usb-netmak-nm-lc207-2",
+   "seoTitle": "Lector Codigo de Barras QR / 1D /2D USB",
+   "seoDescription": "Lector código de barras QR, 1D y 2D USB Netmak NM-LC207. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lector-codigo-de-barras-usb-1d-netmak-nm-lc401",
+   "name": "Lector Codigo de Barras USB 1D Netmak NM-LC401",
+   "brand": "Netmak",
+   "seoTitle": "Lector Codigo de Barras USB 1D Netmak",
+   "seoDescription": "Lector código de barras USB 1D Netmak NM-LC401 profesional. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lenovo-ideapad-ryzen-5-7520u-8gb-256gb-ssd-15-6-fhd-w11-abyss-blue",
+   "seoTitle": "Notebook Lenovo Ideapad Ryzen 5 7520U 8GB",
+   "seoDescription": "Elegancia, eficiencia y velocidad para tu día a día. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-ef-16-35-f4-l-is-usm-2",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon EF 16-35 F4 L IS USM",
+   "seoDescription": "Lente gran angular Canon EF 16-35mm F4 L IS USM profesional con estabilización de imagen, construcción resistente y… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-ef-16-35mm-f-4l-usm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon EF 16-35mm f/4L USM",
+   "seoDescription": "Lente Canon EF 16-35mm f/4L USM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-ef-24mm-f-2-8-stm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon EF 24mm f/2.8 STM",
+   "seoDescription": "Lente Canon EF 24mm f/2.8 STM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-ef-50mm-f14-usm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon EF 50mm f/1.4 USM",
+   "seoDescription": "Lente Canon EF 50mm f/1.4 USM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-ef-75-300mm-f-4-5-6-iii",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon EF 75-300mm f/4-5.6 III",
+   "seoDescription": "Lente Canon EF 75-300mm f/4-5.6 III. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-ef-s-10-18-f4-5-5-6-is-stm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon EF-S 10-18 F4.5-5.6 IS STM",
+   "seoDescription": "Lente gran angular Canon EF-S 10-18mm con estabilización óptica IS y motor STM silencioso para fotografía… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-ef-s-10-18mm-f-4-5-5-6-is-stm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon EF-S 10-18mm f/4.5-5.6 IS STM",
+   "seoDescription": "Objetivo Gran Angular Estabilizador de Imagen Motor de enfoque STM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-ef-s-24m-f2-8-stm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon EF-S 24M F2.8 STM",
+   "seoDescription": "Lente Canon EF-S 24mm F2.8 STM con gran angular, apertura luminosa f/2.8 y enfoque silencioso para fotografía… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-ef-s-50m-f1-4-usm-2",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon EF-S 50M F1.4 USM",
+   "seoDescription": "Lente Canon EF-S 50mm F1.4 USM con enfoque ultrasónico silencioso, apertura amplia F1.4 y calidad óptica profesional… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-100-400mm-f-56-8-is-usm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RF 100-400mm f/5,6-8 IS USM",
+   "seoDescription": "Lente Canon RF 100-400mm f/5,6-8 IS USM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-100-400mm-f5-6-8-is-usm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RF 100-400MM F5.6-8 IS USM",
+   "seoDescription": "Lente Canon RF 100-400MM F5.6-8 IS USM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-100-500mm-f-4-5-7-1l-is-usm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RF 100-500mm f/4.5-7.1L IS USM",
+   "seoDescription": "Lente Canon RF 100-500mm f/4.5-7.1L IS USM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-100mm-f-2-8l-macro-is-usm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RF 100mm f/2.8L Macro IS USM",
+   "seoDescription": "Lente Canon RF 100mm f/2.8L Macro IS USM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-14-35mm-f4l-is-usm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RF 14-35MM F4L IS USM",
+   "seoDescription": "Lente Canon RF 14-35MM F4L IS USM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-15-30mm-f-4-5-5-6-is-stm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RF 15-30mm f/4.5-5.6 IS STM",
+   "seoDescription": "Longitud focal de 15-30 mm: Un objetivo ideal para capturar paisajes, arquitectura e interiores con una gama… Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-15-35mm-f2-8l-is-usm",
+   "brand": "Canon",
+   "seoTitle": "Lente Canon RF 15-35MM F2.8L IS USM",
+   "seoDescription": "Lente Canon RF 15-35MM F2.8L IS USM. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "lente-canon-rf-16mm-f-2-8-stm",
+   "seoTitle": "Lente Canon RF 16mm f/2.8 STM",
+   "seoDescription": "Objetivo rápido, asequible y ultra gran angular de la serie EOS R. Garantía oficial y envíos a todo el país."
+  }
+ ]
+}

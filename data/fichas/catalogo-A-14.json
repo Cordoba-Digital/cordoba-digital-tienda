@@ -1,0 +1,2003 @@
+{
+  "lote": "catalogo-A-14",
+  "productos": [
+    {
+      "slug": "ups-apc-online-easy-srv-10000va-220v",
+      "name": "UPS APC Online Easy SRV 10000VA 220V",
+      "brand": "APC",
+      "model": "SRV10KI",
+      "seoTitle": "UPS APC Online Easy SRV 10000VA 220V",
+      "seoDescription": "UPS APC Online Easy SRV de 10000VA con salida de 220V y regulación automática de voltaje. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Easy SRV de 10000VA con salida de 220V y regulación automática de voltaje (AVR). Para equipos críticos que no pueden quedarse sin energía.",
+      "highlights": [
+        "Capacidad de 10000VA para equipos críticos",
+        "Salida de 220V",
+        "Regulación automática de voltaje (AVR)",
+        "Tipo online: energía continua ante cortes"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Potencia",
+          "value": "10000 VA"
+        },
+        {
+          "label": "Tensión de salida",
+          "value": "220 V"
+        },
+        {
+          "label": "Regulación de voltaje",
+          "value": "AVR (automática)"
+        },
+        {
+          "label": "Serie",
+          "value": "Easy SRV"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS APC Online Easy SRV de 10000VA mantiene encendidos tus equipos cuando se corta la luz. Es una opción para cargas grandes, con salida de 220V.</p><h3>Protección</h3><p>Incluye regulación automática de voltaje (AVR), que ayuda a cuidar los equipos frente a picos de tensión.</p><h3>Para qué equipos</h3><p>Está pensada para dispositivos críticos y para equipos que funcionan a 220V. Revisá la potencia total de lo que vas a conectar antes de elegirla.</p><h3>Cómo elegir la potencia</h3><p>Antes de elegir, sumá los vatios de todo lo que vas a conectar y dejá un margen. Los VA de la UPS no equivalen a vatios disponibles. Si tenés dudas, escribinos con la lista de equipos.</p><h3>Antes de comprar</h3><ul><li>El texto original no informa autonomía, cantidad de tomas ni dimensiones.</li><li>Consultanos si necesitás verificar compatibilidad con tu instalación.</li><li>Garantía oficial, envíos a todo el país y retiro en Córdoba</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto APC por el nombre.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron.",
+        "Se quitaron frases de relleno ('marca líder', 'diseño compacto', 'fácil de instalar') porque no aportan datos."
+      ]
+    },
+    {
+      "slug": "ups-apc-online-easy-srv-1000va-230v-expan-2cajas",
+      "name": "UPS APC Online Easy SRV 1000VA 230V EXPAN (2 cajas)",
+      "brand": "APC",
+      "model": "SRV1KIL-AR",
+      "seoTitle": "UPS APC Online Easy SRV 1000VA EXPAN",
+      "seoDescription": "UPS APC Online Easy SRV de 1000VA y 230V con 2 salidas y protección contra sobretensiones. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Easy SRV EXPAN de 1000VA y 230V, con 2 salidas y protección contra sobretensiones y picos de voltaje. Se entrega en 2 cajas.",
+      "highlights": [
+        "Capacidad de 1000VA a 230V",
+        "Dos salidas para conectar varios equipos",
+        "Protección contra sobretensiones y picos",
+        "Tipo online, versión EXPAN"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Potencia",
+          "value": "1000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Salidas",
+          "value": "2"
+        },
+        {
+          "label": "Serie",
+          "value": "Easy SRV"
+        }
+      ],
+      "descriptionHtml": "<p>Esta UPS APC Online Easy SRV EXPAN de 1000VA protege tus equipos de cortes de energía y de variaciones de tensión. Tiene dos salidas y trabaja a 230V.</p><h3>Protección</h3><p>Cuida los equipos conectados frente a sobretensiones y picos de voltaje, además de darles respaldo durante un corte.</p><h3>Conexión</h3><p>Con dos salidas podés conectar dos dispositivos al mismo tiempo, por ejemplo una PC y un router o un equipo de red.</p><h3>Compra con respaldo</h3><p>Es un producto nuevo con garantía oficial. Hacemos envíos a todo el país y podés retirarlo en Córdoba. Si no sabés qué UPS necesitás, contanos qué querés proteger y te orientamos.</p><h3>Antes de comprar</h3><ul><li>Se indica '2 cajas' en el nombre del producto; consultanos qué incluye cada caja.</li><li>El texto original no informa autonomía ni dimensiones.</li><li>Revisá que la potencia de tus equipos no supere la capacidad.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto APC por el nombre.",
+        "'(2CAJAS)' y 'EXPAN' no se explican en el texto: no sé si es un módulo de baterías o packaging. Se dejó tal cual en el nombre.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-apc-online-easy-srv-1000va-230v-rac-exp-4caja",
+      "name": "UPS APC Online Easy SRV 1000VA 230V RAC-EXP (4 cajas)",
+      "brand": "APC",
+      "model": "SRV1KRILRK-AR",
+      "seoTitle": "UPS APC Online Easy SRV 1000VA RAC-EXP",
+      "seoDescription": "UPS APC Online Easy SRV RAC-EXP de 1000VA y 230V, con 4 salidas y energía limpia y estable. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Easy SRV RAC-EXP de 1000VA y 230V. Diseño online con 4 salidas para conectar varios equipos, pensado para oficinas. Se entrega en 4 cajas.",
+      "highlights": [
+        "Capacidad de 1000VA a 230V",
+        "Diseño online: energía limpia y estable",
+        "Cuatro salidas para varios equipos",
+        "Pensada para oficinas y servicios continuos"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Potencia",
+          "value": "1000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Salidas",
+          "value": "4"
+        },
+        {
+          "label": "Serie",
+          "value": "Easy SRV"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS APC Online Easy SRV RAC-EXP de 1000VA entrega energía limpia y estable a tus equipos. Tiene cuatro salidas y sirve para oficinas donde no puede cortarse el servicio.</p><h3>Energía estable</h3><p>Al ser online, los equipos reciben la energía de la UPS de forma continua y no quedan expuestos a interrupciones.</p><h3>Conexión</h3><p>Las cuatro salidas permiten alimentar varios dispositivos a la vez desde un mismo equipo.</p><h3>Cómo elegir la potencia</h3><p>Antes de elegir, sumá los vatios de todo lo que vas a conectar y dejá un margen. Los VA de la UPS no equivalen a vatios disponibles. Si tenés dudas, escribinos con la lista de equipos.</p><h3>Antes de comprar</h3><ul><li>El nombre indica '4 cajas' y 'RAC-EXP'; consultanos si necesitás el detalle de lo que incluye.</li><li>El texto original no informa autonomía ni medidas del rack.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto APC por el nombre.",
+        "'RAC-EXP' y '(4CAJA' no se explican en el texto. El nombre venía cortado: se completó como '4 cajas'.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-apc-online-easy-srv-1000va-230v-torre",
+      "name": "UPS APC Online Easy SRV 1000VA 230V Torre",
+      "brand": "APC",
+      "model": "SRV1KI-AR",
+      "seoTitle": "UPS APC Online Easy SRV 1000VA Torre",
+      "seoDescription": "UPS APC Online Easy SRV de 1000VA y 230V en formato torre, con regulación automática de voltaje. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Easy SRV de 1000VA y 230V en formato torre. Incluye regulación automática de voltaje (AVR) contra picos y caídas de tensión.",
+      "highlights": [
+        "Capacidad de 1000VA a 230V",
+        "Formato torre, ocupa poco lugar",
+        "Regulación automática de voltaje (AVR)",
+        "Respaldo ante cortes de energía"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Formato",
+          "value": "Torre"
+        },
+        {
+          "label": "Potencia",
+          "value": "1000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Regulación de voltaje",
+          "value": "AVR (automática)"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS APC Online Easy SRV de 1000VA se instala en formato torre, sobre el escritorio o en el piso. Respalda tus equipos en un corte y regula la tensión.</p><h3>Protección</h3><p>La regulación automática de voltaje (AVR) ayuda a cuidar los equipos de picos y caídas de tensión.</p><h3>Instalación</h3><p>Al ser torre, no necesita rack. La conexión es sencilla y el equipo queda listo para usarse.</p><h3>Compra con respaldo</h3><p>Es un producto nuevo con garantía oficial. Hacemos envíos a todo el país y podés retirarlo en Córdoba. Si no sabés qué UPS necesitás, contanos qué querés proteger y te orientamos.</p><h3>Antes de comprar</h3><ul><li>El texto original no informa autonomía, cantidad de tomas ni dimensiones.</li><li>Sumá la potencia de tus equipos para confirmar que entren en 1000VA.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto APC por el nombre.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-apc-online-easy-srv-2000va-230v-expand-2cajas",
+      "name": "UPS APC Online Easy SRV 2000VA 230V EXPAND (2 cajas)",
+      "brand": "APC",
+      "model": "SRV2KIL-AR",
+      "seoTitle": "UPS APC Online Easy SRV 2000VA EXPAND",
+      "seoDescription": "UPS APC Online Easy SRV EXPAND de 2000VA y 230V con regulación de voltaje y posibilidad de sumar baterías. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Easy SRV EXPAND de 2000VA y 230V. Permite sumar baterías para tener más autonomía e incluye regulación automática de voltaje (AVR).",
+      "highlights": [
+        "Capacidad de 2000VA a 230V",
+        "Admite expansión con baterías adicionales",
+        "Regulación automática de voltaje (AVR)",
+        "Respaldo ante cortes de energía"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Potencia",
+          "value": "2000 VA"
+        },
+        {
+          "label": "Tensión de salida",
+          "value": "230 V"
+        },
+        {
+          "label": "Regulación de voltaje",
+          "value": "AVR (automática)"
+        },
+        {
+          "label": "Expansión",
+          "value": "Con baterías adicionales"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS APC Online Easy SRV EXPAND de 2000VA está pensada para ampliar la autonomía: admite baterías adicionales. Trabaja a 230V y regula la tensión.</p><h3>Autonomía ampliable</h3><p>Según el texto original, la expansión permite agregar más baterías para tener más respaldo durante un corte.</p><h3>Protección</h3><p>La regulación automática de voltaje (AVR) cuida los equipos de picos de tensión.</p><h3>Compatibilidad</h3><p>Con salida de 230V, funciona con la mayoría de los equipos electrónicos y electrodomésticos que se conectan a esa tensión.</p><h3>Cómo elegir la potencia</h3><p>Antes de elegir, sumá los vatios de todo lo que vas a conectar y dejá un margen. Los VA de la UPS no equivalen a vatios disponibles. Si tenés dudas, escribinos con la lista de equipos.</p><h3>Antes de comprar</h3><ul><li>Las baterías adicionales no están descriptas en el texto: consultanos qué módulos son compatibles.</li><li>No se informa autonomía ni cantidad de tomas.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto APC por el nombre.",
+        "'(2CAJAS' venía cortado. No se aclara qué incluyen las cajas ni qué módulos de batería son compatibles.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-apc-online-easy-srv-2000va-230v-rac-exp-4caja",
+      "name": "UPS APC Online Easy SRV 2000VA 230V RAC-EXP (4 cajas)",
+      "brand": "APC",
+      "model": "SRV2KRILRK-AR",
+      "seoTitle": "UPS APC Online Easy SRV 2000VA RAC-EXP",
+      "seoDescription": "UPS APC Online Easy SRV RAC-EXP de 2000VA y 230V. Consultanos el detalle técnico. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Easy SRV RAC-EXP de 2000VA y 230V. Equipo de respaldo de energía para uso profesional, con garantía oficial.",
+      "highlights": [
+        "Capacidad de 2000VA a 230V",
+        "Tipo online, serie Easy SRV",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Potencia",
+          "value": "2000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Serie",
+          "value": "Easy SRV"
+        }
+      ],
+      "descriptionHtml": "<p>UPS APC Online Easy SRV RAC-EXP de 2000VA y 230V, con modelo SRV2KRILRK-AR. La publicación original casi no trae datos técnicos, por eso te pedimos que nos consultes el detalle antes de comprar.</p><h3>Qué sabemos</h3><p>Es una UPS online de la serie Easy SRV, de 2000VA y 230V. Se entrega en 4 cajas. Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno sin datos técnicos.",
+        "'RAC-EXP' y '(4CAJA' no se explican. Faltan autonomía, tomas, formato y medidas.",
+        "Brand estaba en General: puesto APC por el nombre."
+      ]
+    },
+    {
+      "slug": "ups-apc-online-easy-srv-2000va-230v-rack-2cajas",
+      "name": "UPS APC Online Easy SRV 2000VA 230V Rack (2 cajas)",
+      "brand": "APC",
+      "model": "SRV2KRIRK-AR",
+      "seoTitle": "UPS APC Online Easy SRV 2000VA Rack",
+      "seoDescription": "UPS APC Online Easy SRV de 2000VA y 230V en formato rack, con salida dual y regulación de voltaje. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Easy SRV de 2000VA y 230V en formato rack. Salida dual y regulación automática de voltaje (AVR) para servidores y equipos de red.",
+      "highlights": [
+        "Capacidad de 2000VA a 230V",
+        "Formato rack para gabinetes de servidor",
+        "Conexiones de salida dual",
+        "Regulación automática de voltaje (AVR)"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Formato",
+          "value": "Rack"
+        },
+        {
+          "label": "Potencia",
+          "value": "2000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Salidas",
+          "value": "Dual"
+        },
+        {
+          "label": "Regulación de voltaje",
+          "value": "AVR (automática)"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS APC Online Easy SRV de 2000VA viene en formato rack para instalarla en el gabinete de servidores. Tiene salida dual y regula la tensión automáticamente.</p><h3>Para infraestructura</h3><p>Está indicada para servidores, sistemas de red y equipos críticos que tienen que seguir funcionando durante un corte.</p><h3>Estabilidad eléctrica</h3><p>La función AVR mantiene estable la tensión que reciben los equipos conectados.</p><h3>Cómo elegir la potencia</h3><p>Antes de elegir, sumá los vatios de todo lo que vas a conectar y dejá un margen. Los VA de la UPS no equivalen a vatios disponibles. Si tenés dudas, escribinos con la lista de equipos.</p><h3>Antes de comprar</h3><ul><li>El texto original no informa la altura en unidades de rack, la autonomía ni la cantidad de tomas.</li><li>Verificá que tu gabinete tenga lugar y consultanos las medidas.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto APC por el nombre.",
+        "'(2CAJAS)' no se explica en el texto. No se informan unidades de rack (U).",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-apc-online-easy-srv-3000va-230v-expand-2cajas",
+      "name": "UPS APC Online Easy SRV 3000VA 230V EXPAND (2 cajas)",
+      "brand": "APC",
+      "model": "SRV3KIL-AR",
+      "seoTitle": "UPS APC Online Easy SRV 3000VA EXPAND",
+      "seoDescription": "UPS APC Online Easy SRV EXPAND de 3000VA y 230V. Consultanos el detalle técnico. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Easy SRV EXPAND de 3000VA y 230V. Equipo de respaldo de energía para uso profesional, con garantía oficial.",
+      "highlights": [
+        "Capacidad de 3000VA a 230V",
+        "Tipo online, serie Easy SRV",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Potencia",
+          "value": "3000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Serie",
+          "value": "Easy SRV"
+        }
+      ],
+      "descriptionHtml": "<p>UPS APC Online Easy SRV EXPAND de 3000VA y 230V, con modelo SRV3KIL-AR. La publicación original casi no trae datos técnicos, por eso te pedimos que nos consultes el detalle antes de comprar.</p><h3>Qué sabemos</h3><p>Es una UPS online de la serie Easy SRV, de 3000VA y 230V. Se entrega en 2 cajas. Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno sin datos técnicos.",
+        "'EXPAND' y '(2CAJAS' no se explican. Faltan autonomía, tomas, formato y medidas.",
+        "Brand estaba en General: puesto APC por el nombre."
+      ]
+    },
+    {
+      "slug": "ups-apc-online-easy-srv-3000va-230v-rac-exp-4caja",
+      "name": "UPS APC Online Easy SRV 3000VA 230V RAC-EXP (4 cajas)",
+      "brand": "APC",
+      "model": "SRV3KRILRK-AR",
+      "seoTitle": "UPS APC Online Easy SRV 3000VA RAC-EXP",
+      "seoDescription": "UPS APC Online Easy SRV RAC-EXP de 3000VA y 230V, online, con 4 salidas y respaldo para equipos críticos. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Easy SRV RAC-EXP de 3000VA y 230V. Diseño online con 4 salidas, para proteger equipos críticos con energía constante. Se entrega en 4 cajas.",
+      "highlights": [
+        "Capacidad de 3000VA a 230V",
+        "Diseño online: alimentación limpia y constante",
+        "Cuatro salidas para varios dispositivos",
+        "Instalación rápida y sencilla"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Potencia",
+          "value": "3000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Salidas",
+          "value": "4"
+        },
+        {
+          "label": "Serie",
+          "value": "Easy SRV"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS APC Online Easy SRV RAC-EXP de 3000VA protege equipos críticos con una alimentación constante. Tiene cuatro salidas y trabaja a 230V.</p><h3>Energía constante</h3><p>El diseño online entrega una alimentación limpia y evita interrupciones y picos de voltaje en los equipos conectados.</p><h3>Conexión</h3><p>Con cuatro salidas alimentás varios dispositivos desde una sola UPS.</p><h3>Puesta en marcha</h3><p>Según el texto original, la configuración es rápida y se puede empezar a usar en pocos minutos.</p><h3>Cómo elegir la potencia</h3><p>Antes de elegir, sumá los vatios de todo lo que vas a conectar y dejá un margen. Los VA de la UPS no equivalen a vatios disponibles. Si tenés dudas, escribinos con la lista de equipos.</p><h3>Antes de comprar</h3><ul><li>El nombre indica '4 cajas' y 'RAC-EXP'; consultanos qué incluye.</li><li>No se informa autonomía ni medidas.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto APC por el nombre.",
+        "'RAC-EXP' y '(4CAJA' no se explican en el texto. El nombre venía cortado.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-apc-online-easy-srv-3000va-230v-rack-2cajas",
+      "name": "UPS APC Online Easy SRV 3000VA 230V Rack (2 cajas)",
+      "brand": "APC",
+      "model": "SRV3KRIRK-AR",
+      "seoTitle": "UPS APC Online Easy SRV 3000VA Rack",
+      "seoDescription": "UPS APC Online Easy SRV de 3000VA y 230V en formato rack. Consultanos el detalle técnico. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Easy SRV de 3000VA y 230V en formato rack. Equipo de respaldo de energía para uso profesional, con garantía oficial.",
+      "highlights": [
+        "Capacidad de 3000VA a 230V",
+        "Formato rack, serie Easy SRV",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Formato",
+          "value": "Rack"
+        },
+        {
+          "label": "Potencia",
+          "value": "3000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        }
+      ],
+      "descriptionHtml": "<p>UPS APC Online Easy SRV de 3000VA y 230V en formato rack, con modelo SRV3KRIRK-AR. La publicación original casi no trae datos técnicos, por eso te pedimos que nos consultes el detalle antes de comprar.</p><h3>Qué sabemos</h3><p>Es una UPS online de la serie Easy SRV, en formato rack. Se entrega en 2 cajas. Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno sin datos técnicos.",
+        "Faltan autonomía, tomas, unidades de rack y medidas.",
+        "Brand estaba en General: puesto APC por el nombre."
+      ]
+    },
+    {
+      "slug": "ups-apc-online-easy-srv-3000va-230v-torre",
+      "name": "UPS APC Online Easy SRV 3000VA 230V Torre",
+      "brand": "APC",
+      "model": "SRV3KI-AR",
+      "seoTitle": "UPS APC Online Easy SRV 3000VA Torre",
+      "seoDescription": "UPS APC Online Easy SRV de 3000VA y 230V en formato torre, con AVR y varias salidas. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Easy SRV de 3000VA y 230V en formato torre. Energía ininterrumpida con regulación automática de voltaje (AVR) y varias salidas.",
+      "highlights": [
+        "Capacidad de 3000VA a 230V",
+        "Formato torre: ahorra espacio",
+        "Regulación automática de voltaje (AVR)",
+        "Varias salidas para conectar equipos"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Formato",
+          "value": "Torre"
+        },
+        {
+          "label": "Potencia",
+          "value": "3000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Regulación de voltaje",
+          "value": "AVR (automática)"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS APC Online Easy SRV de 3000VA en formato torre da energía ininterrumpida a tus equipos críticos. Regula la tensión y tiene varias salidas.</p><h3>Seguridad eléctrica</h3><p>El AVR ayuda a proteger los equipos conectados de las variaciones de tensión.</p><h3>Conexión</h3><p>Las salidas permiten alimentar varios dispositivos al mismo tiempo.</p><h3>Instalación</h3><p>El formato torre se adapta a distintos entornos de trabajo y no requiere rack.</p><h3>Cómo elegir la potencia</h3><p>Antes de elegir, sumá los vatios de todo lo que vas a conectar y dejá un margen. Los VA de la UPS no equivalen a vatios disponibles. Si tenés dudas, escribinos con la lista de equipos.</p><h3>Antes de comprar</h3><ul><li>No se informa la cantidad exacta de salidas ni la autonomía.</li><li>Sumá la potencia de tus equipos para confirmar que entren en 3000VA.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto APC por el nombre.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-apc-online-easy-srv-6000va-230v-torre",
+      "name": "UPS APC Online Easy SRV 6000VA 230V Torre",
+      "brand": "APC",
+      "model": "SRV6KI",
+      "seoTitle": "UPS APC Online Easy SRV 6000VA Torre",
+      "seoDescription": "UPS APC Online Easy SRV de 6000VA y 230V en formato torre, con pantalla LCD de estado. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Easy SRV de 6000VA y 230V en formato torre. Pantalla LCD con estado de batería y carga, y protección contra sobrecargas y picos.",
+      "highlights": [
+        "Capacidad de 6000VA a 230V",
+        "Pantalla LCD con estado de batería y carga",
+        "Protección contra sobrecargas y picos",
+        "Formato torre para servidores y redes"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Formato",
+          "value": "Torre"
+        },
+        {
+          "label": "Potencia",
+          "value": "6000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Pantalla",
+          "value": "LCD (batería y carga)"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS APC Online Easy SRV de 6000VA es una torre para cargas grandes. Su pantalla LCD muestra en tiempo real cómo están la batería y la carga conectada.</p><h3>Monitoreo</h3><p>La pantalla LCD te permite ver el estado de la batería y el nivel de carga sin abrir ningún programa.</p><h3>Protección</h3><p>Cuida los equipos frente a sobrecargas y picos de voltaje.</p><h3>Usos</h3><p>Está indicada para servidores, sistemas de red y equipos de telecomunicaciones.</p><h3>Compra con respaldo</h3><p>Es un producto nuevo con garantía oficial. Hacemos envíos a todo el país y podés retirarlo en Córdoba. Si no sabés qué UPS necesitás, contanos qué querés proteger y te orientamos.</p><h3>Antes de comprar</h3><ul><li>El texto original no informa autonomía, cantidad de tomas ni medidas.</li><li>Consultanos si necesitás verificar la instalación eléctrica para 6000VA.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto APC por el nombre.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-apc-online-smart-rtg-6000va-230v-2-cajas",
+      "name": "UPS APC Online Smart RTG 6000VA 230V (2 cajas)",
+      "brand": "APC",
+      "model": "SRTG6KXLI",
+      "seoTitle": "UPS APC Online Smart RTG 6000VA 230V",
+      "seoDescription": "UPS APC Online Smart RTG de 6000VA y 230V para uso empresarial o doméstico, con diseño online. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Smart RTG de 6000VA y 230V con diseño online, para alimentación estable y continua. Se entrega en 2 cajas.",
+      "highlights": [
+        "Capacidad de 6000VA a 230V",
+        "Diseño online: alimentación estable y continua",
+        "Para entornos empresariales y domésticos",
+        "Se entrega en 2 cajas"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Potencia",
+          "value": "6000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Serie",
+          "value": "Smart RTG"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS APC Online Smart RTG de 6000VA brinda alimentación estable y sin interrupciones. Se usa en empresas, aunque también sirve en un entorno doméstico.</p><h3>Energía continua</h3><p>Su diseño online alimenta los equipos de forma estable, sin cortes al pasar a batería.</p><h3>Cómo elegir la potencia</h3><p>Antes de elegir, sumá los vatios de todo lo que vas a conectar y dejá un margen. Los VA de la UPS no equivalen a vatios disponibles. Si tenés dudas, escribinos con la lista de equipos.</p><h3>Compra con respaldo</h3><p>Es un producto nuevo con garantía oficial. Hacemos envíos a todo el país y podés retirarlo en Córdoba. Si no sabés qué UPS necesitás, contanos qué querés proteger y te orientamos.</p><h3>Antes de comprar</h3><ul><li>El nombre indica '2 cajas'; consultanos qué incluye cada una (por ejemplo, módulo de baterías).</li><li>No se informa formato, autonomía, tomas ni medidas.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto APC por el nombre.",
+        "'(2 CAJAS)' no se explica en el texto. Faltan formato (torre/rack), autonomía y tomas.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-apc-online-smart-srt-2200va-230v",
+      "name": "UPS APC Online Smart SRT 2200VA 230V",
+      "brand": "APC",
+      "model": "SRT2200XLI",
+      "seoTitle": "UPS APC Online Smart SRT 2200VA 230V",
+      "seoDescription": "UPS APC Online Smart SRT de 2200VA y 230V con conexión USB y protección contra picos y sobrecargas. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Smart SRT de 2200VA y 230V. Diseño online con puerto USB para monitoreo y protección contra picos de voltaje y sobrecargas.",
+      "highlights": [
+        "Capacidad de 2200VA a 230V",
+        "Diseño online: alimentación ininterrumpida",
+        "Conexión USB para monitoreo y gestión",
+        "Protección contra picos y sobrecargas"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Potencia",
+          "value": "2200 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Conectividad",
+          "value": "USB (monitoreo y gestión)"
+        },
+        {
+          "label": "Serie",
+          "value": "Smart SRT"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS APC Online Smart SRT de 2200VA alimenta de forma ininterrumpida servidores, estaciones de trabajo y otros equipos sensibles. Se conecta por USB para monitorearla.</p><h3>Monitoreo</h3><p>El puerto USB permite supervisar y gestionar la UPS desde una computadora.</p><h3>Protección</h3><p>Cuida los equipos de picos de voltaje y sobrecargas.</p><h3>Usos</h3><p>Es una buena opción para servidores, estaciones de trabajo y equipos sensibles.</p><h3>Compra con respaldo</h3><p>Es un producto nuevo con garantía oficial. Hacemos envíos a todo el país y podés retirarlo en Córdoba. Si no sabés qué UPS necesitás, contanos qué querés proteger y te orientamos.</p><h3>Antes de comprar</h3><ul><li>El texto original no informa formato, autonomía ni cantidad de tomas.</li><li>Consultanos si necesitás saber qué software de gestión es compatible.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto APC por el nombre.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-apc-online-smart-srt-5000va-230v",
+      "name": "UPS APC Online Smart SRT 5000VA 230V",
+      "brand": "APC",
+      "model": "SRT5KXLI",
+      "seoTitle": "UPS APC Online Smart SRT 5000VA 230V",
+      "seoDescription": "UPS APC Online Smart SRT de 5000VA y 230V con pantalla LCD y tecnología online. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Smart SRT de 5000VA y 230V. Tecnología online con pantalla LCD para ver el estado de la batería y la carga, y varios puertos de conexión.",
+      "highlights": [
+        "Capacidad de 5000VA a 230V",
+        "Tecnología online: energía limpia y constante",
+        "Pantalla LCD con estado del UPS y de la batería",
+        "Varios puertos para conectar dispositivos"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Potencia",
+          "value": "5000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Pantalla",
+          "value": "LCD"
+        },
+        {
+          "label": "Serie",
+          "value": "Smart SRT"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS APC Online Smart SRT de 5000VA mantiene funcionando tus equipos críticos durante un corte. Elimina fluctuaciones y picos, y tiene pantalla LCD.</p><h3>Energía limpia</h3><p>La tecnología online entrega energía constante y evita fluctuaciones y picos de voltaje.</p><h3>Monitoreo</h3><p>La interfaz LCD muestra el estado del equipo y la carga de la batería.</p><h3>Puesta en marcha</h3><p>El diseño es intuitivo y permite configurarla rápido.</p><h3>Cómo elegir la potencia</h3><p>Antes de elegir, sumá los vatios de todo lo que vas a conectar y dejá un margen. Los VA de la UPS no equivalen a vatios disponibles. Si tenés dudas, escribinos con la lista de equipos.</p><h3>Antes de comprar</h3><ul><li>No se detalla cuántos ni qué tipo de puertos tiene.</li><li>El texto original no informa autonomía ni formato.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto APC por el nombre.",
+        "El texto dice 'múltiples puertos' sin especificar tipos ni cantidad.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-apc-online-smart-srt-6000va-230v",
+      "name": "UPS APC Online Smart SRT 6000VA 230V",
+      "brand": "APC",
+      "model": "SRT6KXLI",
+      "seoTitle": "UPS APC Online Smart SRT 6000VA 230V",
+      "seoDescription": "UPS APC Online Smart SRT de 6000VA y 230V con doble conversión y pantalla LCD, para servidores y redes. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS APC Online Smart SRT de 6000VA y 230V con doble conversión y pantalla LCD. Pensada para servidores y equipos de red que necesitan energía constante.",
+      "highlights": [
+        "Capacidad de 6000VA a 230V",
+        "Doble conversión: energía limpia y estable",
+        "Pantalla LCD de UPS y batería",
+        "Varias salidas para conectar equipos"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online (doble conversión)"
+        },
+        {
+          "label": "Potencia",
+          "value": "6000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Pantalla",
+          "value": "LCD"
+        },
+        {
+          "label": "Serie",
+          "value": "Smart SRT"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS APC Online Smart SRT de 6000VA usa doble conversión para dar energía limpia y estable a servidores y equipos de red. La pantalla LCD muestra el estado de la UPS y de la batería.</p><h3>Doble conversión</h3><p>Esta tecnología entrega una energía estable a los equipos conectados.</p><h3>Monitoreo</h3><p>Desde la pantalla LCD controlás el estado del UPS y de la batería.</p><h3>Conexión</h3><p>Con varias salidas alimentás distintos dispositivos a la vez.</p><h3>Compra con respaldo</h3><p>Es un producto nuevo con garantía oficial. Hacemos envíos a todo el país y podés retirarlo en Córdoba. Si no sabés qué UPS necesitás, contanos qué querés proteger y te orientamos.</p><h3>Antes de comprar</h3><ul><li>No se detalla la cantidad de salidas, la autonomía ni el formato.</li><li>Consultanos por la instalación eléctrica necesaria.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto APC por el nombre.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-eaton-online-9e-10000va-230v-9e-t-exp-s-bat",
+      "name": "UPS Eaton Online 9E 10000VA 230V 9E T-EXP (sin baterías)",
+      "brand": "Eaton",
+      "model": "9E",
+      "seoTitle": "UPS Eaton Online 9E 10000VA 230V",
+      "seoDescription": "UPS Eaton Online 9E de 10000VA y 230V, tecnología online para equipos críticos. Se vende sin baterías. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS Eaton Online 9E de 10000VA y 230V, versión T-EXP sin baterías. Tecnología online que entrega energía limpia y estable a equipos críticos.",
+      "highlights": [
+        "Capacidad de 10000VA a 230V",
+        "Tecnología online: energía limpia y estable",
+        "Versión T-EXP, sin baterías",
+        "Soporte técnico disponible"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Potencia",
+          "value": "10000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Versión",
+          "value": "T-EXP, sin baterías"
+        },
+        {
+          "label": "Serie",
+          "value": "9E"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS Eaton Online 9E de 10000VA entrega una alimentación limpia y estable a tus equipos esenciales. Esta versión T-EXP se vende sin baterías.</p><h3>Energía estable</h3><p>La tecnología online evita que los equipos conectados dependan de la red eléctrica en bruto.</p><h3>Cómo elegir la potencia</h3><p>Antes de elegir, sumá los vatios de todo lo que vas a conectar y dejá un margen. Los VA de la UPS no equivalen a vatios disponibles. Si tenés dudas, escribinos con la lista de equipos.</p><h3>Compra con respaldo</h3><p>Es un producto nuevo con garantía oficial. Hacemos envíos a todo el país y podés retirarlo en Córdoba. Si no sabés qué UPS necesitás, contanos qué querés proteger y te orientamos.</p><h3>Antes de comprar</h3><ul><li>Se vende sin baterías (S/BAT): tenés que sumar las baterías o el módulo correspondiente.</li><li>Consultanos qué baterías son compatibles y qué autonomía necesitás.</li><li>El texto original no informa formato, tomas ni medidas.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto Eaton por el nombre.",
+        "S/BAT lo interpreté como 'sin baterías'; confirmar. 'T-EXP' no se explica.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-eaton-online-9e-20000va-230v-torre",
+      "name": "UPS Eaton Online 9E 20000VA 230V Torre",
+      "brand": "Eaton",
+      "model": "9E",
+      "seoTitle": "UPS Eaton Online 9E 20000VA 230V Torre",
+      "seoDescription": "UPS Eaton Online 9E de 20000VA y 230V en formato torre, con doble conversión y pantalla LCD. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS Eaton Online 9E de 20000VA y 230V en formato torre. Doble conversión para una energía limpia y estable, y pantalla LCD con estado de la red eléctrica.",
+      "highlights": [
+        "Capacidad de 20000VA a 230V",
+        "Doble conversión: energía limpia y estable",
+        "Pantalla LCD con estado del UPS y la red",
+        "Formato torre"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online (doble conversión)"
+        },
+        {
+          "label": "Formato",
+          "value": "Torre"
+        },
+        {
+          "label": "Potencia",
+          "value": "20000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Pantalla",
+          "value": "LCD"
+        },
+        {
+          "label": "Serie",
+          "value": "9E"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS Eaton Online 9E de 20000VA es una torre para equipos de alta demanda. Usa doble conversión y muestra en la pantalla LCD el estado del equipo.</p><h3>Energía confiable</h3><p>La doble conversión entrega energía limpia y estable a las cargas exigentes.</p><h3>Monitoreo</h3><p>La pantalla LCD muestra el estado del UPS y las condiciones de la red eléctrica.</p><h3>Compra con respaldo</h3><p>Es un producto nuevo con garantía oficial. Hacemos envíos a todo el país y podés retirarlo en Córdoba. Si no sabés qué UPS necesitás, contanos qué querés proteger y te orientamos.</p><h3>Cómo elegir la potencia</h3><p>Antes de elegir, sumá los vatios de todo lo que vas a conectar y dejá un margen. Los VA de la UPS no equivalen a vatios disponibles. Si tenés dudas, escribinos con la lista de equipos.</p><h3>Antes de comprar</h3><ul><li>El texto original no informa si incluye baterías, autonomía, tomas ni medidas.</li><li>Un equipo de esta potencia requiere una instalación eléctrica acorde: consultanos.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto Eaton por el nombre.",
+        "No se aclara si incluye baterías (el modelo 9E T-EXP se vende 'S/BAT').",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-eaton-online-9px-1000va-230va-torre-rack-2u",
+      "name": "UPS Eaton Online 9PX 1000VA 230V Torre/Rack 2U",
+      "brand": "Eaton",
+      "model": "9PX",
+      "seoTitle": "UPS Eaton Online 9PX 1000VA Torre/Rack 2U",
+      "seoDescription": "UPS Eaton Online 9PX de 1000VA y 230V en formato torre o rack 2U, con doble conversión y software de gestión. Garantía y envíos a todo el país.",
+      "shortDescription": "UPS Eaton Online 9PX de 1000VA y 230V, convertible entre torre y rack de 2U. Doble conversión y software de gestión para supervisar la carga.",
+      "highlights": [
+        "Capacidad de 1000VA a 230V",
+        "Se instala en torre o en rack de 2U",
+        "Doble conversión: energía limpia y estable",
+        "Incluye software de gestión"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online (doble conversión)"
+        },
+        {
+          "label": "Formato",
+          "value": "Torre/Rack 2U"
+        },
+        {
+          "label": "Potencia",
+          "value": "1000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Software",
+          "value": "De gestión incluido"
+        },
+        {
+          "label": "Serie",
+          "value": "9PX"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS Eaton Online 9PX de 1000VA se adapta a tu espacio: la instalás como torre o en un rack de 2U. Usa doble conversión y trae software para monitorearla.</p><h3>Doble formato</h3><p>Podés usarla en torre sobre un escritorio o montarla en rack, según cómo tengas armado el espacio.</p><h3>Monitoreo</h3><p>El software de gestión permite supervisar el estado de la UPS y la carga conectada.</p><h3>Facilidad de uso</h3><p>Su diseño facilita la configuración y el mantenimiento.</p><h3>Cómo elegir la potencia</h3><p>Antes de elegir, sumá los vatios de todo lo que vas a conectar y dejá un margen. Los VA de la UPS no equivalen a vatios disponibles. Si tenés dudas, escribinos con la lista de equipos.</p><h3>Antes de comprar</h3><ul><li>El texto original no informa autonomía, tomas ni medidas.</li><li>Si la vas a montar en rack, consultanos si incluye los soportes.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto Eaton por el nombre.",
+        "El nombre decía '230VA' (error de tipeo): se corrigió a 230V.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron.",
+        "No se sabe si incluye rieles o soportes de rack."
+      ]
+    },
+    {
+      "slug": "ups-eaton-online-9px-6000va-230v-netpack",
+      "name": "UPS Eaton Online 9PX 6000VA 230V (NetPack)",
+      "brand": "Eaton",
+      "model": "9PX",
+      "seoTitle": "UPS Eaton Online 9PX 6000VA NetPack",
+      "seoDescription": "UPS Eaton Online 9PX de 6000VA y 230V, versión NetPack. Consultanos el detalle técnico. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS Eaton Online 9PX de 6000VA y 230V, versión NetPack. Equipo de respaldo de energía para uso profesional, con garantía oficial.",
+      "highlights": [
+        "Capacidad de 6000VA a 230V",
+        "Tipo online, serie 9PX, versión NetPack",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Potencia",
+          "value": "6000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Serie",
+          "value": "9PX"
+        },
+        {
+          "label": "Versión",
+          "value": "NetPack"
+        }
+      ],
+      "descriptionHtml": "<p>UPS Eaton Online 9PX de 6000VA y 230V, versión NetPack, con código 9104-12609-KT2. La publicación original casi no trae datos técnicos, por eso te pedimos que nos consultes el detalle antes de comprar.</p><h3>Qué sabemos</h3><p>Es una UPS online de la serie 9PX. Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno sin datos técnicos.",
+        "No se explica qué incluye 'NetPack'. Faltan formato, autonomía, tomas y medidas.",
+        "Brand estaba en General: puesto Eaton por el nombre."
+      ]
+    },
+    {
+      "slug": "ups-eaton-online-9sx-20kw-solo-ups-rt-s-kit",
+      "name": "UPS Eaton Online 9SX 20kW (solo UPS, RT, sin kit)",
+      "brand": "Eaton",
+      "model": "9SX",
+      "seoTitle": "UPS Eaton Online 9SX 20kW (solo UPS)",
+      "seoDescription": "UPS Eaton Online 9SX de 20kW en formato rack (RT), solo equipo, sin kit. Para centros de datos y servidores. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS Eaton Online 9SX de 20kW, versión RT en formato rack, solo el equipo y sin kit. Pensada para centros de datos, servidores y aplicaciones industriales.",
+      "highlights": [
+        "Potencia de 20kW",
+        "Formato rack (RT)",
+        "Gestión avanzada con alertas en tiempo real",
+        "Pensada para centros de datos y servidores"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Potencia",
+          "value": "20 kW"
+        },
+        {
+          "label": "Formato",
+          "value": "Rack (RT)"
+        },
+        {
+          "label": "Versión",
+          "value": "Solo UPS, sin kit"
+        },
+        {
+          "label": "Serie",
+          "value": "9SX"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS Eaton Online 9SX de 20kW es un equipo de gran porte para entornos críticos. Esta versión incluye solo la UPS, sin kit.</p><h3>Gestión</h3><p>Tiene tecnología de gestión que permite supervisar el estado y recibir alertas en tiempo real.</p><h3>Entornos críticos</h3><p>Está indicada para centros de datos, servidores y aplicaciones industriales que necesitan protección continua.</p><h3>Eficiencia</h3><p>El fabricante la presenta como un equipo de alta eficiencia energética.</p><h3>Cómo elegir la potencia</h3><p>Antes de elegir, sumá los vatios de todo lo que vas a conectar y dejá un margen. Los VA de la UPS no equivalen a vatios disponibles. Si tenés dudas, escribinos con la lista de equipos.</p><h3>Antes de comprar</h3><ul><li>Se vende solo la UPS, sin kit: consultanos qué accesorios o baterías necesitás.</li><li>El texto original no informa tensión, autonomía ni medidas.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto Eaton por el nombre.",
+        "'s/KIT' y 'RT' sin explicar en el texto; el texto dice 'formato rack (RT)'. Confirmar qué kit falta y si trae baterías.",
+        "Se omitió la frase 'protección inigualable' y la cifra de ahorro (no hay datos).",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-eaton-online-dx-1000va-230v-torre",
+      "name": "UPS Eaton Online DX 1000VA 230V Torre",
+      "brand": "Eaton",
+      "model": "DX",
+      "seoTitle": "UPS Eaton Online DX 1000VA 230V Torre",
+      "seoDescription": "UPS Eaton Online DX de 1000VA y 230V en formato torre, con doble conversión y pantalla LCD. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS Eaton Online DX de 1000VA y 230V en formato torre. Doble conversión para una alimentación estable, varias salidas y pantalla LCD.",
+      "highlights": [
+        "Capacidad de 1000VA a 230V",
+        "Doble conversión: alimentación estable y segura",
+        "Varias salidas para conectar equipos",
+        "Pantalla LCD con estado de la UPS"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online (doble conversión)"
+        },
+        {
+          "label": "Formato",
+          "value": "Torre"
+        },
+        {
+          "label": "Potencia",
+          "value": "1000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Pantalla",
+          "value": "LCD"
+        },
+        {
+          "label": "Serie",
+          "value": "DX"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS Eaton Online DX de 1000VA es una torre compacta para oficina u hogar. Usa doble conversión y tiene pantalla LCD para ver el estado de la energía.</p><h3>Alimentación estable</h3><p>La doble conversión entrega energía estable y segura a los equipos que protege.</p><h3>Conexión</h3><p>Cuenta con varias salidas para alimentar distintos dispositivos a la vez.</p><h3>Monitoreo</h3><p>La pantalla LCD muestra el estado de la UPS y las condiciones de energía.</p><h3>Compra con respaldo</h3><p>Es un producto nuevo con garantía oficial. Hacemos envíos a todo el país y podés retirarlo en Córdoba. Si no sabés qué UPS necesitás, contanos qué querés proteger y te orientamos.</p><h3>Antes de comprar</h3><ul><li>No se detalla la cantidad de salidas ni la autonomía.</li><li>Contanos qué equipos vas a conectar para ayudarte a verificar la potencia.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto Eaton por el nombre.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-eaton-online-dx-2000va-230v-torre-ch-2",
+      "name": "UPS Eaton Online DX 2000VA 230V Torre (CH)",
+      "brand": "Eaton",
+      "model": "DX",
+      "seoTitle": "UPS Eaton Online DX 2000VA 230V Torre",
+      "seoDescription": "UPS Eaton Online DX de 2000VA y 230V en formato torre, con regulación automática de voltaje. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS Eaton Online DX de 2000VA y 230V en formato torre. Regulación automática de voltaje (AVR) y compatibilidad con servidores y equipos de oficina.",
+      "highlights": [
+        "Capacidad de 2000VA a 230V",
+        "Formato torre",
+        "Regulación automática de voltaje (AVR)",
+        "Compatible con servidores y equipos de oficina"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Online"
+        },
+        {
+          "label": "Formato",
+          "value": "Torre"
+        },
+        {
+          "label": "Potencia",
+          "value": "2000 VA"
+        },
+        {
+          "label": "Tensión",
+          "value": "230 V"
+        },
+        {
+          "label": "Regulación de voltaje",
+          "value": "AVR (automática)"
+        },
+        {
+          "label": "Serie",
+          "value": "DX"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS Eaton Online DX de 2000VA es una torre para cuidar desde equipos de oficina hasta servidores. Regula la tensión de forma automática.</p><h3>Protección</h3><p>El AVR ayuda a que la tensión llegue estable a los equipos conectados.</p><h3>Compatibilidad</h3><p>Funciona con una amplia gama de dispositivos electrónicos, desde servidores hasta equipos de oficina.</p><h3>Instalación</h3><p>La conexión es sencilla y trae manual de usuario.</p><h3>Cómo elegir la potencia</h3><p>Antes de elegir, sumá los vatios de todo lo que vas a conectar y dejá un margen. Los VA de la UPS no equivalen a vatios disponibles. Si tenés dudas, escribinos con la lista de equipos.</p><h3>Antes de comprar</h3><ul><li>El nombre incluye '(CH)': consultanos a qué se refiere.</li><li>El texto original no informa autonomía, tomas ni medidas.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto Eaton por el nombre.",
+        "'(CH)' no se explica en el texto.",
+        "El texto no informa autonomía, cantidad de tomas ni dimensiones; no se publicaron."
+      ]
+    },
+    {
+      "slug": "ups-hikvision-ds-1000va",
+      "name": "UPS Hikvision DS 1000VA",
+      "brand": "Hikvision",
+      "model": "DS-UPS1000",
+      "seoTitle": "UPS Hikvision DS 1000VA",
+      "seoDescription": "UPS Hikvision DS de 1000VA para respaldar equipos en cortes de luz, con protección contra picos y sobrecargas. Garantía y envíos a todo el país.",
+      "shortDescription": "UPS Hikvision DS de 1000VA para mantener tus equipos encendidos en un corte de luz. Protege contra picos de voltaje y sobrecargas.",
+      "highlights": [
+        "Capacidad de 1000VA",
+        "Protección contra picos de voltaje y sobrecargas",
+        "Tiempo de respaldo para guardar el trabajo",
+        "Para uso en oficina u hogar"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "1000 VA"
+        },
+        {
+          "label": "Serie",
+          "value": "DS"
+        },
+        {
+          "label": "Código",
+          "value": "DS-UPS1000"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS Hikvision DS de 1000VA mantiene encendidos tus equipos durante un corte de energía. Te da tiempo para guardar el trabajo y apagarlos con seguridad.</p><h3>Protección</h3><p>Protege los equipos conectados de picos de voltaje y sobrecargas.</p><h3>Uso</h3><p>Se instala fácil y sirve para un espacio de trabajo o para el hogar.</p><h3>Compra con respaldo</h3><p>Es un producto nuevo con garantía oficial. Hacemos envíos a todo el país y podés retirarlo en Córdoba. Si no sabés qué UPS necesitás, contanos qué querés proteger y te orientamos.</p><h3>Antes de comprar</h3><ul><li>El texto original no informa el tipo de UPS (online, interactiva), la tensión, la cantidad de tomas ni cuánto dura el respaldo.</li><li>Sumá la potencia de tus equipos para confirmar que entren en 1000VA.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto Hikvision por el nombre.",
+        "No se informa tipo de UPS, tensión, tomas ni autonomía. Se quitaron 'autonomía prolongada' y 'diseño compacto' por falta de datos."
+      ]
+    },
+    {
+      "slug": "ups-hikvision-ds-2000va",
+      "name": "UPS Hikvision DS 2000VA",
+      "brand": "Hikvision",
+      "model": "DS-UPS2000",
+      "seoTitle": "UPS Hikvision DS 2000VA",
+      "seoDescription": "UPS Hikvision DS de 2000VA para equipos críticos, con protección contra sobrecargas y picos de tensión. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS Hikvision DS de 2000VA para dar energía ininterrumpida a equipos críticos. Protege contra sobrecargas y picos de tensión.",
+      "highlights": [
+        "Capacidad de 2000VA",
+        "Protección contra sobrecargas y picos de tensión",
+        "Conexión sencilla para uso inmediato",
+        "Para oficinas y entornos domésticos"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "2000 VA"
+        },
+        {
+          "label": "Serie",
+          "value": "DS"
+        },
+        {
+          "label": "Código",
+          "value": "DS-UPS2000"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS Hikvision DS de 2000VA da energía ininterrumpida a tus equipos críticos cuando falla la red eléctrica. Sirve para oficinas y para el hogar.</p><h3>Protección</h3><p>Salvaguarda los equipos contra sobrecargas y picos de tensión.</p><h3>Instalación</h3><p>La conexión es sencilla y se puede usar enseguida.</p><h3>Cómo elegir la potencia</h3><p>Antes de elegir, sumá los vatios de todo lo que vas a conectar y dejá un margen. Los VA de la UPS no equivalen a vatios disponibles. Si tenés dudas, escribinos con la lista de equipos.</p><h3>Antes de comprar</h3><ul><li>El texto original no informa el tipo de UPS, la tensión, la cantidad de tomas ni la autonomía.</li><li>Consultanos si necesitás ayuda para calcular la potencia de lo que vas a conectar.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto Hikvision por el nombre.",
+        "No se informa tipo de UPS, tensión, tomas ni autonomía."
+      ]
+    },
+    {
+      "slug": "ups-hikvision-ds-3000va",
+      "name": "UPS Hikvision DS 3000VA",
+      "brand": "Hikvision",
+      "model": "DS-UPS3000",
+      "seoTitle": "UPS Hikvision DS 3000VA",
+      "seoDescription": "UPS Hikvision DS de 3000VA con pantalla LCD y protección contra sobrecargas y picos, para empresas y hogares. Garantía y envíos a todo el país.",
+      "shortDescription": "UPS Hikvision DS de 3000VA con pantalla LCD que muestra el estado de la batería y la carga. Protege contra sobrecargas y picos de voltaje.",
+      "highlights": [
+        "Capacidad de 3000VA",
+        "Pantalla LCD con estado de batería y carga",
+        "Protección contra sobrecargas y picos de voltaje",
+        "Para empresas y hogares"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "3000 VA"
+        },
+        {
+          "label": "Pantalla",
+          "value": "LCD (batería y carga)"
+        },
+        {
+          "label": "Serie",
+          "value": "DS"
+        },
+        {
+          "label": "Código",
+          "value": "DS-UPS3000"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS Hikvision DS de 3000VA mantiene funcionando servidores, computadoras y otros dispositivos críticos durante un corte de luz. Tiene pantalla LCD.</p><h3>Monitoreo</h3><p>La pantalla LCD muestra en tiempo real el estado de la batería y la carga conectada.</p><h3>Protección</h3><p>Incluye protección contra sobrecargas y picos de voltaje.</p><h3>Instalación</h3><p>El fabricante la describe como de tamaño optimizado para instalarla en cualquier espacio.</p><h3>Compra con respaldo</h3><p>Es un producto nuevo con garantía oficial. Hacemos envíos a todo el país y podés retirarlo en Córdoba. Si no sabés qué UPS necesitás, contanos qué querés proteger y te orientamos.</p><h3>Antes de comprar</h3><ul><li>El texto original no informa el tipo de UPS, la tensión, la cantidad de tomas ni la autonomía.</li><li>Verificá la potencia total de tus equipos.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto Hikvision por el nombre.",
+        "No se informa tipo de UPS, tensión, tomas ni autonomía."
+      ]
+    },
+    {
+      "slug": "ups-hikvision-ds-600va",
+      "name": "UPS Hikvision DS 600VA",
+      "brand": "Hikvision",
+      "model": "DS-UPS600",
+      "seoTitle": "UPS Hikvision DS 600VA",
+      "seoDescription": "UPS Hikvision DS de 600VA, código DS-UPS600. Consultanos el detalle técnico antes de comprar. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS Hikvision DS de 600VA, código DS-UPS600. Equipo de respaldo de energía con garantía oficial.",
+      "highlights": [
+        "Capacidad de 600VA",
+        "Serie DS, código DS-UPS600",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "600 VA"
+        },
+        {
+          "label": "Serie",
+          "value": "DS"
+        },
+        {
+          "label": "Código",
+          "value": "DS-UPS600"
+        }
+      ],
+      "descriptionHtml": "<p>UPS Hikvision DS de 600VA, código DS-UPS600. La publicación original casi no trae datos técnicos, por eso te pedimos que nos consultes el detalle antes de comprar.</p><h3>Qué sabemos</h3><p>Es una UPS de 600VA de la serie DS. Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno sin datos técnicos.",
+        "Faltan tipo de UPS, tensión, tomas y autonomía.",
+        "Brand estaba en General: puesto Hikvision por el nombre."
+      ]
+    },
+    {
+      "slug": "ups-lyonn-ctb-800ap-display-2",
+      "name": "UPS Lyonn CTB-800AP con display",
+      "brand": "Lyonn",
+      "model": "CTB-800AP",
+      "seoTitle": "UPS Lyonn CTB-800AP con display",
+      "seoDescription": "UPS Lyonn CTB-800AP de 800VA con display digital que muestra batería, voltaje y carga. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "UPS Lyonn CTB-800AP de 800VA con display digital que muestra el estado de la batería, el voltaje de entrada y la carga conectada.",
+      "highlights": [
+        "Capacidad de 800VA",
+        "Display digital con batería, voltaje y carga",
+        "Protección contra cortes, fluctuaciones y picos",
+        "Varias tomas protegidas con respaldo de batería"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "800 VA"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Display digital"
+        },
+        {
+          "label": "Datos en pantalla",
+          "value": "Batería, voltaje de entrada y carga"
+        },
+        {
+          "label": "Tomas",
+          "value": "Múltiples, con respaldo de batería"
+        }
+      ],
+      "descriptionHtml": "<p>La UPS Lyonn CTB-800AP de 800VA protege tus equipos de cortes, fluctuaciones de voltaje y picos eléctricos. Su display digital te muestra qué está pasando en tiempo real.</p><h3>Display digital</h3><p>Muestra el estado de la batería, el voltaje de entrada y la carga conectada.</p><h3>Para qué sirve</h3><p>Mantiene en funcionamiento computadoras, routers y equipos de red durante interrupciones eléctricas. Es de diseño compacto, para oficinas, hogares y pequeños negocios.</p><h3>Compra con respaldo</h3><p>Es un producto nuevo con garantía oficial. Hacemos envíos a todo el país y podés retirarlo en Córdoba. Si no sabés qué UPS necesitás, contanos qué querés proteger y te orientamos.</p><h3>Antes de comprar</h3><ul><li>El texto original no informa la cantidad exacta de tomas ni cuánto dura el respaldo.</li><li>Sumá la potencia de tus equipos para confirmar que entren en 800VA.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto Lyonn por el nombre.",
+        "No se informan cantidad de tomas, tipo de UPS ni autonomía.",
+        "El SKU trae la palabra 'DISPLAY'; el slug termina en '-2' (posible duplicado de otra ficha)."
+      ]
+    },
+    {
+      "slug": "hp-laserjet-enterprise-m611dn-monocromatica-solo-impresion",
+      "name": "Impresora HP LaserJet Enterprise M611dn Monocromática (solo impresión)",
+      "brand": "HP",
+      "model": "M611dn",
+      "seoTitle": "HP LaserJet Enterprise M611dn monocromática",
+      "seoDescription": "Impresora HP LaserJet Enterprise M611dn monocromática, solo impresión. Consultanos el detalle técnico. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Impresora láser HP LaserJet Enterprise M611dn monocromática, solo impresión. Código 7PS84A-L.",
+      "highlights": [
+        "Impresión láser monocromática",
+        "Solo impresión, sin escáner",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Láser monocromática"
+        },
+        {
+          "label": "Funciones",
+          "value": "Solo impresión"
+        }
+      ],
+      "descriptionHtml": "<p>Impresora HP LaserJet Enterprise M611dn, monocromática y de solo impresión, con código 7PS84A-L. La publicación original casi no trae datos técnicos, por eso te pedimos que nos consultes el detalle antes de comprar.</p><h3>Qué sabemos</h3><p>Imprime en blanco y negro y no escanea ni copia. Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno sin datos técnicos ('excelente relación precio/calidad').",
+        "No se publicaron especificaciones (velocidad, resolución, conectividad, consumibles) porque el texto no las trae.",
+        "Brand estaba en General: puesto HP por el nombre."
+      ]
+    },
+    {
+      "slug": "hp-laserjet-managed-e40040dn-monocromatica-solo-impresion",
+      "name": "Impresora HP LaserJet Managed E40040dn Monocromática (solo impresión)",
+      "brand": "HP",
+      "model": "E40040dn",
+      "seoTitle": "HP LaserJet Managed E40040dn monocromática",
+      "seoDescription": "Impresora HP LaserJet Managed E40040dn monocromática, solo impresión. Consultanos el detalle técnico. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Impresora láser HP LaserJet Managed E40040dn monocromática, solo impresión. Código 3PZ35A.",
+      "highlights": [
+        "Impresión láser monocromática",
+        "Solo impresión, sin escáner",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Láser monocromática"
+        },
+        {
+          "label": "Funciones",
+          "value": "Solo impresión"
+        }
+      ],
+      "descriptionHtml": "<p>Impresora HP LaserJet Managed E40040dn, monocromática y de solo impresión, con código 3PZ35A. La publicación original casi no trae datos técnicos, por eso te pedimos que nos consultes el detalle antes de comprar.</p><h3>Qué sabemos</h3><p>Imprime en blanco y negro y no escanea ni copia. Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno sin datos técnicos ('excelente relación precio/calidad').",
+        "No se publicaron especificaciones (velocidad, resolución, conectividad, consumibles) porque el texto no las trae.",
+        "Brand estaba en General: puesto HP por el nombre.",
+        "La línea 'Managed' suele venderse bajo contratos de servicio de HP: confirmar si el equipo se vende como equipo común."
+      ]
+    },
+    {
+      "slug": "hp-laserjet-pro-3003dw-monocromatica-solo-impresion",
+      "name": "Impresora láser HP LaserJet Pro 3003dw Dúplex",
+      "brand": "HP",
+      "model": "3003dw",
+      "seoTitle": "HP LaserJet Pro 3003dw monocromática",
+      "seoDescription": "Impresora láser HP LaserJet Pro 3003dw monocromática, solo impresión y dúplex. Consultanos el detalle técnico. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Impresora láser HP LaserJet Pro 3003dw, monocromática, solo impresión y dúplex. Código 3G654AJ.",
+      "highlights": [
+        "Impresión láser monocromática",
+        "Solo impresión, con función dúplex",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Láser monocromática"
+        },
+        {
+          "label": "Funciones",
+          "value": "Solo impresión"
+        },
+        {
+          "label": "Dúplex",
+          "value": "Sí"
+        }
+      ],
+      "descriptionHtml": "<p>Impresora HP LaserJet Pro 3003dw, monocromática y de solo impresión, con función dúplex y código 3G654AJ. La publicación original casi no trae datos técnicos, por eso te pedimos que nos consultes el detalle antes de comprar.</p><h3>Qué sabemos</h3><p>Imprime en blanco y negro y no escanea ni copia. Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno sin datos técnicos ('excelente relación precio/calidad').",
+        "No se publicaron especificaciones (velocidad, resolución, conectividad, consumibles) porque el texto no las trae.",
+        "Brand estaba en General: puesto HP por el nombre.",
+        "'Dúplex' sale del nombre original; no se aclara si es automático."
+      ]
+    },
+    {
+      "slug": "hp-laserjet-pro-3303fdw-color-multifuncion",
+      "name": "Impresora multifunción HP LaserJet Pro 3303fdw Color",
+      "brand": "HP",
+      "model": "3303fdw",
+      "seoTitle": "HP LaserJet Pro 3303fdw color multifunción",
+      "seoDescription": "Multifunción láser HP LaserJet Pro 3303fdw a color. Consultanos el detalle técnico antes de comprar. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Impresora multifunción láser HP LaserJet Pro 3303fdw a color. Código 499M8A.",
+      "highlights": [
+        "Impresión láser a color",
+        "Equipo multifunción",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Láser color"
+        },
+        {
+          "label": "Tipo",
+          "value": "Multifunción"
+        }
+      ],
+      "descriptionHtml": "<p>Impresora multifunción HP LaserJet Pro 3303fdw, a color, con código 499M8A. La publicación original casi no trae datos técnicos, por eso te pedimos que nos consultes el detalle antes de comprar.</p><h3>Qué sabemos</h3><p>Es un equipo multifunción láser a color. Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno sin datos técnicos ('excelente relación precio/calidad').",
+        "No se publicaron especificaciones (velocidad, resolución, conectividad, consumibles) porque el texto no las trae.",
+        "Brand estaba en General: puesto HP por el nombre.",
+        "No se sabe qué funciones incluye la multifunción (copia, escáner, fax)."
+      ]
+    },
+    {
+      "slug": "hp-laserjet-pro-4003dw-monocromatica-solo-impresion",
+      "name": "Impresora HP LaserJet Pro 4003dw Monocromática (solo impresión)",
+      "brand": "HP",
+      "model": "4003dw",
+      "seoTitle": "HP LaserJet Pro 4003dw monocromática",
+      "seoDescription": "Impresora HP LaserJet Pro 4003dw monocromática, solo impresión. Consultanos el detalle técnico. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Impresora láser HP LaserJet Pro 4003dw monocromática, solo impresión. Código 2Z610A-L.",
+      "highlights": [
+        "Impresión láser monocromática",
+        "Solo impresión, sin escáner",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Láser monocromática"
+        },
+        {
+          "label": "Funciones",
+          "value": "Solo impresión"
+        }
+      ],
+      "descriptionHtml": "<p>Impresora HP LaserJet Pro 4003dw, monocromática y de solo impresión, con código 2Z610A-L. La publicación original casi no trae datos técnicos, por eso te pedimos que nos consultes el detalle antes de comprar.</p><h3>Qué sabemos</h3><p>Imprime en blanco y negro y no escanea ni copia. Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno sin datos técnicos ('excelente relación precio/calidad').",
+        "No se publicaron especificaciones (velocidad, resolución, conectividad, consumibles) porque el texto no las trae.",
+        "Brand estaba en General: puesto HP por el nombre."
+      ]
+    },
+    {
+      "slug": "hp-plotter-designjet-t230-24-solo-impresion",
+      "name": "Plotter HP DesignJet T230 de 24\" (solo impresión)",
+      "brand": "HP",
+      "model": "DesignJet T230",
+      "seoTitle": "Plotter HP DesignJet T230 de 24\"",
+      "seoDescription": "Plotter HP DesignJet T230 de 24 pulgadas, solo impresión. Consultanos el detalle técnico antes de comprar. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Plotter HP DesignJet T230 de 24 pulgadas, solo impresión. Código 5HB07D.",
+      "highlights": [
+        "Plotter de 24 pulgadas",
+        "Solo impresión, sin escáner",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Ancho",
+          "value": "24 pulgadas"
+        },
+        {
+          "label": "Funciones",
+          "value": "Solo impresión"
+        }
+      ],
+      "descriptionHtml": "<p>Plotter HP DesignJet T230 de 24 pulgadas, de solo impresión, con código 5HB07D. La publicación original casi no trae datos técnicos, por eso te pedimos que nos consultes el detalle antes de comprar.</p><h3>Qué sabemos</h3><p>Es un plotter de formato ancho que solo imprime. Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno sin datos técnicos ('excelente relación precio/calidad').",
+        "No se publicaron especificaciones (velocidad, resolución, conectividad, consumibles) porque el texto no las trae.",
+        "Brand estaba en General: puesto HP por el nombre.",
+        "No se aclara si las 24 pulgadas son el ancho de impresión."
+      ]
+    },
+    {
+      "slug": "hp-plotter-designjet-t2600ps-36-multifuncion",
+      "name": "Plotter HP DesignJet T2600PS de 36\" Multifunción",
+      "brand": "HP",
+      "model": "DesignJet T2600PS",
+      "seoTitle": "Plotter HP DesignJet T2600PS de 36\"",
+      "seoDescription": "Plotter multifunción HP DesignJet T2600PS de 36 pulgadas. Consultanos el detalle técnico antes de comprar. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Plotter multifunción HP DesignJet T2600PS de 36 pulgadas. Código 3XB78A.",
+      "highlights": [
+        "Plotter de 36 pulgadas",
+        "Equipo multifunción",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Ancho",
+          "value": "36 pulgadas"
+        },
+        {
+          "label": "Tipo",
+          "value": "Multifunción"
+        }
+      ],
+      "descriptionHtml": "<p>Plotter multifunción HP DesignJet T2600PS de 36 pulgadas, con código 3XB78A. La publicación original casi no trae datos técnicos, por eso te pedimos que nos consultes el detalle antes de comprar.</p><h3>Qué sabemos</h3><p>Es un plotter de formato ancho con funciones multifunción. Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno sin datos técnicos ('excelente relación precio/calidad').",
+        "No se publicaron especificaciones (velocidad, resolución, conectividad, consumibles) porque el texto no las trae.",
+        "Brand estaba en General: puesto HP por el nombre.",
+        "No se sabe qué funciones incluye (escáner, copia)."
+      ]
+    },
+    {
+      "slug": "imp-canon-g1110-sist-continuo-pixma",
+      "name": "Impresora Canon PIXMA G1110 Sistema Continuo",
+      "brand": "Canon",
+      "model": "G1110",
+      "seoTitle": "Impresora Canon PIXMA G1110 sist. continuo",
+      "seoDescription": "Impresora Canon PIXMA G1110 con sistema continuo de tinta. Consultanos el detalle técnico antes de comprar. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Impresora Canon PIXMA G1110 con sistema continuo de tinta. Código de barras 4549292095302.",
+      "highlights": [
+        "Sistema continuo de tinta",
+        "Serie PIXMA de Canon",
+        "Garantía oficial"
+      ],
+      "specs": [
+        {
+          "label": "Sistema de tinta",
+          "value": "Continuo"
+        },
+        {
+          "label": "Serie",
+          "value": "PIXMA"
+        }
+      ],
+      "descriptionHtml": "<p>Impresora Canon PIXMA G1110 con sistema continuo de tinta. La publicación original casi no trae datos técnicos, por eso te pedimos que nos consultes el detalle antes de comprar.</p><h3>Qué sabemos</h3><p>Es una impresora de la serie PIXMA con sistema continuo. Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "El nombre original era 'IMP CANON G1110 SIST CONTINUO PIXMA' y la descripción no trae datos.",
+        "Faltan tipo de impresión (solo impresión o multifunción), velocidad, resolución y conectividad.",
+        "El SKU es un código de barras (EAN).",
+        "Brand estaba en General: puesto Canon por el nombre."
+      ]
+    },
+    {
+      "slug": "impresora-3d-anet-n4-dlp-resina-tactil-resolucion-2k-ultra-rapida",
+      "name": "Impresora 3D Anet N4 de resina DLP con pantalla táctil",
+      "brand": "Anet",
+      "model": "N4",
+      "seoTitle": "Impresora 3D Anet N4 de resina DLP",
+      "seoDescription": "Impresora 3D de resina Anet N4 con resolución 2K, pantalla táctil de 3,5\" y volumen de 120 x 65 x 138 mm. Garantía y envíos a todo el país.",
+      "shortDescription": "Impresora 3D de resina Anet N4 con tecnología DLP, resolución 2K (2560 x 1440) y pantalla táctil de 3,5\". Volumen de impresión de 120 x 65 x 138 mm.",
+      "highlights": [
+        "Resina DLP con resolución 2K (2560 x 1440)",
+        "Resolución en ejes XY de 47 micrones",
+        "Pantalla táctil a color de 3,5\"",
+        "Imprime desde USB o tarjeta SD",
+        "Volumen de impresión de 120 x 65 x 138 mm"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Resina DLP"
+        },
+        {
+          "label": "Volumen de impresión",
+          "value": "120 x 65 x 138 mm"
+        },
+        {
+          "label": "Resolución XY",
+          "value": "47 µm (2560 x 1440)"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "30 mm/h"
+        },
+        {
+          "label": "Grosor de capa",
+          "value": "±0,05 mm"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Táctil a color de 3,5\""
+        },
+        {
+          "label": "Conexión",
+          "value": "USB y tarjeta SD"
+        },
+        {
+          "label": "Software",
+          "value": "ALPrint"
+        },
+        {
+          "label": "Estructura",
+          "value": "Aleación de aluminio y carcasa de plástico"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "23 x 23,5 x 38 cm"
+        },
+        {
+          "label": "Peso",
+          "value": "6,5 kg"
+        }
+      ],
+      "descriptionHtml": "<p>La Anet N4 es una impresora 3D cerrada que trabaja con resina. Al usar una pantalla de 2560 x 1440 píxeles, logra más detalle que una de filamento.</p><h3>Detalle de impresión</h3><p>La resolución llega a 2K y la de los ejes XY es de 47 micrones. Según el texto, el sistema de relleno ahorra más de un 50% de material.</p><h3>Cómo se usa</h3><p>Imprimís sin conectar una PC: cargás el archivo en un pendrive USB o en una tarjeta SD. Se maneja desde la pantalla táctil de 3,5\". Para preparar los archivos se usa el software ALPrint, que detecta y corrige errores del archivo STL.</p><h3>Resinas</h3><p>Está indicada para resinas sensibles a una longitud de onda de 405 nm. No todas curan igual con la misma fuente de luz.</p><h3>Construcción</h3><p>Combina una carcasa de plástico con estructuras de aleación de aluminio.</p><h3>Antes de comprar</h3><ul><li>El volumen de impresión es de 120 x 65 x 138 mm: sirve para piezas chicas.</li><li>La resina no viene incluida en la información que tenemos.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto Anet por el nombre.",
+        "La descripción habla de 'DLP' y también de 'MSLA' (matriz LED con máscara LCD). Publiqué DLP como dice el título.",
+        "No publiqué 'precisión eje Z 0.078 um' (unidad dudosa) ni el tiempo de exposición ('5-/S/layer', ilegible).",
+        "Sin SKU en la entrada. El nombre original traía 'Ultra rápida'; no lo conservé."
+      ]
+    },
+    {
+      "slug": "impresora-laser-brother-hl-1212w-monocromatica-wifi",
+      "name": "Impresora láser Brother HL-1212W Monocromática Wi-Fi",
+      "model": "HL-1212W",
+      "seoTitle": "Impresora láser Brother HL-1212W Wi-Fi",
+      "seoDescription": "Impresora láser monocromática Brother HL-1212W con Wi-Fi, 21 ppm y bandeja de 150 hojas. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Impresora láser monocromática Brother HL-1212W con Wi-Fi. Imprime 21 páginas por minuto, tiene bandeja de 150 hojas y un ciclo mensual de hasta 10.000 páginas.",
+      "highlights": [
+        "Láser monocromática con Wi-Fi",
+        "Velocidad de 21 ppm",
+        "Resolución de hasta 2400 x 600 dpi",
+        "Bandeja de 150 hojas",
+        "Ciclo mensual de hasta 10.000 páginas"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Láser monocromática"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "21 ppm"
+        },
+        {
+          "label": "Resolución",
+          "value": "Hasta 2400 x 600 dpi"
+        },
+        {
+          "label": "Procesador",
+          "value": "200 MHz"
+        },
+        {
+          "label": "Memoria interna",
+          "value": "1 MB"
+        },
+        {
+          "label": "Capacidad de papel",
+          "value": "150 hojas"
+        },
+        {
+          "label": "Conectividad",
+          "value": "USB 2.0 y Wi-Fi"
+        },
+        {
+          "label": "Ciclo mensual",
+          "value": "10.000 páginas"
+        },
+        {
+          "label": "Lenguaje de impresión",
+          "value": "GDI"
+        },
+        {
+          "label": "Tóner",
+          "value": "TN1060"
+        },
+        {
+          "label": "Tambor",
+          "value": "DR1060"
+        },
+        {
+          "label": "Rendimiento del tóner",
+          "value": "800 a 1.000 páginas"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother HL-1212W es una impresora láser monocromática con conexión Wi-Fi, pensada para espacios chicos. Imprime documentos en blanco y negro sin cables.</p><h3>Impresión</h3><p>Alcanza 21 páginas por minuto con una resolución de hasta 2400 x 600 dpi. Trabaja con el lenguaje GDI.</p><h3>Conexión</h3><p>Se conecta por USB 2.0 o por Wi-Fi.</p><h3>Insumos</h3><p>Usa el tóner TN1060 y el tambor DR1060. El tóner rinde de 800 a 1.000 páginas.</p><h3>Compra con respaldo</h3><p>Es un producto nuevo con garantía oficial. Hacemos envíos a todo el país y podés retirarlo en Córdoba.</p><h3>Cómo elegirla</h3><p>Antes de comprar, pensá cuántas páginas imprimís por mes y si necesitás Wi-Fi, dúplex o escáner. Si tenés dudas, escribinos y te orientamos.</p><h3>Antes de comprar</h3><ul><li>Es solo impresión: no copia ni escanea.</li><li>Tiene 1 MB de memoria y un procesador de 200 MHz, suficientes para texto y documentos simples.</li></ul>",
+      "revisar": [
+        "El SKU de entrada (347605585) parece de otro producto: es casi igual al de la Pantum P2509W (347605585-1). Revisar.",
+        "'Solo impresión' lo deduje de que es una láser sin funciones mencionadas.",
+        "Se quitó 'la más buscada' y la mención a tóner sin chip (no verificable)."
+      ]
+    },
+    {
+      "slug": "impresora-laser-brother-monocromatica-hl-1200",
+      "name": "Impresora láser Brother HL-1200 Monocromática",
+      "model": "HL-1200",
+      "seoTitle": "Impresora láser Brother HL-1200",
+      "seoDescription": "Impresora láser monocromática Brother HL-1200 de hasta 21 ppm y resolución de hasta 2400 x 600 dpi. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Impresora láser monocromática Brother HL-1200. Imprime hasta 21 páginas por minuto en tamaño Carta y alcanza 2400 x 600 dpi. El tóner rinde de 800 a 1.000 páginas.",
+      "highlights": [
+        "Láser monocromática de hasta 21 ppm",
+        "Resolución de hasta 2400 x 600 dpi",
+        "Tóner de 800 a 1.000 páginas",
+        "Compacta: 340 x 238 x 189 mm"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Láser monocromática"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "21 ppm (Carta) / 20 ppm (A4)"
+        },
+        {
+          "label": "Resolución",
+          "value": "Hasta 600 x 600 dpi (2400 x 600 con HQ1200)"
+        },
+        {
+          "label": "Rendimiento del tóner",
+          "value": "800 a 1.000 páginas"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "340 x 238 x 189 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "4,6 kg"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother HL-1200 es una impresora láser monocromática de tamaño compacto. Sirve para documentos en blanco y negro en casa o en una oficina chica.</p><h3>Impresión</h3><p>Llega a 21 páginas por minuto en Carta y 20 en A4. La resolución es de 600 x 600 dpi, o de 2400 x 600 dpi con la tecnología HQ1200.</p><h3>Tamaño</h3><p>Mide 340 x 238 x 189 mm y pesa 4,6 kg con los consumibles, así que entra en un escritorio.</p><h3>Tóner</h3><p>El tóner rinde de 800 a 1.000 páginas.</p><h3>Cómo elegirla</h3><p>Antes de comprar, pensá cuántas páginas imprimís por mes y si necesitás Wi-Fi, dúplex o escáner. Si tenés dudas, escribinos y te orientamos.</p><h3>Antes de comprar</h3><ul><li>El texto no informa cómo se conecta ni la capacidad de papel: consultanos.</li><li>Es una impresora monocromática; imprime solo en blanco y negro.</li></ul>",
+      "revisar": [
+        "Se quitó el precio del tóner alternativo que mencionaba la ficha corta.",
+        "La descripción lista memoria 'Estándar 1 MB 32 MB' (ambiguo): no se publicó. Tampoco el tiempo de primera copia, que no aplica a una impresora.",
+        "Sin datos de conectividad ni de bandeja.",
+        "El SKU 'Brother 1200' es un nombre, no un código."
+      ]
+    },
+    {
+      "slug": "impresora-laser-pantum-p2509w-laser-monocromatica",
+      "name": "Impresora láser Pantum P2509W Monocromática",
+      "brand": "Pantum",
+      "model": "P2509W",
+      "seoTitle": "Impresora láser Pantum P2509W Wi-Fi",
+      "seoDescription": "Impresora láser monocromática Pantum P2509W con Wi-Fi, 22 ppm, dúplex manual y bandeja de 150 hojas. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Impresora láser monocromática Pantum P2509W con Wi-Fi y USB. Imprime 22 ppm en A4, tiene dúplex manual y arranca la primera página en menos de 7,8 segundos.",
+      "highlights": [
+        "Láser monocromática con Wi-Fi y USB",
+        "22 ppm en A4 y 23 ppm en Carta",
+        "Primera página en menos de 7,8 segundos",
+        "Cartucho estándar de 1.600 páginas",
+        "Dúplex manual y bandeja de 150 hojas"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Láser monocromática"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "22 ppm (A4) / 23 ppm (Carta)"
+        },
+        {
+          "label": "Primera página",
+          "value": "Menos de 7,8 s"
+        },
+        {
+          "label": "Resolución",
+          "value": "Hasta 1.200 x 1.200 ppp"
+        },
+        {
+          "label": "Dúplex",
+          "value": "Manual"
+        },
+        {
+          "label": "Papel",
+          "value": "Entrada de 150 hojas, salida de 100"
+        },
+        {
+          "label": "Conectividad",
+          "value": "USB 2.0 y Wi-Fi 802.11b/g/n"
+        },
+        {
+          "label": "Procesador y memoria",
+          "value": "600 MHz y 128 MB"
+        },
+        {
+          "label": "Ciclo mensual",
+          "value": "Hasta 15.000 páginas"
+        },
+        {
+          "label": "Cartucho",
+          "value": "Estándar de 1.600 páginas"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "337 x 220 x 178 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "4,75 kg con cartucho"
+        }
+      ],
+      "descriptionHtml": "<p>La Pantum P2509W es una impresora láser monocromática con Wi-Fi, de tamaño compacto. Está pensada para imprimir en casa o en una oficina chica.</p><h3>Velocidad</h3><p>Imprime 22 páginas por minuto en A4 y 23 en Carta. La primera página sale en menos de 7,8 segundos.</p><h3>Impresión móvil</h3><p>Imprime por Wi-Fi desde el celular y es compatible con Mopria en Android.</p><h3>Costos</h3><p>Usa un cartucho todo en uno con rendimiento estándar de 1.600 páginas. El volumen mensual recomendado es de 700 páginas.</p><h3>Compra con respaldo</h3><p>Es un producto nuevo con garantía oficial. Hacemos envíos a todo el país y podés retirarlo en Córdoba.</p><h3>Antes de comprar</h3><ul><li>El dúplex es manual: das vuelta las hojas vos.</li><li>Es solo impresión: no copia ni escanea.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto Pantum por el nombre.",
+        "El SKU de entrada (347605585-1) parece derivado del de la Brother HL-1212W (347605585). Revisar.",
+        "Pasé la velocidad a A4/Carta porque la ficha corta dice 23 ppm y la descripción 22 (A4) / 23 (Carta); coinciden."
+      ]
+    },
+    {
+      "slug": "impresora-multifuncion-brother-t420w-sistema-continuo-wifi",
+      "name": "Impresora multifunción Brother DCP-T420W sistema continuo Wi-Fi",
+      "brand": "Brother",
+      "model": "DCP-T420W",
+      "seoTitle": "Multifunción Brother DCP-T420W Wi-Fi",
+      "seoDescription": "Multifunción de tinta Brother DCP-T420W con sistema continuo, Wi-Fi y hasta 6.000 x 1.200 dpi. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Multifunción de tinta Brother DCP-T420W con tanque InkBenefit y Wi-Fi. Imprime, copia y escanea, con hasta 6.000 x 1.200 dpi y botellas de hasta 7.500 páginas.",
+      "highlights": [
+        "Imprime, copia y escanea con Wi-Fi",
+        "Hasta 6.000 x 1.200 dpi, fotos sin bordes",
+        "Botellas de hasta 7.500 páginas en negro",
+        "Tanque de recarga frontal",
+        "Impresión y escaneo desde celular o tablet"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Inyección de tinta color, tanque InkBenefit Tank"
+        },
+        {
+          "label": "Funciones",
+          "value": "Imprime, copia y escanea"
+        },
+        {
+          "label": "Resolución de impresión",
+          "value": "Hasta 6.000 x 1.200 dpi"
+        },
+        {
+          "label": "Velocidad en negro",
+          "value": "28 ppm (modo eco) / 16 ipm (ISO)"
+        },
+        {
+          "label": "Velocidad en color",
+          "value": "11 ppm (modo eco) / 9 ipm (ISO)"
+        },
+        {
+          "label": "Rendimiento de las botellas",
+          "value": "7.500 páginas en negro y 5.000 en color"
+        },
+        {
+          "label": "Escáner",
+          "value": "De cama plana"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi y USB"
+        },
+        {
+          "label": "En la caja",
+          "value": "Botellas de tinta y cable USB"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother DCP-T420W es una multifunción de tinta con tanques que se recargan por el frente. Sirve para imprimir documentos y fotos en casa o en una oficina chica.</p><h3>Impresión</h3><p>Hace documentos y fotos sin bordes con hasta 6.000 x 1.200 dpi. Las velocidades son de hasta 28 ppm en negro y 11 ppm en color en modo eco, o 16 y 9 ipm medidas con la norma ISO/IEC 24734.</p><h3>Tinta</h3><p>Las botellas se llenan solas y frenan el flujo cuando el tanque está lleno, para reducir derrames. Las de reemplazo rinden hasta 7.500 páginas en negro y 5.000 en color.</p><h3>Conexión</h3><p>Imprimís y escaneás desde computadoras, notebooks, smartphones o tablets por Wi-Fi. También hay función Email Print.</p><h3>Copia y escaneo</h3><p>El escáner es de cama plana, apto para hojas sueltas o gruesas como libros.</p>",
+      "revisar": [
+        "Brand estaba en General: puesto Brother por el nombre. SKU DCPT420W.",
+        "Las velocidades vienen en dos mediciones (modo eco e ISO); publiqué ambas aclarándolo.",
+        "El 'Contenido de la caja' del texto venía cortado: solo confirmé botellas y cable USB."
+      ]
+    },
+    {
+      "slug": "impresora-multifuncion-epson-l14150-ecotank-a3",
+      "name": "Impresora multifunción Epson EcoTank L14150 A3",
+      "brand": "Epson",
+      "model": "L14150",
+      "seoTitle": "Multifunción Epson EcoTank L14150 A3",
+      "seoDescription": "Multifunción Epson EcoTank L14150 de tinta continua 4 en 1, imprime hasta A3+, con dúplex, Wi-Fi y Ethernet. Garantía y envíos a todo el país.",
+      "shortDescription": "Multifunción Epson EcoTank L14150 4 en 1 con tanque de tinta. Imprime hasta A3+, tiene dúplex A4/Carta, alimentador de 35 páginas, Wi-Fi y Ethernet.",
+      "highlights": [
+        "Impresión hasta A3+ (33 x 48 cm)",
+        "4 en 1: imprime, copia, escanea y envía fax",
+        "Alimentador automático de 35 páginas",
+        "Wi-Fi, Wi-Fi Direct y Ethernet",
+        "Hasta 7.500 páginas en negro por juego de botellas"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Inyección de tinta PrecisionCore, 4 colores, tanque EcoTank"
+        },
+        {
+          "label": "Funciones",
+          "value": "Imprime, copia, escanea y fax"
+        },
+        {
+          "label": "Formato máximo",
+          "value": "A3+ (33 x 48 cm)"
+        },
+        {
+          "label": "Velocidad ISO",
+          "value": "17 ppm en negro / 9 ppm en color"
+        },
+        {
+          "label": "Copia ISO",
+          "value": "11,5 cpm en negro / 5,5 cpm en color"
+        },
+        {
+          "label": "Dúplex",
+          "value": "A4/Carta"
+        },
+        {
+          "label": "Alimentador",
+          "value": "35 páginas (A4/Carta)"
+        },
+        {
+          "label": "Pantalla",
+          "value": "De 2,4\""
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi, Wi-Fi Direct, Ethernet y USB"
+        },
+        {
+          "label": "Rendimiento de tinta",
+          "value": "7.500 páginas en negro y 6.000 en color"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "498 x 358 x 245 mm (cerrada)"
+        },
+        {
+          "label": "Peso",
+          "value": "9,7 kg"
+        }
+      ],
+      "descriptionHtml": "<p>La Epson EcoTank L14150 es una multifunción de tanque de tinta que imprime hasta A3+. Es un equipo para uso intensivo en oficina o en proyectos de formato ancho.</p><h3>Formato ancho</h3><p>Imprime hasta A3+ (33 x 48 cm). El escáner de cama admite tamaño Oficio.</p><h3>Productividad</h3><p>Tiene alimentador automático de 35 páginas e imprime en dúplex en A4 y Carta. La pantalla de 2,4\" permite imprimir sin una PC.</p><h3>Tinta</h3><p>Se carga con botellas y no usa cartuchos. Un juego rinde hasta 7.500 páginas en negro o 6.000 en color.</p><h3>Conexión</h3><p>Se comparte en red por Wi-Fi, Wi-Fi Direct o Ethernet, y se opera desde dispositivos móviles.</p><h3>En la caja</h3><p>Impresora, botellas de tinta de inicialización, cable de corriente, cable USB, cable de fax, CD con drivers y documentación.</p>",
+      "revisar": [
+        "Brand estaba en General: puesto Epson por el nombre.",
+        "La descripción dice 'Garantía: 2 años con registro'. No se publicó: la garantía de la tienda es de 6 meses y no se escriben plazos.",
+        "El CD de drivers es solo para Windows, según el texto."
+      ]
+    },
+    {
+      "slug": "impresora-multifuncion-hp-smart-tank-530",
+      "name": "Impresora multifunción HP Smart Tank 530 Wi-Fi sistema continuo",
+      "brand": "HP",
+      "model": "Smart Tank 530",
+      "seoTitle": "Multifunción HP Smart Tank 530 Wi-Fi",
+      "seoDescription": "Multifunción HP Smart Tank 530 de tanque de tinta con Wi-Fi y Bluetooth. Imprime, copia y escanea, con hasta 12.000 páginas en negro. Garantía y envíos.",
+      "shortDescription": "Multifunción HP Smart Tank 530 de tanque de tinta, con Wi-Fi, Bluetooth y USB. Imprime, copia y escanea, con botellas de hasta 12.000 páginas en negro.",
+      "highlights": [
+        "Imprime, copia y escanea",
+        "Tanque de tinta: hasta 12.000 páginas en negro",
+        "Wi-Fi, Bluetooth LE y USB 2.0",
+        "Impresión móvil con la app HP Smart",
+        "Incluye botellas de tinta para empezar"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Inyección térmica de tinta HP, tanque"
+        },
+        {
+          "label": "Funciones",
+          "value": "Imprime, copia y escanea"
+        },
+        {
+          "label": "Calidad en negro",
+          "value": "Hasta 1.200 x 1.200 ppp"
+        },
+        {
+          "label": "Calidad en color",
+          "value": "Hasta 4.800 x 1.200 dpi optimizados"
+        },
+        {
+          "label": "Rendimiento de tinta",
+          "value": "Hasta 12.000 páginas en negro y 8.000 en color"
+        },
+        {
+          "label": "Volumen mensual recomendado",
+          "value": "400 a 800 páginas"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Monocromática de 2,2\""
+        },
+        {
+          "label": "Conectividad",
+          "value": "USB 2.0, Wi-Fi 802.11b/g/n y Bluetooth LE"
+        },
+        {
+          "label": "Impresión móvil",
+          "value": "App HP Smart, Apple AirPrint, HP ePrint y Mopria"
+        },
+        {
+          "label": "Procesador",
+          "value": "1,2 GHz"
+        },
+        {
+          "label": "En la caja",
+          "value": "Impresora, botellas GT53XL negra y GT52 cian, magenta y amarilla, guías y cable de alimentación"
+        }
+      ],
+      "descriptionHtml": "<p>La HP Smart Tank 530 es una multifunción de tanque de tinta pensada para imprimir mucho a bajo costo. Sirve para el hogar y la oficina chica.</p><h3>Tinta</h3><p>Funciona con botellas que llenan el tanque. Con las botellas originales llega a 12.000 páginas en negro y 8.000 en color. Un sensor automático ayuda a controlar los niveles.</p><h3>Calidad</h3><p>Hasta 1.200 x 1.200 ppp en negro y 4.800 x 1.200 dpi optimizados en color.</p><h3>Conexión</h3><p>Se conecta por Wi-Fi, Bluetooth o USB, e imprime desde el celular con la app HP Smart. También podés conectar el smartphone o la tablet directo a la impresora, sin pasar por la red.</p><h3>Antes de comprar</h3><ul><li>Las botellas de reposición son las HP GT53 (negra) y GT52 (color).</li><li>Se recomienda un uso de 400 a 800 páginas por mes.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto HP por el nombre. Sin SKU en la entrada.",
+        "No publiqué la velocidad: la ficha corta dice 'hasta 5 ppm' y la descripción 11 ppm en negro y 5 ppm en color. Aclarar.",
+        "La descripción habla de 'banda dual Wi-Fi' pero lista Wi-Fi 802.11b/g/n (solo 2,4 GHz): no publiqué 'banda dual'.",
+        "La descripción menciona un alimentador automático de documentos y 'niveles de tóner'; son frases dudosas y no las incluí."
+      ]
+    },
+    {
+      "slug": "impresora-multifuncion-laser-pantum-bm2300nw",
+      "name": "Impresora multifunción láser Pantum BM2300NW",
+      "brand": "Pantum",
+      "model": "BM2300NW",
+      "seoTitle": "Multifunción láser Pantum BM2300NW",
+      "seoDescription": "Multifunción láser monocromática Pantum BM2300NW con Wi-Fi de doble banda, Bluetooth y red. 22 ppm, copia y escaneo. Garantía y envíos a todo el país.",
+      "shortDescription": "Multifunción láser Pantum BM2300NW que imprime, copia y escanea a 22 ppm. Conexión USB, red, Wi-Fi de doble banda (2,4 y 5 GHz) y Bluetooth.",
+      "highlights": [
+        "Imprime, copia y escanea a 22 ppm",
+        "Wi-Fi de doble banda 2,4/5 GHz y Bluetooth",
+        "Conexión USB y de red",
+        "Cartucho estándar de 1.600 páginas",
+        "Escanea a PC, correo, FTP, SMB y celular"
+      ],
+      "specs": [
+        {
+          "label": "Funciones",
+          "value": "Imprime, copia y escanea"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "22 ppm (A4) / 23 ppm (Carta)"
+        },
+        {
+          "label": "Primera página",
+          "value": "Menos de 7,8 s"
+        },
+        {
+          "label": "Dúplex",
+          "value": "Manual"
+        },
+        {
+          "label": "Copia",
+          "value": "22 cpm (A4), hasta 99 copias, zoom 20% a 400%"
+        },
+        {
+          "label": "Escaneo",
+          "value": "Hasta 216 x 297 mm; destinos PC, correo, FTP, SMB, iOS y Android"
+        },
+        {
+          "label": "Conectividad",
+          "value": "USB, red, Wi-Fi 2,4/5 GHz y Bluetooth"
+        },
+        {
+          "label": "Papel",
+          "value": "Entrada de 150 hojas, salida de 100"
+        },
+        {
+          "label": "Panel",
+          "value": "LCD de 2 líneas"
+        },
+        {
+          "label": "Procesador",
+          "value": "800 MHz"
+        },
+        {
+          "label": "Ciclo mensual",
+          "value": "Hasta 20.000 páginas"
+        },
+        {
+          "label": "Cartuchos",
+          "value": "Arranque de 700 páginas, estándar de 1.600"
+        }
+      ],
+      "descriptionHtml": "<p>La Pantum BM2300NW es una multifunción láser monocromática para oficina chica o uso intensivo en casa. Imprime, copia y escanea, y se conecta por red, Wi-Fi o USB.</p><h3>Impresión y copia</h3><p>Imprime a 22 ppm en A4 y 23 en Carta. Copia hasta 99 páginas con zoom de 20% a 400%, y tiene funciones como copia de documento de identidad y copia de recibo.</p><h3>Escaneo</h3><p>Escanea a la PC, al correo, a FTP o SMB, o directo al celular iOS o Android.</p><h3>Conexión</h3><p>Soporta Wi-Fi en 2,4 y 5 GHz, Bluetooth para detectar la impresora más cercana y conexión directa al punto de acceso. Viene con cable USB.</p><h3>Antes de comprar</h3><ul><li>El dúplex es manual.</li><li>Tenés dos cartuchos: el de arranque rinde 700 páginas y el estándar, 1.600.</li><li>Es compatible con Windows, macOS y Linux; consultanos la versión de tu sistema.</li></ul>",
+      "revisar": [
+        "Brand estaba en General: puesto Pantum por el nombre.",
+        "El SKU de entrada dice 'BM2300MW' y el nombre 'BM2300NW': gana el nombre.",
+        "La descripción dice 'Memoria 256 millones' (dato ilegible): no se publicó."
+      ]
+    },
+    {
+      "slug": "lc-brother-hl-l8360cdw-33ppm-wifi-duplex",
+      "name": "Impresora láser color Brother HL-L8360CDW",
+      "brand": "Brother",
+      "model": "HL-L8360CDW",
+      "seoTitle": "Impresora láser color Brother HL-L8360CDW",
+      "seoDescription": "Impresora láser color Brother HL-L8360CDW con Wi-Fi, dúplex automático y 33 ppm. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Impresora láser color Brother HL-L8360CDW con Wi-Fi, dúplex automático y velocidad de 33 páginas por minuto. Pensada para oficinas.",
+      "highlights": [
+        "Láser color a 33 páginas por minuto",
+        "Dúplex automático: ahorra papel",
+        "Wi-Fi para imprimir sin cables",
+        "Resolución de hasta 2400 x 600 ppp",
+        "Bandeja de 250 hojas más alimentador manual"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Láser color"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "33 ppm"
+        },
+        {
+          "label": "Dúplex",
+          "value": "Automático"
+        },
+        {
+          "label": "Resolución",
+          "value": "Hasta 2400 x 600 ppp"
+        },
+        {
+          "label": "Papel",
+          "value": "Bandeja de 250 hojas y alimentador manual"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        },
+        {
+          "label": "Impresión móvil",
+          "value": "Móvil y en la nube"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother HL-L8360CDW es una impresora láser color pensada para oficinas con volumen de trabajo. Imprime a 33 páginas por minuto y en doble faz automática.</p><h3>Productividad</h3><p>La velocidad de 33 ppm y la bandeja de 250 hojas más el alimentador manual ayudan a sostener el trabajo diario.</p><h3>Ahorro de papel</h3><p>La impresión dúplex automática imprime en ambas caras sin que des vuelta las hojas.</p><h3>Conexión</h3><p>Se conecta por Wi-Fi e imprime desde dispositivos móviles y desde la nube.</p><h3>Cómo elegirla</h3><p>Antes de comprar, pensá cuántas páginas imprimís por mes y si necesitás Wi-Fi, dúplex o escáner. Si tenés dudas, escribinos y te orientamos.</p><h3>Antes de comprar</h3><ul><li>El texto no informa el tipo de escáner ni las funciones de copia: parece solo impresión.</li><li>Tampoco indica el rendimiento de los tóneres.</li></ul>",
+      "revisar": [
+        "Se quitó la invitación a consultar por WhatsApp y las menciones a stock y precio especial.",
+        "No se aclaran el ciclo mensual, tóneres ni medidas. El texto original dice 'ppp' y no 'dpi'.",
+        "El SKU de entrada es '27373', que no parece un código del fabricante."
+      ]
+    }
+  ]
+}

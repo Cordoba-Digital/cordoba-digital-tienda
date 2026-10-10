@@ -1,0 +1,2225 @@
+{
+  "lote": "catalogo-B-01",
+  "productos": [
+    {
+      "slug": "192956",
+      "name": "Auricular Philips Manos Libres TAE4105",
+      "brand": "Philips",
+      "model": "TAE4105BK/00",
+      "seoTitle": "Auricular Philips Manos Libres TAE4105",
+      "seoDescription": "Auricular Philips TAE4105 manos libres, con micrófono integrado y control de música y llamadas. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Auricular Philips manos libres TAE4105 con bajos potentes, micrófono integrado y control de música y llamadas.",
+      "highlights": [
+        "Bajos potentes para escuchar música",
+        "Micrófono integrado para llamadas",
+        "Control de música y llamadas",
+        "Envíos a todo el país y retiro en Córdoba"
+      ],
+      "specs": [
+        {
+          "label": "Sonido",
+          "value": "Bajos potentes"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Integrado, manos libres"
+        },
+        {
+          "label": "Controles",
+          "value": "Música y llamadas"
+        }
+      ],
+      "descriptionHtml": "<p>El auricular Philips Manos Libres TAE4105 sirve para escuchar música y atender llamadas con manos libres.</p><h3>Sonido y micrófono</h3><p>Tiene bajos potentes y micrófono integrado para hablar sin sostener el teléfono.</p><h3>Controles</h3><p>Desde el mismo auricular podés controlar la música y las llamadas.</p><h3>Antes de comprar</h3><p>La descripción original no indica el tipo de conexión ni el largo del cable. Consultanos si necesitás esos datos.</p>",
+      "revisar": [
+        "Descripción original de relleno: no dice si es con cable o Bluetooth, ni el largo.",
+        "El SKU indica BK (negro), pero el color no figura en el texto: confirmar."
+      ]
+    },
+    {
+      "slug": "airpods-pro-2",
+      "name": "Apple AirPods Pro 2",
+      "brand": "Apple",
+      "model": "AirPods Pro 2",
+      "seoTitle": "Apple AirPods Pro 2 con cancelación de ruido",
+      "seoDescription": "Apple AirPods Pro 2 con chip H2, cancelación activa de ruido, audio espacial y hasta 30 h con el estuche. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Apple AirPods Pro 2 con cancelación activa de ruido, audio espacial personalizado y resistencia al sudor (IP54). Hasta 6 horas de audio por carga.",
+      "highlights": [
+        "Cancelación activa de ruido con chip H2",
+        "Audio espacial personalizado con seguimiento de la cabeza",
+        "Hasta 6 h de audio y 30 h con el estuche",
+        "Resistentes al polvo, agua y sudor (IP54)",
+        "Modo Ambiente y reconocimiento de conversación"
+      ],
+      "specs": [
+        {
+          "label": "Chip",
+          "value": "Apple H2"
+        },
+        {
+          "label": "Cancelación de ruido",
+          "value": "Activa, con Modo Ambiente y reconocimiento de conversación"
+        },
+        {
+          "label": "Audio",
+          "value": "Audio espacial personalizado con seguimiento dinámico de la cabeza"
+        },
+        {
+          "label": "Micrófonos",
+          "value": "Dos, con beamforming"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 6 h de audio (5,5 h con audio espacial y seguimiento de cabeza) y hasta 4,5 h de conversación"
+        },
+        {
+          "label": "Estuche",
+          "value": "Hasta 30 h de audio y 24 h de conversación; 5 minutos de carga equivalen a aprox. 1 h de audio"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP54 (polvo, agua y sudor)"
+        },
+        {
+          "label": "Carga",
+          "value": "MagSafe, Qi o USB-C"
+        },
+        {
+          "label": "Controles",
+          "value": "Táctiles"
+        },
+        {
+          "label": "En la caja",
+          "value": "Estuche de carga MagSafe (USB-C) con bocina y enganche para correa, almohadillas de silicona XS, S, M y L, cable USB-C y documentación"
+        }
+      ],
+      "descriptionHtml": "<p>Los AirPods Pro 2 combinan cancelación activa de ruido, audio espacial personalizado y hasta 30 horas de batería con el estuche.</p><h3>Cancelación de ruido</h3><p>La cancelación activa de ruido con chip H2 bloquea los sonidos de afuera. El Modo Ambiente te deja escuchar lo que pasa alrededor, y el reconocimiento de conversación está incluido para cuando hablan con vos.</p><h3>Audio</h3><p>El audio espacial personalizado usa el seguimiento dinámico de la cabeza para armar un sonido envolvente. Dos micrófonos con beamforming mejoran la calidad de las llamadas.</p><h3>Batería</h3><p>Hasta 6 horas de audio con una carga y hasta 30 horas con el estuche MagSafe. Cinco minutos en el estuche equivalen a aproximadamente una hora de audio.</p><h3>Resistencia y uso</h3><p>Resisten polvo, agua y sudor (IP54). Tienen control táctil para manejar la reproducción y las llamadas.</p><h3>En la caja</h3><p>Estuche de carga MagSafe (USB-C) con bocina y enganche para correa, cuatro tamaños de almohadillas de silicona, cable USB-C y documentación.</p>",
+      "revisar": [
+        "La descripción original dice IP54 para estos AirPods Pro 2; en la ficha de AirPods Pro 2da Gen aparece IPX4. Confirmar.",
+        "Marca estaba como General: la paso a Apple."
+      ]
+    },
+    {
+      "slug": "apple-20w-usb-c-power-adapter",
+      "name": "Apple Adaptador de Corriente USB-C 20 W",
+      "brand": "Apple",
+      "model": "MWVU3LE/A",
+      "seoTitle": "Adaptador USB-C Apple 20 W original",
+      "seoDescription": "Adaptador de corriente USB-C Apple de 20 W, producto original con conector USB-C. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Adaptador de corriente USB-C de 20 W original de Apple, para cargar tu dispositivo con conector USB-C. Envíos a todo el país.",
+      "highlights": [
+        "Potencia de 20 W con conector USB-C",
+        "Producto original Apple",
+        "Código de parte MWVU3LE/A"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "20 W"
+        },
+        {
+          "label": "Conector",
+          "value": "USB-C"
+        },
+        {
+          "label": "Tipo",
+          "value": "Adaptador de corriente"
+        }
+      ],
+      "descriptionHtml": "<p>El adaptador de corriente USB-C de 20 W de Apple es un cargador original para cargar tus dispositivos con conector USB-C.</p><h3>Carga</h3><p>Tiene una potencia de 20 W. La descripción original no detalla los modelos compatibles ni los tiempos de carga, así que consultanos antes de comprar si lo necesitás para un equipo puntual.</p><h3>Original</h3><p>Es un producto original Apple, con garantía oficial y envíos a todo el país.</p>",
+      "revisar": [
+        "Descripción de relleno: no indica compatibilidad de modelos ni si incluye cable.",
+        "Marca estaba como General: la paso a Apple."
+      ]
+    },
+    {
+      "slug": "apple-67w-usb-c-power-adapter",
+      "name": "Apple Adaptador de Corriente USB-C 67 W",
+      "brand": "Apple",
+      "model": "MKU63LE/A",
+      "seoTitle": "Adaptador USB-C Apple 67 W original",
+      "seoDescription": "Adaptador de corriente USB-C Apple de 67 W, producto original con conector USB-C. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Adaptador de corriente USB-C de 67 W original de Apple, para cargar tus dispositivos con conector USB-C. Envíos a todo el país.",
+      "highlights": [
+        "Potencia de 67 W con conector USB-C",
+        "Producto original Apple",
+        "Código de parte MKU63LE/A"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "67 W"
+        },
+        {
+          "label": "Conector",
+          "value": "USB-C"
+        },
+        {
+          "label": "Tipo",
+          "value": "Adaptador de corriente"
+        }
+      ],
+      "descriptionHtml": "<p>El adaptador de corriente USB-C de 67 W de Apple es un cargador original para cargar tus dispositivos con conector USB-C.</p><h3>Carga</h3><p>Tiene una potencia de 67 W. La descripción original no detalla los modelos compatibles ni los tiempos de carga, así que consultanos antes de comprar si lo necesitás para un equipo puntual.</p><h3>Original</h3><p>Es un producto original Apple, con garantía oficial y envíos a todo el país.</p>",
+      "revisar": [
+        "Descripción de relleno: no indica compatibilidad de modelos ni si incluye cable.",
+        "Marca estaba como General: la paso a Apple."
+      ]
+    },
+    {
+      "slug": "apple-airpods-4-active-noise-cancellation",
+      "name": "Apple AirPods 4 con Cancelación Activa de Ruido",
+      "model": "AirPods 4 ANC",
+      "seoTitle": "Apple AirPods 4 con cancelación de ruido",
+      "seoDescription": "Apple AirPods 4 con cancelación activa de ruido, controles táctiles y resistencia al sudor y al agua. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Apple AirPods 4 con cancelación activa de ruido, controles táctiles para música, llamadas y Siri, y resistencia al sudor y al agua.",
+      "highlights": [
+        "Cancelación activa de ruido",
+        "Controles táctiles para música, llamadas y Siri",
+        "Resistentes al sudor y al agua",
+        "Compatibles con dispositivos Apple"
+      ],
+      "specs": [
+        {
+          "label": "Cancelación de ruido",
+          "value": "Activa"
+        },
+        {
+          "label": "Controles",
+          "value": "Táctiles (música, llamadas y Siri)"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Al sudor y al agua"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Bluetooth, compatible con dispositivos Apple"
+        },
+        {
+          "label": "Sonido",
+          "value": "Graves profundos, medios claros y agudos cristalinos"
+        }
+      ],
+      "descriptionHtml": "<p>Los AirPods 4 con Cancelación Activa de Ruido son auriculares inalámbricos para escuchar música, llamadas y contenido sin el ruido del entorno.</p><h3>Cancelación de ruido</h3><p>La cancelación activa de ruido bloquea los sonidos de afuera, para que la música o la llamada se escuchen sin interrupciones.</p><h3>Sonido</h3><p>Según la descripción original, tienen graves profundos, medios claros y agudos nítidos.</p><h3>Uso diario</h3><p>Tienen controles táctiles para manejar la música, las llamadas y Siri. Son resistentes al sudor y al agua, así que sirven para entrenar.</p><h3>Comodidad y conexión</h3><p>El diseño ergonómico está pensado para usarlos durante horas. Se conectan por Bluetooth y son compatibles con dispositivos Apple.</p>",
+      "revisar": [
+        "La descripción original no trae autonomía, chip ni grado de resistencia (IP): completar desde la ficha de Apple.",
+        "La descripción original es muy promocional; se dejaron solo las características que menciona."
+      ]
+    },
+    {
+      "slug": "apple-airpods-pro-2da-gen",
+      "name": "Apple AirPods Pro 2da Generación",
+      "model": "AirPods Pro 2da generación",
+      "seoTitle": "Apple AirPods Pro 2da generación",
+      "seoDescription": "AirPods Pro 2da generación con chip H2, cancelación de ruido mejorada, audio espacial personalizado y hasta 30 h con el estuche. Garantía oficial y envíos.",
+      "shortDescription": "AirPods Pro 2da generación con cancelación activa de ruido, audio espacial personalizado, hasta 30 horas de batería con el estuche y resistencia IPX4.",
+      "highlights": [
+        "Cancelación activa de ruido con chip H2",
+        "Audio espacial personalizado",
+        "Hasta 6 h de reproducción y 30 h con el estuche MagSafe",
+        "Resistencia al sudor y a las salpicaduras (IPX4)",
+        "Controles táctiles en el vástago"
+      ],
+      "specs": [
+        {
+          "label": "Chip",
+          "value": "H2"
+        },
+        {
+          "label": "Cancelación de ruido",
+          "value": "Activa, mejorada respecto de la generación anterior"
+        },
+        {
+          "label": "Audio",
+          "value": "Audio espacial personalizado, con controladores de baja distorsión"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 6 h con una carga; 30 h adicionales con el estuche MagSafe"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IPX4 (sudor y salpicaduras)"
+        },
+        {
+          "label": "Controles",
+          "value": "Táctiles en el vástago, para ajustar el volumen con deslizamientos; Oye Siri"
+        }
+      ],
+      "descriptionHtml": "<p>Los AirPods Pro 2da Generación cambian la forma de escuchar con cancelación de ruido mejorada y audio espacial personalizado.</p><h3>Cancelación de ruido</h3><p>Según la descripción original, la cancelación activa de ruido con el chip H2 es mejor que la de la generación anterior. Bloquea sonidos externos para una escucha más concentrada.</p><h3>Audio</h3><p>El audio espacial personalizado se adapta a la forma de tus oídos. Los controladores de baja distorsión dan graves más profundos y agudos claros.</p><h3>Batería</h3><p>Hasta 6 horas de reproducción con una carga. Con el estuche MagSafe suma 30 horas adicionales.</p><h3>Uso y control</h3><p>Resisten el sudor y las salpicaduras (IPX4), así que son útiles para entrenar. El control táctil del vástago permite subir o bajar el volumen con un deslizamiento, y podés llamar a Siri sin usar las manos.</p>",
+      "revisar": [
+        "La descripción dice que la cancelación es 'hasta 2 veces más efectiva' que la generación anterior. No hay fuente en la ficha: confirmar o quitar.",
+        "No dice si el estuche es USB-C o Lightning: confirmar."
+      ]
+    },
+    {
+      "slug": "apple-airpods-pro-3ra-gen",
+      "name": "Apple AirPods Pro 3ra Generación",
+      "model": "AirPods Pro 3ra generación",
+      "seoTitle": "Apple AirPods Pro 3ra generación",
+      "seoDescription": "AirPods Pro 3ra generación con cancelación activa de ruido adaptativa, audio espacial personalizado y hasta 30 h con el estuche. Garantía oficial y envíos.",
+      "shortDescription": "AirPods Pro 3ra generación con cancelación activa de ruido adaptativa, audio espacial personalizado y resistencia IPX4. Hasta 6 h de reproducción por carga.",
+      "highlights": [
+        "Cancelación activa de ruido adaptativa",
+        "Audio espacial personalizado",
+        "Hasta 6 h de reproducción y 30 h con el estuche MagSafe",
+        "Controles táctiles en el tallo",
+        "Resistentes al agua y al sudor (IPX4)"
+      ],
+      "specs": [
+        {
+          "label": "Cancelación de ruido",
+          "value": "Activa y adaptativa"
+        },
+        {
+          "label": "Audio",
+          "value": "Audio espacial personalizado"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 6 h de reproducción continua; 30 h adicionales con el estuche MagSafe"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IPX4 (agua y sudor)"
+        },
+        {
+          "label": "Controles",
+          "value": "Táctiles en el tallo: volumen, cambio de canciones y Siri"
+        },
+        {
+          "label": "Ajuste",
+          "value": "Varios tamaños de almohadillas de silicona"
+        },
+        {
+          "label": "Carga",
+          "value": "Estuche MagSafe"
+        }
+      ],
+      "descriptionHtml": "<p>Los AirPods Pro 3ra Generación combinan cancelación de ruido adaptativa, audio espacial personalizado y un ajuste cómodo para todo el día.</p><h3>Cancelación de ruido</h3><p>La cancelación adaptativa bloquea los sonidos externos para una inmersión total en la música.</p><h3>Audio espacial</h3><p>El audio espacial personalizado crea un sonido tridimensional que se adapta a la forma de tus oídos.</p><h3>Batería</h3><p>Hasta 6 horas de reproducción continua y 30 horas adicionales con el estuche MagSafe.</p><h3>Control y ajuste</h3><p>Los controles táctiles en el tallo permiten ajustar el volumen, cambiar canciones y activar Siri. Vienen con varios tamaños de almohadillas de silicona.</p><h3>Uso diario</h3><p>Son resistentes al agua y al sudor (IPX4), ideales para entrenamientos y uso diario. Cambian entre iPhone, iPad y Mac sin pasos extra.</p>",
+      "revisar": [
+        "La descripción dice chip H2 y 6 h de batería, que podrían corresponder a la generación anterior. Confirmar antes de publicar."
+      ]
+    },
+    {
+      "slug": "apple-airtags-rastreados-4-pack",
+      "name": "Apple AirTag, Pack de 4",
+      "model": "AirTag (pack de 4)",
+      "seoTitle": "Apple AirTag pack de 4 unidades",
+      "seoDescription": "Pack de 4 Apple AirTag para rastrear llaves, billeteras y mochilas con la red Buscar. Batería CR2032 reemplazable. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Pack de 4 Apple AirTag originales para ubicar llaves, billeteras y objetos personales con la red Buscar de Apple. Resistentes al agua y al polvo (IP67).",
+      "highlights": [
+        "Red Buscar de Apple para ubicar objetos",
+        "Pack de 4 unidades",
+        "Batería CR2032 reemplazable, con una duración de un año",
+        "Resistentes al agua y al polvo (IP67)",
+        "Sonido integrado para localizarlos"
+      ],
+      "specs": [
+        {
+          "label": "Batería",
+          "value": "CR2032 reemplazable, duración de un año"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP67 (agua y polvo)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Bluetooth de ultra banda ancha"
+        },
+        {
+          "label": "Red de búsqueda",
+          "value": "Buscar de Apple"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "iPhone, iPad y otros dispositivos Apple"
+        },
+        {
+          "label": "Sonido",
+          "value": "Integrado, para localización auditiva"
+        },
+        {
+          "label": "Privacidad",
+          "value": "Cifrado de extremo a extremo"
+        },
+        {
+          "label": "En la caja",
+          "value": "4 AirTag"
+        }
+      ],
+      "descriptionHtml": "<p>Los Apple AirTag en pack de 4 sirven para no perder tus objetos más importantes: llaves, billeteras, mochilas o cualquier pertenencia personal.</p><h3>Localización</h3><p>Usan la red Buscar de Apple para encontrar objetos perdidos. Desde la app Buscar podés ver la ubicación de tus pertenencias y localizarlas con sonido.</p><h3>Configuración</h3><p>Acercá el AirTag al iPhone y queda vinculado automáticamente. Son cuatro unidades, una por cada objeto que quieras seguir.</p><h3>Batería y resistencia</h3><p>Tienen batería CR2032 reemplazable, con una duración de aproximadamente un año. Son resistentes al agua y al polvo (IP67).</p><h3>Privacidad</h3><p>Según la descripción original, la información viaja cifrada de extremo a extremo.</p>",
+      "revisar": []
+    },
+    {
+      "slug": "apple-mouse-magic-2-blanco",
+      "name": "Apple Magic Mouse 2 Blanco",
+      "brand": "Apple",
+      "model": "Magic Mouse 2",
+      "seoTitle": "Apple Magic Mouse 2 blanco",
+      "seoDescription": "Apple Magic Mouse 2 en color blanco, producto original Apple. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Apple Magic Mouse 2 en color blanco. Producto original Apple, con garantía y envíos a todo el país.",
+      "highlights": [
+        "Magic Mouse 2 en color blanco",
+        "Producto original Apple",
+        "Código de parte MXK53AM/A"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Blanco"
+        }
+      ],
+      "descriptionHtml": "<p>El Apple Magic Mouse 2 en color blanco es un mouse original de Apple.</p><h3>Detalles</h3><p>La descripción original de este producto es genérica y no trae características técnicas, como conectividad, batería o compatibilidad.</p><h3>Garantía y envíos</h3><p>Es un producto original Apple y se vende con garantía oficial. Enviamos a todo el país y hay retiro en Córdoba.</p>",
+      "revisar": [
+        "Descripción de relleno: faltan conectividad, batería y compatibilidad.",
+        "Marca estaba como General: la paso a Apple."
+      ]
+    },
+    {
+      "slug": "apple-usb-c-power-adapter-20w-original",
+      "name": "Cargador Apple USB-C 20 W Original",
+      "brand": "Apple",
+      "model": "MHJC3LEA",
+      "seoTitle": "Cargador Apple USB-C 20 W original",
+      "seoDescription": "Cargador Apple USB-C de 20 W, original y homologado para Argentina. Carga rápida desde iPhone 8 o posterior. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Adaptador de corriente USB-C de 20 W original de Apple, homologado para Argentina. Con carga rápida desde iPhone 8 o posterior.",
+      "highlights": [
+        "Homologado para Argentina",
+        "Carga rápida desde iPhone 8 o posterior",
+        "Sirve para cualquier dispositivo con USB-C",
+        "El cable USB-C se vende por separado",
+        "Producto original Apple"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "20 W"
+        },
+        {
+          "label": "Conector",
+          "value": "USB-C"
+        },
+        {
+          "label": "Homologación",
+          "value": "Argentina"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "iPhone 11, 12 y 13; iPad Pro de 11 y de 12,9 pulgadas (3.ª generación)"
+        },
+        {
+          "label": "Carga rápida",
+          "value": "Desde iPhone 8 o posterior"
+        },
+        {
+          "label": "Cable",
+          "value": "Se vende por separado"
+        }
+      ],
+      "descriptionHtml": "<p>El cargador USB-C de 20 W de Apple es un adaptador original, homologado para Argentina. Sirve para cargar tu dispositivo en casa, en la oficina o donde estés.</p><h3>Carga rápida</h3><p>Con iPhone 8 o posterior aprovechás la carga rápida. Apple recomienda este adaptador para el iPhone 11, 12 y 13, y para los iPad Pro de 11 y 12,9 pulgadas (3.ª generación), para lograr una carga óptima.</p><h3>Otros usos</h3><p>Funciona con cualquier dispositivo que tenga puerto USB-C. También podés usarlo para cargar tus AirPods.</p><h3>En la caja</h3><p>El adaptador se vende solo. El cable de carga USB-C se vende por separado.</p>",
+      "revisar": [
+        "Marca estaba como General: la paso a Apple.",
+        "La lista de modelos recomendados viene de la descripción original, no de la ficha oficial de Apple: confirmar."
+      ]
+    },
+    {
+      "slug": "applewatch-s10-46mm-gps-aluminium-case",
+      "name": "Apple Watch Series 10 de 46 mm GPS con Caja de Aluminio",
+      "model": "Watch Series 10 46 mm",
+      "seoTitle": "Apple Watch Series 10 de 46 mm GPS",
+      "seoDescription": "Apple Watch Series 10 de 46 mm con GPS y caja de aluminio: pantalla Always-On, monitoreo de salud y agua hasta 50 m. Garantía oficial y envíos.",
+      "shortDescription": "Apple Watch Series 10 de 46 mm con GPS y caja de aluminio. Pantalla Retina Always-On, monitoreo de salud y resistencia al agua hasta 50 metros.",
+      "highlights": [
+        "Caja de aluminio de 46 mm, liviana y resistente",
+        "GPS integrado para entrenar sin llevar el iPhone",
+        "ECG, oxígeno en sangre y frecuencia cardíaca",
+        "Resistente al agua hasta 50 m",
+        "Hasta 18 horas de uso continuo"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Retina Always-On de 46 mm"
+        },
+        {
+          "label": "Caja",
+          "value": "Aluminio de 46 mm"
+        },
+        {
+          "label": "GPS",
+          "value": "Integrado"
+        },
+        {
+          "label": "Salud",
+          "value": "ECG, oxígeno en sangre y frecuencia cardíaca"
+        },
+        {
+          "label": "Resistencia al agua",
+          "value": "Hasta 50 m"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 18 h de uso continuo"
+        },
+        {
+          "label": "Correas",
+          "value": "Intercambiables"
+        },
+        {
+          "label": "Apps",
+          "value": "Compatible con miles de apps"
+        }
+      ],
+      "descriptionHtml": "<p>El Apple Watch Series 10 de 46 mm con GPS y caja de aluminio combina una caja liviana y resistente con un monitoreo de salud completo.</p><h3>Pantalla</h3><p>La pantalla Retina Always-On de 46 mm muestra la información sin necesidad de levantar la muñeca.</p><h3>Salud y entrenamiento</h3><p>Mide frecuencia cardíaca, oxígeno en sangre y ECG. El GPS integrado registra tus recorridos sin llevar el iPhone.</p><h3>Batería y agua</h3><p>Tiene hasta 18 horas de uso continuo y es resistente al agua hasta 50 metros de profundidad.</p><h3>Correas y apps</h3><p>Las correas son intercambiables para personalizar el estilo. Es compatible con miles de apps.</p>",
+      "revisar": [
+        "La descripción no dice si es modelo con conectividad celular: el nombre dice GPS. Confirmar.",
+        "Autonomía (18 h) y resistencia (50 m) vienen de la descripción original: confirmar con la ficha de Apple."
+      ]
+    },
+    {
+      "slug": "applewatch-s11-42mm-gps-aluminuim-case",
+      "name": "Apple Watch Series 11 de 42 mm GPS con Caja de Aluminio",
+      "model": "Watch Series 11 42 mm",
+      "seoTitle": "Apple Watch Series 11 de 42 mm GPS",
+      "seoDescription": "Apple Watch Series 11 de 42 mm con GPS y caja de aluminio, con monitoreo de salud, seguimiento del sueño y agua hasta 50 m. Garantía oficial y envíos.",
+      "shortDescription": "Apple Watch Series 11 de 42 mm con GPS y caja de aluminio. Monitoreo de salud, seguimiento del sueño, pantalla Always-On y resistencia al agua hasta 50 m.",
+      "highlights": [
+        "Caja de aluminio de 42 mm, liviana y resistente",
+        "GPS integrado para seguir tus actividades sin iPhone",
+        "Frecuencia cardíaca y seguimiento del sueño",
+        "Resistente al agua hasta 50 m",
+        "Llamadas, mensajes y notificaciones en la muñeca"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Retina Always-On"
+        },
+        {
+          "label": "Caja",
+          "value": "Aluminio de 42 mm"
+        },
+        {
+          "label": "GPS",
+          "value": "Integrado"
+        },
+        {
+          "label": "Salud",
+          "value": "Frecuencia cardíaca y seguimiento del sueño"
+        },
+        {
+          "label": "Resistencia al agua",
+          "value": "Hasta 50 m"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Todos los modelos de iPhone (según la descripción)"
+        },
+        {
+          "label": "Notificaciones",
+          "value": "Llamadas, mensajes y notificaciones desde la muñeca"
+        }
+      ],
+      "descriptionHtml": "<p>El Apple Watch Series 11 de 42 mm con GPS y caja de aluminio es un smartwatch oficial de Apple para uso diario y para entrenar.</p><h3>Diseño</h3><p>La caja de aluminio de 42 mm ofrece un buen equilibrio entre durabilidad y peso, pensada para usar todos los días.</p><h3>Salud</h3><p>Mide la frecuencia cardíaca de forma continua y registra el sueño. Tiene muchas aplicaciones de salud y fitness.</p><h3>Actividad y agua</h3><p>El GPS integrado permite seguir tus actividades sin llevar el iPhone. Es resistente al agua hasta 50 metros.</p><h3>Notificaciones</h3><p>Recibís llamadas, mensajes y notificaciones inteligentes en la muñeca. La pantalla Retina Always-On se ve bien con cualquier luz.</p>",
+      "revisar": [
+        "La descripción dice que es compatible con todos los modelos de iPhone: confirmar con la ficha de Apple.",
+        "La descripción original no indica autonomía; no se incluyó."
+      ]
+    },
+    {
+      "slug": "applewatch-s11-46mm-gps-aluminium",
+      "name": "Apple Watch Series 11 de 46 mm GPS con Caja de Aluminio",
+      "model": "Watch Series 11 46 mm",
+      "seoTitle": "Apple Watch Series 11 de 46 mm GPS",
+      "seoDescription": "Apple Watch Series 11 de 46 mm con GPS y caja de aluminio: frecuencia cardíaca, oxígeno en sangre, detección de caídas y agua hasta 50 m. Garantía y envíos.",
+      "shortDescription": "Apple Watch Series 11 de 46 mm con GPS y caja de aluminio. Sensor de frecuencia cardíaca, detección de caídas, oxígeno en sangre y resistencia al agua hasta 50 m.",
+      "highlights": [
+        "Caja de aluminio de 46 mm",
+        "GPS integrado para registrar rutas sin iPhone",
+        "Frecuencia cardíaca, sueño y oxígeno en sangre",
+        "Detección de caídas",
+        "Resistente al agua hasta 50 m, apto para natación"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Retina Always-On"
+        },
+        {
+          "label": "Caja",
+          "value": "Aluminio de 46 mm"
+        },
+        {
+          "label": "GPS",
+          "value": "Integrado"
+        },
+        {
+          "label": "Salud",
+          "value": "Frecuencia cardíaca, seguimiento del sueño, oxígeno en sangre y detección de caídas"
+        },
+        {
+          "label": "Resistencia al agua",
+          "value": "Hasta 50 m"
+        },
+        {
+          "label": "Apps",
+          "value": "Miles de apps del App Store"
+        },
+        {
+          "label": "Notificaciones",
+          "value": "Llamadas, mensajes y Siri desde la muñeca"
+        }
+      ],
+      "descriptionHtml": "<p>El Apple Watch Series 11 de 46 mm con GPS y caja de aluminio es un smartwatch oficial de Apple con monitoreo de salud avanzado.</p><h3>Pantalla y diseño</h3><p>La pantalla Retina Always-On muestra la información con buena visibilidad en cualquier condición de luz. La caja de aluminio de 46 mm es liviana y resistente.</p><h3>Salud</h3><p>Monitorea la frecuencia cardíaca, el sueño y la medición de oxígeno en sangre. También incluye detección de caídas.</p><h3>Actividad</h3><p>El GPS integrado registra con precisión tu ubicación y tus rutas, sin necesidad de llevar el iPhone.</p><h3>Agua y uso diario</h3><p>Es resistente al agua hasta 50 metros, así que sirve para natación. Accedés a miles de apps del App Store y recibís llamadas y mensajes desde la muñeca.</p>",
+      "revisar": [
+        "La descripción original menciona opciones de financiamiento: no se incluyeron porque no están confirmadas.",
+        "La autonomía no figura en la descripción; no se incluyó."
+      ]
+    },
+    {
+      "slug": "applewatch-se-3-40mm-gps",
+      "name": "Apple Watch SE 3 de 40 mm GPS",
+      "model": "Watch SE 3 40 mm",
+      "seoTitle": "Apple Watch SE 3 de 40 mm GPS",
+      "seoDescription": "Apple Watch SE 3 de 40 mm con GPS, pantalla Retina Always-On, chip S8, más de 100 entrenamientos y agua hasta 50 m. Garantía oficial y envíos.",
+      "shortDescription": "Apple Watch SE 3 de 40 mm con GPS, pantalla Retina Always-On, chip S8, más de 100 entrenamientos y resistencia al agua hasta 50 m.",
+      "highlights": [
+        "Pantalla Retina Always-On de 40 mm",
+        "Chip S8 para un uso fluido",
+        "Más de 100 tipos de entrenamiento",
+        "Frecuencia cardíaca las 24 horas",
+        "Hasta 18 horas de batería"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Retina Always-On de 40 mm"
+        },
+        {
+          "label": "Chip",
+          "value": "S8"
+        },
+        {
+          "label": "GPS",
+          "value": "Integrado"
+        },
+        {
+          "label": "Entrenamientos",
+          "value": "Más de 100 tipos, con detección automática de ejercicio"
+        },
+        {
+          "label": "Salud",
+          "value": "Frecuencia cardíaca las 24 horas"
+        },
+        {
+          "label": "Resistencia al agua",
+          "value": "Hasta 50 m"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 18 h, con carga rápida"
+        },
+        {
+          "label": "Apps",
+          "value": "Miles de apps del App Store"
+        }
+      ],
+      "descriptionHtml": "<p>El Apple Watch SE 3 de 40 mm con GPS combina una pantalla Retina Always-On con un precio más accesible dentro de la línea.</p><h3>Pantalla y chip</h3><p>La pantalla Retina Always-On de 40 mm muestra la información sin esfuerzo. El chip S8 mantiene el uso fluido y eficiente.</p><h3>Entrenamiento</h3><p>Registra más de 100 tipos de entrenamiento y detecta ejercicios de forma automática. La frecuencia cardíaca se monitorea las 24 horas.</p><h3>Batería</h3><p>Tiene hasta 18 horas de batería, y la carga rápida permite recuperar energía en poco tiempo.</p><h3>Uso diario</h3><p>Recibís notificaciones, llamadas y acceso a miles de apps del App Store desde la muñeca. Es resistente al agua hasta 50 metros, ideal para natación.</p>",
+      "revisar": [
+        "La descripción no indica el material de la caja ni el color: confirmar con la foto.",
+        "Chip S8 y los 100 tipos de entrenamiento vienen de la descripción original: confirmar."
+      ]
+    },
+    {
+      "slug": "applewatch-ultra-2-49mm-cel-gps",
+      "name": "Apple Watch Ultra 2 de 49 mm con GPS y Celular",
+      "model": "Watch Ultra 2 49 mm",
+      "seoTitle": "Apple Watch Ultra 2 de 49 mm con celular",
+      "seoDescription": "Apple Watch Ultra 2 de 49 mm con GPS de doble frecuencia y celular, sumergible hasta 100 m y certificación MIL-STD 810H. Garantía oficial y envíos.",
+      "shortDescription": "Apple Watch Ultra 2 de 49 mm con GPS y conectividad celular. Sumergible hasta 100 metros, certificación MIL-STD 810H y batería de hasta 36 horas.",
+      "highlights": [
+        "Conectividad celular independiente del iPhone",
+        "GPS de doble frecuencia",
+        "Sumergible hasta 100 m",
+        "Certificación MIL-STD 810H",
+        "Hasta 36 h de uso normal y 72 h en modo ahorro",
+        "Compatible con correas Trail Loop y Alpine Loop"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Retina Always-On de 49 mm, muy brillante"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Celular independiente (funciona sin iPhone)"
+        },
+        {
+          "label": "GPS",
+          "value": "Doble frecuencia"
+        },
+        {
+          "label": "Resistencia al agua",
+          "value": "Sumergible hasta 100 m"
+        },
+        {
+          "label": "Certificación",
+          "value": "MIL-STD 810H"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 36 h de uso normal; 72 h en modo ahorro"
+        },
+        {
+          "label": "Sensores",
+          "value": "Temperatura corporal y monitoreo avanzado de salud"
+        },
+        {
+          "label": "Correas",
+          "value": "Compatible con Trail Loop y Alpine Loop"
+        }
+      ],
+      "descriptionHtml": "<p>El Apple Watch Ultra 2 de 49 mm con GPS y celular está pensado para deportes extremos, montaña, natación y uso profesional.</p><h3>Conectividad y GPS</h3><p>Tiene conectividad celular independiente, así que funciona sin iPhone cerca. El GPS de doble frecuencia da una navegación precisa.</p><h3>Resistencia</h3><p>Es sumergible hasta 100 metros y cumple la certificación MIL-STD 810H.</p><h3>Batería</h3><p>Tiene hasta 36 horas de uso normal y 72 horas en modo ahorro de batería.</p><h3>Salud y accesorios</h3><p>Incluye sensor de temperatura corporal y monitoreo avanzado de salud. Es compatible con las correas Trail Loop y Alpine Loop.</p>",
+      "revisar": [
+        "La descripción original no indica color ni material de la caja: confirmar con la foto.",
+        "Confirmar que el modelo es Ultra 2 de 49 mm con celular (el nombre lo dice)."
+      ]
+    },
+    {
+      "slug": "auricular-daewoo-candy-spark-yellow",
+      "brand": "Daewoo",
+      "model": "DW-CS3105-YLW",
+      "seoTitle": "Auriculares Daewoo Candy Spark Yellow",
+      "seoDescription": "Auriculares Daewoo Candy Spark true wireless con estuche de carga inalámbrica, micrófono y alcance de 15 m. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Auriculares true wireless Daewoo Candy Spark en amarillo, con estuche de carga inalámbrica, micrófono integrado y alcance de 15 m.",
+      "highlights": [
+        "Tipo true wireless, sin cables",
+        "Alcance inalámbrico de 15 m",
+        "Micrófono integrado para llamadas manos libres",
+        "Estuche de carga inalámbrica incluido"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "True wireless"
+        },
+        {
+          "label": "Alcance",
+          "value": "15 m"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Integrado, manos libres"
+        },
+        {
+          "label": "Carga",
+          "value": "Estuche de carga inalámbrica"
+        },
+        {
+          "label": "Color",
+          "value": "Amarillo"
+        }
+      ],
+      "descriptionHtml": "<p>Los Daewoo Candy Spark son auriculares true wireless en color amarillo, pensados para escuchar música y atender llamadas sin cables.</p><h3>Conexión</h3><p>Tienen un alcance inalámbrico de 15 metros y modo manos libres incluido.</p><h3>Micrófono</h3><p>Llevan micrófono incorporado para hablar sin sacar el teléfono del bolsillo.</p><h3>Estuche de carga</h3><p>Vienen con un estuche de carga inalámbrica, para recargar los auriculares cuando no los usás.</p><h3>Antes de comprar</h3><p>La descripción original es genérica: no indica autonomía ni versión de Bluetooth. Consultanos si lo necesitás.</p>",
+      "revisar": [
+        "Descripción original de relleno: faltan autonomía, versión de Bluetooth y compatibilidad.",
+        "Marca estaba como General: la paso a Daewoo."
+      ]
+    },
+    {
+      "slug": "auricular-dekkin-tws-sport",
+      "brand": "Dekkin",
+      "seoTitle": "Auricular Dekkin TWS Sport para entrenar",
+      "seoDescription": "Auricular Dekkin TWS Sport para entrenar: calce deportivo, almohadillas de silicona extra, micrófono y control de música y llamadas. Garantía y envíos.",
+      "shortDescription": "Auricular Dekkin TWS Sport con calce pensado para el deporte, almohadillas de silicona extra, micrófono integrado y control de música y llamadas.",
+      "highlights": [
+        "Calce pensado para el deporte",
+        "Almohadillas de silicona extra incluidas",
+        "Micrófono integrado",
+        "Control de música y llamadas",
+        "Conexión rápida y estable"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "TWS (inalámbrico)"
+        },
+        {
+          "label": "Ajuste",
+          "value": "Calce deportivo, con almohadillas de silicona extra"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Integrado"
+        },
+        {
+          "label": "Controles",
+          "value": "Música y llamadas"
+        }
+      ],
+      "descriptionHtml": "<p>El Dekkin TWS Sport es un auricular inalámbrico pensado para entrenar, con un calce deportivo y almohadillas de silicona extra.</p><h3>Calce</h3><p>Las almohadillas de silicona extra ayudan a que el auricular quede firme durante el entrenamiento.</p><h3>Controles y micrófono</h3><p>Tiene micrófono incorporado y control de música y llamadas desde el mismo auricular.</p><h3>Conexión</h3><p>Según la descripción original, la conexión es rápida y estable.</p><h3>Antes de comprar</h3><p>La descripción no indica autonomía, versión de Bluetooth ni grado de resistencia al sudor.</p>",
+      "revisar": [
+        "Descripción original de relleno: faltan autonomía, versión de Bluetooth y resistencia."
+      ]
+    },
+    {
+      "slug": "auricular-eurosound-brick",
+      "brand": "Eurosound",
+      "model": "Brick",
+      "seoTitle": "Auriculares Eurosound Inalámbrico Brick",
+      "seoDescription": "Auriculares Eurosound Inalámbrico Brick con Bluetooth, controles táctiles y diseño ergonómico para música y podcasts. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Auriculares inalámbricos Eurosound Brick con conectividad Bluetooth, controles táctiles y diseño ergonómico, pensados para música y podcasts.",
+      "highlights": [
+        "Conectividad Bluetooth estable",
+        "Graves profundos y agudos nítidos",
+        "Diseño ergonómico para uso prolongado",
+        "Controles táctiles",
+        "Pensados para música y podcasts"
+      ],
+      "specs": [
+        {
+          "label": "Conectividad",
+          "value": "Bluetooth"
+        },
+        {
+          "label": "Tipo",
+          "value": "Inalámbricos"
+        },
+        {
+          "label": "Controles",
+          "value": "Táctiles"
+        },
+        {
+          "label": "Sonido",
+          "value": "Graves profundos y agudos nítidos"
+        },
+        {
+          "label": "Diseño",
+          "value": "Ergonómico"
+        }
+      ],
+      "descriptionHtml": "<p>Los Eurosound Inalámbrico Brick son auriculares Bluetooth con un diseño ergonómico, pensados para escuchar música y podcasts sin cables.</p><h3>Sonido</h3><p>Según la descripción original, tienen graves profundos y agudos nítidos para disfrutar de la música.</p><h3>Conexión</h3><p>La conexión Bluetooth es rápida y estable, así que te podés mover sin cables.</p><h3>Comodidad</h3><p>El diseño ergonómico se adapta a la oreja y está pensado para sesiones largas.</p><h3>Controles</h3><p>Tienen controles táctiles para manejar la reproducción.</p><h3>Antes de comprar</h3><p>La descripción no indica la duración de la batería ni la versión de Bluetooth.</p>",
+      "revisar": [
+        "La descripción dice batería 'prolongada' sin cifra: completar si se tiene el dato.",
+        "Marca estaba como General: la paso a Eurosound."
+      ]
+    },
+    {
+      "slug": "auricular-jahro-bx-324-stereo",
+      "name": "Auricular Jahro BX-324 Stereo",
+      "brand": "Jahro",
+      "model": "BX-324",
+      "seoTitle": "Auricular Jahro BX-324 Stereo",
+      "seoDescription": "Auricular Jahro BX-324 stereo: transductor de 40 mm, 32 Ω, 108 dB, cable de 1,6 m y adaptador de 6,35 mm incluido. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Auricular Jahro BX-324 stereo con transductor de 40 mm, impedancia de 32 Ω, sensibilidad de 108 dB, cable de 1,6 m y adaptador de 6,35 mm incluido.",
+      "highlights": [
+        "Transductor de 40 mm",
+        "Impedancia de 32 Ω y sensibilidad de 108 dB",
+        "Respuesta de 20 Hz a 20 kHz",
+        "Cable de 1,6 m con adaptador de 6,35 mm incluido"
+      ],
+      "specs": [
+        {
+          "label": "Transductor",
+          "value": "40 mm"
+        },
+        {
+          "label": "Impedancia",
+          "value": "32 Ω"
+        },
+        {
+          "label": "Respuesta de frecuencia",
+          "value": "20 Hz a 20 kHz"
+        },
+        {
+          "label": "Sensibilidad",
+          "value": "108 dB a 1 kHz"
+        },
+        {
+          "label": "Potencia nominal",
+          "value": "15 mW"
+        },
+        {
+          "label": "Potencia compatible",
+          "value": "150 mW"
+        },
+        {
+          "label": "Cable",
+          "value": "1,6 m"
+        },
+        {
+          "label": "Adaptador",
+          "value": "6,35 mm incluido"
+        }
+      ],
+      "descriptionHtml": "<p>El Jahro BX-324 es un auricular stereo con transductor de 40 mm y cable de 1,6 metros. Viene con adaptador de 6,35 mm.</p><h3>Especificaciones</h3><p>Impedancia de 32 Ω, respuesta de frecuencia de 20 Hz a 20 kHz y sensibilidad de 108 dB a 1 kHz. Potencia nominal de 15 mW y compatibilidad de potencia de 150 mW.</p><h3>Conexión</h3><p>El cable mide 1,6 metros e incluye un adaptador de 6,35 mm para conectarlo a equipos con esa entrada.</p><h3>Antes de comprar</h3><p>La descripción original es solo la ficha técnica: no indica el tipo de auricular ni el conector del cable. Consultanos antes de comprar.</p>",
+      "revisar": [
+        "La ficha no dice el tipo de auricular ni el conector del cable: confirmar.",
+        "Marca estaba como General: la paso a Jahro."
+      ]
+    },
+    {
+      "slug": "auricular-jahro-gh-112",
+      "brand": "Jahro",
+      "model": "GH-112",
+      "seoTitle": "Auricular Jahro GH-112 de 40 mm",
+      "seoDescription": "Auricular Jahro GH-112 con transductor de 40 mm, impedancia de 32 Ohms, sensibilidad de 108 dB/mW y cable de 1,7 m. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Auricular Jahro GH-112 con transductor de 40 mm, potencia máxima de 45 mW, impedancia de 32 Ohms y cable de 1,7 m.",
+      "highlights": [
+        "Transductor de 40 mm",
+        "Potencia máxima de 45 mW",
+        "Respuesta de 20 Hz a 20 kHz",
+        "Cable de 1,7 m"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño",
+          "value": "40 mm"
+        },
+        {
+          "label": "Potencia máxima",
+          "value": "45 mW"
+        },
+        {
+          "label": "Respuesta de frecuencia",
+          "value": "20 Hz a 20 kHz"
+        },
+        {
+          "label": "Impedancia",
+          "value": "32 Ohms"
+        },
+        {
+          "label": "Sensibilidad",
+          "value": "108 dB/mW"
+        },
+        {
+          "label": "Cable",
+          "value": "1,7 m"
+        }
+      ],
+      "descriptionHtml": "<p>El Jahro GH-112 es un auricular de 40 mm con cable de 1,7 metros y potencia máxima de 45 mW.</p><h3>Sonido</h3><p>Tiene una respuesta de frecuencia de 20 Hz a 20 kHz y una sensibilidad de 108 dB/mW.</p><h3>Impedancia</h3><p>La impedancia es de 32 Ohms.</p><h3>Antes de comprar</h3><p>La descripción original es solo la ficha técnica: no indica el tipo de auricular ni el conector. Consultanos antes de comprar.</p>",
+      "revisar": [
+        "Descripción original de solo ficha técnica: faltan tipo de auricular y conector.",
+        "Marca estaba como General: la paso a Jahro."
+      ]
+    },
+    {
+      "slug": "auricular-nakamichi-in-ear-ce100",
+      "name": "Auricular Nakamichi In-ear CE100",
+      "brand": "Nakamichi",
+      "model": "CE100",
+      "seoTitle": "Auricular Nakamichi In-ear CE100",
+      "seoDescription": "Auricular Nakamichi In-ear CE100, de tamaño pequeño, pensado para la calle, el colectivo, la oficina o el ejercicio. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Auricular Nakamichi In-ear CE100, de tamaño pequeño y diseño intraauricular. Pensado para la calle, el trabajo y hacer ejercicio.",
+      "highlights": [
+        "Diseño in-ear, de tamaño pequeño",
+        "Pensado para la calle, el colectivo o la oficina",
+        "Para acompañarte mientras hacés ejercicio"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "In-ear (intraauricular)"
+        },
+        {
+          "label": "Tamaño",
+          "value": "Pequeño"
+        },
+        {
+          "label": "Uso",
+          "value": "Calle, transporte, oficina y ejercicio"
+        }
+      ],
+      "descriptionHtml": "<p>Los Nakamichi In-ear CE100 son auriculares intraauriculares de tamaño pequeño, para llevar siempre a mano.</p><h3>Para el día a día</h3><p>Sirven para escuchar música y podcasts en la calle, en el colectivo o en la oficina, cuando quieras y donde quieras.</p><h3>Diseño in-ear</h3><p>Por ser intraauriculares, entran en la oreja y son fáciles de llevar en el bolsillo o el bolso.</p><h3>Para entrenar</h3><p>La descripción original los recomienda para hacer ejercicio mientras escuchás tu música.</p><h3>Antes de comprar</h3><p>La descripción no indica si son con cable o inalámbricos, ni el largo del cable ni el tipo de conector. Consultanos antes de comprar.</p>",
+      "revisar": [
+        "La descripción no dice si son con cable o Bluetooth, ni el conector: confirmar.",
+        "Marca estaba como General: la paso a Nakamichi."
+      ]
+    },
+    {
+      "slug": "auricular-samsung-3-5mm-negros",
+      "name": "Auriculares Samsung 3.5 mm Negros",
+      "brand": "Samsung",
+      "model": "EO-IA500BBEBEGWW",
+      "seoTitle": "Auriculares Samsung 3.5 mm negros",
+      "seoDescription": "Auriculares Samsung de 3.5 mm negros con altavoces de dos vías, impedancia de 32 Ω y control de 3 botones. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Auriculares Samsung de 3.5 mm en color negro, con altavoces de dos vías, impedancia de 32 Ω y control de play, pausa y volumen.",
+      "highlights": [
+        "Altavoces de dos vías, con woofer y tweeter",
+        "Conector de 3.5 mm",
+        "Control de play, pausa y volumen en 3 botones",
+        "Almohadillas de distintos tamaños incluidas"
+      ],
+      "specs": [
+        {
+          "label": "Conector",
+          "value": "3.5 mm"
+        },
+        {
+          "label": "Transductores",
+          "value": "Dos vías (woofer y tweeter)"
+        },
+        {
+          "label": "Impedancia",
+          "value": "32 Ω"
+        },
+        {
+          "label": "Respuesta de frecuencia",
+          "value": "20 Hz a 20 kHz"
+        },
+        {
+          "label": "Sensibilidad",
+          "value": "93,2 dB"
+        },
+        {
+          "label": "Controles",
+          "value": "3 botones: play/pausa, volumen + y volumen -"
+        },
+        {
+          "label": "Diseño",
+          "value": "Canal híbrido, con almohadillas de distintos tamaños"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        }
+      ],
+      "descriptionHtml": "<p>Los auriculares Samsung de 3.5 mm en negro dan un sonido intenso, claro y equilibrado, con un diseño de canal híbrido.</p><h3>Sonido</h3><p>Tienen altavoces de dos vías, con un woofer y un tweeter exclusivos, para un sonido suave y distintivo. Los agudos, medios y graves quedan equilibrados.</p><h3>Ajuste y comodidad</h3><p>El diseño de canal híbrido se adapta al oído. Las almohadillas incluidas son de distintos tamaños para que elijas la que mejor calce.</p><h3>Controles</h3><p>Tienen tres botones para play y pausa, y para subir o bajar el volumen.</p><h3>Antes de comprar</h3><p>La descripción no indica el largo del cable ni si tiene micrófono.</p>",
+      "revisar": [
+        "El SKU EO-IA500 es el código de Samsung: confirmar el modelo en la caja.",
+        "Marca estaba como General: la paso a Samsung."
+      ]
+    },
+    {
+      "slug": "auriculares-bluetooth-dekkin-rosa",
+      "brand": "Dekkin",
+      "model": "AUR-HE-032",
+      "seoTitle": "Auriculares Bluetooth Dekkin Rosa",
+      "seoDescription": "Auriculares Bluetooth Dekkin rosa tipo vincha, plegables, con Bluetooth 5.0 y hasta 5 horas de uso. Incluyen cable USB y cable 3.5 mm. Garantía y envíos.",
+      "shortDescription": "Auriculares Bluetooth Dekkin rosa tipo vincha y plegables, con Bluetooth 5.0, batería de 400 mAh y hasta 5 horas de uso.",
+      "highlights": [
+        "Bluetooth 5.0",
+        "Hasta 5 horas de uso con batería de 400 mAh",
+        "Diseño plegable tipo vincha",
+        "Incluye cable USB a MicroUSB y cable 3.5 mm"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Over-ear, tipo vincha"
+        },
+        {
+          "label": "Conexión",
+          "value": "Bluetooth 5.0"
+        },
+        {
+          "label": "Batería",
+          "value": "400 mAh"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 5 horas"
+        },
+        {
+          "label": "Plegable",
+          "value": "Sí"
+        },
+        {
+          "label": "Color",
+          "value": "Rosa"
+        },
+        {
+          "label": "En la caja",
+          "value": "Cable USB a MicroUSB, cable 3.5 mm y manual de usuario"
+        }
+      ],
+      "descriptionHtml": "<p>Los auriculares Bluetooth Dekkin rosa son inalámbricos, tipo vincha y plegables, para llevar en la mochila o el bolso.</p><h3>Diseño</h3><p>El diseño over-ear tiene almohadillas suaves que dan comodidad durante el uso. Es un formato pensado para escuchar música en cualquier lugar.</p><h3>Conexión y batería</h3><p>Se conectan por Bluetooth 5.0 y tienen una batería de 400 mAh, con hasta 5 horas de uso.</p><h3>En la caja</h3><p>Vienen con cable USB a MicroUSB, cable de 3.5 mm y manual de usuario.</p><h3>Antes de comprar</h3><p>La descripción original es corta: no indica el alcance de la conexión Bluetooth ni el tiempo de carga.</p>",
+      "revisar": [
+        "Marca estaba como General: la paso a Dekkin."
+      ]
+    },
+    {
+      "slug": "auriculares-bluetooth-jbl-tune-730bt-white",
+      "name": "Auriculares Bluetooth JBL Tune 730BT Blanco",
+      "model": "Tune 730BT",
+      "seoTitle": "JBL Tune 730BT blancos, hasta 76 h",
+      "seoDescription": "JBL Tune 730BT blancos: over-ear plegables, Bluetooth 5.3 con multipunto, hasta 76 h de reproducción y carga rápida. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Auriculares JBL Tune 730BT blancos, over-ear y plegables, con Bluetooth 5.3, conexión multipunto, hasta 76 horas de reproducción y JBL Pure Bass.",
+      "highlights": [
+        "Hasta 76 horas de reproducción continua",
+        "Carga rápida: 5 minutos dan 5 horas de uso",
+        "Conexión multipunto por Bluetooth 5.3",
+        "Dos micrófonos para llamadas claras",
+        "Compatible con la app JBL Headphones",
+        "Diseño plegable de 218 g"
+      ],
+      "specs": [
+        {
+          "label": "Diseño",
+          "value": "Circumaural (over-ear), plegable"
+        },
+        {
+          "label": "Peso",
+          "value": "218,2 g"
+        },
+        {
+          "label": "Respuesta de frecuencia",
+          "value": "20 Hz a 20 kHz"
+        },
+        {
+          "label": "Bluetooth",
+          "value": "5.3 (perfiles A2DP, AVRCP y HFP)"
+        },
+        {
+          "label": "Conexión",
+          "value": "Multipunto"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 76 h de reproducción continua"
+        },
+        {
+          "label": "Carga rápida",
+          "value": "USB-C: 5 min de carga = 5 h de reproducción"
+        },
+        {
+          "label": "Micrófonos",
+          "value": "Dos integrados"
+        },
+        {
+          "label": "App",
+          "value": "JBL Headphones (iOS y Android)"
+        },
+        {
+          "label": "Sonido",
+          "value": "JBL Pure Bass y ecualización personalizable"
+        },
+        {
+          "label": "Color",
+          "value": "Blanco"
+        }
+      ],
+      "descriptionHtml": "<p>Los JBL Tune 730BT blancos son auriculares over-ear inalámbricos, plegables y livianos, pensados para trabajar, estudiar o viajar.</p><h3>Sonido JBL Pure Bass</h3><p>El sonido JBL Pure Bass da graves potentes con agudos nítidos. Con la app JBL Headphones podés ajustar el ecualizador a tu gusto y activar la guía por voz.</p><h3>Autonomía y carga</h3><p>Tienen hasta 76 horas de reproducción continua con una sola carga. Si se quedan sin energía, cinco minutos de carga por USB-C dan hasta 5 horas adicionales de reproducción.</p><h3>Llamadas</h3><p>Los dos micrófonos captan tu voz con claridad en llamadas y videollamadas.</p><h3>Conexión y diseño</h3><p>La conexión multipunto por Bluetooth te permite pasar de la tablet al celular sin desconectarte. Pesan 218 gramos, tienen almohadillas acolchadas y se pliegan para llevarlos en la mochila.</p>",
+      "revisar": []
+    },
+    {
+      "slug": "auriculares-bluetooth-philips-supraurales-tah4205bk-00",
+      "brand": "Philips",
+      "model": "TAH4205BK/00",
+      "seoTitle": "Auriculares Philips TAH4205BK/00 Bluetooth",
+      "seoDescription": "Auriculares Philips supraurales Bluetooth TAH4205BK: hasta 29 h de reproducción, carga USB-C, plegables y botón de refuerzo de graves. Garantía y envíos.",
+      "shortDescription": "Auriculares Bluetooth Philips supraurales TAH4205BK/00 con hasta 29 horas de reproducción, carga por USB-C, botón de refuerzo de graves y diseño plegable.",
+      "highlights": [
+        "Hasta 29 horas de reproducción",
+        "Carga rápida: 15 min dan unas 4 horas de uso",
+        "Botón de refuerzo de graves",
+        "Controladores de neodimio de 32 mm",
+        "Plegables para llevar en la mochila"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Supraurales (on-ear)"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 29 h"
+        },
+        {
+          "label": "Carga",
+          "value": "USB-C, 2 h para carga completa"
+        },
+        {
+          "label": "Carga rápida",
+          "value": "15 min = unas 4 h de reproducción"
+        },
+        {
+          "label": "Transductores",
+          "value": "Neodimio de 32 mm"
+        },
+        {
+          "label": "Diseño",
+          "value": "Parte posterior cerrada, plegable"
+        },
+        {
+          "label": "Controles",
+          "value": "Botón multifunción y botón de refuerzo de graves"
+        }
+      ],
+      "descriptionHtml": "<p>Los Philips TAH4205BK son auriculares Bluetooth supraurales con hasta 29 horas de reproducción y carga por USB-C.</p><h3>Sonido</h3><p>Tienen controladores acústicos de neodimio de 32 mm y parte posterior cerrada, que aísla bien del ruido externo. El botón de refuerzo de graves suma bajos con un toque.</p><h3>Batería y carga</h3><p>Dan hasta 29 horas con una carga de 2 horas por USB-C. Con 15 minutos de carga rápida se obtienen unas 4 horas más de música.</p><h3>Controles</h3><p>El botón multifunción controla la música y las llamadas. Un toque prolongado lo deja listo para emparejar, y recuerda el último dispositivo al que se conectó.</p><h3>Diseño plegable</h3><p>La banda acolchada es liviana y ajustable, y los auriculares se pliegan por completo para guardarlos en el bolsillo o en la mochila.</p>",
+      "revisar": [
+        "La descripción dice 'supraurales' e 'intrauditivos' a la vez: confirmar el tipo.",
+        "El color no figura en el texto; el código BK puede indicar negro: confirmar."
+      ]
+    },
+    {
+      "slug": "auriculares-bluetooth-stromberg-slag",
+      "brand": "Stromberg",
+      "seoTitle": "Auriculares Stromberg Slag Bluetooth",
+      "seoDescription": "Auriculares Bluetooth Stromberg Slag over-ear con tecnología DeepBass, 8 horas de reproducción y entrada auxiliar de 3.5 mm. Garantía oficial y envíos.",
+      "shortDescription": "Auriculares Bluetooth Stromberg Slag over-ear con tecnología DeepBass para bajos potenciados, 8 horas de reproducción y entrada auxiliar de 3.5 mm.",
+      "highlights": [
+        "Tecnología DeepBass para bajos potenciados",
+        "Hasta 8 horas de reproducción continua",
+        "Bluetooth 5.0",
+        "Entrada auxiliar de 3.5 mm para usar con cable",
+        "Diseño que cubre la oreja por completo"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Over-ear (cubre la oreja)"
+        },
+        {
+          "label": "Conexión",
+          "value": "Bluetooth 5.0 y entrada auxiliar de 3.5 mm"
+        },
+        {
+          "label": "Autonomía",
+          "value": "8 horas de reproducción continua"
+        },
+        {
+          "label": "Tecnología",
+          "value": "DeepBass"
+        },
+        {
+          "label": "Medidas",
+          "value": "18,5 cm de alto, 11,5 cm de ancho y 7 cm de profundidad"
+        }
+      ],
+      "descriptionHtml": "<p>Los auriculares Stromberg Slag son Bluetooth over-ear con tecnología DeepBass, pensados para llevar a todos lados.</p><h3>Sonido</h3><p>La tecnología DeepBass da bajos potenciados y un sonido más cristalino. El diseño que cubre la oreja por completo aísla de los ruidos externos.</p><h3>Batería y conexión</h3><p>Ofrecen 8 horas de reproducción continua con batería interna y conexión Bluetooth 5.0. Si la batería se acaba, se pueden usar con cable gracias a la entrada auxiliar de 3.5 mm.</p><h3>Tamaño y transporte</h3><p>Entran en un bolso, una mochila o una cartera. Miden 18,5 cm de alto, 11,5 cm de ancho y 7 cm de profundidad, y tienen bajo peso.</p><h3>Antes de comprar</h3><p>La descripción no indica si tienen micrófono ni si se pliegan.</p>",
+      "revisar": [
+        "Marca estaba como General: la paso a Stromberg.",
+        "La descripción menciona 'Special Edition by MTSay' y una diseñadora textil: no lo incluí. Confirmar la marca."
+      ]
+    },
+    {
+      "slug": "auriculares-bluetooth-tws-dekkin-c-estuche",
+      "name": "Auriculares Bluetooth TWS Dekkin con Estuche",
+      "brand": "Dekkin",
+      "seoTitle": "Auriculares TWS Dekkin con estuche de carga",
+      "seoDescription": "Auriculares Bluetooth TWS Dekkin in-ear blancos, con controles táctiles, micrófono y estuche de carga de 300 mAh. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Auriculares Bluetooth TWS Dekkin in-ear blancos, con controles táctiles, micrófono integrado y estuche de carga de 300 mAh.",
+      "highlights": [
+        "Controles táctiles",
+        "Micrófono integrado para llamadas manos libres",
+        "Estuche de carga de 300 mAh incluido",
+        "Estuche compacto y fácil de transportar"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "TWS, in-ear"
+        },
+        {
+          "label": "Conexión",
+          "value": "Bluetooth"
+        },
+        {
+          "label": "Controles",
+          "value": "Táctiles"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Integrado"
+        },
+        {
+          "label": "Estuche de carga",
+          "value": "300 mAh"
+        },
+        {
+          "label": "Color",
+          "value": "Blanco"
+        }
+      ],
+      "descriptionHtml": "<p>Los auriculares Bluetooth TWS Dekkin son in-ear, inalámbricos y blancos, para escuchar música sin cables.</p><h3>Ajuste y sonido</h3><p>El diseño in-ear se adapta cómodamente al oído y ofrece un sonido nítido y claro con la conexión Bluetooth.</p><h3>Llamadas</h3><p>El micrófono incorporado permite atender llamadas sin sacar el teléfono del bolsillo.</p><h3>Batería</h3><p>El estuche de carga de 300 mAh permite recargar los auriculares en cualquier momento. Es compacto y fácil de llevar.</p><h3>Controles</h3><p>Son táctiles, así que podés manejar la música y las llamadas desde el mismo auricular.</p><h3>Antes de comprar</h3><p>La descripción no indica la autonomía de los auriculares ni la versión de Bluetooth.</p>",
+      "revisar": [
+        "Falta la autonomía de los auriculares y la versión de Bluetooth.",
+        "La descripción dice que no son específicamente para gamers: no se incluyó."
+      ]
+    },
+    {
+      "slug": "auriculares-dekkin-tws-dot",
+      "brand": "Dekkin",
+      "seoTitle": "Auriculares Dekkin TWS Dot, hasta 4 h",
+      "seoDescription": "Auriculares Dekkin TWS Dot inalámbricos con hasta 4 horas de autonomía, micrófono integrado y almohadillas de silicona extra. Garantía y envíos a todo el país.",
+      "shortDescription": "Auriculares Dekkin TWS Dot inalámbricos con hasta 4 horas de autonomía, micrófono integrado, control de música y llamadas y almohadillas de silicona extra.",
+      "highlights": [
+        "Hasta 4 horas de autonomía",
+        "Micrófono integrado",
+        "Control de música y llamadas",
+        "Almohadillas de silicona extra incluidas"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "TWS, inalámbricos"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 4 horas"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Integrado"
+        },
+        {
+          "label": "Controles",
+          "value": "Música y llamadas"
+        },
+        {
+          "label": "Ajuste",
+          "value": "Almohadillas de silicona extra"
+        }
+      ],
+      "descriptionHtml": "<p>Los Dekkin TWS Dot son auriculares inalámbricos con hasta 4 horas de autonomía, pensados para la comodidad del día a día.</p><h3>Autonomía</h3><p>Dan hasta 4 horas de uso con una carga.</p><h3>Ajuste</h3><p>Traen almohadillas de silicona extra para elegir la que mejor se adapte a tu oreja.</p><h3>Controles y micrófono</h3><p>Tienen micrófono incorporado y control de música y llamadas desde el mismo auricular.</p><h3>Antes de comprar</h3><p>La descripción no indica la autonomía del estuche de carga, la versión de Bluetooth ni la compatibilidad.</p>",
+      "revisar": [
+        "La descripción dice 'Airdot' y el nombre dice 'Dot': confirmar el nombre del modelo.",
+        "Marca estaba como General: la paso a Dekkin."
+      ]
+    },
+    {
+      "slug": "auriculares-inalambricos-kitty-cat-beat-purpura",
+      "name": "Auriculares Inalámbricos Kitty Cat Beat Púrpura Dekkin",
+      "brand": "Dekkin",
+      "seoTitle": "Auriculares Kitty Cat Beat Púrpura Dekkin",
+      "seoDescription": "Auriculares inalámbricos Dekkin Kitty Cat Beat púrpura, con orejas de gatito, luces LED, Bluetooth 5.0 y hasta 5 horas de batería. Garantía y envíos.",
+      "shortDescription": "Auriculares inalámbricos Dekkin Kitty Cat Beat púrpura, con orejas de gatito, luces LED, Bluetooth 5.0, micrófono y hasta 5 horas de batería.",
+      "highlights": [
+        "Diseño de orejas de gatito con luces LED",
+        "Bluetooth 5.0",
+        "Hasta 5 horas de batería",
+        "Plegables, fáciles de transportar",
+        "Incluyen cable Micro USB y cable 3.5 mm"
+      ],
+      "specs": [
+        {
+          "label": "Diseño",
+          "value": "Orejas de gatito con luces LED"
+        },
+        {
+          "label": "Conexión",
+          "value": "Bluetooth 5.0"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 5 horas"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Integrado, manos libres"
+        },
+        {
+          "label": "Plegado",
+          "value": "Sí"
+        },
+        {
+          "label": "Conectores",
+          "value": "Micro USB, Jack 3.5 mm y lector de tarjeta"
+        },
+        {
+          "label": "Color",
+          "value": "Púrpura"
+        },
+        {
+          "label": "En la caja",
+          "value": "Cable Micro USB y cable 3.5 mm"
+        }
+      ],
+      "descriptionHtml": "<p>Los Kitty Cat Beat de Dekkin son auriculares inalámbricos con orejas de gatito y luces LED, pensados para un uso divertido y diario.</p><h3>Diseño</h3><p>Las orejas de gatito y las luces LED los hacen fáciles de identificar. Son plegables, así que entran en la mochila.</p><h3>Batería y conexión</h3><p>Se conectan por Bluetooth 5.0 y tienen una batería de hasta 5 horas de uso.</p><h3>Llamadas</h3><p>Tienen micrófono incorporado para usarlos con manos libres.</p><h3>Conectores</h3><p>Traen cable Micro USB y cable de 3.5 mm. También tienen lector de tarjeta.</p><h3>Antes de comprar</h3><p>La descripción no indica el peso ni el tipo de diseño (diadema o intraauricular).</p>",
+      "revisar": [
+        "La versión púrpura y la verde tienen la misma ficha: confirmar el color en la foto.",
+        "Marca estaba como General: la paso a Dekkin."
+      ]
+    },
+    {
+      "slug": "auriculares-inalambricos-kitty-cat-beat-verde",
+      "brand": "Dekkin",
+      "seoTitle": "Auriculares Kitty Cat Beat Verde Dekkin",
+      "seoDescription": "Auriculares inalámbricos Dekkin Kitty Cat Beat verdes, con orejas de gatito, luces LED, Bluetooth 5.0 y hasta 5 horas de batería. Garantía y envíos.",
+      "shortDescription": "Auriculares inalámbricos Dekkin Kitty Cat Beat verdes, con orejas de gatito, luces LED, Bluetooth 5.0, micrófono y hasta 5 horas de batería.",
+      "highlights": [
+        "Diseño de orejas de gatito con luces LED",
+        "Bluetooth 5.0",
+        "Hasta 5 horas de batería",
+        "Plegables, fáciles de transportar",
+        "Incluyen cable Micro USB y cable 3.5 mm"
+      ],
+      "specs": [
+        {
+          "label": "Diseño",
+          "value": "Orejas de gatito con luces LED"
+        },
+        {
+          "label": "Conexión",
+          "value": "Bluetooth 5.0"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 5 horas"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Integrado, manos libres"
+        },
+        {
+          "label": "Plegado",
+          "value": "Sí"
+        },
+        {
+          "label": "Conectores",
+          "value": "Micro USB, Jack 3.5 mm y lector de tarjeta"
+        },
+        {
+          "label": "Color",
+          "value": "Verde"
+        },
+        {
+          "label": "En la caja",
+          "value": "Cable Micro USB y cable 3.5 mm"
+        }
+      ],
+      "descriptionHtml": "<p>Los Kitty Cat Beat de Dekkin en verde son auriculares inalámbricos con orejas de gatito y luces LED, pensados para un uso divertido y diario.</p><h3>Diseño</h3><p>Las orejas de gatito y las luces LED los hacen fáciles de identificar. Son plegables, así que entran en la mochila.</p><h3>Batería y conexión</h3><p>Se conectan por Bluetooth 5.0 y tienen una batería de hasta 5 horas de uso.</p><h3>Llamadas</h3><p>Tienen micrófono incorporado para usarlos con manos libres.</p><h3>Conectores</h3><p>Traen cable Micro USB y cable de 3.5 mm. También tienen lector de tarjeta.</p><h3>Antes de comprar</h3><p>La descripción no indica el peso ni el tipo de diseño (diadema o intraauricular).</p>",
+      "revisar": [
+        "La versión verde y la púrpura tienen la misma ficha: confirmar el color en la foto.",
+        "Marca estaba como General: la paso a Dekkin."
+      ]
+    },
+    {
+      "slug": "auriculares-inalambricos-philips-supraurales-tah4205wt-00",
+      "brand": "Philips",
+      "model": "TAH4205WT/00",
+      "seoTitle": "Auriculares Philips TAH4205WT/00 Bluetooth",
+      "seoDescription": "Auriculares Philips supraurales Bluetooth TAH4205WT: hasta 29 h de reproducción, carga USB-C y botón de refuerzo de graves. Garantía oficial y envíos.",
+      "shortDescription": "Auriculares Bluetooth Philips supraurales TAH4205WT/00 con hasta 29 horas de reproducción, carga por USB-C y botón de refuerzo de graves.",
+      "highlights": [
+        "Hasta 29 horas de reproducción",
+        "Carga rápida: 15 min dan unas 4 horas de uso",
+        "Botón de refuerzo de graves",
+        "Controladores de neodimio de 32 mm",
+        "Plegables para llevar en la mochila"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Supraurales (on-ear)"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 29 h"
+        },
+        {
+          "label": "Carga",
+          "value": "USB-C, 2 h para carga completa"
+        },
+        {
+          "label": "Carga rápida",
+          "value": "15 min = unas 4 h de reproducción"
+        },
+        {
+          "label": "Transductores",
+          "value": "Neodimio de 32 mm"
+        },
+        {
+          "label": "Diseño",
+          "value": "Parte posterior cerrada, plegable"
+        },
+        {
+          "label": "Controles",
+          "value": "Botón multifunción y botón de refuerzo de graves"
+        }
+      ],
+      "descriptionHtml": "<p>Los Philips TAH4205WT son auriculares Bluetooth supraurales con hasta 29 horas de reproducción y carga por USB-C.</p><h3>Sonido</h3><p>Tienen controladores acústicos de neodimio de 32 mm y parte posterior cerrada, que aísla bien del ruido externo. El botón de refuerzo de graves suma bajos con un toque.</p><h3>Batería y carga</h3><p>Dan hasta 29 horas con una carga de 2 horas por USB-C. Con 15 minutos de carga rápida se obtienen unas 4 horas más de música.</p><h3>Controles</h3><p>El botón multifunción controla la música y las llamadas. Un toque prolongado lo deja listo para emparejar, y recuerda el último dispositivo al que se conectó.</p><h3>Diseño plegable</h3><p>La banda acolchada es liviana y ajustable, y los auriculares se pliegan por completo para guardarlos en el bolsillo o en la mochila.</p>",
+      "revisar": [
+        "Texto idéntico al TAH4205BK: confirmar que la ficha corresponde a esta variante y el color (WT suele indicar blanco)."
+      ]
+    },
+    {
+      "slug": "auriculares-logitech-h390-usb",
+      "name": "Auriculares Logitech H390 USB",
+      "brand": "Logitech",
+      "model": "H390",
+      "seoTitle": "Auriculares Logitech H390 USB",
+      "seoDescription": "Auriculares Logitech H390 con conexión USB plug and play, micrófono con supresión de ruido y controles en el cable. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Auriculares Logitech H390 con conexión USB plug and play, micrófono con supresión de ruido y controles en el cable para videollamadas y música.",
+      "highlights": [
+        "Conexión USB plug and play",
+        "Micrófono con supresión de ruido",
+        "Controles en el cable para volumen y silencio",
+        "Transductores de 30 mm",
+        "Cable de 1,9 m"
+      ],
+      "specs": [
+        {
+          "label": "Conexión",
+          "value": "USB-A, plug and play"
+        },
+        {
+          "label": "Transductores",
+          "value": "30 mm"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Con supresión de ruido, de brazo giratorio"
+        },
+        {
+          "label": "Controles",
+          "value": "En el cable: volumen y silencio"
+        },
+        {
+          "label": "Cable",
+          "value": "1,9 m"
+        },
+        {
+          "label": "Diadema",
+          "value": "Ajustable, con almohadillas de piel sintética giratorias"
+        }
+      ],
+      "descriptionHtml": "<p>Los Logitech H390 son auriculares con conexión USB para reuniones por video, música y más, sin instalar nada.</p><h3>Videollamadas</h3><p>El micrófono con supresión de ruido minimiza el ruido de fondo para que la conversación se escuche clara. Se puede girar y apartar cuando no lo usás.</p><h3>Audio</h3><p>Tienen transductores de 30 mm que dan audio digital mejorado para reuniones y música.</p><h3>Comodidad</h3><p>La diadema es ajustable y tiene almohadillas de piel sintética giratorias. Son fáciles de limpiar y se pueden usar durante horas.</p><h3>Conexión y controles</h3><p>Se conectan con USB-A y funcionan al instante, sin instalar software. El cable mide 1,9 metros, y los controles en el cable permiten ajustar el volumen o silenciar sin cortar la llamada.</p>",
+      "revisar": [
+        "Marca estaba como General: la paso a Logitech."
+      ]
+    },
+    {
+      "slug": "auriculares-philips-supraurales-vincha-con-microfono-blanco",
+      "name": "Auriculares Philips Supraurales con Vincha y Micrófono Blanco",
+      "brand": "Philips",
+      "model": "TAH4105WT/00",
+      "seoTitle": "Auriculares Philips supraurales blancos",
+      "seoDescription": "Auriculares Philips supraurales blancos con micrófono, controladores de 32 mm, parte posterior cerrada y control remoto en el cable. Garantía y envíos.",
+      "shortDescription": "Auriculares Philips supraurales blancos con micrófono, controladores de neodimio de 32 mm, parte posterior cerrada y diseño plegable.",
+      "highlights": [
+        "Controladores de neodimio de 32 mm",
+        "Parte posterior cerrada para aislar el sonido",
+        "Control remoto en el cable para música y llamadas",
+        "Vincha acolchada, liviana y ajustable",
+        "Diseño plegable compacto"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Supraurales (on-ear), con vincha"
+        },
+        {
+          "label": "Transductores",
+          "value": "Neodimio de 32 mm"
+        },
+        {
+          "label": "Diseño",
+          "value": "Parte posterior cerrada, plegable"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Integrado"
+        },
+        {
+          "label": "Control",
+          "value": "Remoto en el cable: contestar llamadas y pausar música"
+        },
+        {
+          "label": "Conector",
+          "value": "En ángulo"
+        },
+        {
+          "label": "Color",
+          "value": "Blanco"
+        }
+      ],
+      "descriptionHtml": "<p>Los Philips TAH4105WT son auriculares supraurales blancos con micrófono, pensados para escuchar música y atender llamadas.</p><h3>Sonido</h3><p>Tienen controladores de neodimio de 32 mm que dan graves potentes y un sonido claro. La parte posterior cerrada aísla bien del ruido externo.</p><h3>Comodidad</h3><p>La banda sujetadora es acolchada, liviana y ajustable. Las almohadillas se pueden mover hasta encontrar la posición cómoda.</p><h3>Control</h3><p>El control remoto en el cable permite contestar una llamada o pausar la lista de reproducción sin tocar el teléfono.</p><h3>Diseño</h3><p>Se pliegan por completo y ocupan poco espacio. El conector en ángulo ayuda a mantenerlos conectados si el teléfono va en el bolsillo.</p>",
+      "revisar": [
+        "No dice el tipo de conector (3.5 mm u otro) ni el largo del cable: confirmar.",
+        "Marca estaba como General: la paso a Philips."
+      ]
+    },
+    {
+      "slug": "auriculares-usb-c-dekkin-manos-libres-068",
+      "name": "Auriculares USB-C Dekkin Manos Libres 068",
+      "brand": "Dekkin",
+      "model": "ACC-AU-068",
+      "seoTitle": "Auriculares USB-C Dekkin Manos Libres 068",
+      "seoDescription": "Auriculares Dekkin ACC-AU-068 con conector USB-C, micrófono, control de volumen y cable de 1,2 m. Sin Bluetooth. Garantía y envíos a todo el país.",
+      "shortDescription": "Auriculares Dekkin manos libres 068 con conector USB-C, micrófono integrado, control de volumen y cable de 1,2 m. No son inalámbricos.",
+      "highlights": [
+        "Conector USB-C",
+        "Micrófono integrado para llamadas manos libres",
+        "Control de volumen, música y llamadas",
+        "Cable de 1,2 m",
+        "Material ABS"
+      ],
+      "specs": [
+        {
+          "label": "Conector",
+          "value": "USB-C"
+        },
+        {
+          "label": "Cable",
+          "value": "1,2 m"
+        },
+        {
+          "label": "Material",
+          "value": "ABS"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Integrado"
+        },
+        {
+          "label": "Controles",
+          "value": "Volumen, música y llamadas"
+        },
+        {
+          "label": "Tipo",
+          "value": "In-ear, con cable (sin Bluetooth)"
+        },
+        {
+          "label": "Color",
+          "value": "Blanco"
+        }
+      ],
+      "descriptionHtml": "<p>Los auriculares Dekkin manos libres 068 tienen conector USB-C y un cable de 1,2 metros, para llamadas y música.</p><h3>Conexión</h3><p>El conector USB-C sirve para dispositivos que tienen ese puerto. El cable de 1,2 metros da libertad para moverte sin que se tense.</p><h3>Llamadas y controles</h3><p>El micrófono incorporado permite hablar con manos libres. Los botones del cable controlan el volumen, la música y las llamadas.</p><h3>Diseño</h3><p>Son de material ABS, de color blanco, y tienen formato in-ear.</p><h3>Antes de comprar</h3><p>No son inalámbricos ni tienen Bluetooth. Son ideales para el uso diario.</p>",
+      "revisar": [
+        "La descripción menciona una 'luz blanca' en el producto: no se incluyó porque no está claro qué es."
+      ]
+    },
+    {
+      "slug": "auriculares-usb-c-dekkin-manos-libres-072",
+      "brand": "Dekkin",
+      "model": "ACC-AU-072",
+      "seoTitle": "Auriculares USB-C Dekkin Manos Libres 072",
+      "seoDescription": "Auriculares Dekkin ACC-AU-072 con conector USB-C, micrófono, control de volumen y cable de 1,2 m. Sin Bluetooth. Garantía y envíos a todo el país.",
+      "shortDescription": "Auriculares Dekkin manos libres 072 con conector USB-C, micrófono integrado, control de volumen y cable de 1,2 m. No son inalámbricos.",
+      "highlights": [
+        "Conector USB-C",
+        "Micrófono integrado para llamadas manos libres",
+        "Control de volumen, música y llamadas",
+        "Cable de 1,2 m",
+        "Material ABS"
+      ],
+      "specs": [
+        {
+          "label": "Conector",
+          "value": "USB-C"
+        },
+        {
+          "label": "Cable",
+          "value": "1,2 m"
+        },
+        {
+          "label": "Material",
+          "value": "ABS"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Integrado"
+        },
+        {
+          "label": "Controles",
+          "value": "Volumen, música y llamadas"
+        },
+        {
+          "label": "Tipo",
+          "value": "In-ear, con cable (sin Bluetooth)"
+        },
+        {
+          "label": "Color",
+          "value": "Blanco"
+        }
+      ],
+      "descriptionHtml": "<p>Los auriculares Dekkin manos libres 072 tienen conector USB-C y un cable de 1,2 metros, para llamadas y música.</p><h3>Conexión</h3><p>El conector USB-C sirve para dispositivos que tienen ese puerto. El cable de 1,2 metros da libertad para moverte sin que se tense.</p><h3>Llamadas y controles</h3><p>El micrófono incorporado permite hablar con manos libres. Los botones del cable controlan el volumen, la música y las llamadas.</p><h3>Diseño</h3><p>Son de material ABS, de color blanco, y tienen formato in-ear.</p><h3>Antes de comprar</h3><p>No son inalámbricos ni tienen Bluetooth. Son ideales para el uso diario.</p>",
+      "revisar": [
+        "La ficha es igual a la del modelo 068: confirmar en qué se diferencian."
+      ]
+    },
+    {
+      "slug": "cable-lightning-mallado-dekkin",
+      "brand": "Dekkin",
+      "model": "CA-314",
+      "seoTitle": "Cable Lightning mallado Dekkin 1,2 m",
+      "seoDescription": "Cable Lightning mallado Dekkin CA-314 de 1,2 m, de nylon trenzado y para carga rápida. Para dispositivos con puerto Lightning. Garantía y envíos a todo el país.",
+      "shortDescription": "Cable Lightning mallado Dekkin de 1,2 m, de nylon trenzado, más resistente a los tirones, para carga rápida.",
+      "highlights": [
+        "Nylon trenzado, resistente a los tirones",
+        "Largo de 1,2 m",
+        "Carga rápida",
+        "Conector Lightning"
+      ],
+      "specs": [
+        {
+          "label": "Salida",
+          "value": "Lightning"
+        },
+        {
+          "label": "Entrada",
+          "value": "USB"
+        },
+        {
+          "label": "Largo",
+          "value": "1,2 m"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon trenzado"
+        },
+        {
+          "label": "Función",
+          "value": "Carga rápida"
+        }
+      ],
+      "descriptionHtml": "<p>El cable Lightning mallado Dekkin sirve para cargar tus dispositivos y auriculares con carga rápida.</p><h3>Material</h3><p>Es de nylon trenzado, más duradero y resistente a los tirones que un cable común.</p><h3>Largo</h3><p>Mide 1,2 metros, un largo práctico para cargar sin estar pegado al tomacorriente.</p><h3>Carga</h3><p>Permite cargar rápido y es ideal para cargar celular y auriculares todos los días.</p><h3>Antes de comprar</h3><p>La descripción no indica el tipo de conector USB de la entrada.</p>",
+      "revisar": [
+        "Confirmar el tipo de conector USB de entrada (la ficha dice solo USB)."
+      ]
+    },
+    {
+      "slug": "cable-micro-usb-mallado-dekkin",
+      "brand": "Dekkin",
+      "model": "CA-313",
+      "seoTitle": "Cable Micro USB mallado Dekkin 1,2 m",
+      "seoDescription": "Cable Micro USB mallado Dekkin CA-313 de 1,2 m, de nylon trenzado y para carga rápida. Para dispositivos con puerto Micro USB. Garantía y envíos.",
+      "shortDescription": "Cable Micro USB mallado Dekkin de 1,2 m, de nylon trenzado, más resistente a los tirones, para carga rápida.",
+      "highlights": [
+        "Nylon trenzado, resistente a los tirones",
+        "Largo de 1,2 m",
+        "Carga rápida",
+        "Conector Micro USB"
+      ],
+      "specs": [
+        {
+          "label": "Salida",
+          "value": "Micro USB"
+        },
+        {
+          "label": "Entrada",
+          "value": "USB"
+        },
+        {
+          "label": "Largo",
+          "value": "1,2 m"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon trenzado"
+        },
+        {
+          "label": "Función",
+          "value": "Carga rápida"
+        }
+      ],
+      "descriptionHtml": "<p>El cable Micro USB mallado Dekkin sirve para cargar tus dispositivos y auriculares con carga rápida.</p><h3>Material</h3><p>Es de nylon trenzado, más duradero y resistente a los tirones que un cable común.</p><h3>Largo</h3><p>Mide 1,2 metros, un largo práctico para cargar sin estar pegado al tomacorriente.</p><h3>Carga</h3><p>Permite cargar rápido y es ideal para cargar celular y auriculares todos los días.</p><h3>Antes de comprar</h3><p>La descripción no indica el tipo de conector USB de la entrada.</p>",
+      "revisar": [
+        "Confirmar el tipo de conector USB de entrada (la ficha dice solo USB)."
+      ]
+    },
+    {
+      "slug": "cable-trenzado-dekkin-tipo-c",
+      "name": "Cable Trenzado Dekkin USB-C",
+      "brand": "Dekkin",
+      "seoTitle": "Cable trenzado Dekkin USB-C",
+      "seoDescription": "Cable trenzado Dekkin con conector USB tipo C para cargar tus dispositivos compatibles. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cable trenzado Dekkin con conector USB tipo C para cargar tus dispositivos compatibles con USB-C. Envíos a todo el país.",
+      "highlights": [
+        "Conector USB tipo C",
+        "Diseño trenzado",
+        "Envíos a todo el país y retiro en Córdoba"
+      ],
+      "specs": [
+        {
+          "label": "Conector",
+          "value": "USB tipo C"
+        },
+        {
+          "label": "Diseño",
+          "value": "Trenzado"
+        }
+      ],
+      "descriptionHtml": "<p>El cable trenzado Dekkin con conector USB tipo C sirve para cargar tus dispositivos compatibles con USB-C.</p><h3>Conector</h3><p>Tiene conector USB tipo C en ambos extremos según el nombre del producto.</p><h3>Antes de comprar</h3><p>La descripción original es genérica: no indica el largo, la potencia de carga ni los dispositivos compatibles. Consultanos si lo necesitás para un equipo puntual.</p><h3>Compra</h3><p>Garantía oficial, envíos a todo el país y retiro en Córdoba.</p>",
+      "revisar": [
+        "Descripción de relleno: faltan largo, potencia de carga y compatibilidad.",
+        "Marca estaba como General: la paso a Dekkin."
+      ]
+    },
+    {
+      "slug": "cable-trv-usb-c-a-usb-c-mallado-3a",
+      "name": "Cable TRV USB-C a USB-C Mallado 3 A",
+      "brand": "TRV",
+      "model": "CAB118",
+      "seoTitle": "Cable TRV USB-C a USB-C mallado 3 A",
+      "seoDescription": "Cable TRV USB-C a USB-C mallado de 3 A para cargar dispositivos con conector USB-C. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cable TRV USB-C a USB-C mallado con corriente de 3 A, para cargar dispositivos con conector USB-C. Envíos a todo el país.",
+      "highlights": [
+        "Conector USB-C en ambos extremos",
+        "Corriente de 3 A",
+        "Cubierta mallada"
+      ],
+      "specs": [
+        {
+          "label": "Conector",
+          "value": "USB-C a USB-C"
+        },
+        {
+          "label": "Corriente",
+          "value": "3 A"
+        },
+        {
+          "label": "Cubierta",
+          "value": "Mallada"
+        }
+      ],
+      "descriptionHtml": "<p>El cable TRV USB-C a USB-C mallado de 3 A sirve para cargar dispositivos que usan conector USB-C.</p><h3>Carga</h3><p>Tiene una corriente de 3 A, pensada para cargar con más potencia que un cable estándar.</p><h3>Material</h3><p>La cubierta mallada lo hace más resistente al uso diario.</p><h3>Antes de comprar</h3><p>La descripción original es genérica: no indica el largo del cable ni los dispositivos compatibles. Consultanos antes de comprar.</p>",
+      "revisar": [
+        "Descripción de relleno: faltan largo, potencia de carga real y compatibilidad.",
+        "Marca TRV tomada del nombre (estaba como General)."
+      ]
+    },
+    {
+      "slug": "cable-usb-c-dekkin-3a",
+      "name": "Cable USB-C Dekkin 3 A",
+      "brand": "Dekkin",
+      "model": "CA-359-BL",
+      "seoTitle": "Cable USB-C Dekkin 3 A carga ultra rápida",
+      "seoDescription": "Cable USB-C Dekkin de 3 A y 1 metro para carga ultra rápida y sincronización de datos. Compatible con cargadores y celulares USB-C. Garantía y envíos.",
+      "shortDescription": "Cable USB-C Dekkin de 3 A y 1 metro para carga ultra rápida y sincronización de datos, con cargador y celular compatibles.",
+      "highlights": [
+        "Amperaje de 3 A",
+        "Largo de 1 metro",
+        "Carga y sincronización de datos",
+        "Carga ultra rápida con cargador y celular compatibles"
+      ],
+      "specs": [
+        {
+          "label": "Amperaje",
+          "value": "3 A"
+        },
+        {
+          "label": "Largo",
+          "value": "1 m"
+        },
+        {
+          "label": "Función",
+          "value": "Carga y sincronización de datos"
+        },
+        {
+          "label": "Conector",
+          "value": "USB-C"
+        }
+      ],
+      "descriptionHtml": "<p>El cable USB-C Dekkin de 3 A y 1 metro sirve para cargar y sincronizar datos con dispositivos USB-C.</p><h3>Carga ultra rápida</h3><p>La carga ultra rápida depende del cargador y del celular: se logra cuando ambos son compatibles.</p><h3>Largo</h3><p>Mide 1 metro, un largo práctico para usarlo en casa o en el escritorio.</p><h3>Antes de comprar</h3><p>La descripción original es corta: no indica los dispositivos compatibles ni la potencia máxima de carga.</p>",
+      "revisar": [
+        "Marca estaba como General: la paso a Dekkin."
+      ]
+    },
+    {
+      "slug": "cargador-auto-12v-usb-3-2a-rapido",
+      "name": "Cargador Auto 12 V USB 3.2 A Rápido",
+      "brand": "TRV",
+      "model": "CAR101",
+      "seoTitle": "Cargador auto 12 V USB 3.2 A rápido",
+      "seoDescription": "Cargador de auto de 12 V con 2 salidas USB-A y 5 V de salida para cargar tus dispositivos en el camino. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cargador de auto con 2 salidas USB-A, entrada de 12 V y salida de 5 V para cargar tus dispositivos en el camino.",
+      "highlights": [
+        "Dos salidas USB-A",
+        "Entrada de 12 V y salida de 5 V",
+        "Corriente total de 3,2 A",
+        "Carga rápida de tus dispositivos en el camino"
+      ],
+      "specs": [
+        {
+          "label": "Entrada",
+          "value": "12 V"
+        },
+        {
+          "label": "Salida",
+          "value": "5 V"
+        },
+        {
+          "label": "Puertos",
+          "value": "2 USB-A"
+        },
+        {
+          "label": "Corriente",
+          "value": "3,2 A"
+        }
+      ],
+      "descriptionHtml": "<p>El cargador de auto CAR101 te permite cargar tus dispositivos mientras viajás, para tenerlos siempre con batería.</p><h3>Carga</h3><p>Tiene dos salidas USB-A con 5 V de salida, para cargar dos dispositivos a la vez.</p><h3>Alimentación</h3><p>Se conecta a 12 V, la toma de corriente habitual en el auto.</p><h3>Antes de comprar</h3><p>La descripción no indica la corriente de cada puerto por separado.</p>",
+      "revisar": [
+        "Marca TRV tomada de la descripción (TRV CAR101), no del nombre: confirmar.",
+        "El 3,2 A total viene del nombre; la descripción no lo dice: confirmar."
+      ]
+    },
+    {
+      "slug": "cargador-auto-dekkin-doble-puerto-usb-2-1a",
+      "name": "Cargador Auto Dekkin Doble Puerto USB 2,1 A",
+      "brand": "Dekkin",
+      "model": "AT-ACC-CC-032",
+      "seoTitle": "Cargador auto Dekkin doble puerto USB 2,1 A",
+      "seoDescription": "Cargador de auto Dekkin con doble puerto USB de 2,1 A para cargar dos dispositivos a la vez durante el viaje. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cargador de auto Dekkin con doble puerto USB de 2,1 A, para cargar dos dispositivos a la vez mientras viajás.",
+      "highlights": [
+        "Dos puertos USB",
+        "Corriente de 2,1 A",
+        "Para cargar dos dispositivos a la vez"
+      ],
+      "specs": [
+        {
+          "label": "Puertos",
+          "value": "2 USB"
+        },
+        {
+          "label": "Corriente",
+          "value": "2,1 A"
+        },
+        {
+          "label": "Uso",
+          "value": "Carga en el auto"
+        }
+      ],
+      "descriptionHtml": "<p>El cargador de auto Dekkin de doble puerto USB te permite cargar dos dispositivos a la vez.</p><h3>Carga</h3><p>Tiene dos puertos USB de 2,1 A. Sirve para cargar celular y otro dispositivo en el viaje.</p><h3>Viajes</h3><p>Es un accesorio práctico para no quedarte sin batería cuando estás en el camino.</p><h3>Antes de comprar</h3><p>La descripción original es corta: no indica el voltaje de entrada ni la corriente por puerto.</p>",
+      "revisar": [
+        "Descripción de relleno: falta voltaje de entrada y corriente por puerto."
+      ]
+    },
+    {
+      "slug": "cargador-auto-general-electric-12v-1-5a-7w",
+      "name": "Cargador Auto General Electric 12 V 1,5 A 7 W",
+      "brand": "General Electric",
+      "model": "13462",
+      "seoTitle": "Cargador auto General Electric 12 V 7 W",
+      "seoDescription": "Cargador de auto General Electric de 12 V, 1,5 A y 7 W, para cargar tu dispositivo en el camino. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cargador de auto General Electric de 12 V, 1,5 A y 7 W, para cargar tu dispositivo mientras viajás.",
+      "highlights": [
+        "Entrada de 12 V",
+        "Potencia de 7 W",
+        "Corriente de 1,5 A"
+      ],
+      "specs": [
+        {
+          "label": "Entrada",
+          "value": "12 V"
+        },
+        {
+          "label": "Corriente",
+          "value": "1,5 A"
+        },
+        {
+          "label": "Potencia",
+          "value": "7 W"
+        }
+      ],
+      "descriptionHtml": "<p>El cargador de auto General Electric de 12 V, 1,5 A y 7 W sirve para cargar tu dispositivo mientras viajás.</p><h3>Alimentación</h3><p>Se conecta a 12 V y entrega hasta 1,5 A, con una potencia de 7 W.</p><h3>Uso</h3><p>Es un accesorio práctico para tener el dispositivo con batería en el camino.</p><h3>Antes de comprar</h3><p>La descripción original es genérica: no indica la cantidad de puertos ni el tipo de conector de salida.</p>",
+      "revisar": [
+        "Descripción de relleno: falta cantidad de puertos y tipo de conector de salida."
+      ]
+    },
+    {
+      "slug": "cargador-auto-general-electric-usb-2-puerto-2-4a",
+      "name": "Cargador Auto General Electric USB 2 Puertos 2,4 A 12 W",
+      "brand": "General Electric",
+      "model": "13455",
+      "seoTitle": "Cargador auto General Electric 2 USB 12 W",
+      "seoDescription": "Cargador de auto General Electric con 2 puertos USB, 2,4 A y 12 W, para cargar celular y tablet a la vez. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cargador de auto General Electric de 12 V con 2 puertos USB, 2,4 A y 12 W, para cargar celular y tablet a la vez. No incluye cable.",
+      "highlights": [
+        "Dos puertos USB para cargar a la vez",
+        "Entrada de 12 V y potencia de 12 W",
+        "Carga rápida",
+        "No incluye cable: podés usar el que ya tenés"
+      ],
+      "specs": [
+        {
+          "label": "Entrada",
+          "value": "12 V"
+        },
+        {
+          "label": "Corriente",
+          "value": "2,4 A"
+        },
+        {
+          "label": "Potencia",
+          "value": "12 W"
+        },
+        {
+          "label": "Puertos",
+          "value": "2 USB"
+        },
+        {
+          "label": "Cable",
+          "value": "No incluido"
+        }
+      ],
+      "descriptionHtml": "<p>El cargador de auto General Electric con 2 puertos USB sirve para cargar celular y tablet mientras viajás.</p><h3>Dos puertos</h3><p>Tiene dos puertos USB que permiten cargar dos dispositivos a la vez.</p><h3>Potencia</h3><p>Trabaja con 12 V de entrada, con una salida de 2,4 A y una potencia de 12 W, para una carga rápida.</p><h3>Cable</h3><p>No incluye cable, así que podés usar el que ya tengas.</p><h3>Diseño</h3><p>Es compacto y moderno, fácil de llevar en cualquier viaje.</p>",
+      "revisar": [
+        "La descripción dice '2.4 Ah': el nombre dice 2,4 A; se usó A.",
+        "Marca estaba como General: la paso a General Electric."
+      ]
+    },
+    {
+      "slug": "cargador-dekkin-duo-usb-a-usb-c-20w",
+      "name": "Cargador Dekkin Duo USB-A y USB-C 20 W",
+      "brand": "Dekkin",
+      "model": "Duo 20 W",
+      "seoTitle": "Cargador Dekkin Duo USB-A y USB-C 20 W",
+      "seoDescription": "Cargador Dekkin Duo de 20 W con salidas USB-A y USB-C para cargar dos equipos a la vez con carga rápida. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Cargador Dekkin Duo de 20 W con salidas USB-A y USB-C, para cargar dos equipos a la vez con carga rápida y sincronización de datos.",
+      "highlights": [
+        "Dos puertos: USB-A y USB-C",
+        "20 W de potencia",
+        "Carga de dos equipos a la vez",
+        "Carga rápida y sincronización de datos"
+      ],
+      "specs": [
+        {
+          "label": "Puertos",
+          "value": "USB-A y USB-C"
+        },
+        {
+          "label": "Potencia",
+          "value": "20 W"
+        },
+        {
+          "label": "Salida",
+          "value": "5 V - 2,0 A"
+        },
+        {
+          "label": "Entrada",
+          "value": "240 V - 0,35 A"
+        },
+        {
+          "label": "Frecuencia",
+          "value": "50 Hz a 60 Hz"
+        },
+        {
+          "label": "Función",
+          "value": "Carga y sincronización de datos"
+        }
+      ],
+      "descriptionHtml": "<p>El cargador Dekkin Duo tiene salidas USB-A y USB-C para cargar dos equipos a la vez con 20 W de potencia.</p><h3>Doble carga</h3><p>Con la doble salida podés cargar dos dispositivos al mismo tiempo, sin tener que elegir cuál cargar primero.</p><h3>Carga rápida</h3><p>Con 20 W de potencia y carga rápida, el cargador acelera la carga de los equipos compatibles.</p><h3>Datos</h3><p>Además de cargar, permite la sincronización de datos según el cable que uses.</p><h3>Antes de comprar</h3><p>La ficha original indica una entrada de 240 V. Confirmá el voltaje antes de comprar.</p>",
+      "revisar": [
+        "La ficha indica entrada de 240 V: confirmar el voltaje, ya que en Argentina el tomacorriente habitual es de 220 V.",
+        "Marca estaba como General: la paso a Dekkin."
+      ]
+    },
+    {
+      "slug": "cargador-inalambrico-samsung-super-fast-max-15w",
+      "name": "Cargador Inalámbrico Samsung Super Fast Max 15 W",
+      "brand": "Samsung",
+      "model": "EP-P2400TBSGAR",
+      "seoTitle": "Cargador inalámbrico Samsung Super Fast 15 W",
+      "seoDescription": "Cargador inalámbrico Samsung Super Fast Max de 15 W, con carga rápida y voltaje bivolt de 110 V a 220 V. Original, con garantía y envíos a todo el país.",
+      "shortDescription": "Cargador inalámbrico Samsung Super Fast Max de 15 W, con carga rápida, conector USB Type-C y voltaje bivolt de 110 V a 220 V.",
+      "highlights": [
+        "Carga inalámbrica de 15 W",
+        "Carga rápida",
+        "Voltaje bivolt, de 110 V a 220 V",
+        "Conector USB Type-C"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Inalámbrico, carga rápida"
+        },
+        {
+          "label": "Potencia",
+          "value": "15 W"
+        },
+        {
+          "label": "Conector",
+          "value": "USB Type-C"
+        },
+        {
+          "label": "Voltaje",
+          "value": "110 V / 220 V (bivolt)"
+        },
+        {
+          "label": "Cable incluido",
+          "value": "No"
+        }
+      ],
+      "descriptionHtml": "<p>El cargador inalámbrico Samsung Super Fast Max de 15 W es un cargador original para cargar tu celular sin cables.</p><h3>Carga rápida</h3><p>Tiene 15 W de potencia y carga rápida para equipos compatibles.</p><h3>Voltaje</h3><p>Es bivolt, con entrada de 110 V o 220 V, así que sirve en distintos tomacorrientes.</p><h3>Conexión</h3><p>Usa conector USB Type-C. La ficha original indica que no incluye cable.</p><h3>Antes de comprar</h3><p>Verificá que tu celular sea compatible con carga inalámbrica de 15 W.</p>",
+      "revisar": [
+        "La ficha indica garantía de 12 meses: no la puse en specs, porque la ficha de la tienda agrega la garantía.",
+        "Descripción de relleno: faltan detalles de compatibilidad con modelos."
+      ]
+    },
+    {
+      "slug": "cargador-samsung-12v-duo-40w-rapido",
+      "name": "Cargador Samsung 12 V Duo 40 W Carga Rápida",
+      "brand": "Samsung",
+      "model": "EP-L4020NBEGWW",
+      "seoTitle": "Cargador Samsung 12 V Duo 40 W original",
+      "seoDescription": "Cargador Samsung Duo de 12 V y 40 W total, con USB-C de 25 W y USB-A de 15 W, y protección contra sobrecorriente y altas temperaturas. Garantía y envíos.",
+      "shortDescription": "Cargador Samsung de 12 V con salida USB-C de 25 W y USB-A de 15 W, para cargar dos dispositivos a la vez con un total de 40 W.",
+      "highlights": [
+        "Hasta 40 W en total",
+        "USB-C de 25 W y USB-A de 15 W",
+        "Carga dos dispositivos a la vez",
+        "Protección contra sobrecorriente, cortocircuitos y altas temperaturas"
+      ],
+      "specs": [
+        {
+          "label": "Entrada",
+          "value": "12 V"
+        },
+        {
+          "label": "Salida",
+          "value": "25 W (USB-C) y 15 W (USB-A)"
+        },
+        {
+          "label": "Potencia total",
+          "value": "40 W"
+        },
+        {
+          "label": "Puertos",
+          "value": "1 USB-C y 1 USB-A"
+        },
+        {
+          "label": "Protecciones",
+          "value": "Sobrecorriente, cortocircuitos y altas temperaturas"
+        }
+      ],
+      "descriptionHtml": "<p>El cargador Samsung 12 V Duo de 40 W carga dos dispositivos a la vez con un total de hasta 40 W.</p><h3>Doble carga</h3><p>Tiene un puerto USB-C de hasta 25 W y un puerto USB-A de hasta 15 W. Podés cargar dos equipos al mismo tiempo, por ejemplo tu celular y el de un acompañante.</p><h3>Carga rápida</h3><p>El puerto USB-C aprovecha hasta 25 W para cargar con rapidez los equipos compatibles.</p><h3>Seguridad</h3><p>Tiene protección contra sobrecorrientes, cortocircuitos y altas temperaturas, y funciona de forma segura en instalaciones eléctricas inestables.</p><h3>Antes de comprar</h3><p>La ficha original no indica si el cargador incluye cable.</p>",
+      "revisar": [
+        "La ficha no dice si incluye cable: confirmar."
+      ]
+    },
+    {
+      "slug": "cargador-samsung-12v-duo-original",
+      "name": "Cargador Samsung 12 V Duo Original",
+      "brand": "Samsung",
+      "model": "EP-L1100NBEGWW",
+      "seoTitle": "Cargador Samsung 12 V Duo original",
+      "seoDescription": "Cargador Samsung 12 V Duo original con dos puertos USB-A de carga rápida dual y LED azul indicador. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cargador Samsung 12 V original con dos puertos USB-A de carga rápida dual, para cargar dos dispositivos a la vez mientras viajás.",
+      "highlights": [
+        "Dos puertos USB-A de carga rápida dual",
+        "Indicador LED azul de carga",
+        "Para cargar dos dispositivos a la vez"
+      ],
+      "specs": [
+        {
+          "label": "Entrada",
+          "value": "12 V"
+        },
+        {
+          "label": "Puertos",
+          "value": "2 USB-A"
+        },
+        {
+          "label": "Tecnología",
+          "value": "Dual Fast Charge"
+        },
+        {
+          "label": "Indicador",
+          "value": "LED azul"
+        }
+      ],
+      "descriptionHtml": "<p>El cargador Samsung 12 V Duo original tiene dos puertos USB-A de carga rápida dual, para cargar dos dispositivos a la vez en movimiento.</p><h3>Carga para dos</h3><p>La salida USB de carga rápida dual permite cargar dos equipos al mismo tiempo mientras conducís.</p><h3>Indicador</h3><p>Tiene un LED azul que muestra si el dispositivo se está cargando correctamente.</p><h3>Antes de comprar</h3><p>La ficha original no indica la potencia de salida por puerto.</p>",
+      "revisar": [
+        "La ficha no indica la potencia de salida por puerto: confirmar."
+      ]
+    },
+    {
+      "slug": "cargador-samsung-15w-power-adapter",
+      "name": "Cargador Samsung 15 W Original",
+      "brand": "Samsung",
+      "model": "EP-T1510NBSGAR",
+      "seoTitle": "Cargador Samsung 15 W USB-C original",
+      "seoDescription": "Cargador Samsung original de 15 W con puerto USB-C con Power Delivery y protección contra sobrecorriente y altas temperaturas. Garantía y envíos a todo el país.",
+      "shortDescription": "Cargador Samsung original de 15 W con puerto USB-C con Power Delivery, para carga rápida con protección contra sobrecorriente.",
+      "highlights": [
+        "15 W con puerto USB-C (USB Power Delivery)",
+        "Compatible con dispositivos habilitados para USB-C",
+        "Protección contra sobrecorriente y altas temperaturas"
+      ],
+      "specs": [
+        {
+          "label": "Conector",
+          "value": "USB-C (USB Power Delivery)"
+        },
+        {
+          "label": "Potencia",
+          "value": "15 W"
+        },
+        {
+          "label": "Protecciones",
+          "value": "Sobrecorriente, cortocircuitos y altas temperaturas"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Dispositivos con USB-C"
+        }
+      ],
+      "descriptionHtml": "<p>El cargador Samsung original de 15 W tiene puerto USB-C con Power Delivery para cargar tu dispositivo rápido.</p><h3>Carga rápida</h3><p>Entrega 15 W de potencia, una carga rápida para cualquier dispositivo habilitado para USB-C.</p><h3>Flexibilidad</h3><p>El puerto USB Power Delivery permite alternar tipos de cable para cargar varios dispositivos, sin cambiar el adaptador de la pared.</p><h3>Seguridad</h3><p>Tiene protección contra sobrecorrientes, cortocircuitos y altas temperaturas, y carga de forma segura incluso en instalaciones inestables.</p><h3>Antes de comprar</h3><p>La ficha original no indica si incluye cable.</p>",
+      "revisar": [
+        "La descripción menciona cables USB-C en ambos extremos: eso es del cable, no del cargador; no se incluyó.",
+        "La ficha no dice si incluye cable: confirmar."
+      ]
+    },
+    {
+      "slug": "cargador-samsung-25w-original-low-standby",
+      "name": "Cargador Samsung 25 W Original Low Standby",
+      "brand": "Samsung",
+      "model": "EP-T2510NBSGAR",
+      "seoTitle": "Cargador Samsung 25 W USB-C original",
+      "seoDescription": "Cargador Samsung original de 25 W con USB-C y carga súper rápida con USB PD 3.0 y PPS. Garantía oficial y envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Cargador Samsung original de 25 W con USB-C y carga súper rápida con USB PD 3.0. Incluye cargador y manual, sin cable.",
+      "highlights": [
+        "Carga súper rápida de hasta 25 W",
+        "Compatible con USB PD 3.0 y PPS",
+        "Conector USB Type-C",
+        "Entrada de 100 a 240 V"
+      ],
+      "specs": [
+        {
+          "label": "Potencia",
+          "value": "25 W"
+        },
+        {
+          "label": "Conector",
+          "value": "USB Type-C"
+        },
+        {
+          "label": "Entrada",
+          "value": "100 a 240 V"
+        },
+        {
+          "label": "Salida",
+          "value": "PDO 9 V; PPS de 3,3 a 5,9 V o de 3,3 a 11 V"
+        },
+        {
+          "label": "Corriente de salida",
+          "value": "Hasta 3 A"
+        },
+        {
+          "label": "Estándar",
+          "value": "USB PD 3.0"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "41,4 x 67,8 x 26,2 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "48,6 g"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Galaxy S10 5G, A80 y A70 (según la ficha)"
+        },
+        {
+          "label": "En la caja",
+          "value": "Cargador y manual de usuario"
+        }
+      ],
+      "descriptionHtml": "<p>El cargador Samsung de 25 W es un cargador original con USB-C y carga súper rápida para dispositivos compatibles.</p><h3>Carga súper rápida</h3><p>Entrega hasta 25 W con USB PD 3.0. Para lograr esa velocidad, el dispositivo tiene que admitir USB PD 3.0 y carga directa; si no, carga a una velocidad menor.</p><h3>Compatibilidad</h3><p>Según la ficha, es compatible con los Galaxy S10 5G, A80 y A70, y con dispositivos compatibles en el futuro.</p><h3>Entrada y salida</h3><p>Funciona con entrada de 100 a 240 V. Tiene dimensiones de 41,4 x 67,8 x 26,2 mm y pesa 48,6 g.</p><h3>En la caja</h3><p>Incluye el cargador de pared y el manual de usuario. No incluye cable: la ficha recomienda usar un cable oficial Samsung de USB tipo C a USB tipo C.</p>",
+      "revisar": [
+        "El nombre dice 'Low Standby' pero la descripción no lo explica: no lo puse en specs.",
+        "La ficha dice que la velocidad real puede variar según el dispositivo: no es un dato a publicar como fijo."
+      ]
+    }
+  ]
+}

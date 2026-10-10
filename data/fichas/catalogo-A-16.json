@@ -1,0 +1,1950 @@
+{
+  "lote": "catalogo-A-16",
+  "productos": [
+    {
+      "slug": "lente-sigma-35mm-f-1-4-dg-art-p-sony",
+      "name": "Lente Sigma 35 mm f/1.4 DG DN Art para Sony E",
+      "brand": "Sigma",
+      "model": "35mm F1.4 DG DN Art",
+      "seoTitle": "Lente Sigma 35 mm f/1.4 DG DN Art Sony E",
+      "seoDescription": "Lente Sigma 35 mm f/1.4 DG DN Art para cámaras sin espejo Sony E, con diafragma de 9 cuchillas. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lente Sigma 35 mm f/1.4 de la línea Art, para cámaras sin espejo Sony con montura E. Diafragma de 9 cuchillas circulares y rosca de filtro de 67 mm.",
+      "highlights": [
+        "Apertura f/1.4 para poca luz y fondos desenfocados",
+        "Hecho para cámaras sin espejo con montura Sony E",
+        "15 elementos en 11 grupos, con vidrios SLD, ELD, FLD y asféricos",
+        "Diafragma de 9 cuchillas circulares para un bokeh suave",
+        "Aro de apertura con y sin clics y botón AFL configurable",
+        "Compatible con Sigma USB Dock"
+      ],
+      "specs": [
+        {
+          "label": "Distancia focal",
+          "value": "35 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/1.4 a f/16"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E (sin espejo)"
+        },
+        {
+          "label": "Construcción óptica",
+          "value": "15 elementos en 11 grupos"
+        },
+        {
+          "label": "Elementos especiales",
+          "value": "2 SLD, 1 ELD, 1 FLD y 2 asféricos"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "Super Multi-Layer Anti-Flare"
+        },
+        {
+          "label": "Diafragma",
+          "value": "9 cuchillas circulares"
+        },
+        {
+          "label": "Distancia mínima de enfoque",
+          "value": "30 cm (11,8 pulgadas)"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Interno flotante"
+        },
+        {
+          "label": "Diámetro de filtro",
+          "value": "67 mm"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Sigma USB Dock"
+        }
+      ],
+      "descriptionHtml": "<p>El Sigma 35 mm f/1.4 DG DN Art es la versión de la línea Art pensada para cámaras sin espejo con montura Sony E. La distancia focal de 35 mm es una de las más usadas para calle, reportaje y retrato ambiental.</p><h3>Óptica</h3><ul><li>Dos elementos SLD, uno ELD, uno FLD y dos asféricos, en 15 elementos y 11 grupos.</li><li>Recubrimiento Super Multi-Layer Anti-Flare contra reflejos y destellos.</li><li>Diafragma de 9 cuchillas circulares para un desenfoque suave en los fondos.</li></ul><h3>Manejo</h3><p>El enfoque automático es rápido, y tenés un aro de apertura que se puede usar con o sin clics. Un botón AFL configurable te deja asignarle la función que prefieras. Sirve tanto para fotos como para video.</p><h3>Fabricación</h3><p>Sigma lo produce en su fábrica de Aizú, en Japón.</p><h3>Antes de comprar</h3><p>Es para montura Sony E: no sirve en otras monturas. Es compatible con el Sigma USB Dock. Si no sabés si tu cámara lo acepta, escribinos por WhatsApp y lo revisamos.</p>",
+      "revisar": [
+        "El texto corto original mencionaba motor HSM (es de la línea para réflex) y el nombre dice DG DN; no puse el tipo de motor. Confirmar con el proveedor.",
+        "Faltan peso y largo del lente.",
+        "La descripción original estaba cortada al final."
+      ]
+    },
+    {
+      "slug": "lente-sigma-85mm-f-1-4-dg-hsm-art-p-sony",
+      "name": "Lente Sigma 85 mm f/1.4 DG DN Art para Sony E",
+      "brand": "Sigma",
+      "model": "85mm F1.4 DG DN Art",
+      "seoTitle": "Lente Sigma 85 mm f/1.4 DG DN Art Sony E",
+      "seoDescription": "Lente Sigma 85 mm f/1.4 Art para cámaras Sony E de formato completo, ideal para retrato, con 9 cuchillas. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lente Sigma 85 mm f/1.4 de la línea Art para cámaras Sony con montura E. Formato completo, diafragma redondo de 9 cuchillas y bayoneta de latón.",
+      "highlights": [
+        "Apertura f/1.4 para retratos con poca profundidad de campo",
+        "Montura Sony E, para cámaras de formato completo",
+        "Dos elementos SLD y uno asférico contra las aberraciones",
+        "Diafragma redondo de 9 cuchillas para un bokeh suave",
+        "Recubrimiento súper multicapa contra reflejos y fantasmas",
+        "Bayoneta de latón y cuerpo de material TSC"
+      ],
+      "specs": [
+        {
+          "label": "Distancia focal",
+          "value": "85 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/1.4 a f/16"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Formato",
+          "value": "Full frame (en APS-C equivale a 127,5 mm)"
+        },
+        {
+          "label": "Elementos especiales",
+          "value": "2 SLD, 1 asférico y 1 de dispersión parcial anómala y alto índice de refracción"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "Súper multicapa"
+        },
+        {
+          "label": "Diafragma",
+          "value": "Redondo, 9 cuchillas"
+        },
+        {
+          "label": "Construcción",
+          "value": "Material TSC y bayoneta de latón"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Automático con anulación manual"
+        }
+      ],
+      "descriptionHtml": "<p>El Sigma 85 mm f/1.4 Art es un teleobjetivo corto para retrato, con montura Sony E. Su apertura f/1.4 separa al sujeto del fondo y rinde bien con poca luz.</p><h3>Óptica</h3><p>Combina dos elementos SLD, uno de alto índice de refracción y uno asférico para corregir la aberración cromática y mantener la nitidez en todo el rango de enfoque. También controla la distorsión y el viñeteo. El recubrimiento súper multicapa reduce los reflejos y las imágenes fantasma.</p><h3>Uso</h3><ul><li>Con el diafragma redondo de 9 cuchillas los puntos de luz del fondo salen circulares.</li><li>El anillo de enfoque es grande y permite ajustar a mano en cualquier momento.</li><li>En cámaras APS-C la distancia focal equivale a 127,5 mm.</li></ul><h3>Construcción</h3><p>Está hecho con un material compuesto termoestable, liviano y resistente, y tiene bayoneta de latón.</p><h3>Antes de comprar</h3><p>Es para montura Sony E y no sirve en otras monturas. Si tenés dudas de compatibilidad con tu cámara, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "El nombre dice DG DN pero el texto original y el slug dicen DG HSM (son versiones distintas). Gana el nombre; no puse el tipo de motor. Confirmar modelo exacto.",
+        "Faltan peso, largo, distancia mínima de enfoque y diámetro de filtro.",
+        "La descripción original estaba cortada."
+      ]
+    },
+    {
+      "slug": "lente-sigma-p-canon-14-24mm-f2-8-dg-hsm-art",
+      "name": "Lente Sigma 14-24 mm f/2.8 DG HSM Art para Canon",
+      "brand": "Sigma",
+      "model": "14-24mm F2.8 DG HSM Art",
+      "seoTitle": "Lente Sigma 14-24 mm f/2.8 DG HSM Art Canon",
+      "seoDescription": "Zoom ultra gran angular Sigma 14-24 mm f/2.8 Art para cámaras réflex Canon de formato completo, con sellado. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Zoom ultra gran angular Sigma 14-24 mm con apertura constante f/2.8, de la línea Art, para cámaras réflex Canon de formato completo. Resistente al polvo y a las salpicaduras.",
+      "highlights": [
+        "Apertura constante f/2.8 en todo el rango de 14 a 24 mm",
+        "Distorsión de 1% o menos",
+        "Tres elementos FLD, tres SLD y tres lentes asféricas",
+        "Estructura resistente al polvo y a las salpicaduras",
+        "Revestimiento repelente al agua y al aceite",
+        "Motor de enfoque HSM y bayoneta de latón"
+      ],
+      "specs": [
+        {
+          "label": "Distancia focal",
+          "value": "14-24 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Montura",
+          "value": "Canon"
+        },
+        {
+          "label": "Formato",
+          "value": "Réflex de formato completo"
+        },
+        {
+          "label": "Elementos especiales",
+          "value": "3 FLD, 3 SLD y 3 asféricos"
+        },
+        {
+          "label": "Distorsión",
+          "value": "1% o menos"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "Súper multicapa, repelente al agua y al aceite"
+        },
+        {
+          "label": "Diafragma",
+          "value": "Redondeado, 9 aspas"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Motor HSM"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente al polvo y a las salpicaduras, bayoneta de latón"
+        }
+      ],
+      "descriptionHtml": "<p>El Sigma 14-24 mm f/2.8 DG HSM Art es un zoom ultra gran angular con apertura constante, pensado para cámaras réflex de formato completo. Está en la línea Art de Sigma.</p><h3>Calidad de imagen</h3><ul><li>Incluye tres elementos FLD, tres SLD y tres lentes asféricas, una de ellas de gran diámetro.</li><li>Reduce la distorsión al 1% o menos y las aberraciones cromáticas.</li><li>Controla los destellos y las luces parásitas.</li><li>Fue pensado para cámaras de más de 50 megapíxeles.</li></ul><h3>Construcción</h3><p>Tiene estructura resistente al polvo y a las salpicaduras, bayoneta de latón y un revestimiento que repele el agua y el aceite. El diafragma redondeado tiene 9 aspas.</p><h3>Antes de comprar</h3><p>Es la versión para Canon. Confirmá con nosotros que la montura sea compatible con tu cámara. Es un lente para formato completo: en cámaras APS-C el ángulo de visión es más cerrado.</p>",
+      "revisar": [
+        "No se aclara si la montura es Canon EF o RF; confirmar.",
+        "El texto corto dice \"resistente al polvo y salpicaduras\" y la descripción \"sellada contra el agua y el polvo\": publiqué la versión más prudente.",
+        "Faltan peso, largo y diámetro de filtro."
+      ]
+    },
+    {
+      "slug": "lente-sigma-p-canon-30mm-f1-4-dc-hsm-art",
+      "name": "Lente Sigma 30 mm f/1.4 DC HSM Art para Canon",
+      "brand": "Sigma",
+      "model": "30mm F1.4 DC HSM Art",
+      "seoTitle": "Lente Sigma 30 mm f/1.4 DC HSM Art Canon",
+      "seoDescription": "Lente Sigma 30 mm f/1.4 DC HSM Art para cámaras Canon con sensor APS-C, con motor HSM y 9 aspas. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lente estándar Sigma 30 mm f/1.4 de la línea Art para cámaras Canon con sensor APS-C. Motor de enfoque HSM, diafragma de 9 aspas y bayoneta de latón.",
+      "highlights": [
+        "Apertura f/1.4 en un lente estándar para APS-C",
+        "Ángulo de visión equivalente a 45 mm",
+        "Motor hipersónico HSM, silencioso, con enfoque manual en cualquier momento",
+        "Lente asférica doble contra distorsión y coma",
+        "Diafragma redondeado de 9 aspas",
+        "Revestimiento repelente al agua y al aceite"
+      ],
+      "specs": [
+        {
+          "label": "Distancia focal",
+          "value": "30 mm (equivale a 45 mm)"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/1.4"
+        },
+        {
+          "label": "Montura",
+          "value": "Canon"
+        },
+        {
+          "label": "Formato",
+          "value": "APS-C"
+        },
+        {
+          "label": "Elementos especiales",
+          "value": "Cristal de baja dispersión y lente asférica doble"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "Súper multicapa, repelente al agua y al aceite"
+        },
+        {
+          "label": "Diafragma",
+          "value": "Redondeado, 9 aspas"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Motor HSM, con enfoque manual"
+        },
+        {
+          "label": "Construcción",
+          "value": "Material TSC y bayoneta de latón"
+        }
+      ],
+      "descriptionHtml": "<p>El Sigma 30 mm f/1.4 DC HSM Art es un lente estándar de gran apertura para cámaras Canon con sensor APS-C. Su ángulo de visión es parecido al de la vista humana, equivalente a 45 mm en formato completo.</p><h3>Óptica</h3><p>La lente asférica doble corrige la distorsión esférica, el astigmatismo y el coma, y la potencia optimizada reduce la curvatura de campo para que los bordes del cuadro mantengan la calidad. Con aperturas grandes, los puntos de luz cercanos a los bordes salen con bokeh circular.</p><h3>Enfoque y manejo</h3><ul><li>Motor hipersónico HSM, rápido y silencioso.</li><li>Podés pasar a enfoque manual en cualquier momento girando el anillo.</li><li>Interruptor de modo de enfoque de uso intuitivo.</li><li>Parasol con conector de goma.</li></ul><h3>Construcción</h3><p>Bayoneta de latón y material compuesto térmicamente (TSC) por dentro y por fuera.</p><h3>Antes de comprar</h3><p>Está diseñado para sensor APS-C. En cámaras de formato completo no es la opción correcta.</p>",
+      "revisar": [
+        "Confirmar si la montura es Canon EF o EF-S.",
+        "Faltan peso, largo, distancia mínima y diámetro de filtro."
+      ]
+    },
+    {
+      "slug": "lente-sony-fe-24mm-1-4-gm",
+      "name": "Lente Sony FE 24 mm f/1.4 GM",
+      "brand": "Sony",
+      "model": "FE 24mm F1.4 GM",
+      "seoTitle": "Lente Sony FE 24 mm f/1.4 GM",
+      "seoDescription": "Lente Sony FE 24 mm f/1.4 GM gran angular para cámaras full frame con montura E, con recubrimiento Nano AR. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lente Sony FE 24 mm f/1.4 de la serie G Master, gran angular para cámaras full frame con montura E. Recubrimiento Nano AR y resistente al polvo y la humedad.",
+      "highlights": [
+        "Apertura f/1.4 para poca luz y desenfoque de fondo",
+        "Serie G Master, con nitidez del centro a los bordes",
+        "Recubrimiento Nano AR contra reflejos",
+        "Resistente al polvo y a la humedad",
+        "Botón de retención de enfoque personalizable"
+      ],
+      "specs": [
+        {
+          "label": "Distancia focal",
+          "value": "24 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/1.4"
+        },
+        {
+          "label": "Serie",
+          "value": "G Master"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E (full frame)"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "Nano AR"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente al polvo y a la humedad"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Automático, con botón de retención personalizable"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 24 mm f/1.4 GM es un gran angular de la serie G Master para cámaras full frame con montura E. Sirve para paisaje, arquitectura, astrofotografía y retratos ambientales.</p><h3>Óptica</h3><p>La apertura f/1.4 rinde bien con poca luz y suma un desenfoque suave. El recubrimiento Nano AR reduce los reflejos.</p><h3>Manejo</h3><p>Tiene enfoque automático silencioso y preciso, y un botón de retención de enfoque que podés configurar. Resiste el polvo y la humedad.</p><h3>Antes de comprar</h3><p>Es para montura E de Sony. Faltan en la ficha datos como el peso y el diámetro de filtro; si los necesitás, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "Parece duplicado de lente-sony-fe-24mm-f1-4-gm (mismo lente).",
+        "Esta ficha dice motores lineales XD y la hermana dice DDSSM: no publiqué el tipo de motor en ninguna.",
+        "Faltan peso, medidas, distancia mínima y diámetro de filtro."
+      ]
+    },
+    {
+      "slug": "lente-sony-fe-24mm-f1-4-gm",
+      "name": "Lente Sony FE 24 mm f/1.4 GM",
+      "brand": "Sony",
+      "model": "FE 24mm F1.4 GM",
+      "seoTitle": "Lente Sony FE 24 mm f/1.4 GM",
+      "seoDescription": "Lente Sony FE 24 mm f/1.4 GM ultra gran angular, de 445 g, con montura E y apertura circular de 11 láminas. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lente Sony FE 24 mm f/1.4 GM, ultra gran angular de la serie G Master para montura E. Pesa 445 g, tiene apertura de 11 láminas y resiste el polvo y la humedad.",
+      "highlights": [
+        "Ultra gran angular f/1.4 de la serie G Master",
+        "Dos elementos XA (asféricos extremos) y tres de cristal ED",
+        "Apertura circular de 11 láminas para un desenfoque atractivo",
+        "Solo 445 g, compacto para cuerpos con montura E",
+        "Resistente al polvo y a la humedad",
+        "Enfoque mínimo de 0,24 m"
+      ],
+      "specs": [
+        {
+          "label": "Distancia focal",
+          "value": "24 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/1.4"
+        },
+        {
+          "label": "Serie",
+          "value": "G Master"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Elementos especiales",
+          "value": "2 XA (asféricos extremos) y 3 ED"
+        },
+        {
+          "label": "Diafragma",
+          "value": "Circular, 11 láminas"
+        },
+        {
+          "label": "Distancia mínima de enfoque",
+          "value": "0,24 m"
+        },
+        {
+          "label": "Ampliación máxima",
+          "value": "0,17x"
+        },
+        {
+          "label": "Diámetro de filtro",
+          "value": "67 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "445 g"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente al polvo y a la humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 24 mm f/1.4 GM es un ultra gran angular de la serie G Master. Con 445 g es liviano para su apertura, y queda bien equilibrado en cuerpos compactos con montura E.</p><h3>Óptica</h3><ul><li>Dos elementos XA (asféricos extremos) mantienen una resolución pareja en todo el cuadro, incluso a f/1.4.</li><li>Tres elementos de cristal ED eliminan la distorsión cromática.</li><li>El diseño reduce el destello sagital, así que las fuentes de luz puntuales se ven fieles, incluso en los bordes.</li></ul><h3>Manejo</h3><p>El diafragma circular de 11 láminas da un desenfoque atractivo. La distancia mínima de enfoque es de 0,24 m y el filtro es de 67 mm. Resiste el polvo y la humedad.</p><h3>Antes de comprar</h3><p>Es para cámaras Sony con montura E. Si dudás con tu cuerpo de cámara, consultanos.</p>",
+      "revisar": [
+        "Parece duplicado de lente-sony-fe-24mm-1-4-gm (mismo lente).",
+        "Esta ficha dice DDSSM y la hermana dice motores lineales XD: no publiqué el tipo de motor en ninguna."
+      ]
+    },
+    {
+      "slug": "lente-sony-fe-2x-teleconverter",
+      "name": "Teleconvertidor Sony FE 2x",
+      "brand": "Sony",
+      "model": "FE 2x Teleconverter",
+      "seoTitle": "Teleconvertidor Sony FE 2x",
+      "seoDescription": "Teleconvertidor Sony FE 2x para montura E: duplica la distancia focal de lentes compatibles y conserva el autoenfoque. Garantía y envíos a todo el país.",
+      "shortDescription": "Teleconvertidor Sony FE 2x para montura E que duplica la distancia focal de los lentes FE compatibles. Mantiene la comunicación con la cámara y está sellado contra polvo y humedad.",
+      "highlights": [
+        "Duplica la distancia focal de los lentes compatibles",
+        "Un 70-200 mm pasa a funcionar como 140-400 mm",
+        "Mantiene el autoenfoque y la estabilización de imagen",
+        "Sellado contra polvo y humedad"
+      ],
+      "specs": [
+        {
+          "label": "Factor de ampliación",
+          "value": "2x"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Comunicación con la cámara",
+          "value": "Completa, con autoenfoque y estabilización"
+        },
+        {
+          "label": "Construcción",
+          "value": "Sellado contra polvo y humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El teleconvertidor Sony FE 2x se coloca entre la cámara y el lente para duplicar la distancia focal. Con un lente de 70-200 mm, por ejemplo, llegás a 140-400 mm.</p><h3>Cómo funciona</h3><p>Mantiene la comunicación entre la cámara y el lente, por lo que conservás el autoenfoque y la estabilización de imagen. Está sellado contra el polvo y la humedad. Sirve para fauna, deportes y retrato a distancia.</p><h3>Antes de comprar</h3><p>Funciona con lentes FE compatibles; no con todos. Decinos qué lente tenés y te confirmamos por WhatsApp.</p>",
+      "revisar": [
+        "Falta la lista de lentes compatibles, el código de modelo y el peso.",
+        "No hay dato de cuánta luz se pierde con el teleconvertidor; no lo puse."
+      ]
+    },
+    {
+      "slug": "lente-sony-fe-35mm-1-4-gm",
+      "name": "Lente Sony FE 35 mm f/1.4 GM",
+      "brand": "Sony",
+      "model": "FE 35mm F1.4 GM",
+      "seoTitle": "Lente Sony FE 35 mm f/1.4 GM",
+      "seoDescription": "Lente Sony FE 35 mm f/1.4 GM para cámaras full frame con montura E, con diafragma de 11 hojas y sellado. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lente Sony FE 35 mm f/1.4 GM para cámaras full frame con montura E. Vidrios ED y Super ED, diafragma circular de 11 hojas y resistencia al polvo y la humedad.",
+      "highlights": [
+        "Apertura f/1.4 para poca luz y fondos suaves",
+        "Vidrios ED y Super ED contra las aberraciones cromáticas",
+        "Diafragma circular de 11 hojas",
+        "Enfoque automático silencioso y preciso",
+        "Resistente al polvo y a la humedad"
+      ],
+      "specs": [
+        {
+          "label": "Distancia focal",
+          "value": "35 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/1.4"
+        },
+        {
+          "label": "Serie",
+          "value": "G Master"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E (full frame)"
+        },
+        {
+          "label": "Elementos especiales",
+          "value": "ED y Super ED"
+        },
+        {
+          "label": "Diafragma",
+          "value": "Circular, 11 hojas"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Automático y silencioso"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente al polvo y a la humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 35 mm f/1.4 GM es un lente de focal fija para cámaras full frame con montura E. Va bien para paisaje, retrato y fotografía callejera.</p><h3>Óptica</h3><p>Los elementos de vidrio ED y Super ED reducen las aberraciones cromáticas. El diafragma circular de 11 hojas da un bokeh suave.</p><h3>Manejo</h3><p>El enfoque automático es silencioso y preciso. El lente resiste el polvo y la humedad.</p><h3>Antes de comprar</h3><p>Es para montura E de Sony. En la ficha faltan peso, medidas y diámetro de filtro; consultanos si los necesitás.</p>",
+      "revisar": [
+        "El nombre y la descripción solo dicen \"GM\" sin más datos; faltan peso, medidas, filtro y distancia mínima de enfoque."
+      ]
+    },
+    {
+      "slug": "lente-sony-fe-50mm-1-8-2",
+      "name": "Lente Sony FE 50 mm f/1.8",
+      "brand": "Sony",
+      "model": "FE 50mm F1.8",
+      "seoTitle": "Lente Sony FE 50 mm f/1.8",
+      "seoDescription": "Lente Sony FE 50 mm f/1.8 compacto y liviano para cámaras Sony con montura E, ideal para retrato. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lente Sony FE 50 mm f/1.8 para cámaras Sony con montura E y full frame. Compacto y liviano, con autoenfoque rápido y silencioso para foto y video.",
+      "highlights": [
+        "Apertura f/1.8 para retratos con fondo desenfocado",
+        "Compacto y liviano",
+        "Montura E, compatible con cámaras full frame",
+        "Autoenfoque rápido y silencioso, para foto y video"
+      ],
+      "specs": [
+        {
+          "label": "Distancia focal",
+          "value": "50 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/1.8"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Formato",
+          "value": "Full frame"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Automático, rápido y silencioso"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 50 mm f/1.8 es un lente de focal fija para cámaras Sony con montura E. Su apertura f/1.8 sirve para retratos y para situaciones de poca luz.</p><h3>Para qué sirve</h3><p>Separa al sujeto del fondo con un desenfoque suave. Es compacto y liviano, cómodo para llevar en sesiones largas. El autoenfoque es rápido y silencioso, tanto en fotos como en video.</p><h3>Antes de comprar</h3><p>Es para montura E de Sony. Los datos como peso, filtro y distancia mínima de enfoque no están confirmados en esta ficha.</p>",
+      "revisar": [
+        "Parece duplicado de lente-sony-fe-50mm-f1-8 (mismo lente): esa ficha tiene más datos (186 g, filtro 49 mm).",
+        "Faltan peso, medidas, filtro y distancia mínima."
+      ]
+    },
+    {
+      "slug": "lente-sony-fe-50mm-f1-8",
+      "name": "Lente Sony FE 50 mm f/1.8",
+      "brand": "Sony",
+      "model": "FE 50mm F1.8",
+      "seoTitle": "Lente Sony FE 50 mm f/1.8",
+      "seoDescription": "Lente Sony FE 50 mm f/1.8 de solo 186 g, con montura E y apertura circular de 7 láminas. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lente Sony FE 50 mm f/1.8, compacto y liviano (186 g), con montura E y diafragma de 7 láminas. En cuerpos APS-C equivale a unos 75 mm.",
+      "highlights": [
+        "Apertura f/1.8 para poca luz y fondos desenfocados",
+        "Solo 186 g, fácil de llevar",
+        "Diafragma circular de 7 láminas",
+        "Elemento asférico que reduce la distorsión",
+        "En cámaras APS-C equivale a unos 75 mm",
+        "Montura metálica"
+      ],
+      "specs": [
+        {
+          "label": "Distancia focal",
+          "value": "50 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/1.8"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E (metálica)"
+        },
+        {
+          "label": "Diseño óptico",
+          "value": "Doble Gauss con un elemento asférico"
+        },
+        {
+          "label": "Diafragma",
+          "value": "Circular, 7 láminas"
+        },
+        {
+          "label": "Distancia mínima de enfoque",
+          "value": "0,45 m"
+        },
+        {
+          "label": "Ampliación máxima",
+          "value": "0,14x"
+        },
+        {
+          "label": "Diámetro de filtro",
+          "value": "49 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "186 g"
+        },
+        {
+          "label": "Equivalencia en APS-C",
+          "value": "Unos 75 mm"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 50 mm f/1.8 es un lente de focal fija pequeño y liviano para cámaras con montura E. Con 186 g queda bien en una cámara de la serie α7.</p><h3>Óptica</h3><p>Un diseño de doble Gauss con un elemento asférico reduce la distorsión esférica y el coma, para mantener la calidad hasta los bordes. El diafragma circular de 7 láminas da un fondo desenfocado suave.</p><h3>Poca luz</h3><p>La apertura f/1.8 ayuda a sacar fotos claras de noche o en interiores, y combinada con la estabilización del cuerpo de la cámara podés disparar sin trípode.</p><h3>Antes de comprar</h3><p>En una cámara APS-C el ángulo de visión equivale a unos 75 mm. La distancia mínima de enfoque es de 0,45 m.</p>",
+      "revisar": [
+        "Parece duplicado de lente-sony-fe-50mm-1-8-2 (mismo lente)."
+      ]
+    },
+    {
+      "slug": "lente-sony-fe-55mm-1-8-2",
+      "name": "Lente Sony FE 55 mm f/1.8 ZA Zeiss Sonnar T*",
+      "brand": "Sony",
+      "model": "FE 55mm F1.8 ZA",
+      "seoTitle": "Lente Sony FE 55 mm f/1.8 ZA Zeiss",
+      "seoDescription": "Lente Sony FE 55 mm f/1.8 ZA con óptica Zeiss Sonnar T* para cámaras full frame con montura E. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lente Sony FE 55 mm f/1.8 ZA con óptica Zeiss Sonnar T*, de focal fija, para cámaras mirrorless full frame con montura E. Compacto y liviano.",
+      "highlights": [
+        "Apertura f/1.8, buena para poca luz",
+        "Óptica Zeiss Sonnar T*",
+        "Compacto y liviano",
+        "Autoenfoque rápido y silencioso, para foto y video"
+      ],
+      "specs": [
+        {
+          "label": "Distancia focal",
+          "value": "55 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/1.8"
+        },
+        {
+          "label": "Óptica",
+          "value": "Zeiss Sonnar T*"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Formato",
+          "value": "Full frame"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Automático, rápido y silencioso"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 55 mm f/1.8 ZA es un lente de focal fija con óptica Zeiss Sonnar T*, para cámaras mirrorless full frame con montura E.</p><h3>Para qué sirve</h3><p>La apertura f/1.8 deja trabajar con poca luz y desenfocar el fondo en retratos. Es compacto y liviano, y sirve para retrato, fotografía callejera y uso diario. El autoenfoque es rápido y silencioso.</p><h3>Antes de comprar</h3><p>Es para montura E de Sony. Peso, medidas y diámetro de filtro no figuran en esta ficha.</p>",
+      "revisar": [
+        "Faltan peso, medidas, filtro y distancia mínima de enfoque."
+      ]
+    },
+    {
+      "slug": "lente-sony-fe-85mm-1-8-2",
+      "name": "Lente Sony FE 85 mm f/1.8",
+      "brand": "Sony",
+      "model": "FE 85mm F1.8",
+      "seoTitle": "Lente Sony FE 85 mm f/1.8",
+      "seoDescription": "Lente Sony FE 85 mm f/1.8 para retrato en cámaras Sony full frame con montura E, con enfoque automático silencioso. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lente Sony FE 85 mm f/1.8 para retrato, para cámaras mirrorless Sony full frame con montura E. Enfoque automático silencioso y preciso.",
+      "highlights": [
+        "Distancia focal de 85 mm, clásica para retrato",
+        "Apertura f/1.8 para fondos desenfocados y poca luz",
+        "Diseñado para sensores full frame con montura E",
+        "Enfoque automático silencioso y preciso"
+      ],
+      "specs": [
+        {
+          "label": "Distancia focal",
+          "value": "85 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/1.8"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Formato",
+          "value": "Full frame"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Automático, silencioso y preciso"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 85 mm f/1.8 es un lente de retrato para cámaras mirrorless Sony con montura E y sensor full frame.</p><h3>Para qué sirve</h3><p>Los 85 mm permiten retratos naturales sin acercarse demasiado al sujeto. La apertura f/1.8 da un bokeh suave y rinde bien con poca luz. El enfoque automático es silencioso y preciso, útil en eventos y sesiones.</p><h3>Antes de comprar</h3><p>Es para montura E de Sony. Peso, medidas y diámetro de filtro no figuran en esta ficha.</p>",
+      "revisar": [
+        "Faltan peso, medidas, filtro y distancia mínima de enfoque."
+      ]
+    },
+    {
+      "slug": "lente-sony-fe-90mm-2-8-macro-g-oss-2",
+      "name": "Lente Sony FE 90 mm f/2.8 Macro G OSS",
+      "brand": "Sony",
+      "model": "FE 90mm F2.8 Macro G OSS",
+      "seoTitle": "Lente Sony FE 90 mm f/2.8 Macro G OSS",
+      "seoDescription": "Lente macro Sony FE 90 mm f/2.8 G OSS con reproducción 1:1 y estabilización óptica, para montura E. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lente macro Sony FE 90 mm f/2.8 G OSS con reproducción 1:1 y estabilización óptica. Para cámaras Sony full frame y APS-C con montura E.",
+      "highlights": [
+        "Macro con reproducción 1:1",
+        "Estabilización óptica OSS",
+        "Enfoque Direct Drive SSM, rápido y silencioso",
+        "Vidrios ED y Super ED",
+        "Resistente al polvo y a la humedad",
+        "Compatible con cámaras Sony full frame y APS-C"
+      ],
+      "specs": [
+        {
+          "label": "Distancia focal",
+          "value": "90 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/2.8"
+        },
+        {
+          "label": "Serie",
+          "value": "G"
+        },
+        {
+          "label": "Reproducción",
+          "value": "1:1 (macro)"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica OSS"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Direct Drive SSM"
+        },
+        {
+          "label": "Elementos especiales",
+          "value": "ED y Super ED"
+        },
+        {
+          "label": "Montura",
+          "value": "Sony E"
+        },
+        {
+          "label": "Construcción",
+          "value": "Resistente al polvo y a la humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Sony FE 90 mm f/2.8 Macro G OSS es un lente macro para cámaras Sony con montura E, con reproducción 1:1 y estabilización óptica.</p><h3>Macro</h3><ul><li>Reproducción 1:1, para fotografiar sujetos muy pequeños con detalle.</li><li>Estabilización óptica OSS para imágenes nítidas incluso con poca luz.</li><li>Enfoque Direct Drive SSM, rápido y silencioso, útil con sujetos delicados.</li></ul><h3>Construcción</h3><p>Usa vidrios ED y Super ED para cuidar los colores y el contraste, y resiste el polvo y la humedad.</p><h3>Antes de comprar</h3><p>Funciona en cámaras Sony full frame y APS-C con montura E. Peso, medidas y diámetro de filtro no figuran en esta ficha.</p>",
+      "revisar": [
+        "Faltan peso, medidas, filtro y distancia mínima de enfoque."
+      ]
+    },
+    {
+      "slug": "monitor-15-6-asus-portatil-mb169ck-usb-fullhd",
+      "name": "Monitor portátil ASUS MB169CK 15,6\" Full HD USB",
+      "brand": "ASUS",
+      "model": "MB169CK",
+      "seoTitle": "Monitor portátil ASUS MB169CK 15,6\" Full HD",
+      "seoDescription": "Monitor portátil ASUS MB169CK de 15,6\" Full HD, panel IPS de 8 mm de espesor, alimentado por USB. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor portátil ASUS MB169CK de 15,6 pulgadas, Full HD con panel IPS. Se conecta y se alimenta por USB, mide 8 mm de espesor e incluye funda Smart Case que hace de soporte.",
+      "highlights": [
+        "Pantalla de 15,6\", Full HD, panel IPS",
+        "Solo 8 mm de espesor, fácil de llevar",
+        "Se alimenta por USB, sin adaptadores externos",
+        "Funda Smart Case que funciona como soporte ajustable",
+        "Para usar con Windows, Mac y dispositivos móviles"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "15,6\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD"
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Conexión",
+          "value": "USB"
+        },
+        {
+          "label": "Alimentación",
+          "value": "Por USB"
+        },
+        {
+          "label": "Espesor",
+          "value": "8 mm"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Windows, Mac y dispositivos móviles"
+        },
+        {
+          "label": "En la caja",
+          "value": "Funda Smart Case con función de soporte"
+        }
+      ],
+      "descriptionHtml": "<p>El ASUS MB169CK es un monitor portátil de 15,6 pulgadas para sumar una segunda pantalla a una notebook, en la oficina o de viaje. Es Full HD con panel IPS y mide apenas 8 mm.</p><h3>Conexión</h3><p>Funciona conectado por USB y toma la energía por el mismo cable, así que no necesita adaptador de corriente.</p><h3>Soporte</h3><p>Trae una funda Smart Case que sirve como soporte ajustable.</p><h3>Antes de comprar</h3><p>La ficha no aclara si el USB es Type-C o Type-A ni qué cable viene en la caja. Consultanos por WhatsApp si necesitás confirmarlo con tu equipo.</p>",
+      "revisar": [
+        "No se indica el tipo de conector USB (Type-C/Type-A) ni los cables incluidos; la compatibilidad con celulares depende de que el equipo soporte salida de video por USB.",
+        "Faltan brillo, peso y frecuencia."
+      ]
+    },
+    {
+      "slug": "monitor-22-asus-vp227hf-j-black-fhd-100hz-hdmi-vga",
+      "name": "Monitor ASUS VP227HF-J 22\" Full HD 100 Hz",
+      "brand": "ASUS",
+      "model": "VP227HF-J",
+      "seoTitle": "Monitor ASUS VP227HF-J 22\" Full HD 100 Hz",
+      "seoDescription": "Monitor ASUS VP227HF-J de 22 pulgadas, Full HD y 100 Hz. Entradas HDMI y VGA. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor ASUS VP227HF-J de 22 pulgadas, Full HD y 100 Hz. Entradas HDMI y VGA.",
+      "highlights": [
+        "Pantalla de 22\", Full HD",
+        "Frecuencia de actualización de 100 Hz",
+        "Entradas HDMI y VGA"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "22\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "100 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y VGA"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        }
+      ],
+      "descriptionHtml": "<p>El ASUS VP227HF-J es un monitor de 22 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>Con 100 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y VGA, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el tipo de panel ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno; solo usé lo que dice el nombre.",
+        "El tipo de panel no figura en el nombre; no lo puse."
+      ]
+    },
+    {
+      "slug": "monitor-22-asus-vy229hf-j-black-ips-100hz-hdmi-vga",
+      "name": "Monitor ASUS VY229HF-J 22\" IPS 100 Hz",
+      "brand": "ASUS",
+      "model": "VY229HF-J",
+      "seoTitle": "Monitor ASUS VY229HF-J 22\" IPS 100 Hz",
+      "seoDescription": "Monitor ASUS VY229HF-J de 22 pulgadas, panel IPS y 100 Hz. Entradas HDMI y VGA. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor ASUS VY229HF-J de 22 pulgadas, panel IPS y 100 Hz. Entradas HDMI y VGA.",
+      "highlights": [
+        "Pantalla de 22\", panel IPS",
+        "Frecuencia de actualización de 100 Hz",
+        "Entradas HDMI y VGA"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "22\""
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "100 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y VGA"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        }
+      ],
+      "descriptionHtml": "<p>El ASUS VY229HF-J es un monitor de 22 pulgadas.</p><h3>Pantalla</h3><p>El panel IPS ofrece ángulos de visión amplios. Con 100 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y VGA, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla la resolución ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno; solo usé lo que dice el nombre.",
+        "No dice la resolución; no la puse (el nombre solo trae IPS, 100 Hz, HDMI/VGA)."
+      ]
+    },
+    {
+      "slug": "monitor-24-asus-va24ehf-j-black-ips-100hz-hdmi",
+      "name": "Monitor ASUS VA24EHF-J 24\" IPS 100 Hz",
+      "brand": "ASUS",
+      "model": "VA24EHF-J",
+      "seoTitle": "Monitor ASUS VA24EHF-J 24\" IPS 100 Hz",
+      "seoDescription": "Monitor ASUS VA24EHF-J de 24 pulgadas, panel IPS y 100 Hz. Entradas HDMI. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor ASUS VA24EHF-J de 24 pulgadas, panel IPS y 100 Hz. Entradas HDMI.",
+      "highlights": [
+        "Pantalla de 24\", panel IPS",
+        "Frecuencia de actualización de 100 Hz",
+        "Entradas HDMI"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24\""
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "100 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        }
+      ],
+      "descriptionHtml": "<p>El ASUS VA24EHF-J es un monitor de 24 pulgadas.</p><h3>Pantalla</h3><p>El panel IPS ofrece ángulos de visión amplios. Con 100 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla la resolución ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno; solo usé lo que dice el nombre.",
+        "No dice la resolución ni otras entradas; solo figura HDMI."
+      ]
+    },
+    {
+      "slug": "monitor-24-asus-vg249ql3a-j-tuf-gaming-180hz-hdmi",
+      "name": "Monitor ASUS TUF Gaming VG249QL3A-J 24\" 180 Hz HDMI",
+      "brand": "ASUS",
+      "model": "TUF Gaming VG249QL3A-J",
+      "seoTitle": "Monitor ASUS TUF Gaming VG249QL3A-J 24\"",
+      "seoDescription": "Monitor gamer ASUS TUF Gaming VG249QL3A-J de 24 pulgadas, 180 Hz. Entradas HDMI. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor gamer ASUS TUF Gaming VG249QL3A-J de 24 pulgadas, 180 Hz. Entradas HDMI.",
+      "highlights": [
+        "Pantalla de 24\"",
+        "Frecuencia de actualización de 180 Hz",
+        "Entradas HDMI"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24\""
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "180 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI"
+        }
+      ],
+      "descriptionHtml": "<p>El ASUS TUF Gaming VG249QL3A-J es un monitor gamer de 24 pulgadas.</p><h3>Pantalla</h3><p>Con 180 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla la resolución, el tipo de panel ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno; solo usé lo que dice el nombre.",
+        "No dice resolución, panel ni otras entradas (puede tener DisplayPort); no las puse."
+      ]
+    },
+    {
+      "slug": "monitor-24-cx-m2453dkj-vga-hdmi-frameless",
+      "name": "Monitor CX M2453DKJ 24\" Full HD VGA/HDMI Frameless",
+      "brand": "CX",
+      "model": "M2453DKJ",
+      "seoTitle": "Monitor CX M2453DKJ 24\" Full HD",
+      "seoDescription": "Monitor CX M2453DKJ de 24 pulgadas, Full HD. Entradas VGA y HDMI. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor CX M2453DKJ de 24 pulgadas, Full HD. Entradas VGA y HDMI.",
+      "highlights": [
+        "Pantalla de 24\", Full HD",
+        "Entradas VGA y HDMI",
+        "Diseño: Frameless (sin marcos)"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "VGA y HDMI"
+        },
+        {
+          "label": "Diseño",
+          "value": "Frameless (sin marcos)"
+        }
+      ],
+      "descriptionHtml": "<p>El CX M2453DKJ es un monitor de 24 pulgadas con resolución Full HD.</p><h3>Conexiones</h3><p>Se conecta por VGA y HDMI, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla la frecuencia ni el tipo de panel. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "Casi no hay información: solo nombre. Falta frecuencia, panel y tiempo de respuesta."
+      ]
+    },
+    {
+      "slug": "monitor-24-gamemax-100hz-ips-fhd-hdmi-vga",
+      "name": "Monitor GameMax 24\" IPS Full HD 100 Hz HDMI/VGA",
+      "brand": "GameMax",
+      "seoTitle": "Monitor gamer GameMax 24\" IPS 100 Hz",
+      "seoDescription": "Monitor gamer GameMax None de 24 pulgadas, Full HD, panel IPS y 100 Hz. Entradas HDMI y VGA. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor gamer GameMax None de 24 pulgadas, Full HD, panel IPS y 100 Hz. Entradas HDMI y VGA.",
+      "highlights": [
+        "Pantalla de 24\", Full HD, panel IPS",
+        "Frecuencia de actualización de 100 Hz",
+        "Entradas HDMI y VGA"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "100 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y VGA"
+        }
+      ],
+      "descriptionHtml": "<p>El GameMax None es un monitor gamer de 24 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>El panel IPS ofrece ángulos de visión amplios. Con 100 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y VGA, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el tiempo de respuesta ni el código de modelo. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "Falta el código de modelo y el tiempo de respuesta."
+      ]
+    },
+    {
+      "slug": "monitor-24-gamemax-180hz-ips-fhd-hdmi-d-port",
+      "name": "Monitor gamer GameMax GMX24F180 24\" IPS Full HD 180 Hz",
+      "brand": "GameMax",
+      "model": "GMX24F180",
+      "seoTitle": "Monitor gamer GameMax GMX24F180 24\" 180 Hz",
+      "seoDescription": "Monitor gamer GameMax GMX24F180 de 24 pulgadas, Full HD, panel IPS y 180 Hz. Entradas HDMI y DisplayPort. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor gamer GameMax GMX24F180 de 24 pulgadas, Full HD, panel IPS y 180 Hz. Entradas HDMI y DisplayPort.",
+      "highlights": [
+        "Pantalla de 24\", Full HD, panel IPS",
+        "Frecuencia de actualización de 180 Hz",
+        "Entradas HDMI y DisplayPort",
+        "FreeSync, Low Blue Light y Flicker-Free"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD"
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "180 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y DisplayPort"
+        },
+        {
+          "label": "Tecnologías",
+          "value": "FreeSync, Low Blue Light y Flicker-Free"
+        }
+      ],
+      "descriptionHtml": "<p>El GameMax GMX24F180 es un monitor gamer de 24 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>El panel IPS ofrece ángulos de visión amplios. Con 180 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y DisplayPort, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "La descripción original era copia de otra tienda (con nombre del local); la limpié. FreeSync, Low Blue Light y Flicker-Free salen de esa copia: confirmar.",
+        "La copia también decía HDR; no lo puse."
+      ]
+    },
+    {
+      "slug": "monitor-25-arkham-gamer-210hz-ips-fhd-1ms-hdmi-dp",
+      "name": "Monitor gamer Arkham 25\" IPS Full HD 210 Hz 1 ms",
+      "brand": "Arkham",
+      "seoTitle": "Monitor gamer Arkham 25\" IPS 210 Hz 1 ms",
+      "seoDescription": "Monitor gamer Arkham None de 25 pulgadas, Full HD, panel IPS y 210 Hz. Entradas HDMI y DisplayPort. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor gamer Arkham None de 25 pulgadas, Full HD, panel IPS y 210 Hz. Entradas HDMI y DisplayPort.",
+      "highlights": [
+        "Pantalla de 25\", Full HD, panel IPS",
+        "Frecuencia de actualización de 210 Hz",
+        "Tiempo de respuesta de 1 ms",
+        "Entradas HDMI y DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "25\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "210 Hz"
+        },
+        {
+          "label": "Tiempo de respuesta",
+          "value": "1 ms"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y DisplayPort"
+        }
+      ],
+      "descriptionHtml": "<p>El Arkham None es un monitor gamer de 25 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>El panel IPS ofrece ángulos de visión amplios. Con 210 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y DisplayPort, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el código de modelo. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "Falta el código de modelo."
+      ]
+    },
+    {
+      "slug": "monitor-25-msi-pro-mp251l-e2-fhd-120hz-hdmi-vga-2",
+      "name": "Monitor MSI Pro MP251L E2 25\" Full HD 120 Hz",
+      "brand": "MSI",
+      "model": "Pro MP251L E2",
+      "seoTitle": "Monitor MSI Pro MP251L E2 25\" Full HD 120 Hz",
+      "seoDescription": "Monitor MSI Pro MP251L E2 de 25 pulgadas, Full HD y 120 Hz. Entradas HDMI y VGA. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor MSI Pro MP251L E2 de 25 pulgadas, Full HD y 120 Hz. Entradas HDMI y VGA.",
+      "highlights": [
+        "Pantalla de 25\", Full HD",
+        "Frecuencia de actualización de 120 Hz",
+        "Entradas HDMI y VGA"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "25\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "120 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y VGA"
+        }
+      ],
+      "descriptionHtml": "<p>El MSI Pro MP251L E2 es un monitor de 25 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>Con 120 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y VGA, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el tipo de panel ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "No dice el tipo de panel; no lo puse."
+      ]
+    },
+    {
+      "slug": "monitor-27-gamemax-100hz-ips-fhd-hdmi-vga",
+      "name": "Monitor GameMax 27\" IPS Full HD 100 Hz HDMI/VGA",
+      "brand": "GameMax",
+      "seoTitle": "Monitor GameMax 27\" IPS Full HD 100 Hz",
+      "seoDescription": "Monitor GameMax None de 27 pulgadas, Full HD, panel IPS y 100 Hz. Entradas HDMI y VGA. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor GameMax None de 27 pulgadas, Full HD, panel IPS y 100 Hz. Entradas HDMI y VGA.",
+      "highlights": [
+        "Pantalla de 27\", Full HD, panel IPS",
+        "Frecuencia de actualización de 100 Hz",
+        "Entradas HDMI y VGA"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "27\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD"
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "100 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y VGA"
+        }
+      ],
+      "descriptionHtml": "<p>El GameMax None es un monitor de 27 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>El panel IPS ofrece ángulos de visión amplios. Con 100 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y VGA, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el código de modelo y el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno; solo usé lo que dice el nombre.",
+        "Falta el código de modelo."
+      ]
+    },
+    {
+      "slug": "monitor-27-gamemax-180hz-ips-fhd-hdmi-d-port",
+      "name": "Monitor GameMax 27\" IPS Full HD 180 Hz HDMI/DisplayPort",
+      "brand": "GameMax",
+      "seoTitle": "Monitor GameMax 27\" IPS Full HD 180 Hz",
+      "seoDescription": "Monitor GameMax None de 27 pulgadas, Full HD, panel IPS y 180 Hz. Entradas HDMI y DisplayPort. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor GameMax None de 27 pulgadas, Full HD, panel IPS y 180 Hz. Entradas HDMI y DisplayPort.",
+      "highlights": [
+        "Pantalla de 27\", Full HD, panel IPS",
+        "Frecuencia de actualización de 180 Hz",
+        "Entradas HDMI y DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "27\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD"
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "180 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y DisplayPort"
+        }
+      ],
+      "descriptionHtml": "<p>El GameMax None es un monitor de 27 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>El panel IPS ofrece ángulos de visión amplios. Con 180 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y DisplayPort, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el código de modelo y el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno; solo usé lo que dice el nombre.",
+        "Falta el código de modelo."
+      ]
+    },
+    {
+      "slug": "monitor-27-msi-g275l-e14-ips-144hz-hdmi-dp",
+      "name": "Monitor MSI G275L E14 27\" IPS 144 Hz",
+      "brand": "MSI",
+      "model": "G275L E14",
+      "seoTitle": "Monitor MSI G275L E14 27\" IPS 144 Hz",
+      "seoDescription": "Monitor MSI G275L E14 de 27 pulgadas, panel IPS y 144 Hz. Entradas HDMI y DisplayPort. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor MSI G275L E14 de 27 pulgadas, panel IPS y 144 Hz. Entradas HDMI y DisplayPort.",
+      "highlights": [
+        "Pantalla de 27\", panel IPS",
+        "Frecuencia de actualización de 144 Hz",
+        "Entradas HDMI y DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "27\""
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "144 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y DisplayPort"
+        }
+      ],
+      "descriptionHtml": "<p>El MSI G275L E14 es un monitor de 27 pulgadas.</p><h3>Pantalla</h3><p>El panel IPS ofrece ángulos de visión amplios. Con 144 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y DisplayPort, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla la resolución ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno; solo usé lo que dice el nombre.",
+        "No dice la resolución. El SKU es 9S6-3CF31M-019."
+      ]
+    },
+    {
+      "slug": "monitor-32-cx-pf236m-vga-hdmi-frameless",
+      "name": "Monitor CX PF236M VGA/HDMI Frameless",
+      "brand": "CX",
+      "model": "PF236M",
+      "seoTitle": "Monitor CX PF236M VGA/HDMI Frameless",
+      "seoDescription": "Monitor CX PF236M frameless, sin marcos visibles, con entradas VGA y HDMI. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor CX PF236M con diseño frameless y entradas VGA y HDMI.",
+      "highlights": [
+        "Entradas VGA y HDMI",
+        "Diseño: Frameless (sin marcos)"
+      ],
+      "specs": [
+        {
+          "label": "Entradas de video",
+          "value": "VGA y HDMI"
+        },
+        {
+          "label": "Diseño",
+          "value": "Frameless (sin marcos)"
+        }
+      ],
+      "descriptionHtml": "<p>El CX PF236M es un monitor con entradas VGA y HDMI y diseño frameless, sin marcos visibles.</p><h3>Conexiones</h3><p>Se conecta por VGA y HDMI, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el tamaño, la resolución ni la frecuencia. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "El nombre dice 32\" pero el código PF236M sugiere 23,6\". Dato dudoso: no publiqué el tamaño y lo saqué del nombre. Confirmar la medida real.",
+        "La descripción original era texto de relleno; solo usé lo que dice el nombre."
+      ]
+    },
+    {
+      "slug": "monitor-32-gigabyte-gs32qca-gaming-curvo-180hz",
+      "name": "Monitor gamer Gigabyte GS32QCA 32\" curvo QHD 180 Hz",
+      "brand": "Gigabyte",
+      "model": "GS32QCA",
+      "seoTitle": "Monitor gamer Gigabyte GS32QCA 32\" curvo",
+      "seoDescription": "Monitor gamer curvo Gigabyte GS32QCA de 32 pulgadas, QHD y 180 Hz. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor gamer curvo Gigabyte GS32QCA de 32 pulgadas, QHD y 180 Hz.",
+      "highlights": [
+        "Pantalla de 32\", QHD",
+        "Frecuencia de actualización de 180 Hz",
+        "Tiempo de respuesta de 1 ms",
+        "Pantalla curva"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "32\""
+        },
+        {
+          "label": "Resolución",
+          "value": "QHD"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "180 Hz"
+        },
+        {
+          "label": "Tiempo de respuesta",
+          "value": "1 ms"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Curva"
+        }
+      ],
+      "descriptionHtml": "<p>El Gigabyte GS32QCA es un monitor gamer curvo de 32 pulgadas con resolución QHD.</p><h3>Pantalla</h3><p>La pantalla curva envuelve el campo visual. Con 180 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Antes de comprar</h3><p>La ficha no detalla el tipo de panel, las entradas ni el radio de curvatura. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "Descripción original era copia de otra tienda; solo usé QHD, 180 Hz, 1 ms y curvo. Faltan panel, entradas y radio de curvatura."
+      ]
+    },
+    {
+      "slug": "monitor-led-20-e-view-1951axa-vga-hdmi-1600x900-2",
+      "name": "Monitor LED E-View 1951AXA 20\" HD+ VGA/HDMI",
+      "brand": "E-View",
+      "model": "1951AXA",
+      "seoTitle": "Monitor LED E-View 1951AXA 20\" HD+",
+      "seoDescription": "Monitor E-View 1951AXA de 20 pulgadas, HD+. Entradas VGA y HDMI. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor E-View 1951AXA de 20 pulgadas, HD+. Entradas VGA y HDMI.",
+      "highlights": [
+        "Pantalla de 20\", HD+",
+        "Entradas VGA y HDMI"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "20\""
+        },
+        {
+          "label": "Resolución",
+          "value": "HD+ (1600×900)"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "VGA y HDMI"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 1951AXA es un monitor de 20 pulgadas con resolución HD+.</p><h3>Pantalla</h3><p>La tecnología LED reduce el consumo de energía.</p><h3>Conexiones</h3><p>Se conecta por VGA y HDMI, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla la frecuencia ni el tipo de panel. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "La medida de 20\" sale del nombre; el modelo sugiere 19,5\". Confirmar."
+      ]
+    },
+    {
+      "slug": "monitor-led-22-e-view-2151ray-hdmi-dp-100hz-1920x1080-2",
+      "name": "Monitor LED E-View 2151RAY 22\" Full HD 100 Hz",
+      "brand": "E-View",
+      "model": "2151RAY",
+      "seoTitle": "Monitor LED E-View 2151RAY 22\" Full HD 100 Hz",
+      "seoDescription": "Monitor E-View 2151RAY de 22 pulgadas, Full HD y 100 Hz. Entradas HDMI y DisplayPort. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor E-View 2151RAY de 22 pulgadas, Full HD y 100 Hz. Entradas HDMI y DisplayPort.",
+      "highlights": [
+        "Pantalla de 22\", Full HD",
+        "Frecuencia de actualización de 100 Hz",
+        "Entradas HDMI y DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "22\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "100 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y DisplayPort"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 2151RAY es un monitor de 22 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>Con 100 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y DisplayPort, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el tipo de panel ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "La medida de 22\" sale del nombre; el modelo sugiere 21,5\". Confirmar. No dice el tipo de panel."
+      ]
+    },
+    {
+      "slug": "monitor-led-24-curvo-e-view-2351cur-hdmi-dp-165hz-1920x1080-2",
+      "name": "Monitor LED curvo E-View 2351CUR 24\" Full HD 165 Hz",
+      "brand": "E-View",
+      "model": "2351CUR",
+      "seoTitle": "Monitor LED curvo E-View 2351CUR 24\" 165 Hz",
+      "seoDescription": "Monitor curvo E-View 2351CUR de 24 pulgadas, Full HD y 165 Hz. Entradas HDMI y DisplayPort. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor curvo E-View 2351CUR de 24 pulgadas, Full HD y 165 Hz. Entradas HDMI y DisplayPort.",
+      "highlights": [
+        "Pantalla de 24\", Full HD",
+        "Frecuencia de actualización de 165 Hz",
+        "Pantalla curva",
+        "Entradas HDMI y DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "165 Hz"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Curva"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y DisplayPort"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 2351CUR es un monitor curvo de 24 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>La pantalla curva envuelve el campo visual. Con 165 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y DisplayPort, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el tipo de panel ni el radio de curvatura. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "Faltan panel y radio de curvatura. La medida de 24\" sale del nombre."
+      ]
+    },
+    {
+      "slug": "monitor-led-24-e-view-2351ray-hdmi-dp-100hz-1920x1080-2",
+      "name": "Monitor LED E-View 2351RAY 24\" Full HD 100 Hz",
+      "brand": "E-View",
+      "model": "2351RAY",
+      "seoTitle": "Monitor LED E-View 2351RAY 24\" Full HD 100 Hz",
+      "seoDescription": "Monitor E-View 2351RAY de 24 pulgadas, Full HD y 100 Hz. Entradas HDMI y DisplayPort. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor E-View 2351RAY de 24 pulgadas, Full HD y 100 Hz. Entradas HDMI y DisplayPort.",
+      "highlights": [
+        "Pantalla de 24\", Full HD",
+        "Frecuencia de actualización de 100 Hz",
+        "Entradas HDMI y DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "100 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y DisplayPort"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 2351RAY es un monitor de 24 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>Con 100 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y DisplayPort, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el tipo de panel ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "No dice el tipo de panel. La medida de 24\" sale del nombre."
+      ]
+    },
+    {
+      "slug": "monitor-led-24-gaming-e-view-235gam-2k-hdmi-dp-165hz-2560x1440-ips-2",
+      "name": "Monitor gamer E-View 235GAM-2K 24\" IPS QHD 165 Hz",
+      "brand": "E-View",
+      "model": "235GAM-2K",
+      "seoTitle": "Monitor gamer E-View 235GAM-2K 24\" QHD 165 Hz",
+      "seoDescription": "Monitor gamer E-View 235GAM-2K de 24 pulgadas, QHD, panel IPS y 165 Hz. Entradas HDMI y DisplayPort. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor gamer E-View 235GAM-2K de 24 pulgadas, QHD, panel IPS y 165 Hz. Entradas HDMI y DisplayPort.",
+      "highlights": [
+        "Pantalla de 24\", QHD, panel IPS",
+        "Frecuencia de actualización de 165 Hz",
+        "Entradas HDMI y DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24\""
+        },
+        {
+          "label": "Resolución",
+          "value": "QHD (2560×1440)"
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "165 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y DisplayPort"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 235GAM-2K es un monitor gamer de 24 pulgadas con resolución QHD.</p><h3>Pantalla</h3><p>El panel IPS ofrece ángulos de visión amplios. Con 165 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y DisplayPort, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "La medida de 24\" sale del nombre."
+      ]
+    },
+    {
+      "slug": "monitor-led-24-gaming-e-view-235gam-hd-hdmi-dp-180hz-1920x1080-ips-2",
+      "name": "Monitor gamer E-View 235GAM-HD 24\" IPS Full HD 180 Hz",
+      "brand": "E-View",
+      "model": "235GAM-HD",
+      "seoTitle": "Monitor gamer E-View 235GAM-HD 24\" 180 Hz",
+      "seoDescription": "Monitor gamer E-View 235GAM-HD de 24 pulgadas, Full HD, panel IPS y 180 Hz. Entradas HDMI y DisplayPort. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor gamer E-View 235GAM-HD de 24 pulgadas, Full HD, panel IPS y 180 Hz. Entradas HDMI y DisplayPort.",
+      "highlights": [
+        "Pantalla de 24\", Full HD, panel IPS",
+        "Frecuencia de actualización de 180 Hz",
+        "Entradas HDMI y DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "180 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y DisplayPort"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 235GAM-HD es un monitor gamer de 24 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>El panel IPS ofrece ángulos de visión amplios. Con 180 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y DisplayPort, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "La medida de 24\" sale del nombre."
+      ]
+    },
+    {
+      "slug": "monitor-led-27-curvo-e-view-cur275gam-2k-hdmi-dp-165hz-2560x1440-2",
+      "name": "Monitor gamer curvo E-View CUR275GAM-2K 27\" QHD 165 Hz",
+      "brand": "E-View",
+      "model": "CUR275GAM-2K",
+      "seoTitle": "Monitor gamer curvo E-View CUR275GAM-2K 27\"",
+      "seoDescription": "Monitor gamer curvo E-View CUR275GAM-2K de 27 pulgadas, QHD y 165 Hz. Entradas HDMI y DisplayPort. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor gamer curvo E-View CUR275GAM-2K de 27 pulgadas, QHD y 165 Hz. Entradas HDMI y DisplayPort.",
+      "highlights": [
+        "Pantalla de 27\", QHD",
+        "Frecuencia de actualización de 165 Hz",
+        "Pantalla curva",
+        "Entradas HDMI y DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "27\""
+        },
+        {
+          "label": "Resolución",
+          "value": "QHD (2560×1440)"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "165 Hz"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Curva"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y DisplayPort"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View CUR275GAM-2K es un monitor gamer curvo de 27 pulgadas con resolución QHD.</p><h3>Pantalla</h3><p>La pantalla curva envuelve el campo visual. Con 165 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y DisplayPort, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el tipo de panel ni el radio de curvatura. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "Faltan panel y radio de curvatura."
+      ]
+    },
+    {
+      "slug": "monitor-led-27-e-view-2751ray-vga-hdmi-75hz-1920x1080-2",
+      "name": "Monitor LED E-View 2751RAY 27\" Full HD 75 Hz",
+      "brand": "E-View",
+      "model": "2751RAY",
+      "seoTitle": "Monitor LED E-View 2751RAY 27\" Full HD 75 Hz",
+      "seoDescription": "Monitor E-View 2751RAY de 27 pulgadas, Full HD y 75 Hz. Entradas VGA y HDMI. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor E-View 2751RAY de 27 pulgadas, Full HD y 75 Hz. Entradas VGA y HDMI.",
+      "highlights": [
+        "Pantalla de 27\", Full HD",
+        "Frecuencia de actualización de 75 Hz",
+        "Entradas VGA y HDMI"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "27\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "75 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "VGA y HDMI"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 2751RAY es un monitor de 27 pulgadas con resolución Full HD.</p><h3>Conexiones</h3><p>Se conecta por VGA y HDMI, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el tipo de panel ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "No dice el tipo de panel."
+      ]
+    },
+    {
+      "slug": "monitor-led-27-gaming-e-view-275gam-2k-hdmi-dp-165hz-2560x1440-2",
+      "name": "Monitor gamer E-View 275GAM-2K 27\" QHD 165 Hz",
+      "brand": "E-View",
+      "model": "275GAM-2K",
+      "seoTitle": "Monitor gamer E-View 275GAM-2K 27\" QHD 165 Hz",
+      "seoDescription": "Monitor gamer E-View 275GAM-2K de 27 pulgadas, QHD y 165 Hz. Entradas HDMI y DisplayPort. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor gamer E-View 275GAM-2K de 27 pulgadas, QHD y 165 Hz. Entradas HDMI y DisplayPort.",
+      "highlights": [
+        "Pantalla de 27\", QHD",
+        "Frecuencia de actualización de 165 Hz",
+        "Entradas HDMI y DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "27\""
+        },
+        {
+          "label": "Resolución",
+          "value": "QHD (2560×1440)"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "165 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y DisplayPort"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 275GAM-2K es un monitor gamer de 27 pulgadas con resolución QHD.</p><h3>Pantalla</h3><p>Con 165 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y DisplayPort, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el tipo de panel ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "No dice el tipo de panel."
+      ]
+    },
+    {
+      "slug": "monitor-led-27-gaming-e-view-275gam-hd-hdmi-dp-180hz-1920x1080-ips-2",
+      "name": "Monitor gamer E-View 275GAM-HD 27\" IPS Full HD 180 Hz",
+      "brand": "E-View",
+      "model": "275GAM-HD",
+      "seoTitle": "Monitor gamer E-View 275GAM-HD 27\" 180 Hz",
+      "seoDescription": "Monitor gamer E-View 275GAM-HD de 27 pulgadas, Full HD, panel IPS y 180 Hz. Entradas HDMI y DisplayPort. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor gamer E-View 275GAM-HD de 27 pulgadas, Full HD, panel IPS y 180 Hz. Entradas HDMI y DisplayPort.",
+      "highlights": [
+        "Pantalla de 27\", Full HD, panel IPS",
+        "Frecuencia de actualización de 180 Hz",
+        "Entradas HDMI y DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "27\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "180 Hz"
+        },
+        {
+          "label": "Entradas de video",
+          "value": "HDMI y DisplayPort"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 275GAM-HD es un monitor gamer de 27 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>El panel IPS ofrece ángulos de visión amplios. Con 180 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Conexiones</h3><p>Se conecta por HDMI y DisplayPort, según la salida de video de tu equipo.</p><h3>Antes de comprar</h3><p>La ficha no detalla el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": []
+    },
+    {
+      "slug": "monitor-msi-21-5-pro-mp225v-1920x1080-va-100hz-2",
+      "name": "Monitor MSI Pro MP225V 21,5\" VA Full HD 100 Hz",
+      "brand": "MSI",
+      "model": "Pro MP225V",
+      "seoTitle": "Monitor MSI Pro MP225V 21,5\" VA 100 Hz",
+      "seoDescription": "Monitor MSI Pro MP225V de 21,5 pulgadas, Full HD, panel VA y 100 Hz. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor MSI Pro MP225V de 21,5 pulgadas, Full HD, panel VA y 100 Hz.",
+      "highlights": [
+        "Pantalla de 21,5\", Full HD, panel VA",
+        "Frecuencia de actualización de 100 Hz"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "21,5\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Panel",
+          "value": "VA"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "100 Hz"
+        }
+      ],
+      "descriptionHtml": "<p>El MSI Pro MP225V es un monitor de 21,5 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>El panel VA da negros profundos y buen contraste. Con 100 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Antes de comprar</h3><p>La ficha no detalla las entradas de video ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "No dice qué entradas de video tiene."
+      ]
+    },
+    {
+      "slug": "monitor-msi-24-mag-244f-1920x1080-ips-200hz-2",
+      "name": "Monitor gamer MSI MAG 244F 24\" IPS Full HD 200 Hz",
+      "brand": "MSI",
+      "model": "MAG 244F",
+      "seoTitle": "Monitor gamer MSI MAG 244F 24\" IPS 200 Hz",
+      "seoDescription": "Monitor gamer MSI MAG 244F de 24 pulgadas, Full HD, panel IPS y 200 Hz. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor gamer MSI MAG 244F de 24 pulgadas, Full HD, panel IPS y 200 Hz.",
+      "highlights": [
+        "Pantalla de 24\", Full HD, panel IPS",
+        "Frecuencia de actualización de 200 Hz"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "200 Hz"
+        }
+      ],
+      "descriptionHtml": "<p>El MSI MAG 244F es un monitor gamer de 24 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>El panel IPS ofrece ángulos de visión amplios. Con 200 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Antes de comprar</h3><p>La ficha no detalla las entradas de video ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "No dice entradas de video. La descripción habla de \"sincronización adaptativa\" sin nombrar la tecnología; no la puse."
+      ]
+    },
+    {
+      "slug": "monitor-msi-24-pro-mp242l-1920x1080-ips-100hz-2",
+      "name": "Monitor MSI Pro MP242L 24\" IPS Full HD 100 Hz",
+      "brand": "MSI",
+      "model": "Pro MP242L",
+      "seoTitle": "Monitor MSI Pro MP242L 24\" IPS 100 Hz",
+      "seoDescription": "Monitor MSI Pro MP242L de 24 pulgadas, Full HD, panel IPS y 100 Hz. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor MSI Pro MP242L de 24 pulgadas, Full HD, panel IPS y 100 Hz.",
+      "highlights": [
+        "Pantalla de 24\", Full HD, panel IPS",
+        "Frecuencia de actualización de 100 Hz"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "100 Hz"
+        }
+      ],
+      "descriptionHtml": "<p>El MSI Pro MP242L es un monitor de 24 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>El panel IPS ofrece ángulos de visión amplios. Con 100 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Antes de comprar</h3><p>La ficha no detalla las entradas de video ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "No dice entradas de video."
+      ]
+    },
+    {
+      "slug": "monitor-msi-24-pro-mp243l-e14-1920x1080-ips-144hz-2",
+      "name": "Monitor MSI Pro MP243L E14 24\" IPS Full HD 144 Hz",
+      "brand": "MSI",
+      "model": "Pro MP243L E14",
+      "seoTitle": "Monitor MSI Pro MP243L E14 24\" IPS 144 Hz",
+      "seoDescription": "Monitor MSI Pro MP243L E14 de 24 pulgadas, Full HD, panel IPS y 144 Hz. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor MSI Pro MP243L E14 de 24 pulgadas, Full HD, panel IPS y 144 Hz.",
+      "highlights": [
+        "Pantalla de 24\", Full HD, panel IPS",
+        "Frecuencia de actualización de 144 Hz"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "144 Hz"
+        }
+      ],
+      "descriptionHtml": "<p>El MSI Pro MP243L E14 es un monitor de 24 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>El panel IPS ofrece ángulos de visión amplios. Con 144 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Antes de comprar</h3><p>La ficha no detalla las entradas de video ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "No dice entradas de video."
+      ]
+    },
+    {
+      "slug": "monitor-msi-27-mag-274f-1920x1080-ips-200hz-2",
+      "name": "Monitor gamer MSI MAG 274F 27\" IPS Full HD 200 Hz",
+      "brand": "MSI",
+      "model": "MAG 274F",
+      "seoTitle": "Monitor gamer MSI MAG 274F 27\" IPS 200 Hz",
+      "seoDescription": "Monitor gamer MSI MAG 274F de 27 pulgadas, Full HD, panel IPS y 200 Hz. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor gamer MSI MAG 274F de 27 pulgadas, Full HD, panel IPS y 200 Hz.",
+      "highlights": [
+        "Pantalla de 27\", Full HD, panel IPS",
+        "Frecuencia de actualización de 200 Hz"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "27\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "200 Hz"
+        }
+      ],
+      "descriptionHtml": "<p>El MSI MAG 274F es un monitor gamer de 27 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>El panel IPS ofrece ángulos de visión amplios. Con 200 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Antes de comprar</h3><p>La ficha no detalla las entradas de video ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "No dice entradas de video."
+      ]
+    },
+    {
+      "slug": "monitor-msi-curvo-24-mag-242c-1500r-1920x1080-va-180hz-2",
+      "name": "Monitor gamer curvo MSI MAG 242C 24\" VA Full HD 180 Hz",
+      "brand": "MSI",
+      "model": "MAG 242C",
+      "seoTitle": "Monitor gamer curvo MSI MAG 242C 24\" 180 Hz",
+      "seoDescription": "Monitor gamer curvo MSI MAG 242C de 24 pulgadas, Full HD, panel VA y 180 Hz. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor gamer curvo MSI MAG 242C de 24 pulgadas, Full HD, panel VA y 180 Hz.",
+      "highlights": [
+        "Pantalla de 24\", Full HD, panel VA",
+        "Frecuencia de actualización de 180 Hz",
+        "Pantalla curva 1500R"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Panel",
+          "value": "VA"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "180 Hz"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Curva 1500R"
+        }
+      ],
+      "descriptionHtml": "<p>El MSI MAG 242C es un monitor gamer curvo de 24 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>El panel VA da negros profundos y buen contraste. La pantalla curva envuelve el campo visual. Con 180 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Antes de comprar</h3><p>La ficha no detalla las entradas de video ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "No dice entradas de video."
+      ]
+    },
+    {
+      "slug": "monitor-msi-curvo-27-mag-276cxf-1500r-1920x1080-va-280hz",
+      "name": "Monitor gamer curvo MSI MAG 276CXF 27\" VA Full HD 280 Hz",
+      "brand": "MSI",
+      "model": "MAG 276CXF",
+      "seoTitle": "Monitor gamer curvo MSI MAG 276CXF 27\" 280 Hz",
+      "seoDescription": "Monitor gamer curvo MSI MAG 276CXF de 27 pulgadas, Full HD, panel VA y 280 Hz. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Monitor gamer curvo MSI MAG 276CXF de 27 pulgadas, Full HD, panel VA y 280 Hz.",
+      "highlights": [
+        "Pantalla de 27\", Full HD, panel VA",
+        "Frecuencia de actualización de 280 Hz",
+        "Pantalla curva 1500R"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "27\""
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD (1920×1080)"
+        },
+        {
+          "label": "Panel",
+          "value": "VA"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "280 Hz"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Curva 1500R"
+        }
+      ],
+      "descriptionHtml": "<p>El MSI MAG 276CXF es un monitor gamer curvo de 27 pulgadas con resolución Full HD.</p><h3>Pantalla</h3><p>El panel VA da negros profundos y buen contraste. La pantalla curva envuelve el campo visual. Con 280 Hz el movimiento se ve más fluido que en una pantalla de 60 Hz.</p><h3>Antes de comprar</h3><p>La ficha no detalla las entradas de video ni el tiempo de respuesta. Si tenés dudas de compatibilidad con tu equipo, escribinos por WhatsApp.</p>",
+      "revisar": [
+        "No dice entradas de video."
+      ]
+    }
+  ]
+}

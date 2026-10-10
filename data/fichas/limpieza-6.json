@@ -1,0 +1,41 @@
+{
+ "lote": "limpieza-6",
+ "soloSinCurar": true,
+ "nota": "Limpieza automática sin redactar: nombre, marca, título y descripción para Google.",
+ "productos": [
+  {
+   "slug": "xiaomi-robot-vacuum-s20",
+   "brand": "Xiaomi",
+   "seoTitle": "Xiaomi Robot Vacuum S20",
+   "seoDescription": "Xiaomi Robot Vacuum S20. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Xiaomi Robot Vacuum S20. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "xiaomi-robot-vacuum-s20-2",
+   "brand": "Xiaomi",
+   "seoTitle": "Xiaomi Robot Vacuum S20+",
+   "seoDescription": "Xiaomi Robot Vacuum S20+. Garantía oficial y envíos a todo el país.",
+   "shortDescription": "Xiaomi Robot Vacuum S20+. Producto nuevo con garantía oficial. Envíos a todo el país y retiro en Córdoba."
+  },
+  {
+   "slug": "xshot-hawk-eye-o-scope",
+   "brand": "X-Shot",
+   "seoTitle": "X-shot Hawk Eye ó Scope",
+   "seoDescription": "Dispara hasta 20 metros. Mira desmontable para mayor precisión Culata de dardos desmontable Incluye 16 Dardos. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "yongnuo-nikon-50-f-1-8-1ra-gen-af-s",
+   "name": "Yongnuo Nikon 50 F/1.8 1RA GEN AF-S",
+   "brand": "Yongnuo",
+   "seoTitle": "Yongnuo Nikon 50 F/1.8 1RA GEN AF-S",
+   "seoDescription": "Lente YONGNUO 50mm f/1.8 AF-S primera generación para Nikon. Garantía oficial y envíos a todo el país."
+  },
+  {
+   "slug": "yongnuo-nikon-50-f-1-8-2da-gen-af-s",
+   "name": "Yongnuo Nikon 50 F/1.8 2DA GEN AF-S",
+   "brand": "Yongnuo",
+   "seoTitle": "Yongnuo Nikon 50 F/1.8 2DA GEN AF-S",
+   "seoDescription": "Lente YONGNUO 50mm f/1.8 segunda generación con enfoque automático AF-S para cámaras Nikon. Garantía oficial y envíos a todo el país."
+  }
+ ]
+}

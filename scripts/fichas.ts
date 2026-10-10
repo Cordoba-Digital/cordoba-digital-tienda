@@ -49,7 +49,12 @@ type Ficha = {
   descriptionHtml?: string;
   revisar?: string[];
 };
-type Lote = { lote: string; productos: Ficha[] };
+/**
+ * `soloSinCurar`: lote de limpieza automática (ver `scripts/fichas-limpieza.py`).
+ * Saltea las fichas que ya tienen `seoTitle`, para no pisar una ficha reescrita
+ * aunque el lote de limpieza se cargue después.
+ */
+type Lote = { lote: string; soloSinCurar?: boolean; productos: Ficha[] };
 
 /** El layout agrega " · Córdoba Digital" (19 caracteres) y Google corta cerca de 60. */
 const MAX_SEO_TITLE = 45;
@@ -119,6 +124,7 @@ async function main(): Promise<void> {
   const { db, pool } = await import("@/db");
   const cambios: { id: number; slug: string; set: Record<string, unknown> }[] = [];
   const faltantes: string[] = [];
+  let salteadas = 0;
 
   for (const f of lote.productos) {
     // Algunos slugs heredados tienen caracteres codificados ("55%e2%80%b3").
@@ -132,6 +138,10 @@ async function main(): Promise<void> {
       faltantes.push(f.slug);
       continue;
     }
+    if (lote.soloSinCurar && fila.seoTitle) {
+      salteadas += 1;
+      continue;
+    }
     const set = valores(f);
     console.log(`\n═══ ${fila.slug} ═══`);
     for (const [campo, nuevo] of Object.entries(set)) {
@@ -143,6 +153,7 @@ async function main(): Promise<void> {
     cambios.push({ id: fila.id, slug: fila.slug, set });
   }
 
+  if (salteadas) console.log(`\n[fichas] ${salteadas} fichas salteadas porque ya estaban curadas.`);
   if (faltantes.length) console.log(`\n[fichas] no están en la base: ${faltantes.join(", ")}`);
 
   if (!apply) {

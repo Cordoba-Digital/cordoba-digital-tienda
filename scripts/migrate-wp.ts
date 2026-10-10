@@ -327,7 +327,7 @@ function mapProduct(
     badge: onSale && hasDiscount && discount / (regular as number) > BADGE_MIN_DISCOUNT ? "Oferta" : null,
     featured: false,
     freeShipping: false,
-    warrantyMonths: 12,
+    warrantyMonths: 6, // Ley 24.240: la tienda da 6 meses (ver /politica-de-garantia)
     weight: typeof p.weight === "string" && p.weight.trim() ? p.weight.trim() : null,
     dimensions: formatDimensions(p.dimensions),
     seoTitle: null, // Rank Math no está expuesto en la Store API

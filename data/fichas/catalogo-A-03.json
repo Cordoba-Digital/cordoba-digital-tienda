@@ -1,0 +1,2543 @@
+{
+  "lote": "catalogo-A-03",
+  "productos": [
+    {
+      "slug": "canon-eos-r5-c-body",
+      "model": "EOS R5 C",
+      "seoTitle": "Canon EOS R5 C Body (solo cuerpo)",
+      "seoDescription": "Canon EOS R5 C solo cuerpo nuevo: video 8K, fotos de 45 MP y refrigeración activa. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Canon EOS R5 C, solo cuerpo. Sensor Full Frame, video 8K a 30 fps, fotos de 45 MP y refrigeración activa para grabar sin límites. Une la línea EOS Cinema con la serie EOS R.",
+      "highlights": [
+        "Video 8K a 30 fps (60 fps con alimentación externa)",
+        "Fotos de 45 MP, hasta 20 fps con obturador electrónico",
+        "Refrigeración activa para grabar 8K sin límites de tiempo",
+        "Cinema RAW Light de 12 bits, hasta 2,6 Gbps",
+        "Canon Log 3, PQ y HLG para trabajo en HDR",
+        "Cuerpo de 680 g, resistente al polvo y la humedad"
+      ],
+      "specs": [
+        {
+          "label": "Sensor",
+          "value": "Full Frame de 45 megapíxeles"
+        },
+        {
+          "label": "Video",
+          "value": "8K a 30 fps (60 fps con fuente de alimentación externa)"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "20 fps (electrónico) y 12 fps (mecánico)"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Dual Pixel CMOS AF con Eye AF y EOS iTR AF X"
+        },
+        {
+          "label": "Grabación interna",
+          "value": "Cinema RAW Light 12 bits (hasta 2,6 Gbps), XF-AVC y MP4"
+        },
+        {
+          "label": "Códecs",
+          "value": "XF-AVC 4:2:2 10 bits (810 Mbps) y HEVC (540 Mbps)"
+        },
+        {
+          "label": "Perfiles HDR",
+          "value": "Canon Log 3, PQ y HLG"
+        },
+        {
+          "label": "Herramientas de cine",
+          "value": "Monitor de forma de onda, falsos colores y código de tiempo"
+        },
+        {
+          "label": "Peso",
+          "value": "680 g"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Al polvo y a la humedad"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS R5 C une la línea EOS Cinema con la serie EOS R en un cuerpo compacto. Sirve tanto para fotos de 45 MP como para grabar video 8K.</p><h3>Video</h3><ul><li>8K a 30 fps; a 60 fps con una fuente de alimentación externa.</li><li>Refrigeración activa para grabar 8K sin límites de tiempo.</li><li>Cinema RAW Light de 12 bits a hasta 2,6 Gbps, o XF-AVC 4:2:2 de 10 bits a 810 Mbps.</li></ul><h3>Fotos y enfoque</h3><p>Fotos de 45 megapíxeles, con ráfagas de hasta 20 fps electrónico y 12 fps mecánico. El Dual Pixel CMOS AF trae Eye AF y EOS iTR AF X para mantener el sujeto enfocado.</p><h3>Herramientas de cine</h3><p>Captura en Canon Log 3, PQ y HLG para contenido HDR, con monitor de forma de onda, falsos colores y código de tiempo.</p><h3>Antes de comprar</h3><ul><li>Se vende solo el cuerpo: el lente va aparte.</li><li>Los 8K a 60 fps requieren una fuente de alimentación externa.</li></ul>",
+      "revisar": [
+        "Descripción original sin tabla de especificaciones: no hay datos de pantalla, visor, ranuras ni conectividad.",
+        "Sin datos de la caja: no puse accesorios incluidos."
+      ]
+    },
+    {
+      "slug": "canon-eos-r5-mark-ii-body",
+      "model": "EOS R5 Mark II",
+      "seoTitle": "Canon EOS R5 Mark II Body (solo cuerpo)",
+      "seoDescription": "Canon EOS R5 Mark II solo cuerpo nuevo: sensor Full Frame apilado de 45 MP, estabilización de sensor y AF Dual Pixel. Garantía y envíos a todo el país.",
+      "shortDescription": "Canon EOS R5 Mark II, solo cuerpo. Sensor Full Frame apilado retroiluminado de 45 MP, procesadores DIGIC Accelerator y DIGIC X, estabilización en el sensor y Dual Pixel Intelligent AF.",
+      "highlights": [
+        "Sensor Full Frame apilado retroiluminado de 45 MP",
+        "Estabilización en el sensor de hasta 8,5 pasos",
+        "Procesadores DIGIC Accelerator + DIGIC X",
+        "Dual Pixel Intelligent AF con 1053 áreas en modo automático",
+        "AF desde -6,5 EV, útil con poca luz",
+        "Montura RF; acepta lentes EF y EF-S con adaptador"
+      ],
+      "specs": [
+        {
+          "label": "Sensor",
+          "value": "CMOS apilado retroiluminado Full Frame, 36 x 24 mm"
+        },
+        {
+          "label": "Píxeles",
+          "value": "45 MP efectivos (50,3 MP totales)"
+        },
+        {
+          "label": "Relación de aspecto",
+          "value": "3:2"
+        },
+        {
+          "label": "Procesador",
+          "value": "DIGIC Accelerator + DIGIC X"
+        },
+        {
+          "label": "Estabilización",
+          "value": "En el sensor: hasta 8,5 pasos en el centro y 7,5 en la periferia"
+        },
+        {
+          "label": "Montura",
+          "value": "RF/RF-S (EF y EF-S con adaptador; EF-M no compatible)"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Dual Pixel Intelligent AF, 1053 áreas con selección automática"
+        },
+        {
+          "label": "Rango de AF",
+          "value": "De -6,5 a 21 EV (23 °C, ISO 100)"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "138,5 x 101,2 x 93,5 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "656 g solo el cuerpo (746 g con tarjeta y batería)"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS R5 Mark II es una mirrorless Full Frame de 45 megapíxeles con sensor apilado y estabilización en el cuerpo. Esta versión es solo el cuerpo.</p><h3>Imagen</h3><ul><li>Sensor CMOS apilado retroiluminado Full Frame de 36 x 24 mm.</li><li>45 MP efectivos y limpieza de sensor integrada.</li><li>Escalado de imágenes en la propia cámara, para recortar o imprimir en gran tamaño.</li></ul><h3>Estabilización y enfoque</h3><p>La estabilización en el sensor compensa hasta 8,5 pasos en el centro, según el lente que uses. El Dual Pixel Intelligent AF trabaja desde -6,5 EV y ofrece modos One Shot, Servo y AI Focus.</p><h3>Compatibilidad</h3><p>Montura RF/RF-S. Los lentes EF y EF-S entran con los adaptadores EF-EOS R; los EF-M no son compatibles.</p><h3>Antes de comprar</h3><ul><li>Se vende solo el cuerpo: el lente va aparte.</li><li>Funciona entre 0 y 40 °C, con humedad relativa de hasta 85 %.</li></ul>",
+      "revisar": [
+        "La descripción original se cortaba en la tabla de enfoque: no hay datos de video, ráfaga, pantalla ni conectividad.",
+        "Revisar el SKU: figura \"EOS R5 MK II Body\"."
+      ]
+    },
+    {
+      "slug": "canon-eos-r50-kit-18-45mm-f-4-5-6-3-is-stm",
+      "model": "EOS R50 + RF-S 18-45mm",
+      "seoTitle": "Canon EOS R50 con lente 18-45mm",
+      "seoDescription": "Canon EOS R50 con lente RF-S 18-45mm: sensor APS-C de 24,2 MP, video 4K y enfoque con IA. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Canon EOS R50 negra con lente RF-S 18-45 mm f/4.5-6.3 IS STM. Sensor APS-C de 24,2 MP, procesador DIGIC X, video 4K 30p y Dual Pixel CMOS AF II. Compacta y liviana, pensada para creadores de contenido.",
+      "highlights": [
+        "Sensor APS-C de 24,2 MP con procesador DIGIC X",
+        "Video UHD 4K 30p con sobremuestreo de 6K",
+        "Dual Pixel CMOS AF II con 651 zonas de enfoque",
+        "Detecta personas, animales y vehículos",
+        "Visor OLED de 2,36 millones de puntos y pantalla táctil",
+        "Incluye lente RF-S 18-45 mm f/4.5-6.3 IS STM"
+      ],
+      "specs": [
+        {
+          "label": "Sensor",
+          "value": "CMOS APS-C de 24,2 MP"
+        },
+        {
+          "label": "Procesador",
+          "value": "DIGIC X"
+        },
+        {
+          "label": "Rango ISO",
+          "value": "100 a 32000 (ampliable a 51200)"
+        },
+        {
+          "label": "Video",
+          "value": "UHD 4K 30p con sobremuestreo de 6K; Full HD 120p"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "Hasta 15 fps con obturador electrónico silencioso"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Dual Pixel CMOS AF II, 651 zonas"
+        },
+        {
+          "label": "Visor",
+          "value": "EVF OLED de 2,36 millones de puntos"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Táctil de 3,0\", 1,62 millones de puntos, ángulo variable"
+        },
+        {
+          "label": "Lente incluido",
+          "value": "RF-S 18-45 mm f/4.5-6.3 IS STM"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS R50 es una mirrorless compacta y liviana para quien crea contenido. Este kit la trae con el lente de zoom RF-S 18-45 mm.</p><h3>Imagen y video</h3><ul><li>Sensor APS-C de 24,2 MP y procesador DIGIC X.</li><li>ISO de 100 a 32000, ampliable a 51200.</li><li>Video 4K 30p con sobremuestreo de 6K y Full HD a 120p para cámara lenta.</li><li>Ráfagas de hasta 15 fps con el obturador electrónico silencioso.</li></ul><h3>Enfoque</h3><p>El Dual Pixel CMOS AF II reconoce personas, animales y vehículos, y los sigue durante ráfagas y video.</p><h3>Visor y pantalla</h3><p>Visor electrónico OLED de 2,36 millones de puntos y pantalla táctil de 3,0\" de ángulo variable para enfocar, navegar menús y revisar las tomas.</p><h3>Antes de comprar</h3><ul><li>Pensada como cámara compacta: es un poco más chica y liviana que la EOS M50 Mark II.</li></ul>",
+      "revisar": [
+        "La descripción original se cortaba antes de las especificaciones finales: no hay datos de batería, conectividad ni peso.",
+        "El modelo del lente (RF-S 18-45 mm f/4.5-6.3 IS STM) sale de la descripción y del slug."
+      ]
+    },
+    {
+      "slug": "canon-eos-r50-kit-18-45mm-f-4-5-6-3-is-stm-55-210mm-f-5-7-1-is-stm",
+      "model": "EOS R50 + 18-45mm + 55-210mm",
+      "seoTitle": "Canon EOS R50 con lentes 18-45 y 55-210mm",
+      "seoDescription": "Canon EOS R50 con dos lentes, 18-45mm y 55-210mm: APS-C de 24,2 MP, video 4K y enfoque con IA. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Canon EOS R50 negra con dos lentes: RF-S 18-45 mm f/4.5-6.3 IS STM y RF-S 55-210 mm f/5-7.1 IS STM. Sensor APS-C de 24,2 MP, DIGIC X y video 4K 30p.",
+      "highlights": [
+        "Dos lentes para cubrir de gran angular a teleobjetivo",
+        "Sensor APS-C de 24,2 MP con procesador DIGIC X",
+        "Video UHD 4K 30p con sobremuestreo de 6K",
+        "Dual Pixel CMOS AF II con 651 zonas de enfoque",
+        "Detecta personas, animales y vehículos",
+        "Visor OLED de 2,36 millones de puntos y pantalla táctil"
+      ],
+      "specs": [
+        {
+          "label": "Sensor",
+          "value": "CMOS APS-C de 24,2 MP"
+        },
+        {
+          "label": "Procesador",
+          "value": "DIGIC X"
+        },
+        {
+          "label": "Rango ISO",
+          "value": "100 a 32000 (ampliable a 51200)"
+        },
+        {
+          "label": "Video",
+          "value": "UHD 4K 30p con sobremuestreo de 6K; Full HD 120p"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "Hasta 15 fps con obturador electrónico silencioso"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Dual Pixel CMOS AF II, 651 zonas"
+        },
+        {
+          "label": "Visor",
+          "value": "EVF OLED de 2,36 millones de puntos"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Táctil de 3,0\", 1,62 millones de puntos, ángulo variable"
+        },
+        {
+          "label": "Lentes incluidos",
+          "value": "RF-S 18-45 mm f/4.5-6.3 IS STM y RF-S 55-210 mm f/5-7.1 IS STM"
+        },
+        {
+          "label": "Color",
+          "value": "Negro"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS R50 es una mirrorless compacta y liviana para creadores de contenido. Este doble kit suma un segundo lente para acercarte más.</p><h3>Dos lentes</h3><ul><li>RF-S 18-45 mm f/4.5-6.3 IS STM: el zoom de uso diario.</li><li>RF-S 55-210 mm f/5-7.1 IS STM: para sujetos más lejanos.</li></ul><h3>Imagen y video</h3><p>Sensor APS-C de 24,2 MP y procesador DIGIC X. Graba 4K 30p con sobremuestreo de 6K y Full HD a 120p para cámara lenta. Ráfagas de hasta 15 fps con obturador electrónico.</p><h3>Enfoque, visor y pantalla</h3><p>El Dual Pixel CMOS AF II reconoce y sigue personas, animales y vehículos. Tiene visor OLED de 2,36 millones de puntos y pantalla táctil de 3,0\" de ángulo variable.</p><h3>Antes de comprar</h3><ul><li>Es un kit con dos lentes RF-S, pensados para cámaras Canon de formato APS-C.</li></ul>",
+      "revisar": [
+        "La descripción original habla solo del kit 18-45 mm; los datos del 55-210 mm (f/5-7.1 IS STM) salen del nombre y del slug.",
+        "El texto se cortaba antes del final: no hay datos de batería ni conectividad."
+      ]
+    },
+    {
+      "slug": "canon-eos-r50-v-kit-14-30mm",
+      "model": "EOS R50 V + 14-30mm",
+      "seoTitle": "Canon EOS R50 V con lente 14-30mm",
+      "seoDescription": "Canon EOS R50 V con lente 14-30mm: cámara pensada para video con 4K a 60p, Canon Log 3 y luz piloto. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Canon EOS R50 V con lente 14-30 mm. Cámara de lentes intercambiables orientada al video: 4K a 60p, Canon Log 3, perfiles de color personalizados y botón de grabación frontal.",
+      "highlights": [
+        "Grabación 4K a 60p, sobremuestreada desde 6K",
+        "Canon Log 3 y perfiles de color personalizados",
+        "Botón de grabación frontal y luz piloto",
+        "Pantalla táctil de ángulo variable para vlogs",
+        "Audio de cuatro canales",
+        "MF Peaking y cebra para enfocar y exponer"
+      ],
+      "specs": [
+        {
+          "label": "Video",
+          "value": "4K a 60p; 4K sobremuestreado a partir de 6K"
+        },
+        {
+          "label": "Perfil de registro",
+          "value": "Canon Log 3"
+        },
+        {
+          "label": "Estabilización de video",
+          "value": "IS digital de video"
+        },
+        {
+          "label": "Audio",
+          "value": "Cuatro canales"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Táctil de ángulo variable"
+        },
+        {
+          "label": "Controles de grabación",
+          "value": "Botón de grabación frontal y luz piloto"
+        },
+        {
+          "label": "Asistentes",
+          "value": "MF Peaking y cebra"
+        },
+        {
+          "label": "Modos de escena",
+          "value": "Piel suave y demostración en primer plano"
+        },
+        {
+          "label": "Montaje",
+          "value": "Soporte para trípode vertical y marcadores de formato"
+        },
+        {
+          "label": "Lente incluido",
+          "value": "14-30 mm"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS R50 V es una cámara de lentes intercambiables hecha para video. Este kit viene con el lente 14-30 mm.</p><h3>Para vlogs y viajes</h3><ul><li>Botón de grabación frontal para empezar a grabar al instante.</li><li>Pantalla táctil de ángulo variable para ajustar la configuración.</li><li>IS digital de video para grabar sin trepidación, incluso caminando.</li></ul><h3>Control creativo</h3><p>Canon Log 3, perfiles de imagen personalizados y filtros de color. Grabás 4K a 60p, o 4K sobremuestreado desde 6K, con modos de cámara lenta y rápida.</p><h3>Asistentes de filmación</h3><p>MF Peaking y cebra para enfocar y exponer bien. Los modos de escena piel suave y demostración en primer plano ayudan en reseñas de productos. El audio es de cuatro canales.</p><h3>Antes de comprar</h3><ul><li>La descripción no detalla el lente 14-30 mm más allá de la distancia focal.</li></ul>",
+      "revisar": [
+        "La descripción original no trae sensor, megapíxeles ni batería: no los puse.",
+        "No indica apertura ni modelo exacto del lente 14-30 mm."
+      ]
+    },
+    {
+      "slug": "canon-eos-r6-body-markii",
+      "model": "EOS R6 Mark II",
+      "seoTitle": "Canon EOS R6 Mark II Body (solo cuerpo)",
+      "seoDescription": "Canon EOS R6 Mark II solo cuerpo nuevo: mirrorless Full Frame con ráfaga de 40 fps, video 4K 60p y estabilización de 8 pasos. Garantía y envíos al país.",
+      "shortDescription": "Canon EOS R6 Mark II, solo cuerpo. Mirrorless Full Frame con ráfaga de hasta 40 fps, 4K 60p con sobremuestreo de ancho completo y estabilizador de hasta 8 pasos.",
+      "highlights": [
+        "Ráfaga de hasta 40 fps electrónico y 12 fps mecánico",
+        "AF con IA de aprendizaje profundo, 80 % más rápido que la R6",
+        "Enfoca con tan solo -6,5 EV",
+        "Estabilización de hasta 8 pasos sin trípode",
+        "Video 4K 60p con sobremuestreo de ancho completo",
+        "Ráfaga RAW a 30 fps con captura previa de 0,5 s"
+      ],
+      "specs": [
+        {
+          "label": "Formato",
+          "value": "Mirrorless Full Frame"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "40 fps (electrónico) y 12 fps (mecánico)"
+        },
+        {
+          "label": "Ráfaga RAW",
+          "value": "30 fps con captura previa de hasta 0,5 s"
+        },
+        {
+          "label": "Enfoque",
+          "value": "AF con IA de aprendizaje profundo; -6,5 EV"
+        },
+        {
+          "label": "Estabilización",
+          "value": "En el cuerpo, hasta 8 pasos, combinada con IS óptico"
+        },
+        {
+          "label": "Video",
+          "value": "4K 60p con sobremuestreo de ancho completo"
+        },
+        {
+          "label": "Estabilización de video",
+          "value": "IBIS + IS óptico + Movie Digital IS"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS R6 Mark II es una mirrorless Full Frame pensada para sujetos en movimiento y para video. Esta versión es solo el cuerpo.</p><h3>Velocidad</h3><ul><li>Hasta 40 fps con obturador electrónico y 12 fps mecánico.</li><li>En modo ráfaga RAW a 30 fps, la captura previa guarda hasta 0,5 s antes de pulsar el disparador.</li></ul><h3>Enfoque</h3><p>El AF con IA y aprendizaje profundo reconoce y sigue más tipos de sujetos y es un 80 % más rápido que el de la EOS R6 original. Bloquea el enfoque con tan solo -6,5 EV.</p><h3>Estabilización y video</h3><p>El estabilizador del cuerpo trabaja junto con el IS óptico de muchos lentes Canon y llega a 8 pasos. Para video, suma el Movie Digital IS en grabaciones 4K 60p con sobremuestreo de ancho completo.</p><h3>Antes de comprar</h3><ul><li>Se vende solo el cuerpo: el lente va aparte.</li></ul>",
+      "revisar": [
+        "La descripción original no trae megapíxeles, pantalla, ranuras ni conectividad: no los puse.",
+        "El SKU figura como \"EOS R6 MARK 2\"."
+      ]
+    },
+    {
+      "slug": "canon-eos-r6-mark-iii-body",
+      "model": "EOS R6 Mark III",
+      "seoTitle": "Canon EOS R6 Mark III Body (solo cuerpo)",
+      "seoDescription": "Canon EOS R6 Mark III solo cuerpo nuevo: mirrorless Full Frame con ráfaga de 40 fps y video 4K 60p sin recorte. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Canon EOS R6 Mark III, solo cuerpo. Mirrorless con sensor CMOS Full Frame, Dual Pixel CMOS AF II, ráfaga de hasta 40 fps y video 4K a 60p sin recorte del sensor.",
+      "highlights": [
+        "Sensor CMOS Full Frame de nueva generación",
+        "Ráfaga de 12 fps mecánico y 40 fps electrónico silencioso",
+        "Dual Pixel CMOS AF II: personas, animales y vehículos",
+        "Video 4K a 60p sin recorte del sensor",
+        "Canon Log 3 y HDR PQ para postproducción",
+        "Estabilización de imagen integrada de 8 pasos"
+      ],
+      "specs": [
+        {
+          "label": "Formato",
+          "value": "Mirrorless Full Frame"
+        },
+        {
+          "label": "Sensor",
+          "value": "CMOS Full Frame"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Dual Pixel CMOS AF II con detección de personas, animales y vehículos"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "12 fps (mecánico) y 40 fps (electrónico silencioso)"
+        },
+        {
+          "label": "Video",
+          "value": "4K a 60p sin recorte del sensor"
+        },
+        {
+          "label": "Perfiles de video",
+          "value": "Canon Log 3 y HDR PQ"
+        },
+        {
+          "label": "Estabilización",
+          "value": "En el cuerpo, 8 pasos"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS R6 Mark III es una mirrorless Full Frame para foto y video. Esta versión es solo el cuerpo, sin lente.</p><h3>Foto</h3><ul><li>Sensor CMOS Full Frame con rango dinámico amplio.</li><li>Buen rendimiento con poca luz.</li><li>Ráfagas de 12 fps con obturador mecánico y 40 fps en modo electrónico silencioso.</li></ul><h3>Enfoque</h3><p>El Dual Pixel CMOS AF II detecta y sigue personas, animales y vehículos con más precisión.</p><h3>Video</h3><p>Graba 4K a 60p sin recorte del sensor. Con Canon Log 3 y HDR PQ tenés más margen en la edición.</p><h3>Estabilización</h3><p>La estabilización integrada de 8 pasos compensa las vibraciones al disparar a pulso.</p><h3>Antes de comprar</h3><ul><li>Se vende solo el cuerpo: el lente va aparte.</li><li>Si necesitás saber el tipo de ranuras o la pantalla, consultanos antes de comprar.</li></ul>",
+      "revisar": [
+        "La descripción original traía un pedido de contacto por WhatsApp y de stock/precio: lo saqué.",
+        "Sin SKU en la carga y sin megapíxeles, pantalla ni conectividad en el texto."
+      ]
+    },
+    {
+      "slug": "canon-eos-r6-mark-iii-kit-24-105mm-f-4-7-1-stm",
+      "model": "EOS R6 Mark III + RF 24-105mm f/4-7.1 STM",
+      "seoTitle": "Canon EOS R6 Mark III con lente 24-105mm",
+      "seoDescription": "Canon EOS R6 Mark III con lente RF 24-105mm f/4-7.1 STM: mirrorless Full Frame con video 4K y estabilización de 8 pasos. Garantía y envíos a todo el país.",
+      "shortDescription": "Canon EOS R6 Mark III en kit con el lente RF 24-105 mm f/4-7.1 STM. Mirrorless con sensor Full Frame, estabilización de 8 pasos, video 4K sin límites de tiempo y enfoque inteligente.",
+      "highlights": [
+        "Sensor Full Frame y estabilización de imagen de 8 pasos",
+        "Lente RF 24-105 mm f/4-7.1 STM incluido",
+        "Video 4K sin límites de tiempo",
+        "Enfoque automático inteligente para sujetos en movimiento",
+        "Conectividad inalámbrica y ergonomía mejorada",
+        "Enfoque STM silencioso, pensado para video"
+      ],
+      "specs": [
+        {
+          "label": "Formato",
+          "value": "Mirrorless Full Frame"
+        },
+        {
+          "label": "Estabilización",
+          "value": "En el cuerpo, 8 pasos"
+        },
+        {
+          "label": "Video",
+          "value": "4K sin límites de tiempo"
+        },
+        {
+          "label": "Lente incluido",
+          "value": "RF 24-105 mm f/4-7.1 STM"
+        },
+        {
+          "label": "Enfoque del lente",
+          "value": "Motor STM, silencioso y suave"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Inalámbrica"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS R6 Mark III es una mirrorless Full Frame para foto y video. Este kit suma el lente RF 24-105 mm f/4-7.1 STM, un zoom para retrato, paisaje y viaje.</p><h3>Cámara</h3><ul><li>Sensor Full Frame de última generación.</li><li>Estabilización de imagen de 8 pasos para tomas nítidas.</li><li>Enfoque automático inteligente y ráfagas para momentos rápidos.</li></ul><h3>Video</h3><p>Graba 4K sin límites de tiempo. El motor STM del lente enfoca de forma silenciosa y suave, algo útil para filmar.</p><h3>Uso</h3><p>Está pensada para fotógrafos profesionales, entusiastas y creadores de contenido. Suma conectividad inalámbrica y una ergonomía mejorada para sesiones largas de trabajo.</p><h3>Antes de comprar</h3><ul><li>El kit combina cuerpo y lente: no se vende cada uno por separado.</li><li>Si necesitás saber el tipo de ranuras o la pantalla, consultanos antes de comprar.</li></ul>",
+      "revisar": [
+        "La descripción original traía un pedido de contacto por WhatsApp y de stock/precio: lo saqué.",
+        "Sin SKU en la carga y sin datos de ráfaga, megapíxeles ni pantalla.",
+        "La descripción original usaba frases de marketing vagas (\"cutting-edge\"); me quedé solo con datos concretos."
+      ]
+    },
+    {
+      "slug": "canon-eos-r7-body",
+      "model": "EOS R7",
+      "seoTitle": "Canon EOS R7 Body (solo cuerpo)",
+      "seoDescription": "Canon EOS R7 solo cuerpo nuevo: sensor APS-C de 32,5 MP, ráfaga de 30 fps y video 4K 60p. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Canon EOS R7, solo cuerpo. Sensor APS-C de 32,5 MP, ráfagas de 15 fps mecánico y 30 fps electrónico, estabilizador en el cuerpo, video 4K UHD 60p y cuerpo sellado.",
+      "highlights": [
+        "Sensor APS-C de 32,5 MP con procesador DIGIC X",
+        "Ráfaga de 15 fps mecánico y 30 fps electrónico",
+        "Estabilizador de 5 ejes en el cuerpo, hasta 8 pasos",
+        "Video 4K UHD 60p y Canon Log 3",
+        "Detección de sujetos con IA heredada de la EOS R3",
+        "Doble ranura de tarjetas y cuerpo sellado"
+      ],
+      "specs": [
+        {
+          "label": "Sensor",
+          "value": "CMOS APS-C de 32,5 MP"
+        },
+        {
+          "label": "Procesador",
+          "value": "DIGIC X"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "15 fps (mecánico) y 30 fps (electrónico)"
+        },
+        {
+          "label": "Sensibilidad",
+          "value": "ISO hasta 32000 en configuración normal"
+        },
+        {
+          "label": "Estabilización",
+          "value": "5 ejes en el cuerpo, hasta 8 pasos con lentes RF compatibles"
+        },
+        {
+          "label": "Video",
+          "value": "4K UHD 60p; 4K UHD Fine 30p sobremuestreado desde 7K; Canon Log 3"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Detección de personas, animales y vehículos con IA"
+        },
+        {
+          "label": "Ranuras",
+          "value": "Doble ranura para tarjetas de memoria"
+        },
+        {
+          "label": "Batería",
+          "value": "LP-E6NH"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Cuerpo sellado contra polvo y agua"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS R7 está pensada para sujetos en movimiento, como deportes, aves, trenes y aviones. También rinde en video, por eso la usan creadores de contenido.</p><h3>Velocidad y enfoque</h3><ul><li>Hasta 15 fps con obturador mecánico y 30 fps con electrónico.</li><li>Detección de sujetos con IA de aprendizaje profundo: personas, animales y vehículos.</li><li>Nuevo dial de control rápido en el cuerpo.</li></ul><h3>Imagen</h3><p>Sensor APS-C de 32,5 MP combinado con el procesador DIGIC X, para más detalle con ISO bajo. ISO de hasta 32000 en uso normal.</p><h3>Estabilización y video</h3><p>Estabilizador de 5 ejes en el cuerpo, de hasta 8 pasos con lentes RF compatibles. Graba 4K UHD 60p, o 4K Fine 30p sobremuestreado desde 7K, y Canon Log 3.</p><h3>Construcción</h3><p>Cuerpo sellado contra polvo y agua, doble ranura de tarjetas y batería LP-E6NH.</p><h3>Antes de comprar</h3><ul><li>Se vende solo el cuerpo: el lente va aparte.</li></ul>",
+      "revisar": [
+        "El texto original se cortaba en la sección de especificaciones: no hay datos de pantalla ni conectividad.",
+        "La descripción dice \"cps\"; lo escribí como fps."
+      ]
+    },
+    {
+      "slug": "canon-eos-r7-kit-18-150mm-is-stm",
+      "model": "EOS R7 + 18-150mm IS STM",
+      "seoTitle": "Canon EOS R7 con lente 18-150mm IS STM",
+      "seoDescription": "Canon EOS R7 con lente 18-150mm IS STM: APS-C de 32,5 MP, ráfaga de 30 fps y video 4K 60p. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Canon EOS R7 en kit con lente 18-150 mm IS STM. Sensor APS-C de 32,5 MP, ráfagas de 15 fps mecánico y 30 fps electrónico, estabilizador en el cuerpo y video 4K UHD 60p.",
+      "highlights": [
+        "Sensor APS-C de 32,5 MP con procesador DIGIC X",
+        "Ráfaga de 15 fps mecánico y 30 fps electrónico",
+        "Estabilizador de 5 ejes en el cuerpo, hasta 8 pasos",
+        "Video 4K UHD 60p y Canon Log 3",
+        "Detección de sujetos con IA heredada de la EOS R3",
+        "Incluye lente 18-150 mm IS STM"
+      ],
+      "specs": [
+        {
+          "label": "Sensor",
+          "value": "CMOS APS-C de 32,5 MP"
+        },
+        {
+          "label": "Procesador",
+          "value": "DIGIC X"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "15 fps (mecánico) y 30 fps (electrónico)"
+        },
+        {
+          "label": "Sensibilidad",
+          "value": "ISO hasta 32000 en configuración normal"
+        },
+        {
+          "label": "Estabilización",
+          "value": "5 ejes en el cuerpo, hasta 8 pasos con lentes RF compatibles"
+        },
+        {
+          "label": "Video",
+          "value": "4K UHD 60p; 4K UHD Fine 30p sobremuestreado desde 7K; Canon Log 3"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Detección de personas, animales y vehículos con IA"
+        },
+        {
+          "label": "Ranuras",
+          "value": "Doble ranura para tarjetas de memoria"
+        },
+        {
+          "label": "Lente incluido",
+          "value": "18-150 mm IS STM"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Cuerpo sellado contra polvo y agua"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS R7 está pensada para sujetos en movimiento, como deportes, aves, trenes y aviones. Este kit trae el lente 18-150 mm IS STM para cubrir distintas distancias con un solo equipo.</p><h3>Velocidad y enfoque</h3><ul><li>Hasta 15 fps con obturador mecánico y 30 fps con electrónico.</li><li>Detección de sujetos con IA de aprendizaje profundo: personas, animales y vehículos.</li><li>Nuevo dial de control rápido en el cuerpo.</li></ul><h3>Imagen</h3><p>Sensor APS-C de 32,5 MP y procesador DIGIC X. ISO de hasta 32000 en uso normal.</p><h3>Estabilización y video</h3><p>Estabilizador de 5 ejes en el cuerpo, de hasta 8 pasos con lentes RF compatibles. Graba 4K UHD 60p y Canon Log 3.</p><h3>Construcción</h3><p>Cuerpo sellado contra polvo y agua, doble ranura de tarjetas y batería LP-E6NH.</p><h3>Antes de comprar</h3><ul><li>El kit incluye cuerpo y lente 18-150 mm IS STM.</li></ul>",
+      "revisar": [
+        "El texto original se cortaba en la sección de especificaciones: no hay datos de pantalla ni conectividad.",
+        "La descripción no detalla el lente 18-150 mm más allá del nombre (sin apertura ni montura)."
+      ]
+    },
+    {
+      "slug": "canon-eos-r8-body",
+      "model": "EOS R8",
+      "seoTitle": "Canon EOS R8 Body (solo cuerpo)",
+      "seoDescription": "Canon EOS R8 solo cuerpo nuevo: mirrorless Full Frame de 24,2 MP con video 4K 60p y ráfaga de 40 fps. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Canon EOS R8, solo cuerpo. Mirrorless Full Frame de 24,2 MP con video 4K hasta 60p, Full HD a 180p, ráfaga de 40 fps con obturador electrónico y visor de 2,36 millones de puntos.",
+      "highlights": [
+        "Sensor Full Frame de 24,2 MP",
+        "Video 4K hasta 60p y Full HD hasta 180p",
+        "Ráfaga de 40 fps con obturador electrónico",
+        "Enfoca con tan solo -6,5 EV",
+        "Wi-Fi, Bluetooth y uso como webcam por USB"
+      ],
+      "specs": [
+        {
+          "label": "Sensor",
+          "value": "Full Frame de 24,2 MP"
+        },
+        {
+          "label": "Sensibilidad",
+          "value": "ISO hasta 102400 (ampliable a 204800); video hasta ISO 25600"
+        },
+        {
+          "label": "Video",
+          "value": "4K hasta 60p (sobremuestreado desde 6K); Full HD hasta 180p"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "40 fps con obturador electrónico; 6 fps con primera cortinilla electrónica"
+        },
+        {
+          "label": "Ráfaga RAW",
+          "value": "30 fps con captura previa de 0,5 s"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Sensibilidad de AF de -6,5 EV"
+        },
+        {
+          "label": "Visor",
+          "value": "EVF de 2,36 millones de puntos"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "Ranura para tarjetas SD UHS-II"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi de 2,4 GHz y Bluetooth de bajo consumo 4.2"
+        },
+        {
+          "label": "Códecs de video",
+          "value": "H.264 y H.265"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS R8 es la forma de dar el salto al Full Frame en foto y video. Esta versión es solo el cuerpo.</p><h3>Imagen</h3><ul><li>Sensor Full Frame de 24,2 MP, con buen rendimiento con poca luz.</li><li>ISO máximo de 102400 en fotos, ampliable a 204800.</li><li>HDR avanzado y HDR PQ, también con sujetos en movimiento.</li></ul><h3>Velocidad y enfoque</h3><p>Ráfagas de 40 fps con el obturador electrónico y modo RAW a 30 fps con captura previa de 0,5 s. El AF enfoca con luz equivalente a la de una media luna (-6,5 EV).</p><h3>Video</h3><p>4K cinematográfico hasta 60p, sobremuestreado desde 6K, y Full HD a 180p para cámara lenta. Usa los códecs H.264 y H.265.</p><h3>Conexión y uso</h3><p>Wi-Fi de 2,4 GHz y Bluetooth 4.2 de bajo consumo. Con USB Plug and Play funciona como webcam. Tiene diseño resistente a la intemperie.</p><h3>Antes de comprar</h3><ul><li>Se vende solo el cuerpo: el lente va aparte.</li></ul>",
+      "revisar": [
+        "El texto original se cortaba al final: sin datos de batería, peso ni pantalla.",
+        "Se quitaron las llamadas de nota (\"ISO 10240010\" = ISO 102400 con nota 10)."
+      ]
+    },
+    {
+      "slug": "canon-eos-r8-kit-24-50",
+      "model": "EOS R8 + RF 24-50mm",
+      "seoTitle": "Canon EOS R8 con lente 24-50mm",
+      "seoDescription": "Canon EOS R8 con lente 24-50mm: mirrorless Full Frame de 24,2 MP con video 4K 60p y ráfaga de 40 fps. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Canon EOS R8 con lente 24-50 mm. Mirrorless Full Frame de 24,2 MP con video 4K hasta 60p, Full HD a 180p, ráfaga de 40 fps con obturador electrónico y visor de 2,36 millones de puntos.",
+      "highlights": [
+        "Sensor Full Frame de 24,2 MP",
+        "Video 4K hasta 60p y Full HD hasta 180p",
+        "Ráfaga de 40 fps con obturador electrónico",
+        "Enfoca con tan solo -6,5 EV",
+        "Wi-Fi, Bluetooth y uso como webcam por USB",
+        "Incluye lente 24-50 mm"
+      ],
+      "specs": [
+        {
+          "label": "Sensor",
+          "value": "Full Frame de 24,2 MP"
+        },
+        {
+          "label": "Sensibilidad",
+          "value": "ISO hasta 102400 (ampliable a 204800); video hasta ISO 25600"
+        },
+        {
+          "label": "Video",
+          "value": "4K hasta 60p (sobremuestreado desde 6K); Full HD hasta 180p"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "40 fps con obturador electrónico; 6 fps con primera cortinilla electrónica"
+        },
+        {
+          "label": "Ráfaga RAW",
+          "value": "30 fps con captura previa de 0,5 s"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Sensibilidad de AF de -6,5 EV"
+        },
+        {
+          "label": "Visor",
+          "value": "EVF de 2,36 millones de puntos"
+        },
+        {
+          "label": "Almacenamiento",
+          "value": "Ranura para tarjetas SD UHS-II"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi de 2,4 GHz y Bluetooth de bajo consumo 4.2"
+        },
+        {
+          "label": "Códecs de video",
+          "value": "H.264 y H.265"
+        },
+        {
+          "label": "Lente incluido",
+          "value": "24-50 mm"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS R8 es la forma de dar el salto al Full Frame en foto y video. Este kit suma un lente zoom de 24-50 mm para empezar a disparar.</p><h3>Imagen</h3><ul><li>Sensor Full Frame de 24,2 MP, con buen rendimiento con poca luz.</li><li>ISO máximo de 102400 en fotos, ampliable a 204800.</li><li>HDR avanzado y HDR PQ, también con sujetos en movimiento.</li></ul><h3>Velocidad y enfoque</h3><p>Ráfagas de 40 fps con el obturador electrónico y modo RAW a 30 fps con captura previa de 0,5 s. El AF enfoca con luz equivalente a la de una media luna (-6,5 EV).</p><h3>Video</h3><p>4K cinematográfico hasta 60p, sobremuestreado desde 6K, y Full HD a 180p para cámara lenta. Usa los códecs H.264 y H.265.</p><h3>Conexión y uso</h3><p>Wi-Fi de 2,4 GHz y Bluetooth 4.2 de bajo consumo. Con USB Plug and Play funciona como webcam. Tiene diseño resistente a la intemperie.</p><h3>Antes de comprar</h3><ul><li>El kit incluye cuerpo y lente 24-50 mm; la descripción no detalla apertura ni modelo del lente.</li></ul>",
+      "revisar": [
+        "El texto original se cortaba al final: sin datos de batería, peso ni pantalla.",
+        "La descripción habla solo de la R8; del lente solo sabemos el 24-50 mm del nombre (¿es RF 24-50 mm f/4.5-6.3 IS STM?). Confirmar.",
+        "Se quitaron las llamadas de nota (\"ISO 10240010\" = ISO 102400 con nota 10)."
+      ]
+    },
+    {
+      "slug": "canon-eos-rebel-rp-24-105mm",
+      "seoTitle": "Canon EOS RP con lente 24-105mm IS STM",
+      "seoDescription": "Canon EOS RP con lente 24-105mm IS STM: mirrorless Full Frame de 26,2 MP, liviana y con pantalla táctil. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Canon EOS RP con lente 24-105 mm IS STM. Mirrorless Full Frame de 26,2 MP con procesador DIGIC 8, Dual Pixel CMOS AF, pantalla táctil de ángulo variable y 485 g de peso.",
+      "highlights": [
+        "Sensor Full Frame de 26,2 MP y procesador DIGIC 8",
+        "Cuerpo liviano de 485 g, con empuñadura tipo EOS",
+        "Dual Pixel CMOS AF de 0,05 s y Eye AF",
+        "Pantalla táctil de ángulo variable y visor OLED",
+        "Montura RF; EF y EF-S con adaptador",
+        "Incluye lente 24-105 mm IS STM"
+      ],
+      "specs": [
+        {
+          "label": "Formato",
+          "value": "Mirrorless Full Frame"
+        },
+        {
+          "label": "Sensor",
+          "value": "CMOS de 26,2 MP"
+        },
+        {
+          "label": "Procesador",
+          "value": "DIGIC 8"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Dual Pixel CMOS AF, 0,05 s, más de 4779 posiciones, hasta -5 EV"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "Hasta 5 fps"
+        },
+        {
+          "label": "Visor",
+          "value": "Electrónico OLED"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Táctil de ángulo variable"
+        },
+        {
+          "label": "Montura",
+          "value": "RF (EF y EF-S con adaptador)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi, app Canon Camera Connect"
+        },
+        {
+          "label": "Peso",
+          "value": "485 g"
+        },
+        {
+          "label": "Lente incluido",
+          "value": "24-105 mm IS STM"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS RP es una mirrorless Full Frame pequeña, ligera e intuitiva. Este kit la trae con un lente zoom 24-105 mm IS STM.</p><h3>Full Frame liviana</h3><p>Sensor CMOS de 26,2 MP con procesador DIGIC 8 y optimizador digital del lente. Es una Full Frame pequeña y ligera, de apenas 485 g.</p><h3>Enfoque</h3><ul><li>Dual Pixel CMOS AF con más de 4779 posiciones de AF seleccionables.</li><li>Enfoque de hasta -5 EV con poca luz.</li><li>Eye AF para retratos nítidos y ahorquillado de enfoque.</li></ul><h3>Conexión</h3><p>Control remoto por Wi-Fi, modo silencioso, ráfagas de hasta 5 fps y envío de fotos con la app Canon Camera Connect.</p><h3>Sistema de lentes</h3><p>La montura RF es la base para lentes RF Full Frame. Con adaptador, entran también lentes EF y EF-S.</p><h3>Antes de comprar</h3><ul><li>El kit incluye cuerpo y lente 24-105 mm IS STM.</li><li>El peso de 485 g es del cuerpo, no del conjunto con lente.</li></ul>",
+      "revisar": [
+        "La descripción llama al producto \"EOS RP\"; el nombre del catálogo dice \"Rebel RP\". Confirmar nombre comercial.",
+        "El texto original se cortaba en la parte de video: no hay datos de resolución ni de batería.",
+        "No describe el lente más allá del nombre (sin apertura ni montura): ¿es RF 24-105 mm f/4-7.1 IS STM?"
+      ]
+    },
+    {
+      "slug": "canon-eos-rebel-rp-body",
+      "seoTitle": "Canon EOS RP Body (solo cuerpo)",
+      "seoDescription": "Canon EOS RP solo cuerpo nuevo: mirrorless Full Frame de 26,2 MP, liviana y con pantalla táctil. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Canon EOS RP, solo cuerpo. Mirrorless Full Frame de 26,2 MP con procesador DIGIC 8, Dual Pixel CMOS AF, pantalla táctil de ángulo variable y 485 g de peso.",
+      "highlights": [
+        "Sensor Full Frame de 26,2 MP y procesador DIGIC 8",
+        "Cuerpo liviano de 485 g, con empuñadura tipo EOS",
+        "Dual Pixel CMOS AF de 0,05 s y Eye AF",
+        "Pantalla táctil de ángulo variable y visor OLED",
+        "Montura RF; EF y EF-S con adaptador"
+      ],
+      "specs": [
+        {
+          "label": "Formato",
+          "value": "Mirrorless Full Frame"
+        },
+        {
+          "label": "Sensor",
+          "value": "CMOS de 26,2 MP"
+        },
+        {
+          "label": "Procesador",
+          "value": "DIGIC 8"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Dual Pixel CMOS AF, 0,05 s, más de 4779 posiciones, hasta -5 EV"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "Hasta 5 fps"
+        },
+        {
+          "label": "Visor",
+          "value": "Electrónico OLED"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Táctil de ángulo variable"
+        },
+        {
+          "label": "Montura",
+          "value": "RF (EF y EF-S con adaptador)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi, app Canon Camera Connect"
+        },
+        {
+          "label": "Peso",
+          "value": "485 g"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS RP es una mirrorless Full Frame pequeña, ligera e intuitiva. Esta versión es solo el cuerpo.</p><h3>Full Frame liviana</h3><p>Sensor CMOS de 26,2 MP con procesador DIGIC 8 y optimizador digital del lente. Es una Full Frame pequeña y ligera, de apenas 485 g.</p><h3>Enfoque</h3><ul><li>Dual Pixel CMOS AF con más de 4779 posiciones de AF seleccionables.</li><li>Enfoque de hasta -5 EV con poca luz.</li><li>Eye AF para retratos nítidos y ahorquillado de enfoque.</li></ul><h3>Conexión</h3><p>Control remoto por Wi-Fi, modo silencioso, ráfagas de hasta 5 fps y envío de fotos con la app Canon Camera Connect.</p><h3>Sistema de lentes</h3><p>La montura RF es la base para lentes RF Full Frame. Con adaptador, entran también lentes EF y EF-S.</p><h3>Antes de comprar</h3><ul><li>Se vende solo el cuerpo: el lente va aparte.</li></ul>",
+      "revisar": [
+        "La descripción llama al producto \"EOS RP\"; el nombre del catálogo dice \"Rebel RP\". Confirmar nombre comercial.",
+        "El texto original se cortaba en la parte de video: no hay datos de resolución ni de batería."
+      ]
+    },
+    {
+      "slug": "canon-eos-rebel-sl3-kit-18-55mm",
+      "model": "EOS Rebel SL3 (250D) + 18-55mm",
+      "seoTitle": "Canon EOS Rebel 250D (SL3) con lente 18-55mm",
+      "seoDescription": "Canon EOS Rebel SL3 (250D) con lente 18-55mm: réflex compacta de 24,1 MP con video 4K y pantalla de ángulo variable. Garantía y envíos al país.",
+      "shortDescription": "Canon EOS Rebel SL3 (250D) con lente 18-55 mm. Réflex EOS chica y liviana, con sensor APS-C de 24,1 MP, video 4K y pantalla de ángulo variable.",
+      "highlights": [
+        "Réflex EOS compacta y liviana",
+        "Sensor APS-C de 24,1 MP y procesador DIGIC 8",
+        "Video 4K, con intervalo de tiempo en 4K",
+        "Dual Pixel CMOS AF",
+        "Pantalla LCD de ángulo variable para autorretratos",
+        "Asistente de filtros creativos"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Réflex digital (DSLR)"
+        },
+        {
+          "label": "Sensor",
+          "value": "CMOS APS-C de 24,1 MP"
+        },
+        {
+          "label": "Procesador",
+          "value": "DIGIC 8"
+        },
+        {
+          "label": "Video",
+          "value": "4K, con video de intervalo de tiempo (time-lapse) 4K"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Dual Pixel CMOS AF"
+        },
+        {
+          "label": "Pantalla",
+          "value": "LCD de ángulo variable"
+        },
+        {
+          "label": "Funciones creativas",
+          "value": "Asistente de filtros creativos"
+        },
+        {
+          "label": "Lente incluido",
+          "value": "18-55 mm"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS Rebel SL3, también conocida como 250D, es una réflex EOS pequeña y liviana, con video 4K y pantalla de ángulo variable. Este kit viene con un lente 18-55 mm, listo para salir a sacar fotos.</p><h3>Para empezar</h3><p>Sensor APS-C de 24,1 MP y procesador DIGIC 8, con buen rendimiento general. El Dual Pixel CMOS AF ayuda a enfocar rápido, también al grabar video.</p><h3>Video</h3><ul><li>Grabación en 4K.</li><li>Videos 4K con intervalo de tiempo (time-lapse).</li></ul><h3>Pantalla y creatividad</h3><p>La pantalla LCD de ángulo variable sirve para autorretratos y tomas en ángulos distintos. El Asistente de filtros creativos suma efectos sin salir de la cámara.</p><h3>Antes de comprar</h3><ul><li>Es una réflex (DSLR): la montura y los lentes compatibles no son los de la línea mirrorless RF.</li></ul>",
+      "revisar": [
+        "Descripción muy corta: no trae ráfaga, ISO, batería ni conectividad.",
+        "La frase \"más pequeña y liviana hasta la fecha\" es de la descripción original; confirmar que siga vigente.",
+        "La descripción no detalla el lente 18-55 mm (apertura, estabilización)."
+      ]
+    },
+    {
+      "slug": "canon-eos-rebel-t7-kit-18-55mm",
+      "model": "EOS Rebel T7 + 18-55mm II",
+      "seoTitle": "Canon EOS Rebel T7 con lente 18-55mm II",
+      "seoDescription": "Canon EOS Rebel T7 con lente 18-55mm II: réflex con sensor APS-C de 24,1 MP, AF de 9 puntos y pantalla de 3,0\". Garantía y envíos a todo el país.",
+      "shortDescription": "Canon EOS Rebel T7 con lente 18-55 mm II. Réflex con sensor APS-C de 24,1 MP, procesador DIGIC 4+, enfoque de 9 puntos y pantalla LCD de 3,0\".",
+      "highlights": [
+        "Sensor APS-C de 24,1 MP, ISO 100-6400 (H: 12800)",
+        "Procesador DIGIC 4+",
+        "AF de 9 puntos con punto central tipo cruz",
+        "AF Servo AI para seguir sujetos en movimiento",
+        "Pantalla LCD de 3,0\" y unos 920.000 puntos",
+        "Modo Auto Discernidor de Escenas"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Réflex digital (DSLR)"
+        },
+        {
+          "label": "Sensor",
+          "value": "CMOS APS-C de 24,1 MP"
+        },
+        {
+          "label": "Sensibilidad",
+          "value": "ISO 100-6400 (H: 12800)"
+        },
+        {
+          "label": "Procesador",
+          "value": "DIGIC 4+"
+        },
+        {
+          "label": "Enfoque",
+          "value": "9 puntos, central tipo cruz; AF Servo AI"
+        },
+        {
+          "label": "Pantalla",
+          "value": "LCD de 3,0\", unos 920.000 puntos, visión de 170°"
+        },
+        {
+          "label": "Live View",
+          "value": "Sí"
+        },
+        {
+          "label": "Modo automático",
+          "value": "Auto Discernidor de Escenas"
+        },
+        {
+          "label": "Lente incluido",
+          "value": "18-55 mm II"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS Rebel T7 es una réflex con sensor APS-C de 24,1 MP, pensada para quien empieza. Este kit incluye el lente 18-55 mm II.</p><h3>Imagen</h3><ul><li>Sensor APS-C de 24,1 MP, con buen desempeño con poca luz.</li><li>ISO de 100 a 6400, ampliable a 12800 (H).</li><li>Procesador DIGIC 4+, que reduce el ruido en tomas con ISO alto.</li></ul><h3>Enfoque</h3><p>El sistema de 9 puntos tiene un punto central tipo cruz. El AF Servo AI mantiene el enfoque en sujetos que se mueven.</p><h3>Pantalla</h3><p>LCD de 3,0\" con unos 920.000 puntos y 170° de ángulo de visión. Sirve para componer en Live View y ver ajustes como AF, ISO y flash.</p><h3>Modo Auto</h3><p>El modo Auto Discernidor de Escenas busca la exposición correcta de forma sencilla.</p><h3>Antes de comprar</h3><ul><li>Es una réflex (DSLR): la montura y los lentes compatibles no son los de la línea mirrorless RF.</li></ul>",
+      "revisar": [
+        "El texto original se cortaba al final: no hay datos de video, ráfaga ni conectividad.",
+        "La descripción no detalla el lente 18-55 mm II (apertura, estabilización)."
+      ]
+    },
+    {
+      "slug": "canon-powershot-g7-x-mark-iii",
+      "name": "Canon PowerShot G7 X Mark III Negra",
+      "model": "PowerShot G7 X Mark III",
+      "seoTitle": "Canon PowerShot G7 X Mark III negra",
+      "seoDescription": "Canon PowerShot G7 X Mark III negra nueva: compacta con sensor de 1 pulgada de 20,1 MP y video 4K. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Canon PowerShot G7 X Mark III negra. Compacta de bolsillo con sensor tipo 1.0 de 20,1 MP, video 4K y pantalla táctil que se despliega hacia arriba, ideal para vlogs.",
+      "highlights": [
+        "Sensor tipo 1.0 de 20,1 MP en un cuerpo de bolsillo",
+        "Video 4K y Full HD hasta 120 fps para cámara lenta",
+        "Pantalla táctil que se despliega hacia arriba",
+        "Entrada para micrófono externo",
+        "Ráfagas de hasta 30 fps, también en RAW",
+        "Bluetooth y app Canon Camera Connect"
+      ],
+      "specs": [
+        {
+          "label": "Sensor",
+          "value": "Tipo 1.0 (1 pulgada) de 20,1 MP"
+        },
+        {
+          "label": "Procesador",
+          "value": "DIGIC 8"
+        },
+        {
+          "label": "Video",
+          "value": "4K; Full HD hasta 120 fps"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "Hasta 30 fps, también en RAW"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Táctil, se despliega hacia arriba"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Entrada para micrófono externo"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Bluetooth y app Canon Camera Connect"
+        },
+        {
+          "label": "Color",
+          "value": "Negra"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon PowerShot G7 X Mark III es una compacta pensada para vlogs, videollamadas y contenido online. Esta versión es negra.</p><h3>Para crear contenido</h3><ul><li>Video 4K y cámara lenta de hasta 120 fps.</li><li>Entrada para micrófono externo.</li><li>La pantalla táctil se despliega hacia arriba para selfies y vlogs.</li></ul><h3>Fotos</h3><p>Sensor tipo 1.0 de 20,1 MP y procesador DIGIC 8. La profundidad de campo reducida separa al sujeto del fondo, y con poca luz conserva detalle.</p><h3>Conexión y firmware</h3><p>Con Bluetooth la emparejás con el celular o la tablet y usás la app Canon Camera Connect como control remoto. El firmware 1.3.2 agrega un modo de video automático para vlogging, pantalla Zebra y marcadores de aspecto.</p><h3>Antes de comprar</h3><ul><li>Es una cámara de lente fijo: no se cambia el objetivo.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "El color (negro) sale del nombre (\"Black\").",
+        "La descripción original no trae zoom ni apertura (sí los trae la ficha de otro producto, el GX7 Mark III del catálogo)."
+      ],
+      "brand": "Canon"
+    },
+    {
+      "slug": "canon-powershot-g7-x-mark-iii-silver",
+      "name": "Canon PowerShot G7 X Mark III Plateada",
+      "model": "PowerShot G7 X Mark III",
+      "seoTitle": "Canon PowerShot G7 X Mark III plateada",
+      "seoDescription": "Canon PowerShot G7 X Mark III plateada nueva: compacta con sensor de 1 pulgada de 20,1 MP y video 4K. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Canon PowerShot G7 X Mark III plateada. Compacta de bolsillo con sensor tipo 1.0 de 20,1 MP, video 4K y pantalla táctil que se despliega hacia arriba, ideal para vlogs.",
+      "highlights": [
+        "Sensor tipo 1.0 de 20,1 MP en un cuerpo de bolsillo",
+        "Video 4K y Full HD hasta 120 fps para cámara lenta",
+        "Pantalla táctil que se despliega hacia arriba",
+        "Entrada para micrófono externo",
+        "Ráfagas de hasta 30 fps, también en RAW",
+        "Bluetooth y app Canon Camera Connect"
+      ],
+      "specs": [
+        {
+          "label": "Sensor",
+          "value": "Tipo 1.0 (1 pulgada) de 20,1 MP"
+        },
+        {
+          "label": "Procesador",
+          "value": "DIGIC 8"
+        },
+        {
+          "label": "Video",
+          "value": "4K; Full HD hasta 120 fps"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "Hasta 30 fps, también en RAW"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Táctil, se despliega hacia arriba"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Entrada para micrófono externo"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Bluetooth y app Canon Camera Connect"
+        },
+        {
+          "label": "Color",
+          "value": "Plateada"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon PowerShot G7 X Mark III es una compacta pensada para vlogs, videollamadas y contenido online. Esta versión es plateada.</p><h3>Para crear contenido</h3><ul><li>Video 4K y cámara lenta de hasta 120 fps.</li><li>Entrada para micrófono externo.</li><li>La pantalla táctil se despliega hacia arriba para selfies y vlogs.</li></ul><h3>Fotos</h3><p>Sensor tipo 1.0 de 20,1 MP y procesador DIGIC 8. La profundidad de campo reducida separa al sujeto del fondo, y con poca luz conserva detalle.</p><h3>Conexión y firmware</h3><p>Con Bluetooth la emparejás con el celular o la tablet y usás la app Canon Camera Connect como control remoto. El firmware 1.3.2 agrega un modo de video automático para vlogging, pantalla Zebra y marcadores de aspecto.</p><h3>Antes de comprar</h3><ul><li>Es una cámara de lente fijo: no se cambia el objetivo.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "El color (plata) sale del nombre (\"Silver\").",
+        "La descripción original es la misma que la de la versión negra."
+      ],
+      "brand": "Canon"
+    },
+    {
+      "slug": "canon-powershot-gx7-mark-iii",
+      "name": "Canon PowerShot G7 X Mark III",
+      "model": "PowerShot G7 X Mark III",
+      "seoTitle": "Canon PowerShot G7 X Mark III",
+      "seoDescription": "Canon PowerShot G7 X Mark III nueva: compacta con sensor de 1 pulgada, zoom 4,2x f/1.8-2.8 y video 4K sin recorte. Garantía y envíos a todo el país.",
+      "shortDescription": "Canon PowerShot G7 X Mark III. Compacta de bolsillo con sensor de 1 pulgada de 20,1 MP, zoom óptico 4,2x (24-100 mm) f/1.8-2.8, video 4K sin recorte y transmisión en vivo a YouTube.",
+      "highlights": [
+        "Sensor de 1 pulgada de 20,1 MP y procesador DIGIC 8",
+        "Zoom óptico 4,2x (24-100 mm equiv.) f/1.8-2.8",
+        "Video 4K UHD 30p sin recorte y Full HD a 120 fps",
+        "Transmisión en vivo directo a YouTube por Wi-Fi",
+        "Pantalla táctil de 3,0\" que gira 180° hacia arriba",
+        "Ráfaga de hasta 30 fps en RAW y 20 fps con AF"
+      ],
+      "specs": [
+        {
+          "label": "Sensor",
+          "value": "CMOS apilado tipo 1.0 (1 pulgada) de 20,1 MP"
+        },
+        {
+          "label": "Procesador",
+          "value": "DIGIC 8"
+        },
+        {
+          "label": "Objetivo",
+          "value": "Zoom óptico 4,2x (24-100 mm equiv.), f/1.8-2.8"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica inteligente, 4 pasos"
+        },
+        {
+          "label": "Video",
+          "value": "4K UHD 29,97/25 fps sin recorte; Full HD a 120 fps"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Táctil de 3,0\", 180° hacia arriba y 45° hacia abajo"
+        },
+        {
+          "label": "Micrófono",
+          "value": "Entrada de miniconector de 3,5 mm"
+        },
+        {
+          "label": "Inalámbrico",
+          "value": "Wi-Fi 802.11b/g/n y Bluetooth 4.2"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "30 fps en RAW; 20 fps estándar con AF"
+        },
+        {
+          "label": "Peso y medidas",
+          "value": "Aprox. 304 g (con batería y tarjeta); 105,5 x 60,9 x 41,4 mm"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon PowerShot G7 X Mark III es una compacta que entra en el bolsillo. Está pensada para vloggers, creadores y fotógrafos de viaje.</p><h3>Video</h3><ul><li>4K UHD 30p sin recorte: usás todo el ángulo del lente.</li><li>Full HD a 120 fps para cámara lenta.</li><li>Video vertical para TikTok, Instagram Reels y YouTube Shorts.</li><li>Transmisión en vivo directo a YouTube por Wi-Fi.</li></ul><h3>Foto</h3><p>Sensor CMOS apilado de 1 pulgada y 20,1 MP con DIGIC 8. El objetivo tiene zoom óptico 4,2x y apertura f/1.8-2.8, que da un fondo desenfocado suave.</p><h3>Pantalla y disparo</h3><p>La pantalla táctil de 3,0\" se orienta 180° hacia arriba. Dispara hasta 30 fps en RAW y 20 fps con enfoque automático.</p><h3>Antes de comprar</h3><ul><li>Es una cámara de lente fijo: no se cambia el objetivo.</li></ul>",
+      "revisar": [
+        "El nombre del catálogo dice \"GX7\": es un error de tipeo de \"G7 X\". Lo corregí en el nombre; el slug no se toca.",
+        "La descripción dice \"sensor CMOS apilado\" y \"f/1.8-2.8 (24-100 mm)\": son datos del texto original.",
+        "Hay otras dos fichas de la misma cámara (negra y plata). Esta no indica color."
+      ]
+    },
+    {
+      "slug": "canon-powershot-sx740-hs",
+      "name": "Canon PowerShot SX740 HS",
+      "brand": "Canon",
+      "model": "PowerShot SX740 HS",
+      "seoTitle": "Canon PowerShot SX740 HS",
+      "seoDescription": "Canon PowerShot SX740 HS nueva: compacta con zoom óptico 40x, 20,3 MP y video 4K. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Canon PowerShot SX740 HS. Cámara compacta de 39,9 mm de profundidad con zoom óptico 40x, 20,3 megapíxeles, video 4K, Wi-Fi y Bluetooth.",
+      "highlights": [
+        "Zoom óptico 40x en una compacta",
+        "20,3 megapíxeles",
+        "Video 4K",
+        "Procesador DIGIC 8",
+        "Ráfagas de 10 fps",
+        "Wi-Fi y Bluetooth para compartir fotos"
+      ],
+      "specs": [
+        {
+          "label": "Resolución",
+          "value": "20,3 megapíxeles"
+        },
+        {
+          "label": "Zoom óptico",
+          "value": "40x"
+        },
+        {
+          "label": "Video",
+          "value": "4K"
+        },
+        {
+          "label": "Procesador",
+          "value": "DIGIC 8"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "10 fps"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi y Bluetooth"
+        },
+        {
+          "label": "Profundidad",
+          "value": "39,9 mm"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon PowerShot SX740 HS es una compacta con zoom óptico de 40x que entra en el bolsillo. Mide 39,9 mm de profundidad.</p><h3>Zoom y fotos</h3><p>Con 20,3 megapíxeles y zoom óptico 40x capturás detalle de lejos sin cambiar de lente.</p><h3>Video y velocidad</h3><p>Graba video en 4K y dispara en serie a 10 fps con el procesador DIGIC 8, para no perder la foto.</p><h3>Para compartir</h3><p>Con Wi-Fi y Bluetooth pasás las imágenes al celular y las compartís enseguida.</p><h3>Para el día a día</h3><p>Es una cámara de apuntar y disparar. Su tamaño compacto la hace fácil de llevar en el bolsillo o la cartera, y ofrece buena velocidad de obturación.</p><h3>Antes de comprar</h3><ul><li>Es una cámara de lente fijo: no se cambia el objetivo.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "Nombre original con \"Sx740\" mal capitalizado; lo corregí a SX740 HS.",
+        "Descripción corta: no hay datos de sensor, pantalla, batería ni apertura.",
+        "El texto original decía \"DIGC 8\": lo interpreté como DIGIC 8."
+      ]
+    },
+    {
+      "slug": "canon-powershot-v1",
+      "brand": "Canon",
+      "model": "PowerShot V1",
+      "seoTitle": "Canon PowerShot V1",
+      "seoDescription": "Canon PowerShot V1 nueva: compacta para video con sensor de 1,4\", lente gran angular f/2,8 y 4K 60p. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Canon PowerShot V1. Compacta de 374 g orientada al video, con sensor de 1,4\", objetivo ultra gran angular f/2,8 integrado, 4K ilimitado y 4K a 60p.",
+      "highlights": [
+        "Sensor de 1,4\" con buena calidad 4K con poca luz",
+        "Objetivo ultra gran angular f/2,8 integrado",
+        "4K ilimitado y 4K a 60p, Full HD a 120p",
+        "Refrigeración activa para grabar por más tiempo",
+        "Pantalla táctil giratoria y botón de grabación frontal",
+        "Cámara de 374 g que entra en el bolsillo"
+      ],
+      "specs": [
+        {
+          "label": "Sensor",
+          "value": "De 1,4\""
+        },
+        {
+          "label": "Objetivo",
+          "value": "Ultra gran angular f/2,8 integrado"
+        },
+        {
+          "label": "Video",
+          "value": "4K ilimitado y 4K a 60p; Full HD a 120p en cámara lenta"
+        },
+        {
+          "label": "Refrigeración",
+          "value": "Activa"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Reconocimiento de personas y animales"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Táctil y giratoria (modo selfie)"
+        },
+        {
+          "label": "Controles",
+          "value": "Botón de grabación frontal"
+        },
+        {
+          "label": "Transmisión",
+          "value": "Plug-and-play en directo"
+        },
+        {
+          "label": "Transferencia",
+          "value": "Wi-Fi o USB"
+        },
+        {
+          "label": "Peso",
+          "value": "374 g"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon PowerShot V1 es una compacta de bolsillo hecha para video. Tiene un sensor grande y un objetivo ultra gran angular fijo.</p><h3>Video</h3><ul><li>Grabación 4K ilimitada y 4K a 60p.</li><li>Full HD a 120p para cámara lenta.</li><li>Refrigeración activa para grabar durante más tiempo.</li></ul><h3>Para creadores</h3><p>Botón de grabación frontal, pantalla táctil giratoria para selfies, control de audio avanzado y transmisión en directo plug-and-play. Pasás el contenido al celular por Wi-Fi o USB.</p><h3>Enfoque y estabilización</h3><p>El AF reconoce personas y animales. Una estabilización de imagen avanzada permite grabar sin trípode, con relación de aspecto pensada para tomas verticales.</p><h3>Peso</h3><p>Pesa 374 g, así que la llevás fácil en el bolsillo o en una mochila liviana.</p><h3>Antes de comprar</h3><ul><li>Es una cámara de lente fijo: no se cambia el objetivo.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "La descripción no trae megapíxeles ni distancia focal del objetivo.",
+        "El texto original se cortaba al final: sin datos de batería ni conectividad detallada."
+      ]
+    },
+    {
+      "slug": "canon-r1-body",
+      "name": "Canon EOS R1 Body",
+      "brand": "Canon",
+      "model": "EOS R1",
+      "seoTitle": "Canon EOS R1 Body (solo cuerpo)",
+      "seoDescription": "Canon EOS R1 solo cuerpo nueva: sensor apilado de 24,2 MP, ráfaga de 40 fps con AF y video RAW 6K. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Canon EOS R1, solo cuerpo. Mirrorless Full Frame con sensor apilado de 24,2 MP, ráfaga de 40 fps con AF y AE, video RAW 6K a 60p, Wi-Fi 6E y Ethernet.",
+      "highlights": [
+        "Sensor apilado retroiluminado de 24,2 MP",
+        "Ráfaga de 40 fps con AF y AE, con disparos previos",
+        "Video RAW 6K hasta 60p, 4K hasta 120p y 2K hasta 240p",
+        "AF hasta -7,5 EV con reconocimiento de caras, ojos y cuerpos",
+        "Ampliación en cámara a 96 MP con aprendizaje profundo",
+        "Wi-Fi 6E y Ethernet 2,5G BASE-T"
+      ],
+      "specs": [
+        {
+          "label": "Formato",
+          "value": "Mirrorless Full Frame"
+        },
+        {
+          "label": "Sensor",
+          "value": "CMOS apilado retroiluminado de 24,2 MP"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Dual Pixel Intelligent AF tipo cruz; hasta -7,5 EV"
+        },
+        {
+          "label": "Ráfaga",
+          "value": "40 fps con AF y AE; disparos previos incluso en RAW"
+        },
+        {
+          "label": "Video",
+          "value": "RAW 6K hasta 60p; 4K hasta 120p; 2K hasta 240p"
+        },
+        {
+          "label": "Ampliación",
+          "value": "Hasta 4x y 96 MP en cámara con IA"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6E y Ethernet 2,5G BASE-T"
+        },
+        {
+          "label": "Reconocimiento",
+          "value": "Caras, ojos, cuerpos y deportes"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EOS R1 está pensada para fotografía deportiva y de acción, donde importa disparar rápido y entregar primero. Esta versión es solo el cuerpo.</p><h3>Velocidad</h3><ul><li>Sensor apilado retroiluminado de 24,2 MP con lectura rápida y poca distorsión por rolling shutter.</li><li>Ráfaga de 40 fps con AF y AE.</li><li>Disparos previos para captar momentos anteriores a pulsar el botón, también en RAW.</li></ul><h3>Enfoque</h3><p>El Dual Pixel Intelligent AF es sensible a líneas horizontales y verticales. Reconoce caras, cabezas, ojos, cuerpos y deportes (fútbol, voleibol y baloncesto), y enfoca hasta -7,5 EV.</p><h3>Video y conexión</h3><p>Graba RAW 6K hasta 60p, 4K hasta 120p y 2K hasta 240p con todo el ancho del sensor Full Frame. Para enviar archivos rápido tiene Wi-Fi 6E y Ethernet 2,5G BASE-T.</p><h3>Antes de comprar</h3><ul><li>Se vende solo el cuerpo: el lente va aparte.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "Nombre original \"Canon R1 Body\": lo pasé a \"Canon EOS R1 Body\" porque la descripción dice EOS R1.",
+        "El texto original se cortaba al final: sin peso, pantalla ni batería."
+      ]
+    },
+    {
+      "slug": "canon-r10-body",
+      "model": "R10",
+      "seoTitle": "Canon R10 Body (solo cuerpo)",
+      "seoDescription": "Canon R10 solo cuerpo nueva: mirrorless con sensor APS-C de 24,2 MP, video 4K a 30 fps, Wi-Fi y Bluetooth. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Canon R10, solo cuerpo. Mirrorless con sensor APS-C de 24,2 MP, video 4K a 30 fps, enfoque rápido y conectividad Wi-Fi y Bluetooth.",
+      "highlights": [
+        "Sensor APS-C de 24,2 MP",
+        "Video 4K a 30 fps",
+        "Enfoque automático rápido y preciso",
+        "Rinde bien con poca luz",
+        "Wi-Fi y Bluetooth para transferir y controlar a distancia"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mirrorless"
+        },
+        {
+          "label": "Sensor",
+          "value": "APS-C de 24,2 MP"
+        },
+        {
+          "label": "Video",
+          "value": "4K a 30 fps"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi y Bluetooth"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon R10 es una mirrorless para fotógrafos y videógrafos entusiastas. Combina portabilidad con un sensor APS-C de 24,2 MP. Esta versión es solo el cuerpo.</p><h3>Imagen y video</h3><p>Con su sensor APS-C de 24,2 MP saca imágenes nítidas y detalladas, incluso con poca luz. Graba video 4K a 30 fps.</p><h3>Enfoque y conexión</h3><p>El enfoque automático es rápido y preciso. Con Wi-Fi y Bluetooth podés transferir imágenes y controlar la cámara de forma remota.</p><h3>Antes de comprar</h3><ul><li>Se vende solo el cuerpo: el lente va aparte.</li></ul>",
+      "revisar": [
+        "Descripción corta: no hay datos de ráfaga, pantalla, visor, batería ni peso. Ficha breve a propósito.",
+        "Nombre sin \"EOS\": la descripción tampoco lo usa, así que lo dejé como está."
+      ]
+    },
+    {
+      "slug": "canon-rf-10-20-f-4-stm",
+      "name": "Lente Canon RF 10-20mm f/4 STM",
+      "brand": "Canon",
+      "model": "RF 10-20mm f/4 STM",
+      "seoTitle": "Lente Canon RF 10-20mm f/4 STM",
+      "seoDescription": "Lente Canon RF 10-20mm f/4 STM nuevo: ultra gran angular con apertura constante y estabilización óptica. Garantía y envíos a todo el país.",
+      "shortDescription": "Lente ultra gran angular Canon RF 10-20 mm f/4 STM. Apertura constante f/4, motor STM silencioso y estabilización óptica, para paisajes, arquitectura e interiores.",
+      "highlights": [
+        "Ultra gran angular de 10 a 20 mm con apertura constante f/4",
+        "Motor STM: enfoque silencioso y preciso, útil para video",
+        "Estabilización óptica de imagen",
+        "Revestimiento Super Spectra contra reflejos no deseados",
+        "Diseño compacto y ligero",
+        "Pensado para paisajes, arquitectura, interiores y astrofotografía"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Zoom ultra gran angular"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "10-20 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/4 constante"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "STM"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica de imagen"
+        },
+        {
+          "label": "Tratamiento óptico",
+          "value": "Super Spectra"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Paisaje, arquitectura, interiores, astrofotografía"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 10-20 mm f/4 STM es un zoom ultra gran angular para cámaras mirrorless con montura RF. Es compacto y ligero, y entra en un rango de 10 a 20 mm con apertura constante f/4.</p><h3>Óptica</h3><p>Su construcción óptica reduce las aberraciones cromáticas y las distorsiones. El revestimiento Super Spectra baja los reflejos no deseados.</p><h3>Enfoque y video</h3><p>El motor STM enfoca de forma silenciosa y precisa, tanto para foto como para video.</p><h3>Para qué sirve</h3><ul><li>Paisajes y arquitectura.</li><li>Interiores.</li><li>Astrofotografía.</li><li>Perspectivas dramáticas con un ángulo muy abierto.</li></ul><h3>Antes de comprar</h3><ul><li>Es de montura RF: va en cámaras Canon mirrorless de la serie EOS R.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-100-400-5-6-8-is-usm",
+      "name": "Lente Canon RF 100-400mm f/5.6-8 IS USM",
+      "brand": "Canon",
+      "model": "RF 100-400mm f/5.6-8 IS USM",
+      "seoTitle": "Lente Canon RF 100-400mm f/5.6-8 IS USM",
+      "seoDescription": "Lente Canon RF 100-400mm f/5.6-8 IS USM nuevo: teleobjetivo con estabilización de 5,5 pasos y enfoque USM. Garantía y envíos a todo el país.",
+      "shortDescription": "Teleobjetivo zoom Canon RF 100-400 mm f/5.6-8 IS USM. Estabilización óptica de hasta 5,5 pasos, enfoque USM silencioso y diseño compacto para fauna, deportes y retratos.",
+      "highlights": [
+        "Zoom de 100 a 400 mm, de apertura f/5.6-8",
+        "Estabilización óptica de hasta 5,5 pasos",
+        "Motor USM silencioso, rápido y preciso",
+        "Compacto y liviano para ser un teleobjetivo",
+        "Para fauna, deportes y retratos",
+        "Exclusivo para el sistema Canon EOS R"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Teleobjetivo zoom"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "100-400 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/5.6-8"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "USM"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica, hasta 5,5 pasos"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Fauna, deportes, retratos"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 100-400 mm f/5.6-8 IS USM es un teleobjetivo zoom para cámaras mirrorless Canon EOS R. Es compacto y liviano para acercar sujetos lejanos.</p><h3>Estabilización</h3><p>El sistema óptico de imagen compensa hasta 5,5 pasos, así que las fotos salen nítidas incluso con poca luz.</p><h3>Enfoque</h3><p>El motor USM es silencioso y enfoca rápido, lo que ayuda con sujetos en movimiento.</p><h3>Para qué sirve</h3><ul><li>Fotografía de fauna.</li><li>Deportes.</li><li>Retratos desde lejos.</li></ul><h3>Antes de comprar</h3><ul><li>Es de montura RF y, según la descripción, compatible exclusivamente con el sistema Canon EOS R.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-100-500-4-5-7-1l-is-usm",
+      "name": "Lente Canon RF 100-500mm f/4.5-7.1L IS USM",
+      "brand": "Canon",
+      "model": "RF 100-500mm f/4.5-7.1L IS USM",
+      "seoTitle": "Lente Canon RF 100-500mm f/4.5-7.1L IS USM",
+      "seoDescription": "Lente Canon RF 100-500mm f/4.5-7.1L IS USM nuevo: teleobjetivo serie L con estabilización de 5 pasos. Garantía y envíos a todo el país.",
+      "shortDescription": "Teleobjetivo zoom Canon RF 100-500 mm f/4.5-7.1L IS USM, de la serie L. Estabilización óptica de 5 pasos, motor USM y construcción resistente a la intemperie.",
+      "highlights": [
+        "Zoom de 100 a 500 mm de la serie L, f/4.5-7.1",
+        "Estabilización óptica de 5 pasos para disparar a mano alzada",
+        "Motor USM ultrarrápido, silencioso y preciso",
+        "Construcción resistente a la intemperie",
+        "Para fauna y deportes",
+        "Aberraciones mínimas y colores vibrantes"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Teleobjetivo zoom, serie L"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "100-500 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/4.5-7.1"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "USM"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica, 5 pasos"
+        },
+        {
+          "label": "Resistencia",
+          "value": "A la intemperie (serie L)"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Fauna, deportes"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 100-500 mm f/4.5-7.1L IS USM es un teleobjetivo zoom de la serie L para cámaras mirrorless Canon EOS R. Cubre desde retratos hasta fauna.</p><h3>Rango y nitidez</h3><p>Con 100 a 500 mm captura desde retratos hasta animales lejanos. La estabilización óptica de 5 pasos permite fotos nítidas a mano alzada.</p><h3>Enfoque</h3><p>El motor USM enfoca rápido y en silencio.</p><h3>Construcción</h3><p>La serie L suma una construcción resistente a la intemperie y pensada para condiciones difíciles.</p><h3>Antes de comprar</h3><ul><li>Es de montura RF: va en cámaras Canon mirrorless de la serie EOS R.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-14-35-f-4-l-is-usm",
+      "name": "Lente Canon RF 14-35mm f/4L IS USM",
+      "brand": "Canon",
+      "model": "RF 14-35mm f/4L IS USM",
+      "seoTitle": "Lente Canon RF 14-35mm f/4L IS USM",
+      "seoDescription": "Lente Canon RF 14-35mm f/4L IS USM nuevo: gran angular serie L con estabilización de 5,5 pasos. Garantía y envíos a todo el país.",
+      "shortDescription": "Gran angular zoom Canon RF 14-35 mm f/4L IS USM, de la serie L. Estabilización de 5,5 pasos, motor USM y construcción sellada contra polvo y humedad.",
+      "highlights": [
+        "Zoom gran angular de 14 a 35 mm, f/4 de la serie L",
+        "Estabilización de 5,5 pasos",
+        "Motor USM silencioso y preciso",
+        "Resistente al polvo y la humedad",
+        "Elementos de baja dispersión contra aberraciones cromáticas",
+        "Para paisajes, arquitectura e interiores"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Zoom gran angular, serie L"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "14-35 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/4"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "USM"
+        },
+        {
+          "label": "Estabilización",
+          "value": "De imagen, 5,5 pasos"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Al polvo y a la humedad"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Paisaje, arquitectura, interiores"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 14-35 mm f/4L IS USM es un gran angular de la serie L para cámaras mirrorless con montura RF. Está pensado para fotógrafos que buscan versatilidad y buena calidad de imagen.</p><h3>Óptica</h3><p>Combina elementos de baja dispersión y recubrimientos avanzados que reducen las aberraciones cromáticas y dan imágenes nítidas con colores vibrantes en todo el encuadre.</p><h3>Estabilización y enfoque</h3><p>La estabilización de 5,5 pasos compensa las vibraciones. El motor USM enfoca en silencio y con precisión.</p><h3>Construcción</h3><p>Es resistente al polvo y la humedad, algo útil en condiciones adversas.</p><h3>Antes de comprar</h3><ul><li>Es de montura RF: va en cámaras Canon mirrorless de la serie EOS R.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-15-30-f-4-5-5-6",
+      "name": "Lente Canon RF 15-30mm f/4.5-5.6",
+      "brand": "Canon",
+      "model": "RF 15-30mm f/4.5-5.6",
+      "seoTitle": "Lente Canon RF 15-30mm f/4.5-5.6",
+      "seoDescription": "Lente Canon RF 15-30mm f/4.5-5.6 nuevo: zoom gran angular compacto con estabilización de imagen. Garantía y envíos a todo el país.",
+      "shortDescription": "Zoom ultra gran angular Canon RF 15-30 mm f/4.5-5.6, compacto y ligero. Incorpora estabilización de imagen y enfoque rápido y silencioso para foto y video.",
+      "highlights": [
+        "Zoom ultra gran angular de 15 a 30 mm, f/4.5-5.6",
+        "Estabilización de imagen",
+        "Enfoque rápido, silencioso y preciso",
+        "Diseño compacto y ligero",
+        "Pensado para paisajes, arquitectura y viajes",
+        "Compatible con todas las funciones del sistema Canon EOS R"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Zoom ultra gran angular"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "15-30 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/4.5-5.6"
+        },
+        {
+          "label": "Estabilización",
+          "value": "De imagen"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Paisaje, arquitectura, viajes"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 15-30 mm f/4.5-5.6 es un zoom gran angular para cámaras mirrorless del sistema RF. Es compacto y ligero para llevar de viaje.</p><h3>Para qué sirve</h3><ul><li>Paisajes amplios.</li><li>Fotografía de arquitectura.</li><li>Escenas de viaje.</li></ul><h3>Óptica y estabilización</h3><p>Reúne elementos ópticos de calidad y estabilización de imagen para fotos nítidas con colores vibrantes.</p><h3>Enfoque</h3><p>Ofrece enfoque rápido, silencioso y preciso para foto y video, con todas las funciones del sistema Canon EOS R.</p><h3>Antes de comprar</h3><ul><li>Es de montura RF: va en cámaras Canon mirrorless de la serie EOS R.</li><li>La descripción no indica el tipo de motor de enfoque ni de estabilización.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "Nombre sin el tipo de motor ni la sigla IS: no figura en la descripción.",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-15-35-f-2-8-is-usm",
+      "name": "Lente Canon RF 15-35mm f/2.8L IS USM",
+      "brand": "Canon",
+      "model": "RF 15-35mm f/2.8L IS USM",
+      "seoTitle": "Lente Canon RF 15-35mm f/2.8L IS USM",
+      "seoDescription": "Lente Canon RF 15-35mm f/2.8L IS USM nuevo: gran angular f/2.8 constante con estabilización de 5 pasos. Garantía y envíos a todo el país.",
+      "shortDescription": "Zoom gran angular Canon RF 15-35 mm f/2.8L IS USM. Apertura constante f/2.8, estabilización de 5 pasos, motor USM Nano y construcción sellada contra polvo y humedad.",
+      "highlights": [
+        "Zoom gran angular de 15 a 35 mm con apertura constante f/2.8",
+        "Estabilización óptica de 5 pasos",
+        "Motor USM Nano silencioso y preciso",
+        "Sellado contra polvo y humedad",
+        "Elementos de fluorita y lentes UD para más nitidez",
+        "Para paisajes, arquitectura, reportaje y video"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Zoom gran angular, serie L"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "15-35 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "USM Nano"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica, 5 pasos"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Sellado contra polvo y humedad"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Paisaje, arquitectura, reportaje, video"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 15-35 mm f/2.8L IS USM es un gran angular profesional para cámaras mirrorless de montura RF. Mantiene f/2.8 en todo el rango de zoom.</p><h3>Luz y estabilización</h3><p>La apertura constante f/2.8 y la estabilización óptica de 5 pasos dan buenos resultados en cualquier condición de luz.</p><h3>Óptica</h3><p>Usa elementos de fluorita y lentes UD para lograr imágenes nítidas y colores vibrantes del centro a las esquinas.</p><h3>Enfoque y construcción</h3><p>El motor USM Nano enfoca de forma silenciosa y precisa, ideal para video profesional. La construcción sellada resiste el polvo y la humedad.</p><h3>Antes de comprar</h3><ul><li>Es compatible con todos los cuerpos Canon EOS R.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-16-28-f-2-8-is-stm",
+      "name": "Lente Canon RF 16-28mm f/2.8 IS STM",
+      "brand": "Canon",
+      "model": "RF 16-28mm f/2.8 IS STM",
+      "seoTitle": "Lente Canon RF 16-28mm f/2.8 IS STM",
+      "seoDescription": "Lente Canon RF 16-28mm f/2.8 IS STM nuevo: gran angular de apertura constante con estabilización de 5,5 pasos. Garantía y envíos a todo el país.",
+      "shortDescription": "Zoom gran angular Canon RF 16-28 mm f/2.8 IS STM. Apertura constante f/2.8, estabilización de hasta 5,5 pasos, motor STM silencioso y construcción resistente a la intemperie.",
+      "highlights": [
+        "Zoom gran angular de 16 a 28 mm con apertura constante f/2.8",
+        "Estabilización óptica de hasta 5,5 pasos",
+        "Motor STM: enfoque silencioso y rápido",
+        "Construcción resistente a la intemperie",
+        "Elementos de baja dispersión para colores precisos",
+        "Para paisajes, arquitectura y viajes"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Zoom gran angular"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "16-28 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "STM"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica, hasta 5,5 pasos"
+        },
+        {
+          "label": "Resistencia",
+          "value": "A la intemperie"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Paisaje, arquitectura, viajes"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 16-28 mm f/2.8 IS STM es un gran angular zoom para cámaras mirrorless del sistema RF. Mantiene f/2.8 en todo el rango.</p><h3>Estabilización y luz</h3><p>Con f/2.8 constante y estabilización de hasta 5,5 pasos, las fotos salen nítidas incluso con poca luz.</p><h3>Enfoque</h3><p>El motor STM enfoca rápido y en silencio.</p><h3>Óptica y construcción</h3><p>El diseño óptico usa elementos de baja dispersión para imágenes nítidas y colores precisos del centro a los bordes. La construcción resiste la intemperie.</p><h3>Antes de comprar</h3><ul><li>Es de montura RF: va en cámaras Canon mirrorless de la serie EOS R.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-16m-f-2-8-stm",
+      "name": "Lente Canon RF 16mm f/2.8 STM",
+      "brand": "Canon",
+      "model": "RF 16mm f/2.8 STM",
+      "seoTitle": "Lente Canon RF 16mm f/2.8 STM",
+      "seoDescription": "Lente Canon RF 16mm f/2.8 STM nuevo: ultra gran angular fijo, compacto, con enfoque STM silencioso. Garantía y envíos a todo el país.",
+      "shortDescription": "Lente fijo Canon RF 16 mm f/2.8 STM. Ultra gran angular compacto y liviano para cámaras mirrorless Full Frame, con enfoque STM silencioso y foco cercano.",
+      "highlights": [
+        "Ultra gran angular fijo de 16 mm, f/2.8",
+        "Diseño compacto y liviano",
+        "Motor STM: enfoque silencioso para foto y video",
+        "Distancia mínima de enfoque de 5,1 pulgadas, aumento de 0,26x",
+        "Anillo de control configurable",
+        "Diafragma de siete hojas redondeadas"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Cobertura",
+          "value": "Fotograma completo (Full Frame)"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "16 mm (fija)"
+        },
+        {
+          "label": "Rango de apertura",
+          "value": "f/2.8 a f/22"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "STM (paso a paso)"
+        },
+        {
+          "label": "Construcción óptica",
+          "value": "Un elemento asférico, revestimiento Super Spectra"
+        },
+        {
+          "label": "Distancia mínima de enfoque",
+          "value": "5,1 pulgadas"
+        },
+        {
+          "label": "Aumento máximo",
+          "value": "0,26x"
+        },
+        {
+          "label": "Diafragma",
+          "value": "Siete hojas redondeadas"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Interiores, arquitectura, paisajes, astrofotografía, vlogs"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 16 mm f/2.8 STM es un ultra gran angular fijo, compacto y liviano. Está hecho para cámaras mirrorless Full Frame con montura RF.</p><h3>Óptica</h3><ul><li>Un elemento asférico que limita la distorsión y favorece la nitidez.</li><li>Revestimiento Super Spectra: menos destellos e imágenes superpuestas.</li><li>Diafragma redondeado de siete hojas para un bokeh agradable.</li></ul><h3>Enfoque cercano</h3><p>La distancia mínima de enfoque es de 5,1 pulgadas y el aumento máximo es de 0,26x, útil para primeros planos con mucha profundidad de campo.</p><h3>Para qué sirve</h3><p>Interiores, arquitectura, paisajes panorámicos y astrofotografía. Por su tamaño es una buena opción para vlogs. El anillo de control configurable ajusta apertura, ISO o compensación de exposición.</p><h3>Antes de comprar</h3><ul><li>Está diseñado para cámaras sin espejo Canon con montura RF de fotograma completo.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "Nombre original \"16M\": lo pasé a \"16mm\"."
+      ]
+    },
+    {
+      "slug": "canon-rf-200-800-f6-3-9-is-usm",
+      "name": "Lente Canon RF 200-800mm f/6.3-9 IS USM",
+      "brand": "Canon",
+      "model": "RF 200-800mm f/6.3-9 IS USM",
+      "seoTitle": "Lente Canon RF 200-800mm f/6.3-9 IS USM",
+      "seoDescription": "Lente Canon RF 200-800mm f/6.3-9 IS USM nuevo: teleobjetivo zoom con estabilización para fauna y deportes. Garantía y envíos a todo el país.",
+      "shortDescription": "Teleobjetivo zoom Canon RF 200-800 mm f/6.3-9 IS USM. Estabilización de imagen y motor ultrasónico USM para fotografiar fauna, deportes y eventos a gran distancia.",
+      "highlights": [
+        "Zoom de 200 a 800 mm, f/6.3-9",
+        "Estabilización de imagen IS",
+        "Motor ultrasónico USM: enfoque rápido y silencioso",
+        "Imágenes nítidas en todo el rango de zoom",
+        "Para fauna, deportes y eventos lejanos",
+        "Compatible con cámaras mirrorless Canon de montura RF"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Teleobjetivo zoom"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "200-800 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/6.3-9"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "USM"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica (IS)"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Fauna, deportes, eventos a distancia"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 200-800 mm f/6.3-9 IS USM es un teleobjetivo zoom con un rango muy largo. Sirve para fotografiar desde muy lejos.</p><h3>Rango</h3><p>De 200 a 800 mm tenés versatilidad para fauna, deportes y eventos a gran distancia.</p><h3>Estabilización y enfoque</h3><p>La estabilización IS ayuda a sostener nitidez con distancias focales largas. El motor USM enfoca rápido y en silencio.</p><h3>Óptica</h3><p>Su construcción óptica busca imágenes nítidas y detalladas en todo el rango de zoom.</p><h3>Antes de comprar</h3><ul><li>Es de montura RF: va en cámaras Canon mirrorless de la serie EOS R.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-20m-f-1-4",
+      "name": "Lente Canon RF 20mm f/1.4",
+      "brand": "Canon",
+      "model": "RF 20mm f/1.4",
+      "seoTitle": "Lente Canon RF 20mm f/1.4",
+      "seoDescription": "Lente Canon RF 20mm f/1.4 nuevo: gran angular luminoso para paisajes, arquitectura y astrofotografía. Garantía y envíos a todo el país.",
+      "shortDescription": "Lente fijo Canon RF 20 mm f/1.4. Gran angular muy luminoso para paisajes, arquitectura y astrofotografía, con enfoque rápido y silencioso.",
+      "highlights": [
+        "Gran angular fijo de 20 mm",
+        "Apertura f/1.4 para poca luz y fondos desenfocados",
+        "Pensado para paisajes, arquitectura y astrofotografía",
+        "Óptica avanzada con menos aberraciones y distorsión",
+        "Imágenes nítidas de esquina a esquina",
+        "Enfoque rápido y silencioso"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Gran angular fijo"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "20 mm (fija)"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/1.4"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Paisaje, arquitectura, astrofotografía"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 20 mm f/1.4 es un gran angular fijo diseñado para el sistema mirrorless Canon EOS R. Combina un ángulo amplio con una apertura luminosa.</p><h3>Luz</h3><p>Con f/1.4 rinde bien con poca luz y logra un bokeh cremoso.</p><h3>Óptica</h3><p>La construcción óptica reduce aberraciones y distorsiones, y busca nitidez de esquina a esquina.</p><h3>Para qué sirve</h3><p>Paisajes, arquitectura y astrofotografía. El enfoque es rápido y silencioso.</p><h3>Antes de comprar</h3><ul><li>Es de montura RF: va en cámaras Canon mirrorless de la serie EOS R.</li><li>La descripción no indica el tipo de motor ni si tiene estabilización.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "Nombre original \"20M\": lo pasé a \"20mm\".",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-24-105-f-2-8-is-usm",
+      "name": "Lente Canon RF 24-105mm f/2.8 IS USM",
+      "brand": "Canon",
+      "model": "RF 24-105mm f/2.8 IS USM",
+      "seoTitle": "Lente Canon RF 24-105mm f/2.8 IS USM",
+      "seoDescription": "Lente Canon RF 24-105mm f/2.8 IS USM nuevo: zoom con apertura constante f/2.8 y estabilización de 5 pasos. Garantía y envíos a todo el país.",
+      "shortDescription": "Zoom Canon RF 24-105 mm f/2.8 IS USM. Apertura constante f/2.8 en todo el rango, estabilización de 5 pasos, motor USM silencioso y construcción sellada contra polvo y humedad.",
+      "highlights": [
+        "Zoom de 24 a 105 mm con apertura constante f/2.8",
+        "Estabilización IS de 5 pasos",
+        "Motor USM ultrasilencioso y preciso",
+        "Sellado contra polvo y humedad",
+        "Compatible con teleconvertidores Canon RF",
+        "Para retratos, paisajes y eventos"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar profesional"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "24-105 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "USM"
+        },
+        {
+          "label": "Estabilización",
+          "value": "IS, 5 pasos"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Sellado contra polvo y humedad"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Teleconvertidores Canon RF"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Retratos, paisajes, eventos"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 24-105 mm f/2.8 IS USM es un zoom profesional para cámaras mirrorless Canon EOS R. Mantiene f/2.8 de punta a punta del rango focal.</p><h3>Luz y estabilización</h3><p>La apertura constante f/2.8 da calidad uniforme en todo el recorrido. El IS de 5 pasos y el motor USM ayudan a lograr tomas nítidas y un enfoque preciso.</p><h3>Construcción</h3><p>Está sellado contra polvo y humedad, pensado para trabajo profesional.</p><h3>Versatilidad</h3><p>Sirve para retratos, paisajes y eventos. Con teleconvertidores Canon RF ampliás el alcance.</p><h3>Antes de comprar</h3><ul><li>Es de montura RF: va en cámaras Canon mirrorless de la serie EOS R.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-24-105-f-4-7-1-is-stm",
+      "name": "Lente Canon RF 24-105mm f/4-7.1 IS STM",
+      "brand": "Canon",
+      "model": "RF 24-105mm f/4-7.1 IS STM",
+      "seoTitle": "Lente Canon RF 24-105mm f/4-7.1 IS STM",
+      "seoDescription": "Lente Canon RF 24-105mm f/4-7.1 IS STM nuevo: zoom liviano con estabilización de 5 pasos y enfoque STM silencioso. Garantía y envíos al país.",
+      "shortDescription": "Zoom Canon RF 24-105 mm f/4-7.1 IS STM. Estabilización óptica de hasta 5 pasos, enfoque STM silencioso y apertura variable que cuida el peso del lente.",
+      "highlights": [
+        "Zoom versátil de 24 a 105 mm, apertura variable f/4-7.1",
+        "Estabilización óptica de hasta 5 pasos",
+        "Motor STM suave y silencioso, ideal para video",
+        "Apertura variable para mantener el peso reducido",
+        "Sellado contra polvo y humedad",
+        "Cubre desde paisajes hasta retratos"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "24-105 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/4-7.1 (variable)"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "STM"
+        },
+        {
+          "label": "Estabilización",
+          "value": "IS óptica, hasta 5 pasos"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Sellado contra polvo y humedad"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Paisajes, retratos, video"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 24-105 mm f/4-7.1 IS STM es un zoom versátil para cámaras mirrorless del sistema RF. Va de gran angular a tele corto.</p><h3>Rango y luz</h3><p>Con 24-105 mm capturás paisajes amplios y retratos con compresión natural. La apertura variable f/4-7.1 equilibra rendimiento óptico y peso reducido.</p><h3>Estabilización y enfoque</h3><p>El IS compensa hasta 5 pasos. El motor STM enfoca de forma suave y silenciosa, ideal para grabar video.</p><h3>Construcción</h3><p>Según la descripción, tiene sellado contra polvo y humedad.</p><h3>Antes de comprar</h3><ul><li>Es de montura RF: va en cámaras Canon mirrorless de la serie EOS R.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "La descripción original dice \"construcción robusta con sellado contra polvo y humedad\": confirmar con la ficha de Canon.",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-24-105-f-4-is-usm",
+      "name": "Lente Canon RF 24-105mm f/4L IS USM",
+      "brand": "Canon",
+      "model": "RF 24-105mm f/4L IS USM",
+      "seoTitle": "Lente Canon RF 24-105mm f/4L IS USM",
+      "seoDescription": "Lente Canon RF 24-105mm f/4L IS USM nuevo: zoom de la serie L con f/4 constante y estabilización de 5 pasos. Garantía y envíos a todo el país.",
+      "shortDescription": "Zoom Canon RF 24-105 mm f/4L IS USM, de la serie L. Apertura constante f/4, estabilización de 5 pasos, motor USM y construcción resistente a la intemperie.",
+      "highlights": [
+        "Zoom estándar de 24 a 105 mm con f/4 constante",
+        "Estabilización de 5 pasos",
+        "Motor USM silencioso",
+        "Construcción de la serie L resistente a la intemperie",
+        "Diseño compacto y ligero",
+        "Para retratos, paisajes, eventos y viajes"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar, serie L"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "24-105 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/4 constante"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "USM"
+        },
+        {
+          "label": "Estabilización",
+          "value": "De imagen, 5 pasos"
+        },
+        {
+          "label": "Resistencia",
+          "value": "A la intemperie"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Retratos, paisajes, eventos, viaje"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 24-105 mm f/4L IS USM es un zoom estándar de la serie L, pensado para fotógrafos profesionales y entusiastas. Es compacto y ligero.</p><h3>Rendimiento</h3><p>La apertura constante f/4 mantiene la calidad en todo el rango. La estabilización de 5 pasos y el motor USM dan fotos nítidas y enfoque silencioso.</p><h3>Construcción</h3><p>Pertenece a la serie L y tiene construcción resistente a la intemperie.</p><h3>Para qué sirve</h3><p>Retratos, paisajes, eventos y fotografía de viaje.</p><h3>Antes de comprar</h3><ul><li>Según la descripción, es compatible exclusivamente con el sistema Canon EOS R (montura RF).</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-24-240-4-6-3-is-usm",
+      "name": "Lente Canon RF 24-240mm f/4-6.3 IS USM",
+      "brand": "Canon",
+      "model": "RF 24-240mm f/4-6.3 IS USM",
+      "seoTitle": "Lente Canon RF 24-240mm f/4-6.3 IS USM",
+      "seoDescription": "Lente Canon RF 24-240mm f/4-6.3 IS USM nuevo: zoom todo en uno 10x con estabilización de 5 pasos. Garantía y envíos a todo el país.",
+      "shortDescription": "Zoom todo en uno Canon RF 24-240 mm f/4-6.3 IS USM. Rango focal de 10x, estabilización de hasta 5 pasos y motor USM Nano rápido y silencioso, útil en viajes.",
+      "highlights": [
+        "Zoom 10x de 24 a 240 mm, apertura f/4-6.3",
+        "Estabilización óptica de hasta 5 pasos",
+        "Motor USM Nano rápido y silencioso",
+        "Un solo lente de gran angular a teleobjetivo",
+        "Pensado para viajes",
+        "Compatible con cámaras mirrorless Canon EOS R"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Zoom todo en uno (10x)"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "24-240 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/4-6.3 (variable)"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "USM Nano"
+        },
+        {
+          "label": "Estabilización",
+          "value": "IS óptica, hasta 5 pasos"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Viajes, paisajes, retratos, fauna"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 24-240 mm f/4-6.3 IS USM es un zoom todo en uno. Cubre desde gran angular hasta teleobjetivo con un solo lente.</p><h3>Rango</h3><p>Con su rango de 10x sirve para paisajes, retratos y fauna sin cambiar de lente.</p><h3>Estabilización y enfoque</h3><p>El IS compensa hasta 5 pasos, útil con poca luz. El motor USM Nano enfoca rápido y en silencio, bueno también para video.</p><h3>Para quién</h3><p>Viajeros y fotógrafos que prefieren cargar un solo lente.</p><h3>Antes de comprar</h3><ul><li>Según la descripción, es compatible exclusivamente con cámaras mirrorless Canon EOS R (montura RF).</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-24-70-f-2-8-is-usm",
+      "name": "Lente Canon RF 24-70mm f/2.8L IS USM",
+      "model": "RF 24-70mm f/2.8L IS USM",
+      "seoTitle": "Lente Canon RF 24-70mm f/2.8L IS USM",
+      "seoDescription": "Lente Canon RF 24-70mm f/2.8L IS USM nuevo: zoom estándar f/2.8 con estabilización de 5 pasos y Nano USM. Garantía y envíos a todo el país.",
+      "shortDescription": "Zoom estándar Canon RF 24-70 mm f/2.8L IS USM. Apertura constante f/2.8, estabilización de 5 pasos, enfoque Nano USM y construcción resistente a la intemperie.",
+      "highlights": [
+        "Zoom estándar de 24 a 70 mm con f/2.8 constante",
+        "Estabilización de imagen de 5 pasos",
+        "Enfoque Nano USM silencioso y ultrarrápido",
+        "Elementos de baja dispersión contra aberraciones y reflejos",
+        "Construcción resistente a la intemperie",
+        "Para foto profesional y video 4K"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar, serie L"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "24-70 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "Nano USM"
+        },
+        {
+          "label": "Estabilización",
+          "value": "De imagen, 5 pasos"
+        },
+        {
+          "label": "Resistencia",
+          "value": "A la intemperie"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Foto profesional, video 4K"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 24-70 mm f/2.8L IS USM es un zoom estándar para cámaras mirrorless Canon EOS R. Mantiene f/2.8 en todo el rango focal.</p><h3>Luz y profundidad de campo</h3><p>Con f/2.8 constante rinde bien con poca luz y permite jugar con poca profundidad de campo.</p><h3>Estabilización y enfoque</h3><p>La estabilización de 5 pasos ayuda a tomar fotos nítidas sin trípode. La tecnología Nano USM enfoca en silencio y rápido, ideal para video 4K.</p><h3>Óptica y construcción</h3><p>Los elementos de baja dispersión y los recubrimientos minimizan aberraciones y reflejos. La construcción es resistente a la intemperie.</p><h3>Antes de comprar</h3><ul><li>Es de montura RF: va en cámaras Canon mirrorless de la serie EOS R.</li></ul>",
+      "revisar": [
+        "Este producto ya tenía marca Canon y nombre con \"Lente\"; solo le agregué la L de la serie al nombre porque la descripción dice \"f/2.8L\".",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-24m-1-8-f-macro-is-stm",
+      "name": "Lente Canon RF 24mm f/1.8 Macro IS STM",
+      "brand": "Canon",
+      "model": "RF 24mm f/1.8 Macro IS STM",
+      "seoTitle": "Lente Canon RF 24mm f/1.8 Macro IS STM",
+      "seoDescription": "Lente Canon RF 24mm f/1.8 Macro IS STM nuevo: gran angular luminoso con macro y estabilización de 5 pasos. Garantía y envíos a todo el país.",
+      "shortDescription": "Lente fijo Canon RF 24 mm f/1.8 Macro IS STM. Gran angular luminoso con capacidad macro, estabilización de hasta 5 pasos y enfoque STM silencioso para foto y video.",
+      "highlights": [
+        "Gran angular fijo de 24 mm con apertura f/1.8",
+        "Capacidad macro para primeros planos",
+        "Estabilización óptica de hasta 5 pasos",
+        "Motor STM rápido y silencioso, ideal para video",
+        "Construcción resistente a la intemperie",
+        "Distorsión mínima en toda la gama de aperturas"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Gran angular fijo, macro"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "24 mm (fija)"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/1.8"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "STM"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica, hasta 5 pasos"
+        },
+        {
+          "label": "Resistencia",
+          "value": "A la intemperie"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Foto, video, macro"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 24 mm f/1.8 Macro IS STM combina una apertura luminosa con capacidad macro. Es un gran angular fijo para el sistema RF.</p><h3>Luz y estabilización</h3><p>Con f/1.8 y estabilización de hasta 5 pasos sacás imágenes nítidas incluso con poca luz.</p><h3>Enfoque</h3><p>El motor STM enfoca rápido y en silencio, útil para video y para fotografía discreta.</p><h3>Macro y construcción</h3><p>La distancia mínima de enfoque permite captar detalles macro. La construcción resiste la intemperie.</p><h3>Antes de comprar</h3><ul><li>Es de montura RF: va en cámaras Canon mirrorless de la serie EOS R.</li><li>La descripción no indica el aumento macro (por ejemplo 1:2).</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "Nombre original \"24M 1.8 F/MACRO\": lo ordené a \"24mm f/1.8 Macro\".",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-24mm-f-1-4-vcm",
+      "name": "Lente Canon RF 24mm f/1.4 VCM",
+      "brand": "Canon",
+      "model": "RF 24mm f/1.4 VCM",
+      "seoTitle": "Lente Canon RF 24mm f/1.4 VCM",
+      "seoDescription": "Lente Canon RF 24mm f/1.4 VCM nuevo: gran angular luminoso con motor VCM silencioso y diseño compacto. Garantía y envíos a todo el país.",
+      "shortDescription": "Lente fijo Canon RF 24 mm f/1.4 VCM. Gran angular luminoso con motor VCM de enfoque silencioso y preciso, diseño compacto y resistente a la intemperie.",
+      "highlights": [
+        "Gran angular fijo de 24 mm",
+        "Apertura f/1.4 para poca luz y bokeh",
+        "Motor VCM (Voice Coil Motor): enfoque silencioso y preciso",
+        "Diseño compacto y resistente a la intemperie",
+        "Imágenes nítidas del centro a los bordes",
+        "Para retratos, ciudad y arquitectura"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Gran angular fijo"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "24 mm (fija)"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/1.4"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "VCM (Voice Coil Motor)"
+        },
+        {
+          "label": "Resistencia",
+          "value": "A la intemperie"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Retratos, paisajes urbanos, arquitectura"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 24 mm f/1.4 VCM es un gran angular fijo, luminoso y compacto, diseñado para cámaras mirrorless del sistema RF.</p><h3>Luz</h3><p>Con f/1.4 rinde muy bien con poca luz y permite desenfocar el fondo.</p><h3>Enfoque</h3><p>El motor VCM enfoca de forma silenciosa y precisa.</p><h3>Para qué sirve</h3><p>Retratos, paisajes urbanos y arquitectura. Es compacto y resiste la intemperie.</p><h3>Antes de comprar</h3><ul><li>Es de montura RF: va en cámaras Canon mirrorless de la serie EOS R.</li><li>La descripción no indica si tiene estabilización.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "Nombre original \"24MM\": lo pasé a \"24mm\".",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-28-70-f2-l-usm",
+      "name": "Lente Canon RF 28-70mm f/2 L USM",
+      "brand": "Canon",
+      "model": "RF 28-70mm f/2 L USM",
+      "seoTitle": "Lente Canon RF 28-70mm f/2 L USM",
+      "seoDescription": "Lente Canon RF 28-70mm f/2 L USM nuevo: zoom serie L con apertura constante f/2 y enfoque USM. Garantía y envíos a todo el país.",
+      "shortDescription": "Zoom Canon RF 28-70 mm f/2 L USM, de la serie L. Apertura constante f/2 en todo el rango, resistente al polvo y la humedad, con enfoque USM silencioso.",
+      "highlights": [
+        "Zoom de 28 a 70 mm con apertura constante f/2",
+        "Serie L resistente al polvo y la humedad",
+        "Motor USM silencioso y preciso",
+        "Mucha luz y control de profundidad de campo",
+        "Para retratos, eventos y fotografía comercial",
+        "Exclusivo del sistema Canon RF"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar, serie L"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "28-70 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/2 constante"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "USM"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Al polvo y a la humedad"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Retratos, eventos, fotografía comercial"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 28-70 mm f/2 L USM es un zoom con apertura f/2 constante de punta a punta. Es de la serie L.</p><h3>Luz</h3><p>La apertura constante f/2 da buen desempeño con poca luz y control profesional de la profundidad de campo.</p><h3>Enfoque y construcción</h3><p>El motor USM enfoca en silencio y con precisión. La construcción de la serie L resiste el polvo y la humedad.</p><h3>Para qué sirve</h3><p>Retratos, eventos y fotografía comercial.</p><h3>Antes de comprar</h3><ul><li>Según la descripción, es compatible exclusivamente con el sistema Canon RF (cámaras mirrorless EOS R).</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "Nombre original \"F2\": lo pasé a \"f/2\" y dejé \"L USM\".",
+        "Evité las frases de marketing (\"revoluciona\", \"redefine los estándares\").",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-28m-f-2-8",
+      "name": "Lente Canon RF 28mm f/2.8 STM",
+      "model": "RF 28mm f/2.8 STM",
+      "seoTitle": "Lente Canon RF 28mm f/2.8 STM",
+      "seoDescription": "Lente Canon RF 28mm f/2.8 STM nuevo: gran angular ultracompacto y liviano para calle, paisajes y uso diario. Garantía y envíos a todo el país.",
+      "shortDescription": "Lente fijo Canon RF 28 mm f/2.8 STM. Gran angular ultracompacto y liviano para cámaras mirrorless Canon EOS R, con enfoque STM silencioso para foto y video.",
+      "highlights": [
+        "Gran angular fijo de 28 mm, f/2.8",
+        "Ultracompacto y liviano",
+        "Motor STM: enfoque silencioso y preciso",
+        "Desenfoque de fondo agradable",
+        "Para fotografía callejera, arquitectura y paisajes",
+        "Compatible con todas las cámaras Canon EOS R"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Gran angular fijo"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "28 mm (fija)"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/2.8"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "STM"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Calle, arquitectura, paisajes, retratos ambientales"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 28 mm f/2.8 STM es un gran angular fijo muy compacto y liviano para el sistema mirrorless Canon EOS R.</p><h3>Tamaño y luz</h3><p>Su diseño ultracompacto se lleva fácil a todos lados. Con f/2.8 rinde bien con poca luz y desenfoca el fondo de forma agradable.</p><h3>Enfoque</h3><p>El motor STM enfoca de forma silenciosa y precisa, para foto y video.</p><h3>Para qué sirve</h3><p>Fotografía callejera, arquitectura, paisajes y retratos ambientales.</p><h3>Antes de comprar</h3><ul><li>Es de montura RF: va en cámaras Canon mirrorless de la serie EOS R.</li><li>La descripción no indica si tiene estabilización.</li></ul>",
+      "revisar": [
+        "Este producto ya tenía marca Canon y nombre con \"Lente\".",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-35m-f-1-4-l-vcm",
+      "name": "Lente Canon RF 35mm f/1.4 L VCM",
+      "brand": "Canon",
+      "model": "RF 35mm f/1.4 L VCM",
+      "seoTitle": "Lente Canon RF 35mm f/1.4 L VCM",
+      "seoDescription": "Lente Canon RF 35mm f/1.4 L VCM nuevo: serie L luminoso con motor VCM y resistencia al polvo y la humedad. Garantía y envíos a todo el país.",
+      "shortDescription": "Lente fijo Canon RF 35 mm f/1.4 L VCM, de la serie L. Apertura f/1.4, motor VCM de enfoque rápido y silencioso, y resistencia al polvo y la humedad.",
+      "highlights": [
+        "Lente fijo de 35 mm de la serie L, f/1.4",
+        "Buen rendimiento con poca luz y bokeh que aísla al sujeto",
+        "Motor VCM: enfoque ultrarrápido y silencioso",
+        "Resistente al polvo y la humedad",
+        "Imágenes nítidas con calidad óptica superior",
+        "Para retratos, ciudad y trabajo documental"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Fijo, serie L"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "35 mm (fija)"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/1.4"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "VCM (Voice Coil Motor)"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Al polvo y a la humedad"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Retratos, paisajes urbanos, documental"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 35 mm f/1.4 L VCM es un lente fijo profesional para cámaras mirrorless del sistema RF. Es de la serie L.</p><h3>Luz y bokeh</h3><p>Con f/1.4 rinde muy bien con poca luz y separa al sujeto del fondo.</p><h3>Enfoque</h3><p>El motor Voice Coil Motor (VCM) enfoca de forma ultrarrápida y silenciosa.</p><h3>Construcción y uso</h3><p>La serie L asegura resistencia al polvo y la humedad. Sirve para retratos, paisajes urbanos y trabajo documental.</p><h3>Antes de comprar</h3><ul><li>Es de montura RF: va en cámaras Canon mirrorless de la serie EOS R.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "Nombre original \"35M\": lo pasé a \"35mm\". La descripción lo llama \"gran angular\"; en la ficha lo dejé como lente fijo.",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-35m-f-1-8-macro-is-stm",
+      "name": "Lente Canon RF 35mm f/1.8 Macro IS STM",
+      "brand": "Canon",
+      "model": "RF 35mm f/1.8 Macro IS STM",
+      "seoTitle": "Lente Canon RF 35mm f/1.8 Macro IS STM",
+      "seoDescription": "Lente Canon RF 35mm f/1.8 Macro IS STM nuevo: lente fijo con macro 1:2 y estabilización de 5 pasos. Garantía y envíos a todo el país.",
+      "shortDescription": "Lente fijo Canon RF 35 mm f/1.8 Macro IS STM. Macro con ampliación 1:2, estabilización óptica de 5 pasos y enfoque STM silencioso para foto y video.",
+      "highlights": [
+        "Lente fijo de 35 mm, apertura f/1.8",
+        "Macro con ampliación 1:2",
+        "Estabilización óptica de 5 pasos",
+        "Motor STM: enfoque rápido y silencioso",
+        "Elementos de dispersión ultra baja contra aberraciones",
+        "Revestimiento Super Spectra que reduce reflejos"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Fijo macro"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "35 mm (fija)"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/1.8"
+        },
+        {
+          "label": "Ampliación macro",
+          "value": "1:2"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "STM"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica, 5 pasos"
+        },
+        {
+          "label": "Tratamiento óptico",
+          "value": "Super Spectra"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Macro, retratos, paisajes"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 35 mm f/1.8 Macro IS STM es un lente versátil para el sistema de monturas RF. Sirve para macro, retratos y paisajes.</p><h3>Macro y luz</h3><p>La ampliación macro 1:2 y la apertura f/1.8 dan calidad tanto en primeros planos como en retratos y paisajes.</p><h3>Estabilización y enfoque</h3><p>El IS de 5 pasos mantiene la nitidez con poca luz. El motor STM enfoca rápido y en silencio, ideal para video.</p><h3>Óptica</h3><p>Los elementos de dispersión ultra baja minimizan las aberraciones cromáticas. El revestimiento Super Spectra reduce reflejos y mejora el contraste.</p><h3>Antes de comprar</h3><ul><li>Es de montura RF: va en cámaras Canon mirrorless de la serie EOS R.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "Nombre original \"35M\": lo pasé a \"35mm\".",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    },
+    {
+      "slug": "canon-rf-600-f-11l-is-stm",
+      "name": "Lente Canon RF 600mm f/11L IS STM",
+      "brand": "Canon",
+      "model": "RF 600mm f/11L IS STM",
+      "seoTitle": "Lente Canon RF 600mm f/11L IS STM",
+      "seoDescription": "Lente Canon RF 600mm f/11L IS STM nuevo: teleobjetivo fijo con estabilización de 5 pasos y enfoque STM. Garantía y envíos a todo el país.",
+      "shortDescription": "Teleobjetivo fijo Canon RF 600 mm f/11L IS STM. Estabilización óptica de 5 pasos, motor STM silencioso y diseño compacto y ligero para fauna y deportes.",
+      "highlights": [
+        "Teleobjetivo fijo de 600 mm, apertura f/11",
+        "Estabilización óptica de 5 pasos",
+        "Motor STM ultrasilencioso",
+        "Diseño compacto y ligero para expediciones",
+        "Elementos de baja dispersión contra aberraciones cromáticas",
+        "Para fauna, deportes y naturaleza"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Tipo",
+          "value": "Teleobjetivo fijo"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "600 mm (fija)"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/11"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "STM"
+        },
+        {
+          "label": "Estabilización",
+          "value": "Óptica, 5 pasos"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Fauna, deportes, naturaleza"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 600 mm f/11L IS STM es un teleobjetivo fijo para fotografiar a gran distancia. Es compacto y ligero para su alcance.</p><h3>Alcance y estabilización</h3><p>Los 600 mm acercan sujetos lejanos. La estabilización óptica de 5 pasos ayuda a lograr tomas nítidas.</p><h3>Enfoque</h3><p>El motor STM enfoca rápido, preciso y en silencio.</p><h3>Óptica</h3><p>Incluye elementos de baja dispersión que minimizan aberraciones cromáticas y dan colores vibrantes.</p><h3>Antes de comprar</h3><ul><li>Es de montura RF; la descripción dice que es compatible con cámaras Canon EOS R.</li></ul>",
+      "revisar": [
+        "Marca estaba como \"General\": la paso a Canon.",
+        "Nombre original \"RF 600 F/11L\": revisar si es \"L\" realmente (la descripción original dice serie L).",
+        "La descripción original es genérica (parece redactada sin ficha técnica): validar apertura, estabilización y sellado contra la ficha oficial de Canon."
+      ]
+    }
+  ]
+}

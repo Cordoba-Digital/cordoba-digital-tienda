@@ -1,0 +1,1921 @@
+{
+  "lote": "catalogo-A-15",
+  "productos": [
+    {
+      "slug": "ln-brother-hl-1200-21ppm",
+      "name": "Impresora Brother HL-1200 21 ppm",
+      "brand": "Brother",
+      "model": "HL-1200",
+      "seoTitle": "Impresora Brother HL-1200 21 ppm",
+      "seoDescription": "Impresora Brother HL-1200 de 21 páginas por minuto. Ficha básica, consultanos por consumibles. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Impresora Brother HL-1200 con velocidad de impresión de 21 páginas por minuto.",
+      "highlights": [
+        "Impresora Brother modelo HL-1200",
+        "Velocidad de 21 páginas por minuto",
+        "Garantía oficial y envíos a todo el país"
+      ],
+      "specs": [
+        {
+          "label": "Velocidad de impresión",
+          "value": "21 ppm"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother HL-1200 es una impresora con velocidad de 21 páginas por minuto. Consultanos por tamaños de papel y conectividad.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan tecnología, conectividad y consumibles.",
+        "El nombre dice 'LN' al principio: no sé qué significa (¿láser negro?). No lo usé. Confirmar tecnología (láser o tinta)."
+      ]
+    },
+    {
+      "slug": "ln-brother-hl-1212w-21ppm-wifi",
+      "name": "Impresora Brother HL-1212W 21 ppm Wi-Fi",
+      "brand": "Brother",
+      "model": "HL-1212W",
+      "seoTitle": "Impresora Brother HL-1212W 21 ppm Wi-Fi",
+      "seoDescription": "Impresora Brother HL-1212W con Wi-Fi y velocidad de 21 páginas por minuto. Garantía oficial y envíos a todo el país, retiro en Córdoba.",
+      "shortDescription": "Impresora Brother HL-1212W con conectividad Wi-Fi y velocidad de 21 páginas por minuto.",
+      "highlights": [
+        "Impresora Brother modelo HL-1212W",
+        "Conectividad Wi-Fi",
+        "Velocidad de 21 páginas por minuto"
+      ],
+      "specs": [
+        {
+          "label": "Velocidad de impresión",
+          "value": "21 ppm"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother HL-1212W es una impresora con Wi-Fi y velocidad de 21 páginas por minuto. Con la conexión inalámbrica podés imprimir sin cables desde tu red.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan tecnología, conectividad y consumibles.",
+        "El nombre dice 'LN' al principio: no se sabe qué significa. No lo usé. Confirmar tecnología."
+      ]
+    },
+    {
+      "slug": "ln-brother-hl-2320d-30ppm-duplex-2",
+      "name": "Impresora Láser Brother HL-2320D 30 ppm Dúplex",
+      "model": "HL-2320D",
+      "seoTitle": "Impresora Láser Brother HL-2320D 30 ppm",
+      "seoDescription": "Impresora láser monocromática Brother HL-2320D con dúplex automático y 30 ppm. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Impresora láser monocromática Brother HL-2320D. Imprime a 30 páginas por minuto y en ambas caras de forma automática. Conexión USB.",
+      "highlights": [
+        "Láser monocromática de 30 páginas por minuto",
+        "Impresión automática a doble cara: gastás menos papel",
+        "Conexión USB y compatibilidad con varios sistemas operativos",
+        "Diseño compacto para escritorios y oficinas chicas"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Láser monocromática"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "30 ppm"
+        },
+        {
+          "label": "Impresión a doble cara",
+          "value": "Automática (dúplex)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "USB"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother HL-2320D es una impresora láser monocromática para oficina y hogar. Imprime 30 páginas por minuto y hace dúplex automático.</p><h3>Velocidad y ahorro de papel</h3><p>Con 30 páginas por minuto resolvés tandas de documentos sin esperar. El dúplex automático imprime en ambas caras de la hoja y reduce el consumo de papel.</p><h3>Conexión y tamaño</h3><ul><li>Puerto USB para conectarla a tu PC.</li><li>Compatible con varios sistemas operativos.</li><li>Diseño compacto: ocupa poco lugar.</li></ul><h3>Antes de comprar</h3><p>Es monocromática: imprime en blanco y negro. La descripción indica conexión USB y no menciona Wi-Fi ni red.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarla en Córdoba.</p>",
+      "revisar": [
+        "La descripción dice 'incluye tóner de alta capacidad': no lo publiqué, confirmar qué tóner trae en la caja.",
+        "El SKU (HLL2320D) coincide con el modelo. En Antes de comprar aclaré que no se menciona Wi-Fi ni red (solo USB). Confirmar si tiene red."
+      ]
+    },
+    {
+      "slug": "ln-brother-hl-l5210dw-48ppm-duplex-red",
+      "name": "Impresora Láser Brother HL-L5210DN 48 ppm Dúplex Red",
+      "model": "HL-L5210DN",
+      "seoTitle": "Impresora Láser Brother HL-L5210DN 48 ppm",
+      "seoDescription": "Impresora láser Brother HL-L5210DN de 48 páginas por minuto con dúplex automático y conexión de red. Garantía y envíos a todo el país.",
+      "shortDescription": "Impresora láser Brother HL-L5210DN. Velocidad de 48 páginas por minuto, impresión dúplex y conexión de red.",
+      "highlights": [
+        "Velocidad de 48 páginas por minuto",
+        "Impresión automática a doble cara",
+        "Conexión de red para compartirla en la oficina"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Láser"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "48 ppm"
+        },
+        {
+          "label": "Impresión a doble cara",
+          "value": "Automática (dúplex)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Red"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother HL-L5210DN es una impresora láser de 48 páginas por minuto. Imprime en ambas caras de forma automática y se conecta a la red para que la compartan varios equipos.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan tecnología, conectividad y consumibles.",
+        "Tres códigos distintos: slug HL-L5210DW, nombre HL-L5210DN y SKU HLL2360DW. Use el nombre (DN), que no tiene Wi-Fi. Confirmar el modelo real antes de publicar.",
+        "No dice si es monocromática o color."
+      ]
+    },
+    {
+      "slug": "ln-hp-m501dn-lj-45ppm-eprint-j8h61a",
+      "name": "Impresora Láser HP LaserJet Pro M501dn 45 ppm Dúplex Red",
+      "brand": "HP",
+      "model": "LaserJet Pro M501dn",
+      "seoTitle": "Impresora láser HP LaserJet Pro M501dn",
+      "seoDescription": "Impresora láser monocromática HP LaserJet Pro M501dn: 45 ppm, dúplex y Ethernet. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "HP LaserJet Pro M501dn, impresora láser monocromática de 45 páginas por minuto con dúplex automático, Ethernet, USB 2.0 y HP ePrint. Resolución de hasta 1200 x 1200 dpi.",
+      "highlights": [
+        "45 páginas por minuto, láser monocromática",
+        "Dúplex automático para imprimir en ambas caras",
+        "Ethernet integrado para compartirla en red",
+        "Bandeja de 550 hojas más ranura multipropósito de 100",
+        "Impresión desde dispositivos móviles con HP ePrint"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Láser monocromática"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "45 ppm"
+        },
+        {
+          "label": "Resolución",
+          "value": "Hasta 1200 x 1200 dpi"
+        },
+        {
+          "label": "Impresión a doble cara",
+          "value": "Automática (dúplex)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Ethernet y USB 2.0"
+        },
+        {
+          "label": "Impresión móvil",
+          "value": "HP ePrint"
+        },
+        {
+          "label": "Bandeja de entrada",
+          "value": "550 hojas + ranura multipropósito de 100 hojas"
+        },
+        {
+          "label": "Número de parte",
+          "value": "J8H61A"
+        }
+      ],
+      "descriptionHtml": "<p>La HP LaserJet Pro M501dn es una impresora láser monocromática para oficinas con mucho volumen de trabajo. Imprime 45 páginas por minuto y hace dúplex automático.</p><h3>Productividad</h3><p>La bandeja de 550 hojas más la ranura multipropósito de 100 hojas reducen las recargas de papel. La resolución llega a 1200 x 1200 dpi, con texto nítido.</p><h3>Conexión</h3><ul><li>Ethernet integrado para compartirla en la red de la oficina.</li><li>Puerto USB 2.0.</li><li>HP ePrint para imprimir desde celulares y tablets.</li></ul><h3>Antes de comprar</h3><p>Imprime solo en blanco y negro. La ficha no indica Wi-Fi: la conexión es por cable de red o USB.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarla en Córdoba.</p>",
+      "revisar": [
+        "La descripción dice que el dúplex 'reduce el consumo de papel hasta un 50%': no lo publiqué.",
+        "Dice ePrint 'de forma inalámbrica' pero no menciona Wi-Fi: en la ficha aclaré que no se indica Wi-Fi. Confirmar."
+      ]
+    },
+    {
+      "slug": "mf-brother-dcp-t230-27-11ppm-sist-continuo",
+      "name": "Multifunción Brother DCP-T230 Sistema de tinta continua",
+      "brand": "Brother",
+      "model": "DCP-T230",
+      "seoTitle": "Multifunción Brother DCP-T230 de tinta",
+      "seoDescription": "Multifunción Brother DCP-T230 con sistema de tinta continua. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Multifunción Brother DCP-T230 con sistema de tinta continua.",
+      "highlights": [
+        "Multifunción Brother modelo DCP-T230",
+        "Sistema de tinta continua"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción"
+        },
+        {
+          "label": "Sistema de tinta",
+          "value": "Continua"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother DCP-T230 es una multifunción con sistema de tinta continua. Consultanos por conectividad y velocidad.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan tecnología, conectividad y consumibles.",
+        "No publiqué velocidad: los nombres de las T230/T430W/T530DW/T830DW dicen 27/11 o 28/11 ppm pero la T730DW dice 27/23 ppm (modo ECO) en la descripción. Confirmar valores con Brother.",
+        "No dice si es de tinta (se asume por 'sistema continuo'), ni conectividad."
+      ]
+    },
+    {
+      "slug": "mf-brother-dcp-t430w-28-11ppm-sist-continuo",
+      "name": "Multifunción Brother DCP-T430W Sistema de tinta continua",
+      "brand": "Brother",
+      "model": "DCP-T430W",
+      "seoTitle": "Multifunción Brother DCP-T430W de tinta",
+      "seoDescription": "Multifunción Brother DCP-T430W con sistema de tinta continua. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Multifunción Brother DCP-T430W con sistema de tinta continua.",
+      "highlights": [
+        "Multifunción Brother modelo DCP-T430W",
+        "Sistema de tinta continua"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción"
+        },
+        {
+          "label": "Sistema de tinta",
+          "value": "Continua"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother DCP-T430W es una multifunción con sistema de tinta continua. Consultanos por conectividad y velocidad.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan tecnología, conectividad y consumibles.",
+        "No publiqué velocidad: los nombres de las T230/T430W/T530DW/T830DW dicen 27/11 o 28/11 ppm pero la T730DW dice 27/23 ppm (modo ECO) en la descripción. Confirmar valores con Brother.",
+        "No dice si es de tinta (se asume por 'sistema continuo'), ni conectividad."
+      ]
+    },
+    {
+      "slug": "mf-brother-dcp-t530dw-28-11ppm-sist-continuo",
+      "name": "Multifunción Brother DCP-T530DW Sistema de tinta continua",
+      "brand": "Brother",
+      "model": "DCP-T530DW",
+      "seoTitle": "Multifunción Brother DCP-T530DW de tinta",
+      "seoDescription": "Multifunción Brother DCP-T530DW con sistema de tinta continua. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Multifunción Brother DCP-T530DW con sistema de tinta continua.",
+      "highlights": [
+        "Multifunción Brother modelo DCP-T530DW",
+        "Sistema de tinta continua"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción"
+        },
+        {
+          "label": "Sistema de tinta",
+          "value": "Continua"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother DCP-T530DW es una multifunción con sistema de tinta continua. Consultanos por conectividad y velocidad.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan tecnología, conectividad y consumibles.",
+        "No publiqué velocidad: los nombres de las T230/T430W/T530DW/T830DW dicen 27/11 o 28/11 ppm pero la T730DW dice 27/23 ppm (modo ECO) en la descripción. Confirmar valores con Brother.",
+        "No dice si es de tinta (se asume por 'sistema continuo'), ni conectividad."
+      ]
+    },
+    {
+      "slug": "mf-brother-dcp-t730dw-28-11ppm-sist-continuo",
+      "name": "Multifunción Brother DCP-T730DW Sistema de tinta continua Dúplex",
+      "brand": "Brother",
+      "model": "DCP-T730DW",
+      "seoTitle": "Multifunción Brother DCP-T730DW de tinta",
+      "seoDescription": "Multifunción Brother DCP-T730DW con tanque de tinta, dúplex, ADF de 20 hojas y Wi-Fi de doble banda. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Multifunción 3 en 1 Brother DCP-T730DW InkBenefit Tank con tanque de tinta de recarga frontal, dúplex automático, ADF de 20 hojas, Wi-Fi de doble banda, Ethernet y USB.",
+      "highlights": [
+        "Impresora, copiadora y escáner con tanque de tinta de recarga frontal",
+        "Dúplex automático: imprime en ambas caras",
+        "ADF de 20 hojas para copiar y escanear sin cargar de a una",
+        "Wi-Fi de doble banda (2,4 y 5 GHz), Ethernet y USB",
+        "Resolución de impresión de hasta 6000 x 1200 dpi",
+        "App Brother Mobile Connect para iOS y Android"
+      ],
+      "specs": [
+        {
+          "label": "Funciones",
+          "value": "Impresión, copia y escaneo"
+        },
+        {
+          "label": "Tecnología",
+          "value": "Inyección de tinta con tanque (InkBenefit Tank)"
+        },
+        {
+          "label": "Resolución de impresión",
+          "value": "Hasta 6000 x 1200 dpi"
+        },
+        {
+          "label": "Impresión a doble cara",
+          "value": "Automática"
+        },
+        {
+          "label": "Alimentador automático (ADF)",
+          "value": "20 hojas"
+        },
+        {
+          "label": "Bandeja de papel",
+          "value": "150 hojas + ranura manual de 1 hoja"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 2,4 / 5 GHz, Ethernet y USB"
+        },
+        {
+          "label": "Pantalla",
+          "value": "LCD"
+        },
+        {
+          "label": "Impresión móvil",
+          "value": "Brother Mobile Connect (iOS y Android)"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother DCP-T730DW es una multifunción 3 en 1 con tanque de tinta, pensada para el hogar y la pequeña oficina. Imprime, copia y escanea, con dúplex automático y alimentador de documentos.</p><h3>Tanque de tinta</h3><p>El tanque viene integrado de fábrica y se recarga por el frente. Podés ver el nivel de tinta y rellenarlo sin derrames: las botellas originales tienen boquilla antiderrames que corta el flujo cuando el tanque está lleno.</p><h3>Documentos</h3><ul><li>Dúplex automático para imprimir en ambas caras.</li><li>ADF de 20 hojas para copiar y escanear varias páginas seguidas.</li><li>Bandeja cubierta de 150 hojas y ranura manual de 1 hoja para sobres o papel más grueso.</li><li>Papel A4, Carta, Oficio y fotografías.</li></ul><h3>Conectividad</h3><p>Wi-Fi de doble banda, Ethernet y USB. Con la app Brother Mobile Connect imprimís, escaneás y revisás el nivel de tinta desde el celular. La pantalla LCD sirve para copias rápidas y mantenimiento.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarla en Córdoba.</p>",
+      "revisar": [
+        "No publiqué velocidad: la descripción dice 27 ppm negro / 23 color (modo ECO) y 16/15 ipm (ISO), pero el slug y las hermanas DCP-T430W/T530DW/T830DW dicen 28/11 ppm. Confirmar.",
+        "La descripción menciona 'costo por página ultra bajo' y 'miles de páginas': no lo publiqué.",
+        "La descripción estaba cortada en 'Pantalla L...': pueden faltar datos de escaneo y dimensiones."
+      ]
+    },
+    {
+      "slug": "mf-brother-dcp-t830dw-28-11ppm-sist-continuo",
+      "name": "Multifunción Brother DCP-T830DW Sistema de tinta continua Dúplex",
+      "brand": "Brother",
+      "model": "DCP-T830DW",
+      "seoTitle": "Multifunción Brother DCP-T830DW de tinta",
+      "seoDescription": "Multifunción Brother DCP-T830DW con sistema de tinta continua, impresión dúplex. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Multifunción Brother DCP-T830DW con sistema de tinta continua, impresión dúplex.",
+      "highlights": [
+        "Multifunción Brother modelo DCP-T830DW",
+        "Sistema de tinta continua",
+        "Impresión a doble cara"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción"
+        },
+        {
+          "label": "Sistema de tinta",
+          "value": "Continua"
+        },
+        {
+          "label": "Impresión a doble cara",
+          "value": "Dúplex"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother DCP-T830DW es una multifunción con sistema de tinta continua. Consultanos por conectividad y velocidad.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan tecnología, conectividad y consumibles.",
+        "No publiqué velocidad: los nombres de las T230/T430W/T530DW/T830DW dicen 27/11 o 28/11 ppm pero la T730DW dice 27/23 ppm (modo ECO) en la descripción. Confirmar valores con Brother.",
+        "No dice si es de tinta (se asume por 'sistema continuo'), ni conectividad."
+      ]
+    },
+    {
+      "slug": "mf-brother-mfc-j5340dw-28ppm-wifi-fax-red-a3",
+      "name": "Multifunción Brother MFC-J5340DW 28 ppm Wi-Fi Fax Red A3",
+      "brand": "Brother",
+      "model": "MFC-J5340DW",
+      "seoTitle": "Multifunción Brother MFC-J5340DW A3 Wi-Fi",
+      "seoDescription": "Multifunción Brother MFC-J5340DW: 28 ppm, Wi-Fi, fax, red y formato A3. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Multifunción Brother MFC-J5340DW con 28 ppm, Wi-Fi, fax y conexión de red y formato A3.",
+      "highlights": [
+        "Velocidad de 28 páginas por minuto",
+        "Conectividad Wi-Fi y red",
+        "Incluye fax",
+        "Formato A3"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "28 ppm"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi y red"
+        },
+        {
+          "label": "Fax",
+          "value": "Sí"
+        },
+        {
+          "label": "Formato máximo",
+          "value": "A3"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother MFC-J5340DW es una multifunción con fax, Wi-Fi y red y formato A3. Imprime a 28 ppm.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan tecnología, consumibles y detalles de conectividad.",
+        "Consultar si es de tinta o láser y qué consumibles usa (el nombre no lo dice)."
+      ]
+    },
+    {
+      "slug": "mf-brother-mfc-j6955dw-30ppm-wifi-fax-a3",
+      "name": "Multifunción Brother MFC-J6955DW 30 ppm Wi-Fi Fax A3",
+      "brand": "Brother",
+      "model": "MFC-J6955DW",
+      "seoTitle": "Multifunción Brother MFC-J6955DW A3 Wi-Fi",
+      "seoDescription": "Multifunción Brother MFC-J6955DW con 30 ppm, Wi-Fi, fax y formato A3. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Multifunción Brother MFC-J6955DW con 30 ppm, Wi-Fi, fax y formato A3.",
+      "highlights": [
+        "Velocidad de 30 páginas por minuto",
+        "Conectividad Wi-Fi",
+        "Incluye fax",
+        "Formato A3"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "30 ppm"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        },
+        {
+          "label": "Fax",
+          "value": "Sí"
+        },
+        {
+          "label": "Formato máximo",
+          "value": "A3"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother MFC-J6955DW es una multifunción con fax, Wi-Fi y formato A3. Imprime a 30 ppm.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan tecnología, consumibles y detalles de conectividad.",
+        "Consultar si es de tinta o láser y qué consumibles usa (el nombre no lo dice)."
+      ]
+    },
+    {
+      "slug": "mf-brother-mfc-t4500dw-35-27-ppm-sist-continuo-a3",
+      "name": "Multifunción Brother MFC-T4500DW 35/27 ppm Sistema de tinta continua A3",
+      "brand": "Brother",
+      "model": "MFC-T4500DW",
+      "seoTitle": "Multifunción Brother MFC-T4500DW A3",
+      "seoDescription": "Multifunción Brother MFC-T4500DW con tinta continua, impresión A3, 35 ppm y Wi-Fi, con escáner, copiadora y fax. Garantía y envíos a todo el país.",
+      "shortDescription": "Multifunción Brother MFC-T4500DW con sistema de tinta continua e impresión A3. Imprime hasta 35 ppm en negro y 27 ppm a color, con Wi-Fi, escáner, copiadora y fax.",
+      "highlights": [
+        "Impresión A3 con sistema de tinta continua",
+        "Hasta 35 ppm en negro y 27 ppm a color",
+        "Wi-Fi para imprimir desde cualquier dispositivo",
+        "Escáner, copiadora y fax en un solo equipo"
+      ],
+      "specs": [
+        {
+          "label": "Funciones",
+          "value": "Impresión, escaneo, copia y fax"
+        },
+        {
+          "label": "Sistema de tinta",
+          "value": "Continua"
+        },
+        {
+          "label": "Formato máximo de impresión",
+          "value": "A3"
+        },
+        {
+          "label": "Velocidad en negro",
+          "value": "Hasta 35 ppm"
+        },
+        {
+          "label": "Velocidad a color",
+          "value": "Hasta 27 ppm"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother MFC-T4500DW es una multifunción profesional con sistema de tinta continua. Imprime en formato A3 y suma escáner, copiadora y fax.</p><h3>Velocidad</h3><p>Llega a 35 páginas por minuto en negro y 27 a color. Está pensada para oficinas con trabajo constante.</p><h3>Conectividad</h3><p>Con Wi-Fi imprimís sin cables desde computadoras y dispositivos móviles.</p><h3>Costos de impresión</h3><p>El sistema de tinta continua apunta a reducir los costos de impresión.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarla en Córdoba.</p>",
+      "revisar": [
+        "La descripción dice 'reduce significativamente los costos operativos' y 'solución integral perfecta': lo moderé. Sin cifras de rendimiento ni de bandejas.",
+        "El nombre no aclara si escanea y copia en A3; no lo publiqué."
+      ]
+    },
+    {
+      "slug": "mf-hp-smart-tank-530-aio-printer-4sb24a-wifi",
+      "name": "Multifunción HP Smart Tank 530 AIO 4SB24A Wi-Fi",
+      "brand": "HP",
+      "model": "Smart Tank 530",
+      "seoTitle": "Multifunción HP Smart Tank 530 Wi-Fi",
+      "seoDescription": "Multifunción HP Smart Tank 530 (4SB24A) con Wi-Fi. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Multifunción HP Smart Tank 530 All-in-One, número de parte 4SB24A, con conectividad Wi-Fi.",
+      "highlights": [
+        "Multifunción HP Smart Tank 530",
+        "Conectividad Wi-Fi",
+        "Número de parte 4SB24A"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción All-in-One"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        },
+        {
+          "label": "Número de parte",
+          "value": "4SB24A"
+        }
+      ],
+      "descriptionHtml": "<p>La HP Smart Tank 530 es una multifunción All-in-One con Wi-Fi (parte 4SB24A). Pertenece a la línea Smart Tank de HP.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan tecnología, consumibles y detalles de conectividad.",
+        "Brand venía 'General'; el nombre dice HP.",
+        "Confirmar velocidad, dúplex, ADF y tintas de este modelo."
+      ]
+    },
+    {
+      "slug": "mf-hp-smart-tank-720-aio-printer-6uu46a-wifi",
+      "name": "Multifunción HP Smart Tank 720 AIO 6UU46A Wi-Fi",
+      "brand": "HP",
+      "model": "Smart Tank 720",
+      "seoTitle": "Multifunción HP Smart Tank 720 Wi-Fi",
+      "seoDescription": "Multifunción HP Smart Tank 720 (6UU46A) con Wi-Fi. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Multifunción HP Smart Tank 720 All-in-One, número de parte 6UU46A, con conectividad Wi-Fi.",
+      "highlights": [
+        "Multifunción HP Smart Tank 720",
+        "Conectividad Wi-Fi",
+        "Número de parte 6UU46A"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción All-in-One"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        },
+        {
+          "label": "Número de parte",
+          "value": "6UU46A"
+        }
+      ],
+      "descriptionHtml": "<p>La HP Smart Tank 720 es una multifunción All-in-One con Wi-Fi (parte 6UU46A). Pertenece a la línea Smart Tank de HP.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan tecnología, consumibles y detalles de conectividad.",
+        "Brand venía 'General'; el nombre dice HP.",
+        "Confirmar velocidad, dúplex, ADF y tintas de este modelo."
+      ]
+    },
+    {
+      "slug": "mf-hp-smart-tank-750-aio-printer-6uu47a-wifi",
+      "name": "Multifunción HP Smart Tank 750 AIO 6UU47A Wi-Fi",
+      "brand": "HP",
+      "model": "Smart Tank 750",
+      "seoTitle": "Multifunción HP Smart Tank 750 Wi-Fi",
+      "seoDescription": "Multifunción HP Smart Tank 750 (6UU47A) con Wi-Fi. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Multifunción HP Smart Tank 750 All-in-One, número de parte 6UU47A, con conectividad Wi-Fi.",
+      "highlights": [
+        "Multifunción HP Smart Tank 750",
+        "Conectividad Wi-Fi",
+        "Número de parte 6UU47A"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción All-in-One"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        },
+        {
+          "label": "Número de parte",
+          "value": "6UU47A"
+        }
+      ],
+      "descriptionHtml": "<p>La HP Smart Tank 750 es una multifunción All-in-One con Wi-Fi (parte 6UU47A). Pertenece a la línea Smart Tank de HP.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan tecnología, consumibles y detalles de conectividad.",
+        "Brand venía 'General'; el nombre dice HP.",
+        "Confirmar velocidad, dúplex, ADF y tintas de este modelo."
+      ]
+    },
+    {
+      "slug": "mfl-brother-dcp-1617nw-21ppm-wifi",
+      "name": "Multifunción Láser Brother DCP-1617NW 21 ppm Wi-Fi",
+      "brand": "Brother",
+      "model": "DCP-1617NW",
+      "seoTitle": "Multifunción Láser Brother DCP-1617NW",
+      "seoDescription": "Multifunción láser monocromática Brother DCP-1617NW con Wi-Fi y 21 ppm: imprime, copia y escanea. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Multifunción láser monocromática Brother DCP-1617NW. Imprime, copia y escanea a 21 páginas por minuto, con Wi-Fi integrado.",
+      "highlights": [
+        "Imprime, copia y escanea en un solo equipo",
+        "Láser monocromática de 21 páginas por minuto",
+        "Wi-Fi integrado, sin cables",
+        "Compatible con dispositivos móviles",
+        "Diseño compacto"
+      ],
+      "specs": [
+        {
+          "label": "Funciones",
+          "value": "Impresión, copia y escaneo"
+        },
+        {
+          "label": "Tecnología",
+          "value": "Láser monocromática"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "21 ppm"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother DCP-1617NW es una multifunción láser monocromática para oficina o casa. Imprime, copia y escanea, y se conecta por Wi-Fi.</p><h3>Velocidad</h3><p>Imprime hasta 21 páginas por minuto con tecnología láser monocromática.</p><h3>Conexión</h3><ul><li>Wi-Fi integrado para imprimir desde la computadora sin cables.</li><li>Compatible con dispositivos móviles.</li></ul><h3>Antes de comprar</h3><p>Imprime en blanco y negro. Tiene diseño compacto para espacios reducidos.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarla en Córdoba.</p>",
+      "revisar": [
+        "La descripción no da datos de dúplex, bandeja ni tóner."
+      ]
+    },
+    {
+      "slug": "mfl-brother-dcp-l2540dw-30ppm-wifi-duplex",
+      "name": "Multifunción Láser Brother DCP-L2540DW 30 ppm Wi-Fi Dúplex",
+      "brand": "Brother",
+      "model": "DCP-L2540DW",
+      "seoTitle": "Multifunción Láser Brother DCP-L2540DW",
+      "seoDescription": "Multifunción láser Brother DCP-L2540DW de 30 ppm con Wi-Fi y dúplex. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Multifunción láser Brother DCP-L2540DW con velocidad de 30 ppm, Wi-Fi e impresión dúplex.",
+      "highlights": [
+        "Velocidad de 30 páginas por minuto",
+        "Conectividad Wi-Fi",
+        "Impresión a doble cara (dúplex)"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción láser"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "30 ppm"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        },
+        {
+          "label": "Impresión a doble cara",
+          "value": "Dúplex"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother DCP-L2540DW es una multifunción láser de 30 ppm. Tiene Wi-Fi e impresión dúplex.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan tecnología, consumibles y detalles de conectividad.",
+        "Confirmar si es monocromática (el nombre solo dice láser) y qué funciones trae (copia, escaneo, fax)."
+      ]
+    },
+    {
+      "slug": "mfl-brother-dcp-l2660dw-34ppm-wifi-duplex",
+      "name": "Multifunción Láser Brother DCP-L2660DW 34 ppm Wi-Fi Dúplex",
+      "brand": "Brother",
+      "model": "DCP-L2660DW",
+      "seoTitle": "Multifunción Láser Brother DCP-L2660DW",
+      "seoDescription": "Multifunción láser Brother DCP-L2660DW de 34 ppm con Wi-Fi y dúplex. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Multifunción láser Brother DCP-L2660DW con velocidad de 34 ppm, Wi-Fi e impresión dúplex.",
+      "highlights": [
+        "Velocidad de 34 páginas por minuto",
+        "Conectividad Wi-Fi",
+        "Impresión a doble cara (dúplex)"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción láser"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "34 ppm"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        },
+        {
+          "label": "Impresión a doble cara",
+          "value": "Dúplex"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother DCP-L2660DW es una multifunción láser de 34 ppm. Tiene Wi-Fi e impresión dúplex.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan tecnología, consumibles y detalles de conectividad.",
+        "Confirmar si es monocromática (el nombre solo dice láser) y qué funciones trae (copia, escaneo, fax)."
+      ]
+    },
+    {
+      "slug": "mfl-brother-mfc-l5915dw-50ppm-wifi-duplex",
+      "name": "Multifunción Láser Brother MFC-L5915DW 50 ppm Wi-Fi Dúplex",
+      "brand": "Brother",
+      "model": "MFC-L5915DW",
+      "seoTitle": "Multifunción Láser Brother MFC-L5915DW",
+      "seoDescription": "Multifunción láser Brother MFC-L5915DW de 50 ppm con Wi-Fi y dúplex. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Multifunción láser Brother MFC-L5915DW con velocidad de 50 ppm, Wi-Fi e impresión dúplex.",
+      "highlights": [
+        "Velocidad de 50 páginas por minuto",
+        "Conectividad Wi-Fi",
+        "Impresión a doble cara (dúplex)"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción láser"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "50 ppm"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        },
+        {
+          "label": "Impresión a doble cara",
+          "value": "Dúplex"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother MFC-L5915DW es una multifunción láser de 50 ppm. Tiene Wi-Fi e impresión dúplex.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan tecnología, consumibles y detalles de conectividad.",
+        "Confirmar si es monocromática (el nombre solo dice láser) y qué funciones trae (copia, escaneo, fax)."
+      ]
+    },
+    {
+      "slug": "mfl-hp-m141w-lj-21ppm-7md74a",
+      "name": "Multifunción Láser HP LaserJet M141w",
+      "brand": "HP",
+      "model": "LaserJet M141w",
+      "seoTitle": "Multifunción Láser HP LaserJet M141w",
+      "seoDescription": "Multifunción láser HP LaserJet M141w, número de parte 7MD74A. Ficha básica: consultanos por detalles. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Multifunción láser HP LaserJet M141w, número de parte 7MD74A.",
+      "highlights": [
+        "Multifunción láser HP LaserJet M141w",
+        "Número de parte 7MD74A",
+        "Garantía oficial y envíos a todo el país"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción láser"
+        },
+        {
+          "label": "Número de parte",
+          "value": "7MD74A"
+        }
+      ],
+      "descriptionHtml": "<p>La HP LaserJet M141w es una multifunción láser, número de parte 7MD74A. Es una ficha básica: consultanos por velocidad y conectividad.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan velocidad, conectividad y consumibles.",
+        "Hay otra ficha del mismo modelo (mfl-hp-m141w-lj-21ppm-7md74a-2) con 21 ppm y Wi-Fi. Acá no los puse porque esta ficha no los dice. Evaluar unificar las dos."
+      ]
+    },
+    {
+      "slug": "mfl-hp-m141w-lj-21ppm-7md74a-2",
+      "name": "Multifunción Láser HP LaserJet M141w 21 ppm",
+      "brand": "HP",
+      "model": "LaserJet M141w",
+      "seoTitle": "Multifunción Láser HP LaserJet M141w",
+      "seoDescription": "Multifunción láser HP LaserJet M141w con Wi-Fi: imprime, copia y escanea a 21 ppm. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Multifunción HP LaserJet M141w (7MD74A) que imprime, copia y escanea a 21 páginas por minuto, con Wi-Fi integrado y compatibilidad con HP Smart.",
+      "highlights": [
+        "Imprime, copia y escanea en un solo equipo",
+        "Láser de 21 páginas por minuto",
+        "Wi-Fi integrado",
+        "Impresión desde el celular con la app HP Smart"
+      ],
+      "specs": [
+        {
+          "label": "Funciones",
+          "value": "Impresión, copia y escaneo"
+        },
+        {
+          "label": "Tecnología",
+          "value": "Láser"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "21 ppm"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        },
+        {
+          "label": "Impresión móvil",
+          "value": "App HP Smart"
+        },
+        {
+          "label": "Número de parte",
+          "value": "7MD74A"
+        }
+      ],
+      "descriptionHtml": "<p>La HP LaserJet MFP M141w es una multifunción láser compacta. Imprime, copia y escanea, y se conecta por Wi-Fi.</p><h3>Velocidad y calidad</h3><p>Imprime 21 páginas por minuto. La tecnología láser da textos nítidos para documentos de trabajo o de estudio.</p><h3>Conexión</h3><p>Con el Wi-Fi integrado y la app HP Smart imprimís desde el celular o la computadora, sin cables.</p><h3>Uso diario</h3><p>Su diseño compacto ahorra espacio. Incluye funciones de ahorro de energía y es fácil de configurar.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarla en Córdoba.</p>",
+      "revisar": [
+        "La descripción no aclara si es monocromática; no lo puse.",
+        "Hay otra ficha del mismo modelo sin datos (mfl-hp-m141w-lj-21ppm-7md74a). Evaluar unificar."
+      ]
+    },
+    {
+      "slug": "mfl-hp-m236sdw-29ppm-9yg09a",
+      "name": "Multifunción Láser HP M236sdw Doble Faz",
+      "brand": "HP",
+      "model": "M236sdw",
+      "seoTitle": "Multifunción Láser HP M236sdw Doble Faz",
+      "seoDescription": "Multifunción láser HP LaserJet M236sdw con impresión a doble cara, número de parte 9YG09A. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Multifunción láser HP M236sdw con impresión a doble cara, número de parte 9YG09A.",
+      "highlights": [
+        "Multifunción láser HP M236sdw",
+        "Impresión a doble cara",
+        "Número de parte 9YG09A"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción láser"
+        },
+        {
+          "label": "Impresión a doble cara",
+          "value": "Sí"
+        },
+        {
+          "label": "Número de parte",
+          "value": "9YG09A"
+        }
+      ],
+      "descriptionHtml": "<p>La HP M236sdw es una multifunción láser con impresión a doble cara, número de parte 9YG09A. Es una ficha básica: consultanos por velocidad y conectividad.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan velocidad, conectividad y consumibles.",
+        "No publiqué velocidad: el slug dice 29 ppm, pero la otra ficha del mismo modelo (-2) trae 29 ppm en el nombre y 'hasta 30 ppm' en las especificaciones. Confirmar.",
+        "Hay una segunda ficha del mismo modelo (mfl-hp-m236sdw-29ppm-9yg09a-2) con más datos. Evaluar unificar."
+      ]
+    },
+    {
+      "slug": "mfl-hp-m236sdw-29ppm-9yg09a-2",
+      "name": "Multifunción Láser HP LaserJet M236sdw Dúplex",
+      "brand": "HP",
+      "model": "LaserJet M236sdw",
+      "seoTitle": "Multifunción Láser HP M236sdw Dúplex",
+      "seoDescription": "Multifunción láser HP LaserJet M236sdw con Wi-Fi, dúplex, Ethernet y HP Smart: imprime, copia y escanea. Garantía y envíos a todo el país.",
+      "shortDescription": "Multifunción láser monocromática HP LaserJet M236sdw. Imprime, copia y escanea con dúplex automático, Wi-Fi, Ethernet y la app HP Smart.",
+      "highlights": [
+        "Imprime, copia y escanea en un equipo compacto",
+        "Dúplex automático",
+        "Wi-Fi, Wi-Fi Direct, Ethernet y USB 2.0",
+        "Impresión móvil con HP Smart, AirPrint y Mopria",
+        "Hasta 20.000 páginas de ciclo de trabajo mensual"
+      ],
+      "specs": [
+        {
+          "label": "Funciones",
+          "value": "Impresión, copia y escaneo"
+        },
+        {
+          "label": "Tecnología",
+          "value": "Láser monocromática"
+        },
+        {
+          "label": "Resolución",
+          "value": "Hasta 600 x 600 dpi (HP FastRes 1200)"
+        },
+        {
+          "label": "Impresión a doble cara",
+          "value": "Automática"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi, Wi-Fi Direct, Ethernet 10/100, USB 2.0 y Bluetooth de bajo consumo"
+        },
+        {
+          "label": "Impresión móvil",
+          "value": "HP Smart, Apple AirPrint, Mopria"
+        },
+        {
+          "label": "Bandeja de entrada",
+          "value": "150 hojas"
+        },
+        {
+          "label": "Bandeja de salida",
+          "value": "100 hojas"
+        },
+        {
+          "label": "Memoria estándar",
+          "value": "64 MB"
+        },
+        {
+          "label": "Pantalla",
+          "value": "LCD de íconos de 1,6\""
+        },
+        {
+          "label": "Resolución de escaneo",
+          "value": "Hasta 600 ppp"
+        },
+        {
+          "label": "Ciclo de trabajo mensual",
+          "value": "Hasta 20.000 páginas"
+        }
+      ],
+      "descriptionHtml": "<p>La HP LaserJet MFP M236sdw es una multifunción láser monocromática para oficinas chicas y uso en casa. Imprime, escanea y copia, con dúplex automático.</p><h3>Impresión</h3><p>Resolución de hasta 600 x 600 dpi, con HP FastRes 1200 para calidad equivalente a 1200 dpi. Bandeja de entrada de 150 hojas y salida de 100.</p><h3>Conexión</h3><ul><li>Wi-Fi 802.11b/g/n, Wi-Fi Direct, Ethernet y USB 2.0.</li><li>Impresión desde el celular con la app HP Smart, AirPrint y Mopria.</li><li>Compatible con Windows y Mac.</li></ul><h3>Tóner</h3><p>Usa los cartuchos HP LaserJet 136A (W1360A, unas 1150 páginas) y 136X (W1360X, unas 2600 páginas).</p><h3>Antes de comprar</h3><p>Imprime solo en blanco y negro. No tiene lector de tarjetas de memoria.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarla en Córdoba.</p>",
+      "revisar": [
+        "Velocidad no publicada: el nombre dice 29 ppm y las especificaciones 'Normal hasta 30 ppm'. Confirmar.",
+        "Brand venía 'Hp'; lo normalicé a HP.",
+        "La descripción estaba cortada en 'Tamaño...': puede faltar el tamaño de escaneo y otras medidas. Hay otra ficha del mismo modelo (sin -2) con pocos datos."
+      ]
+    },
+    {
+      "slug": "mfl-hp-m4103fdw-lj-40ppm-wifi-eprint-2z629a",
+      "name": "Multifunción Láser HP LaserJet M4103fdw 40 ppm Wi-Fi ePrint",
+      "brand": "HP",
+      "model": "LaserJet M4103fdw",
+      "seoTitle": "Multifunción Láser HP M4103fdw 40 ppm",
+      "seoDescription": "Multifunción láser HP LaserJet M4103fdw de 40 ppm con Wi-Fi, ePrint, escáner, copiadora y fax. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Multifunción láser HP LaserJet M4103fdw de 40 páginas por minuto. Con Wi-Fi y ePrint, escanea, copia y envía fax.",
+      "highlights": [
+        "Láser de 40 páginas por minuto para volúmenes altos",
+        "Wi-Fi y HP ePrint para imprimir desde dispositivos móviles",
+        "Escáner, copiadora y fax en el mismo equipo",
+        "Diseño compacto y fácil de usar"
+      ],
+      "specs": [
+        {
+          "label": "Funciones",
+          "value": "Impresión, escaneo, copia y fax"
+        },
+        {
+          "label": "Tecnología",
+          "value": "Láser"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "Hasta 40 ppm"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        },
+        {
+          "label": "Impresión móvil",
+          "value": "HP ePrint"
+        },
+        {
+          "label": "Número de parte",
+          "value": "2Z629A"
+        }
+      ],
+      "descriptionHtml": "<p>La HP LaserJet M4103fdw es una multifunción láser para oficinas con mucho trabajo. Imprime hasta 40 páginas por minuto y suma escáner, copiadora y fax.</p><h3>Velocidad</h3><p>Los 40 páginas por minuto permiten manejar grandes volúmenes sin sacrificar calidad.</p><h3>Conexión</h3><p>Con Wi-Fi y HP ePrint imprimís desde celulares y otros dispositivos, sin cables.</p><h3>Funciones</h3><ul><li>Escaneo y copiado.</li><li>Envío de fax.</li><li>Diseño compacto para ahorrar espacio.</li></ul><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarla en Córdoba.</p>",
+      "revisar": [
+        "La descripción venía con bloques SHORT/LONG/TAGS/META copiados; los descarté.",
+        "No dice si es monocromática ni si tiene dúplex; no lo publiqué.",
+        "'LJ' en el nombre se expandió a LaserJet."
+      ]
+    },
+    {
+      "slug": "mflc-brother-dcp-l3560cdw-26ppm-duplex-red-wifi",
+      "name": "Multifunción Láser Color Brother DCP-L3560CDW 26 ppm Dúplex Red Wi-Fi",
+      "brand": "Brother",
+      "model": "DCP-L3560CDW",
+      "seoTitle": "Multifunción Láser Color Brother DCP-L3560CDW",
+      "seoDescription": "Multifunción láser color Brother DCP-L3560CDW de 26 ppm con Wi-Fi, dúplex y conexión de red. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Multifunción láser color Brother DCP-L3560CDW con velocidad de 26 ppm, impresión dúplex, Wi-Fi y conexión de red.",
+      "highlights": [
+        "Láser color de 26 páginas por minuto",
+        "Impresión a doble cara (dúplex)",
+        "Wi-Fi y conexión de red"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción láser color"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "26 ppm"
+        },
+        {
+          "label": "Impresión a doble cara",
+          "value": "Dúplex"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi y red"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother DCP-L3560CDW es una multifunción láser color de 26 ppm. Tiene dúplex, Wi-Fi y conexión de red.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan velocidad, conectividad y consumibles.",
+        "Confirmar funciones (copia, escaneo, fax) y consumibles."
+      ]
+    },
+    {
+      "slug": "mflc-brother-mfc-l8900cdw-33ppm-wifi-duplex",
+      "name": "Multifunción Láser Color Brother MFC-L8900CDW 33 ppm Wi-Fi Dúplex",
+      "brand": "Brother",
+      "model": "MFC-L8900CDW",
+      "seoTitle": "Multifunción Láser Color Brother MFC-L8900CDW",
+      "seoDescription": "Multifunción láser color Brother MFC-L8900CDW de 33 ppm con Wi-Fi y dúplex. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Multifunción láser color Brother MFC-L8900CDW con velocidad de 33 páginas por minuto, Wi-Fi e impresión dúplex.",
+      "highlights": [
+        "Láser color de 33 páginas por minuto",
+        "Impresión a doble cara (dúplex)",
+        "Conectividad Wi-Fi"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Multifunción láser color"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "33 ppm"
+        },
+        {
+          "label": "Impresión a doble cara",
+          "value": "Dúplex"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        }
+      ],
+      "descriptionHtml": "<p>La Brother MFC-L8900CDW es una multifunción láser color de 33 páginas por minuto. Tiene dúplex y Wi-Fi.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Descripción original genérica (texto de relleno): solo se usaron datos del nombre. Faltan velocidad, conectividad y consumibles.",
+        "Confirmar funciones (copia, escaneo, fax) y consumibles."
+      ]
+    },
+    {
+      "slug": "mflc-hp-pro-4303fdw-35-ppm-5hh67a-local-2",
+      "name": "Multifunción Láser HP Pro 4303fdw 35 ppm",
+      "brand": "HP",
+      "model": "Pro 4303fdw",
+      "seoTitle": "Multifunción Láser HP Pro 4303fdw 35 ppm",
+      "seoDescription": "Multifunción láser HP Pro 4303fdw de 35 ppm con Wi-Fi, escáner, copiadora y fax. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Multifunción láser HP Pro 4303fdw (5HH67A) de 35 páginas por minuto con Wi-Fi, escáner, copiadora y fax integrado.",
+      "highlights": [
+        "Láser de 35 páginas por minuto",
+        "Wi-Fi para imprimir desde computadoras y celulares",
+        "Escáner, copiadora y fax integrado",
+        "Diseño robusto para uso intensivo en oficinas"
+      ],
+      "specs": [
+        {
+          "label": "Funciones",
+          "value": "Impresión, escaneo, copia y fax"
+        },
+        {
+          "label": "Tecnología",
+          "value": "Láser"
+        },
+        {
+          "label": "Velocidad de impresión",
+          "value": "35 ppm"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        },
+        {
+          "label": "Número de parte",
+          "value": "5HH67A"
+        }
+      ],
+      "descriptionHtml": "<p>La HP Pro 4303fdw es una multifunción láser para oficinas. Imprime 35 páginas por minuto y reúne impresión, escaneo, copia y fax.</p><h3>Productividad</h3><p>Es un equipo todo en uno de diseño robusto para trabajo constante. Entrega textos nítidos y líneas precisas.</p><h3>Conexión</h3><p>Con Wi-Fi imprimís desde cualquier computadora o dispositivo móvil, sin cables.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarla en Córdoba.</p>",
+      "revisar": [
+        "El nombre dice MFLC (multifunción láser color) pero la descripción dice 'láser monocromático'. No publiqué ni color ni monocromático en ninguna parte. Confirmar.",
+        "El nombre termina en 'LOCAL': no sé qué significa (¿stock local? ¿garantía local?). No lo usé.",
+        "No hay datos de dúplex ni de bandejas."
+      ]
+    },
+    {
+      "slug": "plotter-epson-surecolor-t3170-61cm-wifi-ethernet",
+      "name": "Plotter Epson SureColor T3170 61 cm Wi-Fi Ethernet",
+      "brand": "Epson",
+      "model": "SureColor T3170",
+      "seoTitle": "Plotter Epson SureColor T3170 61 cm",
+      "seoDescription": "Plotter Epson SureColor T3170 de 61 cm (24\") con Wi-Fi, Ethernet y cabezal PrecisionCore. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Plotter Epson SureColor T3170 de 61 cm (24 pulgadas) de ancho de impresión, con Wi-Fi, Ethernet y tecnología de inyección de tinta PrecisionCore.",
+      "highlights": [
+        "Ancho de impresión de 61 cm (24 pulgadas)",
+        "Tecnología de inyección PrecisionCore",
+        "Conexión Wi-Fi y Ethernet",
+        "Pensado para planos técnicos, pósters y diseños"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Plotter de gran formato"
+        },
+        {
+          "label": "Ancho de impresión",
+          "value": "61 cm (24\")"
+        },
+        {
+          "label": "Tecnología",
+          "value": "Inyección de tinta PrecisionCore"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi y Ethernet"
+        }
+      ],
+      "descriptionHtml": "<p>El Epson SureColor T3170 es un plotter de gran formato de 61 cm (24 pulgadas) para arquitectura, ingeniería y diseño. Imprime planos técnicos, pósters y diseños.</p><h3>Impresión</h3><p>La tecnología de inyección de tinta PrecisionCore apunta a líneas nítidas y colores vivos en trabajos de gran formato.</p><h3>Conexión</h3><p>Tiene Wi-Fi y Ethernet: lo instalás donde te convenga y lo compartís en red con el resto del equipo.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Brand venía 'General'; el nombre dice Epson.",
+        "La descripción no da velocidad, resolución, tintas ni tipo de papel. Faltan datos para completar la tabla."
+      ]
+    },
+    {
+      "slug": "plotter-hp-t250-designjet-wifi-61cm-24-5hb06d",
+      "name": "Plotter HP DesignJet T250 24\" (solo impresión)",
+      "brand": "HP",
+      "model": "DesignJet T250",
+      "seoTitle": "Plotter HP DesignJet T250 24\" (5HB06D)",
+      "seoDescription": "Plotter HP DesignJet T250 de 24 pulgadas (61 cm), solo impresión, número de parte 5HB06D. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Plotter HP DesignJet T250 de 24 pulgadas, solo impresión, número de parte 5HB06D.",
+      "highlights": [
+        "Plotter HP DesignJet T250 de 24 pulgadas",
+        "Equipo de solo impresión",
+        "Número de parte 5HB06D"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Plotter de gran formato"
+        },
+        {
+          "label": "Ancho de impresión",
+          "value": "24 pulgadas"
+        },
+        {
+          "label": "Funciones",
+          "value": "Solo impresión"
+        },
+        {
+          "label": "Número de parte",
+          "value": "5HB06D"
+        }
+      ],
+      "descriptionHtml": "<p>El HP DesignJet T250 es un plotter de 24 pulgadas que solo imprime, número de parte 5HB06D. Es una ficha básica: consultanos por conectividad y velocidad.</p><p>Para saber qué consumibles usa o qué trae en la caja, consultanos antes de comprar. Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Brand venía 'General'; el nombre dice HP.",
+        "Ficha sin datos técnicos; hay otra ficha del mismo modelo (-2) con más datos. Evaluar unificar."
+      ]
+    },
+    {
+      "slug": "plotter-hp-t250-designjet-wifi-61cm-24-5hb06d-2",
+      "name": "Plotter HP DesignJet T250 61 cm Wi-Fi",
+      "brand": "HP",
+      "model": "DesignJet T250",
+      "seoTitle": "Plotter HP DesignJet T250 61 cm Wi-Fi",
+      "seoDescription": "Plotter HP DesignJet T250 de 61 cm: plano A1 en 30 segundos, Wi-Fi, Ethernet, USB y HP Click. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Plotter HP DesignJet T250 de 24 pulgadas (61 cm). Imprime un plano A1 en 30 segundos y tiene Wi-Fi, Ethernet, USB y software HP Click.",
+      "highlights": [
+        "Plano A1 en 30 segundos, hasta 76 impresiones A1 por hora",
+        "Resolución de hasta 2400 x 1200 dpi",
+        "Wi-Fi, Ethernet Gigabit y USB 2.0",
+        "HP Click: enviás varios archivos con un solo clic",
+        "Cortador horizontal automático",
+        "Diseñado con plástico reciclado"
+      ],
+      "specs": [
+        {
+          "label": "Ancho de impresión",
+          "value": "610 mm (24\")"
+        },
+        {
+          "label": "Formatos",
+          "value": "A1, A2, A3 y A4"
+        },
+        {
+          "label": "Tecnología",
+          "value": "Inyección térmica de tinta HP"
+        },
+        {
+          "label": "Tintas",
+          "value": "Negra pigmentada y color en base colorante"
+        },
+        {
+          "label": "Velocidad",
+          "value": "30 segundos por página A1"
+        },
+        {
+          "label": "Resolución (color)",
+          "value": "Hasta 2400 x 1200 dpi"
+        },
+        {
+          "label": "Medios",
+          "value": "Rollo hasta 610 mm y hojas sueltas A4/A3"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi, Ethernet Gigabit y USB 2.0"
+        },
+        {
+          "label": "Impresión móvil",
+          "value": "App HP Smart"
+        },
+        {
+          "label": "Número de parte",
+          "value": "5HB06D"
+        }
+      ],
+      "descriptionHtml": "<p>El HP DesignJet T250 de 24 pulgadas (61 cm) es un plotter compacto para estudios de arquitectura, ingeniería y construcción. Imprime un plano A1 en 30 segundos.</p><h3>Velocidad</h3><p>Hasta 76 impresiones A1 por hora, con resolución de hasta 2400 x 1200 dpi. Con el software HP Click mandás varios PDF, JPEG o TIFF con un solo clic y ves una vista previa antes de imprimir.</p><h3>Tintas y papel</h3><ul><li>Tinta negra pigmentada para líneas nítidas y tintas de color para gráficos y renders.</li><li>Rollo de hasta 610 mm y hojas sueltas desde A4/A3.</li><li>Cortador horizontal automático.</li></ul><h3>Conexión</h3><p>Wi-Fi, Ethernet Gigabit y USB 2.0. Con la app HP Smart gestionás la cola de impresión desde el celular.</p><h3>Antes de comprar</h3><p>El alimentador automático de hojas A3/A4 es un accesorio opcional.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Dato 'hasta 95 % menos tinta de mantenimiento': es comparativo con la competencia; no lo publiqué.",
+        "La descripción estaba cortada en 'Tipos de Tinta': pueden faltar cartuchos y dimensiones."
+      ]
+    },
+    {
+      "slug": "scanner-kodak-alaris-e1030-30-ppm-adf-80-duplex",
+      "name": "Escáner Kodak Alaris E1030 30 ppm ADF 80 hojas Dúplex",
+      "brand": "Kodak Alaris",
+      "model": "E1030",
+      "seoTitle": "Escáner Kodak Alaris E1030 30 ppm",
+      "seoDescription": "Escáner Kodak Alaris E1030 de 30 páginas por minuto con alimentador de 80 hojas y escaneo dúplex. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Escáner de documentos Kodak Alaris E1030. Escanea 30 páginas por minuto, con alimentador automático de 80 hojas y escaneo dúplex.",
+      "highlights": [
+        "30 páginas por minuto",
+        "Alimentador automático (ADF) de 80 hojas",
+        "Escaneo dúplex: las dos caras en una pasada",
+        "Compatible con varios formatos de archivo y sistemas operativos"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Escáner de documentos"
+        },
+        {
+          "label": "Velocidad",
+          "value": "30 ppm"
+        },
+        {
+          "label": "Alimentador automático (ADF)",
+          "value": "80 hojas"
+        },
+        {
+          "label": "Escaneo a doble cara",
+          "value": "Dúplex automático"
+        }
+      ],
+      "descriptionHtml": "<p>El Kodak Alaris E1030 es un escáner de documentos para oficinas. Digitaliza 30 páginas por minuto y escanea las dos caras en una pasada.</p><h3>Alimentador</h3><p>El ADF de 80 hojas procesa lotes completos sin que cargues de a una.</p><h3>Uso</h3><p>Sirve para digitalizar facturas, contratos y archivos de empresa. Es compatible con múltiples formatos de archivo y sistemas operativos.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Brand venía 'General'; el nombre dice Kodak Alaris.",
+        "La descripción no da resolución, conectividad ni formatos concretos; no lo inventé."
+      ]
+    },
+    {
+      "slug": "scanner-kodak-alaris-s2060w-60-ppm-wifi-duplex",
+      "name": "Escáner Kodak Alaris S2060w 60 ppm Wi-Fi Dúplex",
+      "brand": "Kodak Alaris",
+      "model": "S2060w",
+      "seoTitle": "Escáner Kodak Alaris S2060w 60 ppm Wi-Fi",
+      "seoDescription": "Escáner Kodak Alaris S2060w de 60 páginas por minuto con Wi-Fi y escaneo dúplex automático. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Escáner de documentos Kodak Alaris S2060w. Escanea 60 páginas por minuto, con Wi-Fi integrado y escaneo dúplex automático.",
+      "highlights": [
+        "60 páginas por minuto",
+        "Wi-Fi integrado: escaneás sin cables",
+        "Dúplex automático: ambas caras en una pasada",
+        "Pensado para oficinas con gestión documental"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Escáner de documentos"
+        },
+        {
+          "label": "Velocidad",
+          "value": "60 ppm"
+        },
+        {
+          "label": "Escaneo a doble cara",
+          "value": "Dúplex automático"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi"
+        }
+      ],
+      "descriptionHtml": "<p>El Kodak Alaris S2060w es un escáner de documentos de alto rendimiento para oficinas. Digitaliza 60 páginas por minuto y escanea ambas caras en una sola pasada.</p><h3>Conexión</h3><p>Con Wi-Fi integrado escaneás de forma inalámbrica desde cualquier dispositivo.</p><h3>Flujo de trabajo</h3><p>Incluye procesamiento de imágenes Kodak para obtener resultados de buena calidad en la gestión documental.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Brand venía 'General'; el nombre dice Kodak Alaris.",
+        "No hay dato de capacidad del alimentador, resolución ni otras conexiones."
+      ]
+    },
+    {
+      "slug": "scanner-kodak-alaris-s3100-100-ppm-adf300-a3duplex",
+      "name": "Escáner Kodak Alaris S3100 100 ppm ADF 300 hojas A3 Dúplex",
+      "brand": "Kodak Alaris",
+      "model": "S3100",
+      "seoTitle": "Escáner Kodak Alaris S3100 100 ppm A3",
+      "seoDescription": "Escáner Kodak Alaris S3100 de 100 páginas por minuto con alimentador de 300 hojas, formato A3 y escaneo dúplex. Garantía y envíos a todo el país.",
+      "shortDescription": "Escáner de documentos Kodak Alaris S3100. Escanea hasta 100 páginas por minuto, con alimentador de 300 hojas, formato A3 y dúplex.",
+      "highlights": [
+        "Hasta 100 páginas por minuto",
+        "Alimentador automático (ADF) de 300 hojas",
+        "Escaneo dúplex: ambas caras a la vez",
+        "Formato A3"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Escáner de documentos"
+        },
+        {
+          "label": "Velocidad",
+          "value": "Hasta 100 ppm"
+        },
+        {
+          "label": "Alimentador automático (ADF)",
+          "value": "300 hojas"
+        },
+        {
+          "label": "Escaneo a doble cara",
+          "value": "Dúplex"
+        },
+        {
+          "label": "Formato",
+          "value": "A3"
+        }
+      ],
+      "descriptionHtml": "<p>El Kodak Alaris S3100 es un escáner de alta velocidad para oficinas con mucho papel. Procesa hasta 100 páginas por minuto y trabaja con documentos A3.</p><h3>Alimentador</h3><p>El ADF de 300 hojas permite digitalizar lotes grandes en una sola carga.</p><h3>Dúplex</h3><p>Escanea ambas caras del documento al mismo tiempo, así reducís el tiempo de trabajo.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "La descripción venía con bloques SHORT/LONG/TAGS/META copiados; los descarté.",
+        "Brand venía 'General'; el nombre dice Kodak Alaris.",
+        "No hay dato de resolución ni conectividad."
+      ]
+    },
+    {
+      "slug": "lente-canon-ef-16-35-f4-l-is-usm-2",
+      "name": "Lente Canon EF 16-35 mm f/4L IS USM",
+      "brand": "Canon",
+      "model": "EF 16-35mm f/4L IS USM",
+      "seoTitle": "Lente Canon EF 16-35 mm f/4L IS USM",
+      "seoDescription": "Lente gran angular Canon EF 16-35 mm f/4L IS USM con apertura constante, estabilización de 4 pasos y sellado. Garantía y envíos a todo el país.",
+      "shortDescription": "Lente gran angular Canon EF 16-35 mm f/4L IS USM de la serie L. Apertura constante f/4, estabilización de imagen de 4 pasos, motor USM y construcción sellada contra polvo y humedad.",
+      "highlights": [
+        "Apertura constante f/4 en todo el rango de 16 a 35 mm",
+        "Estabilización de imagen de 4 pasos",
+        "Motor USM de enfoque rápido y silencioso",
+        "Sellado contra polvo y humedad",
+        "Para cámaras Canon full frame y APS-C"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom gran angular, serie L"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "16-35 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/4 constante"
+        },
+        {
+          "label": "Estabilizador",
+          "value": "Sí, 4 pasos"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "USM"
+        },
+        {
+          "label": "Montura",
+          "value": "Canon EF"
+        },
+        {
+          "label": "Construcción",
+          "value": "Sellada contra polvo y humedad"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon EF 16-35 mm f/4L IS USM es un zoom gran angular de la serie L. Cubre desde paisajes hasta arquitectura con apertura f/4 constante.</p><h3>Estabilización</h3><p>El estabilizador de 4 pasos te ayuda a sacar fotos nítidas con velocidades de obturación bajas.</p><h3>Enfoque</h3><p>El motor USM enfoca rápido y en silencio, útil para fotos y para video.</p><h3>Construcción</h3><p>Está sellado contra polvo y humedad para trabajar en condiciones difíciles.</p><h3>Compatibilidad</h3><p>Es compatible con cámaras Canon full frame y APS-C de montura EF.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Brand venía 'General'; el nombre dice Canon.",
+        "Dice compatible con APS-C: es válido con montura EF, pero conviene confirmar.",
+        "'-2' en el slug: puede haber otra ficha de este lente en otra tanda; verificar que no contradiga."
+      ]
+    },
+    {
+      "slug": "lente-canon-ef-s-10-18-f4-5-5-6-is-stm",
+      "name": "Lente Canon EF-S 10-18 mm f/4.5-5.6 IS STM",
+      "brand": "Canon",
+      "model": "EF-S 10-18mm f/4.5-5.6 IS STM",
+      "seoTitle": "Lente Canon EF-S 10-18 mm f/4.5-5.6 IS STM",
+      "seoDescription": "Lente ultra gran angular Canon EF-S 10-18 mm f/4.5-5.6 IS STM con estabilización y motor STM silencioso. Garantía y envíos a todo el país.",
+      "shortDescription": "Lente ultra gran angular Canon EF-S 10-18 mm f/4.5-5.6 IS STM para cámaras APS-C. Con estabilización de imagen y enfoque automático silencioso.",
+      "highlights": [
+        "Ultra gran angular de 10 a 18 mm",
+        "Estabilización de imagen IS para fotos nítidas sin trípode",
+        "Motor STM de enfoque suave y silencioso, ideal para video",
+        "Compacto y liviano",
+        "Elementos de baja dispersión contra aberraciones cromáticas"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom ultra gran angular"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "10-18 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/4.5-5.6"
+        },
+        {
+          "label": "Estabilizador",
+          "value": "Sí (IS)"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "STM"
+        },
+        {
+          "label": "Montura",
+          "value": "Canon EF-S (cámaras APS-C)"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon EF-S 10-18 mm f/4.5-5.6 IS STM es un zoom ultra gran angular para cámaras Canon APS-C. Sirve para paisajes, arquitectura e interiores.</p><h3>Imagen</h3><p>Capta escenas amplias con buena nitidez. El estabilizador IS compensa las vibraciones, así que podés sacar fotos nítidas incluso sin trípode.</p><h3>Enfoque</h3><p>El motor STM da un enfoque automático suave y silencioso, útil para grabar video.</p><h3>Tamaño</h3><p>Es compacto y liviano. Tiene elementos de baja dispersión que reducen las aberraciones cromáticas.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Brand venía 'General'; el nombre dice Canon.",
+        "La descripción original decía 'fotografía paisajística profesional': lo moderé."
+      ]
+    },
+    {
+      "slug": "lente-canon-ef-s-24m-f2-8-stm",
+      "name": "Lente Canon EF-S 24 mm f/2.8 STM",
+      "brand": "Canon",
+      "model": "EF-S 24mm f/2.8 STM",
+      "seoTitle": "Lente Canon EF-S 24 mm f/2.8 STM",
+      "seoDescription": "Lente Canon EF-S 24 mm f/2.8 STM, gran angular compacto con enfoque silencioso para cámaras APS-C. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lente gran angular Canon EF-S 24 mm f/2.8 STM para cámaras APS-C. Compacto y liviano, con enfoque automático suave y silencioso.",
+      "highlights": [
+        "Apertura f/2.8 para poca luz y fondos desenfocados",
+        "Motor STM de enfoque silencioso, ideal para video",
+        "Compacto y liviano",
+        "Para paisajes, arquitectura y fotografía callejera"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Gran angular fijo"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "24 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/2.8"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "STM"
+        },
+        {
+          "label": "Montura",
+          "value": "Canon EF-S (cámaras APS-C)"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon EF-S 24 mm f/2.8 STM es un gran angular fijo, compacto y liviano, para cámaras Canon APS-C.</p><h3>Poca luz</h3><p>La apertura máxima de f/2.8 rinde bien con poca luz y permite desenfocar el fondo.</p><h3>Enfoque</h3><p>El motor STM (Stepping Motor) enfoca de forma suave y silenciosa, para fotos y video.</p><h3>Para qué sirve</h3><p>Es útil en paisajes, arquitectura, fotografía callejera y cuando necesitás más campo de visión.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "El nombre decía '24M' (se entendió 24 mm).",
+        "Brand venía 'General'; el nombre dice Canon."
+      ]
+    },
+    {
+      "slug": "lente-canon-ef-s-50m-f1-4-usm-2",
+      "name": "Lente Canon EF-S 50 mm f/1.4 USM",
+      "brand": "Canon",
+      "model": "EF-S 50mm f/1.4 USM",
+      "seoTitle": "Lente Canon EF-S 50 mm f/1.4 USM",
+      "seoDescription": "Lente Canon 50 mm f/1.4 USM con enfoque ultrasónico silencioso, ideal para retratos y poca luz. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lente Canon de 50 mm con apertura f/1.4 y motor de enfoque ultrasónico USM. Ideal para retratos y fotos con poca luz.",
+      "highlights": [
+        "Apertura máxima f/1.4 para poca luz",
+        "Motor ultrasónico USM rápido, preciso y silencioso",
+        "Distancia focal clásica de 50 mm para retrato",
+        "Desenfoque de fondo suave"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Fijo"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "50 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/1.4"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "USM (ultrasónico)"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon 50 mm f/1.4 USM combina la distancia focal clásica de 50 mm con una apertura f/1.4. Es una buena opción para retratos y poca luz.</p><h3>Enfoque</h3><p>El motor ultrasónico USM enfoca rápido, con precisión y en silencio. Sirve para foto y para video.</p><h3>Imagen</h3><p>La construcción óptica reduce las aberraciones cromáticas y da imágenes nítidas con desenfoque de fondo cremoso.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "El nombre dice 'EF-S 50M f/1.4 USM', pero no recuerdo que exista un EF-S de 50 mm (el lente conocido es el Canon EF 50mm f/1.4 USM). Confirmar el modelo; por eso en el nombre del lente publiqué 'EF-S' tal cual y evité afirmar compatibilidad con APS-C o full frame.",
+        "El nombre decía '50M' (se entendió 50 mm).",
+        "Brand venía 'General'; el nombre dice Canon."
+      ]
+    },
+    {
+      "slug": "lente-canon-rf-85mm-f-1-2l-usm",
+      "name": "Lente Canon RF 85 mm f/1.2L USM",
+      "brand": "Canon",
+      "model": "RF 85mm f/1.2L USM",
+      "seoTitle": "Lente Canon RF 85 mm f/1.2L USM",
+      "seoDescription": "Lente de retrato Canon RF 85 mm f/1.2L USM para fotograma completo: apertura f/1.2, motor USM y sellado climático. Garantía y envíos a todo el país.",
+      "shortDescription": "Lente de retrato Canon RF 85 mm f/1.2L USM para cámaras de fotograma completo. Apertura f/1.2, motor USM y anillo de control, con protección contra las inclemencias del clima.",
+      "highlights": [
+        "Apertura f/1.2 para poca luz y desenfoque de fondo",
+        "Para cámaras de fotograma completo con montura RF",
+        "Motor USM de enfoque rápido",
+        "Anillo de control del objetivo",
+        "Protección climática y revestimientos de flúor"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Teleobjetivo corto fijo, serie L"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "85 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/1.2"
+        },
+        {
+          "label": "Abertura mínima",
+          "value": "f/16"
+        },
+        {
+          "label": "Hojas del diafragma",
+          "value": "9"
+        },
+        {
+          "label": "Distancia mínima de enfoque",
+          "value": "0,85 m"
+        },
+        {
+          "label": "Aumento máximo",
+          "value": "0,12x"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "USM"
+        },
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Accesorios incluidos",
+          "value": "Tapa E-82 II, parasol ET-89 y estuche LP1424"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF 85 mm f/1.2L USM es un lente de retrato de la serie L para cámaras de fotograma completo con montura RF.</p><h3>Retrato y poca luz</h3><p>La apertura f/1.2 da un enfoque de poca profundidad y buen rendimiento con poca luz. La distancia focal de 85 mm es corta para teleobjetivo y favorece los retratos sin distorsión.</p><h3>Óptica</h3><p>Usa óptica Blue Spectrum Refractive (BR) contra las aberraciones cromáticas y un elemento asférico contra las esféricas.</p><h3>Construcción y enfoque</h3><ul><li>Protección contra las inclemencias del clima.</li><li>Revestimientos de flúor en los elementos frontal y posterior contra agua, polvo y rayones.</li><li>Motor USM y anillo de control del objetivo.</li></ul><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "La descripción estaba cortada en 'Especificaciones: Abertura máxim...': pueden faltar peso y medidas.",
+        "Los accesorios (tapa, parasol, estuche) salen del texto de especificaciones; confirmar que vienen en la caja.",
+        "La descripción dice 'el objetivo de retratos definitivo': lo saqué.",
+        "Brand venía 'General'; el nombre dice Canon."
+      ]
+    },
+    {
+      "slug": "lente-canon-rfs-3-9-f3-5-dual-fisheye-stm-caja-blanca-2",
+      "name": "Lente Canon RF-S 3.9 mm f/3.5 Dual Fisheye STM (caja blanca)",
+      "brand": "Canon",
+      "model": "RF-S 3.9mm f/3.5 Dual Fisheye STM",
+      "seoTitle": "Lente Canon RF-S 3.9 mm f/3.5 Dual Fisheye",
+      "seoDescription": "Lente Canon RF-S 3.9 mm f/3.5 Dual Fisheye STM para video y fotos VR de 180°, en caja blanca. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lente Canon RF-S 3.9 mm f/3.5 Dual Fisheye STM, de doble objetivo para contenido VR de 180°. Enfoque STM silencioso. Presentación en caja blanca.",
+      "highlights": [
+        "Doble objetivo fisheye para contenido VR de 180°",
+        "Motor STM de enfoque silencioso y preciso",
+        "Compacto y liviano",
+        "Presentación en caja blanca"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Doble fisheye para VR"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "3,9 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/3.5"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "STM"
+        },
+        {
+          "label": "Campo de visión",
+          "value": "VR de 180°"
+        },
+        {
+          "label": "Presentación",
+          "value": "Caja blanca"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF-S 3.9 mm f/3.5 Dual Fisheye STM es un lente de doble objetivo fisheye para crear fotos y video VR de 180°.</p><h3>Imagen</h3><p>Integra dos elementos ópticos sincronizados que capturan perspectivas esféricas. Es compacto y liviano.</p><h3>Enfoque</h3><p>El motor STM (Stepping Motor) da un enfoque automático silencioso y preciso, útil para grabar video.</p><h3>Antes de comprar</h3><p>Se vende en caja blanca, es decir, sin el packaging comercial de Canon.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Aclaré que 'caja blanca' es sin packaging comercial: es lo habitual, pero confirmar qué incluye.",
+        "Brand venía 'General'; el nombre dice Canon.",
+        "El nombre original decía 'RFS 3.9': se entendió RF-S 3,9 mm. El slug termina en '-2': verificar duplicados.",
+        "La descripción no dice con qué cámaras funciona."
+      ]
+    },
+    {
+      "slug": "lente-canon-rfs-7-8-f4-stm-dual-caja-blanca-2",
+      "name": "Lente Canon RF-S 7.8 mm f/4 STM Dual (caja blanca)",
+      "brand": "Canon",
+      "model": "RF-S 7.8mm f/4 STM Dual",
+      "seoTitle": "Lente Canon RF-S 7.8 mm f/4 STM Dual",
+      "seoDescription": "Lente Canon RF-S 7.8 mm f/4 STM Dual con montura RF y enfoque silencioso, en caja blanca. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Lente Canon RF-S 7.8 mm f/4 STM Dual con apertura f/4, montura RF y motor STM de enfoque silencioso. Presentación en caja blanca.",
+      "highlights": [
+        "Apertura f/4",
+        "Motor STM de enfoque silencioso y preciso",
+        "Montura Canon RF",
+        "Diseño compacto",
+        "Presentación en caja blanca"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Lente dual"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "7,8 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/4"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "STM"
+        },
+        {
+          "label": "Montura",
+          "value": "Canon RF"
+        },
+        {
+          "label": "Presentación",
+          "value": "Caja blanca"
+        }
+      ],
+      "descriptionHtml": "<p>El Canon RF-S 7.8 mm f/4 STM Dual es un lente de montura RF con apertura f/4. Se vende en caja blanca.</p><h3>Enfoque</h3><p>El motor STM (Stepping Motor) enfoca de forma silenciosa y precisa, para fotos y video.</p><h3>Tamaño</h3><p>Tiene un diseño compacto que facilita el transporte.</p><h3>Antes de comprar</h3><p>Se vende en caja blanca, es decir, sin el packaging comercial de Canon.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "La descripción es genérica y dice que la 'tecnología DUAL optimiza el rendimiento con distintas luces': no lo publiqué porque no lo entiendo. Confirmar qué es este lente.",
+        "Dice 'incluye todos los accesorios originales': no lo publiqué.",
+        "Brand venía 'General'; el nombre dice Canon. Slug termina en '-2': verificar duplicados."
+      ]
+    },
+    {
+      "slug": "lente-nikkor-z-28mm-f-2-8",
+      "name": "Lente Nikon Z 28 mm f/2.8",
+      "brand": "Nikon",
+      "model": "Z 28mm f/2.8",
+      "seoTitle": "Lente Nikon Z 28 mm f/2.8",
+      "seoDescription": "Lente Nikon Z 28 mm f/2.8 compacto y liviano para cámaras de la serie Z, ideal para paisajes y escenas urbanas. Garantía y envíos a todo el país.",
+      "shortDescription": "Lente Nikon Z 28 mm f/2.8 compacto y liviano para cámaras de la serie Z. Apertura f/2.8 para poca luz y fondos desenfocados.",
+      "highlights": [
+        "Apertura f/2.8 para poca luz",
+        "Distancia focal de 28 mm para paisajes y escenas urbanas",
+        "Compacto y liviano",
+        "Para cámaras Nikon de la serie Z"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Gran angular fijo"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "28 mm"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/2.8"
+        },
+        {
+          "label": "Montura",
+          "value": "Nikon Z"
+        }
+      ],
+      "descriptionHtml": "<p>El Nikon Z 28 mm f/2.8 es un lente fijo compacto para cámaras de la serie Z. La distancia focal de 28 mm sirve para paisajes, retratos y escenas urbanas.</p><h3>Poca luz</h3><p>La apertura máxima de f/2.8 rinde bien con poca luz y da un lindo desenfoque de fondo.</p><h3>Diseño</h3><p>Es liviano y resistente, fácil de llevar. La construcción óptica reduce las aberraciones y distorsiones.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "Brand venía 'General'; el nombre dice Nikon.",
+        "Sin datos de motor, peso ni diámetro de filtro."
+      ]
+    },
+    {
+      "slug": "lente-sigma-10-18mm-f2-8-dc-dn-contemporary",
+      "name": "Lente Sigma 10-18 mm f/2.8 DC DN Contemporary para Sony",
+      "brand": "Sigma",
+      "model": "10-18mm f/2.8 DC DN Contemporary",
+      "seoTitle": "Lente Sigma 10-18 mm f/2.8 DC DN para Sony",
+      "seoDescription": "Lente ultra gran angular Sigma 10-18 mm f/2.8 DC DN Contemporary para Sony, con f/2.8 constante y foco mínimo de 11,6 cm. Garantía y envíos a todo el país.",
+      "shortDescription": "Zoom ultra gran angular Sigma 10-18 mm f/2.8 DC DN Contemporary para cámaras sin espejo APS-C, versión para Sony. Apertura constante f/2.8 y motor de enfoque paso a paso.",
+      "highlights": [
+        "Apertura constante f/2.8 en todo el zoom",
+        "Equivale a 15-27 mm en formato universal",
+        "Distancia mínima de enfoque de 11,6 cm",
+        "Motor de enfoque paso a paso, con enfoque interno",
+        "Montura resistente a salpicaduras y polvo"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom ultra gran angular"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "10-18 mm (equivale a 15-27 mm)"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/2.8 constante"
+        },
+        {
+          "label": "Formato",
+          "value": "Cámaras sin espejo APS-C"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "Paso a paso, enfoque interno"
+        },
+        {
+          "label": "Distancia mínima de enfoque",
+          "value": "11,6 cm"
+        },
+        {
+          "label": "Diafragma",
+          "value": "7 aspas redondeadas"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "Súper Multi Capa"
+        },
+        {
+          "label": "Montura",
+          "value": "Versión para Sony"
+        }
+      ],
+      "descriptionHtml": "<p>El Sigma 10-18 mm f/2.8 DC DN Contemporary es un zoom ultra gran angular para cámaras sin espejo con sensor APS-C. Esta versión es para Sony.</p><h3>Óptica</h3><p>Mantiene la apertura f/2.8 en todo el rango. Equivale a 15-27 mm en formato universal. Usa un elemento asférico que reduce el tamaño sin perder calidad de imagen.</p><h3>Enfoque</h3><p>Tiene motor de enfoque paso a paso, enfoque interno y una distancia mínima de 11,6 cm, con poco focus breathing. Va bien con un gimbal para video.</p><h3>Construcción</h3><ul><li>Montura de latón resistente a salpicaduras y polvo.</li><li>Diafragma redondeado de 7 aspas.</li><li>Parasol de pétalo a presión.</li></ul><h3>Para qué sirve</h3><p>Paisajes, viajes, interiores y vlogging.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "El texto corto decía 'Abonando de contado efectivo 10% de descuento': lo borré.",
+        "La descripción dice 'el más pequeño y ligero del mercado' y 260 g, pero el peso es de la versión L-Mount: no lo publiqué.",
+        "La descripción dice enfoque lineal solo en L-Mount; no lo puse.",
+        "La descripción no aclara la montura exacta de la versión Sony (¿E?). Confirmar.",
+        "Brand venía 'General'; el nombre dice Sigma."
+      ]
+    },
+    {
+      "slug": "lente-sigma-18-35mm-f-1-8-dc-hsm-art",
+      "name": "Lente Sigma 18-35 mm f/1.8 DC HSM Art para Canon",
+      "brand": "Sigma",
+      "model": "18-35mm f/1.8 DC HSM Art",
+      "seoTitle": "Lente Sigma 18-35 mm f/1.8 DC HSM Art Canon",
+      "seoDescription": "Lente zoom Sigma 18-35 mm f/1.8 DC HSM Art para Canon EF con apertura constante f/1.8 y motor HSM. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Zoom Sigma 18-35 mm f/1.8 DC HSM Art para cámaras Canon APS-C. Apertura constante f/1.8, motor de enfoque ultrasónico HSM y filtro de 72 mm.",
+      "highlights": [
+        "Apertura constante f/1.8 en todo el rango de 18 a 35 mm",
+        "Motor de autoenfoque ultrasónico HSM interno",
+        "Diafragma circular de 9 hojas",
+        "Equivale a 28,8-56 mm",
+        "Compatible con el USB Dock de Sigma"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Zoom estándar, línea Art"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "18-35 mm (equivale a 28,8-56 mm)"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/1.8 a f/16"
+        },
+        {
+          "label": "Formato",
+          "value": "Sensores APS-C"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "HSM (ultrasónico), enfoque interno"
+        },
+        {
+          "label": "Diafragma",
+          "value": "9 hojas circulares"
+        },
+        {
+          "label": "Diámetro de filtro",
+          "value": "72 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "810 g"
+        },
+        {
+          "label": "Montura",
+          "value": "Canon EF"
+        }
+      ],
+      "descriptionHtml": "<p>El Sigma 18-35 mm f/1.8 DC HSM Art es un zoom para cámaras APS-C con apertura constante f/1.8. Esta versión es para Canon EF.</p><h3>Óptica</h3><p>Usa vidrio FLD y SLD y lentes asféricas para controlar las aberraciones. El diafragma circular de 9 hojas da buen desenfoque de fondo. Sirve para bodas, retratos y video.</p><h3>Enfoque</h3><p>El motor HSM es ultrasónico, con enfoque interno. Con el USB Dock de Sigma actualizás el firmware y calibrás el enfoque desde la computadora.</p><h3>Antes de comprar</h3><p>Pesa 810 g. Está pensado para sensores APS-C.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "La descripción dice 'primer objetivo con apertura constante de 1.8' y 'monturas Canon, Nikon, Pentax, Sony, Sigma': esta ficha es la versión Canon.",
+        "El texto habla de '17 lentes' y de 4 elementos asféricos y 5 SLD en el corto; no publiqué los conteos.",
+        "El USB Dock no viene en la caja necesariamente: lo mencioné solo como compatibilidad.",
+        "Brand venía 'General'; el nombre dice Sigma."
+      ]
+    },
+    {
+      "slug": "lente-sigma-35mm-f-1-4-dg-art-hsm-p-nikon",
+      "name": "Lente Sigma 35 mm f/1.4 DG HSM Art para Nikon",
+      "brand": "Sigma",
+      "model": "35mm f/1.4 DG HSM Art",
+      "seoTitle": "Lente Sigma 35 mm f/1.4 DG HSM Art Nikon",
+      "seoDescription": "Lente Sigma 35 mm f/1.4 DG HSM Art para Nikon con motor HSM, enfoque interno flotante y diafragma de 9 hojas. Garantía y envíos a todo el país.",
+      "shortDescription": "Lente Sigma 35 mm f/1.4 DG HSM de la línea Art, versión para Nikon. Motor HSM, enfoque interno flotante y diafragma circular de 9 hojas.",
+      "highlights": [
+        "Apertura f/1.4 para poca luz y desenfoque de fondo",
+        "Motor ultrasónico HSM, rápido y silencioso",
+        "Enfoque interno flotante",
+        "Distancia mínima de enfoque de unos 30 cm",
+        "Compatible con el USB Dock de Sigma"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Fijo, línea Art"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "35 mm"
+        },
+        {
+          "label": "Apertura",
+          "value": "f/1.4 a f/16"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "HSM (ultrasónico)"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Interno flotante, manual en todo momento"
+        },
+        {
+          "label": "Diafragma",
+          "value": "9 hojas circulares"
+        },
+        {
+          "label": "Diámetro de filtro",
+          "value": "67 mm"
+        },
+        {
+          "label": "Distancia mínima de enfoque",
+          "value": "11,8\" (unos 30 cm)"
+        },
+        {
+          "label": "Recubrimiento",
+          "value": "Súper Multi Capa antirreflejo"
+        },
+        {
+          "label": "Montura",
+          "value": "Nikon"
+        }
+      ],
+      "descriptionHtml": "<p>El Sigma 35 mm f/1.4 DG HSM Art es un lente fijo de la línea Art, en versión para Nikon.</p><h3>Imagen</h3><p>La apertura f/1.4 permite fondos desenfocados y fotos con poca luz. El recubrimiento Súper Multi Capa reduce reflejos y luces parásitas, incluso a contraluz. Los elementos de baja dispersión mejoran la nitidez.</p><h3>Enfoque</h3><p>El motor HSM y el enfoque interno flotante dan un autoenfoque rápido, silencioso y preciso. Pasás a enfoque manual sin cambiar de modo en la cámara: solo mové el interruptor AF/MF.</p><h3>Construcción</h3><p>Las piezas metálicas y el material compuesto TSC van en el interior. La montura es de latón de alta precisión.</p><p>Tiene garantía oficial, hacemos envíos a todo el país y podés retirarlo en Córdoba.</p>",
+      "revisar": [
+        "La descripción es una traducción automática con frases confusas; usé solo lo claro.",
+        "Dice 'primer lente de la serie Art' y 'el nuevo': lo saqué.",
+        "Brand venía 'General'; el nombre dice Sigma.",
+        "La conversión 11,8\" a unos 30 cm es mía."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2322 @@
+{
+  "lote": "catalogo-A-10",
+  "productos": [
+    {
+      "slug": "macbook-air-m5-15-24gb-1tb-midnight",
+      "name": "Apple MacBook Air 15″ M5 24 GB RAM 1 TB SSD Midnight",
+      "model": "MacBook Air 15″ M5",
+      "storage": "1 TB",
+      "ram": "24 GB",
+      "seoTitle": "MacBook Air M5 15″ 24 GB 1 TB Midnight",
+      "seoDescription": "MacBook Air de 15,3″ con chip Apple M5, 24 GB de RAM y SSD de 1 TB en color Midnight. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "MacBook Air de 15,3″ con chip Apple M5 de 10 núcleos, 24 GB de memoria unificada y SSD de 1 TB. Pantalla Liquid Retina, diseño sin ventiladores y hasta 18 horas de batería.",
+      "highlights": [
+        "Chip Apple M5 con CPU de 10 núcleos y GPU de 10 núcleos",
+        "24 GB de memoria unificada y SSD de 1 TB",
+        "Pantalla Liquid Retina de 15,3″ con True Tone",
+        "Hasta 18 horas de batería",
+        "Refrigeración pasiva: sin ventiladores y silenciosa",
+        "Dos puertos Thunderbolt 4 y carga MagSafe 3"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Midnight (Medianoche)"
+        },
+        {
+          "label": "Procesador",
+          "value": "Apple M5, CPU de 10 núcleos y GPU de 10 núcleos"
+        },
+        {
+          "label": "Neural Engine",
+          "value": "16 núcleos"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Liquid Retina de 15,3″, 2880 x 1864, 500 nits, gama P3, True Tone"
+        },
+        {
+          "label": "Cámara",
+          "value": "Center Stage de 12 MP"
+        },
+        {
+          "label": "Audio",
+          "value": "Sistema de 6 altavoces con audio espacial"
+        },
+        {
+          "label": "Puertos",
+          "value": "2 Thunderbolt 4 / USB4, MagSafe 3 y jack de auriculares de 3,5 mm"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 18 horas"
+        },
+        {
+          "label": "Refrigeración",
+          "value": "Pasiva, sin ventiladores"
+        },
+        {
+          "label": "Cuerpo",
+          "value": "Aluminio monocasco"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "macOS"
+        }
+      ],
+      "descriptionHtml": "<p>La MacBook Air de 15,3″ con chip M5 suma una pantalla grande a un cuerpo de aluminio fino y liviano. Esta versión trae 24 GB de memoria unificada y 1 TB de SSD, en color Midnight.</p><h3>Rendimiento</h3><ul><li>Chip Apple M5 de 10 núcleos de CPU y 10 de GPU, con Neural Engine de 16 núcleos.</li><li>24 GB de memoria unificada para tener muchas apps y pestañas abiertas a la vez.</li><li>SSD de 1 TB para proyectos, fotos y videos pesados.</li><li>Está pensada para las funciones de Apple Intelligence.</li></ul><h3>Pantalla y sonido</h3><p>Pantalla Liquid Retina de 15,3″ con resolución de 2880 x 1864, 500 nits y True Tone. Suma cámara Center Stage de 12 MP y sistema de 6 altavoces con audio espacial.</p><h3>Diseño y conectividad</h3><p>Cuerpo de aluminio con acabado Midnight que reduce las huellas. No tiene ventiladores, así que no hace ruido. Tiene dos puertos Thunderbolt 4 / USB4, carga MagSafe 3 y jack de 3,5 mm.</p>",
+      "revisar": [
+        "El número de parte MDVN4LL/A es de origen estadounidense: confirmar distribución del teclado y cargador que trae.",
+        "La descripción original no aclara qué incluye la caja."
+      ]
+    },
+    {
+      "slug": "macbook-neo-13-8gb-256gb-silver",
+      "name": "Apple MacBook Neo 13″ 8 GB RAM 256 GB SSD Silver",
+      "model": "MacBook Neo 13″",
+      "storage": "256 GB",
+      "ram": "8 GB",
+      "seoTitle": "MacBook Neo 13″ 8 GB 256 GB Silver",
+      "seoDescription": "MacBook Neo de 13″ con 8 GB de RAM, SSD de 256 GB y cuerpo de aluminio en color Silver. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "MacBook Neo de 13″ con 8 GB de RAM y SSD de 256 GB, en color Silver y con cuerpo de aluminio. Corre macOS y se integra con iCloud.",
+      "highlights": [
+        "Pantalla de 13″",
+        "8 GB de RAM y SSD de 256 GB",
+        "Cuerpo de aluminio en color Silver",
+        "Funciona con macOS e iCloud"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Silver"
+        },
+        {
+          "label": "Pantalla",
+          "value": "13″"
+        },
+        {
+          "label": "Cuerpo",
+          "value": "Aluminio"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "macOS"
+        }
+      ],
+      "descriptionHtml": "<p>La MacBook Neo es una notebook de Apple de 13″ en color Silver, con 8 GB de RAM y SSD de 256 GB. Tiene cuerpo de aluminio y corre macOS con acceso a los servicios de iCloud. Sirve para estudiar, trabajar y uso cotidiano.</p><h3>Qué sabemos</h3><ul><li>Pantalla de 13″.</li><li>8 GB de RAM y SSD de 256 GB.</li><li>Cuerpo de aluminio en color Silver.</li></ul>",
+      "revisar": [
+        "La descripción original es genérica: no dice procesador, resolución, batería ni puertos. Completar con la ficha oficial del MHFA4.",
+        "Se quitó el texto de venta (\"consulta stock por WhatsApp\", \"ofertas exclusivas\")."
+      ]
+    },
+    {
+      "slug": "macbook-pro-m5-pro-14%e2%80%b3-24gb-1tb-silver",
+      "name": "Apple MacBook Pro 14″ M5 Pro 24 GB RAM 1 TB SSD Silver",
+      "model": "MacBook Pro 14″ M5 Pro",
+      "storage": "1 TB",
+      "ram": "24 GB",
+      "seoTitle": "MacBook Pro 14″ M5 Pro 24 GB 1 TB Silver",
+      "seoDescription": "MacBook Pro de 14,2″ con chip M5 Pro de 15 núcleos, 24 GB de RAM y 1 TB de SSD, pantalla XDR. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "MacBook Pro de 14,2″ con chip Apple M5 Pro (CPU de 15 núcleos, GPU de 16), 24 GB de memoria unificada y SSD de 1 TB. Pantalla Liquid Retina XDR de 120 Hz.",
+      "highlights": [
+        "Chip M5 Pro con CPU de 15 núcleos y GPU de 16 núcleos",
+        "24 GB de memoria unificada y SSD de 1 TB",
+        "Pantalla Liquid Retina XDR de 14,2″ a 120 Hz",
+        "Brillo sostenido de 1000 nits y picos de 1600 nits",
+        "Thunderbolt 5, HDMI, lector SDXC y MagSafe 3",
+        "Teclado retroiluminado con Touch ID"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Silver (Plata)"
+        },
+        {
+          "label": "Procesador",
+          "value": "Apple M5 Pro, CPU de 15 núcleos y GPU de 16 núcleos"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Liquid Retina XDR de 14,2″, 3024 x 1964, ProMotion 120 Hz, gama P3"
+        },
+        {
+          "label": "Brillo",
+          "value": "1000 nits sostenido, hasta 1600 nits pico"
+        },
+        {
+          "label": "Cámara",
+          "value": "Center Stage de 12 MP"
+        },
+        {
+          "label": "Audio",
+          "value": "Sistema de 6 altavoces con audio espacial"
+        },
+        {
+          "label": "Teclado",
+          "value": "Magic Keyboard retroiluminado con Touch ID"
+        },
+        {
+          "label": "Puertos",
+          "value": "Thunderbolt 5 / USB4, HDMI, lector de tarjetas SDXC y MagSafe 3"
+        },
+        {
+          "label": "Cuerpo",
+          "value": "Aluminio unibody"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "macOS"
+        }
+      ],
+      "descriptionHtml": "<p>La MacBook Pro de 14,2″ con chip M5 Pro está pensada para trabajo pesado: edición de video, 3D, programación y diseño. Esta versión trae 24 GB de memoria unificada y 1 TB de SSD, en color Silver.</p><h3>Rendimiento</h3><ul><li>Chip Apple M5 Pro con CPU de 15 núcleos y GPU de 16 núcleos.</li><li>24 GB de memoria unificada y SSD de 1 TB.</li><li>Preparada para las funciones de Apple Intelligence.</li></ul><h3>Pantalla</h3><p>Liquid Retina XDR de 14,2″ con resolución de 3024 x 1964 y ProMotion de 120 Hz. El brillo sostenido llega a 1000 nits y el pico a 1600 nits.</p><h3>Conectividad</h3><p>Thunderbolt 5 / USB4, salida HDMI, lector de tarjetas SDXC y carga MagSafe 3. Tiene cámara Center Stage de 12 MP, 6 altavoces con audio espacial y teclado retroiluminado con Touch ID.</p>",
+      "revisar": [
+        "La descripción original se corta antes de terminar la lista de puertos y no da cifras de batería: no se publicaron.",
+        "Dice que el HDMI es compatible con 8K: no se publicó por no estar confirmado en la lista de especificaciones."
+      ]
+    },
+    {
+      "slug": "maletin-porta-notebook-travel-tech-original-negro",
+      "name": "Maletín porta notebook Travel Tech Original Negro",
+      "brand": "Travel Tech",
+      "seoTitle": "Maletín porta notebook Travel Tech negro",
+      "seoDescription": "Maletín porta notebook Travel Tech negro, con compartimento acolchado, bolsillos con organizador y correa de hombro regulable. Envíos a todo el país.",
+      "shortDescription": "Maletín negro para notebook con espacio acolchado, compartimento para papeles, tres bolsillos y correa de hombro regulable. Pesa 1 kg.",
+      "highlights": [
+        "Espacio acolchado para la notebook",
+        "Correa de hombro regulable y manijas",
+        "Compartimento extra para papeles o cuadernos",
+        "Dos bolsillos frontales, uno con organizador",
+        "Bolsillo trasero y ganchos de metal",
+        "Pesa 1 kg"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Negro"
+        },
+        {
+          "label": "Peso",
+          "value": "1 kg"
+        },
+        {
+          "label": "Compartimento principal",
+          "value": "1, con espacio acolchado para notebook"
+        },
+        {
+          "label": "Compartimento secundario",
+          "value": "1, para papeles o cuadernos"
+        },
+        {
+          "label": "Bolsillos",
+          "value": "2 frontales (uno con organizador) y 1 trasero"
+        },
+        {
+          "label": "Transporte",
+          "value": "Correa larga regulable de hombro y manijas"
+        },
+        {
+          "label": "Interior",
+          "value": "Forrado en poliéster con logo de la marca"
+        },
+        {
+          "label": "Herrajes",
+          "value": "Ganchos de metal"
+        }
+      ],
+      "descriptionHtml": "<p>Un maletín negro para llevar la notebook y lo que la acompaña. Tiene espacio acolchado para el equipo, un compartimento para papeles o cuadernos y varios bolsillos para accesorios.</p><h3>Compartimentos</h3><ul><li>Compartimento principal amplio con espacio portanotebook acolchado.</li><li>Compartimento aparte para papeles o cuadernos.</li><li>Dos bolsillos frontales, uno con organizador, y un bolsillo en la parte de atrás.</li></ul><h3>Para llevarlo</h3><ul><li>Correa larga regulable para hombro.</li><li>Manijas para llevarlo en la mano.</li><li>Ganchos de metal.</li><li>Peso de 1 kg.</li></ul><h3>Materiales</h3><p>El interior está forrado en poliéster y lleva el logo de la marca.</p>",
+      "revisar": [
+        "La descripción no indica hasta qué tamaño de notebook entra (pulgadas) ni las medidas del maletín. Completar antes de publicar.",
+        "Brand cambiada de General a Travel Tech.",
+        "La descripción menciona un plazo de garantía: no se publicó."
+      ]
+    },
+    {
+      "slug": "memoria-sodimm-ddr4-4gb-adata-2666-pc4-21300",
+      "name": "Memoria SO-DIMM DDR4 4 GB ADATA 2666 PC4-21300",
+      "brand": "ADATA",
+      "seoTitle": "Memoria SO-DIMM DDR4 4 GB ADATA 2666",
+      "seoDescription": "Memoria SO-DIMM DDR4 de 4 GB ADATA a 2666 (PC4-21300) para notebooks. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Memoria SO-DIMM DDR4 de 4 GB ADATA, velocidad 2666 (PC4-21300), en formato para notebook.",
+      "highlights": [
+        "Capacidad de 4 GB",
+        "DDR4 a 2666, norma PC4-21300",
+        "Formato SO-DIMM para notebooks",
+        "Marca ADATA"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "DDR4 SO-DIMM"
+        },
+        {
+          "label": "Capacidad",
+          "value": "4 GB"
+        },
+        {
+          "label": "Velocidad",
+          "value": "2666 (PC4-21300)"
+        }
+      ],
+      "descriptionHtml": "<p>Módulo de memoria RAM ADATA de 4 GB, DDR4 a 2666 (PC4-21300), en formato SO-DIMM. Sirve para ampliar o reemplazar la memoria de una notebook compatible. Antes de comprar, revisá que tu equipo use DDR4.</p><h3>Qué sabemos</h3><ul><li>4 GB de capacidad.</li><li>DDR4, velocidad 2666 (PC4-21300).</li><li>Formato SO-DIMM.</li></ul>",
+      "revisar": [
+        "La descripción original es texto de relleno: solo se usó el nombre.",
+        "El SKU AD3S266664G19-SGN parece de una línea DDR3 (AD3S) y no coincide con DDR4 del nombre: confirmar el modelo real.",
+        "Falta voltaje y latencia (CL)."
+      ]
+    },
+    {
+      "slug": "mesa-de-computacion-piro-blanca",
+      "name": "Mesa de computación Piro 8000 Blanca",
+      "brand": "Piro",
+      "seoTitle": "Mesa de computación Piro 8000 blanca",
+      "seoDescription": "Mesa de computación Piro 8000 blanca con bandeja extraíble, de aglomerado de 15 mm. Se entrega en caja para armar. Envíos a todo el país.",
+      "shortDescription": "Mesa de computación Piro 8000 en color blanco, con bandeja extraíble y tableros aglomerados de 15 mm. Se entrega para armar, con manual.",
+      "highlights": [
+        "Bandeja extraíble",
+        "Tableros aglomerados de 15 mm de espesor",
+        "Color blanco",
+        "Se entrega en una sola caja para armar",
+        "Incluye herrajes y manual de instrucciones"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Blanco"
+        },
+        {
+          "label": "Material",
+          "value": "Tableros aglomerados de 15 mm de espesor"
+        },
+        {
+          "label": "Bandeja",
+          "value": "Extraíble"
+        },
+        {
+          "label": "Bultos",
+          "value": "1"
+        },
+        {
+          "label": "Armado",
+          "value": "Para armar; incluye componentes y manual"
+        }
+      ],
+      "descriptionHtml": "<p>La mesa Piro 8000 es un escritorio chico para la PC, en color blanco y con bandeja extraíble. Está hecha con tableros aglomerados de 15 mm. Viene en un solo bulto para armar en casa.</p><h3>Características</h3><ul><li>Tableros aglomerados de 15 mm de espesor.</li><li>Bandeja extraíble.</li><li>Color blanco.</li></ul><h3>Armado</h3><p>Se entrega en una caja para armar. Trae todos los componentes de armado y el manual de instrucciones.</p><h3>Antes de comprar</h3><ul><li>Es para armar: no llega armada.</li></ul>",
+      "revisar": [
+        "Medidas omitidas: la ficha corta dice 856 x 738 x 450 mm y la descripción 85 x 74 x 45 cm. Confirmar y completar."
+      ]
+    },
+    {
+      "slug": "meta-quest-3-512gb",
+      "name": "Meta Quest 3 512 GB",
+      "model": "Meta Quest 3",
+      "seoTitle": "Meta Quest 3 512 GB blanco",
+      "seoDescription": "Visor de realidad mixta Meta Quest 3 de 512 GB en blanco, con dos controladores Touch Plus. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Visor Meta Quest 3 de 512 GB en blanco. Incluye dos controladores Touch Plus con correas, interfaz facial ajustable, cable y adaptador de carga.",
+      "highlights": [
+        "512 GB de almacenamiento interno",
+        "Incluye dos controladores Touch Plus",
+        "Interfaz facial estándar ajustable",
+        "Sonido espacial",
+        "Cable de carga y adaptador de corriente en la caja"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Blanco"
+        },
+        {
+          "label": "Capacidad interna",
+          "value": "512 GB"
+        },
+        {
+          "label": "Controles",
+          "value": "2 controladores Touch Plus con correas de muñeca"
+        },
+        {
+          "label": "Audio",
+          "value": "Sonido espacial"
+        },
+        {
+          "label": "En la caja",
+          "value": "Visor con interfaz facial estándar, 2 controladores Touch Plus, 2 pilas AA, cable de carga y adaptador de corriente"
+        }
+      ],
+      "descriptionHtml": "<p>El Meta Quest 3 es un visor de realidad virtual y mixta. Esta versión trae 512 GB de espacio para tus juegos y apps, y viene en color blanco con todo lo necesario para empezar.</p><h3>Lo que ofrece</h3><ul><li>Espacio de 512 GB para instalar juegos y aplicaciones.</li><li>Dos controladores Touch Plus con correas para las muñecas.</li><li>Sonido espacial y diseño ergonómico.</li></ul><h3>En la caja</h3><ul><li>Visor Meta Quest 3 con interfaz facial estándar ajustable.</li><li>Dos controladores Touch Plus con correas y dos pilas AA.</li><li>Cable de carga y adaptador de corriente.</li></ul>",
+      "revisar": [
+        "La descripción dice \"resolución 4K\": no se publicó por no estar confirmado.",
+        "No trae procesador, pantalla ni autonomía. Completar con la ficha oficial."
+      ]
+    },
+    {
+      "slug": "meta-quest-3s-256gb",
+      "name": "Meta Quest 3S 256 GB",
+      "model": "Meta Quest 3S",
+      "seoTitle": "Meta Quest 3S 256 GB",
+      "seoDescription": "Visor de realidad mixta Meta Quest 3S de 256 GB con Snapdragon XR2 Gen 2 y passthrough a color. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Visor Meta Quest 3S de 256 GB con Snapdragon XR2 Gen 2, passthrough a todo color, controladores Touch Plus y seguimiento de manos.",
+      "highlights": [
+        "Procesador Snapdragon XR2 Gen 2",
+        "Passthrough a todo color para realidad mixta",
+        "Controladores Touch Plus con respuesta háptica",
+        "Seguimiento de manos sin mandos",
+        "Pantalla de hasta 120 Hz",
+        "Compatible con PC VR por cable (Meta Quest Link)"
+      ],
+      "specs": [
+        {
+          "label": "Capacidad interna",
+          "value": "256 GB"
+        },
+        {
+          "label": "Procesador",
+          "value": "Qualcomm Snapdragon XR2 Gen 2"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Fast-LCD, 1832 x 1920 por ojo, 90 / 120 Hz"
+        },
+        {
+          "label": "Lentes",
+          "value": "Fresnel, ajuste de distancia interpupilar en 3 posiciones"
+        },
+        {
+          "label": "Realidad mixta",
+          "value": "Passthrough a todo color con sensores de profundidad"
+        },
+        {
+          "label": "Controles",
+          "value": "2 mandos Touch Plus con háptica TruTouch y seguimiento de manos"
+        },
+        {
+          "label": "Audio",
+          "value": "Altavoces estéreo integrados con audio espacial 3D y jack de 3,5 mm"
+        },
+        {
+          "label": "Batería",
+          "value": "Aprox. 2,5 horas de uso continuo, carga por USB-C"
+        },
+        {
+          "label": "PC VR",
+          "value": "Compatible con Meta Quest Link por cable"
+        }
+      ],
+      "descriptionHtml": "<p>El Meta Quest 3S es un visor de realidad virtual y mixta que funciona sin cables ni consola. Esta versión tiene 256 GB para instalar tus juegos y apps.</p><h3>Rendimiento</h3><p>Usa el procesador Qualcomm Snapdragon XR2 Gen 2. No necesita PC ni consola para funcionar.</p><h3>Realidad mixta</h3><p>Las cámaras frontales muestran tu espacio en colores reales, para poner pantallas virtuales o juegos sobre el living.</p><h3>Controles y sonido</h3><ul><li>Mandos Touch Plus con háptica TruTouch, sin los aros de seguimiento voluminosos.</li><li>Seguimiento de manos para navegar menús con gestos.</li><li>Altavoces con audio espacial 3D y entrada de auriculares de 3,5 mm.</li></ul><h3>Pantalla</h3><p>Fast-LCD de 1832 x 1920 píxeles por ojo, a 90 o 120 Hz, con lentes Fresnel y ajuste de distancia interpupilar en 3 posiciones.</p><h3>Antes de comprar</h3><ul><li>La batería rinde alrededor de 2,5 horas de uso continuo.</li><li>Para usarlo con juegos de PC necesitás cable y Meta Quest Link.</li></ul>",
+      "revisar": [
+        "La descripción no detalla qué viene en la caja: confirmar."
+      ]
+    },
+    {
+      "slug": "micro-sd-128gb-hiksemi-clase-10-c10",
+      "name": "Tarjeta microSD Hiksemi 128 GB Clase 10 V30",
+      "brand": "Hiksemi",
+      "seoTitle": "Micro SD Hiksemi 128 GB Clase 10 V30",
+      "seoDescription": "Tarjeta microSD Hiksemi de 128 GB, Clase 10 y V30, para celulares, cámaras y grabación continua. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Tarjeta microSD Hiksemi de 128 GB, Clase 10 y V30, con velocidad de escritura sostenida de 30 MB/s para video Full HD. Pensada también para cámaras de seguridad.",
+      "highlights": [
+        "128 GB de capacidad",
+        "Clase 10 y V30: escritura sostenida de 30 MB/s",
+        "Graba video Full HD sin cortes",
+        "Pensada para grabación continua en cámaras de seguridad",
+        "Resistente al agua, impactos y vibraciones",
+        "Sirve en celulares, consolas portátiles y cámaras"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "microSD"
+        },
+        {
+          "label": "Capacidad",
+          "value": "128 GB"
+        },
+        {
+          "label": "Clase de velocidad",
+          "value": "Clase 10"
+        },
+        {
+          "label": "Clase de video",
+          "value": "V30 (escritura mínima sostenida de 30 MB/s)"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Video Full HD, cámaras de seguridad (CCTV), celulares, cámaras de acción, drones y consolas portátiles"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Agua, impactos, vibraciones y rayos X"
+        }
+      ],
+      "descriptionHtml": "<p>Tarjeta microSD Hiksemi de 128 GB, Clase 10 y V30. La certificación V30 asegura una escritura sostenida de al menos 30 MB/s, necesaria para grabar video Full HD sin saltos de fotogramas.</p><h3>Para qué sirve</h3><ul><li>Grabar video Full HD en celulares, cámaras de acción y drones.</li><li>Ampliar el espacio de consolas portátiles como la Nintendo Switch.</li><li>Guardar fotos, música y archivos.</li></ul><h3>Cámaras de seguridad</h3><p>Está pensada para ciclos de escritura constantes, como los de una cámara de seguridad que graba las 24 horas.</p><h3>Resistencia</h3><p>Es impermeable y resiste impactos, vibraciones y rayos X.</p><h3>Antes de comprar</h3><ul><li>Revisá que tu equipo acepte tarjetas microSD de 128 GB.</li></ul>",
+      "revisar": [
+        "La descripción original está cortada y no trae velocidad de lectura en MB/s ni adaptador: no se publicaron.",
+        "Sin SKU. Brand cambiada de General a Hiksemi."
+      ]
+    },
+    {
+      "slug": "monitor-gamer-curvo-msi-24-mag-242c-va-180-hz-full-hd",
+      "name": "Monitor gamer curvo MSI MAG 242C 24″ VA 180 Hz Full HD",
+      "brand": "MSI",
+      "model": "MAG 242C",
+      "seoTitle": "Monitor MSI MAG 242C 24″ curvo 180 Hz",
+      "seoDescription": "Monitor gamer curvo MSI MAG 242C de 24″, panel VA Full HD, 180 Hz y 1 ms MPRT. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor gamer curvo de 24″ con panel VA Full HD de 1920 x 1080, 180 Hz y 1 ms (MPRT). Preparado para HDR y con AI Vision.",
+      "highlights": [
+        "Panel VA curvo de 24″ con resolución Full HD",
+        "Tasa de refresco de 180 Hz para imagen fluida",
+        "Tiempo de respuesta de 1 ms (MPRT)",
+        "Preparado para HDR: más detalle en luces y sombras",
+        "AI Vision: revela detalle en zonas oscuras",
+        "Reducción de luz azul por software"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24″"
+        },
+        {
+          "label": "Tipo de panel",
+          "value": "VA, curvo"
+        },
+        {
+          "label": "Resolución",
+          "value": "1920 x 1080 (Full HD)"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "180 Hz"
+        },
+        {
+          "label": "Tiempo de respuesta",
+          "value": "1 ms (MPRT)"
+        },
+        {
+          "label": "HDR",
+          "value": "Preparado para HDR (HDR Ready)"
+        },
+        {
+          "label": "Tecnologías",
+          "value": "AI Vision y reducción de luz azul"
+        }
+      ],
+      "descriptionHtml": "<p>El MSI MAG 242C es un monitor gamer curvo de 24″ con panel VA Full HD. Combina 180 Hz y 1 ms de respuesta para juegos de movimiento rápido.</p><h3>Fluidez para jugar</h3><p>Con 180 Hz y 1 ms (MPRT), las imágenes se ven más fluidas y se reducen el tearing y los saltos de fotogramas. Sirve para shooters en primera persona, juegos de carreras, estrategia en tiempo real y deportes.</p><h3>Imagen</h3><ul><li>Resolución Full HD de 1920 x 1080.</li><li>Preparado para HDR, con ajustes de contraste y sombras que realzan los detalles.</li><li>AI Vision: aclara las zonas oscuras y mejora el brillo general y los colores.</li><li>Reducción de luz azul mediante software.</li></ul><h3>Construcción</h3><p>La serie MAG de MSI apunta a la estabilidad y la durabilidad en sesiones largas de juego, con una construcción robusta y buena disipación del calor.</p><h3>Antes de comprar</h3><ul><li>La descripción no detalla las conexiones ni el brillo del panel. Consultanos si necesitás una entrada puntual.</li></ul>",
+      "revisar": [
+        "La descripción no informa entradas de video, brillo, ni base/VESA: no se publicaron.",
+        "Brand cambiada de General a MSI."
+      ]
+    },
+    {
+      "slug": "monitor-gamer-curvo-msi-27-mag-276cxf-va-280-hz-full-hd",
+      "name": "Monitor gamer curvo MSI MAG 276CXF 27″ VA 280 Hz Full HD",
+      "brand": "MSI",
+      "model": "MAG 276CXF",
+      "seoTitle": "Monitor MSI MAG 276CXF 27″ curvo Full HD",
+      "seoDescription": "Monitor gamer curvo MSI MAG 276CXF de 27″, panel VA Full HD con AI Vision y preparado para HDR. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor gamer curvo MSI de 27″ con panel VA Full HD, AI Vision y soporte HDR Ready. Pensado para juegos de movimiento rápido.",
+      "highlights": [
+        "Panel VA curvo de 27″ con resolución Full HD",
+        "Alta tasa de refresco para juegos veloces",
+        "Preparado para HDR: más detalle en luces y sombras",
+        "AI Vision: revela detalle en zonas oscuras",
+        "Reducción de luz azul por software",
+        "Serie MAG: construcción robusta"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "27″"
+        },
+        {
+          "label": "Tipo de panel",
+          "value": "VA, curvo"
+        },
+        {
+          "label": "Resolución",
+          "value": "Full HD"
+        },
+        {
+          "label": "HDR",
+          "value": "Preparado para HDR (HDR Ready)"
+        },
+        {
+          "label": "Tecnologías",
+          "value": "AI Vision y reducción de luz azul"
+        },
+        {
+          "label": "Serie",
+          "value": "MSI MAG (Arsenal Gaming)"
+        }
+      ],
+      "descriptionHtml": "<p>El MSI MAG 276CXF es un monitor gamer curvo de 27″ con panel VA Full HD. Trae AI Vision y soporte HDR Ready para ver más detalle en escenas oscuras.</p><h3>Para jugar</h3><p>Está pensado para géneros de movimiento rápido: shooters en primera persona, juegos de lucha, carreras, estrategia en tiempo real y deportes. Una tasa de refresco alta y un tiempo de respuesta bajo ayudan a que la imagen se vea fluida.</p><h3>Imagen</h3><ul><li>Panel VA curvo de 27″ con resolución Full HD.</li><li>AI Vision: revela detalles en zonas oscuras y mejora brillo y color.</li><li>HDR Ready: más rango de colores y más detalle que un monitor tradicional.</li><li>Reducción de luz azul mediante software.</li></ul><h3>Serie MAG</h3><p>La línea MAG de MSI tiene un diseño robusto, pensado para resistir sesiones de juego intensas.</p><h3>Antes de comprar</h3><ul><li>La ficha del fabricante no es consistente con la frecuencia de actualización y el tiempo de respuesta, por eso no figuran acá. Consultanos antes de comprar si ese dato es clave para vos.</li></ul>",
+      "revisar": [
+        "Frecuencia y respuesta contradictorias: el nombre y el SKU dicen 280 Hz; la ficha corta dice 180 Hz y 1 ms (MPRT) y la descripción 280 Hz y 0,5 ms (GTG). No se publicaron cifras, pero el name conserva 280 Hz del título original: confirmar y ajustar.",
+        "Brand cambiada de General a MSI."
+      ]
+    },
+    {
+      "slug": "monitor-gamer-msi-24-mag-244f-200-hz-ips-full-hd",
+      "name": "Monitor gamer MSI MAG 244F 24″ IPS 200 Hz Full HD",
+      "brand": "MSI",
+      "model": "MAG 244F",
+      "seoTitle": "Monitor MSI MAG 244F 24″ IPS 200 Hz",
+      "seoDescription": "Monitor gamer MSI MAG 244F de 24″, panel Rapid IPS Full HD, 200 Hz y 0,5 ms GtG. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor gamer de 24″ con panel Rapid IPS Full HD, 200 Hz y 0,5 ms (GtG, mín.). Compatible con HDR y con AI Vision.",
+      "highlights": [
+        "Panel Rapid IPS de 24″ con resolución Full HD",
+        "Tasa de refresco de 200 Hz",
+        "Respuesta de 0,5 ms (GtG, mín.)",
+        "Compatible con HDR: más detalle en luces y sombras",
+        "AI Vision: revela detalle en zonas oscuras",
+        "Reducción de emisión de luz azul"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24″"
+        },
+        {
+          "label": "Tipo de panel",
+          "value": "Rapid IPS"
+        },
+        {
+          "label": "Resolución",
+          "value": "1920 x 1080 (Full HD)"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "200 Hz"
+        },
+        {
+          "label": "Tiempo de respuesta",
+          "value": "0,5 ms (GtG, mín.)"
+        },
+        {
+          "label": "HDR",
+          "value": "Compatible con HDR"
+        },
+        {
+          "label": "Tecnologías",
+          "value": "AI Vision y reducción de luz azul"
+        }
+      ],
+      "descriptionHtml": "<p>El MSI MAG 244F es un monitor gamer de 24″ con panel Rapid IPS Full HD. Llega a 200 Hz con 0,5 ms de respuesta, pensado para juegos competitivos.</p><h3>Velocidad y precisión</h3><p>Con 200 Hz y 0,5 ms (GtG, mín.), la imagen se ve más fluida y sin tearing ni fotogramas entrecortados. Aprovecha bien los shooters en primera persona, los simuladores de carreras, la estrategia en tiempo real y los deportes.</p><h3>Imagen</h3><ul><li>Panel Rapid IPS con resolución de 1920 x 1080.</li><li>Compatible con HDR para realzar detalles con ajustes de contraste y sombras.</li><li>AI Vision: aclara zonas oscuras y mejora brillo y color.</li><li>Reducción de emisión de luz azul mediante software.</li></ul><h3>Serie MAG</h3><p>Construcción robusta y buena disipación del calor, pensadas para sesiones largas.</p>",
+      "revisar": [
+        "La descripción no informa conexiones, brillo ni soporte VESA: no se publicaron.",
+        "SKU trae \"24&#8243;\" con restos de HTML. Brand cambiada de General a MSI."
+      ]
+    },
+    {
+      "slug": "monitor-gamer-msi-27-mag-274f-200-hz-ips-full-hd",
+      "name": "Monitor gamer MSI MAG 274F 27″ IPS 200 Hz Full HD",
+      "brand": "MSI",
+      "model": "MAG 274F",
+      "seoTitle": "Monitor MSI MAG 274F 27″ IPS 200 Hz",
+      "seoDescription": "Monitor gamer MSI MAG 274F de 27″, panel Rapid IPS Full HD, 200 Hz y 0,5 ms GtG. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor gamer de 27″ con panel Rapid IPS Full HD, 200 Hz y 0,5 ms (GtG, mín.). Preparado para HDR y con AI Vision.",
+      "highlights": [
+        "Panel Rapid IPS de 27″ con resolución Full HD",
+        "Tasa de refresco de 200 Hz",
+        "Respuesta de 0,5 ms (GtG, mín.)",
+        "Preparado para HDR: más detalle en luces y sombras",
+        "AI Vision: revela detalle en zonas oscuras",
+        "Reducción de emisión de luz azul"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "27″"
+        },
+        {
+          "label": "Tipo de panel",
+          "value": "Rapid IPS"
+        },
+        {
+          "label": "Resolución",
+          "value": "1920 x 1080 (Full HD)"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "200 Hz"
+        },
+        {
+          "label": "Tiempo de respuesta",
+          "value": "0,5 ms (GtG, mín.)"
+        },
+        {
+          "label": "HDR",
+          "value": "Preparado para HDR (HDR Ready)"
+        },
+        {
+          "label": "Tecnologías",
+          "value": "AI Vision y reducción de luz azul"
+        }
+      ],
+      "descriptionHtml": "<p>El MSI MAG 274F suma una pantalla de 27″ al panel Rapid IPS Full HD de la línea MAG. Llega a 200 Hz con 0,5 ms de respuesta, ideal para juegos competitivos.</p><h3>Velocidad y precisión</h3><p>Con 200 Hz y 0,5 ms (GtG, mín.), las escenas rápidas se ven fluidas, sin tearing. Está pensado para shooters en primera persona, simuladores de carreras y estrategia en tiempo real.</p><h3>Imagen</h3><ul><li>Resolución de 1920 x 1080 en 27″.</li><li>Preparado para HDR, con ajustes de contraste y sombras.</li><li>AI Vision: aclara zonas oscuras y mejora brillo y color.</li><li>Reducción de emisión de luz azul mediante software.</li></ul><h3>Serie MAG</h3><p>La línea MAG de MSI tiene una construcción robusta y buena disipación del calor para sesiones largas de juego.</p><h3>Antes de comprar</h3><ul><li>En 27″ la resolución Full HD tiene menos densidad de píxeles que en un monitor de 24″.</li></ul>",
+      "revisar": [
+        "La descripción no informa conexiones, brillo ni VESA: no se publicaron.",
+        "SKU con restos de HTML (\"&#8243;\"). Brand cambiada de General a MSI."
+      ]
+    },
+    {
+      "slug": "monitor-led-20-e-view-1951axa",
+      "name": "Monitor LED E-View 2151AXA 22″ VGA/HDMI 75 Hz",
+      "brand": "E-View",
+      "model": "2151AXA",
+      "seoTitle": "Monitor E-View 2151AXA 22″ VGA/HDMI 75 Hz",
+      "seoDescription": "Monitor LED E-View 2151AXA de 21,5″ Full HD con entradas VGA y HDMI y 75 Hz. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor LED de 21,5″ Full HD (1920 x 1080) con entradas VGA y HDMI, respuesta de 5 ms y montaje VESA.",
+      "highlights": [
+        "Pantalla LED de 21,5″ Full HD",
+        "Entradas VGA y HDMI",
+        "75 Hz de frecuencia de actualización",
+        "Tiempo de respuesta de 5 ms",
+        "Contraste de 1000:1 y brillo de 250 cd/m²",
+        "Compatible con montaje en pared VESA"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "21,5″"
+        },
+        {
+          "label": "Resolución",
+          "value": "1920 x 1080 (Full HD)"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "75 Hz"
+        },
+        {
+          "label": "Relación de contraste",
+          "value": "1000:1"
+        },
+        {
+          "label": "Tiempo de respuesta",
+          "value": "5 ms"
+        },
+        {
+          "label": "Brillo",
+          "value": "250 cd/m²"
+        },
+        {
+          "label": "Colores",
+          "value": "16,7 millones"
+        },
+        {
+          "label": "Entradas",
+          "value": "VGA y HDMI"
+        },
+        {
+          "label": "Montaje",
+          "value": "Soporte de pared VESA"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 2151AXA es un monitor LED de 21,5″ para la casa o la oficina. Tiene resolución Full HD y entradas VGA y HDMI.</p><h3>Imagen</h3><p>Resolución de 1920 x 1080, contraste de 1000:1 y brillo de 250 cd/m². Muestra 16,7 millones de colores y responde en 5 ms.</p><h3>Conexiones y montaje</h3><ul><li>Entrada VGA para equipos más viejos.</li><li>Entrada HDMI para PCs y notebooks actuales.</li><li>Compatible con montaje en pared VESA.</li></ul><h3>Para qué sirve</h3><p>Es un monitor de uso general: trabajo de oficina, estudio, videos y navegación.</p>",
+      "revisar": [
+        "Slug dice 20\" 1951AXA pero el nombre y la descripción corresponden al 2151AXA de 21,5\": no se toca el slug, confirmar.",
+        "Brand cambiada de General a E-View. Sin SKU."
+      ]
+    },
+    {
+      "slug": "monitor-led-20-e-view-1951axa-vga-hdmi-60hz",
+      "name": "Monitor LED E-View 1951AXA 20″ VGA/HDMI 60 Hz",
+      "brand": "E-View",
+      "model": "1951AXA",
+      "seoTitle": "Monitor E-View 1951AXA 20″ VGA/HDMI 60 Hz",
+      "seoDescription": "Monitor LED E-View 1951AXA de 19,5″ con resolución 1600 x 900, VGA y HDMI y 60 Hz. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor LED de 19,5″ con resolución de 1600 x 900, entradas VGA y HDMI y 60 Hz. Compatible con montaje VESA 100 x 100.",
+      "highlights": [
+        "Pantalla LED de 19,5″ con resolución de 1600 x 900",
+        "Entradas VGA y HDMI",
+        "60 Hz de frecuencia de actualización",
+        "Tiempo de respuesta de 7,5 ms",
+        "Brillo de 250 cd/m² y contraste de 850:1",
+        "Montaje en pared VESA 100 x 100"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "19,5″"
+        },
+        {
+          "label": "Resolución",
+          "value": "1600 x 900"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "60 Hz"
+        },
+        {
+          "label": "Relación de contraste",
+          "value": "850:1"
+        },
+        {
+          "label": "Tiempo de respuesta",
+          "value": "7,5 ms"
+        },
+        {
+          "label": "Brillo",
+          "value": "250 cd/m²"
+        },
+        {
+          "label": "Entradas",
+          "value": "VGA y HDMI"
+        },
+        {
+          "label": "Montaje",
+          "value": "Soporte de pared VESA 100 x 100"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 1951AXA es un monitor LED compacto de 19,5″ para tareas de todos los días. Tiene entradas VGA y HDMI.</p><h3>Imagen</h3><p>Resolución de 1600 x 900, contraste de 850:1, brillo de 250 cd/m² y tiempo de respuesta de 7,5 ms.</p><h3>Conexiones y montaje</h3><ul><li>Entrada VGA para equipos más viejos.</li><li>Entrada HDMI para equipos actuales.</li><li>Compatible con montaje en pared VESA 100 x 100.</li></ul><h3>Para qué sirve</h3><p>Es un monitor básico para la oficina, el estudio o un segundo puesto de trabajo.</p><h3>Antes de comprar</h3><ul><li>La resolución es 1600 x 900, no Full HD.</li></ul>",
+      "revisar": [
+        "La descripción nombra el modelo como \"1051AXA\", y el nombre y el SKU dicen 1951AXA: se usó 1951AXA.",
+        "Ficha corta tenía solo un texto promocional: se ignoró.",
+        "Brand cambiada de General a E-View."
+      ]
+    },
+    {
+      "slug": "monitor-led-22-e-view-2151ray-hdmi-dp-100hz",
+      "name": "Monitor LED E-View 2151RAY 22″ Full HD",
+      "brand": "E-View",
+      "model": "2151RAY",
+      "seoTitle": "Monitor E-View 2151RAY 22″ Full HD",
+      "seoDescription": "Monitor LED E-View 2151RAY de 21,5″ Full HD, 5 ms, ángulos de visión de 85° y montaje VESA. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor LED de 21,5″ Full HD (1920 x 1080) con relación 16:9, 5 ms de respuesta, contraste 1000:1 y montaje VESA.",
+      "highlights": [
+        "Pantalla LED de 21,5″ Full HD 16:9",
+        "Contraste estático de 1000:1 y brillo de 250 cd/m²",
+        "Tiempo de respuesta de 5 ms",
+        "Ángulos de visión de 85° y 80°",
+        "Consumo aproximado de 25 W",
+        "Compatible con montaje VESA"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "21,5″"
+        },
+        {
+          "label": "Resolución",
+          "value": "1920 x 1080 (Full HD), 16:9"
+        },
+        {
+          "label": "Contraste estático",
+          "value": "1000:1"
+        },
+        {
+          "label": "Brillo",
+          "value": "250 cd/m²"
+        },
+        {
+          "label": "Tiempo de respuesta",
+          "value": "5 ms (Tr+Tf)"
+        },
+        {
+          "label": "Ángulos de visión",
+          "value": "85° (izq./der.) y 80° (arriba/abajo)"
+        },
+        {
+          "label": "Consumo",
+          "value": "Aprox. 25 W (100–240 V CA, 50–60 Hz)"
+        },
+        {
+          "label": "Dimensiones",
+          "value": "556 × 115 × 416 mm"
+        },
+        {
+          "label": "Peso",
+          "value": "Aprox. 2 kg"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 2151RAY es un monitor LED Full HD de 21,5″, compacto y liviano. Sirve para la oficina, el estudio o un segundo puesto de trabajo.</p><h3>Imagen</h3><p>Resolución de 1920 x 1080 en formato 16:9, contraste estático de 1000:1 y brillo de 250 cd/m². Los ángulos de visión son amplios, de 85° a los costados y 80° arriba y abajo.</p><h3>Diseño y consumo</h3><ul><li>Mide 556 × 115 × 416 mm y pesa unos 2 kg.</li><li>Consume alrededor de 25 W.</li><li>Se puede montar con soporte VESA.</li></ul><h3>Antes de comprar</h3><ul><li>El nombre dice HDMI/DP y 100 Hz, pero la descripción habla de entradas VGA y HDMI y hasta 75 Hz. Por eso no figuran conexiones ni frecuencia: consultanos antes de comprar.</li></ul>",
+      "revisar": [
+        "Conflicto de datos: nombre HDMI/DP 100 Hz vs descripción VGA/HDMI y hasta 75 Hz. No se publicaron ni conexiones ni Hz; confirmar y ajustar el name.",
+        "Brand cambiada de General a E-View. Sin SKU. Ficha corta era solo texto promocional."
+      ]
+    },
+    {
+      "slug": "monitor-led-24-curvo-e-view-2351cur-hdmi-dp-165hz",
+      "name": "Monitor LED curvo E-View 2351CUR 24″ HDMI/DP 165 Hz",
+      "brand": "E-View",
+      "model": "2351CUR",
+      "seoTitle": "Monitor E-View 2351CUR 24″ curvo 165 Hz",
+      "seoDescription": "Monitor LED curvo E-View 2351CUR de 24″ Full HD, 165 Hz, con entradas HDMI y DisplayPort. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor curvo de 24″ Full HD (1920 x 1080) con 165 Hz y conexión por HDMI y DisplayPort. Pensado para juegos.",
+      "highlights": [
+        "Pantalla curva de 24″ más envolvente",
+        "Resolución Full HD de 1920 x 1080",
+        "165 Hz de frecuencia de actualización",
+        "Entradas HDMI y DisplayPort"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24″"
+        },
+        {
+          "label": "Forma",
+          "value": "Curvo"
+        },
+        {
+          "label": "Resolución",
+          "value": "1920 x 1080 (Full HD)"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "165 Hz"
+        },
+        {
+          "label": "Entradas",
+          "value": "HDMI y DisplayPort"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 2351CUR es un monitor curvo de 24″ Full HD con 165 Hz. Se conecta a PCs y consolas por HDMI o DisplayPort.</p><h3>Para jugar</h3><p>Los 165 Hz dan una imagen más fluida en juegos, y la curvatura hace la experiencia más envolvente.</p><h3>Conexiones</h3><p>HDMI y DisplayPort para conectar PCs y consolas con facilidad.</p>",
+      "revisar": [
+        "La descripción no indica el tipo de panel, el brillo ni el tiempo de respuesta; menciona \"probablemente VA\" sin confirmar, no se publicó.",
+        "Brand cambiada de General a E-View. Sin SKU."
+      ]
+    },
+    {
+      "slug": "monitor-led-24-e-view-2351axa-vga-hdmi-75hz",
+      "name": "Monitor LED E-View 2351AXA 24″ VGA/HDMI 75 Hz",
+      "brand": "E-View",
+      "model": "2351AXA",
+      "seoTitle": "Monitor E-View 2351AXA 24″ VGA/HDMI 75 Hz",
+      "seoDescription": "Monitor LED E-View 2351AXA de 23,6″ Full HD con entradas VGA y HDMI y 75 Hz. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor LED de 23,6″ Full HD (1920 x 1080) con entradas VGA y HDMI, 75 Hz, respuesta de 5 ms y montaje VESA.",
+      "highlights": [
+        "Pantalla LED de 23,6″ Full HD",
+        "Entradas VGA y HDMI",
+        "75 Hz de frecuencia de actualización",
+        "Tiempo de respuesta de 5 ms",
+        "Contraste de 1000:1 y brillo de 250 cd/m²",
+        "Compatible con montaje en pared VESA"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "23,6″"
+        },
+        {
+          "label": "Resolución",
+          "value": "1920 x 1080 (Full HD)"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "75 Hz"
+        },
+        {
+          "label": "Relación de contraste",
+          "value": "1000:1"
+        },
+        {
+          "label": "Tiempo de respuesta",
+          "value": "5 ms"
+        },
+        {
+          "label": "Brillo",
+          "value": "250 cd/m²"
+        },
+        {
+          "label": "Colores",
+          "value": "16,7 millones"
+        },
+        {
+          "label": "Entradas",
+          "value": "VGA y HDMI"
+        },
+        {
+          "label": "Montaje",
+          "value": "Soporte de pared VESA"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 2351AXA es un monitor LED de 23,6″ Full HD para el trabajo y el estudio. Tiene entradas VGA y HDMI.</p><h3>Imagen</h3><p>Resolución de 1920 x 1080, contraste de 1000:1 y brillo de 250 cd/m². Muestra 16,7 millones de colores y responde en 5 ms.</p><h3>Conexiones y montaje</h3><ul><li>Entrada VGA para equipos más viejos.</li><li>Entrada HDMI para PCs y notebooks actuales.</li><li>Compatible con montaje en pared VESA.</li></ul><h3>Para qué sirve</h3><p>Es un monitor de uso general para oficina, estudio, videos y navegación.</p>",
+      "revisar": [
+        "Brand cambiada de General a E-View. Sin SKU."
+      ]
+    },
+    {
+      "slug": "monitor-led-24-gfast-full-hd-hdmi-60hz",
+      "name": "Monitor LED GFast T-240 24″ Full HD HDMI 60 Hz",
+      "brand": "GFast",
+      "model": "T-240",
+      "seoTitle": "Monitor GFast T-240 24″ Full HD 60 Hz",
+      "seoDescription": "Monitor LED GFast T-240 de 24″ Full HD con entradas VGA y HDMI y 60 Hz. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor LED plano de 24″ Full HD (1920 x 1080) con 60 Hz, entradas VGA y HDMI y ángulo de visión de 178°.",
+      "highlights": [
+        "Pantalla LED plana de 24″ Full HD",
+        "Entradas VGA y HDMI",
+        "60 Hz de frecuencia de actualización",
+        "Ángulos de visión de 178°",
+        "Brillo de 250 cd/m²",
+        "Compatible con VESA 100 x 100 mm"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "24″"
+        },
+        {
+          "label": "Forma",
+          "value": "Plano"
+        },
+        {
+          "label": "Resolución",
+          "value": "1920 x 1080 (Full HD)"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "60 Hz"
+        },
+        {
+          "label": "Tiempo de respuesta",
+          "value": "14 ms"
+        },
+        {
+          "label": "Brillo",
+          "value": "250 cd/m²"
+        },
+        {
+          "label": "Ángulo de visión",
+          "value": "178° / 178°"
+        },
+        {
+          "label": "Entradas",
+          "value": "1 x VGA y 1 x HDMI"
+        },
+        {
+          "label": "Voltaje",
+          "value": "100–240 V, 50/60 Hz"
+        },
+        {
+          "label": "VESA",
+          "value": "100 x 100 mm"
+        },
+        {
+          "label": "Dimensiones con base",
+          "value": "548 x 113 x 368 mm"
+        },
+        {
+          "label": "Peso con base",
+          "value": "2,85 kg"
+        }
+      ],
+      "descriptionHtml": "<p>El GFast T-240 es un monitor LED plano de 24″ para la casa o la oficina. Tiene resolución Full HD y entradas VGA y HDMI.</p><h3>Imagen</h3><p>Resolución de 1920 x 1080 con colores nítidos para series, películas y trabajo. Tiene bajo consumo de energía y ángulos de visión de 178°.</p><h3>Conexiones y soporte</h3><ul><li>1 entrada VGA y 1 entrada HDMI.</li><li>Compatible con soporte VESA de 100 x 100 mm.</li><li>Color negro.</li></ul><h3>Para qué sirve</h3><p>Es cómodo para estudiar, trabajar o ver una película.</p><h3>Antes de comprar</h3><ul><li>No tiene parlantes.</li><li>La base no regula la altura ni gira, y no tiene pivote ni inclinación.</li><li>No es compatible con FreeSync ni G-Sync.</li></ul>",
+      "revisar": [
+        "La descripción menciona 23,6\" y 24\" para el tamaño, y el modelo aparece como T-220 en la tabla y T-240 en el SKU y el nombre: se usó 24\" y T-240.",
+        "Brand cambiada de General a GFast. Ficha corta traía solo un texto promocional."
+      ]
+    },
+    {
+      "slug": "monitor-led-27-e-view-2351ray-hdmi-dp-100hz",
+      "name": "Monitor LED gaming E-View 275GAM-HD 27″ HDMI/DP 180 Hz",
+      "brand": "E-View",
+      "model": "275GAM-HD",
+      "seoTitle": "Monitor E-View 275GAM-HD 27″ Gaming 180 Hz",
+      "seoDescription": "Monitor gamer LED E-View 275GAM-HD de 27″ Full HD, 180 Hz y entradas HDMI y DisplayPort. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor gaming de 27″ Full HD (1920 x 1080) con 180 Hz, entradas HDMI y DisplayPort y bisel delgado.",
+      "highlights": [
+        "Pantalla de 27″ en formato 16:9",
+        "Resolución Full HD de 1920 x 1080",
+        "180 Hz de frecuencia de actualización",
+        "Entradas HDMI y DisplayPort",
+        "Diseño de bisel delgado, estilo gamer"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "27″ (16:9)"
+        },
+        {
+          "label": "Resolución",
+          "value": "1920 x 1080 (Full HD)"
+        },
+        {
+          "label": "Frecuencia de actualización",
+          "value": "180 Hz"
+        },
+        {
+          "label": "Entradas",
+          "value": "HDMI y DisplayPort"
+        },
+        {
+          "label": "Diseño",
+          "value": "Bisel delgado, estilo gamer"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 275GAM-HD es un monitor gaming de 27″ Full HD con 180 Hz. Se conecta por HDMI o DisplayPort y tiene bisel delgado.</p><h3>Para jugar</h3><p>Con 180 Hz la imagen se ve fluida en juegos competitivos. El formato 16:9 y los 27″ dan un buen campo de visión.</p><h3>Conexiones y diseño</h3><ul><li>HDMI y DisplayPort para PCs y consolas.</li><li>Bisel delgado y estética gamer.</li></ul><h3>Antes de comprar</h3><ul><li>En 27″ la resolución Full HD tiene menos densidad de píxeles que en un monitor de 24″.</li></ul>",
+      "revisar": [
+        "El slug dice \"27 e-view 2351ray hdmi dp 100hz\" pero el nombre y la descripción son del 275GAM-HD de 180 Hz: no se toca el slug, confirmar.",
+        "La descripción dice \"IPS (estimado)\": no se publicó el tipo de panel.",
+        "Brand cambiada de General a E-View. Sin SKU."
+      ]
+    },
+    {
+      "slug": "monitor-portable-ips-156-e-view-1560port-usb-c-hdmi",
+      "name": "Monitor portátil E-View 1560PORT 15,6″ IPS USB-C/HDMI",
+      "brand": "E-View",
+      "model": "1560PORT",
+      "seoTitle": "Monitor portátil E-View 1560PORT 15,6″ IPS",
+      "seoDescription": "Monitor portátil E-View 1560PORT de 15,6″, panel IPS Full HD con USB-C y HDMI. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Monitor portátil de 15,6″ con panel IPS Full HD (1920 x 1080), conexión USB-C y HDMI. Liviano, para usar como segundo monitor.",
+      "highlights": [
+        "Pantalla IPS de 15,6″ Full HD",
+        "Colores vivos y ángulos de visión amplios",
+        "Conexión por USB-C y HDMI",
+        "Liviano y fácil de llevar",
+        "Sirve como segundo monitor para la notebook"
+      ],
+      "specs": [
+        {
+          "label": "Tamaño de pantalla",
+          "value": "15,6″"
+        },
+        {
+          "label": "Tipo de panel",
+          "value": "IPS"
+        },
+        {
+          "label": "Resolución",
+          "value": "1920 x 1080 (Full HD)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "USB-C y HDMI"
+        },
+        {
+          "label": "Uso",
+          "value": "Segundo monitor portátil"
+        }
+      ],
+      "descriptionHtml": "<p>El E-View 1560PORT es un monitor portátil de 15,6″ con panel IPS Full HD. Funciona como segunda pantalla para tu notebook.</p><h3>Imagen</h3><p>Resolución Full HD de 1920 x 1080. El panel IPS da colores vivos y buenos ángulos de visión.</p><h3>Conexión</h3><p>Se conecta por USB-C o HDMI, así que es compatible con una amplia gama de equipos.</p><h3>Portabilidad</h3><p>Es liviano y fácil de llevar, para trabajar o entretenerte en cualquier lugar.</p><h3>Antes de comprar</h3><ul><li>Para conectarlo por USB-C, tu equipo tiene que admitir salida de video por ese puerto.</li></ul>",
+      "revisar": [
+        "La descripción no informa brillo, peso, cables incluidos ni si lleva funda o soporte: no se publicaron.",
+        "Brand cambiada de General a E-View. Sin SKU."
+      ]
+    },
+    {
+      "slug": "mouse-gamer-logitech-g903-lightspeed",
+      "name": "Mouse gamer Logitech G903 LIGHTSPEED",
+      "brand": "Logitech",
+      "model": "G903 LIGHTSPEED",
+      "seoTitle": "Mouse gamer Logitech G903 LIGHTSPEED",
+      "seoDescription": "Mouse gamer inalámbrico Logitech G903 LIGHTSPEED con sensor HERO 25K y diseño ambidiestro. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mouse gamer inalámbrico con tecnología LIGHTSPEED de 1 ms y sensor HERO 25K de hasta 25.600 dpi. Ambidiestro y compatible con carga POWERPLAY.",
+      "highlights": [
+        "Sensor HERO 25K de hasta 25.600 dpi, sin suavizado ni aceleración",
+        "Inalámbrico LIGHTSPEED con respuesta de 1 ms",
+        "Hasta 140 horas de batería con iluminación RGB",
+        "Hasta 180 horas de batería sin iluminación",
+        "Diseño ambidiestro con hasta 11 botones",
+        "Compatible con carga inalámbrica POWERPLAY"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mouse gamer inalámbrico"
+        },
+        {
+          "label": "Sensor",
+          "value": "HERO 25K, seguimiento 1:1"
+        },
+        {
+          "label": "Sensibilidad máxima",
+          "value": "25.600 dpi"
+        },
+        {
+          "label": "Tecnología inalámbrica",
+          "value": "LIGHTSPEED, respuesta de 1 ms"
+        },
+        {
+          "label": "Botones",
+          "value": "Hasta 11"
+        },
+        {
+          "label": "Diseño",
+          "value": "Ambidiestro"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 140 h con iluminación RGB LIGHTSYNC; hasta 180 h sin iluminación"
+        },
+        {
+          "label": "Carga inalámbrica",
+          "value": "Compatible con POWERPLAY (se vende por separado)"
+        }
+      ],
+      "descriptionHtml": "<p>El Logitech G903 LIGHTSPEED combina el sensor HERO 25K con conexión inalámbrica de baja latencia. Es ambidiestro y pensado para jugar durante horas.</p><h3>Sensor HERO 25K</h3><p>Ofrece seguimiento 1:1 con una sensibilidad de hasta 25.600 dpi y sin suavizado, aceleración ni filtros. Es hasta 10 veces más eficiente en energía que los sensores de la generación anterior.</p><h3>Inalámbrico LIGHTSPEED</h3><p>Una velocidad de respuesta de 1 ms, de nivel profesional, sin sumar peso ni restar batería.</p><h3>Batería y carga</h3><ul><li>Hasta 140 horas con la iluminación RGB LIGHTSYNC al máximo.</li><li>Hasta 180 horas sin iluminación.</li><li>Con el sistema POWERPLAY se carga mientras jugás y cuando está inactivo.</li><li>Incluye el módulo POWERCORE para reemplazar la pesa opcional de 10 g y la tapa.</li></ul><h3>Diseño</h3><p>Es ambidiestro y tiene hasta 11 botones.</p><h3>Antes de comprar</h3><ul><li>El sistema de carga POWERPLAY se vende por separado.</li></ul>",
+      "revisar": [
+        "El SKU dice \"G502 LIGHTSPEED\" pero el nombre y la descripción son del G903: se usó G903.",
+        "Brand cambiada de General a Logitech.",
+        "La descripción no trae peso ni qué incluye la caja: no se publicaron."
+      ]
+    },
+    {
+      "slug": "mouse-inalambrico-logitech-m170-black",
+      "name": "Mouse inalámbrico Logitech M170 Black",
+      "brand": "Logitech",
+      "model": "M170",
+      "seoTitle": "Mouse inalámbrico Logitech M170 Black",
+      "seoDescription": "Mouse inalámbrico Logitech M170 black con receptor USB, sensor óptico y diseño liviano. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mouse inalámbrico Logitech M170 en color black. Se conecta con un receptor USB, sin software ni emparejamiento.",
+      "highlights": [
+        "Conexión inalámbrica con receptor USB",
+        "Plug and play: sin emparejar ni instalar software",
+        "Sensor de movimiento óptico preciso",
+        "Hasta 12 meses de autonomía sin cambiar las baterías",
+        "Interruptor de encendido/apagado y suspensión automática",
+        "Diseño liviano, delgado y ergonómico"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Negro"
+        },
+        {
+          "label": "Tipo",
+          "value": "Mouse inalámbrico óptico"
+        },
+        {
+          "label": "Conexión",
+          "value": "Receptor USB"
+        },
+        {
+          "label": "Instalación",
+          "value": "Plug and play, sin software"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 12 meses sin cambiar las baterías"
+        },
+        {
+          "label": "Ahorro de energía",
+          "value": "Interruptor de encendido/apagado y modo de suspensión automática"
+        }
+      ],
+      "descriptionHtml": "<p>El Logitech M170 en color black es un mouse inalámbrico simple y duradero. Enchufás el receptor y ya lo podés usar.</p><h3>Cómo se usa</h3><p>Colocás el receptor en un puerto USB de la computadora y empezás a usarlo. No hace falta emparejarlo ni descargar software.</p><h3>Comodidad</h3><ul><li>Diseño ultradelgado, ergonómico y liviano.</li><li>Sin cables, el escritorio queda despejado.</li><li>Se lleva fácil de un lugar de trabajo a otro.</li></ul><h3>Autonomía y precisión</h3><p>El sensor óptico mueve el cursor con precisión. Funciona hasta 12 meses sin cambiar las baterías, gracias al interruptor y a la suspensión automática.</p>",
+      "revisar": [
+        "Las 5 fichas M170 comparten la misma descripción original; solo cambia el color.",
+        "Brand cambiada de General a Logitech.",
+        "La descripción es genérica y no trae alcance inalámbrico, dpi ni tipo de batería: no se publicaron."
+      ]
+    },
+    {
+      "slug": "mouse-inalambrico-logitech-m170-blue-grey",
+      "name": "Mouse inalámbrico Logitech M170 Blue Grey",
+      "brand": "Logitech",
+      "model": "M170",
+      "seoTitle": "Mouse inalámbrico Logitech M170 Blue Grey",
+      "seoDescription": "Mouse inalámbrico Logitech M170 blue grey con receptor USB, sensor óptico y diseño liviano. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mouse inalámbrico Logitech M170 en color blue grey. Se conecta con un receptor USB, sin software ni emparejamiento.",
+      "highlights": [
+        "Conexión inalámbrica con receptor USB",
+        "Plug and play: sin emparejar ni instalar software",
+        "Sensor de movimiento óptico preciso",
+        "Hasta 12 meses de autonomía sin cambiar las baterías",
+        "Interruptor de encendido/apagado y suspensión automática",
+        "Diseño liviano, delgado y ergonómico"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Azul grisáceo (Blue Grey)"
+        },
+        {
+          "label": "Tipo",
+          "value": "Mouse inalámbrico óptico"
+        },
+        {
+          "label": "Conexión",
+          "value": "Receptor USB"
+        },
+        {
+          "label": "Instalación",
+          "value": "Plug and play, sin software"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 12 meses sin cambiar las baterías"
+        },
+        {
+          "label": "Ahorro de energía",
+          "value": "Interruptor de encendido/apagado y modo de suspensión automática"
+        }
+      ],
+      "descriptionHtml": "<p>El Logitech M170 en color blue grey es un mouse inalámbrico simple y duradero. Enchufás el receptor y ya lo podés usar.</p><h3>Cómo se usa</h3><p>Colocás el receptor en un puerto USB de la computadora y empezás a usarlo. No hace falta emparejarlo ni descargar software.</p><h3>Comodidad</h3><ul><li>Diseño ultradelgado, ergonómico y liviano.</li><li>Sin cables, el escritorio queda despejado.</li><li>Se lleva fácil de un lugar de trabajo a otro.</li></ul><h3>Autonomía y precisión</h3><p>El sensor óptico mueve el cursor con precisión. Funciona hasta 12 meses sin cambiar las baterías, gracias al interruptor y a la suspensión automática.</p>",
+      "revisar": [
+        "Mismo texto que las otras variantes M170; se traduce el color como \"azul grisáceo\", confirmar.",
+        "Brand cambiada de General a Logitech.",
+        "La descripción es genérica y no trae alcance inalámbrico, dpi ni tipo de batería: no se publicaron."
+      ]
+    },
+    {
+      "slug": "mouse-inalambrico-logitech-m170-red",
+      "name": "Mouse inalámbrico Logitech M170 Red",
+      "brand": "Logitech",
+      "model": "M170",
+      "seoTitle": "Mouse inalámbrico Logitech M170 Red",
+      "seoDescription": "Mouse inalámbrico Logitech M170 red con receptor USB, sensor óptico y diseño liviano. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mouse inalámbrico Logitech M170 en color red. Se conecta con un receptor USB, sin software ni emparejamiento.",
+      "highlights": [
+        "Conexión inalámbrica con receptor USB",
+        "Plug and play: sin emparejar ni instalar software",
+        "Sensor de movimiento óptico preciso",
+        "Hasta 12 meses de autonomía sin cambiar las baterías",
+        "Interruptor de encendido/apagado y suspensión automática",
+        "Diseño liviano, delgado y ergonómico"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Rojo"
+        },
+        {
+          "label": "Tipo",
+          "value": "Mouse inalámbrico óptico"
+        },
+        {
+          "label": "Conexión",
+          "value": "Receptor USB"
+        },
+        {
+          "label": "Instalación",
+          "value": "Plug and play, sin software"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 12 meses sin cambiar las baterías"
+        },
+        {
+          "label": "Ahorro de energía",
+          "value": "Interruptor de encendido/apagado y modo de suspensión automática"
+        }
+      ],
+      "descriptionHtml": "<p>El Logitech M170 en color red es un mouse inalámbrico simple y duradero. Enchufás el receptor y ya lo podés usar.</p><h3>Cómo se usa</h3><p>Colocás el receptor en un puerto USB de la computadora y empezás a usarlo. No hace falta emparejarlo ni descargar software.</p><h3>Comodidad</h3><ul><li>Diseño ultradelgado, ergonómico y liviano.</li><li>Sin cables, el escritorio queda despejado.</li><li>Se lleva fácil de un lugar de trabajo a otro.</li></ul><h3>Autonomía y precisión</h3><p>El sensor óptico mueve el cursor con precisión. Funciona hasta 12 meses sin cambiar las baterías, gracias al interruptor y a la suspensión automática.</p>",
+      "revisar": [
+        "Mismo texto que las otras variantes M170.",
+        "Brand cambiada de General a Logitech.",
+        "La descripción es genérica y no trae alcance inalámbrico, dpi ni tipo de batería: no se publicaron."
+      ]
+    },
+    {
+      "slug": "mouse-inalambrico-logitech-m170-rose",
+      "name": "Mouse inalámbrico Logitech M170 Rose",
+      "brand": "Logitech",
+      "model": "M170",
+      "seoTitle": "Mouse inalámbrico Logitech M170 Rose",
+      "seoDescription": "Mouse inalámbrico Logitech M170 rose con receptor USB, sensor óptico y diseño liviano. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mouse inalámbrico Logitech M170 en color rose. Se conecta con un receptor USB, sin software ni emparejamiento.",
+      "highlights": [
+        "Conexión inalámbrica con receptor USB",
+        "Plug and play: sin emparejar ni instalar software",
+        "Sensor de movimiento óptico preciso",
+        "Hasta 12 meses de autonomía sin cambiar las baterías",
+        "Interruptor de encendido/apagado y suspensión automática",
+        "Diseño liviano, delgado y ergonómico"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Rosa (Rose)"
+        },
+        {
+          "label": "Tipo",
+          "value": "Mouse inalámbrico óptico"
+        },
+        {
+          "label": "Conexión",
+          "value": "Receptor USB"
+        },
+        {
+          "label": "Instalación",
+          "value": "Plug and play, sin software"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 12 meses sin cambiar las baterías"
+        },
+        {
+          "label": "Ahorro de energía",
+          "value": "Interruptor de encendido/apagado y modo de suspensión automática"
+        }
+      ],
+      "descriptionHtml": "<p>El Logitech M170 en color rose es un mouse inalámbrico simple y duradero. Enchufás el receptor y ya lo podés usar.</p><h3>Cómo se usa</h3><p>Colocás el receptor en un puerto USB de la computadora y empezás a usarlo. No hace falta emparejarlo ni descargar software.</p><h3>Comodidad</h3><ul><li>Diseño ultradelgado, ergonómico y liviano.</li><li>Sin cables, el escritorio queda despejado.</li><li>Se lleva fácil de un lugar de trabajo a otro.</li></ul><h3>Autonomía y precisión</h3><p>El sensor óptico mueve el cursor con precisión. Funciona hasta 12 meses sin cambiar las baterías, gracias al interruptor y a la suspensión automática.</p>",
+      "revisar": [
+        "Mismo texto que las otras variantes M170.",
+        "Brand cambiada de General a Logitech.",
+        "La descripción es genérica y no trae alcance inalámbrico, dpi ni tipo de batería: no se publicaron."
+      ]
+    },
+    {
+      "slug": "mouse-inalambrico-logitech-m170-white",
+      "name": "Mouse inalámbrico Logitech M170 White",
+      "brand": "Logitech",
+      "model": "M170",
+      "seoTitle": "Mouse inalámbrico Logitech M170 White",
+      "seoDescription": "Mouse inalámbrico Logitech M170 white con receptor USB, sensor óptico y diseño liviano. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mouse inalámbrico Logitech M170 en color white. Se conecta con un receptor USB, sin software ni emparejamiento.",
+      "highlights": [
+        "Conexión inalámbrica con receptor USB",
+        "Plug and play: sin emparejar ni instalar software",
+        "Sensor de movimiento óptico preciso",
+        "Hasta 12 meses de autonomía sin cambiar las baterías",
+        "Interruptor de encendido/apagado y suspensión automática",
+        "Diseño liviano, delgado y ergonómico"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Blanco"
+        },
+        {
+          "label": "Tipo",
+          "value": "Mouse inalámbrico óptico"
+        },
+        {
+          "label": "Conexión",
+          "value": "Receptor USB"
+        },
+        {
+          "label": "Instalación",
+          "value": "Plug and play, sin software"
+        },
+        {
+          "label": "Autonomía",
+          "value": "Hasta 12 meses sin cambiar las baterías"
+        },
+        {
+          "label": "Ahorro de energía",
+          "value": "Interruptor de encendido/apagado y modo de suspensión automática"
+        }
+      ],
+      "descriptionHtml": "<p>El Logitech M170 en color white es un mouse inalámbrico simple y duradero. Enchufás el receptor y ya lo podés usar.</p><h3>Cómo se usa</h3><p>Colocás el receptor en un puerto USB de la computadora y empezás a usarlo. No hace falta emparejarlo ni descargar software.</p><h3>Comodidad</h3><ul><li>Diseño ultradelgado, ergonómico y liviano.</li><li>Sin cables, el escritorio queda despejado.</li><li>Se lleva fácil de un lugar de trabajo a otro.</li></ul><h3>Autonomía y precisión</h3><p>El sensor óptico mueve el cursor con precisión. Funciona hasta 12 meses sin cambiar las baterías, gracias al interruptor y a la suspensión automática.</p>",
+      "revisar": [
+        "Mismo texto que las otras variantes M170.",
+        "Brand cambiada de General a Logitech.",
+        "La descripción es genérica y no trae alcance inalámbrico, dpi ni tipo de batería: no se publicaron."
+      ]
+    },
+    {
+      "slug": "mouse-inalambrico-logitech-m280-comfort-plus",
+      "name": "Mouse inalámbrico Logitech M280 Comfort Plus",
+      "brand": "Logitech",
+      "model": "M280",
+      "seoTitle": "Mouse inalámbrico Logitech M280 Comfort Plus",
+      "seoDescription": "Mouse inalámbrico Logitech M280 de forma asimétrica para mano derecha y rueda de goma. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mouse inalámbrico Logitech M280 con forma asimétrica para la mano derecha, agarre estampado y rueda de desplazamiento de goma.",
+      "highlights": [
+        "Forma asimétrica pensada para la mano derecha",
+        "Agarre curvo con superficie estampada",
+        "Rueda de goma con desplazamiento línea por línea",
+        "Seguimiento de alta precisión en casi cualquier superficie",
+        "Compatible con Windows, macOS y Linux",
+        "Conexión inalámbrica estable y batería de larga duración"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mouse inalámbrico"
+        },
+        {
+          "label": "Forma",
+          "value": "Asimétrica, para mano derecha"
+        },
+        {
+          "label": "Agarre",
+          "value": "Curvo, con superficie estampada"
+        },
+        {
+          "label": "Rueda de desplazamiento",
+          "value": "De goma, desplazamiento línea por línea"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Windows, macOS y Linux"
+        }
+      ],
+      "descriptionHtml": "<p>El Logitech M280 busca comodidad en el uso diario. Su forma asimétrica guía la mano derecha a una posición natural y el agarre estampado mejora el tacto.</p><h3>Comodidad</h3><p>La forma curva y asimétrica acompaña la mano durante horas de trabajo o estudio. Los patrones de la superficie mejoran el agarre.</p><h3>Control</h3><ul><li>Rueda de goma con buena respuesta al tacto.</li><li>Seguimiento de alta precisión sobre casi cualquier superficie.</li><li>Desplazamiento línea por línea controlado.</li></ul><h3>Compatibilidad</h3><p>Funciona con la mayoría de los sistemas operativos: Windows, macOS y Linux. La conexión inalámbrica es sólida y la batería es de larga duración.</p><h3>Antes de comprar</h3><ul><li>Su forma está pensada para la mano derecha.</li></ul>",
+      "revisar": [
+        "La descripción original mezcla texto de una webcam (micrófono, RightLight, clip de montaje): se descartó.",
+        "No trae tipo de receptor, duración de batería en cifras ni dpi: no se publicaron.",
+        "Brand cambiada de General a Logitech."
+      ]
+    },
+    {
+      "slug": "mouse-jahro-gaming-e-sport",
+      "name": "Mouse gamer Jahro E-Sport",
+      "brand": "Jahro",
+      "model": "JH-2880",
+      "seoTitle": "Mouse gamer Jahro E-Sport JH-2880",
+      "seoDescription": "Mouse gamer Jahro E-Sport con sensor óptico, botones programables y retroiluminación RGB. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mouse gamer Jahro E-Sport con sensor óptico, diseño ergonómico, botones programables y retroiluminación RGB.",
+      "highlights": [
+        "Sensor óptico de seguimiento fluido",
+        "Diseño ergonómico para sesiones largas",
+        "Varios botones programables",
+        "Retroiluminación RGB personalizable"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mouse gamer óptico"
+        },
+        {
+          "label": "Sensor",
+          "value": "Óptico"
+        },
+        {
+          "label": "Botones",
+          "value": "Múltiples, programables"
+        },
+        {
+          "label": "Iluminación",
+          "value": "RGB personalizable"
+        },
+        {
+          "label": "Diseño",
+          "value": "Ergonómico"
+        }
+      ],
+      "descriptionHtml": "<p>El Jahro E-Sport es un mouse gamer con sensor óptico y retroiluminación RGB. Tiene varios botones programables para ajustar los comandos a tu juego.</p><h3>Para jugar</h3><p>El sensor óptico sigue el movimiento de forma fluida sobre cualquier superficie. El diseño ergonómico ayuda a reducir la fatiga en sesiones largas.</p><h3>Personalización</h3><p>Sus botones programables permiten configurar comandos, y la iluminación RGB se personaliza.</p>",
+      "revisar": [
+        "La descripción no trae dpi, cantidad de botones, conexión (cable o inalámbrico), peso ni longitud del cable: no se publicaron.",
+        "Brand cambiada de General a Jahro."
+      ]
+    },
+    {
+      "slug": "mouse-logitech-bluetooth-m196-blanco",
+      "name": "Mouse Bluetooth Logitech M196 Blanco",
+      "model": "M196",
+      "seoTitle": "Mouse Bluetooth Logitech M196 Blanco",
+      "seoDescription": "Mouse Bluetooth Logitech M196 blanco, compacto, de plástico reciclado, hasta 12 meses de autonomía. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mouse Bluetooth Logitech M196 en color blanco. Compacto y liviano, se conecta en segundos y está hecho con plástico reciclado.",
+      "highlights": [
+        "Conexión Bluetooth, sin receptor USB",
+        "Se conecta en segundos",
+        "Diseño compacto, contorneado y liviano",
+        "Hasta 12 meses de duración de batería",
+        "Fabricado con plástico reciclado"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Blanco"
+        },
+        {
+          "label": "Tipo",
+          "value": "Mouse inalámbrico"
+        },
+        {
+          "label": "Conexión",
+          "value": "Bluetooth"
+        },
+        {
+          "label": "Duración de batería",
+          "value": "Hasta 12 meses"
+        },
+        {
+          "label": "Diseño",
+          "value": "Compacto y contorneado"
+        },
+        {
+          "label": "Material",
+          "value": "Plástico reciclado"
+        }
+      ],
+      "descriptionHtml": "<p>El Logitech M196 en color blanco es un mouse Bluetooth que libera tu espacio de trabajo. Es compacto, liviano y se conecta en segundos.</p><h3>Inalámbrico y simple</h3><p>Usa Bluetooth, así que se conecta directo a equipos compatibles sin ocupar un puerto USB.</p><h3>Diseño</h3><ul><li>Compacto, contorneado y más liviano.</li><li>Cómodo para el uso de todos los días.</li><li>Hecho con plástico reciclado duradero.</li></ul><h3>Batería</h3><p>Dura hasta 12 meses, para que te concentres en lo que hacés.</p><h3>Antes de comprar</h3><ul><li>Tu equipo tiene que tener Bluetooth para usarlo.</li></ul>",
+      "revisar": [
+        "La descripción no trae dpi, tipo de batería ni sistemas compatibles: no se publicaron."
+      ]
+    },
+    {
+      "slug": "mouse-logitech-bluetooth-m196-negro",
+      "name": "Mouse Bluetooth Logitech M196 Negro",
+      "brand": "Logitech",
+      "model": "M196",
+      "seoTitle": "Mouse Bluetooth Logitech M196 Negro",
+      "seoDescription": "Mouse Bluetooth Logitech M196 negro, compacto, de plástico reciclado, hasta 12 meses de autonomía. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mouse Bluetooth Logitech M196 en color negro. Compacto y liviano, se conecta en segundos y está hecho con plástico reciclado.",
+      "highlights": [
+        "Conexión Bluetooth, sin receptor USB",
+        "Se conecta en segundos",
+        "Diseño compacto, contorneado y liviano",
+        "Hasta 12 meses de duración de batería",
+        "Fabricado con plástico reciclado"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Negro"
+        },
+        {
+          "label": "Tipo",
+          "value": "Mouse inalámbrico"
+        },
+        {
+          "label": "Conexión",
+          "value": "Bluetooth"
+        },
+        {
+          "label": "Duración de batería",
+          "value": "Hasta 12 meses"
+        },
+        {
+          "label": "Diseño",
+          "value": "Compacto y contorneado"
+        },
+        {
+          "label": "Material",
+          "value": "Plástico reciclado"
+        }
+      ],
+      "descriptionHtml": "<p>El Logitech M196 en color negro es un mouse Bluetooth que libera tu espacio de trabajo. Es compacto, liviano y se conecta en segundos.</p><h3>Inalámbrico y simple</h3><p>Usa Bluetooth, así que se conecta directo a equipos compatibles sin ocupar un puerto USB.</p><h3>Diseño</h3><ul><li>Compacto, contorneado y más liviano.</li><li>Cómodo para el uso de todos los días.</li><li>Hecho con plástico reciclado duradero.</li></ul><h3>Batería</h3><p>Dura hasta 12 meses, para que te concentres en lo que hacés.</p><h3>Antes de comprar</h3><ul><li>Tu equipo tiene que tener Bluetooth para usarlo.</li></ul>",
+      "revisar": [
+        "La descripción no trae dpi, tipo de batería ni sistemas compatibles: no se publicaron.",
+        "Brand cambiada de General a Logitech."
+      ]
+    },
+    {
+      "slug": "mouse-optico-logitech-m100",
+      "name": "Mouse óptico Logitech M90",
+      "brand": "Logitech",
+      "model": "M90",
+      "seoTitle": "Mouse óptico Logitech M90",
+      "seoDescription": "Mouse óptico Logitech M90 de diseño ambidiestro y control preciso del cursor, sin software. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mouse óptico Logitech M90, ambidiestro y de uso sin complicaciones. No requiere instalar software.",
+      "highlights": [
+        "Control preciso del cursor",
+        "Diseño para uso ambidiestro",
+        "Sin configuración de software"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mouse óptico"
+        },
+        {
+          "label": "Diseño",
+          "value": "Ambidiestro"
+        }
+      ],
+      "descriptionHtml": "<p>El Logitech M90 es un mouse óptico simple, para usar con la mano derecha o la izquierda. Funciona sin instalar ni configurar software.</p><h3>Uso</h3><p>Control preciso del cursor y puesta en marcha sin complicaciones. Al ser ambidiestro, lo podés usar con cualquiera de las dos manos.</p><h3>Instalación</h3><p>No necesita configuración de software.</p>",
+      "revisar": [
+        "Casi sin información: la descripción está vacía y la ficha corta solo trae tres frases.",
+        "Slug dice M100 pero el nombre y el SKU dicen M90: no se toca el slug, confirmar.",
+        "Falta conexión (cable o receptor), dpi, botones y peso.",
+        "Brand cambiada de General a Logitech."
+      ]
+    },
+    {
+      "slug": "mouse-optico-logitech-m110",
+      "name": "Mouse óptico Logitech M110 Silencioso",
+      "brand": "Logitech",
+      "model": "M110",
+      "seoTitle": "Mouse óptico silencioso Logitech M110",
+      "seoDescription": "Mouse óptico silencioso Logitech M110 con cable USB de 180 cm, 1000 dpi y diseño ambidiestro. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mouse óptico Logitech M110 con cable USB de 180 cm, 1000 dpi y 3 botones. Diseño ambidiestro y de tamaño normal.",
+      "highlights": [
+        "Conexión USB por cable de 180 cm",
+        "Seguimiento óptico de 1000 dpi",
+        "3 botones",
+        "Diseño ambidiestro de tamaño normal",
+        "Pesa 90 g",
+        "Sin instalar software"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mouse óptico con cable"
+        },
+        {
+          "label": "Resolución",
+          "value": "1000 dpi"
+        },
+        {
+          "label": "Longitud del cable",
+          "value": "180 cm"
+        },
+        {
+          "label": "Botones",
+          "value": "3"
+        },
+        {
+          "label": "Peso",
+          "value": "90 g"
+        },
+        {
+          "label": "Diseño",
+          "value": "Ambidiestro, tamaño normal"
+        }
+      ],
+      "descriptionHtml": "<p>El Logitech M110 es un mouse óptico con cable USB. Es ambidiestro y funciona sin instalar software.</p><h3>Instalación</h3><p>Conectás el cable a un puerto USB y empezás a usarlo, sin software.</p><h3>Precisión</h3><p>El seguimiento óptico de 1000 dpi da un control uniforme del cursor y facilita seleccionar texto. Se desliza bien, con o sin alfombrilla.</p><h3>Comodidad</h3><p>Diseño ambidiestro de tamaño normal, cómodo para ambas manos incluso en uso prolongado.</p>",
+      "revisar": [
+        "La descripción no explica en qué consiste lo \"silencioso\" del nombre; no se publicó como característica.",
+        "Brand cambiada de General a Logitech."
+      ]
+    },
+    {
+      "slug": "mouse-pad-logitech-studio",
+      "name": "Mouse pad Logitech Studio",
+      "brand": "Logitech",
+      "model": "Studio",
+      "seoTitle": "Mouse pad Logitech Studio",
+      "seoDescription": "Mouse pad Logitech Studio de tejido suave, base antideslizante y resistente a salpicaduras. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mouse pad Logitech Studio con superficie de tejido fino, base antideslizante y recubrimiento resistente a salpicaduras.",
+      "highlights": [
+        "Superficie de tejido fino que desliza con poca fricción",
+        "Base antideslizante de caucho natural",
+        "Recubrimiento resistente a salpicaduras",
+        "Se limpia con un paño húmedo",
+        "Contiene poliéster reciclado de botellas PET"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Alfombrilla (mouse pad)"
+        },
+        {
+          "label": "Superficie",
+          "value": "Tejido fino y suave"
+        },
+        {
+          "label": "Base",
+          "value": "Antideslizante, con caucho natural"
+        },
+        {
+          "label": "Resistencia",
+          "value": "Recubrimiento a prueba de salpicaduras"
+        },
+        {
+          "label": "Material reciclado",
+          "value": "13% del peso total es poliéster reciclado (botellas PET)"
+        }
+      ],
+      "descriptionHtml": "<p>El mouse pad Logitech Studio mejora el espacio de trabajo con una superficie suave y silenciosa. La base antideslizante lo mantiene firme.</p><h3>Deslizamiento</h3><p>La superficie de tejido fino genera poca fricción, así el mouse se mueve fácil en la oficina o en casa.</p><h3>Resistente a salpicaduras</h3><p>El recubrimiento resiste los derrames. Si se moja, se limpia con un paño húmedo.</p><h3>Materiales</h3><p>La base tiene caucho natural y el tejido incluye poliéster reciclado, el 13% del peso total.</p><h3>Antes de comprar</h3><ul><li>La base contiene látex de caucho natural, que puede provocar reacciones alérgicas en algunas personas.</li></ul>",
+      "revisar": [
+        "La descripción no trae medidas ni espesor: no se publicaron.",
+        "Brand cambiada de General a Logitech."
+      ]
+    },
+    {
+      "slug": "mouse-targus-optico-usb",
+      "name": "Mouse óptico Targus USB AMU80",
+      "brand": "Targus",
+      "model": "AMU80",
+      "seoTitle": "Mouse óptico Targus USB AMU80",
+      "seoDescription": "Mouse óptico Targus AMU80 con cable USB de 1,5 m, sensor de 1000 DPI y 3 botones. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Mouse óptico Targus con cable USB de 1,5 m, sensor de 1000 DPI y 3 botones. Ambidiestro y sin controladores.",
+      "highlights": [
+        "Cable USB de 1,5 m",
+        "Sensor óptico de 1000 DPI",
+        "3 botones con rueda de desplazamiento",
+        "Apto para diestros y zurdos",
+        "Enchufar y usar, sin controladores",
+        "Pequeño, entra en el maletín de la notebook"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Mouse óptico con cable"
+        },
+        {
+          "label": "Conexión",
+          "value": "USB, cable de 1,5 m"
+        },
+        {
+          "label": "Resolución",
+          "value": "1000 DPI"
+        },
+        {
+          "label": "Botones",
+          "value": "3, con rueda de desplazamiento"
+        },
+        {
+          "label": "Diseño",
+          "value": "Ergonómico, para diestros y zurdos"
+        },
+        {
+          "label": "Instalación",
+          "value": "Plug and play, sin controladores"
+        }
+      ],
+      "descriptionHtml": "<p>El mouse Targus AMU80 es un mouse óptico con cable USB, de tres botones y diseño ergonómico. Sirve para diestros y zurdos.</p><h3>Uso</h3><ul><li>Rueda de desplazamiento para recorrer páginas web y planillas largas.</li><li>Se enchufa al puerto USB y funciona, sin instalar controladores.</li></ul><h3>Tamaño</h3><p>Es cómodo en el escritorio y, por su tamaño chico, se lleva en el maletín de la notebook.</p>",
+      "revisar": [
+        "Brand cambiada de General a Targus.",
+        "La descripción no trae peso ni medidas: no se publicaron."
+      ]
+    },
+    {
+      "slug": "msi-cyborg-i7-240h-16gb-512gb-ssd-15-6-fhd-144hz-rtx-5060-6gb-w11",
+      "name": "Notebook MSI Cyborg 15 Core 7 240H 16 GB RAM 512 GB SSD RTX 5060 8 GB",
+      "model": "Cyborg 15 B2RWFKG-071US",
+      "storage": "512 GB",
+      "ram": "16 GB",
+      "seoTitle": "Notebook MSI Cyborg 15 RTX 5060 16 GB 512 GB",
+      "seoDescription": "Notebook gamer MSI Cyborg 15 con Intel Core 7 240H, RTX 5060 de 8 GB, 16 GB de RAM y SSD de 512 GB. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Notebook gamer MSI Cyborg 15 con Intel Core 7 240H, GeForce RTX 5060 de 8 GB GDDR7, pantalla IPS Full HD de 144 Hz y Windows 11.",
+      "highlights": [
+        "Intel Core 7 240H de 10 núcleos y 16 hilos, hasta 5,2 GHz",
+        "GeForce RTX 5060 de 8 GB GDDR7 con DLSS 4",
+        "16 GB de RAM DDR5 a 5600 MHz en doble canal",
+        "SSD NVMe PCIe Gen4 de 512 GB",
+        "Pantalla IPS Full HD de 15,6″ a 144 Hz",
+        "Teclado RGB de 4 zonas y Wi-Fi 6E"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core 7 240H, 10 núcleos / 16 hilos, hasta 5,2 GHz"
+        },
+        {
+          "label": "Placa de video",
+          "value": "NVIDIA GeForce RTX 5060 Laptop, 8 GB GDDR7, DLSS 4"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR5 5600 MHz, doble canal (2 x 8 GB)"
+        },
+        {
+          "label": "Tipo de almacenamiento",
+          "value": "SSD NVMe M.2 PCIe Gen4"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6″ IPS Full HD, 144 Hz"
+        },
+        {
+          "label": "Teclado",
+          "value": "Retroiluminado RGB de 4 zonas"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6E, puerto de red RJ45"
+        },
+        {
+          "label": "Video",
+          "value": "HDMI 2.1 (4K a 60 Hz) y USB-C con DisplayPort y Power Delivery"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11"
+        }
+      ],
+      "descriptionHtml": "<p>La MSI Cyborg 15 es una notebook gamer de estética cyberpunk con chasis translúcido. Combina un procesador Intel Core 7 de 10 núcleos con una GeForce RTX 5060 de 8 GB.</p><h3>Rendimiento</h3><ul><li>Intel Core 7 240H: 10 núcleos y 16 hilos, hasta 5,2 GHz.</li><li>RTX 5060 de 8 GB GDDR7 con DLSS 4 y Ray Tracing.</li><li>16 GB de RAM DDR5 a 5600 MHz en doble canal.</li><li>SSD NVMe PCIe Gen4 de 512 GB para arranques y cargas rápidas.</li></ul><h3>Pantalla y teclado</h3><p>Pantalla IPS Full HD de 15,6″ a 144 Hz, con imagen fluida y sin tearing. El teclado RGB de 4 zonas tiene las teclas WASD translúcidas.</p><h3>Conexiones</h3><p>HDMI 2.1, USB-C con DisplayPort y Power Delivery, red RJ45 y Wi-Fi 6E. Incluye el software MSI AI Engine, que ajusta los recursos según el uso.</p><h3>Antes de comprar</h3><ul><li>El SKU termina en \"US\": consultá el idioma del teclado antes de comprar.</li></ul>",
+      "revisar": [
+        "El slug dice RTX 5060 6 GB, pero el nombre y la descripción dicen 8 GB GDDR7: se usó 8 GB.",
+        "La tabla de especificaciones de la descripción está cortada: no se publicaron batería, peso, puertos USB ni medidas.",
+        "El SKU B2RWFKG-071US sugiere variante de EE. UU. (teclado/cargador): confirmar.",
+        "La descripción dice \"Core 7 240H\" y el nombre \"i7-240H\": se usó Core 7 240H.",
+        "Windows 11 sale del nombre (\"W11\")."
+      ]
+    },
+    {
+      "slug": "msi-katana-15-i7-14650hx-16gb-512gb-ssd-15-6-fhd-144hz-ips-rtx-5050-8gb-w11",
+      "name": "Notebook MSI Katana 15 Core i7-14650HX 16 GB RAM 512 GB SSD RTX 5050 8 GB",
+      "model": "Katana 15 B14WEK-001US",
+      "storage": "512 GB",
+      "ram": "16 GB",
+      "seoTitle": "Notebook MSI Katana 15 i7 RTX 5050 16 GB",
+      "seoDescription": "Notebook gamer MSI Katana 15 con Core i7-14650HX, RTX 5050 de 8 GB, 16 GB de RAM y SSD de 512 GB. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Notebook gamer MSI Katana 15 con Core i7-14650HX de 16 núcleos, RTX 5050 de 8 GB GDDR7, pantalla IPS Full HD de 144 Hz y Windows 11.",
+      "highlights": [
+        "Core i7-14650HX de 16 núcleos y 24 hilos, hasta 5,2 GHz",
+        "GeForce RTX 5050 de 8 GB GDDR7 con DLSS 4",
+        "16 GB de RAM DDR5 a 5600 MHz en doble canal",
+        "SSD NVMe PCIe Gen4 de 512 GB",
+        "Pantalla IPS Full HD de 15,6″ a 144 Hz",
+        "Refrigeración Cooler Boost 5 con 2 ventiladores"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i7-14650HX, 16 núcleos / 24 hilos (8 P-cores y 8 E-cores), hasta 5,2 GHz"
+        },
+        {
+          "label": "Placa de video",
+          "value": "NVIDIA GeForce RTX 5050, 8 GB GDDR7, DLSS 4"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR5 5600 MHz, doble canal"
+        },
+        {
+          "label": "Tipo de almacenamiento",
+          "value": "SSD M.2 NVMe PCIe Gen4"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6″ IPS Full HD, 144 Hz"
+        },
+        {
+          "label": "Refrigeración",
+          "value": "MSI Cooler Boost 5: 2 ventiladores y 6 tubos de cobre"
+        },
+        {
+          "label": "Teclado",
+          "value": "Retroiluminado RGB de 4 zonas, con bloque numérico"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6E, puerto de red RJ45"
+        },
+        {
+          "label": "Video",
+          "value": "HDMI 2.1 (4K a 120 Hz) y USB-C con DisplayPort y Power Delivery"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11"
+        }
+      ],
+      "descriptionHtml": "<p>La MSI Katana 15 es una notebook gamer con procesador clase HX de 14.ª generación y una GeForce RTX 5050 de 8 GB. Tiene pantalla de 144 Hz y refrigeración reforzada.</p><h3>Rendimiento</h3><ul><li>Core i7-14650HX de 16 núcleos y 24 hilos, hasta 5,2 GHz.</li><li>RTX 5050 de 8 GB GDDR7 con DLSS 4 y Reflex.</li><li>16 GB de RAM DDR5 a 5600 MHz en doble canal.</li><li>SSD NVMe PCIe Gen4 de 512 GB.</li></ul><h3>Refrigeración</h3><p>El sistema MSI Cooler Boost 5 suma 2 ventiladores y 6 tubos de cobre con diseño Shared-Pipe para mantener las temperaturas bajo control.</p><h3>Pantalla, teclado y conexiones</h3><p>Pantalla IPS Full HD de 15,6″ a 144 Hz. Teclado RGB de 4 zonas con bloque numérico. HDMI 2.1, USB-C con DisplayPort y Power Delivery, red RJ45 y Wi-Fi 6E. Se administra con MSI Center.</p><h3>Antes de comprar</h3><ul><li>El SKU termina en \"US\": consultá el idioma del teclado antes de comprar.</li></ul>",
+      "revisar": [
+        "La tabla de especificaciones de la descripción está cortada: no se publicaron batería, peso, puertos USB ni medidas.",
+        "El SKU B14WEK-001US sugiere variante de EE. UU. (teclado/cargador): confirmar.",
+        "Windows 11 sale del nombre (\"W11\")."
+      ]
+    },
+    {
+      "slug": "netmak-adaptador-wifi-usb-con-antena-150-mbs-nm-cs154",
+      "name": "Adaptador WiFi USB Netmak con antena 150 Mbps NM-CS154",
+      "brand": "Netmak",
+      "model": "NM-CS154",
+      "seoTitle": "Adaptador WiFi USB Netmak NM-CS154 150 Mbps",
+      "seoDescription": "Adaptador WiFi USB Netmak NM-CS154 con antena externa, hasta 150 Mbps en 2.4 GHz. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Adaptador WiFi USB con antena externa que llega a 150 Mbps en la banda de 2.4 GHz. Instalación plug and play para PC y notebook.",
+      "highlights": [
+        "Velocidad de hasta 150 Mbps",
+        "Antena externa para más alcance y estabilidad",
+        "Estándares 802.11n/g/b en banda de 2.4 GHz",
+        "Instalación plug and play",
+        "Formato USB compacto"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Adaptador WiFi USB"
+        },
+        {
+          "label": "Velocidad",
+          "value": "Hasta 150 Mbps"
+        },
+        {
+          "label": "Estándares",
+          "value": "802.11n/g/b"
+        },
+        {
+          "label": "Banda",
+          "value": "2.4 GHz"
+        },
+        {
+          "label": "Antena",
+          "value": "Externa"
+        },
+        {
+          "label": "Instalación",
+          "value": "Plug and play"
+        }
+      ],
+      "descriptionHtml": "<p>El Netmak NM-CS154 le agrega WiFi a una PC de escritorio o a una notebook que no lo tiene. Se conecta por USB y trae antena externa.</p><h3>Conexión</h3><p>Llega a 150 Mbps y es compatible con redes 802.11n/g/b de 2.4 GHz. Alcanza para navegar, ver streaming y descargar.</p><h3>Alcance y señal</h3><p>La antena externa mejora el alcance y la estabilidad de la señal.</p><h3>Instalación</h3><p>Es plug and play: lo conectás y lo configurás de forma simple.</p><h3>Antes de comprar</h3><ul><li>Funciona solo en redes de 2.4 GHz, no en 5 GHz.</li></ul>",
+      "revisar": [
+        "La descripción no indica sistemas operativos compatibles ni si trae CD o drivers: no se publicó.",
+        "Brand cambiada de General a Netmak."
+      ]
+    },
+    {
+      "slug": "netmak-hub-4-en-1-usb-tipo-c-nm-4en1-usb-3-0-hdmi-vga-usb-tipo-c",
+      "name": "Hub USB-C 4 en 1 Netmak NM-4EN1 (USB 3.0, HDMI, VGA, USB-C)",
+      "model": "NM-4EN1",
+      "seoTitle": "Hub USB-C 4 en 1 Netmak NM-4EN1",
+      "seoDescription": "Hub USB-C 4 en 1 Netmak NM-4EN1 con USB 3.0, HDMI, VGA y USB-C. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Hub USB-C 4 en 1 con un puerto USB 3.0, salida HDMI, salida VGA y un puerto USB-C adicional. Compacto, para laptops y tablets.",
+      "highlights": [
+        "Puerto USB 3.0 para transferencias rápidas",
+        "Salida HDMI para video en alta definición",
+        "Salida VGA para proyectores y monitores viejos",
+        "Puerto USB-C adicional",
+        "Diseño compacto"
+      ],
+      "specs": [
+        {
+          "label": "Tipo",
+          "value": "Hub USB-C 4 en 1"
+        },
+        {
+          "label": "Puertos",
+          "value": "USB 3.0, HDMI, VGA y USB-C"
+        },
+        {
+          "label": "Conexión al equipo",
+          "value": "USB-C"
+        },
+        {
+          "label": "Compatibilidad",
+          "value": "Laptops, tablets y smartphones con USB-C"
+        }
+      ],
+      "descriptionHtml": "<p>El Netmak NM-4EN1 expande la conectividad de tu equipo USB-C con cuatro salidas en un solo accesorio. Sirve para trabajar, presentar y mirar contenido.</p><h3>Puertos</h3><ul><li>USB 3.0 para pendrives y discos.</li><li>HDMI para video en alta definición.</li><li>VGA para proyectores y monitores antiguos.</li><li>USB-C adicional.</li></ul><h3>Uso</h3><p>Podés conectar varios periféricos a la vez. Su tamaño compacto lo hace práctico para llevar.</p><h3>Antes de comprar</h3><ul><li>Tu equipo tiene que tener un puerto USB-C con salida de video.</li></ul>",
+      "revisar": [
+        "La descripción no trae resolución máxima de HDMI/VGA, carga Power Delivery ni largo del cable: no se publicaron.",
+        "Brand ya era Netmak."
+      ]
+    },
+    {
+      "slug": "netmak-jeringa-grasa-disip-term-x-10-cc-nm-gr10cc",
+      "name": "Netmak jeringa de grasa disipadora térmica 10 cc NM-GR10CC",
+      "brand": "Netmak",
+      "model": "NM-GR10CC",
+      "seoTitle": "Jeringa de grasa térmica Netmak 10 cc",
+      "seoDescription": "Jeringa Netmak NM-GR10CC de 10 cc para aplicar grasa disipadora térmica en procesadores y placas. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Jeringa de 10 cc para aplicar grasa disipadora térmica de forma controlada en procesadores, placas de video y otros componentes.",
+      "highlights": [
+        "Jeringa de 10 cc",
+        "Aplicación precisa y controlada",
+        "Para procesadores, placas de video y otros componentes",
+        "Ayuda a repartir la grasa de forma pareja y sin desperdicio"
+      ],
+      "specs": [
+        {
+          "label": "Presentación",
+          "value": "Jeringa de 10 cc"
+        },
+        {
+          "label": "Producto",
+          "value": "Grasa disipadora térmica"
+        },
+        {
+          "label": "Uso",
+          "value": "Procesadores, placas de video y otros componentes electrónicos"
+        }
+      ],
+      "descriptionHtml": "<p>La jeringa Netmak NM-GR10CC sirve para aplicar grasa disipadora térmica con precisión. Está pensada para técnicos y entusiastas del hardware.</p><h3>Uso</h3><p>Permite aplicar la grasa de forma controlada sobre procesadores, placas de video y otros componentes, sin desperdicio ni contaminación.</p><h3>Para quién</h3><p>Para técnicos, entusiastas del hardware y quienes hacen mantenimiento preventivo de equipos.</p>",
+      "revisar": [
+        "La descripción no aclara el tipo de grasa, su conductividad térmica ni si el producto viene cargado: no se publicó.",
+        "Brand cambiada de General a Netmak."
+      ]
+    },
+    {
+      "slug": "notebook-asus-tuf-ryzen-7-170-16gb-ssd-512gb-16-144hz-rtx-4050-6gb-w11",
+      "name": "Notebook Asus TUF Gaming 16″ Ryzen 7 16 GB RAM 512 GB SSD RTX 4050 6 GB",
+      "model": "TUF Gaming 16 FA607NUQ-WS73",
+      "storage": "512 GB",
+      "ram": "16 GB",
+      "seoTitle": "Notebook Asus TUF Gaming 16″ RTX 4050",
+      "seoDescription": "Notebook Asus TUF Gaming 16″ con Ryzen 7, RTX 4050 de 6 GB, 16 GB de RAM DDR5 y SSD de 512 GB. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Notebook gamer Asus TUF Gaming de 16″ con AMD Ryzen 7, GeForce RTX 4050 de 6 GB, pantalla WUXGA de 144 Hz, Windows 11 y certificación MIL-STD-810H.",
+      "highlights": [
+        "AMD Ryzen 7 y GeForce RTX 4050 de 6 GB GDDR6 con DLSS 3",
+        "16 GB de RAM DDR5 y SSD NVMe PCIe 4.0 de 512 GB",
+        "Pantalla IPS WUXGA de 16″ a 144 Hz, formato 16:10",
+        "Resistencia militar MIL-STD-810H",
+        "Teclado RGB con bloque numérico",
+        "Wi-Fi 6, Bluetooth 5.3 y HDMI 2.1"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 7 (serie 100)"
+        },
+        {
+          "label": "Placa de video",
+          "value": "NVIDIA GeForce RTX 4050, 6 GB GDDR6, DLSS 3"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR5 (expandible)"
+        },
+        {
+          "label": "Tipo de almacenamiento",
+          "value": "SSD M.2 NVMe PCIe 4.0, con slot M.2 adicional"
+        },
+        {
+          "label": "Pantalla",
+          "value": "16″ IPS WUXGA (1920 x 1200), 144 Hz, 16:10, antirreflejo"
+        },
+        {
+          "label": "Teclado",
+          "value": "Retroiluminado RGB con teclado numérico"
+        },
+        {
+          "label": "Audio",
+          "value": "Altavoces estéreo con Dolby Atmos y cancelación de ruido por IA"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6 (802.11ax) y Bluetooth 5.3"
+        },
+        {
+          "label": "Puertos",
+          "value": "1 USB-C 3.2 Gen 2 (DisplayPort/PD), 3 USB-A 3.2 Gen 1, HDMI 2.1, RJ45 y jack de 3,5 mm"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Windows 11 Home"
+        }
+      ],
+      "descriptionHtml": "<p>La Asus TUF Gaming de 16″ está pensada para jugadores y creadores que buscan un equipo resistente y potente. Reúne un Ryzen 7 con una GeForce RTX 4050 de 6 GB.</p><h3>Rendimiento</h3><ul><li>AMD Ryzen 7 con 16 GB de RAM DDR5.</li><li>GeForce RTX 4050 de 6 GB GDDR6 con DLSS 3 y trazado de rayos.</li><li>SSD NVMe PCIe 4.0 de 512 GB y un slot M.2 adicional libre.</li></ul><h3>Pantalla y sonido</h3><p>Pantalla IPS WUXGA de 16″ con relación 16:10 y 144 Hz. Más espacio vertical para trabajar y una imagen fluida para jugar. Altavoces estéreo con Dolby Atmos.</p><h3>Resistencia y refrigeración</h3><p>Cumple la norma militar MIL-STD-810H. Los ventiladores Arc Flow Fans de 84 aspas mantienen estables las temperaturas en sesiones largas.</p><h3>Conexiones</h3><p>USB-C con DisplayPort y Power Delivery, tres USB-A, HDMI 2.1, red RJ45, Wi-Fi 6 y Bluetooth 5.3.</p>",
+      "revisar": [
+        "La descripción dice solo \"Ryzen 7 (serie 100)\" y el nombre \"Ryzen 7-170\": el modelo exacto no está confirmado, no se publicó.",
+        "Windows 11 Home viene de la tabla de la descripción.",
+        "No trae batería ni peso: no se publicaron."
+      ]
+    },
+    {
+      "slug": "notebook-cx-156%e2%80%b3-i5-1235u-16gb-ssd-512gb",
+      "name": "Notebook CX 15,6″ Intel Core i5-1235U 16 GB RAM 512 GB SSD",
+      "model": "CX40215",
+      "storage": "512 GB",
+      "ram": "16 GB",
+      "seoTitle": "Notebook CX 15,6″ i5-1235U 16 GB 512 GB",
+      "seoDescription": "Notebook CX de 15,6″ Full HD con Intel Core i5-1235U de 10 núcleos, 16 GB de RAM y SSD de 512 GB. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Notebook de 15,6″ Full HD con Intel Core i5-1235U de 10 núcleos, 16 GB de RAM DDR4 ampliable y SSD NVMe de 512 GB. Pesa 1,47 kg.",
+      "highlights": [
+        "Intel Core i5-1235U de 10 núcleos y 12 hilos, hasta 4,4 GHz",
+        "16 GB de RAM DDR4 con un slot libre para ampliar",
+        "SSD NVMe M.2 de 512 GB",
+        "Pantalla Full HD de 15,6″ antirreflejo",
+        "Wi-Fi 6, Bluetooth 5.2 y puerto de red RJ-45",
+        "Liviana: 1,47 kg, con teclado numérico en español"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i5-1235U, 10 núcleos / 12 hilos, hasta 4,4 GHz"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel Iris Xe / UHD integrados"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR4 SODIMM (1 slot ocupado y 1 libre)"
+        },
+        {
+          "label": "Tipo de almacenamiento",
+          "value": "SSD M.2 NVMe PCIe"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6″ Full HD (1920 x 1080), antirreflejo, bisagra de 180°"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6 y Bluetooth 5.2"
+        },
+        {
+          "label": "Puertos",
+          "value": "RJ-45, HDMI, USB 3.0, USB-C y lector de tarjetas microSD"
+        },
+        {
+          "label": "Teclado",
+          "value": "En español, con teclado numérico"
+        },
+        {
+          "label": "Peso",
+          "value": "1,47 kg"
+        }
+      ],
+      "descriptionHtml": "<p>La notebook CX de 15,6″ trae un Intel Core i5 de 12.ª generación con 16 GB de RAM y 512 GB de SSD. Está pensada para trabajo, oficina y estudio.</p><h3>Rendimiento</h3><p>El i5-1235U combina 2 núcleos de alto rendimiento y 8 de eficiencia. Alcanza para planillas, videollamadas y muchas pestañas abiertas. La RAM DDR4 de 16 GB se puede ampliar: queda un slot libre.</p><h3>Pantalla y diseño</h3><p>Pantalla Full HD de 15,6″ antirreflejo con bisagra que abre hasta 180°. Pesa 1,47 kg y tiene teclado numérico en español.</p><h3>Conectividad</h3><p>Wi-Fi 6, Bluetooth 5.2, puerto de red RJ-45, HDMI, USB 3.0, USB-C y lector de tarjetas microSD.</p>",
+      "revisar": [
+        "La descripción cortó la tabla de especificaciones: no se publicaron cámara, audio, batería ni cantidad de puertos.",
+        "No indica sistema operativo: no se publicó.",
+        "Brand ya era CX."
+      ]
+    },
+    {
+      "slug": "notebook-cx-156%e2%80%b3-i5-1235u-8gb-ssd-256gb",
+      "name": "Notebook CX 15,6″ Intel Core i5-1235U 8 GB RAM 256 GB SSD",
+      "model": "CX40282",
+      "storage": "256 GB",
+      "ram": "8 GB",
+      "seoTitle": "Notebook CX 15,6″ i5-1235U 8 GB 256 GB",
+      "seoDescription": "Notebook CX de 15,6″ Full HD con Intel Core i5-1235U de 10 núcleos, 8 GB de RAM y SSD de 256 GB. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Notebook de 15,6″ Full HD con Intel Core i5-1235U de 10 núcleos, 8 GB de RAM DDR4 ampliable y SSD NVMe de 256 GB. Pesa 1,47 kg.",
+      "highlights": [
+        "Intel Core i5-1235U de 10 núcleos y 12 hilos, hasta 4,4 GHz",
+        "8 GB de RAM DDR4 con un slot libre para ampliar",
+        "SSD NVMe M.2 de 256 GB",
+        "Pantalla Full HD de 15,6″ con bisagra de 180°",
+        "Wi-Fi 6, Bluetooth 5.2 y puerto de red RJ-45",
+        "Liviana: 1,47 kg, con teclado numérico en español"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core i5-1235U, 10 núcleos / 12 hilos, hasta 4,4 GHz"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel Iris Xe / UHD integrados"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR4 SODIMM (1 slot ocupado y 1 libre)"
+        },
+        {
+          "label": "Tipo de almacenamiento",
+          "value": "SSD M.2 NVMe PCIe"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6″ Full HD (1920 x 1080), bisagra de 180°"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6 y Bluetooth 5.2"
+        },
+        {
+          "label": "Puertos",
+          "value": "RJ-45, HDMI, USB 3.0, USB-C y lector de tarjetas microSD"
+        },
+        {
+          "label": "Teclado",
+          "value": "En español, con teclado numérico"
+        },
+        {
+          "label": "Peso",
+          "value": "1,47 kg"
+        }
+      ],
+      "descriptionHtml": "<p>Esta notebook CX de 15,6″ tiene un Intel Core i5 de 12.ª generación con 8 GB de RAM y 256 GB de SSD. Es una opción liviana para oficina y estudio.</p><h3>Rendimiento</h3><p>El i5-1235U combina 2 núcleos de alto rendimiento y 8 de eficiencia. Responde bien con programas de oficina, planillas, videoconferencias y navegación con varias pestañas. Queda un slot de RAM libre para ampliar.</p><h3>Pantalla y diseño</h3><p>Pantalla Full HD de 15,6″ con bisagra que abre hasta 180°. Pesa 1,47 kg y tiene teclado numérico en español.</p><h3>Conectividad</h3><p>Wi-Fi 6, Bluetooth 5.2, puerto de red RJ-45, HDMI, USB 3.0, USB-C y lector de tarjetas microSD.</p>",
+      "revisar": [
+        "La descripción cortó la tabla de especificaciones: no se publicaron cámara, audio, batería ni cantidad de puertos.",
+        "No indica sistema operativo: no se publicó.",
+        "Brand ya era CX."
+      ]
+    },
+    {
+      "slug": "notebook-cx-156%e2%80%b3-ultra-5-115u-16gb-ssd-512gb",
+      "name": "Notebook CX 15,6″ Intel Core Ultra 5 115U 16 GB RAM 512 GB SSD",
+      "model": "CX45015",
+      "storage": "512 GB",
+      "ram": "16 GB",
+      "seoTitle": "Notebook CX 15,6″ Ultra 5 115U 16 GB 512 GB",
+      "seoDescription": "Notebook CX de 15,6″ IPS con Intel Core Ultra 5 115U, NPU AI Boost, 16 GB de RAM y SSD de 512 GB. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Notebook de 15,6″ Full HD IPS con Intel Core Ultra 5 115U y NPU AI Boost, 16 GB de RAM LPDDR5 y SSD NVMe de 512 GB. Pesa 1,7 kg.",
+      "highlights": [
+        "Intel Core Ultra 5 115U de 8 núcleos y 10 hilos, hasta 4,2 GHz",
+        "NPU Intel AI Boost para tareas de IA locales",
+        "16 GB de RAM LPDDR5",
+        "SSD NVMe M.2 de 512 GB",
+        "Pantalla IPS Full HD de 15,6″",
+        "Cámara de 2 MP con tapa de privacidad"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "Intel Core Ultra 5 115U, 8 núcleos / 10 hilos, hasta 4,2 GHz (Meteor Lake, 15 W)"
+        },
+        {
+          "label": "NPU",
+          "value": "Intel AI Boost"
+        },
+        {
+          "label": "Gráficos",
+          "value": "Intel Graphics integrados"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "LPDDR5"
+        },
+        {
+          "label": "Tipo de almacenamiento",
+          "value": "SSD M.2 NVMe"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6″ IPS Full HD (1920 x 1080), 16:9"
+        },
+        {
+          "label": "Cámara",
+          "value": "Webcam de 2 MP con tapa de privacidad"
+        },
+        {
+          "label": "Puertos",
+          "value": "USB-C con datos, video y energía, y RJ-45"
+        },
+        {
+          "label": "Batería",
+          "value": "46,2 Wh"
+        },
+        {
+          "label": "Peso",
+          "value": "1,7 kg"
+        },
+        {
+          "label": "Color",
+          "value": "Gris"
+        }
+      ],
+      "descriptionHtml": "<p>Esta notebook CX de 15,6″ usa un Intel Core Ultra 5 con NPU dedicada a tareas de inteligencia artificial. Suma 16 GB de RAM LPDDR5 y 512 GB de SSD.</p><h3>Rendimiento</h3><p>El Core Ultra 5 115U (arquitectura Meteor Lake, 15 W) tiene 8 núcleos y 10 hilos. La NPU Intel AI Boost ejecuta tareas de IA en el equipo, como mejoras en videollamadas y procesamiento multimedia.</p><h3>Pantalla y cámara</h3><p>Panel IPS Full HD de 15,6″ con buenos ángulos de visión. La cámara de 2 MP tiene una tapa física para cubrir el lente.</p><h3>Diseño y conexiones</h3><p>Chasis cepillado gris de 1,7 kg, con teclado en español y bloque numérico. Tiene un puerto USB-C completo (datos, video y energía) y conexión de red RJ-45. La batería es de 46,2 Wh.</p>",
+      "revisar": [
+        "La descripción cortó la tabla de especificaciones: no se publicaron Wi-Fi, otros puertos ni sistema operativo.",
+        "Brand ya era CX."
+      ]
+    },
+    {
+      "slug": "notebook-cx-156-ryzen-5-3500u-8gb-ssd-256gb",
+      "name": "Notebook CX 15,6″ AMD Ryzen 5 3500U 8 GB RAM 256 GB SSD",
+      "model": "CX40082",
+      "storage": "256 GB",
+      "ram": "8 GB",
+      "seoTitle": "Notebook CX 15,6″ Ryzen 5 3500U 8 GB 256 GB",
+      "seoDescription": "Notebook CX de 15,6″ Full HD con AMD Ryzen 5 3500U, Radeon Vega 8, 8 GB de RAM y SSD de 256 GB. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Notebook de 15,6″ Full HD con AMD Ryzen 5 3500U y gráficos Radeon Vega 8, 8 GB de RAM DDR4 ampliable y SSD NVMe de 256 GB.",
+      "highlights": [
+        "AMD Ryzen 5 3500U de 4 núcleos y 8 hilos, hasta 3,7 GHz",
+        "Gráficos Radeon Vega 8 integrados",
+        "8 GB de RAM DDR4 con un slot libre para ampliar",
+        "SSD NVMe M.2 de 256 GB",
+        "Pantalla Full HD de 15,6″ con bisagra de 180°",
+        "Liviana: 1,47 kg, con teclado numérico en español"
+      ],
+      "specs": [
+        {
+          "label": "Procesador",
+          "value": "AMD Ryzen 5 3500U, 4 núcleos / 8 hilos, 2,1 a 3,7 GHz"
+        },
+        {
+          "label": "Gráficos",
+          "value": "AMD Radeon Vega 8 integrados"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "DDR4 SODIMM (1 slot ocupado y 1 libre)"
+        },
+        {
+          "label": "Tipo de almacenamiento",
+          "value": "SSD M.2 NVMe PCIe"
+        },
+        {
+          "label": "Pantalla",
+          "value": "15,6″ Full HD (1920 x 1080), bisagra de 180°"
+        },
+        {
+          "label": "Cámara",
+          "value": "Webcam HD 720p (1 MP) con micrófonos duales"
+        },
+        {
+          "label": "Audio",
+          "value": "Altavoces estéreo 2 x 1,5 W"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6 y Bluetooth 5.2"
+        },
+        {
+          "label": "Teclado",
+          "value": "En español, con teclado numérico"
+        },
+        {
+          "label": "Peso",
+          "value": "1,47 kg"
+        }
+      ],
+      "descriptionHtml": "<p>Esta notebook CX de 15,6″ lleva un AMD Ryzen 5 con gráficos Radeon Vega 8, 8 GB de RAM y 256 GB de SSD. Es una opción accesible para estudio y trabajo diario.</p><h3>Rendimiento</h3><p>El Ryzen 5 3500U tiene 4 núcleos y 8 hilos y llega a 3,7 GHz. Sirve para navegar, hacer videollamadas, usar planillas y ver contenido en 1080p. Queda un slot de RAM libre para ampliar.</p><h3>Pantalla y diseño</h3><p>Pantalla Full HD de 15,6″ con bisagra reforzada que abre hasta 180°. Pesa 1,47 kg y tiene teclado numérico en español.</p><h3>Cámara y sonido</h3><p>Webcam HD 720p con micrófonos duales y altavoces estéreo de 2 x 1,5 W. Conecta por Wi-Fi 6 y Bluetooth 5.2.</p>",
+      "revisar": [
+        "La descripción cortó la tabla de especificaciones: no se publicaron los puertos completos, la batería ni el sistema operativo.",
+        "Hay un resto \"[ cite: 1]\" en la ficha corta: se descartó.",
+        "Brand ya era CX."
+      ]
+    }
+  ]
+}
