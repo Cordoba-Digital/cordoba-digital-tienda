@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+import { CATEGORY_MERGES, mergedCategoryRedirect } from "./src/lib/category-merges";
+
 /** Dominio público de las fotos en Cloudflare R2 (ver src/lib/r2.ts). */
 const r2Host = (() => {
   try {
@@ -14,7 +16,19 @@ const nextConfig: NextConfig = {
   // contenido ya no existe en las rutas viejas: la equivalencia es 1:1
   // (mismos slugs), salvo marca/etiqueta que ahora son filtros de /productos.
   async redirects() {
+    // Categorías fusionadas (ver src/lib/category-merges.ts): 308 real desde la
+    // URL nueva y desde la de WordPress, sin pasar por dos saltos. La página
+    // también redirige, pero ahí la respuesta ya salió con 200 y queda como
+    // meta refresh, que Google no trata igual que un redirect.
+    const fusionadas = CATEGORY_MERGES.flatMap(({ from }) => {
+      const destination = mergedCategoryRedirect(from)!;
+      return [
+        { source: `/categoria/${from}`, destination, permanent: true },
+        { source: `/categoria-producto/${from}`, destination, permanent: true },
+      ];
+    });
     return [
+      ...fusionadas,
       {
         // /categoria-producto/computacion/notebooks-cordoba/asus
         // -> /categoria/computacion/notebooks-cordoba/asus
