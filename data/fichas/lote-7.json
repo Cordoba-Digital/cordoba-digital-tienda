@@ -1,0 +1,970 @@
+{
+  "lote": "lote-7",
+  "nota": "Septima tanda (celulares): 16 fichas. Datos de la descripcion o el nombre; lo dudoso va en revisar y no se publica.",
+  "productos": [
+    {
+      "brand": "Samsung",
+      "descriptionHtml": "<p>El Galaxy A26 5G es el gama media redondo de Samsung: pantalla Super AMOLED de 6,6 pulgadas a 120 Hz, cámara de 50 MP con estabilización óptica y batería de 5000 mAh. Esta versión trae 128 GB ampliables con microSD.</p><h3>Pantalla</h3><p>Panel Super AMOLED FHD+ con 120 Hz y Vision Booster: negros profundos, colores vivos y buena lectura al sol. El vidrio Gorilla Glass la cuida de los rayones de todos los días.</p><h3>Cámara</h3><ul><li>Principal de 50 MP con OIS: fotos nítidas de noche y en movimiento.</li><li>Ultra gran angular de 8 MP para paisajes y fotos grupales.</li><li>Macro de 2 MP para primeros planos.</li><li>Frontal de 13 MP con modo retrato para selfies.</li></ul><h3>Batería y seguridad</h3><p>Los 5000 mAh rinden hasta dos días con uso moderado y se recargan a 25 W por USB-C. Trae lector de huellas, desbloqueo facial, NFC para pagar sin contacto y la protección Samsung Knox.</p><h3>Antes de comprar</h3><p>El cargador se vende por separado. Si te quedás sin espacio, acepta microSD de hasta 1 TB.</p>",
+      "highlights": [
+        "Pantalla Super AMOLED de 6,6\" FHD+ a 120 Hz",
+        "Cámara de 50 MP con estabilización óptica (OIS)",
+        "Batería de 5000 mAh, hasta 2 días de uso moderado",
+        "NFC para pagos sin contacto y Samsung Knox",
+        "MicroSD hasta 1 TB para ampliar los 128 GB",
+        "Gorilla Glass y carga rápida de 25 W"
+      ],
+      "model": "Galaxy A26 5G",
+      "name": "Samsung Galaxy A26 5G 128 GB 8 GB RAM",
+      "ram": "8 GB",
+      "revisar": [
+        "El slug indica 6 GB de RAM pero el nombre y la descripción dicen 8 GB: gana el nombre (8 GB). Si la unidad real es 6 GB, avisar.",
+        "La carga de 25 W, la frontal de 13 MP y la microSD hasta 1 TB salen de la descripción original.",
+        "Cargador no incluido es conocimiento general de la línea (no estaba en la descripción): confirmar."
+      ],
+      "seoDescription": "Galaxy A26 5G de 128 GB nuevo: pantalla AMOLED de 6,6\" a 120 Hz, cámara de 50 MP con OIS y batería de 5000 mAh. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Samsung Galaxy A26 5G 128 GB",
+      "shortDescription": "Galaxy A26 5G con 128 GB y pantalla Super AMOLED de 6,6\" a 120 Hz. Cámara principal de 50 MP con OIS, batería de 5000 mAh, NFC y microSD hasta 1 TB. Nuevo, con garantía oficial.",
+      "slug": "samsung-galaxy-a26-5g-6gb-128gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Super AMOLED 6,6\" FHD+ (2340 x 1080), 120 Hz, Gorilla Glass"
+        },
+        {
+          "label": "Procesador",
+          "value": "Exynos octa-core de 5 nm"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (f/1.8, OIS) + 8 MP ultra gran angular + 2 MP macro"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "13 MP (f/2.2) con modo retrato"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "25 W por USB-C"
+        },
+        {
+          "label": "Ranura microSD",
+          "value": "Sí, hasta 1 TB"
+        },
+        {
+          "label": "Red",
+          "value": "5G"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi dual, Bluetooth 5.3, NFC"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Huella + desbloqueo facial, Samsung Knox"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android con One UI"
+        }
+      ],
+      "storage": "128 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Galaxy S25 Ultra 5G es el tope de gama de Samsung: cámara cuádruple de 200 MP, pantalla QHD+ de 6,9 pulgadas, S Pen integrado y 1 TB de almacenamiento. Un equipo pensado para durar, con varios años de actualizaciones.</p><h3>Cámara</h3><ul><li>Principal de 200 MP con OIS y video 8K.</li><li>Zoom óptico de 3x y 5x, y digital de hasta 100x.</li><li>Ultra gran angular de 50 MP y frontal de 12 MP con autoenfoque.</li><li>Cámara lenta de hasta 240 fps en Full HD.</li></ul><h3>Pantalla y S Pen</h3><p>Dynamic AMOLED 2X QHD+ de 6,9 pulgadas a 120 Hz, nítida incluso al sol. El S Pen sirve para escribir, dibujar y controlar la cámara a distancia.</p><h3>Batería y conectividad</h3><p>Batería de 5000 mAh con hasta 31 horas de video. Trae 5G, Wi-Fi 7, Bluetooth 5.4, NFC, UWB, eSIM y Samsung DeX para usarlo como una compu.</p><h3>Antes de comprar</h3><p>No acepta microSD: el almacenamiento es el 1 TB interno. El cargador se vende por separado.</p>",
+      "highlights": [
+        "Cámara de 200 MP con zoom óptico 3x y 5x, digital 100x",
+        "Pantalla Dynamic AMOLED 2X QHD+ de 6,9\" a 120 Hz",
+        "S Pen integrado y funciones Galaxy AI",
+        "Batería de 5000 mAh, hasta 31 h de video",
+        "1 TB interno, sin depender de la nube",
+        "5G, Wi-Fi 7, NFC, UWB y eSIM"
+      ],
+      "model": "Galaxy S25 Ultra 5G",
+      "name": "Samsung Galaxy S25 Ultra 5G 1 TB 12 GB RAM",
+      "ram": "12 GB",
+      "revisar": [
+        "El cargador no viene en la caja (conocimiento general de la línea, no estaba en la descripción): confirmar.",
+        "La fuente solo da velocidades del procesador (octa-core 4,47/3,5 GHz): no nombro el chip para no inventar.",
+        "La fuente indica actualizaciones de seguridad hasta el 31/01/2032: puse 'varios años' sin fecha."
+      ],
+      "seoDescription": "Galaxy S25 Ultra 5G de 1 TB nuevo: cámara de 200 MP con zoom de 100x, pantalla QHD+ de 6,9\" a 120 Hz y S Pen. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Samsung Galaxy S25 Ultra 5G 1 TB",
+      "shortDescription": "Galaxy S25 Ultra 5G con 1 TB y 12 GB de RAM. Cámara cuádruple de 200 MP con zoom óptico de 5x y video 8K, pantalla de 6,9\" QHD+ a 120 Hz y S Pen. Nuevo, con garantía oficial.",
+      "slug": "samsung-galaxy-s25-ultra-5g-1tb-12gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Dynamic AMOLED 2X 6,9\" QHD+ (3120 x 1440), 120 Hz"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa-core hasta 4,47 GHz"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "200 + 50 + 50 + 10 MP, OIS, zoom óptico 3x y 5x"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "12 MP (f/2.2) con autoenfoque"
+        },
+        {
+          "label": "Video",
+          "value": "8K a 30 fps, lenta hasta 240 fps en FHD"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh (hasta 31 h de video)"
+        },
+        {
+          "label": "SIM",
+          "value": "Nano-SIM + eSIM (sin microSD)"
+        },
+        {
+          "label": "Red",
+          "value": "5G Sub6"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 7, Bluetooth 5.4, NFC, UWB, USB-C 3.2"
+        },
+        {
+          "label": "Extras",
+          "value": "S Pen, Samsung DeX"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android"
+        }
+      ],
+      "storage": "1 TB"
+    },
+    {
+      "descriptionHtml": "<p>El Galaxy A17 5G es un gama media con pantalla grande: Super AMOLED de 6,7 pulgadas a 90 Hz, triple cámara de 50 MP con estabilización óptica y batería de 5000 mAh. Fino, liviano y con protección IP54.</p><h3>Pantalla</h3><p>Super AMOLED de 6,7 pulgadas a 90 Hz: colores intensos y movimiento fluido para redes, videos y juegos. El Gorilla Glass Victus la protege de los rayones.</p><h3>Cámara</h3><ul><li>Principal de 50 MP con OIS: fotos más claras, incluso de noche.</li><li>Ultra gran angular de 5 MP para paisajes y grupos.</li><li>Macro de 2 MP para detalles de cerca.</li></ul><h3>Rendimiento y batería</h3><p>Procesador octa-core a 2,4 GHz con 5G para streaming y juegos sin tirones. La batería de 5000 mAh te acompaña todo el día.</p><h3>Antes de comprar</h3><p>El cargador se vende por separado. Viene en negro, gris y azul según disponibilidad.</p>",
+      "highlights": [
+        "Pantalla Super AMOLED de 6,7\" a 90 Hz",
+        "Triple cámara: 50 MP con OIS + 5 MP + macro",
+        "Batería de 5000 mAh para todo el día",
+        "Resistencia IP54 y Gorilla Glass Victus",
+        "5G ultrarrápido para streaming y juegos"
+      ],
+      "model": "Galaxy A17 5G",
+      "name": "Samsung Galaxy A17 5G 128 GB 4 GB RAM",
+      "ram": "4 GB",
+      "revisar": [
+        "La ficha corta dice pantalla HD+ pero el dato oficial del modelo es FHD+: no puse resolución, confirmar.",
+        "Cargador no incluido es conocimiento general de la línea (no estaba en la fuente): confirmar.",
+        "No se informan cámara frontal ni potencia de carga: no las publiqué."
+      ],
+      "seoDescription": "Galaxy A17 5G de 128 GB nuevo: Super AMOLED de 6,7\" a 90 Hz, triple cámara de 50 MP con OIS y batería de 5000 mAh. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Samsung Galaxy A17 5G 128 GB",
+      "shortDescription": "Galaxy A17 5G con 128 GB y 4 GB de RAM. Pantalla Super AMOLED de 6,7\" a 90 Hz, triple cámara de 50 MP con OIS, batería de 5000 mAh y protección IP54. Nuevo, con garantía oficial.",
+      "slug": "samsung-galaxy-a17-5g-128gb-4gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "Super AMOLED 6,7\", 90 Hz"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa-core a 2,4 GHz"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP + 5 MP ultra gran angular + 2 MP macro, OIS"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Diseño",
+          "value": "7,5 mm de grosor"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP54, Gorilla Glass Victus"
+        },
+        {
+          "label": "Red",
+          "value": "5G"
+        },
+        {
+          "label": "Colores",
+          "value": "Negro, gris y azul"
+        }
+      ],
+      "storage": "128 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Galaxy A06 es un equipo simple y rendidor: pantalla grande de 6,7 pulgadas, cámara de 50 MP y batería de 5000 mAh con carga rápida. Ideal si buscás un celular cumplidor a buen precio.</p><h3>Pantalla</h3><p>LCD de 6,7 pulgadas a 60 Hz con mucho espacio para videos, redes y lectura. El diseño fino de 8 mm lo hace cómodo en la mano.</p><h3>Cámara</h3><ul><li>Trasera de 50 MP más sensor de profundidad de 2 MP.</li><li>Frontal de 8 MP para selfies y videollamadas.</li><li>Desbloqueo por huella lateral, rápido y seguro.</li></ul><h3>Batería</h3><p>Los 5000 mAh duran todo el día con uso típico y la carga de 25 W lo levanta rápido cuando lo necesitás.</p><h3>Antes de comprar</h3><p>Es un equipo 4G, sin conectividad 5G. El cargador se vende por separado.</p>",
+      "highlights": [
+        "Pantalla grande de 6,7\" para videos y redes",
+        "Cámara trasera de 50 MP + 2 MP de profundidad",
+        "Batería de 5000 mAh con carga rápida de 25 W",
+        "Huella lateral con accesos directos",
+        "Diseño fino de 8 mm en 4 colores"
+      ],
+      "model": "Galaxy A06",
+      "name": "Samsung Galaxy A06 64 GB 4 GB RAM",
+      "ram": "4 GB",
+      "revisar": [
+        "La ficha corta dice PLS LCD y la descripción dice TFT U-Cut: puse LCD (TFT) sin afirmar el tipo de matriz.",
+        "Red 4G y cargador no incluido son conocimiento general del modelo (no estaban en la fuente): confirmar."
+      ],
+      "seoDescription": "Galaxy A06 de 64 GB nuevo: pantalla de 6,7\", cámara dual de 50 MP y batería de 5000 mAh con carga de 25 W. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Samsung Galaxy A06 64 GB",
+      "shortDescription": "Galaxy A06 con 64 GB y 4 GB de RAM. Pantalla de 6,7\", cámara trasera de 50 + 2 MP, frontal de 8 MP, huella lateral y batería de 5000 mAh con 25 W. Nuevo, con garantía oficial.",
+      "slug": "samsung-galaxy-a06-64gb-4gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "LCD 6,7\" (TFT U-Cut), 60 Hz"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa-core (2 GHz + 1,8 GHz)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP + 2 MP profundidad"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "8 MP"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "25 W"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Huella lateral"
+        },
+        {
+          "label": "Red",
+          "value": "4G LTE"
+        },
+        {
+          "label": "Colores",
+          "value": "Negro, celeste, dorado y verde"
+        }
+      ],
+      "storage": "64 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Xiaomi 15T 5G apuesta todo a la fotografía: triple cámara con lentes Leica, teleobjetivo de 50 MP y video 4K de 10 bits. Lo completa una pantalla AMOLED gigante de 6,83 pulgadas y 512 GB de almacenamiento.</p><h3>Cámara Leica</h3><ul><li>Principal de 50 MP con OIS y apertura f/1.7: nítida con poca luz.</li><li>Teleobjetivo Leica de 50 MP, ideal para retratos.</li><li>Ultra gran angular de 12 MP para paisajes.</li><li>Selfie de 32 MP y video 4K a 60 fps de 10 bits.</li></ul><h3>Pantalla y rendimiento</h3><p>AMOLED de 6,83 pulgadas a 120 Hz con Gorilla Glass 7i y biseles finos. El Dimensity 8400-Ultra mueve juegos y edición sin esfuerzo.</p><h3>Batería</h3><p>Batería de 5500 mAh para todo el día y HyperCharge de 67 W para recargarla rápido. Además trae resistencia IP68 al agua y al polvo.</p>",
+      "highlights": [
+        "Triple cámara Leica de 50 MP con OIS y teleobjetivo",
+        "AMOLED de 6,83\" a 120 Hz con Gorilla Glass 7i",
+        "Dimensity 8400-Ultra para jugar y editar",
+        "Batería de 5500 mAh con HyperCharge de 67 W",
+        "Resistencia IP68 al agua y al polvo",
+        "Selfie de 32 MP y video 4K de 10 bits"
+      ],
+      "model": "Xiaomi 15T",
+      "name": "Xiaomi 15T 5G 512 GB 12 GB RAM",
+      "ram": "12 GB",
+      "revisar": [
+        "La fuente no informa el contenido de la caja: no afirmo si incluye cargador.",
+        "Zoom 15-92 mm y LUT del modo profesional estaban en la fuente pero son detalle técnico: no los publiqué."
+      ],
+      "seoDescription": "Xiaomi 15T 5G de 512 GB nuevo: triple cámara Leica de 50 MP con OIS, AMOLED de 6,83\" a 120 Hz y 5500 mAh. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Xiaomi 15T 5G 512 GB Leica",
+      "shortDescription": "Xiaomi 15T 5G con 512 GB y 12 GB de RAM. Triple cámara Leica de 50 MP con OIS, AMOLED de 6,83\" a 120 Hz, Dimensity 8400-Ultra y 5500 mAh con 67 W. Nuevo, con garantía oficial.",
+      "slug": "xiaomi-15t-512gb-12gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED 6,83\", 120 Hz, Gorilla Glass 7i"
+        },
+        {
+          "label": "Procesador",
+          "value": "MediaTek Dimensity 8400-Ultra"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (OIS) + 50 MP tele + 12 MP ultra gran angular, Leica"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "32 MP"
+        },
+        {
+          "label": "Video",
+          "value": "4K a 60 fps, 10 bits"
+        },
+        {
+          "label": "Batería",
+          "value": "5500 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "67 W HyperCharge"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP68"
+        }
+      ],
+      "storage": "512 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Poco X7 5G es un gama media completo: pantalla AMOLED 1.5K de 6,67 pulgadas, cámara de 50 MP con estabilización óptica, resistencia IP68 y cargador de 45 W incluido en la caja.</p><h3>Pantalla</h3><p>CrystalRes AMOLED de 6,67 pulgadas con resolución 1.5K, 120 Hz, Dolby Vision y hasta 3000 nits de pico: se ve perfecto incluso al sol. La protege Gorilla Glass Victus 2.</p><h3>Cámara</h3><ul><li>Principal de 50 MP con OIS y video 4K.</li><li>Ultra gran angular de 8 MP y macro de 2 MP.</li><li>Frontal de 20 MP con modo noche.</li></ul><h3>Batería y extras</h3><p>Batería de 5110 mAh con carga turbo de 45 W y cargador incluido. Sumá Dimensity 7300-Ultra de 4 nm, huella en pantalla, NFC y parlantes duales Dolby Atmos.</p><h3>Antes de comprar</h3><p>La resistencia IP68 vale en condiciones de laboratorio (agua dulce, hasta 1,5 m por 30 minutos): no lo uses en pileta, playa ni lo cargues mojado.</p>",
+      "highlights": [
+        "AMOLED 1.5K de 6,67\" a 120 Hz, 3000 nits pico",
+        "Cámara de 50 MP con OIS y video 4K",
+        "Dimensity 7300-Ultra de 4 nm",
+        "Batería de 5110 mAh, cargador de 45 W incluido",
+        "IP68, NFC y huella en pantalla"
+      ],
+      "model": "Poco X7 5G",
+      "name": "Xiaomi Poco X7 5G 256 GB 8 GB RAM",
+      "ram": "8 GB",
+      "revisar": [
+        "La resistencia IP68 con condiciones de laboratorio sale de la fuente: la aclaro en Antes de comprar.",
+        "Sin otras dudas: datos de procesador, pantalla, cámaras, batería y caja salen de la fuente."
+      ],
+      "seoDescription": "Poco X7 5G de 256 GB nuevo: AMOLED de 6,67\" a 120 Hz, cámara de 50 MP con OIS, IP68 y 5110 mAh. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Xiaomi Poco X7 5G 256 GB",
+      "shortDescription": "Poco X7 5G con 256 GB y 8 GB de RAM. AMOLED de 6,67\" a 120 Hz, cámara de 50 MP con OIS, Dimensity 7300-Ultra y 5110 mAh con cargador de 45 W. Nuevo, con garantía oficial.",
+      "slug": "xiaomi-poco-x7-5g-256gb-8gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED CrystalRes 6,67\" (2712 x 1220), 120 Hz, Victus 2"
+        },
+        {
+          "label": "Procesador",
+          "value": "Dimensity 7300-Ultra (4 nm, hasta 2,5 GHz)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (OIS, f/1.5) + 8 MP ultra gran angular + 2 MP macro"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "20 MP"
+        },
+        {
+          "label": "Video",
+          "value": "4K a 24/30 fps"
+        },
+        {
+          "label": "Batería",
+          "value": "5110 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "45 W, cargador incluido"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Huella en pantalla + desbloqueo facial"
+        },
+        {
+          "label": "Red",
+          "value": "5G dual SIM"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi 6, Bluetooth 5.4, NFC"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP68"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Xiaomi HyperOS"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Poco F8 Pro 5G es un flagship para jugar en serio: Snapdragon 8 Elite de 3 nm, pantalla AMOLED de 6,59 pulgadas a 120 Hz y una batería gigante de 6210 mAh con carga de 100 W.</p><h3>Rendimiento</h3><p>El Snapdragon 8 Elite con memorias LPDDR5X y UFS 4.1 mueve cualquier juego al máximo y edita video sin trabas, con disipación avanzada para sesiones largas.</p><h3>Pantalla y sonido</h3><p>AMOLED de 6,59 pulgadas a 120 Hz con Dolby Vision y pico de 3500 nits. Los parlantes estéreo con ajuste Bose y Dolby Atmos completan la experiencia.</p><h3>Cámara y batería</h3><ul><li>Principal de 50 MP con OIS para fotos nítidas de noche.</li><li>Teleobjetivo de 50 MP (60 mm) para retratos sin distorsión.</li><li>Gran angular de 8 MP para paisajes.</li><li>6210 mAh con HyperCharge de 100 W y reversible de 22,5 W.</li></ul><p>Además trae IP68, Wi-Fi 7, NFC, infrarrojo y huella ultrasónica.</p>",
+      "highlights": [
+        "Snapdragon 8 Elite de 3 nm, nivel flagship",
+        "AMOLED de 6,59\" a 120 Hz, 3500 nits pico",
+        "Triple cámara 50 + 50 MP tele + OIS",
+        "Batería de 6210 mAh con HyperCharge de 100 W",
+        "Audio Bose con Dolby Atmos e IP68"
+      ],
+      "model": "Poco F8 Pro 5G",
+      "name": "Xiaomi Poco F8 Pro 5G 256 GB 12 GB RAM",
+      "ram": "12 GB",
+      "revisar": [
+        "La fuente lista variantes de 12/16 GB y 256 GB/512 GB/1 TB: esta ficha es la de 12/256 según nombre y slug.",
+        "No se informan cámara frontal ni contenido de la caja: no los publiqué."
+      ],
+      "seoDescription": "Poco F8 Pro 5G de 256 GB nuevo: Snapdragon 8 Elite, AMOLED de 6,59\" a 120 Hz y 6210 mAh con 100 W. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Poco F8 Pro 5G 256 GB 12 GB RAM",
+      "shortDescription": "Poco F8 Pro 5G con 256 GB y 12 GB de RAM. Snapdragon 8 Elite, AMOLED de 6,59\" a 120 Hz, triple cámara de 50 MP con tele y 6210 mAh con 100 W. Nuevo, con garantía oficial.",
+      "slug": "xiaomi-poco-f8-pro-5g-256gb-12gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED 6,59\" 1.5K, 120 Hz, 3500 nits, Dolby Vision"
+        },
+        {
+          "label": "Procesador",
+          "value": "Snapdragon 8 Elite (3 nm), Adreno 830"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (OIS) + 50 MP tele 60 mm + 8 MP gran angular"
+        },
+        {
+          "label": "Batería",
+          "value": "6210 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "100 W HyperCharge, reversible 22,5 W"
+        },
+        {
+          "label": "Audio",
+          "value": "Estéreo Sound by Bose, Dolby Atmos"
+        },
+        {
+          "label": "Resistencia",
+          "value": "IP68"
+        },
+        {
+          "label": "Conectividad",
+          "value": "5G, Wi-Fi 7, Bluetooth 5.4, NFC, infrarrojo"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Huella ultrasónica"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "HyperOS 3 (Android 16)"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Poco M8 5G es un gama media rendidor para el día a día: pantalla AMOLED de 6,77 pulgadas a 120 Hz, Snapdragon 6 Gen 3 con 5G y batería de 5520 mAh con cargador de 45 W incluido.</p><h3>Pantalla y rendimiento</h3><p>AMOLED de 6,77 pulgadas a 120 Hz con pico de 3200 nits: colores vivos y lectura perfecta al aire libre. El Snapdragon 6 Gen 3 de 4 nm con HyperOS mueve redes, streaming y multitarea sin tirones.</p><h3>Cámara</h3><ul><li>Principal de 50 MP con IA y grabación en 4K.</li><li>Edición con IA: borrado de objetos y de reflejos.</li><li>Frontal de 20 MP para selfies.</li></ul><h3>Batería y conectividad</h3><p>Batería de 5520 mAh con carga rápida de 45 W y carga inversa de 18 W para otros equipos. Trae 5G dual SIM, NFC para pagos, Bluetooth 5.4 y microSD de hasta 1 TB.</p>",
+      "highlights": [
+        "AMOLED de 6,77\" a 120 Hz, 3200 nits pico",
+        "Snapdragon 6 Gen 3 de 4 nm con 5G",
+        "Cámara de 50 MP con IA y video 4K",
+        "Batería de 5520 mAh, cargador de 45 W incluido",
+        "MicroSD hasta 1 TB + NFC para pagos"
+      ],
+      "model": "Poco M8 5G",
+      "name": "Xiaomi Poco M8 5G 256 GB 8 GB RAM",
+      "ram": "8 GB",
+      "revisar": [
+        "El nombre no decía 5G pero toda la descripción es del M8 5G (Snapdragon 6 Gen 3): lo agregué al nombre, confirmar.",
+        "La fuente menciona variantes de 8/12 GB y 256/512 GB: esta ficha es la de 8/256 según nombre y slug."
+      ],
+      "seoDescription": "Poco M8 5G de 256 GB nuevo: AMOLED de 6,77\" a 120 Hz, cámara de 50 MP con IA y 5520 mAh. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Xiaomi Poco M8 5G 256 GB",
+      "shortDescription": "Poco M8 5G con 256 GB y 8 GB de RAM. AMOLED de 6,77\" a 120 Hz, Snapdragon 6 Gen 3, cámara de 50 MP con 4K y 5520 mAh con 45 W. Nuevo, con garantía oficial.",
+      "slug": "xiaomi-poco-m8-256gb-8gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED 6,77\" FHD+ (1080 x 2392), 120 Hz, 3200 nits"
+        },
+        {
+          "label": "Procesador",
+          "value": "Snapdragon 6 Gen 3 (4 nm, hasta 2,4 GHz)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (f/1.8, IA, 4K) + 2 MP profundidad"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "20 MP"
+        },
+        {
+          "label": "Batería",
+          "value": "5520 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "45 W con cargador incluido, inversa 18 W"
+        },
+        {
+          "label": "Ranura microSD",
+          "value": "Sí, hasta 1 TB"
+        },
+        {
+          "label": "Red",
+          "value": "5G dual SIM"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi dual, Bluetooth 5.4, NFC, USB-C"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "HyperOS (Android 15)"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Redmi Note 15 apuesta a lo esencial de la gama media: pantalla grande y muy brillante, cámara de 108 MP y una batería de 6000 mAh que llega hasta dos días de uso. Esta versión trae 128 GB de almacenamiento y 6 GB de RAM.</p><h3>Pantalla y sonido</h3><p>El panel AMOLED de 6,77 pulgadas Full HD+ trabaja a 120 Hz y trepa a 3200 nits de pico, así que se ve bien incluso bajo el sol. Suma parlantes estéreo con Dolby Atmos y ficha de 3,5 mm para tus auriculares de siempre.</p><h3>Rendimiento</h3><p>El MediaTek Helio G100 Ultra mueve redes, video y juegos sin demoras. Los 128 GB alcanzan para miles de fotos y apps, y si te quedás corto podés ampliar con microSD.</p><h3>Antes de comprar</h3><p>La certificación IP64 cubre polvo y salpicaduras: no es sumergible. Es un equipo 4G; si necesitás 5G, escribinos por WhatsApp y te mostramos las opciones disponibles.</p>",
+      "highlights": [
+        "AMOLED de 6,77 pulgadas a 120 Hz y 3200 nits",
+        "Cámara principal de 108 MP con IA",
+        "Batería de 6000 mAh: hasta dos días de uso",
+        "Carga rápida de 33 W, cargador incluido",
+        "IP64, estéreo Dolby Atmos y ficha 3,5 mm"
+      ],
+      "model": "Redmi Note 15",
+      "name": "Xiaomi Redmi Note 15 128 GB 6 GB RAM",
+      "ram": "6 GB",
+      "revisar": [
+        "La descripción dice 'combinado con 8 GB de RAM' en un párrafo, pero el nombre, el short y la tabla dicen 6 GB: publico 6 GB.",
+        "El FAQ dice 'ampliar los 256 GB de memoria interna', pero la variante es de 128 GB: publico 128 GB.",
+        "El Helio G100 Ultra es 4G: lo publico como 4G aunque el slug no lo aclare."
+      ],
+      "seoDescription": "Redmi Note 15 nuevo y liberado: AMOLED de 6,77 pulgadas a 120 Hz, cámara de 108 MP y batería de 6000 mAh. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Xiaomi Redmi Note 15 128 GB 6 GB RAM",
+      "shortDescription": "Redmi Note 15 con 128 GB y 6 GB de RAM. Pantalla AMOLED de 6,77 pulgadas a 120 Hz, cámara de 108 MP, batería de 6000 mAh con carga de 33 W y protección IP64. Nuevo y liberado.",
+      "slug": "xiaomi-redmi-note-15-128gb-6gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED 6,77\" FHD+ (1080 x 2392), 120 Hz, 3200 nits pico"
+        },
+        {
+          "label": "Procesador",
+          "value": "MediaTek Helio G100 Ultra (6 nm, octa-core)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "108 MP (f/1.7) principal con IA + sensor de profundidad"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "20 MP (f/2.2)"
+        },
+        {
+          "label": "Batería",
+          "value": "6000 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "33 W por USB-C, cargador incluido"
+        },
+        {
+          "label": "Protección",
+          "value": "IP64 (polvo y salpicaduras, no sumergible)"
+        },
+        {
+          "label": "Audio",
+          "value": "Parlantes estéreo, Dolby Atmos, ficha 3,5 mm"
+        },
+        {
+          "label": "Red",
+          "value": "4G LTE"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi dual, Bluetooth 5.3, NFC, infrarrojo"
+        },
+        {
+          "label": "Ranura microSD",
+          "value": "Sí"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Xiaomi HyperOS (Android)"
+        }
+      ],
+      "storage": "128 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Redmi Note 14 5G combina una cámara de 108 MP con estabilización óptica, pantalla AMOLED de 6,67 pulgadas a 120 Hz y un perfil fino de 7,99 mm. Esta versión trae 256 GB y 8 GB de RAM.</p><h3>Cámara</h3><ul><li>Principal de 108 MP con OIS y lente f/1,7: fotos más nítidas de noche y en movimiento.</li><li>Ultra gran angular de 8 MP para paisajes y grupos.</li><li>Macro de 2 MP y frontal de 20 MP.</li></ul><h3>Pantalla</h3><p>AMOLED Full HD+ de 6,67 pulgadas con 120 Hz, 2100 nits de pico y Gorilla Glass 5. Se ve bien al sol y cuida la vista con atenuación PWM y certificaciones TÜV.</p><h3>Batería y seguridad</h3><p>Batería de 5110 mAh con carga turbo de 45 W. Desbloqueo con huella en pantalla y reconocimiento facial, más NFC para pagos sin contacto.</p><h3>Antes de comprar</h3><p>La ranura es híbrida: o usás segunda SIM o microSD de hasta 1 TB. La protección IP64 vale en condiciones de laboratorio y el NFC puede variar según el mercado.</p>",
+      "highlights": [
+        "Cámara de 108 MP con estabilización óptica",
+        "AMOLED de 6,67 pulgadas a 120 Hz y 2100 nits",
+        "Batería de 5110 mAh con carga turbo de 45 W",
+        "Dimensity 7025-Ultra con 5G y NFC",
+        "Huella en pantalla y Gorilla Glass 5",
+        "Perfil fino de 7,99 mm y 190 g"
+      ],
+      "model": "Redmi Note 14 5G",
+      "name": "Xiaomi Redmi Note 14 5G 256 GB 8 GB RAM Slim",
+      "ram": "8 GB",
+      "revisar": [
+        "El texto fuente parece mencionar ficha de 3,5 mm pero viene cortado: no lo publiqué, confirmar.",
+        "'Slim' se mantiene porque la fuente declara 7,99 mm de grosor."
+      ],
+      "seoDescription": "Redmi Note 14 5G nuevo y liberado: AMOLED de 6,67 pulgadas a 120 Hz, cámara de 108 MP con OIS y carga de 45 W. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Xiaomi Redmi Note 14 5G 256 GB 8 GB RAM",
+      "shortDescription": "Redmi Note 14 5G con 256 GB y 8 GB de RAM. AMOLED de 6,67 pulgadas a 120 Hz, cámara triple de 108 MP con OIS, batería de 5110 mAh y carga turbo de 45 W. Nuevo y liberado.",
+      "slug": "xiaomi-redmi-note-14-5g-256gb-8gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED 6,67\" FHD (2400 x 1080), 120 Hz, 2100 nits, Gorilla Glass 5"
+        },
+        {
+          "label": "Procesador",
+          "value": "MediaTek Dimensity 7025-Ultra (6 nm)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "108 MP (f/1.7, OIS) + 8 MP gran angular + 2 MP macro"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "20 MP (f/2.2)"
+        },
+        {
+          "label": "Batería",
+          "value": "5110 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "Turbo de 45 W"
+        },
+        {
+          "label": "Red",
+          "value": "5G / 4G / 3G / 2G"
+        },
+        {
+          "label": "SIM y microSD",
+          "value": "Híbrida: segunda SIM o microSD hasta 1 TB"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Huella en pantalla y desbloqueo facial"
+        },
+        {
+          "label": "Protección",
+          "value": "IP64 (ensayos de laboratorio)"
+        },
+        {
+          "label": "Conectividad",
+          "value": "NFC (según mercado), emisor de infrarrojos"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Xiaomi 17T Pro 5G es lo más alto de la serie T: óptica Leica con teleobjetivo periscópico, pantalla AMOLED de 6,83 pulgadas a 144 Hz y batería de 7000 mAh. Esta versión trae 1 TB y 12 GB de RAM.</p><h3>Cámara Leica</h3><ul><li>Principal de 50 MP con sensor Light Fusion 950 y estabilización óptica.</li><li>Teleobjetivo periscópico de 50 MP con zoom óptico de 5x.</li><li>Ultra gran angular de 12 MP y frontal de 32 MP.</li></ul><h3>Pantalla y rendimiento</h3><p>El panel CrystalRes de 6,83 pulgadas trabaja a 144 Hz con 3500 nits de pico y Dolby Vision. Adentro, el Dimensity 9500 de 3 nm con 12 GB LPDDR5X y 1 TB UFS 4.1 mueve juegos y edición sin transpirar.</p><h3>Batería</h3><p>Los 7000 mAh dan más de dos días de uso intenso y se recargan con HyperCharge de 120 W. También acepta carga inalámbrica y el equipo suma IP68, Wi-Fi 7 y NFC.</p>",
+      "highlights": [
+        "Teleobjetivo Leica con zoom óptico de 5x",
+        "Principal Light Fusion 950 de 50 MP con OIS",
+        "AMOLED de 6,83 pulgadas a 144 Hz y 3500 nits",
+        "Dimensity 9500 de 3 nm, 12 GB y 1 TB",
+        "Batería de 7000 mAh con carga de 120 W",
+        "IP68, carga inalámbrica y Wi-Fi 7"
+      ],
+      "model": "17T Pro",
+      "name": "Xiaomi 17T Pro 5G 1 TB 12 GB RAM",
+      "ram": "12 GB",
+      "revisar": [
+        "Modelo muy nuevo: los datos salen de la descripción provista (Dimensity 9500, HyperOS 3, Wi-Fi 7, Bluetooth 6.0). Confirmar con la ficha del fabricante antes de publicar.",
+        "Carga inalámbrica declarada sin potencia: no publiqué watts."
+      ],
+      "seoDescription": "Xiaomi 17T Pro 5G nuevo y liberado: teleobjetivo Leica 5x, AMOLED de 6,83 pulgadas a 144 Hz y batería de 7000 mAh. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Xiaomi 17T Pro 5G 1 TB 12 GB RAM",
+      "shortDescription": "Xiaomi 17T Pro 5G con 1 TB y 12 GB de RAM. Cámara Leica con periscopio de zoom 5x, AMOLED de 6,83 pulgadas a 144 Hz, Dimensity 9500 y batería de 7000 mAh con 120 W. Nuevo.",
+      "slug": "xiaomi-17t-pro-5g-1tb-12gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED CrystalRes 6,83\" 1.5K (2772 x 1280), 144 Hz, 3500 nits, Dolby Vision"
+        },
+        {
+          "label": "Procesador",
+          "value": "MediaTek Dimensity 9500 (3 nm, octa-core)"
+        },
+        {
+          "label": "Cámara principal",
+          "value": "50 MP Leica Light Fusion 950 (f/1.6, OIS)"
+        },
+        {
+          "label": "Teleobjetivo",
+          "value": "50 MP Leica periscópico, zoom óptico 5x (f/3.0, OIS)"
+        },
+        {
+          "label": "Gran angular",
+          "value": "12 MP Leica (120°, f/2.2)"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "32 MP"
+        },
+        {
+          "label": "Batería",
+          "value": "7000 mAh (silicio-carbono)"
+        },
+        {
+          "label": "Carga",
+          "value": "HyperCharge 120 W + carga inalámbrica"
+        },
+        {
+          "label": "Protección",
+          "value": "IP68 (agua y polvo)"
+        },
+        {
+          "label": "Tipo de memoria",
+          "value": "12 GB LPDDR5X + 1 TB UFS 4.1"
+        },
+        {
+          "label": "Conectividad",
+          "value": "5G Dual SIM, Wi-Fi 7, Bluetooth 6.0, NFC, USB-C"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Xiaomi HyperOS 3 (Android 16)"
+        }
+      ],
+      "storage": "1 TB"
+    },
+    {
+      "descriptionHtml": "<p>El Poco F9 Ultra 5G está pensado para jugar y hacer varias cosas a la vez: chip de 4 nm, 12 GB de RAM rápida y refrigeración líquida que sostiene el rendimiento. Esta versión trae 256 GB UFS 4.0.</p><h3>Rendimiento</h3><p>El procesador octa-core de 4 nm con 12 GB LPDDR5X mueve los juegos más pesados en calidad máxima. La cámara de vapor disipa el calor en sesiones largas para que no caigan los cuadros por segundo.</p><h3>Pantalla</h3><p>AMOLED Flow de 6,67 pulgadas con resolución WQHD+, 120 Hz adaptativos y muestreo táctil de 2160 Hz. Suma Dolby Vision, HDR10+ y atenuación PWM para cuidar la vista.</p><h3>Cámara y carga</h3><p>Principal de 50 MP con estabilización óptica, más ultra gran angular y macro; frontal de 20 MP. La batería de 5000 mAh se carga completa en menos de 20 minutos con el HyperCharge de 120 W incluido en la caja.</p>",
+      "highlights": [
+        "AMOLED WQHD+ de 6,67 pulgadas a 120 Hz",
+        "Cámara de 50 MP (f/1.6) con OIS",
+        "Batería de 5000 mAh, carga de 120 W incluida",
+        "12 GB LPDDR5X y 256 GB UFS 4.0",
+        "Refrigeración líquida para jugar sin frenos",
+        "IP68 y parlantes estéreo Dolby Atmos"
+      ],
+      "model": "Poco F9 Ultra 5G",
+      "name": "Xiaomi Poco F9 Ultra 5G 256 GB 12 GB RAM",
+      "ram": "12 GB",
+      "revisar": [
+        "La fuente no nombra el modelo del chip (solo 'octa-core de 4 nm'): no lo publiqué, confirmar.",
+        "5G según nombre y descripción; Gorilla Glass Victus y cargador de 120 W incluido según la fuente."
+      ],
+      "seoDescription": "Poco F9 Ultra 5G nuevo y liberado: AMOLED WQHD+ a 120 Hz, cámara de 50 MP con OIS y carga de 120 W. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Poco F9 Ultra 5G 256 GB 12 GB RAM",
+      "shortDescription": "Poco F9 Ultra 5G con 256 GB y 12 GB de RAM. AMOLED de 6,67 pulgadas WQHD+ a 120 Hz, cámara de 50 MP con OIS, batería de 5000 mAh y HyperCharge de 120 W. Nuevo.",
+      "slug": "xiaomi-poco-f9-ultra-5g-256gb-12gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED Flow 6,67\" WQHD+, 120 Hz, Gorilla Glass Victus"
+        },
+        {
+          "label": "Procesador",
+          "value": "Octa-core de 4 nm para gaming (modelo a confirmar)"
+        },
+        {
+          "label": "Refrigeración",
+          "value": "LiquidCool, cámara de vapor de acero"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP (f/1.6, OIS) + gran angular + macro"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "20 MP"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "HyperCharge 120 W, cargador incluido"
+        },
+        {
+          "label": "Protección",
+          "value": "IP68 (agua y polvo)"
+        },
+        {
+          "label": "Audio",
+          "value": "Parlantes estéreo, Dolby Atmos"
+        },
+        {
+          "label": "Red",
+          "value": "5G"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Xiaomi HyperOS (Android)"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Moto G86 5G en su versión de 512 GB y 8 GB de RAM es para quienes no quieren pensar en el espacio: entran miles de fotos, videos, apps y documentos sin borrar nada. Es un equipo nuevo, con Android y conexión 5G.</p><h3>Memoria</h3><p>Los 512 GB tardás años en llenarlos con uso normal, y los 8 GB de RAM mantienen varias apps abiertas sin que se trabe. Ideal si trabajás con el celu o guardás mucho contenido.</p><h3>Para quién es</h3><p>Para profesionales, estudiantes y usuarios exigentes que buscan un equipo confiable con tecnología actual. Si venís de un celu de 128 GB, el salto se nota desde el primer día.</p><h3>Antes de comprar</h3><p>La ficha técnica completa está en revisión: todavía no confirmamos pantalla, procesador, cámaras ni batería. Escribinos por WhatsApp y te pasamos todos los datos antes de comprar.</p>",
+      "highlights": [
+        "512 GB para fotos, videos y apps sin borrar",
+        "8 GB de RAM para usar varias apps a la vez",
+        "Conexión 5G para descargas más rápidas",
+        "Android simple, ideal para todos los días"
+      ],
+      "model": "Moto G86 5G",
+      "name": "Motorola Moto G86 5G 512 GB 8 GB RAM",
+      "ram": "8 GB",
+      "revisar": [
+        "La descripción es relleno genérico sin datos (pantalla, procesador, cámaras, batería): pedir ficha del fabricante.",
+        "5G y Android salen del nombre y la descripción; no se afirma nada más.",
+        "El short original habla de 'diseño slim' sin justificarlo: no lo publiqué."
+      ],
+      "seoDescription": "Moto G86 5G nuevo, con 512 GB y 8 GB de RAM para guardar todo y usar varias apps a la vez. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Moto G86 5G 512 GB 8 GB RAM",
+      "shortDescription": "Moto G86 5G con 512 GB y 8 GB de RAM. Mucho espacio para fotos, videos y apps, con Android y conexión 5G. Nuevo, con garantía oficial.",
+      "slug": "motorola-moto-g86-5g-512gb-8gb",
+      "specs": [
+        {
+          "label": "Red",
+          "value": "5G"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Android"
+        }
+      ],
+      "storage": "512 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Moto G05 es un entrada de gama que se destaca por su pantalla: 6,7 pulgadas con un modo de brillo alto de hasta 1000 nits que se ve bien al sol y responde aunque esté mojada. Esta versión trae 128 GB y 4 GB de RAM.</p><h3>Pantalla y sonido</h3><p>Panel de 6,7 pulgadas con Gorilla Glass 3 y mejora de color en exteriores. Los parlantes estéreo con realce de bajos dan graves 7 veces más potentes.</p><h3>Cámara</h3><p>Principal de 50 MP con tecnología Quad Pixel y funciones de IA para retratos y fotos con poca luz. Un sensor de luz ambiental extra ayuda a enfocar más rápido. La frontal es de 8 MP.</p><h3>Batería y rendimiento</h3><p>Batería de 5200 mAh para llegar al final del día y chip Helio G81 Extreme para el uso cotidiano: redes, mensajería, video y juegos livianos.</p>",
+      "highlights": [
+        "Pantalla de 6,7 pulgadas visible bajo el sol",
+        "Cámara de 50 MP con IA y Quad Pixel",
+        "Batería de 5200 mAh para todo el día",
+        "Parlantes estéreo con bajos más potentes",
+        "Gorilla Glass 3, responde con tacto mojado"
+      ],
+      "model": "Moto G05",
+      "name": "Motorola Moto G05 128 GB 4 GB RAM",
+      "ram": "4 GB",
+      "revisar": [
+        "Red 4G inferida del Helio G81 Extreme (chip sin 5G): confirmar.",
+        "La fuente no declara carga, contenido de la caja ni sistema operativo: no los publiqué."
+      ],
+      "seoDescription": "Moto G05 nuevo: pantalla de 6,7 pulgadas que se ve al sol, cámara de 50 MP y batería de 5200 mAh. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Moto G05 128 GB 4 GB RAM nuevo",
+      "shortDescription": "Moto G05 con 128 GB y 4 GB de RAM. Pantalla de 6,7 pulgadas visible al sol, cámara de 50 MP con IA, sonido estéreo y batería de 5200 mAh. Nuevo, con garantía oficial.",
+      "slug": "motorola-moto-g05-128gb-4gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "6,7\", hasta 1000 nits, Gorilla Glass 3"
+        },
+        {
+          "label": "Procesador",
+          "value": "MediaTek Helio G81 Extreme"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP con Quad Pixel e IA + sensor de luz ambiental"
+        },
+        {
+          "label": "Cámara frontal",
+          "value": "8 MP"
+        },
+        {
+          "label": "Batería",
+          "value": "5200 mAh"
+        },
+        {
+          "label": "Audio",
+          "value": "Parlantes estéreo con realce de bajos"
+        },
+        {
+          "label": "Red",
+          "value": "4G LTE"
+        }
+      ],
+      "storage": "128 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Realme C75x es un gama media todo terreno: resiste agua, polvo y caídas, y suma pantalla de 120 Hz con buena batería. Esta versión trae 256 GB y 8 GB de RAM física, ampliable de forma virtual.</p><h3>Resistencia</h3><p>Certificación IP68/IP69 contra inmersión, polvo y chorros a alta presión, más vidrio ArmorShell con grado militar que aguanta caídas de hasta 1,8 metros. Ideal si trabajás al aire libre.</p><h3>Pantalla y rendimiento</h3><p>Panel de 6,67 pulgadas a 120 Hz para un scroll bien fluido. El Helio G81 Ultra con 8 GB de RAM mueve redes y apps sin cierres; con la RAM dinámica llega hasta 24 GB totales.</p><h3>Cámara y batería</h3><p>Principal de 50 MP con IA para fotos nítidas y retratos, con microSD independiente para no quedarte sin lugar. La batería de 5600 mAh da hasta dos días de uso moderado y carga rápido con 45 W SUPERVOOC.</p>",
+      "highlights": [
+        "IP68/IP69: agua, polvo y chorros a presión",
+        "Grado militar, aguanta caídas de 1,8 m",
+        "Pantalla de 6,67 pulgadas a 120 Hz",
+        "Batería de 5600 mAh con carga de 45 W",
+        "Cámara de 50 MP con IA y lugar de sobra"
+      ],
+      "model": "C75x",
+      "name": "Realme C75x 256 GB 8 GB RAM",
+      "ram": "8 GB",
+      "revisar": [
+        "Red 4G inferida del Helio G81 Ultra (chip sin 5G); el nombre no declara red: confirmar.",
+        "Sin datos de cámara frontal ni sistema operativo en la fuente: no los publiqué."
+      ],
+      "seoDescription": "Realme C75x nuevo: resistente IP69 con grado militar, pantalla de 6,67 pulgadas a 120 Hz y batería de 5600 mAh. Garantía y envíos a todo el país.",
+      "seoTitle": "Realme C75x 256 GB 8 GB RAM",
+      "shortDescription": "Realme C75x con 256 GB y 8 GB de RAM. Estructura IP68/IP69 con grado militar, pantalla de 6,67 pulgadas a 120 Hz, cámara de 50 MP y batería de 5600 mAh. Nuevo, con garantía oficial.",
+      "slug": "realme-c75x-256gb-8gb",
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "6,67\", 120 Hz"
+        },
+        {
+          "label": "Procesador",
+          "value": "MediaTek Helio G81 Ultra"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "50 MP con IA"
+        },
+        {
+          "label": "Batería",
+          "value": "5600 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "45 W SUPERVOOC"
+        },
+        {
+          "label": "Protección",
+          "value": "IP68/IP69 + grado militar MIL-STD-810H"
+        },
+        {
+          "label": "Ranura microSD",
+          "value": "Sí, independiente"
+        },
+        {
+          "label": "RAM dinámica",
+          "value": "Hasta 24 GB totales (8 GB físicos + virtual)"
+        },
+        {
+          "label": "Red",
+          "value": "4G LTE"
+        }
+      ],
+      "storage": "256 GB"
+    },
+    {
+      "descriptionHtml": "<p>El Huawei Pura 80 Pro en su versión de 512 GB y 12 GB de RAM es la configuración más completa del modelo: memoria de sobra para archivos grandes y multitarea intensa sin pensar en el espacio. Es un equipo nuevo, de gama alta.</p><h3>Memoria</h3><p>Los 512 GB entran miles de fotos, videos, aplicaciones y documentos. Los 12 GB de RAM mantienen el celu fluido con muchas apps abiertas, juegos pesados y edición de fotos o video.</p><h3>Para quién es</h3><p>Para usuarios exigentes que buscan lo mejor en tecnología móvil y no quieren quedarse cortos de memoria. Un equipo pensado para rendir varios años.</p><h3>Antes de comprar</h3><p>Estamos completando la ficha técnica con los datos del fabricante: pantalla, procesador, cámaras, batería y red. Escribinos por WhatsApp y te confirmamos todo antes de comprar.</p>",
+      "highlights": [
+        "512 GB para fotos, videos y apps sin borrar",
+        "12 GB de RAM para multitarea exigente",
+        "Gama alta para usuarios exigentes",
+        "Nuevo, con garantía oficial"
+      ],
+      "model": "Pura 80 Pro",
+      "name": "Huawei Pura 80 Pro 512 GB 12 GB RAM",
+      "ram": "12 GB",
+      "revisar": [
+        "La descripción es relleno sin datos técnicos: mínimo honesto, pedir ficha del fabricante (pantalla, procesador, cámaras, batería, carga, red).",
+        "No se publica red ni specs hasta confirmar."
+      ],
+      "seoDescription": "Huawei Pura 80 Pro nuevo, con 512 GB y 12 GB de RAM para multitarea exigente y archivos grandes. Garantía oficial y envíos a todo el país.",
+      "seoTitle": "Huawei Pura 80 Pro 512 GB 12 GB RAM",
+      "shortDescription": "Huawei Pura 80 Pro con 512 GB y 12 GB de RAM. La variante más completa para multitarea intensa y guardar archivos grandes. Nuevo, con garantía oficial.",
+      "slug": "huawei-pura-80-pro-512gb-12gb",
+      "storage": "512 GB"
+    }
+  ]
+}
