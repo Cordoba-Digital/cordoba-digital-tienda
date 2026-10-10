@@ -113,7 +113,7 @@ export function AdminWpImagesCopy({
           type="button"
           onClick={run}
           disabled={running || remaining === 0}
-          className="rounded-xl bg-brand-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-brand-800 disabled:cursor-not-allowed disabled:opacity-60"
+          className="rounded-xl bg-brand-700 px-4 py-2 text-sm font-bold text-white transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-brand-800 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {running ? "Copiando…" : copied || failed ? "Seguir copiando" : "Copiar fotos del WordPress"}
         </button>
@@ -121,7 +121,7 @@ export function AdminWpImagesCopy({
           <button
             type="button"
             onClick={() => (stop.current = true)}
-            className="rounded-xl border border-ink-300 px-4 py-2 text-sm font-bold text-ink-700 transition hover:border-ink-500"
+            className="rounded-xl border border-ink-300 px-4 py-2 text-sm font-bold text-ink-700 transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:border-ink-500"
           >
             Pausar
           </button>

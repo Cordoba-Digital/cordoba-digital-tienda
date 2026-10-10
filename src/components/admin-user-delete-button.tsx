@@ -39,7 +39,7 @@ export function AdminUserDeleteButton({ id, label }: { id: number; label: string
         type="button"
         onClick={remove}
         disabled={pending}
-        className="rounded-xl border border-red-600 px-4 py-2 text-sm font-bold text-red-600 transition hover:bg-red-600 hover:text-white disabled:cursor-not-allowed"
+        className="rounded-xl border border-red-600 px-4 py-2 text-sm font-bold text-red-600 transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-red-600 hover:text-white disabled:cursor-not-allowed"
       >
         {pending ? "Eliminando…" : "Eliminar cuenta"}
       </button>

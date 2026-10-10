@@ -38,7 +38,7 @@ export function AdminUserDisableButton({ id, disabled }: { id: number; disabled:
         type="button"
         onClick={toggle}
         disabled={pending}
-        className="rounded-xl border border-ink-200 px-4 py-2 text-sm font-bold text-ink-700 transition hover:border-red-400 hover:text-red-700 disabled:opacity-50"
+        className="rounded-xl border border-ink-200 px-4 py-2 text-sm font-bold text-ink-700 transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:border-red-400 hover:text-red-700 disabled:opacity-50"
       >
         {pending ? "Guardando…" : disabled ? "Desbloquear cuenta" : "Bloquear cuenta"}
       </button>

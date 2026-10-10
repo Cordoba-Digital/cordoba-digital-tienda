@@ -190,7 +190,7 @@ export function AdminImageManager({
     if (urls.length) void addExternal(urls);
   }
 
-  const btn = "rounded-md border border-ink-200 bg-surface px-2 py-1 text-[11px] font-bold text-ink-700 transition hover:border-ink-400 disabled:opacity-30";
+  const btn = "rounded-md border border-ink-200 bg-surface px-2 py-1 text-[11px] font-bold text-ink-700 transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:border-ink-400 disabled:opacity-30";
   const full = room - pending <= 0;
 
   return (
@@ -290,14 +290,14 @@ export function AdminImageManager({
 
       {!full ? (
         <div
-          className={`rounded-lg border transition ${
+          className={`rounded-lg border transition-[background-color,color,border-color,box-shadow,opacity] duration-150 ${
             dropActive ? "border-brand-700 bg-surface ring-1 ring-brand-700" : "border-ink-200 bg-ink-50/50"
           }`}
         >
           <div className="flex flex-col gap-3 p-3 sm:flex-row sm:items-center sm:gap-4 sm:p-4">
             <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4">
               <span
-                className={`grid h-10 w-10 shrink-0 place-items-center rounded-full transition ${
+                className={`grid h-10 w-10 shrink-0 place-items-center rounded-full transition-[background-color,color,border-color,box-shadow,opacity] duration-150 ${
                   dropActive ? "bg-brand-700 text-white" : "bg-surface text-ink-500 ring-1 ring-ink-200"
                 }`}
                 aria-hidden
@@ -320,7 +320,7 @@ export function AdminImageManager({
               <button
                 type="button"
                 onClick={() => fileInput.current?.click()}
-                className="rounded-lg bg-ink-900 px-3.5 py-2 text-sm font-bold text-white transition hover:bg-ink-700"
+                className="rounded-lg bg-ink-900 px-3.5 py-2 text-sm font-bold text-white transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-ink-700"
               >
                 Subir archivo
               </button>
@@ -328,7 +328,7 @@ export function AdminImageManager({
                 type="button"
                 onClick={() => setUrlOpen((v) => !v)}
                 aria-expanded={urlOpen}
-                className={`rounded-lg border px-3.5 py-2 text-sm font-bold transition ${
+                className={`rounded-lg border px-3.5 py-2 text-sm font-bold transition-[background-color,color,border-color,box-shadow,opacity] duration-150 ${
                   urlOpen ? "border-ink-400 bg-surface text-ink-900" : "border-ink-200 bg-surface text-ink-700 hover:border-ink-300 hover:text-ink-900"
                 }`}
               >

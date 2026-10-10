@@ -410,14 +410,23 @@ input[type="number"]::-webkit-inner-spin-button {
 /* Tablas del admin: esquinas rectas (las tarjetas de números siguen redondeadas). */
 @utility admin-table {
   background-color: var(--color-surface);
-  box-shadow: 0 0 0 1px rgba(20, 22, 28, 0.08);
+  border: 1px solid transparent;
+  box-shadow:
+    0px 0px 0px 1px oklch(0 0 0 / 0.06),
+    0px 1px 2px -1px oklch(0 0 0 / 0.06),
+    0px 2px 4px 0px oklch(0 0 0 / 0.04);
+  font-variant-numeric: tabular-nums;
 }
 
 /* Tarjetas del admin: borde fino y esquinas apenas redondeadas. */
 @utility admin-card {
   background-color: var(--color-surface);
-  border-radius: 0.5rem;
-  box-shadow: 0 0 0 1px rgba(20, 22, 28, 0.08);
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  box-shadow:
+    0px 0px 0px 1px oklch(0 0 0 / 0.06),
+    0px 1px 2px -1px oklch(0 0 0 / 0.06),
+    0px 2px 4px 0px oklch(0 0 0 / 0.04);
 }
 
 /*
@@ -459,4 +468,23 @@ input[type="number"]::-webkit-inner-spin-button {
   from {
     opacity: 0;
   }
+}
+
+/*
+ * Pulido común del panel: los botones se hunden a 0.96 al apretarlos (nunca
+ * deshabilitados) y las fotos de producto llevan un contorno neutro de 1px
+ * para que el blanco no se pierda contra la tarjeta.
+ */
+.admin-shell button {
+  transition-property: scale, background-color, color, border-color, box-shadow, opacity;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+  -webkit-tap-highlight-color: transparent;
+}
+.admin-shell button:not(:disabled):active {
+  scale: 0.96;
+}
+.admin-shell img {
+  outline: 1px solid oklch(0 0 0 / 0.1);
+  outline-offset: -1px;
 }

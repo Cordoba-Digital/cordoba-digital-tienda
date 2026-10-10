@@ -77,7 +77,7 @@ export default async function AdminActivityPage({ searchParams }: { searchParams
           <Link
             key={e.id || "todo"}
             href={href({ tipo: e.id, page: "" })}
-            className={`border px-4 py-1.5 text-xs font-bold transition ${
+            className={`border px-4 py-1.5 text-xs font-bold transition-[background-color,color,border-color,box-shadow,opacity] duration-150 ${
               entity === e.id ? "border-ink-900 bg-ink-900 text-white" : "border-ink-200 bg-surface text-ink-600 hover:border-ink-400"
             }`}
           >

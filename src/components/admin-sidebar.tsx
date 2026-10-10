@@ -86,7 +86,7 @@ export function AdminSidebar({ badges = {}, who = "" }: { badges?: Record<string
   }
 
   const itemCls = (on: boolean) =>
-    `flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-semibold transition ${
+    `flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-semibold transition-[background-color,color,border-color,box-shadow,opacity] duration-150 ${
       on ? "bg-ink-900 text-white" : "text-ink-600 hover:bg-ink-100 hover:text-ink-900"
     }`;
 

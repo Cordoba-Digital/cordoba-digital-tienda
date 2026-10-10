@@ -72,7 +72,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
           <Link
             key={s.id}
             href={withParams(base, { status: status === s.id ? null : s.id, page: null })}
-            className={`admin-card p-4 transition ${status === s.id ? "ring-2 ring-brand-500" : ""}`}
+            className={`admin-card p-4 transition-[background-color,color,border-color,box-shadow,opacity] duration-150 ${status === s.id ? "ring-2 ring-brand-500" : ""}`}
           >
             <p className="text-xs font-bold text-ink-500">{s.label}</p>
             <p className="mt-1 text-2xl font-black text-ink-900">{stats[s.id] ?? 0}</p>

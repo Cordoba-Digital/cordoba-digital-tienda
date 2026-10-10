@@ -74,13 +74,13 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
         <div className="flex gap-2">
           <Link
             href="/admin/productos/archivados"
-            className="border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-700 transition hover:border-brand-300"
+            className="border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-700 transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:border-brand-300"
           >
             Archivados
           </Link>
           <Link
             href="/admin/productos/nuevo"
-            className="bg-brand-700 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800"
+            className="bg-brand-700 px-4 py-2.5 text-sm font-bold text-white transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-brand-800"
           >
             ＋ Nuevo
           </Link>

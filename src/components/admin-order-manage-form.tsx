@@ -76,7 +76,7 @@ export function AdminOrderManageForm({ code, currentStatus, trackingCode }: { co
         <button
           type="submit"
           disabled={saving}
-          className="rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800 disabled:cursor-not-allowed"
+          className="rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-bold text-white transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-brand-800 disabled:cursor-not-allowed"
         >
           {saving ? "Guardando…" : "Guardar cambios"}
         </button>

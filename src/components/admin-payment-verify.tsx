@@ -73,7 +73,7 @@ export function AdminPaymentVerify({ code }: { code: string }) {
         type="button"
         onClick={verify}
         disabled={state.kind === "loading"}
-        className="border border-ink-200 px-2 py-1 text-xs font-bold text-ink-700 transition hover:border-brand-300 hover:text-brand-700 disabled:opacity-50"
+        className="border border-ink-200 px-2 py-1 text-xs font-bold text-ink-700 transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:border-brand-300 hover:text-brand-700 disabled:opacity-50"
       >
         {state.kind === "loading" ? "Verificando…" : "Verificar en MP"}
       </button>

@@ -83,7 +83,7 @@ export function AdminLoginForm({
         {google ? (
           <a
             href={`/api/auth/google/start?admin=1${remember ? "&remember=1" : ""}&next=${encodeURIComponent(next)}`}
-            className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl border border-ink-200 bg-surface px-4 py-3 text-sm font-bold text-ink-900 transition hover:border-ink-400"
+            className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl border border-ink-200 bg-surface px-4 py-3 text-sm font-bold text-ink-900 transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:border-ink-400"
           >
             <svg viewBox="0 0 48 48" className="h-5 w-5" aria-hidden>
               <path
@@ -140,7 +140,7 @@ export function AdminLoginForm({
             <button
               type="submit"
               disabled={loading || !password}
-              className="w-full rounded-xl bg-brand-700 px-4 py-3 text-sm font-bold text-white transition hover:bg-brand-800 disabled:cursor-not-allowed"
+              className="w-full rounded-xl bg-brand-700 px-4 py-3 text-sm font-bold text-white transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-brand-800 disabled:cursor-not-allowed"
             >
               {loading ? "Ingresando…" : "Ingresar"}
             </button>

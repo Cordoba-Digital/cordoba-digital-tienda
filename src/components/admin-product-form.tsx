@@ -378,7 +378,7 @@ export function AdminProductForm({
           <button
             type="submit"
             disabled={saving}
-            className="rounded-lg bg-ink-900 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-ink-800 disabled:cursor-not-allowed"
+            className="rounded-lg bg-ink-900 px-6 py-2.5 text-sm font-bold text-white transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-ink-800 disabled:cursor-not-allowed"
           >
             {editing ? (saving ? "Guardando…" : "Guardar cambios") : saving ? "Creando…" : "Crear producto"}
           </button>

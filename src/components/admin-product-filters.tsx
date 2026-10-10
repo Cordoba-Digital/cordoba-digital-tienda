@@ -60,9 +60,9 @@ export function AdminProductFilters({ q, category, categories, stock, sort, ofer
   }, [text]);
 
   const control =
-    "h-10 border border-ink-200 bg-surface px-3 text-sm text-ink-900 outline-none transition focus:border-ink-400";
+    "h-10 border border-ink-200 bg-surface px-3 text-sm text-ink-900 outline-none transition-[background-color,color,border-color,box-shadow,opacity] duration-150 focus:border-ink-400";
   const chip = (on: boolean) =>
-    `h-10 flex-1 border px-4 text-sm font-semibold transition sm:flex-none ${
+    `h-10 flex-1 border px-4 text-sm font-semibold transition-[background-color,color,border-color,box-shadow,opacity] duration-150 sm:flex-none ${
       on ? "border-ink-900 bg-ink-900 text-white" : "border-ink-200 bg-surface text-ink-600 hover:border-ink-300 hover:text-ink-900"
     }`;
 

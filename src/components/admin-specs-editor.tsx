@@ -89,7 +89,7 @@ export function AdminSpecsEditor({ rows, onChange }: { rows: SpecRow[]; onChange
     onChange(next);
   };
   const used = new Set(rows.map((r) => r.label.trim().toLowerCase()));
-  const btn = "rounded px-1.5 py-1 text-xs font-bold text-ink-400 transition hover:bg-ink-100 hover:text-ink-900 disabled:opacity-20";
+  const btn = "rounded px-1.5 py-1 text-xs font-bold text-ink-400 transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-ink-100 hover:text-ink-900 disabled:opacity-20";
 
   return (
     <div className="space-y-3">

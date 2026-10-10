@@ -59,7 +59,7 @@ export function AdminAccessManager({ rows, canManage, me }: { rows: Row[]; canMa
           <button
             type="submit"
             disabled={busy !== null || !email.trim()}
-            className="h-10 bg-ink-900 px-5 text-sm font-bold text-white transition hover:bg-ink-700 disabled:cursor-default disabled:bg-ink-300"
+            className="h-10 bg-ink-900 px-5 text-sm font-bold text-white transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-ink-700 disabled:cursor-default disabled:bg-ink-300"
           >
             {busy === email.trim() ? "Agregando…" : "Dar acceso"}
           </button>
@@ -98,7 +98,7 @@ export function AdminAccessManager({ rows, canManage, me }: { rows: Row[]; canMa
                     onClick={() => {
                       if (window.confirm(`¿Quitar el acceso de ${r.email}? Se le cierra la sesión del panel.`)) void send("DELETE", r.email);
                     }}
-                    className="border border-red-600 px-3 py-1.5 text-xs font-bold text-red-600 transition hover:bg-red-600 hover:text-white disabled:cursor-default"
+                    className="border border-red-600 px-3 py-1.5 text-xs font-bold text-red-600 transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-red-600 hover:text-white disabled:cursor-default"
                   >
                     {busy === r.email ? "Quitando…" : "Quitar"}
                   </button>

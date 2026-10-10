@@ -131,13 +131,13 @@ export function AdminProductRow({ product }: { product: AdminProductRow }) {
           type="button"
           onClick={save}
           disabled={saving || !dirty}
-          className="w-full border border-brand-700 bg-brand-700 px-3 py-2 text-xs font-bold text-white transition hover:bg-brand-800 disabled:cursor-default disabled:border-ink-200 disabled:bg-surface disabled:text-ink-400"
+          className="w-full border border-brand-700 bg-brand-700 px-3 py-2 text-xs font-bold text-white transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-brand-800 disabled:cursor-default disabled:border-ink-200 disabled:bg-surface disabled:text-ink-400"
         >
           {saving ? "…" : saved || "Guardar"}
         </button>
         <Link
           href={`/admin/productos/${encodeURIComponent(product.slug)}`}
-          className="w-full border border-ink-200 px-3 py-2 text-center text-xs font-bold text-ink-700 transition hover:border-brand-300"
+          className="w-full border border-ink-200 px-3 py-2 text-center text-xs font-bold text-ink-700 transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:border-brand-300"
         >
           Editar
         </Link>
