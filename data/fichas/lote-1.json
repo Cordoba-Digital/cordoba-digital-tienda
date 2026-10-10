@@ -1,0 +1,326 @@
+{
+  "lote": "lote-1",
+  "nota": "Lote de ejemplo para aprobar el estilo. Los datos técnicos salen de la descripción original o del nombre; lo que no se pudo confirmar va en `revisar` y no se publica.",
+  "productos": [
+    {
+      "slug": "iphone-16-128gb-teal",
+      "name": "iPhone 16 128 GB Verde azulado",
+      "model": "iPhone 16",
+      "storage": "128 GB",
+      "seoTitle": "iPhone 16 128 GB Verde azulado nuevo",
+      "seoDescription": "iPhone 16 de 128 GB nuevo, con chip A18, pantalla de 6,1\" y cámara de 48 MP. Garantía oficial, envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "iPhone 16 de 128 GB en verde azulado. Chip A18, pantalla Super Retina XDR de 6,1\", cámara Fusión de 48 MP, Control de Cámara y USB-C. Nuevo, con garantía.",
+      "highlights": [
+        "Chip A18, dos generaciones por delante del A16 del iPhone 15",
+        "Cámara Fusión de 48 MP con zoom 2x de calidad óptica",
+        "Botón Control de Cámara y botón de Acción",
+        "Hasta 22 horas de reproducción de video",
+        "Carga por USB-C y MagSafe",
+        "Frente con Ceramic Shield y cuerpo de aluminio"
+      ],
+      "specs": [
+        {
+          "label": "Color",
+          "value": "Verde azulado (Teal)"
+        },
+        {
+          "label": "Pantalla",
+          "value": "Super Retina XDR OLED de 6,1\""
+        },
+        {
+          "label": "Procesador",
+          "value": "Apple A18"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "Fusión 48 MP + ultra gran angular 12 MP"
+        },
+        {
+          "label": "Batería",
+          "value": "Hasta 22 h de reproducción de video"
+        },
+        {
+          "label": "Conector",
+          "value": "USB-C"
+        },
+        {
+          "label": "Carga inalámbrica",
+          "value": "MagSafe y Qi"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "iOS 18"
+        },
+        {
+          "label": "Conectividad",
+          "value": "5G"
+        }
+      ],
+      "descriptionHtml": "<p>El iPhone 16 trae el chip A18, una cámara de 48 MP y dos botones nuevos que cambian cómo lo usás todos los días. Esta versión tiene 128 GB y viene en verde azulado.</p><h3>Rendimiento</h3><p>El A18 está dos generaciones por delante del A16 Bionic del iPhone 15. Mueve juegos exigentes, edición de fotos y video sin trabarse y gasta menos batería: llega a 22 horas de reproducción de video.</p><h3>Cámara</h3><ul><li>Cámara Fusión de 48 MP con zoom 2x de calidad óptica.</li><li>Ultra gran angular de 12 MP, también para fotos macro.</li><li>Botón Control de Cámara: abrís la cámara, hacés zoom y sacás la foto sin tocar la pantalla.</li><li>Estilos Fotográficos que podés cambiar o deshacer después de sacar la foto.</li></ul><h3>Diseño</h3><p>Cuerpo de aluminio y frente con Ceramic Shield. El botón de Acción se configura para la linterna, una nota de voz, el modo silencio u otro atajo.</p><h3>En la caja</h3><p>iPhone 16 y cable USB-C. El cargador se vende por separado.</p>",
+      "revisar": [
+        "La descripción original decía 'diseño de titanio' (es del iPhone 16 Pro) y 'dos eSIM' (depende del modelo regional). No los puse.",
+        "La foto es la misma para todos los colores: confirmar que es verde azulado."
+      ]
+    },
+    {
+      "slug": "xiaomi-redmi-note-15-pro-256gb-8gb-2",
+      "name": "Xiaomi Redmi Note 15 Pro 4G 256 GB 8 GB RAM",
+      "model": "Redmi Note 15 Pro 4G",
+      "storage": "256 GB",
+      "ram": "8 GB",
+      "seoTitle": "Xiaomi Redmi Note 15 Pro 4G 256 GB 8 GB RAM",
+      "seoDescription": "Redmi Note 15 Pro 4G nuevo y liberado: cámara de 200 MP, AMOLED 120 Hz y carga de 67 W con cargador incluido. Garantía y envíos a todo el país.",
+      "shortDescription": "Redmi Note 15 Pro 4G con 256 GB y 8 GB de RAM. Cámara principal de 200 MP con OIS, pantalla AMOLED de 6,67\" a 120 Hz, batería de 5000 mAh y carga de 67 W. Nuevo y liberado.",
+      "highlights": [
+        "Cámara principal de 200 MP con estabilización óptica",
+        "Pantalla AMOLED de 6,67\" a 120 Hz y 1300 nits",
+        "Batería de 5000 mAh con carga de 67 W, cargador incluido",
+        "Memoria ampliable con microSD hasta 1 TB",
+        "Parlantes estéreo con Dolby Atmos y NFC"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "AMOLED 6,67\" FHD+, 120 Hz, 1300 nits, Gorilla Glass"
+        },
+        {
+          "label": "Procesador",
+          "value": "MediaTek Helio G99 Ultra (8 núcleos)"
+        },
+        {
+          "label": "Cámara trasera",
+          "value": "200 MP (OIS, f/1.65) + 8 MP gran angular + 2 MP macro"
+        },
+        {
+          "label": "Batería",
+          "value": "5000 mAh"
+        },
+        {
+          "label": "Carga",
+          "value": "67 W, cargador incluido"
+        },
+        {
+          "label": "Ranura microSD",
+          "value": "Sí, hasta 1 TB (híbrida)"
+        },
+        {
+          "label": "Red",
+          "value": "4G LTE"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Wi-Fi dual, Bluetooth 5.2, NFC"
+        },
+        {
+          "label": "Seguridad",
+          "value": "Huella en pantalla y desbloqueo facial"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Xiaomi HyperOS (Android)"
+        },
+        {
+          "label": "En la caja",
+          "value": "Cargador 67 W, cable USB-C, funda y extractor de SIM"
+        }
+      ],
+      "descriptionHtml": "<p>El Redmi Note 15 Pro 4G tiene la misma cámara de 200 MP y la misma carga de 67 W que la versión 5G, a un precio más bajo y con ranura para microSD. Esta versión viene con 256 GB y 8 GB de RAM.</p><h3>Cámara</h3><ul><li>Principal de 200 MP con estabilización óptica: menos fotos movidas y zoom 2x y 4x recortando del sensor.</li><li>Gran angular de 8 MP para fotos grupales y paisajes.</li><li>Macro de 2 MP.</li><li>Modo noche con IA.</li></ul><h3>Pantalla</h3><p>AMOLED de 6,67\" FHD+ con 120 Hz y hasta 1300 nits, así que se ve bien al sol. Protegida con Gorilla Glass.</p><h3>Batería</h3><p>5000 mAh para todo el día. Con el cargador de 67 W que viene en la caja se carga completo en unos 45 minutos.</p><h3>¿4G o 5G?</h3><p>Si en tu zona no usás 5G, la 4G te da lo mismo en cámara y batería y además acepta microSD. Si querés 5G, tenemos también el <a href=\"/producto/xiaomi-redmi-note-15-pro-5g-512gb-12gb-2\">Redmi Note 15 Pro 5G</a>.</p>",
+      "revisar": [
+        "El nombre no decía 4G pero la descripción original es toda del 4G (Helio G99). Lo agregué al nombre: confirmar que es el 4G."
+      ]
+    },
+    {
+      "slug": "impresora-laser-hp-m111a-monocromatica",
+      "name": "Impresora Láser HP LaserJet M111a Monocromática",
+      "brand": "HP",
+      "model": "LaserJet M111a (7MD67A)",
+      "seoTitle": "Impresora láser HP LaserJet M111a",
+      "seoDescription": "HP LaserJet M111a: láser blanco y negro, 21 ppm, USB y bandeja de 150 hojas. Incluye tóner inicial. Garantía y envíos a todo el país.",
+      "shortDescription": "Impresora láser monocromática HP LaserJet M111a. Imprime hasta 21 páginas por minuto, bandeja de 150 hojas y conexión USB. Compacta, para casa u oficina chica.",
+      "highlights": [
+        "Láser blanco y negro, hasta 21 páginas por minuto",
+        "Bandeja de entrada de 150 hojas",
+        "Hasta 8.000 páginas por mes",
+        "Compacta: 34,6 x 18,9 x 15,9 cm",
+        "Incluye cartucho de tóner inicial"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Láser monocromática"
+        },
+        {
+          "label": "Funciones",
+          "value": "Solo impresión"
+        },
+        {
+          "label": "Velocidad",
+          "value": "Hasta 21 ppm (carta), 20 ppm (A4)"
+        },
+        {
+          "label": "Doble faz",
+          "value": "Manual"
+        },
+        {
+          "label": "Conectividad",
+          "value": "USB 2.0 (sin Wi-Fi)"
+        },
+        {
+          "label": "Bandeja de entrada",
+          "value": "150 hojas o 10 sobres"
+        },
+        {
+          "label": "Bandeja de salida",
+          "value": "100 hojas"
+        },
+        {
+          "label": "Papeles",
+          "value": "A4, A5, A6, carta, legal, sobres; 65 a 120 g/m²"
+        },
+        {
+          "label": "Ciclo mensual",
+          "value": "Hasta 8.000 páginas (recomendado 100 a 1.000)"
+        },
+        {
+          "label": "Tamaño",
+          "value": "34,6 x 18,9 x 15,9 cm"
+        },
+        {
+          "label": "En la caja",
+          "value": "Impresora, cable de alimentación, tóner inicial (~500 páginas)"
+        }
+      ],
+      "descriptionHtml": "<p>La HP LaserJet M111a es una impresora láser en blanco y negro pensada para casa u oficina chica: ocupa poco, imprime rápido y el tóner rinde mucho más que la tinta.</p><h3>Para quién es</h3><p>Para imprimir documentos, facturas, apuntes o trabajos sin color. HP la recomienda para hasta 3 usuarios y entre 100 y 1.000 páginas por mes.</p><h3>Lo principal</h3><ul><li>Hasta 21 páginas por minuto.</li><li>Bandeja de 150 hojas, acepta sobres y etiquetas.</li><li>Se conecta por USB a la computadora.</li><li>Se configura con la app HP Smart.</li></ul><h3>Antes de comprar</h3><p>No tiene Wi-Fi ni escáner y la doble faz es manual. Usa el tóner HP 150A / 150X.</p><h3>En la caja</h3><p>Impresora, cable de alimentación y cartucho de tóner inicial de unas 500 páginas. El cable USB no viene incluido.</p>",
+      "revisar": [
+        "Marca estaba como 'General': la paso a HP.",
+        "Tóner compatible (HP 150A/150X) y 'cable USB no incluido' salen de la ficha de HP, no de la descripción original. Confirmar antes de publicar."
+      ]
+    },
+    {
+      "slug": "lente-ef-50mm-f18-stm",
+      "name": "Lente Canon EF 50mm f/1.8 STM",
+      "brand": "Canon",
+      "model": "EF 50mm f/1.8 STM",
+      "seoTitle": "Lente Canon EF 50mm f/1.8 STM para retratos",
+      "seoDescription": "Canon EF 50mm f/1.8 STM nuevo: lente fija luminosa para retratos y poca luz, con enfoque silencioso para video. Garantía y envíos a todo el país.",
+      "shortDescription": "Lente fija Canon EF 50mm f/1.8 STM. Muy luminosa, desenfoca el fondo en retratos y enfoca rápido y en silencio con su motor STM. Liviana y compacta.",
+      "highlights": [
+        "Apertura f/1.8: fondo desenfocado y buenas fotos con poca luz",
+        "Motor STM: enfoque rápido y casi silencioso, ideal para video",
+        "Liviana y compacta, para llevar siempre",
+        "Montura EF, compatible con cámaras Canon EOS réflex"
+      ],
+      "specs": [
+        {
+          "label": "Montura",
+          "value": "Canon EF"
+        },
+        {
+          "label": "Distancia focal",
+          "value": "50 mm (fija)"
+        },
+        {
+          "label": "Apertura máxima",
+          "value": "f/1.8"
+        },
+        {
+          "label": "Motor de enfoque",
+          "value": "STM (paso a paso)"
+        },
+        {
+          "label": "Uso recomendado",
+          "value": "Retrato, foto diaria, video"
+        }
+      ],
+      "descriptionHtml": "<p>La Canon EF 50mm f/1.8 STM es la primera lente fija que recomendamos a quien quiere salir del lente del kit. Es luminosa, liviana y deja los retratos con el fondo bien desenfocado.</p><h3>Retratos</h3><p>Separa a la persona del fondo y te deja llenar el encuadre sin acercarte demasiado, así salen expresiones más naturales. En una cámara full frame da una perspectiva parecida a la del ojo; en una APS-C funciona como un 80 mm, muy buena distancia para retrato.</p><h3>Poca luz</h3><p>Con f/1.8 entra mucha luz: podés seguir sacando fotos de noche o adentro sin flash.</p><h3>Video</h3><p>El motor STM enfoca rápido y casi sin ruido, así que no se escucha en la grabación y el enfoque se mueve suave.</p><h3>Compatibilidad</h3><p>Montura EF: va directo en cámaras Canon EOS réflex. En las mirrorless Canon EOS R se usa con el adaptador EF-EOS R.</p>",
+      "revisar": [
+        "Marca estaba como 'General': la paso a Canon.",
+        "El dato del adaptador EF-EOS R y el equivalente de 80 mm en APS-C son conocimiento general, no estaban en la descripción original."
+      ]
+    },
+    {
+      "slug": "smart-tv-qled-samsung-55%e2%80%b3-uhd-4k-q65c",
+      "name": "Smart TV Samsung QLED 55\" 4K Q65C",
+      "model": "QN55Q65CAGCZB",
+      "seoTitle": "Smart TV Samsung QLED 55\" 4K Q65C",
+      "seoDescription": "Smart TV Samsung QLED 55\" 4K Q65C nuevo: Quantum Dot, HDR10+, Tizen y diseño AirSlim. Garantía oficial y envíos a todo el país.",
+      "shortDescription": "Smart TV Samsung QLED de 55\" 4K (QN55Q65C). Color Quantum Dot, HDR10+, sistema Tizen con las apps de streaming, 3 HDMI y diseño AirSlim de 2,6 cm.",
+      "highlights": [
+        "QLED con Quantum Dot: 100% de volumen de color",
+        "4K con HDR10+ (Quantum HDR)",
+        "Diseño AirSlim de 2,6 cm de profundidad",
+        "Tizen con Netflix, YouTube, Prime Video y más",
+        "3 HDMI y 2 USB"
+      ],
+      "specs": [
+        {
+          "label": "Pantalla",
+          "value": "55\" QLED"
+        },
+        {
+          "label": "Resolución",
+          "value": "4K UHD (3840 x 2160)"
+        },
+        {
+          "label": "HDR",
+          "value": "Quantum HDR, HDR10+"
+        },
+        {
+          "label": "Sistema operativo",
+          "value": "Tizen"
+        },
+        {
+          "label": "Asistente",
+          "value": "Bixby"
+        },
+        {
+          "label": "Sonido",
+          "value": "Object Tracking Sound Lite, Q-Symphony"
+        },
+        {
+          "label": "Conexiones",
+          "value": "3 HDMI, 2 USB"
+        },
+        {
+          "label": "Medidas sin base",
+          "value": "123,2 x 70,8 x 2,6 cm"
+        }
+      ],
+      "descriptionHtml": "<p>El Samsung Q65C es un Smart TV QLED de 55\" con resolución 4K, buen color y un diseño muy delgado que queda casi pegado a la pared.</p><h3>Imagen</h3><ul><li><strong>Quantum Dot:</strong> colores intensos que se mantienen reales con cualquier nivel de brillo.</li><li><strong>Quantum HDR con HDR10+:</strong> ajusta el contraste escena por escena para negros más profundos.</li><li><strong>4K UHD:</strong> cuatro veces la resolución de un Full HD.</li></ul><h3>Smart TV</h3><p>Sistema Tizen con las principales apps de streaming y Bixby incorporado. Smart Hub junta todo tu contenido en un solo lugar.</p><h3>Sonido</h3><p>Object Tracking Sound Lite hace que el sonido siga lo que pasa en la pantalla. Con Q-Symphony suma los parlantes de una barra de sonido Samsung compatible.</p><h3>Diseño</h3><p>AirSlim: 2,6 cm de profundidad. Medidas sin base: 123,2 cm de ancho y 70,8 cm de alto.</p>",
+      "revisar": [
+        "'Netflix, YouTube, Prime Video' en destacados es general de Tizen, no estaba en la descripción original."
+      ]
+    },
+    {
+      "slug": "aire-acond-lg-inverter-art-cool-5400w-i",
+      "name": "Aire Acondicionado LG Inverter Art Cool 5400 W",
+      "seoTitle": "Aire acondicionado LG Art Cool Inverter 5400W",
+      "seoDescription": "Aire acondicionado split LG Inverter Art Cool de 5400 W, nuevo y con garantía oficial LG. Envíos a todo el país y retiro en Córdoba.",
+      "shortDescription": "Aire acondicionado LG Art Cool con tecnología Inverter, 5400 W de capacidad. Frente espejado de la línea Art Cool. Nuevo, con garantía oficial.",
+      "highlights": [
+        "Tecnología Inverter: consume menos y mantiene la temperatura estable",
+        "Línea Art Cool, con frente de diseño",
+        "Capacidad de 5400 W"
+      ],
+      "specs": [
+        {
+          "label": "Tecnología",
+          "value": "Inverter"
+        },
+        {
+          "label": "Capacidad",
+          "value": "5400 W"
+        },
+        {
+          "label": "Línea",
+          "value": "LG Art Cool"
+        }
+      ],
+      "descriptionHtml": "<p>Aire acondicionado LG de la línea Art Cool con tecnología Inverter y 5400 W de capacidad.</p><h3>Inverter</h3><p>El compresor Inverter ajusta su velocidad en vez de prenderse y apagarse todo el tiempo: gasta menos energía, hace menos ruido y mantiene la temperatura más pareja.</p><h3>Art Cool</h3><p>Es la línea de diseño de LG, con frente espejado que queda bien en el living o el dormitorio.</p><p>¿Dudas sobre el tamaño del ambiente o la instalación? Escribinos por WhatsApp y te asesoramos.</p>",
+      "revisar": [
+        "La descripción original era texto de relleno y el nombre viene cortado ('5400W I'). Necesito el código de modelo de LG para completar frío/calor, frigorías, consumo, gas y Wi-Fi. Sin eso dejo solo lo que dice el nombre.",
+        "'Frente espejado' es típico de Art Cool pero hay versiones en otros colores: confirmar con la foto."
+      ]
+    }
+  ]
+}

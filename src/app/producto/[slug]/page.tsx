@@ -98,13 +98,25 @@ async function findProduct(slug: string) {
   return null;
 }
 
+/**
+ * Las descripciones cortas de WooCommerce llegan a 500 caracteres y Google
+ * muestra unos 155: sin recortar, el resultado de búsqueda queda cortado a
+ * mitad de palabra. Se corta en el último espacio antes del límite.
+ */
+function recortarMeta(texto: string, max = 155): string {
+  const limpio = texto.replace(/\[cite:[^\]]*\]/gi, "").replace(/\s+/g, " ").trim();
+  if (limpio.length <= max) return limpio;
+  const corte = limpio.slice(0, max - 1);
+  return `${corte.slice(0, corte.lastIndexOf(" ")).replace(/[\s,;:.\-–]+$/, "")}…`;
+}
+
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { slug } = await params;
   // Sin `.catch(() => null)` a proposito: si la base se cae queremos un 500
   // visible, no 2.588 productos respondiendo 404 (eso SI destruye el indice).
   const product = await findProduct(slug);
   if (!product) notFound();
-  const description = product.seoDescription || product.shortDescription || product.name;
+  const description = product.seoDescription || recortarMeta(product.shortDescription) || product.name;
   return {
     title: product.seoTitle || product.name,
     description,
@@ -169,8 +181,9 @@ export default async function ProductPage({ params }: { params: Params }) {
   specRows.push({ label: "Estado", value: condition });
   if (showUnlocked) specRows.push({ label: "Liberado", value: product.isUnlocked ? "Sí" : "No" });
   if (product.sku) specRows.push({ label: "SKU", value: product.sku });
-  if (product.weight) specRows.push({ label: "Peso", value: product.weight });
-  if (product.dimensions) specRows.push({ label: "Dimensiones", value: product.dimensions });
+  // `weight` y `dimensions` son los del paquete para envío que venían de
+  // WooCommerce ("1", "10x10x20 cm" en un celular): no se muestran como
+  // características del producto. Las medidas reales van en `specs`.
 
   const additionalProperty = specRows
     .filter((row) => ["Modelo", "Memoria", "RAM", "Estado", "Liberado"].includes(row.label))

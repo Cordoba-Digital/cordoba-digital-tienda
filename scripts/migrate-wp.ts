@@ -388,24 +388,31 @@ function printExamples(list: MappedProduct[]): void {
 
 type Db = typeof import("@/db").db;
 
+/**
+ * Una ficha con `seo_title` cargado fue reescrita a mano (admin o
+ * `npm run fichas`): sus textos ya no se pisan con los de WooCommerce.
+ */
+const keepCurated = (column: string) =>
+  sql.raw(`CASE WHEN products.seo_title IS NOT NULL THEN products.${column} ELSE excluded.${column} END`);
+
 const productUpsertSet = () => ({
   sku: sql`excluded.sku`,
-  name: sql`excluded.name`,
+  name: keepCurated("name"),
   // WooCommerce no tiene marca en la mayoría de los productos ("General"):
   // no pisar la que completó `npm run subcategorias` desde el nombre.
   brand: sql`CASE WHEN excluded.brand = ${FALLBACK_BRAND} THEN products.brand ELSE excluded.brand END`,
   categorySlug: sql`excluded.category_slug`,
-  shortDescription: sql`excluded.short_description`,
-  description: sql`excluded.description`,
-  descriptionHtml: sql`excluded.description_html`,
+  shortDescription: keepCurated("short_description"),
+  description: keepCurated("description"),
+  descriptionHtml: keepCurated("description_html"),
   price: sql`excluded.price`,
   compareAtPrice: sql`excluded.compare_at_price`,
   stock: sql`excluded.stock`,
   images: sql`excluded.images`,
   imageSrcSets: sql`excluded.image_srcsets`,
   imageSrcSet: sql`excluded.image_srcset`,
-  highlights: sql`excluded.highlights`,
-  specs: sql`excluded.specs`,
+  highlights: keepCurated("highlights"),
+  specs: keepCurated("specs"),
   tags: sql`excluded.tags`,
   badge: sql`excluded.badge`,
   featured: sql`excluded.featured`,
@@ -413,8 +420,8 @@ const productUpsertSet = () => ({
   warrantyMonths: sql`excluded.warranty_months`,
   weight: sql`excluded.weight`,
   dimensions: sql`excluded.dimensions`,
-  seoTitle: sql`excluded.seo_title`,
-  seoDescription: sql`excluded.seo_description`,
+  seoTitle: keepCurated("seo_title"),
+  seoDescription: keepCurated("seo_description"),
   wpId: sql`excluded.wp_id`,
   origin: sql`excluded.origin`,
   updatedAt: sql`now()`,
