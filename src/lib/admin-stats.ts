@@ -37,6 +37,8 @@ export type AdminStats = {
   pendingRevenue: number;
   pendingCount: number;
   daily: { day: string; revenue: number; orders: number }[];
+  /** Últimos 12 meses (incluye el actual), ventas pagadas. `month` = YYYY-MM. */
+  monthly: { month: string; revenue: number; orders: number }[];
   byStatus: Record<string, number>;
   segments: { newCustomers: number; returningCustomers: number };
   topProducts: { slug: string; name: string; image: string; units: number; revenue: number }[];
@@ -67,7 +69,7 @@ export async function getAdminStats(rangeDays: RangeDays = 30): Promise<AdminSta
   const prevStart = new Date(start.getTime() - rangeDays * 86_400_000);
   const paid = inArray(orders.status, PAID_STATUSES);
 
-  const [current, previous, [todayRow], [pendingRow], dailyRows, byStatus, segRows, top, [outCount], alerts, recent] =
+  const [current, previous, [todayRow], [pendingRow], dailyRows, byStatus, segRows, top, [outCount], alerts, recent, monthlyRows] =
     await Promise.all([
       totalsBetween(start, now),
       totalsBetween(prevStart, start),
@@ -146,6 +148,20 @@ export async function getAdminStats(rangeDays: RangeDays = 30): Promise<AdminSta
         .from(orders)
         .orderBy(desc(orders.createdAt))
         .limit(6),
+      db.execute<{ month: string; revenue: number; orders: number }>(sql`
+        select to_char(m, 'YYYY-MM') as month,
+               coalesce(sum(o.total), 0)::int as revenue,
+               count(o.id)::int as orders
+        from generate_series(
+          date_trunc('month', (now() at time zone ${TZ})) - interval '11 months',
+          date_trunc('month', (now() at time zone ${TZ})),
+          interval '1 month'
+        ) m
+        left join orders o
+          on date_trunc('month', o.created_at at time zone ${TZ}) = m
+         and o.status in (${sql.join(PAID_STATUSES.map((s) => sql`${s}`), sql`, `)})
+        group by m order by m
+      `),
     ]);
 
   const segments = { newCustomers: 0, returningCustomers: 0 };
@@ -162,6 +178,7 @@ export async function getAdminStats(rangeDays: RangeDays = 30): Promise<AdminSta
     pendingRevenue: pendingRow?.revenue ?? 0,
     pendingCount: pendingRow?.count ?? 0,
     daily: dailyRows.rows,
+    monthly: monthlyRows.rows,
     byStatus: Object.fromEntries(byStatus.map((s) => [s.status, s.count])),
     segments,
     topProducts: top,

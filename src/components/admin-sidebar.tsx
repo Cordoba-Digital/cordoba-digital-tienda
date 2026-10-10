@@ -96,7 +96,6 @@ export function AdminSidebar({ badges = {}, who = "" }: { badges?: Record<string
       <div className="sticky top-0 z-30 flex items-center justify-between border-b border-ink-100 bg-surface px-4 py-3 lg:hidden">
         <Link href="/admin" className="flex items-center gap-2">
           <Image src="/images/logo.png" alt="Córdoba Digital" width={80} height={32} className="h-7 w-auto" />
-          <span className="text-xs font-bold uppercase tracking-[0.16em] text-ink-500">Admin</span>
         </Link>
         <button
           type="button"
@@ -116,7 +115,6 @@ export function AdminSidebar({ badges = {}, who = "" }: { badges?: Record<string
         <div className="flex h-full flex-col overflow-y-auto px-3 py-4">
           <Link href="/admin" className="mb-6 hidden items-center gap-2 px-3 lg:flex">
             <Image src="/images/logo.png" alt="Córdoba Digital" width={96} height={38} className="h-8 w-auto" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-ink-500">Admin</span>
           </Link>
           <nav aria-label="Administración" className="space-y-5">
             {GROUPS.map((group, gi) => (

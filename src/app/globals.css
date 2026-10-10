@@ -419,3 +419,44 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 0.5rem;
   box-shadow: 0 0 0 1px rgba(20, 22, 28, 0.08);
 }
+
+/*
+ * Tarjetas del Panel: sombra en capas en vez de borde (anillo + elevación +
+ * ambiente). El borde transparente dibuja el contorno en modo alto contraste,
+ * que borra las sombras.
+ */
+@utility admin-panel-card {
+  background-color: var(--color-surface);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  box-shadow:
+    0px 0px 0px 1px oklch(0 0 0 / 0.06),
+    0px 1px 2px -1px oklch(0 0 0 / 0.06),
+    0px 2px 4px 0px oklch(0 0 0 / 0.04);
+}
+
+/* Entrada escalonada del Panel (solo la primera carga, 100ms entre bloques). */
+@keyframes admin-enter {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+    translate: 0 12px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .admin-enter {
+    animation: admin-enter 300ms ease-out both;
+    animation-delay: calc(var(--i, 0) * 100ms);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .admin-enter {
+    animation: admin-fade 300ms ease-out both;
+    animation-delay: calc(var(--i, 0) * 100ms);
+  }
+}
+@keyframes admin-fade {
+  from {
+    opacity: 0;
+  }
+}
