@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 
+import { AdminBackLink } from "@/components/admin-back-link";
 import { AdminProductArchiveButton } from "@/components/admin-product-archive-button";
 import { AdminProductForm } from "@/components/admin-product-form";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
@@ -24,9 +25,7 @@ export default async function EditAdminProductPage({ params }: { params: Promise
     <div className="space-y-6">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <Link href="/admin/productos" className="text-xs font-bold text-brand-700 hover:underline">
-            ← Volver a productos
-          </Link>
+          <AdminBackLink fallback="/admin/productos" />
           <p className="mt-2 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Admin · Catálogo</p>
           <h1 className="mt-1 text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">Editar producto</h1>
           <p className="mt-1 text-sm text-ink-500">

@@ -14,10 +14,20 @@ type Props = {
 };
 
 /** Filtros de la lista: se aplican solos al cambiar, sin botón Buscar. */
+export const LAST_LIST_KEY = "admin:productos:lista";
+
 export function AdminProductFilters({ q, category, categories, stock, sort, oferta, destacados }: Props) {
   const router = useRouter();
   const pathname = usePathname() ?? "/admin/productos";
   const searchParams = useSearchParams();
+
+  // Recuerda la lista tal cual (filtros, orden, página) para el "← Volver" de editar.
+  const listUrl = `${pathname}${searchParams?.toString() ? `?${searchParams.toString()}` : ""}`;
+  useEffect(() => {
+    try {
+      sessionStorage.setItem(LAST_LIST_KEY, listUrl);
+    } catch {}
+  }, [listUrl]);
   const [text, setText] = useState(q);
   const [pending, startTransition] = useTransition();
   const lastPushed = useRef(q);
