@@ -22,7 +22,7 @@ import { SectionHeading } from "@/components/ui";
 import { discountPercent } from "@/lib/format";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { toView } from "@/lib/product-view";
-import { url } from "@/lib/site";
+import { jsonLdString, storeJsonLd } from "@/lib/structured-data";
 import {
   getBestSellers,
   getCategoryTree,
@@ -111,38 +111,16 @@ export default async function HomePage() {
   const bestSlugs = new Set(bestSellers.map((p) => p.slug));
   const dealSlugs = new Set(deals.map((p) => p.slug));
   const featuredPicks = featured.filter((p) => !bestSlugs.has(p.slug) && !dealSlugs.has(p.slug)).slice(0, 8);
-  // El logo vive en /public, así que la imagen de Open Graph y la del JSON-LD
-  // salen del propio sitio. Antes apuntaban al dominio viejo, con lo cual la
-  // vista previa al compartir en redes dependía de que el sitio original
-  // estuviera arriba.
-  const storeImage = url("/images/logo.png");
-
   return (
     <>
+      {/* El local (negocio local) con horarios, perfiles y la nota de Google:
+          los datos salen de lib/structured-data.ts, igual que en el resto. */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Store",
-            name: "Córdoba Digital",
-            image: storeImage,
-            telephone: "+543516777774",
-            email: "consultas@cordobadigital.net",
-            priceRange: "$$",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "27 de Abril 180",
-              addressLocality: "Córdoba",
-              addressCountry: "AR",
-              // Sin `postalCode` a propósito: el sitio original no publica
-              // ningún código postal. Poner un 5000 seria un dato estructurado
-              // falso, y Google toma lo del JSON-LD para el panel de negocio.
-            },
-            ...(ratingValue && reviewCount
-              ? { aggregateRating: { "@type": "AggregateRating", ratingValue, reviewCount: String(reviewCount) } }
-              : {}),
-          }),
+          __html: jsonLdString(
+            storeJsonLd(ratingValue && reviewCount ? { ratingValue, reviewCount } : undefined),
+          ),
         }}
       />
 

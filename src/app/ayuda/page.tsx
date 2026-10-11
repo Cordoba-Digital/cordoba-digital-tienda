@@ -5,6 +5,7 @@ import { FaqAccordion } from "@/components/faq-accordion";
 import { Banknote, RefreshCw, Shield, Truck } from "lucide-react";
 
 import { money } from "@/lib/format";
+import { jsonLdString } from "@/lib/structured-data";
 
 export const dynamic = "force-dynamic";
 
@@ -114,9 +115,28 @@ const SECTIONS = [
   },
 ];
 
+/**
+ * FAQPage con las mismas preguntas que se ven en la página. Google ya no
+ * muestra el desplegable de FAQ en los resultados de tiendas, pero ChatGPT,
+ * Perplexity y los AI Overviews sí leen este bloque para responder "¿hacen
+ * envíos?", "¿qué garantía tienen?" citando a la tienda.
+ */
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: SECTIONS.flatMap((section) =>
+    section.items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  ),
+};
+
 export default function HelpPage() {
   return (
     <div className="container-xl py-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(faqJsonLd) }} />
       <div className="mesh-dark mb-8 rounded-3xl p-8 text-white md:p-10">
         <h1 className="text-3xl font-black tracking-tight md:text-4xl">Centro de ayuda</h1>
         <p className="mt-2 max-w-2xl text-sm text-ink-200 md:text-base">

@@ -47,6 +47,24 @@ const nextConfig: NextConfig = {
    * da 404 y ni aparece en el manifest de rutas), asi que el handler vive en
    * `/sitemap/[id]` y la URL publica `/sitemap-:id.xml` se reescribe aca.
    */
+  /**
+   * `*.vercel.app` no se indexa nunca. Hoy la tienda nueva vive solo ahí
+   * mientras www.cordobadigital.net sigue sirviendo el WordPress, que es el que
+   * Google tiene indexado: con las dos versiones indexables, Google ve el mismo
+   * catálogo en dos dominios y reparte (o pierde) el posicionamiento. Cuando el
+   * dominio real apunte a este proyecto, esto también evita que la URL técnica
+   * de Vercel compita con él. Se manda como header y no en robots.txt para que
+   * Google pueda rastrear la página, leer el noindex y sacarla del índice.
+   */
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "(?<sub>.*)\\.vercel\\.app" }],
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+    ];
+  },
   async rewrites() {
     return [{ source: "/sitemap-:id.xml", destination: "/sitemap/:id" }];
   },

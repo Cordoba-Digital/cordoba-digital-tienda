@@ -22,6 +22,7 @@ import {
   getVerifiedRatingStats,
 } from "@/lib/queries";
 import { url as siteUrl } from "@/lib/site";
+import { breadcrumbJsonLd, jsonLdString, ORG_ID, returnPolicy } from "@/lib/structured-data";
 
 export const dynamic = "force-dynamic";
 
@@ -193,6 +194,8 @@ export default async function ProductPage({ params }: { params: Params }) {
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${siteUrl(`/producto/${product.slug}`)}#product`,
+    url: siteUrl(`/producto/${product.slug}`),
     name: product.name,
     // Las fotos subidas desde el admin se guardan con ruta relativa.
     image: product.images.map((img) => (img.startsWith("/") ? siteUrl(img) : img)),
@@ -214,8 +217,10 @@ export default async function ProductPage({ params }: { params: Params }) {
           ? "https://schema.org/NewCondition"
           : "https://schema.org/UsedCondition",
       ...(priceValidUntil ? { priceValidUntil } : {}),
-      seller: { "@type": "Organization", name: "Córdoba Digital" },
+      url: siteUrl(`/producto/${product.slug}`),
+      seller: { "@id": ORG_ID },
       areaServed: "AR",
+      hasMerchantReturnPolicy: returnPolicy(),
     },
   };
   if (hasRatings) {
@@ -231,27 +236,20 @@ export default async function ProductPage({ params }: { params: Params }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd),
+          __html: jsonLdString(jsonLd),
         }}
       />
       {breadcrumbs.length ? (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Inicio", item: "/" },
-                ...breadcrumbs.map((crumb, i) => ({
-                  "@type": "ListItem",
-                  position: i + 2,
-                  name: crumb.name,
-                  item: `/categoria/${crumb.path}`,
-                })),
-                { "@type": "ListItem", position: breadcrumbs.length + 2, name: product.name },
-              ],
-            }),
+            __html: jsonLdString(
+              breadcrumbJsonLd([
+                { name: "Inicio", path: "/" },
+                ...breadcrumbs.map((crumb) => ({ name: crumb.name, path: `/categoria/${crumb.path}` })),
+                { name: product.name },
+              ]),
+            ),
           }}
         />
       ) : null}

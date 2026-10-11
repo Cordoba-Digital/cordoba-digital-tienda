@@ -10,6 +10,8 @@ import { ProductCard } from "@/components/product-card";
 import { mergedCategoryRedirect } from "@/lib/category-merges";
 import { money } from "@/lib/format";
 import { toView } from "@/lib/product-view";
+import { url as siteUrl } from "@/lib/site";
+import { breadcrumbJsonLd, jsonLdString } from "@/lib/structured-data";
 import { getBrandFacets, getCategoryByPath, getCategoryTree, listProducts } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
@@ -33,21 +35,51 @@ function stripTags(html: string): string {
     .trim();
 }
 
-export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
-  const { path } = await params;
+/**
+ * Primer párrafo con sustancia de la descripción de la categoría, cortado en
+ * una palabra. Antes se pasaba el HTML entero por `stripTags` y la meta
+ * description arrancaba con el título de la guía pegado al párrafo
+ * ("Guía completa para entender... Celulares en Argentina..."), que es lo que
+ * Google mostraba en el resultado.
+ */
+function metaDescription(html: string, max = 155): string {
+  for (const [, inner] of html.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)) {
+    const texto = stripTags(inner);
+    if (texto.length < 70) continue;
+    if (texto.length <= max) return texto;
+    const corte = texto.slice(0, max - 1);
+    return `${corte.slice(0, corte.lastIndexOf(" ")).replace(/[\s,;:.\-–]+$/, "")}…`;
+  }
+  return "";
+}
+
+export async function generateMetadata({
+  params,
+  searchParams,
+}: {
+  params: Params;
+  searchParams: SearchParams;
+}): Promise<Metadata> {
+  const [{ path }, query] = await Promise.all([params, searchParams]);
   const data = await getCategoryByPath(path);
   if (!data) return { title: "Categoría no encontrada" };
 
   const { node, ancestors } = data;
   const trail = [...ancestors.map((a) => a.name), node.name].join(" · ");
   const description =
-    stripTags(node.descriptionHtml).slice(0, 155) ||
-    `${node.name} en Córdoba Digital. ${node.count} productos con stock real, garantía legal y envíos a todo el país.`;
+    metaDescription(node.descriptionHtml) ||
+    `${node.name} en Córdoba Digital: ${node.count} productos con stock real, garantía y envíos a todo el país desde Córdoba.`;
+
+  // Las páginas 2, 3... llevan su propio canonical: si apuntaran a la 1, Google
+  // deja de rastrear los productos que solo aparecen ahí. Los filtros (marca,
+  // precio, orden) sí se consolidan en la URL limpia de la categoría.
+  const pagina = Number(pick(query, "pagina") ?? "1");
+  const canonical = `/categoria/${node.path}${pagina > 1 ? `?pagina=${pagina}` : ""}`;
 
   return {
     title: `${node.name} — ${node.count} productos`,
     description,
-    alternates: { canonical: `/categoria/${node.path}` },
+    alternates: { canonical },
     openGraph: {
       title: `${node.name} | Córdoba Digital`,
       description,
@@ -136,23 +168,30 @@ export default async function CategoryPage({
   if (ofertas) chips.push({ key: "ofertas", label: "Solo ofertas", value: null, href: buildHref({ ofertas: null }) });
   if (stock) chips.push({ key: "stock", label: "Disponible ya", value: null, href: buildHref({ stock: null }) });
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Inicio", item: "/" },
-      ...breadcrumb.map((crumb, i) => ({
+  const jsonLd = [
+    breadcrumbJsonLd([
+      { name: "Inicio", path: "/" },
+      ...breadcrumb.map((crumb) => ({ name: crumb.name, path: `/categoria/${crumb.path}` })),
+    ]),
+    // Los productos de esta página, en orden: le dice a Google y a los
+    // buscadores de IA qué hay en la categoría sin tener que leer las tarjetas.
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: node.name,
+      numberOfItems: result.total,
+      itemListElement: result.items.map((product, i) => ({
         "@type": "ListItem",
-        position: i + 2,
-        name: crumb.name,
-        item: `/categoria/${crumb.path}`,
+        position: (pagina - 1) * PER_PAGE + i + 1,
+        url: siteUrl(`/producto/${product.slug}`),
+        name: product.name,
       })),
-    ],
-  };
+    },
+  ];
 
   return (
     <div className="container-xl py-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(jsonLd) }} />
 
       <nav className="mb-4 flex flex-wrap items-center gap-1.5 text-xs text-ink-500">
         <Link href="/" className="hover:text-brand-700">

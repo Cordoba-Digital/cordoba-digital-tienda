@@ -14,6 +14,7 @@ import { getCategoryTree, getGuides, type CategoryTreeNode, type GuideTeaser } f
 import "./globals.css";
 
 import { SITE_URL } from "@/lib/site";
+import { jsonLdString, organizationAndWebsite } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   // Apuntaba al dominio viejo. Todos los canonicals son relativos y se
@@ -120,6 +121,9 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <link rel="dns-prefetch" href="https://www.cordobadigital.net" />
       </head>
       <body className="min-h-screen bg-ink-50 text-ink-900 antialiased">
+        {/* Organización + sitio en todas las páginas: es lo que Google y los
+            buscadores de IA usan para reconocer a Córdoba Digital como entidad. */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(organizationAndWebsite()) }} />
         <StoreProvider>
           <SmoothScroll />
           <StoreChrome>

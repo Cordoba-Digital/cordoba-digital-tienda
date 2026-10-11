@@ -9,6 +9,8 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Carrito de compras",
   description: "Revisá tu carrito y finalizá tu compra con envío a todo el país.",
+  // Página personal: sin contenido propio para el buscador.
+  robots: { index: false, follow: true },
 };
 
 export default async function CartPage() {

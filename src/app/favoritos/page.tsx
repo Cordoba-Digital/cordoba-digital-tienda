@@ -9,6 +9,8 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Mis favoritos",
   description: "Los productos que guardaste para comparar y comprar después.",
+  // Página personal: sin contenido propio para el buscador.
+  robots: { index: false, follow: true },
 };
 
 export default async function FavoritesPage() {

@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 
 import { getGuideBySlug, getGuides } from "@/lib/queries";
 import { formatDate } from "@/lib/format";
+import { url } from "@/lib/site";
+import { breadcrumbJsonLd, jsonLdString, ORG_ID } from "@/lib/structured-data";
 
 export const dynamic = "force-dynamic";
 
@@ -62,6 +64,33 @@ export default async function GuidePage({ params }: { params: Promise<{ guia: st
 
   return (
     <article className="container-xl py-8">
+      {/* Artículo + miga: con autor/editor y fechas, que es lo que Google y los
+          buscadores de IA miran para decidir si una guía es confiable y vigente. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLdString([
+            {
+              "@context": "https://schema.org",
+              "@type": "Article",
+              headline: article.title,
+              description: article.description,
+              url: url(`/${article.slug}`),
+              mainEntityOfPage: url(`/${article.slug}`),
+              inLanguage: "es-AR",
+              datePublished: article.publishedAt.toISOString(),
+              dateModified: article.updatedAt.toISOString(),
+              author: { "@id": ORG_ID },
+              publisher: { "@id": ORG_ID },
+            },
+            breadcrumbJsonLd([
+              { name: "Inicio", path: "/" },
+              { name: "Guías de compra", path: "/guias" },
+              { name: article.title },
+            ]),
+          ]),
+        }}
+      />
       <nav aria-label="Miga de pan" className="mb-6 text-xs text-ink-500">
         <Link href="/" className="transition hover:text-brand-700">
           Inicio
