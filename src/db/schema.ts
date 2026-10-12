@@ -164,6 +164,13 @@ export const coupons = pgTable("coupons", {
   minSubtotal: integer("min_subtotal").notNull().default(0),
   description: text("description").notNull().default(""),
   active: boolean("active").notNull().default(true),
+  /** Último instante en que se puede usar. Null: no vence. */
+  expiresAt: timestamp("expires_at", { withTimezone: true }),
+  /** Tope de pedidos que lo pueden usar. Null: sin tope. */
+  maxUses: integer("max_uses"),
+  /** Pedidos no cancelados que lo usaron. Un pedido cancelado devuelve su uso. */
+  usedCount: integer("used_count").notNull().default(0),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
 
 /**

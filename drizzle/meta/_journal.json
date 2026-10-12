@@ -15,6 +15,13 @@
       "when": 1791587286364,
       "tag": "0001_indices_pedidos",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1791825709621,
+      "tag": "0002_cupones_vencimiento_y_usos",
+      "breakpoints": true
     }
   ]
 }

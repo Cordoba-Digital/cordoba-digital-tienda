@@ -2,6 +2,7 @@ import { and, eq, lt, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orderEvents, orderItems, orders, products } from "@/db/schema";
+import { ensureCouponSchema, releaseCouponUse, restoreCouponUse } from "@/lib/coupons";
 import { CANCELLED_STATUS, isCancelled, statusIndex } from "@/lib/pricing";
 
 /** Horas que un pedido puede quedar sin pago antes de vencer (lo que promete la tienda). */
@@ -92,7 +93,7 @@ export async function applyOrderStatus(
   orderId: number,
   input: { from: string; to: string; note?: string; extra?: Partial<typeof orders.$inferInsert> },
 ): Promise<boolean> {
-  await ensureOrderStockSchema();
+  await Promise.all([ensureOrderStockSchema(), ensureCouponSchema()]);
   return db.transaction(async (tx) => {
     const changed = input.from !== input.to;
     // Solo aplica si el pedido sigue en `from`. Si dos avisos llegan juntos (el
@@ -104,10 +105,17 @@ export async function applyOrderStatus(
       // vacío: con solo una nota, Drizzle fallaba con "No values to set".
       .set({ ...input.extra, status: input.to, ...(changed ? { statusUpdatedAt: new Date() } : {}) })
       .where(and(eq(orders.id, orderId), eq(orders.status, input.from)))
-      .returning({ id: orders.id });
+      .returning({ id: orders.id, couponCode: orders.couponCode });
     if (!updated.length) return false;
-    if (changed && isCancelled(input.to)) await releaseOrderStock(tx, orderId);
-    if (changed && isCancelled(input.from)) await reserveOrderStock(tx, orderId);
+    const couponCode = updated[0].couponCode;
+    if (changed && isCancelled(input.to)) {
+      await releaseOrderStock(tx, orderId);
+      if (couponCode) await releaseCouponUse(tx, couponCode);
+    }
+    if (changed && isCancelled(input.from)) {
+      await reserveOrderStock(tx, orderId);
+      if (couponCode) await restoreCouponUse(tx, couponCode);
+    }
     if (changed || input.note) {
       await tx.insert(orderEvents).values({ orderId, fromStatus: input.from, toStatus: input.to, note: input.note ?? "" });
     }
@@ -139,15 +147,21 @@ export async function expireStalePendingOrders(): Promise<number> {
 
 /**
  * Borra todos los pedidos (y con ellos los pagos, que salen de los pedidos).
- * Antes devuelve a la tienda el stock y las ventas que descontaron los que no
- * estaban cancelados, así el catálogo queda como si nunca hubieran existido.
+ * Antes devuelve a la tienda el stock, las ventas y los usos de cupón que
+ * descontaron los que no estaban cancelados, así el catálogo queda como si
+ * nunca hubieran existido.
  */
 export async function deleteAllOrders(): Promise<number> {
-  await ensureOrderStockSchema();
+  await Promise.all([ensureOrderStockSchema(), ensureCouponSchema()]);
   return db.transaction(async (tx) => {
-    const all = await tx.select({ id: orders.id, status: orders.status }).from(orders).for("update");
+    const all = await tx
+      .select({ id: orders.id, status: orders.status, couponCode: orders.couponCode })
+      .from(orders)
+      .for("update");
     for (const order of all) {
-      if (!isCancelled(order.status)) await releaseOrderStock(tx, order.id);
+      if (isCancelled(order.status)) continue;
+      await releaseOrderStock(tx, order.id);
+      if (order.couponCode) await releaseCouponUse(tx, order.couponCode);
     }
     await tx.delete(orderEvents);
     await tx.delete(orderItems);

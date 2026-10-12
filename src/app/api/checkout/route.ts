@@ -4,6 +4,7 @@ import { db } from "@/db";
 import { orderItems, orders, products, type ShippingAddress } from "@/db/schema";
 import { computeTotals, MAX_QTY_PER_ITEM, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
 import { ensureOrderStockSchema, reserveOrderStock } from "@/lib/order-status";
+import { claimCouponUse, CouponGoneError } from "@/lib/coupons";
 import { getCoupon } from "@/lib/queries";
 import { resolvePaymentMethod } from "@/lib/checkout-payment";
 import { mercadoPagoReady } from "@/lib/mercadopago";
@@ -232,8 +233,23 @@ export async function POST(request: Request) {
     // Descuenta stock solo donde es una cantidad real y anota cuánto, para
     // devolverlo si el pedido se cancela o vence sin pago.
     await reserveOrderStock(tx, order.id);
+
+    // El uso del cupón se cuenta acá, con el tope chequeado en el mismo UPDATE.
+    // Si otro pedido se llevó el último uso entre la consulta de arriba y este
+    // punto, se deshace todo y el cliente vuelve a intentar sin el cupón.
+    if (couponInfo && !(await claimCouponUse(tx, couponInfo.code))) throw new CouponGoneError(couponInfo.code);
     return order;
+  }).catch((error: unknown) => {
+    if (error instanceof CouponGoneError) return error;
+    throw error;
   });
+
+  if (created instanceof CouponGoneError) {
+    return Response.json(
+      { ok: false, error: `El cupón ${created.code} se acaba de agotar. Sacalo y confirmá el pedido de nuevo.` },
+      { status: 409 },
+    );
+  }
 
   return Response.json({ ok: true, code: created.code, total: totals.total });
 }

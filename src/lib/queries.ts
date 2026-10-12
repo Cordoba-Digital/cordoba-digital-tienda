@@ -3,6 +3,7 @@ import { cache } from "react";
 
 import { db } from "@/db";
 import { categories, coupons, guides, orderItems, orders, productCategories, products, reviews } from "@/db/schema";
+import { couponProblem, ensureCouponSchema } from "@/lib/coupons";
 import {
   ancestorsOf,
   buildCategoryTree,
@@ -517,10 +518,12 @@ export async function getVerifiedRatingStats(slug: string) {
   return { count, rating, distribution };
 }
 
+/** El cupón si hoy se puede usar: activo, sin vencer y con usos disponibles. */
 export async function getCoupon(code: string) {
   const normalized = code.trim().toUpperCase();
+  await ensureCouponSchema();
   const [coupon] = await db.select().from(coupons).where(eq(coupons.code, normalized)).limit(1);
-  if (!coupon || !coupon.active) return null;
+  if (!coupon || couponProblem(coupon)) return null;
   return coupon;
 }
 
