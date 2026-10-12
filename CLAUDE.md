@@ -8,7 +8,8 @@ El cliente es César; la tienda tiene que poder operarse sola desde el panel `/a
 
 | Comando | Para qué |
 | --- | --- |
-| `npm run check` | Tipos + lint + tests rápidos. Correrlo antes de dar una tarea por terminada |
+| `npm run check` | Tipos + lint + tests unitarios. Correrlo antes de dar una tarea por terminada |
+| `npm run test:api` | Tests de checkout, webhook y panel contra Postgres local (`DATABASE_URL` a localhost, migrada) |
 | `npm run build` | Build de producción (necesita `DATABASE_URL`, alcanza una de mentira) |
 | `npm run seguridad` | `npm audit` de dependencias de producción |
 | `npm run db:generate -- --name <nombre>` | Migración nueva después de tocar `src/db/schema.ts` |
@@ -27,6 +28,12 @@ Un PR toca una sola área cuando se puede, y su título empieza con el área (`C
 | Panel admin | `src/app/admin`, `src/app/api/admin`, `src/lib/admin-*.ts` |
 | Datos y catálogo | `src/db`, `drizzle/`, `scripts/` |
 | Plataforma | `.github/`, `.claude/`, `middleware.ts`, `next.config.ts`, `vercel.json` |
+
+## Tests
+
+`node:test` + `tsx`, archivos `.mts` (permiten `await` arriba de todo). Unitarios en `tests/unit`,
+de API en `tests/api` (llaman a los handlers con un `Request` y vacían la base local antes de cada caso).
+Un bug arreglado en checkout, pagos o permisos viene con su test.
 
 ## Reglas
 

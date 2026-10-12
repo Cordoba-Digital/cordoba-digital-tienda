@@ -27,8 +27,7 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm run lint
-      - run: npm run test:checkout
-      - run: npm run test:guias
+      - run: npm test
       - run: npm run build
 
   migraciones:
@@ -63,3 +62,6 @@ jobs:
           fi
       - name: Las migraciones corren sobre una base vacía
         run: npm run db:migrate && npm run db:migrate
+      # Checkout, webhook de Mercado Pago y permisos del panel contra la base recién migrada.
+      - name: Tests de API
+        run: npm run test:api

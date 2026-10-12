@@ -141,7 +141,7 @@ export default async function GuidePage({ params }: { params: Promise<{ guia: st
         blanca de etiquetas y le saca todos los atributos salvo `href`. Es el
         único motivo por el que este `dangerouslySetInnerHTML` es aceptable: no
         hay forma de que llegue un `<script>`, un `onclick` o un `style`.
-        Ver `npm run test:guias`.
+        Ver `npm test` (tests/unit/guia-html.test.mts).
       */}
       <div className="prose-cd max-w-3xl" dangerouslySetInnerHTML={{ __html: article.body }} />
 
