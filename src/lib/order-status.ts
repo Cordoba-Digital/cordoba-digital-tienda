@@ -2,7 +2,9 @@ import { and, eq, lt, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orderEvents, orderItems, orders, products } from "@/db/schema";
+import { isAutomationOn } from "@/lib/automations";
 import { ensureCouponSchema, releaseCouponUse, restoreCouponUse } from "@/lib/coupons";
+import { notifyStatusChange } from "@/lib/order-emails";
 import { CANCELLED_STATUS, isCancelled, statusIndex } from "@/lib/pricing";
 
 /** Horas que un pedido puede quedar sin pago antes de vencer (lo que promete la tienda). */
@@ -88,14 +90,15 @@ export function canTransition(from: string, to: string): string | null {
  * entra o sale de "Cancelado". `extra` permite guardar otros campos en la
  * misma escritura (código de seguimiento, pago de Mercado Pago). Devuelve
  * false si el pedido ya no estaba en `from` (otro cambio llegó antes).
+ * Después de guardar, avisa al cliente si el interruptor está prendido.
  */
 export async function applyOrderStatus(
   orderId: number,
   input: { from: string; to: string; note?: string; extra?: Partial<typeof orders.$inferInsert> },
 ): Promise<boolean> {
   await Promise.all([ensureOrderStockSchema(), ensureCouponSchema()]);
-  return db.transaction(async (tx) => {
-    const changed = input.from !== input.to;
+  const changed = input.from !== input.to;
+  const applied = await db.transaction(async (tx) => {
     // Solo aplica si el pedido sigue en `from`. Si dos avisos llegan juntos (el
     // webhook de MP repite notificaciones), el segundo espera al primero, ya no
     // encuentra el estado viejo y no vuelve a mover el stock.
@@ -121,14 +124,20 @@ export async function applyOrderStatus(
     }
     return true;
   });
+  // Fuera de la transacción: el email sale solo si el cambio quedó guardado, y
+  // solo una vez aunque el webhook repita el aviso (el repetido no aplica).
+  if (applied && changed) await notifyStatusChange(orderId, input.to, input.note);
+  return applied;
 }
 
 /**
  * Cancela los pedidos que siguen en "Pedido recibido" pasadas las horas de
  * reserva y devuelve su stock. Corre desde el cron diario y al abrir el panel,
- * así no depende de que el cron esté activo. Devuelve cuántos venció.
+ * así no depende de que el cron esté activo. No hace nada si el interruptor
+ * "Vencer pedidos sin pago" está apagado. Devuelve cuántos venció.
  */
 export async function expireStalePendingOrders(): Promise<number> {
+  if (!(await isAutomationOn("vencerPedidos"))) return 0;
   const cutoff = new Date(Date.now() - PENDING_EXPIRY_HOURS * 60 * 60 * 1000);
   const stale = await db
     .select({ id: orders.id })

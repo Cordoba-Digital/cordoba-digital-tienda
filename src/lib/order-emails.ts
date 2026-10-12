@@ -1,0 +1,104 @@
+import { eq } from "drizzle-orm";
+
+import { db } from "@/db";
+import { orderEvents, orders } from "@/db/schema";
+import { isAutomationOn } from "@/lib/automations";
+import { money } from "@/lib/format";
+import { mailConfigured, sendMail, STORE_EMAIL } from "@/lib/mailer";
+import { url } from "@/lib/site";
+
+type OrderForEmail = Pick<
+  typeof orders.$inferSelect,
+  "code" | "customerName" | "email" | "deliveryMethod" | "total" | "trackingCode"
+>;
+
+/**
+ * El email que recibe el cliente cuando su pedido pasa a `status`, o null si
+ * ese estado no avisa ("Pedido recibido" ya tiene su página de confirmación).
+ * `note` es la nota del cambio: distingue un pedido vencido de uno cancelado a mano.
+ */
+export function orderStatusEmail(
+  order: OrderForEmail,
+  status: string,
+  note = "",
+): { subject: string; text: string } | null {
+  const firstName = order.customerName.trim().split(/\s+/)[0] || "";
+  const hello = firstName ? `Hola ${firstName},` : "Hola,";
+  const pickup = order.deliveryMethod === "pickup";
+  let subject: string;
+  let body: string;
+
+  switch (status) {
+    case "pago_confirmado":
+      subject = `Recibimos el pago de tu pedido ${order.code}`;
+      body = `Ya se acreditó el pago de tu pedido ${order.code} por ${money(order.total)}. Ahora lo preparamos y te avisamos cuando esté ${pickup ? "listo para retirar" : "en camino"}.`;
+      break;
+    case "preparando":
+      subject = `Estamos preparando tu pedido ${order.code}`;
+      body = `Estamos controlando y embalando los productos de tu pedido ${order.code}. Te avisamos cuando esté ${pickup ? "listo para retirar" : "en camino"}.`;
+      break;
+    case "enviado":
+      if (pickup) {
+        subject = `Tu pedido ${order.code} está listo para retirar`;
+        body = `Tu pedido ${order.code} ya está listo. Podés pasar a retirarlo por el local con tu DNI y el número de pedido.`;
+      } else {
+        subject = `Tu pedido ${order.code} está en camino`;
+        body = order.trackingCode
+          ? `Despachamos tu pedido ${order.code}. El código de seguimiento es ${order.trackingCode}.`
+          : `Despachamos tu pedido ${order.code}. En cuanto tengamos el código de seguimiento lo vas a ver en la página del pedido.`;
+      }
+      break;
+    case "entregado":
+      subject = `Tu pedido ${order.code} fue entregado`;
+      body = `¡Gracias por tu compra! La garantía de tus productos ya está activa. Si tenés cualquier problema, respondé este email.`;
+      break;
+    case "cancelado":
+      subject = `Cancelamos tu pedido ${order.code}`;
+      body = note.startsWith("Vencido")
+        ? `Pasaron 48 horas sin que recibiéramos el pago de tu pedido ${order.code}, así que lo cancelamos y liberamos los productos. Si todavía los querés, podés hacer un pedido nuevo en la tienda.`
+        : `Cancelamos tu pedido ${order.code}. Si no esperabas este cambio o tenés alguna duda, respondé este email y lo vemos.`;
+      break;
+    default:
+      return null;
+  }
+
+  const text = [
+    hello,
+    "",
+    body,
+    "",
+    `Mirá el estado de tu pedido: ${url(`/pedido/${order.code}`)}`,
+    "",
+    "Córdoba Digital",
+    STORE_EMAIL,
+  ].join("\n");
+  return { subject, text };
+}
+
+/**
+ * Le avisa al cliente el nuevo estado de su pedido si el interruptor "Avisar al
+ * cliente por email" está prendido y hay SMTP. Deja anotado en el historial del
+ * pedido si se mandó o no. Nunca tira error: el cambio de estado ya está hecho.
+ */
+export async function notifyStatusChange(orderId: number, status: string, note = ""): Promise<void> {
+  let subject = "";
+  try {
+    if (!mailConfigured() || !(await isAutomationOn("avisarCliente"))) return;
+    const [order] = await db.select().from(orders).where(eq(orders.id, orderId)).limit(1);
+    const mail = order ? orderStatusEmail(order, status, note) : null;
+    if (!order || !mail) return;
+    subject = mail.subject;
+    await sendMail({ to: order.email, ...mail });
+    await db
+      .insert(orderEvents)
+      .values({ orderId, fromStatus: status, toStatus: status, note: `Le avisamos al cliente por email: ${mail.subject}.` });
+  } catch (error) {
+    // El detalle del SMTP queda en los logs, no en el historial que ve el panel.
+    console.error("[order-emails] no se pudo avisar al cliente:", orderId, status, error);
+    if (!subject) return;
+    await db
+      .insert(orderEvents)
+      .values({ orderId, fromStatus: status, toStatus: status, note: "No se pudo mandar el email al cliente." })
+      .catch(() => undefined);
+  }
+}
