@@ -17,6 +17,7 @@ const ENTITIES = [
   { id: "usuario", label: "Usuarios" },
   { id: "sesion", label: "Ingresos" },
   { id: "acceso", label: "Accesos" },
+  { id: "cupon", label: "Cupones" },
 ];
 
 const when = new Intl.DateTimeFormat("es-AR", {
@@ -42,6 +43,7 @@ function entityLink(row: ActivityRow): string | null {
   if (row.entityType === "pedido") return `/admin/pedidos/${encodeURIComponent(row.entityId)}`;
   if (row.entityType === "usuario") return `/admin/usuarios/${encodeURIComponent(row.entityId)}`;
   if (row.entityType === "acceso") return "/admin/accesos";
+  if (row.entityType === "cupon") return "/admin/cupones";
   return null;
 }
 

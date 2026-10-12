@@ -5,13 +5,14 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
-type IconName = "panel" | "pedidos" | "pagos" | "usuarios" | "productos" | "nuevo" | "archivo" | "fotos" | "actividad" | "accesos" | "tienda" | "salir";
+type IconName = "panel" | "pedidos" | "pagos" | "usuarios" | "productos" | "nuevo" | "archivo" | "fotos" | "actividad" | "accesos" | "cupones" | "tienda" | "salir";
 
 const PATHS: Record<IconName, string> = {
   panel: "M4 4v16h16M8 15l3.5-4 3 2.5L20 7",
   nuevo: "M12 5v14M5 12h14",
   pedidos: "M6 7h12l-1 13H7L6 7Zm3 0V6a3 3 0 0 1 6 0v1",
   pagos: "M3 7h18v10H3V7Zm0 4h18M7 15h3",
+  cupones: "M4 7h16v3a2 2 0 0 0 0 4v3H4v-3a2 2 0 0 0 0-4V7Zm6 3 4 4m0-4h.01M10 14h.01",
   usuarios: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0",
   productos: "M12 3 4 7v10l8 4 8-4V7l-8-4Zm0 0v18M4 7l8 4 8-4",
   archivo: "M4 5h16v4H4V5Zm1 4v10h14V9M10 13h4",
@@ -49,6 +50,7 @@ const GROUPS: { title?: string; items: NavItem[] }[] = [
     items: [
       { href: "/admin/pedidos", label: "Pedidos", icon: "pedidos" },
       { href: "/admin/pagos", label: "Pagos", icon: "pagos" },
+      { href: "/admin/cupones", label: "Cupones", icon: "cupones" },
     ],
   },
   { title: "Clientes", items: [{ href: "/admin/usuarios", label: "Usuarios", icon: "usuarios" }] },

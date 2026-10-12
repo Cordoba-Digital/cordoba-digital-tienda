@@ -13,7 +13,7 @@ import { readAdminSession } from "@/lib/admin-session";
 export type FieldChange = { from: unknown; to: unknown };
 export type AuditEntry = {
   action: string;
-  entityType: "producto" | "pedido" | "usuario" | "sesion" | "acceso";
+  entityType: "producto" | "pedido" | "usuario" | "sesion" | "acceso" | "cupon";
   entityId: string;
   summary: string;
   changes?: Record<string, FieldChange>;
@@ -65,6 +65,8 @@ const FIELD_LABELS: Record<string, string> = {
   featured: "destacado", warrantyMonths: "garantía", tags: "etiquetas de búsqueda", seoTitle: "título SEO",
   seoDescription: "descripción SEO", weight: "peso", dimensions: "medidas", highlights: "destacados",
   specs: "características",
+  kind: "tipo", value: "descuento", minSubtotal: "compra mínima", active: "activo", expiresOn: "vence",
+  maxUses: "tope de usos",
 };
 
 /** Nombre del campo para mostrar en la Actividad. */
