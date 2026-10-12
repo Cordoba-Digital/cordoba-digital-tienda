@@ -11,6 +11,27 @@ const r2Host = (() => {
   }
 })();
 
+/** Para todo el sitio, panel incluido. */
+const SECURITY_HEADERS = [
+  // Solo HTTPS por dos años. Sin includeSubDomains: puede haber subdominios
+  // del hosting viejo sin certificado.
+  { key: "Strict-Transport-Security", value: "max-age=63072000" },
+  // La tienda no usa cámara, micrófono ni ubicación; ningún script de terceros puede pedirlos.
+  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+];
+
+/**
+ * Para la tienda. El CSP no limita scripts (Next, GA, WhatsApp y el JSON-LD
+ * van inline): cierra iframes ajenos, `<base>` y plugins, que es lo que se
+ * puede sin romper nada.
+ */
+const STORE_HEADERS = [
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  { key: "Content-Security-Policy", value: "frame-ancestors 'self'; base-uri 'self'; object-src 'none'" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+];
+
 const nextConfig: NextConfig = {
   // Las URLs del catálogo migrado desde WooCommerce. Son 301 porque el
   // contenido ya no existe en las rutas viejas: la equivalencia es 1:1
@@ -58,6 +79,12 @@ const nextConfig: NextConfig = {
    */
   async headers() {
     return [
+      { source: "/:path*", headers: SECURITY_HEADERS },
+      // El panel manda los suyos desde el middleware, más estrictos (DENY,
+      // same-origin). Con `next start` el middleware pisa estos, pero no
+      // dependemos del orden en que Vercel los aplica: a /admin y /api/admin
+      // no se les mandan.
+      { source: "/((?!admin|api/admin).*)", headers: STORE_HEADERS },
       {
         source: "/:path*",
         has: [{ type: "host", value: "(?<sub>.*)\\.vercel\\.app" }],

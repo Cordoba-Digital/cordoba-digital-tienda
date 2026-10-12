@@ -107,3 +107,21 @@ test("un cliente compra desde la ficha y el pedido queda en la base", async () =
 
   assert.deepEqual(erroresDePagina, []);
 });
+
+test("la tienda y el panel mandan sus headers de seguridad, sin valores repetidos", async () => {
+  const tienda = await fetch(`${BASE}/producto/auriculares-prueba`);
+  assert.equal(tienda.headers.get("strict-transport-security"), "max-age=63072000");
+  assert.equal(tienda.headers.get("x-frame-options"), "SAMEORIGIN");
+  assert.match(tienda.headers.get("content-security-policy") ?? "", /frame-ancestors 'self'/);
+  assert.equal(tienda.headers.get("x-content-type-options"), "nosniff");
+  assert.equal(tienda.headers.get("referrer-policy"), "strict-origin-when-cross-origin");
+  assert.match(tienda.headers.get("permissions-policy") ?? "", /camera=\(\)/);
+
+  // El panel conserva los suyos, más estrictos. `Headers.get` junta los
+  // valores repetidos con ", ", así que un header duplicado también falla acá.
+  const panel = await fetch(`${BASE}/admin/login`);
+  assert.equal(panel.headers.get("x-frame-options"), "DENY");
+  assert.equal(panel.headers.get("referrer-policy"), "same-origin");
+  assert.equal(panel.headers.get("content-security-policy"), "frame-ancestors 'none'");
+  assert.equal(panel.headers.get("strict-transport-security"), "max-age=63072000");
+});
