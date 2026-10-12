@@ -350,6 +350,31 @@ export async function getBrandFacets(categoryId?: number) {
     .orderBy(asc(products.brand));
 }
 
+/**
+ * Rango de precios y stock de una categoría con su subárbol, para las
+ * preguntas frecuentes de la página (ver lib/category-seo.ts). Los productos
+ * sin precio cargado no cuentan para el rango.
+ */
+export async function getCategoryPriceStats(categoryId: number) {
+  const subtree = await subtreeOf(categoryId);
+  const [row] = await db
+    .select({
+      total: sql<number>`count(*)::int`,
+      inStock: sql<number>`count(*) filter (where ${products.stock} > 0)::int`,
+      minPrice: sql<number | null>`min(${products.price}) filter (where ${products.price} > 0)`,
+      maxPrice: sql<number | null>`max(${products.price}) filter (where ${products.price} > 0)`,
+    })
+    .from(products)
+    .where(buildWhere({}, subtree));
+  return {
+    total: row?.total ?? 0,
+    inStock: row?.inStock ?? 0,
+    // `Number` por si el driver devuelve el agregado como string.
+    minPrice: row?.minPrice == null ? null : Number(row.minPrice),
+    maxPrice: row?.maxPrice == null ? null : Number(row.maxPrice),
+  };
+}
+
 export async function getFeaturedProducts(limit = 8) {
   // El catálogo migrado de WooCommerce no trae `featured` (todo false) ni
   // `soldCount` (todo 0). Ordenar por soldCount las enterraba detrás del
