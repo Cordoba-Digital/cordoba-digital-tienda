@@ -46,6 +46,9 @@ Un bug arreglado en checkout, pagos o permisos viene con su test.
 - No leer ni escribir `.env*` ni correr scripts contra la base de producción sin pedido explícito y backup previo (branch de Neon).
 - Scripts que escriben datos se prueban primero con `--dry-run`.
 - Checkout, pagos, webhooks y permisos del panel necesitan aprobación de Ronan (`CODEOWNERS`).
+- Antes de pedir el merge de un PR que toque checkout, pagos, webhooks, envíos o el panel, correr la skill
+  `revision-seguridad` y dejar el resultado como comentario en el PR (la revisión automática de
+  `revision-claude.yml` está apagada: no hay `ANTHROPIC_API_KEY`).
 
 ## Documentación
 
