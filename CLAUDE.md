@@ -10,6 +10,7 @@ El cliente es César; la tienda tiene que poder operarse sola desde el panel `/a
 | --- | --- |
 | `npm run check` | Tipos + lint + tests unitarios. Correrlo antes de dar una tarea por terminada |
 | `npm run test:api` | Tests de checkout, webhook y panel contra Postgres local (`DATABASE_URL` a localhost, migrada) |
+| `npm run test:e2e` | Compra completa en Chromium contra el build (`npm run build` antes) y la misma base local |
 | `npm run build` | Build de producción (necesita `DATABASE_URL`, alcanza una de mentira) |
 | `npm run seguridad` | `npm audit` de dependencias de producción |
 | `npm run db:generate -- --name <nombre>` | Migración nueva después de tocar `src/db/schema.ts` |
@@ -32,7 +33,9 @@ Un PR toca una sola área cuando se puede, y su título empieza con el área (`C
 ## Tests
 
 `node:test` + `tsx`, archivos `.mts` (permiten `await` arriba de todo). Unitarios en `tests/unit`,
-de API en `tests/api` (llaman a los handlers con un `Request` y vacían la base local antes de cada caso).
+de API en `tests/api` (llaman a los handlers con un `Request` y vacían la base local antes de cada caso),
+y la compra en el navegador en `tests/e2e` (Playwright; acá `CHROMIUM_PATH=/opt/pw-browsers/chromium`,
+sin `playwright install`).
 Un bug arreglado en checkout, pagos o permisos viene con su test.
 
 ## Reglas

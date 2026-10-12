@@ -56,6 +56,7 @@ npm run verify:wp                       # compara la base contra WooCommerce
 - `npm run check` — tipos + lint + tests unitarios (`npm test`, en `tests/unit`)
 - `npm run test:api` — checkout, webhook de Mercado Pago y permisos del panel
   contra un Postgres local migrado (`tests/api`; se niega a correr contra otra base)
+- `npm run test:e2e` — una compra completa en Chromium (ficha, carrito, checkout, confirmación); necesita `npm run build` y la base local
   (el CI corre todo en cada PR, junto con `next build`)
 
 ## Pagos

@@ -32,7 +32,7 @@ jobs:
 
   migraciones:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     services:
       postgres:
         image: postgres:16
@@ -65,3 +65,12 @@ jobs:
       # Checkout, webhook de Mercado Pago y permisos del panel contra la base recién migrada.
       - name: Tests de API
         run: npm run test:api
+      # Una compra de punta a punta en Chromium contra el build y la misma base.
+      - name: Build para la prueba de compra
+        run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
+      - name: Instalar Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Prueba de compra en el navegador
+        run: npm run test:e2e
