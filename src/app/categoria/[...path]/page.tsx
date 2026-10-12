@@ -10,9 +10,15 @@ import { ProductCard } from "@/components/product-card";
 import { mergedCategoryRedirect } from "@/lib/category-merges";
 import { money } from "@/lib/format";
 import { toView } from "@/lib/product-view";
-import { url as siteUrl } from "@/lib/site";
+import { categoryFaq, categoryItemListJsonLd, faqPageJsonLd } from "@/lib/category-seo";
 import { breadcrumbJsonLd, jsonLdString } from "@/lib/structured-data";
-import { getBrandFacets, getCategoryByPath, getCategoryTree, listProducts } from "@/lib/queries";
+import {
+  getBrandFacets,
+  getCategoryByPath,
+  getCategoryPriceStats,
+  getCategoryTree,
+  listProducts,
+} from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -116,7 +122,7 @@ export default async function CategoryPage({
   const stock = pick(query, "stock") === "1";
 
   const PER_PAGE = 24;
-  const [brands, result, tree] = await Promise.all([
+  const [brands, result, tree, priceStats] = await Promise.all([
     getBrandFacets(node.id),
     listProducts({
       categoryId: node.id,
@@ -130,7 +136,11 @@ export default async function CategoryPage({
       inStock: stock,
     }),
     getCategoryTree(),
+    getCategoryPriceStats(node.id),
   ]);
+
+  // Preguntas con datos de toda la categoría (no de los filtros aplicados).
+  const faq = categoryFaq(node.name, { ...priceStats, brands });
 
   const buildHref = (updates: Record<string, string | null>, keepPage = false) => {
     const next = new URLSearchParams();
@@ -173,20 +183,16 @@ export default async function CategoryPage({
       { name: "Inicio", path: "/" },
       ...breadcrumb.map((crumb) => ({ name: crumb.name, path: `/categoria/${crumb.path}` })),
     ]),
-    // Los productos de esta página, en orden: le dice a Google y a los
-    // buscadores de IA qué hay en la categoría sin tener que leer las tarjetas.
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
+    // Los productos de esta página, en orden y con precio y stock: le dice a
+    // Google y a los buscadores de IA qué hay en la categoría y cuánto sale
+    // sin tener que leer las tarjetas ni abrir cada ficha.
+    categoryItemListJsonLd({
       name: node.name,
-      numberOfItems: result.total,
-      itemListElement: result.items.map((product, i) => ({
-        "@type": "ListItem",
-        position: (pagina - 1) * PER_PAGE + i + 1,
-        url: siteUrl(`/producto/${product.slug}`),
-        name: product.name,
-      })),
-    },
+      total: result.total,
+      offset: (pagina - 1) * PER_PAGE,
+      items: result.items,
+    }),
+    faqPageJsonLd(faq),
   ];
 
   return (
@@ -313,6 +319,22 @@ export default async function CategoryPage({
           <Pagination page={result.page} pages={result.pages} hrefFor={pageHref} />
         </section>
       </div>
+
+      <section className="card-surface mt-8 p-6" aria-labelledby="faq-categoria">
+        <h2 id="faq-categoria" className="text-lg font-extrabold text-ink-900">
+          Preguntas frecuentes sobre {node.name}
+        </h2>
+        <div className="mt-3 divide-y divide-ink-100">
+          {faq.map((item) => (
+            <details key={item.pregunta} className="group py-3">
+              <summary className="cursor-pointer list-none font-semibold text-ink-800 marker:hidden group-open:text-brand-700">
+                {item.pregunta}
+              </summary>
+              <p className="mt-2 text-sm text-ink-600">{item.respuesta}</p>
+            </details>
+          ))}
+        </div>
+      </section>
 
       {node.descriptionHtml?.trim() ? (
         <section className="card-surface mt-8 p-6">
