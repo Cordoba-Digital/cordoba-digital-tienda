@@ -18,6 +18,17 @@ npm run dev
 
 Abrir `http://localhost:3000`.
 
+## Área de trabajo
+
+- Editor: Cursor o VS Code. `.vscode/` arregla ESLint al guardar y recomienda las extensiones.
+- `.devcontainer/` levanta Node 22 y Postgres 16 ya migrado (Cursor, VS Code o Codespaces).
+- `npm run check` corre tipos, lint y tests rápidos; `npm run seguridad`, el audit de producción.
+- Claude Code lee `CLAUDE.md` (áreas y reglas) y `.claude/settings.json` (permisos y hooks:
+  ESLint en cada archivo que edita y `npm run check` antes de terminar).
+- En GitHub: plantilla de PR, `CODEOWNERS` para checkout, pagos y panel, Dependabot, escaneo de
+  secretos y análisis estático (`.github/workflows/seguridad.yml`), y revisión de Claude en los PR
+  que tocan plata o permisos (necesita el secreto `ANTHROPIC_API_KEY`).
+
 ## Catálogo
 
 El catálogo es el **real de WooCommerce** (2588 productos, 128 categorías en 3

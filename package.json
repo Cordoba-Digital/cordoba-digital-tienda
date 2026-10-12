@@ -7,6 +7,8 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run lint && npm run test:checkout && npm run test:guias",
+    "seguridad": "npm audit --omit=dev --audit-level=high",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx scripts/db-migrate.ts",
     "db:studio": "drizzle-kit studio",

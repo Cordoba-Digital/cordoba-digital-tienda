@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "ms-playwright.playwright",
+    "anthropic.claude-code",
+    "eamodio.gitlens",
+    "editorconfig.editorconfig",
+    "ms-vscode-remote.remote-containers"
+  ]
+}

@@ -1,0 +1,52 @@
+name: Seguridad
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+  schedule:
+    # Lunes 9:00 en Córdoba (12:00 UTC): una vulnerabilidad nueva aparece aunque nadie toque el código.
+    - cron: "0 12 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  dependencias:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Sin vulnerabilidades altas o críticas en producción
+        run: npm run seguridad
+
+  secretos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      # El binario directo: la action de gitleaks pide permisos de PR y licencia en organizaciones.
+      - name: Ninguna clave en el código
+        env:
+          GITLEAKS_VERSION: 8.24.3
+        run: |
+          curl -sSL "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" | tar xz gitleaks
+          ./gitleaks git . --redact --no-banner --exit-code 1
+
+  analisis-estatico:
+    # CodeQL necesita GitHub Code Security en repos privados; Semgrep es gratis.
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    container:
+      image: semgrep/semgrep
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inyecciones, XSS y malas prácticas de Next.js
+        run: semgrep scan --config p/javascript --config p/typescript --config p/nextjs --error --metrics=off src middleware.ts

@@ -1,0 +1,51 @@
+name: Revisión de Claude
+
+# Revisa los PR que tocan plata o permisos. Necesita el secreto ANTHROPIC_API_KEY
+# en Settings → Secrets and variables → Actions; sin él, el job se saltea.
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review]
+    paths:
+      - "src/app/api/checkout/**"
+      - "src/app/api/webhooks/**"
+      - "src/app/api/admin/**"
+      - "src/lib/checkout-*.ts"
+      - "src/lib/pricing.ts"
+      - "src/lib/mercadopago.ts"
+      - "src/lib/order-status.ts"
+      - "src/lib/admin-*.ts"
+      - "src/lib/shipping*.ts"
+      - "middleware.ts"
+
+permissions:
+  contents: read
+  pull-requests: write
+  id-token: write
+
+jobs:
+  revisar:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      TIENE_CLAVE: ${{ secrets.ANTHROPIC_API_KEY != '' }}
+    steps:
+      - name: Falta ANTHROPIC_API_KEY
+        if: env.TIENE_CLAVE != 'true'
+        run: echo "::notice::Sin ANTHROPIC_API_KEY no corre la revisión de Claude."
+      - uses: actions/checkout@v4
+        if: env.TIENE_CLAVE == 'true'
+        with:
+          fetch-depth: 1
+      - uses: anthropics/claude-code-action@v1
+        if: env.TIENE_CLAVE == 'true'
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Revisá este PR de una tienda online argentina (Next.js + Postgres) siguiendo las reglas de CLAUDE.md.
+            Concentrate en lo que puede costar plata o exponer datos: montos calculados con datos del navegador,
+            pedidos que pasan a pagado sin que coincida el monto, stock que se descuenta o devuelve dos veces,
+            rutas /api/admin sin sesión o sin CSRF, datos de clientes expuestos, migraciones faltantes.
+            Dejá comentarios en las líneas concretas y en español. Si no encontrás nada serio, decilo en un comentario corto.
+          claude_args: |
+            --allowedTools "mcp__github_inline_comment__create_inline_comment,Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*)"

@@ -1,0 +1,16 @@
+# Cambios que mueven plata o permisos necesitan la aprobación de Ronan.
+/src/app/api/checkout/      @konnaleft
+/src/app/api/webhooks/      @konnaleft
+/src/app/api/admin/         @konnaleft
+/src/lib/checkout-*.ts      @konnaleft
+/src/lib/pricing.ts         @konnaleft
+/src/lib/mercadopago.ts     @konnaleft
+/src/lib/order-status.ts    @konnaleft
+/src/lib/admin-auth.ts      @konnaleft
+/src/lib/admin-session.ts   @konnaleft
+/src/lib/admin-access.ts    @konnaleft
+/middleware.ts              @konnaleft
+/src/db/schema.ts           @konnaleft
+/drizzle/                   @konnaleft
+/.github/                   @konnaleft
+/.claude/                   @konnaleft
