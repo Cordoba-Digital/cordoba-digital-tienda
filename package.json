@@ -39,7 +39,8 @@
     "subcategorias": "tsx scripts/subcategorias.ts",
     "categorias:limpiar": "tsx scripts/limpiar-categorias.ts",
     "fichas": "tsx scripts/fichas.ts",
-    "garantia": "tsx scripts/garantia.ts"
+    "garantia": "tsx scripts/garantia.ts",
+    "test:e2e": "node --import tsx --test --test-reporter=spec tests/e2e/*.test.mts"
   },
   "dependencies": {
     "@vercel/blob": "2.8.1",
@@ -64,6 +65,7 @@
     "drizzle-kit": "0.31.10",
     "eslint": "9.39.4",
     "eslint-config-next": "16.4.0",
+    "playwright": "1.63.0",
     "postcss": "8.5.8",
     "tailwindcss": "4.1.17",
     "tsx": "^4.23.15",
