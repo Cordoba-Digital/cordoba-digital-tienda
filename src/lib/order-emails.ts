@@ -93,8 +93,9 @@ export async function notifyStatusChange(orderId: number, status: string, note =
       .insert(orderEvents)
       .values({ orderId, fromStatus: status, toStatus: status, note: `Le avisamos al cliente por email: ${mail.subject}.` });
   } catch (error) {
-    // El detalle del SMTP queda en los logs, no en el historial que ve el panel.
-    console.error("[order-emails] no se pudo avisar al cliente:", orderId, status, error);
+    // Solo el código del error: el mensaje del SMTP puede traer el email del cliente.
+    const { code, responseCode } = (error ?? {}) as { code?: string; responseCode?: number };
+    console.error("[order-emails] no se pudo avisar al cliente:", orderId, status, code ?? "sin código", responseCode ?? "");
     if (!subject) return;
     await db
       .insert(orderEvents)
