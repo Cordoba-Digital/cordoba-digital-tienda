@@ -114,15 +114,15 @@ export function categoryFaq(nombre: string, stats: CategoryStats): CategoryFaqIt
   if (stats.total > 0 && stats.minPrice != null && stats.maxPrice != null) {
     const rango =
       stats.minPrice === stats.maxPrice
-        ? `a ${money(stats.minPrice)}`
-        : `desde ${money(stats.minPrice)} hasta ${money(stats.maxPrice)}`;
+        ? `con un precio de ${money(stats.minPrice)}`
+        : `con precios desde ${money(stats.minPrice)} hasta ${money(stats.maxPrice)}`;
     const disponibles =
       stats.inStock === stats.total
         ? "Todos tienen stock disponible."
         : `${stats.inStock.toLocaleString("es-AR")} tienen stock disponible para comprar ya.`;
     faq.push({
       pregunta: `¿Cuánto salen los productos de ${nombre} en ${NEGOCIO.nombre}?`,
-      respuesta: `Hoy hay ${stats.total.toLocaleString("es-AR")} producto${stats.total === 1 ? "" : "s"} en ${nombre}, con precios ${rango} en pesos argentinos. ${disponibles} El precio final y las cuotas se ven en cada ficha.`,
+      respuesta: `Hoy hay ${stats.total.toLocaleString("es-AR")} producto${stats.total === 1 ? "" : "s"} en ${nombre}, ${rango} en pesos argentinos. ${disponibles} El precio final y las cuotas se ven en cada ficha.`,
     });
   }
 
