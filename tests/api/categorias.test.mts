@@ -1,8 +1,9 @@
 /**
- * Precios y stock de una categoría para sus preguntas frecuentes
- * (`getCategoryPriceStats`, ver lib/category-seo.ts). Lo que importa: que sume
- * el subárbol y los productos que llegan por el puente N:N, y que un producto
- * sin precio no baje el "desde $…" a cero.
+ * Consultas por categoría: precios y stock para las preguntas frecuentes
+ * (`getCategoryPriceStats`, ver lib/category-seo.ts), productos y marcas.
+ * Lo que importa: que sumen el subárbol y los productos que llegan por el
+ * puente N:N, que un producto sin precio no baje el "desde $…" a cero, y que
+ * una categoría inexistente no devuelva el catálogo entero.
  *
  * Uso: npm run test:api (con DATABASE_URL a una base local migrada)
  */
@@ -13,7 +14,7 @@ import { sql } from "drizzle-orm";
 
 import { db, pool, resetDb, schema } from "./db.mts";
 
-const { getCategoryPriceStats } = await import("../../src/lib/queries");
+const { getBrandFacets, getCategoryPriceStats, listProducts } = await import("../../src/lib/queries");
 
 async function producto(slug: string, categorySlug: string, price: number, stock: number): Promise<number> {
   const [row] = await db
@@ -64,4 +65,22 @@ test("la subcategoría solo cuenta lo suyo", async () => {
 
 test("una categoría inexistente no cuenta el catálogo entero", async () => {
   assert.deepEqual(await getCategoryPriceStats(9999), { total: 0, inStock: 0, minPrice: null, maxPrice: null });
+});
+
+test("los productos de una categoría incluyen subcategorías y el puente", async () => {
+  const { items, total } = await listProducts({ categoryId: celulares.id, perPage: 50 });
+  assert.equal(total, 4);
+  assert.deepEqual(items.map((p) => p.slug).sort(), ["moto", "poco-agotado", "redmi", "sin-precio"]);
+});
+
+test("una categoría inexistente no lista el catálogo entero", async () => {
+  const { items, total, pages } = await listProducts({ categoryId: 9999 });
+  assert.equal(total, 0);
+  assert.deepEqual(items, []);
+  assert.equal(pages, 1);
+});
+
+test("las marcas de una categoría inexistente vienen vacías", async () => {
+  assert.deepEqual(await getBrandFacets(9999), []);
+  assert.deepEqual(await getBrandFacets(xiaomi.id), [{ brand: "Test", count: 3 }]);
 });

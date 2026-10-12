@@ -59,6 +59,9 @@ function buildWhere(filters: ProductFilters, subtree?: { ids: number[]; slugs: s
     );
   }
   if (filters.category) clauses.push(eq(products.categorySlug, filters.category));
+  // Se pidió una categoría que no está en el árbol: no hay productos. Sin esto
+  // el filtro quedaba vacío y se listaba el catálogo entero.
+  if (subtree && !subtree.ids.length && !subtree.slugs.length) clauses.push(sql`false`);
   if (subtree && (subtree.ids.length || subtree.slugs.length)) {
     // Puente N:N (categorías secundarias) + categoría principal, para que el
     // producto sin filas en el puente siga apareciendo.
@@ -357,8 +360,6 @@ export async function getBrandFacets(categoryId?: number) {
  */
 export async function getCategoryPriceStats(categoryId: number) {
   const subtree = await subtreeOf(categoryId);
-  // Sin subárbol `buildWhere` no filtra nada y esto contaría todo el catálogo.
-  if (!subtree.ids.length) return { total: 0, inStock: 0, minPrice: null, maxPrice: null };
   const [row] = await db
     .select({
       total: sql<number>`count(*)::int`,
