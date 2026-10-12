@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { QuantityStepper } from "@/components/cart-drawer";
+import { InstallmentsDetail } from "@/components/installments-provider";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Spinner, Stars } from "@/components/ui";
@@ -316,10 +317,14 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
         )}
       </div>
 
-      {/* Sin cuotas ni promos bancarias: no hay datos y no se inventan.
-          Solo los medios de pago que el sitio realmente ofrece, en una sola
-          fila para que la caja entre hasta Guardar/Consultar sin scroll en
-          una notebook al 100%. */}
+      {/* Cuotas: solo las que devuelve la cuenta de Mercado Pago (ver
+          `lib/installments.ts`). Sin Mercado Pago configurado no aparece nada:
+          no se inventan cuotas ni promos bancarias. */}
+      {product.stock > 0 ? <InstallmentsDetail price={product.price} /> : null}
+
+      {/* Los medios de pago que el sitio realmente ofrece, en una sola fila
+          para que la caja entre hasta Guardar/Consultar sin scroll en una
+          notebook al 100%. */}
       <div className="flex items-start gap-2.5 rounded-xl border border-ink-100 px-3.5 py-2.5 text-[13px]">
         <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] shrink-0 text-brand-700" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <path d="M3 10l9-6 9 6M5 10v8M19 10v8M9 10v8M15 10v8M3 20h18" />

@@ -4,12 +4,14 @@ import localFont from "next/font/local";
 
 import { CartDrawer, Toaster } from "@/components/cart-drawer";
 import { GoogleAnalytics } from "@/components/google-analytics";
+import { InstallmentsProvider } from "@/components/installments-provider";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StoreProvider } from "@/components/store-provider";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { StoreChrome } from "@/components/store-chrome";
 import { WhatsAppFab } from "@/components/whatsapp-fab";
+import { getInstallmentPlans } from "@/lib/installments-server";
 import { getCategoryTree, getGuides, type CategoryTreeNode, type GuideTeaser } from "@/lib/queries";
 import "./globals.css";
 
@@ -84,10 +86,16 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     count: number;
     children?: NavNode[];
   };
-  // Árbol y guías en paralelo: son independientes y este layout corre en
-  // TODAS las páginas. Cada uno conserva su fallback por separado con
-  // `allSettled`: si la base no responde, la página igual se dibuja.
-  const [treeRes, guideRes] = await Promise.allSettled([getCategoryTree(), getGuides()]);
+  // Árbol, guías y cuotas en paralelo: son independientes y este layout corre
+  // en TODAS las páginas. Cada uno conserva su fallback por separado con
+  // `allSettled`: si la base no responde, la página igual se dibuja. Las
+  // cuotas ya devuelven una lista vacía si Mercado Pago falla.
+  const [treeRes, guideRes, plansRes] = await Promise.allSettled([
+    getCategoryTree(),
+    getGuides(),
+    getInstallmentPlans(),
+  ]);
+  const installmentPlans = plansRes.status === "fulfilled" ? plansRes.value : [];
   let categories: (NavNode & { tagline: string })[] = [];
   try {
     if (treeRes.status !== "fulfilled") throw new Error("sin árbol");
@@ -125,21 +133,23 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
             buscadores de IA usan para reconocer a Córdoba Digital como entidad. */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(organizationAndWebsite()) }} />
         <StoreProvider>
-          <SmoothScroll />
-          <StoreChrome>
-            <SiteHeader categories={categories} />
-          </StoreChrome>
-          <main className="min-h-[60vh]">{children}</main>
-          <StoreChrome>
-            <SiteFooter
-              categories={categories.map((c) => ({ name: c.name, path: c.path, count: c.count }))}
-              cuit={process.env.STORE_CUIT?.trim() ?? ""}
-              guides={guides}
-            />
-            <CartDrawer />
-            <WhatsAppFab />
-          </StoreChrome>
-          <Toaster />
+          <InstallmentsProvider plans={installmentPlans}>
+            <SmoothScroll />
+            <StoreChrome>
+              <SiteHeader categories={categories} />
+            </StoreChrome>
+            <main className="min-h-[60vh]">{children}</main>
+            <StoreChrome>
+              <SiteFooter
+                categories={categories.map((c) => ({ name: c.name, path: c.path, count: c.count }))}
+                cuit={process.env.STORE_CUIT?.trim() ?? ""}
+                guides={guides}
+              />
+              <CartDrawer />
+              <WhatsAppFab />
+            </StoreChrome>
+            <Toaster />
+          </InstallmentsProvider>
         </StoreProvider>
         {GA_MEASUREMENT_ID ? <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} /> : null}
       </body>

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 import Link from "next/link";
 
+import { InstallmentsLine } from "@/components/installments-provider";
 import { ProductImg, ProductPlaceholder } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Stars } from "@/components/ui";
@@ -163,6 +164,7 @@ export function ProductCard({ product, badge }: { product: ProductView; badge?: 
               <p className="text-xs text-ink-400 line-through">{money(product.compareAtPrice)}</p>
             ) : null}
             <p className="text-[17px] font-extrabold tracking-tight leading-none text-ink-900">{money(product.price)}</p>
+            {outOfStock ? null : <InstallmentsLine price={product.price} className="mt-1 text-[11.5px] font-semibold leading-tight text-emerald-700" />}
           </div>
           {inCart > 0 ? (
             // Ya está en el carrito: la cantidad se ajusta acá mismo. Restar
