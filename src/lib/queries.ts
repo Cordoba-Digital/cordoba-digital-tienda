@@ -357,6 +357,8 @@ export async function getBrandFacets(categoryId?: number) {
  */
 export async function getCategoryPriceStats(categoryId: number) {
   const subtree = await subtreeOf(categoryId);
+  // Sin subárbol `buildWhere` no filtra nada y esto contaría todo el catálogo.
+  if (!subtree.ids.length) return { total: 0, inStock: 0, minPrice: null, maxPrice: null };
   const [row] = await db
     .select({
       total: sql<number>`count(*)::int`,

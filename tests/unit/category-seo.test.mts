@@ -75,6 +75,11 @@ test("el FAQ arma el rango de precios y las marcas con datos del catálogo", () 
   assert.equal(marcas?.respuesta.includes("General"), false);
 });
 
+test("con un solo precio no habla de un rango", () => {
+  const [precios] = categoryFaq("Drones", { total: 1, inStock: 1, minPrice: 900000, maxPrice: 900000, brands: [] });
+  assert.match(precios.respuesta, /Hoy hay 1 producto en Drones, con un precio de \$\s?900\.000 en pesos argentinos\. Todos tienen stock/);
+});
+
 test("sin productos ni marcas solo quedan las preguntas de la tienda", () => {
   const faq = categoryFaq("Drones", { total: 0, inStock: 0, minPrice: null, maxPrice: null, brands: [] });
   assert.deepEqual(
