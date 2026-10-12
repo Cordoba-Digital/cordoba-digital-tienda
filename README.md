@@ -53,8 +53,10 @@ npm run verify:wp                       # compara la base contra WooCommerce
 - `npm run build` / `npm start` — producción
 - `npm run db:generate` / `db:migrate` — migraciones versionadas en `drizzle/` (ver `docs/MIGRACIONES.md`)
 - `npm run audit:wp` / `migrate:wp` / `verify:wp` — ciclo del catálogo
-- `npm run typecheck` / `npm run lint` / `npm run test:checkout` / `npm run test:guias`
-  (los corre el CI en cada PR, junto con `next build`)
+- `npm run check` — tipos + lint + tests unitarios (`npm test`, en `tests/unit`)
+- `npm run test:api` — checkout, webhook de Mercado Pago y permisos del panel
+  contra un Postgres local migrado (`tests/api`; se niega a correr contra otra base)
+  (el CI corre todo en cada PR, junto con `next build`)
 
 ## Pagos
 

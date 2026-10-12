@@ -22,3 +22,6 @@ out/
 .vercel
 .env*
 !.env.example
+
+# Documentos comerciales del cliente: van en la carpeta del proyecto, no en el repo.
+/docs/cliente/
