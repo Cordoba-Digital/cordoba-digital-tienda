@@ -78,6 +78,7 @@ export default async function OrderPage({
     deliveryMethod: order.deliveryMethod,
     deliveryLabel: order.deliveryLabel,
     deliveryEta: order.deliveryEta,
+    trackingCode: order.trackingCode ?? "",
     address,
     paymentMethod: order.paymentMethod,
     paymentLabel: order.paymentLabel,

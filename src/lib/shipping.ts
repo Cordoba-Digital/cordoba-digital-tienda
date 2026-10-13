@@ -29,6 +29,7 @@ export type ShippingOption = {
 /** Plazos que declara el local en la ficha de producto ("1-3 dias habiles"). */
 const PLAZO_DOMICILIO = "Llega entre 1 y 3 días hábiles";
 const PLAZO_SUCURSAL = "El local te confirma la sucursal y el plazo";
+const PLAZO_SUCURSAL_ELEGIDA = "Elegí la sucursal de retiro";
 
 export function normalizeZip(input: string): string {
   const digits = (input || "").toUpperCase().replace(/[^0-9]/g, "");
@@ -50,7 +51,13 @@ export function zoneForZip(zip: string): { zona: ZonaEnvio; name: string; zip: s
   return { zona, name: NOMBRE_ZONA[zona], zip: normalized };
 }
 
-export function shippingOptions(zip: string): ShippingOption[] {
+/**
+ * Precios que devolvió Andreani para este carrito. Cuando están, reemplazan a
+ * la tarifa fija del paquete más chico (ver `shipping-andreani.ts`).
+ */
+export type PreciosAndreani = { estandar?: number; sucursal?: number };
+
+export function shippingOptions(zip: string, andreani: PreciosAndreani = {}): ShippingOption[] {
   const zone = zoneForZip(zip);
 
   // El unico envio sin cargo es el retiro en el local. No hay umbral por monto:
@@ -90,7 +97,7 @@ export function shippingOptions(zip: string): ShippingOption[] {
     label: `Andreani (estándar) · ${zone.name}`,
     description: "Envío a domicilio con seguimiento online",
     eta: PLAZO_DOMICILIO,
-    cost: Math.round(tarifa.estandar),
+    cost: Math.round(andreani.estandar ?? tarifa.estandar),
     free: false,
   });
 
@@ -100,14 +107,14 @@ export function shippingOptions(zip: string): ShippingOption[] {
     id: "express",
     label: `Andreani (sucursal) · ${zone.name}`,
     description: "Retirás en la sucursal de Andreani más cercana",
-    eta: PLAZO_SUCURSAL,
-    cost: Math.round(tarifa.sucursal),
+    eta: andreani.sucursal !== undefined ? PLAZO_SUCURSAL_ELEGIDA : PLAZO_SUCURSAL,
+    cost: Math.round(andreani.sucursal ?? tarifa.sucursal),
     free: false,
   });
 
   return options;
 }
 
-export function findShippingOption(zip: string, id: DeliveryMethod): ShippingOption | null {
-  return shippingOptions(zip).find((option) => option.id === id) ?? null;
+export function findShippingOption(zip: string, id: DeliveryMethod, andreani: PreciosAndreani = {}): ShippingOption | null {
+  return shippingOptions(zip, andreani).find((option) => option.id === id) ?? null;
 }

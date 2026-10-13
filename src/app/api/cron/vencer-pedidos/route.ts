@@ -1,3 +1,5 @@
+import { sincronizarEnvios } from "@/lib/admin-andreani";
+import { andreaniConfigurado } from "@/lib/andreani";
 import { expireStalePendingOrders } from "@/lib/order-status";
 
 export const dynamic = "force-dynamic";
@@ -14,5 +16,13 @@ export async function GET(request: Request) {
     return Response.json({ ok: false, error: "No autorizado." }, { status: 401 });
   }
   const expired = await expireStalePendingOrders();
-  return Response.json({ ok: true, expired });
+  // De paso trae de Andreani los números de seguimiento y estados nuevos. El
+  // panel también lo hace a pedido con "Actualizar seguimiento".
+  let andreani: { revisados: number; actualizados: number } | { error: string } | null = null;
+  if (andreaniConfigurado()) {
+    andreani = await sincronizarEnvios().catch((error: unknown) => ({
+      error: error instanceof Error ? error.message : "error inesperado",
+    }));
+  }
+  return Response.json({ ok: true, expired, andreani });
 }

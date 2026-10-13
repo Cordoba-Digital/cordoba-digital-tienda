@@ -388,7 +388,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
       </div>
 
       <div className="space-y-4 border-t border-ink-100 pt-4">
-        <ShippingCalculator price={product.price} />
+        <ShippingCalculator price={product.price} slug={product.slug} />
         <div className="flex items-start gap-3 text-[13px] leading-snug text-ink-500">
           <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-brand-700" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
               <path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11zM12 10m-2.5 0a2.5 2.5 0 105 0 2.5 2.5 0 10-5 0" />
@@ -464,7 +464,7 @@ export function MobileBuyBar({ product }: { product: BuyBoxProduct }) {
   );
 }
 
-export function ShippingCalculator({ price }: { price: number }) {
+export function ShippingCalculator({ price, slug }: { price: number; slug: string }) {
   const [zip, setZip] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -475,7 +475,7 @@ export function ShippingCalculator({ price }: { price: number }) {
     setLoading(true);
     setError(null);
     try {
-      const data = await fetchShippingQuote({ zip, subtotal: price });
+      const data = await fetchShippingQuote({ zip, subtotal: price, items: [{ slug, quantity: 1 }] });
       setResult({ zone: data.zone, options: data.options });
     } catch (error) {
       setError(error instanceof Error ? error.message : "No pudimos calcular el envío. Probá de nuevo.");
