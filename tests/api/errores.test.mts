@@ -86,6 +86,30 @@ test("si sigue pasando no vuelve a avisar antes de 6 horas, y después sí", asy
   assert.equal(enviados.length, 2);
 });
 
+test("muchos errores distintos en una hora mandan como mucho 10 emails, pero quedan todos en el panel", async () => {
+  const palabras = "alfa beta gama delta épsilon zeta eta theta iota kappa lambda mu".split(" ");
+  for (const p of palabras) await recordServerError({ ...falla(1), message: `invalid input syntax: "${p}"` });
+  assert.equal((await filas()).length, 12);
+  assert.equal(enviados.length, 10);
+});
+
+test("con la tabla llena no guarda tipos nuevos, pero sigue contando los que ya están", async () => {
+  await recordServerError(falla(1));
+  await db.execute(
+    sql`insert into error_events (fingerprint, message) select lpad(to_hex(g), 24, '0'), 'relleno ' || g from generate_series(1, 999) g`,
+  );
+  await recordServerError({ ...falla(1), message: "uno nuevo" });
+  assert.equal((await filas()).length, 1000);
+  await recordServerError(falla(2));
+  const [row] = await db.select().from(schema.errorEvents).where(sql`${schema.errorEvents.route} <> ''`);
+  assert.equal(row.count, 2);
+
+  // Con resueltos, los borra para hacer lugar.
+  await db.execute(sql`update error_events set resolved_at = now() where message like 'relleno%'`);
+  await recordServerError({ ...falla(1), message: "uno nuevo" });
+  assert.deepEqual((await filas()).map((f) => f.message).sort(), ["Pedido 2 no encontrado para [email]", "uno nuevo"]);
+});
+
 test("marcarlo resuelto lo saca de la cuenta, y si reaparece se reabre y avisa enseguida", async () => {
   await recordServerError(falla(1));
   const [row] = await filas();

@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 
-import { desc, isNull, sql } from "drizzle-orm";
+import { desc, isNotNull, isNull, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { errorEvents } from "@/db/schema";
@@ -19,6 +19,13 @@ import { url } from "@/lib/site";
 
 /** Un error que sigue pasando vuelve a avisar como mucho cada este tiempo. */
 const REALERT_MS = 6 * 60 * 60 * 1000;
+/**
+ * Topes por si alguien provoca errores a propósito con textos distintos (un
+ * error de Postgres repite lo que mandó el cliente): no más de este número de
+ * tipos guardados ni de emails por hora entre todos los tipos.
+ */
+const MAX_ROWS = 1000;
+const MAX_ALERTS_PER_HOUR = 10;
 
 export type ServerErrorInput = {
   message: string;
@@ -91,6 +98,21 @@ export async function recordServerError(input: ServerErrorInput): Promise<void> 
     const method = (input.method ?? "").slice(0, 10);
     const key = fingerprint(message, route);
 
+    const [{ total, exists }] = await db
+      .select({
+        total: sql<number>`count(*)::int`,
+        exists: sql<boolean>`bool_or(${errorEvents.fingerprint} = ${key})`,
+      })
+      .from(errorEvents);
+    if (!exists && total >= MAX_ROWS) {
+      // Llena: hace lugar borrando los ya resueltos; si no hay ninguno, el error queda solo en los logs.
+      const freed = await db.delete(errorEvents).where(isNotNull(errorEvents.resolvedAt)).returning({ fingerprint: errorEvents.fingerprint });
+      if (!freed.length) {
+        console.error("[error-log] tabla llena, no se guarda:", message.slice(0, 200));
+        return;
+      }
+    }
+
     const [row] = await db
       .insert(errorEvents)
       .values({ fingerprint: key, message, stack, route, path, method })
@@ -117,7 +139,13 @@ export async function recordServerError(input: ServerErrorInput): Promise<void> 
           or ${errorEvents.lastAlertedAt} < now() - make_interval(secs => ${REALERT_MS / 1000}))`,
       )
       .returning({ fingerprint: errorEvents.fingerprint });
-    if (claimed.length) await alertOwners(row);
+    if (!claimed.length) return;
+    const [{ recent }] = await db
+      .select({ recent: sql<number>`count(*)::int` })
+      .from(errorEvents)
+      .where(sql`${errorEvents.lastAlertedAt} > now() - interval '1 hour'`);
+    // El que se acaba de reclamar ya cuenta; pasado el tope, queda en el panel sin email.
+    if (recent <= MAX_ALERTS_PER_HOUR) await alertOwners(row);
   } catch (error) {
     console.error("[error-log] no se pudo registrar el error:", error instanceof Error ? error.message : error);
   }
