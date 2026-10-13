@@ -11,8 +11,15 @@ import { getAdminProductForEdit, listProductCategories } from "@/lib/admin-produ
 
 export const dynamic = "force-dynamic";
 
-export default async function EditAdminProductPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function EditAdminProductPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
   const { slug } = await params;
+  const justCreated = (await searchParams).creado === "1";
   const jar = await cookies();
   if (!(await verifyAdminSessionValue(jar.get(ADMIN_COOKIE)?.value))) {
     redirect(`/admin/login?next=${encodeURIComponent(`/admin/productos/${slug}`)}`);
@@ -37,6 +44,16 @@ export default async function EditAdminProductPage({ params }: { params: Promise
         </div>
         <AdminProductArchiveButton slug={product.slug} mode="archive" />
       </div>
+
+      {justCreated ? (
+        <div role="status" className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm">
+          <p className="font-semibold text-emerald-800">Producto creado y publicado en la tienda.</p>
+          <div className="flex flex-wrap gap-3 font-bold">
+            <Link href={`/producto/${product.slug}`} target="_blank" className="text-emerald-800 hover:underline">Verlo en la tienda ↗</Link>
+            <Link href="/admin/productos/nuevo" className="text-emerald-800 hover:underline">Cargar otro</Link>
+          </div>
+        </div>
+      ) : null}
 
       <AdminProductForm categories={categories} initial={product} />
     </div>

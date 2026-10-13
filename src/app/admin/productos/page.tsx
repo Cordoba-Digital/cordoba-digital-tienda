@@ -3,22 +3,15 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { AdminProductFilters } from "@/components/admin-product-filters";
-import { AdminProductRow } from "@/components/admin-product-row";
+import { AdminProductList } from "@/components/admin-product-list";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { listAdminProducts, listProductCategories } from "@/lib/admin-products";
 
 export const dynamic = "force-dynamic";
 
-function withParams(base: Record<string, string>, overrides: Record<string, string | null>): string {
-  const params = new URLSearchParams(base);
-  for (const [key, value] of Object.entries(overrides)) {
-    if (value === null || value === "") params.delete(key);
-    else params.set(key, value);
-  }
-  const query = params.toString();
-  return query ? `/admin/productos?${query}` : "/admin/productos";
-}
+/** Tanda de productos por carga; las siguientes llegan solas al scrollear. */
+const PER_PAGE = 30;
 
 type SearchParams = Promise<Record<string, string | string[] | undefined>>;
 
@@ -44,10 +37,9 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
   const sort: "" | "stock-desc" | "stock-asc" = sortParam === "stock-desc" || sortParam === "stock-asc" ? sortParam : "";
   const oferta = flag(sp.oferta);
   const destacados = flag(sp.destacados);
-  const page = Math.max(1, Number(first(sp.page)) || 1);
 
-  const [{ items, total, pages }, categories] = await Promise.all([
-    listAdminProducts({ q, category, sinStock: false, stock, sort, oferta, destacados, page, perPage: 20 }),
+  const [{ items, total }, categories] = await Promise.all([
+    listAdminProducts({ q, category, sinStock: false, stock, sort, oferta, destacados, page: 1, perPage: PER_PAGE }),
     listProductCategories(),
   ]);
   const base = {
@@ -58,8 +50,7 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
     ...(oferta ? { oferta: "1" } : {}),
     ...(destacados ? { destacados: "1" } : {}),
   };
-
-
+  const query = new URLSearchParams(base).toString();
 
   return (
     <div className="space-y-6">
@@ -97,47 +88,7 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
         destacados={destacados}
       />
 
-      <div className="admin-table" role="table" aria-label="Productos">
-        <div
-          role="row"
-          className="hidden border-b border-ink-100 px-4 py-3 text-xs font-bold uppercase tracking-wide text-ink-500 lg:grid lg:grid-cols-[minmax(0,1fr)_8.5rem_6.5rem_8.5rem_6rem] lg:gap-4"
-        >
-          <span role="columnheader">Producto</span>
-          <span role="columnheader">Precio</span>
-          <span role="columnheader" aria-sort={sort === "stock-desc" ? "descending" : sort === "stock-asc" ? "ascending" : "none"}>
-            Stock
-          </span>
-          <span role="columnheader">Etiqueta</span>
-          <span role="columnheader" className="text-right">Acción</span>
-        </div>
-        {items.length === 0 ? (
-          <p className="px-4 py-8 text-center text-sm text-ink-500">Sin productos para este filtro.</p>
-        ) : (
-          items.map((p) => <AdminProductRow key={p.slug} product={p} />)
-        )}
-      </div>
-
-      <div className="flex items-center justify-between gap-2">
-        <p className="text-xs text-ink-500">Página {page} de {pages}</p>
-        <div className="flex gap-2">
-          {page > 1 ? (
-            <Link
-              href={withParams({ ...base, page: String(page - 1) }, {})}
-              className="border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
-            >
-              ← Anterior
-            </Link>
-          ) : null}
-          {page < pages ? (
-            <Link
-              href={withParams({ ...base, page: String(page + 1) }, {})}
-              className="border border-ink-200 px-4 py-2 text-xs font-bold text-ink-700"
-            >
-              Siguiente →
-            </Link>
-          ) : null}
-        </div>
-      </div>
+      <AdminProductList key={query} initialItems={items} total={total} perPage={PER_PAGE} query={query} />
     </div>
   );
 }
