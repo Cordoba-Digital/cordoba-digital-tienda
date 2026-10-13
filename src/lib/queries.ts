@@ -1,4 +1,5 @@
 import { and, asc, desc, eq, gte, ilike, inArray, lte, ne, or, sql, type SQL } from "drizzle-orm";
+import type { AnyPgColumn } from "drizzle-orm/pg-core";
 import { cache } from "react";
 
 import { db } from "@/db";
@@ -16,10 +17,13 @@ import {
   type CategoryNode,
   type CategoryRow,
 } from "@/lib/category-tree";
+import { normalizeSearch, stem, understandQuery, type QueryUnderstanding } from "@/lib/query-understanding";
 import { ttlCache } from "@/lib/ttl-cache";
 
 export type ProductFilters = {
   q?: string;
+  /** Palabras que tienen que estar todas (ver `understandQuery`). Se combinan con `q` si vienen los dos. */
+  terms?: string[];
   /** Categoría principal (compatibilidad con el catálogo plano). */
   category?: string;
   /** Categoría por id: incluye el subárbol completo (categoría + descendientes). */
@@ -43,6 +47,26 @@ export const SORT_OPTIONS = [
   { id: "puntaje", label: "Mejor puntaje" },
 ];
 
+/** Columna en minúsculas y sin tildes, para comparar con lo que escribió el cliente. */
+function plain(column: SQL | AnyPgColumn): SQL {
+  return sql`translate(lower(${column}), 'áéíóúüàèìòùâêîôû', 'aeiouuaeiouaeiou')`;
+}
+
+/**
+ * Una palabra de la búsqueda en nombre, marca, descripción corta, categoría o
+ * etiquetas, sin tildes y en singular ("cámaras" encuentra "Cámara").
+ */
+function termMatch(term: string): SQL {
+  const pattern = `%${stem(normalizeSearch(term))}%`;
+  return or(
+    sql`${plain(products.name)} like ${pattern}`,
+    sql`${plain(products.brand)} like ${pattern}`,
+    sql`${plain(products.shortDescription)} like ${pattern}`,
+    sql`${plain(products.categorySlug)} like ${pattern}`,
+    sql`${plain(sql`${products.tags}::text`)} like ${pattern}`,
+  ) as SQL;
+}
+
 function buildWhere(filters: ProductFilters, subtree?: { ids: number[]; slugs: string[] }): SQL | undefined {
   const clauses: (SQL | undefined)[] = [];
 
@@ -58,6 +82,7 @@ function buildWhere(filters: ProductFilters, subtree?: { ids: number[]; slugs: s
       ),
     );
   }
+  for (const term of filters.terms ?? []) clauses.push(termMatch(term));
   if (filters.category) clauses.push(eq(products.categorySlug, filters.category));
   // Se pidió una categoría que no está en el árbol: no hay productos. Sin esto
   // el filtro quedaba vacío y se listaba el catálogo entero.
@@ -607,8 +632,8 @@ export async function getOrdersByEmail(email: string) {
 }
 
 export async function searchProducts(term: string, limit = 6) {
-  if (!term.trim()) return [];
-  const pattern = `%${term.trim()}%`;
+  const words = normalizeSearch(term).split(" ").filter(Boolean);
+  if (!words.length) return [];
   return db
     .select({
       slug: products.slug,
@@ -619,13 +644,20 @@ export async function searchProducts(term: string, limit = 6) {
       categorySlug: products.categorySlug,
     })
     .from(products)
-    .where(
-      or(
-        ilike(products.name, pattern),
-        ilike(products.brand, pattern),
-        sql`${products.tags}::text ilike ${pattern}`,
-      ),
-    )
+    // Cada palabra en cualquier campo: "celular samsung" encuentra "Samsung Galaxy A55" de Celulares.
+    .where(and(...words.map(termMatch)))
     .orderBy(desc(products.soldCount))
     .limit(limit);
+}
+
+/**
+ * Qué categoría y marca nombra una búsqueda del catálogo (ver
+ * `query-understanding.ts`). Usa el árbol y las marcas que ya están en caché.
+ */
+export async function understandCatalogQuery(q: string): Promise<QueryUnderstanding> {
+  const [tree, brands] = await Promise.all([getCategoryTree(), getBrandFacets()]);
+  return understandQuery(q, {
+    categories: flattenTree(tree).map((c) => ({ id: c.id, name: c.name, path: c.path, depth: c.depth, parentId: c.parentId, count: c.count })),
+    brands: brands.map((b) => b.brand).filter(Boolean),
+  });
 }
