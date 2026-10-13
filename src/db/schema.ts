@@ -395,6 +395,14 @@ export const adminAudit = pgTable(
   (table) => [index("admin_audit_at_idx").on(table.at.desc().nullsFirst())],
 );
 
+/** Ajustes que se cambian desde el panel, como los interruptores de automatización (ver `automations.ts`). */
+export const storeSettings = pgTable("store_settings", {
+  key: text("key").primaryKey(),
+  value: jsonb("value").notNull(),
+  updatedBy: text("updated_by").notNull().default(""),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
 /** Fotos subidas desde el panel (ver `product-images.ts`). */
 export const productImages = pgTable("product_images", {
   id: text("id").primaryKey(),

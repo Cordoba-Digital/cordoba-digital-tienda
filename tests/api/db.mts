@@ -29,6 +29,7 @@ export async function resetDb(): Promise<void> {
     sql`truncate table order_events, order_items, orders, products, coupons, admin_access restart identity cascade`,
   );
   await db.execute(sql`do $$ begin if to_regclass('rate_limit_misses') is not null then truncate table rate_limit_misses; end if; end $$`);
+  await db.execute(sql`do $$ begin if to_regclass('store_settings') is not null then truncate table store_settings; end if; end $$`);
 }
 
 export async function seedProduct(slug: string, price: number, stock: number): Promise<void> {
