@@ -87,8 +87,14 @@ export class AndreaniError extends Error {
   }
 }
 
+// Tolera lo que suele colarse al pegarla en Vercel: espacios, comillas o un
+// "Basic " adelante. Andreani espera el texto base64 solo.
 function credencial(): string {
-  return process.env.ANDREANI_CREDENTIAL?.trim() ?? "";
+  return (process.env.ANDREANI_CREDENTIAL ?? "")
+    .trim()
+    .replace(/^["']|["']$/g, "")
+    .replace(/^(basic|bearer)\s+/i, "")
+    .trim();
 }
 
 /** Si la tienda tiene credencial cargada. Sin ella todo cae a la tarifa fija. */
@@ -163,7 +169,21 @@ async function login(): Promise<Sesion> {
     }
   })();
   if (res.status === 401 || res.status === 403) {
-    throw new AndreaniError("Andreani rechazó la credencial. Hay que generar una nueva en pymes.andreani.com.", res.status);
+    // Sin la credencial: estado, tipo de respuesta y lo que contestó Andreani,
+    // para distinguir una credencial vencida de un firewall que corta el pedido.
+    const html = (res.headers.get("content-type") ?? "").includes("html");
+    console.warn("[andreani] ingreso rechazado", {
+      status: res.status,
+      html,
+      formato: tipoDeCredencial(valor) ?? "desconocido",
+      detalle: html ? crudo.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim().slice(0, 160) : detalleDeError(cuerpo, crudo),
+    });
+    throw new AndreaniError(
+      html
+        ? `Andreani bloqueó la conexión desde el servidor (respuesta ${res.status}).`
+        : "Andreani rechazó la credencial. Hay que generar una nueva en pymes.andreani.com.",
+      res.status,
+    );
   }
   const datos = (cuerpo?.response ?? null) as Record<string, unknown> | null;
   const token = texto(datos?.accessToken);
