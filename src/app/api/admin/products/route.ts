@@ -18,11 +18,15 @@ export async function GET(request: Request) {
     return Response.json({ ok: false, error: "No autorizado." }, { status: 401 });
   }
   const { searchParams } = new URL(request.url);
+  const stockParam = searchParams.get("stock");
+  const sortParam = searchParams.get("orden");
   const [result, categories] = await Promise.all([
     listAdminProducts({
       q: searchParams.get("q") ?? "",
       category: searchParams.get("categoria") ?? "",
       sinStock: flag(searchParams.get("sinStock")),
+      stock: stockParam === "con" || stockParam === "sin" ? stockParam : "",
+      sort: sortParam === "stock-desc" || sortParam === "stock-asc" ? sortParam : "",
       oferta: flag(searchParams.get("oferta")),
       destacados: flag(searchParams.get("destacados")),
       page: Number(searchParams.get("page") ?? 1) || 1,

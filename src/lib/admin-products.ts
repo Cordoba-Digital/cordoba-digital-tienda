@@ -90,6 +90,9 @@ export async function listAdminProducts(input: {
           : input.sort === "stock-asc"
             ? [asc(products.stock), desc(products.createdAt)]
             : [desc(products.createdAt)]),
+        // Desempate fijo: la lista se carga de a tandas al scrollear y, sin él,
+        // productos importados en el mismo instante podían repetirse o faltar.
+        desc(products.id),
       )
       .limit(perPage)
       .offset((page - 1) * perPage),
