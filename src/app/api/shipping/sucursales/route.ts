@@ -1,6 +1,7 @@
-import { andreaniConfigurado, AndreaniError, sucursales, sucursalesEnCache } from "@/lib/andreani";
-import { ANDREANI_LIMIT, blockedMinutes, ipFromHeaders, recordMiss } from "@/lib/rate-limit";
+import { andreaniConfigurado, sucursales, sucursalesEnCache } from "@/lib/andreani";
+import { ipFromHeaders } from "@/lib/rate-limit";
 import { normalizeZip } from "@/lib/shipping";
+import { consultaAndreaniPermitida, motivoDeError } from "@/lib/shipping-andreani";
 
 export const dynamic = "force-dynamic";
 
@@ -14,10 +15,8 @@ export async function GET(request: Request) {
     return Response.json({ ok: true, sucursales: [] });
   }
   try {
-    if (!sucursalesEnCache(cp)) {
-      const ip = ipFromHeaders(request.headers);
-      if (await blockedMinutes(ANDREANI_LIMIT, ip)) return Response.json({ ok: true, sucursales: [] });
-      await recordMiss(ANDREANI_LIMIT, ip);
+    if (!sucursalesEnCache(cp) && !(await consultaAndreaniPermitida(ipFromHeaders(request.headers)))) {
+      return Response.json({ ok: true, sucursales: [] });
     }
     const lista = await sucursales(cp);
     return Response.json(
@@ -25,7 +24,7 @@ export async function GET(request: Request) {
       { headers: { "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400" } },
     );
   } catch (error) {
-    console.warn("[andreani] sucursales no disponibles:", error instanceof AndreaniError ? error.message : "error inesperado");
+    console.warn("[andreani] sucursales no disponibles:", motivoDeError(error));
     return Response.json({ ok: true, sucursales: [] });
   }
 }

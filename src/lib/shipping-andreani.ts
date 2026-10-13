@@ -39,6 +39,28 @@ export async function productosParaAndreani(items: ItemCarrito[]): Promise<Produ
   return resultado;
 }
 
+/** Motivo para el log: el mensaje propio de Andreani, o el tipo de error si es otra cosa. */
+export function motivoDeError(error: unknown): string {
+  if (error instanceof AndreaniError) return error.message;
+  if (error instanceof Error) return `error inesperado (${error.name}: ${error.message.slice(0, 120)})`;
+  return "error inesperado";
+}
+
+/**
+ * Cuenta una llamada nueva a Andreani contra el límite por IP. Si la base no
+ * responde deja pasar: el límite protege la credencial, no vale cortar los
+ * envíos por eso.
+ */
+export async function consultaAndreaniPermitida(ip: string): Promise<boolean> {
+  try {
+    if (await blockedMinutes(ANDREANI_LIMIT, ip)) return false;
+    await recordMiss(ANDREANI_LIMIT, ip);
+  } catch (error) {
+    console.warn("[andreani] no se pudo revisar el límite por IP:", motivoDeError(error));
+  }
+  return true;
+}
+
 /**
  * Precios de Andreani para el carrito, o `{}` si no se pueden obtener (sin
  * credencial, productos sin medidas o Andreani caído). Nunca tira: el checkout
@@ -51,15 +73,11 @@ export async function preciosAndreani(cp: string, items: ItemCarrito[], ip?: str
     if (!productos) return {};
     // Con IP (la ruta pública de cotización) se limita cuántas llamadas nuevas
     // a Andreani puede generar cada visitante. Lo que ya está en caché no cuenta.
-    if (ip && !cotizacionEnCache(cp, productos)) {
-      if (await blockedMinutes(ANDREANI_LIMIT, ip)) return {};
-      await recordMiss(ANDREANI_LIMIT, ip);
-    }
+    if (ip && !cotizacionEnCache(cp, productos) && !(await consultaAndreaniPermitida(ip))) return {};
     const cotizacion = await cotizar(cp, productos);
     return { estandar: cotizacion.domicilio, sucursal: cotizacion.sucursal };
   } catch (error) {
-    const motivo = error instanceof AndreaniError ? error.message : "error inesperado";
-    console.warn("[andreani] cotización no disponible, se usa la tarifa fija:", motivo);
+    console.warn("[andreani] cotización no disponible, se usa la tarifa fija:", motivoDeError(error));
     return {};
   }
 }
