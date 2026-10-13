@@ -224,6 +224,18 @@ export type ShippingAddress = {
   city: string;
   province: string;
   zip: string;
+  /** Sucursal de Andreani elegida para "Andreani (sucursal)", si se eligió una. */
+  sucursal?: { codigo: string; nombre: string; direccion: string };
+};
+
+export type EnvioAndreani = {
+  pedidoId: string;
+  numeroInterno: string;
+  modalidad: "domicilio" | "sucursal";
+  /** Último estado informado por Andreani ("" hasta que se paga el envío). */
+  estado: string;
+  creadoEn: string;
+  actualizadoEn: string;
 };
 
 export const orders = pgTable(
@@ -253,6 +265,12 @@ export const orders = pgTable(
     mercadopagoPreferenceId: text("mercadopago_preference_id"),
     mercadopagoPaymentId: text("mercadopago_payment_id"),
     trackingCode: text("tracking_code").notNull().default(""),
+    /**
+     * Envío dado de alta en Andreani desde el panel. `pedidoId` es lo que
+     * devuelve el alta; el número de seguimiento llega recién cuando el local
+     * paga el envío en el portal de PyMEs y se guarda en `trackingCode`.
+     */
+    andreani: jsonb("andreani").$type<EnvioAndreani | null>(),
     statusUpdatedAt: timestamp("status_updated_at", { withTimezone: true }).notNull().defaultNow(),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },

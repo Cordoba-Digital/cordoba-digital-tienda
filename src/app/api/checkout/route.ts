@@ -10,6 +10,8 @@ import { resolvePaymentMethod } from "@/lib/checkout-payment";
 import { mercadoPagoReady } from "@/lib/mercadopago";
 import { validateDelivery, validatePersonalData } from "@/lib/checkout-validation";
 import { findShippingOption, normalizeZip, type DeliveryMethod } from "@/lib/shipping";
+import { preciosAndreani } from "@/lib/shipping-andreani";
+import { andreaniConfigurado, AndreaniError, sucursales } from "@/lib/andreani";
 
 export const dynamic = "force-dynamic";
 
@@ -30,6 +32,8 @@ type CheckoutBody = {
     extra?: string;
     city?: string;
     province?: string;
+    /** Código de la sucursal de Andreani, solo para "express" (a sucursal). */
+    branch?: string;
   };
   payment?: { method?: PaymentMethodId; installments?: number };
   couponCode?: string | null;
@@ -165,7 +169,11 @@ export async function POST(request: Request) {
       }
     : null;
 
-  const shippingOption = findShippingOption(method === "pickup" ? "5000" : zip, method);
+  // El precio de Andreani se vuelve a pedir acá con los productos validados:
+  // no se confía en el monto que mostró el navegador. La cotización queda en
+  // caché unos minutos, así que coincide con lo que vio el cliente.
+  const andreani = method === "pickup" ? {} : await preciosAndreani(zip, validated);
+  const shippingOption = findShippingOption(method === "pickup" ? "5000" : zip, method, andreani);
   if (!shippingOption) {
     return Response.json({ ok: false, errors: { zip: "No podemos enviar a ese código postal." } }, { status: 400 });
   }
@@ -177,6 +185,24 @@ export async function POST(request: Request) {
     paymentMethod: paymentId,
     installments,
   });
+
+  // La sucursal se guarda solo si existe en la lista de Andreani para ese CP.
+  // Si no se eligió o no se puede verificar, el local la completa desde el panel.
+  const branchCode = text(delivery.branch).slice(0, 20);
+  if (address && method === "express" && branchCode && andreaniConfigurado()) {
+    try {
+      const sucursal = (await sucursales(zip)).find((s) => s.codigo === branchCode);
+      if (sucursal) {
+        address.sucursal = {
+          codigo: sucursal.codigo,
+          nombre: sucursal.nombre,
+          direccion: [sucursal.direccion, sucursal.localidad].filter(Boolean).join(", "),
+        };
+      }
+    } catch (error) {
+      console.warn("[andreani] no se pudo verificar la sucursal:", error instanceof AndreaniError ? error.message : "error inesperado");
+    }
+  }
 
   const paymentLabel = PAYMENT_METHODS.find((p) => p.id === paymentId)?.label ?? "Transferencia";
 

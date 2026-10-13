@@ -25,7 +25,7 @@ Un PR toca una sola área cuando se puede, y su título empieza con el área (`C
 | --- | --- |
 | Tienda | páginas públicas de `src/app`, `src/components`, `src/lib/queries.ts`, `src/lib/structured-data.ts` |
 | Checkout y pagos | `src/app/api/checkout`, `src/app/api/webhooks`, `src/lib/checkout-*.ts`, `src/lib/pricing.ts`, `src/lib/mercadopago.ts` |
-| Envíos | `src/lib/shipping*.ts`, `src/lib/tarifas-envio.ts`, `src/app/api/shipping` |
+| Envíos | `src/lib/shipping*.ts`, `src/lib/andreani*.ts`, `src/lib/tarifas-envio.ts`, `src/app/api/shipping` |
 | Panel admin | `src/app/admin`, `src/app/api/admin`, `src/lib/admin-*.ts` |
 | Datos y catálogo | `src/db`, `drizzle/`, `scripts/` |
 | Plataforma | `.github/`, `.claude/`, `middleware.ts`, `next.config.ts`, `vercel.json` |
@@ -55,4 +55,4 @@ Un bug arreglado en checkout, pagos o permisos viene con su test.
 
 ## Documentación
 
-`docs/MIGRACIONES.md`, `docs/IMAGENES.md`, `docs/MIGRACION-WP.md`, `docs/TARIFAS-ENVIO.md`, `docs/AI-COMMERCE.md`.
+`docs/MIGRACIONES.md`, `docs/IMAGENES.md`, `docs/MIGRACION-WP.md`, `docs/TARIFAS-ENVIO.md`, `docs/ANDREANI.md`, `docs/AI-COMMERCE.md`.

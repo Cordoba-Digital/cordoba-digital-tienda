@@ -2,11 +2,13 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 
+import { AdminOrderAndreani } from "@/components/admin-order-andreani";
 import { AdminOrderManageForm } from "@/components/admin-order-manage-form";
 import { OrderConfirmation, type OrderSummary } from "@/components/order-confirmation";
 import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
+import { andreaniConfigurado } from "@/lib/andreani";
 import { getAdminOrderDetail } from "@/lib/admin-orders";
 import { formatDateTime } from "@/lib/format";
 import { statusLabel } from "@/lib/pricing";
@@ -85,6 +87,16 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
           </div>
         ) : null}
       </div>
+
+      <AdminOrderAndreani
+        code={order.code}
+        deliveryMethod={order.deliveryMethod}
+        address={order.address}
+        andreani={order.andreani ?? null}
+        trackingCode={order.trackingCode ?? ""}
+        status={order.status}
+        configurado={andreaniConfigurado()}
+      />
 
       <div className="-m-4">
         <OrderConfirmation order={summary} isNew={false} />

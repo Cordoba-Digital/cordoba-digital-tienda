@@ -13,7 +13,7 @@ import { money } from "@/lib/format";
 import { isPaymentMethodOffered } from "@/lib/checkout-payment";
 import { computeTotals, PAYMENT_METHODS, type CouponInfo, type PaymentMethodId } from "@/lib/pricing";
 import { validateDelivery, validatePersonalData } from "@/lib/checkout-validation";
-import { useShippingQuote } from "@/lib/shipping-quote";
+import { useShippingQuote, useSucursales } from "@/lib/shipping-quote";
 import type { DeliveryMethod, ShippingOption } from "@/lib/shipping";
 
 type CheckoutIconProps = { className?: string };
@@ -226,6 +226,7 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
   const [terms, setTerms] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
+  const [branch, setBranch] = useState("");
 
   useEffect(() => {
     const id = window.setTimeout(() => {
@@ -269,7 +270,11 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
   }, [form, hydrated]);
 
   // Quote shipping whenever the ZIP or subtotal changes.
-  const { options, zone, loading: zipLoading } = useShippingQuote({ zip: form.zip, subtotal });
+  const { options, zone, loading: zipLoading } = useShippingQuote({ zip: form.zip, subtotal, items });
+  // Sucursales de Andreani para "a sucursal". Si la consulta no trae ninguna
+  // (sin conexión con Andreani), el local confirma la sucursal después.
+  const { sucursales, loading: sucursalesLoading } = useSucursales(deliveryMethod === "express" ? form.zip : "");
+  const branchValida = sucursales.some((s) => s.codigo === branch);
 
   const selectedOption = useMemo(() => {
     if (deliveryMethod === "pickup") {
@@ -319,8 +324,8 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
   // un solo bloque marcado.
   const datosErrors = (): Record<string, string> => validatePersonalData(form);
 
-  const entregaErrors = (): Record<string, string> =>
-    validateDelivery({
+  const entregaErrors = (): Record<string, string> => {
+    const found = validateDelivery({
       method: deliveryMethod,
       zip: form.zip,
       street: form.street,
@@ -330,6 +335,11 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
       selectedOption,
       requireShippingOption: true,
     });
+    if (deliveryMethod === "express" && sucursales.length && !branchValida) {
+      found.branch = "Elegí la sucursal de Andreani donde vas a retirar.";
+    }
+    return found;
+  };
 
   const applyCoupon = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -398,6 +408,7 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
             extra: form.extra,
             city: form.city,
             province: form.province,
+            branch: deliveryMethod === "express" && branchValida ? branch : "",
           },
           payment: { method: payment, installments },
           couponCode: coupon?.code ?? null,
@@ -584,6 +595,32 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
                           </button>
                         ))}
                     </div>
+                  ) : null}
+
+                  {deliveryMethod === "express" && (sucursales.length || sucursalesLoading) ? (
+                    <Field label="Sucursal de retiro" error={errors.branch}>
+                      <select
+                        className={inputClass}
+                        value={branchValida ? branch : ""}
+                        onChange={(e) => {
+                          setBranch(e.target.value);
+                          setErrors((prev) => {
+                            if (!prev.branch) return prev;
+                            const next = { ...prev };
+                            delete next.branch;
+                            return next;
+                          });
+                        }}
+                        disabled={sucursalesLoading}
+                      >
+                        <option value="">{sucursalesLoading ? "Buscando sucursales..." : "Elegí una sucursal"}</option>
+                        {sucursales.map((s) => (
+                          <option key={s.codigo} value={s.codigo}>
+                            {[s.nombre, s.direccion, s.localidad].filter(Boolean).join(" · ")}
+                          </option>
+                        ))}
+                      </select>
+                    </Field>
                   ) : null}
 
                   <div className="grid gap-4 sm:grid-cols-[1fr_8rem]">

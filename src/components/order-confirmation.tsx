@@ -19,7 +19,17 @@ export type OrderSummary = {
   deliveryMethod: string;
   deliveryLabel: string;
   deliveryEta: string;
-  address: { street: string; number: string; extra: string; city: string; province: string; zip: string } | null;
+  address: {
+    street: string;
+    number: string;
+    extra: string;
+    city: string;
+    province: string;
+    zip: string;
+    sucursal?: { codigo: string; nombre: string; direccion: string };
+  } | null;
+  /** Número de seguimiento de Andreani, cuando ya lo hay. */
+  trackingCode?: string;
   paymentMethod: string;
   paymentLabel: string;
   installments: number;
@@ -261,6 +271,25 @@ export function OrderConfirmation({
               <h3 className="text-sm font-extrabold uppercase tracking-wide text-ink-400">Entrega</h3>
               <p className="mt-2 text-sm font-bold text-ink-900">{order.deliveryLabel}</p>
               <p className="text-xs text-emerald-700">{order.deliveryEta}</p>
+              {order.address?.sucursal ? (
+                <p className="mt-2 text-sm text-ink-600">
+                  Retirás en <strong>{order.address.sucursal.nombre}</strong>
+                  {order.address.sucursal.direccion ? ` · ${order.address.sucursal.direccion}` : ""}
+                </p>
+              ) : null}
+              {order.trackingCode ? (
+                <p className="mt-2 text-sm text-ink-600">
+                  Seguimiento:{" "}
+                  <a
+                    href={`https://www.andreani.com/envio/${encodeURIComponent(order.trackingCode)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-bold text-brand-700 hover:underline"
+                  >
+                    {order.trackingCode}
+                  </a>
+                </p>
+              ) : null}
               {order.address ? (
                 <p className="mt-2 text-sm text-ink-600">
                   {order.address.street ? (

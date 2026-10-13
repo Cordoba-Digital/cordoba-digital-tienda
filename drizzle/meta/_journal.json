@@ -29,6 +29,13 @@
       "when": 1791828428904,
       "tag": "0003_ajustes_tienda",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1791858505815,
+      "tag": "0004_envio_andreani",
+      "breakpoints": true
     }
   ]
 }

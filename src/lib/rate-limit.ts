@@ -13,6 +13,12 @@ export type RateLimit = { bucket: string; max: number; windowMinutes: number };
 export const COUPON_LIMIT: RateLimit = { bucket: "cupon", max: 10, windowMinutes: 15 };
 export const ORDER_LOOKUP_LIMIT: RateLimit = { bucket: "pedido", max: 10, windowMinutes: 15 };
 export const REVIEW_LIMIT: RateLimit = { bucket: "resena", max: 10, windowMinutes: 60 };
+/**
+ * Consultas a Andreani (cotizaciones y sucursales que no estaban en caché) por
+ * IP. Acá no cuentan fallos sino llamadas: son públicas y gastan la
+ * credencial del local. Al pasarse, el checkout usa la tarifa fija.
+ */
+export const ANDREANI_LIMIT: RateLimit = { bucket: "andreani", max: 40, windowMinutes: 15 };
 
 let tableReady: Promise<void> | null = null;
 function ensureTable(): Promise<void> {
