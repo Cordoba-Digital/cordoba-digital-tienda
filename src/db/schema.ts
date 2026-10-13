@@ -413,7 +413,7 @@ export const adminAudit = pgTable(
   (table) => [index("admin_audit_at_idx").on(table.at.desc().nullsFirst())],
 );
 
-/** Ajustes que se cambian desde el panel, como los interruptores de automatización (ver `automations.ts`). */
+/** Ajustes que se cambian desde el panel, como los interruptores de automatización (ver `automations.ts`) y el orden de la home (ver `home-layout-server.ts`). */
 export const storeSettings = pgTable("store_settings", {
   key: text("key").primaryKey(),
   value: jsonb("value").notNull(),

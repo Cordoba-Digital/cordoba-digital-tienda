@@ -50,7 +50,9 @@ export function organizationAndWebsite() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        // `OnlineStore` es una `Organization` más específica (la que usa
+        // Mercado Libre): le dice a Google que la empresa vende por internet.
+        "@type": "OnlineStore",
         "@id": ORG_ID,
         name: NEGOCIO.nombre,
         url: url("/"),

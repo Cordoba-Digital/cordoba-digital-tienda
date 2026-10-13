@@ -46,6 +46,7 @@ function entityLink(row: ActivityRow): string | null {
   if (row.entityType === "acceso") return "/admin/accesos";
   if (row.entityType === "cupon") return "/admin/cupones";
   if (row.entityType === "automatizacion") return "/admin/automatizaciones";
+  if (row.entityType === "inicio") return "/admin/inicio";
   return null;
 }
 
