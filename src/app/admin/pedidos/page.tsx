@@ -84,8 +84,9 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
         {allCount > 0 ? <AdminOrdersWipeButton /> : null}
       </div>
 
-      <nav aria-label="Filtrar por estado" className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-        <ul className="flex min-w-max gap-1.5 border-b border-ink-100 pb-px">
+      {/* En el celular las pestañas se deslizan de costado sin barra a la vista; en la compu bajan de renglón. */}
+      <nav aria-label="Filtrar por estado" className="no-scrollbar -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0 lg:overflow-visible">
+        <ul className="flex min-w-max gap-1.5 border-b border-ink-100 pb-px lg:min-w-0 lg:flex-wrap">
           {tabs.map((t) => {
             const active = status === t.id;
             return (
