@@ -126,10 +126,10 @@ export async function migrateWpImages(opts: {
           try {
             images[i] = await putStoredImage(productImageKey(row.name, id, prepared.ext), prepared.bytes, prepared.contentType);
           } catch (error) {
-            rowFailed = true;
-            result.failed++;
-            if (result.errors.length < 20) result.errors.push(`${row.name}: no se pudo guardar (${(error as Error).message.slice(0, 120)})`);
-            continue;
+            // Si el almacenamiento rechaza una foto (store suspendido, token
+            // vencido) va a rechazar todas: se corta la tanda en vez de
+            // recorrer el catálogo entero bajando fotos que no se pueden guardar.
+            throw new Error(`El almacenamiento de fotos no acepta archivos: ${(error as Error).message.slice(0, 160)}`);
           }
           // El srcset apuntaba a variantes del WordPress; la copia es una sola foto.
           if (i < srcSets.length) srcSets[i] = [];
