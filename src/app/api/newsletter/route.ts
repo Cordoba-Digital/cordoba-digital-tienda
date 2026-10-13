@@ -1,15 +1,20 @@
 import { db } from "@/db";
 import { subscribers } from "@/db/schema";
+import { blockedMinutes, ipFromHeaders, NEWSLETTER_LIMIT, recordMiss, tooManyAttempts } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
-  const body = (await request.json().catch(() => ({}))) as { email?: string };
-  const email = (body.email ?? "").trim().toLowerCase();
-  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+  const ip = ipFromHeaders(request.headers);
+  const minutes = await blockedMinutes(NEWSLETTER_LIMIT, ip);
+  if (minutes > 0) return tooManyAttempts(minutes);
+  const body = (await request.json().catch(() => ({}))) as { email?: unknown };
+  const email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
+  if (email.length > 254 || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
     return Response.json({ ok: false, error: "Email inválido" }, { status: 400 });
   }
   try {
+    await recordMiss(NEWSLETTER_LIMIT, ip);
     await db.insert(subscribers).values({ email }).onConflictDoNothing();
   } catch {
     return Response.json({ ok: false }, { status: 500 });

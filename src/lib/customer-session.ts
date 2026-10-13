@@ -55,14 +55,28 @@ export function looksLikeSessionToken(value: string | undefined | null): boolean
   return !!value && /^[0-9a-f]{64}$/.test(value);
 }
 
-/** Solo paths internos (`/mi-cuenta`, nunca `//evil` ni `https:`). */
+/**
+ * Solo paths internos (`/mi-cuenta`, nunca `//evil`, `https:` ni `/\evil`).
+ * Rechaza también espacios y caracteres de control: el navegador borra un tab
+ * o un salto de línea, y `/\t/evil.com` termina siendo `//evil.com`.
+ */
 export function safeNextPath(raw: string | null | undefined, fallback = "/mi-cuenta"): string {
   if (!raw) return fallback;
   try {
     const decoded = decodeURIComponent(raw);
-    if (decoded.startsWith("/") && !decoded.startsWith("//") && !decoded.includes("\\")) return decoded;
+    if (!decoded.startsWith("/") || decoded.startsWith("//")) return fallback;
+    if (/[\s\u0000-\u001f\u007f\\]/.test(decoded)) return fallback;
+    const base = "https://tienda.invalid";
+    const url = new URL(decoded, base);
+    if (url.origin !== base) return fallback;
+    return decoded;
   } catch {
-    // cae al fallback
+    return fallback;
   }
-  return fallback;
+}
+
+/** Igual que `safeNextPath`, pero solo deja volver a páginas del panel. */
+export function safeAdminPath(raw: string | null | undefined): string {
+  const path = safeNextPath(raw, "/admin");
+  return path === "/admin" || path.startsWith("/admin/") || path.startsWith("/admin?") ? path : "/admin";
 }

@@ -12,6 +12,7 @@ import { money } from "@/lib/format";
 import { toView } from "@/lib/product-view";
 import { categoryFaq, categoryItemListJsonLd, faqPageJsonLd } from "@/lib/category-seo";
 import { breadcrumbJsonLd, jsonLdString } from "@/lib/structured-data";
+import { sanitizeHtml } from "@/lib/sanitize-html";
 import {
   getBrandFacets,
   getCategoryByPath,
@@ -340,7 +341,7 @@ export default async function CategoryPage({
         <section className="card-surface mt-8 p-6">
           <div
             className="prose-cd prose-soft"
-            dangerouslySetInnerHTML={{ __html: node.descriptionHtml }}
+            dangerouslySetInnerHTML={{ __html: sanitizeHtml(node.descriptionHtml) }}
           />
         </section>
       ) : null}

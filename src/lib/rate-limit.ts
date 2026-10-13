@@ -20,6 +20,21 @@ export const REVIEW_LIMIT: RateLimit = { bucket: "resena", max: 10, windowMinute
  */
 export const ANDREANI_LIMIT: RateLimit = { bucket: "andreani", max: 40, windowMinutes: 15 };
 
+/**
+ * Formularios públicos que guardan en la base o mandan un email al local
+ * (arrepentimiento, newsletter). Cuentan envíos, no fallos: sin límite, un
+ * script llena la casilla de consultas o la lista de suscriptores.
+ */
+export const FORM_LIMIT: RateLimit = { bucket: "formulario", max: 5, windowMinutes: 60 };
+export const NEWSLETTER_LIMIT: RateLimit = { bucket: "newsletter", max: 5, windowMinutes: 60 };
+
+/**
+ * Pedidos creados por IP. Cada pedido reserva stock y puede gastar un uso de
+ * cupón hasta que vence, así que un script no puede crear cientos. Holgado
+ * para varias personas detrás de la misma IP (redes móviles, oficinas).
+ */
+export const CHECKOUT_LIMIT: RateLimit = { bucket: "checkout", max: 15, windowMinutes: 60 };
+
 let tableReady: Promise<void> | null = null;
 function ensureTable(): Promise<void> {
   if (!tableReady) {

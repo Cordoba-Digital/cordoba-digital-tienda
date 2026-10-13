@@ -2,6 +2,7 @@ import nodemailer from "nodemailer";
 
 import { db } from "@/db";
 import { arrepentimientoRequests } from "@/db/schema";
+import { blockedMinutes, FORM_LIMIT, ipFromHeaders, recordMiss, tooManyAttempts } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -15,16 +16,25 @@ type ArrepentimientoBody = {
   comentarios?: string;
 };
 
+/** Texto recortado a un largo razonable; lo que no es texto cuenta como vacío. */
+function field(value: unknown, max: number): string {
+  return typeof value === "string" ? value.trim().slice(0, max) : "";
+}
+
 export async function POST(request: Request) {
+  const ip = ipFromHeaders(request.headers);
+  const minutes = await blockedMinutes(FORM_LIMIT, ip);
+  if (minutes > 0) return tooManyAttempts(minutes);
+
   const body = (await request.json().catch(() => ({}))) as ArrepentimientoBody;
 
-  const nombre = (body.nombre ?? "").trim();
-  const email = (body.email ?? "").trim().toLowerCase();
-  const telefono = (body.telefono ?? "").trim();
-  const fechaCompra = (body.fechaCompra ?? "").trim();
-  const producto = (body.producto ?? "").trim();
-  const numeroPedido = (body.numeroPedido ?? "").trim();
-  const comentarios = (body.comentarios ?? "").trim();
+  const nombre = field(body.nombre, 120);
+  const email = field(body.email, 254).toLowerCase();
+  const telefono = field(body.telefono, 40);
+  const fechaCompra = field(body.fechaCompra, 40);
+  const producto = field(body.producto, 300);
+  const numeroPedido = field(body.numeroPedido, 40);
+  const comentarios = field(body.comentarios, 2000);
 
   const errors: Record<string, string> = {};
   if (nombre.length < 2) errors.nombre = "Ingresá tu nombre.";
@@ -40,6 +50,7 @@ export async function POST(request: Request) {
     .insert(arrepentimientoRequests)
     .values({ nombre, email, numeroPedido, telefono, fechaCompra, producto, comentarios })
     .returning({ id: arrepentimientoRequests.id });
+  await recordMiss(FORM_LIMIT, ip);
 
   let emailSent = false;
   let emailError: string | null = null;

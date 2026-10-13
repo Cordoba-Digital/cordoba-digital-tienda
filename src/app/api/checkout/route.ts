@@ -12,6 +12,7 @@ import { validateDelivery, validatePersonalData } from "@/lib/checkout-validatio
 import { findShippingOption, normalizeZip, type DeliveryMethod } from "@/lib/shipping";
 import { preciosAndreani } from "@/lib/shipping-andreani";
 import { andreaniConfigurado, AndreaniError, sucursales } from "@/lib/andreani";
+import { blockedMinutes, CHECKOUT_LIMIT, COUPON_LIMIT, ipFromHeaders, recordMiss, tooManyAttempts } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -58,6 +59,10 @@ function text(value: unknown): string {
 }
 
 export async function POST(request: Request) {
+  const ip = ipFromHeaders(request.headers);
+  const blocked = await blockedMinutes(CHECKOUT_LIMIT, ip);
+  if (blocked) return tooManyAttempts(blocked);
+
   // `?? {}` cubre un body `null`; `text` evita un 500 si un campo no es texto.
   const body = ((await request.json().catch(() => ({}))) ?? {}) as CheckoutBody;
   const errors: Record<string, string> = {};
@@ -125,7 +130,14 @@ export async function POST(request: Request) {
 
   // El cupón se pide temprano y se espera tarde: es independiente de la
   // validación de productos y así las dos consultas viajan juntas.
-  const couponCode = text(body.couponCode);
+  // Un cupón que no existe se ignora (el pedido sale sin descuento), pero
+  // cuenta como intento fallido igual que en /api/coupon: si no, el total que
+  // devuelve el checkout serviría para adivinar códigos a fuerza bruta.
+  const couponCode = text(body.couponCode).slice(0, 40);
+  if (couponCode) {
+    const couponBlocked = await blockedMinutes(COUPON_LIMIT, ip);
+    if (couponBlocked) return tooManyAttempts(couponBlocked);
+  }
   const couponPromise = couponCode ? getCoupon(couponCode) : null;
 
   const slugs = items.map((i) => i.slug);
@@ -159,6 +171,7 @@ export async function POST(request: Request) {
   const subtotal = validated.reduce((acc, item) => acc + item.unitPrice * item.quantity, 0);
 
   const coupon = couponPromise ? await couponPromise : null;
+  if (couponCode && !coupon) await recordMiss(COUPON_LIMIT, ip);
   const couponInfo = coupon
     ? {
         code: coupon.code,
@@ -277,5 +290,6 @@ export async function POST(request: Request) {
     );
   }
 
+  await recordMiss(CHECKOUT_LIMIT, ip);
   return Response.json({ ok: true, code: created.code, total: totals.total });
 }

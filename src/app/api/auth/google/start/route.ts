@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-import { OAUTH_STATE_COOKIE, OAUTH_STATE_TTL_MS, randomToken, safeNextPath } from "@/lib/customer-session";
+import { OAUTH_STATE_COOKIE, OAUTH_STATE_TTL_MS, randomToken, safeAdminPath, safeNextPath } from "@/lib/customer-session";
 import { ADMIN_OAUTH_COOKIE, adminGoogleConfigured } from "@/lib/admin-auth";
 import { googleOAuthConfigured, googleRedirectUri } from "@/lib/customer-auth";
 import { SITE_URL } from "@/lib/site";
@@ -61,9 +61,4 @@ export async function GET(request: Request) {
   if (forAdmin) res.cookies.set(ADMIN_OAUTH_COOKIE, searchParams.get("remember") === "1" ? `${state}.r` : state, cookieOptions);
   else res.cookies.delete(ADMIN_OAUTH_COOKIE);
   return res;
-}
-
-function safeAdminPath(raw: string | null): string {
-  const path = safeNextPath(raw, "/admin");
-  return path === "/admin" || path.startsWith("/admin/") ? path : "/admin";
 }
