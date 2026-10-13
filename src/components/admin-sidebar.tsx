@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
-type IconName = "panel" | "pedidos" | "pagos" | "usuarios" | "productos" | "nuevo" | "archivo" | "fotos" | "actividad" | "accesos" | "cupones" | "automatizaciones" | "errores" | "tienda" | "inicio" | "salir";
+type IconName = "panel" | "pedidos" | "pagos" | "usuarios" | "productos" | "nuevo" | "archivo" | "fotos" | "actividad" | "accesos" | "cupones" | "automatizaciones" | "errores" | "arrepentimientos" | "tienda" | "inicio" | "salir";
 
 const PATHS: Record<IconName, string> = {
   panel: "M4 4v16h16M8 15l3.5-4 3 2.5L20 7",
@@ -20,6 +20,7 @@ const PATHS: Record<IconName, string> = {
   actividad: "M12 7v5l3 2M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z",
   accesos: "M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6l-7-3Zm-3 9 2 2 4-4",
   automatizaciones: "M3 12a5 5 0 0 1 5-5h8a5 5 0 0 1 0 10H8a5 5 0 0 1-5-5Zm13 2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z",
+  arrepentimientos: "M9 14 4 9l5-5M4 9h11a5 5 0 0 1 0 10h-3",
   errores: "M12 4 2.5 20h19L12 4Zm0 6v4m0 3h.01",
   tienda: "M4 10h16l-1-5H5l-1 5Zm1 0v9h14v-9M10 19v-5h4v5",
   inicio: "M4 11 12 4l8 7v9h-5v-6H9v6H4v-9Z",
@@ -53,6 +54,7 @@ const GROUPS: { title?: string; items: NavItem[] }[] = [
     items: [
       { href: "/admin/pedidos", label: "Pedidos", icon: "pedidos" },
       { href: "/admin/pagos", label: "Pagos", icon: "pagos" },
+      { href: "/admin/arrepentimientos", label: "Arrepentimientos", icon: "arrepentimientos" },
       { href: "/admin/cupones", label: "Cupones", icon: "cupones" },
     ],
   },
