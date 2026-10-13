@@ -1,6 +1,8 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 import { Pool } from "pg";
 
+import { withVerifiedSsl } from "./connection-url";
+
 const databaseUrl = process.env.DATABASE_URL;
 
 if (!databaseUrl) {
@@ -21,7 +23,7 @@ const poolMax = Number(process.env.PG_POOL_MAX) || 3;
 export const pool =
   globalForDb.__arenaNextJsPostgresqlPool ??
   new Pool({
-    connectionString: databaseUrl,
+    connectionString: withVerifiedSsl(databaseUrl),
     max: poolMax,
     idleTimeoutMillis: 10_000,
     connectionTimeoutMillis: 10_000,
