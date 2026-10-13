@@ -4,9 +4,10 @@ import { redirect } from "next/navigation";
 
 import { AdminBackLink } from "@/components/admin-back-link";
 import { AdminProductForm } from "@/components/admin-product-form";
+import { AdminProductGuide } from "@/components/admin-product-guide";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
-import { listProductCategories } from "@/lib/admin-products";
+import { listKnownBrands, listProductCategories } from "@/lib/admin-products";
 
 export const dynamic = "force-dynamic";
 
@@ -16,7 +17,7 @@ export default async function NewAdminProductPage() {
     redirect("/admin/login?next=/admin/productos/nuevo");
   }
 
-  const categories = await listProductCategories();
+  const [categories, knownBrands] = await Promise.all([listProductCategories(), listKnownBrands()]);
 
   return (
     <div className="space-y-6">
@@ -29,7 +30,9 @@ export default async function NewAdminProductPage() {
         </p>
       </div>
 
-      <AdminProductForm categories={categories} />
+      <AdminProductGuide />
+
+      <AdminProductForm categories={categories} knownBrands={knownBrands} />
     </div>
   );
 }

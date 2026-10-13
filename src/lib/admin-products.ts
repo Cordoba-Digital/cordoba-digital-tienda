@@ -208,7 +208,7 @@ export type AdminProductCreateInput = {
   secondaryCategorySlugs?: string[];
   shortDescription?: string;
   description?: string;
-  /** Solo en edición: HTML de la descripción migrada de WooCommerce. Se sanea. */
+  /** HTML de la descripción migrada de WooCommerce (edición, o alta copiada de uno migrado). Se sanea. */
   descriptionHtml?: string;
   images?: string[];
   badge?: string | null;
@@ -368,7 +368,8 @@ async function normalizeProductInput(
 
 /**
  * Alta manual de producto (origen `manual`, protegido del prune de `migrate-wp`).
- * La descripción del form es texto plano: `descriptionHtml` queda vacío y
+ * La descripción del form es texto plano; `descriptionHtml` solo viene (saneado)
+ * cuando el producto se armó a partir de uno migrado ("Usar como base"), y
  * `imageSrcSets` son arrays vacíos por foto (la galería tolera srcsets vacíos
  * y pinta el `<img>` directo). Devuelve error legible en español o el slug.
  */
@@ -388,8 +389,7 @@ export async function createAdminProduct(raw: AdminProductCreateInput): Promise<
       .values({
         ...values,
         slug,
-        // Texto plano por ahora: el alta no edita HTML.
-        descriptionHtml: "",
+        descriptionHtml: values.descriptionHtml ?? "",
         // Sin variantes locales: un array vacío por foto, que la galería
         // (`srcSets[index] ?? []`) y `ProductImg` (`srcSet = []`) toleran.
         imageSrcSets: values.images!.map(() => []),
@@ -598,4 +598,72 @@ export async function restoreAdminProduct(slug: string): Promise<string | null> 
   });
   if (!restoredOk) return "No se pudo restaurar.";
   return null;
+}
+
+/** Marcas del catálogo, las más usadas primero, para reconocerlas en el nombre de un producto nuevo. */
+export async function listKnownBrands(): Promise<string[]> {
+  const rows = await db
+    .select({ brand: products.brand, n: sql<number>`count(*)::int` })
+    .from(products)
+    .groupBy(products.brand)
+    .orderBy(desc(sql`count(*)`))
+    .limit(300);
+  return rows.map((r) => r.brand.trim()).filter((b) => b && b.toLowerCase() !== "general");
+}
+
+export type SimilarProduct = Pick<
+  AdminProductEditData,
+  | "slug"
+  | "name"
+  | "brand"
+  | "categorySlug"
+  | "secondaryCategorySlugs"
+  | "shortDescription"
+  | "description"
+  | "descriptionHtml"
+  | "highlights"
+  | "specs"
+  | "tags"
+  | "warrantyMonths"
+  | "weight"
+  | "dimensions"
+> & { image: string };
+
+/**
+ * Hasta 3 productos ya cargados con el mismo modelo que `name`, para usarlos
+ * de base al dar de alta uno nuevo (otra memoria, otro color). Busca con todas
+ * las palabras del modelo y, si no encuentra, con menos.
+ */
+export async function findSimilarProducts(name: string, terms: string[]): Promise<SimilarProduct[]> {
+  if (!name.trim() || !terms.length) return [];
+  let slugs: string[] = [];
+  for (let k = terms.length; k >= Math.min(2, terms.length) && !slugs.length; k -= 1) {
+    const rows = await db
+      .select({ slug: products.slug })
+      .from(products)
+      .where(and(...terms.slice(0, k).map((t) => ilike(products.name, `%${t}%`))))
+      .orderBy(desc(products.id))
+      .limit(3);
+    slugs = rows.map((r) => r.slug);
+  }
+  const full = await Promise.all(slugs.map((slug) => getAdminProductForEdit(slug)));
+  return full
+    .filter((p): p is AdminProductEditData => p !== null)
+    .map((p) => ({
+      slug: p.slug,
+      name: p.name,
+      brand: p.brand,
+      categorySlug: p.categorySlug,
+      secondaryCategorySlugs: p.secondaryCategorySlugs,
+      shortDescription: p.shortDescription,
+      description: p.description,
+      descriptionHtml: p.descriptionHtml,
+      highlights: p.highlights,
+      specs: p.specs,
+      tags: p.tags,
+      warrantyMonths: p.warrantyMonths,
+      weight: p.weight,
+      dimensions: p.dimensions,
+      image: p.images?.[0] ?? "",
+    }));
 }
