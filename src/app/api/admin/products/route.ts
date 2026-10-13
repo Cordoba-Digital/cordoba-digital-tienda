@@ -2,6 +2,7 @@ import { sessionFromCookieHeader } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { actorFromRequest, logAdminAction } from "@/lib/admin-audit";
 import { createAdminProduct, listAdminProducts, listProductCategories, type AdminProductCreateInput } from "@/lib/admin-products";
+import { refreshStorePages } from "@/lib/store-cache";
 
 export const dynamic = "force-dynamic";
 
@@ -42,6 +43,7 @@ export async function POST(request: Request) {
   if (!result.ok) {
     return Response.json({ ok: false, error: result.error }, { status: result.status });
   }
+  refreshStorePages([result.slug]);
   await logAdminAction(await actorFromRequest(request), {
     action: "alta",
     entityType: "producto",

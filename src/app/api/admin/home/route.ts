@@ -3,6 +3,7 @@ import { logAdminAction } from "@/lib/admin-audit";
 import { readAdminSession } from "@/lib/admin-session";
 import { HOME_BLOCKS, parseHomeLayout } from "@/lib/home-layout";
 import { saveHomeLayout } from "@/lib/home-layout-server";
+import { refreshStorePages } from "@/lib/store-cache";
 
 export const dynamic = "force-dynamic";
 
@@ -25,6 +26,8 @@ export async function PUT(request: Request) {
     console.error("[admin-home] no se pudo guardar:", error);
     return Response.json({ ok: false, error: "No se pudo guardar. Probá de nuevo." }, { status: 500 });
   }
+
+  refreshStorePages();
 
   const order = layout.filter((item) => item.visible).map((item) => LABELS.get(item.id));
   const hidden = layout.filter((item) => !item.visible).map((item) => LABELS.get(item.id));

@@ -1,8 +1,23 @@
 "use client";
 
+import { getImageProps } from "next/image";
 import { useMemo, useState } from "react";
 
-import { resolveMedia, resolveSrcSet } from "@/lib/media";
+import { canOptimize, resolveMedia, resolveSrcSet } from "@/lib/media";
+
+/**
+ * Las fotos guardadas miden hasta 1600 px: sin achicarlas, una card de 250 px
+ * o una miniatura de 72 px bajaban la foto entera. El optimizador de Vercel
+ * arma las variantes (y las sirve en AVIF/WebP) según el `sizes` de cada uso.
+ */
+function optimizedSrcSet(src: string, sizes: string, alt: string): string | undefined {
+  if (!canOptimize(src)) return undefined;
+  try {
+    return getImageProps({ src, alt, sizes, fill: true, quality: 75 }).props.srcSet;
+  } catch {
+    return undefined;
+  }
+}
 
 type Props = {
   src: string;
@@ -52,6 +67,9 @@ export function ProductImg({
   const [current, setCurrent] = useState(resolved || fallback);
   const [failed, setFailed] = useState(!src);
   const [triedFallback, setTriedFallback] = useState(false);
+  // Si el optimizador no puede con una foto (un host que lo bloquea), se
+  // vuelve a pedir el archivo original antes de mostrar el placeholder.
+  const [optimizerFailed, setOptimizerFailed] = useState(false);
 
   // Cuando React reutiliza el componente para otra foto (las galerías y las
   // cards con segunda imagen al hover), hay que volver al estado inicial. Se
@@ -63,6 +81,7 @@ export function ProductImg({
     setCurrent(resolved || fallback);
     setFailed(!src);
     setTriedFallback(false);
+    setOptimizerFailed(false);
   }
 
   if (failed || !current) {
@@ -72,14 +91,19 @@ export function ProductImg({
   // `srcSet` con mayúscula, que es la prop que React conoce, y no `srcset` a
   // mano con un cast: con la minúscula React avisaba "Invalid DOM property
   // `srcset`" en cada imagen y salía el cartel de "1 Issue" en desarrollo.
-  const listaSrcSet = resolvedSet.length && current === resolved ? resolvedSet.join(", ") : undefined;
+  const listaSrcSet =
+    resolvedSet.length && current === resolved
+      ? resolvedSet.join(", ")
+      : optimizerFailed
+        ? undefined
+        : optimizedSrcSet(current, sizes, alt);
 
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
       src={current}
       srcSet={listaSrcSet}
-      sizes={resolvedSet.length ? sizes : undefined}
+      sizes={listaSrcSet ? sizes : undefined}
       alt={alt}
       width={width}
       height={height}
@@ -89,6 +113,10 @@ export function ProductImg({
       className={className}
       style={style}
       onError={() => {
+        if (listaSrcSet && !resolvedSet.length && !optimizerFailed) {
+          setOptimizerFailed(true);
+          return;
+        }
         if (!triedFallback && fallback && fallback !== current) {
           setTriedFallback(true);
           setCurrent(fallback);
