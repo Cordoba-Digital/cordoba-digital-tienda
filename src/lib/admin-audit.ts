@@ -13,7 +13,7 @@ import { readAdminSession } from "@/lib/admin-session";
 export type FieldChange = { from: unknown; to: unknown };
 export type AuditEntry = {
   action: string;
-  entityType: "producto" | "pedido" | "usuario" | "sesion" | "acceso" | "cupon" | "automatizacion" | "inicio";
+  entityType: "producto" | "pedido" | "usuario" | "sesion" | "acceso" | "cupon" | "automatizacion" | "inicio" | "error";
   entityId: string;
   summary: string;
   changes?: Record<string, FieldChange>;

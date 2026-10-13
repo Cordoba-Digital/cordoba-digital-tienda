@@ -1,0 +1,70 @@
+name: Monitoreo
+
+# Cada 15 minutos le pregunta a la tienda si está viva (`/api/health` también
+# prueba la base). Si no responde, abre un issue "Tienda caída" y GitHub se lo
+# avisa por email a quien mire el repo (Watch). Cuando vuelve, lo cierra solo.
+#
+# La URL sale de la variable del repo `URL_TIENDA` (Settings → Secrets and
+# variables → Actions → Variables). Sin esa variable no chequea nada: el
+# dominio de vercel.app pide login de Vercel, así que recién tiene sentido con
+# el dominio propio apuntando a la tienda.
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: monitoreo
+  cancel-in-progress: false
+
+jobs:
+  salud:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      URL_TIENDA: ${{ vars.URL_TIENDA }}
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      TITULO: Tienda caída
+    steps:
+      - name: Sin URL configurada
+        if: env.URL_TIENDA == ''
+        run: echo "::notice::Falta la variable URL_TIENDA; no se chequea nada."
+
+      - name: Chequear la tienda
+        id: chequeo
+        if: env.URL_TIENDA != ''
+        run: |
+          # Tres intentos separados: un corte de un segundo no es una caída.
+          for intento in 1 2 3; do
+            codigo=$(curl -s -o respuesta.json -w '%{http_code}' --max-time 20 "${URL_TIENDA%/}/api/health" || true)
+            if [ "$codigo" = "200" ] && grep -q '"ok":true' respuesta.json; then
+              echo "estado=ok" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            if [ "$intento" -lt 3 ]; then sleep 20; fi
+          done
+          echo "estado=caida" >> "$GITHUB_OUTPUT"
+          echo "codigo=$codigo" >> "$GITHUB_OUTPUT"
+
+      - name: Abrir el aviso
+        if: steps.chequeo.outputs.estado == 'caida'
+        run: |
+          abierto=$(gh issue list --state open --search "\"$TITULO\" in:title" --json number --jq '.[0].number')
+          if [ -z "$abierto" ]; then
+            gh issue create --title "$TITULO" --body \
+              "La tienda no respondió en \`${URL_TIENDA%/}/api/health\` (código ${{ steps.chequeo.outputs.codigo }}) a las $(TZ=America/Argentina/Cordoba date '+%H:%M del %d/%m'). Mirá los logs de Vercel y Admin → Errores. Este issue se cierra solo cuando la tienda vuelve."
+          fi
+          exit 1
+
+      - name: Cerrar el aviso
+        if: steps.chequeo.outputs.estado == 'ok'
+        run: |
+          for n in $(gh issue list --state open --search "\"$TITULO\" in:title" --json number --jq '.[].number'); do
+            gh issue close "$n" --comment "La tienda volvió a responder a las $(TZ=America/Argentina/Cordoba date '+%H:%M del %d/%m')."
+          done
