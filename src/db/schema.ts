@@ -421,6 +421,24 @@ export const storeSettings = pgTable("store_settings", {
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
 });
 
+/**
+ * Errores del servidor agrupados por huella (ver `error-log.ts`): cada error
+ * distinto es una fila con cuántas veces pasó, y se ve en Admin → Errores.
+ */
+export const errorEvents = pgTable("error_events", {
+  fingerprint: text("fingerprint").primaryKey(),
+  message: text("message").notNull(),
+  stack: text("stack").notNull().default(""),
+  route: text("route").notNull().default(""),
+  path: text("path").notNull().default(""),
+  method: text("method").notNull().default(""),
+  count: integer("count").notNull().default(1),
+  firstSeen: timestamp("first_seen", { withTimezone: true }).notNull().defaultNow(),
+  lastSeen: timestamp("last_seen", { withTimezone: true }).notNull().defaultNow(),
+  lastAlertedAt: timestamp("last_alerted_at", { withTimezone: true }),
+  resolvedAt: timestamp("resolved_at", { withTimezone: true }),
+});
+
 /** Fotos subidas desde el panel (ver `product-images.ts`). */
 export const productImages = pgTable("product_images", {
   id: text("id").primaryKey(),

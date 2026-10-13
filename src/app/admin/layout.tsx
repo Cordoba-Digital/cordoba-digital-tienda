@@ -6,6 +6,7 @@ import { AdminSidebar } from "@/components/admin-sidebar";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { readAdminSession } from "@/lib/admin-session";
 import { countPendingOrders } from "@/lib/admin-stats";
+import { countOpenErrors } from "@/lib/error-log";
 
 export const metadata: Metadata = {
   title: "Admin",
@@ -24,7 +25,10 @@ export default async function AdminLayout({ children }: { children: ReactNode })
   }
   return (
     <div className="min-h-screen">
-      <AdminSidebar badges={{ "/admin/pedidos": await countPendingOrders() }} who={session.email} />
+      <AdminSidebar
+        badges={{ "/admin/pedidos": await countPendingOrders(), "/admin/errores": await countOpenErrors() }}
+        who={session.email}
+      />
       <div className="lg:pl-60">
         <main className="admin-shell mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8">{children}</main>
       </div>
