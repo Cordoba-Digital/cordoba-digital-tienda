@@ -256,6 +256,11 @@ const cotizaciones = new Map<string, { valor: Cotizacion; vence: number }>();
  * `/api/shipping` llaman a esta misma función con los mismos productos, y el
  * caché de 15 minutos hace que el servidor cobre lo mismo que se mostró.
  */
+/** Si esta cotización ya está en caché (no genera una llamada a Andreani). */
+export function cotizacionEnCache(cpDestino: string, productos: ProductoCotizacion[]): boolean {
+  return (cotizaciones.get(JSON.stringify([cpDestino, productos]))?.vence ?? 0) > Date.now();
+}
+
 export async function cotizar(cpDestino: string, productos: ProductoCotizacion[]): Promise<Cotizacion> {
   const clave = JSON.stringify([cpDestino, productos]);
   const guardada = cotizaciones.get(clave);
@@ -300,6 +305,11 @@ export async function cotizar(cpDestino: string, productos: ProductoCotizacion[]
 
 const DURACION_SUCURSALES_MS = 2 * 60 * 60 * 1000;
 const cacheSucursales = new Map<string, { valor: SucursalAndreani[]; vence: number }>();
+
+/** Si las sucursales de este CP ya están en caché. */
+export function sucursalesEnCache(cp: string): boolean {
+  return (cacheSucursales.get(cp)?.vence ?? 0) > Date.now();
+}
 
 export async function sucursales(cp: string): Promise<SucursalAndreani[]> {
   const guardada = cacheSucursales.get(cp);

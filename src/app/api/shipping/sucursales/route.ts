@@ -1,4 +1,5 @@
-import { andreaniConfigurado, AndreaniError, sucursales } from "@/lib/andreani";
+import { andreaniConfigurado, AndreaniError, sucursales, sucursalesEnCache } from "@/lib/andreani";
+import { ANDREANI_LIMIT, blockedMinutes, ipFromHeaders, recordMiss } from "@/lib/rate-limit";
 import { normalizeZip } from "@/lib/shipping";
 
 export const dynamic = "force-dynamic";
@@ -13,6 +14,11 @@ export async function GET(request: Request) {
     return Response.json({ ok: true, sucursales: [] });
   }
   try {
+    if (!sucursalesEnCache(cp)) {
+      const ip = ipFromHeaders(request.headers);
+      if (await blockedMinutes(ANDREANI_LIMIT, ip)) return Response.json({ ok: true, sucursales: [] });
+      await recordMiss(ANDREANI_LIMIT, ip);
+    }
     const lista = await sucursales(cp);
     return Response.json(
       { ok: true, sucursales: lista.slice(0, 30) },

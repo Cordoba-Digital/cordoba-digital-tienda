@@ -2,8 +2,9 @@ import { inArray } from "drizzle-orm";
 
 import { db } from "@/db";
 import { products } from "@/db/schema";
-import { andreaniConfigurado, AndreaniError, cotizar, type ProductoCotizacion } from "@/lib/andreani";
+import { andreaniConfigurado, AndreaniError, cotizacionEnCache, cotizar, type ProductoCotizacion } from "@/lib/andreani";
 import { medidasDeEnvio } from "@/lib/andreani-paquete";
+import { ANDREANI_LIMIT, blockedMinutes, recordMiss } from "@/lib/rate-limit";
 import type { PreciosAndreani } from "@/lib/shipping";
 
 export type ItemCarrito = { slug: string; quantity: number };
@@ -43,11 +44,17 @@ export async function productosParaAndreani(items: ItemCarrito[]): Promise<Produ
  * credencial, productos sin medidas o Andreani caído). Nunca tira: el checkout
  * sigue funcionando con la tarifa fija.
  */
-export async function preciosAndreani(cp: string, items: ItemCarrito[]): Promise<PreciosAndreani> {
+export async function preciosAndreani(cp: string, items: ItemCarrito[], ip?: string): Promise<PreciosAndreani> {
   if (!andreaniConfigurado() || cp.length !== 4) return {};
   try {
     const productos = await productosParaAndreani(items);
     if (!productos) return {};
+    // Con IP (la ruta pública de cotización) se limita cuántas llamadas nuevas
+    // a Andreani puede generar cada visitante. Lo que ya está en caché no cuenta.
+    if (ip && !cotizacionEnCache(cp, productos)) {
+      if (await blockedMinutes(ANDREANI_LIMIT, ip)) return {};
+      await recordMiss(ANDREANI_LIMIT, ip);
+    }
     const cotizacion = await cotizar(cp, productos);
     return { estandar: cotizacion.domicilio, sucursal: cotizacion.sucursal };
   } catch (error) {

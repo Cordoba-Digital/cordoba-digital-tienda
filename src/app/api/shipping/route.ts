@@ -1,4 +1,5 @@
 import { normalizeZip, shippingOptions, zoneForZip } from "@/lib/shipping";
+import { ipFromHeaders } from "@/lib/rate-limit";
 import { preciosAndreani, type ItemCarrito } from "@/lib/shipping-andreani";
 
 export const dynamic = "force-dynamic";
@@ -20,7 +21,7 @@ export async function POST(request: Request) {
   // Con los productos del carrito se pide el precio real a Andreani (por peso y
   // medidas). Si no se puede, quedan las tarifas fijas por zona.
   const items = Array.isArray(body.items) ? body.items.slice(0, 50) : [];
-  const andreani = items.length ? await preciosAndreani(zip, items) : {};
+  const andreani = items.length ? await preciosAndreani(zip, items, ipFromHeaders(request.headers)) : {};
 
   return Response.json({
     ok: true,

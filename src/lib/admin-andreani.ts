@@ -128,7 +128,8 @@ export async function crearEnvioDePedido(code: string, sucursalElegida = ""): Pr
     // duplicarlo; por eso el panel avisa que se revise el portal antes.
     await db.update(orders).set({ andreani: null }).where(eq(orders.id, order.id));
     const mensaje = error instanceof AndreaniError ? error.message : "Error inesperado al crear el envío.";
-    console.error("[andreani] alta de envío fallida", order.code, mensaje);
+    // Sin el mensaje: Andreani puede repetir ahí datos del destinatario.
+    console.error("[andreani] alta de envío fallida", order.code, error instanceof AndreaniError ? error.status : "sin estado");
     return { ok: false, error: mensaje, status: 502 };
   }
 }
