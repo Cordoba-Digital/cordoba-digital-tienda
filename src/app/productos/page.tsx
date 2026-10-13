@@ -7,7 +7,7 @@ import { CategoryChips, EmptyResults, Pagination } from "@/components/catalog-ui
 import { ProductCard } from "@/components/product-card";
 import { money } from "@/lib/format";
 import { toView } from "@/lib/product-view";
-import { getBrandFacets, getCategoryTree, listProducts } from "@/lib/queries";
+import { getBrandFacets, getCategoryTree, listProducts, understandCatalogQuery, type ProductFilters } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 
@@ -41,21 +41,33 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
   const ofertas = pick(params, "ofertas") === "1";
   const stock = pick(params, "stock") === "1";
 
-  const [categories, brands, result] = await Promise.all([
+  // "celular samsung" se entiende como Celulares + Samsung y lo que sobra se
+  // busca palabra por palabra (ver lib/query-understanding.ts). Con
+  // `literal=1` se busca el texto tal cual, en todo el catálogo.
+  const literal = pick(params, "literal") === "1";
+  const words = q ? q.split(/\s+/).filter(Boolean) : [];
+  const understood = q && !literal ? await understandCatalogQuery(q) : null;
+  const detected = understood && (understood.category || (understood.brand && !marcas.length)) ? understood : null;
+
+  const base: ProductFilters = { brands: marcas, min, max, sort: orden, page: pagina, perPage: 24, onlyOffers: ofertas, inStock: stock };
+  const plain: ProductFilters = { ...base, terms: words };
+  const smart: ProductFilters | null = detected
+    ? {
+        ...base,
+        terms: detected.terms,
+        categoryId: detected.category?.id,
+        brands: marcas.length ? marcas : detected.brand ? [detected.brand] : [],
+      }
+    : null;
+
+  const [categories, brands, smartResult] = await Promise.all([
     getCategoryTree(),
     getBrandFacets(),
-    listProducts({
-      q,
-      brands: marcas,
-      min,
-      max,
-      sort: orden,
-      page: pagina,
-      perPage: 24,
-      onlyOffers: ofertas,
-      inStock: stock,
-    }),
+    smart ? listProducts(smart) : listProducts(plain),
   ]);
+  // Si lo detectado no trae nada, se busca palabra por palabra en todo el catálogo.
+  const usedDetection = Boolean(smart && smartResult.total > 0);
+  const result = smart && !usedDetection ? await listProducts(plain) : smartResult;
 
   const chips: { key: string; label: string; value: string | null }[] = [];
   if (q) chips.push({ key: "q", label: `“${q}”`, value: null });
@@ -111,6 +123,29 @@ export default async function CatalogPage({ searchParams }: { searchParams: Sear
           Productos nuevos, con garantía legal y envío a todo el país.
         </p>
       </header>
+
+      {usedDetection && detected ? (
+        <p className="mb-4 rounded-xl bg-brand-50 px-3.5 py-2.5 text-sm text-ink-700">
+          Buscamos
+          {detected.category ? (
+            <>
+              {" "}en{" "}
+              <Link href={`/categoria/${detected.category.path}`} className="font-bold text-ink-900 hover:text-brand-700">
+                {detected.category.name}
+              </Link>
+            </>
+          ) : null}
+          {detected.brand && !marcas.length ? (
+            <>
+              {" "}de la marca <b className="text-ink-900">{detected.brand}</b>
+            </>
+          ) : null}
+          {detected.terms.length ? <> con “{detected.terms.join(" ")}”</> : null}.{" "}
+          <Link href={`/productos?${new URLSearchParams({ q: q ?? "", literal: "1" }).toString()}`} className="font-bold text-brand-700 hover:text-brand-800">
+            Buscar “{q}” en todo el catálogo
+          </Link>
+        </p>
+      ) : null}
 
       <CategoryChips items={rootCategories} />
 
