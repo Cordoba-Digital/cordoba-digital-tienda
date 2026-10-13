@@ -414,6 +414,14 @@ export const productArchive = pgTable("product_archive", {
   archivedAt: timestamp("archived_at", { withTimezone: true }).notNull().defaultNow(),
 });
 
+/** Ajustes de la tienda que se editan desde el panel, por clave (ver `home-layout-server.ts`). */
+export const storeSettings = pgTable("store_settings", {
+  key: text("key").primaryKey(),
+  value: jsonb("value").notNull(),
+  updatedBy: text("updated_by").notNull(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
 export type Product = typeof products.$inferSelect;
 export type Category = typeof categories.$inferSelect;
 export type Review = typeof reviews.$inferSelect;

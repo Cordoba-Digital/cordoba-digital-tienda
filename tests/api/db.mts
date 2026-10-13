@@ -26,7 +26,7 @@ export { db, pool, schema };
 
 export async function resetDb(): Promise<void> {
   await db.execute(
-    sql`truncate table order_events, order_items, orders, products, coupons, admin_access restart identity cascade`,
+    sql`truncate table order_events, order_items, orders, products, coupons, admin_access, store_settings restart identity cascade`,
   );
   await db.execute(sql`do $$ begin if to_regclass('rate_limit_misses') is not null then truncate table rate_limit_misses; end if; end $$`);
 }
