@@ -395,6 +395,14 @@ export const adminAudit = pgTable(
   (table) => [index("admin_audit_at_idx").on(table.at.desc().nullsFirst())],
 );
 
+/** Ajustes que se cambian desde el panel, como los interruptores de automatización (ver `automations.ts`) y el orden de la home (ver `home-layout-server.ts`). */
+export const storeSettings = pgTable("store_settings", {
+  key: text("key").primaryKey(),
+  value: jsonb("value").notNull(),
+  updatedBy: text("updated_by").notNull().default(""),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
 /** Fotos subidas desde el panel (ver `product-images.ts`). */
 export const productImages = pgTable("product_images", {
   id: text("id").primaryKey(),
@@ -412,14 +420,6 @@ export const productArchive = pgTable("product_archive", {
   data: jsonb("data").notNull(),
   categoryIds: jsonb("category_ids").notNull().default(sql`'[]'::jsonb`),
   archivedAt: timestamp("archived_at", { withTimezone: true }).notNull().defaultNow(),
-});
-
-/** Ajustes de la tienda que se editan desde el panel, por clave (ver `home-layout-server.ts`). */
-export const storeSettings = pgTable("store_settings", {
-  key: text("key").primaryKey(),
-  value: jsonb("value").notNull(),
-  updatedBy: text("updated_by").notNull(),
-  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
 });
 
 export type Product = typeof products.$inferSelect;
