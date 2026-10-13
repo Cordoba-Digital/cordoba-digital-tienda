@@ -25,7 +25,18 @@ import { url as siteUrl } from "@/lib/site";
 import { breadcrumbJsonLd, jsonLdString, ORG_ID, returnPolicy } from "@/lib/structured-data";
 import { sanitizeHtml } from "@/lib/sanitize-html";
 
-export const dynamic = "force-dynamic";
+/**
+ * La ficha queda en la caché del CDN y se regenera cada 5 minutos, o en el acto
+ * cuando el panel cambia el producto (ver `refreshStorePages`). El checkout
+ * vuelve a chequear precio y stock, así que unos minutos de atraso no venden
+ * algo que no hay.
+ */
+export const revalidate = 300;
+
+/** Sin fichas armadas en el build: cada una se genera en la primera visita. */
+export function generateStaticParams(): { slug: string }[] {
+  return [];
+}
 
 /**
  * OJO: esta ruta no puede tener `loading.tsx`.

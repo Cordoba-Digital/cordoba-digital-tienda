@@ -103,3 +103,21 @@ export function hasLocalMedia(url: string | null | undefined): boolean {
   if (!url) return false;
   return resolveMedia(url).startsWith("/images/");
 }
+
+/**
+ * Hosts que el optimizador de imágenes de Vercel acepta (los mismos de
+ * `images.remotePatterns` en next.config.ts) y fotos propias servidas por la
+ * tienda. Las del WordPress viejo no: Cloudflare le responde 403 a Vercel.
+ * Un dominio propio de R2 no está acá: se agrega cuando se active R2.
+ */
+const OPTIMIZABLE_HOST = /(^|\.)(public\.blob\.vercel-storage\.com|r2\.dev|images\.pexels\.com)$/i;
+
+export function canOptimize(url: string): boolean {
+  if (url.startsWith("/")) return !url.startsWith("//") && !url.startsWith("/_next/");
+  try {
+    const parsed = new URL(url);
+    return parsed.protocol === "https:" && OPTIMIZABLE_HOST.test(parsed.hostname);
+  } catch {
+    return false;
+  }
+}

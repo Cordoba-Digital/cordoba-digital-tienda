@@ -2,6 +2,7 @@ import { sessionFromCookieHeader } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { actorFromRequest, logAdminAction } from "@/lib/admin-audit";
 import { getAdminProductForEdit, NOT_ARCHIVED, restoreAdminProduct } from "@/lib/admin-products";
+import { refreshStorePages } from "@/lib/store-cache";
 
 export const dynamic = "force-dynamic";
 
@@ -26,6 +27,7 @@ export async function POST(request: Request, context: { params: Promise<{ slug: 
     return Response.json({ ok: false, error }, { status: 409 });
   }
   const restored = await getAdminProductForEdit(slug);
+  refreshStorePages([restored?.slug, slug]);
   await logAdminAction(await actorFromRequest(request), {
     action: "restauracion",
     entityType: "producto",

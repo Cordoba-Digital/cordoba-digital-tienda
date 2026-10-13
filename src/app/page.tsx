@@ -29,6 +29,7 @@ import { getGoogleReviews } from "@/lib/google-reviews";
 import { visibleHomeBlocks, type HomeBlockId } from "@/lib/home-layout";
 import { getHomeLayout } from "@/lib/home-layout-server";
 import { toView } from "@/lib/product-view";
+import { renderPerRequestIfNoDatabase } from "@/lib/store-cache";
 import { jsonLdString, storeJsonLd } from "@/lib/structured-data";
 import {
   getBestSellers,
@@ -39,7 +40,8 @@ import {
   getProductCount,
 } from "@/lib/queries";
 
-export const dynamic = "force-dynamic";
+/** En la caché del CDN, regenerada cada 5 minutos o al cambiar algo desde el panel. */
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   // La home no tenía canonical y era la única que se indexaba sin señalar
@@ -92,6 +94,7 @@ const FAQ = [
 ];
 
 export default async function HomePage() {
+  await renderPerRequestIfNoDatabase();
   const [featured, deals, bestSellers, categories, googleReviews, productCount, guides, layout] = await Promise.all([
     getFeaturedProducts(24),
     getDealProducts(8),

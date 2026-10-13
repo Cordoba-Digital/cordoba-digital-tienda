@@ -9,6 +9,7 @@ import {
   type AdminProductCreateInput,
   type ProductPatch,
 } from "@/lib/admin-products";
+import { refreshStorePages } from "@/lib/store-cache";
 
 export const dynamic = "force-dynamic";
 
@@ -31,6 +32,7 @@ export async function PATCH(request: Request, context: { params: Promise<{ slug:
   if (error) {
     return Response.json({ ok: false, error }, { status: 400 });
   }
+  refreshStorePages([before?.slug, slug]);
   if (before) {
     const after = await getAdminProductForEdit(before.slug);
     const changes = after ? diffFields(before, after, ["price", "stock", "featured", "badge"]) : {};
@@ -59,6 +61,7 @@ export async function PUT(request: Request, context: { params: Promise<{ slug: s
   if (!result.ok) {
     return Response.json({ ok: false, error: result.error }, { status: result.status });
   }
+  refreshStorePages([before?.slug, slug, result.slug]);
   const after = await getAdminProductForEdit(result.slug);
   if (before && after) {
     const { origin: _beforeOrigin, ...beforeFields } = before;
@@ -88,6 +91,7 @@ export async function DELETE(request: Request, context: { params: Promise<{ slug
   if (error) {
     return Response.json({ ok: false, error }, { status: 404 });
   }
+  refreshStorePages([before?.slug, slug]);
   await logAdminAction(await actorFromRequest(request), {
     action: "archivo",
     entityType: "producto",
