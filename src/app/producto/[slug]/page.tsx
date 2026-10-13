@@ -23,6 +23,7 @@ import {
 } from "@/lib/queries";
 import { url as siteUrl } from "@/lib/site";
 import { breadcrumbJsonLd, jsonLdString, ORG_ID, returnPolicy } from "@/lib/structured-data";
+import { sanitizeHtml } from "@/lib/sanitize-html";
 
 export const dynamic = "force-dynamic";
 
@@ -336,14 +337,14 @@ export default async function ProductPage({ params }: { params: Params }) {
         <section className="card-surface p-6">
           <h2 className="mb-3 text-xl font-bold tracking-tight text-ink-900">Descripción</h2>
           {product.descriptionHtml ? (
-            // El HTML viene saneado por el migrador (scripts, estilos y
-            // handlers inline ya eliminados). Ver scripts/migrate-wp.ts.
+            // El HTML se sanea al guardarlo (migrador y panel) y otra vez acá,
+            // por si quedó alguna fila guardada con una versión vieja del saneo.
             // `prose-soft`: el HTML migrado abusa de <strong> y de subtítulos
             // en cada línea; la referencia muestra el cuerpo en peso normal.
             // La jerarquía sobrevive por tamaño y espaciado, no por peso.
             <div
               className="prose-cd prose-soft"
-              dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
+              dangerouslySetInnerHTML={{ __html: sanitizeHtml(product.descriptionHtml) }}
             />
           ) : (
             <p className="text-sm leading-relaxed text-ink-600">

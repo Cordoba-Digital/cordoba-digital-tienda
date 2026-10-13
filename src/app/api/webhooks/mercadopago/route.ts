@@ -25,14 +25,22 @@ function parseSignature(header: string): { ts?: string; v1?: string } {
   return { ts: parts.ts, v1: parts.v1 };
 }
 
-async function handleEventAsync(notification: MpNotification): Promise<void> {
+/**
+ * `dataId` es el id que cubrió la firma, no el del body: el body no está
+ * firmado y alguien que reenvíe un aviso válido podría cambiarlo.
+ */
+async function handleEventAsync(notification: MpNotification, dataId: string): Promise<void> {
   const topic = notification.type ?? notification.topic;
-  const dataId = notification.data?.id;
-  if (!dataId) return;
 
   // Solo reconciliamos pagos; merchant_order legacy se registra sin actuar.
   if (topic !== "payment") {
     console.log(`[mp-webhook] tópico ignorado: ${topic} id=${dataId}`);
+    return;
+  }
+
+  // Los ids de pago son numéricos; cualquier otra cosa no se manda a la API.
+  if (!/^\d{1,20}$/.test(dataId)) {
+    console.warn("[mp-webhook] id de pago con formato inesperado, ignorado.");
     return;
   }
 
@@ -158,6 +166,10 @@ export async function POST(request: Request) {
     return new Response(null, { status: 401 });
   }
 
+  // Sin chequeo de antigüedad del `ts`: MP reintenta el mismo aviso hasta un
+  // día después, y repetir uno viejo no hace daño porque el estado siempre se
+  // vuelve a leer de la API de MP con nuestro token.
+
   // 200 inmediato — MP reintenta con backoff hasta ~24h ante non-200.
   const response = new Response(null, { status: 200 });
 
@@ -166,7 +178,7 @@ export async function POST(request: Request) {
   // `queueMicrotask` la instancia podía congelarse apenas salía el 200 y el
   // pedido quedaba en `pendiente_pago` aunque el cobro estuviera aprobado.
   after(() =>
-    handleEventAsync(notification).catch((error) => console.error("[mp-webhook] handler:", error)),
+    handleEventAsync(notification, dataId).catch((error) => console.error("[mp-webhook] handler:", error)),
   );
 
   return response;

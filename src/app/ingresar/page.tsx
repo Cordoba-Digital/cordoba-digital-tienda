@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 
 import { CustomerLoginCard } from "@/components/customer-login-card";
 import { getCurrentCustomer } from "@/lib/customer-auth";
+import { safeNextPath } from "@/lib/customer-session";
 
 export const metadata: Metadata = {
   title: "Ingresar a tu cuenta",
@@ -25,7 +26,7 @@ export default async function IngresarPage({ searchParams }: { searchParams: Sea
   const first = (v: string | string[] | undefined): string => (Array.isArray(v) ? (v[0] ?? "") : (v ?? ""));
   const next = first(sp.next);
   if (customer) {
-    redirect(next.startsWith("/") && !next.startsWith("//") ? next : "/mi-cuenta");
+    redirect(safeNextPath(next));
   }
   const error = ERRORS[first(sp.error)] ?? null;
   const startHref = `/api/auth/google/start${next ? `?next=${encodeURIComponent(next)}` : ""}`;

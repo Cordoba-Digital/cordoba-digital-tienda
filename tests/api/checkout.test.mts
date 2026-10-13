@@ -14,6 +14,7 @@ import { comprador, db, domicilio, pool, post, resetDb, schema, seedProduct } fr
 delete process.env.MP_ACCESS_TOKEN;
 const { POST } = await import("../../src/app/api/checkout/route");
 const { findShippingOption } = await import("../../src/lib/shipping");
+const { CHECKOUT_LIMIT, COUPON_LIMIT, recordMiss } = await import("../../src/lib/rate-limit");
 
 const envio = findShippingOption("5000", "standard")!.cost;
 
@@ -128,4 +129,32 @@ test("carrito vacío o datos con tipos raros responden 400, no 500", async () =>
   assert.equal((await checkout({ items: [] })).status, 400);
   assert.equal((await checkout({ items: [{ slug: "x", quantity: 1 }], customer: { firstName: 123, email: ["a"] } })).status, 400);
   assert.equal((await checkout({ items: "todo" })).status, 400);
+});
+
+test("cada pedido cuenta para el límite por IP y al pasarse responde 429", async () => {
+  await seedProduct("note", 1_000_000, 10);
+  const ip = { "x-real-ip": "200.1.2.3" };
+  const pedir = () =>
+    POST(post("/api/checkout", { customer: comprador, delivery: domicilio, payment: { method: "transferencia" }, items: [{ slug: "note", quantity: 1 }] }, ip));
+  assert.equal((await pedir()).status, 200);
+  for (let i = 1; i < CHECKOUT_LIMIT.max; i += 1) await recordMiss(CHECKOUT_LIMIT, "200.1.2.3");
+  const bloqueado = await pedir();
+  assert.equal(bloqueado.status, 429);
+  assert.ok(bloqueado.headers.get("retry-after"));
+  assert.equal((await db.select().from(schema.orders)).length, 1);
+  // Otra IP sigue comprando.
+  const otra = await POST(post("/api/checkout", { customer: comprador, delivery: domicilio, payment: { method: "transferencia" }, items: [{ slug: "note", quantity: 1 }] }, { "x-real-ip": "200.9.9.9" }));
+  assert.equal(otra.status, 200);
+});
+
+test("un cupón inventado en el checkout cuenta como intento fallido", async () => {
+  await seedProduct("note", 1_000_000, 10);
+  const ip = { "x-real-ip": "200.4.5.6" };
+  const pedir = (couponCode?: string) =>
+    POST(post("/api/checkout", { customer: comprador, delivery: domicilio, payment: { method: "transferencia" }, items: [{ slug: "note", quantity: 1 }], couponCode }, ip));
+  assert.equal((await pedir("TRUCHO1")).status, 200);
+  for (let i = 1; i < COUPON_LIMIT.max; i += 1) await recordMiss(COUPON_LIMIT, "200.4.5.6");
+  assert.equal((await pedir("TRUCHO2")).status, 429);
+  // Sin cupón puede seguir comprando.
+  assert.equal((await pedir()).status, 200);
 });

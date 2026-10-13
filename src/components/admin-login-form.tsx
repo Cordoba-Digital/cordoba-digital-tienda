@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
+import { safeAdminPath } from "@/lib/customer-session";
+
 const ERRORS: Record<string, string> = {
   email:
     "Ese email de Google no tiene acceso al panel. Pedile a un dueño que te agregue en Accesos.",
@@ -21,7 +23,7 @@ export function AdminLoginForm({
 }) {
   const router = useRouter();
   const params = useSearchParams();
-  const next = params.get("next") || "/admin";
+  const next = safeAdminPath(params.get("next"));
   const [password, setPassword] = useState("");
   const [error, setError] = useState(ERRORS[params.get("error") ?? ""] ?? "");
   const [loading, setLoading] = useState(false);
