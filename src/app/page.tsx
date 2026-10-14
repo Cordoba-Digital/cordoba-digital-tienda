@@ -161,19 +161,19 @@ export default async function HomePage() {
             */}
             <section className="relative z-10 -mt-6 sm:-mt-8">
               <div className="container-xl">
-                {/* En el celular, una sola fila que se desliza y sin la bajada: en
-                    2×2 se comía un cuarto de la pantalla. */}
-                <div className="no-scrollbar flex overflow-x-auto rounded-2xl bg-surface shadow-[0_20px_50px_-30px_rgba(20,22,28,0.45)] ring-1 ring-black/5 sm:grid sm:grid-cols-2 sm:overflow-hidden lg:grid-cols-4">
+                {/* En el celular, las cuatro en una fila con el ícono arriba y el
+                    título en dos líneas: entran enteras sin deslizar y sin la bajada. */}
+                <div className="grid grid-cols-4 overflow-hidden rounded-2xl bg-surface shadow-[0_20px_50px_-30px_rgba(20,22,28,0.45)] ring-1 ring-black/5 sm:grid-cols-2 lg:grid-cols-4">
                   {TRUST.map((t, i) => (
                     <div
                       key={t.title}
-                      className={`flex shrink-0 items-center gap-2 border-ink-100 px-3 py-2.5 sm:items-start sm:gap-3 sm:p-5 ${i > 0 ? "max-sm:border-l" : ""} ${i % 2 ? "sm:border-l" : ""} ${i > 1 ? "sm:border-t lg:border-t-0" : ""} ${i === 2 ? "lg:border-l" : ""}`}
+                      className={`flex flex-col items-center gap-1 border-ink-100 px-1 py-2.5 text-center sm:flex-row sm:items-start sm:gap-3 sm:p-5 sm:text-left ${i > 0 ? "max-sm:border-l" : ""} ${i % 2 ? "sm:border-l" : ""} ${i > 1 ? "sm:border-t lg:border-t-0" : ""} ${i === 2 ? "lg:border-l" : ""}`}
                     >
                       <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brand-50 text-brand-700 sm:h-10 sm:w-10 sm:rounded-xl">
                         <Icon name={t.icon} className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
                       </span>
                       <div>
-                        <p className="whitespace-nowrap text-[12px] font-bold leading-tight text-ink-900 sm:whitespace-normal sm:text-sm">{t.title}</p>
+                        <p className="text-balance text-[11px] font-bold leading-tight text-ink-900 sm:text-sm">{t.title}</p>
                         <p className="mt-0.5 hidden text-xs leading-relaxed text-ink-500 sm:block">{t.text}</p>
                       </div>
                     </div>
@@ -205,7 +205,7 @@ export default async function HomePage() {
               <li key={a.title} className="w-[66px] shrink-0 snap-start sm:w-auto">
                 <Link
                   href={a.href}
-                  className="flex h-full flex-col items-center gap-1.5 text-center transition sm:flex-row sm:gap-3 sm:rounded-2xl sm:bg-surface sm:p-3.5 sm:text-left sm:ring-1 sm:ring-black/5 sm:hover:-translate-y-0.5 sm:hover:shadow-lg"
+                  className="group flex h-full flex-col items-center gap-1.5 text-center transition active:scale-95 motion-reduce:transform-none sm:flex-row sm:gap-3 sm:rounded-2xl sm:bg-surface sm:p-3.5 sm:text-left sm:ring-1 sm:ring-black/5 sm:hover:-translate-y-0.5 sm:hover:shadow-lg"
                 >
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-surface text-brand-700 shadow-sm ring-1 ring-black/5 sm:h-10 sm:w-10 sm:rounded-xl sm:bg-brand-50 sm:shadow-none sm:ring-0">
                     <a.icon size={20} aria-hidden />

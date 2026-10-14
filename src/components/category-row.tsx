@@ -120,12 +120,14 @@ export function CategoryRow({ items, label }: { items: CategoryRowItem[]; label:
             <Link
               key={item.href}
               href={item.href}
-              className="group flex w-[74px] shrink-0 flex-col items-center gap-1.5 rounded-2xl px-0.5 py-1 sm:w-[108px] sm:gap-2 sm:px-1 sm:py-2"
+              className="group flex w-[74px] shrink-0 flex-col items-center gap-1.5 rounded-2xl px-0.5 py-1 outline-none sm:w-[108px] sm:gap-2 sm:px-1 sm:py-2"
             >
-              <span className="grid h-14 w-14 place-items-center rounded-full bg-surface sm:h-[68px] sm:w-[68px] sm:rounded-2xl text-brand-700 shadow-sm ring-1 ring-black/5 transition group-hover:-translate-y-0.5 group-hover:ring-brand-400">
-                <CategoryIcon name={item.name} className="h-6 w-6 sm:h-[26px] sm:w-[26px]" />
+              {/* Al pasar el mouse sube, se tiñe y el ícono crece; al tocarlo con
+                  el dedo se hunde un poco, para que se note que respondió. */}
+              <span className="grid h-14 w-14 place-items-center rounded-full bg-surface text-brand-700 shadow-sm ring-1 ring-black/5 transition duration-200 ease-out group-hover:-translate-y-1 group-hover:bg-brand-50 group-hover:shadow-[0_10px_24px_-12px_rgba(194,65,12,0.55)] group-hover:ring-brand-300 group-focus-visible:ring-2 group-focus-visible:ring-brand-500 group-active:translate-y-0 group-active:scale-90 group-active:bg-brand-100 motion-reduce:transition-none sm:h-[68px] sm:w-[68px] sm:rounded-2xl">
+                <CategoryIcon name={item.name} className="h-6 w-6 transition-transform duration-200 ease-out group-hover:scale-110 sm:h-[26px] sm:w-[26px]" />
               </span>
-              <span className="line-clamp-2 min-h-[2.5em] text-center text-[11px] font-semibold leading-tight text-ink-900 sm:min-h-8 sm:text-[12px]">
+              <span className="line-clamp-2 min-h-[2.5em] text-center text-[11px] font-semibold leading-tight text-ink-900 transition-colors group-hover:text-brand-700 sm:min-h-8 sm:text-[12px]">
                 {item.name}
               </span>
               <span className="hidden tabular-nums text-[11px] text-ink-400 sm:inline">{item.count}</span>

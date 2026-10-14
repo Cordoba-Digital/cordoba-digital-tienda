@@ -100,8 +100,10 @@ export function HomeCategoryTabs({ tabs }: { tabs: CategoryShowcaseTab[] }) {
               aria-selected={selected}
               aria-controls={`${id}-panel`}
               onClick={() => setActive(index)}
-              className={`shrink-0 rounded-full px-3 py-1.5 text-[13px] font-bold transition sm:px-4 sm:py-2 sm:text-sm ${
-                selected ? "bg-ink-900 text-white" : "bg-surface text-ink-700 ring-1 ring-black/5 hover:bg-brand-50 hover:text-brand-700"
+              className={`shrink-0 rounded-full px-3 py-1.5 text-[13px] font-bold transition duration-200 active:scale-95 motion-reduce:transition-none sm:px-4 sm:py-2 sm:text-sm ${
+                selected
+                  ? "bg-brand-700 text-white shadow-[0_8px_20px_-10px_rgba(194,65,12,0.7)]"
+                  : "bg-surface text-ink-700 ring-1 ring-black/5 hover:bg-brand-50 hover:text-brand-700"
               }`}
             >
               {tab.name}
@@ -110,7 +112,9 @@ export function HomeCategoryTabs({ tabs }: { tabs: CategoryShowcaseTab[] }) {
         })}
       </div>
       <div role="tabpanel" id={`${id}-panel`} aria-labelledby={`${id}-tab-${active}`}>
-        <ProductRow key={current.path} products={current.products} label={current.name} />
+        <div key={current.path} className="animate-rise motion-reduce:animate-none">
+          <ProductRow products={current.products} label={current.name} />
+        </div>
         <Link
           href={`/categoria/${current.path}`}
           className="group mt-3 inline-flex items-center gap-1.5 text-[13px] font-bold text-brand-700 hover:text-brand-800 sm:mt-4 sm:text-sm"
