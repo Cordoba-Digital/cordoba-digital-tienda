@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { fieldLabel, listAdminActivity, type ActivityRow } from "@/lib/admin-audit";
+import { activitySummary, actorName } from "@/lib/admin-actor";
 
 export const dynamic = "force-dynamic";
 
@@ -98,7 +99,7 @@ export default async function AdminActivityPage({ searchParams }: { searchParams
               <option value="">Todas las personas</option>
               {actors.map((a) => (
                 <option key={a} value={a}>
-                  {a}
+                  {actorName(a)}
                 </option>
               ))}
             </select>
@@ -121,16 +122,16 @@ export default async function AdminActivityPage({ searchParams }: { searchParams
                 <li key={row.id} className="grid gap-1 border-b border-ink-100 px-4 py-3 last:border-0 sm:grid-cols-[8.5rem_minmax(0,1fr)] sm:gap-4">
                   <div className="text-xs text-ink-500">
                     <p className="font-semibold text-ink-700">{when.format(new Date(row.at))}</p>
-                    <p className="truncate" title={row.actor}>{row.actor}</p>
+                    <p className="truncate" title={actorName(row.actor)}>{actorName(row.actor)}</p>
                   </div>
                   <div className="min-w-0">
                     <p className="text-sm font-semibold text-ink-900">
                       {link ? (
                         <Link href={link} className="hover:text-brand-700 hover:underline">
-                          {row.summary}
+                          {activitySummary(row.summary)}
                         </Link>
                       ) : (
-                        row.summary
+                        activitySummary(row.summary)
                       )}
                     </p>
                     {changes.length ? (

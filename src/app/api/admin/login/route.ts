@@ -28,7 +28,7 @@ export async function POST(request: Request) {
   if (!session) {
     return Response.json({ ok: false, error: "No se pudo crear la sesión." }, { status: 500 });
   }
-  await logAdminAction("contraseña", { action: "ingreso", entityType: "sesion", entityId: ip, summary: "Ingresó con la contraseña" });
+  await logAdminAction("contraseña", { action: "ingreso", entityType: "sesion", entityId: ip, summary: "Ingresó con la clave de administrador" });
   const res = Response.json({ ok: true });
   res.headers.append("Set-Cookie", adminSessionCookieHeader(session, remember));
   return res;

@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-import { HOME_BLOCKS, type HomeLayoutItem } from "@/lib/home-layout";
+import { defaultHomeLayout, HOME_BLOCKS, type HomeLayoutItem } from "@/lib/home-layout";
 
 const INFO = new Map(HOME_BLOCKS.map((block) => [block.id, block]));
 
@@ -31,6 +31,14 @@ export function AdminHomeLayout({ initial }: { initial: HomeLayoutItem[] }) {
 
   function toggle(index: number) {
     setItems((current) => current.map((item, i) => (i === index ? { ...item, visible: !item.visible } : item)));
+    setMessage(null);
+  }
+
+  /** Vuelve al orden recomendado sin tocar qué bloques están ocultos. */
+  function recommended() {
+    setItems((current) =>
+      defaultHomeLayout().map((block) => ({ ...block, visible: current.find((item) => item.id === block.id)?.visible ?? true })),
+    );
     setMessage(null);
   }
 
@@ -109,6 +117,14 @@ export function AdminHomeLayout({ initial }: { initial: HomeLayoutItem[] }) {
           className="h-10 bg-ink-900 px-5 text-sm font-bold text-white transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-ink-700 disabled:cursor-default disabled:bg-ink-300"
         >
           {busy ? "Guardando…" : "Guardar orden"}
+        </button>
+        <button
+          type="button"
+          onClick={recommended}
+          disabled={busy}
+          className="h-10 border border-ink-200 px-4 text-sm font-bold text-ink-700 transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-ink-100 disabled:cursor-default disabled:opacity-50"
+        >
+          Usar el orden recomendado
         </button>
         <a href="/" target="_blank" rel="noreferrer" className="text-sm font-bold text-brand-700 hover:text-brand-800">
           Ver la home

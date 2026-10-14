@@ -519,11 +519,11 @@ export function CategoryNavBar({ categories }: { categories: CategoryNavRoot[] }
       </div>
     </div>
     {/*
-      La misma tira en móvil: acá el contenido (~770 px) sí desborda y la tira
-      desplaza de verdad. Sin hamburguesa: el menú completo ya vive en el
-      drawer del header.
+      La misma tira en tablet. En el celular no va: el header ya ocupaba casi un
+      cuarto de la pantalla, y Ofertas, Ayuda y todas las categorías están en el
+      menú de la hamburguesa (y en los accesos de la home).
     */}
-    <div className="border-t border-ink-100 lg:hidden">
+    <div className="hidden border-t border-ink-100 sm:block lg:hidden">
       <nav
         aria-label="Accesos de categorías"
         className="no-scrollbar flex h-11 items-center gap-0.5 overflow-x-auto px-4"

@@ -34,8 +34,9 @@ export default async function AdminLayout({ children }: { children: ReactNode })
         }}
         who={session.email}
       />
-      <div className="lg:pl-60">
-        <main className="admin-shell mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8">{children}</main>
+      {/* El contenido acompaña el ancho: más aire en monitores grandes sin que las tablas queden angostas. */}
+      <div className="md:pl-[72px] lg:pl-60">
+        <main className="admin-shell mx-auto max-w-6xl px-4 py-5 sm:px-6 md:py-6 lg:px-8 lg:py-8 xl:max-w-7xl 2xl:max-w-[1440px] 2xl:px-10">{children}</main>
       </div>
     </div>
   );

@@ -6,6 +6,8 @@
  * `node:crypto` acá: rompe el middleware en build y en Vercel.
  */
 
+import { PASSWORD_ACTOR } from "@/lib/admin-actor";
+
 export const ADMIN_COOKIE = "admin_session";
 /** Marca que el login con Google en curso es para el admin (guarda el `state`). */
 export const ADMIN_OAUTH_COOKIE = "admin_oauth";
@@ -124,7 +126,7 @@ export function shouldRenewAdminSession(session: AdminSession): boolean {
 
 /** Quién hizo el cambio, para el registro de actividad. */
 export function adminActorLabel(session: AdminSession | null): string {
-  return session?.email || "contraseña";
+  return session?.email || PASSWORD_ACTOR;
 }
 
 /**

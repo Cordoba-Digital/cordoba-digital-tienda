@@ -80,18 +80,20 @@ export function SectionHeading({
   action?: { href: string; label: string };
 }) {
   return (
-    <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
-      <div>
+    // En el celular, título chico en una línea con su enlace al costado (como en
+    // Mercado Libre): la volanta y la bajada se guardan para pantallas grandes.
+    <div className="mb-3 flex items-end justify-between gap-3 sm:mb-6 sm:flex-wrap sm:gap-4">
+      <div className="min-w-0">
         {eyebrow ? (
-          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">{eyebrow}</p>
+          <p className="hidden text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700 sm:block">{eyebrow}</p>
         ) : null}
-        <h2 className="mt-1 text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">{title}</h2>
-        {description ? <p className="mt-1.5 max-w-xl text-sm leading-relaxed text-ink-500">{description}</p> : null}
+        <h2 className="text-lg font-extrabold leading-tight tracking-tight text-ink-900 sm:mt-1 sm:text-3xl">{title}</h2>
+        {description ? <p className="mt-1.5 hidden max-w-xl text-sm leading-relaxed text-ink-500 sm:block">{description}</p> : null}
       </div>
       {action ? (
         <Link
           href={action.href}
-          className="group inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-ink-900 transition hover:text-brand-700"
+          className="group inline-flex shrink-0 items-center gap-1.5 text-[13px] font-bold text-brand-700 transition hover:text-brand-800 sm:text-sm sm:font-semibold sm:text-ink-900 sm:hover:text-brand-700"
         >
           {action.label}
           <span className="transition group-hover:translate-x-0.5" aria-hidden>
