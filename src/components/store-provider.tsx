@@ -50,6 +50,7 @@ type StoreState = {
   toggleFavorite: (slug: string) => void;
   isFavorite: (slug: string) => boolean;
   pushRecent: (slug: string) => void;
+  clearRecent: () => void;
   openCart: () => void;
   closeCart: () => void;
   pushToast: (toast: Omit<ToastMessage, "id">) => void;
@@ -212,6 +213,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     setRecentlyViewed((prev) => [slug, ...prev.filter((s) => s !== slug)].slice(0, 8));
   }, []);
 
+  const clearRecent = useCallback(() => setRecentlyViewed([]), []);
+
   const value = useMemo<StoreState>(() => {
     const subtotal = items.reduce((acc, i) => acc + i.price * i.quantity, 0);
     const listSubtotal = items.reduce((acc, i) => acc + (i.compareAtPrice ?? i.price) * i.quantity, 0);
@@ -230,6 +233,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       toggleFavorite,
       isFavorite: (slug: string) => favorites.includes(slug),
       pushRecent,
+      clearRecent,
       openCart: () => setCartOpen(true),
       closeCart: () => setCartOpen(false),
       pushToast,
@@ -251,6 +255,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     clearCart,
     toggleFavorite,
     pushRecent,
+    clearRecent,
     pushToast,
   ]);
 

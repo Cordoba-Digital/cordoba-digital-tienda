@@ -24,25 +24,47 @@ test("respeta el orden y lo oculto, y la portada queda primera aunque la manden 
     { id: "local", visible: false },
     { id: "portada", visible: false },
   ]);
-  assert.deepEqual(layout.slice(0, 4), [
-    { id: "portada", visible: true },
-    { id: "ofertas", visible: true },
-    { id: "local", visible: false },
-    { id: "accesos", visible: true },
-  ]);
+  assert.deepEqual(layout[0], { id: "portada", visible: true });
+  const ids = layout.map((item) => item.id);
+  assert.ok(ids.indexOf("ofertas") < ids.indexOf("local"));
+  assert.deepEqual(layout.find((item) => item.id === "local"), { id: "local", visible: false });
   assert.equal(layout.length, TODOS.length);
   assert.ok(!visibleHomeBlocks(layout).includes("local"));
 });
 
 test("ignora bloques desconocidos y repetidos", () => {
   const layout = parseHomeLayout([{ id: "guias" }, { id: "<script>" }, { id: "guias", visible: false }, "ofertas", null]);
-  assert.deepEqual(layout[1], { id: "guias", visible: true });
+  assert.deepEqual(layout.find((item) => item.id === "guias"), { id: "guias", visible: true });
   assert.equal(layout.filter((item) => item.id === "guias").length, 1);
   assert.deepEqual(new Set(layout.map((item) => item.id)), new Set(TODOS));
 });
 
-test("un bloque nuevo que no estaba guardado aparece al final, visible", () => {
+test("un bloque nuevo que no estaba guardado aparece visible y en su lugar, no al final", () => {
   const guardado = defaultHomeLayout().filter((item) => item.id !== "accesos");
   const layout = parseHomeLayout(guardado);
-  assert.deepEqual(layout.at(-1), { id: "accesos", visible: true });
+  assert.deepEqual(layout, defaultHomeLayout());
+});
+
+test("con un orden viejo guardado, los bloques nuevos entran después de su vecino y se respeta lo demás", () => {
+  // Así quedó guardada la home antes de sumar "vistos", "por-categoria" y "explorar".
+  const viejo = ["accesos", "categorias", "ofertas", "pagos-retiro", "mas-vendidos", "local", "destacados", "guias", "preguntas"].map(
+    (id) => ({ id, visible: id !== "local" }),
+  );
+  const layout = parseHomeLayout(viejo);
+  assert.deepEqual(visibleHomeBlocks(layout), [
+    "portada",
+    "vistos",
+    "accesos",
+    "categorias",
+    "ofertas",
+    "pagos-retiro",
+    "mas-vendidos",
+    "por-categoria",
+    "destacados",
+    "guias",
+    "explorar",
+    "preguntas",
+  ]);
+  assert.deepEqual(layout.find((item) => item.id === "local"), { id: "local", visible: false });
+  assert.equal(layout.length, TODOS.length);
 });

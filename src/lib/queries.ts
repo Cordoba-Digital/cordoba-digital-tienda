@@ -452,6 +452,25 @@ export async function getNewArrivals(limit = 8) {
   return db.select().from(products).orderBy(desc(products.createdAt), desc(products.id)).limit(limit);
 }
 
+/**
+ * Vitrina de la home por categoría: las categorías principales con más
+ * productos y una fila de cada una, para mirar sin salir de la home. Solo
+ * entran las que tienen al menos `minProducts` con stock.
+ */
+export async function getCategoryShowcase(maxTabs = 6, perTab = 8, minProducts = 4) {
+  const roots = (await getCategoryTree())
+    .filter((c) => c.count >= minProducts)
+    .sort((a, b) => b.count - a.count)
+    .slice(0, maxTabs);
+  const rows = await Promise.all(
+    roots.map(async (c) => {
+      const { items } = await listProducts({ categoryId: c.id, inStock: true, perPage: perTab });
+      return { name: c.name, path: c.path, count: c.count, products: items };
+    }),
+  );
+  return rows.filter((row) => row.products.length >= minProducts);
+}
+
 /** Por slug, con `cache()` de React: `generateMetadata` y la página llaman a
     `findProduct()` en el mismo request (hasta 5 lookups por los slugs con
     `%`-encoding) y sin esto cada uno pegaba a la base. */

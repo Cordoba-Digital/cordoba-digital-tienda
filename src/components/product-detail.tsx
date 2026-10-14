@@ -237,9 +237,11 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
   const off = discountPercent(product.price, product.compareAtPrice);
   const fav = hydrated && isFavorite(product.slug);
 
+  // Después de leer el navegador: antes, la lectura (vacía) pisaba este
+  // producto y "vistos recientemente" nunca guardaba nada.
   useEffect(() => {
-    pushRecent(product.slug);
-  }, [product.slug, pushRecent]);
+    if (hydrated) pushRecent(product.slug);
+  }, [hydrated, product.slug, pushRecent]);
 
   useEffect(() => {
     trackViewItem({

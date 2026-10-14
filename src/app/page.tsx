@@ -21,6 +21,7 @@ import { Icon } from "@/components/category-icon";
 import { Countdown } from "@/components/countdown";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { HomeHero } from "@/components/home-hero";
+import { HomeCategoryTabs, HomeExplore, HomeRecentlyViewed } from "@/components/home-sections";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { ProductRow } from "@/components/product-card";
 import { SectionHeading } from "@/components/ui";
@@ -33,11 +34,13 @@ import { renderPerRequestIfNoDatabase } from "@/lib/store-cache";
 import { jsonLdString, storeJsonLd } from "@/lib/structured-data";
 import {
   getBestSellers,
+  getCategoryShowcase,
   getCategoryTree,
   getDealProducts,
   getFeaturedProducts,
   getGuides,
   getProductCount,
+  listProducts,
 } from "@/lib/queries";
 
 /** En la caché del CDN, regenerada cada 5 minutos o al cambiar algo desde el panel. */
@@ -95,7 +98,10 @@ const FAQ = [
 
 export default async function HomePage() {
   await renderPerRequestIfNoDatabase();
-  const [featured, deals, bestSellers, categories, googleReviews, productCount, guides, layout] = await Promise.all([
+  const layout = await getHomeLayout();
+  const visible = visibleHomeBlocks(layout);
+  // Los bloques nuevos piden datos aparte: si están ocultos, no se consultan.
+  const [featured, deals, bestSellers, categories, googleReviews, productCount, guides, showcase, explore] = await Promise.all([
     getFeaturedProducts(24),
     getDealProducts(8),
     getBestSellers(8),
@@ -103,7 +109,8 @@ export default async function HomePage() {
     getGoogleReviews(),
     getProductCount(),
     getGuides(),
-    getHomeLayout(),
+    visible.includes("por-categoria") ? getCategoryShowcase() : Promise.resolve([]),
+    visible.includes("explorar") ? listProducts({ inStock: true, perPage: 10 }) : Promise.resolve(null),
   ]);
 
   const ratingValue = googleReviews.rating?.toFixed(1) ?? null;
@@ -122,7 +129,6 @@ export default async function HomePage() {
   const bestSlugs = new Set(bestSellers.map((p) => p.slug));
   const dealSlugs = new Set(deals.map((p) => p.slug));
   const featuredPicks = featured.filter((p) => !bestSlugs.has(p.slug) && !dealSlugs.has(p.slug)).slice(0, 8);
-  const visible = visibleHomeBlocks(layout);
   // Los accesos apuntan al bloque del local solo si está en la home.
   const pickupHref = visible.includes("local") ? "#local" : "/ayuda";
 
@@ -157,18 +163,19 @@ export default async function HomePage() {
             */}
             <section className="relative z-10 -mt-6 sm:-mt-8">
               <div className="container-xl">
-                <div className="grid overflow-hidden rounded-2xl bg-surface shadow-[0_20px_50px_-30px_rgba(20,22,28,0.45)] ring-1 ring-black/5 sm:grid-cols-2 lg:grid-cols-4">
+                {/* En el celular, 2×2 y sin la bajada: apiladas ocupaban casi una pantalla. */}
+                <div className="grid grid-cols-2 overflow-hidden rounded-2xl bg-surface shadow-[0_20px_50px_-30px_rgba(20,22,28,0.45)] ring-1 ring-black/5 lg:grid-cols-4">
                   {TRUST.map((t, i) => (
                     <div
                       key={t.title}
-                      className={`flex gap-3 p-4 sm:p-5 ${i > 0 ? "border-t border-ink-100 sm:border-t-0 sm:border-l sm:border-ink-100" : ""}`}
+                      className={`flex items-center gap-2.5 p-3 sm:items-start sm:gap-3 sm:p-5 ${i % 2 ? "border-l border-ink-100" : ""} ${i > 1 ? "border-t border-ink-100 lg:border-t-0" : ""} ${i === 2 ? "lg:border-l" : ""}`}
                     >
-                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-700">
+                      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-700 sm:h-10 sm:w-10">
                         <Icon name={t.icon} className="h-[18px] w-[18px]" />
                       </span>
                       <div>
-                        <p className="text-sm font-bold text-ink-900">{t.title}</p>
-                        <p className="mt-0.5 text-xs leading-relaxed text-ink-500">{t.text}</p>
+                        <p className="text-[13px] font-bold leading-tight text-ink-900 sm:text-sm">{t.title}</p>
+                        <p className="mt-0.5 hidden text-xs leading-relaxed text-ink-500 sm:block">{t.text}</p>
                       </div>
                     </div>
                   ))}
@@ -178,6 +185,7 @@ export default async function HomePage() {
           </div>
       </>
     ),
+    vistos: () => <HomeRecentlyViewed />,
     accesos: () => (
       <>
         {/*
@@ -185,7 +193,8 @@ export default async function HomePage() {
           más se busca, sin pasar por el menú.
         */}
         <nav aria-label="Accesos rápidos" className="container-xl pt-10">
-          <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5">
+          {/* En el celular van en una fila que se desliza: en grilla ocupaban una pantalla entera. */}
+          <ul className="no-scrollbar -mx-4 flex snap-x gap-2.5 overflow-x-auto px-4 pb-1 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-5">
             {[
               { href: "/productos?ofertas=1", icon: BadgePercent, title: "Ofertas", text: heroMaxOff > 0 ? `Hasta ${heroMaxOff}% OFF` : "Precios de la semana" },
               { href: "/productos?orden=vendidos", icon: Trophy, title: "Más vendidos", text: "El ranking del depósito" },
@@ -193,12 +202,12 @@ export default async function HomePage() {
               { href: pickupHref, icon: Store, title: "Retiro en el local", text: "27 de Abril 180" },
               { href: "/ayuda", icon: Truck, title: "Envíos y pagos", text: "Andreani a todo el país" },
             ].map((a) => (
-              <li key={a.title}>
+              <li key={a.title} className="w-[200px] shrink-0 snap-start sm:w-auto">
                 <Link
                   href={a.href}
-                  className="flex h-full items-center gap-3 rounded-2xl bg-surface p-3.5 ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-lg"
+                  className="flex h-full items-center gap-3 rounded-2xl bg-surface p-3 ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-lg sm:p-3.5"
                 >
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-700">
+                  <span className="grid h-9 w-9 shrink-0 sm:h-10 sm:w-10 place-items-center rounded-xl bg-brand-50 text-brand-700">
                     <a.icon size={18} aria-hidden />
                   </span>
                   <span className="min-w-0">
@@ -314,6 +323,14 @@ export default async function HomePage() {
           </section>
       </>
     ),
+    "por-categoria": () =>
+      showcase.length ? (
+        <HomeCategoryTabs
+          tabs={showcase.map((tab) => ({ name: tab.name, path: tab.path, count: tab.count, products: tab.products.map(toView) }))}
+        />
+      ) : null,
+    explorar: () =>
+      explore ? <HomeExplore initial={explore.items.map(toView)} total={explore.total} hasMore={explore.pages > 1} /> : null,
     local: () => (
       <>
           <section id="local" className="container-xl grid gap-4 py-12 lg:grid-cols-2">
