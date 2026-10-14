@@ -188,17 +188,17 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                 }`}
               >
                 <div>
-                  <span className={`inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold text-white backdrop-blur${enterClass}`} style={enterStyle(0)}>
-                    <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" aria-hidden />
+                  <span className={`inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white/70 px-3 py-1 text-[11px] font-semibold text-ink-700 backdrop-blur${enterClass}`} style={enterStyle(0)}>
+                    <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" aria-hidden />
                     {slide.pill}
                   </span>
-                  <Title className={`mt-3.5 text-balance-pretty text-[1.75rem] font-black leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-[2.6rem]${enterClass}`} style={enterStyle(70)}>
+                  <Title className={`mt-3.5 text-balance-pretty text-[1.75rem] font-black leading-[1.08] tracking-tight text-ink-900 sm:text-4xl lg:text-[2.6rem]${enterClass}`} style={enterStyle(70)}>
                     {slide.titleLead}{" "}
-                    {/* Naranja sólido, no degradado: `brand-400` da 6,45:1 sobre
-                        el fondo del hero (`#14161c`), bien por encima de AA. */}
-                    <span className="text-brand-400">{slide.titleAccent}</span>
+                    {/* Naranja sólido, no degradado: `brand-700` da más de 4,5:1
+                        sobre el crema del hero. */}
+                    <span className="text-brand-700">{slide.titleAccent}</span>
                   </Title>
-                  <p className={`mt-3.5 max-w-xl text-[15px] leading-relaxed text-white/70${enterClass}`} style={enterStyle(140)}>{slide.text}</p>
+                  <p className={`mt-3.5 max-w-xl text-[15px] leading-relaxed text-ink-600${enterClass}`} style={enterStyle(140)}>{slide.text}</p>
                   {/* Botones píldora. El naranja de marca lleva la etiqueta en
                       tinta oscura y no en blanco: `brand-500` es un naranja
                       claro y con blanco da 3,37:1, que no pasa los 4,5:1 de
@@ -213,7 +213,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                     {slide.cta2 ? (
                       <Link
                         href={slide.cta2.href}
-                        className="rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/10"
+                        className="rounded-full border border-ink-200 bg-white/60 px-5 py-3 text-sm font-bold text-ink-900 transition hover:bg-white"
                       >
                         {slide.cta2.label}
                       </Link>
@@ -221,9 +221,9 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                   </div>
                   <dl className={`mt-6 grid max-w-xl gap-2.5 ${statsCols}`}>
                     {slide.stats.map((stat) => (
-                      <div key={stat.v} className={`rounded-2xl border border-white/10 bg-white/5 px-3 py-2.5 backdrop-blur${enterClass}`} style={enterStyle(280)}>
-                        <dt className="text-base font-black leading-none text-white">{stat.k}</dt>
-                        <dd className="mt-1 text-[10px] font-medium uppercase tracking-wide text-white/45">{stat.v}</dd>
+                      <div key={stat.v} className={`rounded-2xl border border-brand-100 bg-white/70 px-3 py-2.5 backdrop-blur${enterClass}`} style={enterStyle(280)}>
+                        <dt className="text-base font-black leading-none text-ink-900">{stat.k}</dt>
+                        <dd className="mt-1 text-[10px] font-medium uppercase tracking-wide text-ink-500">{stat.v}</dd>
                       </div>
                     ))}
                   </dl>
@@ -239,7 +239,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                 */}
                 {producto ? (
                   <div className={`relative lg:h-full lg:min-h-0${enterClass}`} style={enterStyle(280)}>
-                    <article className="rounded-[28px] bg-surface p-4 lg:flex lg:h-full lg:flex-col shadow-[0_28px_70px_-34px_rgba(20,22,28,0.5)] ring-1 ring-black/5 sm:p-5">
+                    <article className="rounded-[28px] bg-surface p-4 lg:flex lg:h-full lg:flex-col shadow-[0_28px_70px_-34px_rgba(194,65,12,0.35)] ring-1 ring-black/5 sm:p-5">
                       <div className="flex items-center justify-between gap-3">
                         <span className="inline-flex items-center gap-1.5 rounded-full bg-deep px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white">
                           <Truck size={12} strokeWidth={2.4} aria-hidden />
@@ -324,24 +324,24 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
       {count > 1 ? (
         <>
           {/* Flechas a los costados, sin relleno ni contorno: solo el ícono
-              con sombra, para que se lean sobre el fondo oscuro y también si
+              con sombra, para que se lean sobre el fondo crema y también si
               caen sobre la tarjeta blanca. En móvil se usa swipe. Sin puntos
               de avance: el usuario los pidió fuera. */}
           <button
             type="button"
             onClick={() => go(-1)}
             aria-label="Diapositiva anterior"
-            className="group absolute left-0.5 top-1/2 z-10 hidden h-12 w-8 -translate-y-1/2 place-items-center rounded-lg bg-transparent text-white/85 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid min-[1440px]:left-6 min-[1440px]:w-12"
+            className="group absolute left-0.5 top-1/2 z-10 hidden h-12 w-8 -translate-y-1/2 place-items-center rounded-lg bg-transparent text-ink-700 transition hover:text-brand-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid min-[1440px]:left-6 min-[1440px]:w-12"
           >
-            <ChevronLeft size={30} strokeWidth={2} aria-hidden className="drop-shadow-[0_1px_3px_rgba(0,0,0,0.55)] transition-transform group-hover:-translate-x-0.5" />
+            <ChevronLeft size={30} strokeWidth={2} aria-hidden className="drop-shadow-[0_1px_2px_rgba(255,255,255,0.9)] transition-transform group-hover:-translate-x-0.5" />
           </button>
           <button
             type="button"
             onClick={() => go(1)}
             aria-label="Diapositiva siguiente"
-            className="group absolute right-0.5 top-1/2 z-10 hidden h-12 w-8 -translate-y-1/2 place-items-center rounded-lg bg-transparent text-white/85 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid min-[1440px]:right-6 min-[1440px]:w-12"
+            className="group absolute right-0.5 top-1/2 z-10 hidden h-12 w-8 -translate-y-1/2 place-items-center rounded-lg bg-transparent text-ink-700 transition hover:text-brand-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-400 active:scale-95 sm:grid min-[1440px]:right-6 min-[1440px]:w-12"
           >
-            <ChevronRight size={30} strokeWidth={2} aria-hidden className="drop-shadow-[0_1px_3px_rgba(0,0,0,0.55)] transition-transform group-hover:translate-x-0.5" />
+            <ChevronRight size={30} strokeWidth={2} aria-hidden className="drop-shadow-[0_1px_2px_rgba(255,255,255,0.9)] transition-transform group-hover:translate-x-0.5" />
           </button>
         </>
       ) : null}

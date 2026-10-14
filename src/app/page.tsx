@@ -10,7 +10,6 @@ import {
   MapPin,
   Phone,
   Store,
-  Timer,
   Trophy,
   Truck,
   Wallet,
@@ -18,7 +17,6 @@ import {
 
 import { CategoryRow } from "@/components/category-row";
 import { Icon } from "@/components/category-icon";
-import { Countdown } from "@/components/countdown";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { HomeHero } from "@/components/home-hero";
 import { HomeCategoryTabs, HomeExplore, HomeRecentlyViewed } from "@/components/home-sections";
@@ -140,11 +138,11 @@ export default async function HomePage() {
     portada: () => (
       <>
           {/*
-            Hero y cintillo comparten el mismo fondo oscuro (`mesh-dark` vive acá y
-            no en el carrusel): el negro baja hasta el borde inferior del cintillo,
-            con corte recto, en vez de partirlo mitad oscuro y mitad crema.
+            Hero y cintillo comparten el mismo fondo crema de marca (`mesh-warm` vive
+            acá y no en el carrusel): baja hasta el borde inferior del cintillo, con
+            corte recto.
           */}
-          <div className="mesh-dark">
+          <div className="mesh-warm">
             <HomeHero
               productCount={productCount}
               ratingValue={ratingValue}
@@ -159,7 +157,7 @@ export default async function HomePage() {
 
             {/*
               Cintillo de confianza: una caja blanca que pisa el hero. El `z-10` la
-              saca del orden normal para que la sombra caiga sobre el fondo oscuro.
+              saca del orden normal para que la sombra caiga sobre el fondo del hero.
             */}
             <section className="relative z-10 -mt-6 sm:-mt-8">
               <div className="container-xl">
@@ -247,28 +245,26 @@ export default async function HomePage() {
     ),
     ofertas: () => (
       <>
-          {/* Ofertas: panel oscuro redondeado con el contador a la derecha. */}
+          {/* Ofertas: panel crema de marca con las mayores rebajas reales. */}
           <section id="ofertas" className="container-xl">
-            <div className="rounded-[28px] bg-ink px-4 py-6 text-white sm:px-6 sm:py-8">
+            <div className="mesh-warm rounded-[28px] px-4 py-6 ring-1 ring-brand-100 sm:px-6 sm:py-8">
               <div className="flex flex-wrap items-end justify-between gap-4">
                 <div>
-                  <p className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-300">
-                    <Timer size={13} aria-hidden /> Ofertas relámpago
+                  <p className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-700">
+                    <BadgePercent size={13} aria-hidden /> Ofertas
                   </p>
-                  <h2 className="mt-1 text-2xl font-extrabold tracking-tight sm:text-3xl">
-                    Los descuentos más grandes de la semana
+                  <h2 className="mt-1 text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
+                    Los descuentos más grandes de la tienda
                   </h2>
-                  <p className="mt-1 max-w-xl text-sm text-white/60">
-                    Stock limitado en depósito. A la medianoche, hora Córdoba, estos precios vuelven a la lista.
+                  {/* Sin cuenta regresiva: los precios no cambian a la medianoche,
+                      y anunciar un vencimiento que no existe es publicidad engañosa. */}
+                  <p className="mt-1 max-w-xl text-sm text-ink-500">
+                    Productos con precio rebajado y stock en el depósito, de mayor a menor descuento.
                   </p>
                 </div>
-                <div className="text-right">
-                  <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white/40">Termina en</p>
-                  {/* El contador va con `tono="oscuro"`: el panel es `bg-ink` y las
-                      cajitas de los digitos necesitan el tono claro de la variante
-                      oscura para no desvanecerse en el fondo. */}
-                  <Countdown label="" tono="oscuro" />
-                </div>
+                <Link href="/productos?ofertas=1" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700 hover:text-brand-800">
+                  Ver todas las ofertas <ArrowRight size={14} aria-hidden />
+                </Link>
               </div>
               <div className="mt-6">
                 <ProductRow products={deals.map(toView)} label="las ofertas" />
@@ -489,16 +485,16 @@ export default async function HomePage() {
                 Centro de ayuda <ArrowRight size={14} aria-hidden />
               </Link>
             </div>
-            <div className="flex flex-col justify-between rounded-[28px] bg-ink p-6 text-white sm:p-7">
+            <div className="mesh-warm flex flex-col justify-between rounded-[28px] p-6 ring-1 ring-brand-100 sm:p-7">
               <div>
-                <p className="inline-flex rounded-full bg-white/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-white/70">
+                <p className="inline-flex rounded-full bg-white/70 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">
                   Newsletter
                 </p>
-                <h3 className="mt-4 text-2xl font-extrabold tracking-tight">Novedades y ofertas de Córdoba Digital</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/65">Ingresos de depósito y ofertas fuertes. No un mail por día.</p>
+                <h3 className="mt-4 text-2xl font-extrabold tracking-tight text-ink-900">Novedades y ofertas de Córdoba Digital</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-500">Ingresos de depósito y ofertas fuertes. No un mail por día.</p>
               </div>
               <div className="mt-6">
-                <NewsletterForm />
+                <NewsletterForm variant="light" />
               </div>
             </div>
           </section>

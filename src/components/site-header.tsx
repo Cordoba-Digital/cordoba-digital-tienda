@@ -108,7 +108,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="mesh-dark border-b border-white/5 py-1.5 text-center text-[12px] font-medium text-white/85">
+      <div className="bg-brand-700 py-1.5 text-center text-[12px] font-medium text-white">
         <div className="container-xl flex items-center justify-center gap-2 overflow-hidden">
           <span key={announcement} className="animate-rise">
             {ANNOUNCEMENTS[announcement]}

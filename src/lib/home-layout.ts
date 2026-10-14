@@ -13,7 +13,7 @@ export const HOME_BLOCKS = [
   { id: "vistos", label: "Seguí donde lo dejaste", description: "Los últimos productos que miró cada visitante. Solo aparece si ya vio alguno." },
   { id: "accesos", label: "Accesos rápidos", description: "Atajos a ofertas, más vendidos, envíos, retiro y pagos." },
   { id: "categorias", label: "Categorías", description: "Fila desplazable con las categorías y su cantidad de productos." },
-  { id: "ofertas", label: "Ofertas relámpago", description: "Panel oscuro con las ofertas y el contador hasta la medianoche." },
+  { id: "ofertas", label: "Ofertas", description: "Los productos con precio rebajado y stock, de mayor a menor descuento." },
   { id: "mas-vendidos", label: "Más vendidos", description: "Los 8 productos que más salen, con Top 1, 2 y 3." },
   { id: "por-categoria", label: "Explorá por categoría", description: "Pestañas con las categorías con más productos y una fila de cada una." },
   { id: "pagos-retiro", label: "Pagos y retiro", description: "Dos tarjetas: transferencia o efectivo, y retiro en el local." },
