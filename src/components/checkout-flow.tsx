@@ -304,6 +304,12 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
   // estado inconsistente y el ida y vuelta del efecto).
   const chooseDelivery = (method: DeliveryMethod) => {
     setDeliveryMethod(method);
+    setErrors((prev) => {
+      if (!prev.delivery) return prev;
+      const next = { ...prev };
+      delete next.delivery;
+      return next;
+    });
     if (method !== "pickup") {
       setPayment((prev) => (prev === "efectivo" ? "transferencia" : prev));
     }
