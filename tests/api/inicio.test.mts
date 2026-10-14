@@ -74,10 +74,10 @@ test("guarda el orden validado, la home lo lee y queda en la actividad", async (
   const body = (await res.json()) as { ok: boolean; blocks: { id: string }[] };
   assert.equal(body.ok, true);
   // Lo que no vino en la lista se suma en su lugar del orden recomendado.
-  assert.deepEqual(body.blocks.slice(0, 3).map((b) => b.id), ["portada", "vistos", "accesos"]);
+  assert.deepEqual(body.blocks.slice(0, 3).map((b) => b.id), ["portada", "accesos", "vistos"]);
 
   const visibles = visibleHomeBlocks(await getHomeLayout());
-  assert.deepEqual(visibles.slice(0, 6), ["portada", "vistos", "accesos", "categorias", "ofertas", "mas-vendidos"]);
+  assert.deepEqual(visibles.slice(0, 6), ["portada", "accesos", "vistos", "categorias", "ofertas", "mas-vendidos"]);
   assert.ok(!visibles.includes("local"));
   assert.ok(!visibles.includes("inventado" as never));
 

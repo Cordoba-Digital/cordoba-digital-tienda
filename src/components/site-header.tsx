@@ -108,7 +108,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="bg-brand-700 py-1.5 text-center text-[12px] font-medium text-white">
+      <div className="bg-brand-700 py-1 text-center text-[11px] font-medium text-white sm:py-1.5 sm:text-[12px]">
         <div className="container-xl flex items-center justify-center gap-2 overflow-hidden">
           <span key={announcement} className="animate-rise">
             {ANNOUNCEMENTS[announcement]}
@@ -117,12 +117,12 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
       </div>
 
       <div className="border-b border-ink-100 bg-surface/95 backdrop-blur-md">
-        <div className="container-xl flex h-16 items-center gap-3 md:h-[72px] md:gap-5">
+        <div className="container-xl flex h-14 items-center gap-2 sm:h-16 sm:gap-3 md:h-[72px] md:gap-5">
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Abrir menú"
-            className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-ink-100 text-ink-700 lg:hidden"
+            className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-ink-100 text-ink-700 sm:h-10 sm:w-10 lg:hidden"
           >
             <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" />
@@ -130,7 +130,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
           </button>
 
           <Link href="/" className="flex shrink-0 items-center gap-2.5">
-            <Image src="/images/logo.png" alt="Córdoba Digital" width={160} height={64} className="h-12 w-auto object-contain" priority />
+            <Image src="/images/logo.png" alt="Córdoba Digital" width={160} height={64} className="h-10 w-auto object-contain sm:h-12" priority />
           </Link>
 
           <div ref={boxRef} className="relative hidden flex-1 md:block">
@@ -204,7 +204,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
 
             <Link
               href="/favoritos"
-              className="relative grid h-10 w-10 place-items-center rounded-full border border-ink-100 text-ink-600 transition hover:bg-ink-50 hover:text-rose-500"
+              className="relative grid h-9 w-9 place-items-center rounded-full border border-ink-100 text-ink-600 transition hover:bg-ink-50 hover:text-rose-500 sm:h-10 sm:w-10"
               aria-label="Favoritos"
             >
               <svg viewBox="0 0 24 24" className="h-5.5 w-5.5" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -219,7 +219,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
 
             <Link
               href="/mi-cuenta"
-              className="grid h-10 w-10 place-items-center overflow-hidden rounded-full border border-ink-100 text-ink-600 transition hover:bg-ink-50 hover:text-brand-700"
+              className="grid h-9 w-9 place-items-center overflow-hidden rounded-full border border-ink-100 text-ink-600 transition hover:bg-ink-50 hover:text-brand-700 sm:h-10 sm:w-10"
               aria-label={me ? `Mi cuenta (${me.name || me.email})` : "Mi cuenta"}
               title={me ? `Ingresaste como ${me.email}` : "Ingresar"}
             >
@@ -241,7 +241,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
             <button
               type="button"
               onClick={openCart}
-              className="relative flex h-10 items-center gap-2 rounded-full bg-brand-500 px-4 text-sm font-bold text-white transition hover:bg-brand-600"
+              className="relative flex h-9 items-center gap-2 rounded-full bg-brand-500 px-3 text-sm font-bold text-white transition hover:bg-brand-600 sm:h-10 sm:px-4"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <path d="M3 4h2.2l2 11h10.4l2-8H6" strokeLinecap="round" strokeLinejoin="round" />
@@ -263,13 +263,13 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
         </div>
 
         {/* Mobile search */}
-        <div className="container-xl pb-3 md:hidden">
+        <div className="container-xl pb-2 sm:pb-3 md:hidden">
           <form onSubmit={submitSearch} className="relative">
             <input
               value={term}
               onChange={(e) => setTerm(e.target.value)}
               placeholder="¿Qué estás buscando?"
-              className="h-11 w-full rounded-full border border-ink-100 bg-ink-50/80 pl-10 pr-4 text-sm outline-none focus:border-brand-400 focus:bg-surface"
+              className="h-10 w-full rounded-full border border-ink-100 bg-ink-50/80 pl-10 pr-4 text-sm outline-none focus:border-brand-400 focus:bg-surface sm:h-11"
             />
             <svg
               viewBox="0 0 24 24"

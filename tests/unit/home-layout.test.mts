@@ -53,8 +53,8 @@ test("con un orden viejo guardado, los bloques nuevos entran después de su veci
   const layout = parseHomeLayout(viejo);
   assert.deepEqual(visibleHomeBlocks(layout), [
     "portada",
-    "vistos",
     "accesos",
+    "vistos",
     "categorias",
     "ofertas",
     "pagos-retiro",

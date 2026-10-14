@@ -40,13 +40,13 @@ export function HomeRecentlyViewed() {
   if (!key || !products.length) return null;
 
   return (
-    <section aria-labelledby="vistos-titulo" className="container-xl pt-10">
-      <div className="mb-5 flex items-end justify-between gap-3">
+    <section aria-labelledby="vistos-titulo" className="container-xl pt-5 sm:pt-10">
+      <div className="mb-3 flex items-end justify-between gap-3 sm:mb-5">
         <div className="min-w-0">
-          <p className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">
+          <p className="hidden items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700 sm:inline-flex">
             <History size={13} aria-hidden /> Vistos recientemente
           </p>
-          <h2 id="vistos-titulo" className="mt-1 text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
+          <h2 id="vistos-titulo" className="text-lg font-extrabold leading-tight tracking-tight text-ink-900 sm:mt-1 sm:text-3xl">
             Seguí donde lo dejaste
           </h2>
         </div>
@@ -79,15 +79,15 @@ export function HomeCategoryTabs({ tabs }: { tabs: CategoryShowcaseTab[] }) {
   if (!current) return null;
 
   return (
-    <section aria-labelledby={`${id}-titulo`} className="container-xl py-10">
-      <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Mirá sin salir de acá</p>
-      <h2 id={`${id}-titulo`} className="mt-1 text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
+    <section aria-labelledby={`${id}-titulo`} className="container-xl py-5 sm:py-10">
+      <p className="hidden text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700 sm:block">Mirá sin salir de acá</p>
+      <h2 id={`${id}-titulo`} className="text-lg font-extrabold leading-tight tracking-tight text-ink-900 sm:mt-1 sm:text-3xl">
         Explorá por categoría
       </h2>
       <div
         role="tablist"
         aria-label="Categorías"
-        className="no-scrollbar -mx-4 mb-5 mt-4 flex gap-2 overflow-x-auto px-4 pb-1 md:mx-0 md:flex-wrap md:px-0"
+        className="no-scrollbar -mx-4 mb-3 mt-2.5 flex gap-1.5 overflow-x-auto px-4 pb-1 sm:mb-5 sm:mt-4 sm:gap-2 md:mx-0 md:flex-wrap md:px-0"
       >
         {tabs.map((tab, index) => {
           const selected = index === active;
@@ -100,7 +100,7 @@ export function HomeCategoryTabs({ tabs }: { tabs: CategoryShowcaseTab[] }) {
               aria-selected={selected}
               aria-controls={`${id}-panel`}
               onClick={() => setActive(index)}
-              className={`shrink-0 rounded-full px-4 py-2 text-sm font-bold transition ${
+              className={`shrink-0 rounded-full px-3 py-1.5 text-[13px] font-bold transition sm:px-4 sm:py-2 sm:text-sm ${
                 selected ? "bg-ink-900 text-white" : "bg-surface text-ink-700 ring-1 ring-black/5 hover:bg-brand-50 hover:text-brand-700"
               }`}
             >
@@ -113,7 +113,7 @@ export function HomeCategoryTabs({ tabs }: { tabs: CategoryShowcaseTab[] }) {
         <ProductRow key={current.path} products={current.products} label={current.name} />
         <Link
           href={`/categoria/${current.path}`}
-          className="group mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-brand-700 hover:text-brand-800"
+          className="group mt-3 inline-flex items-center gap-1.5 text-[13px] font-bold text-brand-700 hover:text-brand-800 sm:mt-4 sm:text-sm"
         >
           Ver {current.count} productos en {current.name}
           <ArrowRight size={14} className="transition group-hover:translate-x-0.5" aria-hidden />
@@ -157,17 +157,17 @@ export function HomeExplore({ initial, total, hasMore: initialHasMore }: { initi
   if (!products.length) return null;
 
   return (
-    <section aria-labelledby="explorar-titulo" className="container-xl py-10">
-      <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Hay más para ver</p>
-      <h2 id="explorar-titulo" className="mb-6 mt-1 text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
+    <section aria-labelledby="explorar-titulo" className="container-xl py-5 sm:py-10">
+      <p className="hidden text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700 sm:block">Hay más para ver</p>
+      <h2 id="explorar-titulo" className="mb-3 text-lg font-extrabold leading-tight tracking-tight text-ink-900 sm:mb-6 sm:mt-1 sm:text-3xl">
         Seguí explorando
       </h2>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-4 xl:grid-cols-5">
         {products.map((product) => (
           <ProductCard key={product.slug} product={product} />
         ))}
       </div>
-      <div className="mt-8 flex flex-col items-center gap-2 text-center">
+      <div className="mt-5 flex flex-col items-center gap-2 text-center sm:mt-8">
         <p className="text-xs text-ink-500" aria-live="polite">
           Mostrando {products.length} de {total} productos
         </p>

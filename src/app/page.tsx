@@ -161,18 +161,19 @@ export default async function HomePage() {
             */}
             <section className="relative z-10 -mt-6 sm:-mt-8">
               <div className="container-xl">
-                {/* En el celular, 2×2 y sin la bajada: apiladas ocupaban casi una pantalla. */}
-                <div className="grid grid-cols-2 overflow-hidden rounded-2xl bg-surface shadow-[0_20px_50px_-30px_rgba(20,22,28,0.45)] ring-1 ring-black/5 lg:grid-cols-4">
+                {/* En el celular, una sola fila que se desliza y sin la bajada: en
+                    2×2 se comía un cuarto de la pantalla. */}
+                <div className="no-scrollbar flex overflow-x-auto rounded-2xl bg-surface shadow-[0_20px_50px_-30px_rgba(20,22,28,0.45)] ring-1 ring-black/5 sm:grid sm:grid-cols-2 sm:overflow-hidden lg:grid-cols-4">
                   {TRUST.map((t, i) => (
                     <div
                       key={t.title}
-                      className={`flex items-center gap-2.5 p-3 sm:items-start sm:gap-3 sm:p-5 ${i % 2 ? "border-l border-ink-100" : ""} ${i > 1 ? "border-t border-ink-100 lg:border-t-0" : ""} ${i === 2 ? "lg:border-l" : ""}`}
+                      className={`flex shrink-0 items-center gap-2 border-ink-100 px-3 py-2.5 sm:items-start sm:gap-3 sm:p-5 ${i > 0 ? "max-sm:border-l" : ""} ${i % 2 ? "sm:border-l" : ""} ${i > 1 ? "sm:border-t lg:border-t-0" : ""} ${i === 2 ? "lg:border-l" : ""}`}
                     >
-                      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-700 sm:h-10 sm:w-10">
-                        <Icon name={t.icon} className="h-[18px] w-[18px]" />
+                      <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brand-50 text-brand-700 sm:h-10 sm:w-10 sm:rounded-xl">
+                        <Icon name={t.icon} className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
                       </span>
                       <div>
-                        <p className="text-[13px] font-bold leading-tight text-ink-900 sm:text-sm">{t.title}</p>
+                        <p className="whitespace-nowrap text-[12px] font-bold leading-tight text-ink-900 sm:whitespace-normal sm:text-sm">{t.title}</p>
                         <p className="mt-0.5 hidden text-xs leading-relaxed text-ink-500 sm:block">{t.text}</p>
                       </div>
                     </div>
@@ -190,9 +191,10 @@ export default async function HomePage() {
           Accesos rápidos (el "dynamic access" de Mercado Libre): atajos a lo que
           más se busca, sin pasar por el menú.
         */}
-        <nav aria-label="Accesos rápidos" className="container-xl pt-10">
-          {/* En el celular van en una fila que se desliza: en grilla ocupaban una pantalla entera. */}
-          <ul className="no-scrollbar -mx-4 flex snap-x gap-2.5 overflow-x-auto px-4 pb-1 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-5">
+        <nav aria-label="Accesos rápidos" className="container-xl pt-4 sm:pt-10">
+          {/* En el celular son íconos redondos con su nombre abajo, como los de
+              Mercado Libre: entran los cinco en una fila sin deslizar. */}
+          <ul className="no-scrollbar -mx-4 flex snap-x justify-between gap-1 overflow-x-auto px-4 pb-1 sm:mx-0 sm:grid sm:grid-cols-3 sm:gap-2.5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-5">
             {[
               { href: "/productos?ofertas=1", icon: BadgePercent, title: "Ofertas", text: heroMaxOff > 0 ? `Hasta ${heroMaxOff}% OFF` : "Precios de la semana" },
               { href: "/productos?orden=vendidos", icon: Trophy, title: "Más vendidos", text: "El ranking del depósito" },
@@ -200,17 +202,17 @@ export default async function HomePage() {
               { href: pickupHref, icon: Store, title: "Retiro en el local", text: "27 de Abril 180" },
               { href: "/ayuda", icon: Truck, title: "Envíos y pagos", text: "Andreani a todo el país" },
             ].map((a) => (
-              <li key={a.title} className="w-[200px] shrink-0 snap-start sm:w-auto">
+              <li key={a.title} className="w-[66px] shrink-0 snap-start sm:w-auto">
                 <Link
                   href={a.href}
-                  className="flex h-full items-center gap-3 rounded-2xl bg-surface p-3 ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-lg sm:p-3.5"
+                  className="flex h-full flex-col items-center gap-1.5 text-center transition sm:flex-row sm:gap-3 sm:rounded-2xl sm:bg-surface sm:p-3.5 sm:text-left sm:ring-1 sm:ring-black/5 sm:hover:-translate-y-0.5 sm:hover:shadow-lg"
                 >
-                  <span className="grid h-9 w-9 shrink-0 sm:h-10 sm:w-10 place-items-center rounded-xl bg-brand-50 text-brand-700">
-                    <a.icon size={18} aria-hidden />
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-surface text-brand-700 shadow-sm ring-1 ring-black/5 sm:h-10 sm:w-10 sm:rounded-xl sm:bg-brand-50 sm:shadow-none sm:ring-0">
+                    <a.icon size={20} aria-hidden />
                   </span>
                   <span className="min-w-0">
-                    <span className="block text-sm font-bold text-ink-900">{a.title}</span>
-                    <span className="block text-xs leading-snug text-ink-500">{a.text}</span>
+                    <span className="block text-[11px] font-semibold leading-tight text-ink-700 sm:text-sm sm:font-bold sm:text-ink-900">{a.title}</span>
+                    <span className="hidden text-xs leading-snug text-ink-500 sm:block">{a.text}</span>
                   </span>
                 </Link>
               </li>
@@ -226,7 +228,7 @@ export default async function HomePage() {
             de la base. La foto, el dron y el CCTV van por separado, para que no
             confundas una cosa con otra.
           */}
-          <section id="categorias" className="container-xl py-14">
+          <section id="categorias" className="container-xl py-5 sm:py-14">
             <SectionHeading
               eyebrow="Explorá"
               title="Categorías"
@@ -247,26 +249,27 @@ export default async function HomePage() {
       <>
           {/* Ofertas: panel crema de marca con las mayores rebajas reales. */}
           <section id="ofertas" className="container-xl">
-            <div className="mesh-warm rounded-[28px] px-4 py-6 ring-1 ring-brand-100 sm:px-6 sm:py-8">
-              <div className="flex flex-wrap items-end justify-between gap-4">
-                <div>
-                  <p className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-700">
+            <div className="mesh-warm -mx-1 rounded-2xl px-3 py-4 ring-1 ring-brand-100 sm:mx-0 sm:rounded-[28px] sm:px-6 sm:py-8">
+              <div className="flex items-end justify-between gap-3 sm:flex-wrap sm:gap-4">
+                <div className="min-w-0">
+                  <p className="hidden items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-700 sm:inline-flex">
                     <BadgePercent size={13} aria-hidden /> Ofertas
                   </p>
-                  <h2 className="mt-1 text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
+                  <h2 className="text-lg font-extrabold leading-tight tracking-tight text-ink-900 sm:mt-1 sm:text-3xl">
                     Los descuentos más grandes de la tienda
                   </h2>
                   {/* Sin cuenta regresiva: los precios no cambian a la medianoche,
                       y anunciar un vencimiento que no existe es publicidad engañosa. */}
-                  <p className="mt-1 max-w-xl text-sm text-ink-500">
+                  <p className="mt-1 hidden max-w-xl text-sm text-ink-500 sm:block">
                     Productos con precio rebajado y stock en el depósito, de mayor a menor descuento.
                   </p>
                 </div>
-                <Link href="/productos?ofertas=1" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700 hover:text-brand-800">
-                  Ver todas las ofertas <ArrowRight size={14} aria-hidden />
+                <Link href="/productos?ofertas=1" className="inline-flex shrink-0 items-center gap-1 text-[13px] font-bold text-brand-700 hover:text-brand-800 sm:gap-1.5 sm:text-sm">
+                  <span className="sm:hidden">Ver todas</span>
+                  <span className="hidden sm:inline">Ver todas las ofertas</span> <ArrowRight size={14} aria-hidden />
                 </Link>
               </div>
-              <div className="mt-6">
+              <div className="mt-3 sm:mt-6">
                 <ProductRow products={deals.map(toView)} label="las ofertas" />
               </div>
             </div>
@@ -275,27 +278,27 @@ export default async function HomePage() {
     ),
     "pagos-retiro": () => (
       <>
-          <section className="container-xl grid gap-4 py-8 md:grid-cols-2">
-            <article className="rounded-[28px] bg-surface p-6 ring-1 ring-black/5">
-              <div className="mb-4 h-1 w-14 rounded-full bg-emerald-500" />
-              <Wallet size={22} className="text-emerald-700" aria-hidden />
-              <h3 className="mt-3 text-xl font-extrabold tracking-tight text-ink-900">Transferencia o efectivo en el local</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-500">
+          <section className="container-xl grid gap-3 py-5 sm:gap-4 sm:py-8 md:grid-cols-2">
+            <article className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-[28px] sm:p-6">
+              <div className="mb-4 hidden h-1 w-14 rounded-full bg-emerald-500 sm:block" />
+              <h3 className="flex items-center gap-2 text-base font-extrabold tracking-tight text-ink-900 sm:block sm:text-xl">
+                <Wallet size={22} className="shrink-0 text-emerald-700 sm:mb-3" aria-hidden />Transferencia o efectivo en el local</h3>
+              <p className="mt-1.5 text-[13px] leading-relaxed text-ink-500 sm:mt-2 sm:text-sm">
                 Te mostramos el CBU cuando confirmás el pedido, no antes. En el local también podés pagar en efectivo o seña.
                 Nunca te pedimos una clave, un código ni un token por chat.
               </p>
-              <Link href="/ayuda" className="mt-4 inline-block text-sm font-bold text-brand-700 hover:text-brand-800">
+              <Link href="/ayuda" className="mt-2 inline-block text-[13px] font-bold text-brand-700 hover:text-brand-800 sm:mt-4 sm:text-sm">
                 Ver medios de pago
               </Link>
             </article>
-            <article className="rounded-[28px] bg-surface p-6 ring-1 ring-black/5">
-              <div className="mb-4 h-1 w-14 rounded-full bg-brand-500" />
-              <Store size={22} className="text-brand-700" aria-hidden />
-              <h3 className="mt-3 text-xl font-extrabold tracking-tight text-ink-900">Retiro en el local</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-500">
+            <article className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-[28px] sm:p-6">
+              <div className="mb-4 hidden h-1 w-14 rounded-full bg-brand-500 sm:block" />
+              <h3 className="flex items-center gap-2 text-base font-extrabold tracking-tight text-ink-900 sm:block sm:text-xl">
+                <Store size={22} className="shrink-0 text-brand-700 sm:mb-3" aria-hidden />Retiro en el local</h3>
+              <p className="mt-1.5 text-[13px] leading-relaxed text-ink-500 sm:mt-2 sm:text-sm">
                 Comprá online y retirá en {DIRECCION}. {HORARIOS}. Probamos el equipo con vos antes de que te lo lleves.
               </p>
-              <a href={WHATSAPP} className="mt-4 inline-block text-sm font-bold text-brand-700 hover:text-brand-800">
+              <a href={WHATSAPP} className="mt-2 inline-block text-[13px] font-bold text-brand-700 hover:text-brand-800 sm:mt-4 sm:text-sm">
                 Avisar que paso a retirar
               </a>
             </article>
@@ -304,7 +307,7 @@ export default async function HomePage() {
     ),
     "mas-vendidos": () => (
       <>
-          <section className="container-xl py-6">
+          <section className="container-xl py-5 sm:py-6">
             <SectionHeading
               eyebrow="Elegidos por los cordobeses"
               title="Los más vendidos"
@@ -329,8 +332,8 @@ export default async function HomePage() {
       explore ? <HomeExplore initial={explore.items.map(toView)} total={explore.total} hasMore={explore.pages > 1} /> : null,
     local: () => (
       <>
-          <section id="local" className="container-xl grid gap-4 py-12 lg:grid-cols-2">
-            <div className="relative flex min-h-[560px] flex-col justify-end overflow-hidden rounded-[28px] bg-ink text-white">
+          <section id="local" className="container-xl grid gap-3 py-6 sm:gap-4 sm:py-12 lg:grid-cols-2">
+            <div className="relative flex min-h-[340px] flex-col justify-end overflow-hidden rounded-2xl sm:min-h-[560px] sm:rounded-[28px] bg-ink text-white">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/local-cordoba-1400.jpg"
@@ -342,7 +345,7 @@ export default async function HomePage() {
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/5" />
-              <div className="relative z-10 space-y-3 px-6 pb-6 pt-8">
+              <div className="relative z-10 space-y-2 px-4 pb-4 pt-8 sm:space-y-3 sm:px-6 sm:pb-6">
                 <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/45">Local a la calle</p>
                 <h3 className="text-2xl font-extrabold">Córdoba Digital</h3>
                 <p className="flex items-start gap-2 text-sm text-white/80">
@@ -379,23 +382,23 @@ export default async function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center rounded-[28px] bg-surface p-6 ring-1 ring-black/5 sm:p-8">
+            <div className="flex flex-col justify-center rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-[28px] sm:p-8">
               <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Online + local a la calle</p>
-              <h2 className="mt-2 text-3xl font-extrabold leading-[1.1] tracking-tight text-ink-900">
+              <h2 className="mt-1 text-xl font-extrabold leading-[1.15] tracking-tight text-ink-900 sm:mt-2 sm:text-3xl sm:leading-[1.1]">
                 Comprás por internet, pero hay gente real del otro lado
               </h2>
-              <p className="mt-3 text-sm leading-relaxed text-ink-500">
+              <p className="mt-2 text-[13px] leading-relaxed text-ink-500 sm:mt-3 sm:text-sm">
                 Combinamos la agilidad del e-commerce con la confianza de atender en el centro. Si algo falla, no discutís
                 con un chatbot: venís al local o nos escribís por WhatsApp y lo resolvemos.
               </p>
-              <ul className="mt-5 space-y-3">
+              <ul className="mt-3 space-y-2 sm:mt-5 sm:space-y-3">
                 {[
                   "Probamos el equipo con vos antes de que te lo lleves",
                   "Servicio técnico y gestión de garantía en Córdoba",
                   "Asesoramiento para elegir el modelo correcto",
                   "Emitimos factura o comprobante de compra",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm font-medium text-ink-700">
+                  <li key={item} className="flex items-start gap-2.5 text-[13px] font-medium text-ink-700 sm:text-sm">
                     <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-emerald-50 text-emerald-700">
                       <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                         <path d="M5 12l5 5L20 7" />
@@ -405,7 +408,7 @@ export default async function HomePage() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-2 sm:mt-6">
                 <a
                   href={MAPS}
                   target="_blank"
@@ -445,24 +448,24 @@ export default async function HomePage() {
     guias: () => (
       <>
           {guides.length > 0 ? (
-            <section className="container-xl py-12">
+            <section className="container-xl py-6 sm:py-12">
               <SectionHeading
                 eyebrow="Antes de comprar"
                 title="Guías cortas, sin relleno"
                 action={{ href: "/ayuda", label: "Centro de ayuda" }}
               />
-              <div className="grid gap-3 md:grid-cols-3">
+              <div className="grid gap-2 sm:gap-3 md:grid-cols-3">
                 {guides.slice(0, 3).map((g) => (
                   <Link
                     key={g.slug}
                     href={`/${g.slug}`}
-                    className="rounded-[24px] bg-surface p-5 ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-lg"
+                    className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-lg sm:rounded-[24px] sm:p-5"
                   >
                     <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">Guía de compra</p>
-                    <h3 className="mt-2 text-lg font-extrabold tracking-tight text-ink-900">{g.title}</h3>
+                    <h3 className="mt-1 text-base font-extrabold tracking-tight text-ink-900 sm:mt-2 sm:text-lg">{g.title}</h3>
                     {/* Sin bajada: el `subtitle` de la guia es el titulo de SEO en
                         mayusculas y repetiria el titulo de la tarjeta. */}
-                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-ink-900">
+                    <span className="mt-2 inline-flex items-center gap-1 text-sm font-bold text-ink-900 sm:mt-4">
                       Leer <ArrowRight size={14} aria-hidden />
                     </span>
                   </Link>
@@ -474,10 +477,10 @@ export default async function HomePage() {
     ),
     preguntas: () => (
       <>
-          <section id="preguntas" className="container-xl grid gap-4 pb-16 lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="rounded-[28px] bg-surface p-5 ring-1 ring-black/5 sm:p-7">
+          <section id="preguntas" className="container-xl grid gap-3 pb-10 pt-2 sm:gap-4 sm:pb-16 sm:pt-0 lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-[28px] sm:p-7">
               <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Antes de comprar</p>
-              <h2 className="mt-1 text-2xl font-extrabold tracking-tight text-ink-900">Preguntas frecuentes</h2>
+              <h2 className="mt-1 text-xl font-extrabold tracking-tight text-ink-900 sm:text-2xl">Preguntas frecuentes</h2>
               <div className="mt-3">
                 <FaqAccordion items={FAQ} variant="plano" />
               </div>
@@ -485,15 +488,15 @@ export default async function HomePage() {
                 Centro de ayuda <ArrowRight size={14} aria-hidden />
               </Link>
             </div>
-            <div className="mesh-warm flex flex-col justify-between rounded-[28px] p-6 ring-1 ring-brand-100 sm:p-7">
+            <div className="mesh-warm flex flex-col justify-between rounded-2xl p-4 ring-1 ring-brand-100 sm:rounded-[28px] sm:p-7">
               <div>
                 <p className="inline-flex rounded-full bg-white/70 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">
                   Newsletter
                 </p>
-                <h3 className="mt-4 text-2xl font-extrabold tracking-tight text-ink-900">Novedades y ofertas de Córdoba Digital</h3>
+                <h3 className="mt-3 text-xl font-extrabold tracking-tight text-ink-900 sm:mt-4 sm:text-2xl">Novedades y ofertas de Córdoba Digital</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-500">Ingresos de depósito y ofertas fuertes. No un mail por día.</p>
               </div>
-              <div className="mt-6">
+              <div className="mt-4 sm:mt-6">
                 <NewsletterForm variant="light" />
               </div>
             </div>

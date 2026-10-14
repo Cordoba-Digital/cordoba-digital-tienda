@@ -10,8 +10,8 @@
 
 export const HOME_BLOCKS = [
   { id: "portada", label: "Portada", description: "Carrusel principal y cintillo de confianza. Va siempre primero.", fixed: true },
-  { id: "vistos", label: "Seguí donde lo dejaste", description: "Los últimos productos que miró cada visitante. Solo aparece si ya vio alguno." },
   { id: "accesos", label: "Accesos rápidos", description: "Atajos a ofertas, más vendidos, envíos, retiro y pagos." },
+  { id: "vistos", label: "Seguí donde lo dejaste", description: "Los últimos productos que miró cada visitante. Solo aparece si ya vio alguno." },
   { id: "categorias", label: "Categorías", description: "Fila desplazable con las categorías y su cantidad de productos." },
   { id: "ofertas", label: "Ofertas", description: "Los productos con precio rebajado y stock, de mayor a menor descuento." },
   { id: "mas-vendidos", label: "Más vendidos", description: "Los 8 productos que más salen, con Top 1, 2 y 3." },
