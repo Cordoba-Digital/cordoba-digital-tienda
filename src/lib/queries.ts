@@ -631,9 +631,43 @@ export async function getOrdersByEmail(email: string) {
   return rows.map((r) => ({ ...r, itemsCount: byOrder.get(r.id) ?? 0 }));
 }
 
+/** Marcas de relleno que no ayudan como atajo ("Cámaras General"). */
+const PLACEHOLDER_BRANDS = new Set(["general", "generica", "generico", "sin marca", "otros", "otra", "varios"]);
+
+/** Lo que entiende el buscador de una búsqueda: categoría y marca nombradas, y categorías que sugiere. */
+async function analyzeSearch(q: string) {
+  const loaded = await loadQueryCatalog();
+  const catalog = { categories: loaded.categories, brands: loaded.brands.map((b) => b.brand).filter(Boolean) };
+  const understood = understandQuery(q, catalog);
+  const suggested = suggestCategories(q, catalog);
+  return { loaded, catalog, understood, suggested };
+}
+
 export async function searchProducts(term: string, limit = 6) {
   const words = normalizeSearch(term).split(" ").filter(Boolean);
   if (!words.length) return [];
+  const { understood, suggested } = await analyzeSearch(term);
+
+  // Dónde está lo que se busca: la categoría nombrada o, si no se nombró
+  // ninguna, las que sugiere el desplegable ("camaras" → Cámaras Digitales,
+  // Cámaras CCTV). Lo de ahí va primero aunque otro producto mencione la
+  // palabra en la descripción (los celulares dicen "cámara").
+  // Lo de la primera suma más que lo de las demás: en "celulares", Celulares
+  // Liberados pesa más que Accesorios P/ Celulares.
+  const focusIds = understood.category ? [understood.category.id] : suggested.map((c) => c.id);
+  const focus = await Promise.all(focusIds.map(subtreeOf));
+
+  // Relevancia: cada palabra que está en el nombre suma 3 ("Aire Acondicionado"
+  // antes que "Caloventor" dentro de Aires Acondicionados) y estar en la
+  // categoría buscada suma 5, o 2 en las otras sugeridas (el parlante de
+  // Accesorios P/ Celulares queda debajo de los celulares). Después, lo más vendido.
+  const nameWords = words.filter((w) => w.length > 2).map(stem);
+  const parts: SQL[] = nameWords.map((w) => sql`(case when ${plain(products.name)} like ${`%${w}%`} then 3 else 0 end)`);
+  focus.forEach((t, i) => {
+    if (t.slugs.length) parts.push(sql`(case when ${inArray(products.categorySlug, t.slugs)} then ${i === 0 ? 5 : 2} else 0 end)`);
+  });
+  const score = parts.length ? sql.join(parts, sql` + `) : sql`0`;
+
   const run = (where: SQL | undefined) =>
     db
       .select({
@@ -646,13 +680,12 @@ export async function searchProducts(term: string, limit = 6) {
       })
       .from(products)
       .where(where)
-      .orderBy(desc(products.soldCount))
+      .orderBy(desc(score), desc(products.soldCount))
       .limit(limit);
 
   // Como en /productos: si nombra categoría o marca, se busca ahí adentro
   // ("celular samsung" no trae la funda Samsung de Accesorios).
-  const understood = await understandCatalogQuery(term).catch(() => null);
-  if (understood && (understood.category || understood.brand)) {
+  if (understood.category || understood.brand) {
     const subtree = understood.category ? await subtreeOf(understood.category.id) : undefined;
     const rows = await run(buildWhere({ terms: understood.terms, brands: understood.brand ? [understood.brand] : [] }, subtree));
     if (rows.length) return rows;
@@ -669,16 +702,14 @@ export type SearchShortcut = { label: string; href: string; count: number };
  * sugiere todo Samsung. Llevan a la categoría o al catálogo ya filtrados.
  */
 export async function searchShortcuts(q: string, limit = 6): Promise<SearchShortcut[]> {
-  const loaded = await loadQueryCatalog();
+  const { loaded, catalog, understood, suggested } = await analyzeSearch(q);
   const brandRows = loaded.brands;
-  const catalog = { categories: loaded.categories, brands: brandRows.map((b) => b.brand).filter(Boolean) };
-  const understood = understandQuery(q, catalog);
-  const suggested = suggestCategories(q, catalog);
   const main = understood.category
     ? catalog.categories.find((c) => c.id === understood.category!.id) ?? suggested[0]
     : suggested[0];
 
   const out: SearchShortcut[] = [];
+  let brandsShown: string[] = [];
   if (main) {
     // Las subcategorías por marca se llaman como la marca ("Samsung" dentro de
     // Celulares): se muestran como "Celulares Samsung".
@@ -689,18 +720,28 @@ export async function searchShortcuts(q: string, limit = 6): Promise<SearchShort
     // Las marcas que más hay dentro de la categoría; si se nombró una, solo esa.
     const inside = (await getBrandFacets(main.id))
       .filter((b) => b.brand && (!understood.brand || b.brand === understood.brand))
+      .filter((b) => !PLACEHOLDER_BRANDS.has(normalizeSearch(b.brand)))
       .filter((b) => normalizeSearch(b.brand) !== normalizeSearch(main.name))
       .sort((a, b) => b.count - a.count)
       .slice(0, 3);
     for (const b of inside) {
       out.push({ label: `${main.name} ${b.brand}`, href: `/categoria/${main.path}?marca=${encodeURIComponent(b.brand)}`, count: b.count });
     }
+    brandsShown = inside.map((b) => normalizeSearch(b.brand));
   } else if (understood.brand) {
     const count = brandRows.find((b) => b.brand === understood.brand)?.count ?? 0;
     out.push({ label: `Todo ${understood.brand}`, href: `/productos?marca=${encodeURIComponent(understood.brand)}`, count });
   }
+  const byId = new Map(catalog.categories.map((c) => [c.id, c]));
+  const insideMain = (id: number) => {
+    for (let p = byId.get(id)?.parentId ?? null; p != null; p = byId.get(p)?.parentId ?? null) if (p === main?.id) return true;
+    return false;
+  };
   for (const c of suggested) {
-    if (c.id !== main?.id) out.push({ label: c.name, href: `/categoria/${c.path}`, count: c.count });
+    if (c.id === main?.id) continue;
+    // "Celulares Xiaomi" (subcategoría) repetiría el atajo "Celulares Liberados Xiaomi".
+    if (insideMain(c.id) && brandsShown.some((b) => ` ${normalizeSearch(c.name)} `.includes(` ${b} `))) continue;
+    out.push({ label: c.name, href: `/categoria/${c.path}`, count: c.count });
   }
   return out.slice(0, limit);
 }
