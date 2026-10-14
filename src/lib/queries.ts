@@ -17,6 +17,7 @@ import {
   type CategoryNode,
   type CategoryRow,
 } from "@/lib/category-tree";
+import { esMarcaDeRelleno } from "@/lib/brand-from-name";
 import { normalizeSearch, stem, suggestCategories, understandQuery, type QueryUnderstanding } from "@/lib/query-understanding";
 import { ttlCache } from "@/lib/ttl-cache";
 
@@ -631,9 +632,6 @@ export async function getOrdersByEmail(email: string) {
   return rows.map((r) => ({ ...r, itemsCount: byOrder.get(r.id) ?? 0 }));
 }
 
-/** Marcas de relleno que no ayudan como atajo ("Cámaras General"). */
-const PLACEHOLDER_BRANDS = new Set(["general", "generica", "generico", "sin marca", "otros", "otra", "varios"]);
-
 /** Lo que entiende el buscador de una búsqueda: categoría y marca nombradas, y categorías que sugiere. */
 async function analyzeSearch(q: string) {
   const loaded = await loadQueryCatalog();
@@ -720,7 +718,8 @@ export async function searchShortcuts(q: string, limit = 6): Promise<SearchShort
     // Las marcas que más hay dentro de la categoría; si se nombró una, solo esa.
     const inside = (await getBrandFacets(main.id))
       .filter((b) => b.brand && (!understood.brand || b.brand === understood.brand))
-      .filter((b) => !PLACEHOLDER_BRANDS.has(normalizeSearch(b.brand)))
+      // Las de relleno no ayudan como atajo ("Cámaras General").
+      .filter((b) => !esMarcaDeRelleno(b.brand))
       .filter((b) => normalizeSearch(b.brand) !== normalizeSearch(main.name))
       .sort((a, b) => b.count - a.count)
       .slice(0, 3);
