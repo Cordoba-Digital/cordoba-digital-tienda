@@ -17,7 +17,7 @@ import {
   type CategoryNode,
   type CategoryRow,
 } from "@/lib/category-tree";
-import { normalizeSearch, stem, understandQuery, type QueryUnderstanding } from "@/lib/query-understanding";
+import { normalizeSearch, stem, suggestCategories, understandQuery, type QueryUnderstanding } from "@/lib/query-understanding";
 import { ttlCache } from "@/lib/ttl-cache";
 
 export type ProductFilters = {
@@ -653,20 +653,75 @@ export async function getOrdersByEmail(email: string) {
 export async function searchProducts(term: string, limit = 6) {
   const words = normalizeSearch(term).split(" ").filter(Boolean);
   if (!words.length) return [];
-  return db
-    .select({
-      slug: products.slug,
-      name: products.name,
-      brand: products.brand,
-      price: products.price,
-      image: sql<string>`${products.images}->>0`,
-      categorySlug: products.categorySlug,
-    })
-    .from(products)
-    // Cada palabra en cualquier campo: "celular samsung" encuentra "Samsung Galaxy A55" de Celulares.
-    .where(and(...words.map(termMatch)))
-    .orderBy(desc(products.soldCount))
-    .limit(limit);
+  const run = (where: SQL | undefined) =>
+    db
+      .select({
+        slug: products.slug,
+        name: products.name,
+        brand: products.brand,
+        price: products.price,
+        image: sql<string>`${products.images}->>0`,
+        categorySlug: products.categorySlug,
+      })
+      .from(products)
+      .where(where)
+      .orderBy(desc(products.soldCount))
+      .limit(limit);
+
+  // Como en /productos: si nombra categoría o marca, se busca ahí adentro
+  // ("celular samsung" no trae la funda Samsung de Accesorios).
+  const understood = await understandCatalogQuery(term).catch(() => null);
+  if (understood && (understood.category || understood.brand)) {
+    const subtree = understood.category ? await subtreeOf(understood.category.id) : undefined;
+    const rows = await run(buildWhere({ terms: understood.terms, brands: understood.brand ? [understood.brand] : [] }, subtree));
+    if (rows.length) return rows;
+  }
+  // Cada palabra en cualquier campo: "celular samsung" encuentra "Samsung Galaxy A55" de Celulares.
+  return run(and(...words.map(termMatch)));
+}
+
+export type SearchShortcut = { label: string; href: string; count: number };
+
+/**
+ * Atajos del desplegable del buscador además de los productos: "celular" sugiere
+ * Celulares y sus marcas (Celulares Samsung, Celulares Apple...), y "samsung"
+ * sugiere todo Samsung. Llevan a la categoría o al catálogo ya filtrados.
+ */
+export async function searchShortcuts(q: string, limit = 6): Promise<SearchShortcut[]> {
+  const loaded = await loadQueryCatalog();
+  const brandRows = loaded.brands;
+  const catalog = { categories: loaded.categories, brands: brandRows.map((b) => b.brand).filter(Boolean) };
+  const understood = understandQuery(q, catalog);
+  const suggested = suggestCategories(q, catalog);
+  const main = understood.category
+    ? catalog.categories.find((c) => c.id === understood.category!.id) ?? suggested[0]
+    : suggested[0];
+
+  const out: SearchShortcut[] = [];
+  if (main) {
+    // Las subcategorías por marca se llaman como la marca ("Samsung" dentro de
+    // Celulares): se muestran como "Celulares Samsung".
+    const isBrand = (name: string) => catalog.brands.some((b) => normalizeSearch(b) === normalizeSearch(name));
+    const parent = main.parentId != null ? catalog.categories.find((c) => c.id === main.parentId) : undefined;
+    const label = parent && isBrand(main.name) ? `${parent.name} ${main.name}` : main.name;
+    out.push({ label, href: `/categoria/${main.path}`, count: main.count });
+    // Las marcas que más hay dentro de la categoría; si se nombró una, solo esa.
+    const inside = (await getBrandFacets(main.id))
+      .filter((b) => b.brand && (!understood.brand || b.brand === understood.brand))
+      .filter((b) => normalizeSearch(b.brand) !== normalizeSearch(main.name))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 3);
+    for (const b of inside) {
+      out.push({ label: `${main.name} ${b.brand}`, href: `/categoria/${main.path}?marca=${encodeURIComponent(b.brand)}`, count: b.count });
+    }
+  } else if (understood.brand) {
+    const count = brandRows.find((b) => b.brand === understood.brand)?.count ?? 0;
+    out.push({ label: `Todo ${understood.brand}`, href: `/productos?marca=${encodeURIComponent(understood.brand)}`, count });
+  }
+  for (const c of suggested) {
+    if (c.id !== main?.id) out.push({ label: c.name, href: `/categoria/${c.path}`, count: c.count });
+  }
+  return out.slice(0, limit);
 }
 
 /**
@@ -674,9 +729,15 @@ export async function searchProducts(term: string, limit = 6) {
  * `query-understanding.ts`). Usa el árbol y las marcas que ya están en caché.
  */
 export async function understandCatalogQuery(q: string): Promise<QueryUnderstanding> {
+  const { categories, brands } = await loadQueryCatalog();
+  return understandQuery(q, { categories, brands: brands.map((b) => b.brand).filter(Boolean) });
+}
+
+/** Categorías y marcas del catálogo en el formato de `query-understanding.ts`. */
+async function loadQueryCatalog() {
   const [tree, brands] = await Promise.all([getCategoryTree(), getBrandFacets()]);
-  return understandQuery(q, {
+  return {
     categories: flattenTree(tree).map((c) => ({ id: c.id, name: c.name, path: c.path, depth: c.depth, parentId: c.parentId, count: c.count })),
-    brands: brands.map((b) => b.brand).filter(Boolean),
-  });
+    brands: brands.map((b) => ({ brand: b.brand, count: b.count })),
+  };
 }

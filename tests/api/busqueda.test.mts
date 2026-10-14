@@ -12,7 +12,7 @@ import { sql } from "drizzle-orm";
 
 import { db, pool, resetDb, schema } from "./db.mts";
 
-const { listProducts, searchProducts, understandCatalogQuery } = await import("../../src/lib/queries");
+const { listProducts, searchProducts, searchShortcuts, understandCatalogQuery } = await import("../../src/lib/queries");
 
 await resetDb();
 await db.execute(sql`truncate table categories, product_categories restart identity cascade`);
@@ -28,7 +28,12 @@ const productos = [
   { slug: "funda-a55", name: "Funda para Samsung A55", brand: "Generica", categorySlug: "accesorios-p-celulares" },
   { slug: "camara", name: "Cámara de seguridad WiFi", brand: "Imou", categorySlug: "accesorios-p-celulares" },
 ];
-await db.insert(schema.products).values(productos.map((p) => ({ ...p, price: 100000, stock: 3 })));
+const insertados = await db.insert(schema.products).values(productos.map((p) => ({ ...p, price: 100000, stock: 3 }))).returning();
+// El puente producto ↔ categoría, que es de donde salen los conteos del árbol.
+const cats = await db.select().from(schema.categories);
+await db.insert(schema.productCategories).values(
+  insertados.map((p) => ({ productId: p.id, categoryId: cats.find((c) => c.slug === p.categorySlug)!.id })),
+);
 
 after(async () => {
   await db.execute(sql`truncate table categories, product_categories restart identity cascade`);
@@ -61,4 +66,30 @@ test("el buscador del encabezado también busca palabra por palabra", async () =
   const r = await searchProducts("samsung galaxy 128", 6);
   assert.deepEqual(r.map((p) => p.slug).sort(), ["galaxy-a15", "galaxy-a55"]);
   assert.deepEqual(await searchProducts("   ", 6), []);
+});
+
+test("el desplegable sugiere la categoría y sus marcas mientras se escribe", async () => {
+  const celu = await searchShortcuts("celu");
+  assert.deepEqual(
+    celu.map((s) => [s.label, s.href, s.count]),
+    [
+      ["Celulares", "/categoria/celulares", 3],
+      ["Celulares Samsung", "/categoria/celulares?marca=Samsung", 2],
+      ["Celulares Apple", "/categoria/celulares?marca=Apple", 1],
+      ["Accesorios P/ Celulares", "/categoria/accesorios-p-celulares", 2],
+    ],
+  );
+  // Con la marca nombrada, solo esa marca.
+  assert.deepEqual(
+    (await searchShortcuts("celular samsung")).map((s) => s.label),
+    ["Celulares", "Celulares Samsung", "Accesorios P/ Celulares"],
+  );
+  // Solo la marca: todo lo de esa marca.
+  assert.deepEqual((await searchShortcuts("samsung"))[0], { label: "Todo Samsung", href: "/productos?marca=Samsung", count: 3 });
+  assert.deepEqual(await searchShortcuts("iphone"), []);
+});
+
+test("el desplegable busca dentro de la categoría y marca que nombró", async () => {
+  const r = await searchProducts("celular samsung", 6);
+  assert.deepEqual(r.map((p) => p.slug).sort(), ["galaxy-a15", "galaxy-a55"]);
 });

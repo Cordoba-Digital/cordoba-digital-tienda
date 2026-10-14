@@ -137,3 +137,35 @@ export function understandQuery(
     terms,
   };
 }
+
+/**
+ * Categorías para sugerir mientras se escribe en el buscador del encabezado:
+ * "celu" ya muestra Celulares. A diferencia de `understandQuery`, la última
+ * palabra puede estar a medio escribir, así que cada palabra alcanza con que
+ * sea el comienzo de una palabra del nombre. La marca nombrada no cuenta
+ * ("celular samsung" sugiere Celulares) y las vacías no se sugieren.
+ */
+export function suggestCategories(
+  query: string,
+  catalog: { categories: QueryCategory[]; brands: string[] },
+  limit = 3,
+): QueryCategory[] {
+  const brandWords = new Set(catalog.brands.flatMap((b) => words(b)));
+  const tokens = words(query).filter((t) => !STOPWORDS.has(t) && !brandWords.has(t));
+  if (!tokens.length) return [];
+
+  const scored: { category: QueryCategory; first: boolean }[] = [];
+  for (const category of catalog.categories) {
+    if (category.count <= 0) continue;
+    const name = words(category.name).filter((w) => !STOPWORDS.has(w));
+    // Con el singular aproximado, "celulares" también encuentra "Celular".
+    const hits = tokens.map((t) => name.findIndex((w) => w.startsWith(t) || w.startsWith(stem(t))));
+    if (hits.some((i) => i < 0)) continue;
+    scored.push({ category, first: hits.includes(0) });
+  }
+  scored.sort(
+    (a, b) =>
+      Number(b.first) - Number(a.first) || a.category.depth - b.category.depth || b.category.count - a.category.count,
+  );
+  return scored.slice(0, limit).map((s) => s.category);
+}
