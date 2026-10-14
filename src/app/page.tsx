@@ -159,10 +159,10 @@ export default async function HomePage() {
               Cintillo de confianza: una caja blanca que pisa el hero. El `z-10` la
               saca del orden normal para que la sombra caiga sobre el fondo del hero.
             */}
-            <section className="relative z-10 -mt-6 sm:-mt-8">
+            {/* En el celular no va: la barra naranja de arriba ya rota estos
+                mismos mensajes, y acá repetía lo mismo en la primera pantalla. */}
+            <section className="relative z-10 -mt-8 hidden sm:block">
               <div className="container-xl">
-                {/* En el celular, las cuatro en una fila con el ícono arriba y el
-                    título en dos líneas: entran enteras sin deslizar y sin la bajada. */}
                 <div className="grid grid-cols-4 overflow-hidden rounded-2xl bg-surface shadow-[0_20px_50px_-30px_rgba(20,22,28,0.45)] ring-1 ring-black/5 sm:grid-cols-2 lg:grid-cols-4">
                   {TRUST.map((t, i) => (
                     <div
@@ -205,7 +205,7 @@ export default async function HomePage() {
               <li key={a.title} className="w-[66px] shrink-0 snap-start sm:w-auto">
                 <Link
                   href={a.href}
-                  className="group flex h-full flex-col items-center gap-1.5 text-center transition active:scale-95 motion-reduce:transform-none sm:flex-row sm:gap-3 sm:rounded-2xl sm:bg-surface sm:p-3.5 sm:text-left sm:ring-1 sm:ring-black/5 sm:hover:-translate-y-0.5 sm:hover:shadow-lg"
+                  className="flex h-full flex-col items-center gap-1.5 text-center transition sm:flex-row sm:gap-3 sm:rounded-2xl sm:bg-surface sm:p-3.5 sm:text-left sm:ring-1 sm:ring-black/5 sm:hover:-translate-y-0.5 sm:hover:shadow-lg"
                 >
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-surface text-brand-700 shadow-sm ring-1 ring-black/5 sm:h-10 sm:w-10 sm:rounded-xl sm:bg-brand-50 sm:shadow-none sm:ring-0">
                     <a.icon size={20} aria-hidden />

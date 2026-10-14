@@ -337,7 +337,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
       {/* Espacio al pie del hero, sobre el que se apoya el cintillo de
           confianza (lo pisa 24-32 px). Fondo liso, sin degradé: el usuario
           lo pidió con el corte recto. */}
-      <div aria-hidden className="h-9 shrink-0 sm:h-20 lg:h-16" />
+      <div aria-hidden className="h-3 shrink-0 sm:h-20 lg:h-16" />
 
       {count > 1 ? (
         <>
