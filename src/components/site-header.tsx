@@ -7,19 +7,15 @@ import { useEffect, useRef, useState } from "react";
 
 import { CategoryIcon } from "@/components/category-icon";
 import { CategoryNavBar, type CategoryNavRoot } from "@/components/hdr-category-nav";
+import {
+  SearchSuggestions,
+  suggestionHrefs,
+  type SearchShortcut,
+  type SearchSuggestion,
+} from "@/components/search-suggestions";
 import { useStore } from "@/components/store-provider";
-import { money } from "@/lib/format";
 
 type CategoryLink = CategoryNavRoot;
-
-type Suggestion = {
-  slug: string;
-  name: string;
-  brand: string;
-  price: number;
-  image: string | null;
-  categorySlug: string;
-};
 
 const ANNOUNCEMENTS = [
   "🏦 Transferencia bancaria o efectivo/seña en el local",
@@ -33,12 +29,15 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
   const router = useRouter();
   const pathname = usePathname();
   const [term, setTerm] = useState("");
-  const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
+  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
+  const [shortcuts, setShortcuts] = useState<SearchShortcut[]>([]);
+  const [active, setActive] = useState(-1);
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [expandedCats, setExpandedCats] = useState<string[]>([]);
   const [announcement, setAnnouncement] = useState(0);
   const boxRef = useRef<HTMLDivElement>(null);
+  const mobileBoxRef = useRef<HTMLDivElement>(null);
   // Cliente con sesión: el ícono de cuenta muestra su foto o inicial.
   const [me, setMe] = useState<{ name: string; email: string; avatarUrl: string } | null>(null);
 
@@ -70,7 +69,10 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
 
   useEffect(() => {
     if (term.trim().length < 2) {
-      const id = window.setTimeout(() => setSuggestions([]), 0);
+      const id = window.setTimeout(() => {
+        setSuggestions([]);
+        setShortcuts([]);
+      }, 0);
       return () => window.clearTimeout(id);
     }
     const controller = new AbortController();
@@ -78,8 +80,10 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
       try {
         const res = await fetch(`/api/search?q=${encodeURIComponent(term)}`, { signal: controller.signal });
         if (!res.ok) return;
-        const data = (await res.json()) as { results: Suggestion[] };
+        const data = (await res.json()) as { results: SearchSuggestion[]; shortcuts?: SearchShortcut[] };
         setSuggestions(data.results ?? []);
+        setShortcuts(data.shortcuts ?? []);
+        setActive(-1);
         setOpen(true);
       } catch {
         /* ignored */
@@ -93,11 +97,38 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
 
   useEffect(() => {
     const handler = (event: MouseEvent) => {
-      if (boxRef.current && !boxRef.current.contains(event.target as Node)) setOpen(false);
+      const target = event.target as Node;
+      if (!boxRef.current?.contains(target) && !mobileBoxRef.current?.contains(target)) setOpen(false);
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, []);
+
+  const hasSuggestions = suggestions.length > 0 || shortcuts.length > 0;
+  const showSuggestions = open && hasSuggestions && term.trim().length >= 2;
+
+  // Flechas para recorrer el desplegable, Enter para ir y Escape para cerrarlo.
+  const onSearchKey = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Escape") {
+      setOpen(false);
+      setActive(-1);
+      return;
+    }
+    if (!hasSuggestions) return;
+    const hrefs = suggestionHrefs(term, shortcuts, suggestions);
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      setOpen(true);
+      const step = event.key === "ArrowDown" ? 1 : -1;
+      // -1 es volver al texto escrito; da la vuelta en los dos extremos.
+      const slots = hrefs.length + 1;
+      setActive((i) => ((((i + 1 + step) % slots) + slots) % slots) - 1);
+    } else if (event.key === "Enter" && showSuggestions && active >= 0 && active < hrefs.length) {
+      event.preventDefault();
+      setOpen(false);
+      router.push(hrefs[active]);
+    }
+  };
 
   const submitSearch = (event: React.FormEvent) => {
     event.preventDefault();
@@ -138,7 +169,13 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               <input
                 value={term}
                 onChange={(e) => setTerm(e.target.value)}
-                onFocus={() => suggestions.length && setOpen(true)}
+                onFocus={() => hasSuggestions && setOpen(true)}
+                onKeyDown={onSearchKey}
+                role="combobox"
+                aria-expanded={showSuggestions}
+                aria-controls="busqueda-sugerencias"
+                aria-autocomplete="list"
+                aria-activedescendant={showSuggestions && active >= 0 ? `busqueda-sugerencias-${active}` : undefined}
                 placeholder="Buscá tu próximo celular, notebook, cámara..."
                 className="h-11 w-full rounded-full border border-ink-100 bg-ink-50/80 pl-11 pr-28 text-sm text-ink-800 outline-none transition placeholder:text-ink-400 focus:border-brand-400 focus:bg-surface focus:ring-4 focus:ring-brand-100"
               />
@@ -160,32 +197,16 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               </button>
             </form>
 
-            {open && suggestions.length > 0 ? (
-              <div className="absolute left-0 right-0 top-[52px] z-50 animate-pop overflow-hidden rounded-2xl border border-ink-100 bg-surface shadow-2xl shadow-black/10">
-                {suggestions.map((s) => (
-                  <Link
-                    key={s.slug}
-                    href={`/producto/${s.slug}`}
-                    className="flex items-center gap-3 border-b border-ink-50 px-3 py-2.5 transition last:border-0 hover:bg-ink-50"
-                  >
-                    {s.image ? (
-                      <Image src={s.image} alt="" width={44} height={44} className="h-11 w-11 rounded-lg object-cover" />
-                    ) : null}
-                    <span className="min-w-0 flex-1">
-                      <span className="block truncate text-sm font-semibold text-ink-800">{s.name}</span>
-                      <span className="block text-xs text-ink-500">{s.brand}</span>
-                    </span>
-                    <span className="text-sm font-bold text-ink-900">{money(s.price)}</span>
-                  </Link>
-                ))}
-                <button
-                  type="button"
-                  onClick={() => router.push(`/productos?q=${encodeURIComponent(term)}`)}
-                  className="w-full bg-ink-50 px-3 py-2.5 text-center text-xs font-bold text-brand-700 hover:bg-brand-50"
-                >
-                  Ver todos los resultados para “{term}”
-                </button>
-              </div>
+            {showSuggestions ? (
+              <SearchSuggestions
+                id="busqueda-sugerencias"
+                term={term}
+                shortcuts={shortcuts}
+                results={suggestions}
+                active={active}
+                onHover={setActive}
+                onPick={() => setOpen(false)}
+              />
             ) : null}
           </div>
 
@@ -263,11 +284,14 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
         </div>
 
         {/* Mobile search */}
-        <div className="container-xl pb-3 md:hidden">
+        <div ref={mobileBoxRef} className="container-xl relative pb-3 md:hidden">
           <form onSubmit={submitSearch} className="relative">
             <input
               value={term}
               onChange={(e) => setTerm(e.target.value)}
+              onFocus={() => hasSuggestions && setOpen(true)}
+              onKeyDown={onSearchKey}
+              enterKeyHint="search"
               placeholder="¿Qué estás buscando?"
               className="h-11 w-full rounded-full border border-ink-100 bg-ink-50/80 pl-10 pr-4 text-sm outline-none focus:border-brand-400 focus:bg-surface"
             />
@@ -282,6 +306,19 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               <path d="M20 20l-3.2-3.2" strokeLinecap="round" />
             </svg>
           </form>
+          {showSuggestions ? (
+            <div className="absolute inset-x-4 top-0">
+              <SearchSuggestions
+                id="busqueda-sugerencias-movil"
+                term={term}
+                shortcuts={shortcuts}
+                results={suggestions}
+                active={active}
+                onHover={setActive}
+                onPick={() => setOpen(false)}
+              />
+            </div>
+          ) : null}
         </div>
 
         {/* Desktop category bar */}
