@@ -151,7 +151,9 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
             <Toaster />
           </InstallmentsProvider>
         </StoreProvider>
-        {GA_MEASUREMENT_ID ? <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} /> : null}
+        {GA_MEASUREMENT_ID ? (
+          <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} host={new URL(SITE_URL).hostname} />
+        ) : null}
       </body>
     </html>
   );

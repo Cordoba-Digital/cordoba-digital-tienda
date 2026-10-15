@@ -74,7 +74,8 @@ npm run verify:wp                       # compara la base contra WooCommerce
   datos > Agregar feed > URL `https://<dominio>/products.xml`, descarga diaria.
   Quedan afuera los productos sin precio o sin foto.
 - **GA4**: variable `GA_MEASUREMENT_ID` (`G-XXXXXXXX`). Sin ella no se carga
-  ningún script. Envía páginas vistas y los eventos `view_item`,
+  ningún script, y con ella solo mide en el dominio de `SITE_URL` (los previews
+  y `localhost` quedan afuera). Envía páginas vistas y los eventos `view_item`,
   `add_to_cart`, `begin_checkout` y `purchase` (`src/lib/analytics.ts`).
 - **Search Console**: variable `GOOGLE_SITE_VERIFICATION` con el código de la
   meta `google-site-verification` (varios códigos separados por coma).
