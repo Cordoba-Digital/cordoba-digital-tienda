@@ -43,3 +43,21 @@ test("marcas de relleno", () => {
   for (const b of ["General", "Genérica", "", null, " Sin marca "]) assert.ok(esMarcaDeRelleno(b), String(b));
   for (const b of ["Daihatsu", "General Electric"]) assert.ok(!esMarcaDeRelleno(b), b);
 });
+
+test("Google TV y gateway no son la marca del producto", () => {
+  assert.equal(marcaDesdeNombre("Smart Tv Qüint 32″ HD Google Tv"), "Qüint");
+  const detectar = crearDetectorDeMarca(["Gateway"]);
+  assert.equal(detectar("Gateway 5P HPE Networking Instant 2.5G 64W SG2505P"), null);
+  assert.equal(detectar("Google Pixel 9 128 GB"), "Google");
+});
+
+test("marcas que habían quedado sin reconocer", () => {
+  assert.equal(marcaDesdeNombre("GRANDSTREAM SW L2+ 8 PORT POE GIGA 2SFP"), "Grandstream");
+  assert.equal(marcaDesdeNombre("DDR4 16 GB 3200MHZ Basic C16 Netac"), "Netac");
+  assert.equal(marcaDesdeNombre("FUENTE COOLERMASTER ELITE V3 600W"), "Cooler Master");
+  assert.equal(marcaDesdeNombre("MONITOR LED 24 E-VIEW 2351RAY HDMI/DP 100HZ"), "E-View");
+  assert.equal(marcaDesdeNombre("TL-LINK AP BE9300 TRI-BAND WIFI 7 IN"), "TP-Link");
+  assert.equal(marcaDesdeNombre("HIK KIT INTERCOM HIBRIDO DS-KIS302-P"), "Hikvision");
+  assert.equal(marcaDesdeNombre("EVOLVE2 65 LINK380A MS BLACK"), "Jabra");
+  assert.equal(marcaDesdeNombre("Parlante Harman Kardon Aura Studio 3"), "Harman Kardon");
+});

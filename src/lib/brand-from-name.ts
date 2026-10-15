@@ -39,6 +39,10 @@ export const MARCAS = [
   // Foto y video
   "Canon", "Nikon", "Fujifilm", "Olympus", "GoPro", "Insta360", "Godox", "Ulanzi", "Rode", "Zhiyun",
   "Sigma", "Tamron", "Manfrotto", "Hikvision", "Dahua", "Imou", "Ezviz",
+  // Redes, telefonía y componentes que vinieron sin marca
+  "Grandstream", "Netac", "Nexxt", "Cambium", "Hubbell", "Honeywell", "Poly", "Jabra", "Loosafe",
+  "Gynoid", "Gamemax", "Cooler Master", "Thermaltake", "Raptor", "Biostar", "ECS", "E-View", "Arkham",
+  "BenQ", "Lyonn", "Forza", "Eiffel", "Harman Kardon", "Stromberg", "GFast", "Travel Tech", "Qüint",
 ];
 
 /** Variantes del nombre que también cuentan como la marca. */
@@ -66,7 +70,19 @@ export const ALIAS: Record<string, string> = {
   redmi: "Xiaomi",
   poco: "Xiaomi",
   galaxy: "Samsung",
+  "tl link": "TP-Link",
+  coolermaster: "Cooler Master",
+  hubbel: "Hubbell",
+  hik: "Hikvision",
+  evolve: "Jabra",
+  evolve2: "Jabra",
 };
+
+/**
+ * Frases que nombran una marca sin que sea la del producto: "Smart TV Qüint
+ * Google TV" es Qüint, y "Gateway 5P HPE" es un gateway de HPE.
+ */
+const NO_ES_LA_MARCA = ["google tv", "android tv", "gateway"];
 
 /** Marcas de relleno: no son una marca de verdad. */
 const PLACEHOLDERS = new Set(["general", "generica", "generico", "sin marca", "otros", "otra", "varios", "otras marcas"]);
@@ -111,7 +127,10 @@ export function crearDetectorDeMarca(catalogo: string[] = []): (nombre: string) 
   for (const [alias, marca] of Object.entries(ALIAS)) agregar(normalizarMarca(alias), forma.get(normalizarMarca(marca)) ?? marca);
 
   return (nombre: string) => {
-    const n = normalizarMarca(nombre);
+    let n = ` ${normalizarMarca(nombre)} `;
+    // Se tapan con espacios para que las posiciones del resto no cambien.
+    for (const f of NO_ES_LA_MARCA) n = n.replaceAll(` ${f} `, ` ${" ".repeat(f.length)} `);
+    n = n.slice(1, -1);
     let mejor: { pos: number; largo: number; marca: string } | null = null;
     for (const { re, marca, largo } of patrones) {
       const m = re.exec(n);
