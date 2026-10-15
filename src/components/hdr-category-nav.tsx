@@ -73,20 +73,20 @@ function StripLinks({ items }: { items: BarItem[] }) {
         <Link
           key={root.slug}
           href={`/categoria/${root.path}`}
-          className="shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50 hover:text-ink-900"
+          className="shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50 hover:text-ink-900"
         >
           {label}
         </Link>
       ))}
       <Link
         href="/productos?ofertas=1"
-        className="shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-sm font-bold text-rose-600 transition hover:bg-rose-50"
+        className="shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-sm font-bold text-rose-600 transition hover:bg-rose-50"
       >
         Ofertas
       </Link>
       <Link
         href="/ayuda"
-        className="shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50"
+        className="shrink-0 whitespace-nowrap rounded-lg px-3 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50"
       >
         Ayuda
       </Link>

@@ -193,7 +193,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                 }`}
               >
                 <div>
-                  <span className={`hidden items-center gap-2 rounded-full border border-brand-200 bg-white/70 px-3 py-1 text-[11px] font-semibold text-ink-700 backdrop-blur sm:inline-flex${enterClass}`} style={enterStyle(0)}>
+                  <span className={`hidden items-center gap-2 rounded-lg border border-brand-200 bg-white/70 px-3 py-1 text-[11px] font-semibold text-ink-700 backdrop-blur sm:inline-flex${enterClass}`} style={enterStyle(0)}>
                     <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" aria-hidden />
                     {slide.pill}
                   </span>
@@ -211,14 +211,14 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                   <div className={`mt-3 flex flex-wrap gap-2.5 sm:mt-5${enterClass}`} style={enterStyle(210)}>
                     <Link
                       href={slide.cta.href}
-                      className="rounded-full bg-brand-500 px-4 py-2 text-[13px] font-extrabold text-deep transition hover:bg-brand-400 sm:px-5 sm:py-3 sm:text-sm"
+                      className="rounded-lg bg-brand-500 px-4 py-2 text-[13px] font-extrabold text-deep transition hover:bg-brand-400 sm:px-5 sm:py-3 sm:text-sm"
                     >
                       {slide.cta.label}
                     </Link>
                     {slide.cta2 ? (
                       <Link
                         href={slide.cta2.href}
-                        className="hidden rounded-full border border-ink-200 bg-white/60 px-5 py-3 text-sm font-bold text-ink-900 transition hover:bg-white sm:inline-block"
+                        className="hidden rounded-lg border border-ink-200 bg-white/60 px-5 py-3 text-sm font-bold text-ink-900 transition hover:bg-white sm:inline-block"
                       >
                         {slide.cta2.label}
                       </Link>
@@ -244,14 +244,14 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                 */}
                 {producto ? (
                   <div className={`relative lg:h-full lg:min-h-0${enterClass}`} style={enterStyle(280)}>
-                    <article className="relative rounded-2xl bg-surface p-2 shadow-[0_28px_70px_-34px_rgba(194,65,12,0.35)] ring-1 ring-black/5 sm:rounded-[28px] sm:p-5 lg:flex lg:h-full lg:flex-col">
+                    <article className="relative rounded-2xl bg-surface p-2 shadow-[0_28px_70px_-34px_rgba(194,65,12,0.35)] ring-1 ring-black/5 sm:rounded-3xl sm:p-5 lg:flex lg:h-full lg:flex-col">
                       {off > 0 ? (
                         <span className="absolute left-2 top-2 z-10 rounded-md bg-rose-600 px-1.5 py-0.5 text-[10px] font-extrabold text-white sm:hidden">
                           {off}% OFF
                         </span>
                       ) : null}
                       <div className="hidden items-center justify-between gap-3 sm:flex">
-                        <span className="inline-flex items-center gap-1.5 rounded-full bg-deep px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white">
+                        <span className="inline-flex items-center gap-1.5 rounded-lg bg-deep px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white">
                           <Truck size={12} strokeWidth={2.4} aria-hidden />
                           Envío Andreani
                         </span>
@@ -311,7 +311,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                       <div className={`mt-4 hidden items-center gap-2 sm:flex${enterClass}`} style={enterStyle(420)}>
                         <Link
                           href={`/producto/${producto.slug}`}
-                          className="min-w-0 flex-1 rounded-full bg-ink-900 px-4 py-2.5 text-center text-[13px] font-extrabold text-white transition hover:bg-ink-800"
+                          className="min-w-0 flex-1 rounded-lg bg-ink-900 px-4 py-2.5 text-center text-[13px] font-extrabold text-white transition hover:bg-ink-800"
                         >
                           Ver este equipo
                         </Link>
@@ -320,7 +320,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                           onClick={agregar}
                           disabled={sinStock}
                           aria-label={sinStock ? `${producto.name} sin stock` : `Agregar ${producto.name} al carrito`}
-                          className="shrink-0 rounded-full bg-brand-500 px-4 py-2.5 text-[13px] font-extrabold text-deep transition hover:bg-brand-400 disabled:cursor-not-allowed disabled:bg-ink-100 disabled:text-ink-500"
+                          className="shrink-0 rounded-lg bg-brand-500 px-4 py-2.5 text-[13px] font-extrabold text-deep transition hover:bg-brand-400 disabled:cursor-not-allowed disabled:bg-ink-100 disabled:text-ink-500"
                         >
                           {sinStock ? "Sin stock" : "Agregar"}
                         </button>

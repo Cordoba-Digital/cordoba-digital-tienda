@@ -236,7 +236,7 @@ export default async function CategoryPage({
                 <Link
                   key={a.id}
                   href={`/categoria/${a.path}`}
-                  className="rounded-full border border-ink-200 bg-surface px-2.5 py-1 font-semibold text-ink-600 hover:border-brand-300"
+                  className="rounded-lg border border-ink-200 bg-surface px-2.5 py-1 font-semibold text-ink-600 hover:border-brand-300"
                 >
                   {a.name}
                 </Link>
@@ -260,7 +260,7 @@ export default async function CategoryPage({
             <Link
               key={child.id}
               href={`/categoria/${child.path}`}
-              className="inline-flex items-center gap-1.5 rounded-full border border-ink-200 bg-surface px-3.5 py-1.5 text-sm font-semibold text-ink-700 transition hover:border-brand-300 hover:text-brand-700"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-ink-200 bg-surface px-3.5 py-1.5 text-sm font-semibold text-ink-700 transition hover:border-brand-300 hover:text-brand-700"
             >
               {child.name}
               <span className="text-[11px] font-normal text-ink-500">{child.count}</span>
@@ -295,7 +295,7 @@ export default async function CategoryPage({
                 <Link
                   key={chip.key}
                   href={chip.href}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-brand-200 bg-brand-50 px-3 py-1.5 text-xs font-semibold text-brand-700 transition hover:bg-brand-100"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-brand-200 bg-brand-50 px-3 py-1.5 text-xs font-semibold text-brand-700 transition hover:bg-brand-100"
                 >
                   {chip.label}
                   <span aria-hidden className="text-brand-600">×</span>

@@ -211,7 +211,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
                 aria-autocomplete="list"
                 aria-activedescendant={showSuggestions && active >= 0 ? `busqueda-sugerencias-${active}` : undefined}
                 placeholder="Buscá tu próximo celular, notebook, cámara..."
-                className="h-11 w-full rounded-full border border-ink-100 bg-ink-50/80 pl-11 pr-28 text-sm text-ink-800 outline-none transition placeholder:text-ink-400 focus:border-brand-400 focus:bg-surface focus:ring-4 focus:ring-brand-100"
+                className="h-11 w-full rounded-xl border border-ink-100 bg-ink-50/80 pl-11 pr-28 text-sm text-ink-800 outline-none transition placeholder:text-ink-400 focus:border-brand-400 focus:bg-surface focus:ring-4 focus:ring-brand-100"
               />
               <svg
                 viewBox="0 0 24 24"
@@ -225,7 +225,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               </svg>
               <button
                 type="submit"
-                className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-full bg-brand-500 px-4 py-2 text-xs font-bold text-white transition hover:bg-brand-600"
+                className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-lg bg-brand-500 px-4 py-2 text-xs font-bold text-white transition hover:bg-brand-600"
               >
                 Buscar
               </button>
@@ -247,7 +247,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
           <nav className="ml-auto flex items-center gap-1">
             <Link
               href="/seguimiento"
-              className="hidden items-center gap-2 rounded-full border border-ink-200 px-4 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50 hover:text-ink-900 lg:flex"
+              className="hidden items-center gap-2 rounded-lg border border-ink-200 px-4 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50 hover:text-ink-900 lg:flex"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z" />
@@ -296,7 +296,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
             <button
               type="button"
               onClick={openCart}
-              className="relative flex h-9 items-center gap-2 rounded-full bg-brand-500 px-3 text-sm font-bold text-white transition hover:bg-brand-600 sm:h-10 sm:px-4"
+              className="relative flex h-9 items-center gap-2 rounded-lg bg-brand-500 px-3 text-sm font-bold text-white transition hover:bg-brand-600 sm:h-10 sm:px-4"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <path d="M3 4h2.2l2 11h10.4l2-8H6" strokeLinecap="round" strokeLinejoin="round" />
@@ -327,7 +327,7 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
               onKeyDown={onSearchKey}
               enterKeyHint="search"
               placeholder="¿Qué estás buscando?"
-              className="h-10 w-full rounded-full border border-ink-100 bg-ink-50/80 pl-10 pr-4 text-sm outline-none focus:border-brand-400 focus:bg-surface sm:h-11"
+              className="h-10 w-full rounded-xl border border-ink-100 bg-ink-50/80 pl-10 pr-4 text-sm outline-none focus:border-brand-400 focus:bg-surface sm:h-11"
             />
             <svg
               viewBox="0 0 24 24"

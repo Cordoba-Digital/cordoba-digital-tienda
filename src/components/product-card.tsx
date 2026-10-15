@@ -102,14 +102,14 @@ export function ProductCard({ product, badge }: { product: ProductView; badge?: 
         {added ? (
           <span
             key={added}
-            className="pointer-events-none absolute bottom-2 right-2 animate-pop rounded-full bg-emerald-600 px-2 py-0.5 text-[11px] font-bold text-white shadow-sm motion-reduce:animate-none"
+            className="pointer-events-none absolute bottom-2 right-2 animate-pop rounded-lg bg-emerald-600 px-2 py-0.5 text-[11px] font-bold text-white shadow-sm motion-reduce:animate-none"
           >
             ✓ Agregado
           </span>
         ) : null}
 
         {badge ? (
-          <span className="pointer-events-none absolute bottom-2 left-2 rounded-full bg-deep/90 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
+          <span className="pointer-events-none absolute bottom-2 left-2 rounded-lg bg-deep/90 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
             {badge}
           </span>
         ) : null}
@@ -237,7 +237,41 @@ export function ProductRow({ products, label, badges }: { products: ProductView[
   // Referencia normal y no un estado: la tira no se vuelve a pintar cuando el
   // nodo se monta o se desmonta, y `move` lee el nodo por `ref.current`.
   const ref = useRef<HTMLDivElement | null>(null);
-  const move = (dir: -1 | 1) => ref.current?.scrollBy({ left: dir * 280, behavior: "smooth" });
+  // Extremos de la tira, para apagar la flecha que no tiene a dónde ir. Arranca
+  // "al inicio" y "no al final", que es lo que se ve antes de medir.
+  const [enInicio, setEnInicio] = useState(true);
+  const [enFinal, setEnFinal] = useState(false);
+
+  useEffect(() => {
+    const tira = ref.current;
+    if (!tira) return;
+    let cuadro = 0;
+    const medir = () => {
+      if (cuadro) return;
+      cuadro = requestAnimationFrame(() => {
+        cuadro = 0;
+        setEnInicio(tira.scrollLeft <= 1);
+        setEnFinal(tira.scrollLeft + tira.clientWidth >= tira.scrollWidth - 1);
+      });
+    };
+    medir();
+    tira.addEventListener("scroll", medir, { passive: true });
+    window.addEventListener("resize", medir);
+    return () => {
+      tira.removeEventListener("scroll", medir);
+      window.removeEventListener("resize", medir);
+      if (cuadro) cancelAnimationFrame(cuadro);
+    };
+  }, []);
+
+  // Una tarjeta y algo por clic: se ve que avanzó sin perder de vista la anterior.
+  const move = (dir: -1 | 1) => {
+    const tira = ref.current;
+    if (!tira) return;
+    const tarjeta = tira.firstElementChild as HTMLElement | null;
+    const paso = tarjeta ? tarjeta.offsetWidth * 2 : 280;
+    tira.scrollBy({ left: dir * paso, behavior: "smooth" });
+  };
 
   return (
     <div className="relative">
@@ -255,8 +289,11 @@ export function ProductRow({ products, label, badges }: { products: ProductView[
       <button
         type="button"
         onClick={() => move(-1)}
+        disabled={enInicio}
         aria-label={`Ver productos anteriores de ${label}`}
-        className="absolute -left-3 top-[38%] hidden h-10 w-10 place-items-center rounded-full border border-ink-100 bg-surface text-ink-700 shadow-md transition hover:bg-brand-50 hover:text-brand-700 md:grid"
+        className={`absolute -left-3 top-[38%] hidden h-10 w-10 place-items-center rounded-full border border-ink-100 bg-surface text-ink-700 shadow-md transition hover:bg-brand-50 hover:text-brand-700 md:grid ${
+          enInicio ? "pointer-events-none opacity-0" : ""
+        }`}
       >
         <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M15 5l-7 7 7 7" />
@@ -265,8 +302,11 @@ export function ProductRow({ products, label, badges }: { products: ProductView[
       <button
         type="button"
         onClick={() => move(1)}
+        disabled={enFinal}
         aria-label={`Ver más productos de ${label}`}
-        className="absolute -right-3 top-[38%] hidden h-10 w-10 place-items-center rounded-full border border-ink-100 bg-surface text-ink-700 shadow-md transition hover:bg-brand-50 hover:text-brand-700 md:grid"
+        className={`absolute -right-3 top-[38%] hidden h-10 w-10 place-items-center rounded-full border border-ink-100 bg-surface text-ink-700 shadow-md transition hover:bg-brand-50 hover:text-brand-700 md:grid ${
+          enFinal ? "pointer-events-none opacity-0" : ""
+        }`}
       >
         <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M9 5l7 7-7 7" />

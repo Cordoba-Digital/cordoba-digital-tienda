@@ -7,12 +7,10 @@ import { QuantityStepper } from "@/components/cart-drawer";
 import { InstallmentsDetail } from "@/components/installments-provider";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
-import { Spinner, Stars } from "@/components/ui";
+import { Stars } from "@/components/ui";
 import { trackViewItem } from "@/lib/analytics";
 import { discountPercent, money } from "@/lib/format";
 import { MAX_QTY_PER_ITEM } from "@/lib/pricing";
-import { fetchShippingQuote } from "@/lib/shipping-quote";
-import type { ShippingOption } from "@/lib/shipping";
 
 export function ProductGallery({
   images,
@@ -310,7 +308,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
              stock = 1 y ninguno tiene entre 2 y 5, así que el aviso salía en el
              91% de las fichas. El `stock` del sitio original funciona como
              disponible/no disponible, no como un conteo real de depósito. */
-          <p className="mt-1.5 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-[13px] font-bold text-emerald-700">
+          <p className="mt-1.5 inline-flex items-center gap-2 rounded-lg bg-emerald-50 px-3 py-1 text-[13px] font-bold text-emerald-700">
             <span className="h-2 w-2 rounded-full bg-current" aria-hidden />
             Stock disponible para envío inmediato
           </p>
@@ -390,7 +388,16 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
       </div>
 
       <div className="space-y-4 border-t border-ink-100 pt-4">
-        <ShippingCalculator price={product.price} slug={product.slug} />
+        {/* El costo del envío se calcula solo en el checkout, con el carrito y el código postal. */}
+        <div className="flex items-start gap-3 text-[13px] leading-snug text-ink-500">
+          <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-brand-700" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+            <path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z" />
+          </svg>
+          <p>
+            <b className="block text-sm text-ink-900">Envíos a todo el país por Andreani</b>
+            A domicilio o a sucursal. El costo lo ves en el checkout con tu código postal.
+          </p>
+        </div>
         <div className="flex items-start gap-3 text-[13px] leading-snug text-ink-500">
           <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-brand-700" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
               <path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11zM12 10m-2.5 0a2.5 2.5 0 105 0 2.5 2.5 0 10-5 0" />
@@ -461,74 +468,6 @@ export function MobileBuyBar({ product }: { product: BuyBoxProduct }) {
             Comprar ahora
           </button>
         </div>
-      </div>
-    </div>
-  );
-}
-
-export function ShippingCalculator({ price, slug }: { price: number; slug: string }) {
-  const [zip, setZip] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [result, setResult] = useState<{ zone: string; options: ShippingOption[] } | null>(null);
-
-  const quote = async (event: React.FormEvent) => {
-    event.preventDefault();
-    setLoading(true);
-    setError(null);
-    try {
-      const data = await fetchShippingQuote({ zip, subtotal: price, items: [{ slug, quantity: 1 }] });
-      setResult({ zone: data.zone, options: data.options });
-    } catch (error) {
-      setError(error instanceof Error ? error.message : "No pudimos calcular el envío. Probá de nuevo.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  return (
-    <div className="flex items-start gap-3">
-      <svg viewBox="0 0 24 24" className="mt-0.5 h-5 w-5 shrink-0 text-brand-700" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-        <path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z" />
-      </svg>
-      <div className="min-w-0 flex-1 text-[13px] leading-snug text-ink-500">
-      <h3 className="text-sm font-bold text-ink-900">Calculá el costo de envío</h3>
-      <p className="mt-0.5">Ingresá tu código postal y te mostramos las opciones de Andreani.</p>
-      <form onSubmit={quote} className="mt-2.5 flex gap-2">
-        <input
-          value={zip}
-          onChange={(e) => setZip(e.target.value)}
-          inputMode="numeric"
-          maxLength={8}
-          placeholder="Ej: 5000"
-          className="h-10 min-w-0 flex-1 rounded-xl border border-ink-200 bg-ink-50 px-3 text-sm text-ink-900 outline-none focus:border-brand-400"
-        />
-        <button
-          type="submit"
-          disabled={loading}
-          className="inline-flex h-10 items-center gap-2 rounded-xl bg-deep px-4 text-sm font-bold text-white transition hover:opacity-90 disabled:opacity-60"
-        >
-          {loading ? <Spinner className="h-4 w-4" /> : null}
-          Calcular
-        </button>
-      </form>
-      {error ? <p role="alert" className="mt-2 text-xs font-semibold text-rose-600">{error}</p> : null}
-      {result ? (
-        <div className="mt-3 space-y-2">
-          <p className="text-xs font-semibold text-ink-500">Zona detectada: {result.zone}</p>
-          {result.options.map((option) => (
-            <div key={option.id} className="flex items-start justify-between gap-3 rounded-xl border border-ink-100 p-3">
-              <div>
-                <p className="text-xs font-bold text-ink-900">{option.label}</p>
-                <p className="text-[11px] text-ink-500">{option.eta}</p>
-              </div>
-              <span className={`text-sm font-extrabold ${option.free ? "text-emerald-600" : "text-ink-900"}`}>
-                {option.free ? "Gratis" : money(option.cost)}
-              </span>
-            </div>
-          ))}
-        </div>
-      ) : null}
       </div>
     </div>
   );

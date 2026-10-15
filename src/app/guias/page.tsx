@@ -69,7 +69,7 @@ export default async function GuidesIndexPage() {
           {guias.map((guia) => (
             <article key={guia.slug} className="card-surface flex flex-col p-6">
               {guia.meta?.etiqueta ? (
-                <p className="mb-3 inline-block self-start rounded-full bg-brand-50 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-brand-700">
+                <p className="mb-3 inline-block self-start rounded-lg bg-brand-50 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-brand-700">
                   {guia.meta.etiqueta}
                 </p>
               ) : null}

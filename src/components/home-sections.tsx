@@ -100,7 +100,7 @@ export function HomeCategoryTabs({ tabs }: { tabs: CategoryShowcaseTab[] }) {
               aria-selected={selected}
               aria-controls={`${id}-panel`}
               onClick={() => setActive(index)}
-              className={`shrink-0 rounded-full px-3 py-1.5 text-[13px] font-bold transition sm:px-4 sm:py-2 sm:text-sm ${
+              className={`shrink-0 rounded-lg px-3 py-1.5 text-[13px] font-bold transition sm:px-4 sm:py-2 sm:text-sm ${
                 selected ? "bg-ink-900 text-white" : "bg-surface text-ink-700 ring-1 ring-black/5 hover:bg-brand-50 hover:text-brand-700"
               }`}
             >
@@ -176,7 +176,7 @@ export function HomeExplore({ initial, total, hasMore: initialHasMore }: { initi
             type="button"
             onClick={loadMore}
             disabled={loading}
-            className="inline-flex min-w-[220px] items-center justify-center gap-2 rounded-full bg-ink-900 px-6 py-3 text-sm font-bold text-white transition hover:bg-ink-700 disabled:opacity-70"
+            className="inline-flex min-w-[220px] items-center justify-center gap-2 rounded-lg bg-ink-900 px-6 py-3 text-sm font-bold text-white transition hover:bg-ink-700 disabled:opacity-70"
           >
             {loading ? <Spinner className="h-4 w-4" /> : null}
             {loading ? "Cargando…" : "Ver más productos"}
@@ -184,7 +184,7 @@ export function HomeExplore({ initial, total, hasMore: initialHasMore }: { initi
         ) : (
           <Link
             href="/productos"
-            className="inline-flex min-w-[220px] items-center justify-center gap-1.5 rounded-full bg-ink-900 px-6 py-3 text-sm font-bold text-white transition hover:bg-ink-700"
+            className="inline-flex min-w-[220px] items-center justify-center gap-1.5 rounded-lg bg-ink-900 px-6 py-3 text-sm font-bold text-white transition hover:bg-ink-700"
           >
             Ver todo el catálogo <ArrowRight size={14} aria-hidden />
           </Link>

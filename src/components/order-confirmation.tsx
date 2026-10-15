@@ -177,7 +177,7 @@ export function OrderConfirmation({
                         <p className={`text-sm font-bold ${done ? "text-ink-900" : "text-ink-500"}`}>{stage.label}</p>
                         <p className="text-xs text-ink-500">{stage.description}</p>
                         {index === current ? (
-                          <span className="mt-1 inline-block rounded-full bg-brand-50 px-2 py-0.5 text-[10px] font-bold text-brand-700">
+                          <span className="mt-1 inline-block rounded-lg bg-brand-50 px-2 py-0.5 text-[10px] font-bold text-brand-700">
                             Estado actual
                           </span>
                         ) : null}

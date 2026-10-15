@@ -95,7 +95,7 @@ export function HomeHero({
       pill: "Envíos a todo el país",
       titleLead: "Te lo llevamos",
       titleAccent: "por Andreani o lo retirás",
-      text: "Calculá el costo con tu código postal en cada producto, o pasá por 27 de Abril 180, Córdoba Capital.",
+      text: "Elegí domicilio o sucursal y ves el costo en el checkout con tu código postal, o pasá por 27 de Abril 180, Córdoba Capital.",
       cta: { href: "/productos", label: "Elegir mi producto" },
       stats: [
         { k: "Andreani", v: "domicilio o sucursal" },

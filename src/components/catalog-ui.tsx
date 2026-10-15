@@ -94,7 +94,7 @@ export function CategoryChips({
         <Link
           key={c.slug}
           href={`/categoria/${c.path}`}
-          className={`inline-flex shrink-0 items-center gap-2 rounded-full border px-3.5 py-2 text-sm font-semibold transition ${
+          className={`inline-flex shrink-0 items-center gap-2 rounded-lg border px-3.5 py-2 text-sm font-semibold transition ${
             activePath === c.path
               ? "border-brand-700 bg-brand-700 text-white"
               : "border-ink-200 bg-surface text-ink-700 hover:border-brand-300 hover:text-brand-700"

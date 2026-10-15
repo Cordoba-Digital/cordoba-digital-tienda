@@ -22,10 +22,10 @@ export default async function AdminLayout({ children }: { children: ReactNode })
   const jar = await cookies();
   const session = await readAdminSession(jar.get(ADMIN_COOKIE)?.value);
   if (!session) {
-    return <div className="admin-shell grid min-h-screen place-items-center px-4 py-10">{children}</div>;
+    return <div className="admin-shell admin-radios grid min-h-screen place-items-center px-4 py-10">{children}</div>;
   }
   return (
-    <div className="min-h-screen">
+    <div className="admin-radios min-h-screen">
       <AdminSidebar
         badges={{
           "/admin/pedidos": await countPendingOrders(),
