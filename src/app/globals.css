@@ -222,6 +222,28 @@ body {
     radial-gradient(40rem 24rem at 60% 120%, rgba(249, 115, 22, 0.18), transparent 60%);
 }
 
+/*
+ * Fondo de la portada: el mismo crema durazno de `mesh-warm`, pero el final
+ * se funde con el papel de la página en vez de cortar en línea recta
+ * debajo del cintillo de confianza.
+ */
+@utility mesh-warm-fundido {
+  /* La primera capa es la de arriba: tapa los brillos y el crema hacia el
+     final, así que el borde inferior queda exactamente del color del papel. */
+  --fundido: 6rem;
+  background-color: #ffeee2;
+  background-image:
+    linear-gradient(to bottom, transparent calc(100% - var(--fundido)), var(--color-ink-50) 100%),
+    radial-gradient(60rem 30rem at 10% -10%, rgba(241, 90, 36, 0.26), transparent 60%),
+    radial-gradient(45rem 26rem at 95% 0%, rgba(255, 176, 32, 0.3), transparent 65%),
+    radial-gradient(40rem 24rem at 60% 120%, rgba(249, 115, 22, 0.18), transparent 60%);
+  /* En el celular no hay cintillo debajo del hero: el degradé es más corto
+     para no lavar la tarjeta del producto. */
+  @media (width >= 40rem) {
+    --fundido: 14rem;
+  }
+}
+
 @utility text-balance-pretty {
   text-wrap: balance;
 }
