@@ -138,11 +138,11 @@ export default async function HomePage() {
     portada: () => (
       <>
           {/*
-            Hero y cintillo comparten el mismo fondo crema de marca (vive acá y no
-            en el carrusel). Baja un poco más que el cintillo y se funde en degradé
-            con el papel de la página, sin corte recto.
+            Hero y cintillo comparten el mismo fondo crema de marca (`mesh-warm` vive
+            acá y no en el carrusel): baja hasta el borde inferior del cintillo, con
+            corte recto.
           */}
-          <div className="mesh-warm-fundido pb-4 sm:pb-8">
+          <div className="mesh-warm">
             <HomeHero
               productCount={productCount}
               ratingValue={ratingValue}
