@@ -271,11 +271,18 @@ export const orders = pgTable(
      * paga el envío en el portal de PyMEs y se guarda en `trackingCode`.
      */
     andreani: jsonb("andreani").$type<EnvioAndreani | null>(),
+    /**
+     * Clave que manda el navegador por cada intento de compra. Si el mismo
+     * envío llega dos veces (doble toque, reintento tras un corte de red), el
+     * checkout devuelve este pedido en vez de crear otro.
+     */
+    checkoutKey: text("checkout_key"),
     statusUpdatedAt: timestamp("status_updated_at", { withTimezone: true }).notNull().defaultNow(),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (table) => [
     uniqueIndex("orders_code_idx").on(table.code),
+    uniqueIndex("orders_checkout_key_idx").on(table.checkoutKey),
     // "Mi cuenta" y el panel de usuarios buscan pedidos por email sin mayúsculas.
     index("orders_email_lower_idx").on(sql`lower(${table.email})`),
   ],

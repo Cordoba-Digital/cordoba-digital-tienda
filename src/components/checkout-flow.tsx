@@ -227,6 +227,9 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
   const [branch, setBranch] = useState("");
+  // Clave del intento de compra: se repite mientras el pedido que se manda sea
+  // el mismo, así un reintento después de un corte no crea un pedido doble.
+  const checkoutAttempt = useRef<{ key: string; payload: string } | null>(null);
 
   useEffect(() => {
     const id = window.setTimeout(() => {
@@ -388,32 +391,39 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
     setSubmitting(true);
     setServerError(null);
     try {
+      const order = {
+        items: items.map((item) => ({ slug: item.slug, quantity: item.quantity })),
+        customer: {
+          firstName: form.firstName,
+          lastName: form.lastName,
+          email: form.email,
+          phone: form.phone,
+          docId: form.docId,
+        },
+        delivery: {
+          method: deliveryMethod,
+          zip: form.zip,
+          street: form.street,
+          number: form.number,
+          extra: form.extra,
+          city: form.city,
+          province: form.province,
+          branch: deliveryMethod === "express" && branchValida ? branch : "",
+        },
+        payment: { method: payment, installments },
+        couponCode: coupon?.code ?? null,
+        notes: form.notes,
+      };
+      const payload = JSON.stringify(order);
+      if (checkoutAttempt.current?.payload !== payload) {
+        // Sin `randomUUID` (navegadores viejos) va vacía y el pedido sale igual.
+        const key = typeof crypto.randomUUID === "function" ? crypto.randomUUID() : "";
+        checkoutAttempt.current = { key, payload };
+      }
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          items: items.map((item) => ({ slug: item.slug, quantity: item.quantity })),
-          customer: {
-            firstName: form.firstName,
-            lastName: form.lastName,
-            email: form.email,
-            phone: form.phone,
-            docId: form.docId,
-          },
-          delivery: {
-            method: deliveryMethod,
-            zip: form.zip,
-            street: form.street,
-            number: form.number,
-            extra: form.extra,
-            city: form.city,
-            province: form.province,
-            branch: deliveryMethod === "express" && branchValida ? branch : "",
-          },
-          payment: { method: payment, installments },
-          couponCode: coupon?.code ?? null,
-          notes: form.notes,
-        }),
+        body: JSON.stringify({ ...order, checkoutKey: checkoutAttempt.current.key }),
       });
       const data = await res.json();
       if (!res.ok || !data.ok) {
