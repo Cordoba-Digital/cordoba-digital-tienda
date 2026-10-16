@@ -45,9 +45,9 @@ export function AdminOrdersWipeButton() {
         type="button"
         onClick={wipe}
         disabled={pending}
-        className="inline-flex h-10 items-center rounded-full border border-adm-red/40 bg-adm-red/[0.06] px-4 text-sm font-semibold text-red-600 transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-adm-red/[0.14] disabled:cursor-not-allowed"
+        className="inline-flex h-9 items-center rounded-full px-3 text-[13px] text-adm-muted transition-[background-color,color] duration-150 hover:bg-adm-red/[0.1] hover:text-red-600 disabled:cursor-not-allowed"
       >
-        {pending ? "Borrando…" : "Borrar todos"}
+        {pending ? "Borrando…" : "Borrar todos los pedidos"}
       </button>
       {error && (
         <span className="text-xs text-red-700" role="alert">
