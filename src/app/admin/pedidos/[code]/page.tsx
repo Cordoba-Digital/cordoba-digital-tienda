@@ -8,6 +8,7 @@ import { AdminOrderAndreani } from "@/components/admin-order-andreani";
 import { AdminOrderManageForm } from "@/components/admin-order-manage-form";
 import { AdminOrderNextStep } from "@/components/admin-order-next-step";
 import { ProductImg } from "@/components/product-img";
+import { AdminStatusBadge } from "@/components/admin-ui";
 import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { allowedStatuses, nextStep, statusSteps, whatsappHref } from "@/lib/admin-order-helpers";
@@ -85,9 +86,7 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
       <section className="admin-card p-5">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="text-sm font-bold text-ink-900">Estado del pedido</h2>
-          <Pill solid tone={cancelled ? "neutral" : order.status === "pendiente_pago" ? "amber" : order.status === "entregado" || order.status === "enviado" ? "success" : "brand"}>
-            {statusLabel(order.status)}
-          </Pill>
+          <AdminStatusBadge status={order.status} />
         </div>
         <ol className="mt-4 grid gap-2 sm:grid-cols-5">
           {statusSteps(order.status).map((s, i) => (

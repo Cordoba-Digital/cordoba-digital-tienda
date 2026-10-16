@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { AdminPaymentVerify } from "@/components/admin-payment-verify";
+import { AdminStatusBadge } from "@/components/admin-ui";
 import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
@@ -133,9 +134,7 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
                   </td>
                   <td className="px-3 py-2 font-black">{money(row.total)}</td>
                   <td className="px-3 py-2">
-                    <Pill solid tone={row.status === "pendiente_pago" ? "amber" : "brand"}>
-                      {statusLabel(row.status)}
-                    </Pill>
+                    <AdminStatusBadge status={row.status} />
                   </td>
                   <td className="px-3 py-2 text-xs text-ink-500">
                     <span className="block">Pref: {row.preferenceId ?? "—"}</span>

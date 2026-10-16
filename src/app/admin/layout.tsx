@@ -1,13 +1,31 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { cookies } from "next/headers";
 import type { ReactNode } from "react";
 
-import { AdminSidebar } from "@/components/admin-sidebar";
+import { ADMIN_NAV_COOKIE } from "@/components/admin-nav-items";
+import { AdminFrame } from "@/components/admin-sidebar";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { readAdminSession } from "@/lib/admin-session";
 import { countRecentArrepentimientos } from "@/lib/admin-arrepentimientos";
 import { countPendingOrders } from "@/lib/admin-stats";
 import { countOpenErrors } from "@/lib/error-log";
+
+/* Geist y Geist Mono (licencia OFL, ver public/fonts/GEIST-OFL.txt): solo el
+   panel las usa, la tienda sigue con Plus Jakarta Sans. */
+const geist = localFont({
+  src: "../../../public/fonts/geist-latin.woff2",
+  weight: "100 900",
+  variable: "--font-geist",
+  display: "swap",
+});
+const geistMono = localFont({
+  src: "../../../public/fonts/geist-mono-latin.woff2",
+  weight: "100 900",
+  variable: "--font-geist-mono",
+  display: "swap",
+});
+const theme = `admin-theme ${geist.variable} ${geistMono.variable}`;
 
 export const metadata: Metadata = {
   title: "Admin",
@@ -22,22 +40,21 @@ export default async function AdminLayout({ children }: { children: ReactNode })
   const jar = await cookies();
   const session = await readAdminSession(jar.get(ADMIN_COOKIE)?.value);
   if (!session) {
-    return <div className="admin-shell grid min-h-screen place-items-center px-4 py-10">{children}</div>;
+    return <div className={`${theme} admin-shell grid min-h-screen place-items-center px-4 py-10`}>{children}</div>;
   }
   return (
-    <div className="min-h-screen">
-      <AdminSidebar
+    <div className={theme}>
+      <AdminFrame
         badges={{
           "/admin/pedidos": await countPendingOrders(),
           "/admin/arrepentimientos": await countRecentArrepentimientos(),
           "/admin/errores": await countOpenErrors(),
         }}
         who={session.email}
-      />
-      {/* El contenido acompaña el ancho: más aire en monitores grandes sin que las tablas queden angostas. */}
-      <div className="md:pl-[72px] lg:pl-60">
-        <main className="admin-shell mx-auto max-w-6xl px-4 py-5 sm:px-6 md:py-6 lg:px-8 lg:py-8 xl:max-w-7xl 2xl:max-w-[1440px] 2xl:px-10">{children}</main>
-      </div>
+        compact={jar.get(ADMIN_NAV_COOKIE)?.value === "compacto"}
+      >
+        {children}
+      </AdminFrame>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { notFound, redirect } from "next/navigation";
 
 import { AdminUserDeleteButton } from "@/components/admin-user-delete-button";
 import { AdminUserDisableButton } from "@/components/admin-user-disable-button";
+import { AdminStatusBadge } from "@/components/admin-ui";
 import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
@@ -95,7 +96,7 @@ export default async function AdminUserDetailPage({ params }: { params: Promise<
                   </td>
                   <td className="px-3 py-2 text-xs text-ink-500">{formatDateTime(o.createdAt)}</td>
                   <td className="px-3 py-2">
-                    <Pill solid tone={o.status === "pendiente_pago" ? "amber" : "brand"}>{statusLabel(o.status)}</Pill>
+                    <AdminStatusBadge status={o.status} />
                   </td>
                   <td className="px-3 py-2">{o.itemsCount}</td>
                   <td className="px-3 py-2 font-black">{money(o.total)}</td>
