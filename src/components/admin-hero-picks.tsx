@@ -106,7 +106,7 @@ export function AdminHeroPicks({ initial }: { initial: HeroAdminState }) {
   return (
     <section aria-labelledby="portada-titulo" className="space-y-3">
       <div>
-        <h2 id="portada-titulo" className="text-lg font-black tracking-tight text-ink-900">
+        <h2 id="portada-titulo" className="text-lg font-semibold tracking-[-0.01em] text-ink-900">
           Productos de la portada
         </h2>
         <p className="mt-0.5 max-w-2xl text-sm text-ink-500">
@@ -125,7 +125,7 @@ export function AdminHeroPicks({ initial }: { initial: HeroAdminState }) {
                 {state.auto ? <p className="mt-0.5 text-xs text-ink-500">{slide.rule}</p> : null}
               </div>
               {slide.pick ? (
-                <div className="flex min-w-0 flex-1 items-center gap-3">
+                <div className="flex min-w-0 basis-full items-center gap-3 sm:basis-0 sm:flex-1">
                   <Thumb product={slide.pick} />
                   <div className="min-w-0">
                     <p className="truncate text-sm font-semibold text-ink-900">{slide.pick.name}</p>
@@ -138,7 +138,7 @@ export function AdminHeroPicks({ initial }: { initial: HeroAdminState }) {
                   </div>
                 </div>
               ) : (
-                <p className="flex-1 text-sm text-ink-500">Sin producto: no hay ninguno con stock y foto que encaje.</p>
+                <p className="basis-full text-sm text-ink-500 sm:basis-0 sm:flex-1">Sin producto: no hay ninguno con stock y foto que encaje.</p>
               )}
               <div className="flex flex-wrap gap-2">
                 <button
@@ -164,7 +164,7 @@ export function AdminHeroPicks({ initial }: { initial: HeroAdminState }) {
                     type="button"
                     disabled={busy}
                     onClick={() => exclude(slide.pick!.slug)}
-                    className="rounded-lg border border-ink-200 px-3 py-1.5 text-xs font-bold text-red-600 hover:bg-red-50 disabled:opacity-60"
+                    className="rounded-lg border border-ink-200 px-3 py-1.5 text-xs font-bold text-red-600 hover:bg-ink-50 disabled:opacity-60"
                   >
                     No mostrar este
                   </button>
