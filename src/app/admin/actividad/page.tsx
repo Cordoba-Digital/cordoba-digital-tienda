@@ -75,8 +75,8 @@ export default async function AdminActivityPage({ searchParams }: { searchParams
   return (
     <div className="space-y-6">
       <div>
-        <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Admin · Registro</p>
-        <h1 className="mt-1 text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">Actividad</h1>
+        <p className="text-[13px] text-adm-muted">Registro</p>
+        <h1 className="mt-1 text-[28px] font-semibold leading-tight tracking-[-0.02em] text-adm-fg sm:text-[30px]">Actividad</h1>
         <p className="mt-1 text-sm text-ink-500">Quién cambió qué y cuándo. {total} movimientos.</p>
       </div>
 
@@ -95,7 +95,7 @@ export default async function AdminActivityPage({ searchParams }: { searchParams
         {actors.length > 1 ? (
           <form action="/admin/actividad" method="get" className="ml-auto flex gap-2">
             {entity ? <input type="hidden" name="tipo" value={entity} /> : null}
-            <select name="quien" defaultValue={actor} className="border border-ink-200 bg-surface px-3 py-1.5 text-xs text-ink-900">
+            <select name="quien" defaultValue={actor} aria-label="Filtrar por persona" className="border border-ink-200 bg-surface px-3 py-1.5 text-xs text-ink-900">
               <option value="">Todas las personas</option>
               {actors.map((a) => (
                 <option key={a} value={a}>

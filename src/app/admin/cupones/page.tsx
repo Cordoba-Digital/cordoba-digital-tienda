@@ -18,8 +18,8 @@ export default async function AdminCouponsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Admin · Ventas</p>
-        <h1 className="mt-1 text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">Cupones</h1>
+        <p className="text-[13px] text-adm-muted">Ventas</p>
+        <h1 className="mt-1 text-[28px] font-semibold leading-tight tracking-[-0.02em] text-adm-fg sm:text-[30px]">Cupones</h1>
         <p className="mt-1 max-w-2xl text-sm text-ink-500">
           Códigos de descuento que el cliente escribe en el carrito o el checkout. Podés ponerles fecha de vencimiento y un tope
           de usos. Un pedido cancelado devuelve su uso.

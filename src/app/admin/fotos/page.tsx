@@ -18,8 +18,8 @@ export default async function AdminPhotosPage() {
   return (
     <div className="space-y-6">
       <div>
-        <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Admin · Catálogo</p>
-        <h1 className="mt-1 text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">Fotos del WordPress</h1>
+        <p className="text-[13px] text-adm-muted">Catálogo</p>
+        <h1 className="mt-1 text-[28px] font-semibold leading-tight tracking-[-0.02em] text-adm-fg sm:text-[30px]">Fotos del WordPress</h1>
         <p className="mt-1 max-w-2xl text-sm text-ink-500">
           Copia a nuestro almacenamiento las fotos de producto que todavía se cargan desde el WordPress viejo, para poder
           apagarlo. Se achican a WebP como las que subís desde el panel. Se puede cortar y retomar: lo ya copiado no se repite.

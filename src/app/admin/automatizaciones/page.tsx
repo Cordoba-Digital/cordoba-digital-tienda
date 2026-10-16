@@ -37,8 +37,8 @@ export default async function AdminAutomationsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Admin · Control</p>
-        <h1 className="mt-1 text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">Automatizaciones</h1>
+        <p className="text-[13px] text-adm-muted">Control</p>
+        <h1 className="mt-1 text-[28px] font-semibold leading-tight tracking-[-0.02em] text-adm-fg sm:text-[30px]">Automatizaciones</h1>
         <p className="mt-1 max-w-2xl text-sm text-ink-500">
           Pasos que la tienda puede hacer sola. Cada cambio vale enseguida y queda registrado en Actividad.
         </p>
