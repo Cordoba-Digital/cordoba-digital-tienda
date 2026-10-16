@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 
 import { AdminOrderSearch } from "@/components/admin-order-search";
 import { AdminOrdersWipeButton } from "@/components/admin-orders-wipe-button";
-import { AdminAvatar, AdminPageHeader, AdminStatusBadge } from "@/components/admin-ui";
+import { AdminAvatar, AdminPageHeader, AdminStatusBadge, adminBtn } from "@/components/admin-ui";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { ACTIONABLE_STATUSES, whatsappHref } from "@/lib/admin-order-helpers";
@@ -118,7 +118,15 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
               ? `${actionable} ${actionable === 1 ? "pedido espera" : "pedidos esperan"} que hagas algo: cobrar, preparar o despachar.`
               : "Todo al día: no hay pedidos esperando."
         }
-        actions={allCount > 0 ? <AdminOrdersWipeButton /> : null}
+        actions={
+          <>
+            {allCount > 0 ? <AdminOrdersWipeButton /> : null}
+            <Link href="/admin/pedidos/nuevo" className={adminBtn}>
+              <span aria-hidden className="text-base leading-none">+</span>
+              Pedido manual
+            </Link>
+          </>
+        }
       />
 
       {/* Un solo renglón: si no entran (celular, tablet), se deslizan de costado sin barra a la vista. */}
