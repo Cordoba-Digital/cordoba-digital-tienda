@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import type { CSSProperties } from "react";
 
 import { AdminIcon } from "@/components/admin-icon";
 import type { AdminIconName } from "@/components/admin-nav-items";
@@ -19,13 +20,13 @@ const PER_PAGE = 30;
 /** Tarjeta de número del catálogo; lleva a la lista ya filtrada. */
 function Stat({ href, icon, color, label, value }: { href: string; icon: AdminIconName; color: string; label: string; value: string }) {
   return (
-    <Link href={href} className="admin-card flex items-center gap-3.5 px-[18px] py-4 transition-[background-color] duration-150 hover:bg-white/[0.06]">
-      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl" style={{ backgroundColor: `${color}26`, color }}>
+    <Link href={href} className="admin-card flex items-center gap-3.5 px-[18px] py-4 transition-[background-color] duration-150 hover:bg-adm-fg/[0.06]">
+      <span className="adm-tint grid h-10 w-10 shrink-0 place-items-center rounded-xl" style={{ "--c": color } as CSSProperties}>
         <AdminIcon name={icon} />
       </span>
       <span className="flex min-w-0 flex-col">
-        <span className="truncate text-[13px] text-[#8b8f98]">{label}</span>
-        <span className="admin-mono text-[22px] leading-tight text-white">{value}</span>
+        <span className="truncate text-[13px] text-adm-muted">{label}</span>
+        <span className="admin-mono text-[22px] leading-tight text-adm-fg">{value}</span>
       </span>
     </Link>
   );

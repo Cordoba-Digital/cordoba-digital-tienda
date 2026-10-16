@@ -63,7 +63,7 @@ export function AdminProductFilters({ q, category, categories, stock, sort, ofer
     "h-11 !rounded-full border border-ink-200 bg-surface px-4 text-sm text-ink-900 outline-none transition-[background-color,color,border-color,box-shadow,opacity] duration-150 focus:border-ink-400";
   const chip = (on: boolean) =>
     `h-11 flex-1 rounded-full border px-4 text-sm transition-[background-color,color,border-color,box-shadow,opacity] duration-150 sm:flex-none ${
-      on ? "border-brand-500/50 bg-brand-500/15 text-[#ff8a5b]" : "border-white/10 bg-white/[0.05] text-[#d5d8de] hover:bg-white/[0.09]"
+      on ? "border-brand-500/50 bg-brand-500/15 text-adm-accent" : "border-adm-fg/10 bg-adm-fg/[0.05] text-adm-soft hover:bg-adm-fg/[0.09]"
     }`;
 
   // Filtros puestos, como pastillas con una cruz para sacar cada uno.
@@ -157,11 +157,11 @@ export function AdminProductFilters({ q, category, categories, stock, sort, ofer
                 apply(f.clear);
               }}
               aria-label={`Sacar el filtro ${f.label}: ${f.value}`}
-              className="inline-flex h-9 items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-3.5 text-[13px] text-[#9a9ea7] hover:bg-white/[0.09]"
+              className="inline-flex h-9 items-center gap-2 rounded-full border border-adm-fg/10 bg-adm-fg/[0.05] px-3.5 text-[13px] text-adm-muted hover:bg-adm-fg/[0.09]"
             >
               {f.label}
-              <span className="text-white">{f.value}</span>
-              <span aria-hidden className="text-[#9a9ea7]">✕</span>
+              <span className="text-adm-fg">{f.value}</span>
+              <span aria-hidden className="text-adm-muted">✕</span>
             </button>
           ))}
           <button
@@ -171,7 +171,7 @@ export function AdminProductFilters({ q, category, categories, stock, sort, ofer
               setText("");
               apply({ q: null, categoria: null, stock: null, orden: null, oferta: null, destacados: null });
             }}
-            className="px-2 text-[13px] text-[#9a9ea7] hover:text-white"
+            className="px-2 text-[13px] text-adm-muted hover:text-adm-fg"
           >
             Limpiar filtros
           </button>

@@ -31,6 +31,19 @@
   /* Tarjetas, paneles y formularios sobre el papel calido. */
   --color-surface: #ffffff;
 
+  /* Colores del panel admin (tema oscuro). El tema claro los redefine en
+     `.admin-theme[data-tema="claro"]`; la tienda no los usa. */
+  --color-adm-fg: #ffffff;
+  --color-adm-soft: #d5d8de;
+  --color-adm-muted: #9a9ea7;
+  --color-adm-faint: #80848d;
+  --color-adm-panel: #15171c;
+  --color-adm-bg: #0b0c0f;
+  --color-adm-accent: #ff8a5b;
+  --color-adm-red: #ff8a8a;
+  --color-adm-green: #6ee79a;
+  --color-adm-amber: #f5b544;
+
   /* Fondos que tienen que seguir oscuros siempre: boton "Ver mas", contador de
      ofertas, distintivos sobre la foto y el logo sobre pastilla. */
   --color-deep: #14161c;
@@ -519,19 +532,21 @@ input[type="number"]::-webkit-inner-spin-button {
   --color-ink-800: #e6e8ec;
   --color-ink-900: #f2f2f3;
   --color-surface: #14161b;
-  --admin-bg: #0b0c0f;
+  --admin-bg: var(--color-adm-bg);
   --admin-line: rgb(255 255 255 / 0.08);
   --admin-glass: linear-gradient(180deg, rgb(255 255 255 / 0.055), rgb(255 255 255 / 0.025));
-  --admin-accent: #ff8a5b;
+  --admin-shadow: 0 1px 0 rgb(255 255 255 / 0.05) inset, 0 12px 32px -16px rgb(0 0 0 / 0.6);
+  --admin-field: rgb(255 255 255 / 0.04);
+  --admin-field-line: rgb(255 255 255 / 0.1);
+  --admin-glow: radial-gradient(900px 520px at 12% -8%, rgb(241 90 36 / 0.17), transparent 60%),
+    radial-gradient(760px 520px at 100% 0%, rgb(90 120 255 / 0.09), transparent 60%);
+  --admin-accent: var(--color-adm-accent);
   --font-sans: var(--font-geist), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
   color-scheme: dark;
   font-family: var(--font-sans);
   color: var(--color-ink-900);
-  background:
-    radial-gradient(900px 520px at 12% -8%, rgb(241 90 36 / 0.17), transparent 60%),
-    radial-gradient(760px 520px at 100% 0%, rgb(90 120 255 / 0.09), transparent 60%),
-    var(--admin-bg);
+  background: var(--admin-glow), var(--admin-bg);
   background-attachment: fixed;
 }
 .admin-theme :focus-visible {
@@ -549,9 +564,7 @@ input[type="number"]::-webkit-inner-spin-button {
   background: var(--admin-glass);
   border: 1px solid var(--admin-line);
   border-radius: 18px;
-  box-shadow:
-    0 1px 0 rgb(255 255 255 / 0.05) inset,
-    0 12px 32px -16px rgb(0 0 0 / 0.6);
+  box-shadow: var(--admin-shadow);
 }
 .admin-theme .admin-table {
   overflow: hidden;
@@ -570,14 +583,14 @@ input[type="number"]::-webkit-inner-spin-button {
 .admin-theme input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]),
 .admin-theme select,
 .admin-theme textarea {
-  background-color: rgb(255 255 255 / 0.04);
-  border-color: rgb(255 255 255 / 0.1);
+  background-color: var(--admin-field);
+  border-color: var(--admin-field-line);
   border-radius: 10px;
   color: var(--color-ink-900);
 }
 .admin-theme input::placeholder,
 .admin-theme textarea::placeholder {
-  color: #80848d;
+  color: var(--color-adm-faint);
 }
 .admin-theme input:focus,
 .admin-theme select:focus,
@@ -618,16 +631,16 @@ input[type="number"]::-webkit-inner-spin-button {
 .admin-theme .text-red-600,
 .admin-theme .text-red-700,
 .admin-theme .text-rose-700 {
-  color: #ff8a8a;
+  color: var(--color-adm-red);
 }
 .admin-theme .text-emerald-700,
 .admin-theme .text-emerald-800,
 .admin-theme .text-green-700 {
-  color: #6ee79a;
+  color: var(--color-adm-green);
 }
 .admin-theme .text-amber-700,
 .admin-theme .text-amber-900 {
-  color: #f5b544;
+  color: var(--color-adm-amber);
 }
 /* Fondos pastel de avisos y etiquetas: translúcidos con borde del mismo tono. */
 .admin-theme .bg-brand-50,
@@ -655,7 +668,77 @@ input[type="number"]::-webkit-inner-spin-button {
   border-color: rgb(241 90 36 / 0.4);
 }
 .admin-theme img {
-  outline-color: rgb(255 255 255 / 0.08);
+  outline-color: color-mix(in srgb, var(--color-adm-fg) 8%, transparent);
+}
+
+/* Íconos y etiquetas con el color de cada estado (`--c`): en el tema claro el
+   texto se oscurece para que se lea sobre blanco. */
+.admin-theme .adm-tint {
+  color: var(--c);
+  background-color: color-mix(in srgb, var(--c) 15%, transparent);
+}
+.admin-theme .adm-badge {
+  color: var(--c);
+  background-color: color-mix(in srgb, var(--c) 10%, transparent);
+  border-color: color-mix(in srgb, var(--c) 30%, transparent);
+}
+
+/*
+ * Tema claro del panel (botón "Tema claro" de la barra lateral, guardado en la
+ * cookie `admin_tema`). Mismo diseño sobre fondo claro: la rampa de grises
+ * vuelve a la de la tienda y los colores del panel pasan a tonos oscuros.
+ */
+.admin-theme[data-tema="claro"] {
+  --color-ink-50: #f4f1eb;
+  --color-ink-100: #e7e2da;
+  --color-ink-200: #d8d1c4;
+  --color-ink-300: #b0a695;
+  --color-ink-400: #6f6759;
+  --color-ink-500: #574f45;
+  --color-ink-600: #443e37;
+  --color-ink-700: #36302a;
+  --color-ink-800: #26221c;
+  --color-ink-900: #14161c;
+  --color-surface: #ffffff;
+  --color-adm-fg: #14161c;
+  --color-adm-soft: #2e3138;
+  --color-adm-muted: #555a63;
+  --color-adm-faint: #6b6f78;
+  --color-adm-panel: #ffffff;
+  --color-adm-bg: #f3f4f6;
+  --color-adm-accent: #c2410c;
+  --color-adm-red: #c62828;
+  --color-adm-green: #15803d;
+  --color-adm-amber: #a15c07;
+  --admin-line: rgb(20 22 28 / 0.09);
+  --admin-glass: linear-gradient(180deg, #ffffff, #fbfbfc);
+  --admin-shadow: 0 1px 2px rgb(20 22 28 / 0.04), 0 12px 32px -18px rgb(20 22 28 / 0.18);
+  --admin-field: #ffffff;
+  --admin-field-line: rgb(20 22 28 / 0.14);
+  --admin-glow: radial-gradient(900px 520px at 12% -8%, rgb(241 90 36 / 0.1), transparent 60%),
+    radial-gradient(760px 520px at 100% 0%, rgb(90 120 255 / 0.06), transparent 60%);
+  color-scheme: light;
+}
+.admin-theme[data-tema="claro"] ::selection {
+  background: rgb(241 90 36 / 0.25);
+  color: inherit;
+}
+.admin-theme[data-tema="claro"] .bg-ink-700,
+.admin-theme[data-tema="claro"] .bg-ink-800 {
+  background-color: var(--color-ink-700);
+  color: #ffffff;
+}
+.admin-theme[data-tema="claro"] .bg-brand-50,
+.admin-theme[data-tema="claro"] .bg-brand-50\/60 {
+  background-color: rgb(241 90 36 / 0.09);
+}
+.admin-theme[data-tema="claro"] .adm-tint,
+.admin-theme[data-tema="claro"] .adm-badge {
+  color: color-mix(in srgb, var(--c) 58%, #000);
+}
+.admin-theme[data-tema="claro"] .adm-badge {
+  background-color: color-mix(in srgb, var(--c) 14%, #fff);
+  border-color: color-mix(in srgb, var(--c) 40%, #fff);
 }
 
 /*
@@ -685,4 +768,8 @@ input[type="number"]::-webkit-inner-spin-button {
 html:has(.admin-theme),
 html:has(.admin-theme) body {
   background-color: #0b0c0f;
+}
+html:has(.admin-theme[data-tema="claro"]),
+html:has(.admin-theme[data-tema="claro"]) body {
+  background-color: #f3f4f6;
 }

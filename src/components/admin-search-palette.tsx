@@ -91,10 +91,10 @@ export function AdminSearchPalette() {
         aria-modal="true"
         aria-label="Buscar en el panel"
         onClick={(event) => event.stopPropagation()}
-        className="w-full max-w-lg overflow-hidden rounded-2xl border border-white/10 bg-[#15171c] shadow-[0_24px_60px_-20px_rgb(0_0_0/0.9)]"
+        className="w-full max-w-lg overflow-hidden rounded-2xl border border-adm-fg/10 bg-adm-panel shadow-[0_24px_60px_-20px_rgb(0_0_0/0.9)]"
       >
-        <div className="flex items-center gap-2.5 border-b border-white/[0.08] px-4">
-          <span className="text-[#80848d]">
+        <div className="flex items-center gap-2.5 border-b border-adm-fg/[0.08] px-4">
+          <span className="text-adm-faint">
             <AdminIcon name="buscar" />
           </span>
           <input
@@ -124,13 +124,13 @@ export function AdminSearchPalette() {
             aria-expanded="true"
             aria-controls="admin-search-results"
             aria-activedescendant={results[current] ? `admin-search-${results[current].key}` : undefined}
-            className="h-14 flex-1 !rounded-none !border-0 !bg-transparent !outline-none text-[15px] text-white outline-none"
+            className="h-14 flex-1 !rounded-none !border-0 !bg-transparent !outline-none text-[15px] text-adm-fg outline-none"
           />
-          <kbd className="rounded-md border border-white/[0.14] px-1.5 py-0.5 font-sans text-[11px] text-[#9a9ea7]">Esc</kbd>
+          <kbd className="rounded-md border border-adm-fg/[0.14] px-1.5 py-0.5 font-sans text-[11px] text-adm-muted">Esc</kbd>
         </div>
         <ul id="admin-search-results" role="listbox" className="max-h-[50vh] overflow-y-auto p-2">
           {results.length === 0 ? (
-            <li className="px-3 py-6 text-center text-sm text-[#9a9ea7]">No hay secciones con ese nombre.</li>
+            <li className="px-3 py-6 text-center text-sm text-adm-muted">No hay secciones con ese nombre.</li>
           ) : (
             results.map((result, i) => (
               <li
@@ -140,16 +140,16 @@ export function AdminSearchPalette() {
                 aria-selected={i === current}
                 onMouseEnter={() => setIndex(i)}
                 onClick={() => go(result)}
-                className={`flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2.5 text-sm ${i === current ? "bg-white/[0.07] text-white" : "text-[#d5d8de]"}`}
+                className={`flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2.5 text-sm ${i === current ? "bg-adm-fg/[0.07] text-adm-fg" : "text-adm-soft"}`}
               >
-                <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-[10px] ${i === current ? "bg-brand-500/20 text-[#ff8a5b]" : "bg-white/[0.05] text-[#9a9ea7]"}`}>
+                <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-[10px] ${i === current ? "bg-brand-500/20 text-adm-accent" : "bg-adm-fg/[0.05] text-adm-muted"}`}>
                   <AdminIcon name={result.icon} className="h-4 w-4" />
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate">{result.label}</span>
-                  <span className="block truncate text-xs text-[#80848d]">{result.hint}</span>
+                  <span className="block truncate text-xs text-adm-faint">{result.hint}</span>
                 </span>
-                {i === current ? <span className="text-xs text-[#80848d]">Enter</span> : null}
+                {i === current ? <span className="text-xs text-adm-faint">Enter</span> : null}
               </li>
             ))
           )}

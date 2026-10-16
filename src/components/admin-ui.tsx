@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 import { statusLabel } from "@/lib/pricing";
 
@@ -21,8 +21,8 @@ export function AdminStatusBadge({ status, className = "" }: { status: string; c
   const color = statusColor(status);
   return (
     <span
-      className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border px-2.5 py-[3px] text-xs font-medium ${className}`}
-      style={{ color, backgroundColor: `${color}1a`, borderColor: `${color}4d` }}
+      className={`adm-badge inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border px-2.5 py-[3px] text-xs font-medium ${className}`}
+      style={{ "--c": color } as CSSProperties}
     >
       <i className="h-1.5 w-1.5 rounded-full bg-current" aria-hidden />
       {statusLabel(status)}
@@ -34,8 +34,8 @@ export function AdminStatusBadge({ status, className = "" }: { status: string; c
 export function AdminDotBadge({ color, children, className = "" }: { color: string; children: ReactNode; className?: string }) {
   return (
     <span
-      className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border px-2.5 py-[3px] text-xs font-medium ${className}`}
-      style={{ color, backgroundColor: `${color}1a`, borderColor: `${color}4d` }}
+      className={`adm-badge inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border px-2.5 py-[3px] text-xs font-medium ${className}`}
+      style={{ "--c": color } as CSSProperties}
     >
       <i className="h-1.5 w-1.5 rounded-full bg-current" aria-hidden />
       {children}
@@ -77,9 +77,9 @@ export function AdminPageHeader({
   return (
     <header className="flex flex-wrap items-end gap-4">
       <div className="flex min-w-0 flex-[1_1_260px] flex-col gap-1">
-        {eyebrow ? <span className="text-[13px] text-[#8b8f98]">{eyebrow}</span> : null}
-        <h1 className="text-[28px] font-semibold leading-tight tracking-[-0.02em] text-white sm:text-[30px]">{title}</h1>
-        {description ? <p className="text-sm text-[#9a9ea7]">{description}</p> : null}
+        {eyebrow ? <span className="text-[13px] text-adm-muted">{eyebrow}</span> : null}
+        <h1 className="text-[28px] font-semibold leading-tight tracking-[-0.02em] text-adm-fg sm:text-[30px]">{title}</h1>
+        {description ? <p className="text-sm text-adm-muted">{description}</p> : null}
       </div>
       {actions ? <div className="flex flex-wrap items-center gap-2.5">{actions}</div> : null}
     </header>
@@ -92,7 +92,7 @@ export const adminBtn =
 
 /** Botón secundario (pastilla translúcida). */
 export const adminChip =
-  "inline-flex h-10 items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-3.5 text-[13px] text-[#d5d8de] transition-[background-color] duration-150 hover:bg-white/[0.09]";
+  "inline-flex h-10 items-center gap-2 rounded-full border border-adm-fg/10 bg-adm-fg/[0.05] px-3.5 text-[13px] text-adm-soft transition-[background-color] duration-150 hover:bg-adm-fg/[0.09]";
 
 /** Enlace naranja de "Ver todos" en los títulos de las tarjetas. */
-export const adminLink = "ml-auto inline-flex items-center gap-1 text-[13px] text-[#ff8a5b] hover:text-[#ffb08f]";
+export const adminLink = "ml-auto inline-flex items-center gap-1 text-[13px] text-adm-accent hover:text-adm-accent";

@@ -69,10 +69,10 @@ export function AdminProductRow({ product, categoryName }: { product: AdminProdu
   return (
     <div
       role="row"
-      className="grid grid-cols-2 gap-x-3 gap-y-2 border-t border-white/[0.06] px-5 py-3.5 transition-[background-color] duration-150 hover:bg-white/[0.035] sm:grid-cols-4 lg:grid-cols-[minmax(0,1fr)_8.5rem_8rem_9rem_6.5rem] lg:items-start lg:gap-4"
+      className="grid grid-cols-2 gap-x-3 gap-y-2 border-t border-adm-fg/[0.06] px-5 py-3.5 transition-[background-color] duration-150 hover:bg-adm-fg/[0.035] sm:grid-cols-4 lg:grid-cols-[minmax(0,1fr)_8.5rem_8rem_9rem_6.5rem] lg:items-start lg:gap-4"
     >
       <div role="cell" className="col-span-2 flex min-w-0 items-center gap-3.5 sm:col-span-4 lg:col-span-1">
-        <div className="h-11 w-11 shrink-0 overflow-hidden rounded-xl border border-white/[0.08] bg-white">
+        <div className="h-11 w-11 shrink-0 overflow-hidden rounded-xl border border-adm-fg/[0.08] bg-white">
           <ProductImg
             src={product.image}
             alt=""
@@ -85,15 +85,15 @@ export function AdminProductRow({ product, categoryName }: { product: AdminProdu
         <div className="min-w-0">
           <Link
             href={`/admin/productos/${encodeURIComponent(product.slug)}`}
-            className="line-clamp-2 text-sm font-medium leading-snug text-white hover:text-[#ff8a5b]"
+            className="line-clamp-2 text-sm font-medium leading-snug text-adm-fg hover:text-adm-accent"
             title={product.name}
           >
             {product.name}
           </Link>
-          <p className="truncate text-xs text-[#8b8f98]">
+          <p className="truncate text-xs text-adm-muted">
             {product.brand} · {categoryName || product.categorySlug}
           </p>
-          <p className="admin-mono truncate text-[11px] text-[#80848d]">{product.sku || "sin SKU"}</p>
+          <p className="admin-mono truncate text-[11px] text-adm-faint">{product.sku || "sin SKU"}</p>
         </div>
       </div>
       <div role="cell" className="min-w-0">
@@ -104,7 +104,7 @@ export function AdminProductRow({ product, categoryName }: { product: AdminProdu
           className={`${field} admin-mono`}
           aria-label={`Precio de ${product.name}`}
         />
-        <p className="mt-1 truncate text-xs text-[#80848d]">{money(product.price)} actual</p>
+        <p className="mt-1 truncate text-xs text-adm-faint">{money(product.price)} actual</p>
       </div>
       <div role="cell" className="min-w-0">
         <input
@@ -118,7 +118,7 @@ export function AdminProductRow({ product, categoryName }: { product: AdminProdu
           <AdminDotBadge color={stockState.color} className="!px-2 !py-0 text-[11px]">
             {stockState.label}
           </AdminDotBadge>
-          <span className="mt-1.5 block h-[3px] w-full overflow-hidden rounded-full bg-white/[0.08]" aria-hidden>
+          <span className="mt-1.5 block h-[3px] w-full overflow-hidden rounded-full bg-adm-fg/[0.08]" aria-hidden>
             <span className="block h-full rounded-full" style={{ width: `${fill}%`, backgroundColor: stockState.color }} />
           </span>
         </div>
@@ -132,12 +132,12 @@ export function AdminProductRow({ product, categoryName }: { product: AdminProdu
           className={field}
           aria-label={`Etiqueta de ${product.name}`}
         />
-        <label className="mt-2 flex cursor-pointer items-center gap-2 text-xs text-[#b4b8c0]">
+        <label className="mt-2 flex cursor-pointer items-center gap-2 text-xs text-adm-muted">
           <input type="checkbox" checked={featured} onChange={(e) => setFeatured(e.target.checked)} className="peer sr-only" />
           {/* Interruptor: naranja cuando el producto va destacado en la tienda. */}
           <span
             aria-hidden
-            className="relative h-5 w-9 shrink-0 rounded-full bg-white/[0.12] transition-colors duration-150 after:absolute after:left-0.5 after:top-0.5 after:h-4 after:w-4 after:rounded-full after:bg-white after:transition-transform after:duration-150 peer-checked:bg-brand-500 peer-checked:after:translate-x-4 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-[#ff8a5b]"
+            className="relative h-5 w-9 shrink-0 rounded-full bg-adm-fg/[0.12] transition-colors duration-150 after:absolute after:left-0.5 after:top-0.5 after:h-4 after:w-4 after:rounded-full after:bg-white after:transition-transform after:duration-150 peer-checked:bg-brand-500 peer-checked:after:translate-x-4 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-adm-accent"
           />
           Destacado
         </label>
@@ -147,13 +147,13 @@ export function AdminProductRow({ product, categoryName }: { product: AdminProdu
           type="button"
           onClick={save}
           disabled={saving || !dirty}
-          className="h-9 w-full rounded-full bg-[linear-gradient(180deg,#ff7440,#f15a24)] px-3 text-xs font-semibold text-[#14161c] transition-[filter,opacity] duration-150 hover:brightness-110 disabled:cursor-default disabled:bg-none disabled:bg-white/[0.05] disabled:text-[#80848d]"
+          className="h-9 w-full rounded-full bg-[linear-gradient(180deg,#ff7440,#f15a24)] px-3 text-xs font-semibold text-[#14161c] transition-[filter,opacity] duration-150 hover:brightness-110 disabled:cursor-default disabled:bg-none disabled:bg-adm-fg/[0.05] disabled:text-adm-faint"
         >
           {saving ? "…" : saved || "Guardar"}
         </button>
         <Link
           href={`/admin/productos/${encodeURIComponent(product.slug)}`}
-          className="inline-flex h-9 w-full items-center justify-center rounded-full border border-white/10 bg-white/[0.04] px-3 text-xs text-[#d5d8de] transition-[background-color] duration-150 hover:bg-white/[0.09]"
+          className="inline-flex h-9 w-full items-center justify-center rounded-full border border-adm-fg/10 bg-adm-fg/[0.04] px-3 text-xs text-adm-soft transition-[background-color] duration-150 hover:bg-adm-fg/[0.09]"
         >
           Editar
         </Link>

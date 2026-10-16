@@ -57,7 +57,7 @@ function pageWindow(page: number, pages: number): (number | "…")[] {
   return out;
 }
 
-const pagerBtn = "inline-flex h-9 min-w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] px-3.5 text-[13px] text-[#d5d8de] transition-[background-color] duration-150 hover:bg-white/[0.09]";
+const pagerBtn = "inline-flex h-9 min-w-9 items-center justify-center rounded-full border border-adm-fg/10 bg-adm-fg/[0.04] px-3.5 text-[13px] text-adm-soft transition-[background-color] duration-150 hover:bg-adm-fg/[0.09]";
 
 function withParams(base: Record<string, string>, overrides: Record<string, string | null>): string {
   const params = new URLSearchParams(base);
@@ -113,7 +113,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
 
       {/* En el celular las pestañas se deslizan de costado sin barra a la vista; en la compu bajan de renglón. */}
       <nav aria-label="Filtrar por estado" className="no-scrollbar -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0 lg:overflow-visible">
-        <ul className="flex min-w-max gap-1 border-b border-white/[0.08] lg:min-w-0 lg:flex-wrap">
+        <ul className="flex min-w-max gap-1 border-b border-adm-fg/[0.08] lg:min-w-0 lg:flex-wrap">
           {tabs.map((t) => {
             const active = status === t.id;
             return (
@@ -121,11 +121,11 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
                 <Link
                   href={withParams(base, { status: t.id || null, page: null })}
                   aria-current={active ? "page" : undefined}
-                  className={`-mb-px inline-flex items-center gap-2 border-b-2 px-1 pb-3 pt-2 text-sm transition-colors duration-150 sm:px-2.5 ${active ? "border-brand-500 text-white" : "border-transparent text-[#9a9ea7] hover:text-white"}`}
+                  className={`-mb-px inline-flex items-center gap-2 border-b-2 px-1 pb-3 pt-2 text-sm transition-colors duration-150 sm:px-2.5 ${active ? "border-brand-500 text-adm-fg" : "border-transparent text-adm-muted hover:text-adm-fg"}`}
                 >
                   {t.label}
                   <span
-                    className={`rounded-full px-[7px] py-px text-[11px] font-semibold tabular-nums ${t.id === ACTIONABLE_FILTER && t.count > 0 ? "bg-brand-500 text-[#14161c]" : active ? "bg-brand-500/20 text-[#ff8a5b]" : "bg-white/[0.08] text-[#d5d8de]"}`}
+                    className={`rounded-full px-[7px] py-px text-[11px] font-semibold tabular-nums ${t.id === ACTIONABLE_FILTER && t.count > 0 ? "bg-brand-500 text-[#14161c]" : active ? "bg-brand-500/20 text-adm-accent" : "bg-adm-fg/[0.08] text-adm-soft"}`}
                   >
                     {t.count}
                   </span>
@@ -139,7 +139,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
       <div className="flex flex-wrap items-center gap-3">
         <AdminOrderSearch key={q} initial={q} status={status} />
         {q || status ? (
-          <Link href="/admin/pedidos" className="px-2 text-[13px] text-[#9a9ea7] hover:text-white">
+          <Link href="/admin/pedidos" className="px-2 text-[13px] text-adm-muted hover:text-adm-fg">
             Limpiar filtros
           </Link>
         ) : null}
@@ -169,7 +169,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
           <div className="relative overflow-x-auto">
             <table className="w-full min-w-[960px] text-left text-sm">
               <thead>
-                <tr className="text-xs uppercase tracking-[0.06em] text-[#80848d]">
+                <tr className="text-xs uppercase tracking-[0.06em] text-adm-faint">
                   <th className="px-4 py-3.5 font-normal">Cliente</th>
                   <th className="px-3 py-3.5 font-normal">Productos</th>
                   <th className="px-3 py-3.5 font-normal">Pago</th>
@@ -184,35 +184,35 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
                 {orders.map((o) => {
                   const wa = whatsappHref(o.phone, `Hola ${o.customerName.split(" ")[0]}! Te escribimos de Córdoba Digital por tu pedido ${o.code}.`);
                   return (
-                    <tr key={o.id} className="relative border-t border-white/[0.06] transition-[background-color] duration-150 hover:bg-white/[0.035]">
+                    <tr key={o.id} className="relative border-t border-adm-fg/[0.06] transition-[background-color] duration-150 hover:bg-adm-fg/[0.035]">
                       <td className="px-4 py-3">
                         <div className="flex items-center gap-3">
                           <AdminAvatar name={o.customerName} />
                           <div className="min-w-0">
                             <Link
                               href={`/admin/pedidos/${o.code}`}
-                              className="block max-w-[200px] truncate font-medium text-white after:absolute after:inset-0 after:content-[''] hover:text-[#ff8a5b]"
+                              className="block max-w-[200px] truncate font-medium text-adm-fg after:absolute after:inset-0 after:content-[''] hover:text-adm-accent"
                             >
                               {o.customerName}
                             </Link>
-                            <p className="admin-mono text-xs text-[#8b8f98]">{o.code}</p>
+                            <p className="admin-mono text-xs text-adm-muted">{o.code}</p>
                           </div>
                         </div>
                       </td>
                       <td className="max-w-[160px] px-3 py-3">
-                        <p className="truncate text-[#d5d8de]" title={o.firstItem}>{o.firstItem || "—"}</p>
-                        <p className="text-xs text-[#8b8f98]">
+                        <p className="truncate text-adm-soft" title={o.firstItem}>{o.firstItem || "—"}</p>
+                        <p className="text-xs text-adm-muted">
                           {o.itemsCount} {o.itemsCount === 1 ? "unidad" : "unidades"}
                         </p>
                       </td>
                       <td className="whitespace-nowrap px-3 py-3">
-                        <span className="flex items-center gap-2 text-[#e6e8ec]">
+                        <span className="flex items-center gap-2 text-adm-soft">
                           <LineIcon d={paymentIcon(o.paymentMethod)} />
                           {o.paymentLabel || o.paymentMethod}
                         </span>
                       </td>
                       <td className="whitespace-nowrap px-3 py-3">
-                        <span className="flex items-center gap-2 text-[#9a9ea7]">
+                        <span className="flex items-center gap-2 text-adm-muted">
                           <LineIcon d={deliveryIcon(o.deliveryMethod)} />
                           {o.deliveryLabel || o.deliveryMethod}
                         </span>
@@ -220,8 +220,8 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
                       <td className="px-3 py-3">
                         <AdminStatusBadge status={o.status} />
                       </td>
-                      <td className="admin-mono whitespace-nowrap px-3 py-3 text-right text-white">{money(o.total)}</td>
-                      <td className="whitespace-nowrap px-3 py-3 text-right text-[13px] text-[#8b8f98]" title={formatDateTime(o.createdAt)}>
+                      <td className="admin-mono whitespace-nowrap px-3 py-3 text-right text-adm-fg">{money(o.total)}</td>
+                      <td className="whitespace-nowrap px-3 py-3 text-right text-[13px] text-adm-muted" title={formatDateTime(o.createdAt)}>
                         {shortDate(o.createdAt)}
                       </td>
                       <td className="px-2 py-3 text-right">
@@ -232,7 +232,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
                             rel="noopener noreferrer"
                             title={`Escribirle a ${o.customerName} por WhatsApp`}
                             aria-label={`Escribirle a ${o.customerName} por WhatsApp`}
-                            className="relative z-10 inline-grid h-8 w-8 place-items-center rounded-full border border-white/10 bg-white/[0.04] text-[#9a9ea7] hover:border-[#6ee79a]/50 hover:text-[#6ee79a]"
+                            className="relative z-10 inline-grid h-8 w-8 place-items-center rounded-full border border-adm-fg/10 bg-adm-fg/[0.04] text-adm-muted hover:border-adm-green/50 hover:text-adm-green"
                           >
                             <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-4 w-4" aria-hidden>
                               <path d="M4.2 15.8 5 12.9A6.5 6.5 0 1 1 7.4 15.2l-3.2.6Z" strokeLinejoin="round" />
@@ -246,8 +246,8 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
               </tbody>
             </table>
           </div>
-          <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.06] px-5 py-3.5">
-            <p className="text-[13px] text-[#9a9ea7]">
+          <div className="flex flex-wrap items-center justify-between gap-3 border-t border-adm-fg/[0.06] px-5 py-3.5">
+            <p className="text-[13px] text-adm-muted">
               {pages > 1 ? `Mostrando ${from}–${to} de ${total} pedidos` : `${total} ${total === 1 ? "pedido" : "pedidos"}`}
             </p>
             {pages > 1 ? (
@@ -259,13 +259,13 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
                 ) : null}
                 {pageWindow(page, pages).map((n, i) =>
                   n === "…" ? (
-                    <span key={`hueco-${i}`} className="px-1 text-[#80848d]">…</span>
+                    <span key={`hueco-${i}`} className="px-1 text-adm-faint">…</span>
                   ) : (
                     <Link
                       key={n}
                       href={withParams(base, { page: n === 1 ? null : String(n) })}
                       aria-current={n === page ? "page" : undefined}
-                      className={`${pagerBtn} px-0 ${n === page ? "!border-brand-500/60 !bg-brand-500/20 text-white" : ""}`}
+                      className={`${pagerBtn} px-0 ${n === page ? "!border-brand-500/60 !bg-brand-500/20 text-adm-fg" : ""}`}
                     >
                       {n}
                     </Link>

@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import { cookies } from "next/headers";
 import type { ReactNode } from "react";
 
-import { ADMIN_NAV_COOKIE } from "@/components/admin-nav-items";
+import { ADMIN_NAV_COOKIE, ADMIN_THEME_COOKIE } from "@/components/admin-nav-items";
 import { AdminFrame } from "@/components/admin-sidebar";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { readAdminSession } from "@/lib/admin-session";
@@ -39,11 +39,12 @@ export default async function AdminLayout({ children }: { children: ReactNode })
   // sesión) no se muestra nada interno, ni siquiera los nombres de las secciones.
   const jar = await cookies();
   const session = await readAdminSession(jar.get(ADMIN_COOKIE)?.value);
+  const tema = jar.get(ADMIN_THEME_COOKIE)?.value === "claro" ? "claro" : "oscuro";
   if (!session) {
-    return <div className={`${theme} admin-shell grid min-h-screen place-items-center px-4 py-10`}>{children}</div>;
+    return <div data-tema={tema} className={`${theme} admin-shell grid min-h-screen place-items-center px-4 py-10`}>{children}</div>;
   }
   return (
-    <div className={theme}>
+    <div data-tema={tema} className={theme}>
       <AdminFrame
         badges={{
           "/admin/pedidos": await countPendingOrders(),
@@ -52,6 +53,7 @@ export default async function AdminLayout({ children }: { children: ReactNode })
         }}
         who={session.email}
         compact={jar.get(ADMIN_NAV_COOKIE)?.value === "compacto"}
+        tema={tema}
       >
         {children}
       </AdminFrame>

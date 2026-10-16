@@ -78,7 +78,7 @@ export function AdminProductList({
       <div className="admin-table" role="table" aria-label="Productos">
         <div
           role="row"
-          className="hidden px-5 py-3.5 text-xs uppercase tracking-[0.06em] text-[#80848d] lg:grid lg:grid-cols-[minmax(0,1fr)_8.5rem_8rem_9rem_6.5rem] lg:gap-4"
+          className="hidden px-5 py-3.5 text-xs uppercase tracking-[0.06em] text-adm-faint lg:grid lg:grid-cols-[minmax(0,1fr)_8.5rem_8rem_9rem_6.5rem] lg:gap-4"
         >
           <span role="columnheader">Producto</span>
           <span role="columnheader">Precio</span>
@@ -95,7 +95,7 @@ export function AdminProductList({
 
       <div ref={sentinel} className="flex flex-col items-center gap-2 py-2 text-center" aria-live="polite">
         {items.length > 0 ? (
-          <p className="text-[13px] text-[#9a9ea7]">
+          <p className="text-[13px] text-adm-muted">
             {done ? `Son todos: ${items.length} productos.` : `Mostrando ${items.length} de ${total}.`}
           </p>
         ) : null}
@@ -105,7 +105,7 @@ export function AdminProductList({
           <button
             type="button"
             onClick={() => void loadMore()}
-            className="inline-flex h-9 items-center rounded-full border border-white/10 bg-white/[0.05] px-4 text-[13px] text-[#d5d8de] hover:bg-white/[0.09]"
+            className="inline-flex h-9 items-center rounded-full border border-adm-fg/10 bg-adm-fg/[0.05] px-4 text-[13px] text-adm-soft hover:bg-adm-fg/[0.09]"
           >
             {error ? "Reintentar" : "Cargar más"}
           </button>

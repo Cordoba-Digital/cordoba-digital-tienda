@@ -21,7 +21,7 @@ import { expireStalePendingOrders } from "@/lib/order-status";
 export const dynamic = "force-dynamic";
 
 const card = "admin-panel-card";
-const cardTitle = "text-base font-semibold text-white";
+const cardTitle = "text-base font-semibold text-adm-fg";
 
 const COLORS = { cobrar: "#eb6834", curso: "#e0457b", entregado: "#2fa36b" };
 
@@ -32,7 +32,7 @@ function Delta({ now, before }: { now: number; before: number }) {
   const up = pct >= 0;
   return (
     <span
-      className={`inline-flex items-center gap-1 rounded-full py-0.5 pl-1.5 pr-2 text-xs font-medium ${up ? "bg-[#6ee79a]/[0.12] text-[#6ee79a]" : "bg-[#ff8a8a]/[0.12] text-[#ff8a8a]"}`}
+      className={`inline-flex items-center gap-1 rounded-full py-0.5 pl-1.5 pr-2 text-xs font-medium ${up ? "bg-adm-green/[0.12] text-adm-green" : "bg-adm-red/[0.12] text-adm-red"}`}
       title="Contra el período anterior"
     >
       <svg viewBox="0 0 24 24" aria-hidden className="h-[13px] w-[13px]" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
@@ -49,18 +49,18 @@ function Kpi({ icon, tint, label, value, now, before }: { icon: string; tint: st
   return (
     <div className={`${card} flex min-w-0 flex-col gap-3 px-[18px] pb-4 pt-[18px]`}>
       <div className="flex items-center gap-2.5">
-        <span className="grid h-[34px] w-[34px] shrink-0 place-items-center rounded-[10px]" style={{ backgroundColor: `${tint}26`, color: tint }}>
+        <span className="adm-tint grid h-[34px] w-[34px] shrink-0 place-items-center rounded-[10px]" style={{ "--c": tint } as CSSProperties}>
           <svg viewBox="0 0 24 24" aria-hidden className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round">
             <path d={icon} />
           </svg>
         </span>
-        <span className="truncate text-[13px] text-[#8b8f98]">{label}</span>
+        <span className="truncate text-[13px] text-adm-muted">{label}</span>
         <span className="ml-auto shrink-0">
           <Delta now={now} before={before} />
         </span>
       </div>
-      <span className="admin-mono truncate text-[26px] font-medium tracking-[-0.02em] text-white">{value}</span>
-      {before <= 0 ? <span className="-mt-2 text-xs text-[#80848d]">Sin período anterior para comparar</span> : null}
+      <span className="admin-mono truncate text-[26px] font-medium tracking-[-0.02em] text-adm-fg">{value}</span>
+      {before <= 0 ? <span className="-mt-2 text-xs text-adm-faint">Sin período anterior para comparar</span> : null}
     </div>
   );
 }
@@ -68,15 +68,15 @@ function Kpi({ icon, tint, label, value, now, before }: { icon: string; tint: st
 /** Un estado de pedidos con su barra de rayitas (el gráfico de siempre). */
 function StatusRow({ href, label, value, total, color, note }: { href: string; label: string; value: number; total: number; color: string; note?: string }) {
   return (
-    <Link href={href} className="block rounded-[14px] border border-white/5 bg-white/[0.04] px-4 py-3 transition-[background-color] duration-150 hover:bg-white/[0.07]">
+    <Link href={href} className="block rounded-[14px] border border-adm-fg/5 bg-adm-fg/[0.04] px-4 py-3 transition-[background-color] duration-150 hover:bg-adm-fg/[0.07]">
       <div className="flex items-baseline justify-between gap-2">
-        <p className="flex items-center gap-2 text-sm text-[#d5d8de]">
+        <p className="flex items-center gap-2 text-sm text-adm-soft">
           <span className="h-2.5 w-2.5 rounded-[3px]" style={{ backgroundColor: color }} aria-hidden />
           {label}
         </p>
-        <p className="admin-mono text-xl text-white">{value.toLocaleString("es-AR")}</p>
+        <p className="admin-mono text-xl text-adm-fg">{value.toLocaleString("es-AR")}</p>
       </div>
-      <div className="mt-1 flex items-baseline justify-between text-xs text-[#80848d]">
+      <div className="mt-1 flex items-baseline justify-between text-xs text-adm-faint">
         <span>{note ?? `de ${total.toLocaleString("es-AR")} pedidos`}</span>
         <span className="admin-mono">
           {value}/{total}
@@ -94,7 +94,7 @@ function Thumb({ src }: { src: string }) {
     // eslint-disable-next-line @next/next/no-img-element
     <img src={src} alt="" referrerPolicy="no-referrer" className="h-10 w-10 shrink-0 rounded-xl bg-white object-contain p-1" />
   ) : (
-    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-white/[0.08] bg-white/[0.05] text-[#80848d]">
+    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-adm-fg/[0.08] bg-adm-fg/[0.05] text-adm-faint">
       <AdminIcon name="productos" className="h-4 w-4" />
     </span>
   );
@@ -104,7 +104,7 @@ function Thumb({ src }: { src: string }) {
 function Bar({ value, max, color }: { value: number; max: number; color: string }) {
   const pct = max > 0 ? Math.max(4, Math.min(100, (value / max) * 100)) : 0;
   return (
-    <span className="block h-2.5 w-full overflow-hidden rounded-full bg-white/[0.06]">
+    <span className="block h-2.5 w-full overflow-hidden rounded-full bg-adm-fg/[0.06]">
       <span className="block h-full rounded-full" style={{ width: `${pct}%`, backgroundColor: color }} />
     </span>
   );
@@ -179,20 +179,20 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
         <details className="group relative">
           <summary
             aria-label={alerts.length ? `Avisos (${alerts.length})` : "Avisos"}
-            className="relative grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-white/10 bg-white/[0.05] text-[#d5d8de] hover:bg-white/[0.09] [&::-webkit-details-marker]:hidden"
+            className="relative grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-adm-fg/10 bg-adm-fg/[0.05] text-adm-soft hover:bg-adm-fg/[0.09] [&::-webkit-details-marker]:hidden"
           >
             <svg viewBox="0 0 24 24" aria-hidden className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round">
               <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0" />
             </svg>
-            {alerts.length ? <span className="absolute right-2.5 top-[9px] h-2 w-2 rounded-full border-2 border-[#14161b] bg-brand-500" aria-hidden /> : null}
+            {alerts.length ? <span className="absolute right-2.5 top-[9px] h-2 w-2 rounded-full border-2 border-adm-panel bg-brand-500" aria-hidden /> : null}
           </summary>
-          <div className="absolute right-0 z-20 mt-2 w-80 rounded-2xl border border-white/10 bg-[#15171c] p-2 shadow-[0_24px_60px_-20px_rgb(0_0_0/0.9)]">
+          <div className="absolute right-0 z-20 mt-2 w-80 rounded-2xl border border-adm-fg/10 bg-adm-panel p-2 shadow-[0_24px_60px_-20px_rgb(0_0_0/0.9)]">
             {alerts.length === 0 ? (
-              <p className="px-3 py-4 text-sm text-[#9a9ea7]">Todo al día: no hay nada esperando.</p>
+              <p className="px-3 py-4 text-sm text-adm-muted">Todo al día: no hay nada esperando.</p>
             ) : (
               alerts.map((a) => (
-                <Link key={a.href} href={a.href} className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-[#d5d8de] hover:bg-white/[0.06]">
-                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-[10px]" style={{ backgroundColor: `${a.color}26`, color: a.color }}>
+                <Link key={a.href} href={a.href} className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-adm-soft hover:bg-adm-fg/[0.06]">
+                  <span className="adm-tint grid h-8 w-8 shrink-0 place-items-center rounded-[10px]" style={{ "--c": a.color } as CSSProperties}>
                     <AdminIcon name={a.icon} className="h-4 w-4" />
                   </span>
                   {a.text}
@@ -209,7 +209,7 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
           title="Panel"
           description={
             <>
-              Hoy llevás <span className="admin-mono text-white">{money(s.todayRevenue)}</span> en ventas pagadas.
+              Hoy llevás <span className="admin-mono text-adm-fg">{money(s.todayRevenue)}</span> en ventas pagadas.
             </>
           }
           actions={
@@ -224,13 +224,13 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
                     <path d="m6 9 6 6 6-6" />
                   </svg>
                 </summary>
-                <nav aria-label="Período" className="absolute right-0 z-20 mt-2 flex w-48 flex-col rounded-2xl border border-white/10 bg-[#15171c] p-1.5 shadow-[0_24px_60px_-20px_rgb(0_0_0/0.9)]">
+                <nav aria-label="Período" className="absolute right-0 z-20 mt-2 flex w-48 flex-col rounded-2xl border border-adm-fg/10 bg-adm-panel p-1.5 shadow-[0_24px_60px_-20px_rgb(0_0_0/0.9)]">
                   {RANGE_OPTIONS.map((r) => (
                     <Link
                       key={r}
                       href={r === 30 ? "/admin" : `/admin?rango=${r}`}
                       aria-current={r === range ? "page" : undefined}
-                      className={`rounded-xl px-3 py-2 text-sm ${r === range ? "bg-brand-500/15 text-[#ff8a5b]" : "text-[#d5d8de] hover:bg-white/[0.06]"}`}
+                      className={`rounded-xl px-3 py-2 text-sm ${r === range ? "bg-brand-500/15 text-adm-accent" : "text-adm-soft hover:bg-adm-fg/[0.06]"}`}
                     >
                       Últimos {r} días
                     </Link>
@@ -259,7 +259,7 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
         <section className={`${card} p-5`}>
           <div className="mb-5 flex flex-wrap items-baseline gap-2">
             <h2 className={cardTitle}>Ventas por mes</h2>
-            <span className="ml-auto text-[13px] text-[#8b8f98]">Pedidos con pago acreditado, últimos 12 meses</span>
+            <span className="ml-auto text-[13px] text-adm-muted">Pedidos con pago acreditado, últimos 12 meses</span>
           </div>
           <AdminMonthlyChart data={s.monthly} />
         </section>
@@ -282,23 +282,23 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
             <SectionLink href="/admin/pedidos">Ver pedidos</SectionLink>
           </div>
           {s.recentOrders.length === 0 ? (
-            <p className="border-t border-white/[0.06] px-5 py-5 text-sm text-[#9a9ea7]">Sin pedidos todavía.</p>
+            <p className="border-t border-adm-fg/[0.06] px-5 py-5 text-sm text-adm-muted">Sin pedidos todavía.</p>
           ) : (
             <ul>
               {s.recentOrders.map((o) => (
                 <li key={o.code}>
                   <Link
                     href={`/admin/pedidos/${o.code}`}
-                    className="flex flex-wrap items-center gap-x-3.5 gap-y-2 border-t border-white/[0.06] px-5 py-3 text-sm transition-[background-color] duration-150 hover:bg-white/[0.035]"
+                    className="flex flex-wrap items-center gap-x-3.5 gap-y-2 border-t border-adm-fg/[0.06] px-5 py-3 text-sm transition-[background-color] duration-150 hover:bg-adm-fg/[0.035]"
                   >
                     <AdminAvatar name={o.customerName} />
                     <span className="flex min-w-0 flex-[1_1_170px] flex-col">
-                      <span className="truncate font-medium text-white">{o.customerName}</span>
-                      <span className="admin-mono text-xs text-[#8b8f98]">{o.code}</span>
+                      <span className="truncate font-medium text-adm-fg">{o.customerName}</span>
+                      <span className="admin-mono text-xs text-adm-muted">{o.code}</span>
                     </span>
-                    <span className="text-[13px] text-[#8b8f98]">{formatDate(o.createdAt)}</span>
+                    <span className="text-[13px] text-adm-muted">{formatDate(o.createdAt)}</span>
                     <AdminStatusBadge status={o.status} />
-                    <span className="admin-mono min-w-24 text-right text-white">{money(o.total)}</span>
+                    <span className="admin-mono min-w-24 text-right text-adm-fg">{money(o.total)}</span>
                   </Link>
                 </li>
               ))}
@@ -310,7 +310,7 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
           <section className={`${card} flex flex-col gap-4 p-5`} aria-label="Clientes">
             <div className="flex items-baseline">
               <h2 className={cardTitle}>Clientes</h2>
-              <span className="ml-auto text-[13px] text-[#8b8f98]">{plural(segTotal, "compró", "compraron")} en {range} días</span>
+              <span className="ml-auto text-[13px] text-adm-muted">{plural(segTotal, "compró", "compraron")} en {range} días</span>
             </div>
             <div className="grid grid-cols-2 gap-3">
               {[
@@ -318,11 +318,11 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
                 { label: "Recurrentes", n: s.segments.returningCustomers, from: "#6fd3a5", to: "#2fa36b" },
               ].map((seg) => (
                 <div key={seg.label}>
-                  <p className="flex items-center gap-2 text-[13px] text-[#8b8f98]">
+                  <p className="flex items-center gap-2 text-[13px] text-adm-muted">
                     <span className="h-2.5 w-2.5 rounded-[3px]" style={{ backgroundColor: seg.to }} aria-hidden />
                     {seg.label}
                   </p>
-                  <p className="admin-mono mt-0.5 text-[22px] text-white">{seg.n}</p>
+                  <p className="admin-mono mt-0.5 text-[22px] text-adm-fg">{seg.n}</p>
                   <div className="mt-2 flex h-16 items-end">
                     <span
                       className="w-full rounded-lg"
@@ -337,19 +337,19 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
           <section className={`${card} flex flex-col gap-2 p-5`} aria-label="Requiere atención">
             <h2 className={`${cardTitle} mb-1.5`}>Requiere atención</h2>
             {alerts.length === 0 ? (
-              <p className="text-sm text-[#9a9ea7]">Todo al día: no hay nada esperando.</p>
+              <p className="text-sm text-adm-muted">Todo al día: no hay nada esperando.</p>
             ) : (
               alerts.map((a) => (
                 <Link
                   key={a.href}
                   href={a.href}
-                  className="flex items-center gap-3 rounded-[14px] border border-white/5 bg-white/[0.04] px-3 py-2.5 text-sm text-[#e6e8ec] transition-[background-color] duration-150 hover:bg-white/[0.07]"
+                  className="flex items-center gap-3 rounded-[14px] border border-adm-fg/5 bg-adm-fg/[0.04] px-3 py-2.5 text-sm text-adm-soft transition-[background-color] duration-150 hover:bg-adm-fg/[0.07]"
                 >
-                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-[10px]" style={{ backgroundColor: `${a.color}26`, color: a.color }}>
+                  <span className="adm-tint grid h-8 w-8 shrink-0 place-items-center rounded-[10px]" style={{ "--c": a.color } as CSSProperties}>
                     <AdminIcon name={a.icon} className="h-4 w-4" />
                   </span>
                   <span className="flex-1">{a.text}</span>
-                  <span className="text-[#80848d]">
+                  <span className="text-adm-faint">
                     <AdminIcon name="flecha" className="h-4 w-4" />
                   </span>
                 </Link>
@@ -363,10 +363,10 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
         <section className={`${card} p-5`}>
           <div className="mb-4 flex items-center">
             <h2 className={cardTitle}>Más vendidos</h2>
-            <span className="ml-auto text-[13px] text-[#8b8f98]">últimos {range} días</span>
+            <span className="ml-auto text-[13px] text-adm-muted">últimos {range} días</span>
           </div>
           {s.topProducts.length === 0 ? (
-            <p className="text-sm text-[#9a9ea7]">Todavía no hay ventas pagadas en el período.</p>
+            <p className="text-sm text-adm-muted">Todavía no hay ventas pagadas en el período.</p>
           ) : (
             <ul className="space-y-3.5">
               {s.topProducts.map((p) => (
@@ -374,13 +374,13 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
                   <Link href={`/admin/productos/${encodeURIComponent(p.slug)}`} className="grid grid-cols-[auto_minmax(0,1fr)_minmax(0,9rem)] items-center gap-3">
                     <Thumb src={p.image} />
                     <span className="min-w-0">
-                      <span className="block truncate text-sm text-white">{p.name}</span>
-                      <span className="admin-mono block text-xs text-[#8b8f98]">{money(p.revenue)}</span>
+                      <span className="block truncate text-sm text-adm-fg">{p.name}</span>
+                      <span className="admin-mono block text-xs text-adm-muted">{money(p.revenue)}</span>
                     </span>
                     <span>
                       <Bar value={p.units} max={topUnits} color={COLORS.cobrar} />
-                      <span className="mt-1 flex justify-between text-[11px] text-[#80848d]">
-                        vendidos <span className="admin-mono text-[#d5d8de]">{p.units}</span>
+                      <span className="mt-1 flex justify-between text-[11px] text-adm-faint">
+                        vendidos <span className="admin-mono text-adm-soft">{p.units}</span>
                       </span>
                     </span>
                   </Link>
@@ -396,18 +396,18 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
             <SectionLink href="/admin/productos?stock=sin">{s.outOfStockCount.toLocaleString("es-AR")} sin stock</SectionLink>
           </div>
           {s.stockAlerts.length === 0 ? (
-            <p className="text-sm text-[#9a9ea7]">Ningún producto con stock bajo (2 a 5 unidades).</p>
+            <p className="text-sm text-adm-muted">Ningún producto con stock bajo (2 a 5 unidades).</p>
           ) : (
             <ul className="space-y-3.5">
               {s.stockAlerts.map((p) => (
                 <li key={p.slug}>
                   <Link href={`/admin/productos/${encodeURIComponent(p.slug)}`} className="grid grid-cols-[auto_minmax(0,1fr)_minmax(0,9rem)] items-center gap-3">
                     <Thumb src={p.image} />
-                    <span className="truncate text-sm text-white">{p.name}</span>
+                    <span className="truncate text-sm text-adm-fg">{p.name}</span>
                     <span>
                       <Bar value={p.stock} max={5} color={p.stock <= 2 ? "#dc2626" : "#d97706"} />
-                      <span className="mt-1 flex justify-between text-[11px] text-[#80848d]">
-                        quedan <span className="admin-mono text-[#d5d8de]">{p.stock}/5</span>
+                      <span className="mt-1 flex justify-between text-[11px] text-adm-faint">
+                        quedan <span className="admin-mono text-adm-soft">{p.stock}/5</span>
                       </span>
                     </span>
                   </Link>

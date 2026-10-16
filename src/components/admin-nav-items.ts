@@ -19,11 +19,15 @@ export type AdminIconName =
   | "buscar"
   | "contraer"
   | "externo"
-  | "flecha";
+  | "flecha"
+  | "sol"
+  | "luna";
 
 /** Trazos de los íconos del panel (24×24, línea de 1,6). */
 export const ADMIN_ICON_PATHS: Record<AdminIconName, string> = {
   panel: "M4 4h6v7H4zM14 4h6v4h-6zM14 12h6v8h-6zM4 15h6v5H4z",
+  sol: "M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4",
+  luna: "M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z",
   nuevo: "M12 8v8M8 12h8M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z",
   pedidos: "M5 7h14l-1 13H6L5 7Zm4 0V6a3 3 0 0 1 6 0v1M9 11a3 3 0 0 0 6 0",
   pagos: "M3 6h18v12H3zM3 10h18M7 15h3",
@@ -89,3 +93,7 @@ export const ADMIN_SEARCH_EVENT = "admin:buscar";
 
 /** Cookie con la preferencia de la barra lateral en la compu (completa o compacta). */
 export const ADMIN_NAV_COOKIE = "admin_nav";
+
+/** Cookie con el tema del panel: "claro" u "oscuro" (sin cookie, oscuro). */
+export const ADMIN_THEME_COOKIE = "admin_tema";
+export type AdminTheme = "claro" | "oscuro";
