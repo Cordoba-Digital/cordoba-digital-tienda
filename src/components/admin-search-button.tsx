@@ -3,7 +3,7 @@
 import { AdminIcon } from "@/components/admin-icon";
 import { ADMIN_SEARCH_EVENT } from "@/components/admin-nav-items";
 
-/** Caja de búsqueda de la barra superior: abre el buscador del panel (⌘K). */
+/** Caja de búsqueda de la barra superior: abre el buscador del panel. */
 export function AdminSearchButton() {
   return (
     <button
@@ -13,7 +13,6 @@ export function AdminSearchButton() {
     >
       <AdminIcon name="buscar" />
       <span className="flex-1 truncate">Buscar pedidos, productos o clientes…</span>
-      <kbd className="rounded-md border border-adm-fg/[0.14] px-1.5 py-0.5 font-sans text-[11px] text-adm-muted">⌘K</kbd>
     </button>
   );
 }

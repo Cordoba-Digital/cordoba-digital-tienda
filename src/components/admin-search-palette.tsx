@@ -14,7 +14,7 @@ function plain(text: string): string {
 }
 
 /**
- * Buscador del panel (⌘K o Ctrl+K): salta a una sección o busca el texto en
+ * Buscador del panel (botón "Buscar…"): salta a una sección o busca el texto en
  * pedidos, productos o usuarios con los buscadores que ya tiene cada pantalla.
  */
 export function AdminSearchPalette() {
@@ -30,23 +30,9 @@ export function AdminSearchPalette() {
       setIndex(0);
       setOpen(true);
     };
-    const onKey = (event: KeyboardEvent) => {
-      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
-        event.preventDefault();
-        setOpen((was) => {
-          if (!was) {
-            setQ("");
-            setIndex(0);
-          }
-          return !was;
-        });
-      }
-    };
     window.addEventListener(ADMIN_SEARCH_EVENT, show);
-    window.addEventListener("keydown", onKey);
     return () => {
       window.removeEventListener(ADMIN_SEARCH_EVENT, show);
-      window.removeEventListener("keydown", onKey);
     };
   }, []);
 

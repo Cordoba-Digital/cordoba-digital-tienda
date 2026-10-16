@@ -626,7 +626,7 @@ export function AdminProductForm({
         </div>
       </div>
 
-      <div className="fixed inset-x-0 bottom-0 z-20 border-t border-ink-100 bg-surface/95 backdrop-blur lg:left-60">
+      <div className="fixed inset-x-0 bottom-0 z-20 border-t border-ink-100 bg-surface/95 backdrop-blur transition-[left] duration-200 md:left-[72px] wide:left-[248px]">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-end gap-3 px-4 py-3 sm:px-6 lg:px-8">
           {error ? <p role="alert" className="mr-auto text-sm font-semibold text-red-600">{error}</p> : null}
           {!error && saved ? <p role="status" className="mr-auto text-sm font-semibold text-emerald-700">Cambios guardados.</p> : null}

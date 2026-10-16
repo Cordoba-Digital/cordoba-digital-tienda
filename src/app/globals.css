@@ -756,6 +756,30 @@ input[type="number"]::-webkit-inner-spin-button {
     }
   }
 }
+/* Ventanas bajas: la barra lateral se compacta para entrar entera sin scroll.
+   `roomy` aprieta un poco, `short` cambia los títulos de grupo por rayitas y
+   `tiny` achica los renglones. */
+@custom-variant roomy {
+  @media (max-height: 1000px) {
+    @slot;
+  }
+}
+@custom-variant short {
+  @media (max-height: 880px) {
+    @slot;
+  }
+}
+@custom-variant tiny {
+  @media (max-height: 740px) {
+    @slot;
+  }
+}
+/* Más bajo que esto ya no entra: el menú se desplaza también en la columna de íconos. */
+@custom-variant cramped {
+  @media (max-height: 640px) {
+    @slot;
+  }
+}
 @custom-variant wide {
   @media (min-width: 64rem) {
     :where([data-nav="completo"]) & {

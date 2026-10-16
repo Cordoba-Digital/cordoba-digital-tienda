@@ -173,7 +173,7 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
   return (
     <div className="flex flex-col gap-6">
       {/* En el celular la búsqueda está en la barra de arriba y los avisos en "Requiere atención". */}
-      <div className="admin-enter hidden flex-wrap items-center gap-3 md:flex" style={{ "--i": 0 } as CSSProperties}>
+      <div className="admin-enter relative z-30 hidden flex-wrap items-center gap-3 md:flex" style={{ "--i": 0 } as CSSProperties}>
         <AdminSearchButton />
         <span className="flex-1" />
         <details className="group relative">
@@ -186,7 +186,7 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
             </svg>
             {alerts.length ? <span className="absolute right-2.5 top-[9px] h-2 w-2 rounded-full border-2 border-adm-panel bg-brand-500" aria-hidden /> : null}
           </summary>
-          <div className="absolute right-0 z-20 mt-2 w-80 rounded-2xl border border-adm-fg/10 bg-adm-panel p-2 shadow-[0_24px_60px_-20px_rgb(0_0_0/0.9)]">
+          <div className="absolute right-0 z-20 mt-2 w-80 rounded-2xl border border-adm-fg/10 bg-adm-panel p-2 shadow-[0_24px_60px_-20px_rgb(0_0_0/0.45)]">
             {alerts.length === 0 ? (
               <p className="px-3 py-4 text-sm text-adm-muted">Todo al día: no hay nada esperando.</p>
             ) : (
@@ -203,7 +203,7 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
         </details>
       </div>
 
-      <div className="admin-enter" style={{ "--i": 0 } as CSSProperties}>
+      <div className="admin-enter relative z-20" style={{ "--i": 0 } as CSSProperties}>
         <AdminPageHeader
           eyebrow={todayLabel()}
           title="Panel"

@@ -103,7 +103,7 @@ export function AdminFrame({
 
   // En la columna de íconos el texto se oculta y aparece como globo al pasar el mouse.
   const itemCls = (on: boolean) =>
-    `group/item relative flex items-center gap-2.5 rounded-[10px] px-2.5 py-[7px] text-sm transition-[background-color,color,box-shadow] duration-150 rail:justify-center rail:px-0 [@media(max-height:820px)]:py-1 ${
+    `group/item relative flex items-center gap-2.5 rounded-[10px] px-2.5 py-[7px] text-sm transition-[background-color,color,box-shadow] duration-150 rail:justify-center rail:px-0 roomy:py-1 short:py-[3px] tiny:py-0.5 tiny:text-[13px] ${
       on
         ? "bg-[linear-gradient(90deg,rgb(241_90_36/0.2),rgb(241_90_36/0.06))] text-adm-fg shadow-[inset_0_0_0_1px_rgb(241_90_36/0.32)] before:absolute before:-left-3.5 before:inset-y-2 before:w-[3px] before:rounded-r before:bg-brand-500 rail:before:-left-2"
         : "text-adm-muted hover:bg-adm-fg/[0.06] hover:text-adm-fg"
@@ -154,7 +154,7 @@ export function AdminFrame({
           open ? "translate-x-0 shadow-2xl" : "-translate-x-full"
         }`}
       >
-        <div className="flex h-full flex-col gap-[18px] overflow-y-auto px-3.5 py-5 rail:overflow-visible rail:px-2.5 [@media(max-height:820px)]:gap-3 [@media(max-height:820px)]:py-3.5">
+        <div className="flex h-full flex-col gap-[18px] overflow-y-auto px-3.5 py-5 rail:overflow-visible rail:cramped:overflow-y-auto rail:px-2.5 roomy:gap-3 roomy:py-3.5 short:gap-2 short:py-2.5">
           <div className="flex items-center gap-2.5 px-1.5 rail:flex-col rail:gap-2 rail:px-0">
             <Link href="/admin" onClick={() => setOpen(false)} className="flex min-w-0 items-center gap-2.5" aria-label="Panel de Córdoba Digital">
               <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[11px] bg-[linear-gradient(135deg,#ff8a5b,#f15a24)] text-sm font-bold text-[#14161c] shadow-[0_6px_18px_-6px_rgb(241_90_36/0.7),inset_0_1px_0_rgb(255_255_255/0.4)]">
@@ -190,21 +190,20 @@ export function AdminFrame({
           <button
             type="button"
             onClick={openSearch}
-            className="group/item relative flex h-[38px] shrink-0 items-center text-left gap-2.5 rounded-xl border border-adm-fg/[0.09] bg-adm-fg/[0.04] px-3 text-[13px] text-adm-muted hover:bg-adm-fg/[0.07] hover:text-adm-fg rail:justify-center rail:px-0"
+            className="group/item relative flex h-[38px] shrink-0 items-center tiny:h-8 text-left gap-2.5 rounded-xl border border-adm-fg/[0.09] bg-adm-fg/[0.04] px-3 text-[13px] text-adm-muted hover:bg-adm-fg/[0.07] hover:text-adm-fg rail:justify-center rail:px-0"
           >
             <AdminIcon name="buscar" className="h-4 w-4" />
             <span className={labelCls}>Buscar…</span>
-            <kbd className="ml-auto rounded-md border border-adm-fg/[0.14] px-1.5 py-0.5 font-sans text-[11px] text-adm-muted rail:hidden">⌘K</kbd>
           </button>
 
-          <nav aria-label="Administración" className="flex flex-col gap-3.5 rail:gap-2 [@media(max-height:820px)]:gap-2">
+          <nav aria-label="Administración" className="flex flex-col gap-3.5 rail:gap-2 roomy:gap-2 short:gap-1.5 tiny:gap-1">
             {ADMIN_NAV_GROUPS.map((group, gi) => (
               <div key={group.title ?? gi} className="flex flex-col gap-0.5 rail:gap-1">
                 {group.title ? (
                   <>
-                    <p className="px-2.5 pb-1.5 text-[11px] uppercase tracking-[0.08em] text-adm-faint rail:hidden">{group.title}</p>
-                    {/* En la columna de íconos el título del grupo es una rayita. */}
-                    <hr className="mx-2 hidden border-adm-fg/[0.08] rail:block" />
+                    <p className="px-2.5 pb-1.5 text-[11px] uppercase tracking-[0.08em] text-adm-faint rail:hidden short:hidden">{group.title}</p>
+                    {/* En la columna de íconos (y en ventanas bajas) el título del grupo es una rayita. */}
+                    <hr className="mx-2 hidden border-adm-fg/[0.08] rail:block short:mb-1 short:block" />
                   </>
                 ) : null}
                 {group.items.map((item) => {
@@ -237,7 +236,7 @@ export function AdminFrame({
             ))}
           </nav>
 
-          <div className="mt-auto flex flex-col gap-2.5 border-t border-adm-fg/[0.08] pt-4 [@media(max-height:820px)]:pt-3">
+          <div className="mt-auto flex flex-col gap-2.5 border-t border-adm-fg/[0.08] pt-4 roomy:pt-3 short:gap-1.5 short:pt-2">
             <Link href="/" target="_blank" className={itemCls(false)}>
               <AdminIcon name="tienda" />
               <span className={labelCls}>Ver la tienda</span>
@@ -245,7 +244,7 @@ export function AdminFrame({
                 <AdminIcon name="externo" className="h-3.5 w-3.5" />
               </span>
             </Link>
-            <div className="flex items-center gap-2.5 rounded-xl border border-adm-fg/[0.08] bg-adm-fg/[0.04] p-2.5 rail:flex-col rail:border-0 rail:bg-transparent rail:p-0">
+            <div className="flex items-center gap-2.5 rounded-xl border border-adm-fg/[0.08] bg-adm-fg/[0.04] p-2.5 short:p-1.5 rail:flex-col rail:gap-0.5 rail:border-0 rail:bg-transparent rail:p-0">
               <span className="relative grid h-8 w-8 shrink-0 place-items-center rounded-full rail:hidden bg-[linear-gradient(135deg,#ff8a5b,#f15a24)] text-[13px] font-bold text-[#14161c]" title={name}>
                 {initial}
                 <span className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border-2 border-adm-panel bg-[#3dd6b0]" aria-hidden />
