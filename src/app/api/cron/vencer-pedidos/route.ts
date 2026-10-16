@@ -1,5 +1,6 @@
 import { sincronizarEnvios } from "@/lib/admin-andreani";
 import { andreaniConfigurado } from "@/lib/andreani";
+import { syncPendingMpOrders } from "@/lib/checkout-mp-sync";
 import { expireStalePendingOrders } from "@/lib/order-status";
 
 export const dynamic = "force-dynamic";
@@ -15,6 +16,11 @@ export async function GET(request: Request) {
   if (!secret || request.headers.get("authorization") !== `Bearer ${secret}`) {
     return Response.json({ ok: false, error: "No autorizado." }, { status: 401 });
   }
+  // Antes de vencer, se acreditan los pedidos de Mercado Pago que se cobraron
+  // pero cuyo aviso no llegó: si no, se cancelaría un pedido pagado.
+  const mercadoPago = await syncPendingMpOrders().catch((error: unknown) => ({
+    error: error instanceof Error ? error.message : "error inesperado",
+  }));
   const expired = await expireStalePendingOrders();
   // De paso trae de Andreani los números de seguimiento y estados nuevos. El
   // panel también lo hace a pedido con "Actualizar seguimiento".
@@ -24,5 +30,5 @@ export async function GET(request: Request) {
       error: error instanceof Error ? error.message : "error inesperado",
     }));
   }
-  return Response.json({ ok: true, expired, andreani });
+  return Response.json({ ok: true, expired, mercadoPago, andreani });
 }
