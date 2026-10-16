@@ -8,7 +8,9 @@ import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { trackPurchase } from "@/lib/analytics";
 import { money } from "@/lib/format";
+import { orderBanner } from "@/lib/order-banner";
 import { isCancelled, ORDER_STATUS_FLOW, statusIndex } from "@/lib/pricing";
+import type { TransferAccount } from "@/lib/transfer-account";
 
 export type OrderSummary = {
   code: string;
@@ -69,9 +71,12 @@ export function OrderConfirmation({
   order,
   isNew,
   paymentReturn,
+  transfer,
 }: {
   order: OrderSummary;
   isNew: boolean;
+  /** Cuenta para transferir (`lib/transfer-account`); null si no está configurada. */
+  transfer: TransferAccount | null;
   /** `?pago=` con el que vuelve Mercado Pago (exito, pendiente, fallo) o `error` si no se pudo iniciar. */
   paymentReturn?: string;
 }) {
@@ -108,7 +113,8 @@ export function OrderConfirmation({
     });
   }, [isNew, order]);
 
-  const needsPayment = order.paymentMethod === "transferencia" && !isCancelled(order.status);
+  const needsPayment = order.paymentMethod === "transferencia" && order.status === "pendiente_pago";
+  const banner = orderBanner(order);
   const awaitingMercadoPago = order.paymentMethod === "mercadopago" && order.status === "pendiente_pago";
 
   return (
@@ -118,9 +124,10 @@ export function OrderConfirmation({
           <div className="flex flex-wrap items-center gap-4">
             <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white/20 text-3xl">✓</span>
             <div>
-              <h1 className="text-2xl font-black md:text-3xl">¡Gracias {order.customerName.split(" ")[0]}! Tu pedido está confirmado</h1>
+              <h1 className="text-2xl font-black md:text-3xl">{banner.title}</h1>
+              {banner.detail ? <p className="mt-1 text-sm font-semibold text-white">{banner.detail}</p> : null}
               <p className="mt-1 text-sm text-emerald-50">
-                Te enviamos el detalle a <strong>{order.email}</strong>. También podés seguirlo desde acá cuando quieras.
+                Guardá tu número de pedido, <strong>{order.code}</strong>: con él podés seguirlo desde acá cuando quieras.
               </p>
             </div>
           </div>
@@ -194,47 +201,64 @@ export function OrderConfirmation({
           {needsPayment ? (
             <section className="card-surface border-2 border-amber-200 bg-amber-50/40 p-5">
               <h2 className="text-lg font-extrabold text-ink-900">💸 Cómo completar tu pago</h2>
-              <p className="mt-1 text-sm text-ink-600">
-                Transferí <strong>{money(order.total)}</strong> a cualquiera de estas cuentas.
-              </p>
-              <div className="mt-4">
-                <div className="rounded-xl border border-ink-100 bg-surface p-4">
-                  <p className="text-xs font-bold uppercase tracking-wide text-ink-500">Transferencia bancaria</p>
-                  <dl className="mt-2 space-y-1.5 text-sm">
-                    <div className="flex items-center justify-between gap-2">
-                      <dt className="text-ink-500">CBU</dt>
-                      <dd className="flex items-center gap-2 font-semibold text-ink-900">
-                        0070123430004012345678
-                        <CopyButton value="0070123430004012345678" />
-                      </dd>
+              {transfer ? (
+                <>
+                  <p className="mt-1 text-sm text-ink-600">
+                    Transferí <strong>{money(order.total)}</strong> a esta cuenta.
+                  </p>
+                  <div className="mt-4">
+                    <div className="rounded-xl border border-ink-100 bg-surface p-4">
+                      <p className="text-xs font-bold uppercase tracking-wide text-ink-500">Transferencia bancaria</p>
+                      <dl className="mt-2 space-y-1.5 text-sm">
+                        {transfer.number ? (
+                          <div className="flex items-center justify-between gap-2">
+                            <dt className="text-ink-500">{transfer.numberLabel}</dt>
+                            <dd className="flex items-center gap-2 font-semibold text-ink-900">
+                              {transfer.number}
+                              <CopyButton value={transfer.number} />
+                            </dd>
+                          </div>
+                        ) : null}
+                        {transfer.alias ? (
+                          <div className="flex items-center justify-between gap-2">
+                            <dt className="text-ink-500">Alias</dt>
+                            <dd className="flex items-center gap-2 font-semibold text-ink-900">
+                              {transfer.alias}
+                              <CopyButton value={transfer.alias} />
+                            </dd>
+                          </div>
+                        ) : null}
+                        <div className="flex justify-between gap-2">
+                          <dt className="text-ink-500">Titular</dt>
+                          <dd className="text-right font-semibold text-ink-900">{transfer.holder}</dd>
+                        </div>
+                        {transfer.cuit ? (
+                          <div className="flex justify-between">
+                            <dt className="text-ink-500">CUIT</dt>
+                            <dd className="font-semibold text-ink-900">{transfer.cuit}</dd>
+                          </div>
+                        ) : null}
+                      </dl>
                     </div>
-                    <div className="flex items-center justify-between gap-2">
-                      <dt className="text-ink-500">Alias</dt>
-                      <dd className="flex items-center gap-2 font-semibold text-ink-900">
-                        CORDOBA.DIGITAL.AR
-                        <CopyButton value="CORDOBA.DIGITAL.AR" />
-                      </dd>
-                    </div>
-                    <div className="flex justify-between">
-                      <dt className="text-ink-500">Titular</dt>
-                      <dd className="font-semibold text-ink-900">Córdoba Digital SRL</dd>
-                    </div>
-                    <div className="flex justify-between">
-                      <dt className="text-ink-500">CUIT</dt>
-                      <dd className="font-semibold text-ink-900">30-71234567-9</dd>
-                    </div>
-                  </dl>
-                </div>
-              </div>
+                  </div>
+                </>
+              ) : (
+                <p className="mt-1 text-sm text-ink-600">
+                  Escribinos por WhatsApp con el número de pedido y te pasamos los datos para transferir{" "}
+                  <strong>{money(order.total)}</strong>.
+                </p>
+              )}
               <a
                 href={`https://wa.me/5493516777774?text=${encodeURIComponent(
-                  `Hola! Envío el comprobante del pedido ${order.code}`,
+                  transfer
+                    ? `Hola! Envío el comprobante del pedido ${order.code}`
+                    : `Hola! Quiero los datos para transferir el pedido ${order.code}`,
                 )}`}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-4 inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-emerald-600"
               >
-                📎 Enviar comprobante por WhatsApp
+                {transfer ? "📎 Enviar comprobante por WhatsApp" : "Pedir los datos por WhatsApp"}
               </a>
             </section>
           ) : null}

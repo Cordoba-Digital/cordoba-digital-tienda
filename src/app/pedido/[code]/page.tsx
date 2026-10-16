@@ -6,6 +6,7 @@ import { OrderConfirmation, type OrderSummary } from "@/components/order-confirm
 import { formatDateTime } from "@/lib/format";
 import { getOrderByCode } from "@/lib/queries";
 import { blockedMinutes, ipFromHeaders, ORDER_LOOKUP_LIMIT, recordMiss } from "@/lib/rate-limit";
+import { transferAccount } from "@/lib/transfer-account";
 
 export const dynamic = "force-dynamic";
 
@@ -104,5 +105,5 @@ export default async function OrderPage({
 
   const pago = typeof query.pago === "string" ? query.pago : undefined;
 
-  return <OrderConfirmation order={summary} isNew={isNew} paymentReturn={pago} />;
+  return <OrderConfirmation order={summary} isNew={isNew} paymentReturn={pago} transfer={transferAccount()} />;
 }

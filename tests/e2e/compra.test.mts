@@ -86,7 +86,9 @@ test("un cliente compra desde la ficha y el pedido queda en la base", async () =
   await page.getByRole("button", { name: /^Confirmar pedido/ }).click();
 
   await page.waitForURL(/\/pedido\/CD-[A-Z2-9]{6}\?nuevo=1$/);
-  await page.getByRole("heading", { name: "¡Gracias Ana! Tu pedido está confirmado" }).waitFor();
+  // Transferencia sin pagar: el pedido se recibió, pero no está confirmado hasta acreditar el pago.
+  await page.getByRole("heading", { name: "¡Gracias Ana! Recibimos tu pedido" }).waitFor();
+  await page.getByText("Transferí el total y mandanos el comprobante", { exact: false }).waitFor();
   const code = new URL(page.url()).pathname.split("/").pop()!;
 
   const [order] = await db.select().from(schema.orders).where(eq(schema.orders.code, code));
