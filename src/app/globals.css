@@ -549,6 +549,22 @@ input[type="number"]::-webkit-inner-spin-button {
   background: var(--admin-glow), var(--admin-bg);
   background-attachment: fixed;
 }
+.admin-theme :is(button, [role="button"], select, summary, input[type="checkbox"], input[type="radio"], label:has(> input[type="checkbox"]), label:has(> input[type="radio"])):not(:disabled) {
+  cursor: pointer;
+}
+.admin-theme :is(button, select):disabled {
+  cursor: not-allowed;
+}
+/* Con la barra fija de Guardar abajo, el campo enfocado con Tab no queda tapado. */
+html:has(.admin-save-bar) {
+  scroll-padding-bottom: 96px;
+}
+/* En el celular los campos van a 16px: con menos, Safari hace zoom al tocarlos. */
+@media (max-width: 47.99rem) {
+  .admin-theme :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, textarea) {
+    font-size: 16px;
+  }
+}
 .admin-theme :focus-visible {
   outline: 2px solid var(--admin-accent);
   outline-offset: 2px;
@@ -734,7 +750,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .admin-theme[data-tema="claro"] .adm-tint,
 .admin-theme[data-tema="claro"] .adm-badge {
-  color: color-mix(in srgb, var(--c) 58%, #000);
+  color: color-mix(in srgb, var(--c) 48%, #000);
 }
 .admin-theme[data-tema="claro"] .adm-badge {
   background-color: color-mix(in srgb, var(--c) 14%, #fff);
@@ -758,25 +774,26 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 /* Ventanas bajas: la barra lateral se compacta para entrar entera sin scroll.
    `roomy` aprieta un poco, `short` cambia los títulos de grupo por rayitas y
-   `tiny` achica los renglones. */
+   `tiny` achica los renglones. En el celular no aplican: ahí el menú es un
+   panel que se desplaza y los renglones quedan cómodos para el dedo. */
 @custom-variant roomy {
-  @media (max-height: 1000px) {
+  @media (min-width: 48rem) and (max-height: 1000px) {
     @slot;
   }
 }
 @custom-variant short {
-  @media (max-height: 880px) {
+  @media (min-width: 48rem) and (max-height: 880px) {
     @slot;
   }
 }
 @custom-variant tiny {
-  @media (max-height: 740px) {
+  @media (min-width: 48rem) and (max-height: 740px) {
     @slot;
   }
 }
 /* Más bajo que esto ya no entra: el menú se desplaza también en la columna de íconos. */
 @custom-variant cramped {
-  @media (max-height: 640px) {
+  @media (min-width: 48rem) and (max-height: 640px) {
     @slot;
   }
 }

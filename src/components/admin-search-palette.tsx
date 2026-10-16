@@ -23,9 +23,12 @@ export function AdminSearchPalette() {
   const [q, setQ] = useState("");
   const [index, setIndex] = useState(0);
   const input = useRef<HTMLInputElement>(null);
+  // Al cerrar, el foco vuelve al botón que abrió el buscador (no al principio de la página).
+  const opener = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const show = () => {
+      opener.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
       setQ("");
       setIndex(0);
       setOpen(true);
@@ -38,6 +41,7 @@ export function AdminSearchPalette() {
 
   useEffect(() => {
     if (open) input.current?.focus();
+    else if (opener.current?.isConnected) opener.current.focus();
   }, [open]);
 
   const results = useMemo<Result[]>(() => {

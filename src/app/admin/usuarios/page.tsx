@@ -38,8 +38,10 @@ export default async function AdminUsersPage({ searchParams }: { searchParams: S
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <h1 className="text-2xl font-black text-ink-900">Usuarios</h1>
+      <div>
+        <p className="text-[13px] text-adm-muted">Clientes</p>
+        <h1 className="mt-1 text-[28px] font-semibold leading-tight tracking-[-0.02em] text-adm-fg sm:text-[30px]">Usuarios</h1>
+        <p className="mt-1 max-w-2xl text-sm text-ink-500">Clientes que entraron a la tienda con su cuenta de Google.</p>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3">

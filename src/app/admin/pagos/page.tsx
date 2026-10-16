@@ -49,8 +49,10 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <h1 className="text-2xl font-black text-ink-900">Pagos — Mercado Pago</h1>
+      <div>
+        <p className="text-[13px] text-adm-muted">Ventas</p>
+        <h1 className="mt-1 text-[28px] font-semibold leading-tight tracking-[-0.02em] text-adm-fg sm:text-[30px]">Pagos</h1>
+        <p className="mt-1 max-w-2xl text-sm text-ink-500">Cobros de Mercado Pago y su conciliación con los pedidos.</p>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -89,7 +91,7 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
           placeholder="Código, email o cliente…"
           className="min-w-52 flex-1 border border-ink-200 bg-surface px-3 py-2 text-sm"
         />
-        <select name="flag" defaultValue={flag} className="border border-ink-200 bg-surface px-3 py-2 text-sm">
+        <select name="flag" defaultValue={flag} aria-label="Filtrar por alerta" className="border border-ink-200 bg-surface px-3 py-2 text-sm">
           <option value="">Todos</option>
           {FLAGS.map((f) => (
             <option key={f} value={f}>

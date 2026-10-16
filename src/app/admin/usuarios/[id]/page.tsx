@@ -34,7 +34,7 @@ export default async function AdminUserDetailPage({ params }: { params: Promise<
           <Link className="text-sm font-bold text-brand-700 underline" href="/admin/usuarios">
             ← Usuarios
           </Link>
-          <h1 className="text-2xl font-black text-ink-900">{user.name || user.email}</h1>
+          <h1 className="text-[28px] font-semibold leading-tight tracking-[-0.02em] text-adm-fg sm:text-[30px]">{user.name || user.email}</h1>
           {user.isDisabled && <Pill solid tone="amber">Bloqueado</Pill>}
         </div>
       </div>

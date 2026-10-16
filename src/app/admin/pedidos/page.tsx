@@ -17,6 +17,16 @@ export const dynamic = "force-dynamic";
 
 const PER_PAGE = 20;
 
+/** Nombres cortos de las pestañas, para que entren en un renglón. */
+const TAB_LABELS: Record<string, string> = {
+  pendiente_pago: "Recibidos",
+  pago_confirmado: "Pagados",
+  preparando: "Preparando",
+  enviado: "En camino",
+  entregado: "Entregados",
+  cancelado: "Cancelados",
+};
+
 /** Lo de las últimas 24 h con la hora ("hace 3 h", "ayer 19:01"); lo anterior, solo el día ("14 oct"). */
 function shortDate(date: Date): string {
   if (Date.now() - date.getTime() < 86_400_000) return formatAgo(date);
@@ -91,7 +101,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
   const tabs = [
     { id: "", label: "Todos", count: allCount },
     { id: ACTIONABLE_FILTER, label: "Para atender", count: actionable },
-    ...ADMIN_ORDER_STATUSES.map((s) => ({ id: s.id as string, label: s.label, count: stats[s.id] ?? 0 })),
+    ...ADMIN_ORDER_STATUSES.map((s) => ({ id: s.id as string, label: TAB_LABELS[s.id] ?? s.label, count: stats[s.id] ?? 0 })),
   ];
   const from = total === 0 ? 0 : (page - 1) * PER_PAGE + 1;
   const to = Math.min(total, page * PER_PAGE);
@@ -111,9 +121,9 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
         actions={allCount > 0 ? <AdminOrdersWipeButton /> : null}
       />
 
-      {/* En el celular las pestañas se deslizan de costado sin barra a la vista; en la compu bajan de renglón. */}
-      <nav aria-label="Filtrar por estado" className="no-scrollbar -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0 lg:overflow-visible">
-        <ul className="flex min-w-max gap-1 border-b border-adm-fg/[0.08] lg:min-w-0 lg:flex-wrap">
+      {/* Un solo renglón: si no entran (celular, tablet), se deslizan de costado sin barra a la vista. */}
+      <nav aria-label="Filtrar por estado" className="no-scrollbar -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+        <ul className="flex min-w-max gap-1 border-b border-adm-fg/[0.08]">
           {tabs.map((t) => {
             const active = status === t.id;
             return (
@@ -166,14 +176,36 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
         </div>
       ) : (
         <div className="admin-table">
-          <div className="relative overflow-x-auto">
-            <table className="w-full min-w-[960px] text-left text-sm">
+          {/* Hasta 1280 px de ancho, una lista con lo que importa (quién, estado y total) en vez de la tabla ancha. */}
+          <ul className="xl:hidden">
+            {orders.map((o) => (
+              <li key={o.id} className="border-t border-adm-fg/[0.06] first:border-t-0">
+                <Link href={`/admin/pedidos/${o.code}`} className="flex items-start gap-3 px-4 py-3.5 active:bg-adm-fg/[0.05]">
+                  <AdminAvatar name={o.customerName} />
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <p className="truncate font-medium text-adm-fg">{o.customerName}</p>
+                      <p className="admin-mono shrink-0 text-adm-fg">{money(o.total)}</p>
+                    </div>
+                    <p className="truncate text-xs text-adm-muted">
+                      <span className="admin-mono">{o.code}</span> · {o.firstItem || "—"}
+                    </p>
+                    <div className="mt-2 flex items-center justify-between gap-3">
+                      <AdminStatusBadge status={o.status} />
+                      <span className="shrink-0 text-xs text-adm-muted">{shortDate(o.createdAt)}</span>
+                    </div>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="relative hidden overflow-x-auto xl:block">
+            <table className="w-full text-left text-sm">
               <thead>
                 <tr className="text-xs uppercase tracking-[0.06em] text-adm-faint">
                   <th className="px-4 py-3.5 font-normal">Cliente</th>
                   <th className="px-3 py-3.5 font-normal">Productos</th>
-                  <th className="px-3 py-3.5 font-normal">Pago</th>
-                  <th className="px-3 py-3.5 font-normal">Entrega</th>
+                  <th className="px-3 py-3.5 font-normal">Pago y entrega</th>
                   <th className="px-3 py-3.5 font-normal">Estado</th>
                   <th className="px-3 py-3.5 text-right font-normal">Total</th>
                   <th className="px-3 py-3.5 text-right font-normal">Fecha</th>
@@ -191,7 +223,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
                           <div className="min-w-0">
                             <Link
                               href={`/admin/pedidos/${o.code}`}
-                              className="block max-w-[200px] truncate font-medium text-adm-fg after:absolute after:inset-0 after:content-[''] hover:text-adm-accent"
+                              className="block max-w-[180px] truncate font-medium text-adm-fg after:absolute after:inset-0 after:content-[''] hover:text-adm-accent"
                             >
                               {o.customerName}
                             </Link>
@@ -199,7 +231,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
                           </div>
                         </div>
                       </td>
-                      <td className="max-w-[160px] px-3 py-3">
+                      <td className="max-w-[150px] px-3 py-3">
                         <p className="truncate text-adm-soft" title={o.firstItem}>{o.firstItem || "—"}</p>
                         <p className="text-xs text-adm-muted">
                           {o.itemsCount} {o.itemsCount === 1 ? "unidad" : "unidades"}
@@ -210,9 +242,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
                           <LineIcon d={paymentIcon(o.paymentMethod)} />
                           {o.paymentLabel || o.paymentMethod}
                         </span>
-                      </td>
-                      <td className="whitespace-nowrap px-3 py-3">
-                        <span className="flex items-center gap-2 text-adm-muted">
+                        <span className="mt-0.5 flex items-center gap-2 text-xs text-adm-muted">
                           <LineIcon d={deliveryIcon(o.deliveryMethod)} />
                           {o.deliveryLabel || o.deliveryMethod}
                         </span>

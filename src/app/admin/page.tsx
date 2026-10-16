@@ -176,7 +176,7 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
       <div className="admin-enter relative z-30 hidden flex-wrap items-center gap-3 md:flex" style={{ "--i": 0 } as CSSProperties}>
         <AdminSearchButton />
         <span className="flex-1" />
-        <details className="group relative">
+        <details data-popover className="group relative">
           <summary
             aria-label={alerts.length ? `Avisos (${alerts.length})` : "Avisos"}
             className="relative grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-adm-fg/10 bg-adm-fg/[0.05] text-adm-soft hover:bg-adm-fg/[0.09] [&::-webkit-details-marker]:hidden"
@@ -214,7 +214,7 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
           }
           actions={
             <>
-              <details className="relative">
+              <details data-popover className="relative">
                 <summary className={`${adminChip} cursor-pointer list-none [&::-webkit-details-marker]:hidden`}>
                   <svg viewBox="0 0 24 24" aria-hidden className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round">
                     <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />

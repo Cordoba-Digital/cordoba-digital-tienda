@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { type ReactNode, useEffect, useState } from "react";
+import { type ReactNode, Suspense, useEffect, useState } from "react";
 
 import { AdminIcon } from "@/components/admin-icon";
 import { ADMIN_NAV, ADMIN_NAV_COOKIE, ADMIN_NAV_GROUPS, ADMIN_SEARCH_EVENT, ADMIN_THEME_COOKIE, type AdminTheme } from "@/components/admin-nav-items";
+import { AdminPopovers } from "@/components/admin-popovers";
 import { AdminSearchPalette } from "@/components/admin-search-palette";
 import { PASSWORD_ACTOR_NAME } from "@/lib/admin-actor";
 
@@ -103,7 +104,7 @@ export function AdminFrame({
 
   // En la columna de íconos el texto se oculta y aparece como globo al pasar el mouse.
   const itemCls = (on: boolean) =>
-    `group/item relative flex items-center gap-2.5 rounded-[10px] px-2.5 py-[7px] text-sm transition-[background-color,color,box-shadow] duration-150 rail:justify-center rail:px-0 roomy:py-1 short:py-[3px] tiny:py-0.5 tiny:text-[13px] ${
+    `group/item relative flex items-center gap-2.5 rounded-[10px] px-2.5 py-[7px] text-sm max-md:py-2.5 transition-[background-color,color,box-shadow] duration-150 rail:justify-center rail:px-0 roomy:py-1 short:py-[3px] tiny:py-0.5 tiny:text-[13px] ${
       on
         ? "bg-[linear-gradient(90deg,rgb(241_90_36/0.2),rgb(241_90_36/0.06))] text-adm-fg shadow-[inset_0_0_0_1px_rgb(241_90_36/0.32)] before:absolute before:-left-3.5 before:inset-y-2 before:w-[3px] before:rounded-r before:bg-brand-500 rail:before:-left-2"
         : "text-adm-muted hover:bg-adm-fg/[0.06] hover:text-adm-fg"
@@ -112,7 +113,7 @@ export function AdminFrame({
     "flex-1 truncate rail:pointer-events-none rail:absolute rail:left-full rail:z-50 rail:ml-3 rail:flex-none rail:whitespace-nowrap rail:rounded-md rail:border rail:border-adm-fg/10 rail:bg-adm-panel rail:px-2.5 rail:py-1.5 rail:text-xs rail:text-adm-fg rail:opacity-0 rail:shadow-lg rail:transition-opacity rail:group-hover/item:opacity-100 rail:group-focus-visible/item:opacity-100";
 
   return (
-    <div data-nav={compact ? "compacto" : "completo"} className="min-h-screen">
+    <div data-nav={compact ? "compacto" : "completo"} className="min-h-dvh">
       {/* Barra superior solo en celular: abre el menú como cajón. */}
       <div className="sticky top-0 z-30 flex items-center justify-between border-b border-adm-fg/[0.08] bg-adm-bg/90 px-4 py-2.5 backdrop-blur md:hidden">
         <button
@@ -283,6 +284,9 @@ export function AdminFrame({
       </div>
 
       <AdminSearchPalette />
+      <Suspense fallback={null}>
+        <AdminPopovers />
+      </Suspense>
     </div>
   );
 }
