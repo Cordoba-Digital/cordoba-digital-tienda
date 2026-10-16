@@ -12,6 +12,7 @@ import { validateDelivery, validatePersonalData } from "@/lib/checkout-validatio
 import { findShippingOption, normalizeZip, type DeliveryMethod } from "@/lib/shipping";
 import { preciosAndreani } from "@/lib/shipping-andreani";
 import { andreaniConfigurado, AndreaniError, sucursales } from "@/lib/andreani";
+import { findOrderByCheckoutKey, isCheckoutKeyConflict, parseCheckoutKey } from "@/lib/checkout-idempotency";
 import { blockedMinutes, CHECKOUT_LIMIT, COUPON_LIMIT, ipFromHeaders, recordMiss, tooManyAttempts } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
@@ -39,6 +40,8 @@ type CheckoutBody = {
   payment?: { method?: PaymentMethodId; installments?: number };
   couponCode?: string | null;
   notes?: string;
+  /** Clave del intento de compra (ver `checkout-idempotency.ts`). */
+  checkoutKey?: string;
 };
 
 function orderCode(): string {
@@ -126,6 +129,14 @@ export async function POST(request: Request) {
 
   if (Object.keys(errors).length) {
     return Response.json({ ok: false, errors }, { status: 400 });
+  }
+
+  // El mismo intento ya creó un pedido (la respuesta se perdió o llegó un
+  // doble toque): se devuelve ese, sin reservar stock ni usar el cupón de nuevo.
+  const checkoutKey = parseCheckoutKey(body.checkoutKey);
+  if (checkoutKey) {
+    const existing = await findOrderByCheckoutKey(checkoutKey, email);
+    if (existing) return Response.json({ ok: true, code: existing.code, total: existing.total });
   }
 
   // El cupón se pide temprano y se espera tarde: es independiente de la
@@ -255,6 +266,7 @@ export async function POST(request: Request) {
         total: totals.total,
         couponCode: couponInfo?.code ?? null,
         notes: text(body.notes).slice(0, 500),
+        checkoutKey,
       })
       .returning({ id: orders.id, code: orders.code });
 
@@ -280,8 +292,20 @@ export async function POST(request: Request) {
     return order;
   }).catch((error: unknown) => {
     if (error instanceof CouponGoneError) return error;
+    // Dos envíos con la misma clave llegaron juntos y el otro guardó primero:
+    // esta transacción se deshizo entera y se responde con el pedido del otro.
+    if (checkoutKey && isCheckoutKeyConflict(error)) return null;
     throw error;
   });
+
+  if (created === null) {
+    const existing = checkoutKey ? await findOrderByCheckoutKey(checkoutKey, email) : null;
+    // La clave es de un pedido con otro email: no se muestra, se pide reintentar.
+    if (!existing) {
+      return Response.json({ ok: false, error: "No pudimos procesar el pedido. Probá de nuevo." }, { status: 409 });
+    }
+    return Response.json({ ok: true, code: existing.code, total: existing.total });
+  }
 
   if (created instanceof CouponGoneError) {
     return Response.json(
