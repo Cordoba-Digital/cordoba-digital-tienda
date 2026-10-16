@@ -73,10 +73,10 @@ beforeEach(async () => {
 });
 after(() => pool.end());
 
-test("sin tocar nada, vencer está prendido y avisar al cliente apagado", async () => {
+test("sin tocar nada, vencer y la portada están prendidos y avisar al cliente apagado", async () => {
   const res = await leer(new Request(`${BASE}/api/admin/automations`, { headers: { cookie: await sesion() } }));
   assert.equal(res.status, 200);
-  assert.deepEqual(((await res.json()) as { automations: unknown }).automations, { vencerPedidos: true, avisarCliente: false });
+  assert.deepEqual(((await res.json()) as { automations: unknown }).automations, { vencerPedidos: true, avisarCliente: false, portadaAutomatica: true });
 });
 
 test("sin sesión no se leen ni se cambian", async () => {
