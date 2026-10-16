@@ -352,6 +352,27 @@ export const orderRefunds = pgTable(
   ],
 );
 
+/**
+ * Productos que el cliente devolvió de un pedido que ya había salido
+ * (arrepentimiento, falla, cambio). Se anota cuando el producto llega al
+ * local: en ese momento las unidades vuelven al stock. La plata se devuelve
+ * aparte, desde Reembolsos.
+ */
+export type ReturnItem = { orderItemId: number; productSlug: string; name: string; quantity: number };
+
+export const orderReturns = pgTable(
+  "order_returns",
+  {
+    id: serial("id").primaryKey(),
+    orderId: integer("order_id").notNull(),
+    items: jsonb("items").$type<ReturnItem[]>().notNull(),
+    reason: text("reason").notNull().default(""),
+    createdBy: text("created_by").notNull().default(""),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index("order_returns_order_idx").on(table.orderId)],
+);
+
 export const subscribers = pgTable("subscribers", {
   id: serial("id").primaryKey(),
   email: text("email").notNull().unique(),
