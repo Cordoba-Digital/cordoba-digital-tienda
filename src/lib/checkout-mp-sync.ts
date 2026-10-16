@@ -2,6 +2,7 @@ import { and, desc, eq } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orderEvents, orders } from "@/db/schema";
+import { syncMpRefunds } from "@/lib/admin-refunds";
 import { applyOrderStatus, canTransition } from "@/lib/order-status";
 import { CANCELLED_STATUS, isCancelled } from "@/lib/pricing";
 
@@ -23,6 +24,8 @@ type MpPayment = {
   status?: string;
   external_reference?: string;
   transaction_amount?: number;
+  /** Reembolsos del pago, totales o parciales (hechos desde el panel o desde MP). */
+  refunds?: { id?: number | string; amount?: number; status?: string }[];
 };
 
 export type ReconcileResult =
@@ -84,6 +87,12 @@ export async function reconcileMpPayment(
   if (!order) {
     console.log(`[mp] payment ${paymentId} status=${payment.status} sin pedido MP ref=${ref}`);
     return "sin_pedido";
+  }
+
+  // Los reembolsos del pago que acreditó el pedido quedan anotados aunque se
+  // hayan hecho desde la cuenta de MP y no desde el panel.
+  if (order.paidWith === paymentId && payment.refunds?.length) {
+    await syncMpRefunds(order.id, payment.refunds);
   }
 
   if (payment.status === "approved") {

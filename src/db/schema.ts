@@ -321,6 +321,37 @@ export const orderItems = pgTable(
   (table) => [index("order_items_order_idx").on(table.orderId)],
 );
 
+/**
+ * Plata devuelta al cliente de un pedido, total o parcial.
+ *
+ * - `mercadopago`: se pidió a la API de MP desde el panel (o se hizo en MP y
+ *   llegó por el webhook). `externalId` es el id del reembolso en MP.
+ * - `manual`: el local devolvió la plata por fuera (transferencia, efectivo) y
+ *   lo anota acá para que el pedido lo refleje.
+ *
+ * `estado`: `pendiente` mientras se espera la respuesta de MP (cuenta como
+ * devuelto, así dos clics no devuelven dos veces), `hecho` o `fallido`.
+ */
+export const orderRefunds = pgTable(
+  "order_refunds",
+  {
+    id: serial("id").primaryKey(),
+    orderId: integer("order_id").notNull(),
+    amount: integer("amount").notNull(),
+    method: text("method").notNull(), // mercadopago | manual
+    estado: text("estado").notNull().default("hecho"), // pendiente | hecho | fallido
+    reason: text("reason").notNull().default(""),
+    externalId: text("external_id"),
+    error: text("error").notNull().default(""),
+    createdBy: text("created_by").notNull().default(""),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [
+    index("order_refunds_order_idx").on(table.orderId),
+    uniqueIndex("order_refunds_external_idx").on(table.externalId),
+  ],
+);
+
 export const subscribers = pgTable("subscribers", {
   id: serial("id").primaryKey(),
   email: text("email").notNull().unique(),
