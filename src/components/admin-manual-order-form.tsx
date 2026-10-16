@@ -359,7 +359,7 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
           {!paymentOk ? <span className="text-xs text-amber-700">Elegí un medio de pago para esta entrega.</span> : null}
           <FieldError text={errors.payment} />
           <label className={label}>
-            Nota interna (opcional)
+            Nota del pedido (opcional, la ve el cliente)
             <textarea value={notes} onChange={(event) => setNotes(event.target.value)} maxLength={500} rows={3} className="w-full px-3 py-2 text-sm" />
           </label>
         </section>
