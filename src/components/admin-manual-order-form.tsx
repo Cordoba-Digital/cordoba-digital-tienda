@@ -22,7 +22,7 @@ const DELIVERIES: { id: Delivery; label: string; hint: string }[] = [
 ];
 
 const field = "h-10 w-full px-3 text-sm";
-const label = "flex flex-col gap-1.5 text-[13px] text-[#9a9ea7]";
+const label = "flex flex-col gap-1.5 text-[13px] text-adm-muted";
 const card = "admin-card flex flex-col gap-4 rounded-2xl p-5";
 
 /** Mismo tope que el checkout: el stock 1 migrado de WooCommerce es "hay", no una cantidad. */
@@ -143,13 +143,13 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
           <AdminIcon name="pedidos" />
         </span>
         <div className="flex flex-col gap-1">
-          <h2 className="text-lg font-semibold text-white">Pedido {created.code} cargado</h2>
-          <p className="text-sm text-[#9a9ea7]">
+          <h2 className="text-lg font-semibold text-adm-fg">Pedido {created.code} cargado</h2>
+          <p className="text-sm text-adm-muted">
             Total {money(created.total)}. Quedó pendiente de pago con el stock reservado. Mandale el link al cliente: ahí ve el detalle y paga con el medio elegido.
           </p>
         </div>
-        <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] p-2 pl-3">
-          <span className="admin-mono min-w-0 flex-1 truncate text-[13px] text-[#d5d8de]">{created.link}</span>
+        <div className="flex items-center gap-2 rounded-xl border border-adm-fg/10 bg-adm-fg/[0.03] p-2 pl-3">
+          <span className="admin-mono min-w-0 flex-1 truncate text-[13px] text-adm-soft">{created.link}</span>
           <button
             type="button"
             className={adminChip}
@@ -192,7 +192,7 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
     <form onSubmit={submit} className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_340px]" noValidate>
       <div className="flex min-w-0 flex-col gap-5">
         <section className={card}>
-          <h2 className="text-base font-semibold text-white">Productos</h2>
+          <h2 className="text-base font-semibold text-adm-fg">Productos</h2>
           <div className="relative">
             <input
               value={q}
@@ -205,26 +205,26 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
               className={field}
             />
             {q.trim().length >= 2 ? (
-              <ul className="absolute inset-x-0 top-12 z-10 max-h-80 overflow-y-auto rounded-xl border border-white/10 bg-[#15171c] p-1.5 shadow-[0_24px_60px_-20px_rgb(0_0_0/0.9)]">
+              <ul className="absolute inset-x-0 top-12 z-10 max-h-80 overflow-y-auto rounded-xl border border-adm-fg/10 bg-adm-panel p-1.5 shadow-[0_24px_60px_-20px_rgb(0_0_0/0.9)]">
                 {found.length === 0 ? (
-                  <li className="px-3 py-3 text-sm text-[#9a9ea7]">{searching ? "Buscando…" : "No hay productos con stock que coincidan."}</li>
+                  <li className="px-3 py-3 text-sm text-adm-muted">{searching ? "Buscando…" : "No hay productos con stock que coincidan."}</li>
                 ) : (
                   found.map((product) => (
                     <li key={product.slug}>
                       <button
                         type="button"
                         onClick={() => add(product)}
-                        className="flex w-full items-center gap-3 rounded-lg px-2.5 py-2 text-left text-sm text-[#d5d8de] hover:bg-white/[0.07]"
+                        className="flex w-full items-center gap-3 rounded-lg px-2.5 py-2 text-left text-sm text-adm-soft hover:bg-adm-fg/[0.07]"
                       >
                         {product.image ? (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img src={product.image} alt="" className="h-9 w-9 shrink-0 rounded-lg bg-white object-contain" />
                         ) : (
-                          <span className="h-9 w-9 shrink-0 rounded-lg bg-white/[0.06]" />
+                          <span className="h-9 w-9 shrink-0 rounded-lg bg-adm-fg/[0.06]" />
                         )}
                         <span className="min-w-0 flex-1">
                           <span className="block truncate">{product.name}</span>
-                          <span className="block text-xs text-[#80848d]">
+                          <span className="block text-xs text-adm-faint">
                             {product.sku ? `${product.sku} · ` : ""}stock {product.stock}
                           </span>
                         </span>
@@ -237,31 +237,31 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
             ) : null}
           </div>
           {lines.length === 0 ? (
-            <p className="rounded-xl border border-dashed border-white/10 px-4 py-6 text-center text-sm text-[#80848d]">
+            <p className="rounded-xl border border-dashed border-adm-fg/10 px-4 py-6 text-center text-sm text-adm-faint">
               Buscá un producto y tocalo para sumarlo al pedido.
             </p>
           ) : (
-            <ul className="flex flex-col divide-y divide-white/[0.06]">
+            <ul className="flex flex-col divide-y divide-adm-fg/[0.06]">
               {lines.map((line) => (
                 <li key={line.slug} className="flex flex-wrap items-center gap-3 py-3">
                   <span className="min-w-0 flex-[1_1_200px]">
-                    <span className="block truncate text-sm text-white">{line.name}</span>
-                    <span className="block text-xs text-[#80848d]">{money(line.price)} c/u</span>
+                    <span className="block truncate text-sm text-adm-fg">{line.name}</span>
+                    <span className="block text-xs text-adm-faint">{money(line.price)} c/u</span>
                   </span>
-                  <span className="inline-flex items-center rounded-full border border-white/10">
-                    <button type="button" aria-label="Uno menos" onClick={() => setQuantity(line.slug, line.quantity - 1)} className="h-8 w-8 text-[#d5d8de]">
+                  <span className="inline-flex items-center rounded-full border border-adm-fg/10">
+                    <button type="button" aria-label="Uno menos" onClick={() => setQuantity(line.slug, line.quantity - 1)} className="h-8 w-8 text-adm-soft">
                       −
                     </button>
-                    <span className="w-6 text-center text-sm tabular-nums text-white">{line.quantity}</span>
-                    <button type="button" aria-label="Uno más" onClick={() => setQuantity(line.slug, line.quantity + 1)} className="h-8 w-8 text-[#d5d8de]">
+                    <span className="w-6 text-center text-sm tabular-nums text-adm-fg">{line.quantity}</span>
+                    <button type="button" aria-label="Uno más" onClick={() => setQuantity(line.slug, line.quantity + 1)} className="h-8 w-8 text-adm-soft">
                       +
                     </button>
                   </span>
-                  <span className="w-28 text-right text-sm tabular-nums text-white">{money(line.price * line.quantity)}</span>
+                  <span className="w-28 text-right text-sm tabular-nums text-adm-fg">{money(line.price * line.quantity)}</span>
                   <button
                     type="button"
                     onClick={() => setLines((current) => current.filter((l) => l.slug !== line.slug))}
-                    className="text-xs text-[#9a9ea7] hover:text-red-600"
+                    className="text-xs text-adm-muted hover:text-red-600"
                   >
                     Quitar
                   </button>
@@ -272,7 +272,7 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
         </section>
 
         <section className={card}>
-          <h2 className="text-base font-semibold text-white">Cliente</h2>
+          <h2 className="text-base font-semibold text-adm-fg">Cliente</h2>
           <div className="grid gap-4 sm:grid-cols-2">
             {(
               [
@@ -299,16 +299,16 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
         </section>
 
         <section className={card}>
-          <h2 className="text-base font-semibold text-white">Entrega</h2>
+          <h2 className="text-base font-semibold text-adm-fg">Entrega</h2>
           <div className="grid gap-2.5 sm:grid-cols-3">
             {DELIVERIES.map((option) => (
               <label
                 key={option.id}
-                className={`flex cursor-pointer flex-col gap-0.5 rounded-xl border px-3.5 py-3 text-sm ${delivery === option.id ? "border-brand-500/60 bg-brand-500/10 text-white" : "border-white/10 text-[#d5d8de]"}`}
+                className={`flex cursor-pointer flex-col gap-0.5 rounded-xl border px-3.5 py-3 text-sm ${delivery === option.id ? "border-brand-500/60 bg-brand-500/10 text-adm-fg" : "border-adm-fg/10 text-adm-soft"}`}
               >
                 <input type="radio" name="delivery" value={option.id} checked={delivery === option.id} onChange={() => setDelivery(option.id)} className="sr-only" />
                 {option.label}
-                <span className="text-xs text-[#80848d]">{option.hint}</span>
+                <span className="text-xs text-adm-faint">{option.hint}</span>
               </label>
             ))}
           </div>
@@ -344,12 +344,12 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
 
       <aside className="flex flex-col gap-5 lg:sticky lg:top-6 lg:self-start">
         <section className={card}>
-          <h2 className="text-base font-semibold text-white">Pago</h2>
+          <h2 className="text-base font-semibold text-adm-fg">Pago</h2>
           <div className="flex flex-col gap-2">
             {payments.map((option) => (
               <label
                 key={option.id}
-                className={`flex cursor-pointer items-center gap-2.5 rounded-xl border px-3.5 py-2.5 text-sm ${payment === option.id ? "border-brand-500/60 bg-brand-500/10 text-white" : "border-white/10 text-[#d5d8de]"}`}
+                className={`flex cursor-pointer items-center gap-2.5 rounded-xl border px-3.5 py-2.5 text-sm ${payment === option.id ? "border-brand-500/60 bg-brand-500/10 text-adm-fg" : "border-adm-fg/10 text-adm-soft"}`}
               >
                 <input type="radio" name="payment" value={option.id} checked={payment === option.id} onChange={() => setPayment(option.id)} className="accent-brand-500" />
                 {option.short}
@@ -365,11 +365,11 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
         </section>
 
         <section className={card}>
-          <div className="flex items-baseline justify-between text-sm text-[#9a9ea7]">
+          <div className="flex items-baseline justify-between text-sm text-adm-muted">
             <span>Subtotal</span>
-            <span className="tabular-nums text-white">{money(subtotal)}</span>
+            <span className="tabular-nums text-adm-fg">{money(subtotal)}</span>
           </div>
-          <p className="text-xs text-[#80848d]">El envío y el total final los calcula el sistema al guardar, con los precios y el stock del momento.</p>
+          <p className="text-xs text-adm-faint">El envío y el total final los calcula el sistema al guardar, con los precios y el stock del momento.</p>
           {error ? <p className="text-sm text-red-600">{error}</p> : null}
           <button type="submit" disabled={saving || !paymentOk} className={`${adminBtn} justify-center disabled:opacity-60`}>
             {saving ? "Cargando…" : "Cargar pedido"}

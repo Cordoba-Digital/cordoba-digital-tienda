@@ -20,7 +20,7 @@ export default async function AdminNewOrderPage() {
     <div className="flex flex-col gap-6">
       <AdminPageHeader
         eyebrow={
-          <Link href="/admin/pedidos" className="hover:text-white">
+          <Link href="/admin/pedidos" className="hover:text-adm-fg">
             Pedidos
           </Link>
         }
