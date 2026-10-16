@@ -119,13 +119,10 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
               : "Todo al día: no hay pedidos esperando."
         }
         actions={
-          <>
-            {allCount > 0 ? <AdminOrdersWipeButton /> : null}
-            <Link href="/admin/pedidos/nuevo" className={adminBtn}>
-              <span aria-hidden className="text-base leading-none">+</span>
-              Pedido manual
-            </Link>
-          </>
+          <Link href="/admin/pedidos/nuevo" className={adminBtn}>
+            <span aria-hidden className="text-base leading-none">+</span>
+            Pedido manual
+          </Link>
         }
       />
 
@@ -319,6 +316,13 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
           </div>
         </div>
       )}
+
+      {/* Lejos de las acciones de todos los días: borra todo y no se puede deshacer. */}
+      {allCount > 0 ? (
+        <div className="flex justify-end">
+          <AdminOrdersWipeButton />
+        </div>
+      ) : null}
     </div>
   );
 }
