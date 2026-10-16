@@ -7,12 +7,15 @@ import { AdminCopyButton } from "@/components/admin-copy-button";
 import { AdminOrderAndreani } from "@/components/admin-order-andreani";
 import { AdminOrderManageForm } from "@/components/admin-order-manage-form";
 import { AdminOrderNextStep } from "@/components/admin-order-next-step";
+import { AdminOrderRefunds } from "@/components/admin-order-refunds";
 import { ProductImg } from "@/components/product-img";
 import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { allowedStatuses, nextStep, statusSteps, whatsappHref } from "@/lib/admin-order-helpers";
 import { getAdminOrderDetail } from "@/lib/admin-orders";
-import { verifyAdminSessionValue } from "@/lib/admin-session";
+import { isOwnerEmail } from "@/lib/admin-access";
+import { listOrderRefunds, orderWasPaid } from "@/lib/admin-refunds";
+import { readAdminSession } from "@/lib/admin-session";
 import { andreaniConfigurado } from "@/lib/andreani";
 import { isAutomationOn } from "@/lib/automations";
 import { formatAgo, formatDateTime, money } from "@/lib/format";
@@ -44,14 +47,15 @@ function Row({ label, children }: { label: string; children: ReactNode }) {
 export default async function AdminOrderDetailPage({ params }: { params: Promise<{ code: string }> }) {
   const jar = await cookies();
   const { code } = await params;
-  if (!(await verifyAdminSessionValue(jar.get(ADMIN_COOKIE)?.value))) {
+  const session = await readAdminSession(jar.get(ADMIN_COOKIE)?.value);
+  if (!session) {
     redirect(`/admin/login?next=/admin/pedidos/${encodeURIComponent(code)}`);
   }
 
   const result = await getAdminOrderDetail(decodeURIComponent(code));
   if (!result) notFound();
   const { order, items, events } = result;
-  const notifiesCustomer = await isAutomationOn("avisarCliente");
+  const [notifiesCustomer, refunds] = await Promise.all([isAutomationOn("avisarCliente"), listOrderRefunds(order.id)]);
 
   const step = nextStep(order);
   const cancelled = isCancelled(order.status);
@@ -272,6 +276,15 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
               </Link>
             ) : null}
           </Card>
+
+          <AdminOrderRefunds
+            code={order.code}
+            total={order.total}
+            refunds={refunds.map((r) => ({ ...r, createdAt: r.createdAt.toISOString() }))}
+            paid={orderWasPaid(order.status, events.map((e) => e.toStatus))}
+            viaMp={order.paymentMethod === "mercadopago"}
+            canRefund={!session.email || isOwnerEmail(session.email)}
+          />
 
           {order.notes ? (
             <Card title="Nota del cliente">
