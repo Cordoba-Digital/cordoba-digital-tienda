@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 
 import { OrderConfirmation, type OrderSummary } from "@/components/order-confirmation";
+import { reconcileMpPayment } from "@/lib/checkout-mp-sync";
 import { formatDateTime } from "@/lib/format";
 import { getOrderByCode } from "@/lib/queries";
 import { blockedMinutes, ipFromHeaders, ORDER_LOOKUP_LIMIT, recordMiss } from "@/lib/rate-limit";
@@ -48,8 +49,25 @@ export default async function OrderPage({
   // Mismo límite que "Seguir pedido": quien prueba códigos al azar se frena.
   const ip = ipFromHeaders(await headers());
   if (await blockedMinutes(ORDER_LOOKUP_LIMIT, ip).catch(() => 0)) notFound();
-  const result = await getOrderByCode(decodeURIComponent(code)).catch(() => null);
+  let result = await getOrderByCode(decodeURIComponent(code)).catch(() => null);
   if (!result) await recordMiss(ORDER_LOOKUP_LIMIT, ip).catch(() => undefined);
+
+  // Mercado Pago vuelve acá con `payment_id`. Si el pedido sigue pendiente (el
+  // webhook todavía no llegó o no llega), se concilia en el momento contra la
+  // API de MP: el id de la URL solo dice qué pago consultar, y solo cuenta si
+  // ese pago es de este pedido y por el total exacto.
+  const returnedPaymentId = typeof query.payment_id === "string" ? query.payment_id : "";
+  if (
+    result &&
+    returnedPaymentId &&
+    result.order.paymentMethod === "mercadopago" &&
+    result.order.status === "pendiente_pago"
+  ) {
+    const outcome = await reconcileMpPayment(returnedPaymentId, { expectedCode: result.order.code }).catch(
+      () => null,
+    );
+    if (outcome === "acreditado") result = await getOrderByCode(result.order.code).catch(() => result);
+  }
 
   // Un codigo que no existe tiene que salir con 404, no con 200: la pagina se
   // mostraba bien, pero responder 200 a cualquier `/pedido/lo-que-sea` es el
