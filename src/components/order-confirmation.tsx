@@ -8,6 +8,7 @@ import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { trackPurchase } from "@/lib/analytics";
 import { money } from "@/lib/format";
+import { orderBanner } from "@/lib/order-banner";
 import { isCancelled, ORDER_STATUS_FLOW, statusIndex } from "@/lib/pricing";
 import type { TransferAccount } from "@/lib/transfer-account";
 
@@ -113,6 +114,7 @@ export function OrderConfirmation({
   }, [isNew, order]);
 
   const needsPayment = order.paymentMethod === "transferencia" && order.status === "pendiente_pago";
+  const banner = orderBanner(order);
   const awaitingMercadoPago = order.paymentMethod === "mercadopago" && order.status === "pendiente_pago";
 
   return (
@@ -122,7 +124,8 @@ export function OrderConfirmation({
           <div className="flex flex-wrap items-center gap-4">
             <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white/20 text-3xl">✓</span>
             <div>
-              <h1 className="text-2xl font-black md:text-3xl">¡Gracias {order.customerName.split(" ")[0]}! Tu pedido está confirmado</h1>
+              <h1 className="text-2xl font-black md:text-3xl">{banner.title}</h1>
+              {banner.detail ? <p className="mt-1 text-sm font-semibold text-white">{banner.detail}</p> : null}
               <p className="mt-1 text-sm text-emerald-50">
                 Guardá tu número de pedido, <strong>{order.code}</strong>: con él podés seguirlo desde acá cuando quieras.
               </p>
