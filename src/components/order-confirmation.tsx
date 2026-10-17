@@ -1,12 +1,13 @@
 "use client";
 
+import { Check, CircleCheck, Copy, CreditCard, Landmark, MessageCircle, Paperclip, Store, Truck, Wallet } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
-import { CopyButton, TransferDetails } from "@/components/transfer-details";
+import { TransferDetails } from "@/components/transfer-details";
 import { trackPurchase } from "@/lib/analytics";
 import { money } from "@/lib/format";
 import { orderBanner, orderCodeLabel } from "@/lib/order-banner";
@@ -97,30 +98,23 @@ export function OrderConfirmation({
   const banner = orderBanner(order);
   const codeLabel = orderCodeLabel(order.status);
   const awaitingMercadoPago = order.paymentMethod === "mercadopago" && order.status === "pendiente_pago";
+  // Mientras falta el pago no va aviso arriba: lo que falta ya lo dicen el
+  // estado ("Reserva creada") y la tarjeta de cómo pagar, y el aviso ámbar
+  // empujaba todo para abajo. El aviso queda para el pedido ya confirmado.
+  const showBanner = isNew && banner.tone === "confirmado";
+  const CodeHeading = showBanner ? "p" : "h1";
 
   return (
-    <div className="container-xl py-8">
-      {isNew ? (
-        <div
-          className={`mb-6 animate-rise overflow-hidden rounded-3xl p-6 md:p-8 ${
-            banner.tone === "confirmado"
-              ? "bg-gradient-to-r from-emerald-500 to-emerald-400 text-white"
-              : "border-2 border-amber-300 bg-amber-50 text-ink-900"
-          }`}
-        >
+    <div className="container-xl py-8 md:py-10">
+      {showBanner ? (
+        <div className="mb-6 animate-rise overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-600 to-emerald-500 p-6 text-white md:p-8">
           <div className="flex flex-wrap items-center gap-4">
-            <span
-              className={`grid h-14 w-14 shrink-0 place-items-center rounded-full text-3xl ${
-                banner.tone === "confirmado" ? "bg-white/20" : "bg-amber-100"
-              }`}
-              aria-hidden
-            >
-              {banner.tone === "confirmado" ? "✓" : "⏳"}
+            <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white/20" aria-hidden>
+              <CircleCheck className="h-8 w-8" strokeWidth={2.25} />
             </span>
             <div>
               <h1 className="text-2xl font-black md:text-3xl">{banner.title}</h1>
-              {banner.detail ? <p className="mt-1 text-sm font-semibold">{banner.detail}</p> : null}
-              <p className={`mt-1 text-sm ${banner.tone === "confirmado" ? "text-emerald-50" : "text-ink-600"}`}>
+              <p className="mt-1 text-sm text-emerald-50">
                 Guardá tu {codeLabel.label.toLowerCase()}, <strong>{order.code}</strong>: con él podés seguirlo desde acá cuando quieras.
               </p>
             </div>
@@ -128,60 +122,70 @@ export function OrderConfirmation({
         </div>
       ) : null}
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem]">
+      <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_22rem]">
         <div className="space-y-5">
-          <section className="card-surface p-5">
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <div>
+          <section className="card-surface p-5 md:p-6">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div className="min-w-0">
                 <p className="text-xs font-bold uppercase tracking-wide text-ink-500">{codeLabel.label}</p>
-                <p className="text-2xl font-black tracking-tight text-ink-900">{order.code}</p>
-                <p className="text-xs text-ink-500">Realizado el {order.createdAt}</p>
+                <CodeHeading className="mt-0.5 text-2xl font-black tracking-tight text-ink-900 md:text-3xl">
+                  {order.code}
+                </CodeHeading>
+                <p className="mt-1 text-xs text-ink-500">Realizado el {order.createdAt}</p>
               </div>
-              <div className="flex gap-2">
-                <CopyButton value={order.code} label="Copiar código" />
+              <div className="flex w-full gap-2 sm:w-auto">
+                <CopyCodeButton value={order.code} />
                 <Link
                   href={`/seguimiento?codigo=${order.code}`}
-                  className="rounded-lg bg-brand-700 px-3 py-1.5 text-[11px] font-bold text-white"
+                  className="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-xl bg-brand-700 px-4 text-sm font-bold text-white transition hover:bg-brand-800 sm:flex-none"
                 >
+                  <Truck className="h-4 w-4" aria-hidden />
                   Seguir pedido
                 </Link>
               </div>
             </div>
           </section>
 
-          <section className="card-surface p-5">
-            <h2 className="mb-4 text-lg font-extrabold text-ink-900">Estado del pedido</h2>
+          <section className="card-surface p-5 md:p-6">
+            <h2 className="mb-5 text-lg font-extrabold text-ink-900">Estado del pedido</h2>
             {isCancelled(order.status) ? (
               <p className="rounded-xl bg-ink-50 px-4 py-3 text-sm font-semibold text-ink-700">
                 Este pedido está cancelado: venció la reserva de 48 hs sin pago o lo cancelamos a pedido. Si ya
                 pagaste o querés retomarlo, escribinos por WhatsApp con el número de pedido.
               </p>
             ) : (
-              <ol className="space-y-4">
+              <ol>
                 {ORDER_STATUS_FLOW.map((stage, index) => {
                   const done = index <= current;
+                  const isCurrent = index === current;
+                  const last = index === ORDER_STATUS_FLOW.length - 1;
                   return (
-                    <li key={stage.id} className="flex gap-3">
+                    <li key={stage.id} className="flex gap-4" aria-current={isCurrent ? "step" : undefined}>
                       <div className="flex flex-col items-center">
                         <span
-                          className={`grid h-7 w-7 place-items-center rounded-full text-xs font-bold ${
-                            done ? "bg-emerald-700 text-white" : "bg-ink-100 text-ink-500"
-                          }`}
+                          className={`grid h-8 w-8 shrink-0 place-items-center rounded-full text-xs font-bold ${
+                            done ? "bg-emerald-700 text-white" : "border border-ink-200 bg-surface text-ink-500"
+                          } ${isCurrent ? "ring-4 ring-emerald-100" : ""}`}
                         >
-                          {done ? "✓" : index + 1}
+                          {done ? <Check className="h-4 w-4" strokeWidth={3} aria-hidden /> : index + 1}
                         </span>
-                        {index < ORDER_STATUS_FLOW.length - 1 ? (
-                          <span className={`mt-1 h-8 w-0.5 ${index < current ? "bg-emerald-400" : "bg-ink-100"}`} />
-                        ) : null}
+                        {last ? null : (
+                          <span
+                            className={`my-1 w-0.5 flex-1 rounded-full ${index < current ? "bg-emerald-500" : "bg-ink-100"}`}
+                            aria-hidden
+                          />
+                        )}
                       </div>
-                      <div className="pb-1">
-                        <p className={`text-sm font-bold ${done ? "text-ink-900" : "text-ink-500"}`}>{stage.label}</p>
-                        <p className="text-xs text-ink-500">{stage.description}</p>
-                        {index === current ? (
-                          <span className="mt-1 inline-block rounded-full bg-brand-50 px-2 py-0.5 text-[10px] font-bold text-brand-700">
-                            Estado actual
-                          </span>
-                        ) : null}
+                      <div className={`min-w-0 pt-1 ${last ? "" : "pb-6"}`}>
+                        <p className={`flex flex-wrap items-center gap-2 text-sm font-bold ${done ? "text-ink-900" : "text-ink-500"}`}>
+                          {stage.label}
+                          {isCurrent ? (
+                            <span className="rounded-full bg-brand-50 px-2 py-0.5 text-xs font-bold text-brand-700">
+                              Estado actual
+                            </span>
+                          ) : null}
+                        </p>
+                        <p className="mt-0.5 text-sm text-ink-500">{stage.description}</p>
                       </div>
                     </li>
                   );
@@ -193,23 +197,30 @@ export function OrderConfirmation({
           {awaitingMercadoPago ? <MercadoPagoPanel code={order.code} total={order.total} paymentReturn={paymentReturn} /> : null}
 
           {needsPayment ? (
-            <section className="card-surface border-2 border-amber-200 bg-amber-50/40 p-5">
-              <h2 className="text-lg font-extrabold text-ink-900">💸 Cómo completar tu pago</h2>
+            <section className="card-surface border border-amber-200 bg-amber-50/50 p-5 md:p-6">
+              <div className="flex items-start gap-3">
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-amber-100 text-amber-800" aria-hidden>
+                  <Landmark className="h-5 w-5" />
+                </span>
+                <div className="min-w-0">
+                  <h2 className="text-lg font-extrabold text-ink-900">Cómo completar tu pago</h2>
+                  {transfer ? (
+                    <p className="mt-0.5 text-sm text-ink-600">
+                      Transferí <strong>{money(order.total)}</strong> a esta cuenta y mandanos el comprobante.
+                    </p>
+                  ) : (
+                    <p className="mt-0.5 text-sm text-ink-600">
+                      Escribinos por WhatsApp con tu código de reserva y te pasamos los datos para transferir{" "}
+                      <strong>{money(order.total)}</strong>.
+                    </p>
+                  )}
+                </div>
+              </div>
               {transfer ? (
-                <>
-                  <p className="mt-1 text-sm text-ink-600">
-                    Transferí <strong>{money(order.total)}</strong> a esta cuenta.
-                  </p>
-                  <div className="mt-4">
-                    <TransferDetails account={transfer} amount={order.total} />
-                  </div>
-                </>
-              ) : (
-                <p className="mt-1 text-sm text-ink-600">
-                  Escribinos por WhatsApp con tu código de reserva y te pasamos los datos para transferir{" "}
-                  <strong>{money(order.total)}</strong>.
-                </p>
-              )}
+                <div className="mt-4">
+                  <TransferDetails account={transfer} amount={order.total} />
+                </div>
+              ) : null}
               <a
                 href={`https://wa.me/5493516777774?text=${encodeURIComponent(
                   transfer
@@ -218,45 +229,53 @@ export function OrderConfirmation({
                 )}`}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-4 inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-emerald-600"
+                className="mt-4 inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-emerald-700 px-5 text-sm font-bold text-white transition hover:bg-emerald-600 sm:w-auto"
               >
-                {transfer ? "📎 Enviar comprobante por WhatsApp" : "Pedir los datos por WhatsApp"}
+                {transfer ? <Paperclip className="h-4 w-4" aria-hidden /> : <MessageCircle className="h-4 w-4" aria-hidden />}
+                {transfer ? "Enviar comprobante por WhatsApp" : "Pedir los datos por WhatsApp"}
               </a>
             </section>
           ) : null}
 
-          <section className="card-surface p-5">
+          <section className="card-surface p-5 md:p-6">
             <h2 className="mb-4 text-lg font-extrabold text-ink-900">Productos</h2>
-            <div className="space-y-3">
+            <ul className="divide-y divide-ink-100">
               {order.items.map((item) => (
-                <div key={item.productSlug} className="flex items-center gap-3">
-                  <ProductImg
-                    src={item.image}
-                    alt=""
-                    sizes="56px"
-                    width={56}
-                    height={56}
-                    className="h-14 w-14 rounded-lg object-cover"
-                  />
+                <li key={item.productSlug} className="flex items-center gap-4 py-3 first:pt-0 last:pb-0">
+                  <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl border border-ink-100 bg-white">
+                    <ProductImg
+                      src={item.image}
+                      alt=""
+                      sizes="64px"
+                      width={64}
+                      height={64}
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
                   <div className="min-w-0 flex-1">
-                    <Link href={`/producto/${item.productSlug}`} className="line-clamp-1 text-sm font-semibold text-ink-800 hover:text-brand-700">
+                    <Link href={`/producto/${item.productSlug}`} className="line-clamp-2 text-sm font-semibold text-ink-800 hover:text-brand-700">
                       {item.name}
                     </Link>
-                    <p className="text-xs text-ink-500">
-                      {item.quantity} x {money(item.unitPrice)}
+                    <p className="mt-0.5 text-xs text-ink-500 tabular-nums">
+                      {item.quantity} × {money(item.unitPrice)}
                     </p>
                   </div>
-                  <span className="text-sm font-bold text-ink-900">{money(item.unitPrice * item.quantity)}</span>
-                </div>
+                  <span className="shrink-0 whitespace-nowrap text-sm font-bold text-ink-900 tabular-nums">
+                    {money(item.unitPrice * item.quantity)}
+                  </span>
+                </li>
               ))}
-            </div>
+            </ul>
           </section>
 
-          <section className="grid gap-4 md:grid-cols-2">
-            <div className="card-surface p-5">
-              <h3 className="text-sm font-extrabold uppercase tracking-wide text-ink-400">Entrega</h3>
-              <p className="mt-2 text-sm font-bold text-ink-900">{order.deliveryLabel}</p>
-              <p className="text-xs text-emerald-700">{order.deliveryEta}</p>
+          <section className="grid gap-5 md:grid-cols-2">
+            <div className="card-surface p-5 md:p-6">
+              <h3 className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wide text-ink-500">
+                {order.address ? <Truck className="h-4 w-4" aria-hidden /> : <Store className="h-4 w-4" aria-hidden />}
+                Entrega
+              </h3>
+              <p className="mt-3 text-sm font-bold text-ink-900">{order.deliveryLabel}</p>
+              <p className="text-xs font-semibold text-emerald-700">{order.deliveryEta}</p>
               {order.address?.sucursal ? (
                 <p className="mt-2 text-sm text-ink-600">
                   Retirás en <strong>{order.address.sucursal.nombre}</strong>
@@ -289,25 +308,31 @@ export function OrderConfirmation({
               ) : (
                 <p className="mt-2 text-sm text-ink-600">27 de Abril 180, Córdoba Capital</p>
               )}
-              {order.notes ? <p className="mt-2 text-xs italic text-ink-400">“{order.notes}”</p> : null}
+              {order.notes ? <p className="mt-2 text-xs italic text-ink-500">“{order.notes}”</p> : null}
             </div>
-            <div className="card-surface p-5">
-              <h3 className="text-sm font-extrabold uppercase tracking-wide text-ink-400">Pago</h3>
-              <p className="mt-2 text-sm font-bold text-ink-900">{order.paymentLabel}</p>
+            <div className="card-surface p-5 md:p-6">
+              <h3 className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wide text-ink-500">
+                <Wallet className="h-4 w-4" aria-hidden />
+                Pago
+              </h3>
+              <p className="mt-3 text-sm font-bold text-ink-900">{order.paymentLabel}</p>
               {order.installments > 1 ? (
                 <p className="text-xs text-ink-500">
                   {order.installments} cuotas de {money(Math.round(order.total / order.installments))}
                 </p>
               ) : null}
-              <p className="mt-2 text-xs text-ink-500">Facturamos a nombre de {order.customerName}.</p>
+              <p className="mt-2 text-sm text-ink-600">Facturamos a nombre de {order.customerName}.</p>
             </div>
           </section>
         </div>
 
-        <aside className="space-y-4">
-          <div className="card-surface sticky top-36 space-y-3 p-5">
+        {/* El header es sticky y mide 148 px en escritorio: con `top-36` el
+            resumen se metía abajo. `top-47` (188 px) es donde arranca la
+            tarjeta, así que al bajar queda quieta con el mismo aire de arriba. */}
+        <aside className="lg:sticky lg:top-47">
+          <div className="card-surface space-y-4 p-5 md:p-6">
             <h2 className="text-lg font-extrabold text-ink-900">Resumen</h2>
-            <dl className="space-y-2 text-sm">
+            <dl className="space-y-2.5 text-sm tabular-nums">
               <div className="flex justify-between text-ink-600">
                 <dt>Subtotal</dt>
                 <dd>{money(order.subtotal)}</dd>
@@ -332,13 +357,13 @@ export function OrderConfirmation({
                 <dd>{order.shippingCost === 0 ? "Gratis" : money(order.shippingCost)}</dd>
               </div>
             </dl>
-            <div className="flex items-end justify-between border-t border-ink-100 pt-3">
+            <div className="flex items-baseline justify-between border-t border-ink-100 pt-4">
               <span className="text-sm font-semibold text-ink-600">Total</span>
-              <span className="text-2xl font-black text-ink-900">{money(order.total)}</span>
+              <span className="text-2xl font-black text-ink-900 tabular-nums">{money(order.total)}</span>
             </div>
             <Link
               href="/productos"
-              className="block w-full rounded-xl bg-brand-700 px-4 py-3 text-center text-sm font-bold text-white transition hover:bg-brand-800"
+              className="flex h-12 w-full items-center justify-center rounded-xl bg-brand-700 px-4 text-sm font-bold text-white transition hover:bg-brand-800"
             >
               Seguir comprando
             </Link>
@@ -346,17 +371,41 @@ export function OrderConfirmation({
               href="https://wa.me/5493516777774"
               target="_blank"
               rel="noreferrer"
-              className="block w-full rounded-xl border border-ink-200 px-4 py-2.5 text-center text-xs font-bold text-ink-700 transition hover:border-emerald-300 hover:text-emerald-700"
+              className="flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-ink-200 px-4 text-sm font-bold text-ink-700 transition hover:border-emerald-300 hover:text-emerald-700"
             >
+              <MessageCircle className="h-4 w-4" aria-hidden />
               ¿Necesitás ayuda? Escribinos
             </a>
-            <p className="text-center text-[11px] text-ink-500">
-              Guardá el código <strong>{order.code}</strong> para consultar el estado cuando quieras.
+            <p className="text-center text-xs leading-relaxed text-ink-500">
+              Guardá el código <strong className="text-ink-700">{order.code}</strong> para consultar el estado cuando quieras.
             </p>
           </div>
         </aside>
       </div>
     </div>
+  );
+}
+
+/** Copiar el código, del mismo alto que "Seguir pedido" que va al lado. */
+function CopyCodeButton({ value }: { value: string }) {
+  const [copied, setCopied] = useState(false);
+  return (
+    <button
+      type="button"
+      onClick={async () => {
+        try {
+          await navigator.clipboard.writeText(value);
+          setCopied(true);
+          window.setTimeout(() => setCopied(false), 1800);
+        } catch {
+          /* sin portapapeles: no hacemos nada */
+        }
+      }}
+      className="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-xl border border-ink-200 bg-surface px-4 text-sm font-bold text-ink-700 transition hover:border-brand-300 hover:text-brand-700 sm:flex-none"
+    >
+      {copied ? <Check className="h-4 w-4 text-emerald-700" aria-hidden /> : <Copy className="h-4 w-4" aria-hidden />}
+      <span aria-live="polite">{copied ? "¡Copiado!" : "Copiar código"}</span>
+    </button>
   );
 }
 
@@ -405,25 +454,33 @@ function MercadoPagoPanel({ code, total, paymentReturn }: { code: string; total:
   };
 
   return (
-    <section className="card-surface border-2 border-sky-200 bg-sky-50/40 p-5">
-      <h2 className="text-lg font-extrabold text-ink-900">
-        {confirming ? "Estamos confirmando tu pago" : paymentReturn === "pendiente" ? "Tu pago está pendiente" : "Falta el pago"}
-      </h2>
-      <p className="mt-1 text-sm text-ink-600">
-        {confirming
-          ? "Mercado Pago nos está avisando del cobro. En unos segundos el pedido pasa a “Pago acreditado”."
-          : paymentReturn === "pendiente"
-            ? "Mercado Pago todavía no acreditó el pago (por ejemplo, si elegiste pagar en efectivo). Cuando se acredite, el pedido se actualiza solo."
-            : paymentReturn === "fallo"
-              ? "El pago no se completó. Podés intentarlo de nuevo con otra tarjeta o medio."
-              : `Pagá ${money(total)} con Mercado Pago para confirmar el pedido.`}
-      </p>
+    <section className="card-surface border border-sky-200 bg-sky-50/50 p-5 md:p-6">
+      <div className="flex items-start gap-3">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-sky-100 text-sky-800" aria-hidden>
+          <CreditCard className="h-5 w-5" />
+        </span>
+        <div className="min-w-0">
+          <h2 className="text-lg font-extrabold text-ink-900">
+            {confirming ? "Estamos confirmando tu pago" : paymentReturn === "pendiente" ? "Tu pago está pendiente" : "Falta el pago"}
+          </h2>
+          <p className="mt-0.5 text-sm text-ink-600">
+            {confirming
+              ? "Mercado Pago nos está avisando del cobro. En unos segundos el pedido pasa a “Pago acreditado”."
+              : paymentReturn === "pendiente"
+                ? "Mercado Pago todavía no acreditó el pago (por ejemplo, si elegiste pagar en efectivo). Cuando se acredite, el pedido se actualiza solo."
+                : paymentReturn === "fallo"
+                  ? "El pago no se completó. Podés intentarlo de nuevo con otra tarjeta o medio."
+                  : `Pagá ${money(total)} con Mercado Pago para confirmar el pedido.`}
+          </p>
+        </div>
+      </div>
       {confirming ? null : (
         <button
           type="button"
           onClick={pay}
           disabled={loading}
-          className="mt-4 rounded-xl bg-sky-600 px-4 py-2.5 text-sm font-bold text-white disabled:opacity-60"
+          aria-busy={loading}
+          className="mt-4 inline-flex h-11 w-full items-center justify-center rounded-xl bg-sky-700 px-5 text-sm font-bold text-white transition hover:bg-sky-800 disabled:opacity-60 sm:w-auto"
         >
           {loading ? "Abriendo Mercado Pago…" : `Pagar ${money(total)} con Mercado Pago`}
         </button>
