@@ -6,9 +6,10 @@ import { useEffect, useState } from "react";
 
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
+import { CopyButton, TransferDetails } from "@/components/transfer-details";
 import { trackPurchase } from "@/lib/analytics";
 import { money } from "@/lib/format";
-import { orderBanner } from "@/lib/order-banner";
+import { orderBanner, orderCodeLabel } from "@/lib/order-banner";
 import { isCancelled, ORDER_STATUS_FLOW, statusIndex } from "@/lib/pricing";
 import type { TransferAccount } from "@/lib/transfer-account";
 
@@ -45,27 +46,6 @@ export type OrderSummary = {
   createdAt: string;
   items: { name: string; image: string; unitPrice: number; quantity: number; productSlug: string }[];
 };
-
-function CopyButton({ value, label }: { value: string; label?: string }) {
-  const [copied, setCopied] = useState(false);
-  return (
-    <button
-      type="button"
-      onClick={async () => {
-        try {
-          await navigator.clipboard.writeText(value);
-          setCopied(true);
-          window.setTimeout(() => setCopied(false), 1800);
-        } catch {
-          /* ignore */
-        }
-      }}
-      className="rounded-lg border border-ink-200 bg-surface px-2.5 py-1 text-[11px] font-bold text-ink-600 transition hover:border-brand-300 hover:text-brand-700"
-    >
-      {copied ? "¡Copiado!" : (label ?? "Copiar")}
-    </button>
-  );
-}
 
 export function OrderConfirmation({
   order,
@@ -115,6 +95,7 @@ export function OrderConfirmation({
 
   const needsPayment = order.paymentMethod === "transferencia" && order.status === "pendiente_pago";
   const banner = orderBanner(order);
+  const codeLabel = orderCodeLabel(order.status);
   const awaitingMercadoPago = order.paymentMethod === "mercadopago" && order.status === "pendiente_pago";
 
   return (
@@ -140,7 +121,7 @@ export function OrderConfirmation({
               <h1 className="text-2xl font-black md:text-3xl">{banner.title}</h1>
               {banner.detail ? <p className="mt-1 text-sm font-semibold">{banner.detail}</p> : null}
               <p className={`mt-1 text-sm ${banner.tone === "confirmado" ? "text-emerald-50" : "text-ink-600"}`}>
-                Guardá tu número de pedido, <strong>{order.code}</strong>: con él podés seguirlo desde acá cuando quieras.
+                Guardá tu {codeLabel.label.toLowerCase()}, <strong>{order.code}</strong>: con él podés seguirlo desde acá cuando quieras.
               </p>
             </div>
           </div>
@@ -152,7 +133,7 @@ export function OrderConfirmation({
           <section className="card-surface p-5">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
-                <p className="text-xs font-bold uppercase tracking-wide text-ink-500">Número de pedido</p>
+                <p className="text-xs font-bold uppercase tracking-wide text-ink-500">{codeLabel.label}</p>
                 <p className="text-2xl font-black tracking-tight text-ink-900">{order.code}</p>
                 <p className="text-xs text-ink-500">Realizado el {order.createdAt}</p>
               </div>
@@ -220,44 +201,12 @@ export function OrderConfirmation({
                     Transferí <strong>{money(order.total)}</strong> a esta cuenta.
                   </p>
                   <div className="mt-4">
-                    <div className="rounded-xl border border-ink-100 bg-surface p-4">
-                      <p className="text-xs font-bold uppercase tracking-wide text-ink-500">Transferencia bancaria</p>
-                      <dl className="mt-2 space-y-1.5 text-sm">
-                        {transfer.number ? (
-                          <div className="flex items-center justify-between gap-2">
-                            <dt className="text-ink-500">{transfer.numberLabel}</dt>
-                            <dd className="flex items-center gap-2 font-semibold text-ink-900">
-                              {transfer.number}
-                              <CopyButton value={transfer.number} />
-                            </dd>
-                          </div>
-                        ) : null}
-                        {transfer.alias ? (
-                          <div className="flex items-center justify-between gap-2">
-                            <dt className="text-ink-500">Alias</dt>
-                            <dd className="flex items-center gap-2 font-semibold text-ink-900">
-                              {transfer.alias}
-                              <CopyButton value={transfer.alias} />
-                            </dd>
-                          </div>
-                        ) : null}
-                        <div className="flex justify-between gap-2">
-                          <dt className="text-ink-500">Titular</dt>
-                          <dd className="text-right font-semibold text-ink-900">{transfer.holder}</dd>
-                        </div>
-                        {transfer.cuit ? (
-                          <div className="flex justify-between">
-                            <dt className="text-ink-500">CUIT</dt>
-                            <dd className="font-semibold text-ink-900">{transfer.cuit}</dd>
-                          </div>
-                        ) : null}
-                      </dl>
-                    </div>
+                    <TransferDetails account={transfer} amount={order.total} />
                   </div>
                 </>
               ) : (
                 <p className="mt-1 text-sm text-ink-600">
-                  Escribinos por WhatsApp con el número de pedido y te pasamos los datos para transferir{" "}
+                  Escribinos por WhatsApp con tu código de reserva y te pasamos los datos para transferir{" "}
                   <strong>{money(order.total)}</strong>.
                 </p>
               )}

@@ -45,7 +45,14 @@ before(async () => {
   await seedProduct("auriculares-prueba", PRECIO, 5);
 
   servidor = spawn("node_modules/.bin/next", ["start", "-p", String(PUERTO)], {
-    env: { ...process.env, MP_ACCESS_TOKEN: "", NEXT_TELEMETRY_DISABLED: "1" },
+    env: {
+      ...process.env,
+      MP_ACCESS_TOKEN: "",
+      NEXT_TELEMETRY_DISABLED: "1",
+      TRANSFER_CBU: "0000003100012345678901",
+      TRANSFER_ALIAS: "tienda.prueba.cd",
+      TRANSFER_TITULAR: "Titular de prueba",
+    },
     stdio: ["ignore", "pipe", "pipe"],
   });
   servidor.stdout?.on("data", (d) => (salidaServidor += d));
@@ -82,6 +89,9 @@ test("un cliente compra desde la ficha y el pedido queda en la base", async () =
   await page.getByLabel("DNI o CUIT").fill("30123456");
   await page.getByRole("button", { name: /Retiro en el local/ }).click();
   await page.getByRole("button", { name: /Transferencia bancaria/ }).click();
+  // Los datos para transferir se ven antes de confirmar, sin pedirlos por WhatsApp.
+  await page.getByText("Datos para transferir").waitFor();
+  await page.getByText("tienda.prueba.cd").waitFor();
   await page.getByRole("checkbox", { name: /Acepto los términos/ }).check();
   await page.getByRole("button", { name: /^Confirmar pedido/ }).click();
 
