@@ -14,7 +14,7 @@ type OrderForEmail = Pick<
 
 /**
  * El email que recibe el cliente cuando su pedido pasa a `status`, o null si
- * ese estado no avisa ("Pedido recibido" ya tiene su página de confirmación).
+ * ese estado no avisa ("Reserva creada" ya tiene su página de confirmación).
  * `note` es la nota del cambio: distingue un pedido vencido de uno cancelado a mano.
  */
 export function orderStatusEmail(

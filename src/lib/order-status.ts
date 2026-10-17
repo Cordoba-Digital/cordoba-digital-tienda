@@ -131,7 +131,7 @@ export async function applyOrderStatus(
 }
 
 /**
- * Cancela los pedidos que siguen en "Pedido recibido" pasadas las horas de
+ * Cancela los pedidos que siguen en "Reserva creada" pasadas las horas de
  * reserva y devuelve su stock. Corre desde el cron diario y al abrir el panel,
  * así no depende de que el cron esté activo. No hace nada si el interruptor
  * "Vencer pedidos sin pago" está apagado. Devuelve cuántos venció.

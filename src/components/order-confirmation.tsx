@@ -8,7 +8,7 @@ import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { trackPurchase } from "@/lib/analytics";
 import { money } from "@/lib/format";
-import { orderBanner } from "@/lib/order-banner";
+import { orderBanner, orderCodeLabel } from "@/lib/order-banner";
 import { isCancelled, ORDER_STATUS_FLOW, statusIndex } from "@/lib/pricing";
 import type { TransferAccount } from "@/lib/transfer-account";
 
@@ -115,6 +115,7 @@ export function OrderConfirmation({
 
   const needsPayment = order.paymentMethod === "transferencia" && order.status === "pendiente_pago";
   const banner = orderBanner(order);
+  const codeLabel = orderCodeLabel(order.status);
   const awaitingMercadoPago = order.paymentMethod === "mercadopago" && order.status === "pendiente_pago";
 
   return (
@@ -140,7 +141,7 @@ export function OrderConfirmation({
               <h1 className="text-2xl font-black md:text-3xl">{banner.title}</h1>
               {banner.detail ? <p className="mt-1 text-sm font-semibold">{banner.detail}</p> : null}
               <p className={`mt-1 text-sm ${banner.tone === "confirmado" ? "text-emerald-50" : "text-ink-600"}`}>
-                Guardá tu número de pedido, <strong>{order.code}</strong>: con él podés seguirlo desde acá cuando quieras.
+                Guardá tu {codeLabel.label.toLowerCase()}, <strong>{order.code}</strong>: con él podés seguirlo desde acá cuando quieras.
               </p>
             </div>
           </div>
@@ -152,7 +153,7 @@ export function OrderConfirmation({
           <section className="card-surface p-5">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
-                <p className="text-xs font-bold uppercase tracking-wide text-ink-500">Número de pedido</p>
+                <p className="text-xs font-bold uppercase tracking-wide text-ink-500">{codeLabel.label}</p>
                 <p className="text-2xl font-black tracking-tight text-ink-900">{order.code}</p>
                 <p className="text-xs text-ink-500">Realizado el {order.createdAt}</p>
               </div>

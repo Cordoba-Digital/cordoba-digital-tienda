@@ -4,7 +4,7 @@ import { db } from "@/db";
 import { orderItems, orders, products } from "@/db/schema";
 
 /**
- * Estados que cuentan como venta: el pago ya se acreditó. "Pedido recibido"
+ * Estados que cuentan como venta: el pago ya se acreditó. "Reserva creada"
  * (`pendiente_pago`) y "Cancelado" quedan afuera porque la plata no entró.
  */
 export const PAID_STATUSES = ["pago_confirmado", "preparando", "enviado", "entregado"];

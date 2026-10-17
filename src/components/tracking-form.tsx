@@ -6,6 +6,7 @@ import { useCallback, useEffect, useState } from "react";
 
 import { Spinner } from "@/components/ui";
 import { money } from "@/lib/format";
+import { orderCodeLabel } from "@/lib/order-banner";
 import { isCancelled, ORDER_STATUS_FLOW, statusIndex, statusLabel } from "@/lib/pricing";
 
 type TrackedOrder = {
@@ -109,7 +110,7 @@ export function TrackingForm() {
         <div className="card-surface animate-rise p-5">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-ink-100 pb-4">
             <div>
-              <p className="text-xs font-bold uppercase tracking-wide text-ink-500">Pedido {order.code}</p>
+              <p className="text-xs font-bold uppercase tracking-wide text-ink-500">{orderCodeLabel(order.status).noun} {order.code}</p>
               <p className="text-lg font-extrabold text-ink-900">{statusLabel(order.status)}</p>
               <p className="text-xs text-ink-500">
                 {order.deliveryLabel} · {order.deliveryEta}

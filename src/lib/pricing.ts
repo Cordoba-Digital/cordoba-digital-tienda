@@ -128,7 +128,7 @@ export function computeTotals(input: {
 }
 
 export const ORDER_STATUS_FLOW = [
-  { id: "pendiente_pago", label: "Pedido recibido", description: "Reservamos tu stock por 48 hs." },
+  { id: "pendiente_pago", label: "Reserva creada", description: "Te reservamos el stock 48 hs mientras se acredita el pago." },
   { id: "pago_confirmado", label: "Pago acreditado", description: "Verificamos el pago y emitimos la factura." },
   { id: "preparando", label: "Preparando el pedido", description: "Controlamos y embalamos tu producto." },
   { id: "enviado", label: "En camino / Listo para retirar", description: "Te enviamos el código de seguimiento." },
@@ -155,5 +155,5 @@ export function statusIndex(status: string): number {
 }
 
 export function statusLabel(status: string): string {
-  return ADMIN_ORDER_STATUSES.find((s) => s.id === status)?.label ?? "Pedido recibido";
+  return ADMIN_ORDER_STATUSES.find((s) => s.id === status)?.label ?? "Reserva creada";
 }

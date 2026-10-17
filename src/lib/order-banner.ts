@@ -28,3 +28,14 @@ export function orderBanner(order: { customerName: string; status: string; payme
   }
   return { tone: "pendiente", title: "Falta el pago para confirmar tu pedido", detail };
 }
+
+/**
+ * Cómo se llama el código mientras falta el pago: sin plata acreditada no hay
+ * pedido confirmado, hay una reserva. El código es el mismo (sirve de
+ * referencia para transferir y para seguirlo); cambia solo el nombre.
+ */
+export function orderCodeLabel(status: string): { label: string; noun: string } {
+  return status === "pendiente_pago"
+    ? { label: "Código de reserva", noun: "Reserva" }
+    : { label: "Número de pedido", noun: "Pedido" };
+}

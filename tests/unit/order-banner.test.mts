@@ -9,7 +9,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { orderBanner } from "../../src/lib/order-banner";
+import { orderBanner, orderCodeLabel } from "../../src/lib/order-banner";
 
 const PENDIENTE = "Falta el pago para confirmar tu pedido";
 
@@ -47,4 +47,10 @@ test("sin nombre no queda un espacio suelto", () => {
     orderBanner({ customerName: " ", status: "pago_confirmado", paymentMethod: "mercadopago" }).title,
     "¡Gracias! Tu pedido está confirmado",
   );
+});
+
+test("sin pago el código se presenta como reserva, con pago como pedido", () => {
+  assert.deepEqual(orderCodeLabel("pendiente_pago"), { label: "Código de reserva", noun: "Reserva" });
+  assert.deepEqual(orderCodeLabel("pago_confirmado"), { label: "Número de pedido", noun: "Pedido" });
+  assert.deepEqual(orderCodeLabel("entregado"), { label: "Número de pedido", noun: "Pedido" });
 });
