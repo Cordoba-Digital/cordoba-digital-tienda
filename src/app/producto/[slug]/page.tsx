@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { ProductCard } from "@/components/product-card";
+import { ProductRow } from "@/components/product-card";
 import { RefreshCw, Shield, MessageCircle } from "lucide-react";
 import {
   BuyBox,
@@ -149,7 +149,7 @@ export default async function ProductPage({ params }: { params: Params }) {
   if (!product) notFound();
 
   const [related, productReviews, breadcrumbs, ratingStats] = await Promise.all([
-    getRelatedProducts(product.slug, product.categorySlug, 4),
+    getRelatedProducts(product),
     getReviewsForProduct(product.slug),
     getProductBreadcrumbs(product.slug),
     getVerifiedRatingStats(product.slug),
@@ -244,7 +244,7 @@ export default async function ProductPage({ params }: { params: Params }) {
   }
 
   return (
-    <div className="container-xl py-6 pb-28 lg:pb-6 lg:pt-4">
+    <div className="ficha-tarjetas container-xl py-6 pb-28 lg:pb-6 lg:pt-4">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -394,18 +394,13 @@ export default async function ProductPage({ params }: { params: Params }) {
 
       {related.length ? (
         <section className="mt-14">
-          <h2 className="mb-5 text-xl font-extrabold tracking-tight text-ink-900">
-            Quienes vieron esto también compraron
-          </h2>
-          <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-            {related.map((item) => (
-              <ProductCard key={item.slug} product={toView(item)} />
-            ))}
-          </div>
+          <h2 className="mb-5 text-xl font-extrabold tracking-tight text-ink-900">También te puede interesar</h2>
+          {/* Carrusel a mano: no avanza solo. Flechas en escritorio, deslizar en el celular. */}
+          <ProductRow products={related.map(toView)} label="las recomendaciones" />
         </section>
       ) : null}
 
-      <section className="mt-14 grid gap-4 rounded-3xl bg-surface p-6 md:grid-cols-3">
+      <section className="mt-14 grid gap-4 rounded-2xl bg-surface p-6 md:grid-cols-3">
         {[
           { icon: <Shield size={24} />, title: "Garantía oficial", text: `${product.warrantyMonths} meses cubiertos por el fabricante y gestionados por nosotros.` },
           { icon: <RefreshCw size={24} />, title: "Cambios sin drama", text: "Tenés 10 días corridos para cambiar el producto si no era lo que esperabas." },

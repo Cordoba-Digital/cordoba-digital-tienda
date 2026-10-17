@@ -19,7 +19,7 @@ viejo. El cliente está en `src/lib/andreani.ts`.
 
 | Dónde | Qué |
 | --- | --- |
-| Checkout y ficha de producto | Cotiza con el peso y las medidas de cada producto. Si algún producto no tiene medidas, o Andreani no responde, usa la tarifa fija. |
+| Checkout | Cotiza con el peso y las medidas de cada producto. Si algún producto no tiene medidas, o Andreani no responde, usa la tarifa fija. |
 | Checkout, "Andreani (sucursal)" | El cliente elige la sucursal de retiro de la lista de Andreani para su CP. |
 | Panel, detalle del pedido | "Crear envío en Andreani" da de alta el envío. Se paga en el portal de PyMEs; recién ahí aparece el número de seguimiento. "Actualizar seguimiento" lo trae y "Descargar etiqueta" baja el PDF. |
 | Cron diario (`/api/cron/vencer-pedidos`) | Trae seguimiento y estado de los envíos abiertos. Si Andreani dice "entregado", el pedido pasa a Entregado. |

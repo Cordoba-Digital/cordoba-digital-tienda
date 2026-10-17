@@ -540,12 +540,31 @@ export async function getProductsBySlugs(slugs: string[]) {
   return db.select().from(products).where(inArray(products.slug, slugs));
 }
 
-export async function getRelatedProducts(slug: string, categorySlug: string, limit = 4) {
+/** Tope de recomendaciones en la ficha: alcanza para tres vueltas de flecha sin volverse un catálogo. */
+export const MAX_RECOMENDADOS = 12;
+
+/**
+ * Recomendaciones para la ficha: productos de la misma categoría, primero los
+ * que tienen stock, después los de la misma marca y, entre esos, los de precio
+ * más parecido. Así un iPhone 16 muestra primero otros iPhone de rango similar
+ * y no el más vendido de la categoría a cualquier precio.
+ */
+export async function getRelatedProducts(
+  product: { slug: string; categorySlug: string; brand: string; price: number },
+  limit = MAX_RECOMENDADOS,
+) {
+  // Una marca de relleno ("General") no dice nada del producto: no se prioriza.
+  const mismaMarca = esMarcaDeRelleno(product.brand) ? sql`0` : sql`(${products.brand} = ${product.brand})::int`;
   return db
     .select()
     .from(products)
-    .where(and(eq(products.categorySlug, categorySlug), ne(products.slug, slug)))
-    .orderBy(desc(products.soldCount))
+    .where(and(eq(products.categorySlug, product.categorySlug), ne(products.slug, product.slug)))
+    .orderBy(
+      desc(sql`(${products.stock} > 0)::int`),
+      desc(mismaMarca),
+      asc(sql`abs(${products.price} - ${product.price})`),
+      desc(products.soldCount),
+    )
     .limit(limit);
 }
 
