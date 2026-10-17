@@ -120,13 +120,26 @@ export function OrderConfirmation({
   return (
     <div className="container-xl py-8">
       {isNew ? (
-        <div className="mb-6 animate-rise overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-500 to-emerald-400 p-6 text-white md:p-8">
+        <div
+          className={`mb-6 animate-rise overflow-hidden rounded-3xl p-6 md:p-8 ${
+            banner.tone === "confirmado"
+              ? "bg-gradient-to-r from-emerald-500 to-emerald-400 text-white"
+              : "border-2 border-amber-300 bg-amber-50 text-ink-900"
+          }`}
+        >
           <div className="flex flex-wrap items-center gap-4">
-            <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white/20 text-3xl">✓</span>
+            <span
+              className={`grid h-14 w-14 shrink-0 place-items-center rounded-full text-3xl ${
+                banner.tone === "confirmado" ? "bg-white/20" : "bg-amber-100"
+              }`}
+              aria-hidden
+            >
+              {banner.tone === "confirmado" ? "✓" : "⏳"}
+            </span>
             <div>
               <h1 className="text-2xl font-black md:text-3xl">{banner.title}</h1>
-              {banner.detail ? <p className="mt-1 text-sm font-semibold text-white">{banner.detail}</p> : null}
-              <p className="mt-1 text-sm text-emerald-50">
+              {banner.detail ? <p className="mt-1 text-sm font-semibold">{banner.detail}</p> : null}
+              <p className={`mt-1 text-sm ${banner.tone === "confirmado" ? "text-emerald-50" : "text-ink-600"}`}>
                 Guardá tu número de pedido, <strong>{order.code}</strong>: con él podés seguirlo desde acá cuando quieras.
               </p>
             </div>
