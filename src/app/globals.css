@@ -461,6 +461,20 @@ input[type="number"]::-webkit-inner-spin-button {
   --radius-3xl: 1.5rem;
 }
 
+/*
+ * Ficha de producto: esquinas casi rectas (2 a 4px) en tarjetas, botones,
+ * campos y etiquetas. Va en el contenedor de la página, así que no toca el
+ * header ni el footer. Los círculos (`rounded-full`) siguen redondos. Si gusta,
+ * estos valores pasan a `@theme` para toda la tienda.
+ */
+@utility ficha-rectas {
+  --radius-md: 2px;
+  --radius-lg: 2px;
+  --radius-xl: 3px;
+  --radius-2xl: 4px;
+  --radius-3xl: 4px;
+}
+
 /* Tarjetas del admin: borde fino y esquinas apenas redondeadas. */
 @utility admin-card {
   background-color: var(--color-surface);

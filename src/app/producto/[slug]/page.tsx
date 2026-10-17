@@ -244,7 +244,7 @@ export default async function ProductPage({ params }: { params: Params }) {
   }
 
   return (
-    <div className="container-xl py-6 pb-28 lg:pb-6 lg:pt-4">
+    <div className="ficha-rectas container-xl py-6 pb-28 lg:pb-6 lg:pt-4">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
