@@ -805,7 +805,7 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
                           <span className="flex items-center justify-between gap-2 text-sm font-extrabold text-ink-900">
                             {method.short}
                             {method.perk ? (
-                              <span className="rounded-lg bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
+                              <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
                                 {method.perk}
                               </span>
                             ) : null}

@@ -41,10 +41,10 @@ export default async function AdminLayout({ children }: { children: ReactNode })
   const session = await readAdminSession(jar.get(ADMIN_COOKIE)?.value);
   const tema = jar.get(ADMIN_THEME_COOKIE)?.value === "oscuro" ? "oscuro" : "claro";
   if (!session) {
-    return <div data-tema={tema} className={`${theme} admin-shell admin-radios grid min-h-dvh place-items-center px-4 py-10`}>{children}</div>;
+    return <div data-tema={tema} className={`${theme} admin-shell grid min-h-dvh place-items-center px-4 py-10`}>{children}</div>;
   }
   return (
-    <div data-tema={tema} className={`${theme} admin-radios`}>
+    <div data-tema={tema} className={theme}>
       <AdminFrame
         badges={{
           "/admin/pedidos": await countPendingOrders(),

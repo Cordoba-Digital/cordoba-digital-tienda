@@ -244,7 +244,7 @@ export default async function ProductPage({ params }: { params: Params }) {
   }
 
   return (
-    <div className="ficha-rectas container-xl py-6 pb-28 lg:pb-6 lg:pt-4">
+    <div className="ficha-tarjetas container-xl py-6 pb-28 lg:pb-6 lg:pt-4">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -400,7 +400,7 @@ export default async function ProductPage({ params }: { params: Params }) {
         </section>
       ) : null}
 
-      <section className="mt-14 grid gap-4 rounded-3xl bg-surface p-6 md:grid-cols-3">
+      <section className="mt-14 grid gap-4 rounded-2xl bg-surface p-6 md:grid-cols-3">
         {[
           { icon: <Shield size={24} />, title: "Garantía oficial", text: `${product.warrantyMonths} meses cubiertos por el fabricante y gestionados por nosotros.` },
           { icon: <RefreshCw size={24} />, title: "Cambios sin drama", text: "Tenés 10 días corridos para cambiar el producto si no era lo que esperabas." },

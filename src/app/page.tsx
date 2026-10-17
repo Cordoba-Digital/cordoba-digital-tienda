@@ -266,7 +266,7 @@ export default async function HomePage() {
       <>
           {/* Ofertas: panel crema de marca con las mayores rebajas reales. */}
           <section id="ofertas" className="container-xl">
-            <div className="mesh-warm -mx-1 rounded-2xl px-3 py-4 ring-1 ring-brand-100 sm:mx-0 sm:rounded-3xl sm:px-6 sm:py-8">
+            <div className="mesh-warm -mx-1 rounded-2xl px-3 py-4 ring-1 ring-brand-100 sm:mx-0 sm:rounded-[28px] sm:px-6 sm:py-8">
               <div className="flex items-end justify-between gap-3 sm:flex-wrap sm:gap-4">
                 <div className="min-w-0">
                   <p className="hidden items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-700 sm:inline-flex">
@@ -296,7 +296,7 @@ export default async function HomePage() {
     "pagos-retiro": () => (
       <>
           <section className="container-xl grid gap-3 py-5 sm:gap-4 sm:py-8 md:grid-cols-2">
-            <article className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-3xl sm:p-6">
+            <article className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-[28px] sm:p-6">
               <div className="mb-4 hidden h-1 w-14 rounded-full bg-emerald-500 sm:block" />
               <h3 className="flex items-center gap-2 text-base font-extrabold tracking-tight text-ink-900 sm:block sm:text-xl">
                 <Wallet size={22} className="shrink-0 text-emerald-700 sm:mb-3" aria-hidden />Transferencia o efectivo en el local</h3>
@@ -308,7 +308,7 @@ export default async function HomePage() {
                 Ver medios de pago
               </Link>
             </article>
-            <article className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-3xl sm:p-6">
+            <article className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-[28px] sm:p-6">
               <div className="mb-4 hidden h-1 w-14 rounded-full bg-brand-500 sm:block" />
               <h3 className="flex items-center gap-2 text-base font-extrabold tracking-tight text-ink-900 sm:block sm:text-xl">
                 <Store size={22} className="shrink-0 text-brand-700 sm:mb-3" aria-hidden />Retiro en el local</h3>
@@ -350,7 +350,7 @@ export default async function HomePage() {
     local: () => (
       <>
           <section id="local" className="container-xl grid gap-3 py-6 sm:gap-4 sm:py-12 lg:grid-cols-2">
-            <div className="relative flex min-h-[340px] flex-col justify-end overflow-hidden rounded-2xl sm:min-h-[560px] sm:rounded-3xl bg-ink text-white">
+            <div className="relative flex min-h-[340px] flex-col justify-end overflow-hidden rounded-2xl sm:min-h-[560px] sm:rounded-[28px] bg-ink text-white">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/local-cordoba-1400.jpg"
@@ -384,7 +384,7 @@ export default async function HomePage() {
                     href={MAPS}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-lg bg-surface px-4 py-2 text-sm font-bold text-ink-900"
+                    className="inline-flex items-center gap-1.5 rounded-full bg-surface px-4 py-2 text-sm font-bold text-ink-900"
                   >
                     Cómo llegar <ExternalLink size={14} aria-hidden />
                   </a>
@@ -392,14 +392,14 @@ export default async function HomePage() {
                     href={WHATSAPP}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-white/20 px-4 py-2 text-sm font-bold text-white"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-white/20 px-4 py-2 text-sm font-bold text-white"
                   >
                     Consultar por WhatsApp
                   </a>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-3xl sm:p-8">
+            <div className="flex flex-col justify-center rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-[28px] sm:p-8">
               <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Online + local a la calle</p>
               <h2 className="mt-1 text-xl font-extrabold leading-[1.15] tracking-tight text-ink-900 sm:mt-2 sm:text-3xl sm:leading-[1.1]">
                 Comprás por internet, pero hay gente real del otro lado
@@ -430,7 +430,7 @@ export default async function HomePage() {
                   href={MAPS}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-lg bg-ink-900 px-4 py-2.5 text-sm font-bold text-white"
+                  className="rounded-full bg-ink-900 px-4 py-2.5 text-sm font-bold text-white"
                 >
                   Cómo llegar
                 </a>
@@ -438,7 +438,7 @@ export default async function HomePage() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-lg border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-700 hover:bg-ink-50"
+                  className="rounded-full border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-700 hover:bg-ink-50"
                 >
                   Consultar por WhatsApp
                 </a>
@@ -476,7 +476,7 @@ export default async function HomePage() {
                   <Link
                     key={g.slug}
                     href={`/${g.slug}`}
-                    className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-lg sm:rounded-3xl sm:p-5"
+                    className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-lg sm:rounded-[24px] sm:p-5"
                   >
                     <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">Guía de compra</p>
                     <h3 className="mt-1 text-base font-extrabold tracking-tight text-ink-900 sm:mt-2 sm:text-lg">{g.title}</h3>
@@ -495,7 +495,7 @@ export default async function HomePage() {
     preguntas: () => (
       <>
           <section id="preguntas" className="container-xl grid gap-3 pb-10 pt-2 sm:gap-4 sm:pb-16 sm:pt-0 lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-3xl sm:p-7">
+            <div className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-[28px] sm:p-7">
               <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Antes de comprar</p>
               <h2 className="mt-1 text-xl font-extrabold tracking-tight text-ink-900 sm:text-2xl">Preguntas frecuentes</h2>
               <div className="mt-3">
@@ -505,9 +505,9 @@ export default async function HomePage() {
                 Centro de ayuda <ArrowRight size={14} aria-hidden />
               </Link>
             </div>
-            <div className="mesh-warm flex flex-col justify-between rounded-2xl p-4 ring-1 ring-brand-100 sm:rounded-3xl sm:p-7">
+            <div className="mesh-warm flex flex-col justify-between rounded-2xl p-4 ring-1 ring-brand-100 sm:rounded-[28px] sm:p-7">
               <div>
-                <p className="inline-flex rounded-lg bg-white/70 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">
+                <p className="inline-flex rounded-full bg-white/70 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">
                   Newsletter
                 </p>
                 <h3 className="mt-3 text-xl font-extrabold tracking-tight text-ink-900 sm:mt-4 sm:text-2xl">Novedades y ofertas de Córdoba Digital</h3>

@@ -102,14 +102,14 @@ export function ProductCard({ product, badge }: { product: ProductView; badge?: 
         {added ? (
           <span
             key={added}
-            className="pointer-events-none absolute bottom-2 right-2 animate-pop rounded-lg bg-emerald-600 px-2 py-0.5 text-[11px] font-bold text-white shadow-sm motion-reduce:animate-none"
+            className="pointer-events-none absolute bottom-2 right-2 animate-pop rounded-full bg-emerald-600 px-2 py-0.5 text-[11px] font-bold text-white shadow-sm motion-reduce:animate-none"
           >
             ✓ Agregado
           </span>
         ) : null}
 
         {badge ? (
-          <span className="pointer-events-none absolute bottom-2 left-2 rounded-lg bg-deep/90 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
+          <span className="pointer-events-none absolute bottom-2 left-2 rounded-full bg-deep/90 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
             {badge}
           </span>
         ) : null}

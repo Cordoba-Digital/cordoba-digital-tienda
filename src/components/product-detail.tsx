@@ -308,7 +308,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
              stock = 1 y ninguno tiene entre 2 y 5, así que el aviso salía en el
              91% de las fichas. El `stock` del sitio original funciona como
              disponible/no disponible, no como un conteo real de depósito. */
-          <p className="mt-1.5 inline-flex items-center gap-2 rounded-lg bg-emerald-50 px-3 py-1 text-[13px] font-bold text-emerald-700">
+          <p className="mt-1.5 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-[13px] font-bold text-emerald-700">
             <span className="h-2 w-2 rounded-full bg-current" aria-hidden />
             Stock disponible para envío inmediato
           </p>

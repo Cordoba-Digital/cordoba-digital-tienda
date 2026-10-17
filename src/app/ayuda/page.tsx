@@ -148,7 +148,7 @@ export default function HelpPage() {
             <a
               key={section.id}
               href={`#${section.id}`}
-              className="rounded-lg border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold text-white transition hover:bg-white/20"
+              className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold text-white transition hover:bg-white/20"
             >
               {section.icon} {section.title}
             </a>

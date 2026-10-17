@@ -105,7 +105,7 @@ export default async function GuidePage({ params }: { params: Promise<{ guia: st
 
       <header className="mb-8 max-w-3xl">
         {meta.etiqueta ? (
-          <p className="mb-3 inline-block rounded-lg bg-brand-50 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-brand-700">
+          <p className="mb-3 inline-block rounded-full bg-brand-50 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-brand-700">
             {meta.etiqueta}
           </p>
         ) : null}
