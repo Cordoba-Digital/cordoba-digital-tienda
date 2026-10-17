@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
+import { CopyButton, TransferDetails } from "@/components/transfer-details";
 import { trackPurchase } from "@/lib/analytics";
 import { money } from "@/lib/format";
 import { orderBanner, orderCodeLabel } from "@/lib/order-banner";
@@ -45,27 +46,6 @@ export type OrderSummary = {
   createdAt: string;
   items: { name: string; image: string; unitPrice: number; quantity: number; productSlug: string }[];
 };
-
-function CopyButton({ value, label }: { value: string; label?: string }) {
-  const [copied, setCopied] = useState(false);
-  return (
-    <button
-      type="button"
-      onClick={async () => {
-        try {
-          await navigator.clipboard.writeText(value);
-          setCopied(true);
-          window.setTimeout(() => setCopied(false), 1800);
-        } catch {
-          /* ignore */
-        }
-      }}
-      className="rounded-lg border border-ink-200 bg-surface px-2.5 py-1 text-[11px] font-bold text-ink-600 transition hover:border-brand-300 hover:text-brand-700"
-    >
-      {copied ? "¡Copiado!" : (label ?? "Copiar")}
-    </button>
-  );
-}
 
 export function OrderConfirmation({
   order,
@@ -221,44 +201,12 @@ export function OrderConfirmation({
                     Transferí <strong>{money(order.total)}</strong> a esta cuenta.
                   </p>
                   <div className="mt-4">
-                    <div className="rounded-xl border border-ink-100 bg-surface p-4">
-                      <p className="text-xs font-bold uppercase tracking-wide text-ink-500">Transferencia bancaria</p>
-                      <dl className="mt-2 space-y-1.5 text-sm">
-                        {transfer.number ? (
-                          <div className="flex items-center justify-between gap-2">
-                            <dt className="text-ink-500">{transfer.numberLabel}</dt>
-                            <dd className="flex items-center gap-2 font-semibold text-ink-900">
-                              {transfer.number}
-                              <CopyButton value={transfer.number} />
-                            </dd>
-                          </div>
-                        ) : null}
-                        {transfer.alias ? (
-                          <div className="flex items-center justify-between gap-2">
-                            <dt className="text-ink-500">Alias</dt>
-                            <dd className="flex items-center gap-2 font-semibold text-ink-900">
-                              {transfer.alias}
-                              <CopyButton value={transfer.alias} />
-                            </dd>
-                          </div>
-                        ) : null}
-                        <div className="flex justify-between gap-2">
-                          <dt className="text-ink-500">Titular</dt>
-                          <dd className="text-right font-semibold text-ink-900">{transfer.holder}</dd>
-                        </div>
-                        {transfer.cuit ? (
-                          <div className="flex justify-between">
-                            <dt className="text-ink-500">CUIT</dt>
-                            <dd className="font-semibold text-ink-900">{transfer.cuit}</dd>
-                          </div>
-                        ) : null}
-                      </dl>
-                    </div>
+                    <TransferDetails account={transfer} amount={order.total} />
                   </div>
                 </>
               ) : (
                 <p className="mt-1 text-sm text-ink-600">
-                  Escribinos por WhatsApp con el número de pedido y te pasamos los datos para transferir{" "}
+                  Escribinos por WhatsApp con tu código de reserva y te pasamos los datos para transferir{" "}
                   <strong>{money(order.total)}</strong>.
                 </p>
               )}

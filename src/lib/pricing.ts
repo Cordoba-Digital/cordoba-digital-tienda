@@ -34,7 +34,7 @@ export const PAYMENT_METHODS: PaymentMethod[] = [
     id: "transferencia",
     label: "Pago por transferencia bancaria",
     short: "Transferencia bancaria",
-    description: "Te enviamos el CBU o el alias al confirmar. Acreditación inmediata.",
+    description: "Desde tu banco o billetera virtual. Confirmamos el pedido cuando se acredita.",
     icon: "🏦",
   },
   {

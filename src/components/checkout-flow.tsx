@@ -6,6 +6,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
+import { TransferDetails } from "@/components/transfer-details";
 import { Spinner } from "@/components/ui";
 import { trackBeginCheckout } from "@/lib/analytics";
 import { readCoupon, writeCoupon } from "@/lib/coupon-storage";
@@ -15,6 +16,7 @@ import { computeTotals, PAYMENT_METHODS, type CouponInfo, type PaymentMethodId }
 import { validateDelivery, validatePersonalData } from "@/lib/checkout-validation";
 import { useShippingQuote, useSucursales } from "@/lib/shipping-quote";
 import type { DeliveryMethod, ShippingOption } from "@/lib/shipping";
+import type { TransferAccount } from "@/lib/transfer-account";
 
 type CheckoutIconProps = { className?: string };
 
@@ -208,7 +210,14 @@ function Field({
 const inputClass =
   "h-11 w-full rounded-xl border border-ink-200 bg-surface px-3.5 text-sm text-ink-900 outline-none transition placeholder:text-ink-500 focus:border-brand-400 focus:ring-4 focus:ring-brand-100";
 
-export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean }) {
+export function CheckoutFlow({
+  mercadoPago = false,
+  transfer = null,
+}: {
+  mercadoPago?: boolean;
+  /** Cuenta para transferir (`transferAccount()`); sin configurar, los datos se piden por WhatsApp. */
+  transfer?: TransferAccount | null;
+}) {
   const router = useRouter();
   const { items, subtotal, listSubtotal, hydrated, clearCart, setQuantity } = useStore();
 
@@ -832,13 +841,25 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
                 ) : null}
 
                 {payment === "transferencia" ? (
-                  <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
-                    <p className="font-bold text-ink-900">Te enviamos el CBU o el alias para transferir.</p>
-                    <p className="mt-1 text-xs">
-                      Nos avisás cuando lo hagas y despachamos. La reserva de stock por tiempo limitado no se anuncia
-                      hasta que el cliente confirme la política.
-                    </p>
-                  </div>
+                  transfer ? (
+                    <div className="space-y-3 rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
+                      <p className="font-bold text-ink-900">Datos para transferir</p>
+                      <TransferDetails account={transfer} amount={totals.total} />
+                      <ol className="list-decimal space-y-1 pl-4 text-xs">
+                        <li>Confirmá el pedido: te damos un código de reserva y te guardamos el stock 48 hs.</li>
+                        <li>Transferí el monto exacto desde tu banco o billetera virtual.</li>
+                        <li>Mandanos el comprobante por WhatsApp con tu código de reserva.</li>
+                      </ol>
+                      <p className="text-xs">Cuando se acredita la transferencia, confirmamos el pedido y te avisamos.</p>
+                    </div>
+                  ) : (
+                    <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
+                      <p className="font-bold text-ink-900">Al confirmar te pasamos el CBU o el alias por WhatsApp.</p>
+                      <p className="mt-1 text-xs">
+                        Te guardamos el stock 48 hs. Cuando se acredita la transferencia, confirmamos el pedido.
+                      </p>
+                    </div>
+                  )
                 ) : null}
 
                 {payment === "efectivo" ? (
