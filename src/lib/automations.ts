@@ -23,6 +23,12 @@ export const AUTOMATIONS = {
       "Le manda un email al cliente cuando su pedido cambia de estado: pago acreditado, en preparación, en camino o listo para retirar, entregado y cancelado.",
     default: false,
   },
+  portadaAutomatica: {
+    label: "Elegir los productos de la portada",
+    description:
+      "Cada slide del carrusel de la portada muestra el producto que mejor le va: la oferta con más descuento, lo más vendido de los últimos 30 días y, en el resto, los que más se venden. Solo entran productos con stock y foto, y se actualiza cada 5 minutos. Si lo apagás, vuelve a mostrar los más nuevos. Lo que fijes o saques abajo vale siempre.",
+    default: true,
+  },
 } as const satisfies Record<string, { label: string; description: string; default: boolean }>;
 
 export type AutomationId = keyof typeof AUTOMATIONS;

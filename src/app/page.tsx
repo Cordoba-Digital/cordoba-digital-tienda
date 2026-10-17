@@ -26,6 +26,8 @@ import { SectionHeading } from "@/components/ui";
 import { discountPercent } from "@/lib/format";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { visibleHomeBlocks, type HomeBlockId } from "@/lib/home-layout";
+import type { HeroSlideId } from "@/lib/hero-picks";
+import { getHeroPicks } from "@/lib/hero-picks-server";
 import { getHomeLayout } from "@/lib/home-layout-server";
 import { toView } from "@/lib/product-view";
 import { renderPerRequestIfNoDatabase } from "@/lib/store-cache";
@@ -113,13 +115,28 @@ export default async function HomePage() {
 
   const ratingValue = googleReviews.rating?.toFixed(1) ?? null;
   const reviewCount = googleReviews.count;
-  // Hero de 5 slides: principal, oferta, más vendido, envío y pago. Mismo
-  // mapeo que la propuesta original, sobre los queries del deploy.
-  const heroMain = featured[0] ? toView(featured[0]) : null;
-  const heroDeal = deals[0] ? toView(deals[0]) : null;
-  const heroBest = bestSellers[0] ? toView(bestSellers[0]) : null;
-  const heroShipping = featured[1] ? toView(featured[1]) : null;
-  const heroPayment = featured[2] ? toView(featured[2]) : null;
+  // Hero de 5 slides: principal, oferta, más vendido, envío y pago. Cada uno
+  // elige su producto solo (Panel → Automatizaciones, ver `lib/hero-picks.ts`);
+  // con la automatización apagada se usa el mapeo de siempre, que va de respaldo.
+  const hero = await getHeroPicks({
+    inicio: featured[0],
+    ofertas: deals[0],
+    vendidos: bestSellers[0],
+    envios: featured[1],
+    pagos: featured[2],
+  }).catch((error) => {
+    console.warn("[portada] no se pudo elegir el carrusel, uso el de siempre:", error instanceof Error ? error.message : error);
+    return null;
+  });
+  const heroView = (id: HeroSlideId, before: Parameters<typeof toView>[0] | undefined) => {
+    const product = hero ? hero[id]?.product : before;
+    return product ? toView(product) : null;
+  };
+  const heroMain = heroView("inicio", featured[0]);
+  const heroDeal = heroView("ofertas", deals[0]);
+  const heroBest = heroView("vendidos", bestSellers[0]);
+  const heroShipping = heroView("envios", featured[1]);
+  const heroPayment = heroView("pagos", featured[2]);
   const heroMaxOff = Math.max(0, ...deals.map((d) => discountPercent(d.price, d.compareAtPrice)));
   // "Destacados" y "Más vendidos" caían al mismo fallback (lo más nuevo con
   // stock) y mostraban los mismos productos. Acá se excluyen los ya mostrados
