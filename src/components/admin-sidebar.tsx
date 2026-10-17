@@ -41,7 +41,7 @@ export function AdminFrame({
   badges = {},
   who = "",
   compact: initialCompact = false,
-  tema: initialTema = "oscuro",
+  tema: initialTema = "claro",
   children,
 }: {
   badges?: Record<string, number>;
