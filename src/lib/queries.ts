@@ -554,14 +554,16 @@ export async function getRelatedProducts(
   limit = MAX_RECOMENDADOS,
 ) {
   // Una marca de relleno ("General") no dice nada del producto: no se prioriza.
-  const mismaMarca = esMarcaDeRelleno(product.brand) ? sql`0` : sql`(${products.brand} = ${product.brand})::int`;
+  // Se saca el criterio en vez de ordenar por un `0` constante: Postgres lee un
+  // número suelto en el ORDER BY como "la columna 0" y la consulta falla.
+  const mismaMarca = esMarcaDeRelleno(product.brand) ? [] : [desc(sql`(${products.brand} = ${product.brand})::int`)];
   return db
     .select()
     .from(products)
     .where(and(eq(products.categorySlug, product.categorySlug), ne(products.slug, product.slug)))
     .orderBy(
       desc(sql`(${products.stock} > 0)::int`),
-      desc(mismaMarca),
+      ...mismaMarca,
       asc(sql`abs(${products.price} - ${product.price})`),
       desc(products.soldCount),
     )
