@@ -13,7 +13,7 @@ import { MAX_QTY_PER_ITEM, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/p
 type Found = { slug: string; name: string; sku: string; price: number; stock: number; image: string };
 type Line = Found & { quantity: number };
 type Delivery = "pickup" | "standard" | "express";
-type Created = { code: string; total: number; link: string };
+type Created = { code: string; total: number; link: string; delivered: boolean };
 
 const DELIVERIES: { id: Delivery; label: string; hint: string }[] = [
   { id: "pickup", label: "Retira en el local", hint: "27 de Abril 180, sin costo" },
@@ -52,6 +52,8 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
   const [created, setCreated] = useState<Created | null>(null);
+  // Venta en el local: ya cobrada y entregada (solo con retiro y sin Mercado Pago).
+  const [counter, setCounter] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const payments = PAYMENT_METHODS.filter(
@@ -98,6 +100,8 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
   }
 
   const subtotal = lines.reduce((sum, l) => sum + l.price * l.quantity, 0);
+  const canCounter = delivery === "pickup" && payment !== "mercadopago";
+  const isCounter = counter && canCounter;
 
   async function submit(event: React.FormEvent) {
     event.preventDefault();
@@ -118,6 +122,7 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
           delivery: delivery === "pickup" ? { method: "pickup" } : { method: delivery, ...address },
           payment: { method: payment },
           notes,
+          counterSale: isCounter,
         }),
       });
       const data = (await res.json()) as { ok: boolean; error?: string; errors?: Record<string, string> } & Partial<Created>;
@@ -126,12 +131,45 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
         setError(data.error ?? (data.errors ? "Revisá los datos marcados." : "No se pudo cargar el pedido."));
         return;
       }
-      setCreated({ code: data.code, total: data.total ?? 0, link: data.link ?? "" });
+      setCreated({ code: data.code, total: data.total ?? 0, link: data.link ?? "", delivered: !!data.delivered });
     } catch {
       setError("No se pudo cargar el pedido. Probá de nuevo.");
     } finally {
       setSaving(false);
     }
+  }
+
+  if (created?.delivered) {
+    return (
+      <section className={`${card} max-w-2xl`}>
+        <span className="grid h-11 w-11 place-items-center rounded-full bg-emerald-50 text-emerald-700">
+          <AdminIcon name="pedidos" />
+        </span>
+        <div className="flex flex-col gap-1">
+          <h2 className="text-lg font-semibold text-adm-fg">Venta {created.code} registrada</h2>
+          <p className="text-sm text-adm-muted">
+            Total {money(created.total)}. Quedó cobrada y entregada, y el stock ya se descontó. Cuenta en las ventas del Panel.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2.5">
+          <button
+            type="button"
+            className={adminBtn}
+            onClick={() => {
+              setCreated(null);
+              setLines([]);
+              setCustomer({ firstName: "", lastName: "", email: "", phone: "", docId: "" });
+              setNotes("");
+            }}
+          >
+            Registrar otra venta
+          </button>
+          <Link href={`/admin/pedidos/${created.code}`} className={adminChip}>
+            Ver la venta
+          </Link>
+        </div>
+      </section>
+    );
   }
 
   if (created) {
@@ -284,7 +322,7 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
               ] as const
             ).map(([key, text, type]) => (
               <label key={key} className={label}>
-                {text}
+                {isCounter && key !== "firstName" && key !== "lastName" ? `${text} (opcional)` : text}
                 <input
                   type={type}
                   value={customer[key]}
@@ -358,6 +396,15 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
           </div>
           {!paymentOk ? <span className="text-xs text-amber-700">Elegí un medio de pago para esta entrega.</span> : null}
           <FieldError text={errors.payment} />
+          {canCounter ? (
+            <label className={`flex cursor-pointer items-start gap-2.5 rounded-xl border px-3.5 py-3 text-sm ${isCounter ? "border-emerald-500/50 bg-emerald-500/10 text-adm-fg" : "border-adm-fg/10 text-adm-soft"}`}>
+              <input type="checkbox" checked={counter} onChange={(event) => setCounter(event.target.checked)} className="mt-0.5" />
+              <span className="flex flex-col gap-0.5">
+                Ya lo cobré y se lo llevó
+                <span className="text-xs text-adm-faint">Venta en el local: queda entregada y pagada, sin link de pago. Del cliente alcanza con nombre y apellido.</span>
+              </span>
+            </label>
+          ) : null}
           <label className={label}>
             Nota del pedido (opcional, la ve el cliente)
             <textarea value={notes} onChange={(event) => setNotes(event.target.value)} maxLength={500} rows={3} className="w-full px-3 py-2 text-sm" />
@@ -366,13 +413,17 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
 
         <section className={card}>
           <div className="flex items-baseline justify-between text-sm text-adm-muted">
-            <span>Subtotal</span>
+            <span>{isCounter ? "Total a cobrar" : "Subtotal"}</span>
             <span className="tabular-nums text-adm-fg">{money(subtotal)}</span>
           </div>
-          <p className="text-xs text-adm-faint">El envío y el total final los calcula el sistema al guardar, con los precios y el stock del momento.</p>
+          <p className="text-xs text-adm-faint">
+            {isCounter
+              ? "Con los precios de la tienda. El sistema lo vuelve a calcular al guardar."
+              : "El envío y el total final los calcula el sistema al guardar, con los precios y el stock del momento."}
+          </p>
           {error ? <p className="text-sm text-red-600">{error}</p> : null}
           <button type="submit" disabled={saving || !paymentOk} className={`${adminBtn} justify-center disabled:opacity-60`}>
-            {saving ? "Cargando…" : "Cargar pedido"}
+            {saving ? "Guardando…" : isCounter ? "Registrar venta" : "Cargar pedido"}
           </button>
         </section>
       </aside>

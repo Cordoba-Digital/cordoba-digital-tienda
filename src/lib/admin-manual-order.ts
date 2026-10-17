@@ -20,6 +20,11 @@ import { preciosAndreani } from "@/lib/shipping-andreani";
  * desde la página del pedido (`/pedido/CODIGO`) con el medio elegido, así el
  * cobro y la acreditación son los de siempre. Lo único distinto: no lleva
  * cupón ni límite de intentos (lo carga alguien con sesión del panel).
+ *
+ * Venta en el local (`counterSale`): el cliente ya pagó en el mostrador y se
+ * llevó el producto. Solo con retiro y efectivo o transferencia; el pedido
+ * nace "Entregado" (cuenta como venta pagada), el stock baja igual y del
+ * cliente alcanza con nombre y apellido.
  */
 
 export type ManualOrderInput = {
@@ -28,10 +33,11 @@ export type ManualOrderInput = {
   delivery?: { method?: unknown; zip?: unknown; street?: unknown; number?: unknown; extra?: unknown; city?: unknown; province?: unknown };
   payment?: { method?: unknown };
   notes?: unknown;
+  counterSale?: unknown;
 };
 
 export type ManualOrderResult =
-  | { ok: true; code: string; total: number }
+  | { ok: true; code: string; total: number; delivered: boolean }
   | { ok: false; status: number; error?: string; errors?: Record<string, string> };
 
 function text(value: unknown): string {
@@ -56,10 +62,17 @@ export async function createManualOrder(input: ManualOrderInput): Promise<Manual
   const email = text(customer.email).toLowerCase();
   const phone = text(customer.phone);
   const docId = text(customer.docId);
-  const errors: Record<string, string> = { ...validatePersonalData({ firstName, lastName, email, phone, docId }) };
-
   const delivery = input.delivery ?? {};
   const method: DeliveryMethod = delivery.method === "standard" || delivery.method === "express" ? delivery.method : "pickup";
+  const counterSale = input.counterSale === true;
+
+  const errors: Record<string, string> = { ...validatePersonalData({ firstName, lastName, email, phone, docId }) };
+  // En el mostrador, email, celular y DNI son opcionales; si se cargan, tienen que estar bien.
+  if (counterSale) {
+    if (!email) delete errors.email;
+    if (!phone) delete errors.phone;
+    if (!docId) delete errors.docId;
+  }
   const zip = normalizeZip(text(delivery.zip));
   let address: ShippingAddress | null = null;
   if (method !== "pickup") {
@@ -77,6 +90,10 @@ export async function createManualOrder(input: ManualOrderInput): Promise<Manual
   if (!payment.ok) errors.payment = payment.error;
   if (Object.keys(errors).length || !payment.ok) return { ok: false, status: 400, errors };
   const paymentId: PaymentMethodId = payment.method;
+  if (counterSale && (method !== "pickup" || paymentId === "mercadopago")) {
+    return { ok: false, status: 400, error: "La venta en el local es con retiro y pago en efectivo o transferencia." };
+  }
+  const status = counterSale ? "entregado" : "pendiente_pago";
 
   const rows = await db.select().from(products).where(inArray(products.slug, items.map((i) => i.slug)));
   const bySlug = new Map(rows.map((r) => [r.slug, r]));
@@ -114,7 +131,7 @@ export async function createManualOrder(input: ManualOrderInput): Promise<Manual
       .insert(orders)
       .values({
         code,
-        status: "pendiente_pago",
+        status,
         customerName: `${firstName} ${lastName}`,
         email,
         phone,
@@ -146,9 +163,14 @@ export async function createManualOrder(input: ManualOrderInput): Promise<Manual
       })),
     );
     await reserveOrderStock(tx, order.id);
-    await tx.insert(orderEvents).values({ orderId: order.id, fromStatus: "", toStatus: "pendiente_pago", note: "Pedido cargado desde el panel" });
+    await tx.insert(orderEvents).values({
+      orderId: order.id,
+      fromStatus: "",
+      toStatus: status,
+      note: counterSale ? "Venta en el local: cobrada y entregada" : "Pedido cargado desde el panel",
+    });
     return order;
   });
 
-  return { ok: true, code: created.code, total: totals.total };
+  return { ok: true, code: created.code, total: totals.total, delivered: counterSale };
 }
