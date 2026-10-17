@@ -54,7 +54,7 @@ export function AdminAccessManager({ rows, canManage, me }: { rows: Row[]; canMa
             placeholder="email@gmail.com"
             aria-label="Email del nuevo admin"
             required
-            className="h-10 min-w-0 flex-1 border border-ink-200 bg-surface px-3 text-sm text-ink-900 outline-none focus:border-ink-400"
+            className="h-10 min-w-0 border border-ink-200 bg-surface px-3 text-sm text-ink-900 outline-none focus:border-ink-400 sm:flex-1"
           />
           <button
             type="submit"

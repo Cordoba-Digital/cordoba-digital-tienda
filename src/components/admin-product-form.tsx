@@ -473,10 +473,10 @@ export function AdminProductForm({
             >
               Escribir los textos por mí
             </button>
-            <div className="rounded-lg border border-ink-100 bg-white p-3" aria-label="Vista previa en Google">
-              <p className="truncate text-xs text-ink-500">cordobadigital.net › producto</p>
+            <div className="rounded-lg border border-[#dadce0] bg-[#fff] p-3" aria-label="Vista previa en Google">
+              <p className="truncate text-xs text-[#4d5156]">cordobadigital.net › producto</p>
               <p className="truncate text-base text-[#1a0dab]">{(seoTitle.trim() || name.trim() || "Nombre del producto")} · Córdoba Digital</p>
-              <p className="line-clamp-2 text-xs text-ink-600">
+              <p className="line-clamp-2 text-xs text-[#4d5156]">
                 {seoDescription.trim() || shortDescription.trim() || "Sin descripción corta: Google muestra solo el nombre. Completá la descripción corta o esta."}
               </p>
             </div>
@@ -626,7 +626,7 @@ export function AdminProductForm({
         </div>
       </div>
 
-      <div className="fixed inset-x-0 bottom-0 z-20 border-t border-ink-100 bg-surface/95 backdrop-blur lg:left-60">
+      <div className="admin-save-bar fixed inset-x-0 bottom-0 z-20 border-t border-ink-100 bg-surface/95 backdrop-blur transition-[left] duration-200 md:left-[72px] wide:left-[248px]">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-end gap-3 px-4 py-3 sm:px-6 lg:px-8">
           {error ? <p role="alert" className="mr-auto text-sm font-semibold text-red-600">{error}</p> : null}
           {!error && saved ? <p role="status" className="mr-auto text-sm font-semibold text-emerald-700">Cambios guardados.</p> : null}

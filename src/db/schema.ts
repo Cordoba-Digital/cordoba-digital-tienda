@@ -271,11 +271,18 @@ export const orders = pgTable(
      * paga el envío en el portal de PyMEs y se guarda en `trackingCode`.
      */
     andreani: jsonb("andreani").$type<EnvioAndreani | null>(),
+    /**
+     * Clave que manda el navegador por cada intento de compra. Si el mismo
+     * envío llega dos veces (doble toque, reintento tras un corte de red), el
+     * checkout devuelve este pedido en vez de crear otro.
+     */
+    checkoutKey: text("checkout_key"),
     statusUpdatedAt: timestamp("status_updated_at", { withTimezone: true }).notNull().defaultNow(),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (table) => [
     uniqueIndex("orders_code_idx").on(table.code),
+    uniqueIndex("orders_checkout_key_idx").on(table.checkoutKey),
     // "Mi cuenta" y el panel de usuarios buscan pedidos por email sin mayúsculas.
     index("orders_email_lower_idx").on(sql`lower(${table.email})`),
   ],
@@ -312,6 +319,58 @@ export const orderItems = pgTable(
     stockReserved: integer("stock_reserved").notNull().default(0),
   },
   (table) => [index("order_items_order_idx").on(table.orderId)],
+);
+
+/**
+ * Plata devuelta al cliente de un pedido, total o parcial.
+ *
+ * - `mercadopago`: se pidió a la API de MP desde el panel (o se hizo en MP y
+ *   llegó por el webhook). `externalId` es el id del reembolso en MP.
+ * - `manual`: el local devolvió la plata por fuera (transferencia, efectivo) y
+ *   lo anota acá para que el pedido lo refleje.
+ *
+ * `estado`: `pendiente` mientras se espera la respuesta de MP (cuenta como
+ * devuelto, así dos clics no devuelven dos veces), `hecho` o `fallido`.
+ */
+export const orderRefunds = pgTable(
+  "order_refunds",
+  {
+    id: serial("id").primaryKey(),
+    orderId: integer("order_id").notNull(),
+    amount: integer("amount").notNull(),
+    method: text("method").notNull(), // mercadopago | manual
+    estado: text("estado").notNull().default("hecho"), // pendiente | hecho | fallido
+    reason: text("reason").notNull().default(""),
+    externalId: text("external_id"),
+    error: text("error").notNull().default(""),
+    createdBy: text("created_by").notNull().default(""),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [
+    index("order_refunds_order_idx").on(table.orderId),
+    uniqueIndex("order_refunds_external_idx").on(table.externalId),
+  ],
+);
+
+/**
+ * Productos que el cliente devolvió de un pedido que ya había salido
+ * (arrepentimiento, falla, cambio). Se anota cuando el producto llega al
+ * local: en ese momento las unidades vuelven al stock. La plata se devuelve
+ * aparte, desde Reembolsos.
+ */
+export type ReturnItem = { orderItemId: number; productSlug: string; name: string; quantity: number };
+
+export const orderReturns = pgTable(
+  "order_returns",
+  {
+    id: serial("id").primaryKey(),
+    orderId: integer("order_id").notNull(),
+    items: jsonb("items").$type<ReturnItem[]>().notNull(),
+    reason: text("reason").notNull().default(""),
+    createdBy: text("created_by").notNull().default(""),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [index("order_returns_order_idx").on(table.orderId)],
 );
 
 export const subscribers = pgTable("subscribers", {

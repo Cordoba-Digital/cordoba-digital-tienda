@@ -22,8 +22,8 @@ export default async function ArchivedProductsPage() {
     <div className="space-y-6">
       <div>
         <AdminBackLink fallback="/admin/productos" />
-        <p className="mt-2 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Admin · Catálogo</p>
-        <h1 className="mt-1 text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">Archivados</h1>
+        <p className="mt-2 text-[13px] text-adm-muted">Catálogo</p>
+        <h1 className="mt-1 text-[28px] font-semibold leading-tight tracking-[-0.02em] text-adm-fg sm:text-[30px]">Archivados</h1>
         <p className="mt-1 text-sm text-ink-500">
           No se ven en la tienda, el buscador ni Google Shopping. Restaurar los vuelve a publicar con todos sus datos.
         </p>

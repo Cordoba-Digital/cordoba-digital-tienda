@@ -38,7 +38,7 @@ export function AdminOrderSearch({ initial, status }: { initial: string; status:
       className="relative min-w-0 flex-1"
     >
       {status ? <input type="hidden" name="status" value={status} /> : null}
-      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-400" aria-hidden>
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-400" aria-hidden>
         <circle cx="9" cy="9" r="5.5" />
         <path d="m13.5 13.5 3.5 3.5" strokeLinecap="round" />
       </svg>
@@ -54,9 +54,9 @@ export function AdminOrderSearch({ initial, status }: { initial: string; status:
         }}
         placeholder="Buscar por código, nombre o email…"
         aria-label="Buscar pedidos"
-        className="w-full rounded-lg border border-ink-200 bg-surface py-2.5 pl-9 pr-24 text-sm text-ink-900 outline-none focus:border-ink-400"
+        className="h-11 w-full !rounded-full border border-ink-200 bg-surface pl-10 pr-24 text-sm text-ink-900 outline-none focus:border-ink-400"
       />
-      <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-ink-400" aria-live="polite">
+      <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-xs text-ink-400" aria-live="polite">
         {pending ? "Buscando…" : ""}
       </span>
     </form>

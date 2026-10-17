@@ -7,12 +7,18 @@ import { AdminCopyButton } from "@/components/admin-copy-button";
 import { AdminOrderAndreani } from "@/components/admin-order-andreani";
 import { AdminOrderManageForm } from "@/components/admin-order-manage-form";
 import { AdminOrderNextStep } from "@/components/admin-order-next-step";
+import { AdminOrderRefunds } from "@/components/admin-order-refunds";
+import { AdminOrderReturns } from "@/components/admin-order-returns";
 import { ProductImg } from "@/components/product-img";
+import { AdminStatusBadge } from "@/components/admin-ui";
 import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { allowedStatuses, nextStep, statusSteps, whatsappHref } from "@/lib/admin-order-helpers";
 import { getAdminOrderDetail } from "@/lib/admin-orders";
-import { verifyAdminSessionValue } from "@/lib/admin-session";
+import { isOwnerEmail } from "@/lib/admin-access";
+import { listOrderRefunds, orderWasPaid } from "@/lib/admin-refunds";
+import { listOrderReturns, returnedByItem } from "@/lib/admin-returns";
+import { readAdminSession } from "@/lib/admin-session";
 import { andreaniConfigurado } from "@/lib/andreani";
 import { isAutomationOn } from "@/lib/automations";
 import { formatAgo, formatDateTime, money } from "@/lib/format";
@@ -44,14 +50,20 @@ function Row({ label, children }: { label: string; children: ReactNode }) {
 export default async function AdminOrderDetailPage({ params }: { params: Promise<{ code: string }> }) {
   const jar = await cookies();
   const { code } = await params;
-  if (!(await verifyAdminSessionValue(jar.get(ADMIN_COOKIE)?.value))) {
+  const session = await readAdminSession(jar.get(ADMIN_COOKIE)?.value);
+  if (!session) {
     redirect(`/admin/login?next=/admin/pedidos/${encodeURIComponent(code)}`);
   }
 
   const result = await getAdminOrderDetail(decodeURIComponent(code));
   if (!result) notFound();
   const { order, items, events } = result;
-  const notifiesCustomer = await isAutomationOn("avisarCliente");
+  const [notifiesCustomer, refunds, returns] = await Promise.all([
+    isAutomationOn("avisarCliente"),
+    listOrderRefunds(order.id),
+    listOrderReturns(order.id),
+  ]);
+  const returned = returnedByItem(returns);
 
   const step = nextStep(order);
   const cancelled = isCancelled(order.status);
@@ -67,9 +79,9 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
 
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Admin · Pedido</p>
+          <p className="text-[13px] text-adm-muted">Pedido</p>
           <div className="mt-1 flex flex-wrap items-center gap-2">
-            <h1 className="text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">{order.code}</h1>
+            <h1 className="text-[28px] font-semibold leading-tight tracking-[-0.02em] text-adm-fg sm:text-[30px]">{order.code}</h1>
             <AdminCopyButton value={order.code} label="Copiar código" />
           </div>
           <p className="mt-1 text-sm text-ink-500">
@@ -85,9 +97,7 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
       <section className="admin-card p-5">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2 className="text-sm font-bold text-ink-900">Estado del pedido</h2>
-          <Pill solid tone={cancelled ? "neutral" : order.status === "pendiente_pago" ? "amber" : order.status === "entregado" || order.status === "enviado" ? "success" : "brand"}>
-            {statusLabel(order.status)}
-          </Pill>
+          <AdminStatusBadge status={order.status} />
         </div>
         <ol className="mt-4 grid gap-2 sm:grid-cols-5">
           {statusSteps(order.status).map((s, i) => (
@@ -145,8 +155,8 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
               ) : null}
               <Row label="Envío">{order.shippingCost ? money(order.shippingCost) : "Sin cargo"}</Row>
               <div className="mt-1 flex justify-between gap-3 border-t border-ink-100 pt-2 text-base font-black text-ink-900">
-                <span>Total</span>
-                <span>{money(order.total)}</span>
+                <dt>Total</dt>
+                <dd>{money(order.total)}</dd>
               </div>
             </dl>
           </Card>
@@ -216,7 +226,7 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
                 href={wa}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 flex w-full items-center justify-center rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-bold text-white hover:bg-emerald-700"
+                className="mt-4 flex w-full items-center justify-center rounded-lg bg-emerald-700 px-4 py-2.5 text-sm font-bold text-white hover:bg-emerald-800"
               >
                 Escribirle por WhatsApp
               </a>
@@ -272,6 +282,22 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
               </Link>
             ) : null}
           </Card>
+
+          <AdminOrderRefunds
+            code={order.code}
+            total={order.total}
+            refunds={refunds.map((r) => ({ ...r, createdAt: r.createdAt.toISOString() }))}
+            paid={orderWasPaid(order.status, events.map((e) => e.toStatus))}
+            viaMp={order.paymentMethod === "mercadopago"}
+            canRefund={!session.email || isOwnerEmail(session.email)}
+          />
+
+          <AdminOrderReturns
+            code={order.code}
+            items={items.map((item) => ({ id: item.id, name: item.name, quantity: item.quantity, returned: returned.get(item.id) ?? 0 }))}
+            returns={returns.map((r) => ({ ...r, createdAt: r.createdAt.toISOString() }))}
+            canReturn={order.status === "enviado" || order.status === "entregado"}
+          />
 
           {order.notes ? (
             <Card title="Nota del cliente">

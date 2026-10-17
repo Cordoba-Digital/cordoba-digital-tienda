@@ -19,7 +19,7 @@ type Form = {
 const EMPTY: Form = { code: "", kind: "percent", value: "", minSubtotal: "", expiresOn: "", maxUses: "", description: "" };
 
 const STATE: Record<string, { label: string; cls: string }> = {
-  ok: { label: "Activo", cls: "bg-emerald-600 text-white" },
+  ok: { label: "Activo", cls: "bg-emerald-700 text-white" },
   inactivo: { label: "Pausado", cls: "bg-ink-300 text-ink-900" },
   vencido: { label: "Vencido", cls: "bg-ink-700 text-white" },
   agotado: { label: "Agotado", cls: "bg-amber-500 text-ink-900" },
