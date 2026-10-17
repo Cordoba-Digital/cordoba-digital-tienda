@@ -27,7 +27,15 @@ export async function POST(request: Request) {
     action: "pedido_manual",
     entityType: "pedido",
     entityId: result.code,
-    summary: `Cargó el pedido ${result.code} desde el panel`,
+    summary: result.delivered
+      ? `Registró la venta en el local ${result.code} (cobrada y entregada)`
+      : `Cargó el pedido ${result.code} desde el panel`,
   });
-  return Response.json({ ok: true, code: result.code, total: result.total, link: `${appBaseUrl(request)}/pedido/${result.code}` });
+  return Response.json({
+    ok: true,
+    code: result.code,
+    total: result.total,
+    delivered: result.delivered,
+    link: `${appBaseUrl(request)}/pedido/${result.code}`,
+  });
 }

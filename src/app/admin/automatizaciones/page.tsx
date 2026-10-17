@@ -2,9 +2,11 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 import { AdminAutomations, type AutomationView } from "@/components/admin-automations";
+import { AdminHeroPicks } from "@/components/admin-hero-picks";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { readAdminSession } from "@/lib/admin-session";
 import { AUTOMATION_IDS, AUTOMATIONS, getAutomations } from "@/lib/automations";
+import { getHeroAdminState } from "@/lib/hero-picks-server";
 import { mailConfigured } from "@/lib/mailer";
 
 export const dynamic = "force-dynamic";
@@ -14,7 +16,7 @@ export default async function AdminAutomationsPage() {
   const session = await readAdminSession(jar.get(ADMIN_COOKIE)?.value);
   if (!session) redirect("/admin/login?next=/admin/automatizaciones");
 
-  const state = await getAutomations();
+  const [state, hero] = await Promise.all([getAutomations(), getHeroAdminState()]);
   // Avisos para quien configura Vercel: el interruptor se puede prender igual y vale en cuanto esté la variable.
   const warnings: Partial<Record<keyof typeof AUTOMATIONS, string>> = {
     vencerPedidos: process.env.CRON_SECRET?.trim()
@@ -42,6 +44,7 @@ export default async function AdminAutomationsPage() {
         </p>
       </div>
       <AdminAutomations rows={rows} />
+      <AdminHeroPicks initial={hero} />
     </div>
   );
 }

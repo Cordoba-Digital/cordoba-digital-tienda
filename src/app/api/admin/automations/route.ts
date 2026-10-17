@@ -2,6 +2,7 @@ import { sessionFromCookieHeader } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { actorFromRequest, logAdminAction } from "@/lib/admin-audit";
 import { AUTOMATIONS, getAutomations, isAutomationId, setAutomation } from "@/lib/automations";
+import { refreshStorePages } from "@/lib/store-cache";
 
 export const dynamic = "force-dynamic";
 
@@ -28,6 +29,8 @@ export async function PATCH(request: Request) {
   const actor = await actorFromRequest(request);
   const before = await setAutomation(body.id, body.enabled, actor);
   if (before !== body.enabled) {
+    // La portada elige sus productos según este interruptor: que el cambio se vea enseguida.
+    if (body.id === "portadaAutomatica") refreshStorePages();
     await logAdminAction(actor, {
       action: body.enabled ? "prender" : "apagar",
       entityType: "automatizacion",

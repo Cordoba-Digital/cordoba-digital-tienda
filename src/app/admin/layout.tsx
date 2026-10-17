@@ -39,7 +39,7 @@ export default async function AdminLayout({ children }: { children: ReactNode })
   // sesión) no se muestra nada interno, ni siquiera los nombres de las secciones.
   const jar = await cookies();
   const session = await readAdminSession(jar.get(ADMIN_COOKIE)?.value);
-  const tema = jar.get(ADMIN_THEME_COOKIE)?.value === "claro" ? "claro" : "oscuro";
+  const tema = jar.get(ADMIN_THEME_COOKIE)?.value === "oscuro" ? "oscuro" : "claro";
   if (!session) {
     return <div data-tema={tema} className={`${theme} admin-shell admin-radios grid min-h-dvh place-items-center px-4 py-10`}>{children}</div>;
   }

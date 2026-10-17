@@ -734,7 +734,7 @@ html:has(.admin-save-bar) {
 }
 
 /*
- * Tema claro del panel (botón "Tema claro" de la barra lateral, guardado en la
+ * Tema claro del panel (el predeterminado; el botón de la barra lateral lo cambia y lo guarda en la
  * cookie `admin_tema`). Mismo diseño sobre fondo claro: la rampa de grises
  * vuelve a la de la tienda y los colores del panel pasan a tonos oscuros.
  */

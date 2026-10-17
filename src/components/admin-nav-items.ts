@@ -94,6 +94,6 @@ export const ADMIN_SEARCH_EVENT = "admin:buscar";
 /** Cookie con la preferencia de la barra lateral en la compu (completa o compacta). */
 export const ADMIN_NAV_COOKIE = "admin_nav";
 
-/** Cookie con el tema del panel: "claro" u "oscuro" (sin cookie, oscuro). */
+/** Cookie con el tema del panel: "claro" u "oscuro" (sin cookie, claro). */
 export const ADMIN_THEME_COOKIE = "admin_tema";
 export type AdminTheme = "claro" | "oscuro";

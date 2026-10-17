@@ -110,3 +110,66 @@ test("pide los datos del cliente", async () => {
   assert.equal(res.status, 400);
   assert.ok(res.body.errors.email || res.body.errors.phone);
 });
+
+test("venta en el local: queda entregada, baja el stock y alcanza con nombre y apellido", async () => {
+  await seedProduct("tele", 100_000, 5);
+  const res = await cargar({
+    items: [{ slug: "tele", quantity: 2, price: 1 }],
+    customer: { firstName: "Juan", lastName: "Pérez" },
+    delivery: { method: "pickup" },
+    payment: { method: "efectivo" },
+    counterSale: true,
+  });
+  assert.equal(res.status, 200, JSON.stringify(res.body));
+  assert.equal(res.body.delivered, true);
+  assert.equal(res.body.total, 200_000);
+
+  const [order] = await db.select().from(schema.orders).where(eq(schema.orders.code, res.body.code));
+  assert.equal(order.status, "entregado");
+  assert.equal(order.total, 200_000);
+  assert.equal(order.email, "");
+  assert.equal(await stock("tele"), 3);
+  const events = await db.select().from(schema.orderEvents).where(eq(schema.orderEvents.orderId, order.id));
+  assert.deepEqual(
+    events.map((e) => e.toStatus),
+    ["entregado"],
+  );
+});
+
+test("venta en el local: si cargan un email, tiene que ser válido", async () => {
+  await seedProduct("tele", 100_000, 5);
+  const res = await cargar({
+    items: [{ slug: "tele", quantity: 1 }],
+    customer: { firstName: "Juan", lastName: "Pérez", email: "no-es-email" },
+    payment: { method: "efectivo" },
+    counterSale: true,
+  });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.errors.email);
+  assert.equal(await stock("tele"), 5);
+});
+
+test("venta en el local: no se puede con envío a domicilio", async () => {
+  await seedProduct("tele", 100_000, 5);
+  const res = await cargar({
+    items: [{ slug: "tele", quantity: 1 }],
+    customer: comprador,
+    delivery: domicilio,
+    payment: { method: "transferencia" },
+    counterSale: true,
+  });
+  assert.equal(res.status, 400);
+  assert.equal((await db.select().from(schema.orders)).length, 0);
+  assert.equal(await stock("tele"), 5);
+});
+
+test("sin marcar la venta en el local, el email sigue siendo obligatorio", async () => {
+  await seedProduct("tele", 100_000, 5);
+  const res = await cargar({
+    items: [{ slug: "tele", quantity: 1 }],
+    customer: { firstName: "Juan", lastName: "Pérez" },
+    payment: { method: "efectivo" },
+  });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.errors.email);
+});

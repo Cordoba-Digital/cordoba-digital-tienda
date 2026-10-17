@@ -25,7 +25,7 @@ export default async function AdminNewOrderPage() {
           </Link>
         }
         title="Pedido manual"
-        description="Para ventas por WhatsApp, teléfono o mostrador. El pedido queda pendiente de pago con el stock reservado, y le mandás el link al cliente para que pague."
+        description="Para ventas por WhatsApp, teléfono o en el local. El pedido queda pendiente de pago con el stock reservado y le mandás el link al cliente. Si ya cobraste en el local, marcá «Ya lo cobré y se lo llevó» y queda como venta terminada."
         actions={
           <Link href="/admin/pedidos" className={adminChip}>
             Volver a pedidos
