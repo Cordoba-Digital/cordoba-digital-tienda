@@ -666,6 +666,21 @@ html:has(.admin-save-bar) {
   border-radius: 10px;
   color: var(--color-ink-900);
 }
+/* La lista que se abre de un select toma los colores del select. Con el fondo semitransparente
+   de los campos, Chrome la pinta con su fondo blanco y el texto claro del tema no se lee.
+   El select lleva un fondo sólido (el del panel) y el tono de campo va encima como capa. */
+.admin-theme select {
+  background-color: var(--color-adm-panel);
+  background-image: linear-gradient(var(--admin-field), var(--admin-field));
+}
+.admin-theme select option,
+.admin-theme select optgroup {
+  background-color: var(--color-adm-panel);
+  color: var(--color-ink-900);
+}
+.admin-theme select option:disabled {
+  color: var(--color-adm-faint);
+}
 .admin-theme input::placeholder,
 .admin-theme textarea::placeholder {
   color: var(--color-adm-faint);
