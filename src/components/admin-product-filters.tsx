@@ -4,6 +4,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState, useTransition } from "react";
 
 import type { AdminCategoryOption } from "@/lib/admin-products";
+import type { PhotoFilter } from "@/lib/photo-checks";
 import { groupCategoryOptions } from "@/lib/category-tree";
 
 type Props = {
@@ -14,12 +15,20 @@ type Props = {
   sort: "" | "stock-desc" | "stock-asc";
   oferta: boolean;
   destacados: boolean;
+  fotos: PhotoFilter;
+};
+
+export const PHOTO_FILTER_LABELS: Record<Exclude<PhotoFilter, "">, string> = {
+  sin: "Sin foto",
+  chicas: "Fotos chicas",
+  marcadas: "Marcadas para cambiar",
+  "sin-medir": "Fotos sin medir",
 };
 
 /** Filtros de la lista: se aplican solos al cambiar, sin botón Buscar. */
 export const LAST_LIST_KEY = "admin:productos:lista";
 
-export function AdminProductFilters({ q, category, categories, stock, sort, oferta, destacados }: Props) {
+export function AdminProductFilters({ q, category, categories, stock, sort, oferta, destacados, fotos }: Props) {
   const router = useRouter();
   const pathname = usePathname() ?? "/admin/productos";
   const searchParams = useSearchParams();
@@ -77,6 +86,7 @@ export function AdminProductFilters({ q, category, categories, stock, sort, ofer
   if (sort) active.push({ key: "orden", label: "Orden", value: sort === "stock-desc" ? "Más stock primero" : "Menos stock primero", clear: { orden: null } });
   if (oferta) active.push({ key: "oferta", label: "Precio", value: "En oferta", clear: { oferta: null } });
   if (destacados) active.push({ key: "destacados", label: "Vitrina", value: "Destacados", clear: { destacados: null } });
+  if (fotos) active.push({ key: "fotos", label: "Fotos", value: PHOTO_FILTER_LABELS[fotos], clear: { fotos: null } });
 
   return (
     <div className={`flex flex-col gap-3 transition-opacity ${pending ? "opacity-60" : ""}`}>
@@ -130,6 +140,19 @@ export function AdminProductFilters({ q, category, categories, stock, sort, ofer
           <option value="">Más recientes</option>
           <option value="stock-desc">Más stock primero</option>
           <option value="stock-asc">Menos stock primero</option>
+        </select>
+        <select
+          value={fotos}
+          onChange={(e) => apply({ fotos: e.target.value || null })}
+          aria-label="Fotos"
+          className={`${control} flex-1 sm:flex-none`}
+        >
+          <option value="">Todas las fotos</option>
+          {Object.entries(PHOTO_FILTER_LABELS).map(([value, label]) => (
+            <option key={value} value={value}>
+              {label}
+            </option>
+          ))}
         </select>
         <button type="button" aria-pressed={oferta} onClick={() => apply({ oferta: oferta ? null : "1" })} className={chip(oferta)}>
           En oferta

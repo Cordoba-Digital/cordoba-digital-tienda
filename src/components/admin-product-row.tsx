@@ -7,6 +7,7 @@ import { AdminDotBadge } from "@/components/admin-ui";
 import { ProductImg } from "@/components/product-img";
 import { money } from "@/lib/format";
 import type { AdminProductRow } from "@/lib/admin-products";
+import { isSmallPhoto } from "@/lib/image-dimensions";
 
 export function AdminProductRow({ product, categoryName }: { product: AdminProductRow; categoryName?: string }) {
   const [price, setPrice] = useState(String(product.price));
@@ -16,6 +17,8 @@ export function AdminProductRow({ product, categoryName }: { product: AdminProdu
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
   const [saved, setSaved] = useState("");
+  const [photoFlagged, setPhotoFlagged] = useState(product.photoFlagged);
+  const [flagging, setFlagging] = useState(false);
 
   const dirty =
     Number(price) !== product.price ||
@@ -51,6 +54,39 @@ export function AdminProductRow({ product, categoryName }: { product: AdminProdu
       setSaving(false);
     }
   }
+
+  /** "Hay que cambiar la foto": se guarda al toque, sin el botón Guardar. */
+  async function toggleFlag() {
+    const next = !photoFlagged;
+    setFlagging(true);
+    setError("");
+    try {
+      const res = await fetch(`/api/admin/products/${encodeURIComponent(product.slug)}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ photoFlagged: next }),
+      });
+      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
+      if (!res.ok || !data.ok) {
+        setError(data.error ?? "No se pudo marcar la foto.");
+        return;
+      }
+      setPhotoFlagged(next);
+    } catch {
+      setError("Error de red.");
+    } finally {
+      setFlagging(false);
+    }
+  }
+
+  const photo = { width: product.photoWidth, height: product.photoHeight };
+  const photoState = !product.image
+    ? { label: "Sin foto", color: "#ff8a8a" }
+    : photoFlagged
+      ? { label: "Foto para cambiar", color: "#f5b544" }
+      : isSmallPhoto(photo)
+        ? { label: `Foto chica · ${photo.width}×${photo.height}`, color: "#f5b544" }
+        : null;
 
   // Estado según lo que está escrito, así se ve el cambio antes de guardar.
   const units = Number(stock) || 0;
@@ -94,6 +130,11 @@ export function AdminProductRow({ product, categoryName }: { product: AdminProdu
             {product.brand} · {categoryName || product.categorySlug}
           </p>
           <p className="admin-mono truncate text-[11px] text-adm-faint">{product.sku || "sin SKU"}</p>
+          {photoState ? (
+            <AdminDotBadge color={photoState.color} className="mt-1 !px-2 !py-0 text-[11px]">
+              {photoState.label}
+            </AdminDotBadge>
+          ) : null}
         </div>
       </div>
       <div role="cell" className="min-w-0">
@@ -157,6 +198,16 @@ export function AdminProductRow({ product, categoryName }: { product: AdminProdu
         >
           Editar
         </Link>
+        <button
+          type="button"
+          onClick={toggleFlag}
+          disabled={flagging}
+          aria-pressed={photoFlagged}
+          title={photoFlagged ? "Sacar la marca" : "La foto es de baja calidad o no corresponde al producto"}
+          className="text-xs text-adm-muted underline-offset-2 transition-colors duration-150 hover:text-adm-fg hover:underline disabled:opacity-60"
+        >
+          {flagging ? "…" : photoFlagged ? "Desmarcar foto" : "Marcar foto"}
+        </button>
         {error ? <p role="alert" className="text-xs font-semibold text-red-600">{error}</p> : null}
       </div>
     </div>

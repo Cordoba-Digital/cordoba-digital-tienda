@@ -64,6 +64,13 @@
       "when": 1792176744144,
       "tag": "0008_devoluciones",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1792354526738,
+      "tag": "0009_revision_fotos",
+      "breakpoints": true
     }
   ]
 }

@@ -149,7 +149,7 @@ function isPrivateAddress(ip: string): boolean {
 }
 
 /** Solo hosts públicos: el servidor no tiene que poder pedir nada de la red interna. */
-async function assertPublicHost(url: URL): Promise<void> {
+export async function assertPublicHost(url: URL): Promise<void> {
   if (url.protocol !== "https:" && url.protocol !== "http:") throw new Error("La URL tiene que empezar con http(s).");
   if (url.username || url.password) throw new Error("URL no permitida.");
   const addresses = await lookup(url.hostname, { all: true }).catch(() => []);

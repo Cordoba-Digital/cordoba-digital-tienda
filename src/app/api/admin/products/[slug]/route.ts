@@ -27,11 +27,22 @@ export async function PATCH(request: Request, context: { params: Promise<{ slug:
   const { slug } = await context.params;
   const body = (await request.json().catch(() => ({}))) as ProductPatch;
   const before = await getAdminProductForEdit(slug);
-  const patch = { price: body.price, stock: body.stock, featured: body.featured, badge: body.badge };
+  const patch = { price: body.price, stock: body.stock, featured: body.featured, badge: body.badge, photoFlagged: body.photoFlagged };
   const error = await updateAdminProduct(slug, patch);
   if (error) {
     return Response.json({ ok: false, error }, { status: 400 });
   }
+  // La marca de foto es solo del panel: no cambia nada de la tienda.
+  if (typeof body.photoFlagged === "boolean" && before) {
+    await logAdminAction(await actorFromRequest(request), {
+      action: "edicion_rapida",
+      entityType: "producto",
+      entityId: before.slug,
+      summary: `${before.name}: ${body.photoFlagged ? "marcó la foto para cambiar" : "desmarcó la foto"}`,
+    });
+  }
+  const onlyFlag = [body.price, body.stock, body.featured, body.badge].every((v) => v === undefined);
+  if (onlyFlag) return Response.json({ ok: true });
   refreshStorePages([before?.slug, slug]);
   if (before) {
     const after = await getAdminProductForEdit(before.slug);
