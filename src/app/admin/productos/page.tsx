@@ -11,6 +11,7 @@ import { AdminPageHeader, adminBtn, adminChip } from "@/components/admin-ui";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { listAdminProducts, listArchivedProducts, listProductCategories } from "@/lib/admin-products";
+import { parsePhotoFilter } from "@/lib/photo-checks";
 
 export const dynamic = "force-dynamic";
 
@@ -56,10 +57,11 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
   const sort: "" | "stock-desc" | "stock-asc" = sortParam === "stock-desc" || sortParam === "stock-asc" ? sortParam : "";
   const oferta = flag(sp.oferta);
   const destacados = flag(sp.destacados);
+  const fotos = parsePhotoFilter(first(sp.fotos));
 
   const all = { q: "", category: "", sinStock: false, stock: "" as const, sort: "" as const, oferta: false, destacados: false, page: 1, perPage: 1 };
   const [{ items, total }, categories, published, outOfStock, archived] = await Promise.all([
-    listAdminProducts({ q, category, sinStock: false, stock, sort, oferta, destacados, page: 1, perPage: PER_PAGE }),
+    listAdminProducts({ q, category, sinStock: false, stock, sort, oferta, destacados, fotos, page: 1, perPage: PER_PAGE }),
     listProductCategories(),
     listAdminProducts(all),
     listAdminProducts({ ...all, stock: "sin" }),
@@ -75,6 +77,7 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
     ...(sort ? { orden: sort } : {}),
     ...(oferta ? { oferta: "1" } : {}),
     ...(destacados ? { destacados: "1" } : {}),
+    ...(fotos ? { fotos } : {}),
   };
   const query = new URLSearchParams(base).toString();
 
@@ -115,6 +118,7 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
         sort={sort}
         oferta={oferta}
         destacados={destacados}
+        fotos={fotos}
       />
 
       <AdminProductList key={query} initialItems={items} total={total} perPage={PER_PAGE} query={query} categoryNames={categoryNames} />

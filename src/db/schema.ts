@@ -507,6 +507,21 @@ export const productImages = pgTable("product_images", {
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
 
+/**
+ * Revisión de fotos desde el panel (ver `photo-checks.ts`): el tamaño medido de
+ * la foto principal y la marca "hay que cambiarla". Va aparte de `products`
+ * para que la medición no toque la ficha. `url` es la foto que se midió: si la
+ * principal cambia, la medición vieja deja de contar.
+ */
+export const productPhotoChecks = pgTable("product_photo_checks", {
+  productId: integer("product_id").primaryKey(),
+  url: text("url").notNull().default(""),
+  width: integer("width"),
+  height: integer("height"),
+  flagged: boolean("flagged").notNull().default(false),
+  checkedAt: timestamp("checked_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
 /** Productos archivados desde el panel, para poder restaurarlos (ver `admin-products.ts`). */
 export const productArchive = pgTable("product_archive", {
   id: serial("id").primaryKey(),

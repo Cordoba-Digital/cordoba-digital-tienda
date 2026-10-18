@@ -1,10 +1,17 @@
 import { and, asc, desc, eq, ilike, or, sql } from "drizzle-orm";
 
 import { db } from "@/db";
-import { categories, productCategories, products, type Spec } from "@/db/schema";
+import { categories, productCategories, productPhotoChecks, products, type Spec } from "@/db/schema";
 import { buildCategoryTree, titleCaseCategoryName, type CategoryNode, type CategoryRow } from "@/lib/category-tree";
 import { findProductBySlug } from "@/lib/queries";
 import { sanitizeHtml } from "@/lib/sanitize-html";
+import {
+  clearPhotoFlagIfMainChanged,
+  ensurePhotoChecksTable,
+  photoFilterClause,
+  setPhotoFlag,
+  type PhotoFilter,
+} from "@/lib/photo-checks";
 import { UPLOADED_IMAGE_PATH } from "@/lib/product-images";
 
 export type AdminProductRow = {
@@ -19,6 +26,11 @@ export type AdminProductRow = {
   badge: string | null;
   featured: boolean;
   image: string;
+  /** Tamaño medido de la foto principal (null si todavía no se midió). */
+  photoWidth: number | null;
+  photoHeight: number | null;
+  /** Marcada desde la lista como "hay que cambiar la foto". */
+  photoFlagged: boolean;
 };
 
 export async function listAdminProducts(input: {
@@ -31,6 +43,8 @@ export async function listAdminProducts(input: {
   sort?: "" | "stock-desc" | "stock-asc";
   oferta: boolean;
   destacados: boolean;
+  /** Fotos a revisar: sin foto, chicas, marcadas o sin medir. */
+  fotos?: PhotoFilter;
   page: number;
   perPage: number;
 }): Promise<{ items: AdminProductRow[]; total: number; page: number; perPage: number; pages: number }> {
@@ -65,7 +79,12 @@ export async function listAdminProducts(input: {
   if (stockFilter === "con") clauses.push(sql`${products.stock} > 0`);
   if (input.oferta) clauses.push(sql`${products.compareAtPrice} is not null and ${products.compareAtPrice} > ${products.price}`);
   if (input.destacados) clauses.push(eq(products.featured, true));
+  const photoClause = photoFilterClause(input.fotos ?? "");
+  if (photoClause) clauses.push(photoClause);
   const where = clauses.length ? and(...clauses) : undefined;
+  await ensurePhotoChecksTable();
+  // La medición cuenta solo si es de la foto principal actual.
+  const sameMain = sql`${productPhotoChecks.url} = ${products.images}->>0`;
 
   const [rows, [countRow]] = await Promise.all([
     db
@@ -81,8 +100,12 @@ export async function listAdminProducts(input: {
         badge: products.badge,
         featured: products.featured,
         image: sql<string>`${products.images}->>0`,
+        photoWidth: sql<number | null>`case when ${sameMain} then ${productPhotoChecks.width} end`,
+        photoHeight: sql<number | null>`case when ${sameMain} then ${productPhotoChecks.height} end`,
+        photoFlagged: sql<boolean>`coalesce(${productPhotoChecks.flagged}, false)`,
       })
       .from(products)
+      .leftJoin(productPhotoChecks, eq(productPhotoChecks.productId, products.id))
       .where(where)
       .orderBy(
         ...(input.sort === "stock-desc"
@@ -141,6 +164,8 @@ export type ProductPatch = {
   stock?: number;
   featured?: boolean;
   badge?: string | null;
+  /** "Hay que cambiar la foto" (ver `photo-checks.ts`). */
+  photoFlagged?: boolean;
 };
 
 /** Valida y aplica cambios operativos. Devuelve error legible o null si ok. */
@@ -163,12 +188,14 @@ export async function updateAdminProduct(slug: string, patch: ProductPatch): Pro
     const badge = (patch.badge ?? "").trim().slice(0, 40) || null;
     set.badge = badge;
   }
-  if (Object.keys(set).length === 0) return "Nada para actualizar.";
+  const flag = typeof patch.photoFlagged === "boolean" ? patch.photoFlagged : undefined;
+  if (Object.keys(set).length === 0 && flag === undefined) return "Nada para actualizar.";
   // Los slugs con `%` literal (restos de la migración) llegan crudos o
   // decodificados según la ruta: se resuelven con las variantes de encoding.
   const existing = await findProductBySlug(slug);
   if (!existing) return "Producto inexistente.";
-  await db.update(products).set(set).where(eq(products.slug, existing.slug));
+  if (Object.keys(set).length) await db.update(products).set(set).where(eq(products.slug, existing.slug));
+  if (flag !== undefined) await setPhotoFlag(existing.id, flag);
   return null;
 }
 
@@ -488,6 +515,7 @@ export async function updateAdminProductFull(slug: string, raw: AdminProductCrea
     .update(products)
     .set({ ...values, imageSrcSets, origin: "manual" })
     .where(eq(products.id, existing.id));
+  await clearPhotoFlagIfMainChanged(existing.id, existing.images[0], values.images?.[0]);
 
   await db.delete(productCategories).where(eq(productCategories.productId, existing.id));
   await db

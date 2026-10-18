@@ -2,6 +2,7 @@ import { sessionFromCookieHeader } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { actorFromRequest, logAdminAction } from "@/lib/admin-audit";
 import { createAdminProduct, listAdminProducts, listProductCategories, type AdminProductCreateInput } from "@/lib/admin-products";
+import { parsePhotoFilter } from "@/lib/photo-checks";
 import { refreshStorePages } from "@/lib/store-cache";
 
 export const dynamic = "force-dynamic";
@@ -30,6 +31,7 @@ export async function GET(request: Request) {
       sort: sortParam === "stock-desc" || sortParam === "stock-asc" ? sortParam : "",
       oferta: flag(searchParams.get("oferta")),
       destacados: flag(searchParams.get("destacados")),
+      fotos: parsePhotoFilter(searchParams.get("fotos")),
       page: Number(searchParams.get("page") ?? 1) || 1,
       perPage: Number(searchParams.get("perPage") ?? 20) || 20,
     }),

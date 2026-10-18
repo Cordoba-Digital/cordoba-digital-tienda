@@ -61,7 +61,7 @@ export const ADMIN_NAV_GROUPS: { title?: string; items: AdminNavItem[] }[] = [
       { href: "/admin/productos", label: "Productos", icon: "productos" },
       { href: "/admin/productos/nuevo", label: "Nuevo producto", icon: "nuevo" },
       { href: "/admin/productos/archivados", label: "Archivados", icon: "archivo" },
-      { href: "/admin/fotos", label: "Fotos del WordPress", icon: "fotos" },
+      { href: "/admin/fotos", label: "Fotos", icon: "fotos" },
     ],
   },
   {
