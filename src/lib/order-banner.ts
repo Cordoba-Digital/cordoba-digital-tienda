@@ -9,9 +9,14 @@
 /** Horas de reserva antes de que venza un pedido sin pago (`PENDING_EXPIRY_HOURS` en `lib/order-status`). */
 const RESERVA_HS = 48;
 
-export type OrderBanner = { tone: "pendiente" | "confirmado"; title: string; detail: string | null };
+export type OrderBanner = { tone: "pendiente" | "confirmado" | "cancelado"; title: string; detail: string | null };
 
 export function orderBanner(order: { customerName: string; status: string; paymentMethod: string }): OrderBanner {
+  // Cancelado no es confirmado: si se recarga la página de la compra (`?nuevo=1`)
+  // después de cancelarlo, no puede volver a aparecer el "gracias".
+  if (order.status === "cancelado") {
+    return { tone: "cancelado", title: "Este pedido está cancelado", detail: null };
+  }
   if (order.status !== "pendiente_pago") {
     const firstName = order.customerName.trim().split(/\s+/)[0] ?? "";
     const thanks = firstName ? `¡Gracias ${firstName}!` : "¡Gracias!";

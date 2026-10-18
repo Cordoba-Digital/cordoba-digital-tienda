@@ -163,6 +163,58 @@
   }
 }
 
+/*
+ * Paso en curso de la barra de estado de un pedido (panel y página del
+ * pedido): se llena hacia el paso siguiente y vuelve a empezar. Sin
+ * movimiento (preferencia del sistema) queda lleno a la mitad.
+ */
+@keyframes estado-avance {
+  from {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  75% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+@keyframes estado-avance-v {
+  from {
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  75% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 0;
+  }
+}
+.estado-avance {
+  transform-origin: left center;
+  animation: estado-avance 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+.estado-avance-v {
+  transform-origin: center top;
+  animation: estado-avance-v 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .estado-avance {
+    animation: none;
+    transform: scaleX(0.5);
+  }
+  .estado-avance-v {
+    animation: none;
+    transform: scaleY(0.5);
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
