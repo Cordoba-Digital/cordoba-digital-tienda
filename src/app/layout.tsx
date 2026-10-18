@@ -11,6 +11,7 @@ import { StoreProvider } from "@/components/store-provider";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { StoreChrome } from "@/components/store-chrome";
 import { WhatsAppFab } from "@/components/whatsapp-fab";
+import { getTopBarVisible } from "@/lib/home-layout-server";
 import { getInstallmentPlans } from "@/lib/installments-server";
 import { getCategoryTree, getGuides, type CategoryTreeNode, type GuideTeaser } from "@/lib/queries";
 import "./globals.css";
@@ -90,11 +91,14 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   // en TODAS las páginas. Cada uno conserva su fallback por separado con
   // `allSettled`: si la base no responde, la página igual se dibuja. Las
   // cuotas ya devuelven una lista vacía si Mercado Pago falla.
-  const [treeRes, guideRes, plansRes] = await Promise.allSettled([
+  const [treeRes, guideRes, plansRes, topBarRes] = await Promise.allSettled([
     getCategoryTree(),
     getGuides(),
     getInstallmentPlans(),
+    getTopBarVisible(),
   ]);
+  // La barra de avisos se apaga desde Panel → Inicio; ante la duda se muestra.
+  const topBar = topBarRes.status === "fulfilled" ? topBarRes.value : true;
   const installmentPlans = plansRes.status === "fulfilled" ? plansRes.value : [];
   let categories: (NavNode & { tagline: string })[] = [];
   try {
@@ -136,7 +140,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
           <InstallmentsProvider plans={installmentPlans}>
             <SmoothScroll />
             <StoreChrome>
-              <SiteHeader categories={categories} />
+              <SiteHeader categories={categories} topBar={topBar} />
             </StoreChrome>
             <main className="min-h-[60vh]">{children}</main>
             <StoreChrome>

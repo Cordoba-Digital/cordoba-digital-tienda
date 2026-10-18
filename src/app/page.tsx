@@ -8,6 +8,7 @@ import {
   ExternalLink,
   LayoutGrid,
   MapPin,
+  MessageCircle,
   Phone,
   Store,
   Trophy,
@@ -20,7 +21,7 @@ import { Icon } from "@/components/category-icon";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { HomeHero } from "@/components/home-hero";
 import { HomeCategoryTabs, HomeExplore, HomeRecentlyViewed } from "@/components/home-sections";
-import { NewsletterForm } from "@/components/newsletter-form";
+import { HomeTiles } from "@/components/home-tiles";
 import { ProductRow } from "@/components/product-card";
 import { SectionHeading } from "@/components/ui";
 import { discountPercent } from "@/lib/format";
@@ -28,13 +29,14 @@ import { getGoogleReviews } from "@/lib/google-reviews";
 import { visibleHomeBlocks, type HomeBlockId } from "@/lib/home-layout";
 import type { HeroSlideId } from "@/lib/hero-picks";
 import { getHeroPicks } from "@/lib/hero-picks-server";
-import { getHomeLayout } from "@/lib/home-layout-server";
+import { getHomeLayout, getTopBarVisible } from "@/lib/home-layout-server";
 import { toView } from "@/lib/product-view";
 import { renderPerRequestIfNoDatabase } from "@/lib/store-cache";
 import { jsonLdString, storeJsonLd } from "@/lib/structured-data";
 import {
   getBestSellers,
   getCategoryShowcase,
+  getCategoryTiles,
   getCategoryTree,
   getDealProducts,
   getFeaturedProducts,
@@ -101,7 +103,8 @@ export default async function HomePage() {
   const layout = await getHomeLayout();
   const visible = visibleHomeBlocks(layout);
   // Los bloques nuevos piden datos aparte: si están ocultos, no se consultan.
-  const [featured, deals, bestSellers, categories, googleReviews, productCount, guides, showcase, explore] = await Promise.all([
+  const wantsTiles = visible.includes("vitrinas") || visible.includes("vitrinas-2");
+  const [featured, deals, bestSellers, categories, googleReviews, productCount, guides, showcase, explore, tiles, topBar] = await Promise.all([
     getFeaturedProducts(24),
     getDealProducts(8),
     getBestSellers(8),
@@ -111,7 +114,12 @@ export default async function HomePage() {
     getGuides(),
     visible.includes("por-categoria") ? getCategoryShowcase() : Promise.resolve([]),
     visible.includes("explorar") ? listProducts({ inStock: true, perPage: 10 }) : Promise.resolve(null),
+    wantsTiles ? getCategoryTiles(6) : Promise.resolve([]),
+    getTopBarVisible(),
   ]);
+  const tileViews = tiles.map((tile) => ({ ...tile, products: tile.products.map(toView) }));
+  // Con una sola vitrina visible, esa usa las tres categorías principales.
+  const secondTiles = visible.includes("vitrinas") ? tileViews.slice(3, 6) : tileViews.slice(0, 3);
 
   const ratingValue = googleReviews.rating?.toFixed(1) ?? null;
   const reviewCount = googleReviews.count;
@@ -144,8 +152,9 @@ export default async function HomePage() {
   const bestSlugs = new Set(bestSellers.map((p) => p.slug));
   const dealSlugs = new Set(deals.map((p) => p.slug));
   const featuredPicks = featured.filter((p) => !bestSlugs.has(p.slug) && !dealSlugs.has(p.slug)).slice(0, 8);
-  // Los accesos apuntan al bloque del local solo si está en la home.
-  const pickupHref = visible.includes("local") ? "#local" : "/ayuda";
+  // Los accesos apuntan al bloque del local, o a la franja que también lo
+  // nombra, solo si están en la home.
+  const pickupHref = visible.includes("local") ? "#local" : visible.includes("pagos-retiro") ? "#comprar-tranquilo" : "/ayuda";
 
   /*
    * Cada bloque de la home, por id. El orden y cuáles se muestran salen de
@@ -176,9 +185,9 @@ export default async function HomePage() {
               Cintillo de confianza: una caja blanca que pisa el hero. El `z-10` la
               saca del orden normal para que la sombra caiga sobre el fondo del hero.
             */}
-            {/* En el celular no va: la barra naranja de arriba ya rota estos
-                mismos mensajes, y acá repetía lo mismo en la primera pantalla. */}
-            <section className="relative z-10 -mt-8 hidden sm:block">
+            {/* En el celular va solo si la barra de avisos está apagada: si no,
+                la barra ya rota estos mismos mensajes y acá se repetían. */}
+            <section className={`relative z-10 -mt-8 ${topBar ? "hidden sm:block" : "max-sm:mt-0 max-sm:pb-1"}`}>
               <div className="container-xl">
                 <div className="grid grid-cols-4 overflow-hidden rounded-2xl bg-surface shadow-[0_20px_50px_-30px_rgba(20,22,28,0.45)] ring-1 ring-black/5 sm:grid-cols-2 lg:grid-cols-4">
                   {TRUST.map((t, i) => (
@@ -245,7 +254,7 @@ export default async function HomePage() {
             de la base. La foto, el dron y el CCTV van por separado, para que no
             confundas una cosa con otra.
           */}
-          <section id="categorias" className="container-xl py-5 sm:py-14">
+          <section id="categorias" className="container-xl py-5 sm:py-10">
             <SectionHeading
               eyebrow="Explorá"
               title="Categorías"
@@ -295,40 +304,62 @@ export default async function HomePage() {
     ),
     "pagos-retiro": () => (
       <>
-          <section className="container-xl grid gap-3 py-5 sm:gap-4 sm:py-8 md:grid-cols-2">
-            <article className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-[28px] sm:p-6">
-              <div className="mb-4 hidden h-1 w-14 rounded-full bg-emerald-500 sm:block" />
-              <h3 className="flex items-center gap-2 text-base font-extrabold tracking-tight text-ink-900 sm:block sm:text-xl">
-                <Wallet size={22} className="shrink-0 text-emerald-700 sm:mb-3" aria-hidden />Transferencia o efectivo en el local</h3>
-              <p className="mt-1.5 text-[13px] leading-relaxed text-ink-500 sm:mt-2 sm:text-sm">
-                Te mostramos el CBU cuando confirmás el pedido, no antes. En el local también podés pagar en efectivo o seña.
-                Nunca te pedimos una clave, un código ni un token por chat.
-              </p>
-              <Link href="/ayuda" className="mt-2 inline-block text-[13px] font-bold text-brand-700 hover:text-brand-800 sm:mt-4 sm:text-sm">
-                Ver medios de pago
-              </Link>
-            </article>
-            <article className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-[28px] sm:p-6">
-              <div className="mb-4 hidden h-1 w-14 rounded-full bg-brand-500 sm:block" />
-              <h3 className="flex items-center gap-2 text-base font-extrabold tracking-tight text-ink-900 sm:block sm:text-xl">
-                <Store size={22} className="shrink-0 text-brand-700 sm:mb-3" aria-hidden />Retiro en el local</h3>
-              <p className="mt-1.5 text-[13px] leading-relaxed text-ink-500 sm:mt-2 sm:text-sm">
-                Comprá online y retirá en {DIRECCION}. {HORARIOS}. Probamos el equipo con vos antes de que te lo lleves.
-              </p>
-              <a href={WHATSAPP} className="mt-2 inline-block text-[13px] font-bold text-brand-700 hover:text-brand-800 sm:mt-4 sm:text-sm">
-                Avisar que paso a retirar
-              </a>
-            </article>
+          {/*
+            Franja corta de confianza, como la de Tiendamia: tres columnas con
+            un ícono, una línea y un enlace. Reemplaza a las dos tarjetas de
+            pagos y retiro y a la sección grande del local.
+          */}
+          <section id="comprar-tranquilo" aria-label="Comprá tranquilo" className="container-xl py-4 sm:py-8">
+            <ul className="grid divide-y divide-ink-100 rounded-2xl bg-surface ring-1 ring-black/5 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+              {[
+                {
+                  icon: Wallet,
+                  title: "Pagá como te quede cómodo",
+                  text: "Transferencia bancaria, o efectivo y seña en el local. El CBU lo ves al confirmar el pedido: nunca te pedimos claves por chat.",
+                  link: { href: "/ayuda", label: "Ver medios de pago", external: false },
+                },
+                {
+                  icon: Store,
+                  title: "Retirá en el local",
+                  text: `${DIRECCION}. ${HORARIOS}. Probamos el equipo con vos antes de que te lo lleves.`,
+                  link: { href: MAPS, label: "Cómo llegar", external: true },
+                },
+                {
+                  icon: MessageCircle,
+                  title: "Hablá con una persona",
+                  text: "Antes o después de comprar te atendemos por WhatsApp, por mail o en el local. Sin call center.",
+                  link: { href: WHATSAPP, label: "Escribinos por WhatsApp", external: true },
+                },
+              ].map((item) => (
+                <li key={item.title} className="flex gap-3 p-4 sm:flex-col sm:items-center sm:gap-2 sm:p-6 sm:text-center">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-700">
+                    <item.icon size={20} aria-hidden />
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="text-[15px] font-extrabold tracking-tight text-ink-900">{item.title}</h3>
+                    <p className="mt-1 text-[13px] leading-relaxed text-ink-500">{item.text}</p>
+                    <a
+                      href={item.link.href}
+                      {...(item.link.external ? { target: "_blank", rel: "noreferrer" } : {})}
+                      className="mt-2 inline-block text-[13px] font-bold text-brand-700 hover:text-brand-800"
+                    >
+                      {item.link.label}
+                    </a>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </section>
       </>
     ),
+    vitrinas: () => <HomeTiles tiles={tileViews.slice(0, 3)} label="Categorías destacadas" />,
+    "vitrinas-2": () => <HomeTiles tiles={secondTiles} mirror label="Más categorías" />,
     "mas-vendidos": () => (
       <>
           <section className="container-xl py-5 sm:py-6">
             <SectionHeading
-              eyebrow="Elegidos por los cordobeses"
+              eyebrow="Lo más elegido por la gente"
               title="Los más vendidos"
-              description="Lo que más sale de nuestro depósito esta semana, con stock confirmado."
               action={{ href: "/productos?orden=vendidos", label: "Ver ranking" }}
             />
             <ProductRow
@@ -454,7 +485,6 @@ export default async function HomePage() {
               <SectionHeading
                 eyebrow="Selección del equipo"
                 title="Destacados de la semana"
-                description="Lo que recomendaríamos si nos preguntás por rendimiento, precio y disponibilidad real."
                 action={{ href: "/productos", label: "Ver catálogo" }}
               />
               <ProductRow products={featuredPicks.map(toView)} label="los destacados" />
@@ -494,28 +524,16 @@ export default async function HomePage() {
     ),
     preguntas: () => (
       <>
-          <section id="preguntas" className="container-xl grid gap-3 pb-10 pt-2 sm:gap-4 sm:pb-16 sm:pt-0 lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-[28px] sm:p-7">
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Antes de comprar</p>
-              <h2 className="mt-1 text-xl font-extrabold tracking-tight text-ink-900 sm:text-2xl">Preguntas frecuentes</h2>
-              <div className="mt-3">
-                <FaqAccordion items={FAQ} variant="plano" />
-              </div>
-              <Link href="/ayuda" className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">
-                Centro de ayuda <ArrowRight size={14} aria-hidden />
-              </Link>
-            </div>
-            <div className="mesh-warm flex flex-col justify-between rounded-2xl p-4 ring-1 ring-brand-100 sm:rounded-[28px] sm:p-7">
+          <section id="preguntas" className="container-xl py-6 sm:py-10">
+            <div className="grid gap-4 rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-[28px] sm:p-7 lg:grid-cols-[0.8fr_1.2fr] lg:gap-10">
               <div>
-                <p className="inline-flex rounded-full bg-white/70 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">
-                  Newsletter
-                </p>
-                <h3 className="mt-3 text-xl font-extrabold tracking-tight text-ink-900 sm:mt-4 sm:text-2xl">Novedades y ofertas de Córdoba Digital</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-500">Ingresos de depósito y ofertas fuertes. No un mail por día.</p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Antes de comprar</p>
+                <h2 className="mt-1 text-xl font-extrabold tracking-tight text-ink-900 sm:text-2xl">Preguntas frecuentes</h2>
+                <Link href="/ayuda" className="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">
+                  Centro de ayuda <ArrowRight size={14} aria-hidden />
+                </Link>
               </div>
-              <div className="mt-4 sm:mt-6">
-                <NewsletterForm variant="light" />
-              </div>
+              <FaqAccordion items={FAQ} variant="plano" />
             </div>
           </section>
       </>

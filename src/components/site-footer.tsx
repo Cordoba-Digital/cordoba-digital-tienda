@@ -28,14 +28,12 @@ export async function SiteFooter({
     <footer className="mt-20 mesh-warm border-t border-brand-100 text-ink-600">
       <div className="container-xl grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
         <div>
-          <div className="mb-4 flex items-center gap-2.5">
+          {/* El logo tiene fondo blanco propio: va en una tarjeta blanca con
+              aire alrededor, sin el borde naranja que lo hacía ver recortado
+              sobre el degradé, y sin repetir el nombre que el logo ya dice. */}
+          <div className="mb-5 inline-flex rounded-xl bg-white px-4 py-3 shadow-[0_8px_24px_-16px_rgba(20,22,28,0.35)]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/logo.png"
-              alt="Córdoba Digital"
-              className="h-10 w-auto rounded-[4px] bg-white object-contain px-3 py-1 ring-1 ring-brand-100"
-            />
-            <span className="text-base font-extrabold text-ink-900">Córdoba Digital</span>
+            <img src="/images/logo.png" alt="Córdoba Digital" width={1461} height={1005} className="h-12 w-auto object-contain" />
           </div>
           <p className="text-sm leading-relaxed text-ink-600">
             Tecnología con garantía legal. Local a la calle en el centro de Córdoba y envíos a todo el país con
@@ -43,7 +41,9 @@ export async function SiteFooter({
           </p>
           <div className="mt-6 space-y-1.5 text-sm text-ink-600">
             <p className="font-semibold text-ink-900">Local: 27 de Abril 180, Córdoba</p>
-            <p>Lun a Vie 14:00 a 18:30 · Sáb 12:00 a 14:30</p>
+            {/* Un renglón por día: en una sola línea el sábado quedaba partido. */}
+            <p>Lunes a viernes de 14:00 a 18:30</p>
+            <p>Sábados de 12:00 a 14:30</p>
             <a href="tel:+543516777774" className="block transition hover:text-brand-700">
               +54 351 677-7774
             </a>
@@ -174,9 +174,10 @@ export async function SiteFooter({
             © {new Date().getFullYear()} Córdoba Digital
             {cuit ? ` · CUIT ${cuit}` : ""} · Todos los derechos reservados.
           </p>
+          {/* Sin procesador de tarjetas: solo los medios que de verdad se aceptan. */}
           <div className="flex flex-wrap items-center justify-center gap-2">
-            {["Transferencia", "Efectivo", "Visa", "Mastercard", "Amex", "Naranja X", "Cabal"].map((m) => (
-              <span key={m} className="rounded-md border border-brand-100 bg-white px-2 py-1 text-[10px] font-semibold text-ink-600">
+            {["Transferencia desde cualquier banco o billetera virtual", "Efectivo en el local"].map((m) => (
+              <span key={m} className="rounded-md border border-brand-100 bg-white px-2.5 py-1 text-[11px] font-semibold text-ink-600">
                 {m}
               </span>
             ))}

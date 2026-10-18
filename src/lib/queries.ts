@@ -472,6 +472,25 @@ export async function getCategoryShowcase(maxTabs = 6, perTab = 8, minProducts =
   return rows.filter((row) => row.products.length >= minProducts);
 }
 
+/**
+ * Vitrinas de la home: las categorías raíz con más productos, cada una con sus
+ * tres productos con stock más vendidos para la foto. Una categoría sin ningún
+ * producto con foto se saltea: una tarjeta sin imagen se ve rota.
+ */
+export async function getCategoryTiles(max = 6) {
+  const roots = (await getCategoryTree())
+    .filter((c) => c.count >= 3)
+    .sort((a, b) => b.count - a.count)
+    .slice(0, max + 2);
+  const rows = await Promise.all(
+    roots.map(async (c) => {
+      const { items } = await listProducts({ categoryId: c.id, inStock: true, perPage: 3, sort: "vendidos" });
+      return { name: c.name, path: c.path, count: c.count, tagline: c.tagline, products: items.filter((p) => p.images.length > 0) };
+    }),
+  );
+  return rows.filter((row) => row.products.length > 0).slice(0, max);
+}
+
 /** Por slug, con `cache()` de React: `generateMetadata` y la página llaman a
     `findProduct()` en el mismo request (hasta 5 lookups por los slugs con
     `%`-encoding) y sin esto cada uno pegaba a la base. */

@@ -25,7 +25,7 @@ const ANNOUNCEMENTS = [
   "🛡️ 6 meses de garantía legal + soporte post-venta local",
 ];
 
-export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
+export function SiteHeader({ categories, topBar = true }: { categories: CategoryLink[]; topBar?: boolean }) {
   const { count, openCart, favorites, hydrated } = useStore();
   const router = useRouter();
   const pathname = usePathname();
@@ -87,9 +87,10 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
   };
 
   useEffect(() => {
+    if (!topBar) return;
     const id = window.setInterval(() => setAnnouncement((i) => (i + 1) % ANNOUNCEMENTS.length), 4200);
     return () => window.clearInterval(id);
-  }, []);
+  }, [topBar]);
 
   useEffect(() => {
     const id = window.setTimeout(() => {
@@ -171,13 +172,16 @@ export function SiteHeader({ categories }: { categories: CategoryLink[] }) {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="bg-brand-700 py-1 text-center text-[11px] font-medium text-white sm:py-1.5 sm:text-[12px]">
-        <div className="container-xl flex items-center justify-center gap-2 overflow-hidden">
-          <span key={announcement} className="animate-rise">
-            {ANNOUNCEMENTS[announcement]}
-          </span>
+      {/* Barra de avisos: se apaga desde Panel → Inicio. */}
+      {topBar ? (
+        <div className="bg-brand-700 py-1 text-center text-[11px] font-medium text-white sm:py-1.5 sm:text-[12px]">
+          <div className="container-xl flex items-center justify-center gap-2 overflow-hidden">
+            <span key={announcement} className="animate-rise">
+              {ANNOUNCEMENTS[announcement]}
+            </span>
+          </div>
         </div>
-      </div>
+      ) : null}
 
       <div className="border-b border-ink-100 bg-surface/95 backdrop-blur-md">
         <div className="container-xl flex h-14 items-center gap-2 sm:h-16 sm:gap-3 md:h-[72px] md:gap-5">

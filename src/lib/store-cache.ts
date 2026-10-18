@@ -22,6 +22,18 @@ export function refreshStorePages(slugs: (string | null | undefined)[] = []): vo
 }
 
 /**
+ * Como `refreshStorePages`, pero para algo del header o del pie, que se ve en
+ * todas las páginas: invalida el layout entero y no solo la home.
+ */
+export function refreshWholeStore(): void {
+  try {
+    revalidatePath("/", "layout");
+  } catch (error) {
+    if (process.env.NODE_ENV === "production") console.warn("[cache] no se pudo refrescar la tienda:", error);
+  }
+}
+
+/**
  * Las páginas en caché se arman también durante el build. En Vercel la base
  * responde y la página sale prearmada; en el CI (o si la base no contesta en
  * ese momento) la página pasa a armarse en cada visita en vez de romper el
