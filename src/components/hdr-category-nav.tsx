@@ -62,10 +62,7 @@ const BAR_ITEMS: { label: string; path: string }[] = [
 /** Un acceso curado resuelto contra el árbol real. */
 type BarItem = { label: string; path: string; node: CategoryNavNode };
 
-/**
- * Enlaces de la tira: los curados más Ofertas y Ayuda, todos directos y sin
- * paneles. Se usa en desktop y en móvil con el mismo contenido.
- */
+/** Enlaces de la tira: los accesos curados, directos y sin paneles. */
 function StripLinks({ items }: { items: BarItem[] }) {
   return (
     <>
@@ -78,6 +75,17 @@ function StripLinks({ items }: { items: BarItem[] }) {
           {label}
         </Link>
       ))}
+    </>
+  );
+}
+
+/**
+ * Ofertas y Ayuda van aparte, pegadas al borde derecho (debajo del carrito):
+ * no son categorías y mezcladas con ellas se perdían.
+ */
+function EndLinks() {
+  return (
+    <div className="ml-auto flex shrink-0 items-center gap-0.5 pl-2">
       <Link
         href="/productos?ofertas=1"
         className="shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-sm font-bold text-rose-600 transition hover:bg-rose-50"
@@ -90,9 +98,10 @@ function StripLinks({ items }: { items: BarItem[] }) {
       >
         Ayuda
       </Link>
-    </>
+    </div>
   );
 }
+
 /** Busca un nodo en los tres niveles por su path (`a/b/c`). */
 function findNodeByPath(nodes: CategoryNavNode[], path: string): CategoryNavNode | undefined {
   for (const node of nodes) {
@@ -506,9 +515,9 @@ export function CategoryNavBar({ categories }: { categories: CategoryNavRoot[] }
         </div>
 
         {/*
-          Tira desplazable con los accesos curados más Ofertas y Ayuda: son
-          enlaces directos, sin paneles al hover. La navegación por
-          subcategorías vive en el panel del ícono.
+          Tira desplazable con los accesos curados: son enlaces directos, sin
+          paneles al hover. La navegación por subcategorías vive en el panel
+          del ícono. Ofertas y Ayuda quedan fijas a la derecha.
         */}
         <nav
           aria-label="Categorías"
@@ -516,6 +525,7 @@ export function CategoryNavBar({ categories }: { categories: CategoryNavRoot[] }
         >
           <StripLinks items={barItems} />
         </nav>
+        <EndLinks />
       </div>
     </div>
     {/*
@@ -524,12 +534,15 @@ export function CategoryNavBar({ categories }: { categories: CategoryNavRoot[] }
       menú de la hamburguesa (y en los accesos de la home).
     */}
     <div className="hidden border-t border-ink-100 sm:block lg:hidden">
-      <nav
-        aria-label="Accesos de categorías"
-        className="no-scrollbar flex h-11 items-center gap-0.5 overflow-x-auto px-4"
-      >
-        <StripLinks items={barItems} />
-      </nav>
+      <div className="flex h-11 items-center px-4">
+        <nav
+          aria-label="Accesos de categorías"
+          className="no-scrollbar flex min-w-0 flex-1 items-center gap-0.5 overflow-x-auto"
+        >
+          <StripLinks items={barItems} />
+        </nav>
+        <EndLinks />
+      </div>
     </div>
     </>
   );

@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { AdminHomeLayout } from "@/components/admin-home-layout";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { readAdminSession } from "@/lib/admin-session";
-import { getHomeLayoutRecord } from "@/lib/home-layout-server";
+import { getHomeLayoutRecord, getTopBarVisible } from "@/lib/home-layout-server";
 
 export const dynamic = "force-dynamic";
 
@@ -22,7 +22,7 @@ export default async function AdminHomePage() {
   const session = await readAdminSession(jar.get(ADMIN_COOKIE)?.value);
   if (!session) redirect("/admin/login?next=/admin/inicio");
 
-  const record = await getHomeLayoutRecord();
+  const [record, topBar] = await Promise.all([getHomeLayoutRecord(), getTopBarVisible()]);
 
   return (
     <div className="space-y-6">
@@ -38,7 +38,7 @@ export default async function AdminHomePage() {
             : "Todavía no se cambió: la home usa el orden de siempre."}
         </p>
       </div>
-      <AdminHomeLayout initial={record.layout} />
+      <AdminHomeLayout initial={record.layout} initialTopBar={topBar} />
     </div>
   );
 }
