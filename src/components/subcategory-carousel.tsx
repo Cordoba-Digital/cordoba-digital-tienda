@@ -13,23 +13,13 @@ const RESUME_AFTER_TOUCH_MS = 2500;
 /**
  * Botones de subcategorías en una sola fila que se desplazan solos y sin fin.
  * Se frena con el mouse encima, con foco de teclado o al tocar, y se puede
- * deslizar a mano. Si entran todos en el ancho, o el sistema pide menos
- * movimiento, queda quieta con scroll horizontal.
+ * deslizar a mano. Si entran todos en el ancho, queda quieta.
  */
 export function SubcategoryCarousel({ items, label }: { items: SubcategoryLink[]; label: string }) {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const firstSetRef = useRef<HTMLDivElement>(null);
   const [overflows, setOverflows] = useState(false);
-  const [reduceMotion, setReduceMotion] = useState(false);
   const touchedUntil = useRef(0);
-
-  useEffect(() => {
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const sync = () => setReduceMotion(media.matches);
-    sync();
-    media.addEventListener("change", sync);
-    return () => media.removeEventListener("change", sync);
-  }, []);
 
   useEffect(() => {
     const scroller = scrollerRef.current;
@@ -43,7 +33,10 @@ export function SubcategoryCarousel({ items, label }: { items: SubcategoryLink[]
     return () => observer.disconnect();
   }, []);
 
-  const animate = overflows && !reduceMotion;
+  // No se apaga con "reducir movimiento" del sistema: Windows lo activa con solo
+  // desactivar los efectos de animación, y la fila se frenaba sin que nadie lo
+  // pidiera. Es lenta y se detiene con el mouse, el foco o al tocar.
+  const animate = overflows;
 
   useEffect(() => {
     const scroller = scrollerRef.current;

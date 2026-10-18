@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 import { ActiveFilters, FiltersPanel, SortSelect } from "@/components/catalog-filters";
 import { CategoryIcon } from "@/components/category-icon";
-import { CategoryChips, EmptyResults, Pagination } from "@/components/catalog-ui";
+import { EmptyResults, Pagination } from "@/components/catalog-ui";
 import { ProductCard } from "@/components/product-card";
 import { SubcategoryCarousel } from "@/components/subcategory-carousel";
 import { mergedCategoryRedirect } from "@/lib/category-merges";
@@ -18,7 +18,6 @@ import {
   getBrandFacets,
   getCategoryByPath,
   getCategoryPriceStats,
-  getCategoryTree,
   listProducts,
 } from "@/lib/queries";
 
@@ -124,7 +123,7 @@ export default async function CategoryPage({
   const stock = pick(query, "stock") === "1";
 
   const PER_PAGE = 24;
-  const [brands, result, tree, priceStats] = await Promise.all([
+  const [brands, result, priceStats] = await Promise.all([
     getBrandFacets(node.id),
     listProducts({
       categoryId: node.id,
@@ -137,7 +136,6 @@ export default async function CategoryPage({
       onlyOffers: ofertas,
       inStock: stock,
     }),
-    getCategoryTree(),
     getCategoryPriceStats(node.id),
   ]);
 
@@ -252,8 +250,6 @@ export default async function CategoryPage({
           </span>
         </p>
       </header>
-
-      <CategoryChips items={tree.map((c) => ({ slug: c.slug, name: c.name, path: c.path }))} activePath={breadcrumb[0]?.path} />
 
       {children.length ? (
         <SubcategoryCarousel
