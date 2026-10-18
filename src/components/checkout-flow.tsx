@@ -207,6 +207,33 @@ function Field({
   );
 }
 
+function CheckoutStep({
+  number,
+  title,
+  subtitle,
+  children,
+}: {
+  number: number;
+  title: string;
+  subtitle: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section className="card-surface p-6 sm:p-8" aria-labelledby={`paso-${number}`}>
+      <div className="mb-6 flex items-start gap-3">
+        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-500 text-sm font-extrabold text-deep" aria-hidden>
+          {number}
+        </span>
+        <div>
+          <h2 id={`paso-${number}`} className="text-xl font-extrabold leading-8 tracking-tight text-ink-900">{title}</h2>
+          <p className="text-xs text-ink-500">{subtitle}</p>
+        </div>
+      </div>
+      {children}
+    </section>
+  );
+}
+
 const inputClass =
   "h-11 w-full rounded-xl border border-ink-200 bg-surface px-3.5 text-sm text-ink-900 outline-none transition placeholder:text-ink-500 focus:border-brand-400 focus:ring-4 focus:ring-brand-100";
 
@@ -470,6 +497,8 @@ export function CheckoutFlow({
     }
   };
 
+  const unidades = items.reduce((n, item) => n + item.quantity, 0);
+
   if (hydrated && items.length === 0) {
     return (
       <div className="container-xl py-16">
@@ -501,40 +530,44 @@ export function CheckoutFlow({
         </Link>
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_400px]">
+      {/* Izquierda, lo que completa el comprador en orden (1 datos, 2 entrega,
+          3 pago); derecha, el resumen fijo con el total y el botón. Antes el
+          medio de pago iba abajo del resumen y la columna izquierda quedaba
+          con un hueco grande. En celular las columnas se apilan en ese orden y
+          el botón queda al final, después del total. */}
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-8">
         <div className="space-y-4">
-          <section className="card-surface p-6 sm:p-8">
-            <h2 className="mb-6 text-xl font-extrabold tracking-tight text-ink-900">Detalles de facturación</h2>
+          <CheckoutStep number={1} title="Tus datos" subtitle="Para la factura y para avisarte cómo va el pedido.">
             <div className="space-y-4">
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field label="Nombre" error={errors.firstName}>
-                  <input className={inputClass} value={form.firstName} onChange={set("firstName")} placeholder="Juan" />
+                  <input className={inputClass} value={form.firstName} onChange={set("firstName")} placeholder="Juan" autoComplete="given-name" />
                 </Field>
                 <Field label="Apellidos" error={errors.lastName}>
-                  <input className={inputClass} value={form.lastName} onChange={set("lastName")} placeholder="Pérez" />
+                  <input className={inputClass} value={form.lastName} onChange={set("lastName")} placeholder="Pérez" autoComplete="family-name" />
                 </Field>
               </div>
               <Field label="Email" error={errors.email} hint="Te enviamos la confirmación y el seguimiento acá.">
-                <input className={inputClass} type="email" value={form.email} onChange={set("email")} placeholder="juan@email.com" />
+                <input className={inputClass} type="email" value={form.email} onChange={set("email")} placeholder="juan@email.com" autoComplete="email" />
               </Field>
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field label="Teléfono / WhatsApp" error={errors.phone}>
-                  <input className={inputClass} value={form.phone} onChange={set("phone")} placeholder="351 555 5555" />
+                  <input className={inputClass} type="tel" value={form.phone} onChange={set("phone")} placeholder="351 555 5555" autoComplete="tel" />
                 </Field>
                 <Field label="DNI o CUIT" error={errors.docId} hint="Necesario para la factura.">
-                  <input className={inputClass} value={form.docId} onChange={set("docId")} placeholder="30123456" />
+                  <input className={inputClass} value={form.docId} onChange={set("docId")} placeholder="30123456" inputMode="numeric" />
                 </Field>
               </div>
             </div>
-          </section>
+          </CheckoutStep>
 
-          <section className="card-surface p-6 sm:p-8">
-            <h2 className="mb-6 text-xl font-extrabold tracking-tight text-ink-900">Entrega</h2>
+          <CheckoutStep number={2} title="Entrega" subtitle="Te lo mandamos o lo retirás gratis en el local.">
             <div className="space-y-4">
               <div className="grid gap-3 sm:grid-cols-2">
                 <button
                   type="button"
                   onClick={() => chooseDelivery("standard")}
+                  aria-pressed={deliveryMethod !== "pickup"}
                   className={`rounded-2xl border p-4 text-left transition ${
                     deliveryMethod !== "pickup" ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-100 bg-surface hover:bg-ink-50"
                   }`}
@@ -545,6 +578,7 @@ export function CheckoutFlow({
                 <button
                   type="button"
                   onClick={() => chooseDelivery("pickup")}
+                  aria-pressed={deliveryMethod === "pickup"}
                   className={`rounded-2xl border p-4 text-left transition ${
                     deliveryMethod === "pickup" ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-100 bg-surface hover:bg-ink-50"
                   }`}
@@ -553,7 +587,6 @@ export function CheckoutFlow({
                   <p className="mt-1 text-xs text-emerald-700">Gratis · 27 de Abril 180, Córdoba Capital</p>
                 </button>
               </div>
-
               {deliveryMethod === "pickup" ? (
                 <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-600">
                   <p className="font-bold text-ink-900">27 de Abril 180, Córdoba Capital</p>
@@ -669,16 +702,111 @@ export function CheckoutFlow({
               )}
 
               {errors.delivery ? <p role="alert" className="text-xs font-semibold text-rose-600">{errors.delivery}</p> : null}
+
+              <Field label="Comentarios para la entrega (opcional)">
+                <textarea
+                  value={form.notes}
+                  onChange={set("notes")}
+                  rows={2}
+                  placeholder="Ej: entregar después de las 14 hs, dejar en portería..."
+                  className="w-full rounded-xl border border-ink-200 p-3 text-sm outline-none focus:border-brand-400"
+                />
+              </Field>
             </div>
-          </section>
+          </CheckoutStep>
+
+          <CheckoutStep number={3} title="Pago" subtitle="El total es el mismo con cualquier medio.">
+            <div className="space-y-4">
+              <div className="grid gap-3 sm:grid-cols-[repeat(auto-fit,minmax(15rem,1fr))]">
+                {PAYMENT_METHODS.filter((method) => isPaymentMethodOffered(method.id, deliveryMethod, { mercadoPago })).map(
+                  (method) => {
+                    const PaymentIcon = PAYMENT_ICONS[method.id];
+                    return (
+                    <button
+                      key={method.id}
+                      type="button"
+                      onClick={() => setPayment(method.id)}
+                      aria-pressed={payment === method.id}
+                      {...(method.id === "mercadopago" ? { "data-mp-checkout-cta": "checkout-pro" } : {})}
+                      className={`flex w-full items-start gap-3 rounded-2xl border p-4 text-left transition ${
+                        payment === method.id ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-100 bg-surface hover:bg-ink-50"
+                      }`}
+                    >
+                      <span className={`mt-0.5 rounded-lg p-2 ${payment === method.id ? "bg-brand-100 text-brand-700" : "bg-ink-50 text-ink-400"}`}>
+                        <PaymentIcon className="h-5 w-5 shrink-0" />
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="flex items-center justify-between gap-2 text-sm font-extrabold text-ink-900">
+                          {method.short}
+                          {method.perk ? (
+                            <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
+                              {method.perk}
+                            </span>
+                          ) : null}
+                        </span>
+                        <span className="mt-0.5 block text-xs leading-snug text-ink-500">{method.description}</span>
+                      </span>
+                    </button>
+                    );
+                  },
+                )}
+              </div>
+
+              {/* USDT queda oculto hasta que el negocio lo habilite. Mercado
+                  Pago aparece solo si el servidor tiene sus credenciales. */}
+
+              {payment === "mercadopago" ? (
+                <div className="rounded-xl bg-sky-50 p-4 text-sm text-sky-900">
+                  <p className="font-bold">Al confirmar te llevamos a Mercado Pago para pagar.</p>
+                  <p className="mt-1 text-xs">
+                    Tarjeta de crédito, débito o dinero en cuenta. Las cuotas las elegís ahí. Cuando el pago se
+                    acredita, el pedido pasa a &quot;Pago acreditado&quot; solo.
+                  </p>
+                </div>
+              ) : null}
+
+              {payment === "transferencia" ? (
+                transfer ? (
+                  <div className="space-y-3 rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
+                    <p className="font-bold text-ink-900">Datos para transferir</p>
+                    <TransferDetails account={transfer} amount={totals.total} />
+                    <ol className="list-decimal space-y-1 pl-4 text-xs">
+                      <li>Confirmá el pedido: te damos un código de reserva y te guardamos el stock 48 hs.</li>
+                      <li>Transferí el monto exacto desde tu banco o billetera virtual.</li>
+                      <li>Mandanos el comprobante por WhatsApp con tu código de reserva.</li>
+                    </ol>
+                    <p className="text-xs">Cuando se acredita la transferencia, confirmamos el pedido y te avisamos.</p>
+                  </div>
+                ) : (
+                  <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
+                    <p className="font-bold text-ink-900">Al confirmar te pasamos el CBU o el alias por WhatsApp.</p>
+                    <p className="mt-1 text-xs">
+                      Te guardamos el stock 48 hs. Cuando se acredita la transferencia, confirmamos el pedido.
+                    </p>
+                  </div>
+                )
+              ) : null}
+
+              {payment === "efectivo" ? (
+                <div className="rounded-xl bg-emerald-50 p-4 text-sm text-emerald-800">
+                  <p className="font-bold">Pagás al retirar en el local.</p>
+                  {/* Acá decía "Reservamos el producto por 48 horas hábiles a
+                      tu nombre". Es un compromiso operativo que no está en el
+                      sitio original y que el cliente tendría que confirmar. */}
+                </div>
+              ) : null}
+            </div>
+          </CheckoutStep>
         </div>
 
-        {/* RESUMEN (Tu pedido) y MEDIO DE PAGO: van juntos en la columna derecha,
-            en dos tarjetas, para que el comprador vea el pago sin otro paso. */}
         <aside className="self-start lg:sticky lg:top-36">
-          <div className="space-y-6">
-            <div className="card-surface space-y-4 p-6">
-              <h2 className="text-xl font-extrabold tracking-tight text-ink-900">Tu pedido</h2>
+          <div className="card-surface space-y-4 p-6">
+            <h2 className="flex items-baseline justify-between text-xl font-extrabold tracking-tight text-ink-900">
+              Tu pedido
+              <span className="text-xs font-semibold text-ink-500">
+                {unidades} {unidades === 1 ? "producto" : "productos"}
+              </span>
+            </h2>
             <div className="max-h-56 space-y-3 overflow-y-auto overscroll-contain data-lenis-prevent pr-1">
               {items.map((item) => (
                 <div key={item.slug} className="flex items-center gap-3">
@@ -783,131 +911,38 @@ export function CheckoutFlow({
               </p>
             ) : null}
 
-            <ul className="space-y-1.5 border-t border-ink-100 pt-3 text-[11px] text-ink-500">
-              <li className="flex items-center gap-1.5"><IconLock className="h-4 w-4 shrink-0 text-brand-700" /> Pago seguro · datos cifrados</li>
-              <li className="flex items-center gap-1.5"><IconShield className="h-4 w-4 shrink-0 text-brand-700" /> 6 meses de garantía legal</li>
-              <li className="flex items-center gap-1.5"><IconStore className="h-4 w-4 shrink-0 text-brand-700" /> Servicio técnico propio en el local</li>
+            <label className="flex items-start gap-2.5 text-xs text-ink-600" data-error={errors.terms ? "terms" : undefined}>
+              <input
+                type="checkbox"
+                checked={terms}
+                onChange={(e) => setTerms(e.target.checked)}
+                className="mt-0.5 h-4 w-4 accent-brand-600"
+              />
+              <span>
+                Acepto los <Link href="/ayuda" className="font-semibold text-brand-700 underline">términos y condiciones</Link> y
+                la política de privacidad de Córdoba Digital.
+              </span>
+            </label>
+            {errors.terms ? <p role="alert" className="text-xs font-semibold text-rose-600">{errors.terms}</p> : null}
+            {serverError ? (
+              <p role="alert" className="rounded-xl bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700">{serverError}</p>
+            ) : null}
+
+            <button
+              type="button"
+              onClick={submit}
+              disabled={submitting}
+              className="flex h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-brand-500 text-[15px] font-extrabold text-deep transition hover:bg-brand-400 disabled:opacity-40"
+            >
+              {submitting ? <Spinner className="h-4 w-4" /> : null}
+              Confirmar pedido · {money(totals.total)}
+            </button>
+
+            <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 border-t border-ink-100 pt-4 text-[11px] text-ink-500">
+              <li className="flex items-center gap-1.5"><IconLock className="h-4 w-4 shrink-0 text-brand-700" /> Pago seguro</li>
+              <li className="flex items-center gap-1.5"><IconShield className="h-4 w-4 shrink-0 text-brand-700" /> 6 meses de garantía</li>
+              <li className="flex items-center gap-1.5"><IconStore className="h-4 w-4 shrink-0 text-brand-700" /> Servicio técnico propio</li>
             </ul>
-            </div>
-
-            {/* MEDIO DE PAGO: tarjeta aparte, igual que en la referencia. */}
-            <div className="card-surface space-y-4 p-6">
-              <h2 className="text-xl font-extrabold tracking-tight text-ink-900">Medio de pago</h2>
-              <div className="grid gap-2">
-                  {PAYMENT_METHODS.filter((method) => isPaymentMethodOffered(method.id, deliveryMethod, { mercadoPago })).map(
-                    (method) => {
-                      const PaymentIcon = PAYMENT_ICONS[method.id];
-                      return (
-                      <button
-                        key={method.id}
-                        type="button"
-                        onClick={() => setPayment(method.id)}
-                        {...(method.id === "mercadopago" ? { "data-mp-checkout-cta": "checkout-pro" } : {})}
-                        className={`flex w-full items-start gap-3 rounded-2xl border p-4 text-left transition ${
-                          payment === method.id ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-100 bg-surface hover:bg-ink-50"
-                        }`}
-                      >
-                        <span className={`mt-0.5 rounded-lg p-2 ${payment === method.id ? "bg-brand-100 text-brand-700" : "bg-ink-50 text-ink-400"}`}>
-                          <PaymentIcon className="h-5 w-5 shrink-0" />
-                        </span>
-                        <span className="min-w-0 flex-1">
-                          <span className="flex items-center justify-between gap-2 text-sm font-extrabold text-ink-900">
-                            {method.short}
-                            {method.perk ? (
-                              <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
-                                {method.perk}
-                              </span>
-                            ) : null}
-                          </span>
-                          <span className="mt-0.5 block text-xs leading-snug text-ink-500">{method.description}</span>
-                        </span>
-                      </button>
-                      );
-                    },
-                  )}
-                </div>
-
-                {/* USDT queda oculto hasta que el negocio lo habilite. Mercado
-                    Pago aparece solo si el servidor tiene sus credenciales. */}
-
-                {payment === "mercadopago" ? (
-                  <div className="rounded-xl bg-sky-50 p-4 text-sm text-sky-900">
-                    <p className="font-bold">Al confirmar te llevamos a Mercado Pago para pagar.</p>
-                    <p className="mt-1 text-xs">
-                      Tarjeta de crédito, débito o dinero en cuenta. Las cuotas las elegís ahí. Cuando el pago se
-                      acredita, el pedido pasa a &quot;Pago acreditado&quot; solo.
-                    </p>
-                  </div>
-                ) : null}
-
-                {payment === "transferencia" ? (
-                  transfer ? (
-                    <div className="space-y-3 rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
-                      <p className="font-bold text-ink-900">Datos para transferir</p>
-                      <TransferDetails account={transfer} amount={totals.total} />
-                      <ol className="list-decimal space-y-1 pl-4 text-xs">
-                        <li>Confirmá el pedido: te damos un código de reserva y te guardamos el stock 48 hs.</li>
-                        <li>Transferí el monto exacto desde tu banco o billetera virtual.</li>
-                        <li>Mandanos el comprobante por WhatsApp con tu código de reserva.</li>
-                      </ol>
-                      <p className="text-xs">Cuando se acredita la transferencia, confirmamos el pedido y te avisamos.</p>
-                    </div>
-                  ) : (
-                    <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
-                      <p className="font-bold text-ink-900">Al confirmar te pasamos el CBU o el alias por WhatsApp.</p>
-                      <p className="mt-1 text-xs">
-                        Te guardamos el stock 48 hs. Cuando se acredita la transferencia, confirmamos el pedido.
-                      </p>
-                    </div>
-                  )
-                ) : null}
-
-                {payment === "efectivo" ? (
-                  <div className="rounded-xl bg-emerald-50 p-4 text-sm text-emerald-800">
-                    <p className="font-bold">Pagás al retirar en el local.</p>
-                    {/* Acá decía "Reservamos el producto por 48 horas hábiles a
-                        tu nombre". Es un compromiso operativo que no está en el
-                        sitio original y que el cliente tendría que confirmar. */}
-                  </div>
-                ) : null}
-
-                <Field label="Comentarios para la entrega (opcional)">
-                  <textarea
-                    value={form.notes}
-                    onChange={set("notes")}
-                    rows={2}
-                    placeholder="Ej: entregar después de las 14 hs, dejar en portería..."
-                    className="w-full rounded-xl border border-ink-200 p-3 text-sm outline-none focus:border-brand-400"
-                  />
-                </Field>
-
-                <label className="flex items-start gap-2.5 text-xs text-ink-600" data-error={errors.terms ? "terms" : undefined}>
-                  <input
-                    type="checkbox"
-                    checked={terms}
-                    onChange={(e) => setTerms(e.target.checked)}
-                    className="mt-0.5 h-4 w-4 accent-brand-600"
-                  />
-                  <span>
-                    Acepto los <Link href="/ayuda" className="font-semibold text-brand-700 underline">términos y condiciones</Link> y
-                    la política de privacidad de Córdoba Digital.
-                  </span>
-                </label>
-                {errors.terms ? <p role="alert" className="text-xs font-semibold text-rose-600">{errors.terms}</p> : null}
-                {serverError ? (
-                  <p role="alert" className="rounded-xl bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700">{serverError}</p>
-                ) : null}
-
-                <button
-                  type="button"
-                  onClick={submit}
-                  disabled={submitting}
-                  className="flex h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-brand-500 text-[15px] font-extrabold text-deep transition hover:bg-brand-400 disabled:opacity-40"
-                >
-                  {submitting ? <Spinner className="h-4 w-4" /> : null}
-                  Confirmar pedido · {money(totals.total)}
-                </button>
-            </div>
           </div>
         </aside>
       </div>
