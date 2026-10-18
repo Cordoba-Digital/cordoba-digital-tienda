@@ -7,6 +7,7 @@ import { ActiveFilters, FiltersPanel, SortSelect } from "@/components/catalog-fi
 import { CategoryIcon } from "@/components/category-icon";
 import { CategoryChips, EmptyResults, Pagination } from "@/components/catalog-ui";
 import { ProductCard } from "@/components/product-card";
+import { SubcategoryCarousel } from "@/components/subcategory-carousel";
 import { mergedCategoryRedirect } from "@/lib/category-merges";
 import { money } from "@/lib/format";
 import { toView } from "@/lib/product-view";
@@ -255,18 +256,10 @@ export default async function CategoryPage({
       <CategoryChips items={tree.map((c) => ({ slug: c.slug, name: c.name, path: c.path }))} activePath={breadcrumb[0]?.path} />
 
       {children.length ? (
-        <nav className="mb-6 flex flex-wrap gap-2" aria-label={`Subcategorías de ${node.name}`}>
-          {children.map((child) => (
-            <Link
-              key={child.id}
-              href={`/categoria/${child.path}`}
-              className="inline-flex items-center gap-1.5 rounded-full border border-ink-200 bg-surface px-3.5 py-1.5 text-sm font-semibold text-ink-700 transition hover:border-brand-300 hover:text-brand-700"
-            >
-              {child.name}
-              <span className="text-[11px] font-normal text-ink-500">{child.count}</span>
-            </Link>
-          ))}
-        </nav>
+        <SubcategoryCarousel
+          label={`Subcategorías de ${node.name}`}
+          items={children.map((child) => ({ id: String(child.id), name: child.name, path: child.path, count: child.count }))}
+        />
       ) : null}
 
       <div className="grid gap-6 lg:grid-cols-[17rem_minmax(0,1fr)]">
