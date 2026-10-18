@@ -4,7 +4,7 @@ import { Preference } from "mercadopago";
 import { db } from "@/db";
 import { orderItems, orders } from "@/db/schema";
 import { PENDING_EXPIRY_HOURS } from "@/lib/order-status";
-import { appBaseUrl, pesosToUnits, isPublicAppUrl, mpClient, MP_CURRENCY } from "@/lib/mercadopago";
+import { appBaseUrl, pesosToUnits, isPublicAppUrl, mercadoPagoReady, mpClient, MP_CURRENCY } from "@/lib/mercadopago";
 
 export const dynamic = "force-dynamic";
 
@@ -20,19 +20,21 @@ export async function POST(request: Request) {
     return Response.json({ ok: false, error: "Falta el código de pedido." }, { status: 400 });
   }
 
-  const client = mpClient();
+  // Sin las dos credenciales Mercado Pago está apagado (ver `mercadoPagoReady`):
+  // aunque quede un token cargado, no se crea ningún cobro.
+  const client = mercadoPagoReady() ? mpClient() : null;
   if (!client) {
     // El mensaje va al cliente final: nunca el nombre de una variable de
     // entorno. El detalle técnico queda en `detail` para los logs.
-    console.warn("[mp] falta MP_ACCESS_TOKEN: el pago con Mercado Pago no está habilitado.");
+    console.warn("[mp] Mercado Pago apagado (faltan MP_ACCESS_TOKEN o MP_WEBHOOK_SECRET): no se crea el cobro.");
     return Response.json(
       {
         ok: false,
         error:
-          "El pago con Mercado Pago se habilita al conectar la cuenta del negocio. " +
-          "Mientras tanto podés completar el pedido por transferencia o efectivo.",
+          "El pago con Mercado Pago no está disponible. " +
+          "Podés completar el pedido por transferencia o efectivo.",
         missingCredentials: true,
-        detail: "MP_ACCESS_TOKEN no configurado",
+        detail: "Mercado Pago apagado: faltan MP_ACCESS_TOKEN o MP_WEBHOOK_SECRET",
       },
       { status: 503 },
     );
