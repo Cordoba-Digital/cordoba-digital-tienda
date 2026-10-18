@@ -6,11 +6,12 @@ import type { CSSProperties, ReactNode } from "react";
 import { AdminIcon } from "@/components/admin-icon";
 import type { AdminIconName } from "@/components/admin-nav-items";
 import { AdminMonthlyChart } from "@/components/admin-monthly-chart";
+import { AdminOrdersLive } from "@/components/admin-orders-live";
 import { AdminSearchButton } from "@/components/admin-search-button";
 import { AdminTickMeter } from "@/components/admin-tick-meter";
 import { AdminAvatar, AdminPageHeader, AdminStatusBadge, adminBtn, adminChip, adminLink } from "@/components/admin-ui";
 import { countRecentArrepentimientos } from "@/lib/admin-arrepentimientos";
-import { ACTIONABLE_FILTER } from "@/lib/admin-orders";
+import { ACTIONABLE_FILTER, ordersFingerprint } from "@/lib/admin-orders";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { getAdminStats, RANGE_OPTIONS, type RangeDays } from "@/lib/admin-stats";
@@ -150,7 +151,12 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
 
   // Vence los pedidos sin pago antes de contar, por si el cron diario no corrió.
   await expireStalePendingOrders();
-  const [s, arrepentimientos, errores] = await Promise.all([getAdminStats(range), countRecentArrepentimientos(), countOpenErrors()]);
+  const [s, arrepentimientos, errores, firma] = await Promise.all([
+    getAdminStats(range),
+    countRecentArrepentimientos(),
+    countOpenErrors(),
+    ordersFingerprint(),
+  ]);
 
   const enCurso = (s.byStatus.pago_confirmado ?? 0) + (s.byStatus.preparando ?? 0) + (s.byStatus.enviado ?? 0);
   const porCobrar = s.byStatus.pendiente_pago ?? 0;
@@ -172,6 +178,7 @@ export default async function AdminDashboardPage({ searchParams }: { searchParam
 
   return (
     <div className="flex flex-col gap-6">
+      <AdminOrdersLive firma={firma} />
       {/* En el celular la búsqueda está en la barra de arriba y los avisos en "Requiere atención". */}
       <div className="admin-enter relative z-30 hidden flex-wrap items-center gap-3 md:flex" style={{ "--i": 0 } as CSSProperties}>
         <AdminSearchButton />

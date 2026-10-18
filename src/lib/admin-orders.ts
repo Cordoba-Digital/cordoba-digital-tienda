@@ -114,6 +114,22 @@ export async function listAdminOrders(input: { q: string; status: string; page: 
   };
 }
 
+/**
+ * Huella de los pedidos: cambia cuando entra uno, cuando alguno cambia de
+ * estado o cuando se borran. El panel la consulta seguido para actualizarse
+ * solo, sin volver a traer la lista si no pasó nada.
+ */
+export async function ordersFingerprint(): Promise<string> {
+  const [row] = await db
+    .select({
+      count: sql<number>`count(*)::int`,
+      lastCreated: sql<string | null>`max(${orders.createdAt})::text`,
+      lastChanged: sql<string | null>`max(${orders.statusUpdatedAt})::text`,
+    })
+    .from(orders);
+  return `${row?.count ?? 0}|${row?.lastCreated ?? ""}|${row?.lastChanged ?? ""}`;
+}
+
 export async function getAdminOrderDetail(code: string) {
   const normalized = code.trim().toUpperCase();
   if (!normalized) return null;

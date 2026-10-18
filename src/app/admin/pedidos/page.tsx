@@ -3,12 +3,13 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { AdminOrderSearch } from "@/components/admin-order-search";
+import { AdminOrdersLive } from "@/components/admin-orders-live";
 import { AdminOrdersWipeButton } from "@/components/admin-orders-wipe-button";
 import { AdminAvatar, AdminPageHeader, AdminStatusBadge, adminBtn } from "@/components/admin-ui";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { ACTIONABLE_STATUSES, whatsappHref } from "@/lib/admin-order-helpers";
-import { ACTIONABLE_FILTER, listAdminOrders } from "@/lib/admin-orders";
+import { ACTIONABLE_FILTER, listAdminOrders, ordersFingerprint } from "@/lib/admin-orders";
 import { formatAgo, formatDateTime, money } from "@/lib/format";
 import { expireStalePendingOrders } from "@/lib/order-status";
 import { ADMIN_ORDER_STATUSES } from "@/lib/pricing";
@@ -94,7 +95,10 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
   const page = Math.max(1, Number(first(sp.page)) || 1);
 
   await expireStalePendingOrders();
-  const { orders, total, pages, stats } = await listAdminOrders({ q, status, page, perPage: PER_PAGE });
+  const [{ orders, total, pages, stats }, firma] = await Promise.all([
+    listAdminOrders({ q, status, page, perPage: PER_PAGE }),
+    ordersFingerprint(),
+  ]);
   const base = { ...(q ? { q } : {}), ...(status ? { status } : {}) };
   const allCount = Object.values(stats).reduce((sum, n) => sum + n, 0);
   const actionable = ACTIONABLE_STATUSES.reduce((sum, id) => sum + (stats[id] ?? 0), 0);
@@ -108,6 +112,7 @@ export default async function AdminOrdersPage({ searchParams }: { searchParams: 
 
   return (
     <div className="flex flex-col gap-6">
+      <AdminOrdersLive firma={firma} />
       <AdminPageHeader
         eyebrow="Ventas"
         title="Pedidos"
