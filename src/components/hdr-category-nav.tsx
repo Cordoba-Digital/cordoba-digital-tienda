@@ -88,8 +88,11 @@ function EndLinks() {
     <div className="ml-auto flex shrink-0 items-center gap-0.5 pl-2">
       <Link
         href="/productos?ofertas=1"
-        className="shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-sm font-bold text-rose-600 transition hover:bg-rose-50"
+        className="hdr-btn flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 text-sm font-bold text-rose-600 transition hover:bg-rose-50"
       >
+        <span className="hdr-fuego" aria-hidden="true">
+          🔥
+        </span>
         Ofertas
       </Link>
       <Link

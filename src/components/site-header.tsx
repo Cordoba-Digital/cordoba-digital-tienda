@@ -251,22 +251,29 @@ export function SiteHeader({ categories, topBar = true }: { categories: Category
           <nav className="ml-auto flex items-center gap-1">
             <Link
               href="/seguimiento"
-              className="hidden items-center gap-2 rounded-full border border-ink-200 px-4 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50 hover:text-ink-900 lg:flex"
+              style={{ "--hdr-i": 0 } as React.CSSProperties}
+              className="hdr-btn hdr-entra hidden items-center gap-2 rounded-full border border-ink-200 px-4 py-2 text-sm font-semibold text-ink-600 transition hover:bg-ink-50 hover:text-ink-900 lg:flex"
             >
-              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z" />
-                <circle cx="7" cy="18" r="1.6" />
-                <circle cx="17.5" cy="18" r="1.6" />
-              </svg>
+              {/* Recorte del tamaño del ícono: el camión entra y sale por los bordes. */}
+              <span className="inline-flex overflow-hidden" aria-hidden="true">
+                <span className="hdr-camion-llega">
+                  <svg viewBox="0 0 24 24" className="hdr-ico-camion h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z" />
+                    <circle cx="7" cy="18" r="1.6" />
+                    <circle cx="17.5" cy="18" r="1.6" />
+                  </svg>
+                </span>
+              </span>
               Seguir pedido
             </Link>
 
             <Link
               href="/favoritos"
-              className="relative grid h-9 w-9 place-items-center rounded-full border border-ink-100 text-ink-600 transition hover:bg-ink-50 hover:text-rose-500 sm:h-10 sm:w-10"
+              style={{ "--hdr-i": 1 } as React.CSSProperties}
+              className="hdr-btn hdr-entra relative grid h-9 w-9 place-items-center rounded-full border border-ink-100 text-ink-600 transition hover:bg-ink-50 hover:text-rose-500 sm:h-10 sm:w-10"
               aria-label="Favoritos"
             >
-              <svg viewBox="0 0 24 24" className="h-5.5 w-5.5" fill="none" stroke="currentColor" strokeWidth="1.8">
+              <svg viewBox="0 0 24 24" className="hdr-ico hdr-ico-corazon h-5.5 w-5.5" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <path d="M12 21s-7.5-4.6-9.5-9A5.5 5.5 0 0112 5.5 5.5 5.5 0 0121.5 12c-2 4.4-9.5 9-9.5 9z" />
               </svg>
               {hydrated && favorites.length > 0 ? (
@@ -278,7 +285,8 @@ export function SiteHeader({ categories, topBar = true }: { categories: Category
 
             <Link
               href="/mi-cuenta"
-              className="grid h-9 w-9 place-items-center overflow-hidden rounded-full border border-ink-100 text-ink-600 transition hover:bg-ink-50 hover:text-brand-700 sm:h-10 sm:w-10"
+              style={{ "--hdr-i": 2 } as React.CSSProperties}
+              className="hdr-btn hdr-entra grid h-9 w-9 place-items-center overflow-hidden rounded-full border border-ink-100 text-ink-600 transition hover:bg-ink-50 hover:text-brand-700 sm:h-10 sm:w-10"
               aria-label={me ? `Mi cuenta (${me.name || me.email})` : "Mi cuenta"}
               title={me ? `Ingresaste como ${me.email}` : "Ingresar"}
             >
@@ -290,7 +298,7 @@ export function SiteHeader({ categories, topBar = true }: { categories: Category
                   {(me.name || me.email).slice(0, 1).toUpperCase()}
                 </span>
               ) : (
-                <svg viewBox="0 0 24 24" className="h-5.5 w-5.5" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <svg viewBox="0 0 24 24" className="hdr-ico hdr-ico-usuario h-5.5 w-5.5" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <circle cx="12" cy="8" r="3.5" />
                   <path d="M4.5 20c1.5-3.5 4.5-5 7.5-5s6 1.5 7.5 5" />
                 </svg>
@@ -300,9 +308,10 @@ export function SiteHeader({ categories, topBar = true }: { categories: Category
             <button
               type="button"
               onClick={openCart}
-              className="relative flex h-9 items-center gap-2 rounded-full bg-brand-500 px-3 text-sm font-bold text-white transition hover:bg-brand-600 sm:h-10 sm:px-4"
+              style={{ "--hdr-i": 3 } as React.CSSProperties}
+              className="hdr-btn hdr-entra relative flex h-9 items-center gap-2 rounded-full bg-brand-500 px-3 text-sm font-bold text-white transition hover:bg-brand-600 sm:h-10 sm:px-4"
             >
-              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+              <svg viewBox="0 0 24 24" className="hdr-ico hdr-ico-carrito h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
                 <path d="M3 4h2.2l2 11h10.4l2-8H6" strokeLinecap="round" strokeLinejoin="round" />
                 <circle cx="9" cy="19" r="1.6" />
                 <circle cx="17" cy="19" r="1.6" />
@@ -503,7 +512,7 @@ export function SiteHeader({ categories, topBar = true }: { categories: Category
               </div>
               <div className="mt-5 space-y-1 border-t border-ink-100 pt-4 text-sm font-semibold text-ink-700">
                 <Link href="/productos?ofertas=1" className="block rounded-xl px-3 py-2.5 text-rose-600 hover:bg-rose-50">
-                  🔥 Ofertas de la semana
+                  <span className="hdr-fuego" aria-hidden="true">🔥</span> Ofertas de la semana
                 </Link>
                 <Link href="/favoritos" className="block rounded-xl px-3 py-2.5 hover:bg-ink-50">
                   ❤️ Mis favoritos
