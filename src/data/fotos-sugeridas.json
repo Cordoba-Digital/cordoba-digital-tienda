@@ -4,7 +4,13 @@
     "image": "https://aerocool.io/wp-content/uploads/2020/01/Ore-A_02.png",
     "source": "https://aerocool.io/product/ore-tempered-glass/",
     "confidence": "media",
-    "note": "Foto de 1042×589 px. Es apaisada: fijate que muestre el producto y no un banner. Primera foto de la galería V2 en la página oficial; el nombre del archivo dice Ore-A, revisar que sea la de vidrio."
+    "note": "Foto de 1042×589 px. Es apaisada: fijate que muestre el producto y no un banner. Primera foto de la galería V2 en la página oficial; el nombre del archivo dice Ore-A, revisar que sea la de vidrio.",
+    "extras": [
+      "https://aerocool.io/wp-content/uploads/2020/01/Ore-A_03.png",
+      "https://aerocool.io/wp-content/uploads/2020/01/Ore-A_04.png",
+      "https://aerocool.io/wp-content/uploads/2020/01/Ore-A_05.png",
+      "https://aerocool.io/wp-content/uploads/2020/01/Ore-A_06.png"
+    ]
   },
   {
     "slug": "lente-canon-ef-50mm-f14-usm",
@@ -18,7 +24,11 @@
     "image": "https://cdn.media.amplience.net/i/canon/mount-adater-ef-eos-r-fra_8ca88b42782d4fa1b174eb84292466eb?w=1600&fmt=jpg&bg=rgb(255,255,255)",
     "source": "https://www.canon-europe.com/lenses/eos-r-adapters/mount-adapter-ef-eos-r/index.html",
     "confidence": "alta",
-    "note": "Foto de 1600×1600 px (la actual tiene 259 px). Canon Europa; vista frontal-angular (og:image lateral 1225px)."
+    "note": "Foto de 1600×1600 px (la actual tiene 259 px). Canon Europa; vista frontal-angular (og:image lateral 1225px).",
+    "extras": [
+      "https://cdn.media.amplience.net/i/canon/mount-adater-ef-eos-r-slant_07ca2b98826941339b371cb22dcf3748?w=1600&fmt=jpg&bg=rgb(255,255,255)",
+      "https://cdn.media.amplience.net/i/canon/mount-adater-ef-eos-r-side_d952845853d74cc895fb82a9248bb03b?w=1600&fmt=jpg&bg=rgb(255,255,255)"
+    ]
   },
   {
     "slug": "mate-acero-inoxidable-outdoors-blanco",
@@ -39,7 +49,13 @@
     "image": "https://images.philips.com/is/image/philipsconsumer/9f57d04ff61141f2a53cb0c300d86b16?$png$&wid=1600&hei=1600&fit=constrain",
     "source": "https://www.philips.iq/en/c-p/TAS7505_00/wireless-speaker",
     "confidence": "alta",
-    "note": "Foto de 1600×1600 px (la actual tiene 420 px). Philips TAS7505/00 30W (discontinuado); foto principal pedida a 1600px."
+    "note": "Foto de 1600×1600 px (la actual tiene 420 px). Philips TAS7505/00 30W (discontinuado); foto principal pedida a 1600px.",
+    "extras": [
+      "https://images.philips.com/is/image/philipsconsumer/ca41feb0ebbf47cb9fe2b0be0126eaff?$png$&wid=1600&hei=1600&fit=constrain",
+      "https://images.philips.com/is/image/philipsconsumer/5d7308aa832d48e6b859b0d000a72814?$png$&wid=1600&hei=1600&fit=constrain",
+      "https://images.philips.com/is/image/philipsconsumer/3acc8be35ee044389152b0ca0078ab47?$png$&wid=1600&hei=1600&fit=constrain",
+      "https://images.philips.com/is/image/philipsconsumer/6028554bb1344df999ddb0c801134470?$png$&wid=1600&hei=1600&fit=constrain"
+    ]
   },
   {
     "slug": "camara-compacta-cinema-line-fx30-body",
@@ -53,7 +69,12 @@
     "image": "https://static.tp-link.com/upload/image-line/Deco_E4(2-pack)_EU_V1.0_01_large_20220828090106c.jpg",
     "source": "https://www.tp-link.com/ar/home-networking/deco/deco-e4/",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 225 px). TP-Link Argentina; foto del pack de 2."
+    "note": "Foto de 1000×1000 px (la actual tiene 225 px). TP-Link Argentina; foto del pack de 2.",
+    "extras": [
+      "https://static.tp-link.com/upload/image-line/Deco_E4(2-pack)_EU_V1.0_02_large_20220828090118u.jpg",
+      "https://static.tp-link.com/upload/image-line/Deco_E4(2-pack)_EU_V1.0_03_large_20220828090130s.jpg",
+      "https://static.tp-link.com/upload/image-line/Deco_E4(2-pack)_EU_V1.0_04_large_20220828090142a.jpg"
+    ]
   },
   {
     "slug": "lente-sigma-56mm-f1-4-dc-dn-contemporary",
@@ -123,7 +144,11 @@
     "image": "https://download.se.com/files?p_Doc_Ref=SRV_2U_RightImage_FR_H&p_File_Type=rendition_1500_jpg&default_image=DefaultProductImage.png",
     "source": "https://www.se.com/eg/en/product/SRV2KRILRK/apc-easy-ups-online-2000va-1600w-rackmount-4u-230v-4x-iec-c13-outlets-intelligent-card-slot-lcd-extended-runtime-w-rail-kit/",
     "confidence": "alta",
-    "note": "Foto de 1500×1500 px (la actual tiene 369 px). SRV2KRILRK (rack 4U, autonomía extendida, 4x C13); imagen principal de la galería en tamaño 1500."
+    "note": "Foto de 1500×1500 px (la actual tiene 369 px). SRV2KRILRK (rack 4U, autonomía extendida, 4x C13); imagen principal de la galería en tamaño 1500.",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=SRVPM_2KRIL_RearPanel_B_H&p_File_Type=rendition_1500_jpg&default_image=DefaultProductImage.png",
+      "https://download.se.com/files?p_Doc_Ref=SPD_RLAE-B39QVE_FS_H&p_File_Type=rendition_1500_jpg&default_image=DefaultProductImage.png"
+    ]
   },
   {
     "slug": "procesador-amd-ryzen-7-9700x-am5-sin-cooler",
@@ -137,14 +162,23 @@
     "image": "https://download.se.com/files?p_Doc_Ref=SPD_STOS-7RTLYC_FL_H&p_File_Type=rendition_1500_jpg&default_image=DefaultProductImage.png",
     "source": "https://www.se.com/hk/en/product/SBP5000RMI2U/apc-service-bypass-panel-230v-32a-bbm-iec320-c20-hw-input-iec320-output-2-c19-8-c13/",
     "confidence": "media",
-    "note": "Foto de 1500×1500 px (la actual tiene 369 px). Asumido SBP5000RMI2U (230V 32A, 2xC19 8xC13); falta el SKU en la lista para confirmar."
+    "note": "Foto de 1500×1500 px (la actual tiene 369 px). Asumido SBP5000RMI2U (230V 32A, 2xC19 8xC13); falta el SKU en la lista para confirmar.",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=SPD_STOS-7RV493_B_V&p_File_Type=rendition_1500_jpg&default_image=DefaultProductImage.png",
+      "https://download.se.com/files?p_Doc_Ref=SPD_STOS-7RTAUK_B_V&p_File_Type=rendition_1500_jpg&default_image=DefaultProductImage.png",
+      "https://download.se.com/files?p_Doc_Ref=SPD_STOS-7RUU55_B_H&p_File_Type=rendition_1500_jpg&default_image=DefaultProductImage.png"
+    ]
   },
   {
     "slug": "apc-placa-red-web-snmp",
     "image": "https://download.se.com/files?p_Doc_Ref=SPD_HEPN-BG4P63_FL_H&p_File_Type=rendition_1500_jpg&default_image=DefaultProductImage.png",
     "source": "https://www.se.com/us/en/product/AP9640/network-management-card-3-nmc3-secure-remote-ups-monitoring-and-management/",
     "confidence": "media",
-    "note": "Foto de 1500×1500 px (la actual tiene 369 px). Nombre genérico; asumida la placa actual NMC3 AP9640 (podría ser AP9630/AP9631 o AP9641)."
+    "note": "Foto de 1500×1500 px (la actual tiene 369 px). Nombre genérico; asumida la placa actual NMC3 AP9640 (podría ser AP9630/AP9631 o AP9641).",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=AP9640_Rear&p_File_Type=rendition_1500_jpg&default_image=DefaultProductImage.png",
+      "https://download.se.com/files?p_Doc_Ref=SPD_HEPN-BG4P63_FS_H&p_File_Type=rendition_1500_jpg&default_image=DefaultProductImage.png"
+    ]
   },
   {
     "slug": "ap-mikrotik-rb952ui-5ac2nd-sf",
@@ -165,14 +199,24 @@
     "image": "https://fr-store.msi.com/cdn/shop/files/1024_af62a6dc-386e-45c2-8c9a-aa728ef746d9.png?v=1716529341",
     "source": "https://fr-store.msi.com/products/mag-coreliquid-e240-liquid-cooler",
     "confidence": "alta",
-    "note": "Foto de 1024×819 px (la actual tiene 300 px). Es el water cooler MSI MAG CORELIQUID E240 negro (SKU 306-7ZW5E17-C24); tienda oficial MSI, original 1024px."
+    "note": "Foto de 1024×819 px (la actual tiene 300 px). Es el water cooler MSI MAG CORELIQUID E240 negro (SKU 306-7ZW5E17-C24); tienda oficial MSI, original 1024px.",
+    "extras": [
+      "https://fr-store.msi.com/cdn/shop/files/1024_e8f76f59-154c-42ae-9e2b-c177cd4ec0a8.png?v=1716529341",
+      "https://fr-store.msi.com/cdn/shop/files/1024_57386bca-a850-4dd7-b072-cd23aacd1e71.png?v=1716529340",
+      "https://fr-store.msi.com/cdn/shop/files/1024_4865aab7-9000-49ad-a29a-6ab1e3b32a74.png?v=1716529342",
+      "https://fr-store.msi.com/cdn/shop/files/1024_4f676bfe-b9ab-4ac3-a230-27ce9e678cbc.png?v=1716529342"
+    ]
   },
   {
     "slug": "apple-usb-c-digital-av-multiport-adapter",
     "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MUF82?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=ZWtQWkJFTXcyaVlHWGt1K1NoUlYwbWorYzFkTG5HaE9wejd5WUxYZjRMK2I2elFubVhUMUdUbUxPYVZ3Z2lNVkY4YUNnMDBSMVJabFdYMHdOQjdTOHc",
     "source": "https://www.apple.com/au/shop/product/mw5m3za/a/usb-c-digital-av-multiport-adapter",
     "confidence": "alta",
-    "note": "Foto de 2000×2000 px (la actual tiene 400 px). Apple Store oficial (MW5M3); imagen principal a 2000x2000."
+    "note": "Foto de 2000×2000 px (la actual tiene 400 px). Apple Store oficial (MW5M3); imagen principal a 2000x2000.",
+    "extras": [
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MUF82_AV1?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=Z3pic3g2V1UrdEdQR0ZRUXdnMEMwU1RkTXNZOFJZTitTVFE0NHl0VW5Cb2VueUtJNXEwVXlaaThWZlk1L254bDc3WHdhTExDcElrOVB4aFNQdjlXNHc",
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MUF82_AV2?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=YVQ4bFE4ZUszb3Y4bGpZVHBtc2h0U1RkTXNZOFJZTitTVFE0NHl0VW5Cb2VueUtJNXEwVXlaaThWZlk1L254bHlGc1RQbTRHUkpHMkZVTDBhd0g5cmc"
+    ]
   },
   {
     "slug": "producto-sin-nombre-39",
@@ -228,28 +272,48 @@
     "image": "https://static.tp-link.com/upload/image-line/Archer_T4U_Plus_2000px_large_20230809093831c.jpg",
     "source": "https://www.tp-link.com/us/home-networking/usb-adapter/archer-t4u-plus/",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 241 px). Archer T4U Plus AC1300; imagen principal 2000px."
+    "note": "Foto de 1000×1000 px (la actual tiene 241 px). Archer T4U Plus AC1300; imagen principal 2000px.",
+    "extras": [
+      "https://static.tp-link.com/Archer-T4U-Plus-02_large_1595834158220i.jpg",
+      "https://static.tp-link.com/Archer-T4U-Plus-03_large_1595834166181k.jpg",
+      "https://static.tp-link.com/Archer-T4U-Plus-04_large_1595834175820o.jpg",
+      "https://static.tp-link.com/Archer-T4U-Plus-05_large_1595834185621w.jpg"
+    ]
   },
   {
     "slug": "vigi-cam-is-s355-5mp-out-bullet-2-8mm",
     "image": "https://static.tp-link.com/upload/image-line/InSight_S355_UN_1.0_overview_01_large_20240914012923k.jpg",
     "source": "https://www.vigi.com/uk/business-networking/vigi-network-camera/insight-s355/",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 200 px). VIGI InSight S355; misma página y foto para lente 2.8mm y 4mm."
+    "note": "Foto de 1000×1000 px (la actual tiene 200 px). VIGI InSight S355; misma página y foto para lente 2.8mm y 4mm.",
+    "extras": [
+      "https://static.tp-link.com/upload/image-line/InSight_S355_UN_1.0_overview_02_large_20240914012936a.jpg",
+      "https://static.tp-link.com/upload/image-line/InSight_S355_UN_1.0_overview_03_large_20240914012953w.jpg",
+      "https://static.tp-link.com/upload/image-line/InSight_S355_UN_1.0_overview_04_large_20240914013006s.jpg"
+    ]
   },
   {
     "slug": "vigi-cam-is-s355-5mp-out-bullet-4mm",
     "image": "https://static.tp-link.com/upload/image-line/InSight_S355_UN_1.0_overview_01_large_20240914012923k.jpg",
     "source": "https://www.vigi.com/uk/business-networking/vigi-network-camera/insight-s355/",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 200 px). VIGI InSight S355; misma página y foto para lente 2.8mm y 4mm."
+    "note": "Foto de 1000×1000 px (la actual tiene 200 px). VIGI InSight S355; misma página y foto para lente 2.8mm y 4mm.",
+    "extras": [
+      "https://static.tp-link.com/upload/image-line/InSight_S355_UN_1.0_overview_02_large_20240914012936a.jpg",
+      "https://static.tp-link.com/upload/image-line/InSight_S355_UN_1.0_overview_03_large_20240914012953w.jpg",
+      "https://static.tp-link.com/upload/image-line/InSight_S355_UN_1.0_overview_04_large_20240914013006s.jpg"
+    ]
   },
   {
     "slug": "vigi-cam-is-s345zi-4mp-out-bullet-moto-varifocal",
     "image": "https://static.tp-link.com/upload/image-line/01_large_20240927121337o.jpg",
     "source": "https://www.vigi.com/us/business-networking/vigi-network-camera/insight-s345zi/",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 200 px). VIGI InSight S345ZI varifocal motorizada; imagen principal de la galería."
+    "note": "Foto de 1000×1000 px (la actual tiene 200 px). VIGI InSight S345ZI varifocal motorizada; imagen principal de la galería.",
+    "extras": [
+      "https://static.tp-link.com/upload/image-line/02_large_20240927121400z.jpg",
+      "https://static.tp-link.com/upload/image-line/InSight_S345ZI_UN_1.0_overview_03_large_20241012100641z.jpg"
+    ]
   },
   {
     "slug": "sigma-56mm-f1-4-dg-dn-sony",
@@ -263,49 +327,87 @@
     "image": "https://www.sigma-global.com/lenses/c023_10_18_28_product_img01.png",
     "source": "https://www.sigma-global.com/en/lenses/c023_10_18_28/specification.html",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 350 px). Sigma oficial 10-18 F2.8 DC DN C; foto única para todas las monturas."
+    "note": "Foto de 1000×1000 px (la actual tiene 350 px). Sigma oficial 10-18 F2.8 DC DN C; foto única para todas las monturas.",
+    "extras": [
+      "https://www.sigma-global.com/lenses/c023_10_18_28_product_img02.png",
+      "https://www.sigma-global.com/lenses/c023_10_18_28_product_img03.png",
+      "https://www.sigma-global.com/lenses/c023_10_18_28_product_img04.png"
+    ]
   },
   {
     "slug": "sigma-105mm-f2-8-dg-dn-art-maco-sony-2",
     "image": "https://www.sigma-global.com/lenses/a020_105_28_product_img01.png",
     "source": "https://www.sigma-global.com/en/lenses/a020_105_28/specification.html",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 350 px). Sigma oficial 105 F2.8 DG DN Macro Art; foto única para L y Sony E."
+    "note": "Foto de 1000×1000 px (la actual tiene 350 px). Sigma oficial 105 F2.8 DG DN Macro Art; foto única para L y Sony E.",
+    "extras": [
+      "https://www.sigma-global.com/lenses/a020_105_28_product_img02.png",
+      "https://www.sigma-global.com/lenses/a020_105_28_product_img03.png"
+    ]
   },
   {
     "slug": "sigma-28-70-f2-8-dg-dn-contemporary-sony-2",
     "image": "https://www.sigma-global.com/lenses/images/c021_28_70_28_product_img01.png",
     "source": "https://www.sigma-global.com/en/lenses/c021_28_70_28/",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 495 px). Sigma oficial 28-70 F2.8 DG DN C (primera versión, no la II); foto única L/Sony E."
+    "note": "Foto de 1000×1000 px (la actual tiene 495 px). Sigma oficial 28-70 F2.8 DG DN C (primera versión, no la II); foto única L/Sony E.",
+    "extras": [
+      "https://www.sigma-global.com/lenses/images/c021_28_70_28_product_img02.png",
+      "https://www.sigma-global.com/lenses/images/c021_28_70_28_product_img03.png",
+      "https://www.sigma-global.com/lenses/images/c021_28_70_28_product_img04.png"
+    ]
   },
   {
     "slug": "sigma-28-105-f2-8-dg-dn-art-sony",
     "image": "https://www.sigma-global.com/lenses/a024_28_105_28_product_img01.png",
     "source": "https://www.sigma-global.com/en/lenses/a024_28_105_28/specification.html",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 350 px). Sigma oficial 28-105 F2.8 DG DN Art; foto única L/Sony E."
+    "note": "Foto de 1000×1000 px (la actual tiene 350 px). Sigma oficial 28-105 F2.8 DG DN Art; foto única L/Sony E.",
+    "extras": [
+      "https://www.sigma-global.com/lenses/a024_28_105_28_product_img02.png",
+      "https://www.sigma-global.com/lenses/a024_28_105_28_product_img03.png",
+      "https://www.sigma-global.com/lenses/a024_28_105_28_product_img04.png",
+      "https://www.sigma-global.com/lenses/a024_28_105_28_product_img05.png"
+    ]
   },
   {
     "slug": "tamron-16-30-f2-8-iii-g2-sony-2",
     "image": "https://www.tamron.com/product/pc_file/file/a064s_lens.jpg",
     "source": "https://www.tamron.com/global/consumer/lenses/a064/spec.html",
     "confidence": "alta",
-    "note": "Foto de 584×584 px (la actual tiene 350 px). Tamron oficial A064; sufijo \"s\" = versión Sony E; vista exterior \"lens\"."
+    "note": "Foto de 584×584 px (la actual tiene 350 px). Tamron oficial A064; sufijo \"s\" = versión Sony E; vista exterior \"lens\".",
+    "extras": [
+      "https://www.tamron.com/product/pc_file/file/a064s_topside.jpg",
+      "https://www.tamron.com/product/pc_file/file/a064s_sideview.jpg",
+      "https://www.tamron.com/product/pc_file/file/a064s_mount.jpg",
+      "https://www.tamron.com/product/pc_file/file/a064s_underside.jpg"
+    ]
   },
   {
     "slug": "tamron-50-400-f4-5-6-3-di-iii-vc-vxd-sony-2",
     "image": "https://www.tamron.com/product/pc_file/file/a067_lens.png",
     "source": "https://tamron.com/global/consumer/lenses/a067/spec.html",
     "confidence": "media",
-    "note": "Foto de 580×580 px (la actual tiene 225 px). Tamron oficial A067; la foto no indica montura (la Z usa sufijo a067z, esta sería la Sony E)."
+    "note": "Foto de 580×580 px (la actual tiene 225 px). Tamron oficial A067; la foto no indica montura (la Z usa sufijo a067z, esta sería la Sony E).",
+    "extras": [
+      "https://www.tamron.com/product/pc_file/file/a067_topside.png",
+      "https://www.tamron.com/product/pc_file/file/a067_sideview.png",
+      "https://www.tamron.com/product/pc_file/file/a067_mount.png",
+      "https://www.tamron.com/product/pc_file/file/a067_underside.png"
+    ]
   },
   {
     "slug": "tamron-150-500-f5-6-7-di-iii-vxd-sony-2",
     "image": "https://www.tamron.com/product/pc_file/file/a057e_lens.png",
     "source": "https://www.tamron.com/global/consumer/lenses/a057/spec.html",
     "confidence": "media",
-    "note": "Foto de 584×584 px (la actual tiene 244 px). Tamron oficial A057; sufijo \"e\" parece Sony E pero la página no lo confirma."
+    "note": "Foto de 584×584 px (la actual tiene 244 px). Tamron oficial A057; sufijo \"e\" parece Sony E pero la página no lo confirma.",
+    "extras": [
+      "https://www.tamron.com/product/pc_file/file/a057e_topside.png",
+      "https://www.tamron.com/product/pc_file/file/a057e_sideview.png",
+      "https://www.tamron.com/product/pc_file/file/a057e_mount.png",
+      "https://www.tamron.com/product/pc_file/file/a057e_underside.png"
+    ]
   },
   {
     "slug": "nikon-af-s-35-1-8g",
@@ -319,7 +421,12 @@
     "image": "https://www.nikon.co.il/globalassets/digizuite/161278-en-z50_1.2_angle1-vE483AA83EE28.png",
     "source": "https://www.nikon.co.il/en_IL/product/lenses/mirrorless/nikkor-z-50mm-f1.2-s-JMA003DA",
     "confidence": "alta",
-    "note": "Foto de 5790×3750 px (la actual tiene 350 px). Nikon Europa (Israel) JMA003DA; vista 3/4; original del CDN, si falla agregar /OptimizelySmallDesktopWebP."
+    "note": "Foto de 5790×3750 px (la actual tiene 350 px). Nikon Europa (Israel) JMA003DA; vista 3/4; original del CDN, si falla agregar /OptimizelySmallDesktopWebP.",
+    "extras": [
+      "https://www.nikon.co.il/globalassets/digizuite/161279-en-z50_1.2_angle2-v0D16ACCDA031.png",
+      "https://www.nikon.co.il/globalassets/digizuite/161290-en-z50_1.2_angle3-vBF77B2C1B989.png",
+      "https://www.nikon.co.il/globalassets/digizuite/161291-en-z50_1.2_angle4-vF20EEBC907F3.png"
+    ]
   },
   {
     "slug": "nikon-linea-z-50-f1-8-s-2",
@@ -333,91 +440,145 @@
     "image": "https://www.nikon.co.il/globalassets/digizuite/175386-en-dx_lens_1-vBB44DE696058.png",
     "source": "https://www.nikon.co.il/en_IL/product/lenses/mirrorless/nikkor-z-dx-12-28mm-f3.5-5.6-pz-vr-JMA719DA",
     "confidence": "media",
-    "note": "Foto de 3205×2862 px (la actual tiene 350 px). Nikon Europa (Israel) JMA719DA; es el og:image de la página pero el nombre del archivo es genérico (dx_lens_1)."
+    "note": "Foto de 3205×2862 px (la actual tiene 350 px). Nikon Europa (Israel) JMA719DA; es el og:image de la página pero el nombre del archivo es genérico (dx_lens_1).",
+    "extras": [
+      "https://www.nikon.co.il/globalassets/digizuite/175388-en-dx_lens_2_web-vF56FF817E229.png",
+      "https://www.nikon.co.il/globalassets/digizuite/175387-en-dx_lens_3_web-vD42D24DEA53A.png"
+    ]
   },
   {
     "slug": "sigma-18-35mm-f-1-8-hsm-nikon",
     "image": "https://www.sigma-global.com/lenses/a013_18_35_18_product_img01.png",
     "source": "https://www.sigma-global.com/en/lenses/a013_18_35_18/",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 350 px). Sigma oficial 18-35 F1.8 DC HSM Art; foto única para Nikon F/Canon EF."
+    "note": "Foto de 1000×1000 px (la actual tiene 350 px). Sigma oficial 18-35 F1.8 DC HSM Art; foto única para Nikon F/Canon EF.",
+    "extras": [
+      "https://www.sigma-global.com/lenses/a013_18_35_18_product_img02.png",
+      "https://www.sigma-global.com/lenses/a013_18_35_18_product_img03.png"
+    ]
   },
   {
     "slug": "sigma-70-200-f2-8-dg-os-hsm-sport-nikon",
     "image": "https://www.sigma-global.com/lenses/s018_70_200_28_product_img01.png",
     "source": "https://www.sigma-global.com/en/lenses/s018_70_200_28/",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 430 px). Sigma oficial 70-200 F2.8 DG OS HSM Sports (discontinuado); foto única Nikon F/Canon EF."
+    "note": "Foto de 1000×1000 px (la actual tiene 430 px). Sigma oficial 70-200 F2.8 DG OS HSM Sports (discontinuado); foto única Nikon F/Canon EF.",
+    "extras": [
+      "https://www.sigma-global.com/lenses/s018_70_200_28_product_img02.png"
+    ]
   },
   {
     "slug": "canon-rf-14-35-f-4-l-is-usm",
     "image": "https://cdn.media.amplience.net/i/canon/rf-14-35mm-f4l-is-usm-slant_product-gallery_03_a09e5edb704a4eebb6ed8eed0856c8fc?w=2000&fmt=jpg&bg=rgb(255,255,255)",
     "source": "https://www.canon-europe.com/lenses/rf-14-35mm-f4-4l-is-usm-lens/",
     "confidence": "alta",
-    "note": "Foto de 2000×2000 px (la actual tiene 350 px). Canon Europa; vista 3/4 (slant) de la galería de producto."
+    "note": "Foto de 2000×2000 px (la actual tiene 350 px). Canon Europa; vista 3/4 (slant) de la galería de producto.",
+    "extras": [
+      "https://cdn.media.amplience.net/i/canon/rf-14-35mm-f4l-is-usm-side_product-gallery_01_f3cb121edd6f48ea9d98b224378a942e?w=2000&fmt=jpg&bg=rgb(255,255,255)",
+      "https://cdn.media.amplience.net/i/canon/rf-14-35mm-f4l-is-usm-side-with-cap_product-gallery_02_063d6227f9fc4f53a775b7aa4d879b5d?w=2000&fmt=jpg&bg=rgb(255,255,255)",
+      "https://cdn.media.amplience.net/i/canon/rf-14-35mm-f4l-is-usm-slant-with-cap_product-gallery_04_3838d80c054c43e0b0fcf9e4f5994ee1?w=2000&fmt=jpg&bg=rgb(255,255,255)"
+    ]
   },
   {
     "slug": "sigma-12mm-f1-4-contemporary-canon-rf",
     "image": "https://www.sigma-global.com/lenses/c025_12_14_product_img01.png",
     "source": "https://www.sigma-global.com/en/lenses/c025_12_14",
     "confidence": "media",
-    "note": "Foto de 1000×1000 px (la actual tiene 364 px). Sigma oficial 12mm F1.4 DC C; foto genérica, la versión RF tiene anillo de control en vez de anillo de diafragma."
+    "note": "Foto de 1000×1000 px (la actual tiene 364 px). Sigma oficial 12mm F1.4 DC C; foto genérica, la versión RF tiene anillo de control en vez de anillo de diafragma.",
+    "extras": [
+      "https://www.sigma-global.com/lenses/c025_12_14_product_img02.png",
+      "https://www.sigma-global.com/lenses/c025_12_14_product_img03.png"
+    ]
   },
   {
     "slug": "tamron-24-70-f2-8-g2-canon-ef",
     "image": "https://www.tamron.com/product/pc_file/file/a032n_lens.png",
     "source": "https://www.tamron.com/global/consumer/lenses/a032/spec.html",
     "confidence": "media",
-    "note": "Foto de 600×600 px (la actual tiene 350 px). Tamron oficial A032 (SP 24-70 G2); la foto publicada es la versión Nikon F (sufijo n), no hay de Canon EF; por fuera solo cambia la montura."
+    "note": "Foto de 600×600 px (la actual tiene 350 px). Tamron oficial A032 (SP 24-70 G2); la foto publicada es la versión Nikon F (sufijo n), no hay de Canon EF; por fuera solo cambia la montura.",
+    "extras": [
+      "https://www.tamron.com/product/pc_file/file/a032n_topside.png",
+      "https://www.tamron.com/product/pc_file/file/a032n_sideview.png",
+      "https://www.tamron.com/product/pc_file/file/a032n_underside.png"
+    ]
   },
   {
     "slug": "sigma-50-100mm-f-1-8-hsm-dc-art-canon",
     "image": "https://www.sigma-global.com/lenses/a016_50_100_18_product_img01.png",
     "source": "https://www.sigma-global.com/en/lenses/a016_50_100_18/",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 350 px). Sigma oficial 50-100 F1.8 DC HSM Art (discontinuado); foto única Canon EF/Nikon F."
+    "note": "Foto de 1000×1000 px (la actual tiene 350 px). Sigma oficial 50-100 F1.8 DC HSM Art (discontinuado); foto única Canon EF/Nikon F.",
+    "extras": [
+      "https://www.sigma-global.com/lenses/a016_50_100_18_product_img02.png",
+      "https://www.sigma-global.com/lenses/a016_50_100_18_product_img03.png",
+      "https://www.sigma-global.com/lenses/a016_50_100_18_product_img04.png"
+    ]
   },
   {
     "slug": "canon-rf-70-200-2-8-l-is",
     "image": "https://cdn.media.amplience.net/i/canon/rf70-200mm-f2.8-l-is-usm-wo-tripod-ring-frt-04_1x1_86cc10e9070d44d0a04b04075f97a71e?w=2000&fmt=jpg&bg=rgb(255,255,255)",
     "source": "https://canon-europe.com/lenses/rf-70-200mm-f2-8l-is-usm-lens",
     "confidence": "alta",
-    "note": "Foto de 2000×2000 px (la actual tiene 350 px). Canon Europa 3792C005, versión original (no la Z); imagen og 1x1."
+    "note": "Foto de 2000×2000 px (la actual tiene 350 px). Canon Europa 3792C005, versión original (no la Z); imagen og 1x1.",
+    "extras": [
+      "https://cdn.media.amplience.net/i/canon/rf70-200mm-f2.8-l-is-usm-wht-fsl_db464233895444868cc34d4b8e785b7d?w=2000&fmt=jpg&bg=rgb(255,255,255)"
+    ]
   },
   {
     "slug": "jbl-auricular-e35-on-ear-diseno-plegable-black-wired",
     "image": "https://kh.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw6656d738/JBL_E35_HERO_BLACK_5710_FS_x1-1605x1605px.png?sw=1605&sfrm=png",
     "source": "https://kh.jbl.com/over-ear-headphones/JBL+E35.html?dwvar_JBL%20E35_color=Black-GLOBAL-Current",
     "confidence": "alta",
-    "note": "Foto de 1605×1605 px (la actual tiene 480 px). JBL oficial (Camboya); hero negro, original 1605x1605."
+    "note": "Foto de 1605×1605 px (la actual tiene 480 px). JBL oficial (Camboya); hero negro, original 1605x1605.",
+    "extras": [
+      "https://kh.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwb790a544/JBL_E35_FOLD_BLACK_5717_FS_x1-1605x1605px.png?sw=1605&sfrm=png",
+      "https://kh.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw404cb553/JBL_E35_FRONT_BLACK_5919_FS_x1-1605x1605px.png?sw=1605&sfrm=png",
+      "https://kh.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw2617f8a8/JBL_E35_KEY_BLACK_6048_FS_x1-1605x1605px.png?sw=1605&sfrm=png",
+      "https://kh.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwa56f651b/JBL_E35_TOP_BLACK_5995_FS_x1-1605x1605px.png?sw=1605&sfrm=png"
+    ]
   },
   {
     "slug": "netmak-adaptador-wifi-usb-con-antena-150-mbs-nm-cs154",
     "image": "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-6539.png",
     "source": "https://netmak.ar/nm-cs154",
     "confidence": "media",
-    "note": "Foto de 1000×1000 px (la actual tiene 480 px). Netmak oficial NM-CS154 (netmak.com.ar redirige a netmak.ar); og:image, la otra foto es product-image-6537.png."
+    "note": "Foto de 1000×1000 px (la actual tiene 480 px). Netmak oficial NM-CS154 (netmak.com.ar redirige a netmak.ar); og:image, la otra foto es product-image-6537.png.",
+    "extras": [
+      "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-6537.png"
+    ]
   },
   {
     "slug": "netmak-hub-8-en-1-usb-tipo-c-nm-8en1-2xtipo-c-hdmi-microsd-sd-2xusb-rj45",
     "image": "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-6080.png",
     "source": "https://netmak.ar/nm-8en1",
     "confidence": "media",
-    "note": "Foto de 1000×1000 px (la actual tiene 250 px). Netmak oficial NM-8EN1, pero la ficha lista VGA y 1 USB-C (no 2xTipo C como nuestro título); revisar si es el mismo hub."
+    "note": "Foto de 1000×1000 px (la actual tiene 250 px). Netmak oficial NM-8EN1, pero la ficha lista VGA y 1 USB-C (no 2xTipo C como nuestro título); revisar si es el mismo hub.",
+    "extras": [
+      "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-6082.png",
+      "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-6084.png",
+      "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-6086.png"
+    ]
   },
   {
     "slug": "netmak-hub-6-en-1-usb-tipo-c-nm-6en1-tipo-c-hdmi-microsd-sd-usb",
     "image": "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-2143.png",
     "source": "https://netmak.ar/nm-6en1",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 250 px). Netmak oficial NM-6EN1, puertos coinciden."
+    "note": "Foto de 1000×1000 px (la actual tiene 250 px). Netmak oficial NM-6EN1, puertos coinciden.",
+    "extras": [
+      "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-2145.png",
+      "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-2147.png"
+    ]
   },
   {
     "slug": "disco-ssd-500-gb-sata-iii-25-wd-green",
     "image": "https://www.sandisk.com/content/dam/sandisk/en-us/assets/products/internal-storage/wd-green-sata-internal-ssd/gallery/wd-green-sata-ssd-cased-500gb-front.png",
     "source": "https://www.sandisk.com/products/ssd/internal-ssd/wd-green-sata-internal-ssd-7mm?sku=WDS500G5G0A-00CPT0",
     "confidence": "media",
-    "note": "Foto de 1680×1680 px (la actual tiene 232 px). Página oficial (WD Green ahora en Sandisk). URL de imagen 500GB inferida del patrón de la de 250GB; verificar que cargue."
+    "note": "Foto de 1680×1680 px (la actual tiene 232 px). Página oficial (WD Green ahora en Sandisk). URL de imagen 500GB inferida del patrón de la de 250GB; verificar que cargue.",
+    "extras": [
+      "https://www.sandisk.com/content/dam/sandisk/en-us/assets/products/internal-storage/wd-green-sata-internal-ssd/gallery/wd-green-sata-ssd-cased-500gb-left.png"
+    ]
   },
   {
     "slug": "netmak-jeringa-grasa-disip-term-x-10-cc-nm-gr10cc",
@@ -431,7 +592,13 @@
     "image": "https://storage-asset.msi.com/global/picture/product/product_17392664094978d1fa9b16a1d028d5b1465aea3b5e.webp",
     "source": "https://www.msi.com/Monitor/MAG-274F",
     "confidence": "alta",
-    "note": "Foto de 1000×800 px (la actual tiene 350 px). Primera imagen de la galería oficial (og:image)."
+    "note": "Foto de 1000×800 px (la actual tiene 350 px). Primera imagen de la galería oficial (og:image).",
+    "extras": [
+      "https://storage-asset.msi.com/global/picture/product/product_17392664092d0e30aa46b2239c95a1972f17b4d826.webp",
+      "https://storage-asset.msi.com/global/picture/product/product_173926641189728ee8dcea12d711382f5a84e6ff61.webp",
+      "https://storage-asset.msi.com/global/picture/product/product_17392664112fc420bbff39be2be2408cf47009db91.webp",
+      "https://storage-asset.msi.com/global/picture/product/product_1739266414cf96f4911ecd7cce334c00d15f8fc2b6.webp"
+    ]
   },
   {
     "slug": "hp-victus-15-fa2013dx-i5-13420h-8gb-512gb-15-6fhd-144hz-rtx-3050-6gb-win11",
@@ -445,63 +612,111 @@
     "image": "https://us.targus.com/cdn/shop/files/TSB968GL_FRONT_ZIPPER.jpg?v=1789761976",
     "source": "https://us.targus.com/products/intellect-advanced-15-6-inch-laptop-backpack-black-tsb968gl",
     "confidence": "alta",
-    "note": "Foto de 1200×1200 px (la actual tiene 495 px). TSB968GL; imagen principal de la tienda oficial Targus, tamaño original del CDN Shopify."
+    "note": "Foto de 1200×1200 px (la actual tiene 495 px). TSB968GL; imagen principal de la tienda oficial Targus, tamaño original del CDN Shopify.",
+    "extras": [
+      "https://us.targus.com/cdn/shop/files/TSB968GL-71_BACK.jpg?v=1789761976",
+      "https://us.targus.com/cdn/shop/files/TSB968GL-71_SIDE.jpg?v=1789761976",
+      "https://us.targus.com/cdn/shop/files/TSB968GL-71_DETAIL.jpg?v=1789761976",
+      "https://us.targus.com/cdn/shop/files/TSB968GL-71_OPEN.jpg?v=1789761976"
+    ]
   },
   {
     "slug": "mochila-targus-para-notebook-motor-laptop-16-black-2",
     "image": "https://ap.targus.com/cdn/shop/products/TSB194US_70_FRONT.jpg?v=1575002142",
     "source": "https://ap.targus.com/products/16-motor-laptop-backpack",
     "confidence": "alta",
-    "note": "Foto de 1200×1200 px (la actual tiene 200 px). TSB194US negra; vista frontal, tamaño original del CDN Shopify."
+    "note": "Foto de 1200×1200 px (la actual tiene 200 px). TSB194US negra; vista frontal, tamaño original del CDN Shopify.",
+    "extras": [
+      "https://ap.targus.com/cdn/shop/products/TSB194US_70_BACK.jpg?v=1575002142",
+      "https://ap.targus.com/cdn/shop/products/TSB194US_70_WATERBOTTLE.jpg?v=1575002142"
+    ]
   },
   {
     "slug": "msi-raider-ge68-hx-14vgg-287-i9-14900hx-32gb-1tb-ssd-15-6-fhd-144hz-win11-rtx-4070-8gb",
     "image": "https://storage-asset.msi.com/global/picture/product/product_16897537971a5bf13cb50e1e26b0c835af9ad4e311.webp",
     "source": "https://us.msi.com/Laptop/Raider-GE68-HX-14VX",
     "confidence": "alta",
-    "note": "Foto de 1000×800 px (la actual tiene 492 px). Página oficial Raider GE68 HX 14V (incluye 14VGG-287US); imagen principal (og:image)."
+    "note": "Foto de 1000×800 px (la actual tiene 492 px). Página oficial Raider GE68 HX 14V (incluye 14VGG-287US); imagen principal (og:image).",
+    "extras": [
+      "https://storage-asset.msi.com/global/picture/product/product_1668757510644dcddccac86a5b823ab67fc1bb19c4.webp",
+      "https://storage-asset.msi.com/global/picture/product/product_16687575185b369889172bb726826fdeb2f15567b4.webp",
+      "https://storage-asset.msi.com/global/picture/product/product_16687575222cd99f6c11279affa8bf473e450d6c11.webp",
+      "https://storage-asset.msi.com/global/picture/product/product_166875752594b9a75d1350832eb6f41ead857cd927.webp"
+    ]
   },
   {
     "slug": "netmak-mini-consola-4k-hdmi-tv-40-000-juegos-nm-k10-2",
     "image": "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-6118.png",
     "source": "https://netmak.ar/nm-k10",
     "confidence": "alta",
-    "note": "Foto de 1280×1280 px (la actual tiene 245 px). Sitio oficial Netmak; imagen principal (og:image) en tamaño original."
+    "note": "Foto de 1280×1280 px (la actual tiene 245 px). Sitio oficial Netmak; imagen principal (og:image) en tamaño original.",
+    "extras": [
+      "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-6120.png",
+      "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-6128.png",
+      "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-6130.png",
+      "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-6132.png"
+    ]
   },
   {
     "slug": "placa-red-pci-e-tp-link-tg-3468-10-100-1000-2",
     "image": "https://static.tp-link.com/res/images/products/large/TG-3468(UN)2.0-01.jpg",
     "source": "https://www.tp-link.com/us/home-networking/pci-adapter/tg-3468/",
     "confidence": "alta",
-    "note": "Foto de 960×720 px (la actual tiene 490 px). Imagen principal oficial (og:image), tamaño large."
+    "note": "Foto de 960×720 px (la actual tiene 490 px). Imagen principal oficial (og:image), tamaño large.",
+    "extras": [
+      "https://static.tp-link.com/res/images/products/large/TG-3468(UN)2.0-02.jpg"
+    ]
   },
   {
     "slug": "router-2p-mercusys-mb110-4g-300mbps",
     "image": "https://static.mercusys.com/product-image/01_large20221129084356.jpg",
     "source": "https://www.mercusys.com/en/product/5g-4g-router/mb110-4g/v1/",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 182 px). Primera imagen de la galería oficial, tamaño large."
+    "note": "Foto de 1000×1000 px (la actual tiene 182 px). Primera imagen de la galería oficial, tamaño large.",
+    "extras": [
+      "https://static.mercusys.com/product-image/02_large20221129084344.jpg",
+      "https://static.mercusys.com/product-image/03_large20221129084335.jpg",
+      "https://static.mercusys.com/product-image/04_large20221129084319.jpg",
+      "https://static.mercusys.com/product-image/05_large20221129084309.jpg"
+    ]
   },
   {
     "slug": "router-3p-mercusys-mr70x-ax1800",
     "image": "https://static.mercusys.com/product-image/01_large20201223072930.jpg",
     "source": "https://www.mercusys.com/en/product/details/mr70x/",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 495 px). Primera imagen de la galería oficial, tamaño large."
+    "note": "Foto de 1000×1000 px (la actual tiene 495 px). Primera imagen de la galería oficial, tamaño large.",
+    "extras": [
+      "https://static.mercusys.com/product-image/02_large20201223072954.jpg",
+      "https://static.mercusys.com/product-image/03_large20201223073015.jpg",
+      "https://static.mercusys.com/product-image/04_large20201223073042.jpg"
+    ]
   },
   {
     "slug": "router-3p-mercusys-mr25be-be3600",
     "image": "https://static.mercusys.com/product-image/MR25BE_EU_1.0_overview_1_large20250116071113.jpg",
     "source": "https://www.mercusys.com/en/product/details/mr25be/",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 350 px). Primera imagen de la galería oficial, tamaño large."
+    "note": "Foto de 1000×1000 px (la actual tiene 350 px). Primera imagen de la galería oficial, tamaño large.",
+    "extras": [
+      "https://static.mercusys.com/product-image/MR25BE_EU_1.0_overview_2_large20250116071058.jpg",
+      "https://static.mercusys.com/product-image/MR25BE_EU_1.0_overview_3_large20250116071043.jpg",
+      "https://static.mercusys.com/product-image/MR25BE_EU_1.0_overview_4_large20250116071025.jpg",
+      "https://static.mercusys.com/product-image/MR25BE_EU_1.0_overview_5_large20250116071008.jpg"
+    ]
   },
   {
     "slug": "router-3p-mercusys-mw305r-300mbps",
     "image": "https://static.mercusys.com/product-image/localTest_MW305R2.0(EU)_1906_02_large20200513090024.jpg",
     "source": "https://www.mercusys.com/en/product/wifi-router/mw305r/v3.30/",
     "confidence": "alta",
-    "note": "Foto de 1000×1000 px (la actual tiene 350 px). Galería oficial MW305R (imagen de la v2, mismo diseño), tamaño large."
+    "note": "Foto de 1000×1000 px (la actual tiene 350 px). Galería oficial MW305R (imagen de la v2, mismo diseño), tamaño large.",
+    "extras": [
+      "https://static.mercusys.com/product-image/localTest_MW305R(EU)2.0_1906_03_large20200513085954.jpg",
+      "https://static.mercusys.com/product-image/localTest_MW305R(EU)2.0_1906_01_large20200513085927.jpg",
+      "https://static.mercusys.com/product-image/localTest_MW305R(EU)2.0_1906_06_large20200513085855.jpg",
+      "https://static.mercusys.com/product-image/localTest_MW305R(EU)2.0_1906_07_large20200513085824.jpg"
+    ]
   },
   {
     "slug": "ln-hp-m111w-lj-21-ppm-7md68a-wifi-2",
@@ -522,14 +737,25 @@
     "image": "https://dlcdnwebimgs.asus.com/gain/a153ae97-c99f-4c09-a653-fe25756f9fc4/",
     "source": "https://www.asus.com/us/motherboards-components/motherboards/prime/prime-b550m-a-ac/",
     "confidence": "alta",
-    "note": "Foto de 2400×2400 px (la actual tiene 200 px). Vista frontal oficial (og:image), tamaño original sin parámetro de ancho."
+    "note": "Foto de 2400×2400 px (la actual tiene 200 px). Vista frontal oficial (og:image), tamaño original sin parámetro de ancho.",
+    "extras": [
+      "https://dlcdnwebimgs.asus.com/gain/3615785c-657a-4802-883e-bb392c878f6f/",
+      "https://dlcdnwebimgs.asus.com/gain/e2cd2801-aa7b-4c47-853a-e632fdcba6b5/",
+      "https://dlcdnwebimgs.asus.com/gain/611b374f-853f-449c-85c3-700e46f342d4/",
+      "https://dlcdnwebimgs.asus.com/gain/2ac43813-5a44-4552-9558-e6f0deddc67e/"
+    ]
   },
   {
     "slug": "plotter-epson-surecolor-t3170x-61cm-wifi-sist-cont",
     "image": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=bc42990f2b1993279d02cc1c4251129401144a3c&vid=bc42990f2b1993279d02cc1c4251129401144a3c&prid=1200Wx1200H&clid=SAPDAM&prclid=banner&assetDescr=SC-T3170X_headon_690x460",
     "source": "https://epson.com/For-Work/Printers/Large-Format/SureColor-T3170x-24%22-Desktop-Printer/p/SCT3170X",
     "confidence": "alta",
-    "note": "Foto de 690×460 px (la actual tiene 250 px). Vista de frente oficial (headon), 1200x1200, el mayor tamaño que ofrece la página."
+    "note": "Foto de 690×460 px (la actual tiene 250 px). Vista de frente oficial (headon), 1200x1200, el mayor tamaño que ofrece la página.",
+    "extras": [
+      "https://mediaserver.goepson.com/adaptivemedia/rendition?id=bc02523c9b18eb18fd7f46f6f5baf99814929364&vid=bc02523c9b18eb18fd7f46f6f5baf99814929364&prid=1200Wx1200H&clid=SAPDAM&prclid=banner&assetDescr=SureColor_T3170x_Product_03_Right_Angle_690x460",
+      "https://mediaserver.goepson.com/adaptivemedia/rendition?id=b59b8e113d043f541ae95a5caf527d09790ff095&vid=b59b8e113d043f541ae95a5caf527d09790ff095&prid=1200Wx1200H&clid=SAPDAM&prclid=banner&assetDescr=SureColor_T3170x_Product_02_Left_Angle_690x460",
+      "https://mediaserver.goepson.com/adaptivemedia/rendition?id=69642805f8c57699e01e3ec5ab32bcda35cd864d&vid=69642805f8c57699e01e3ec5ab32bcda35cd864d&prid=1200Wx1200H&clid=SAPDAM&prclid=banner&assetDescr=SureColor_T3170x_Product_07_690x460"
+    ]
   },
   {
     "slug": "alarma-ezviz-smart-home-t33-control-infrarrojo",
@@ -550,21 +776,39 @@
     "image": "https://mx.store.dji.com/cdn/shop/files/SKU34_5_14db7c31-c3c8-4ad3-9e61-fd0f0bf5f013.png?v=1785785955&width=2000",
     "source": "https://mx.store.dji.com/products/dji-mini-5-pro-fly-more-combo-plus-dji-rc2",
     "confidence": "alta",
-    "note": "Foto de 2000×2000 px (la actual tiene 480 px). Og:image de la tienda oficial DJI México para Fly More Combo Plus RC 2."
+    "note": "Foto de 2000×2000 px (la actual tiene 480 px). Og:image de la tienda oficial DJI México para Fly More Combo Plus RC 2.",
+    "extras": [
+      "https://mx.store.dji.com/cdn/shop/files/mini5provmprc2.jpg?v=1785813067&width=2000",
+      "https://mx.store.dji.com/cdn/shop/files/6937224123205_DJI_Mini_5_Pro_DJI_RC_2__2.jpg?v=1785786010&width=2000",
+      "https://mx.store.dji.com/cdn/shop/files/6937224123205_DJI_Mini_5_Pro_DJI_RC_2__3.jpg?v=1785786010&width=2000",
+      "https://mx.store.dji.com/cdn/shop/files/6937224123205_DJI_Mini_5_Pro_DJI_RC_2__4.jpg?v=1785786010&width=2000"
+    ]
   },
   {
     "slug": "mini-pc-asus-ryzen-5-7535h-pn53-b-2s-barebone",
     "image": "https://dlcdnwebimgs.asus.com/gain/73de4d20-2afb-4e61-bc2a-59ecb69d398f/",
     "source": "https://www.asus.com/displays-desktops/mini-pcs/pn-series/asus-expertcenter-pn53/",
     "confidence": "alta",
-    "note": "Foto de 2400×2400 px (la actual tiene 225 px). Og:image oficial ExpertCenter PN53 (mismo gabinete para todas las CPU; ASUS lista 7535HS)."
+    "note": "Foto de 2400×2400 px (la actual tiene 225 px). Og:image oficial ExpertCenter PN53 (mismo gabinete para todas las CPU; ASUS lista 7535HS).",
+    "extras": [
+      "https://dlcdnwebimgs.asus.com/gain/4a7dcfa0-6631-4bb7-af18-55ca710d1e51/",
+      "https://dlcdnwebimgs.asus.com/gain/aa73dd0c-2efb-4283-973c-b8e2ae92ebe7/",
+      "https://dlcdnwebimgs.asus.com/gain/7ccaca54-2221-472f-b0a9-b4539b4e93ac/",
+      "https://dlcdnwebimgs.asus.com/gain/838c917a-4f6b-4ba2-ae03-8f582c762284/"
+    ]
   },
   {
     "slug": "mb-asus-s1700-prime-b760m-k-ddr5-box-m-atx",
     "image": "https://dlcdnwebimgs.asus.com/gain/e280c246-2efc-4719-bf7c-cc356e9e96fa/",
     "source": "https://www.asus.com/motherboards-components/motherboards/prime/prime-b760m-k/",
     "confidence": "alta",
-    "note": "Foto de 2400×2400 px (la actual tiene 232 px). Og:image oficial ASUS PRIME B760M-K (DDR5), original sin redimensionar."
+    "note": "Foto de 2400×2400 px (la actual tiene 232 px). Og:image oficial ASUS PRIME B760M-K (DDR5), original sin redimensionar.",
+    "extras": [
+      "https://dlcdnwebimgs.asus.com/gain/272c4b23-0f64-41f9-bea5-e112c84bba38/",
+      "https://dlcdnwebimgs.asus.com/gain/1d8bdf45-1232-4b12-a35a-d7ce62ee8ae8/",
+      "https://dlcdnwebimgs.asus.com/gain/5f52aec8-debb-463c-84b3-d4e6be8c5cc8/",
+      "https://dlcdnwebimgs.asus.com/gain/81ad2b14-600c-44a3-bca0-bf6434565ea3/"
+    ]
   },
   {
     "slug": "samsung-galaxy-a07-128gb-6gb",
@@ -578,7 +822,10 @@
     "image": "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-5208.png",
     "source": "https://netmak.ar/nm-mp758",
     "confidence": "alta",
-    "note": "Foto de 1280×1280 px (la actual tiene 480 px). Sitio oficial Netmak, NM-MP758 90x40 cm; primera imagen de la ficha."
+    "note": "Foto de 1280×1280 px (la actual tiene 480 px). Sitio oficial Netmak, NM-MP758 90x40 cm; primera imagen de la ficha.",
+    "extras": [
+      "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-5206.png"
+    ]
   },
   {
     "slug": "netmak-soporte-tv-moni-32-60-brazo-articulado-nm-st36",
@@ -592,7 +839,11 @@
     "image": "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-5064.png",
     "source": "https://netmak.ar/nm-legend",
     "confidence": "alta",
-    "note": "Foto de 1280×1280 px (la actual tiene 480 px). Sitio oficial Netmak, NM-LEGEND con apoya muñeca; primera imagen de la ficha."
+    "note": "Foto de 1280×1280 px (la actual tiene 480 px). Sitio oficial Netmak, NM-LEGEND con apoya muñeca; primera imagen de la ficha.",
+    "extras": [
+      "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-5066.png",
+      "https://ss-cnt-001c.esmsv.com/r/content/host2/f6994f14028dad7ebda206b43e3f933c//img/products/product-image-5068.png"
+    ]
   },
   {
     "slug": "apple-airpods-4-active-noise-cancellation",
@@ -613,7 +864,13 @@
     "image": "https://s7d1.scene7.com/is/image/canon/7084C002-r6-markiii-body-primary-01?fmt=png-alpha&wid=2000&hei=2000",
     "source": "https://www.usa.canon.com/shop/p/eos-r6-mark-iii",
     "confidence": "alta",
-    "note": "Foto de 2000×2000 px (la actual tiene 400 px). Imagen principal oficial Canon USA del R6 Mark III Body (7084C002)."
+    "note": "Foto de 2000×2000 px (la actual tiene 400 px). Imagen principal oficial Canon USA del R6 Mark III Body (7084C002).",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/7084C002-r6-markiii-body-02?fmt=png-alpha&wid=2000&hei=2000",
+      "https://s7d1.scene7.com/is/image/canon/7084C002-r6-markiii-body-03?fmt=png-alpha&wid=2000&hei=2000",
+      "https://s7d1.scene7.com/is/image/canon/7084C002-r6-markiii-body-04?fmt=png-alpha&wid=2000&hei=2000",
+      "https://s7d1.scene7.com/is/image/canon/7084C002-r6-markiii-body-05?fmt=png-alpha&wid=2000&hei=2000"
+    ]
   },
   {
     "slug": "macbook-pro-m5-pro-14%e2%80%b3-24gb-2tb-silver",
@@ -621,5 +878,824 @@
     "source": "https://www.apple.com/shop/buy-mac/macbook-pro/14-inch-m5-pro",
     "confidence": "media",
     "note": "Foto de 2400×1260 px (la actual tiene 416 px). Es apaisada: fijate que muestre el producto y no un banner. Imagen oficial Apple del MacBook Pro 14\" (selector de tamaño); no hay foto específica Silver, color sin confirmar."
+  },
+  {
+    "slug": "sony-playstation-5-pro-2tb",
+    "image": "https://media.direct.playstation.com/is/image/sierialto/ps5-pro-Hero-1-angled?wid=1600",
+    "source": "https://direct.playstation.com/en-us/buy-consoles/playstation5-pro-console-2-tb",
+    "confidence": "alta",
+    "note": "Foto de 1600×900 px (la actual tiene 500 px). Es apaisada: fijate que muestre el producto y no un banner. PS5 Pro 2 TB de PlayStation Direct (EE.UU.); viene sin lectora de discos; el ?wid=1600 lo agregué yo al URL de la galería.",
+    "extras": [
+      "https://media.direct.playstation.com/is/image/sierialto/ps5-pro-Hero-2-forward-facing?wid=1600",
+      "https://media.direct.playstation.com/is/image/sierialto/PS5PRO-hero-Packshot-US-2025?wid=1600",
+      "https://media.direct.playstation.com/is/image/sierialto/ps5-pro-Hero-4-laying-flat?wid=1600",
+      "https://media.direct.playstation.com/is/image/sierialto/ps5-pro-Hero-7-angled-console?wid=1600"
+    ]
+  },
+  {
+    "slug": "handy-baofeng-bf-888s-max-2",
+    "image": "https://www.baofengradio.com/cdn/shop/files/BF-888S-2-Pack-5W-UHF-Radio-Baofeng-4926.jpg?v=1696342743&width=1600",
+    "source": "https://www.baofengradio.com/products/bf-888s",
+    "confidence": "media",
+    "note": "Foto de 650×650 px (la actual tiene 500 px). Es el BF-888S común (pack x2) de la tienda oficial Baofeng; la versión Max puede cambiar el diseño, comparalo con la foto actual.",
+    "extras": [
+      "https://www.baofengradio.com/cdn/shop/files/BF-888S-2-Pack-5W-UHF-Radio-Baofeng-4065.jpg?v=1696342777&width=1600",
+      "https://www.baofengradio.com/cdn/shop/files/BF-888S-2-Pack-5W-UHF-Radio-Baofeng-5342.jpg?v=1696342780&width=1600",
+      "https://www.baofengradio.com/cdn/shop/files/BF-888S-2-Pack-5W-UHF-Radio-Baofeng-4514.jpg?v=1696342786&width=1600"
+    ]
+  },
+  {
+    "slug": "parlante-bluetooth-philips-party-speaker-40w",
+    "image": "https://images.philips.com/is/image/philipsconsumer/tpv_77492?$png$&wid=1600&hei=1600&fit=constrain",
+    "source": "https://www.usa.philips.com/c-p/TAX3206_37/bluetooth-party-speaker",
+    "confidence": "media",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). Supuse que es el TAX3206, pero la página no confirma los 40 W: comparalo con la foto actual. El wid/hei de 1600 lo cambié yo en el URL.",
+    "extras": [
+      "https://images.philips.com/is/image/philipsconsumer/tpv_76682?$png$&wid=1600&hei=1600&fit=constrain",
+      "https://images.philips.com/is/image/philipsconsumer/tpv_76700?$png$&wid=1600&hei=1600&fit=constrain",
+      "https://images.philips.com/is/image/philipsconsumer/tpv_77495?$png$&wid=1600&hei=1600&fit=constrain"
+    ]
+  },
+  {
+    "slug": "nikon-z30-doble-kit-16-50mm-f-3-5-5-6",
+    "image": "https://cdn11.bigcommerce.com/s-zyhylwkdkw/images/stencil/original/products/1071/1462/1737-Z-30-front-body-only__91351.1656475105.png",
+    "source": "https://store.nikon.ca/p/z-30/1737",
+    "confidence": "media",
+    "note": "Foto de 700×595 px (la actual tiene 500 px). Foto oficial de la tienda de Nikon Canadá, pero es solo el cuerpo, sin los lentes del kit; armé el URL en tamaño original con el patrón de BigCommerce del mismo sitio."
+  },
+  {
+    "slug": "nikon-z6-ii-body",
+    "image": "https://cdn11.bigcommerce.com/s-zyhylwkdkw/images/stencil/original/products/912/1246/1659-Z6II-cap__32556.1602648622.png",
+    "source": "https://store.nikon.ca/p/z-6ii/1659",
+    "confidence": "media",
+    "note": "Foto de 700×595 px (la actual tiene 500 px). Tienda oficial de Nikon Canadá; por el nombre del archivo debería ser el cuerpo con tapa, sin lente: chequealo. URL en tamaño original armado con el patrón del sitio."
+  },
+  {
+    "slug": "canon-eos-r6-body-markii",
+    "image": "https://s7d1.scene7.com/is/image/canon/5666C002_eos_r6_mark_ii_body_primary?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/eos-r6-mark-ii",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). EOS R6 Mark II solo cuerpo (5666C002) de Canon USA; el tamaño 1600 lo cambié yo sobre el URL de la galería.",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/5666C002_eos_r6_mark_ii_body_2?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/5666C002_eos_r6_mark_ii_body_3?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/5666C002_eos_r6_mark_ii_body_4?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/5666C002_eos_r6_mark_ii_body_5?fmt=webp-alpha&wid=1600&hei=1600"
+    ]
+  },
+  {
+    "slug": "lente-canon-rf-35mm-f-1-8-macro-is-stm",
+    "image": "https://s7d1.scene7.com/is/image/canon/2973C002_rf-35mm-f1.8-macro-is-stm_primary?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/rf35mm-f1-8-macro-is-stm",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). RF 35mm f/1.8 Macro IS STM (2973C002) de Canon USA; el tamaño 1600 lo cambié yo sobre el URL de la galería.",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/2973C002_rf-35mm-f1.8-macro-is-stm_7-1?fmt=webp-alpha&wid=1600&hei=1600"
+    ]
+  },
+  {
+    "slug": "lente-canon-rf-85mm-f-1-2l-usm",
+    "image": "https://s7d1.scene7.com/is/image/canon/3447C002_rf85mm-f12-l-usm_primary?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/rf85mm-f1-2-l-usm",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). Es la versión común (3447C002), no la DS; Canon USA lo marca discontinuado. Tamaño 1600 cambiado por mí en el URL."
+  },
+  {
+    "slug": "canon-eos-r8-kit-24-50",
+    "image": "https://s7d1.scene7.com/is/image/canon/eos_r8_rf24_50mm_f45_63_is_stm_primary?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/eos-r8-rf24-50mm-f4-5-6-3-is-stm-lens-kit",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). EOS R8 con RF 24-50mm (no el Mark II) de Canon USA; tamaño 1600 cambiado por mí en el URL.",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/eos_r8_rf24_50mm_f45_63_is_stm_2?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/eos_r8_rf24_50mm_f45_63_is_stm_3?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/eos_r8_rf24_50mm_f45_63_is_stm_4?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/eos_r8_rf24_50mm_f45_63_is_stm_5?fmt=webp-alpha&wid=1600&hei=1600"
+    ]
+  },
+  {
+    "slug": "canon-eos-r50-kit-18-45mm-f-4-5-6-3-is-stm",
+    "image": "https://s7d1.scene7.com/is/image/canon/5811C012_eos-r50-rf-s18-45mm-f4-5-6-3-is-stm-lens-kit-black_primary?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/eos-r50-rf-s18-45mm-f4-5-6-3-is-stm-lens-kit",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). Es la R50 negra con 18-45mm; si la publicación es la blanca, no sirve. Tamaño 1600 cambiado por mí en el URL.",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/5811C012_eos-r50-rf-s18-45mm-f4-5-6-3-is-stm-lens-kit-black_2?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/5811C012_eos-r50-rf-s18-45mm-f4-5-6-3-is-stm-lens-kit-black_3?fmt=webp-alpha&wid=1600&hei=1600"
+    ]
+  },
+  {
+    "slug": "canon-eos-r10-kit-18-45mm-f-4-5-6-3-is-stm",
+    "image": "https://s7d1.scene7.com/is/image/canon/5331C009_eos-r10-rf-s18-45mm-f45-63-is-stm_primary?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/eos-r10-rf-s18-45mm-f4-5-6-3-is-stm-lens-kit",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). Packshot oficial de Canon USA del kit con el RF-S 18-45; el tamaño 1600 lo pedí a mano con wid/hei de Scene7.",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/5331C009_eos-r10-rf-s18-45mm-f45-63-is-stm_2?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/5331C009_eos-r10-rf-s18-45mm-f45-63-is-stm_3?fmt=webp-alpha&wid=1600&hei=1600"
+    ]
+  },
+  {
+    "slug": "lente-sigma-35mm-f-1-4-dg-art-p-sony",
+    "image": "https://www.sigma-global.com/lenses/a012_35_14_product_img01.png",
+    "source": "https://www.sigma-global.com/en/lenses/a012_35_14/",
+    "confidence": "media",
+    "note": "Foto de 1000×1000 px (la actual tiene 500 px). Es la 35mm F1.4 DG HSM Art (A012); si el producto es la DG DN Art nueva usar a021_35_14_product_img01.png. La foto puede mostrar otra montura que Sony E.",
+    "extras": [
+      "https://www.sigma-global.com/lenses/a012_35_14_product_img02.png",
+      "https://www.sigma-global.com/lenses/a012_35_14_product_img03.png"
+    ]
+  },
+  {
+    "slug": "iphone-15-128gb",
+    "image": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone_15_hero.png",
+    "source": "https://support.apple.com/en-us/111831",
+    "confidence": "media",
+    "note": "Foto de 1000×1000 px (la actual tiene 500 px). Foto de la ficha técnica de Apple (el iPhone 15 ya no está en la tienda de Apple); puede ser más chica que 1000 px y muestra colores genéricos.",
+    "extras": [
+      "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/111831-iphone-15-port-image1.png",
+      "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/111831-iphone-15-port-image2.png"
+    ]
+  },
+  {
+    "slug": "iphone-15-pro-128gb",
+    "image": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone_15_pro.png",
+    "source": "https://support.apple.com/en-us/111829",
+    "confidence": "media",
+    "note": "Foto de 1000×1000 px (la actual tiene 500 px). Foto de la ficha técnica de Apple, sin color definido; chequear que el tamaño alcance y que coincida con el color que se vende."
+  },
+  {
+    "slug": "grabador-portatil-zoom-h4n-pro",
+    "image": "https://zoomcorp.com/media/original_images/H4nPro_black_Slant_Front_2.jpg",
+    "source": "https://zoomcorp.com/en/us/handheld-recorders/handheld-recorders/h4n-pro/",
+    "confidence": "alta",
+    "note": "Foto de 1989×3947 px (la actual tiene 500 px). H4n Pro negro de la página oficial de Zoom; armé la URL del original sacando el sufijo de recorte/tamaño de la galería.",
+    "extras": [
+      "https://zoomcorp.com/media/original_images/H4nPro_black_front_2.jpg",
+      "https://zoomcorp.com/media/original_images/H4nPro_black_rear_2.jpg",
+      "https://zoomcorp.com/media/original_images/H4nPro_black__Right_side.jpg",
+      "https://zoomcorp.com/media/original_images/H4nPro_black_Left_side.jpg"
+    ]
+  },
+  {
+    "slug": "fujifilm-fuji-x-t5-body",
+    "image": "https://www.fujifilm-x.com/products-cameras-static/x-t5/assets/images/top/koes_concept_img_01_pc.png",
+    "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t5/",
+    "confidence": "media",
+    "note": "Foto de 1300×740 px (la actual tiene 500 px). Es apaisada: fijate que muestre el producto y no un banner. No es packshot: es la imagen principal de la página oficial de la X-T5; chequear el color (negro o plata) y que se vea sin lente."
+  },
+  {
+    "slug": "fujifilm-fuji-x-t5-kit-18-55mm",
+    "image": "https://www.fujifilm-x.com/products-cameras-static/x-t5/assets/images/top/koes_concept_img_01_pc.png",
+    "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t5/",
+    "confidence": "media",
+    "note": "Foto de 1300×740 px (la actual tiene 500 px). Es apaisada: fijate que muestre el producto y no un banner. Misma imagen de la página oficial de la X-T5; no confirmé que muestre el XF18-55mm, chequear lente y color."
+  },
+  {
+    "slug": "canon-r10-body",
+    "image": "https://s7d1.scene7.com/is/image/canon/5331C002_eos-r10-body_primary3?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/eos-r10",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). Packshot oficial del cuerpo solo (Canon USA); el tamaño 1600 lo pedí a mano con wid/hei de Scene7.",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/5331C002_eos-r10-body_2?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/5331C002_eos-r10-body_3?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/5331C002_eos-r10-body_4?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/5331C002_eos-r10-body_5?fmt=webp-alpha&wid=1600&hei=1600"
+    ]
+  },
+  {
+    "slug": "protector-de-tension-trv-protech-f",
+    "image": "https://acdn-us.mitiendanube.com/stores/005/889/261/products/protech1-89c465435cfa887bf017453500426912-1024-1024.webp",
+    "source": "https://tienda.trv.com.ar/productos/protector-de-tension-protech-f/",
+    "confidence": "alta",
+    "note": "Foto de 1024×683 px (la actual tiene 500 px). Tienda oficial de TRV; 1024 px es lo más grande que ofrece la galería.",
+    "extras": [
+      "https://acdn-us.mitiendanube.com/stores/005/889/261/products/protech2-46858f51b4b9284bcb17453500524624-1024-1024.webp",
+      "https://acdn-us.mitiendanube.com/stores/005/889/261/products/protech3-ad988db9b8d4ff84d517453500728191-1024-1024.webp"
+    ]
+  },
+  {
+    "slug": "canon-eos-r50-kit-18-45mm-f-4-5-6-3-is-stm-55-210mm-f-5-7-1-is-stm",
+    "image": "https://s7d1.scene7.com/is/image/canon/5811C022_eos-r50-black-two-lens-kit_primary?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/eos-r50-rf-s18-45mm-f4-5-6-3-is-stm-rf-s55-210mm-f5-7-1-is-stm-lens-kit",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). Kit de dos lentes en negro (Canon USA); el tamaño 1600 lo pedí a mano con wid/hei de Scene7.",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/5811C022_eos-r50-black-two-lens-kit_2?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/5811C022_eos-r50-black-two-lens-kit_3?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/5811C022_eos-r50-black-two-lens-kit_4?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/5811C022_eos-r50-black-two-lens-kit_5?fmt=webp-alpha&wid=1600&hei=1600"
+    ]
+  },
+  {
+    "slug": "lente-canon-ef-24mm-f-2-8-stm",
+    "image": "https://s7d1.scene7.com/is/image/canon/9522B002_ef-s-24mm-f-2.8-stm_primary-2?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/ef-s-24mm-f-2-8-stm",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). Es el EF-S 24mm f/2.8 STM (el único 24 f/2.8 STM de Canon); conviene corregir el nombre a EF-S. Tamaño 1600 pedido a mano."
+  },
+  {
+    "slug": "xshot-hawk-eye-o-scope",
+    "image": "https://cdn.sanity.io/images/j1qnzlrr/production/5266ea748705027c40f32114be177b80af8b3414-1000x1000.png?w=1000&h=1000&auto=format",
+    "source": "https://zurutoys.com/brands/xshot/excel",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 500 px). X-Shot Excel Hawk Eye de la página oficial de ZURU; el original mide 1000 px."
+  },
+  {
+    "slug": "lavarropas-philco-frontal-6-5-kg-1000rpm",
+    "image": "https://tiendanewsan.com.ar/media/wysiwyg/PHLF6510P2_PERSP_02_FLAT_ALTA.png",
+    "source": "https://tiendanewsan.com.ar/lavarropas-predicta-philco-carga-frontal-6-5kg-plata.html",
+    "confidence": "media",
+    "note": "Foto de 4000×4601 px (la actual tiene 500 px). Supuse el Predicta PHLF6510P2 plata (el de 1000 rpm); el blanco PHLF6510B2 es de 800 rpm. Chequear modelo y color del que se vende.",
+    "extras": [
+      "https://tiendanewsan.com.ar/media/catalog/product/cache/e16223670af7ae8877a6c2db5c335df1/p/h/phlf6510p2_2-100_2_.jpg"
+    ]
+  },
+  {
+    "slug": "canon-eos-r8-body",
+    "image": "https://s7d1.scene7.com/is/image/canon/eos_r8_body_primary?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/eos-r8",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). Cuerpo solo de la R8 (Canon USA, figura discontinuada); el tamaño 1600 lo pedí a mano con wid/hei de Scene7.",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/eos_r8_body_2?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/eos_r8_body_3?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/eos_r8_body_4?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/eos_r8_body_5?fmt=webp-alpha&wid=1600&hei=1600"
+    ]
+  },
+  {
+    "slug": "caloventor-split-whitenblack-2000w-cpwb01",
+    "image": "https://whitenblack.com.ar/wp-content/uploads/2023/10/wnb_img_web_0000s_0003_CPWB01.jpg.jpg",
+    "source": "https://whitenblack.com.ar/calefactor-de-pared-tipo-split/",
+    "confidence": "alta",
+    "note": "Foto de 800×600 px (la actual tiene 500 px). CPWB01 de la página oficial de Whitenblack; es la única foto y no sé si llega a 1000 px."
+  },
+  {
+    "slug": "kit-2x-handy-baofeng-bf-888s-bateria-tipo-c-copia",
+    "image": "https://www.baofengradio.com/cdn/shop/files/OPEN-BOX-BF-888S-5W-UHF-Radio-2-Pack-Baofeng-5549.jpg?v=1696448756&width=1600",
+    "source": "https://www.baofengradio.com/products/open-box-bf-888s",
+    "confidence": "media",
+    "note": "Foto de 650×650 px (la actual tiene 500 px). Foto del pack x2 de BF-888S en la tienda oficial de Baofeng (página open box); no confirma la batería tipo C.",
+    "extras": [
+      "https://www.baofengradio.com/cdn/shop/files/OPEN-BOX-BF-888S-5W-UHF-Radio-2-Pack-Baofeng-7555.jpg?v=1696448759&width=1600",
+      "https://www.baofengradio.com/cdn/shop/files/OPEN-BOX-BF-888S-5W-UHF-Radio-2-Pack-Baofeng-8.jpg?v=1696448763&width=1600",
+      "https://www.baofengradio.com/cdn/shop/files/OPEN-BOX-BF-888S-5W-UHF-Radio-2-Pack-Baofeng-6796.jpg?v=1696448766&width=1600"
+    ]
+  },
+  {
+    "slug": "lavarropas-philco-carga-superior-9-5kg-600-rpm-blanco",
+    "image": "https://magnoliapublic2.newsan.com.ar/dam/jcr:858ba6a9-a089-40a5-8020-a6d7cf386470/PHCS1402B2_2-100.jpg",
+    "source": "https://www.philco.com.ar/product/94PHCS1402B2",
+    "confidence": "media",
+    "note": "Foto de 1000×1000 px (la actual tiene 500 px). Es el PHCS1402B2 de 9,5 kg y 600 rpm; la página no dice el color, chequear que sea blanco.",
+    "extras": [
+      "https://magnoliapublic2.newsan.com.ar/dam/jcr:99d43418-4156-46bf-88cb-0f392b57efc9/PHCS1402B2_3-100%20(1).jpg"
+    ]
+  },
+  {
+    "slug": "kit-4x-handy-baofeng-bf-888s-bateria-tipo-c",
+    "image": "https://www.baofengradio.com/cdn/shop/files/OPEN-BOX-BF-888S-5W-UHF-Radio-2-Pack-Baofeng-5549.jpg?v=1696448756&width=1600",
+    "source": "https://www.baofengradio.com/products/open-box-bf-888s",
+    "confidence": "media",
+    "note": "Foto de 650×650 px (la actual tiene 500 px). Foto oficial del pack x2 (no hay x4); no confirma la batería tipo C, chequear si sirve igual.",
+    "extras": [
+      "https://www.baofengradio.com/cdn/shop/files/OPEN-BOX-BF-888S-5W-UHF-Radio-2-Pack-Baofeng-7555.jpg?v=1696448759&width=1600",
+      "https://www.baofengradio.com/cdn/shop/files/OPEN-BOX-BF-888S-5W-UHF-Radio-2-Pack-Baofeng-8.jpg?v=1696448763&width=1600",
+      "https://www.baofengradio.com/cdn/shop/files/OPEN-BOX-BF-888S-5W-UHF-Radio-2-Pack-Baofeng-6796.jpg?v=1696448766&width=1600"
+    ]
+  },
+  {
+    "slug": "placa-red-usb-tp-link-archer-tx1u-nano-ax300",
+    "image": "https://static.tp-link.com/upload/image-line/Archer_TX1U_Nano_US_1.0_Overview_01_large_20241011015526r.jpg",
+    "source": "https://www.tp-link.com/au/home-networking/usb-adapter/archer-tx1u-nano/",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 500 px). Foto oficial de TP-Link (versión US, mismo hardware); mirá que las extras no sean de uso o íconos.",
+    "extras": [
+      "https://static.tp-link.com/upload/image-line/Archer_TX1U_Nano_US_1.0_Overview_02_large_20241011015551u.jpg",
+      "https://static.tp-link.com/upload/image-line/Archer_TX1U_Nano_US_1.0_Overview_03_large_20241011015631l.jpg",
+      "https://static.tp-link.com/upload/image-line/Archer_TX1U_Nano_US_1.0_Overview_04_large_20241011015701l.jpg"
+    ]
+  },
+  {
+    "slug": "pen-drive-64gb-sandisk-2-0-cruzerblade",
+    "image": "https://www.sandisk.com/content/dam/store/en-us/assets/products/usb-flash-drives/cruzer-blade-usb-2-0/gallery/cruzer-blade-usb-2-0-angle.png",
+    "source": "https://www.sandisk.com/products/usb-flash-drives/sandisk-cruzer-blade-usb-2-0?sku=SDCZ50-064G-B35",
+    "confidence": "alta",
+    "note": "Foto de 1680×1680 px (la actual tiene 500 px). Cruzer Blade roja y negra de la web oficial; la foto es genérica de la línea, puede no mostrar 64GB impreso."
+  },
+  {
+    "slug": "camara-ip-3mp-ezviz-h9c-dual-lens-2k-exterior",
+    "image": "https://mfs.ezvizlife.com/073776431d630895e1e9d72b079ae733.jpg",
+    "source": "https://www.ezviz.com/product/h9c-dual-2k/52810",
+    "confidence": "alta",
+    "note": "Foto de 1200×600 px (la actual tiene 500 px). Es apaisada: fijate que muestre el producto y no un banner. H9c Dual 2K (2304x1296, 3MP) de la web oficial de EZVIZ; chequeá que la foto sea grande."
+  },
+  {
+    "slug": "camara-ip-4mp-ezviz-hb8-exteriorpanel-solar",
+    "image": "https://mfs.ezvizlife.com/148921de7fc3e5b1365fe1bdd271c9a3.jpg",
+    "source": "https://www.ezviz.com/uk/product/hb8-2k/60287",
+    "confidence": "media",
+    "note": "Foto de 1920×600 px (la actual tiene 500 px). Es apaisada: fijate que muestre el producto y no un banner. Es la HB8 2K+ 4MP sola; EZVIZ aclara que el panel solar no viene incluido, revisá si vendemos el kit."
+  },
+  {
+    "slug": "cerradura-ezviz-smart-home-dl03-huella",
+    "image": "https://mfs.ezvizlife.com/f9fbca29c7112a1d241274bc6baed05d.jpg",
+    "source": "https://www.ezviz.com/product/dl03+pro/57675",
+    "confidence": "media",
+    "note": "Foto de 1200×600 px (la actual tiene 500 px). Es apaisada: fijate que muestre el producto y no un banner. Es la DL03 Pro (la que tiene huella); la DL03 común no tiene lector, confirmá cuál es la nuestra."
+  },
+  {
+    "slug": "ups-apc-back-1200va-230v-tomas-iram",
+    "image": "https://download.se.com/files?p_Doc_Ref=Back_UPS_BX1200MI_Image_FR_H&p_File_Type=rendition_1500_jpg",
+    "source": "https://se.com/ar/es/product/BX1200MI-AR/apc-back-ups-1200va,-230v,-avr,-argentina-sockets",
+    "confidence": "alta",
+    "note": "Foto de 1500×1500 px (la actual tiene 500 px). BX1200MI-AR de Schneider Argentina; las extras las pedí en 1500 cambiando el parámetro rendition.",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=Back_UPS_BX1200MI_FL_H&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=Back_UPS_BX1200MI_Image_FS_V&p_File_Type=rendition_1500_jpg"
+    ]
+  },
+  {
+    "slug": "ups-apc-back-1600va-230v-tomas-iram",
+    "image": "https://download.se.com/files?p_Doc_Ref=Back_UPS_BX1200MI_FL_H&p_File_Type=rendition_1500_jpg",
+    "source": "https://www.se.com/ar/es/product/BX1600MI-AR/",
+    "confidence": "media",
+    "note": "Foto de 1500×1500 px (la actual tiene 500 px). Frente compartido con la BX1200MI en la galería oficial de la BX1600MI-AR (URL armada en 1500); la vista trasera con tomas IRAM es la primera extra.",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=Back_UPS_BX1600MI_AR_Image_B_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=Back_UPS_BX1200MI_Image_FR_H&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=Back_UPS_BX1200MI_Image_FS_V&p_File_Type=rendition_1500_jpg"
+    ]
+  },
+  {
+    "slug": "ups-apc-back-2200va-230v-tomas-iram",
+    "image": "https://download.se.com/files?p_Doc_Ref=Back_UPS_BX1200MI_FL_H&p_File_Type=rendition_1500_jpg",
+    "source": "https://www.se.com/ar/es/product/BX2200MI-AR/",
+    "confidence": "media",
+    "note": "Foto de 1500×1500 px (la actual tiene 500 px). Frente compartido con la BX1200MI en la galería oficial de la BX2200MI-AR (URL armada en 1500); la vista trasera con tomas IRAM es la primera extra.",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=Back_UPS_BX2200MI_AR_Image_B_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=Back_UPS_BX1200MI_Image_FR_H&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=Back_UPS_BX1200MI_Image_FS_V&p_File_Type=rendition_1500_jpg"
+    ]
+  },
+  {
+    "slug": "ups-apc-easy-ups-3s-de-10-kva-8aut33",
+    "image": "https://download.se.com/files?p_Doc_Ref=SPD_ACOS-AYLQ4Y_FS_V&p_File_Type=rendition_1500_jpg",
+    "source": "https://www.se.com/ar/es/product/E3SUPS10KHB/",
+    "confidence": "media",
+    "note": "Foto de 1500×1500 px (la actual tiene 500 px). Es la E3SUPS10KHB (3:3, con baterías internas); confirmá que sea esa y no la E3SUPS10KH sin baterías.",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=SPD_ACOS-AYLQ4Y_FR_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SPD_ACOS-AYLQ4Y_FL_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SPD_ACOS-AYLQ4Y_B_V&p_File_Type=rendition_1500_jpg"
+    ]
+  },
+  {
+    "slug": "ups-apc-online-easy-srv-1000va-230v-expan-2cajas",
+    "image": "https://download.se.com/files?p_Doc_Ref=SRV1KIL_FS_V&p_File_Type=rendition_1500_jpg",
+    "source": "https://www.se.com/cl/es/product/SRV1KIL/unidad-easy-ups-online-srv-de-apc-con-tiempo-extendido-de-operaci%C3%B3n-1000-va-y-230-v-con-paquete-de-bater%C3%ADas-externas/",
+    "confidence": "alta",
+    "note": "Foto de 1500×1500 px (la actual tiene 500 px). SRV1KIL de Schneider Chile (no está en la web argentina); extras en 1500 cambiando el rendition.",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=SRV1KIL_FL_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SPD_HEPN-B7CKHG_B_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SPD_HEPN-B4ZN97_B_V&p_File_Type=rendition_1500_jpg"
+    ]
+  },
+  {
+    "slug": "ups-apc-online-easy-srv-10000-230v-expand-2cajas",
+    "image": "https://download.se.com/files?p_Doc_Ref=SRV6_10KIL_FS_V&p_File_Type=rendition_1500_jpg",
+    "source": "https://www.se.com/ar/es/product/SRV10KIL/",
+    "confidence": "alta",
+    "note": "Foto de 1500×1500 px (la actual tiene 500 px). SRV10KIL de Schneider Argentina; la foto es compartida con la de 6 kVA (mismo gabinete).",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=SRV6_10KIL_FL_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SPD_HEPN-B5TL8E_B_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SPD_HEPN-B5SSTS_B_V&p_File_Type=rendition_1500_jpg"
+    ]
+  },
+  {
+    "slug": "ups-apc-online-easy-srv-10000va-220v",
+    "image": "https://download.se.com/files?p_Doc_Ref=SPD_JVAN-AUQMD4_FS_V&p_File_Type=rendition_1500_jpg",
+    "source": "https://www.se.com/ar/es/product/SRV10KI/",
+    "confidence": "alta",
+    "note": "Foto de 1500×1500 px (la actual tiene 500 px). SRV10KI de Schneider Argentina (figura como 230 V, el slug dice 220 V).",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=SPD_JVAN-AUQMD4_FL_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SPD_JVAN-AUQMD4_B_V&p_File_Type=rendition_1500_jpg"
+    ]
+  },
+  {
+    "slug": "ups-apc-online-easy-srv-1000va-230v-rac-exp-4caja",
+    "image": "https://download.se.com/files?p_Doc_Ref=SRV_2U_RightImage_FR_H&p_File_Type=rendition_1500_jpg",
+    "source": "https://www.se.com/ae/en/product/SRV1KRILRK/apc-easy-ups-online-srv-rm-ext-runtime-1000va-230v-with-rail-kit-batt-pack/",
+    "confidence": "media",
+    "note": "Foto de 1500×1500 px (la actual tiene 500 px). Foto de la galería de la SRV1KRILRK (misma unidad con kit de rieles); la ficha de la SRV1KRIL no abre. URL armada en 1500.",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=SRVPM_1KRIL_RearPanel_B_H&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SRV_36RLBP9A_B_H&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SPD_RLAE-B39QVE_FS_H&p_File_Type=rendition_1500_jpg"
+    ]
+  },
+  {
+    "slug": "ups-apc-online-easy-srv-2000va-230v-expand-2cajas",
+    "image": "https://download.se.com/files?p_Doc_Ref=SRV2_3KIL_FS_V&p_File_Type=rendition_1500_jpg",
+    "source": "https://www.se.com/pe/es/product/SRV2KIL/unidad-easy-ups-online-srv-de-apc-con-tiempo-extendido-de-operaci%C3%B3n-2000-va-y-230-v-con-paquete-de-bater%C3%ADas-externas/",
+    "confidence": "alta",
+    "note": "Foto de 1500×1500 px (la actual tiene 500 px). SRV2KIL de Schneider Perú; foto compartida con la de 3 kVA (mismo gabinete).",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=SRV2_3KIL_FL_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SRV_72BP9A_B_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SRV_2KIL_B_H&p_File_Type=rendition_1500_jpg"
+    ]
+  },
+  {
+    "slug": "ups-apc-online-easy-srv-3000va-230v-rac-exp-4caja",
+    "image": "https://download.se.com/files?p_Doc_Ref=SRV_2U_RightImage_FR_H&p_File_Type=rendition_1500_jpg",
+    "source": "https://www.se.com/ar/es/product/SRV3KRIL/",
+    "confidence": "alta",
+    "note": "Foto de 1500×1500 px (la actual tiene 500 px). SRV3KRIL de Schneider Argentina; el frente lo pedí en 1500 cambiando el rendition (el og:image es la vista trasera).",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=SRVPM_3KRIL_RearPanel_B_H&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SPD_RLAE-B39QVE_FS_H&p_File_Type=rendition_1500_jpg"
+    ]
+  },
+  {
+    "slug": "ups-apc-online-smart-rtg-6000va-230v-2-cajas",
+    "image": "https://download.se.com/files?p_Doc_Ref=SPD_SRTG5K6XLI_FS_V&p_File_Type=rendition_1500_jpg",
+    "source": "https://www.se.com/ar/es/product/SRTG6KXLI/",
+    "confidence": "alta",
+    "note": "Foto de 1500×1500 px (la actual tiene 500 px). SRTG6KXLI de Schneider Argentina; la foto es compartida con la de 5 kVA (mismo gabinete).",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=SPD_SRTG5K6XLI_FL_H&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SPD_SRTG5K6XLI_FL_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SPD_SRTG5K6XLI_R_H&p_File_Type=rendition_1500_jpg"
+    ]
+  },
+  {
+    "slug": "ups-apc-online-smart-srt-6000va-230v",
+    "image": "https://download.se.com/files?p_Doc_Ref=SPD_LEAN-9HDHXH_FS_V&p_File_Type=rendition_1500_jpg",
+    "source": "https://www.se.com/ar/es/product/SRT6KXLI/",
+    "confidence": "alta",
+    "note": "Foto de 1500×1500 px (la actual tiene 500 px). SRT6KXLI de Schneider Argentina; extras en 1500 cambiando el rendition.",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=APC-LEAN-9HDHXH_01&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SPD_LEAN-9HCKL8_A_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SPD_LEAN-9HDN4A_B_V&p_File_Type=rendition_1500_jpg"
+    ]
+  },
+  {
+    "slug": "apc-easy-pdubasiczerou16a230v20c13-4c19",
+    "image": "https://download.se.com/files?p_Doc_Ref=EPDU1116B_FL_V&p_File_Type=rendition_1500_jpg",
+    "source": "https://www.se.com/nl/en/product/EPDU1116B/apc-easy-basic-rack-pdu-0u-1-phase-3-7kw-230v-16a-20-c13-and-4-c19-outlets-iec60309-2p+e-inlet/",
+    "confidence": "alta",
+    "note": "Foto de 1500×1500 px (la actual tiene 500 px). Es la EPDU1116B (0U, 20 C13 + 4 C19, entrada IEC309); URL armada en 1500 cambiando el rendition."
+  },
+  {
+    "slug": "proyector-epson-powerlite-l210w-4500l-wxga-laser",
+    "image": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=6c2d678c981c98bb03c183705aefd3a6c28c30ea&vid=6c2d678c981c98bb03c183705aefd3a6c28c30ea&prid=1200Wx1200H&clid=SAPDAM&prclid=banner&assetDescr=PowerLite_L210W_headon_690x460",
+    "source": "https://epson.com/For-Work/Projectors/Classroom/PowerLite-L210W-WXGA-3LCD-Lamp-Free-Laser-Display-with-Built-In-Wireless/p/V11HA70020",
+    "confidence": "alta",
+    "note": "Foto de 690×460 px (la actual tiene 500 px). PowerLite L210W (4500 lm, WXGA) de Epson; foto de frente en 1200 px.",
+    "extras": [
+      "https://mediaserver.goepson.com/adaptivemedia/rendition?id=dd386d499e1a70f09315d0786fcb992f4f5706f3&vid=dd386d499e1a70f09315d0786fcb992f4f5706f3&prid=1200Wx1200H&clid=SAPDAM&prclid=banner&assetDescr=PowerLite_L210W_top-right_690x460",
+      "https://mediaserver.goepson.com/adaptivemedia/rendition?id=0aa651d3338b4a10aa26e498bb8740a406abb831&vid=0aa651d3338b4a10aa26e498bb8740a406abb831&prid=1200Wx1200H&clid=SAPDAM&prclid=banner&assetDescr=PowerLite_L210W_top-left_690x460",
+      "https://mediaserver.goepson.com/adaptivemedia/rendition?id=12c1e3b8e2b9bf497f58963d02b1af15e08785de&vid=12c1e3b8e2b9bf497f58963d02b1af15e08785de&prid=1200Wx1200H&clid=SAPDAM&prclid=banner&assetDescr=PowerLite_L210W_back-panel_690x460",
+      "https://mediaserver.goepson.com/adaptivemedia/rendition?id=f394a1f2070d347c49542054632dddcab09a5d48&vid=f394a1f2070d347c49542054632dddcab09a5d48&prid=1200Wx1200H&clid=SAPDAM&prclid=banner&assetDescr=PowerLite_L210W_top-headon_690x460"
+    ]
+  },
+  {
+    "slug": "apple-20w-usb-c-power-adapter",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MWVV3?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=ZGMwamVQM3NMNFF3dllBOFdrb0RHV2orYzFkTG5HaE9wejd5WUxYZjRMK0xZRW05UENvR2I1ditwQTlTUkJwZHVBYVpQODZ2VDA1a1lBSm83UHYrTWc",
+    "source": "https://www.apple.com/shop/product/mwvv3am/a/20w-usb-c-power-adapter",
+    "confidence": "media",
+    "note": "Foto de 2000×2000 px (la actual tiene 500 px). Foto oficial de Apple EE.UU.: muestra el enchufe tipo A (patas planas); fijate si el que vendemos tiene la misma ficha.",
+    "extras": [
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MWVV3_AV1?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=S2lBZ0R5SEJIMThxTWwvTTBTbGRMU1RkTXNZOFJZTitTVFE0NHl0VW5Cb0YwVmtIbGRkS25RMVpBRlo0bk5DUXdadzlBcHJxLzJqYWd3cEJUTWFwc0E",
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MWVV3_AV2?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=eEgzSy9LZzlOLzVzMFNSOFp4enNnaVRkTXNZOFJZTitTVFE0NHl0VW5Cb0YwVmtIbGRkS25RMVpBRlo0bk5DUWVPeW8yNGVlZ0lZd01sVWRUSDR4Snc"
+    ]
+  },
+  {
+    "slug": "apple-67w-usb-c-power-adapter",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MKU63?wid=1600&hei=1600&fmt=jpeg&qlt=90",
+    "source": "https://www.apple.com/us-hed/shop/product/MKU63AM/A/67w-usb-c-power-adapter",
+    "confidence": "media",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). URL armada a mano con el patrón del CDN de Apple y el código MKU63 (no pude abrir la página); verificar que baje el cargador de 67W y no el de 70W."
+  },
+  {
+    "slug": "sony-fe-20-70-f4-gm",
+    "image": "https://www.sony.jp/products/picture/SEL2070G.jpg",
+    "source": "https://www.sony.jp/ichigan/products/SEL2070G/",
+    "confidence": "media",
+    "note": "Foto de 626×470 px (la actual tiene 500 px). El slug dice GM pero el modelo real es FE 20-70mm F4 G (SEL2070G); foto de Sony Japón, puede ser chica: si no llega a 1000 px, descartala."
+  },
+  {
+    "slug": "sigma-35-f1-4-dg-dn-art-sony",
+    "image": "https://www.sigmaphoto.com/media/catalog/product/a/0/a021_35_14_basic_01_2.png",
+    "source": "https://www.sigmaphoto.com/35mm-f1-4-dg-dn-a",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 500 px). 35mm F1.4 DG DN Art; saqué el segmento /cache/ de la URL para pedir el original. La foto no indica montura, pero de frente es igual en Sony E."
+  },
+  {
+    "slug": "sigma-70-200-f2-8-dg-dn-os-sports-sony",
+    "image": "https://www.sigmaphoto.com/media/catalog/product/s/0/s023_70_200_28_basic_01_2.png",
+    "source": "https://www.sigmaphoto.com/70-200mm-f2-8-dg-dn-os-s",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 500 px). 70-200mm F2.8 DG DN OS Sports; URL original sin el segmento /cache/. No indica montura (la foto social de la página es L-Mount, no la usé)."
+  },
+  {
+    "slug": "nikon-z-teleconverter-tc-2x",
+    "image": "https://images.cdn.us-central1.gcp.commercetools.com/f7c8f2bb-aff1-4581-a826-1ad2527be222/Front-20099-Z-TELECO-c6RwdErg.png",
+    "source": "https://www.nikonusa.com/p/z-teleconverter-tc-20x/20099/overview",
+    "confidence": "alta",
+    "note": "Foto de 700×595 px (la actual tiene 500 px). Z Teleconverter TC-2.0x, foto de frente de Nikon USA.",
+    "extras": [
+      "https://images.contentstack.io/v3/assets/blt0e5ec1de4817c440/blt793671a8837fe612/65e7942e963f600a030cfa04/TC-2.0x.png"
+    ]
+  },
+  {
+    "slug": "nikon-linea-z-14-24-f2-8s",
+    "image": "https://images.cdn.us-central1.gcp.commercetools.com/f7c8f2bb-aff1-4581-a826-1ad2527be222/Front-20097-NIKKOR-Z-kaEMxK9h.png",
+    "source": "https://www.nikonusa.com/p/nikkor-z-14-24mm-f28-s/20097/overview",
+    "confidence": "alta",
+    "note": "Foto de 700×595 px (la actual tiene 500 px). NIKKOR Z 14-24mm f/2.8 S, vista de frente de Nikon USA."
+  },
+  {
+    "slug": "sigma-28-f1-4-art-dg-hsm-nikon-2",
+    "image": "https://www.sigmaphoto.com/media/catalog/product/a/0/a019_28_14_basic_01_3.png",
+    "source": "https://www.sigmaphoto.com/28mm-f1-4-dg-hsm-i-art-refurbished",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 500 px). 28mm F1.4 DG HSM Art (sacada de la ficha de reacondicionado, misma foto); URL original sin /cache/. No indica montura."
+  },
+  {
+    "slug": "sigma-35-f1-4-art-dg-hsm-nikon-2",
+    "image": "https://www.sigmaphoto.com/media/catalog/product/a/0/a012_35_14_basic_01_2.png",
+    "source": "https://www.sigmaphoto.com/35mm-f1-4-dg-hsm-a",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 500 px). 35mm F1.4 DG HSM Art (el de réflex, no el DG DN); URL original sin /cache/. No indica montura."
+  },
+  {
+    "slug": "tamron-35-150-f2-2-8-di-iii-vxd-nikon-z",
+    "image": "https://tamron-americas.com/wp-content/uploads/2024/09/a058z_topside_20230403-1.jpg",
+    "source": "https://tamron-americas.com/product/35-150mm-f-2-2-8-di-iii-vxd/",
+    "confidence": "alta",
+    "note": "Foto de 1800×1200 px (la actual tiene 500 px). 35-150mm F/2-2.8 Di III VXD versión Nikon Z (A058Z, la \"z\" está en el archivo); es vista de arriba, si preferís la de 3/4 está en la galería pero sin montura indicada.",
+    "extras": [
+      "https://tamron-americas.com/wp-content/uploads/2024/09/a058z_mount_20230403-1.jpg",
+      "https://tamron-americas.com/wp-content/uploads/2024/09/a058_lens_20210819-1-1.jpg"
+    ]
+  },
+  {
+    "slug": "lente-canon-ef-s-24m-f2-8-stm",
+    "image": "https://s7d1.scene7.com/is/image/canon/9522B002_ef-s-24mm-f-2.8-stm_primary-2?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/ef-s-24mm-f-2-8-stm",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). EF-S 24mm f/2.8 STM de Canon USA; pedí 1600 px al CDN."
+  },
+  {
+    "slug": "lente-canon-rfs-3-9-f3-5-dual-fisheye-stm-caja-blanca-2",
+    "image": "https://s7d1.scene7.com/is/image/canon/6578C001_PRIMARY?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/rf-s3-9mm-f3-5-stm-dual-fisheye",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). RF-S 3.9mm F3.5 STM Dual Fisheye de Canon USA; pedí 1600 px al CDN.",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/6578C001_2?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/6578C001_3?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/6578C001_4?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/6578C001_5?fmt=webp-alpha&wid=1600&hei=1600"
+    ]
+  },
+  {
+    "slug": "canon-rf-16m-f-2-8-stm",
+    "image": "https://s7d1.scene7.com/is/image/canon/5051C002_rf16mm-f28-stm_primary?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/refurbished-rf16mm-f2-8-stm",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). RF16mm F2.8 STM; la foto sale de la ficha de reacondicionado de Canon USA pero es la del código nuevo (5051C002).",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/5051C002_rf16mm-f28-stm_3?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/5051C002_rf16mm-f28-stm_4?fmt=webp-alpha&wid=1600&hei=1600"
+    ]
+  },
+  {
+    "slug": "canon-rf-24-70-f-2-8-is-usm",
+    "image": "https://s7d1.scene7.com/is/image/canon/3680C002_rf-24-70mm-f2.8-l-is-usm_primary?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/rf24-70mm-f2-8l-is-usm",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). RF 24-70mm F2.8 L IS USM de Canon USA; pedí 1600 px al CDN.",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/3680C002_rf-24-70mm-f2.8-l-is-usm_2?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/3680C002_rf-24-70mm-f2.8-l-is-usm_3?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/3680C002_rf-24-70mm-f2.8-l-is-usm_4?fmt=webp-alpha&wid=1600&hei=1600"
+    ]
+  },
+  {
+    "slug": "canon-rf-24-240-4-6-3-is-usm",
+    "image": "https://s7d1.scene7.com/is/image/canon/3684C009_refurbished-rf24-240mm-f4-6.3-is-usm_primary?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/refurbished-rf24-240mm-f4-6-3-is-usm",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). RF24-240mm F4-6.3 IS USM; la ficha nueva no abría y usé la de reacondicionado de Canon USA (mismo lente, foto de estudio).",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/3684C009_refurbished-rf24-240mm-f4-6.3-is-usm_2?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/3684C009_refurbished-rf24-240mm-f4-6.3-is-usm_3?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/3684C009_refurbished-rf24-240mm-f4-6.3-is-usm_4?fmt=webp-alpha&wid=1600&hei=1600"
+    ]
+  },
+  {
+    "slug": "sigma-85mm-f1-4-dg-hsm-art-ef-canon-2",
+    "image": "https://www.sigmaphoto.com/media/catalog/product/a/0/a016_85_14_basic_01_4.png",
+    "source": "https://www.sigmaphoto.com/85mm-f1-4-dg-hsm-a",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 500 px). 85mm F1.4 DG HSM Art (discontinuado, la ficha sigue online); URL original sin /cache/. No indica montura."
+  },
+  {
+    "slug": "sigma-17-40-1-8-art-canon-aps-c",
+    "image": "https://www.sigmaphoto.com/media/catalog/product/p/r/product_img01_3.png",
+    "source": "https://www.sigmaphoto.com/17-40mm-f1-8-dc-a",
+    "confidence": "media",
+    "note": "Foto de 1000×1000 px (la actual tiene 500 px). 17-40mm F1.8 DC Art; la foto no dice montura y la versión Canon RF tiene un anillo distinto: chequear que coincida con la RF."
+  },
+  {
+    "slug": "sigma-18-50m-f-2-8-contemporary-canon-rf",
+    "image": "https://www.sigmaphoto.com/media/catalog/product/c/0/c021_18_50_28_basic_01_4.png",
+    "source": "https://www.sigmaphoto.com/18-50mm-f2-8-dc-dn-c",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 500 px). 18-50mm F2.8 DC DN Contemporary; URL original sin /cache/. No indica montura (la foto social es Sony E, no la usé)."
+  },
+  {
+    "slug": "sigma-56-f1-4-dc-dn-contemporary-nikon-z-2",
+    "image": "https://www.sigmaphoto.com/media/catalog/product/c/0/c018_56_14_basic_01_1.png",
+    "source": "https://www.sigmaphoto.com/56mm-f1-4-dc-dn-c",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 500 px). 56mm F1.4 DC DN Contemporary; URL original sin /cache/. No indica montura, de frente es igual en Nikon Z."
+  },
+  {
+    "slug": "dron-dji-flip-fly-more-combo-rc2",
+    "image": "https://se-cdn.djiits.com/tpc/uploads/spu/cover/119b26334ffaadfcb220e72be5e44763@ultra.png?format=webp",
+    "source": "https://store.dji.com/product/dji-flip-fly-more-combo-rc-2",
+    "confidence": "media",
+    "note": "Foto de 1280×1280 px (la actual tiene 500 px). Portada del Fly More Combo (DJI RC 2) en la tienda de DJI; la página no describe la foto, mirá que muestre el combo con el control RC 2. Extras 2 y 3 armados con el patrón @small a @ultra: revisá que.",
+    "extras": [
+      "https://se-cdn.djiits.com/tpc/uploads/carousel/image/5ee2e8f595784dadb848ea2f413219b5@ultra.jpg?format=webp",
+      "https://se-cdn.djiits.com/tpc/uploads/carousel/image/438df355832ba04d56e39cd4d88104d6@ultra.jpg?format=webp",
+      "https://se-cdn.djiits.com/tpc/uploads/carousel/image/fefff4d5ad9e513a3888b9b1c109ce66@ultra.jpg?format=webp"
+    ]
+  },
+  {
+    "slug": "xiaomi-redmi-note-15-pro-256gb-8gb",
+    "image": "https://i02.appmifile.com/47_operator_sg/19/12/2025/5e434dcb9f897ee5791cc019ceb831bc.png",
+    "source": "https://www.mi.com/co/product/redmi-note-15-pro/specs/",
+    "confidence": "media",
+    "note": "Foto de 1200×600 px (la actual tiene 500 px). Es apaisada: fijate que muestre el producto y no un banner. Redmi Note 15 Pro (4G, existe en 8+256) de Xiaomi Colombia; es la única foto de la ficha y no dice color ni vista: confirmar que sea el teléfono y el color que vendemos."
+  },
+  {
+    "slug": "motorola-moto-g56-5g-256gb-8gb",
+    "image": "https://armoto.vtexassets.com/arquivos/ids/174438-1600-1600/2025_BOGOTA_BasicPack_DYN-BACKSIDE-RIGHT_gray.png?v=639257887639300000",
+    "source": "https://www.motorola.com.ar/moto-g56-5g/p",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). Tienda oficial Motorola AR, versión 256 GB/8 GB en color Gray Mist (también hay Black Oyster y Dill); el 1600 px lo pedí a mano al CDN de VTEX (la página lo sirve a 1000).",
+    "extras": [
+      "https://armoto.vtexassets.com/arquivos/ids/174441-1600-1600/2025_BOGOTA_BasicPack_FRONTSIDE_Gray-Mist.png?v=639231958394070000",
+      "https://armoto.vtexassets.com/arquivos/ids/174443-1600-1600/2025_BOGOTA_BasicPack_BACKSIDE_Gray-Mist.png?v=639231958394200000",
+      "https://armoto.vtexassets.com/arquivos/ids/174442-1600-1600/2025_BOGOTA_BasicPack_DYN-FRONTSIDE-LEFT_Gray-Mist.png?v=639231958394200000",
+      "https://armoto.vtexassets.com/arquivos/ids/174444-1600-1600/2025_BOGOTA_BasicPack_DYN-BACKSIDE-LEFT__Gray-Mist.png?v=639231958394200000"
+    ]
+  },
+  {
+    "slug": "xiaomi-poco-m8-256gb-8gb",
+    "image": "https://i02.appmifile.com/941_operator_sg/21/12/2025/87381c22c74a3ca25240f78434c5ead7.png",
+    "source": "https://www.mi.com/global/product/poco-m8-5g/specs/",
+    "confidence": "media",
+    "note": "Foto de 1200×600 px (la actual tiene 500 px). Es apaisada: fijate que muestre el producto y no un banner. La ficha oficial es del POCO M8 5G (existe en 8+256); confirmá que el que vendés sea ese y fijate de qué color es la foto (hay negro, plateado y verde)."
+  },
+  {
+    "slug": "xiaomi-poco-m8-512gb-8gb",
+    "image": "https://i02.appmifile.com/941_operator_sg/21/12/2025/87381c22c74a3ca25240f78434c5ead7.png",
+    "source": "https://www.mi.com/global/product/poco-m8-5g/specs/",
+    "confidence": "media",
+    "note": "Foto de 1200×600 px (la actual tiene 500 px). Es apaisada: fijate que muestre el producto y no un banner. Misma foto que el POCO M8 5G de 256 GB (existe en 8+512); confirmá que sea el 5G y el color de la foto."
+  },
+  {
+    "slug": "xiaomi-redmi-note-15-pro-5g-512gb-8gb",
+    "image": "https://i02.appmifile.com/119_operator_sg/19/12/2025/f8f0bfcf12f78974ff0fbb65d37b4401.png",
+    "source": "https://www.mi.com/global/product/redmi-note-15-pro-5g/specs/",
+    "confidence": "alta",
+    "note": "Foto de 1200×600 px (la actual tiene 500 px). Es apaisada: fijate que muestre el producto y no un banner. Foto de la ficha global del Redmi Note 15 Pro 5G (existe 8+512); la página no dice qué color muestra (Black, Glacier Blue, Titanium, Mist Purple)."
+  },
+  {
+    "slug": "xiaomi-poco-m8-pro-5g-512gb-12gb",
+    "image": "https://i02.appmifile.com/590_operator_sg/21/12/2025/e6bb60a4d9e37ea759177980013139c0.png",
+    "source": "https://www.mi.com/global/product/poco-m8-pro-5g/specs/",
+    "confidence": "alta",
+    "note": "Foto de 1200×600 px (la actual tiene 500 px). Es apaisada: fijate que muestre el producto y no un banner. Foto de la ficha global del POCO M8 Pro 5G (existe 12+512); el color de la foto no está indicado."
+  },
+  {
+    "slug": "xiaomi-poco-f8-pro-5g-256gb-12gb",
+    "image": "https://i02.appmifile.com/550_operator_sg/16/11/2025/2b8e8a7404eee32e1034bce875893472.png",
+    "source": "https://www.mi.com/global/product/poco-f8-pro/specs/",
+    "confidence": "alta",
+    "note": "Foto de 1200×600 px (la actual tiene 500 px). Es apaisada: fijate que muestre el producto y no un banner. Foto de la ficha global del POCO F8 Pro (existe 12+256); el color de la foto no está indicado (Black, Titanium Silver, Blue)."
+  },
+  {
+    "slug": "samsung-galaxy-a57-5g-128gb-8gb",
+    "image": "https://img.global.news.samsung.com/ar/wp-content/uploads/2026/05/019-galaxy-a57-awesomeicyblue-front-1.jpg",
+    "source": "https://news.samsung.com/ar/samsung-presenta-en-argentina-los-nuevos-galaxy-a57-5g-y-galaxy-a37-5g-con-beneficios-exclusivos-de-lanzamiento",
+    "confidence": "media",
+    "note": "Foto de 4500×3000 px (la actual tiene 500 px). Foto de prensa de Samsung Argentina, A57 frente en Awesome Icy Blue; armé la URL a mano sacando el sufijo -728x410 de la miniatura, chequeá que baje y que el color sea el que vendés."
+  },
+  {
+    "slug": "motorola-moto-g06-128gb-4gb",
+    "image": "https://armoto.vtexassets.com/arquivos/ids/174021-1600-1600/2025_LAGOS_Basic-Pack_Tapestry_Frontside.png?v=639216444327170000",
+    "source": "https://www.motorola.com.ar/moto-g06-128gb/p",
+    "confidence": "media",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). Tienda oficial Motorola AR, 128 GB/4 GB en color Tapestry; la primera foto de la galería no dice el color, así que elegí la serie Tapestry y pedí 1600 px a mano al CDN de VTEX.",
+    "extras": [
+      "https://armoto.vtexassets.com/arquivos/ids/174022-1600-1600/2025_LAGOS_Basic-Pack_Tapestry_Dyn-Front-Left.png?v=639216444327170000",
+      "https://armoto.vtexassets.com/arquivos/ids/174024-1600-1600/2025_LAGOS_Basic-Pack_Tapestry_Backside.png?v=639216444327300000",
+      "https://armoto.vtexassets.com/arquivos/ids/174023-1600-1600/2025_LAGOS_Basic-Pack_Tapestry_PDP.png?v=639216444327300000"
+    ]
+  },
+  {
+    "slug": "panasonic-hc-x2100",
+    "image": "https://shop.panasonic.com/cdn/shop/files/camcorder-2025-cx20_x2100_cx17-ec1-1-250108.jpg?v=1779309754&width=1600",
+    "source": "https://shop.panasonic.com/products/4k-professional-camcorder-24x-optical-zoom-live-streaming-hc-x2100",
+    "confidence": "media",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). Tienda oficial Panasonic US; la foto es compartida entre CX20, X2100 y CX17 (mismo cuerpo), chequeá que no se vea el logo de otro modelo.",
+    "extras": [
+      "https://shop.panasonic.com/cdn/shop/files/camcorder-2025-cx20_x2100_cx17-ec1-7-250108.jpg?v=1779309755&width=1600",
+      "https://shop.panasonic.com/cdn/shop/files/camcorder-2025-cx20_x2100_cx17-ec1-8-250108.jpg?v=1779309757&width=1600",
+      "https://shop.panasonic.com/cdn/shop/files/camcorder-2025-cx20_x2100_cx17-ec1-9-250108.jpg?v=1779309759&width=1600",
+      "https://shop.panasonic.com/cdn/shop/files/camcorder-2025-cx20_x2100_cx17-ec1-10-250108.jpg?v=1779309760&width=1600"
+    ]
+  },
+  {
+    "slug": "xiaomi-redmi-buds-6-play",
+    "image": "https://i02.appmifile.com/640_operatorx_operatorx_opx/02/09/2024/2e17e2f72632d75847bdb47d5cee20bc.png",
+    "source": "https://www.mi.com/global/product/redmi-buds-6-play/specs/",
+    "confidence": "media",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). Es la imagen para compartir (og:image) de la ficha oficial, la única de la página; puede ser un banner con varios colores, chequeá."
+  },
+  {
+    "slug": "xiaomi-poco-x8-pro-5g-512gb-12gb",
+    "image": "https://i02.appmifile.com/864_operator_sg/25/05/2026/831c2a6a5d280720bf6544a34ce09b17.png",
+    "source": "https://www.mi.com/global/product/poco-x8-pro/specs/",
+    "confidence": "alta",
+    "note": "Foto de 1200×660 px (la actual tiene 500 px). Es apaisada: fijate que muestre el producto y no un banner. Foto de la ficha global del POCO X8 Pro (existe 12+512); el color de la foto no está indicado (Black, Mint Green, White, Yellow)."
+  },
+  {
+    "slug": "xiaomi-redmi-note-15-pro-5g-512gb-12gb-2",
+    "image": "https://i02.appmifile.com/119_operator_sg/19/12/2025/f8f0bfcf12f78974ff0fbb65d37b4401.png",
+    "source": "https://www.mi.com/global/product/redmi-note-15-pro-5g/specs/",
+    "confidence": "alta",
+    "note": "Foto de 1200×600 px (la actual tiene 500 px). Es apaisada: fijate que muestre el producto y no un banner. Misma foto de la ficha global del Redmi Note 15 Pro 5G (existe 12+512); el color de la foto no está indicado."
+  },
+  {
+    "slug": "macbook-neo-13%e2%80%b3-8gb-512gb-indigo",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/macbook-neo-color-select-202603-indigo-512gb?wid=1600&hei=1600&fmt=jpeg&qlt=95&.v=1770944488774",
+    "source": "https://www.apple.com/shop/buy-mac/macbook-neo/indigo-512gb",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). MacBook Neo Indigo 512 GB confirmado en Apple; armé wid/hei=1600 a mano sobre la og:image (venía a 1200x630), chequeá que no quede recortada."
+  },
+  {
+    "slug": "notebook-hp-15-i5-1334u-8gb-ssd-256gb-156-hd-w11",
+    "image": "https://hp.widen.net/content/monqkef361/webp/monqkef361.png?dpi=72&color=ffffff00&w=1600",
+    "source": "https://www.hp.com/us-en/shop/custom/hp-laptop-15t-fd000-15-inch-intel-core-i5-1334u-8gb-ram-256gb-ssd-natural-silver-7P8K6AV_6008?catEntryId=3074457345620752821",
+    "confidence": "media",
+    "note": "Foto de 1600×1242 px (la actual tiene 500 px). HP Laptop 15t-fd000 de la tienda HP US en Natural Silver con i5-1334U, 8 GB, 256 GB y pantalla HD; el modelo argentino puede venir en otro color, y el w=1600 lo puse a mano."
+  },
+  {
+    "slug": "ipad-11-128gb",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-finish-select-202503-blue-wifi?wid=1600&hei=1600&fmt=jpeg&qlt=95&.v=1739318920731",
+    "source": "https://www.apple.com/shop/buy-ipad/ipad/128gb-blue-wifi",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). IPad (A16) 128 GB Wi-Fi en Azul; si vendés otro color o el Cellular, cambiá la foto. El 1600 px lo pedí a mano sobre la og:image."
+  },
+  {
+    "slug": "notebook-asus-tuf-ryzen-7-170-16gb-ssd-512gb-16-144hz-rtx-4050-6gb-w11",
+    "image": "https://dlcdnwebimgs.asus.com/gain/7f8d804d-3316-4841-bc31-e931d0929719/w1600",
+    "source": "https://www.asus.com/sg/laptops/for-gaming/tuf-gaming/asus-tuf-gaming-a16-2024/",
+    "confidence": "media",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). Es la TUF Gaming A16 (2024, FA607) que lleva Ryzen 7 170 y RTX 4050; el w1600 lo puse a mano y las fotos extra no tienen descripción, chequeá que sean del mismo color.",
+    "extras": [
+      "https://dlcdnwebimgs.asus.com/gain/6b9dff20-ef85-4202-829b-68d7d9155a0e/w1600",
+      "https://dlcdnwebimgs.asus.com/gain/9a8217a6-7800-439d-949c-7a2eb90e2743/w1600",
+      "https://dlcdnwebimgs.asus.com/gain/1dfd62ad-0a38-4808-9b6f-dbbc3743f735/w1600",
+      "https://dlcdnwebimgs.asus.com/gain/d0144204-766b-4b7e-bce6-dbe8ed4ec998/w1600"
+    ]
+  },
+  {
+    "slug": "canon-powershot-gx7-mark-iii",
+    "image": "https://s7d1.scene7.com/is/image/canon/3637C001_powershot-g7-x-mark-iii-black_primary?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/powershot-g7-x-mark-iii",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). Es la G7 X Mark III negra de la tienda Canon USA (también existe plateada); el 1600 px lo pedí a mano a Scene7.",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/3637C001_powershot-g7-x-mark-iii-black_2?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/3637C001_powershot-g7-x-mark-iii-black_3?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/3637C001_powershot-g7-x-mark-iii-black_4?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/3637C001_powershot-g7-x-mark-iii-black_5?fmt=webp-alpha&wid=1600&hei=1600"
+    ]
   }
 ]
