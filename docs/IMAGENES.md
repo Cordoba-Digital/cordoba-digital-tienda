@@ -54,12 +54,15 @@ En **Catálogo → Fotos**, debajo de los contadores, aparecen las fotos oficial
 foto chica o sin foto. Cada tarjeta muestra la foto actual al lado de la sugerida (con su tamaño real) y el
 link de dónde sale.
 
-- **Usar esta foto**: el servidor la descarga, la pasa a WebP como las que se suben desde el panel y la pone
-  como principal. La foto anterior queda segunda; se puede borrar desde Editar.
+- **Usar**: el servidor la descarga, la pasa a WebP como las que se suben desde el panel y la pone
+  como principal. Si la sugerencia trae otras vistas del producto (atrás, costado, detalle), se suman las que
+  queden tildadas, en ese orden. Las fotos anteriores quedan después; se pueden borrar desde Editar. Si una
+  vista extra no se puede bajar, se sigue con el resto.
 - **Descartar**: la sugerencia desaparece y el producto queda igual.
 
 La lista vive en `src/data/fotos-sugeridas.json` (`slug`, `image`, `source`, `confidence` `alta`/`media`,
-`note`). La ruta `/api/admin/fotos-sugeridas` solo acepta pares producto/foto de esa lista, y lo usado o
+`note` y `extras`, hasta 4 URLs). La ruta `/api/admin/fotos-sugeridas` solo acepta pares producto/foto de esa
+lista y, de las vistas extra, solo las que trae esa sugerencia; lo usado o
 descartado queda en `photo_suggestion_decisions` (migración `0010`, la tabla también se crea sola).
 Las fotos se buscaron en sitios de fabricantes o distribuidores oficiales, nunca en MercadoLibre ni en otras
 tiendas.
