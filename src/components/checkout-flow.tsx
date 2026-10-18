@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import { ProductImg } from "@/components/product-img";
+import { getLenis } from "@/components/smooth-scroll";
 import { useStore } from "@/components/store-provider";
 import { TransferDetails } from "@/components/transfer-details";
 import { Spinner } from "@/components/ui";
@@ -225,6 +226,15 @@ const STEP_TOGGLE_MS = 320;
 
 const PERSONAL_FIELDS = new Set(["firstName", "lastName", "email", "phone", "docId"]);
 
+/** Lleva la página a un paso. Pasa por Lenis cuando está activo (ver getLenis). */
+function scrollToStep(step: StepNumber, smooth: boolean) {
+  const el = document.getElementById(`paso-${step}`);
+  if (!el) return;
+  const lenis = getLenis();
+  if (lenis) lenis.scrollTo(el, { immediate: !smooth, force: true });
+  else el.scrollIntoView({ behavior: smooth ? "smooth" : "auto", block: "start" });
+}
+
 function reducedMotion(): boolean {
   return typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
@@ -364,6 +374,7 @@ export function CheckoutFlow({
   // Clave del intento de compra: se repite mientras el pedido que se manda sea
   // el mismo, así un reintento después de un corte no crea un pedido doble.
   const checkoutAttempt = useRef<{ key: string; payload: string } | null>(null);
+  const stepsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const id = window.setTimeout(() => {
@@ -519,16 +530,28 @@ export function CheckoutFlow({
   };
 
   const abrirPaso = (step: StepNumber, scroll = true) => {
+    const reduce = reducedMotion();
+    // Mientras un paso se pliega y el otro se abre, la columna conserva su
+    // alto. Si la página se achicara de golpe, el navegador recortaría el
+    // scroll y la pantalla saltaría al pie (pasaba al completar un paso).
+    const col = stepsRef.current;
+    if (col && !reduce) {
+      col.style.minHeight = `${col.offsetHeight}px`;
+      window.setTimeout(() => {
+        col.style.minHeight = "";
+      }, STEP_TOGGLE_MS + 700);
+    }
     setOpenStep(step);
     if (!scroll) return;
+    // El paso 1 no se mueve al plegar los de abajo, así que se sube ahí
+    // enseguida, sin esperar a que termine la animación: se ven los pasos ya
+    // completos y el que se abre justo debajo.
+    scrollToStep(1, !reduce);
     window.setTimeout(() => {
-      // Si entra, se muestran también los pasos ya completos de arriba.
-      const target = document.getElementById(`paso-${step}`);
-      const first = document.getElementById("paso-1");
-      if (!target || !first) return;
-      const fits = target.getBoundingClientRect().top - first.getBoundingClientRect().top < window.innerHeight * 0.4;
-      (fits ? first : target).scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "start" });
-    }, reducedMotion() ? 0 : STEP_TOGGLE_MS);
+      // Si el paso que se abrió quedó lejos (pantallas muy bajas), se va a él.
+      const target = document.getElementById(`paso-${step}`)?.getBoundingClientRect();
+      if (target && (target.top < 0 || target.top > window.innerHeight * 0.6)) scrollToStep(step, !reduce);
+    }, reduce ? 0 : STEP_TOGGLE_MS + 300);
   };
 
   // Valida el paso; si está bien lo "manda" (anima, lo pliega) y abre el que sigue.
@@ -699,7 +722,7 @@ export function CheckoutFlow({
           con un hueco grande. En celular las columnas se apilan en ese orden y
           el botón queda al final, después del total. */}
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-8">
-        <div className="min-w-0 space-y-4">
+        <div ref={stepsRef} className="min-w-0 space-y-4">
           <CheckoutStep
             number={1}
             title="Tus datos"

@@ -3,6 +3,17 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 
+let current: Lenis | null = null;
+
+/**
+ * La instancia activa, para mover la página desde código. Con Lenis andando,
+ * un `scrollIntoView` nativo puede quedar pisado por el scroll suave que
+ * Lenis todavía está animando.
+ */
+export function getLenis(): Lenis | null {
+  return current;
+}
+
 export function SmoothScroll() {
   useEffect(() => {
     if (
@@ -21,6 +32,7 @@ export function SmoothScroll() {
       syncTouch: true,
       allowNestedScroll: true,
     });
+    current = lenis;
 
     let frame = 0;
     const raf = (time: number) => {
@@ -32,6 +44,7 @@ export function SmoothScroll() {
     return () => {
       cancelAnimationFrame(frame);
       lenis.destroy();
+      current = null;
     };
   }, []);
 
