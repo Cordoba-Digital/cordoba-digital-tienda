@@ -522,6 +522,18 @@ export const productPhotoChecks = pgTable("product_photo_checks", {
   checkedAt: timestamp("checked_at", { withTimezone: true }).notNull().defaultNow(),
 });
 
+/**
+ * Qué se hizo con cada foto sugerida de `src/data/fotos-sugeridas.json`
+ * ("usada" o "descartada"). Vale solo para esa `image`: si la sugerencia del
+ * producto cambia, vuelve a aparecer en el panel.
+ */
+export const photoSuggestionDecisions = pgTable("photo_suggestion_decisions", {
+  productId: integer("product_id").primaryKey(),
+  image: text("image").notNull(),
+  decision: text("decision").notNull(),
+  decidedAt: timestamp("decided_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
 /** Productos archivados desde el panel, para poder restaurarlos (ver `admin-products.ts`). */
 export const productArchive = pgTable("product_archive", {
   id: serial("id").primaryKey(),
