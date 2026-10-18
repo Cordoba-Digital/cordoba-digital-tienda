@@ -47,3 +47,19 @@ productos ya filtrada; el mismo filtro está en **Productos → Todas las fotos*
 
 Lo que no mide: la compresión. Una foto de 1200 px muy comprimida se ve mal y no
 aparece como chica; para esas está la marca.
+
+## Fotos sugeridas
+
+En **Catálogo → Fotos**, debajo de los contadores, aparecen las fotos oficiales sugeridas para productos con
+foto chica o sin foto. Cada tarjeta muestra la foto actual al lado de la sugerida (con su tamaño real) y el
+link de dónde sale.
+
+- **Usar esta foto**: el servidor la descarga, la pasa a WebP como las que se suben desde el panel y la pone
+  como principal. La foto anterior queda segunda; se puede borrar desde Editar.
+- **Descartar**: la sugerencia desaparece y el producto queda igual.
+
+La lista vive en `src/data/fotos-sugeridas.json` (`slug`, `image`, `source`, `confidence` `alta`/`media`,
+`note`). La ruta `/api/admin/fotos-sugeridas` solo acepta pares producto/foto de esa lista, y lo usado o
+descartado queda en `photo_suggestion_decisions` (migración `0010`, la tabla también se crea sola).
+Las fotos se buscaron en sitios de fabricantes o distribuidores oficiales, nunca en MercadoLibre ni en otras
+tiendas.

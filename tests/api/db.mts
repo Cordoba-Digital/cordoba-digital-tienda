@@ -32,6 +32,7 @@ export async function resetDb(): Promise<void> {
   await db.execute(sql`do $$ begin if to_regclass('store_settings') is not null then truncate table store_settings; end if; end $$`);
   await db.execute(sql`do $$ begin if to_regclass('error_events') is not null then truncate table error_events; end if; end $$`);
   await db.execute(sql`do $$ begin if to_regclass('product_photo_checks') is not null then truncate table product_photo_checks; end if; end $$`);
+  await db.execute(sql`do $$ begin if to_regclass('photo_suggestion_decisions') is not null then truncate table photo_suggestion_decisions; end if; end $$`);
   await db.execute(sql`truncate table users, subscribers, arrepentimiento_requests restart identity cascade`);
 }
 
