@@ -17,7 +17,7 @@ type Refund = {
 };
 
 const botonCls =
-  "rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-bold text-white transition-[background-color,opacity] duration-150 hover:bg-brand-800 disabled:cursor-not-allowed disabled:opacity-60";
+  "rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-bold text-white transition-[background-color,opacity] duration-150 hover:bg-brand-800 disabled:cursor-not-allowed disabled:bg-ink-100 disabled:text-ink-400";
 const campoCls = "mt-1 w-full rounded-xl border border-ink-200 bg-surface px-3 py-2.5 text-sm text-ink-900 outline-none focus:border-brand-400";
 
 const ESTADOS: Record<string, string> = { pendiente: "Esperando a Mercado Pago", hecho: "Hecho", fallido: "Falló" };
@@ -50,6 +50,8 @@ export function AdminOrderRefunds({
   const [amount, setAmount] = useState(String(available));
   const [reason, setReason] = useState("");
   const [confirming, setConfirming] = useState(false);
+  // El formulario arranca cerrado: devolver plata es la excepción, no lo que se hace en cada pedido.
+  const [open, setOpen] = useState(false);
   const [working, setWorking] = useState(false);
   const [error, setError] = useState("");
 
@@ -112,6 +114,17 @@ export function AdminOrderRefunds({
 
       {!paid || available === 0 ? null : !canRefund ? (
         <p className="text-xs text-ink-500">Solo los dueños de la tienda pueden devolver plata.</p>
+      ) : !open ? (
+        <>
+          {refunds.length ? null : <p className="text-xs text-ink-500">Todavía no se devolvió plata de este pedido.</p>}
+          <button
+            type="button"
+            className="rounded-xl border border-ink-200 bg-surface px-4 py-2 text-sm font-semibold text-ink-800 transition-colors hover:bg-ink-50"
+            onClick={() => setOpen(true)}
+          >
+            {viaMp ? "Devolver plata" : "Anotar una devolución"}
+          </button>
+        </>
       ) : (
         <div className="space-y-3 border-t border-ink-100 pt-3">
           <p className="text-xs text-ink-500">
@@ -151,9 +164,14 @@ export function AdminOrderRefunds({
               </div>
             </div>
           ) : (
-            <button type="button" className={botonCls} disabled={!valid} onClick={() => setConfirming(true)}>
-              {viaMp ? "Devolver por Mercado Pago" : "Anotar devolución"}
-            </button>
+            <div className="flex flex-wrap items-center gap-2">
+              <button type="button" className={botonCls} disabled={!valid} onClick={() => setConfirming(true)}>
+                {viaMp ? "Devolver por Mercado Pago" : "Anotar devolución"}
+              </button>
+              <button type="button" className="px-3 text-sm font-semibold text-ink-600 hover:text-ink-900" onClick={() => setOpen(false)}>
+                Cancelar
+              </button>
+            </div>
           )}
         </div>
       )}

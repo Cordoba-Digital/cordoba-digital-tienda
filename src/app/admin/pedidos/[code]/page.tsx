@@ -26,9 +26,9 @@ import { isCancelled, statusIndex, statusLabel } from "@/lib/pricing";
 
 export const dynamic = "force-dynamic";
 
-function Card({ title, action, children }: { title: string; action?: ReactNode; children: ReactNode }) {
+function Card({ title, action, className = "", children }: { title: string; action?: ReactNode; className?: string; children: ReactNode }) {
   return (
-    <section className="admin-card p-5">
+    <section className={`admin-card p-5 ${className}`}>
       <div className="mb-3 flex items-center justify-between gap-2">
         <h2 className="text-sm font-bold text-ink-900">{title}</h2>
         {action}
@@ -124,9 +124,12 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
         </div>
       </section>
 
-      <div className="grid grid-cols-[minmax(0,1fr)] items-start gap-5 lg:grid-cols-[minmax(0,1fr)_340px]">
-        <div className="space-y-5">
-          <Card title={`Productos (${units})`}>
+      {/* En el celular las dos columnas se deshacen (display: contents) y cada
+          bloque toma su lugar con `order`: cliente, productos, entrega y pago
+          arriba; reembolsos, historial y los cambios a mano al final. */}
+      <div className="flex flex-col gap-5 lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:items-start">
+        <div className="contents lg:block lg:space-y-5">
+          <Card title={`Productos (${units})`} className="order-2 lg:order-none">
             <ul className="divide-y divide-ink-50">
               {items.map((item) => (
                 <li key={item.id} className="flex items-center gap-3 py-3 first:pt-0">
@@ -161,6 +164,7 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
             </dl>
           </Card>
 
+          <div className="order-5 empty:hidden lg:order-none">
           <AdminOrderAndreani
             code={order.code}
             deliveryMethod={order.deliveryMethod}
@@ -170,28 +174,40 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
             status={order.status}
             configurado={andreaniConfigurado()}
           />
+          </div>
 
-          <Card title="Historial">
-            <ol className="space-y-2.5 text-sm">
-              {events.map((ev) => (
-                <li key={ev.id} className="flex flex-col gap-x-3 sm:flex-row">
-                  <span className="w-36 shrink-0 text-xs tabular-nums text-ink-400">{formatDateTime(ev.createdAt)}</span>
-                  <span className="text-ink-800">
-                    {ev.fromStatus === ev.toStatus ? "Nota" : <>Pasó a <strong>{statusLabel(ev.toStatus)}</strong></>}
-                    {ev.note ? <span className="text-ink-500"> · {ev.note}</span> : null}
-                  </span>
+          <Card title="Historial" className="order-9 lg:order-none">
+            {/* Línea de tiempo: lo más nuevo arriba, la fecha debajo de cada hecho. */}
+            <ol className="text-sm">
+              {[
+                ...events.map((ev) => ({
+                  key: String(ev.id),
+                  at: ev.createdAt,
+                  text: ev.fromStatus === ev.toStatus ? <>Nota interna</> : <>Pasó a <strong className="font-semibold">{statusLabel(ev.toStatus)}</strong></>,
+                  note: ev.note,
+                })),
+                { key: "creado", at: order.createdAt, text: <>Pedido creado en la tienda</>, note: "" },
+              ].map((ev, i, all) => (
+                <li key={ev.key} className="relative flex gap-3 pb-4 last:pb-0">
+                  {i < all.length - 1 ? <span className="absolute bottom-0 left-[4px] top-4 w-px bg-ink-100" aria-hidden /> : null}
+                  <span className={`mt-1.5 h-[9px] w-[9px] shrink-0 rounded-full ${i === 0 ? "bg-brand-500" : "bg-ink-300"}`} aria-hidden />
+                  <div className="min-w-0">
+                    <p className="text-ink-800">{ev.text}</p>
+                    {ev.note ? <p className="text-ink-500">{ev.note}</p> : null}
+                    <p className="mt-0.5 text-xs text-ink-400">{formatDateTime(ev.at)}</p>
+                  </div>
                 </li>
               ))}
-              <li className="flex flex-col gap-x-3 sm:flex-row">
-                <span className="w-36 shrink-0 text-xs tabular-nums text-ink-400">{formatDateTime(order.createdAt)}</span>
-                <span className="text-ink-800">Pedido creado en la tienda</span>
-              </li>
             </ol>
           </Card>
 
-          <details className="admin-card group p-5">
-            <summary className="cursor-pointer list-none text-sm font-bold text-ink-900">
-              <span className="inline-block transition-transform group-open:rotate-90" aria-hidden>›</span> Cambiar a mano (estado, seguimiento o nota interna)
+          <details className="admin-card group order-10 p-5 lg:order-none">
+            <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-bold text-ink-900 [&::-webkit-details-marker]:hidden">
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 shrink-0 text-ink-500 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                <path d="m9 6 6 6-6 6" />
+              </svg>
+              Cambiar a mano
+              <span className="hidden font-normal text-ink-500 sm:inline">estado, seguimiento o nota interna</span>
             </summary>
             <div className="mt-4">
               <AdminOrderManageForm
@@ -205,8 +221,8 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
         </div>
 
         {/* En el celular, el cliente va primero: es lo que más se usa (WhatsApp, dirección). */}
-        <div className="order-first space-y-5 lg:order-none">
-          <Card title="Cliente">
+        <div className="contents lg:block lg:space-y-5">
+          <Card title="Cliente" className="order-1 lg:order-none">
             <p className="font-semibold text-ink-900">{order.customerName}</p>
             {order.docId ? <p className="text-xs text-ink-500">DNI/CUIT {order.docId}</p> : null}
             <div className="mt-3 space-y-2 text-sm">
@@ -236,7 +252,13 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
             </Link>
           </Card>
 
-          <Card title="Entrega">
+          {order.notes ? (
+            <Card title="Nota del cliente" className="order-3 lg:order-none">
+              <p className="whitespace-pre-line text-sm text-ink-800">{order.notes}</p>
+            </Card>
+          ) : null}
+
+          <Card title="Entrega" className="order-4 lg:order-none">
             <p className="font-semibold text-ink-900">{order.deliveryLabel || order.deliveryMethod}</p>
             {order.deliveryEta ? <p className="text-xs text-ink-500">{order.deliveryEta}</p> : null}
             {address?.sucursal?.nombre ? (
@@ -270,7 +292,7 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
             ) : null}
           </Card>
 
-          <Card title="Pago">
+          <Card title="Pago" className="order-6 lg:order-none">
             <dl>
               <Row label="Medio">{order.paymentLabel || order.paymentMethod}</Row>
               {order.installments > 1 ? <Row label="Cuotas">{order.installments} de {money(Math.round(order.total / order.installments))}</Row> : null}
@@ -283,6 +305,7 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
             ) : null}
           </Card>
 
+          <div className="order-7 empty:hidden lg:order-none">
           <AdminOrderRefunds
             code={order.code}
             total={order.total}
@@ -291,21 +314,18 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
             viaMp={order.paymentMethod === "mercadopago"}
             canRefund={!session.email || isOwnerEmail(session.email)}
           />
+          </div>
 
+          <div className="order-8 empty:hidden lg:order-none">
           <AdminOrderReturns
             code={order.code}
             items={items.map((item) => ({ id: item.id, name: item.name, quantity: item.quantity, returned: returned.get(item.id) ?? 0 }))}
             returns={returns.map((r) => ({ ...r, createdAt: r.createdAt.toISOString() }))}
             canReturn={order.status === "enviado" || order.status === "entregado"}
           />
+          </div>
 
-          {order.notes ? (
-            <Card title="Nota del cliente">
-              <p className="whitespace-pre-line text-sm text-ink-800">{order.notes}</p>
-            </Card>
-          ) : null}
-
-          <Link href={`/pedido/${order.code}`} target="_blank" className="block text-center text-xs font-semibold text-ink-500 hover:text-ink-900 hover:underline">
+          <Link href={`/pedido/${order.code}`} target="_blank" className="order-11 block text-center text-xs font-semibold text-ink-500 hover:text-ink-900 hover:underline lg:order-none">
             Ver el pedido como lo ve el cliente ↗
           </Link>
         </div>
