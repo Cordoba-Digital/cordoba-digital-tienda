@@ -207,30 +207,124 @@ function Field({
   );
 }
 
+function IconCheck({ className = "h-4 w-4 shrink-0" }: CheckoutIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M5 12.5l4.5 4.5L19 7.5" />
+    </svg>
+  );
+}
+
+type StepNumber = 1 | 2 | 3;
+type StepState = "open" | "done" | "pending";
+
+/** Tiempo de la animación de "enviado" antes de cerrar el paso (ms). */
+const STEP_SEND_MS = 420;
+/** Lo que tarda en abrirse o cerrarse el cuerpo de un paso (ms). */
+const STEP_TOGGLE_MS = 320;
+
+const PERSONAL_FIELDS = new Set(["firstName", "lastName", "email", "phone", "docId"]);
+
+function reducedMotion(): boolean {
+  return typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+/**
+ * Un paso del checkout. Abierto muestra el formulario; completo se pliega en
+ * una línea con el resumen y "Editar"; pendiente queda cerrado hasta llegar.
+ * Al completarlo (`sending`) el contenido baja y se desvanece, como si se
+ * mandara, y recién después se pliega.
+ */
 function CheckoutStep({
   number,
   title,
   subtitle,
+  state,
+  sending = false,
+  summary,
+  onEdit,
   children,
 }: {
-  number: number;
+  number: StepNumber;
   title: string;
   subtitle: string;
+  state: StepState;
+  sending?: boolean;
+  summary?: string;
+  onEdit?: () => void;
   children: React.ReactNode;
 }) {
+  const open = state === "open";
+  const done = state === "done" || sending;
   return (
-    <section className="card-surface p-6 sm:p-8" aria-labelledby={`paso-${number}`}>
-      <div className="mb-6 flex items-start gap-3">
-        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-500 text-sm font-extrabold text-deep" aria-hidden>
-          {number}
+    <section
+      id={`paso-${number}`}
+      aria-labelledby={`paso-${number}-titulo`}
+      className={`card-surface scroll-mt-40 px-6 transition-[padding] duration-300 motion-reduce:transition-none sm:px-8 ${
+        open ? "py-6 sm:py-8" : "py-5"
+      }`}
+    >
+      <div className="flex items-start gap-3">
+        <span
+          aria-hidden
+          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-extrabold transition-colors duration-300 ${
+            done ? "bg-emerald-600 text-white" : open ? "bg-brand-500 text-deep" : "bg-ink-100 text-ink-500"
+          }`}
+        >
+          {done ? <IconCheck /> : number}
         </span>
-        <div>
-          <h2 id={`paso-${number}`} className="text-xl font-extrabold leading-8 tracking-tight text-ink-900">{title}</h2>
-          <p className="text-xs text-ink-500">{subtitle}</p>
+        <div className="min-w-0 flex-1">
+          <h2
+            id={`paso-${number}-titulo`}
+            className={`text-xl font-extrabold leading-8 tracking-tight ${state === "pending" ? "text-ink-500" : "text-ink-900"}`}
+          >
+            {title}
+          </h2>
+          <p className={`text-xs text-ink-500 ${state === "done" ? "truncate" : ""}`}>
+            {state === "done" && summary ? summary : subtitle}
+          </p>
+        </div>
+        {state === "done" && onEdit ? (
+          <button
+            type="button"
+            onClick={onEdit}
+            className="mt-1 shrink-0 rounded-lg px-2 py-1 text-sm font-semibold text-brand-700 hover:bg-brand-50"
+          >
+            Editar<span className="sr-only"> {title.toLowerCase()}</span>
+          </button>
+        ) : null}
+      </div>
+      <div
+        inert={!open}
+        className={`grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none ${
+          open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+        }`}
+      >
+        {/* El margen negativo deja lugar al anillo de foco de los campos. */}
+        <div className="-mx-2 min-h-0 overflow-hidden px-2">
+          <div
+            className={`pb-1 pt-6 transition duration-[400ms] motion-reduce:transition-none ${
+              sending ? "translate-y-10 scale-[0.97] opacity-0 ease-in" : open ? "opacity-100 ease-out" : "opacity-0"
+            }`}
+          >
+            {children}
+          </div>
         </div>
       </div>
-      {children}
     </section>
+  );
+}
+
+function StepContinue({ label, onClick }: { label: string; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="mt-6 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-brand-500 px-6 text-sm font-extrabold text-deep transition hover:bg-brand-400 sm:w-auto"
+    >
+      {label}
+      <span aria-hidden>→</span>
+    </button>
   );
 }
 
@@ -263,6 +357,10 @@ export function CheckoutFlow({
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
   const [branch, setBranch] = useState("");
+  // Pasos: uno abierto a la vez. Los completos quedan plegados con su resumen.
+  const [openStep, setOpenStep] = useState<StepNumber>(1);
+  const [doneSteps, setDoneSteps] = useState<{ 1: boolean; 2: boolean }>({ 1: false, 2: false });
+  const [sendingStep, setSendingStep] = useState<StepNumber | null>(null);
   // Clave del intento de compra: se repite mientras el pedido que se manda sea
   // el mismo, así un reintento después de un corte no crea un pedido doble.
   const checkoutAttempt = useRef<{ key: string; payload: string } | null>(null);
@@ -272,7 +370,15 @@ export function CheckoutFlow({
       setCoupon(readCoupon());
       try {
         const saved = window.localStorage.getItem("cd_checkout_v1");
-        if (saved) setForm({ ...EMPTY_FORM, ...(JSON.parse(saved) as Partial<FormState>) });
+        if (saved) {
+          const restored = { ...EMPTY_FORM, ...(JSON.parse(saved) as Partial<FormState>) };
+          setForm(restored);
+          // Quien ya compró desde este navegador arranca con sus datos listos.
+          if (Object.keys(validatePersonalData(restored)).length === 0) {
+            setDoneSteps({ 1: true, 2: false });
+            setOpenStep(2);
+          }
+        }
       } catch {
         /* ignore */
       }
@@ -412,16 +518,60 @@ export function CheckoutFlow({
     foco?.focus();
   };
 
+  const abrirPaso = (step: StepNumber, scroll = true) => {
+    setOpenStep(step);
+    if (!scroll) return;
+    window.setTimeout(() => {
+      // Si entra, se muestran también los pasos ya completos de arriba.
+      const target = document.getElementById(`paso-${step}`);
+      const first = document.getElementById("paso-1");
+      if (!target || !first) return;
+      const fits = target.getBoundingClientRect().top - first.getBoundingClientRect().top < window.innerHeight * 0.4;
+      (fits ? first : target).scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "start" });
+    }, reducedMotion() ? 0 : STEP_TOGGLE_MS);
+  };
+
+  // Valida el paso; si está bien lo "manda" (anima, lo pliega) y abre el que sigue.
+  const completarPaso = (step: 1 | 2) => {
+    const found = step === 1 ? datosErrors() : entregaErrors();
+    if (Object.keys(found).length) {
+      setErrors(found);
+      window.setTimeout(() => irAlPrimerError(), 0);
+      return;
+    }
+    setSendingStep(step);
+    window.setTimeout(() => {
+      setSendingStep(null);
+      const done = { ...doneSteps, [step]: true };
+      setDoneSteps(done);
+      abrirPaso(step === 1 && !done[2] ? 2 : 3);
+    }, reducedMotion() ? 0 : STEP_SEND_MS);
+  };
+
+  // Abre el paso del primer campo con error y lleva el foco ahí.
+  const mostrarErrores = (found: Record<string, string>) => {
+    const first = Object.keys(found)[0];
+    if (first && first !== "terms") abrirPaso(PERSONAL_FIELDS.has(first) ? 1 : 2, false);
+    window.setTimeout(() => irAlPrimerError(), reducedMotion() ? 0 : STEP_TOGGLE_MS);
+  };
+
   const submit = async () => {
     const found = { ...datosErrors(), ...entregaErrors() };
     if (Object.keys(found).length) {
       setErrors(found);
-      irAlPrimerError();
+      mostrarErrores(found);
+      return;
+    }
+    // Con los datos bien pero sin haber visto el pago, primero se muestra el
+    // paso 3: el medio de pago no se elige a ciegas.
+    if (openStep !== 3) {
+      setDoneSteps({ 1: true, 2: true });
+      abrirPaso(3);
       return;
     }
     if (!terms) {
       setErrors({ terms: "Tenés que aceptar los términos para continuar." });
-      irAlPrimerError("[data-error='terms']");
+      window.setTimeout(() => irAlPrimerError("[data-error='terms']"), 0);
       return;
     }
     setSubmitting(true);
@@ -465,7 +615,7 @@ export function CheckoutFlow({
       if (!res.ok || !data.ok) {
         if (data.errors) {
           setErrors(data.errors as Record<string, string>);
-          window.setTimeout(() => irAlPrimerError(), 0);
+          mostrarErrores(data.errors as Record<string, string>);
         }
         setServerError(data.error ?? "Revisá los datos marcados en rojo.");
         return;
@@ -498,6 +648,19 @@ export function CheckoutFlow({
   };
 
   const unidades = items.reduce((n, item) => n + item.quantity, 0);
+  const stepState = (step: StepNumber): StepState =>
+    sendingStep === step || openStep === step ? "open" : step !== 3 && doneSteps[step] ? "done" : "pending";
+  const resumenDatos = [`${form.firstName} ${form.lastName}`.trim(), form.email, form.phone].filter(Boolean).join(" · ");
+  const resumenEntrega =
+    deliveryMethod === "pickup"
+      ? "Retiro en el local · Gratis"
+      : [
+          selectedOption?.label,
+          [`${form.street} ${form.number}`.trim(), form.city].filter(Boolean).join(", "),
+          selectedOption ? (selectedOption.free ? "Gratis" : money(selectedOption.cost)) : null,
+        ]
+          .filter(Boolean)
+          .join(" · ");
 
   if (hydrated && items.length === 0) {
     return (
@@ -536,8 +699,16 @@ export function CheckoutFlow({
           con un hueco grande. En celular las columnas se apilan en ese orden y
           el botón queda al final, después del total. */}
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-8">
-        <div className="space-y-4">
-          <CheckoutStep number={1} title="Tus datos" subtitle="Para la factura y para avisarte cómo va el pedido.">
+        <div className="min-w-0 space-y-4">
+          <CheckoutStep
+            number={1}
+            title="Tus datos"
+            subtitle="Para la factura y para avisarte cómo va el pedido."
+            state={stepState(1)}
+            sending={sendingStep === 1}
+            summary={resumenDatos}
+            onEdit={() => abrirPaso(1)}
+          >
             <div className="space-y-4">
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field label="Nombre" error={errors.firstName}>
@@ -559,9 +730,18 @@ export function CheckoutFlow({
                 </Field>
               </div>
             </div>
+            <StepContinue label="Continuar a la entrega" onClick={() => completarPaso(1)} />
           </CheckoutStep>
 
-          <CheckoutStep number={2} title="Entrega" subtitle="Te lo mandamos o lo retirás gratis en el local.">
+          <CheckoutStep
+            number={2}
+            title="Entrega"
+            subtitle="Te lo mandamos o lo retirás gratis en el local."
+            state={stepState(2)}
+            sending={sendingStep === 2}
+            summary={resumenEntrega}
+            onEdit={() => abrirPaso(2)}
+          >
             <div className="space-y-4">
               <div className="grid gap-3 sm:grid-cols-2">
                 <button
@@ -713,9 +893,10 @@ export function CheckoutFlow({
                 />
               </Field>
             </div>
+            <StepContinue label="Continuar al pago" onClick={() => completarPaso(2)} />
           </CheckoutStep>
 
-          <CheckoutStep number={3} title="Pago" subtitle="El total es el mismo con cualquier medio.">
+          <CheckoutStep number={3} title="Pago" subtitle="El total es el mismo con cualquier medio." state={stepState(3)}>
             <div className="space-y-4">
               <div className="grid gap-3 sm:grid-cols-[repeat(auto-fit,minmax(15rem,1fr))]">
                 {PAYMENT_METHODS.filter((method) => isPaymentMethodOffered(method.id, deliveryMethod, { mercadoPago })).map(
@@ -937,6 +1118,9 @@ export function CheckoutFlow({
               {submitting ? <Spinner className="h-4 w-4" /> : null}
               Confirmar pedido · {money(totals.total)}
             </button>
+            {openStep !== 3 ? (
+              <p className="text-center text-[11px] text-ink-500">Completá tus datos y la entrega para elegir cómo pagar.</p>
+            ) : null}
 
             <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 border-t border-ink-100 pt-4 text-[11px] text-ink-500">
               <li className="flex items-center gap-1.5"><IconLock className="h-4 w-4 shrink-0 text-brand-700" /> Pago seguro</li>

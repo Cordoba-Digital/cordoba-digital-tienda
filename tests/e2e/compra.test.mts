@@ -87,7 +87,10 @@ test("un cliente compra desde la ficha y el pedido queda en la base", async () =
   await page.getByLabel(/^Email/).fill("ana@example.com");
   await page.getByLabel("Teléfono / WhatsApp").fill("351 555 1234");
   await page.getByLabel("DNI o CUIT").fill("30123456");
+  // El checkout va por pasos: cada "Continuar" pliega el paso y abre el siguiente.
+  await page.getByRole("button", { name: /Continuar a la entrega/ }).click();
   await page.getByRole("button", { name: /Retiro en el local/ }).click();
+  await page.getByRole("button", { name: /Continuar al pago/ }).click();
   await page.getByRole("button", { name: /Transferencia bancaria/ }).click();
   // Los datos para transferir se ven antes de confirmar, sin pedirlos por WhatsApp.
   await page.getByText("Datos para transferir").waitFor();
