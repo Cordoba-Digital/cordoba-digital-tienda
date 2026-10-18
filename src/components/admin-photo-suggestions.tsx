@@ -35,9 +35,38 @@ function SuggestedPhoto({ src, alt }: { src: string; alt: string }) {
   );
 }
 
+function ExtraPhoto({ src, alt, picked, onToggle }: { src: string; alt: string; picked: boolean; onToggle: () => void }) {
+  const [broken, setBroken] = useState(false);
+  if (broken) return null;
+  return (
+    <label
+      className={`relative block aspect-square cursor-pointer overflow-hidden rounded-lg border bg-white ${
+        picked ? "border-brand-700 ring-2 ring-brand-700/30" : "border-ink-200 opacity-60"
+      }`}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        referrerPolicy="no-referrer"
+        className="h-full w-full object-contain"
+        onError={() => {
+          setBroken(true);
+          if (picked) onToggle();
+        }}
+      />
+      <input type="checkbox" checked={picked} onChange={onToggle} className="absolute left-1.5 top-1.5 h-4 w-4 accent-brand-700" />
+    </label>
+  );
+}
+
 function Card({ item, onDone }: { item: PendingSuggestion; onDone: (message: string) => void }) {
   const [busy, setBusy] = useState<"usar" | "descartar" | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const extras = item.extras ?? [];
+  const [picked, setPicked] = useState<string[]>(extras);
+  const toggle = (url: string) => setPicked((list) => (list.includes(url) ? list.filter((u) => u !== url) : [...list, url]));
 
   async function decide(action: "usar" | "descartar") {
     setBusy(action);
@@ -46,17 +75,24 @@ function Card({ item, onDone }: { item: PendingSuggestion; onDone: (message: str
       const res = await fetch("/api/admin/fotos-sugeridas", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ slug: item.productSlug, image: item.image, action }),
+        body: JSON.stringify({ slug: item.productSlug, image: item.image, action, extras: action === "usar" ? picked : [] }),
       });
       const data = (await res.json().catch(() => ({ ok: false, error: `Error ${res.status}` }))) as {
         ok: boolean;
         error?: string;
+        added?: number;
+        failedExtras?: number;
       };
       if (!data.ok) {
         setError(data.error ?? "No se pudo guardar.");
         return;
       }
-      onDone(action === "usar" ? `Listo: ${item.name} ya tiene la foto nueva.` : `Descartada la sugerencia de ${item.name}.`);
+      if (action === "descartar") return onDone(`Descartada la sugerencia de ${item.name}.`);
+      const added = data.added ?? 1;
+      const failed = data.failedExtras ? ` (${data.failedExtras} no se pudieron bajar)` : "";
+      onDone(
+        added > 1 ? `Listo: ${item.name} ya tiene ${added} fotos nuevas${failed}.` : `Listo: ${item.name} ya tiene la foto nueva${failed}.`,
+      );
     } catch {
       setError("Se cortó la conexión. Probá de nuevo.");
     } finally {
@@ -91,6 +127,22 @@ function Card({ item, onDone }: { item: PendingSuggestion; onDone: (message: str
         </figure>
         <SuggestedPhoto src={item.image} alt={`Foto sugerida de ${item.name}`} />
       </div>
+      {extras.length ? (
+        <div className="space-y-1">
+          <p className="text-xs text-ink-500">Más fotos del fabricante: se suman las que dejes tildadas.</p>
+          <div className="grid grid-cols-4 gap-2">
+            {extras.map((url, i) => (
+              <ExtraPhoto
+                key={url}
+                src={url}
+                alt={`Otra vista de ${item.name} (${i + 1})`}
+                picked={picked.includes(url)}
+                onToggle={() => toggle(url)}
+              />
+            ))}
+          </div>
+        </div>
+      ) : null}
       {item.note ? <p className="text-xs text-ink-500">{item.note}</p> : null}
       <div className="flex flex-wrap items-center gap-2">
         <button
@@ -99,7 +151,7 @@ function Card({ item, onDone }: { item: PendingSuggestion; onDone: (message: str
           disabled={busy !== null}
           className="rounded-xl bg-brand-700 px-3 py-1.5 text-sm font-bold text-white transition-[background-color,opacity] duration-150 hover:bg-brand-800 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {busy === "usar" ? "Guardando…" : "Usar esta foto"}
+          {busy === "usar" ? "Guardando…" : picked.length ? `Usar ${picked.length + 1} fotos` : "Usar esta foto"}
         </button>
         <button
           type="button"

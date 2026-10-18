@@ -44,8 +44,8 @@ export default async function AdminPhotosPage() {
             <h2 className="text-xl font-semibold text-adm-fg">Fotos sugeridas ({suggestions.length})</h2>
             <p className="mt-1 max-w-2xl text-sm text-ink-500">
               Fotos oficiales de los fabricantes para productos con foto chica o sin foto. Compará con la actual y
-              tocá <strong>Usar esta foto</strong> si es el mismo producto: pasa a ser la principal y la anterior queda
-              segunda. Si no corresponde, <strong>Descartar</strong>.
+              tocá <strong>Usar</strong> si es el mismo producto: pasa a ser la principal, se suman las otras vistas
+              que dejes tildadas y las fotos anteriores quedan después. Si no corresponde, <strong>Descartar</strong>.
             </p>
           </div>
           <AdminPhotoSuggestions items={suggestions} />
