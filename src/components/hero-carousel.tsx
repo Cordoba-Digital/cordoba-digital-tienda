@@ -31,11 +31,24 @@ export type HeroSlide = {
 };
 
 const INTERVAL_MS = 3000;
+// Igual que `duration-300` de la pista.
+const SLIDE_MS = 300;
 
 export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
   const { addItem } = useStore();
   const count = slides.length;
-  const [index, setIndex] = useState(0);
+  // Loop continuo: la pista lleva una copia del último aviso al principio y
+  // una del primero al final. `pos` es la posición en esa pista (1 = primer
+  // aviso real). Al llegar a una copia se salta sin transición al aviso real
+  // equivalente, así del último se pasa al primero sin recorrer los demás.
+  const loop = slides.length > 1;
+  const [pos, setPos] = useState(loop ? 1 : 0);
+  const [animate, setAnimate] = useState(true);
+  // Tras el salto, el aviso real ya se ve en su estado final: sin esto
+  // repetiría la entrada que ya hizo la copia y parpadearía.
+  const [skipEnter, setSkipEnter] = useState(false);
+  const jumping = useRef(false);
+  const index = loop ? (pos - 1 + count) % count : 0;
   const [paused, setPaused] = useState(false);
   const [reduceMotion, setReduceMotion] = useState(false);
   // Distancia del hero al borde de arriba (barra + header + menú). En
@@ -50,7 +63,45 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
   const wheelAcc = useRef({ x: 0, at: 0 });
   const wheelLock = useRef(0);
 
-  const go = useCallback((delta: number) => setIndex((i) => (i + delta + count) % count), [count]);
+  const go = useCallback(
+    (delta: number) => {
+      if (count < 2 || jumping.current) return;
+      setSkipEnter(false);
+      setPos((p) => Math.min(count + 1, Math.max(0, p + delta)));
+    },
+    [count],
+  );
+
+  // Parado sobre una copia: cuando termina el deslizamiento se salta al aviso
+  // real sin transición. Con un timer y no con `transitionend`, que no llega
+  // con movimiento reducido ni si la pestaña quedó en segundo plano.
+  useEffect(() => {
+    if (!loop || (pos !== 0 && pos !== count + 1)) return;
+    jumping.current = true;
+    const timer = window.setTimeout(() => {
+      setAnimate(false);
+      setSkipEnter(true);
+      setPos(pos === 0 ? count : 1);
+    }, SLIDE_MS + 20);
+    return () => window.clearTimeout(timer);
+  }, [pos, count, loop]);
+
+  // Vuelve a activar la transición dos cuadros después del salto, cuando el
+  // navegador ya pintó la pista en la posición nueva.
+  useEffect(() => {
+    if (animate) return;
+    let second = 0;
+    const first = requestAnimationFrame(() => {
+      second = requestAnimationFrame(() => {
+        jumping.current = false;
+        setAnimate(true);
+      });
+    });
+    return () => {
+      cancelAnimationFrame(first);
+      cancelAnimationFrame(second);
+    };
+  }, [animate]);
 
   // Solo suscribe al cambio; el valor inicial sale del useState de arriba.
   useEffect(() => {
@@ -74,15 +125,23 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
     return () => window.removeEventListener("resize", measure);
   }, []);
 
-  // Avance automático: `index` queda fuera de las dependencias a propósito.
-  // Con el tick funcional el timer no se recrea en cada diapositiva y no hay
-  // deriva; el cambio manual igual reinicia el ciclo porque `go` re-renderiza
-  // pero el intervalo sigue su ritmo.
+  // Avance automático. `index` en las dependencias reinicia el ciclo con cada
+  // cambio, también el manual. El salto desde una copia no cambia `index`, así
+  // que no corta la cuenta.
   useEffect(() => {
     if (paused || count < 2) return;
-    const timer = setInterval(() => setIndex((i) => (i + 1) % count), INTERVAL_MS);
+    const timer = setInterval(() => go(1), INTERVAL_MS);
     return () => clearInterval(timer);
-  }, [paused, count, index]);
+  }, [paused, count, index, go]);
+
+  const real = slides.map((slide, i) => ({ slide, i, clone: false, key: slide.id, at: loop ? i + 1 : i }));
+  const track = loop
+    ? [
+        { slide: slides[count - 1], i: count - 1, clone: true, key: "copia-inicio", at: 0 },
+        ...real,
+        { slide: slides[0], i: 0, clone: true, key: "copia-fin", at: count + 1 },
+      ]
+    : real;
 
   return (
     <section
@@ -129,20 +188,21 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
       }}
     >
       <div
-        className="flex transition-transform duration-300 ease-out motion-reduce:transition-none lg:min-h-0 lg:flex-1"
-        style={{ transform: `translateX(-${index * 100}%)` }}
+        className={`flex lg:min-h-0 lg:flex-1 ${animate ? "transition-transform duration-300 ease-out motion-reduce:transition-none" : ""}`}
+        style={{ transform: `translateX(-${pos * 100}%)` }}
       >
-        {slides.map((slide, i) => {
-          const active = i === index;
+        {track.map(({ slide, i, clone, key, at }) => {
+          // Una copia solo está activa mientras se ve, durante el salto.
+          const active = at === pos;
           // Entrada escalonada solo del slide activo: fade + rise (solo
           // transform/opacity, sin layout) con keyframes propios `hero-enter`.
           // Sin `key` ni remontajes: las fotos persisten y no reflashean.
-          const enter = active && !reduceMotion;
+          const enter = active && !reduceMotion && !skipEnter;
           const enterClass = enter ? " animate-hero-enter motion-reduce:animate-none" : "";
           const enterStyle = (ms: number) => (enter ? { animationDelay: `${ms}ms` } : undefined);
           // Un solo `h1` en toda la home: el del primer slide. El resto usa el
           // mismo estilo en un `p` para no romper la jerarquía de títulos.
-          const Title = i === 0 ? "h1" : "p";
+          const Title = i === 0 && !clone ? "h1" : "p";
           const statsCols =
             slide.stats.length >= 4 ? "grid-cols-2 sm:grid-cols-4" : slide.stats.length === 3 ? "grid-cols-3" : "grid-cols-2";
           const producto = slide.product;
@@ -174,12 +234,12 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
 
           return (
             <div
-              key={slide.id}
+              key={key}
               role="group"
               aria-roledescription="diapositiva"
               aria-label={`${i + 1} de ${count}`}
-              aria-hidden={!active}
-              inert={!active}
+              aria-hidden={clone || !active}
+              inert={clone || !active}
               className="w-full shrink-0 lg:h-full"
             >
               {/* En el celular la portada es un banner bajo: título y botón a la
@@ -277,7 +337,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                             sizes="(max-width: 1024px) 100vw, 40vw"
                             width={800}
                             height={500}
-                            priority={i === 0}
+                            priority={i === 0 && !clone}
                             className="h-full w-full object-contain"
                           />
                         </div>
