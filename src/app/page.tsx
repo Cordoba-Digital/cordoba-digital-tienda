@@ -358,7 +358,7 @@ export default async function HomePage() {
       <>
           <section className="container-xl py-5 sm:py-6">
             <SectionHeading
-              eyebrow="Elegidos por los cordobeses"
+              eyebrow="Lo más elegido por la gente"
               title="Los más vendidos"
               action={{ href: "/productos?orden=vendidos", label: "Ver ranking" }}
             />
