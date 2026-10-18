@@ -273,9 +273,11 @@ export function SiteHeader({ categories, topBar = true }: { categories: Category
               className="hdr-btn hdr-entra relative grid h-9 w-9 place-items-center rounded-full border border-ink-100 text-ink-600 transition hover:bg-ink-50 hover:text-rose-500 sm:h-10 sm:w-10"
               aria-label="Favoritos"
             >
-              <svg viewBox="0 0 24 24" className="hdr-ico hdr-ico-corazon h-5.5 w-5.5" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M12 21s-7.5-4.6-9.5-9A5.5 5.5 0 0112 5.5 5.5 5.5 0 0121.5 12c-2 4.4-9.5 9-9.5 9z" />
-              </svg>
+              <span className="hdr-cargar hdr-cargar-corazon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" className="hdr-ico hdr-ico-corazon h-5.5 w-5.5" fill="none" stroke="currentColor" strokeWidth="1.8">
+                  <path d="M12 21s-7.5-4.6-9.5-9A5.5 5.5 0 0112 5.5 5.5 5.5 0 0121.5 12c-2 4.4-9.5 9-9.5 9z" />
+                </svg>
+              </span>
               {hydrated && favorites.length > 0 ? (
                 <span className="absolute right-1 top-1 grid h-4 min-w-4 place-items-center rounded-full bg-rose-600 px-1 text-[10px] font-bold text-white">
                   {favorites.length}
@@ -298,10 +300,12 @@ export function SiteHeader({ categories, topBar = true }: { categories: Category
                   {(me.name || me.email).slice(0, 1).toUpperCase()}
                 </span>
               ) : (
-                <svg viewBox="0 0 24 24" className="hdr-ico hdr-ico-usuario h-5.5 w-5.5" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <circle cx="12" cy="8" r="3.5" />
-                  <path d="M4.5 20c1.5-3.5 4.5-5 7.5-5s6 1.5 7.5 5" />
-                </svg>
+                <span className="hdr-cargar hdr-cargar-usuario" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" className="hdr-ico hdr-ico-usuario h-5.5 w-5.5" fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <circle cx="12" cy="8" r="3.5" />
+                    <path d="M4.5 20c1.5-3.5 4.5-5 7.5-5s6 1.5 7.5 5" />
+                  </svg>
+                </span>
               )}
             </Link>
 
@@ -311,11 +315,13 @@ export function SiteHeader({ categories, topBar = true }: { categories: Category
               style={{ "--hdr-i": 3 } as React.CSSProperties}
               className="hdr-btn hdr-entra relative flex h-9 items-center gap-2 rounded-full bg-brand-500 px-3 text-sm font-bold text-white transition hover:bg-brand-600 sm:h-10 sm:px-4"
             >
-              <svg viewBox="0 0 24 24" className="hdr-ico hdr-ico-carrito h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M3 4h2.2l2 11h10.4l2-8H6" strokeLinecap="round" strokeLinejoin="round" />
-                <circle cx="9" cy="19" r="1.6" />
-                <circle cx="17" cy="19" r="1.6" />
-              </svg>
+              <span className="hdr-cargar hdr-cargar-carrito" aria-hidden="true">
+                <svg viewBox="0 0 24 24" className="hdr-ico hdr-ico-carrito h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+                  <path d="M3 4h2.2l2 11h10.4l2-8H6" strokeLinecap="round" strokeLinejoin="round" />
+                  <circle cx="9" cy="19" r="1.6" />
+                  <circle cx="17" cy="19" r="1.6" />
+                </svg>
+              </span>
               <span className="hidden sm:inline">Carrito</span>
               {hydrated && count > 0 ? (
                 // La `key` reinicia el salto cada vez que cambia la cantidad.

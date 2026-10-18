@@ -216,27 +216,18 @@
 }
 
 /*
- * Micro-animaciones del header. Las que arrancan solas (el fuego de Ofertas y
- * la entrada al cargar) se apagan con "reducir movimiento" del sistema. Las de
- * pasar el mouse son cortas, chicas y las dispara la persona, así que quedan
- * siempre; solo corren en equipos con mouse (en el celular no hay hover y se
- * quedarían trabadas después del toque).
+ * Micro-animaciones del header. Cada ícono hace su animación una sola vez al
+ * entrar a la página o actualizarla (navegar dentro de la tienda no la repite:
+ * el header no se vuelve a montar) y otra vez al pasar el mouse. Son cortas,
+ * chicas y no se repiten solas, así que corren también con "reducir
+ * movimiento"; lo único que esa opción apaga es la entrada escalonada de los
+ * botones. El hover corre solo en equipos con mouse (en el celular no hay
+ * hover y se quedaría trabado después del toque).
+ *
+ * La animación de carga va en un `span` que envuelve al ícono y la de hover en
+ * el ícono: si fueran el mismo elemento, al sacar el mouse volvería la de carga
+ * y se repetiría.
  */
-@keyframes hdr-fuego {
-  0%,
-  100% {
-    transform: scale(1, 1) rotate(-3deg);
-  }
-  25% {
-    transform: scale(1.06, 1.14) rotate(2deg);
-  }
-  50% {
-    transform: scale(0.97, 1.04) rotate(-1deg);
-  }
-  75% {
-    transform: scale(1.04, 1.1) rotate(3deg);
-  }
-}
 @keyframes hdr-fuego-aviva {
   0%,
   100% {
@@ -346,18 +337,29 @@
 .hdr-ico-camion {
   display: block;
 }
-.hdr-camion-llega {
+.hdr-cargar {
   display: inline-block;
 }
+.hdr-camion-llega {
+  display: inline-block;
+  animation: hdr-camion-llega 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+.hdr-cargar-fuego {
+  transform-origin: 50% 85%;
+  animation: hdr-fuego-aviva 0.6s ease-in-out 0.4s 2;
+}
+.hdr-cargar-corazon {
+  animation: hdr-latido 0.9s ease-in-out 0.6s;
+}
+.hdr-cargar-usuario {
+  transform-origin: 50% 100%;
+  animation: hdr-saludo 0.6s ease-in-out 0.8s;
+}
+.hdr-cargar-carrito {
+  transform-origin: 40% 90%;
+  animation: hdr-carrito 0.6s ease-in-out 1s;
+}
 @media (prefers-reduced-motion: no-preference) {
-  .hdr-fuego {
-    display: inline-block;
-    transform-origin: 50% 85%;
-    animation: hdr-fuego 1.6s ease-in-out infinite;
-  }
-  .hdr-camion-llega {
-    animation: hdr-camion-llega 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
-  }
   .hdr-entra {
     animation: hdr-entrada 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
     animation-delay: calc(var(--hdr-i, 0) * 70ms + 120ms);
