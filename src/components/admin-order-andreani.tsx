@@ -9,7 +9,7 @@ import { useSucursales } from "@/lib/shipping-quote";
 const PORTAL_PYMES = "https://pymes.andreani.com/ver-envios?tab=integraciones";
 
 const botonCls =
-  "rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-bold text-white transition-[background-color,opacity] duration-150 hover:bg-brand-800 disabled:cursor-not-allowed disabled:opacity-60";
+  "rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-bold text-white transition-[background-color,opacity] duration-150 hover:bg-brand-800 disabled:cursor-not-allowed disabled:bg-ink-100 disabled:text-ink-400";
 const botonSecundarioCls =
   "rounded-xl border border-ink-200 bg-surface px-4 py-2.5 text-sm font-bold text-ink-800 transition-colors hover:bg-ink-50 disabled:cursor-not-allowed disabled:opacity-60";
 
@@ -72,7 +72,7 @@ export function AdminOrderAndreani({
 
   return (
     <div className="admin-card space-y-3 p-5">
-      <h2 className="text-lg font-extrabold text-ink-900">Envío por Andreani</h2>
+      <h2 className="text-sm font-bold text-ink-900">Envío por Andreani</h2>
 
       {!configurado ? (
         <p className="text-sm text-ink-500">Andreani no está conectado. Cargá el código de seguimiento a mano arriba.</p>
@@ -89,7 +89,7 @@ export function AdminOrderAndreani({
               Sucursal elegida: <strong>{address.sucursal.nombre}</strong> · {address.sucursal.direccion}
             </p>
           ) : null}
-          {faltaSucursal ? (
+          {faltaSucursal && !pagoPendiente ? (
             <label className="block">
               <span className="text-xs font-bold text-ink-600">Sucursal donde retira el cliente (CP {address?.zip})</span>
               <select
@@ -107,27 +107,37 @@ export function AdminOrderAndreani({
               </select>
             </label>
           ) : null}
-          <p className="text-xs text-ink-500">
-            {pagoPendiente
-              ? "El envío se crea cuando el pago del pedido está acreditado."
-              : "Crea el envío en tu cuenta de Andreani con el peso y las medidas de los productos. Después lo pagás en el portal de PyMEs."}
-          </p>
-          <button
-            type="button"
-            className={botonCls}
-            disabled={trabajando || pagoPendiente || (faltaSucursal && !sucursal)}
-            onClick={() => accion({ accion: "crear", sucursal }, "Envío creado. Ahora pagalo en el portal de Andreani.")}
-          >
-            {trabajando ? "Creando…" : "Crear envío en Andreani"}
-          </button>
+          {pagoPendiente ? (
+            // Sin pago no hay botón: uno deshabilitado en naranja se confundía con uno activo.
+            <p className="rounded-lg bg-ink-50 px-3 py-2.5 text-sm text-ink-600">
+              {status === "cancelado"
+                ? "El pedido está cancelado, no hace falta crear el envío."
+                : "Vas a poder crear el envío cuando el pago del pedido esté acreditado."}
+            </p>
+          ) : (
+            <>
+              <p className="text-xs text-ink-500">
+                Crea el envío en tu cuenta de Andreani con el peso y las medidas de los productos. Después lo pagás en el
+                portal de PyMEs.
+              </p>
+              <button
+                type="button"
+                className={botonCls}
+                disabled={trabajando || (faltaSucursal && !sucursal)}
+                onClick={() => accion({ accion: "crear", sucursal }, "Envío creado. Ahora pagalo en el portal de Andreani.")}
+              >
+                {trabajando ? "Creando…" : "Crear envío en Andreani"}
+              </button>
+            </>
+          )}
         </>
       ) : (
         <>
-          <dl className="grid gap-2 text-sm text-ink-600 md:grid-cols-2">
-            <div className="flex justify-between gap-2"><dt>Pedido en Andreani</dt><dd className="font-mono">{andreani.pedidoId}</dd></div>
-            <div className="flex justify-between gap-2"><dt>Seguimiento</dt><dd className="font-mono">{trackingCode || "—"}</dd></div>
-            <div className="flex justify-between gap-2"><dt>Estado</dt><dd>{andreani.estado || "Falta pagar el envío"}</dd></div>
-            <div className="flex justify-between gap-2"><dt>Modalidad</dt><dd>{andreani.modalidad === "sucursal" ? "A sucursal" : "A domicilio"}</dd></div>
+          <dl className="grid grid-cols-2 gap-x-6 gap-y-3 text-sm md:grid-cols-4">
+            <div><dt className="text-xs text-ink-500">Pedido en Andreani</dt><dd className="mt-0.5 font-mono text-ink-900">{andreani.pedidoId}</dd></div>
+            <div><dt className="text-xs text-ink-500">Seguimiento</dt><dd className="mt-0.5 font-mono text-ink-900">{trackingCode || "—"}</dd></div>
+            <div><dt className="text-xs text-ink-500">Estado</dt><dd className="mt-0.5 text-ink-900">{andreani.estado || "Falta pagar el envío"}</dd></div>
+            <div><dt className="text-xs text-ink-500">Modalidad</dt><dd className="mt-0.5 text-ink-900">{andreani.modalidad === "sucursal" ? "A sucursal" : "A domicilio"}</dd></div>
           </dl>
           {!trackingCode ? (
             <p className="text-xs text-ink-500">

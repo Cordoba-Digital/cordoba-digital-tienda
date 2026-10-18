@@ -26,9 +26,9 @@ import { isCancelled, statusIndex, statusLabel } from "@/lib/pricing";
 
 export const dynamic = "force-dynamic";
 
-function Card({ title, action, children }: { title: string; action?: ReactNode; children: ReactNode }) {
+function Card({ title, action, className = "", children }: { title: string; action?: ReactNode; className?: string; children: ReactNode }) {
   return (
-    <section className="admin-card p-5">
+    <section className={`admin-card p-5 ${className}`}>
       <div className="mb-3 flex items-center justify-between gap-2">
         <h2 className="text-sm font-bold text-ink-900">{title}</h2>
         {action}
@@ -46,6 +46,11 @@ function Row({ label, children }: { label: string; children: ReactNode }) {
     </div>
   );
 }
+
+/* Filas del detalle en escritorio: dos tarjetas de la misma altura. */
+const fila = "contents lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-5";
+/* Columna derecha de una fila: la última tarjeta ocupa el alto que sobra. */
+const pila = "contents lg:flex lg:flex-col lg:gap-5 lg:[&>*:last-child]:flex-1";
 
 export default async function AdminOrderDetailPage({ params }: { params: Promise<{ code: string }> }) {
   const jar = await cookies();
@@ -72,6 +77,12 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
   const wa = whatsappHref(order.phone, `Hola ${firstName}! Te escribimos de Córdoba Digital por tu pedido ${order.code}.`);
   const units = items.reduce((sum, item) => sum + item.quantity, 0);
   const address = order.address;
+  const paid = orderWasPaid(order.status, events.map((e) => e.toStatus));
+  const canReturn = order.status === "enviado" || order.status === "entregado";
+  // Lo mismo que deciden los componentes para no mostrarse, así la fila sabe qué tarjeta queda última.
+  const conAndreani = order.deliveryMethod !== "pickup";
+  const conReembolsos = paid || refunds.length > 0;
+  const conDevoluciones = canReturn || returns.length > 0;
 
   return (
     <div className="space-y-5">
@@ -127,190 +138,256 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
         </div>
       </section>
 
-      <div className="grid grid-cols-[minmax(0,1fr)] items-start gap-5 lg:grid-cols-[minmax(0,1fr)_340px]">
-        <div className="space-y-5">
-          <Card title={`Productos (${units})`}>
-            <ul className="divide-y divide-ink-50">
-              {items.map((item) => (
-                <li key={item.id} className="flex items-center gap-3 py-3 first:pt-0">
-                  <div className="h-14 w-14 shrink-0 overflow-hidden rounded-lg bg-white">
-                    <ProductImg src={item.image} alt="" sizes="56px" className="h-full w-full object-contain" />
+      {/* Escritorio: filas de dos tarjetas con la misma altura (productos con
+          cliente, Andreani con entrega, historial con pago). Si la columna de la
+          derecha tiene más de una tarjeta, la última se estira hasta el final de
+          la fila. En el celular las filas se deshacen (display: contents) y cada
+          bloque toma su lugar con `order`: cliente, productos, entrega y pago
+          arriba; reembolsos, historial y los cambios a mano al final. */}
+      <div className="flex flex-col gap-5">
+        <div className={fila}>
+            <Card title={`Productos (${units})`} className="order-2 lg:order-none">
+              <ul className="divide-y divide-ink-50">
+                {items.map((item) => (
+                  <li key={item.id} className="flex items-center gap-3 py-3 first:pt-0">
+                    <div className="h-14 w-14 shrink-0 overflow-hidden rounded-lg bg-white">
+                      <ProductImg src={item.image} alt="" sizes="56px" className="h-full w-full object-contain" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <Link href={`/admin/productos/${item.productSlug}`} className="font-semibold text-ink-900 hover:text-brand-700 hover:underline">
+                        {item.name}
+                      </Link>
+                      <p className="text-xs text-ink-500">
+                        {item.quantity} × {money(item.unitPrice)}
+                      </p>
+                    </div>
+                    <p className="shrink-0 font-bold text-ink-900">{money(item.unitPrice * item.quantity)}</p>
+                  </li>
+                ))}
+              </ul>
+              <dl className="mt-3 border-t border-ink-100 pt-3">
+                <Row label="Subtotal">{money(order.subtotal)}</Row>
+                {order.discount ? <Row label={order.couponCode ? `Cupón ${order.couponCode}` : "Descuento"}>−{money(order.discount)}</Row> : null}
+                {order.paymentAdjustment ? (
+                  <Row label={order.paymentAdjustment < 0 ? "Descuento por medio de pago" : "Recargo por medio de pago"}>
+                    {order.paymentAdjustment < 0 ? "−" : "+"}{money(Math.abs(order.paymentAdjustment))}
+                  </Row>
+                ) : null}
+                <Row label="Envío">{order.shippingCost ? money(order.shippingCost) : "Sin cargo"}</Row>
+                <div className="mt-1 flex justify-between gap-3 border-t border-ink-100 pt-2 text-base font-black text-ink-900">
+                  <dt>Total</dt>
+                  <dd>{money(order.total)}</dd>
+                </div>
+              </dl>
+            </Card>
+          <div className={pila}>
+              <Card title="Cliente" className="order-1 lg:order-none">
+                <p className="font-semibold text-ink-900">{order.customerName}</p>
+                {order.docId ? <p className="text-xs text-ink-500">DNI/CUIT {order.docId}</p> : null}
+                <div className="mt-3 space-y-2 text-sm">
+                  <div className="flex items-center justify-between gap-2">
+                    <a href={`mailto:${order.email}?subject=${encodeURIComponent(`Tu pedido ${order.code}`)}`} className="min-w-0 truncate text-brand-700 hover:underline">
+                      {order.email}
+                    </a>
+                    <AdminCopyButton value={order.email} />
                   </div>
-                  <div className="min-w-0 flex-1">
-                    <Link href={`/admin/productos/${item.productSlug}`} className="font-semibold text-ink-900 hover:text-brand-700 hover:underline">
-                      {item.name}
-                    </Link>
-                    <p className="text-xs text-ink-500">
-                      {item.quantity} × {money(item.unitPrice)}
-                    </p>
+                  <div className="flex items-center justify-between gap-2">
+                    <a href={`tel:${order.phone.replace(/[^0-9+]/g, "")}`} className="text-ink-900 hover:underline">{order.phone}</a>
+                    <AdminCopyButton value={order.phone} />
                   </div>
-                  <p className="shrink-0 font-bold text-ink-900">{money(item.unitPrice * item.quantity)}</p>
-                </li>
-              ))}
-            </ul>
-            <dl className="mt-3 border-t border-ink-100 pt-3">
-              <Row label="Subtotal">{money(order.subtotal)}</Row>
-              {order.discount ? <Row label={order.couponCode ? `Cupón ${order.couponCode}` : "Descuento"}>−{money(order.discount)}</Row> : null}
-              {order.paymentAdjustment ? (
-                <Row label={order.paymentAdjustment < 0 ? "Descuento por medio de pago" : "Recargo por medio de pago"}>
-                  {order.paymentAdjustment < 0 ? "−" : "+"}{money(Math.abs(order.paymentAdjustment))}
-                </Row>
+                </div>
+                {wa ? (
+                  <a
+                    href={wa}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 flex w-full items-center justify-center rounded-lg bg-emerald-700 px-4 py-2.5 text-sm font-bold text-white hover:bg-emerald-800"
+                  >
+                    Escribirle por WhatsApp
+                  </a>
+                ) : null}
+                <Link href={`/admin/pedidos?q=${encodeURIComponent(order.email)}`} className="mt-3 block text-xs font-semibold text-ink-500 hover:text-ink-900 hover:underline">
+                  Ver sus otros pedidos →
+                </Link>
+              </Card>
+              {order.notes ? (
+                <Card title="Nota del cliente" className="order-3 lg:order-none">
+                  <p className="whitespace-pre-line text-sm text-ink-800">{order.notes}</p>
+                </Card>
               ) : null}
-              <Row label="Envío">{order.shippingCost ? money(order.shippingCost) : "Sin cargo"}</Row>
-              <div className="mt-1 flex justify-between gap-3 border-t border-ink-100 pt-2 text-base font-black text-ink-900">
-                <dt>Total</dt>
-                <dd>{money(order.total)}</dd>
-              </div>
-            </dl>
-          </Card>
-
-          <AdminOrderAndreani
-            code={order.code}
-            deliveryMethod={order.deliveryMethod}
-            address={order.address ?? null}
-            andreani={order.andreani ?? null}
-            trackingCode={order.trackingCode ?? ""}
-            status={order.status}
-            configurado={andreaniConfigurado()}
-          />
-
-          <Card title="Historial">
-            <ol className="space-y-2.5 text-sm">
-              {events.map((ev) => (
-                <li key={ev.id} className="flex flex-col gap-x-3 sm:flex-row">
-                  <span className="w-36 shrink-0 text-xs tabular-nums text-ink-400">{formatDateTime(ev.createdAt)}</span>
-                  <span className="text-ink-800">
-                    {ev.fromStatus === ev.toStatus ? "Nota" : <>Pasó a <strong>{statusLabel(ev.toStatus)}</strong></>}
-                    {ev.note ? <span className="text-ink-500"> · {ev.note}</span> : null}
-                  </span>
-                </li>
-              ))}
-              <li className="flex flex-col gap-x-3 sm:flex-row">
-                <span className="w-36 shrink-0 text-xs tabular-nums text-ink-400">{formatDateTime(order.createdAt)}</span>
-                <span className="text-ink-800">Pedido creado en la tienda</span>
-              </li>
-            </ol>
-          </Card>
-
-          <details className="admin-card group p-5">
-            <summary className="cursor-pointer list-none text-sm font-bold text-ink-900">
-              <span className="inline-block transition-transform group-open:rotate-90" aria-hidden>›</span> Cambiar a mano (estado, seguimiento o nota interna)
-            </summary>
-            <div className="mt-4">
-              <AdminOrderManageForm
-                code={order.code}
-                currentStatus={order.status}
-                trackingCode={order.trackingCode ?? ""}
-                statuses={allowedStatuses(order.status)}
-              />
-            </div>
-          </details>
+          </div>
         </div>
 
-        {/* En el celular, el cliente va primero: es lo que más se usa (WhatsApp, dirección). */}
-        <div className="order-first space-y-5 lg:order-none">
-          <Card title="Cliente">
-            <p className="font-semibold text-ink-900">{order.customerName}</p>
-            {order.docId ? <p className="text-xs text-ink-500">DNI/CUIT {order.docId}</p> : null}
-            <div className="mt-3 space-y-2 text-sm">
-              <div className="flex items-center justify-between gap-2">
-                <a href={`mailto:${order.email}?subject=${encodeURIComponent(`Tu pedido ${order.code}`)}`} className="min-w-0 truncate text-brand-700 hover:underline">
-                  {order.email}
-                </a>
-                <AdminCopyButton value={order.email} />
+        {conAndreani ? (
+          <div className={fila}>
+              <div className="order-5 lg:order-none lg:[&>*]:h-full">
+              <AdminOrderAndreani
+                code={order.code}
+                deliveryMethod={order.deliveryMethod}
+                address={order.address ?? null}
+                andreani={order.andreani ?? null}
+                trackingCode={order.trackingCode ?? ""}
+                status={order.status}
+                configurado={andreaniConfigurado()}
+              />
               </div>
-              <div className="flex items-center justify-between gap-2">
-                <a href={`tel:${order.phone.replace(/[^0-9+]/g, "")}`} className="text-ink-900 hover:underline">{order.phone}</a>
-                <AdminCopyButton value={order.phone} />
-              </div>
+            <div className={pila}>
+                <Card title="Entrega" className="order-4 lg:order-none">
+                  <p className="font-semibold text-ink-900">{order.deliveryLabel || order.deliveryMethod}</p>
+                  {order.deliveryEta ? <p className="text-xs text-ink-500">{order.deliveryEta}</p> : null}
+                  {address?.sucursal?.nombre ? (
+                    <p className="mt-2 text-sm text-ink-700">
+                      Sucursal {address.sucursal.nombre}
+                      <br />
+                      <span className="text-ink-500">{address.sucursal.direccion}</span>
+                    </p>
+                  ) : address?.street ? (
+                    <div className="mt-2 flex items-start justify-between gap-2 text-sm text-ink-700">
+                      <p>
+                        {address.street} {address.number}
+                        {address.extra ? `, ${address.extra}` : ""}
+                        <br />
+                        {address.city}, {address.province} (CP {address.zip})
+                      </p>
+                      <AdminCopyButton
+                        value={`${address.street} ${address.number}${address.extra ? `, ${address.extra}` : ""}, ${address.city}, ${address.province} (CP ${address.zip})`}
+                      />
+                    </div>
+                  ) : order.deliveryMethod === "pickup" ? (
+                    <p className="mt-2 text-sm text-ink-700">Lo retira en el local.</p>
+                  ) : null}
+                  {order.trackingCode ? (
+                    <div className="mt-3 flex items-center justify-between gap-2 rounded-lg bg-ink-50 px-3 py-2 text-sm">
+                      <span>
+                        Seguimiento <strong className="font-mono">{order.trackingCode}</strong>
+                      </span>
+                      <AdminCopyButton value={order.trackingCode} />
+                    </div>
+                  ) : null}
+                </Card>
             </div>
-            {wa ? (
-              <a
-                href={wa}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 flex w-full items-center justify-center rounded-lg bg-emerald-700 px-4 py-2.5 text-sm font-bold text-white hover:bg-emerald-800"
-              >
-                Escribirle por WhatsApp
-              </a>
-            ) : null}
-            <Link href={`/admin/pedidos?q=${encodeURIComponent(order.email)}`} className="mt-3 block text-xs font-semibold text-ink-500 hover:text-ink-900 hover:underline">
-              Ver sus otros pedidos →
-            </Link>
-          </Card>
+          </div>
+        ) : null}
 
-          <Card title="Entrega">
-            <p className="font-semibold text-ink-900">{order.deliveryLabel || order.deliveryMethod}</p>
-            {order.deliveryEta ? <p className="text-xs text-ink-500">{order.deliveryEta}</p> : null}
-            {address?.sucursal?.nombre ? (
-              <p className="mt-2 text-sm text-ink-700">
-                Sucursal {address.sucursal.nombre}
-                <br />
-                <span className="text-ink-500">{address.sucursal.direccion}</span>
-              </p>
-            ) : address?.street ? (
-              <div className="mt-2 flex items-start justify-between gap-2 text-sm text-ink-700">
-                <p>
-                  {address.street} {address.number}
-                  {address.extra ? `, ${address.extra}` : ""}
-                  <br />
-                  {address.city}, {address.province} (CP {address.zip})
-                </p>
-                <AdminCopyButton
-                  value={`${address.street} ${address.number}${address.extra ? `, ${address.extra}` : ""}, ${address.city}, ${address.province} (CP ${address.zip})`}
+        <div className={fila}>
+            <Card title="Historial" className="order-9 lg:order-none">
+              {/* Línea de tiempo: lo más nuevo arriba, la fecha debajo de cada hecho. */}
+              <ol className="text-sm">
+                {[
+                  ...events.map((ev) => ({
+                    key: String(ev.id),
+                    at: ev.createdAt,
+                    text: ev.fromStatus === ev.toStatus ? <>Nota interna</> : <>Pasó a <strong className="font-semibold">{statusLabel(ev.toStatus)}</strong></>,
+                    note: ev.note,
+                  })),
+                  { key: "creado", at: order.createdAt, text: <>Pedido creado en la tienda</>, note: "" },
+                ].map((ev, i, all) => (
+                  <li key={ev.key} className="relative flex gap-3 pb-4 last:pb-0">
+                    {i < all.length - 1 ? <span className="absolute bottom-0 left-[4px] top-4 w-px bg-ink-100" aria-hidden /> : null}
+                    <span className={`mt-1.5 h-[9px] w-[9px] shrink-0 rounded-full ${i === 0 ? "bg-brand-500" : "bg-ink-300"}`} aria-hidden />
+                    <div className="min-w-0">
+                      <p className="text-ink-800">{ev.text}</p>
+                      {ev.note ? <p className="text-ink-500">{ev.note}</p> : null}
+                      <p className="mt-0.5 text-xs text-ink-400">{formatDateTime(ev.at)}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </Card>
+          <div className={pila}>
+            {conAndreani ? null : (
+                <Card title="Entrega" className="order-4 lg:order-none">
+                  <p className="font-semibold text-ink-900">{order.deliveryLabel || order.deliveryMethod}</p>
+                  {order.deliveryEta ? <p className="text-xs text-ink-500">{order.deliveryEta}</p> : null}
+                  {address?.sucursal?.nombre ? (
+                    <p className="mt-2 text-sm text-ink-700">
+                      Sucursal {address.sucursal.nombre}
+                      <br />
+                      <span className="text-ink-500">{address.sucursal.direccion}</span>
+                    </p>
+                  ) : address?.street ? (
+                    <div className="mt-2 flex items-start justify-between gap-2 text-sm text-ink-700">
+                      <p>
+                        {address.street} {address.number}
+                        {address.extra ? `, ${address.extra}` : ""}
+                        <br />
+                        {address.city}, {address.province} (CP {address.zip})
+                      </p>
+                      <AdminCopyButton
+                        value={`${address.street} ${address.number}${address.extra ? `, ${address.extra}` : ""}, ${address.city}, ${address.province} (CP ${address.zip})`}
+                      />
+                    </div>
+                  ) : order.deliveryMethod === "pickup" ? (
+                    <p className="mt-2 text-sm text-ink-700">Lo retira en el local.</p>
+                  ) : null}
+                  {order.trackingCode ? (
+                    <div className="mt-3 flex items-center justify-between gap-2 rounded-lg bg-ink-50 px-3 py-2 text-sm">
+                      <span>
+                        Seguimiento <strong className="font-mono">{order.trackingCode}</strong>
+                      </span>
+                      <AdminCopyButton value={order.trackingCode} />
+                    </div>
+                  ) : null}
+                </Card>
+            )}
+              <Card title="Pago" className="order-6 lg:order-none">
+                <dl>
+                  <Row label="Medio">{order.paymentLabel || order.paymentMethod}</Row>
+                  {order.installments > 1 ? <Row label="Cuotas">{order.installments} de {money(Math.round(order.total / order.installments))}</Row> : null}
+                  {order.mercadopagoPaymentId ? <Row label="Pago en Mercado Pago"><span className="font-mono text-xs">{order.mercadopagoPaymentId}</span></Row> : null}
+                </dl>
+                {order.paymentMethod === "mercadopago" ? (
+                  <Link href="/admin/pagos" className="mt-2 block text-xs font-semibold text-ink-500 hover:text-ink-900 hover:underline">
+                    Ver en Pagos →
+                  </Link>
+                ) : null}
+              </Card>
+            {conReembolsos ? (
+                <div className="order-7 lg:order-none lg:[&>*]:h-full">
+                <AdminOrderRefunds
+                  code={order.code}
+                  total={order.total}
+                  refunds={refunds.map((r) => ({ ...r, createdAt: r.createdAt.toISOString() }))}
+                  paid={paid}
+                  viaMp={order.paymentMethod === "mercadopago"}
+                  canRefund={!session.email || isOwnerEmail(session.email)}
+                />
+                </div>
+            ) : null}
+            {conDevoluciones ? (
+                <div className="order-8 lg:order-none lg:[&>*]:h-full">
+                <AdminOrderReturns
+                  code={order.code}
+                  items={items.map((item) => ({ id: item.id, name: item.name, quantity: item.quantity, returned: returned.get(item.id) ?? 0 }))}
+                  returns={returns.map((r) => ({ ...r, createdAt: r.createdAt.toISOString() }))}
+                  canReturn={canReturn}
+                />
+                </div>
+            ) : null}
+          </div>
+        </div>
+
+        <div className={`${fila} lg:items-start`}>
+            <details className="admin-card group order-10 p-5 lg:order-none">
+              <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-bold text-ink-900 [&::-webkit-details-marker]:hidden">
+                <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 shrink-0 text-ink-500 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                  <path d="m9 6 6 6-6 6" />
+                </svg>
+                Cambiar a mano
+                <span className="hidden font-normal text-ink-500 sm:inline">estado, seguimiento o nota interna</span>
+              </summary>
+              <div className="mt-4">
+                <AdminOrderManageForm
+                  code={order.code}
+                  currentStatus={order.status}
+                  trackingCode={order.trackingCode ?? ""}
+                  statuses={allowedStatuses(order.status)}
                 />
               </div>
-            ) : order.deliveryMethod === "pickup" ? (
-              <p className="mt-2 text-sm text-ink-700">Lo retira en el local.</p>
-            ) : null}
-            {order.trackingCode ? (
-              <div className="mt-3 flex items-center justify-between gap-2 rounded-lg bg-ink-50 px-3 py-2 text-sm">
-                <span>
-                  Seguimiento <strong className="font-mono">{order.trackingCode}</strong>
-                </span>
-                <AdminCopyButton value={order.trackingCode} />
-              </div>
-            ) : null}
-          </Card>
-
-          <Card title="Pago">
-            <dl>
-              <Row label="Medio">{order.paymentLabel || order.paymentMethod}</Row>
-              {order.installments > 1 ? <Row label="Cuotas">{order.installments} de {money(Math.round(order.total / order.installments))}</Row> : null}
-              {order.mercadopagoPaymentId ? <Row label="Pago en Mercado Pago"><span className="font-mono text-xs">{order.mercadopagoPaymentId}</span></Row> : null}
-            </dl>
-            {order.paymentMethod === "mercadopago" ? (
-              <Link href="/admin/pagos" className="mt-2 block text-xs font-semibold text-ink-500 hover:text-ink-900 hover:underline">
-                Ver en Pagos →
-              </Link>
-            ) : null}
-          </Card>
-
-          <AdminOrderRefunds
-            code={order.code}
-            total={order.total}
-            refunds={refunds.map((r) => ({ ...r, createdAt: r.createdAt.toISOString() }))}
-            paid={orderWasPaid(order.status, events.map((e) => e.toStatus))}
-            viaMp={order.paymentMethod === "mercadopago"}
-            canRefund={!session.email || isOwnerEmail(session.email)}
-          />
-
-          <AdminOrderReturns
-            code={order.code}
-            items={items.map((item) => ({ id: item.id, name: item.name, quantity: item.quantity, returned: returned.get(item.id) ?? 0 }))}
-            returns={returns.map((r) => ({ ...r, createdAt: r.createdAt.toISOString() }))}
-            canReturn={order.status === "enviado" || order.status === "entregado"}
-          />
-
-          {order.notes ? (
-            <Card title="Nota del cliente">
-              <p className="whitespace-pre-line text-sm text-ink-800">{order.notes}</p>
-            </Card>
-          ) : null}
-
-          <Link href={`/pedido/${order.code}`} target="_blank" className="block text-center text-xs font-semibold text-ink-500 hover:text-ink-900 hover:underline">
-            Ver el pedido como lo ve el cliente ↗
-          </Link>
+            </details>
+            <Link href={`/pedido/${order.code}`} target="_blank" className="order-11 block text-center text-xs font-semibold text-ink-500 hover:text-ink-900 hover:underline lg:order-none lg:self-center">
+              Ver el pedido como lo ve el cliente ↗
+            </Link>
         </div>
       </div>
     </div>
