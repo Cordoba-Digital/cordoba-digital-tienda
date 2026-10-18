@@ -36,6 +36,48 @@
       "when": 1791858505815,
       "tag": "0004_envio_andreani",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1791904109711,
+      "tag": "0005_errores_servidor",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1792174997855,
+      "tag": "0006_pedido_una_vez",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1792176074486,
+      "tag": "0007_reembolsos",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1792176744144,
+      "tag": "0008_devoluciones",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1792354526738,
+      "tag": "0009_revision_fotos",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1792360396630,
+      "tag": "0010_fotos_sugeridas",
+      "breakpoints": true
     }
   ]
 }

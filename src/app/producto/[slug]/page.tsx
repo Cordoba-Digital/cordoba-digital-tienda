@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { ProductCard } from "@/components/product-card";
+import { ProductRow } from "@/components/product-card";
 import { RefreshCw, Shield, MessageCircle } from "lucide-react";
 import {
   BuyBox,
@@ -23,8 +23,20 @@ import {
 } from "@/lib/queries";
 import { url as siteUrl } from "@/lib/site";
 import { breadcrumbJsonLd, jsonLdString, ORG_ID, returnPolicy } from "@/lib/structured-data";
+import { sanitizeHtml } from "@/lib/sanitize-html";
 
-export const dynamic = "force-dynamic";
+/**
+ * La ficha queda en la caché del CDN y se regenera cada 5 minutos, o en el acto
+ * cuando el panel cambia el producto (ver `refreshStorePages`). El checkout
+ * vuelve a chequear precio y stock, así que unos minutos de atraso no venden
+ * algo que no hay.
+ */
+export const revalidate = 300;
+
+/** Sin fichas armadas en el build: cada una se genera en la primera visita. */
+export function generateStaticParams(): { slug: string }[] {
+  return [];
+}
 
 /**
  * OJO: esta ruta no puede tener `loading.tsx`.
@@ -137,7 +149,7 @@ export default async function ProductPage({ params }: { params: Params }) {
   if (!product) notFound();
 
   const [related, productReviews, breadcrumbs, ratingStats] = await Promise.all([
-    getRelatedProducts(product.slug, product.categorySlug, 4),
+    getRelatedProducts(product),
     getReviewsForProduct(product.slug),
     getProductBreadcrumbs(product.slug),
     getVerifiedRatingStats(product.slug),
@@ -232,7 +244,7 @@ export default async function ProductPage({ params }: { params: Params }) {
   }
 
   return (
-    <div className="container-xl py-6 pb-28 lg:pb-6 lg:pt-4">
+    <div className="ficha-tarjetas container-xl py-6 pb-28 lg:pb-6 lg:pt-4">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -336,14 +348,14 @@ export default async function ProductPage({ params }: { params: Params }) {
         <section className="card-surface p-6">
           <h2 className="mb-3 text-xl font-bold tracking-tight text-ink-900">Descripción</h2>
           {product.descriptionHtml ? (
-            // El HTML viene saneado por el migrador (scripts, estilos y
-            // handlers inline ya eliminados). Ver scripts/migrate-wp.ts.
+            // El HTML se sanea al guardarlo (migrador y panel) y otra vez acá,
+            // por si quedó alguna fila guardada con una versión vieja del saneo.
             // `prose-soft`: el HTML migrado abusa de <strong> y de subtítulos
             // en cada línea; la referencia muestra el cuerpo en peso normal.
             // La jerarquía sobrevive por tamaño y espaciado, no por peso.
             <div
               className="prose-cd prose-soft"
-              dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
+              dangerouslySetInnerHTML={{ __html: sanitizeHtml(product.descriptionHtml) }}
             />
           ) : (
             <p className="text-sm leading-relaxed text-ink-600">
@@ -382,18 +394,13 @@ export default async function ProductPage({ params }: { params: Params }) {
 
       {related.length ? (
         <section className="mt-14">
-          <h2 className="mb-5 text-xl font-extrabold tracking-tight text-ink-900">
-            Quienes vieron esto también compraron
-          </h2>
-          <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-            {related.map((item) => (
-              <ProductCard key={item.slug} product={toView(item)} />
-            ))}
-          </div>
+          <h2 className="mb-5 text-xl font-extrabold tracking-tight text-ink-900">También te puede interesar</h2>
+          {/* Carrusel a mano: no avanza solo. Flechas en escritorio, deslizar en el celular. */}
+          <ProductRow products={related.map(toView)} label="las recomendaciones" />
         </section>
       ) : null}
 
-      <section className="mt-14 grid gap-4 rounded-3xl bg-surface p-6 md:grid-cols-3">
+      <section className="mt-14 grid gap-4 rounded-2xl bg-surface p-6 md:grid-cols-3">
         {[
           { icon: <Shield size={24} />, title: "Garantía oficial", text: `${product.warrantyMonths} meses cubiertos por el fabricante y gestionados por nosotros.` },
           { icon: <RefreshCw size={24} />, title: "Cambios sin drama", text: "Tenés 10 días corridos para cambiar el producto si no era lo que esperabas." },

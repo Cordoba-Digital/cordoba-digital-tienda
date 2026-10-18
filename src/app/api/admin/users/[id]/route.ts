@@ -1,5 +1,6 @@
 import { sessionFromCookieHeader } from "@/lib/admin-auth";
-import { verifyAdminSessionValue } from "@/lib/admin-session";
+import { readAdminSession, verifyAdminSessionValue } from "@/lib/admin-session";
+import { isOwnerEmail } from "@/lib/admin-access";
 import { actorFromRequest, logAdminAction } from "@/lib/admin-audit";
 import { deleteUser, getAdminUserDetail, setUserDisabled } from "@/lib/admin-users";
 
@@ -57,8 +58,13 @@ export async function PATCH(request: Request) {
 }
 
 export async function DELETE(request: Request) {
-  if (!(await authorized(request))) {
+  // Borrar una cuenta no se deshace: solo dueños o quien entró con la contraseña.
+  const session = await readAdminSession(sessionFromCookieHeader(request.headers.get("cookie")));
+  if (!session) {
     return Response.json({ ok: false, error: "No autorizado." }, { status: 401 });
+  }
+  if (session.email && !isOwnerEmail(session.email)) {
+    return Response.json({ ok: false, error: "Solo los dueños pueden borrar cuentas." }, { status: 403 });
   }
   const id = idFrom(request);
   if (id === null) {

@@ -17,7 +17,8 @@ import {
   type CategoryNode,
   type CategoryRow,
 } from "@/lib/category-tree";
-import { normalizeSearch, stem, understandQuery, type QueryUnderstanding } from "@/lib/query-understanding";
+import { esMarcaDeRelleno } from "@/lib/brand-from-name";
+import { normalizeSearch, stem, suggestCategories, understandQuery, type QueryUnderstanding } from "@/lib/query-understanding";
 import { ttlCache } from "@/lib/ttl-cache";
 
 export type ProductFilters = {
@@ -452,6 +453,44 @@ export async function getNewArrivals(limit = 8) {
   return db.select().from(products).orderBy(desc(products.createdAt), desc(products.id)).limit(limit);
 }
 
+/**
+ * Vitrina de la home por categoría: las categorías principales con más
+ * productos y una fila de cada una, para mirar sin salir de la home. Solo
+ * entran las que tienen al menos `minProducts` con stock.
+ */
+export async function getCategoryShowcase(maxTabs = 6, perTab = 8, minProducts = 4) {
+  const roots = (await getCategoryTree())
+    .filter((c) => c.count >= minProducts)
+    .sort((a, b) => b.count - a.count)
+    .slice(0, maxTabs);
+  const rows = await Promise.all(
+    roots.map(async (c) => {
+      const { items } = await listProducts({ categoryId: c.id, inStock: true, perPage: perTab });
+      return { name: c.name, path: c.path, count: c.count, products: items };
+    }),
+  );
+  return rows.filter((row) => row.products.length >= minProducts);
+}
+
+/**
+ * Vitrinas de la home: las categorías raíz con más productos, cada una con sus
+ * tres productos con stock más vendidos para la foto. Una categoría sin ningún
+ * producto con foto se saltea: una tarjeta sin imagen se ve rota.
+ */
+export async function getCategoryTiles(max = 6) {
+  const roots = (await getCategoryTree())
+    .filter((c) => c.count >= 3)
+    .sort((a, b) => b.count - a.count)
+    .slice(0, max + 2);
+  const rows = await Promise.all(
+    roots.map(async (c) => {
+      const { items } = await listProducts({ categoryId: c.id, inStock: true, perPage: 3, sort: "vendidos" });
+      return { name: c.name, path: c.path, count: c.count, tagline: c.tagline, products: items.filter((p) => p.images.length > 0) };
+    }),
+  );
+  return rows.filter((row) => row.products.length > 0).slice(0, max);
+}
+
 /** Por slug, con `cache()` de React: `generateMetadata` y la página llaman a
     `findProduct()` en el mismo request (hasta 5 lookups por los slugs con
     `%`-encoding) y sin esto cada uno pegaba a la base. */
@@ -520,12 +559,33 @@ export async function getProductsBySlugs(slugs: string[]) {
   return db.select().from(products).where(inArray(products.slug, slugs));
 }
 
-export async function getRelatedProducts(slug: string, categorySlug: string, limit = 4) {
+/** Tope de recomendaciones en la ficha: alcanza para tres vueltas de flecha sin volverse un catálogo. */
+export const MAX_RECOMENDADOS = 12;
+
+/**
+ * Recomendaciones para la ficha: productos de la misma categoría, primero los
+ * que tienen stock, después los de la misma marca y, entre esos, los de precio
+ * más parecido. Así un iPhone 16 muestra primero otros iPhone de rango similar
+ * y no el más vendido de la categoría a cualquier precio.
+ */
+export async function getRelatedProducts(
+  product: { slug: string; categorySlug: string; brand: string; price: number },
+  limit = MAX_RECOMENDADOS,
+) {
+  // Una marca de relleno ("General") no dice nada del producto: no se prioriza.
+  // Se saca el criterio en vez de ordenar por un `0` constante: Postgres lee un
+  // número suelto en el ORDER BY como "la columna 0" y la consulta falla.
+  const mismaMarca = esMarcaDeRelleno(product.brand) ? [] : [desc(sql`(${products.brand} = ${product.brand})::int`)];
   return db
     .select()
     .from(products)
-    .where(and(eq(products.categorySlug, categorySlug), ne(products.slug, slug)))
-    .orderBy(desc(products.soldCount))
+    .where(and(eq(products.categorySlug, product.categorySlug), ne(products.slug, product.slug)))
+    .orderBy(
+      desc(sql`(${products.stock} > 0)::int`),
+      ...mismaMarca,
+      asc(sql`abs(${products.price} - ${product.price})`),
+      desc(products.soldCount),
+    )
     .limit(limit);
 }
 
@@ -631,23 +691,117 @@ export async function getOrdersByEmail(email: string) {
   return rows.map((r) => ({ ...r, itemsCount: byOrder.get(r.id) ?? 0 }));
 }
 
+/** Lo que entiende el buscador de una búsqueda: categoría y marca nombradas, y categorías que sugiere. */
+async function analyzeSearch(q: string) {
+  const loaded = await loadQueryCatalog();
+  const catalog = { categories: loaded.categories, brands: loaded.brands.map((b) => b.brand).filter(Boolean) };
+  const understood = understandQuery(q, catalog);
+  const suggested = suggestCategories(q, catalog);
+  return { loaded, catalog, understood, suggested };
+}
+
 export async function searchProducts(term: string, limit = 6) {
   const words = normalizeSearch(term).split(" ").filter(Boolean);
   if (!words.length) return [];
-  return db
-    .select({
-      slug: products.slug,
-      name: products.name,
-      brand: products.brand,
-      price: products.price,
-      image: sql<string>`${products.images}->>0`,
-      categorySlug: products.categorySlug,
-    })
-    .from(products)
-    // Cada palabra en cualquier campo: "celular samsung" encuentra "Samsung Galaxy A55" de Celulares.
-    .where(and(...words.map(termMatch)))
-    .orderBy(desc(products.soldCount))
-    .limit(limit);
+  const { understood, suggested } = await analyzeSearch(term);
+
+  // Dónde está lo que se busca: la categoría nombrada o, si no se nombró
+  // ninguna, las que sugiere el desplegable ("camaras" → Cámaras Digitales,
+  // Cámaras CCTV). Lo de ahí va primero aunque otro producto mencione la
+  // palabra en la descripción (los celulares dicen "cámara").
+  // Lo de la primera suma más que lo de las demás: en "celulares", Celulares
+  // Liberados pesa más que Accesorios P/ Celulares.
+  const focusIds = understood.category ? [understood.category.id] : suggested.map((c) => c.id);
+  const focus = await Promise.all(focusIds.map(subtreeOf));
+
+  // Relevancia: cada palabra que está en el nombre suma 3 ("Aire Acondicionado"
+  // antes que "Caloventor" dentro de Aires Acondicionados) y estar en la
+  // categoría buscada suma 5, o 2 en las otras sugeridas (el parlante de
+  // Accesorios P/ Celulares queda debajo de los celulares). Después, lo más vendido.
+  const nameWords = words.filter((w) => w.length > 2).map(stem);
+  const parts: SQL[] = nameWords.map((w) => sql`(case when ${plain(products.name)} like ${`%${w}%`} then 3 else 0 end)`);
+  focus.forEach((t, i) => {
+    if (t.slugs.length) parts.push(sql`(case when ${inArray(products.categorySlug, t.slugs)} then ${i === 0 ? 5 : 2} else 0 end)`);
+  });
+  const score = parts.length ? sql.join(parts, sql` + `) : sql`0`;
+
+  const run = (where: SQL | undefined) =>
+    db
+      .select({
+        slug: products.slug,
+        name: products.name,
+        brand: products.brand,
+        price: products.price,
+        image: sql<string>`${products.images}->>0`,
+        categorySlug: products.categorySlug,
+      })
+      .from(products)
+      .where(where)
+      .orderBy(desc(score), desc(products.soldCount))
+      .limit(limit);
+
+  // Como en /productos: si nombra categoría o marca, se busca ahí adentro
+  // ("celular samsung" no trae la funda Samsung de Accesorios).
+  if (understood.category || understood.brand) {
+    const subtree = understood.category ? await subtreeOf(understood.category.id) : undefined;
+    const rows = await run(buildWhere({ terms: understood.terms, brands: understood.brand ? [understood.brand] : [] }, subtree));
+    if (rows.length) return rows;
+  }
+  // Cada palabra en cualquier campo: "celular samsung" encuentra "Samsung Galaxy A55" de Celulares.
+  return run(and(...words.map(termMatch)));
+}
+
+export type SearchShortcut = { label: string; href: string; count: number };
+
+/**
+ * Atajos del desplegable del buscador además de los productos: "celular" sugiere
+ * Celulares y sus marcas (Celulares Samsung, Celulares Apple...), y "samsung"
+ * sugiere todo Samsung. Llevan a la categoría o al catálogo ya filtrados.
+ */
+export async function searchShortcuts(q: string, limit = 6): Promise<SearchShortcut[]> {
+  const { loaded, catalog, understood, suggested } = await analyzeSearch(q);
+  const brandRows = loaded.brands;
+  const main = understood.category
+    ? catalog.categories.find((c) => c.id === understood.category!.id) ?? suggested[0]
+    : suggested[0];
+
+  const out: SearchShortcut[] = [];
+  let brandsShown: string[] = [];
+  if (main) {
+    // Las subcategorías por marca se llaman como la marca ("Samsung" dentro de
+    // Celulares): se muestran como "Celulares Samsung".
+    const isBrand = (name: string) => catalog.brands.some((b) => normalizeSearch(b) === normalizeSearch(name));
+    const parent = main.parentId != null ? catalog.categories.find((c) => c.id === main.parentId) : undefined;
+    const label = parent && isBrand(main.name) ? `${parent.name} ${main.name}` : main.name;
+    out.push({ label, href: `/categoria/${main.path}`, count: main.count });
+    // Las marcas que más hay dentro de la categoría; si se nombró una, solo esa.
+    const inside = (await getBrandFacets(main.id))
+      .filter((b) => b.brand && (!understood.brand || b.brand === understood.brand))
+      // Las de relleno no ayudan como atajo ("Cámaras General").
+      .filter((b) => !esMarcaDeRelleno(b.brand))
+      .filter((b) => normalizeSearch(b.brand) !== normalizeSearch(main.name))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 3);
+    for (const b of inside) {
+      out.push({ label: `${main.name} ${b.brand}`, href: `/categoria/${main.path}?marca=${encodeURIComponent(b.brand)}`, count: b.count });
+    }
+    brandsShown = inside.map((b) => normalizeSearch(b.brand));
+  } else if (understood.brand) {
+    const count = brandRows.find((b) => b.brand === understood.brand)?.count ?? 0;
+    out.push({ label: `Todo ${understood.brand}`, href: `/productos?marca=${encodeURIComponent(understood.brand)}`, count });
+  }
+  const byId = new Map(catalog.categories.map((c) => [c.id, c]));
+  const insideMain = (id: number) => {
+    for (let p = byId.get(id)?.parentId ?? null; p != null; p = byId.get(p)?.parentId ?? null) if (p === main?.id) return true;
+    return false;
+  };
+  for (const c of suggested) {
+    if (c.id === main?.id) continue;
+    // "Celulares Xiaomi" (subcategoría) repetiría el atajo "Celulares Liberados Xiaomi".
+    if (insideMain(c.id) && brandsShown.some((b) => ` ${normalizeSearch(c.name)} `.includes(` ${b} `))) continue;
+    out.push({ label: c.name, href: `/categoria/${c.path}`, count: c.count });
+  }
+  return out.slice(0, limit);
 }
 
 /**
@@ -655,9 +809,15 @@ export async function searchProducts(term: string, limit = 6) {
  * `query-understanding.ts`). Usa el árbol y las marcas que ya están en caché.
  */
 export async function understandCatalogQuery(q: string): Promise<QueryUnderstanding> {
+  const { categories, brands } = await loadQueryCatalog();
+  return understandQuery(q, { categories, brands: brands.map((b) => b.brand).filter(Boolean) });
+}
+
+/** Categorías y marcas del catálogo en el formato de `query-understanding.ts`. */
+async function loadQueryCatalog() {
   const [tree, brands] = await Promise.all([getCategoryTree(), getBrandFacets()]);
-  return understandQuery(q, {
+  return {
     categories: flattenTree(tree).map((c) => ({ id: c.id, name: c.name, path: c.path, depth: c.depth, parentId: c.parentId, count: c.count })),
-    brands: brands.map((b) => b.brand).filter(Boolean),
-  });
+    brands: brands.map((b) => ({ brand: b.brand, count: b.count })),
+  };
 }

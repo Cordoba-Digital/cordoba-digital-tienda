@@ -23,8 +23,8 @@ export default function PoliticaPrivacidadPage() {
             <li><strong>Datos de Identificación:</strong> Nombre, apellido y DNI/CUIT (para facturación).</li>
             <li><strong>Datos de Contacto:</strong> Correo electrónico, teléfono y dirección de envío.</li>
             <li>
-              <strong>Información de Pago:</strong> Los datos de tarjetas de crédito o débito son procesados de forma encriptada a través de plataformas seguras
-              (como Mercado Pago o Mobbex) y nunca son almacenados en nuestros servidores.
+              <strong>Información de Pago:</strong> Pagás por transferencia bancaria, desde cualquier banco o billetera virtual, o en efectivo en el
+              local. No pedimos ni guardamos datos de tarjetas.
             </li>
           </ul>
           <h2 className="text-xl font-extrabold text-ink-900">2. Finalidad del Tratamiento</h2>

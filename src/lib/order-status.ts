@@ -131,7 +131,7 @@ export async function applyOrderStatus(
 }
 
 /**
- * Cancela los pedidos que siguen en "Pedido recibido" pasadas las horas de
+ * Cancela los pedidos que siguen en "Reserva creada" pasadas las horas de
  * reserva y devuelve su stock. Corre desde el cron diario y al abrir el panel,
  * así no depende de que el cron esté activo. No hace nada si el interruptor
  * "Vencer pedidos sin pago" está apagado. Devuelve cuántos venció.
@@ -139,19 +139,27 @@ export async function applyOrderStatus(
 export async function expireStalePendingOrders(): Promise<number> {
   if (!(await isAutomationOn("vencerPedidos"))) return 0;
   const cutoff = new Date(Date.now() - PENDING_EXPIRY_HOURS * 60 * 60 * 1000);
-  const stale = await db
-    .select({ id: orders.id })
-    .from(orders)
-    .where(and(eq(orders.status, "pendiente_pago"), lt(orders.createdAt, cutoff)))
-    .limit(200);
-  for (const order of stale) {
-    await applyOrderStatus(order.id, {
-      from: "pendiente_pago",
-      to: CANCELLED_STATUS.id,
-      note: `Vencido: sin pago en ${PENDING_EXPIRY_HOURS} hs.`,
-    });
+  // De a tandas de 200 hasta que no quede ninguno: con un tope fijo, una ola
+  // de pedidos falsos dejaría stock reservado por días. El máximo de tandas
+  // corta el bucle si algún pedido no se pudiera cancelar.
+  let expired = 0;
+  for (let round = 0; round < 25; round += 1) {
+    const stale = await db
+      .select({ id: orders.id })
+      .from(orders)
+      .where(and(eq(orders.status, "pendiente_pago"), lt(orders.createdAt, cutoff)))
+      .limit(200);
+    for (const order of stale) {
+      const applied = await applyOrderStatus(order.id, {
+        from: "pendiente_pago",
+        to: CANCELLED_STATUS.id,
+        note: `Vencido: sin pago en ${PENDING_EXPIRY_HOURS} hs.`,
+      });
+      if (applied) expired += 1;
+    }
+    if (stale.length < 200) break;
   }
-  return stale.length;
+  return expired;
 }
 
 /**

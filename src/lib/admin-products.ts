@@ -1,10 +1,17 @@
 import { and, asc, desc, eq, ilike, or, sql } from "drizzle-orm";
 
 import { db } from "@/db";
-import { categories, productCategories, products, type Spec } from "@/db/schema";
+import { categories, productCategories, productPhotoChecks, products, type Spec } from "@/db/schema";
 import { buildCategoryTree, titleCaseCategoryName, type CategoryNode, type CategoryRow } from "@/lib/category-tree";
 import { findProductBySlug } from "@/lib/queries";
 import { sanitizeHtml } from "@/lib/sanitize-html";
+import {
+  clearPhotoFlagIfMainChanged,
+  ensurePhotoChecksTable,
+  photoFilterClause,
+  setPhotoFlag,
+  type PhotoFilter,
+} from "@/lib/photo-checks";
 import { UPLOADED_IMAGE_PATH } from "@/lib/product-images";
 
 export type AdminProductRow = {
@@ -19,6 +26,11 @@ export type AdminProductRow = {
   badge: string | null;
   featured: boolean;
   image: string;
+  /** Tamaño medido de la foto principal (null si todavía no se midió). */
+  photoWidth: number | null;
+  photoHeight: number | null;
+  /** Marcada desde la lista como "hay que cambiar la foto". */
+  photoFlagged: boolean;
 };
 
 export async function listAdminProducts(input: {
@@ -31,6 +43,8 @@ export async function listAdminProducts(input: {
   sort?: "" | "stock-desc" | "stock-asc";
   oferta: boolean;
   destacados: boolean;
+  /** Fotos a revisar: sin foto, chicas, marcadas o sin medir. */
+  fotos?: PhotoFilter;
   page: number;
   perPage: number;
 }): Promise<{ items: AdminProductRow[]; total: number; page: number; perPage: number; pages: number }> {
@@ -65,7 +79,12 @@ export async function listAdminProducts(input: {
   if (stockFilter === "con") clauses.push(sql`${products.stock} > 0`);
   if (input.oferta) clauses.push(sql`${products.compareAtPrice} is not null and ${products.compareAtPrice} > ${products.price}`);
   if (input.destacados) clauses.push(eq(products.featured, true));
+  const photoClause = photoFilterClause(input.fotos ?? "");
+  if (photoClause) clauses.push(photoClause);
   const where = clauses.length ? and(...clauses) : undefined;
+  await ensurePhotoChecksTable();
+  // La medición cuenta solo si es de la foto principal actual.
+  const sameMain = sql`${productPhotoChecks.url} = ${products.images}->>0`;
 
   const [rows, [countRow]] = await Promise.all([
     db
@@ -81,8 +100,12 @@ export async function listAdminProducts(input: {
         badge: products.badge,
         featured: products.featured,
         image: sql<string>`${products.images}->>0`,
+        photoWidth: sql<number | null>`case when ${sameMain} then ${productPhotoChecks.width} end`,
+        photoHeight: sql<number | null>`case when ${sameMain} then ${productPhotoChecks.height} end`,
+        photoFlagged: sql<boolean>`coalesce(${productPhotoChecks.flagged}, false)`,
       })
       .from(products)
+      .leftJoin(productPhotoChecks, eq(productPhotoChecks.productId, products.id))
       .where(where)
       .orderBy(
         ...(input.sort === "stock-desc"
@@ -90,6 +113,9 @@ export async function listAdminProducts(input: {
           : input.sort === "stock-asc"
             ? [asc(products.stock), desc(products.createdAt)]
             : [desc(products.createdAt)]),
+        // Desempate fijo: la lista se carga de a tandas al scrollear y, sin él,
+        // productos importados en el mismo instante podían repetirse o faltar.
+        desc(products.id),
       )
       .limit(perPage)
       .offset((page - 1) * perPage),
@@ -138,6 +164,8 @@ export type ProductPatch = {
   stock?: number;
   featured?: boolean;
   badge?: string | null;
+  /** "Hay que cambiar la foto" (ver `photo-checks.ts`). */
+  photoFlagged?: boolean;
 };
 
 /** Valida y aplica cambios operativos. Devuelve error legible o null si ok. */
@@ -160,12 +188,14 @@ export async function updateAdminProduct(slug: string, patch: ProductPatch): Pro
     const badge = (patch.badge ?? "").trim().slice(0, 40) || null;
     set.badge = badge;
   }
-  if (Object.keys(set).length === 0) return "Nada para actualizar.";
+  const flag = typeof patch.photoFlagged === "boolean" ? patch.photoFlagged : undefined;
+  if (Object.keys(set).length === 0 && flag === undefined) return "Nada para actualizar.";
   // Los slugs con `%` literal (restos de la migración) llegan crudos o
   // decodificados según la ruta: se resuelven con las variantes de encoding.
   const existing = await findProductBySlug(slug);
   if (!existing) return "Producto inexistente.";
-  await db.update(products).set(set).where(eq(products.slug, existing.slug));
+  if (Object.keys(set).length) await db.update(products).set(set).where(eq(products.slug, existing.slug));
+  if (flag !== undefined) await setPhotoFlag(existing.id, flag);
   return null;
 }
 
@@ -208,7 +238,7 @@ export type AdminProductCreateInput = {
   secondaryCategorySlugs?: string[];
   shortDescription?: string;
   description?: string;
-  /** Solo en edición: HTML de la descripción migrada de WooCommerce. Se sanea. */
+  /** HTML de la descripción migrada de WooCommerce (edición, o alta copiada de uno migrado). Se sanea. */
   descriptionHtml?: string;
   images?: string[];
   badge?: string | null;
@@ -368,7 +398,8 @@ async function normalizeProductInput(
 
 /**
  * Alta manual de producto (origen `manual`, protegido del prune de `migrate-wp`).
- * La descripción del form es texto plano: `descriptionHtml` queda vacío y
+ * La descripción del form es texto plano; `descriptionHtml` solo viene (saneado)
+ * cuando el producto se armó a partir de uno migrado ("Usar como base"), y
  * `imageSrcSets` son arrays vacíos por foto (la galería tolera srcsets vacíos
  * y pinta el `<img>` directo). Devuelve error legible en español o el slug.
  */
@@ -388,8 +419,7 @@ export async function createAdminProduct(raw: AdminProductCreateInput): Promise<
       .values({
         ...values,
         slug,
-        // Texto plano por ahora: el alta no edita HTML.
-        descriptionHtml: "",
+        descriptionHtml: values.descriptionHtml ?? "",
         // Sin variantes locales: un array vacío por foto, que la galería
         // (`srcSets[index] ?? []`) y `ProductImg` (`srcSet = []`) toleran.
         imageSrcSets: values.images!.map(() => []),
@@ -485,6 +515,7 @@ export async function updateAdminProductFull(slug: string, raw: AdminProductCrea
     .update(products)
     .set({ ...values, imageSrcSets, origin: "manual" })
     .where(eq(products.id, existing.id));
+  await clearPhotoFlagIfMainChanged(existing.id, existing.images[0], values.images?.[0]);
 
   await db.delete(productCategories).where(eq(productCategories.productId, existing.id));
   await db
@@ -598,4 +629,72 @@ export async function restoreAdminProduct(slug: string): Promise<string | null> 
   });
   if (!restoredOk) return "No se pudo restaurar.";
   return null;
+}
+
+/** Marcas del catálogo, las más usadas primero, para reconocerlas en el nombre de un producto nuevo. */
+export async function listKnownBrands(): Promise<string[]> {
+  const rows = await db
+    .select({ brand: products.brand, n: sql<number>`count(*)::int` })
+    .from(products)
+    .groupBy(products.brand)
+    .orderBy(desc(sql`count(*)`))
+    .limit(300);
+  return rows.map((r) => r.brand.trim()).filter((b) => b && b.toLowerCase() !== "general");
+}
+
+export type SimilarProduct = Pick<
+  AdminProductEditData,
+  | "slug"
+  | "name"
+  | "brand"
+  | "categorySlug"
+  | "secondaryCategorySlugs"
+  | "shortDescription"
+  | "description"
+  | "descriptionHtml"
+  | "highlights"
+  | "specs"
+  | "tags"
+  | "warrantyMonths"
+  | "weight"
+  | "dimensions"
+> & { image: string };
+
+/**
+ * Hasta 3 productos ya cargados con el mismo modelo que `name`, para usarlos
+ * de base al dar de alta uno nuevo (otra memoria, otro color). Busca con todas
+ * las palabras del modelo y, si no encuentra, con menos.
+ */
+export async function findSimilarProducts(name: string, terms: string[]): Promise<SimilarProduct[]> {
+  if (!name.trim() || !terms.length) return [];
+  let slugs: string[] = [];
+  for (let k = terms.length; k >= Math.min(2, terms.length) && !slugs.length; k -= 1) {
+    const rows = await db
+      .select({ slug: products.slug })
+      .from(products)
+      .where(and(...terms.slice(0, k).map((t) => ilike(products.name, `%${t}%`))))
+      .orderBy(desc(products.id))
+      .limit(3);
+    slugs = rows.map((r) => r.slug);
+  }
+  const full = await Promise.all(slugs.map((slug) => getAdminProductForEdit(slug)));
+  return full
+    .filter((p): p is AdminProductEditData => p !== null)
+    .map((p) => ({
+      slug: p.slug,
+      name: p.name,
+      brand: p.brand,
+      categorySlug: p.categorySlug,
+      secondaryCategorySlugs: p.secondaryCategorySlugs,
+      shortDescription: p.shortDescription,
+      description: p.description,
+      descriptionHtml: p.descriptionHtml,
+      highlights: p.highlights,
+      specs: p.specs,
+      tags: p.tags,
+      warrantyMonths: p.warrantyMonths,
+      weight: p.weight,
+      dimensions: p.dimensions,
+      image: p.images?.[0] ?? "",
+    }));
 }

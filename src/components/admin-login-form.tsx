@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
+import { safeAdminPath } from "@/lib/customer-session";
+
 const ERRORS: Record<string, string> = {
   email:
     "Ese email de Google no tiene acceso al panel. Pedile a un dueño que te agregue en Accesos.",
@@ -21,7 +23,7 @@ export function AdminLoginForm({
 }) {
   const router = useRouter();
   const params = useSearchParams();
-  const next = params.get("next") || "/admin";
+  const next = safeAdminPath(params.get("next"));
   const [password, setPassword] = useState("");
   const [error, setError] = useState(ERRORS[params.get("error") ?? ""] ?? "");
   const [loading, setLoading] = useState(false);
@@ -108,7 +110,7 @@ export function AdminLoginForm({
         ) : null}
         {google && passwordEnabled ? (
           <p className="mt-4 text-center text-[11px] font-bold uppercase tracking-wide text-ink-400">
-            o con la contraseña
+            o con la clave de administrador
           </p>
         ) : null}
         {!google && !passwordEnabled ? (
@@ -123,7 +125,7 @@ export function AdminLoginForm({
             className={`${google ? "mt-3" : "mt-5"} space-y-3`}
           >
             <label className="block">
-              <span className="text-xs font-bold text-ink-600">Contraseña</span>
+              <span className="text-xs font-bold text-ink-600">Clave de administrador</span>
               <input
                 type="password"
                 value={password}

@@ -5,18 +5,19 @@ import { Suspense } from "react";
 
 import { ActiveFilters, FiltersPanel, SortSelect } from "@/components/catalog-filters";
 import { CategoryIcon } from "@/components/category-icon";
-import { CategoryChips, EmptyResults, Pagination } from "@/components/catalog-ui";
+import { EmptyResults, Pagination } from "@/components/catalog-ui";
 import { ProductCard } from "@/components/product-card";
+import { SubcategoryCarousel } from "@/components/subcategory-carousel";
 import { mergedCategoryRedirect } from "@/lib/category-merges";
 import { money } from "@/lib/format";
 import { toView } from "@/lib/product-view";
 import { categoryFaq, categoryItemListJsonLd, faqPageJsonLd } from "@/lib/category-seo";
 import { breadcrumbJsonLd, jsonLdString } from "@/lib/structured-data";
+import { sanitizeHtml } from "@/lib/sanitize-html";
 import {
   getBrandFacets,
   getCategoryByPath,
   getCategoryPriceStats,
-  getCategoryTree,
   listProducts,
 } from "@/lib/queries";
 
@@ -122,7 +123,7 @@ export default async function CategoryPage({
   const stock = pick(query, "stock") === "1";
 
   const PER_PAGE = 24;
-  const [brands, result, tree, priceStats] = await Promise.all([
+  const [brands, result, priceStats] = await Promise.all([
     getBrandFacets(node.id),
     listProducts({
       categoryId: node.id,
@@ -135,7 +136,6 @@ export default async function CategoryPage({
       onlyOffers: ofertas,
       inStock: stock,
     }),
-    getCategoryTree(),
     getCategoryPriceStats(node.id),
   ]);
 
@@ -251,21 +251,11 @@ export default async function CategoryPage({
         </p>
       </header>
 
-      <CategoryChips items={tree.map((c) => ({ slug: c.slug, name: c.name, path: c.path }))} activePath={breadcrumb[0]?.path} />
-
       {children.length ? (
-        <nav className="mb-6 flex flex-wrap gap-2" aria-label={`Subcategorías de ${node.name}`}>
-          {children.map((child) => (
-            <Link
-              key={child.id}
-              href={`/categoria/${child.path}`}
-              className="inline-flex items-center gap-1.5 rounded-full border border-ink-200 bg-surface px-3.5 py-1.5 text-sm font-semibold text-ink-700 transition hover:border-brand-300 hover:text-brand-700"
-            >
-              {child.name}
-              <span className="text-[11px] font-normal text-ink-500">{child.count}</span>
-            </Link>
-          ))}
-        </nav>
+        <SubcategoryCarousel
+          label={`Subcategorías de ${node.name}`}
+          items={children.map((child) => ({ id: String(child.id), name: child.name, path: child.path, count: child.count }))}
+        />
       ) : null}
 
       <div className="grid gap-6 lg:grid-cols-[17rem_minmax(0,1fr)]">
@@ -340,7 +330,7 @@ export default async function CategoryPage({
         <section className="card-surface mt-8 p-6">
           <div
             className="prose-cd prose-soft"
-            dangerouslySetInnerHTML={{ __html: node.descriptionHtml }}
+            dangerouslySetInnerHTML={{ __html: sanitizeHtml(node.descriptionHtml) }}
           />
         </section>
       ) : null}

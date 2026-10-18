@@ -24,21 +24,28 @@ const SECRET = "secreto-de-prueba";
 process.env.MP_ACCESS_TOKEN = "TEST-token";
 
 let pagoSimulado: Record<string, unknown> = {};
+const consultados: string[] = [];
 const fetchReal = globalThis.fetch;
 globalThis.fetch = (async (input: string | URL | Request) => {
   const url = String(input instanceof Request ? input.url : input);
-  if (url.startsWith("https://api.mercadopago.com/v1/payments/")) return Response.json(pagoSimulado);
+  if (url.startsWith("https://api.mercadopago.com/v1/payments/")) {
+    consultados.push(url.slice("https://api.mercadopago.com/v1/payments/".length));
+    return Response.json(pagoSimulado);
+  }
   return fetchReal(input);
 }) as typeof fetch;
 
-function aviso(paymentId: string, { secret = SECRET, firma }: { secret?: string; firma?: string } = {}): Request {
+function aviso(
+  paymentId: string,
+  { secret = SECRET, firma, idEnBody = paymentId }: { secret?: string; firma?: string; idEnBody?: string } = {},
+): Request {
   const ts = String(Date.now());
   const requestId = crypto.randomUUID();
   const v1 = firma ?? crypto.createHmac("sha256", secret).update(`id:${paymentId};request-id:${requestId};ts:${ts};`).digest("hex");
   return new Request(`http://localhost:3000/api/webhooks/mercadopago?data.id=${paymentId}&type=payment`, {
     method: "POST",
     headers: { "content-type": "application/json", "x-signature": `ts=${ts},v1=${v1}`, "x-request-id": requestId },
-    body: JSON.stringify({ type: "payment", data: { id: paymentId } }),
+    body: JSON.stringify({ type: "payment", data: { id: idEnBody } }),
   });
 }
 
@@ -160,4 +167,19 @@ test("un pago que no es de Mercado Pago no se acredita por este camino", async (
   pagoSimulado = { id: 560, status: "approved", external_reference: order.code, transaction_amount: 100_000 };
   await enviar(aviso("560"));
   assert.equal((await estado(order.id)).order.status, "pendiente_pago");
+});
+
+test("se concilia el id firmado, no el que dice el body", async () => {
+  const order = await crearPedido(50_000);
+  pagoSimulado = { id: 777, status: "approved", external_reference: order.code, transaction_amount: 50_000 };
+  consultados.length = 0;
+  assert.equal(await enviar(aviso("777", { idEnBody: "999" })), 200);
+  assert.deepEqual(consultados, ["777"]);
+  assert.equal((await estado(order.id)).order.status, "pago_confirmado");
+});
+
+test("un id firmado que no es numérico no se consulta a Mercado Pago", async () => {
+  consultados.length = 0;
+  assert.equal(await enviar(aviso("../users/me")), 200);
+  assert.deepEqual(consultados, []);
 });

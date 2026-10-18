@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 import type { AutomationId } from "@/lib/automations";
@@ -16,6 +17,7 @@ export function AdminAutomations({ rows }: { rows: AutomationView[] }) {
   const [state, setState] = useState<Record<string, boolean>>(() => Object.fromEntries(rows.map((r) => [r.id, r.enabled])));
   const [busy, setBusy] = useState<string | null>(null);
   const [error, setError] = useState("");
+  const router = useRouter();
 
   async function toggle(id: AutomationId) {
     const enabled = !state[id];
@@ -33,6 +35,8 @@ export function AdminAutomations({ rows }: { rows: AutomationView[] }) {
         return;
       }
       setState(data.automations);
+      // El resto de la página (por ejemplo, los productos de la portada) depende de los interruptores.
+      router.refresh();
     } catch {
       setError("Error de red. Probá de nuevo.");
     } finally {

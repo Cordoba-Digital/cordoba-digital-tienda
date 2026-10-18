@@ -7,7 +7,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { normalizeSearch, understandQuery, type QueryCategory } from "../../src/lib/query-understanding";
+import { normalizeSearch, suggestCategories, understandQuery, type QueryCategory } from "../../src/lib/query-understanding";
 
 const cat = (id: number, name: string, path: string, parentId: number | null = null, count = 10): QueryCategory => ({
   id,
@@ -74,4 +74,19 @@ test("la marca de varias palabras gana a la corta", () => {
 
 test("con un error de tipeo no inventa nada y busca las palabras", () => {
   assert.deepEqual(understandQuery("celuar samsng", catalogo), { category: null, brand: null, terms: ["celuar", "samsng"] });
+});
+
+test("sugerencias del buscador: alcanza con el comienzo de la palabra", () => {
+  assert.deepEqual(
+    suggestCategories("celu", catalogo).map((c) => c.id),
+    [1, 3],
+  );
+  assert.deepEqual(suggestCategories("cámar", catalogo).map((c) => c.id), [7]);
+});
+
+test("sugerencias del buscador: la marca no cuenta y las vacías no aparecen", () => {
+  assert.equal(suggestCategories("celular samsung", catalogo)[0]?.id, 1);
+  assert.deepEqual(suggestCategories("samsung", catalogo), []);
+  const vacia = { ...catalogo, categories: [cat(9, "Celulares Viejos", "celulares-viejos", null, 0), ...catalogo.categories] };
+  assert.ok(!suggestCategories("celular", vacia).some((c) => c.id === 9));
 });

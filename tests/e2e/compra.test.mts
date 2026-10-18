@@ -45,7 +45,14 @@ before(async () => {
   await seedProduct("auriculares-prueba", PRECIO, 5);
 
   servidor = spawn("node_modules/.bin/next", ["start", "-p", String(PUERTO)], {
-    env: { ...process.env, MP_ACCESS_TOKEN: "", NEXT_TELEMETRY_DISABLED: "1" },
+    env: {
+      ...process.env,
+      MP_ACCESS_TOKEN: "",
+      NEXT_TELEMETRY_DISABLED: "1",
+      TRANSFER_CBU: "0000003100012345678901",
+      TRANSFER_ALIAS: "tienda.prueba.cd",
+      TRANSFER_TITULAR: "Titular de prueba",
+    },
     stdio: ["ignore", "pipe", "pipe"],
   });
   servidor.stdout?.on("data", (d) => (salidaServidor += d));
@@ -80,14 +87,25 @@ test("un cliente compra desde la ficha y el pedido queda en la base", async () =
   await page.getByLabel(/^Email/).fill("ana@example.com");
   await page.getByLabel("Teléfono / WhatsApp").fill("351 555 1234");
   await page.getByLabel("DNI o CUIT").fill("30123456");
+  // El checkout va por pasos: cada "Continuar" pliega el paso y abre el siguiente.
+  await page.getByRole("button", { name: /Continuar a la entrega/ }).click();
   await page.getByRole("button", { name: /Retiro en el local/ }).click();
+  await page.getByRole("button", { name: /Continuar al pago/ }).click();
   await page.getByRole("button", { name: /Transferencia bancaria/ }).click();
+  // Los datos para transferir se ven antes de confirmar, sin pedirlos por WhatsApp.
+  await page.getByText("Datos para transferir").waitFor();
+  await page.getByText("tienda.prueba.cd").waitFor();
   await page.getByRole("checkbox", { name: /Acepto los términos/ }).check();
   await page.getByRole("button", { name: /^Confirmar pedido/ }).click();
 
   await page.waitForURL(/\/pedido\/CD-[A-Z2-9]{6}\?nuevo=1$/);
-  await page.getByRole("heading", { name: "¡Gracias Ana! Tu pedido está confirmado" }).waitFor();
+  // Transferencia sin pagar: no está confirmado hasta que la plata se acredita.
+  // El código va como reserva y abajo, cómo pagarla; sin "gracias".
   const code = new URL(page.url()).pathname.split("/").pop()!;
+  await page.getByRole("heading", { level: 1, name: code }).waitFor();
+  await page.getByText("Código de reserva", { exact: true }).waitFor();
+  await page.getByRole("heading", { name: "Cómo completar tu pago" }).waitFor();
+  assert.equal(await page.getByText(/Gracias/).count(), 0);
 
   const [order] = await db.select().from(schema.orders).where(eq(schema.orders.code, code));
   assert.ok(order, `no está el pedido ${code} en la base`);

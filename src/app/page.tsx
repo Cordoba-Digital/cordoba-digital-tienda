@@ -8,9 +8,9 @@ import {
   ExternalLink,
   LayoutGrid,
   MapPin,
+  MessageCircle,
   Phone,
   Store,
-  Timer,
   Trophy,
   Truck,
   Wallet,
@@ -18,28 +18,35 @@ import {
 
 import { CategoryRow } from "@/components/category-row";
 import { Icon } from "@/components/category-icon";
-import { Countdown } from "@/components/countdown";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { HomeHero } from "@/components/home-hero";
-import { NewsletterForm } from "@/components/newsletter-form";
+import { HomeCategoryTabs, HomeExplore, HomeRecentlyViewed } from "@/components/home-sections";
+import { HomeTiles } from "@/components/home-tiles";
 import { ProductRow } from "@/components/product-card";
 import { SectionHeading } from "@/components/ui";
 import { discountPercent } from "@/lib/format";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { visibleHomeBlocks, type HomeBlockId } from "@/lib/home-layout";
-import { getHomeLayout } from "@/lib/home-layout-server";
+import type { HeroSlideId } from "@/lib/hero-picks";
+import { getHeroPicks } from "@/lib/hero-picks-server";
+import { getHomeLayout, getTopBarVisible } from "@/lib/home-layout-server";
 import { toView } from "@/lib/product-view";
+import { renderPerRequestIfNoDatabase } from "@/lib/store-cache";
 import { jsonLdString, storeJsonLd } from "@/lib/structured-data";
 import {
   getBestSellers,
+  getCategoryShowcase,
+  getCategoryTiles,
   getCategoryTree,
   getDealProducts,
   getFeaturedProducts,
   getGuides,
   getProductCount,
+  listProducts,
 } from "@/lib/queries";
 
-export const dynamic = "force-dynamic";
+/** En la caché del CDN, regenerada cada 5 minutos o al cambiar algo desde el panel. */
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   // La home no tenía canonical y era la única que se indexaba sin señalar
@@ -92,7 +99,12 @@ const FAQ = [
 ];
 
 export default async function HomePage() {
-  const [featured, deals, bestSellers, categories, googleReviews, productCount, guides, layout] = await Promise.all([
+  await renderPerRequestIfNoDatabase();
+  const layout = await getHomeLayout();
+  const visible = visibleHomeBlocks(layout);
+  // Los bloques nuevos piden datos aparte: si están ocultos, no se consultan.
+  const wantsTiles = visible.includes("vitrinas") || visible.includes("vitrinas-2");
+  const [featured, deals, bestSellers, categories, googleReviews, productCount, guides, showcase, explore, tiles, topBar] = await Promise.all([
     getFeaturedProducts(24),
     getDealProducts(8),
     getBestSellers(8),
@@ -100,18 +112,39 @@ export default async function HomePage() {
     getGoogleReviews(),
     getProductCount(),
     getGuides(),
-    getHomeLayout(),
+    visible.includes("por-categoria") ? getCategoryShowcase() : Promise.resolve([]),
+    visible.includes("explorar") ? listProducts({ inStock: true, perPage: 10 }) : Promise.resolve(null),
+    wantsTiles ? getCategoryTiles(6) : Promise.resolve([]),
+    getTopBarVisible(),
   ]);
+  const tileViews = tiles.map((tile) => ({ ...tile, products: tile.products.map(toView) }));
+  // Con una sola vitrina visible, esa usa las tres categorías principales.
+  const secondTiles = visible.includes("vitrinas") ? tileViews.slice(3, 6) : tileViews.slice(0, 3);
 
   const ratingValue = googleReviews.rating?.toFixed(1) ?? null;
   const reviewCount = googleReviews.count;
-  // Hero de 5 slides: principal, oferta, más vendido, envío y pago. Mismo
-  // mapeo que la propuesta original, sobre los queries del deploy.
-  const heroMain = featured[0] ? toView(featured[0]) : null;
-  const heroDeal = deals[0] ? toView(deals[0]) : null;
-  const heroBest = bestSellers[0] ? toView(bestSellers[0]) : null;
-  const heroShipping = featured[1] ? toView(featured[1]) : null;
-  const heroPayment = featured[2] ? toView(featured[2]) : null;
+  // Hero de 5 slides: principal, oferta, más vendido, envío y pago. Cada uno
+  // elige su producto solo (Panel → Automatizaciones, ver `lib/hero-picks.ts`);
+  // con la automatización apagada se usa el mapeo de siempre, que va de respaldo.
+  const hero = await getHeroPicks({
+    inicio: featured[0],
+    ofertas: deals[0],
+    vendidos: bestSellers[0],
+    envios: featured[1],
+    pagos: featured[2],
+  }).catch((error) => {
+    console.warn("[portada] no se pudo elegir el carrusel, uso el de siempre:", error instanceof Error ? error.message : error);
+    return null;
+  });
+  const heroView = (id: HeroSlideId, before: Parameters<typeof toView>[0] | undefined) => {
+    const product = hero ? hero[id]?.product : before;
+    return product ? toView(product) : null;
+  };
+  const heroMain = heroView("inicio", featured[0]);
+  const heroDeal = heroView("ofertas", deals[0]);
+  const heroBest = heroView("vendidos", bestSellers[0]);
+  const heroShipping = heroView("envios", featured[1]);
+  const heroPayment = heroView("pagos", featured[2]);
   const heroMaxOff = Math.max(0, ...deals.map((d) => discountPercent(d.price, d.compareAtPrice)));
   // "Destacados" y "Más vendidos" caían al mismo fallback (lo más nuevo con
   // stock) y mostraban los mismos productos. Acá se excluyen los ya mostrados
@@ -119,9 +152,9 @@ export default async function HomePage() {
   const bestSlugs = new Set(bestSellers.map((p) => p.slug));
   const dealSlugs = new Set(deals.map((p) => p.slug));
   const featuredPicks = featured.filter((p) => !bestSlugs.has(p.slug) && !dealSlugs.has(p.slug)).slice(0, 8);
-  const visible = visibleHomeBlocks(layout);
-  // Los accesos apuntan al bloque del local solo si está en la home.
-  const pickupHref = visible.includes("local") ? "#local" : "/ayuda";
+  // Los accesos apuntan al bloque del local, o a la franja que también lo
+  // nombra, solo si están en la home.
+  const pickupHref = visible.includes("local") ? "#local" : visible.includes("pagos-retiro") ? "#comprar-tranquilo" : "/ayuda";
 
   /*
    * Cada bloque de la home, por id. El orden y cuáles se muestran salen de
@@ -131,11 +164,11 @@ export default async function HomePage() {
     portada: () => (
       <>
           {/*
-            Hero y cintillo comparten el mismo fondo oscuro (`mesh-dark` vive acá y
-            no en el carrusel): el negro baja hasta el borde inferior del cintillo,
-            con corte recto, en vez de partirlo mitad oscuro y mitad crema.
+            Hero y cintillo comparten el mismo fondo crema de marca (`mesh-warm` vive
+            acá y no en el carrusel): baja hasta el borde inferior del cintillo, con
+            corte recto.
           */}
-          <div className="mesh-dark">
+          <div className="mesh-warm">
             <HomeHero
               productCount={productCount}
               ratingValue={ratingValue}
@@ -150,22 +183,24 @@ export default async function HomePage() {
 
             {/*
               Cintillo de confianza: una caja blanca que pisa el hero. El `z-10` la
-              saca del orden normal para que la sombra caiga sobre el fondo oscuro.
+              saca del orden normal para que la sombra caiga sobre el fondo del hero.
             */}
-            <section className="relative z-10 -mt-6 sm:-mt-8">
+            {/* En el celular va solo si la barra de avisos está apagada: si no,
+                la barra ya rota estos mismos mensajes y acá se repetían. */}
+            <section className={`relative z-10 -mt-8 ${topBar ? "hidden sm:block" : "max-sm:mt-0 max-sm:pb-1"}`}>
               <div className="container-xl">
-                <div className="grid overflow-hidden rounded-2xl bg-surface shadow-[0_20px_50px_-30px_rgba(20,22,28,0.45)] ring-1 ring-black/5 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="grid grid-cols-4 overflow-hidden rounded-2xl bg-surface shadow-[0_20px_50px_-30px_rgba(20,22,28,0.45)] ring-1 ring-black/5 sm:grid-cols-2 lg:grid-cols-4">
                   {TRUST.map((t, i) => (
                     <div
                       key={t.title}
-                      className={`flex gap-3 p-4 sm:p-5 ${i > 0 ? "border-t border-ink-100 sm:border-t-0 sm:border-l sm:border-ink-100" : ""}`}
+                      className={`flex flex-col items-center gap-1 border-ink-100 px-1 py-2.5 text-center sm:flex-row sm:items-start sm:gap-3 sm:p-5 sm:text-left ${i > 0 ? "max-sm:border-l" : ""} ${i % 2 ? "sm:border-l" : ""} ${i > 1 ? "sm:border-t lg:border-t-0" : ""} ${i === 2 ? "lg:border-l" : ""}`}
                     >
-                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-700">
-                        <Icon name={t.icon} className="h-[18px] w-[18px]" />
+                      <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brand-50 text-brand-700 sm:h-10 sm:w-10 sm:rounded-xl">
+                        <Icon name={t.icon} className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
                       </span>
                       <div>
-                        <p className="text-sm font-bold text-ink-900">{t.title}</p>
-                        <p className="mt-0.5 text-xs leading-relaxed text-ink-500">{t.text}</p>
+                        <p className="text-balance text-[11px] font-bold leading-tight text-ink-900 sm:text-sm">{t.title}</p>
+                        <p className="mt-0.5 hidden text-xs leading-relaxed text-ink-500 sm:block">{t.text}</p>
                       </div>
                     </div>
                   ))}
@@ -175,14 +210,17 @@ export default async function HomePage() {
           </div>
       </>
     ),
+    vistos: () => <HomeRecentlyViewed />,
     accesos: () => (
       <>
         {/*
           Accesos rápidos (el "dynamic access" de Mercado Libre): atajos a lo que
           más se busca, sin pasar por el menú.
         */}
-        <nav aria-label="Accesos rápidos" className="container-xl pt-10">
-          <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5">
+        <nav aria-label="Accesos rápidos" className="container-xl pt-4 sm:pt-10">
+          {/* En el celular son íconos redondos con su nombre abajo, como los de
+              Mercado Libre: entran los cinco en una fila sin deslizar. */}
+          <ul className="no-scrollbar -mx-4 flex snap-x justify-between gap-1 overflow-x-auto px-4 pb-1 sm:mx-0 sm:grid sm:grid-cols-3 sm:gap-2.5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-5">
             {[
               { href: "/productos?ofertas=1", icon: BadgePercent, title: "Ofertas", text: heroMaxOff > 0 ? `Hasta ${heroMaxOff}% OFF` : "Precios de la semana" },
               { href: "/productos?orden=vendidos", icon: Trophy, title: "Más vendidos", text: "El ranking del depósito" },
@@ -190,17 +228,17 @@ export default async function HomePage() {
               { href: pickupHref, icon: Store, title: "Retiro en el local", text: "27 de Abril 180" },
               { href: "/ayuda", icon: Truck, title: "Envíos y pagos", text: "Andreani a todo el país" },
             ].map((a) => (
-              <li key={a.title}>
+              <li key={a.title} className="w-[66px] shrink-0 snap-start sm:w-auto">
                 <Link
                   href={a.href}
-                  className="flex h-full items-center gap-3 rounded-2xl bg-surface p-3.5 ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-lg"
+                  className="flex h-full flex-col items-center gap-1.5 text-center transition sm:flex-row sm:gap-3 sm:rounded-2xl sm:bg-surface sm:p-3.5 sm:text-left sm:ring-1 sm:ring-black/5 sm:hover:-translate-y-0.5 sm:hover:shadow-lg"
                 >
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-700">
-                    <a.icon size={18} aria-hidden />
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-surface text-brand-700 shadow-sm ring-1 ring-black/5 sm:h-10 sm:w-10 sm:rounded-xl sm:bg-brand-50 sm:shadow-none sm:ring-0">
+                    <a.icon size={20} aria-hidden />
                   </span>
                   <span className="min-w-0">
-                    <span className="block text-sm font-bold text-ink-900">{a.title}</span>
-                    <span className="block text-xs leading-snug text-ink-500">{a.text}</span>
+                    <span className="block text-[11px] font-semibold leading-tight text-ink-700 sm:text-sm sm:font-bold sm:text-ink-900">{a.title}</span>
+                    <span className="hidden text-xs leading-snug text-ink-500 sm:block">{a.text}</span>
                   </span>
                 </Link>
               </li>
@@ -216,7 +254,7 @@ export default async function HomePage() {
             de la base. La foto, el dron y el CCTV van por separado, para que no
             confundas una cosa con otra.
           */}
-          <section id="categorias" className="container-xl py-14">
+          <section id="categorias" className="container-xl py-5 sm:py-10">
             <SectionHeading
               eyebrow="Explorá"
               title="Categorías"
@@ -235,30 +273,29 @@ export default async function HomePage() {
     ),
     ofertas: () => (
       <>
-          {/* Ofertas: panel oscuro redondeado con el contador a la derecha. */}
+          {/* Ofertas: panel crema de marca con las mayores rebajas reales. */}
           <section id="ofertas" className="container-xl">
-            <div className="rounded-[28px] bg-ink px-4 py-6 text-white sm:px-6 sm:py-8">
-              <div className="flex flex-wrap items-end justify-between gap-4">
-                <div>
-                  <p className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-300">
-                    <Timer size={13} aria-hidden /> Ofertas relámpago
+            <div className="mesh-warm -mx-1 rounded-2xl px-3 py-4 ring-1 ring-brand-100 sm:mx-0 sm:rounded-[28px] sm:px-6 sm:py-8">
+              <div className="flex items-end justify-between gap-3 sm:flex-wrap sm:gap-4">
+                <div className="min-w-0">
+                  <p className="hidden items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-700 sm:inline-flex">
+                    <BadgePercent size={13} aria-hidden /> Ofertas
                   </p>
-                  <h2 className="mt-1 text-2xl font-extrabold tracking-tight sm:text-3xl">
-                    Los descuentos más grandes de la semana
+                  <h2 className="text-lg font-extrabold leading-tight tracking-tight text-ink-900 sm:mt-1 sm:text-3xl">
+                    Los descuentos más grandes de la tienda
                   </h2>
-                  <p className="mt-1 max-w-xl text-sm text-white/60">
-                    Stock limitado en depósito. A la medianoche, hora Córdoba, estos precios vuelven a la lista.
+                  {/* Sin cuenta regresiva: los precios no cambian a la medianoche,
+                      y anunciar un vencimiento que no existe es publicidad engañosa. */}
+                  <p className="mt-1 hidden max-w-xl text-sm text-ink-500 sm:block">
+                    Productos con precio rebajado y stock en el depósito, de mayor a menor descuento.
                   </p>
                 </div>
-                <div className="text-right">
-                  <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white/40">Termina en</p>
-                  {/* El contador va con `tono="oscuro"`: el panel es `bg-ink` y las
-                      cajitas de los digitos necesitan el tono claro de la variante
-                      oscura para no desvanecerse en el fondo. */}
-                  <Countdown label="" tono="oscuro" />
-                </div>
+                <Link href="/productos?ofertas=1" className="inline-flex shrink-0 items-center gap-1 text-[13px] font-bold text-brand-700 hover:text-brand-800 sm:gap-1.5 sm:text-sm">
+                  <span className="sm:hidden">Ver todas</span>
+                  <span className="hidden sm:inline">Ver todas las ofertas</span> <ArrowRight size={14} aria-hidden />
+                </Link>
               </div>
-              <div className="mt-6">
+              <div className="mt-3 sm:mt-6">
                 <ProductRow products={deals.map(toView)} label="las ofertas" />
               </div>
             </div>
@@ -267,40 +304,62 @@ export default async function HomePage() {
     ),
     "pagos-retiro": () => (
       <>
-          <section className="container-xl grid gap-4 py-8 md:grid-cols-2">
-            <article className="rounded-[28px] bg-surface p-6 ring-1 ring-black/5">
-              <div className="mb-4 h-1 w-14 rounded-full bg-emerald-500" />
-              <Wallet size={22} className="text-emerald-700" aria-hidden />
-              <h3 className="mt-3 text-xl font-extrabold tracking-tight text-ink-900">Transferencia o efectivo en el local</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-500">
-                Te mostramos el CBU cuando confirmás el pedido, no antes. En el local también podés pagar en efectivo o seña.
-                Nunca te pedimos una clave, un código ni un token por chat.
-              </p>
-              <Link href="/ayuda" className="mt-4 inline-block text-sm font-bold text-brand-700 hover:text-brand-800">
-                Ver medios de pago
-              </Link>
-            </article>
-            <article className="rounded-[28px] bg-surface p-6 ring-1 ring-black/5">
-              <div className="mb-4 h-1 w-14 rounded-full bg-brand-500" />
-              <Store size={22} className="text-brand-700" aria-hidden />
-              <h3 className="mt-3 text-xl font-extrabold tracking-tight text-ink-900">Retiro en el local</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-500">
-                Comprá online y retirá en {DIRECCION}. {HORARIOS}. Probamos el equipo con vos antes de que te lo lleves.
-              </p>
-              <a href={WHATSAPP} className="mt-4 inline-block text-sm font-bold text-brand-700 hover:text-brand-800">
-                Avisar que paso a retirar
-              </a>
-            </article>
+          {/*
+            Franja corta de confianza, como la de Tiendamia: tres columnas con
+            un ícono, una línea y un enlace. Reemplaza a las dos tarjetas de
+            pagos y retiro y a la sección grande del local.
+          */}
+          <section id="comprar-tranquilo" aria-label="Comprá tranquilo" className="container-xl py-4 sm:py-8">
+            <ul className="grid divide-y divide-ink-100 rounded-2xl bg-surface ring-1 ring-black/5 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+              {[
+                {
+                  icon: Wallet,
+                  title: "Pagá como te quede cómodo",
+                  text: "Transferencia bancaria, o efectivo y seña en el local. El CBU lo ves al confirmar el pedido: nunca te pedimos claves por chat.",
+                  link: { href: "/ayuda", label: "Ver medios de pago", external: false },
+                },
+                {
+                  icon: Store,
+                  title: "Retirá en el local",
+                  text: `${DIRECCION}. ${HORARIOS}. Probamos el equipo con vos antes de que te lo lleves.`,
+                  link: { href: MAPS, label: "Cómo llegar", external: true },
+                },
+                {
+                  icon: MessageCircle,
+                  title: "Hablá con una persona",
+                  text: "Antes o después de comprar te atendemos por WhatsApp, por mail o en el local. Sin call center.",
+                  link: { href: WHATSAPP, label: "Escribinos por WhatsApp", external: true },
+                },
+              ].map((item) => (
+                <li key={item.title} className="flex gap-3 p-4 sm:flex-col sm:items-center sm:gap-2 sm:p-6 sm:text-center">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-700">
+                    <item.icon size={20} aria-hidden />
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="text-[15px] font-extrabold tracking-tight text-ink-900">{item.title}</h3>
+                    <p className="mt-1 text-[13px] leading-relaxed text-ink-500">{item.text}</p>
+                    <a
+                      href={item.link.href}
+                      {...(item.link.external ? { target: "_blank", rel: "noreferrer" } : {})}
+                      className="mt-2 inline-block text-[13px] font-bold text-brand-700 hover:text-brand-800"
+                    >
+                      {item.link.label}
+                    </a>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </section>
       </>
     ),
+    vitrinas: () => <HomeTiles tiles={tileViews.slice(0, 3)} label="Categorías destacadas" />,
+    "vitrinas-2": () => <HomeTiles tiles={secondTiles} mirror label="Más categorías" />,
     "mas-vendidos": () => (
       <>
-          <section className="container-xl py-6">
+          <section className="container-xl py-5 sm:py-6">
             <SectionHeading
-              eyebrow="Elegidos por los cordobeses"
+              eyebrow="Lo más elegido por la gente"
               title="Los más vendidos"
-              description="Lo que más sale de nuestro depósito esta semana, con stock confirmado."
               action={{ href: "/productos?orden=vendidos", label: "Ver ranking" }}
             />
             <ProductRow
@@ -311,10 +370,18 @@ export default async function HomePage() {
           </section>
       </>
     ),
+    "por-categoria": () =>
+      showcase.length ? (
+        <HomeCategoryTabs
+          tabs={showcase.map((tab) => ({ name: tab.name, path: tab.path, count: tab.count, products: tab.products.map(toView) }))}
+        />
+      ) : null,
+    explorar: () =>
+      explore ? <HomeExplore initial={explore.items.map(toView)} total={explore.total} hasMore={explore.pages > 1} /> : null,
     local: () => (
       <>
-          <section id="local" className="container-xl grid gap-4 py-12 lg:grid-cols-2">
-            <div className="relative flex min-h-[560px] flex-col justify-end overflow-hidden rounded-[28px] bg-ink text-white">
+          <section id="local" className="container-xl grid gap-3 py-6 sm:gap-4 sm:py-12 lg:grid-cols-2">
+            <div className="relative flex min-h-[340px] flex-col justify-end overflow-hidden rounded-2xl sm:min-h-[560px] sm:rounded-[28px] bg-ink text-white">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/local-cordoba-1400.jpg"
@@ -326,7 +393,7 @@ export default async function HomePage() {
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/5" />
-              <div className="relative z-10 space-y-3 px-6 pb-6 pt-8">
+              <div className="relative z-10 space-y-2 px-4 pb-4 pt-8 sm:space-y-3 sm:px-6 sm:pb-6">
                 <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/45">Local a la calle</p>
                 <h3 className="text-2xl font-extrabold">Córdoba Digital</h3>
                 <p className="flex items-start gap-2 text-sm text-white/80">
@@ -363,23 +430,23 @@ export default async function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center rounded-[28px] bg-surface p-6 ring-1 ring-black/5 sm:p-8">
+            <div className="flex flex-col justify-center rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-[28px] sm:p-8">
               <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Online + local a la calle</p>
-              <h2 className="mt-2 text-3xl font-extrabold leading-[1.1] tracking-tight text-ink-900">
+              <h2 className="mt-1 text-xl font-extrabold leading-[1.15] tracking-tight text-ink-900 sm:mt-2 sm:text-3xl sm:leading-[1.1]">
                 Comprás por internet, pero hay gente real del otro lado
               </h2>
-              <p className="mt-3 text-sm leading-relaxed text-ink-500">
+              <p className="mt-2 text-[13px] leading-relaxed text-ink-500 sm:mt-3 sm:text-sm">
                 Combinamos la agilidad del e-commerce con la confianza de atender en el centro. Si algo falla, no discutís
                 con un chatbot: venís al local o nos escribís por WhatsApp y lo resolvemos.
               </p>
-              <ul className="mt-5 space-y-3">
+              <ul className="mt-3 space-y-2 sm:mt-5 sm:space-y-3">
                 {[
                   "Probamos el equipo con vos antes de que te lo lleves",
                   "Servicio técnico y gestión de garantía en Córdoba",
                   "Asesoramiento para elegir el modelo correcto",
                   "Emitimos factura o comprobante de compra",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm font-medium text-ink-700">
+                  <li key={item} className="flex items-start gap-2.5 text-[13px] font-medium text-ink-700 sm:text-sm">
                     <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-emerald-50 text-emerald-700">
                       <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                         <path d="M5 12l5 5L20 7" />
@@ -389,7 +456,7 @@ export default async function HomePage() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-2 sm:mt-6">
                 <a
                   href={MAPS}
                   target="_blank"
@@ -418,7 +485,6 @@ export default async function HomePage() {
               <SectionHeading
                 eyebrow="Selección del equipo"
                 title="Destacados de la semana"
-                description="Lo que recomendaríamos si nos preguntás por rendimiento, precio y disponibilidad real."
                 action={{ href: "/productos", label: "Ver catálogo" }}
               />
               <ProductRow products={featuredPicks.map(toView)} label="los destacados" />
@@ -429,24 +495,24 @@ export default async function HomePage() {
     guias: () => (
       <>
           {guides.length > 0 ? (
-            <section className="container-xl py-12">
+            <section className="container-xl py-6 sm:py-12">
               <SectionHeading
                 eyebrow="Antes de comprar"
                 title="Guías cortas, sin relleno"
                 action={{ href: "/ayuda", label: "Centro de ayuda" }}
               />
-              <div className="grid gap-3 md:grid-cols-3">
+              <div className="grid gap-2 sm:gap-3 md:grid-cols-3">
                 {guides.slice(0, 3).map((g) => (
                   <Link
                     key={g.slug}
                     href={`/${g.slug}`}
-                    className="rounded-[24px] bg-surface p-5 ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-lg"
+                    className="rounded-2xl bg-surface p-4 ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-lg sm:rounded-[24px] sm:p-5"
                   >
                     <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700">Guía de compra</p>
-                    <h3 className="mt-2 text-lg font-extrabold tracking-tight text-ink-900">{g.title}</h3>
+                    <h3 className="mt-1 text-base font-extrabold tracking-tight text-ink-900 sm:mt-2 sm:text-lg">{g.title}</h3>
                     {/* Sin bajada: el `subtitle` de la guia es el titulo de SEO en
                         mayusculas y repetiria el titulo de la tarjeta. */}
-                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-ink-900">
+                    <span className="mt-2 inline-flex items-center gap-1 text-sm font-bold text-ink-900 sm:mt-4">
                       Leer <ArrowRight size={14} aria-hidden />
                     </span>
                   </Link>
@@ -458,28 +524,16 @@ export default async function HomePage() {
     ),
     preguntas: () => (
       <>
-          <section id="preguntas" className="container-xl grid gap-4 pb-16 lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="rounded-[28px] bg-surface p-5 ring-1 ring-black/5 sm:p-7">
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Antes de comprar</p>
-              <h2 className="mt-1 text-2xl font-extrabold tracking-tight text-ink-900">Preguntas frecuentes</h2>
-              <div className="mt-3">
-                <FaqAccordion items={FAQ} variant="plano" />
-              </div>
-              <Link href="/ayuda" className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">
-                Centro de ayuda <ArrowRight size={14} aria-hidden />
-              </Link>
-            </div>
-            <div className="flex flex-col justify-between rounded-[28px] bg-ink p-6 text-white sm:p-7">
+          <section id="preguntas" className="container-xl py-6 sm:py-10">
+            <div className="grid gap-4 rounded-2xl bg-surface p-4 ring-1 ring-black/5 sm:rounded-[28px] sm:p-7 lg:grid-cols-[0.8fr_1.2fr] lg:gap-10">
               <div>
-                <p className="inline-flex rounded-full bg-white/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-white/70">
-                  Newsletter
-                </p>
-                <h3 className="mt-4 text-2xl font-extrabold tracking-tight">Novedades y ofertas de Córdoba Digital</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/65">Ingresos de depósito y ofertas fuertes. No un mail por día.</p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Antes de comprar</p>
+                <h2 className="mt-1 text-xl font-extrabold tracking-tight text-ink-900 sm:text-2xl">Preguntas frecuentes</h2>
+                <Link href="/ayuda" className="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">
+                  Centro de ayuda <ArrowRight size={14} aria-hidden />
+                </Link>
               </div>
-              <div className="mt-6">
-                <NewsletterForm />
-              </div>
+              <FaqAccordion items={FAQ} variant="plano" />
             </div>
           </section>
       </>

@@ -37,6 +37,7 @@
     "verificar:claims-guias": "tsx scripts/verificar-claims-guias.ts",
     "verificar:menu": "node scripts/verificar-menu-categorias.mjs",
     "subcategorias": "tsx scripts/subcategorias.ts",
+    "marcas": "tsx scripts/completar-marcas.ts",
     "categorias:limpiar": "tsx scripts/limpiar-categorias.ts",
     "fichas": "tsx scripts/fichas.ts",
     "garantia": "tsx scripts/garantia.ts",

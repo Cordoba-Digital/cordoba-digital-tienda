@@ -12,6 +12,8 @@ import { validateDelivery, validatePersonalData } from "@/lib/checkout-validatio
 import { findShippingOption, normalizeZip, type DeliveryMethod } from "@/lib/shipping";
 import { preciosAndreani } from "@/lib/shipping-andreani";
 import { andreaniConfigurado, AndreaniError, sucursales } from "@/lib/andreani";
+import { findOrderByCheckoutKey, isCheckoutKeyConflict, parseCheckoutKey } from "@/lib/checkout-idempotency";
+import { blockedMinutes, CHECKOUT_LIMIT, COUPON_LIMIT, ipFromHeaders, recordMiss, tooManyAttempts } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -38,6 +40,8 @@ type CheckoutBody = {
   payment?: { method?: PaymentMethodId; installments?: number };
   couponCode?: string | null;
   notes?: string;
+  /** Clave del intento de compra (ver `checkout-idempotency.ts`). */
+  checkoutKey?: string;
 };
 
 function orderCode(): string {
@@ -58,6 +62,10 @@ function text(value: unknown): string {
 }
 
 export async function POST(request: Request) {
+  const ip = ipFromHeaders(request.headers);
+  const blocked = await blockedMinutes(CHECKOUT_LIMIT, ip);
+  if (blocked) return tooManyAttempts(blocked);
+
   // `?? {}` cubre un body `null`; `text` evita un 500 si un campo no es texto.
   const body = ((await request.json().catch(() => ({}))) ?? {}) as CheckoutBody;
   const errors: Record<string, string> = {};
@@ -123,9 +131,24 @@ export async function POST(request: Request) {
     return Response.json({ ok: false, errors }, { status: 400 });
   }
 
+  // El mismo intento ya creó un pedido (la respuesta se perdió o llegó un
+  // doble toque): se devuelve ese, sin reservar stock ni usar el cupón de nuevo.
+  const checkoutKey = parseCheckoutKey(body.checkoutKey);
+  if (checkoutKey) {
+    const existing = await findOrderByCheckoutKey(checkoutKey, email);
+    if (existing) return Response.json({ ok: true, code: existing.code, total: existing.total });
+  }
+
   // El cupón se pide temprano y se espera tarde: es independiente de la
   // validación de productos y así las dos consultas viajan juntas.
-  const couponCode = text(body.couponCode);
+  // Un cupón que no existe se ignora (el pedido sale sin descuento), pero
+  // cuenta como intento fallido igual que en /api/coupon: si no, el total que
+  // devuelve el checkout serviría para adivinar códigos a fuerza bruta.
+  const couponCode = text(body.couponCode).slice(0, 40);
+  if (couponCode) {
+    const couponBlocked = await blockedMinutes(COUPON_LIMIT, ip);
+    if (couponBlocked) return tooManyAttempts(couponBlocked);
+  }
   const couponPromise = couponCode ? getCoupon(couponCode) : null;
 
   const slugs = items.map((i) => i.slug);
@@ -159,6 +182,7 @@ export async function POST(request: Request) {
   const subtotal = validated.reduce((acc, item) => acc + item.unitPrice * item.quantity, 0);
 
   const coupon = couponPromise ? await couponPromise : null;
+  if (couponCode && !coupon) await recordMiss(COUPON_LIMIT, ip);
   const couponInfo = coupon
     ? {
         code: coupon.code,
@@ -242,6 +266,7 @@ export async function POST(request: Request) {
         total: totals.total,
         couponCode: couponInfo?.code ?? null,
         notes: text(body.notes).slice(0, 500),
+        checkoutKey,
       })
       .returning({ id: orders.id, code: orders.code });
 
@@ -267,8 +292,20 @@ export async function POST(request: Request) {
     return order;
   }).catch((error: unknown) => {
     if (error instanceof CouponGoneError) return error;
+    // Dos envíos con la misma clave llegaron juntos y el otro guardó primero:
+    // esta transacción se deshizo entera y se responde con el pedido del otro.
+    if (checkoutKey && isCheckoutKeyConflict(error)) return null;
     throw error;
   });
+
+  if (created === null) {
+    const existing = checkoutKey ? await findOrderByCheckoutKey(checkoutKey, email) : null;
+    // La clave es de un pedido con otro email: no se muestra, se pide reintentar.
+    if (!existing) {
+      return Response.json({ ok: false, error: "No pudimos procesar el pedido. Probá de nuevo." }, { status: 409 });
+    }
+    return Response.json({ ok: true, code: existing.code, total: existing.total });
+  }
 
   if (created instanceof CouponGoneError) {
     return Response.json(
@@ -277,5 +314,6 @@ export async function POST(request: Request) {
     );
   }
 
+  await recordMiss(CHECKOUT_LIMIT, ip);
   return Response.json({ ok: true, code: created.code, total: totals.total });
 }

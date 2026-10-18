@@ -3,11 +3,13 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { AdminPaymentVerify } from "@/components/admin-payment-verify";
+import { AdminStatusBadge } from "@/components/admin-ui";
 import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { listAdminPayments, PAYMENT_FLAG_LABEL, type PaymentFlag } from "@/lib/admin-payments";
 import { money } from "@/lib/format";
+import { mercadoPagoReady } from "@/lib/mercadopago";
 import { statusLabel } from "@/lib/pricing";
 
 export const dynamic = "force-dynamic";
@@ -36,6 +38,8 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
   if (!(await verifyAdminSessionValue(jar.get(ADMIN_COOKIE)?.value))) {
     redirect("/admin/login?next=/admin/pagos");
   }
+  // Sin Mercado Pago no hay cobros que conciliar: los pedidos se ven en Pedidos.
+  if (!mercadoPagoReady()) redirect("/admin/pedidos");
 
   const sp = await searchParams;
   const first = (v: string | string[] | undefined): string => (Array.isArray(v) ? (v[0] ?? "") : (v ?? ""));
@@ -48,8 +52,10 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <h1 className="text-2xl font-black text-ink-900">Pagos — Mercado Pago</h1>
+      <div>
+        <p className="text-[13px] text-adm-muted">Ventas</p>
+        <h1 className="mt-1 text-[28px] font-semibold leading-tight tracking-[-0.02em] text-adm-fg sm:text-[30px]">Pagos</h1>
+        <p className="mt-1 max-w-2xl text-sm text-ink-500">Cobros de Mercado Pago y su conciliación con los pedidos.</p>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -88,7 +94,7 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
           placeholder="Código, email o cliente…"
           className="min-w-52 flex-1 border border-ink-200 bg-surface px-3 py-2 text-sm"
         />
-        <select name="flag" defaultValue={flag} className="border border-ink-200 bg-surface px-3 py-2 text-sm">
+        <select name="flag" defaultValue={flag} aria-label="Filtrar por alerta" className="border border-ink-200 bg-surface px-3 py-2 text-sm">
           <option value="">Todos</option>
           {FLAGS.map((f) => (
             <option key={f} value={f}>
@@ -133,9 +139,7 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
                   </td>
                   <td className="px-3 py-2 font-black">{money(row.total)}</td>
                   <td className="px-3 py-2">
-                    <Pill solid tone={row.status === "pendiente_pago" ? "amber" : "brand"}>
-                      {statusLabel(row.status)}
-                    </Pill>
+                    <AdminStatusBadge status={row.status} />
                   </td>
                   <td className="px-3 py-2 text-xs text-ink-500">
                     <span className="block">Pref: {row.preferenceId ?? "—"}</span>

@@ -14,6 +14,7 @@ const { db, pool, resetDb, schema } = await import("./db.mts");
 const { createAdminSessionValue } = await import("../../src/lib/admin-auth");
 const { addAdminAccess } = await import("../../src/lib/admin-access");
 const { DELETE, GET } = await import("../../src/app/api/admin/orders/route");
+const usuario = await import("../../src/app/api/admin/users/[id]/route");
 const { middleware } = await import("../../middleware");
 
 const BASE = "http://localhost:3000";
@@ -78,6 +79,24 @@ test("el dueño borra todos los pedidos solo con la confirmación", async () => 
   assert.equal(res.status, 200);
   assert.equal((await res.json()).deleted, 1);
   assert.equal((await db.select().from(schema.orders)).length, 0);
+});
+
+test("borrar la cuenta de un cliente es solo para dueños", async () => {
+  const [cliente] = await db
+    .insert(schema.users)
+    .values({ googleSub: "google-123", email: "cliente@example.com", name: "Cliente" })
+    .returning({ id: schema.users.id });
+  const borrarCuenta = async (cookieHeader: string) =>
+    usuario.DELETE(
+      new Request(`${BASE}/api/admin/users/${cliente.id}`, { method: "DELETE", headers: { cookie: cookieHeader, origin: BASE } }),
+    );
+
+  await addAdminAccess("empleado@example.com", "duenio@example.com");
+  assert.equal((await borrarCuenta(await cookie("empleado@example.com"))).status, 403);
+  assert.equal((await db.select().from(schema.users)).length, 1);
+
+  assert.equal((await borrarCuenta(await cookie("duenio@example.com"))).status, 200);
+  assert.equal((await db.select().from(schema.users)).length, 0);
 });
 
 test("middleware: escritura en /api/admin desde otro origen responde 403", async () => {

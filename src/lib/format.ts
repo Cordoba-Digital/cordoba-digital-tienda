@@ -78,9 +78,13 @@ export function installmentValue(totalPesos: PesosARS, count: number): number {
 // `free_shipping = false`. La única entrega sin cargo es el retiro en el local,
 // que de verdad es gratis.
 
+/** El servidor corre en UTC: las fechas se muestran siempre con la hora de Córdoba. */
+const STORE_TZ = "America/Argentina/Cordoba";
+
 export function formatDate(value: Date | string): string {
   const date = typeof value === "string" ? new Date(value) : value;
   return new Intl.DateTimeFormat("es-AR", {
+    timeZone: STORE_TZ,
     day: "2-digit",
     month: "long",
     year: "numeric",
@@ -90,12 +94,33 @@ export function formatDate(value: Date | string): string {
 export function formatDateTime(value: Date | string): string {
   const date = typeof value === "string" ? new Date(value) : value;
   return new Intl.DateTimeFormat("es-AR", {
+    timeZone: STORE_TZ,
     day: "2-digit",
     month: "2-digit",
     year: "numeric",
     hour: "2-digit",
     minute: "2-digit",
   }).format(date);
+}
+
+/** "hace 5 min", "hace 3 h", "ayer 18:40", "lunes 10:15" o "12/10 09:30" (hora de Córdoba). */
+export function formatAgo(value: Date | string, now = new Date()): string {
+  const date = typeof value === "string" ? new Date(value) : value;
+  const minutes = Math.floor((now.getTime() - date.getTime()) / 60_000);
+  if (minutes < 1) return "recién";
+  if (minutes < 60) return `hace ${minutes} min`;
+  if (minutes < 6 * 60) return `hace ${Math.floor(minutes / 60)} h`;
+  const day = (d: Date) => new Intl.DateTimeFormat("en-CA", { timeZone: STORE_TZ }).format(d);
+  const time = new Intl.DateTimeFormat("es-AR", { timeZone: STORE_TZ, hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(date);
+  const yesterday = new Date(now.getTime() - 24 * 60 * 60_000);
+  if (day(date) === day(now)) return `hoy ${time}`;
+  if (day(date) === day(yesterday)) return `ayer ${time}`;
+  if (minutes < 6 * 24 * 60) {
+    const weekday = new Intl.DateTimeFormat("es-AR", { timeZone: STORE_TZ, weekday: "long" }).format(date);
+    return `${weekday} ${time}`;
+  }
+  const short = new Intl.DateTimeFormat("es-AR", { timeZone: STORE_TZ, day: "2-digit", month: "2-digit" }).format(date);
+  return `${short} ${time}`;
 }
 
 export function addBusinessDays(days: number, from = new Date()): Date {

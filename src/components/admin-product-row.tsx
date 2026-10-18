@@ -3,11 +3,13 @@
 import Link from "next/link";
 import { useState } from "react";
 
+import { AdminDotBadge } from "@/components/admin-ui";
 import { ProductImg } from "@/components/product-img";
 import { money } from "@/lib/format";
 import type { AdminProductRow } from "@/lib/admin-products";
+import { isSmallPhoto } from "@/lib/image-dimensions";
 
-export function AdminProductRow({ product }: { product: AdminProductRow }) {
+export function AdminProductRow({ product, categoryName }: { product: AdminProductRow; categoryName?: string }) {
   const [price, setPrice] = useState(String(product.price));
   const [stock, setStock] = useState(String(product.stock));
   const [featured, setFeatured] = useState(product.featured);
@@ -15,6 +17,8 @@ export function AdminProductRow({ product }: { product: AdminProductRow }) {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
   const [saved, setSaved] = useState("");
+  const [photoFlagged, setPhotoFlagged] = useState(product.photoFlagged);
+  const [flagging, setFlagging] = useState(false);
 
   const dirty =
     Number(price) !== product.price ||
@@ -51,42 +55,86 @@ export function AdminProductRow({ product }: { product: AdminProductRow }) {
     }
   }
 
+  /** "Hay que cambiar la foto": se guarda al toque, sin el botón Guardar. */
+  async function toggleFlag() {
+    const next = !photoFlagged;
+    setFlagging(true);
+    setError("");
+    try {
+      const res = await fetch(`/api/admin/products/${encodeURIComponent(product.slug)}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ photoFlagged: next }),
+      });
+      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
+      if (!res.ok || !data.ok) {
+        setError(data.error ?? "No se pudo marcar la foto.");
+        return;
+      }
+      setPhotoFlagged(next);
+    } catch {
+      setError("Error de red.");
+    } finally {
+      setFlagging(false);
+    }
+  }
+
+  const photo = { width: product.photoWidth, height: product.photoHeight };
+  const photoState = !product.image
+    ? { label: "Sin foto", color: "#ff8a8a" }
+    : photoFlagged
+      ? { label: "Foto para cambiar", color: "#f5b544" }
+      : isSmallPhoto(photo)
+        ? { label: `Foto chica · ${photo.width}×${photo.height}`, color: "#f5b544" }
+        : null;
+
   // Estado según lo que está escrito, así se ve el cambio antes de guardar.
   const units = Number(stock) || 0;
   const stockState =
     units <= 0
-      ? { label: "Sin stock", dot: "bg-red-600", text: "text-red-600" }
+      ? { label: "Sin stock", color: "#ff8a8a" }
       : units <= 3
-        ? { label: "Pocos", dot: "bg-amber-500", text: "text-ink-700" }
-        : { label: "Disponible", dot: "bg-emerald-600", text: "text-ink-700" };
+        ? { label: `Poco stock · ${units}`, color: "#f5b544" }
+        : { label: `En stock · ${units}`, color: "#6ee79a" };
+  // La barrita llena se alcanza con 40 unidades; es solo una referencia visual.
+  const fill = Math.min(100, (units / 40) * 100);
 
   const field =
-    "w-full border border-ink-200 bg-surface px-2 py-1.5 text-sm text-ink-900 outline-none focus:border-brand-400";
+    "h-9 w-full border border-ink-200 bg-surface px-3 text-sm text-ink-900 outline-none focus:border-brand-400";
 
   return (
     <div
       role="row"
-      className="grid grid-cols-2 gap-x-3 gap-y-2 border-b border-ink-100 px-4 py-3 last:border-0 hover:bg-ink-50/50 sm:grid-cols-4 lg:grid-cols-[minmax(0,1fr)_8.5rem_6.5rem_8.5rem_6rem] lg:items-start lg:gap-4"
+      className="grid grid-cols-2 gap-x-3 gap-y-2 border-t border-adm-fg/[0.06] px-5 py-3.5 transition-[background-color] duration-150 hover:bg-adm-fg/[0.035] sm:grid-cols-4 lg:grid-cols-[minmax(0,1fr)_8.5rem_8rem_9rem_6.5rem] lg:items-start lg:gap-4"
     >
-      <div role="cell" className="col-span-2 flex min-w-0 items-center gap-3 sm:col-span-4 lg:col-span-1">
-        <div className="h-12 w-12 shrink-0 overflow-hidden bg-ink-50">
+      <div role="cell" className="col-span-2 flex min-w-0 items-center gap-3.5 sm:col-span-4 lg:col-span-1">
+        <div className="h-11 w-11 shrink-0 overflow-hidden rounded-xl border border-adm-fg/[0.08] bg-white">
           <ProductImg
             src={product.image}
             alt=""
-            sizes="48px"
-            width={48}
-            height={48}
-            className="h-12 w-12 object-cover"
+            sizes="44px"
+            width={44}
+            height={44}
+            className="h-11 w-11 object-contain"
           />
         </div>
         <div className="min-w-0">
-          <p className="line-clamp-2 text-sm font-semibold leading-snug text-ink-900" title={product.name}>
+          <Link
+            href={`/admin/productos/${encodeURIComponent(product.slug)}`}
+            className="line-clamp-2 text-sm font-medium leading-snug text-adm-fg hover:text-adm-accent"
+            title={product.name}
+          >
             {product.name}
+          </Link>
+          <p className="truncate text-xs text-adm-muted">
+            {product.brand} · {categoryName || product.categorySlug}
           </p>
-          <p className="truncate text-xs text-ink-500">
-            {product.brand} · {product.sku || "sin SKU"}
-          </p>
-          <p className="truncate text-xs text-ink-400">{product.categorySlug}</p>
+          <p className="admin-mono truncate text-[11px] text-adm-faint">{product.sku || "sin SKU"}</p>
+          {photoState ? (
+            <AdminDotBadge color={photoState.color} className="mt-1 !px-2 !py-0 text-[11px]">
+              {photoState.label}
+            </AdminDotBadge>
+          ) : null}
         </div>
       </div>
       <div role="cell" className="min-w-0">
@@ -94,23 +142,27 @@ export function AdminProductRow({ product }: { product: AdminProductRow }) {
           inputMode="numeric"
           value={price.replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
           onChange={(e) => setPrice(e.target.value.replace(/[^0-9]/g, ""))}
-          className={`${field} font-bold`}
+          className={`${field} admin-mono`}
           aria-label={`Precio de ${product.name}`}
         />
-        <p className="mt-0.5 truncate text-xs text-ink-500">{money(product.price)} actual</p>
+        <p className="mt-1 truncate text-xs text-adm-faint">{money(product.price)} actual</p>
       </div>
       <div role="cell" className="min-w-0">
         <input
           inputMode="numeric"
           value={stock}
           onChange={(e) => setStock(e.target.value.replace(/[^0-9]/g, ""))}
-          className={`${field} font-bold`}
+          className={`${field} admin-mono`}
           aria-label={`Stock de ${product.name}`}
         />
-        <p className={`mt-1 flex items-center gap-1.5 text-xs font-semibold ${stockState.text}`}>
-          <span className={`h-2 w-2 shrink-0 rounded-full ${stockState.dot}`} aria-hidden />
-          {stockState.label}
-        </p>
+        <div className="mt-1.5">
+          <AdminDotBadge color={stockState.color} className="!px-2 !py-0 text-[11px]">
+            {stockState.label}
+          </AdminDotBadge>
+          <span className="mt-1.5 block h-[3px] w-full overflow-hidden rounded-full bg-adm-fg/[0.08]" aria-hidden>
+            <span className="block h-full rounded-full" style={{ width: `${fill}%`, backgroundColor: stockState.color }} />
+          </span>
+        </div>
       </div>
       <div role="cell" className="min-w-0">
         <input
@@ -121,8 +173,13 @@ export function AdminProductRow({ product }: { product: AdminProductRow }) {
           className={field}
           aria-label={`Etiqueta de ${product.name}`}
         />
-        <label className="mt-1.5 flex cursor-pointer items-center gap-1.5 text-xs font-semibold text-ink-600">
-          <input type="checkbox" checked={featured} onChange={(e) => setFeatured(e.target.checked)} className="h-4 w-4 accent-brand-700" />
+        <label className="mt-2 flex cursor-pointer items-center gap-2 text-xs text-adm-muted">
+          <input type="checkbox" checked={featured} onChange={(e) => setFeatured(e.target.checked)} className="peer sr-only" />
+          {/* Interruptor: naranja cuando el producto va destacado en la tienda. */}
+          <span
+            aria-hidden
+            className="relative h-5 w-9 shrink-0 rounded-full bg-adm-fg/[0.12] transition-colors duration-150 after:absolute after:left-0.5 after:top-0.5 after:h-4 after:w-4 after:rounded-full after:bg-white after:transition-transform after:duration-150 peer-checked:bg-brand-500 peer-checked:after:translate-x-4 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-adm-accent"
+          />
           Destacado
         </label>
       </div>
@@ -131,16 +188,26 @@ export function AdminProductRow({ product }: { product: AdminProductRow }) {
           type="button"
           onClick={save}
           disabled={saving || !dirty}
-          className="w-full border border-brand-700 bg-brand-700 px-3 py-2 text-xs font-bold text-white transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-brand-800 disabled:cursor-default disabled:border-ink-200 disabled:bg-surface disabled:text-ink-400"
+          className="h-9 w-full rounded-full bg-[linear-gradient(180deg,#ff7440,#f15a24)] px-3 text-xs font-semibold text-[#14161c] transition-[filter,opacity] duration-150 hover:brightness-110 disabled:cursor-default disabled:bg-none disabled:bg-adm-fg/[0.05] disabled:text-adm-faint"
         >
           {saving ? "…" : saved || "Guardar"}
         </button>
         <Link
           href={`/admin/productos/${encodeURIComponent(product.slug)}`}
-          className="w-full border border-ink-200 px-3 py-2 text-center text-xs font-bold text-ink-700 transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:border-brand-300"
+          className="inline-flex h-9 w-full items-center justify-center rounded-full border border-adm-fg/10 bg-adm-fg/[0.04] px-3 text-xs text-adm-soft transition-[background-color] duration-150 hover:bg-adm-fg/[0.09]"
         >
           Editar
         </Link>
+        <button
+          type="button"
+          onClick={toggleFlag}
+          disabled={flagging}
+          aria-pressed={photoFlagged}
+          title={photoFlagged ? "Sacar la marca" : "La foto es de baja calidad o no corresponde al producto"}
+          className="text-xs text-adm-muted underline-offset-2 transition-colors duration-150 hover:text-adm-fg hover:underline disabled:opacity-60"
+        >
+          {flagging ? "…" : photoFlagged ? "Desmarcar foto" : "Marcar foto"}
+        </button>
         {error ? <p role="alert" className="text-xs font-semibold text-red-600">{error}</p> : null}
       </div>
     </div>

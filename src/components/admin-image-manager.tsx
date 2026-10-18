@@ -340,6 +340,7 @@ export function AdminImageManager({
               type="file"
               accept="image/*"
               multiple
+              aria-label="Subir fotos"
               className="sr-only"
               tabIndex={-1}
               onChange={(e) => {

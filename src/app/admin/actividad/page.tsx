@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { fieldLabel, listAdminActivity, type ActivityRow } from "@/lib/admin-audit";
+import { activitySummary, actorName } from "@/lib/admin-actor";
 
 export const dynamic = "force-dynamic";
 
@@ -19,6 +20,7 @@ const ENTITIES = [
   { id: "acceso", label: "Accesos" },
   { id: "cupon", label: "Cupones" },
   { id: "automatizacion", label: "Automatizaciones" },
+  { id: "error", label: "Errores" },
 ];
 
 const when = new Intl.DateTimeFormat("es-AR", {
@@ -46,6 +48,7 @@ function entityLink(row: ActivityRow): string | null {
   if (row.entityType === "acceso") return "/admin/accesos";
   if (row.entityType === "cupon") return "/admin/cupones";
   if (row.entityType === "automatizacion") return "/admin/automatizaciones";
+  if (row.entityType === "error") return "/admin/errores";
   if (row.entityType === "inicio") return "/admin/inicio";
   return null;
 }
@@ -72,8 +75,8 @@ export default async function AdminActivityPage({ searchParams }: { searchParams
   return (
     <div className="space-y-6">
       <div>
-        <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Admin · Registro</p>
-        <h1 className="mt-1 text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">Actividad</h1>
+        <p className="text-[13px] text-adm-muted">Registro</p>
+        <h1 className="mt-1 text-[28px] font-semibold leading-tight tracking-[-0.02em] text-adm-fg sm:text-[30px]">Actividad</h1>
         <p className="mt-1 text-sm text-ink-500">Quién cambió qué y cuándo. {total} movimientos.</p>
       </div>
 
@@ -92,11 +95,11 @@ export default async function AdminActivityPage({ searchParams }: { searchParams
         {actors.length > 1 ? (
           <form action="/admin/actividad" method="get" className="ml-auto flex gap-2">
             {entity ? <input type="hidden" name="tipo" value={entity} /> : null}
-            <select name="quien" defaultValue={actor} className="border border-ink-200 bg-surface px-3 py-1.5 text-xs text-ink-900">
+            <select name="quien" defaultValue={actor} aria-label="Filtrar por persona" className="border border-ink-200 bg-surface px-3 py-1.5 text-xs text-ink-900">
               <option value="">Todas las personas</option>
               {actors.map((a) => (
                 <option key={a} value={a}>
-                  {a}
+                  {actorName(a)}
                 </option>
               ))}
             </select>
@@ -119,16 +122,16 @@ export default async function AdminActivityPage({ searchParams }: { searchParams
                 <li key={row.id} className="grid gap-1 border-b border-ink-100 px-4 py-3 last:border-0 sm:grid-cols-[8.5rem_minmax(0,1fr)] sm:gap-4">
                   <div className="text-xs text-ink-500">
                     <p className="font-semibold text-ink-700">{when.format(new Date(row.at))}</p>
-                    <p className="truncate" title={row.actor}>{row.actor}</p>
+                    <p className="truncate" title={actorName(row.actor)}>{actorName(row.actor)}</p>
                   </div>
                   <div className="min-w-0">
                     <p className="text-sm font-semibold text-ink-900">
                       {link ? (
                         <Link href={link} className="hover:text-brand-700 hover:underline">
-                          {row.summary}
+                          {activitySummary(row.summary)}
                         </Link>
                       ) : (
-                        row.summary
+                        activitySummary(row.summary)
                       )}
                     </p>
                     {changes.length ? (

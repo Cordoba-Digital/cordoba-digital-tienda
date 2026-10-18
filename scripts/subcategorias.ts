@@ -22,6 +22,7 @@ import "dotenv/config";
 import { and, eq, inArray, isNull, or, sql } from "drizzle-orm";
 
 import { categories, productCategories, products } from "@/db/schema";
+import { marcaDesdeNombre } from "@/lib/brand-from-name";
 
 const FALLBACK_BRAND = "General";
 const MIN_PRODUCTOS = 3;
@@ -140,70 +141,13 @@ export const PLAN: PlanCategoria[] = [
   // productos) y Calefacción (uno solo). La diferencia es la marca o el modelo.
 ];
 
-/**
- * Marcas que se buscan en el nombre cuando WooCommerce no la tenía cargada.
- * Se toma la que aparece primero en el nombre. La forma escrita acá es la que
- * se guarda.
- */
-const MARCAS = [
-  // Climatización
-  "Samsung", "Hisense", "BGH", "Kanji", "Peabody", "Philco", "Surrey", "Midea", "LG", "Liliana",
-  "Atma", "Electrolux", "TCL", "Noblex", "Gree", "Carrier", "York", "Whirlpool", "Axel",
-  "Ultracomb", "Punktal", "Daewoo", "Westinghouse", "Sansei", "Siam", "Coventry", "Electra",
-  "Telefunken", "Candy", "Enova", "Necchi", "Winco", "Smartlife", "Yelmo", "Magiclick", "Kacemaster",
-  "Embassy", "Oryx", "Alpaca", "Hitachi", "Hyundai",
-  // Herramientas
-  "Black+Decker", "Dewalt", "Makita", "Bosch", "Stanley", "Gamma", "Dowen Pagio", "Lusqtoff",
-  "Einhell", "Skil", "Bauker", "Truper", "Niwa", "Barovo", "Ingco", "Karcher", "Kassel", "Airbender",
-  "Waggs", "Etheos", "TRV",
-  // Drones, monopatines, consolas, handies, muebles
-  "DJI", "Xiaomi", "Segway", "Ninebot", "Daihatsu", "Sony", "Baofeng", "Kenwood", "Motorola",
-  "Yaesu", "Icom", "Retevis", "Cougar", "Corsair", "Redragon", "Logitech", "Delos", "Xtrike Me",
-  "Netmak", "Level Up", "Meta", "Nintendo", "Everlast", "ELF", "Boya", "Amazon", "X-Shot",
-];
-
-/** Variantes del nombre que también cuentan como la marca. */
-const ALIAS: Record<string, string> = {
-  "black & decker": "Black+Decker",
-  "black and decker": "Black+Decker",
-  "black decker": "Black+Decker",
-  "de walt": "Dewalt",
-  dahiatsu: "Daihatsu",
-  xtrike: "Xtrike Me",
-  playstation: "Sony",
-  dualsense: "Sony",
-  dualshock: "Sony",
-};
-
 const normalizar = (s: string) =>
   s
     .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/\s+/g, " ")
     .trim();
-
-const escapar = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-const PATRONES_MARCA: { re: RegExp; marca: string }[] = [
-  ...MARCAS.map((m) => ({ re: new RegExp(`(^|[^a-z0-9])${escapar(normalizar(m))}([^a-z0-9]|$)`), marca: m })),
-  ...Object.entries(ALIAS).map(([alias, marca]) => ({
-    re: new RegExp(`(^|[^a-z0-9])${escapar(alias)}([^a-z0-9]|$)`),
-    marca,
-  })),
-];
-
-export function marcaDesdeNombre(nombre: string): string | null {
-  const n = normalizar(nombre);
-  let mejor: { pos: number; marca: string } | null = null;
-  for (const { re, marca } of PATRONES_MARCA) {
-    const m = re.exec(n);
-    if (!m) continue;
-    const pos = m.index + m[1].length;
-    if (!mejor || pos < mejor.pos) mejor = { pos, marca };
-  }
-  return mejor?.marca ?? null;
-}
 
 export function clasificar(nombre: string, reglas: Regla[]): Regla | null {
   const n = normalizar(nombre);

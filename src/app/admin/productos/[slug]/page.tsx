@@ -11,8 +11,15 @@ import { getAdminProductForEdit, listProductCategories } from "@/lib/admin-produ
 
 export const dynamic = "force-dynamic";
 
-export default async function EditAdminProductPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function EditAdminProductPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
   const { slug } = await params;
+  const justCreated = (await searchParams).creado === "1";
   const jar = await cookies();
   if (!(await verifyAdminSessionValue(jar.get(ADMIN_COOKIE)?.value))) {
     redirect(`/admin/login?next=${encodeURIComponent(`/admin/productos/${slug}`)}`);
@@ -26,8 +33,8 @@ export default async function EditAdminProductPage({ params }: { params: Promise
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <AdminBackLink fallback="/admin/productos" />
-          <p className="mt-2 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-700">Admin · Catálogo</p>
-          <h1 className="mt-1 text-2xl font-black tracking-tight text-ink-900 sm:text-3xl">Editar producto</h1>
+          <p className="mt-2 text-[13px] text-adm-muted">Catálogo</p>
+          <h1 className="mt-1 text-[28px] font-semibold leading-tight tracking-[-0.02em] text-adm-fg sm:text-[30px]">Editar producto</h1>
           <p className="mt-1 text-sm text-ink-500">
             <Link href={`/producto/${product.slug}`} className="font-semibold text-brand-700 hover:underline" target="_blank">
               Ver en la tienda ↗
@@ -37,6 +44,16 @@ export default async function EditAdminProductPage({ params }: { params: Promise
         </div>
         <AdminProductArchiveButton slug={product.slug} mode="archive" />
       </div>
+
+      {justCreated ? (
+        <div role="status" className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm">
+          <p className="font-semibold text-emerald-800">Producto creado y publicado en la tienda.</p>
+          <div className="flex flex-wrap gap-3 font-bold">
+            <Link href={`/producto/${product.slug}`} target="_blank" className="text-emerald-800 hover:underline">Verlo en la tienda ↗</Link>
+            <Link href="/admin/productos/nuevo" className="text-emerald-800 hover:underline">Cargar otro</Link>
+          </div>
+        </div>
+      ) : null}
 
       <AdminProductForm categories={categories} initial={product} />
     </div>

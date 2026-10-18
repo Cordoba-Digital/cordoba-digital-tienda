@@ -3,6 +3,7 @@ import { and, eq, sql } from "drizzle-orm";
 import { db } from "@/db";
 import { orderItems, orders, products, reviews } from "@/db/schema";
 import { blockedMinutes, ipFromHeaders, recordMiss, REVIEW_LIMIT, tooManyAttempts } from "@/lib/rate-limit";
+import { refreshStorePages } from "@/lib/store-cache";
 
 export const dynamic = "force-dynamic";
 
@@ -126,5 +127,7 @@ export async function POST(request: Request) {
     .set({ reviewCount: stats.count, rating: stats.avg10 })
     .where(eq(products.slug, slug));
 
+  // La ficha está en caché: se regenera para que la opinión aparezca al refrescar.
+  refreshStorePages([slug]);
   return Response.json({ ok: true });
 }

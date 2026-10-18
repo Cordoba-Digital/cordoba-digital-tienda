@@ -115,20 +115,20 @@ export function CategoryRow({ items, label }: { items: CategoryRowItem[]; label:
   return (
     <div>
       <div className="relative">
-        <div ref={ref} className="no-scrollbar flex gap-2 overflow-x-auto pb-3">
+        <div ref={ref} className="no-scrollbar -mx-4 flex gap-1 overflow-x-auto px-3 pb-2 sm:mx-0 sm:gap-2 sm:px-0 sm:pb-3">
           {items.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="group flex w-[108px] shrink-0 flex-col items-center gap-2 rounded-2xl px-1 py-2"
+              className="group flex w-[74px] shrink-0 flex-col items-center gap-1.5 rounded-2xl px-0.5 py-1 sm:w-[108px] sm:gap-2 sm:px-1 sm:py-2"
             >
-              <span className="grid h-[68px] w-[68px] place-items-center rounded-2xl bg-surface text-brand-700 shadow-sm ring-1 ring-black/5 transition group-hover:-translate-y-0.5 group-hover:ring-brand-400">
-                <CategoryIcon name={item.name} className="h-[26px] w-[26px]" />
+              <span className="grid h-14 w-14 place-items-center rounded-full bg-surface sm:h-[68px] sm:w-[68px] sm:rounded-2xl text-brand-700 shadow-sm ring-1 ring-black/5 transition group-hover:-translate-y-0.5 group-hover:ring-brand-400">
+                <CategoryIcon name={item.name} className="h-6 w-6 sm:h-[26px] sm:w-[26px]" />
               </span>
-              <span className="line-clamp-2 min-h-8 text-center text-[12px] font-semibold leading-tight text-ink-900">
+              <span className="line-clamp-2 min-h-[2.5em] text-center text-[11px] font-semibold leading-tight text-ink-900 sm:min-h-8 sm:text-[12px]">
                 {item.name}
               </span>
-              <span className="tabular-nums text-[11px] text-ink-400">{item.count}</span>
+              <span className="hidden tabular-nums text-[11px] text-ink-400 sm:inline">{item.count}</span>
             </Link>
           ))}
         </div>

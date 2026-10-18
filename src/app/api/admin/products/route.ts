@@ -2,6 +2,8 @@ import { sessionFromCookieHeader } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { actorFromRequest, logAdminAction } from "@/lib/admin-audit";
 import { createAdminProduct, listAdminProducts, listProductCategories, type AdminProductCreateInput } from "@/lib/admin-products";
+import { parsePhotoFilter } from "@/lib/photo-checks";
+import { refreshStorePages } from "@/lib/store-cache";
 
 export const dynamic = "force-dynamic";
 
@@ -18,13 +20,18 @@ export async function GET(request: Request) {
     return Response.json({ ok: false, error: "No autorizado." }, { status: 401 });
   }
   const { searchParams } = new URL(request.url);
+  const stockParam = searchParams.get("stock");
+  const sortParam = searchParams.get("orden");
   const [result, categories] = await Promise.all([
     listAdminProducts({
       q: searchParams.get("q") ?? "",
       category: searchParams.get("categoria") ?? "",
       sinStock: flag(searchParams.get("sinStock")),
+      stock: stockParam === "con" || stockParam === "sin" ? stockParam : "",
+      sort: sortParam === "stock-desc" || sortParam === "stock-asc" ? sortParam : "",
       oferta: flag(searchParams.get("oferta")),
       destacados: flag(searchParams.get("destacados")),
+      fotos: parsePhotoFilter(searchParams.get("fotos")),
       page: Number(searchParams.get("page") ?? 1) || 1,
       perPage: Number(searchParams.get("perPage") ?? 20) || 20,
     }),
@@ -42,6 +49,7 @@ export async function POST(request: Request) {
   if (!result.ok) {
     return Response.json({ ok: false, error: result.error }, { status: result.status });
   }
+  refreshStorePages([result.slug]);
   await logAdminAction(await actorFromRequest(request), {
     action: "alta",
     entityType: "producto",

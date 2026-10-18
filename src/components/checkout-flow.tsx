@@ -6,6 +6,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
+import { TransferDetails } from "@/components/transfer-details";
 import { Spinner } from "@/components/ui";
 import { trackBeginCheckout } from "@/lib/analytics";
 import { readCoupon, writeCoupon } from "@/lib/coupon-storage";
@@ -15,6 +16,7 @@ import { computeTotals, PAYMENT_METHODS, type CouponInfo, type PaymentMethodId }
 import { validateDelivery, validatePersonalData } from "@/lib/checkout-validation";
 import { useShippingQuote, useSucursales } from "@/lib/shipping-quote";
 import type { DeliveryMethod, ShippingOption } from "@/lib/shipping";
+import type { TransferAccount } from "@/lib/transfer-account";
 
 type CheckoutIconProps = { className?: string };
 
@@ -205,10 +207,138 @@ function Field({
   );
 }
 
+function IconCheck({ className = "h-4 w-4 shrink-0" }: CheckoutIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M5 12.5l4.5 4.5L19 7.5" />
+    </svg>
+  );
+}
+
+type StepNumber = 1 | 2 | 3;
+type StepState = "open" | "done" | "pending";
+
+/** Tiempo de la animación de "enviado" antes de cerrar el paso (ms). */
+const STEP_SEND_MS = 420;
+/** Lo que tarda en abrirse o cerrarse el cuerpo de un paso (ms). */
+const STEP_TOGGLE_MS = 320;
+
+const PERSONAL_FIELDS = new Set(["firstName", "lastName", "email", "phone", "docId"]);
+
+function reducedMotion(): boolean {
+  return typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+/**
+ * Un paso del checkout. Abierto muestra el formulario; completo se pliega en
+ * una línea con el resumen y "Editar"; pendiente queda cerrado hasta llegar.
+ * Al completarlo (`sending`) el contenido baja y se desvanece, como si se
+ * mandara, y recién después se pliega.
+ */
+function CheckoutStep({
+  number,
+  title,
+  subtitle,
+  state,
+  sending = false,
+  summary,
+  onEdit,
+  children,
+}: {
+  number: StepNumber;
+  title: string;
+  subtitle: string;
+  state: StepState;
+  sending?: boolean;
+  summary?: string;
+  onEdit?: () => void;
+  children: React.ReactNode;
+}) {
+  const open = state === "open";
+  const done = state === "done" || sending;
+  return (
+    <section
+      id={`paso-${number}`}
+      aria-labelledby={`paso-${number}-titulo`}
+      className={`card-surface scroll-mt-40 px-6 transition-[padding] duration-300 motion-reduce:transition-none sm:px-8 ${
+        open ? "py-6 sm:py-8" : "py-5"
+      }`}
+    >
+      <div className="flex items-start gap-3">
+        <span
+          aria-hidden
+          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-extrabold transition-colors duration-300 ${
+            done ? "bg-emerald-600 text-white" : open ? "bg-brand-500 text-deep" : "bg-ink-100 text-ink-500"
+          }`}
+        >
+          {done ? <IconCheck /> : number}
+        </span>
+        <div className="min-w-0 flex-1">
+          <h2
+            id={`paso-${number}-titulo`}
+            className={`text-xl font-extrabold leading-8 tracking-tight ${state === "pending" ? "text-ink-500" : "text-ink-900"}`}
+          >
+            {title}
+          </h2>
+          <p className={`text-xs text-ink-500 ${state === "done" ? "truncate" : ""}`}>
+            {state === "done" && summary ? summary : subtitle}
+          </p>
+        </div>
+        {state === "done" && onEdit ? (
+          <button
+            type="button"
+            onClick={onEdit}
+            className="mt-1 shrink-0 rounded-lg px-2 py-1 text-sm font-semibold text-brand-700 hover:bg-brand-50"
+          >
+            Editar<span className="sr-only"> {title.toLowerCase()}</span>
+          </button>
+        ) : null}
+      </div>
+      <div
+        inert={!open}
+        className={`grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none ${
+          open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+        }`}
+      >
+        {/* El margen negativo deja lugar al anillo de foco de los campos. */}
+        <div className="-mx-2 min-h-0 overflow-hidden px-2">
+          <div
+            className={`pb-1 pt-6 transition duration-[400ms] motion-reduce:transition-none ${
+              sending ? "translate-y-10 scale-[0.97] opacity-0 ease-in" : open ? "opacity-100 ease-out" : "opacity-0"
+            }`}
+          >
+            {children}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function StepContinue({ label, onClick }: { label: string; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="mt-6 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-brand-500 px-6 text-sm font-extrabold text-deep transition hover:bg-brand-400 sm:w-auto"
+    >
+      {label}
+      <span aria-hidden>→</span>
+    </button>
+  );
+}
+
 const inputClass =
   "h-11 w-full rounded-xl border border-ink-200 bg-surface px-3.5 text-sm text-ink-900 outline-none transition placeholder:text-ink-500 focus:border-brand-400 focus:ring-4 focus:ring-brand-100";
 
-export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean }) {
+export function CheckoutFlow({
+  mercadoPago = false,
+  transfer = null,
+}: {
+  mercadoPago?: boolean;
+  /** Cuenta para transferir (`transferAccount()`); sin configurar, los datos se piden por WhatsApp. */
+  transfer?: TransferAccount | null;
+}) {
   const router = useRouter();
   const { items, subtotal, listSubtotal, hydrated, clearCart, setQuantity } = useStore();
 
@@ -227,13 +357,28 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
   const [branch, setBranch] = useState("");
+  // Pasos: uno abierto a la vez. Los completos quedan plegados con su resumen.
+  const [openStep, setOpenStep] = useState<StepNumber>(1);
+  const [doneSteps, setDoneSteps] = useState<{ 1: boolean; 2: boolean }>({ 1: false, 2: false });
+  const [sendingStep, setSendingStep] = useState<StepNumber | null>(null);
+  // Clave del intento de compra: se repite mientras el pedido que se manda sea
+  // el mismo, así un reintento después de un corte no crea un pedido doble.
+  const checkoutAttempt = useRef<{ key: string; payload: string } | null>(null);
 
   useEffect(() => {
     const id = window.setTimeout(() => {
       setCoupon(readCoupon());
       try {
         const saved = window.localStorage.getItem("cd_checkout_v1");
-        if (saved) setForm({ ...EMPTY_FORM, ...(JSON.parse(saved) as Partial<FormState>) });
+        if (saved) {
+          const restored = { ...EMPTY_FORM, ...(JSON.parse(saved) as Partial<FormState>) };
+          setForm(restored);
+          // Quien ya compró desde este navegador arranca con sus datos listos.
+          if (Object.keys(validatePersonalData(restored)).length === 0) {
+            setDoneSteps({ 1: true, 2: false });
+            setOpenStep(2);
+          }
+        }
       } catch {
         /* ignore */
       }
@@ -379,53 +524,104 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
     foco?.focus();
   };
 
+  const abrirPaso = (step: StepNumber, scroll = true) => {
+    setOpenStep(step);
+    if (!scroll) return;
+    window.setTimeout(() => {
+      // Si entra, se muestran también los pasos ya completos de arriba.
+      const target = document.getElementById(`paso-${step}`);
+      const first = document.getElementById("paso-1");
+      if (!target || !first) return;
+      const fits = target.getBoundingClientRect().top - first.getBoundingClientRect().top < window.innerHeight * 0.4;
+      (fits ? first : target).scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "start" });
+    }, reducedMotion() ? 0 : STEP_TOGGLE_MS);
+  };
+
+  // Valida el paso; si está bien lo "manda" (anima, lo pliega) y abre el que sigue.
+  const completarPaso = (step: 1 | 2) => {
+    const found = step === 1 ? datosErrors() : entregaErrors();
+    if (Object.keys(found).length) {
+      setErrors(found);
+      window.setTimeout(() => irAlPrimerError(), 0);
+      return;
+    }
+    setSendingStep(step);
+    window.setTimeout(() => {
+      setSendingStep(null);
+      const done = { ...doneSteps, [step]: true };
+      setDoneSteps(done);
+      abrirPaso(step === 1 && !done[2] ? 2 : 3);
+    }, reducedMotion() ? 0 : STEP_SEND_MS);
+  };
+
+  // Abre el paso del primer campo con error y lleva el foco ahí.
+  const mostrarErrores = (found: Record<string, string>) => {
+    const first = Object.keys(found)[0];
+    if (first && first !== "terms") abrirPaso(PERSONAL_FIELDS.has(first) ? 1 : 2, false);
+    window.setTimeout(() => irAlPrimerError(), reducedMotion() ? 0 : STEP_TOGGLE_MS);
+  };
+
   const submit = async () => {
     const found = { ...datosErrors(), ...entregaErrors() };
     if (Object.keys(found).length) {
       setErrors(found);
-      irAlPrimerError();
+      mostrarErrores(found);
+      return;
+    }
+    // Con los datos bien pero sin haber visto el pago, primero se muestra el
+    // paso 3: el medio de pago no se elige a ciegas.
+    if (openStep !== 3) {
+      setDoneSteps({ 1: true, 2: true });
+      abrirPaso(3);
       return;
     }
     if (!terms) {
       setErrors({ terms: "Tenés que aceptar los términos para continuar." });
-      irAlPrimerError("[data-error='terms']");
+      window.setTimeout(() => irAlPrimerError("[data-error='terms']"), 0);
       return;
     }
     setSubmitting(true);
     setServerError(null);
     try {
+      const order = {
+        items: items.map((item) => ({ slug: item.slug, quantity: item.quantity })),
+        customer: {
+          firstName: form.firstName,
+          lastName: form.lastName,
+          email: form.email,
+          phone: form.phone,
+          docId: form.docId,
+        },
+        delivery: {
+          method: deliveryMethod,
+          zip: form.zip,
+          street: form.street,
+          number: form.number,
+          extra: form.extra,
+          city: form.city,
+          province: form.province,
+          branch: deliveryMethod === "express" && branchValida ? branch : "",
+        },
+        payment: { method: payment, installments },
+        couponCode: coupon?.code ?? null,
+        notes: form.notes,
+      };
+      const payload = JSON.stringify(order);
+      if (checkoutAttempt.current?.payload !== payload) {
+        // Sin `randomUUID` (navegadores viejos) va vacía y el pedido sale igual.
+        const key = typeof crypto.randomUUID === "function" ? crypto.randomUUID() : "";
+        checkoutAttempt.current = { key, payload };
+      }
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          items: items.map((item) => ({ slug: item.slug, quantity: item.quantity })),
-          customer: {
-            firstName: form.firstName,
-            lastName: form.lastName,
-            email: form.email,
-            phone: form.phone,
-            docId: form.docId,
-          },
-          delivery: {
-            method: deliveryMethod,
-            zip: form.zip,
-            street: form.street,
-            number: form.number,
-            extra: form.extra,
-            city: form.city,
-            province: form.province,
-            branch: deliveryMethod === "express" && branchValida ? branch : "",
-          },
-          payment: { method: payment, installments },
-          couponCode: coupon?.code ?? null,
-          notes: form.notes,
-        }),
+        body: JSON.stringify({ ...order, checkoutKey: checkoutAttempt.current.key }),
       });
       const data = await res.json();
       if (!res.ok || !data.ok) {
         if (data.errors) {
           setErrors(data.errors as Record<string, string>);
-          window.setTimeout(() => irAlPrimerError(), 0);
+          mostrarErrores(data.errors as Record<string, string>);
         }
         setServerError(data.error ?? "Revisá los datos marcados en rojo.");
         return;
@@ -456,6 +652,21 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
       setSubmitting(false);
     }
   };
+
+  const unidades = items.reduce((n, item) => n + item.quantity, 0);
+  const stepState = (step: StepNumber): StepState =>
+    sendingStep === step || openStep === step ? "open" : step !== 3 && doneSteps[step] ? "done" : "pending";
+  const resumenDatos = [`${form.firstName} ${form.lastName}`.trim(), form.email, form.phone].filter(Boolean).join(" · ");
+  const resumenEntrega =
+    deliveryMethod === "pickup"
+      ? "Retiro en el local · Gratis"
+      : [
+          selectedOption?.label,
+          [`${form.street} ${form.number}`.trim(), form.city].filter(Boolean).join(", "),
+          selectedOption ? (selectedOption.free ? "Gratis" : money(selectedOption.cost)) : null,
+        ]
+          .filter(Boolean)
+          .join(" · ");
 
   if (hydrated && items.length === 0) {
     return (
@@ -488,40 +699,61 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
         </Link>
       </div>
 
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_400px]">
-        <div className="space-y-4">
-          <section className="card-surface p-6 sm:p-8">
-            <h2 className="mb-6 text-xl font-extrabold tracking-tight text-ink-900">Detalles de facturación</h2>
+      {/* Izquierda, lo que completa el comprador en orden (1 datos, 2 entrega,
+          3 pago); derecha, el resumen fijo con el total y el botón. Antes el
+          medio de pago iba abajo del resumen y la columna izquierda quedaba
+          con un hueco grande. En celular las columnas se apilan en ese orden y
+          el botón queda al final, después del total. */}
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-8">
+        <div className="min-w-0 space-y-4">
+          <CheckoutStep
+            number={1}
+            title="Tus datos"
+            subtitle="Para la factura y para avisarte cómo va el pedido."
+            state={stepState(1)}
+            sending={sendingStep === 1}
+            summary={resumenDatos}
+            onEdit={() => abrirPaso(1)}
+          >
             <div className="space-y-4">
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field label="Nombre" error={errors.firstName}>
-                  <input className={inputClass} value={form.firstName} onChange={set("firstName")} placeholder="Juan" />
+                  <input className={inputClass} value={form.firstName} onChange={set("firstName")} placeholder="Juan" autoComplete="given-name" />
                 </Field>
                 <Field label="Apellidos" error={errors.lastName}>
-                  <input className={inputClass} value={form.lastName} onChange={set("lastName")} placeholder="Pérez" />
+                  <input className={inputClass} value={form.lastName} onChange={set("lastName")} placeholder="Pérez" autoComplete="family-name" />
                 </Field>
               </div>
               <Field label="Email" error={errors.email} hint="Te enviamos la confirmación y el seguimiento acá.">
-                <input className={inputClass} type="email" value={form.email} onChange={set("email")} placeholder="juan@email.com" />
+                <input className={inputClass} type="email" value={form.email} onChange={set("email")} placeholder="juan@email.com" autoComplete="email" />
               </Field>
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field label="Teléfono / WhatsApp" error={errors.phone}>
-                  <input className={inputClass} value={form.phone} onChange={set("phone")} placeholder="351 555 5555" />
+                  <input className={inputClass} type="tel" value={form.phone} onChange={set("phone")} placeholder="351 555 5555" autoComplete="tel" />
                 </Field>
                 <Field label="DNI o CUIT" error={errors.docId} hint="Necesario para la factura.">
-                  <input className={inputClass} value={form.docId} onChange={set("docId")} placeholder="30123456" />
+                  <input className={inputClass} value={form.docId} onChange={set("docId")} placeholder="30123456" inputMode="numeric" />
                 </Field>
               </div>
             </div>
-          </section>
+            <StepContinue label="Continuar a la entrega" onClick={() => completarPaso(1)} />
+          </CheckoutStep>
 
-          <section className="card-surface p-6 sm:p-8">
-            <h2 className="mb-6 text-xl font-extrabold tracking-tight text-ink-900">Entrega</h2>
+          <CheckoutStep
+            number={2}
+            title="Entrega"
+            subtitle="Te lo mandamos o lo retirás gratis en el local."
+            state={stepState(2)}
+            sending={sendingStep === 2}
+            summary={resumenEntrega}
+            onEdit={() => abrirPaso(2)}
+          >
             <div className="space-y-4">
               <div className="grid gap-3 sm:grid-cols-2">
                 <button
                   type="button"
                   onClick={() => chooseDelivery("standard")}
+                  aria-pressed={deliveryMethod !== "pickup"}
                   className={`rounded-2xl border p-4 text-left transition ${
                     deliveryMethod !== "pickup" ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-100 bg-surface hover:bg-ink-50"
                   }`}
@@ -532,6 +764,7 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
                 <button
                   type="button"
                   onClick={() => chooseDelivery("pickup")}
+                  aria-pressed={deliveryMethod === "pickup"}
                   className={`rounded-2xl border p-4 text-left transition ${
                     deliveryMethod === "pickup" ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-100 bg-surface hover:bg-ink-50"
                   }`}
@@ -540,7 +773,6 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
                   <p className="mt-1 text-xs text-emerald-700">Gratis · 27 de Abril 180, Córdoba Capital</p>
                 </button>
               </div>
-
               {deliveryMethod === "pickup" ? (
                 <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-600">
                   <p className="font-bold text-ink-900">27 de Abril 180, Córdoba Capital</p>
@@ -656,16 +888,112 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
               )}
 
               {errors.delivery ? <p role="alert" className="text-xs font-semibold text-rose-600">{errors.delivery}</p> : null}
+
+              <Field label="Comentarios para la entrega (opcional)">
+                <textarea
+                  value={form.notes}
+                  onChange={set("notes")}
+                  rows={2}
+                  placeholder="Ej: entregar después de las 14 hs, dejar en portería..."
+                  className="w-full rounded-xl border border-ink-200 p-3 text-sm outline-none focus:border-brand-400"
+                />
+              </Field>
             </div>
-          </section>
+            <StepContinue label="Continuar al pago" onClick={() => completarPaso(2)} />
+          </CheckoutStep>
+
+          <CheckoutStep number={3} title="Pago" subtitle="El total es el mismo con cualquier medio." state={stepState(3)}>
+            <div className="space-y-4">
+              <div className="grid gap-3 sm:grid-cols-[repeat(auto-fit,minmax(15rem,1fr))]">
+                {PAYMENT_METHODS.filter((method) => isPaymentMethodOffered(method.id, deliveryMethod, { mercadoPago })).map(
+                  (method) => {
+                    const PaymentIcon = PAYMENT_ICONS[method.id];
+                    return (
+                    <button
+                      key={method.id}
+                      type="button"
+                      onClick={() => setPayment(method.id)}
+                      aria-pressed={payment === method.id}
+                      {...(method.id === "mercadopago" ? { "data-mp-checkout-cta": "checkout-pro" } : {})}
+                      className={`flex w-full items-start gap-3 rounded-2xl border p-4 text-left transition ${
+                        payment === method.id ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-100 bg-surface hover:bg-ink-50"
+                      }`}
+                    >
+                      <span className={`mt-0.5 rounded-lg p-2 ${payment === method.id ? "bg-brand-100 text-brand-700" : "bg-ink-50 text-ink-400"}`}>
+                        <PaymentIcon className="h-5 w-5 shrink-0" />
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="flex items-center justify-between gap-2 text-sm font-extrabold text-ink-900">
+                          {method.short}
+                          {method.perk ? (
+                            <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
+                              {method.perk}
+                            </span>
+                          ) : null}
+                        </span>
+                        <span className="mt-0.5 block text-xs leading-snug text-ink-500">{method.description}</span>
+                      </span>
+                    </button>
+                    );
+                  },
+                )}
+              </div>
+
+              {/* USDT queda oculto hasta que el negocio lo habilite. Mercado
+                  Pago aparece solo si el servidor tiene sus credenciales. */}
+
+              {payment === "mercadopago" ? (
+                <div className="rounded-xl bg-sky-50 p-4 text-sm text-sky-900">
+                  <p className="font-bold">Al confirmar te llevamos a Mercado Pago para pagar.</p>
+                  <p className="mt-1 text-xs">
+                    Tarjeta de crédito, débito o dinero en cuenta. Las cuotas las elegís ahí. Cuando el pago se
+                    acredita, el pedido pasa a &quot;Pago acreditado&quot; solo.
+                  </p>
+                </div>
+              ) : null}
+
+              {payment === "transferencia" ? (
+                transfer ? (
+                  <div className="space-y-3 rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
+                    <p className="font-bold text-ink-900">Datos para transferir</p>
+                    <TransferDetails account={transfer} amount={totals.total} />
+                    <ol className="list-decimal space-y-1 pl-4 text-xs">
+                      <li>Confirmá el pedido: te damos un código de reserva y te guardamos el stock 48 hs.</li>
+                      <li>Transferí el monto exacto desde tu banco o billetera virtual.</li>
+                      <li>Mandanos el comprobante por WhatsApp con tu código de reserva.</li>
+                    </ol>
+                    <p className="text-xs">Cuando se acredita la transferencia, confirmamos el pedido y te avisamos.</p>
+                  </div>
+                ) : (
+                  <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
+                    <p className="font-bold text-ink-900">Al confirmar te pasamos el CBU o el alias por WhatsApp.</p>
+                    <p className="mt-1 text-xs">
+                      Te guardamos el stock 48 hs. Cuando se acredita la transferencia, confirmamos el pedido.
+                    </p>
+                  </div>
+                )
+              ) : null}
+
+              {payment === "efectivo" ? (
+                <div className="rounded-xl bg-emerald-50 p-4 text-sm text-emerald-800">
+                  <p className="font-bold">Pagás al retirar en el local.</p>
+                  {/* Acá decía "Reservamos el producto por 48 horas hábiles a
+                      tu nombre". Es un compromiso operativo que no está en el
+                      sitio original y que el cliente tendría que confirmar. */}
+                </div>
+              ) : null}
+            </div>
+          </CheckoutStep>
         </div>
 
-        {/* RESUMEN (Tu pedido) y MEDIO DE PAGO: van juntos en la columna derecha,
-            en dos tarjetas, para que el comprador vea el pago sin otro paso. */}
         <aside className="self-start lg:sticky lg:top-36">
-          <div className="space-y-6">
-            <div className="card-surface space-y-4 p-6">
-              <h2 className="text-xl font-extrabold tracking-tight text-ink-900">Tu pedido</h2>
+          <div className="card-surface space-y-4 p-6">
+            <h2 className="flex items-baseline justify-between text-xl font-extrabold tracking-tight text-ink-900">
+              Tu pedido
+              <span className="text-xs font-semibold text-ink-500">
+                {unidades} {unidades === 1 ? "producto" : "productos"}
+              </span>
+            </h2>
             <div className="max-h-56 space-y-3 overflow-y-auto overscroll-contain data-lenis-prevent pr-1">
               {items.map((item) => (
                 <div key={item.slug} className="flex items-center gap-3">
@@ -770,119 +1098,41 @@ export function CheckoutFlow({ mercadoPago = false }: { mercadoPago?: boolean })
               </p>
             ) : null}
 
-            <ul className="space-y-1.5 border-t border-ink-100 pt-3 text-[11px] text-ink-500">
-              <li className="flex items-center gap-1.5"><IconLock className="h-4 w-4 shrink-0 text-brand-700" /> Pago seguro · datos cifrados</li>
-              <li className="flex items-center gap-1.5"><IconShield className="h-4 w-4 shrink-0 text-brand-700" /> 6 meses de garantía legal</li>
-              <li className="flex items-center gap-1.5"><IconStore className="h-4 w-4 shrink-0 text-brand-700" /> Servicio técnico propio en el local</li>
+            <label className="flex items-start gap-2.5 text-xs text-ink-600" data-error={errors.terms ? "terms" : undefined}>
+              <input
+                type="checkbox"
+                checked={terms}
+                onChange={(e) => setTerms(e.target.checked)}
+                className="mt-0.5 h-4 w-4 accent-brand-600"
+              />
+              <span>
+                Acepto los <Link href="/ayuda" className="font-semibold text-brand-700 underline">términos y condiciones</Link> y
+                la política de privacidad de Córdoba Digital.
+              </span>
+            </label>
+            {errors.terms ? <p role="alert" className="text-xs font-semibold text-rose-600">{errors.terms}</p> : null}
+            {serverError ? (
+              <p role="alert" className="rounded-xl bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700">{serverError}</p>
+            ) : null}
+
+            <button
+              type="button"
+              onClick={submit}
+              disabled={submitting}
+              className="flex h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-brand-500 text-[15px] font-extrabold text-deep transition hover:bg-brand-400 disabled:opacity-40"
+            >
+              {submitting ? <Spinner className="h-4 w-4" /> : null}
+              Confirmar pedido · {money(totals.total)}
+            </button>
+            {openStep !== 3 ? (
+              <p className="text-center text-[11px] text-ink-500">Completá tus datos y la entrega para elegir cómo pagar.</p>
+            ) : null}
+
+            <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 border-t border-ink-100 pt-4 text-[11px] text-ink-500">
+              <li className="flex items-center gap-1.5"><IconLock className="h-4 w-4 shrink-0 text-brand-700" /> Pago seguro</li>
+              <li className="flex items-center gap-1.5"><IconShield className="h-4 w-4 shrink-0 text-brand-700" /> 6 meses de garantía</li>
+              <li className="flex items-center gap-1.5"><IconStore className="h-4 w-4 shrink-0 text-brand-700" /> Servicio técnico propio</li>
             </ul>
-            </div>
-
-            {/* MEDIO DE PAGO: tarjeta aparte, igual que en la referencia. */}
-            <div className="card-surface space-y-4 p-6">
-              <h2 className="text-xl font-extrabold tracking-tight text-ink-900">Medio de pago</h2>
-              <div className="grid gap-2">
-                  {PAYMENT_METHODS.filter((method) => isPaymentMethodOffered(method.id, deliveryMethod, { mercadoPago })).map(
-                    (method) => {
-                      const PaymentIcon = PAYMENT_ICONS[method.id];
-                      return (
-                      <button
-                        key={method.id}
-                        type="button"
-                        onClick={() => setPayment(method.id)}
-                        {...(method.id === "mercadopago" ? { "data-mp-checkout-cta": "checkout-pro" } : {})}
-                        className={`flex w-full items-start gap-3 rounded-2xl border p-4 text-left transition ${
-                          payment === method.id ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-100 bg-surface hover:bg-ink-50"
-                        }`}
-                      >
-                        <span className={`mt-0.5 rounded-lg p-2 ${payment === method.id ? "bg-brand-100 text-brand-700" : "bg-ink-50 text-ink-400"}`}>
-                          <PaymentIcon className="h-5 w-5 shrink-0" />
-                        </span>
-                        <span className="min-w-0 flex-1">
-                          <span className="flex items-center justify-between gap-2 text-sm font-extrabold text-ink-900">
-                            {method.short}
-                            {method.perk ? (
-                              <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
-                                {method.perk}
-                              </span>
-                            ) : null}
-                          </span>
-                          <span className="mt-0.5 block text-xs leading-snug text-ink-500">{method.description}</span>
-                        </span>
-                      </button>
-                      );
-                    },
-                  )}
-                </div>
-
-                {/* USDT queda oculto hasta que el negocio lo habilite. Mercado
-                    Pago aparece solo si el servidor tiene sus credenciales. */}
-
-                {payment === "mercadopago" ? (
-                  <div className="rounded-xl bg-sky-50 p-4 text-sm text-sky-900">
-                    <p className="font-bold">Al confirmar te llevamos a Mercado Pago para pagar.</p>
-                    <p className="mt-1 text-xs">
-                      Tarjeta de crédito, débito o dinero en cuenta. Las cuotas las elegís ahí. Cuando el pago se
-                      acredita, el pedido pasa a &quot;Pago acreditado&quot; solo.
-                    </p>
-                  </div>
-                ) : null}
-
-                {payment === "transferencia" ? (
-                  <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
-                    <p className="font-bold text-ink-900">Te enviamos el CBU o el alias para transferir.</p>
-                    <p className="mt-1 text-xs">
-                      Nos avisás cuando lo hagas y despachamos. La reserva de stock por tiempo limitado no se anuncia
-                      hasta que el cliente confirme la política.
-                    </p>
-                  </div>
-                ) : null}
-
-                {payment === "efectivo" ? (
-                  <div className="rounded-xl bg-emerald-50 p-4 text-sm text-emerald-800">
-                    <p className="font-bold">Pagás al retirar en el local.</p>
-                    {/* Acá decía "Reservamos el producto por 48 horas hábiles a
-                        tu nombre". Es un compromiso operativo que no está en el
-                        sitio original y que el cliente tendría que confirmar. */}
-                  </div>
-                ) : null}
-
-                <Field label="Comentarios para la entrega (opcional)">
-                  <textarea
-                    value={form.notes}
-                    onChange={set("notes")}
-                    rows={2}
-                    placeholder="Ej: entregar después de las 14 hs, dejar en portería..."
-                    className="w-full rounded-xl border border-ink-200 p-3 text-sm outline-none focus:border-brand-400"
-                  />
-                </Field>
-
-                <label className="flex items-start gap-2.5 text-xs text-ink-600" data-error={errors.terms ? "terms" : undefined}>
-                  <input
-                    type="checkbox"
-                    checked={terms}
-                    onChange={(e) => setTerms(e.target.checked)}
-                    className="mt-0.5 h-4 w-4 accent-brand-600"
-                  />
-                  <span>
-                    Acepto los <Link href="/ayuda" className="font-semibold text-brand-700 underline">términos y condiciones</Link> y
-                    la política de privacidad de Córdoba Digital.
-                  </span>
-                </label>
-                {errors.terms ? <p role="alert" className="text-xs font-semibold text-rose-600">{errors.terms}</p> : null}
-                {serverError ? (
-                  <p role="alert" className="rounded-xl bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700">{serverError}</p>
-                ) : null}
-
-                <button
-                  type="button"
-                  onClick={submit}
-                  disabled={submitting}
-                  className="flex h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-brand-500 text-[15px] font-extrabold text-deep transition hover:bg-brand-400 disabled:opacity-40"
-                >
-                  {submitting ? <Spinner className="h-4 w-4" /> : null}
-                  Confirmar pedido · {money(totals.total)}
-                </button>
-            </div>
           </div>
         </aside>
       </div>

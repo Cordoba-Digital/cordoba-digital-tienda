@@ -73,10 +73,10 @@ beforeEach(async () => {
 });
 after(() => pool.end());
 
-test("sin tocar nada, vencer está prendido y avisar al cliente apagado", async () => {
+test("sin tocar nada, vencer y la portada están prendidos y avisar al cliente apagado", async () => {
   const res = await leer(new Request(`${BASE}/api/admin/automations`, { headers: { cookie: await sesion() } }));
   assert.equal(res.status, 200);
-  assert.deepEqual(((await res.json()) as { automations: unknown }).automations, { vencerPedidos: true, avisarCliente: false });
+  assert.deepEqual(((await res.json()) as { automations: unknown }).automations, { vencerPedidos: true, avisarCliente: false, portadaAutomatica: true });
 });
 
 test("sin sesión no se leen ni se cambian", async () => {
@@ -170,4 +170,23 @@ test("el pedido vencido le avisa al cliente por qué se canceló", async () => {
   assert.equal(enviados.length, 1);
   assert.equal(enviados[0].subject, `Cancelamos tu pedido ${pedido.code}`);
   assert.match(enviados[0].text, /48 horas sin que recibiéramos el pago/);
+});
+
+test("vence todos los pedidos viejos aunque sean más que una tanda", async () => {
+  const viejos = Array.from({ length: 205 }, (_, i) => ({
+    code: `CD-OLD${String(i).padStart(3, "0")}`,
+    status: "pendiente_pago",
+    customerName: "Ana Pérez",
+    email: "ana@example.com",
+    phone: "351 555-1234",
+    deliveryMethod: "pickup",
+    paymentMethod: "transferencia",
+    subtotal: 1000,
+    total: 1000,
+    createdAt: new Date(Date.now() - 49 * 60 * 60 * 1000),
+  }));
+  await db.insert(schema.orders).values(viejos);
+  assert.equal(await expireStalePendingOrders(), 205);
+  const quedan = await db.select({ id: schema.orders.id }).from(schema.orders).where(eq(schema.orders.status, "pendiente_pago"));
+  assert.equal(quedan.length, 0);
 });

@@ -13,7 +13,9 @@ import { comprador, db, domicilio, pool, post, resetDb, schema, seedProduct } fr
 
 delete process.env.MP_ACCESS_TOKEN;
 const { POST } = await import("../../src/app/api/checkout/route");
+const { POST: crearCobroMp } = await import("../../src/app/api/checkout/mercadopago/route");
 const { findShippingOption } = await import("../../src/lib/shipping");
+const { CHECKOUT_LIMIT, COUPON_LIMIT, recordMiss } = await import("../../src/lib/rate-limit");
 
 const envio = findShippingOption("5000", "standard")!.cost;
 
@@ -124,8 +126,97 @@ test("rechaza Mercado Pago si no está configurado", async () => {
   assert.ok((res.body.errors as Record<string, string>).payment);
 });
 
+test("con solo el token de Mercado Pago (sin la clave del webhook) sigue apagado: ni se ofrece ni se crea el cobro", async (t) => {
+  // Así está producción: el token quedó cargado, pero sin la clave del webhook
+  // un pago nunca se acreditaría.
+  process.env.MP_ACCESS_TOKEN = "TEST-token";
+  delete process.env.MP_WEBHOOK_SECRET;
+  t.after(() => {
+    delete process.env.MP_ACCESS_TOKEN;
+  });
+  await seedProduct("celu", 100_000, 10);
+  const res = await checkout({ items: [{ slug: "celu", quantity: 1 }], payment: { method: "mercadopago" } });
+  assert.equal(res.status, 400);
+
+  const cobro = await crearCobroMp(post("/api/checkout/mercadopago", { code: "CD-AAAAAA" }));
+  assert.equal(cobro.status, 503);
+  assert.match(((await cobro.json()) as { error: string }).error, /no está disponible/);
+});
+
 test("carrito vacío o datos con tipos raros responden 400, no 500", async () => {
   assert.equal((await checkout({ items: [] })).status, 400);
   assert.equal((await checkout({ items: [{ slug: "x", quantity: 1 }], customer: { firstName: 123, email: ["a"] } })).status, 400);
   assert.equal((await checkout({ items: "todo" })).status, 400);
+});
+
+test("cada pedido cuenta para el límite por IP y al pasarse responde 429", async () => {
+  await seedProduct("note", 1_000_000, 10);
+  const ip = { "x-real-ip": "200.1.2.3" };
+  const pedir = () =>
+    POST(post("/api/checkout", { customer: comprador, delivery: domicilio, payment: { method: "transferencia" }, items: [{ slug: "note", quantity: 1 }] }, ip));
+  assert.equal((await pedir()).status, 200);
+  for (let i = 1; i < CHECKOUT_LIMIT.max; i += 1) await recordMiss(CHECKOUT_LIMIT, "200.1.2.3");
+  const bloqueado = await pedir();
+  assert.equal(bloqueado.status, 429);
+  assert.ok(bloqueado.headers.get("retry-after"));
+  assert.equal((await db.select().from(schema.orders)).length, 1);
+  // Otra IP sigue comprando.
+  const otra = await POST(post("/api/checkout", { customer: comprador, delivery: domicilio, payment: { method: "transferencia" }, items: [{ slug: "note", quantity: 1 }] }, { "x-real-ip": "200.9.9.9" }));
+  assert.equal(otra.status, 200);
+});
+
+test("un cupón inventado en el checkout cuenta como intento fallido", async () => {
+  await seedProduct("note", 1_000_000, 10);
+  const ip = { "x-real-ip": "200.4.5.6" };
+  const pedir = (couponCode?: string) =>
+    POST(post("/api/checkout", { customer: comprador, delivery: domicilio, payment: { method: "transferencia" }, items: [{ slug: "note", quantity: 1 }], couponCode }, ip));
+  assert.equal((await pedir("TRUCHO1")).status, 200);
+  for (let i = 1; i < COUPON_LIMIT.max; i += 1) await recordMiss(COUPON_LIMIT, "200.4.5.6");
+  assert.equal((await pedir("TRUCHO2")).status, 429);
+  // Sin cupón puede seguir comprando.
+  assert.equal((await pedir()).status, 200);
+});
+
+test("el mismo intento de compra mandado dos veces crea un solo pedido", async () => {
+  await seedProduct("tele", 100_000, 5);
+  const checkoutKey = "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa";
+  const primero = await checkout({ items: [{ slug: "tele", quantity: 2 }], checkoutKey });
+  const segundo = await checkout({ items: [{ slug: "tele", quantity: 2 }], checkoutKey });
+  assert.equal(segundo.status, 200);
+  assert.equal(segundo.body.code, primero.body.code);
+  assert.equal(segundo.body.total, primero.body.total);
+  assert.equal((await db.select().from(schema.orders)).length, 1);
+  assert.equal(await stock("tele"), 3, "el stock se reserva una sola vez");
+});
+
+test("dos envíos simultáneos con la misma clave dejan un pedido y el stock bien", async () => {
+  await seedProduct("tele", 100_000, 10);
+  const checkoutKey = "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb";
+  const respuestas = await Promise.all(
+    Array.from({ length: 4 }, () => checkout({ items: [{ slug: "tele", quantity: 1 }], checkoutKey })),
+  );
+  assert.deepEqual(respuestas.map((r) => r.status), [200, 200, 200, 200]);
+  assert.equal(new Set(respuestas.map((r) => r.body.code)).size, 1);
+  assert.equal((await db.select().from(schema.orders)).length, 1);
+  assert.equal(await stock("tele"), 9);
+});
+
+test("sin clave, o con otra clave, cada envío es un pedido nuevo", async () => {
+  await seedProduct("tele", 100_000, 10);
+  await checkout({ items: [{ slug: "tele", quantity: 1 }] });
+  await checkout({ items: [{ slug: "tele", quantity: 1 }] });
+  await checkout({ items: [{ slug: "tele", quantity: 1 }], checkoutKey: "11111111-1111-4111-8111-111111111111" });
+  await checkout({ items: [{ slug: "tele", quantity: 1 }], checkoutKey: "22222222-2222-4222-8222-222222222222" });
+  assert.equal((await db.select().from(schema.orders)).length, 4);
+});
+
+test("la clave de otra persona no devuelve su pedido", async () => {
+  await seedProduct("tele", 100_000, 10);
+  const checkoutKey = "33333333-3333-4333-8333-333333333333";
+  const ana = await checkout({ items: [{ slug: "tele", quantity: 1 }], checkoutKey });
+  const otro = await checkout({ items: [{ slug: "tele", quantity: 1 }], checkoutKey, customer: { ...comprador, email: "otro@example.com" } });
+  assert.equal(otro.status, 409);
+  assert.notEqual(otro.body.code, ana.body.code);
+  assert.equal((await db.select().from(schema.orders)).length, 1);
+  assert.equal(await stock("tele"), 9);
 });
