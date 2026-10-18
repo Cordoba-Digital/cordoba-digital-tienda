@@ -234,7 +234,7 @@ export function FiltersPanel({
             />
           </div>
         ) : null}
-        <div className="max-h-72 space-y-0.5 overflow-y-auto overscroll-contain data-lenis-prevent pr-1">
+        <div className="space-y-0.5">
           {visibleBrands.map((b) => (
             <label
               key={b.brand}
@@ -360,7 +360,8 @@ export function FiltersPanel({
       </button>
 
       <aside className="hidden lg:block">
-        <div className="card-surface sticky top-36 max-h-[calc(100vh-10rem)] overflow-y-auto overscroll-contain data-lenis-prevent p-5">{body}</div>
+        {/* Entero y sin scroll propio: acompaña el scroll de la página. */}
+        <div className="card-surface p-5">{body}</div>
       </aside>
 
       {open ? (
