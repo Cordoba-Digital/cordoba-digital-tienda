@@ -87,14 +87,19 @@ export function nextStep(order: { status: string; paymentMethod: string; deliver
   }
 }
 
-/** Pasos del flujo con su situación respecto del estado actual (para la línea de progreso). */
+/**
+ * Pasos del flujo con su situación respecto del estado actual (para la línea
+ * de progreso). "current" es el paso en curso; el último (entregado) ya no
+ * está en curso: el pedido terminó y todos los pasos quedan hechos.
+ */
 export function statusSteps(status: string): { id: string; label: string; state: "done" | "current" | "todo" }[] {
   const current = statusIndex(status);
   const cancelled = isCancelled(status);
+  const finished = current === ORDER_STATUS_FLOW.length - 1;
   return ORDER_STATUS_FLOW.map((s, i) => ({
     id: s.id,
     label: s.label,
-    state: cancelled ? "todo" : i < current ? "done" : i === current ? "current" : "todo",
+    state: cancelled ? "todo" : i < current || finished ? "done" : i === current ? "current" : "todo",
   }));
 }
 

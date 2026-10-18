@@ -103,9 +103,12 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
           {statusSteps(order.status).map((s, i) => (
             <li key={s.id} className="flex items-center gap-2 sm:flex-col sm:items-start">
               <span
-                className={`h-1.5 w-8 shrink-0 rounded-full sm:w-full ${s.state === "done" ? "bg-emerald-500" : s.state === "current" ? "bg-ink-900" : "bg-ink-100"}`}
+                className={`relative h-1.5 w-8 shrink-0 overflow-hidden rounded-full sm:w-full ${s.state === "done" ? "bg-emerald-500" : "bg-ink-100"}`}
                 aria-hidden
-              />
+              >
+                {/* El paso en curso se va llenando, una y otra vez, hasta que el pedido avanza. */}
+                {s.state === "current" ? <span className="estado-avance absolute inset-0 rounded-full bg-brand-500" /> : null}
+              </span>
               <span className={`text-xs ${s.state === "current" ? "font-bold text-ink-900" : s.state === "done" ? "text-ink-600" : "text-ink-400"}`}>
                 {i + 1}. {s.label}
                 {s.state === "current" ? <span className="sr-only"> (estado actual)</span> : null}

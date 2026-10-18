@@ -6,7 +6,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { allowedStatuses, nextStep, whatsappHref } from "../../src/lib/admin-order-helpers.ts";
+import { allowedStatuses, nextStep, statusSteps, whatsappHref } from "../../src/lib/admin-order-helpers.ts";
 import { formatAgo } from "../../src/lib/format.ts";
 import { ADMIN_ORDER_STATUSES } from "../../src/lib/pricing.ts";
 
@@ -39,6 +39,15 @@ test("nextStep: Mercado Pago se acredita solo; la transferencia se marca a mano"
   assert.equal(nextStep({ status: "preparando", paymentMethod: "mercadopago", deliveryMethod: "pickup" }).asksTracking, false);
   assert.equal(nextStep({ status: "entregado", paymentMethod: "mercadopago", deliveryMethod: "pickup" }).to, null);
   assert.equal(nextStep({ status: "cancelado", paymentMethod: "transferencia", deliveryMethod: "pickup" }).to, null);
+});
+
+test("statusSteps: el paso en curso es uno solo, y entregado queda todo hecho", () => {
+  const states = (status: string) => statusSteps(status).map((s) => s.state);
+  assert.deepEqual(states("pendiente_pago"), ["current", "todo", "todo", "todo", "todo"]);
+  assert.deepEqual(states("preparando"), ["done", "done", "current", "todo", "todo"]);
+  assert.deepEqual(states("enviado"), ["done", "done", "done", "current", "todo"]);
+  assert.deepEqual(states("entregado"), ["done", "done", "done", "done", "done"]);
+  assert.deepEqual(states("cancelado"), ["todo", "todo", "todo", "todo", "todo"]);
 });
 
 test("formatAgo usa la hora de Córdoba (UTC-3), no la del servidor", () => {

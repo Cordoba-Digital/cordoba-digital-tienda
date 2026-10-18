@@ -171,9 +171,12 @@ export function OrderConfirmation({
                         </span>
                         {last ? null : (
                           <span
-                            className={`my-1 w-0.5 flex-1 rounded-full ${index < current ? "bg-emerald-500" : "bg-ink-100"}`}
+                            className={`relative my-1 w-0.5 flex-1 overflow-hidden rounded-full ${index < current ? "bg-emerald-500" : "bg-ink-100"}`}
                             aria-hidden
-                          />
+                          >
+                            {/* Hacia el paso siguiente: se va llenando mientras el pedido está en este. */}
+                            {isCurrent ? <span className="estado-avance-v absolute inset-0 rounded-full bg-emerald-500" /> : null}
+                          </span>
                         )}
                       </div>
                       <div className={`min-w-0 pt-1 ${last ? "" : "pb-6"}`}>

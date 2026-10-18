@@ -42,6 +42,14 @@ test("con el pago acreditado o después, gracias y confirmado", () => {
   }
 });
 
+test("cancelado no dice gracias ni confirmado", () => {
+  for (const paymentMethod of ["transferencia", "efectivo", "mercadopago"]) {
+    const banner = orderBanner({ customerName: "Ronan", status: "cancelado", paymentMethod });
+    assert.equal(banner.tone, "cancelado");
+    assert.doesNotMatch(banner.title, /Gracias|confirmado/);
+  }
+});
+
 test("sin nombre no queda un espacio suelto", () => {
   assert.equal(
     orderBanner({ customerName: " ", status: "pago_confirmado", paymentMethod: "mercadopago" }).title,
