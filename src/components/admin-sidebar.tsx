@@ -37,14 +37,19 @@ function badgeCls(href: string, on: boolean): string {
  * - compu (1024 px o más): barra lateral completa, que se puede contraer a íconos.
  * `badges`: contador por sección. `who`: email con el que se entró (vacío si fue con la clave).
  */
+const NO_HIDDEN: string[] = [];
+
 export function AdminFrame({
   badges = {},
   who = "",
   compact: initialCompact = false,
   tema: initialTema = "claro",
+  hidden = NO_HIDDEN,
   children,
 }: {
   badges?: Record<string, number>;
+  /** Secciones que no aplican hoy (por ejemplo Pagos, con Mercado Pago apagado). */
+  hidden?: string[];
   who?: string;
   compact?: boolean;
   tema?: AdminTheme;
@@ -198,7 +203,7 @@ export function AdminFrame({
           </button>
 
           <nav aria-label="Administración" className="flex flex-col gap-3.5 rail:gap-2 roomy:gap-2 short:gap-1.5 tiny:gap-1">
-            {ADMIN_NAV_GROUPS.map((group, gi) => (
+            {ADMIN_NAV_GROUPS.map((group) => ({ ...group, items: group.items.filter((item) => !hidden.includes(item.href)) })).map((group, gi) => (
               <div key={group.title ?? gi} className="flex flex-col gap-0.5 rail:gap-1">
                 {group.title ? (
                   <>
@@ -283,7 +288,7 @@ export function AdminFrame({
         <main className="admin-shell mx-auto max-w-6xl px-4 py-5 sm:px-6 md:py-6 lg:px-9 lg:py-6 xl:max-w-7xl 2xl:max-w-[1440px] 2xl:px-10">{children}</main>
       </div>
 
-      <AdminSearchPalette />
+      <AdminSearchPalette hidden={hidden} />
       <Suspense fallback={null}>
         <AdminPopovers />
       </Suspense>

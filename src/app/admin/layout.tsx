@@ -4,6 +4,7 @@ import { cookies } from "next/headers";
 import type { ReactNode } from "react";
 
 import { ADMIN_NAV_COOKIE, ADMIN_THEME_COOKIE } from "@/components/admin-nav-items";
+import { mercadoPagoReady } from "@/lib/mercadopago";
 import { AdminFrame } from "@/components/admin-sidebar";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { readAdminSession } from "@/lib/admin-session";
@@ -53,6 +54,8 @@ export default async function AdminLayout({ children }: { children: ReactNode })
         }}
         who={session.email}
         compact={jar.get(ADMIN_NAV_COOKIE)?.value === "compacto"}
+        // Pagos es la conciliación de Mercado Pago: sin Mercado Pago no aplica.
+        hidden={mercadoPagoReady() ? [] : ["/admin/pagos"]}
         tema={tema}
       >
         {children}

@@ -13,6 +13,7 @@ import { comprador, db, domicilio, pool, post, resetDb, schema, seedProduct } fr
 
 delete process.env.MP_ACCESS_TOKEN;
 const { POST } = await import("../../src/app/api/checkout/route");
+const { POST: crearCobroMp } = await import("../../src/app/api/checkout/mercadopago/route");
 const { findShippingOption } = await import("../../src/lib/shipping");
 const { CHECKOUT_LIMIT, COUPON_LIMIT, recordMiss } = await import("../../src/lib/rate-limit");
 
@@ -123,6 +124,23 @@ test("rechaza Mercado Pago si no está configurado", async () => {
   const res = await checkout({ items: [{ slug: "celu", quantity: 1 }], payment: { method: "mercadopago" } });
   assert.equal(res.status, 400);
   assert.ok((res.body.errors as Record<string, string>).payment);
+});
+
+test("con solo el token de Mercado Pago (sin la clave del webhook) sigue apagado: ni se ofrece ni se crea el cobro", async (t) => {
+  // Así está producción: el token quedó cargado, pero sin la clave del webhook
+  // un pago nunca se acreditaría.
+  process.env.MP_ACCESS_TOKEN = "TEST-token";
+  delete process.env.MP_WEBHOOK_SECRET;
+  t.after(() => {
+    delete process.env.MP_ACCESS_TOKEN;
+  });
+  await seedProduct("celu", 100_000, 10);
+  const res = await checkout({ items: [{ slug: "celu", quantity: 1 }], payment: { method: "mercadopago" } });
+  assert.equal(res.status, 400);
+
+  const cobro = await crearCobroMp(post("/api/checkout/mercadopago", { code: "CD-AAAAAA" }));
+  assert.equal(cobro.status, 503);
+  assert.match(((await cobro.json()) as { error: string }).error, /no está disponible/);
 });
 
 test("carrito vacío o datos con tipos raros responden 400, no 500", async () => {

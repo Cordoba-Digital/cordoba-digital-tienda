@@ -9,6 +9,7 @@ import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { listAdminPayments, PAYMENT_FLAG_LABEL, type PaymentFlag } from "@/lib/admin-payments";
 import { money } from "@/lib/format";
+import { mercadoPagoReady } from "@/lib/mercadopago";
 import { statusLabel } from "@/lib/pricing";
 
 export const dynamic = "force-dynamic";
@@ -37,6 +38,8 @@ export default async function AdminPaymentsPage({ searchParams }: { searchParams
   if (!(await verifyAdminSessionValue(jar.get(ADMIN_COOKIE)?.value))) {
     redirect("/admin/login?next=/admin/pagos");
   }
+  // Sin Mercado Pago no hay cobros que conciliar: los pedidos se ven en Pedidos.
+  if (!mercadoPagoReady()) redirect("/admin/pedidos");
 
   const sp = await searchParams;
   const first = (v: string | string[] | undefined): string => (Array.isArray(v) ? (v[0] ?? "") : (v ?? ""));

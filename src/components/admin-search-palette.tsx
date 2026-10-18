@@ -17,7 +17,9 @@ function plain(text: string): string {
  * Buscador del panel (botón "Buscar…"): salta a una sección o busca el texto en
  * pedidos, productos o usuarios con los buscadores que ya tiene cada pantalla.
  */
-export function AdminSearchPalette() {
+const NONE: string[] = [];
+
+export function AdminSearchPalette({ hidden = NONE }: { hidden?: string[] }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [q, setQ] = useState("");
@@ -47,7 +49,7 @@ export function AdminSearchPalette() {
   const results = useMemo<Result[]>(() => {
     const text = q.trim();
     const needle = plain(text);
-    const sections = ADMIN_NAV.filter((item) => !needle || plain(item.label).includes(needle)).map((item) => ({
+    const sections = ADMIN_NAV.filter((item) => !hidden.includes(item.href) && (!needle || plain(item.label).includes(needle))).map((item) => ({
       key: item.href,
       label: item.label,
       hint: "Ir a la sección",
@@ -62,7 +64,7 @@ export function AdminSearchPalette() {
       { key: "usuarios", label: `Buscar “${text}” en usuarios`, hint: "Nombre o email", href: `/admin/usuarios?q=${query}`, icon: "usuarios" },
       ...sections,
     ];
-  }, [q]);
+  }, [q, hidden]);
 
   if (!open) return null;
 
