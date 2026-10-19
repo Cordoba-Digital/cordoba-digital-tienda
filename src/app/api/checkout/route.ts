@@ -1,23 +1,22 @@
-import { and, eq, gt, inArray, or, sql } from "drizzle-orm";
+import { and, eq, gt, or, sql } from "drizzle-orm";
 
 import { db } from "@/db";
-import { orderItems, orders, products, type ShippingAddress } from "@/db/schema";
-import { computeTotals, MAX_QTY_PER_ITEM, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
-import { ensureOrderStockSchema, releaseStaleStockHolds, reserveOrderStock } from "@/lib/order-status";
+import { orders, type ShippingAddress } from "@/db/schema";
+import type { PaymentMethodId } from "@/lib/pricing";
+import { releaseStaleStockHolds } from "@/lib/order-status";
 import { PENDING_EXPIRY_HOURS } from "@/lib/payment-rules";
-import { claimCouponUse, CouponGoneError, getCoupon } from "@/lib/coupons";
+import { CouponGoneError, getCoupon } from "@/lib/coupons";
+import { insertOrder, mergeOrderLines, priceOrder } from "@/lib/checkout-order";
 import { resolvePaymentMethod } from "@/lib/checkout-payment";
 import { mercadoPagoReady } from "@/lib/mercadopago";
 import { validateDelivery, validatePersonalData } from "@/lib/checkout-validation";
-import { findShippingOption, normalizeZip, type DeliveryMethod } from "@/lib/shipping";
-import { preciosAndreani } from "@/lib/shipping-andreani";
+import { normalizeZip, type DeliveryMethod } from "@/lib/shipping";
 import { andreaniConfigurado, AndreaniError, sucursales } from "@/lib/andreani";
 import { findOrderByCheckoutKey, isCheckoutKeyConflict, parseCheckoutKey } from "@/lib/checkout-idempotency";
 import { blockedMinutes, CHECKOUT_LIMIT, COUPON_LIMIT, ipFromHeaders, recordMiss, tooManyAttempts } from "@/lib/rate-limit";
 import { usdtAmountFor } from "@/lib/usdt-amount";
 import { getUsdtRate, type UsdtRate } from "@/lib/usdt-rate";
-import { ensureUsdtSchema } from "@/lib/usdt-schema";
-import { createUsdtPayment, getUsdtWallet } from "@/lib/usdt-server";
+import { getUsdtWallet } from "@/lib/usdt-server";
 
 export const dynamic = "force-dynamic";
 
@@ -47,19 +46,6 @@ type CheckoutBody = {
   /** Clave del intento de compra (ver `checkout-idempotency.ts`). */
   checkoutKey?: string;
 };
-
-function orderCode(): string {
-  const alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-  // El código es la llave para ver el pedido en /pedido/[code]: tiene que salir
-  // de un generador criptográfico, no de Math.random (predecible). 256 es
-  // múltiplo de 32, así que el módulo no sesga.
-  const bytes = crypto.getRandomValues(new Uint8Array(6));
-  let suffix = "";
-  for (const byte of bytes) {
-    suffix += alphabet[byte % alphabet.length];
-  }
-  return `CD-${suffix}`;
-}
 
 function text(value: unknown): string {
   return typeof value === "string" ? value.trim() : "";
@@ -97,17 +83,7 @@ export async function POST(request: Request) {
   const body = ((await request.json().catch(() => ({}))) ?? {}) as CheckoutBody;
   const errors: Record<string, string> = {};
 
-  // El mismo producto puede venir en dos líneas: se suman antes de validar, así
-  // el tope por producto vale para el total y no para cada línea.
-  const rawItems: unknown[] = Array.isArray(body.items) ? body.items : [];
-  const merged = new Map<string, number>();
-  for (const raw of rawItems) {
-    const item = raw as { slug?: unknown; quantity?: unknown } | null;
-    const quantity = Number(item?.quantity);
-    if (!item || typeof item.slug !== "string" || !Number.isFinite(quantity) || quantity <= 0) continue;
-    merged.set(item.slug, (merged.get(item.slug) ?? 0) + Math.floor(quantity));
-  }
-  const items = [...merged].map(([slug, quantity]) => ({ slug, quantity }));
+  const items = mergeOrderLines(body.items);
   if (!items.length) {
     return Response.json({ ok: false, error: "Tu carrito está vacío." }, { status: 400 });
   }
@@ -185,8 +161,6 @@ export async function POST(request: Request) {
   // de mirar si alcanza. Si falla, se compra igual con el stock como está.
   await releaseStaleStockHolds().catch((error) => console.error("[checkout] no se pudo liberar stock vencido:", error));
 
-  // El cupón se pide temprano y se espera tarde: es independiente de la
-  // validación de productos y así las dos consultas viajan juntas.
   // Un cupón que no existe se ignora (el pedido sale sin descuento), pero
   // cuenta como intento fallido igual que en /api/coupon: si no, el total que
   // devuelve el checkout serviría para adivinar códigos a fuerza bruta.
@@ -195,66 +169,18 @@ export async function POST(request: Request) {
     const couponBlocked = await blockedMinutes(COUPON_LIMIT, ip);
     if (couponBlocked) return tooManyAttempts(couponBlocked);
   }
-  const couponPromise = couponCode ? getCoupon(couponCode) : null;
-
-  const slugs = items.map((i) => i.slug);
-  const rows = await db.select().from(products).where(inArray(products.slug, slugs));
-  const bySlug = new Map(rows.map((r) => [r.slug, r]));
-
-  const validated: { slug: string; name: string; image: string; unitPrice: number; quantity: number }[] = [];
-  for (const item of items) {
-    const product = bySlug.get(item.slug);
-    if (!product) {
-      return Response.json({ ok: false, error: `El producto ${item.slug} ya no está disponible.` }, { status: 409 });
-    }
-    // El `stock` migrado es disponibilidad, no cantidad. El tope por producto
-    // es MAX_QTY_PER_ITEM; el `stock` solo recorta cuando la cantidad es real
-    // (> 1) y menor. El 0 (sin stock) sigue rechazando.
-    const wanted = Math.max(1, Math.floor(item.quantity));
-    const cap = product.stock > 1 ? Math.min(product.stock, MAX_QTY_PER_ITEM) : product.stock === 0 ? 0 : MAX_QTY_PER_ITEM;
-    const quantity = Math.min(wanted, cap);
-    if (quantity === 0) {
-      return Response.json({ ok: false, error: `Nos quedamos sin stock de ${product.name}.` }, { status: 409 });
-    }
-    validated.push({
-      slug: product.slug,
-      name: product.name,
-      image: product.images?.[0] ?? "",
-      unitPrice: product.price,
-      quantity,
-    });
-  }
-
-  const subtotal = validated.reduce((acc, item) => acc + item.unitPrice * item.quantity, 0);
-
-  const coupon = couponPromise ? await couponPromise : null;
-  if (couponCode && !coupon) await recordMiss(COUPON_LIMIT, ip);
-  const couponInfo = coupon
-    ? {
-        code: coupon.code,
-        kind: coupon.kind,
-        value: coupon.value,
-        minSubtotal: coupon.minSubtotal,
-        description: coupon.description,
-      }
+  const coupon = couponCode
+    ? getCoupon(couponCode).then(async (found) => {
+        if (!found) await recordMiss(COUPON_LIMIT, ip);
+        return found;
+      })
     : null;
 
-  // El precio de Andreani se vuelve a pedir acá con los productos validados:
-  // no se confía en el monto que mostró el navegador. La cotización queda en
-  // caché unos minutos, así que coincide con lo que vio el cliente.
-  const andreani = method === "pickup" ? {} : await preciosAndreani(zip, validated);
-  const shippingOption = findShippingOption(method === "pickup" ? "5000" : zip, method, andreani);
-  if (!shippingOption) {
-    return Response.json({ ok: false, errors: { zip: "No podemos enviar a ese código postal." } }, { status: 400 });
+  const priced = await priceOrder({ source: "web", lines: items, delivery: { method, zip }, paymentMethod: paymentId, installments, coupon });
+  if (!priced.ok) {
+    return Response.json(priced.errors ? { ok: false, errors: priced.errors } : { ok: false, error: priced.error }, { status: priced.status });
   }
-
-  const totals = computeTotals({
-    subtotal,
-    coupon: couponInfo,
-    shippingCost: shippingOption.cost,
-    paymentMethod: paymentId,
-    installments,
-  });
+  const { totals } = priced;
 
   // La sucursal se guarda solo si existe en la lista de Andreani para ese CP.
   // Si no se eligió o no se puede verificar, el local la completa desde el panel.
@@ -274,8 +200,6 @@ export async function POST(request: Request) {
     }
   }
 
-  const paymentLabel = PAYMENT_METHODS.find((p) => p.id === paymentId)?.label ?? "Transferencia";
-
   // USDT: el monto exacto sale del total con la cotización que cargó la tienda
   // y queda fijo en el pedido. Sin cotización no se puede cobrar en USDT.
   let usdtQuote: { expectedAmount: string; rate: UsdtRate } | null = null;
@@ -290,68 +214,18 @@ export async function POST(request: Request) {
     usdtQuote = { expectedAmount: usdtAmountFor(totals.total, rate.rate), rate };
   }
 
-  let code = orderCode();
-  for (let attempt = 0; attempt < 4; attempt += 1) {
-    const [existing] = await db.select({ id: orders.id }).from(orders).where(eq(orders.code, code)).limit(1);
-    if (!existing) break;
-    code = orderCode();
-  }
-
-  // Pedido, ítems y stock en una sola transacción: si algo falla, no queda un
-  // pedido sin productos ni stock descontado de más.
-  await ensureOrderStockSchema();
-  if (usdtQuote) await ensureUsdtSchema();
-  const created = await db.transaction(async (tx) => {
-    const [order] = await tx
-      .insert(orders)
-      .values({
-        code,
-        // Todo pedido nace pendiente, también el de Mercado Pago: el pago se
-        // acredita recién cuando el webhook firmado confirma un cobro aprobado.
-        status: "pendiente_pago",
-        customerName: `${firstName} ${lastName}`,
-        email,
-        phone,
-        docId,
-        deliveryMethod: method,
-        deliveryLabel: shippingOption.label,
-        deliveryEta: shippingOption.eta,
-        address,
-        paymentMethod: paymentId,
-        paymentLabel,
-        installments: paymentId === "mercadopago" ? installments : 1,
-        subtotal: totals.subtotal,
-        discount: totals.couponDiscount,
-        paymentAdjustment: totals.paymentAdjustment,
-        shippingCost: totals.shippingCost,
-        total: totals.total,
-        couponCode: couponInfo?.code ?? null,
-        notes: text(body.notes).slice(0, 500),
-        checkoutKey,
-      })
-      .returning({ id: orders.id, code: orders.code });
-
-    await tx.insert(orderItems).values(
-      validated.map((item) => ({
-        orderId: order.id,
-        productSlug: item.slug,
-        name: item.name,
-        image: item.image,
-        unitPrice: item.unitPrice,
-        quantity: item.quantity,
-      })),
-    );
-
-    // Descuenta stock solo donde es una cantidad real y anota cuánto, para
-    // devolverlo si el pedido se cancela o vence sin pago.
-    await reserveOrderStock(tx, order.id);
-    if (usdtQuote) await createUsdtPayment(tx, order.id, usdtQuote);
-
-    // El uso del cupón se cuenta acá, con el tope chequeado en el mismo UPDATE.
-    // Si otro pedido se llevó el último uso entre la consulta de arriba y este
-    // punto, se deshace todo y el cliente vuelve a intentar sin el cupón.
-    if (couponInfo && !(await claimCouponUse(tx, couponInfo.code))) throw new CouponGoneError(couponInfo.code);
-    return order;
+  const created = await insertOrder({
+    priced,
+    // Todo pedido nace pendiente, también el de Mercado Pago: el pago se
+    // acredita recién cuando el webhook firmado confirma un cobro aprobado.
+    status: "pendiente_pago",
+    customer: { name: `${firstName} ${lastName}`, email, phone, docId },
+    delivery: { method, address },
+    paymentMethod: paymentId,
+    installments: paymentId === "mercadopago" ? installments : 1,
+    notes: text(body.notes).slice(0, 500),
+    checkoutKey,
+    usdtQuote,
   }).catch((error: unknown) => {
     if (error instanceof CouponGoneError) return error;
     // Dos envíos con la misma clave llegaron juntos y el otro guardó primero:

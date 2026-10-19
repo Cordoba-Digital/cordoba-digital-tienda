@@ -14,6 +14,7 @@ process.env.ADMIN_PASSWORD = "clave-de-prueba";
 const { comprador, db, domicilio, pool, post, resetDb, schema, seedProduct } = await import("./db.mts");
 const { createAdminSessionValue } = await import("../../src/lib/admin-auth");
 const { POST } = await import("../../src/app/api/admin/orders/manual/route");
+const { POST: checkout } = await import("../../src/app/api/checkout/route");
 
 const PATH = "/api/admin/orders/manual";
 
@@ -172,4 +173,29 @@ test("sin marcar la venta en el local, el email sigue siendo obligatorio", async
   });
   assert.equal(res.status, 400);
   assert.ok(res.body.errors.email);
+});
+
+test("la tienda y el panel arman el mismo pedido para el mismo carrito", async () => {
+  await seedProduct("tele", 100_000, 10);
+  const carrito = { items: [{ slug: "tele", quantity: 2 }], customer: comprador, delivery: domicilio, payment: { method: "transferencia" } };
+  const web = await checkout(post("/api/checkout", carrito));
+  assert.equal(web.status, 200);
+  const panel = await cargar({ ...carrito, delivery: { ...domicilio, method: "standard" } });
+  assert.equal(panel.status, 200, JSON.stringify(panel.body));
+
+  const [deWeb, delPanel] = await Promise.all(
+    [((await web.json()) as { code: string }).code, panel.body.code as string].map(async (code) => {
+      const [order] = await db.select().from(schema.orders).where(eq(schema.orders.code, code));
+      const items = await db.select().from(schema.orderItems).where(eq(schema.orderItems.orderId, order.id));
+      return { order, items };
+    }),
+  );
+  for (const field of ["subtotal", "shippingCost", "total", "deliveryLabel", "paymentLabel", "status"] as const) {
+    assert.equal(delPanel.order[field], deWeb.order[field], field);
+  }
+  assert.deepEqual(
+    delPanel.items.map((i) => [i.productSlug, i.unitPrice, i.quantity, i.stockReserved]),
+    deWeb.items.map((i) => [i.productSlug, i.unitPrice, i.quantity, i.stockReserved]),
+  );
+  assert.equal(await stock("tele"), 6);
 });

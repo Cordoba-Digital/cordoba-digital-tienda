@@ -8,7 +8,7 @@ import { adminBtn, adminChip } from "@/components/admin-ui";
 import { whatsappHref } from "@/lib/admin-order-helpers";
 import { CHECKOUT_PAYMENT_METHODS, isPaymentMethodOffered } from "@/lib/checkout-payment";
 import { money } from "@/lib/format";
-import { MAX_QTY_PER_ITEM, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
+import { maxQuantityFor, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
 
 type Found = { slug: string; name: string; sku: string; price: number; stock: number; image: string };
 type Line = Found & { quantity: number };
@@ -24,11 +24,6 @@ const DELIVERIES: { id: Delivery; label: string; hint: string }[] = [
 const field = "h-10 w-full px-3 text-sm";
 const label = "flex flex-col gap-1.5 text-[13px] text-adm-muted";
 const card = "admin-card flex flex-col gap-4 rounded-2xl p-5";
-
-/** Mismo tope que el checkout: el stock 1 migrado de WooCommerce es "hay", no una cantidad. */
-function capFor(stock: number): number {
-  return stock > 1 ? Math.min(stock, MAX_QTY_PER_ITEM) : stock === 0 ? 0 : MAX_QTY_PER_ITEM;
-}
 
 function FieldError({ text }: { text?: string }) {
   return text ? <span className="text-xs text-red-600">{text}</span> : null;
@@ -89,7 +84,7 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
     setLines((current) => {
       const existing = current.find((l) => l.slug === product.slug);
       if (existing) {
-        return current.map((l) => (l.slug === product.slug ? { ...l, quantity: Math.min(l.quantity + 1, capFor(l.stock)) } : l));
+        return current.map((l) => (l.slug === product.slug ? { ...l, quantity: Math.min(l.quantity + 1, maxQuantityFor(l.stock)) } : l));
       }
       return [...current, { ...product, quantity: 1 }];
     });
@@ -98,7 +93,7 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
   }
 
   function setQuantity(slug: string, quantity: number) {
-    setLines((current) => current.map((l) => (l.slug === slug ? { ...l, quantity: Math.max(1, Math.min(quantity, capFor(l.stock))) } : l)));
+    setLines((current) => current.map((l) => (l.slug === slug ? { ...l, quantity: Math.max(1, Math.min(quantity, maxQuantityFor(l.stock))) } : l)));
   }
 
   const subtotal = lines.reduce((sum, l) => sum + l.price * l.quantity, 0);
