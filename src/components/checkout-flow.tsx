@@ -12,7 +12,8 @@ import { trackBeginCheckout } from "@/lib/analytics";
 import { readCoupon, writeCoupon } from "@/lib/coupon-storage";
 import { money } from "@/lib/format";
 import { isPaymentMethodOffered } from "@/lib/checkout-payment";
-import { amountDueOnline, computeTotals, PAYMENT_METHODS, SENA_PESOS, type CouponInfo, type PaymentMethodId } from "@/lib/pricing";
+import { amountDueAtPickup, amountDueOnline, PICKUP_HOURS, SENA_EXPIRY_HOURS, STOCK_HOLD_HOURS } from "@/lib/payment-rules";
+import { computeTotals, PAYMENT_METHODS, type CouponInfo, type PaymentMethodId } from "@/lib/pricing";
 import { validateDelivery, validatePersonalData } from "@/lib/checkout-validation";
 import { useShippingQuote, useSucursales } from "@/lib/shipping-quote";
 import type { DeliveryMethod, ShippingOption } from "@/lib/shipping";
@@ -449,6 +450,8 @@ export function CheckoutFlow({
     paymentMethod: payment,
     installments,
   });
+  // El pedido como quedaría con seña, para mostrar cuánto se paga ahora y cuánto al retirar.
+  const senaOrder = { paymentMethod: "sena", total: totals.total };
 
   // Efectivo solo vale con retiro: se corrige en el mismo handler que
   // cambia la entrega, no en un efecto posterior (evita un render con el
@@ -978,7 +981,7 @@ export function CheckoutFlow({
                     <p className="font-bold text-ink-900">Datos para transferir</p>
                     <TransferDetails account={transfer} amount={totals.total} />
                     <ol className="list-decimal space-y-1 pl-4 text-xs">
-                      <li>Confirmá el pedido: te damos un número de orden y te guardamos el stock 2 hs.</li>
+                      <li>Confirmá el pedido: te damos un número de orden y te guardamos el stock {STOCK_HOLD_HOURS} hs.</li>
                       <li>Transferí el monto exacto desde tu banco o billetera virtual.</li>
                       <li>Mandanos el comprobante por WhatsApp con tu número de orden.</li>
                     </ol>
@@ -988,7 +991,7 @@ export function CheckoutFlow({
                   <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
                     <p className="font-bold text-ink-900">Al confirmar te pasamos el CBU o el alias por WhatsApp.</p>
                     <p className="mt-1 text-xs">
-                      Te guardamos el stock 2 hs. Cuando se acredita la transferencia, confirmamos el pedido.
+                      Te guardamos el stock {STOCK_HOLD_HOURS} hs. Cuando se acredita la transferencia, confirmamos el pedido.
                     </p>
                   </div>
                 )
@@ -997,18 +1000,18 @@ export function CheckoutFlow({
               {payment === "sena" ? (
                 <div className="space-y-3 rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
                   <p className="font-bold text-ink-900">
-                    Seña de {money(amountDueOnline({ paymentMethod: "sena", total: totals.total }))}
-                    {totals.total > SENA_PESOS ? ` y ${money(totals.total - SENA_PESOS)} al retirar en el local` : ""}
+                    Seña de {money(amountDueOnline(senaOrder))}
+                    {amountDueAtPickup(senaOrder) > 0 ? ` y ${money(amountDueAtPickup(senaOrder))} al retirar en el local` : ""}
                   </p>
-                  {transfer ? <TransferDetails account={transfer} amount={amountDueOnline({ paymentMethod: "sena", total: totals.total })} /> : null}
+                  {transfer ? <TransferDetails account={transfer} amount={amountDueOnline(senaOrder)} /> : null}
                   <ol className="list-decimal space-y-1 pl-4 text-xs">
-                    <li>Confirmá el pedido: te damos un número de orden y te guardamos el stock 2 hs.</li>
+                    <li>Confirmá el pedido: te damos un número de orden y te guardamos el stock {STOCK_HOLD_HOURS} hs.</li>
                     <li>Transferí la seña {transfer ? "a esta cuenta" : "(te pasamos el CBU por WhatsApp)"} y mandanos el comprobante.</li>
                     <li>Cuando se acredita, la reserva queda confirmada y te damos tu código de reserva.</li>
-                    <li>Retirás y pagás el resto en el local dentro de las 48 hs. Si no pasás, la reserva vence.</li>
+                    <li>Retirás y pagás el resto en el local dentro de las {PICKUP_HOURS} hs. Si no pasás, la reserva vence.</li>
                   </ol>
                   <p className="text-xs font-semibold text-amber-800">
-                    Tenés 24 horas para enviar la seña. Si no llega, la orden se cancela.
+                    Tenés {SENA_EXPIRY_HOURS} horas para enviar la seña. Si no llega, la orden se cancela.
                   </p>
                 </div>
               ) : null}

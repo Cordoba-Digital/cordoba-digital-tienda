@@ -4,7 +4,7 @@ import { db } from "@/db";
 import { orderEvents, orders } from "@/db/schema";
 import { isAutomationOn } from "@/lib/automations";
 import { money } from "@/lib/format";
-import { amountDueOnline } from "@/lib/pricing";
+import { amountDueAtPickup, amountDueOnline, PICKUP_HOURS } from "@/lib/payment-rules";
 import { mailConfigured, sendMail, STORE_EMAIL } from "@/lib/mailer";
 import { url } from "@/lib/site";
 
@@ -33,10 +33,11 @@ export function orderStatusEmail(
     case "pago_confirmado":
       if (order.paymentMethod === "sena") {
         const deposit = amountDueOnline({ paymentMethod: "sena", total: order.total });
+        const rest = amountDueAtPickup({ paymentMethod: "sena", total: order.total });
         subject = `Reserva confirmada: ${order.code}`;
         body = `Recibimos la seña de ${money(deposit)}. Tu código de reserva es ${order.code}. ${
-          order.total > deposit ? `El resto, ${money(order.total - deposit)}, lo pagás al retirar en el local.` : "No queda saldo por pagar."
-        } Tenés 48 horas para retirarlo; si no pasás, la reserva vence. Te avisamos cuando esté listo.`;
+          rest > 0 ? `El resto, ${money(rest)}, lo pagás al retirar en el local.` : "No queda saldo por pagar."
+        } Tenés ${PICKUP_HOURS} horas para retirarlo; si no pasás, la reserva vence. Te avisamos cuando esté listo.`;
         break;
       }
       subject = `Recibimos el pago de tu pedido ${order.code}`;
@@ -64,7 +65,7 @@ export function orderStatusEmail(
     case "cancelado":
       subject = `Cancelamos tu pedido ${order.code}`;
       body = note.startsWith("Reserva vencida")
-        ? `Venció tu reserva ${order.code}: pasaron 48 horas desde la seña y no la retiraste, así que el producto volvió a la venta. Respondé este email y vemos cómo seguimos con tu seña.`
+        ? `Venció tu reserva ${order.code}: pasaron ${PICKUP_HOURS} horas desde la seña y no la retiraste, así que el producto volvió a la venta. Respondé este email y vemos cómo seguimos con tu seña.`
         : note.startsWith("Vencido")
         ? `No recibimos el pago de tu orden ${order.code} ${expiredWithin(note)}, así que la cancelamos. Si todavía querés los productos, podés hacer un pedido nuevo en la tienda.`
         : `Cancelamos tu pedido ${order.code}. Si no esperabas este cambio o tenés alguna duda, respondé este email y lo vemos.`;

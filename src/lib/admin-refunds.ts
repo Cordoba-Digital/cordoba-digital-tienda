@@ -4,7 +4,8 @@ import { db } from "@/db";
 import { orderEvents, orderRefunds, orders } from "@/db/schema";
 import { money } from "@/lib/format";
 import { applyOrderStatus, canTransition } from "@/lib/order-status";
-import { CANCELLED_STATUS, isCancelled, statusIndex } from "@/lib/pricing";
+import { wasEverPaid } from "@/lib/payment-rules";
+import { CANCELLED_STATUS, isCancelled } from "@/lib/pricing";
 
 /**
  * Devolver plata de un pedido desde el panel, total o parcial.
@@ -20,12 +21,6 @@ export type RefundRow = typeof orderRefunds.$inferSelect;
 
 /** Lo que cuenta como devuelto: lo hecho y lo que MP todavía está procesando. */
 const COUNTED = ["pendiente", "hecho"];
-
-/** Un pedido se cobró si llegó alguna vez a "Pago acreditado" o más allá. */
-export function orderWasPaid(status: string, eventStatuses: string[]): boolean {
-  const paid = statusIndex("pago_confirmado");
-  return [status, ...eventStatuses].some((s) => !isCancelled(s) && statusIndex(s) >= paid);
-}
 
 export async function listOrderRefunds(orderId: number): Promise<RefundRow[]> {
   return db.select().from(orderRefunds).where(eq(orderRefunds.orderId, orderId)).orderBy(desc(orderRefunds.createdAt));
@@ -98,7 +93,7 @@ export async function refundOrder(
     if (!order) return { ok: false as const, status: 404, error: "No encontramos un pedido con ese código." };
 
     const events = await tx.select({ toStatus: orderEvents.toStatus }).from(orderEvents).where(eq(orderEvents.orderId, order.id));
-    if (!orderWasPaid(order.status, events.map((e) => e.toStatus))) {
+    if (!wasEverPaid(order.status, events.map((e) => e.toStatus))) {
       return { ok: false as const, status: 409, error: "El pedido no tiene un pago acreditado para devolver." };
     }
     const viaMp = order.paymentMethod === "mercadopago";

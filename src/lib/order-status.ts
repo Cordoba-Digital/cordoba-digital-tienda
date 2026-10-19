@@ -8,29 +8,16 @@ import { notifyStatusChange } from "@/lib/order-emails";
 import { CANCELLED_STATUS, isCancelled, statusIndex } from "@/lib/pricing";
 import { ensureStockHoldSchema } from "@/lib/stock-hold-schema";
 import { ensureUsdtSchema } from "@/lib/usdt-schema";
+import {
+  PENDING_EXPIRY_HOURS,
+  pendingExpiryHours,
+  PICKUP_HOURS,
+  SENA_EXPIRY_HOURS,
+  STOCK_HOLD_HOURS,
+} from "@/lib/payment-rules";
 
-/** Horas que una orden puede quedar sin pago antes de vencer (lo que promete la tienda). */
-export const PENDING_EXPIRY_HOURS = 48;
-/** La seña se espera menos: la reserva es para retirar en el local. */
-export const SENA_EXPIRY_HOURS = 24;
-/**
- * Con la seña acreditada, horas que el local guarda el producto para que lo
- * retiren y paguen el resto (Ronan, 19/10). Pasado ese plazo la reserva vence.
- */
-export const PICKUP_HOURS = 48;
 /** Nota del evento de una reserva vencida; el email al cliente la reconoce. */
 export const UNCLAIMED_NOTE = `Reserva vencida: no se retiró en ${PICKUP_HOURS} hs desde la seña.`;
-/**
- * Horas que una orden sin pago le guarda el stock. Después el stock vuelve a la
- * venta (la orden sigue viva hasta vencer) y, si el pago llega, se descuenta de
- * nuevo. Así nadie puede dejar productos sin stock con órdenes que no paga.
- */
-export const STOCK_HOLD_HOURS = 2;
-
-export function pendingExpiryHours(paymentMethod: string): number {
-  return paymentMethod === "sena" ? SENA_EXPIRY_HOURS : PENDING_EXPIRY_HOURS;
-}
-
 type Tx = Parameters<Parameters<typeof db.transaction>[0]>[0];
 
 /**

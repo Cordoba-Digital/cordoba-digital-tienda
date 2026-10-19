@@ -3,6 +3,7 @@ import { and, desc, eq, gte, inArray, sql } from "drizzle-orm";
 import { db } from "@/db";
 import { orderItems, orders, products, storeSettings } from "@/db/schema";
 import { ensureSettingsSchema, isAutomationOn } from "@/lib/automations";
+import { PAID_STATUSES } from "@/lib/payment-rules";
 import { getBestSellers, getDealProducts, getFeaturedProducts } from "@/lib/queries";
 import {
   HERO_SALES_DAYS,
@@ -15,9 +16,6 @@ import {
 } from "@/lib/hero-picks";
 
 export const HERO_SETTINGS_KEY = "portada.carrusel";
-
-/** Mismos estados que cuentan como venta en el panel (`admin-stats.ts`). */
-const PAID_STATUSES = ["pago_confirmado", "preparando", "enviado", "entregado"];
 
 type ProductRow = typeof products.$inferSelect;
 export type HeroProduct = ProductRow & { recentUnits: number };

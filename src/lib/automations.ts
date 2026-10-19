@@ -2,6 +2,7 @@ import { inArray, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { storeSettings } from "@/db/schema";
+import { PENDING_EXPIRY_HOURS, SENA_EXPIRY_HOURS, STOCK_HOLD_HOURS } from "@/lib/payment-rules";
 
 /**
  * Interruptores de automatización del panel (Admin → Automatizaciones). Cada
@@ -14,7 +15,7 @@ export const AUTOMATIONS = {
   vencerPedidos: {
     label: "Vencer pedidos sin pago",
     description:
-      "Cancela las órdenes que siguen sin pago a las 48 horas (24 horas si eran con seña) y devuelve el cupón. El stock de una orden sin pago vuelve a la venta a las 2 horas aunque esto esté apagado.",
+      `Cancela las órdenes que siguen sin pago a las ${PENDING_EXPIRY_HOURS} horas (${SENA_EXPIRY_HOURS} horas si eran con seña) y devuelve el cupón. El stock de una orden sin pago vuelve a la venta a las ${STOCK_HOLD_HOURS} horas aunque esto esté apagado.`,
     default: true,
   },
   avisarCliente: {

@@ -12,7 +12,8 @@ import { UsdtPaymentPanel, type UsdtPaymentInfo } from "@/components/usdt-paymen
 import { trackPurchase } from "@/lib/analytics";
 import { money } from "@/lib/format";
 import { orderBanner, orderCodeLabel } from "@/lib/order-banner";
-import { amountDueOnline, isCancelled, ORDER_STATUS_FLOW, statusIndex } from "@/lib/pricing";
+import { amountDueAtPickup, amountDueOnline, PICKUP_HOURS } from "@/lib/payment-rules";
+import { isCancelled, ORDER_STATUS_FLOW, statusIndex } from "@/lib/pricing";
 import type { TransferAccount } from "@/lib/transfer-account";
 
 export type OrderSummary = {
@@ -229,8 +230,8 @@ export function OrderConfirmation({
                   )}
                   {isSena ? (
                     <p className="mt-1 text-sm text-ink-600">
-                      Con la seña acreditada, la reserva queda confirmada. El resto, <strong>{money(order.total - dueNow)}</strong>,
-                      lo pagás al retirar en el local dentro de las 48 hs desde la seña. Si no pasás, la reserva vence.
+                      Con la seña acreditada, la reserva queda confirmada. El resto, <strong>{money(amountDueAtPickup(order))}</strong>,
+                      lo pagás al retirar en el local dentro de las {PICKUP_HOURS} hs desde la seña. Si no pasás, la reserva vence.
                     </p>
                   ) : null}
                 </div>

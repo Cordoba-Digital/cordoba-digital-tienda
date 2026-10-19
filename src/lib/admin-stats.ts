@@ -2,12 +2,7 @@ import { and, desc, eq, gte, inArray, lt, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orderItems, orders, products } from "@/db/schema";
-
-/**
- * Estados que cuentan como venta: el pago ya se acreditó. "Esperando el pago"
- * (`pendiente_pago`) y "Cancelado" quedan afuera porque la plata no entró.
- */
-export const PAID_STATUSES = ["pago_confirmado", "preparando", "enviado", "entregado"];
+import { PAID_STATUSES } from "@/lib/payment-rules";
 
 /** Zona horaria del negocio: los días del panel arrancan a las 00:00 de Córdoba. */
 const TZ = "America/Argentina/Cordoba";

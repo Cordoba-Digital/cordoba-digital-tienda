@@ -7,10 +7,7 @@
  */
 
 import { money } from "@/lib/format";
-import { amountDueOnline } from "@/lib/pricing";
-
-/** Horas que se guarda el stock de un pedido sin pago (`STOCK_HOLD_HOURS` en `lib/order-status`). */
-const RESERVA_HS = 2;
+import { amountDueOnline, SENA_EXPIRY_HOURS, STOCK_HOLD_HOURS } from "@/lib/payment-rules";
 
 export type OrderBanner = { tone: "pendiente" | "confirmado" | "cancelado"; title: string; detail: string | null };
 
@@ -31,11 +28,11 @@ export function orderBanner(order: { customerName: string; status: string; payme
 
   let detail: string | null = null;
   if (order.paymentMethod === "transferencia") {
-    detail = `Transferí el total con los datos de abajo y mandanos el comprobante. Te guardamos el stock ${RESERVA_HS} hs.`;
+    detail = `Transferí el total con los datos de abajo y mandanos el comprobante. Te guardamos el stock ${STOCK_HOLD_HOURS} hs.`;
   } else if (order.paymentMethod === "sena") {
-    detail = `Transferí la seña de ${money(amountDueOnline(order))} para confirmar la reserva. Si no llega en 24 hs, la orden se cancela.`;
+    detail = `Transferí la seña de ${money(amountDueOnline(order))} para confirmar la reserva. Si no llega en ${SENA_EXPIRY_HOURS} hs, la orden se cancela.`;
   } else if (order.paymentMethod === "usdt") {
-    detail = `Enviá USDT por red TRON a la wallet de abajo y pegá el TXID. Te reservamos el stock ${RESERVA_HS} hs.`;
+    detail = `Enviá USDT por red TRON a la wallet de abajo y pegá el TXID. Te reservamos el stock ${STOCK_HOLD_HOURS} hs.`;
   } else if (order.paymentMethod === "mercadopago") {
     detail = "Completá el pago en Mercado Pago para confirmarlo.";
   } else if (order.paymentMethod === "efectivo") {

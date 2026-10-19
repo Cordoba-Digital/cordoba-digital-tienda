@@ -3,7 +3,7 @@ import { Preference } from "mercadopago";
 
 import { db } from "@/db";
 import { orderItems, orders } from "@/db/schema";
-import { PENDING_EXPIRY_HOURS } from "@/lib/order-status";
+import { PENDING_EXPIRY_HOURS } from "@/lib/payment-rules";
 import { appBaseUrl, pesosToUnits, isPublicAppUrl, mercadoPagoReady, mpClient, MP_CURRENCY } from "@/lib/mercadopago";
 
 export const dynamic = "force-dynamic";
