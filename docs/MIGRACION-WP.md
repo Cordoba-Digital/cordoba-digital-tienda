@@ -47,8 +47,17 @@ Comando de la migración real completa (con prune del seed demo):
 npm run migrate:wp -- --prune
 ```
 
+Productos nuevos que el cliente sigue cargando en el WordPress (no toca lo que ya está en la base):
+
+```bash
+npm run migrate:wp -- --solo-nuevos --dry-run   # lista los que faltan (lee la base, no escribe)
+npm run migrate:wp -- --solo-nuevos             # los da de alta con descripción, fotos, categorías, precio y stock
+npm run images:migrate -- --yes                 # copia sus fotos del WordPress al almacenamiento propio
+```
+
 | Flag | Efecto |
 | ---- | ------ |
+| `--solo-nuevos` | Solo inserta los productos cuyo slug no existe en la base. No toca categorías ni productos existentes. Necesita `DATABASE_URL` también en `--dry-run`. No se combina con `--prune`. |
 | `--dry-run` | Lee todo, no escribe nada. Imprime conteos, 10 productos mapeados y la lista de huérfanos. |
 | `--prune` | Además del upsert, borra productos y categorías de la DB cuyo slug no existe en WP, y limpia los links huérfanos de `product_categories`. |
 | `--limit=N` | Solo las primeras N páginas de productos (para probar rápido). |
