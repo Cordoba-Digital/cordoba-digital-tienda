@@ -223,3 +223,104 @@ export function AdminUsdtWallet({
     </form>
   );
 }
+
+/**
+ * Cuántos pesos vale 1 USDT para cobrar los pedidos. La fija el dueño, como
+ * el precio en USD de WordPress; sin cotización, el checkout no ofrece USDT.
+ */
+export function AdminUsdtRate({
+  initial,
+  updatedBy,
+  updatedAt,
+  canEdit,
+}: {
+  initial: number | null;
+  updatedBy: string | null;
+  updatedAt: string | null;
+  canEdit: boolean;
+}) {
+  const router = useRouter();
+  const [rate, setRate] = useState(initial ? String(initial) : "");
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
+  const [saved, setSaved] = useState(false);
+  const value = rate.replace(/\D/g, "");
+
+  async function save(next: number | null) {
+    setBusy(true);
+    setError("");
+    setSaved(false);
+    try {
+      const res = await fetch("/api/admin/payment-methods/usdt-rate", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ rate: next }),
+      });
+      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
+      if (!res.ok || !data.ok) {
+        setError(data.error ?? "No se pudo guardar.");
+        return;
+      }
+      setSaved(true);
+      router.refresh();
+    } catch {
+      setError("Error de red. Probá de nuevo.");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <form
+      className="admin-card max-w-2xl space-y-4 p-4 sm:p-5"
+      onSubmit={(e) => {
+        e.preventDefault();
+        const next = value ? Number(value) : null;
+        const question = next
+          ? `¿Cobrar los pedidos en USDT a $${next.toLocaleString("es-AR")} por USDT? Vale desde el próximo pedido.`
+          : "¿Borrar la cotización? Sin cotización, el checkout no ofrece USDT.";
+        if (window.confirm(question)) void save(next);
+      }}
+    >
+      <div>
+        <h2 className="text-base font-semibold text-adm-fg">Cotización de USDT</h2>
+        <p className="mt-1 text-xs text-ink-500">
+          {initial && updatedAt
+            ? `Último cambio: ${updatedBy ?? "—"}, el ${when.format(new Date(updatedAt))}.`
+            : "Sin cotización cargada, el checkout no ofrece USDT."}
+        </p>
+      </div>
+      <label className="block">
+        <span className="text-sm font-semibold text-ink-900">Pesos por 1 USDT</span>
+        <input
+          value={rate}
+          onChange={(e) => setRate(e.target.value)}
+          disabled={!canEdit || busy}
+          inputMode="numeric"
+          autoComplete="off"
+          placeholder="1570"
+          className="mt-1 h-10 w-full max-w-xs border border-ink-200 bg-surface px-3 text-sm text-ink-900 outline-none focus:border-ink-400 disabled:bg-ink-50 disabled:text-ink-600"
+        />
+        <span className="mt-1 block text-xs text-ink-500">
+          El total en pesos se divide por este número y se redondea para arriba al centavo. Por ejemplo, $899.999 a $1.570 son
+          573,25 USDT. El monto queda fijo en cada pedido al crearlo.
+        </span>
+      </label>
+      {canEdit ? (
+        <div className="flex flex-wrap items-center gap-3">
+          <button
+            type="submit"
+            disabled={busy}
+            className="h-10 bg-ink-900 px-5 text-sm font-bold text-white transition-[background-color,color,border-color,box-shadow,opacity] duration-150 hover:bg-ink-700 disabled:cursor-default disabled:bg-ink-300"
+          >
+            {busy ? "Guardando…" : value ? "Guardar cotización" : "Borrar cotización"}
+          </button>
+          {saved ? <span className="text-sm font-semibold text-emerald-700">Guardado. Vale desde el próximo pedido.</span> : null}
+        </div>
+      ) : (
+        <p className="text-sm text-ink-600">Solo los dueños pueden cambiar la cotización.</p>
+      )}
+      {error ? <p role="alert" className="text-sm font-semibold text-red-600">{error}</p> : null}
+    </form>
+  );
+}

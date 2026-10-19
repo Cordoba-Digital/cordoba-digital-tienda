@@ -26,7 +26,7 @@ const { captureMailForTests } = await import("../../src/lib/mailer");
 const { expireStalePendingOrders } = await import("../../src/lib/order-status");
 const { USDT_TRC20_CONTRACT } = await import("../../src/lib/tron");
 const { usdtAmountFor } = await import("../../src/lib/usdt-amount");
-const { resetUsdtRateCache } = await import("../../src/lib/usdt-rate");
+const { PUT: guardarCotizacion } = await import("../../src/app/api/admin/payment-methods/usdt-rate/route");
 
 const BASE = "http://localhost:3000";
 // Dirección pública (el contrato de USDT), no la wallet de la tienda: el repo es público.
@@ -47,6 +47,21 @@ function putWallet(wallet: unknown, cookieHeader: string): Request {
   });
 }
 
+function putRate(rate: unknown, cookieHeader: string): Request {
+  return new Request(`${BASE}/api/admin/payment-methods/usdt-rate`, {
+    method: "PUT",
+    headers: { "content-type": "application/json", cookie: cookieHeader, origin: BASE },
+    body: JSON.stringify({ rate }),
+  });
+}
+
+/** Wallet y cotización cargadas por el dueño: USDT listo para cobrar. */
+async function prenderUsdt(): Promise<void> {
+  const duenio = await cookie("duenio@example.com");
+  assert.equal((await guardarWallet(putWallet(WALLET, duenio))).status, 200);
+  assert.equal((await guardarCotizacion(putRate(COTIZACION, duenio))).status, 200);
+}
+
 async function comprarConUsdt() {
   const res = await checkoutPost(
     post("/api/checkout", { customer: comprador, delivery: domicilio, payment: { method: "usdt" }, items: [{ slug: "celu", quantity: 1 }] }),
@@ -58,17 +73,12 @@ function txid(code: string, value: string) {
   return cargarTxid(post(`/api/orders/${code}/usdt`, { txid: value }), { params: Promise.resolve({ code }) });
 }
 
-const DOLAR = 1_475;
+const COTIZACION = 1_570;
 /** USDT que aparecen en la wallet (null: todavía no llegó nada). */
 let llego: string | null = null;
-let cotizacionCaida = false;
 function redFalsa() {
   globalThis.fetch = (async (url: string | URL | Request) => {
     const href = String(url);
-    if (href.startsWith("https://dolarapi.com/")) {
-      if (cotizacionCaida) return new Response("", { status: 502 });
-      return new Response(JSON.stringify({ moneda: "USD", casa: "oficial", compra: 1_425, venta: DOLAR, fechaActualizacion: new Date().toISOString() }));
-    }
     assert.match(href, /^https:\/\/api\.trongrid\.io\//);
     const data = llego
       ? [
@@ -99,8 +109,6 @@ beforeEach(async () => {
   await seedProduct("celu", 100_000, 10);
   enviados.length = 0;
   llego = null;
-  cotizacionCaida = false;
-  resetUsdtRateCache();
   redFalsa();
 });
 afterEach(() => {
@@ -128,34 +136,49 @@ test("solo un dueño carga la wallet, se valida y queda en Actividad con aviso",
   assert.match(enviados[0].text ?? "", new RegExp(WALLET));
 });
 
-test("el pedido fija el monto exacto en USDT con el dólar oficial", async () => {
-  await guardarWallet(putWallet(WALLET, await cookie("duenio@example.com")));
+test("el pedido fija el monto exacto en USDT con la cotización de la tienda", async () => {
+  await prenderUsdt();
   const compra = await comprarConUsdt();
   assert.equal(compra.status, 200, JSON.stringify(compra.body));
   const { order, pago } = await pedidoPorCodigo(compra.body.code as string);
-  assert.equal(pago.expectedAmount, usdtAmountFor(order.total, DOLAR));
-  assert.equal(pago.rate, String(DOLAR));
+  assert.equal(pago.expectedAmount, usdtAmountFor(order.total, COTIZACION));
+  assert.equal(pago.rate, String(COTIZACION));
   assert.equal(pago.txid, null);
 });
 
-test("sin cotización no se cobra en USDT; si la API se cae, se usa la última guardada", async () => {
+test("con wallet pero sin cotización no se cobra en USDT", async () => {
   await guardarWallet(putWallet(WALLET, await cookie("duenio@example.com")));
-  cotizacionCaida = true;
-  const sinNada = await comprarConUsdt();
-  assert.equal(sinNada.status, 503);
-  assert.match(JSON.stringify(sinNada.body), /cotización/);
+  const res = await comprarConUsdt();
+  assert.equal(res.status, 400);
+  assert.match(JSON.stringify(res.body), /USDT no está disponible/);
+  assert.equal((await db.select().from(schema.orders)).length, 0);
+});
 
-  cotizacionCaida = false;
-  assert.equal((await comprarConUsdt()).status, 200); // guarda la cotización
-  resetUsdtRateCache();
-  cotizacionCaida = true;
-  const conGuardada = await comprarConUsdt();
-  assert.equal(conGuardada.status, 200, JSON.stringify(conGuardada.body));
-  assert.equal((await pedidoPorCodigo(conGuardada.body.code as string)).pago.rate, String(DOLAR));
+test("solo un dueño cambia la cotización, se valida y queda en Actividad con aviso", async () => {
+  await addAdminAccess("empleado@example.com", "duenio@example.com");
+  assert.equal((await guardarCotizacion(putRate(COTIZACION, await cookie("empleado@example.com")))).status, 403);
+  assert.equal((await guardarCotizacion(putRate(COTIZACION, ""))).status, 401);
+  for (const malo of [0, 99, 1570.5, "1570", 200_000]) {
+    assert.equal((await guardarCotizacion(putRate(malo, await cookie("duenio@example.com")))).status, 400, String(malo));
+  }
+  const res = await guardarCotizacion(putRate(COTIZACION, await cookie("duenio@example.com")));
+  assert.equal(res.status, 200, await res.clone().text());
+  const audit = await db.execute(sql`select action, summary from admin_audit`);
+  assert.deepEqual(audit.rows, [{ action: "cotizacion_usdt", summary: "Cambió la cotización de USDT a $1.570" }]);
+  assert.equal(enviados.length, 1);
+  assert.match(enviados[0].text ?? "", /\$1\.570/);
+});
+
+test("cambiar la cotización no cambia lo que debe un pedido ya hecho", async () => {
+  await prenderUsdt();
+  const code = (await comprarConUsdt()).body.code as string;
+  const antes = (await pedidoPorCodigo(code)).pago.expectedAmount;
+  await guardarCotizacion(putRate(2_000, await cookie("duenio@example.com")));
+  assert.equal((await pedidoPorCodigo(code)).pago.expectedAmount, antes);
 });
 
 test("si llega el monto completo, el pedido pasa solo a pagado y avisa a la tienda", async () => {
-  await guardarWallet(putWallet(WALLET, await cookie("duenio@example.com")));
+  await prenderUsdt();
   enviados.length = 0;
   const code = (await comprarConUsdt()).body.code as string;
   const esperado = (await pedidoPorCodigo(code)).pago.expectedAmount;
@@ -181,7 +204,7 @@ test("si llega el monto completo, el pedido pasa solo a pagado y avisa a la tien
 });
 
 test("si llega de menos, queda pendiente con lo que falta y avisa a la tienda", async () => {
-  await guardarWallet(putWallet(WALLET, await cookie("duenio@example.com")));
+  await prenderUsdt();
   enviados.length = 0;
   const code = (await comprarConUsdt()).body.code as string;
   const esperado = (await pedidoPorCodigo(code)).pago.expectedAmount;
@@ -196,7 +219,7 @@ test("si llega de menos, queda pendiente con lo que falta y avisa a la tienda", 
 });
 
 test("un TXID no paga dos pedidos", async () => {
-  await guardarWallet(putWallet(WALLET, await cookie("duenio@example.com")));
+  await prenderUsdt();
   const a = (await comprarConUsdt()).body.code as string;
   const b = (await comprarConUsdt()).body.code as string;
   assert.equal((await txid(a, TXID)).status, 200);
@@ -206,7 +229,7 @@ test("un TXID no paga dos pedidos", async () => {
 });
 
 test("un pedido en USDT con TXID cargado no vence solo; uno sin TXID sí", async () => {
-  await guardarWallet(putWallet(WALLET, await cookie("duenio@example.com")));
+  await prenderUsdt();
   const conTxid = (await comprarConUsdt()).body.code as string;
   const sinTxid = (await comprarConUsdt()).body.code as string;
   await txid(conTxid, TXID);

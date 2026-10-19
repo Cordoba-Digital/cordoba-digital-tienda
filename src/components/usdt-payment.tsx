@@ -14,15 +14,13 @@ export type UsdtPaymentInfo = {
   wallet: string | null;
   /** USDT a enviar, fijado al crear el pedido ("73.45"). */
   expectedAmount: string;
-  /** Dólar oficial (venta) con el que se calculó, y de cuándo era. */
+  /** Cotización de la tienda con la que se calculó, y de cuándo era. */
   rate: number;
   rateAt: string;
   txid: string | null;
   /** USDT que se vieron llegar en la red, cuando ya se verificó. */
   received: string | null;
 };
-
-const rateDateFormat = new Intl.DateTimeFormat("es-AR", { timeZone: "America/Argentina/Cordoba", day: "2-digit", month: "2-digit", year: "numeric" });
 
 /**
  * Cómo pagar un pedido con USDT: la wallet con su QR, la red y el campo para
@@ -69,8 +67,8 @@ export function UsdtPaymentPanel({ code, total, info }: { code: string; total: n
         <div className="min-w-0">
           <h2 className="text-lg font-extrabold text-ink-900">Cómo completar tu pago</h2>
           <p className="mt-0.5 text-sm text-ink-600">
-            Enviá <strong>{formatUsdt(info.expectedAmount)} USDT</strong> por red TRON (TRC20). Es el total de {money(total)} con el
-            dólar oficial (venta) de {money(Math.round(info.rate))} del {rateDateFormat.format(new Date(info.rateAt))}.
+            Enviá <strong>{formatUsdt(info.expectedAmount)} USDT</strong> por red TRON (TRC20). Es el total de tu pedido,{" "}
+            {money(total)}, pasado a USDT.
           </p>
         </div>
       </div>

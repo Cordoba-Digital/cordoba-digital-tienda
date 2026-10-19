@@ -276,15 +276,15 @@ export async function POST(request: Request) {
 
   const paymentLabel = PAYMENT_METHODS.find((p) => p.id === paymentId)?.label ?? "Transferencia";
 
-  // USDT: el monto exacto sale del total con el dólar oficial de este momento
+  // USDT: el monto exacto sale del total con la cotización que cargó la tienda
   // y queda fijo en el pedido. Sin cotización no se puede cobrar en USDT.
   let usdtQuote: { expectedAmount: string; rate: UsdtRate } | null = null;
   if (paymentId === "usdt") {
     const rate = await getUsdtRate();
     if (!rate) {
       return Response.json(
-        { ok: false, errors: { payment: "No pudimos traer la cotización del dólar. Probá en unos minutos o elegí otro medio de pago." } },
-        { status: 503 },
+        { ok: false, errors: { payment: "El pago con USDT no está disponible ahora. Elegí otro medio de pago." } },
+        { status: 400 },
       );
     }
     usdtQuote = { expectedAmount: usdtAmountFor(totals.total, rate.rate), rate };

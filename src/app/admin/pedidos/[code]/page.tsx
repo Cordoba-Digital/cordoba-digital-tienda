@@ -343,7 +343,7 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
                     <>
                       <Row label="A pagar">
                         {usdtPayment.expectedAmount} USDT
-                        <span className="block text-xs text-ink-500">Dólar oficial ${Number(usdtPayment.rate).toLocaleString("es-AR")}</span>
+                        <span className="block text-xs text-ink-500">Cotización ${Number(usdtPayment.rate).toLocaleString("es-AR")}</span>
                       </Row>
                       <Row label="TXID">
                         {usdtPayment.txid ? (

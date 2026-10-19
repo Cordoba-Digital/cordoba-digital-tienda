@@ -5,66 +5,58 @@ import { storeSettings } from "@/db/schema";
 import { ensureSettingsSchema } from "@/lib/automations";
 
 /**
- * Cotización para pasar el total en pesos a USDT: el dólar oficial, precio de
- * venta, del día (DolarApi, que publica el de los bancos autorizados por el
- * BCRA). 1 USDT se toma como 1 dólar.
- *
- * Se guarda en memoria unos minutos y la última buena queda en
- * `store_settings`: si la API no responde, se usa esa. El oficial no se mueve
- * los fines de semana ni feriados, así que se acepta hasta 4 días de
- * antigüedad (un fin de semana largo); más vieja, el checkout no ofrece USDT
- * en vez de cobrar con un número viejo.
+ * Cotización para pasar el total en pesos a USDT: pesos por USDT, la que
+ * carga el dueño en Admin → Medios de pago (Ronan, 19/10: como en WordPress,
+ * un valor que fija la tienda y no el dólar oficial del día). Sin cotización
+ * cargada, el checkout no ofrece USDT.
  */
-export const USDT_RATE_URL = "https://dolarapi.com/v1/dolares/oficial";
-const KEY = "cotizacion.usdt";
-const MEMORY_MS = 10 * 60 * 1000;
-const MAX_AGE_MS = 4 * 24 * 60 * 60 * 1000;
+const KEY = "cotizacion.usdt_tienda";
+/** Fuera de este rango es un error de tipeo, no un precio. */
+export const USDT_RATE_MIN = 100;
+export const USDT_RATE_MAX = 100_000;
 
 export type UsdtRate = { rate: number; updatedAt: string; source: string };
+export type SavedUsdtRate = UsdtRate & { updatedBy: string };
 
-const SOURCE = "Dólar oficial (venta)";
-let memory: { value: UsdtRate; at: number } | null = null;
+const SOURCE = "Cotización de la tienda";
 
-/** Solo para tests: olvida lo guardado en memoria. */
-export function resetUsdtRateCache(): void {
-  memory = null;
+export function isValidUsdtRate(value: unknown): value is number {
+  return typeof value === "number" && Number.isInteger(value) && value >= USDT_RATE_MIN && value <= USDT_RATE_MAX;
 }
 
-function parse(body: unknown): UsdtRate | null {
-  const data = body as { venta?: unknown; fechaActualizacion?: unknown } | null;
-  const rate = typeof data?.venta === "number" ? data.venta : Number(data?.venta);
-  const updatedAt = typeof data?.fechaActualizacion === "string" ? new Date(data.fechaActualizacion) : null;
-  // Un dólar oficial fuera de este rango es un error de la API, no un precio.
-  if (!Number.isFinite(rate) || rate < 100 || rate > 100_000 || !updatedAt || Number.isNaN(updatedAt.getTime())) return null;
-  return { rate, updatedAt: updatedAt.toISOString(), source: SOURCE };
-}
-
-async function readSaved(): Promise<UsdtRate | null> {
+export async function getSavedUsdtRate(): Promise<SavedUsdtRate | null> {
   await ensureSettingsSchema();
-  const [row] = await db.select({ value: storeSettings.value }).from(storeSettings).where(eq(storeSettings.key, KEY)).limit(1);
-  const saved = row?.value as UsdtRate | undefined;
-  if (!saved || !(saved.rate > 0) || Date.now() - new Date(saved.updatedAt).getTime() > MAX_AGE_MS) return null;
-  return saved;
+  const [row] = await db
+    .select({ value: storeSettings.value, updatedBy: storeSettings.updatedBy, updatedAt: storeSettings.updatedAt })
+    .from(storeSettings)
+    .where(eq(storeSettings.key, KEY))
+    .limit(1);
+  const rate = (row?.value as { rate?: unknown } | undefined)?.rate;
+  if (!row || !isValidUsdtRate(rate)) return null;
+  return { rate, updatedAt: row.updatedAt.toISOString(), source: SOURCE, updatedBy: row.updatedBy };
 }
 
-export async function getUsdtRate(fetchImpl: typeof fetch = fetch): Promise<UsdtRate | null> {
-  if (memory && Date.now() - memory.at < MEMORY_MS) return memory.value;
+/** La cotización con la que se cobra, o null (USDT apagado). Si la base falla, USDT se apaga en vez de romper el checkout. */
+export async function getUsdtRate(): Promise<UsdtRate | null> {
   try {
-    const res = await fetchImpl(USDT_RATE_URL, { headers: { accept: "application/json" }, cache: "no-store", signal: AbortSignal.timeout(5000) });
-    const fresh = res.ok ? parse(await res.json()) : null;
-    if (fresh && Date.now() - new Date(fresh.updatedAt).getTime() <= MAX_AGE_MS) {
-      memory = { value: fresh, at: Date.now() };
-      await ensureSettingsSchema();
-      await db
-        .insert(storeSettings)
-        .values({ key: KEY, value: fresh, updatedBy: "sistema" })
-        .onConflictDoUpdate({ target: storeSettings.key, set: { value: fresh, updatedBy: "sistema", updatedAt: new Date() } })
-        .catch((error) => console.error("[usdt] no se pudo guardar la cotización:", error));
-      return fresh;
-    }
-    console.warn(`[usdt] la cotización no vino bien (HTTP ${res.status}); se usa la última guardada`);
+    const saved = await getSavedUsdtRate();
+    return saved ? { rate: saved.rate, updatedAt: saved.updatedAt, source: saved.source } : null;
   } catch (error) {
-    console.warn("[usdt] no se pudo consultar la cotización; se usa la última guardada:", error instanceof Error ? error.message : error);
+    console.error("[usdt] no se pudo leer la cotización:", error);
+    return null;
   }
-  return readSaved().catch(() => null);
+}
+
+/** Guarda la cotización (o la borra con null). Devuelve la anterior (null si no había). */
+export async function saveUsdtRate(rate: number | null, actor: string): Promise<number | null> {
+  const before = (await getSavedUsdtRate())?.rate ?? null;
+  if (rate === null) {
+    await db.delete(storeSettings).where(eq(storeSettings.key, KEY));
+    return before;
+  }
+  await db
+    .insert(storeSettings)
+    .values({ key: KEY, value: { rate }, updatedBy: actor })
+    .onConflictDoUpdate({ target: storeSettings.key, set: { value: { rate }, updatedBy: actor, updatedAt: new Date() } });
+  return before;
 }

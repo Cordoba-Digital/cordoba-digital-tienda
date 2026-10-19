@@ -331,18 +331,6 @@ function StepContinue({ label, onClick }: { label: string; onClick: () => void }
   );
 }
 
-const rateDateFormat = new Intl.DateTimeFormat("es-AR", {
-  timeZone: "America/Argentina/Cordoba",
-  day: "2-digit",
-  month: "2-digit",
-  hour: "2-digit",
-  minute: "2-digit",
-  hourCycle: "h23",
-});
-function rateDate(iso: string): string {
-  return rateDateFormat.format(new Date(iso));
-}
-
 const inputClass =
   "h-11 w-full rounded-xl border border-ink-200 bg-surface px-3.5 text-sm text-ink-900 outline-none transition placeholder:text-ink-500 focus:border-brand-400 focus:ring-4 focus:ring-brand-100";
 
@@ -795,9 +783,6 @@ export function CheckoutFlow({
                 <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-600">
                   <p className="font-bold text-ink-900">27 de Abril 180, Córdoba Capital</p>
                   <p className="mt-1 text-xs">Lunes a viernes de 14:00 a 18:30 · Sábados de 12:00 a 14:30</p>
-                  <p className="mt-2 text-xs">
-                    Te avisamos por WhatsApp cuando esté listo. Llevá tu DNI y el número de pedido.
-                  </p>
                 </div>
               ) : (
                 <>
@@ -967,10 +952,7 @@ export function CheckoutFlow({
                     <span>Total en USDT</span>
                     <strong className="text-base text-ink-900">{formatUsdt(usdtAmountFor(totals.total, usdtRate.rate))} USDT</strong>
                   </p>
-                  <p className="text-xs text-ink-500">
-                    Con el dólar oficial (venta) de {money(Math.round(usdtRate.rate))}, actualizado el {rateDate(usdtRate.updatedAt)}. Al
-                    confirmar, el monto queda fijo en tu pedido.
-                  </p>
+                  <p className="text-xs text-ink-500">Al confirmar, el monto queda fijo en tu pedido.</p>
                   <ol className="list-decimal space-y-1 pl-4 text-xs">
                     <li>Confirmá el pedido: te mostramos la wallet, su QR y el monto exacto.</li>
                     <li>Enviá ese monto desde tu wallet o exchange. Si te cobran comisión, tiene que llegar el monto completo.</li>

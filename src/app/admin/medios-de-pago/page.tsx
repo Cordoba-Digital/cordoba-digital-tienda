@@ -1,10 +1,11 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-import { AdminPaymentMethods, AdminUsdtWallet } from "@/components/admin-payment-methods";
+import { AdminPaymentMethods, AdminUsdtRate, AdminUsdtWallet } from "@/components/admin-payment-methods";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { isOwnerEmail } from "@/lib/admin-access";
 import { readAdminSession } from "@/lib/admin-session";
+import { getSavedUsdtRate } from "@/lib/usdt-rate";
 import { mailConfigured } from "@/lib/mailer";
 import { transferAccount } from "@/lib/transfer-account";
 import { getSavedTransferAccount } from "@/lib/transfer-account-server";
@@ -17,7 +18,7 @@ export default async function AdminPaymentMethodsPage() {
   const session = await readAdminSession(jar.get(ADMIN_COOKIE)?.value);
   if (!session) redirect("/admin/login?next=/admin/medios-de-pago");
 
-  const [saved, usdt] = await Promise.all([getSavedTransferAccount(), getSavedUsdtWallet()]);
+  const [saved, usdt, usdtRate] = await Promise.all([getSavedTransferAccount(), getSavedUsdtWallet(), getSavedUsdtRate()]);
   const canEdit = !session.email || isOwnerEmail(session.email);
   // Sin nada guardado, el formulario arranca con lo que hoy ve el cliente (las variables de Vercel).
   const fallback = transferAccount();
@@ -45,6 +46,12 @@ export default async function AdminPaymentMethodsPage() {
         initial={usdt?.wallet ?? ""}
         updatedBy={usdt?.updatedBy ?? null}
         updatedAt={usdt?.updatedAt.toISOString() ?? null}
+        canEdit={canEdit}
+      />
+      <AdminUsdtRate
+        initial={usdtRate?.rate ?? null}
+        updatedBy={usdtRate?.updatedBy ?? null}
+        updatedAt={usdtRate?.updatedAt ?? null}
         canEdit={canEdit}
       />
     </div>
