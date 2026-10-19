@@ -12,7 +12,9 @@
      sin repetir el numero. */
   --color-ink: #14161c;
 
-  --color-ink-50: #f4f1eb;
+  /* El papel lleva un poco más de tono que el blanco de las tarjetas para que
+     se note el fondo. Con este valor `ink-400` sigue en 4,5:1 encima. */
+  --color-ink-50: #eee7dc;
   --color-ink-100: #e7e2da;
   --color-ink-200: #d8d1c4;
   /* Los grises calidos se reparten por uso, no por numero: `ink-300` es el tono
@@ -58,7 +60,9 @@
   --color-brand-400: #f97316;
   --color-brand-500: #f15a24;
   --color-brand-600: #d9480f;
-  --color-brand-700: #c2410c;
+  /* Un punto más oscuro que el `orange-700` de Tailwind: el texto naranja
+     sobre el papel tiene que seguir pasando 4,5:1. */
+  --color-brand-700: #b63d0b;
   --color-brand-800: #9a2b06;
   --color-brand-900: #7a2305;
 
