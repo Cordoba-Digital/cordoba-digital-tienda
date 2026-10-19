@@ -13,8 +13,9 @@
   --color-ink: #14161c;
 
   /* El papel lleva un poco más de tono que el blanco de las tarjetas para que
-     se note el fondo. Con este valor `ink-400` sigue en 4,5:1 encima. */
-  --color-ink-50: #eee7dc;
+     se note el fondo; gris neutro, sin tinte crema. Con este valor `ink-400`
+     sigue arriba de 4,5:1 encima. */
+  --color-ink-50: #edeef0;
   --color-ink-100: #e7e2da;
   --color-ink-200: #d8d1c4;
   /* Los grises calidos se reparten por uso, no por numero: `ink-300` es el tono
