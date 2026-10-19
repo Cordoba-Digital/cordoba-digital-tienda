@@ -7,7 +7,7 @@ import { reconcileMpPayment } from "@/lib/checkout-mp-sync";
 import { formatDateTime } from "@/lib/format";
 import { getOrderByCode } from "@/lib/queries";
 import { blockedMinutes, ipFromHeaders, ORDER_LOOKUP_LIMIT, recordMiss } from "@/lib/rate-limit";
-import { transferAccount } from "@/lib/transfer-account";
+import { getTransferAccount } from "@/lib/transfer-account-server";
 
 export const dynamic = "force-dynamic";
 
@@ -123,5 +123,5 @@ export default async function OrderPage({
 
   const pago = typeof query.pago === "string" ? query.pago : undefined;
 
-  return <OrderConfirmation order={summary} isNew={isNew} paymentReturn={pago} transfer={transferAccount()} />;
+  return <OrderConfirmation order={summary} isNew={isNew} paymentReturn={pago} transfer={await getTransferAccount()} />;
 }

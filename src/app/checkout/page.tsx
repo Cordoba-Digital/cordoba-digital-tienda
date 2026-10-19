@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { CheckoutFlow } from "@/components/checkout-flow";
 import { mercadoPagoReady } from "@/lib/mercadopago";
-import { transferAccount } from "@/lib/transfer-account";
+import { getTransferAccount } from "@/lib/transfer-account-server";
 
 export const dynamic = "force-dynamic";
 
@@ -15,6 +15,6 @@ export const metadata: Metadata = {
   robots: { index: false },
 };
 
-export default function CheckoutPage() {
-  return <CheckoutFlow mercadoPago={mercadoPagoReady()} transfer={transferAccount()} />;
+export default async function CheckoutPage() {
+  return <CheckoutFlow mercadoPago={mercadoPagoReady()} transfer={await getTransferAccount()} />;
 }
