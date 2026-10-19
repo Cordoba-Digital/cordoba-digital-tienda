@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { CheckoutFlow } from "@/components/checkout-flow";
 import { mercadoPagoReady } from "@/lib/mercadopago";
 import { getTransferAccount } from "@/lib/transfer-account-server";
+import { getUsdtWallet } from "@/lib/usdt-server";
 
 export const dynamic = "force-dynamic";
 
@@ -16,5 +17,6 @@ export const metadata: Metadata = {
 };
 
 export default async function CheckoutPage() {
-  return <CheckoutFlow mercadoPago={mercadoPagoReady()} transfer={await getTransferAccount()} />;
+  const [transfer, usdtWallet] = await Promise.all([getTransferAccount(), getUsdtWallet()]);
+  return <CheckoutFlow mercadoPago={mercadoPagoReady()} transfer={transfer} usdt={!!usdtWallet} />;
 }

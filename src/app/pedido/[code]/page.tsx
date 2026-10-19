@@ -8,6 +8,7 @@ import { formatDateTime } from "@/lib/format";
 import { getOrderByCode } from "@/lib/queries";
 import { blockedMinutes, ipFromHeaders, ORDER_LOOKUP_LIMIT, recordMiss } from "@/lib/rate-limit";
 import { getTransferAccount } from "@/lib/transfer-account-server";
+import { getUsdtWallet, syncUsdtPayment } from "@/lib/usdt-server";
 
 export const dynamic = "force-dynamic";
 
@@ -123,5 +124,21 @@ export default async function OrderPage({
 
   const pago = typeof query.pago === "string" ? query.pago : undefined;
 
-  return <OrderConfirmation order={summary} isNew={isNew} paymentReturn={pago} transfer={await getTransferAccount()} />;
+  // USDT: si el cliente ya cargó el TXID y todavía no se vio en la red, se
+  // vuelve a buscar en cada visita (TronGrid tarda unos segundos en confirmarlo).
+  let usdt = null;
+  if (order.paymentMethod === "usdt") {
+    const [wallet, payment] = await Promise.all([getUsdtWallet(), syncUsdtPayment(order).catch(() => null)]);
+    usdt = { wallet, txid: payment?.txid ?? null, amount: payment?.transfer?.amount ?? null };
+  }
+
+  return (
+    <OrderConfirmation
+      order={summary}
+      isNew={isNew}
+      paymentReturn={pago}
+      transfer={await getTransferAccount()}
+      usdt={usdt}
+    />
+  );
 }

@@ -12,6 +12,8 @@ import {
   uniqueIndex,
 } from "drizzle-orm/pg-core";
 
+import type { UsdtTransfer } from "@/lib/tron";
+
 export type Spec = { label: string; value: string };
 
 export const categories = pgTable(
@@ -286,6 +288,24 @@ export const orders = pgTable(
     // "Mi cuenta" y el panel de usuarios buscan pedidos por email sin mayúsculas.
     index("orders_email_lower_idx").on(sql`lower(${table.email})`),
   ],
+);
+
+/**
+ * Pago en USDT (TRON) de un pedido: el TXID que carga el cliente en la página
+ * del pedido y lo que se encontró en la red al verificarlo (null mientras no
+ * aparece). El TXID es único, así una misma transferencia no paga dos pedidos.
+ * César lo aprueba a mano marcando el pedido como pagado.
+ */
+export const usdtPayments = pgTable(
+  "usdt_payments",
+  {
+    orderId: integer("order_id").primaryKey(),
+    txid: text("txid").notNull(),
+    transfer: jsonb("transfer").$type<UsdtTransfer | null>(),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    verifiedAt: timestamp("verified_at", { withTimezone: true }),
+  },
+  (table) => [uniqueIndex("usdt_payments_txid_idx").on(table.txid)],
 );
 
 export const orderEvents = pgTable(

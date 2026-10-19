@@ -26,6 +26,8 @@ export function orderBanner(order: { customerName: string; status: string; payme
   let detail: string | null = null;
   if (order.paymentMethod === "transferencia") {
     detail = `Transferí el total con los datos de abajo y mandanos el comprobante. Te reservamos el stock ${RESERVA_HS} hs: si el pago no se acredita, el pedido se cancela.`;
+  } else if (order.paymentMethod === "usdt") {
+    detail = `Enviá USDT por red TRON a la wallet de abajo y pegá el TXID. Te reservamos el stock ${RESERVA_HS} hs.`;
   } else if (order.paymentMethod === "mercadopago") {
     detail = "Completá el pago en Mercado Pago para confirmarlo.";
   } else if (order.paymentMethod === "efectivo") {

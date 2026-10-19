@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { TransferDetails } from "@/components/transfer-details";
+import { UsdtPaymentPanel, type UsdtPaymentInfo } from "@/components/usdt-payment";
 import { trackPurchase } from "@/lib/analytics";
 import { money } from "@/lib/format";
 import { orderBanner, orderCodeLabel } from "@/lib/order-banner";
@@ -53,9 +54,12 @@ export function OrderConfirmation({
   isNew,
   paymentReturn,
   transfer,
+  usdt = null,
 }: {
   order: OrderSummary;
   isNew: boolean;
+  /** Pago con USDT: wallet de la tienda y el TXID que cargó el cliente. */
+  usdt?: UsdtPaymentInfo | null;
   /** Cuenta para transferir (`lib/transfer-account`); null si no está configurada. */
   transfer: TransferAccount | null;
   /** `?pago=` con el que vuelve Mercado Pago (exito, pendiente, fallo) o `error` si no se pudo iniciar. */
@@ -196,6 +200,10 @@ export function OrderConfirmation({
               </ol>
             )}
           </section>
+
+          {order.paymentMethod === "usdt" && order.status === "pendiente_pago" && usdt ? (
+            <UsdtPaymentPanel code={order.code} total={order.total} info={usdt} />
+          ) : null}
 
           {awaitingMercadoPago ? <MercadoPagoPanel code={order.code} total={order.total} paymentReturn={paymentReturn} /> : null}
 

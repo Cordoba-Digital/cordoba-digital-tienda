@@ -334,8 +334,11 @@ const inputClass =
 export function CheckoutFlow({
   mercadoPago = false,
   transfer = null,
+  usdt = false,
 }: {
   mercadoPago?: boolean;
+  /** Hay wallet de USDT (red TRON) cargada en el panel: se ofrece USDT. */
+  usdt?: boolean;
   /** Cuenta para transferir (`transferAccount()`); sin configurar, los datos se piden por WhatsApp. */
   transfer?: TransferAccount | null;
 }) {
@@ -905,7 +908,7 @@ export function CheckoutFlow({
           <CheckoutStep number={3} title="Pago" subtitle="El total es el mismo con cualquier medio." state={stepState(3)}>
             <div className="space-y-4">
               <div className="grid gap-3 sm:grid-cols-[repeat(auto-fit,minmax(15rem,1fr))]">
-                {PAYMENT_METHODS.filter((method) => isPaymentMethodOffered(method.id, deliveryMethod, { mercadoPago })).map(
+                {PAYMENT_METHODS.filter((method) => isPaymentMethodOffered(method.id, deliveryMethod, { mercadoPago, usdt })).map(
                   (method) => {
                     const PaymentIcon = PAYMENT_ICONS[method.id];
                     return (
@@ -939,8 +942,26 @@ export function CheckoutFlow({
                 )}
               </div>
 
-              {/* USDT queda oculto hasta que el negocio lo habilite. Mercado
-                  Pago aparece solo si el servidor tiene sus credenciales. */}
+              {/* USDT aparece solo con una wallet cargada en el panel. Mercado
+                  Pago, solo si el servidor tiene sus credenciales. */}
+
+              {payment === "usdt" ? (
+                <div className="space-y-2 rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
+                  <p className="font-bold text-ink-900">Pagás con USDT por red TRON (TRC20).</p>
+                  <ol className="list-decimal space-y-1 pl-4 text-xs">
+                    <li>Confirmá el pedido: te mostramos la wallet y su QR.</li>
+                    <li>
+                      Enviá desde tu wallet o exchange el equivalente en USDT a <strong>{money(totals.total)}</strong>. El monto en
+                      USDT y la comisión de la red corren por tu cuenta.
+                    </li>
+                    <li>Pegá el TXID de la transacción en la página del pedido.</li>
+                  </ol>
+                  <p className="text-xs">
+                    Usá solo la red TRON (TRC20): un envío por otra red no llega y no se puede recuperar. Cuando verificamos el pago,
+                    confirmamos el pedido y te avisamos.
+                  </p>
+                </div>
+              ) : null}
 
               {payment === "mercadopago" ? (
                 <div className="rounded-xl bg-sky-50 p-4 text-sm text-sky-900">

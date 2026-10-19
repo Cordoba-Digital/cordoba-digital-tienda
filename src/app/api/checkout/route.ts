@@ -14,6 +14,7 @@ import { preciosAndreani } from "@/lib/shipping-andreani";
 import { andreaniConfigurado, AndreaniError, sucursales } from "@/lib/andreani";
 import { findOrderByCheckoutKey, isCheckoutKeyConflict, parseCheckoutKey } from "@/lib/checkout-idempotency";
 import { blockedMinutes, CHECKOUT_LIMIT, COUPON_LIMIT, ipFromHeaders, recordMiss, tooManyAttempts } from "@/lib/rate-limit";
+import { getUsdtWallet } from "@/lib/usdt-server";
 
 export const dynamic = "force-dynamic";
 
@@ -122,7 +123,10 @@ export async function POST(request: Request) {
     };
   }
 
-  const payment = resolvePaymentMethod(body.payment?.method, method, { mercadoPago: mercadoPagoReady() });
+  const payment = resolvePaymentMethod(body.payment?.method, method, {
+    mercadoPago: mercadoPagoReady(),
+    usdt: body.payment?.method === "usdt" && !!(await getUsdtWallet()),
+  });
   const paymentId: PaymentMethodId = payment.ok ? payment.method : "transferencia";
   if (!payment.ok) errors.payment = payment.error;
   const installments = Math.max(1, Math.min(12, Number(body.payment?.installments ?? 1)));

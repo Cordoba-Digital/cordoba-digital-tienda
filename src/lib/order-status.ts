@@ -6,6 +6,7 @@ import { isAutomationOn } from "@/lib/automations";
 import { ensureCouponSchema, releaseCouponUse, restoreCouponUse } from "@/lib/coupons";
 import { notifyStatusChange } from "@/lib/order-emails";
 import { CANCELLED_STATUS, isCancelled, statusIndex } from "@/lib/pricing";
+import { ensureUsdtSchema } from "@/lib/usdt-server";
 
 /** Horas que un pedido puede quedar sin pago antes de vencer (lo que promete la tienda). */
 export const PENDING_EXPIRY_HOURS = 48;
@@ -138,6 +139,7 @@ export async function applyOrderStatus(
  */
 export async function expireStalePendingOrders(): Promise<number> {
   if (!(await isAutomationOn("vencerPedidos"))) return 0;
+  await ensureUsdtSchema();
   const cutoff = new Date(Date.now() - PENDING_EXPIRY_HOURS * 60 * 60 * 1000);
   // De a tandas de 200 hasta que no quede ninguno: con un tope fijo, una ola
   // de pedidos falsos dejaría stock reservado por días. El máximo de tandas
@@ -147,7 +149,14 @@ export async function expireStalePendingOrders(): Promise<number> {
     const stale = await db
       .select({ id: orders.id })
       .from(orders)
-      .where(and(eq(orders.status, "pendiente_pago"), lt(orders.createdAt, cutoff)))
+      .where(
+        and(
+          eq(orders.status, "pendiente_pago"),
+          lt(orders.createdAt, cutoff),
+          // Un pago en USDT con TXID cargado no vence solo: lo decide César.
+          sql`not exists (select 1 from usdt_payments where usdt_payments.order_id = ${orders.id})`,
+        ),
+      )
       .limit(200);
     for (const order of stale) {
       const applied = await applyOrderStatus(order.id, {
