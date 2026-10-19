@@ -952,6 +952,10 @@ function report(label: string, tally: ErrorTally): void {
 
 main().catch(async (error) => {
   console.error(`[migrate-wp] FATAL: ${(error as Error).message}`);
+  // Drizzle envuelve el error de Postgres ("Failed query: …"): la causa real
+  // (conexión rechazada, contraseña, SSL, host) viene en `cause`.
+  const cause = (error as { cause?: unknown }).cause;
+  if (cause) console.error(`[migrate-wp] causa: ${cause instanceof Error ? cause.message : String(cause)}`);
   try {
     const { pool } = await import("@/db");
     await pool.end();
