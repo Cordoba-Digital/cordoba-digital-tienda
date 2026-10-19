@@ -3,11 +3,13 @@ import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 
 import { OrderConfirmation, type OrderSummary } from "@/components/order-confirmation";
+import type { UsdtPaymentInfo } from "@/components/usdt-payment";
 import { reconcileMpPayment } from "@/lib/checkout-mp-sync";
 import { formatDateTime } from "@/lib/format";
 import { getOrderByCode } from "@/lib/queries";
 import { blockedMinutes, ipFromHeaders, ORDER_LOOKUP_LIMIT, recordMiss } from "@/lib/rate-limit";
-import { transferAccount } from "@/lib/transfer-account";
+import { getTransferAccount } from "@/lib/transfer-account-server";
+import { getUsdtWallet, syncUsdtPayment } from "@/lib/usdt-server";
 
 export const dynamic = "force-dynamic";
 
@@ -123,5 +125,30 @@ export default async function OrderPage({
 
   const pago = typeof query.pago === "string" ? query.pago : undefined;
 
-  return <OrderConfirmation order={summary} isNew={isNew} paymentReturn={pago} transfer={transferAccount()} />;
+  // USDT: si el cliente ya cargó el TXID y todavía no se vio en la red, se
+  // vuelve a buscar en cada visita (TronGrid tarda unos segundos en confirmarlo).
+  let usdt: UsdtPaymentInfo | null = null;
+  if (order.paymentMethod === "usdt") {
+    const [wallet, payment] = await Promise.all([getUsdtWallet(), syncUsdtPayment(order).catch(() => null)]);
+    usdt = payment
+      ? {
+          wallet,
+          expectedAmount: payment.expectedAmount,
+          rate: Number(payment.rate),
+          rateAt: payment.rateAt.toISOString(),
+          txid: payment.txid,
+          received: payment.transfer?.amount ?? null,
+        }
+      : null;
+  }
+
+  return (
+    <OrderConfirmation
+      order={summary}
+      isNew={isNew}
+      paymentReturn={pago}
+      transfer={await getTransferAccount()}
+      usdt={usdt}
+    />
+  );
 }

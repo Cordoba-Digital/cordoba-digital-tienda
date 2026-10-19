@@ -20,8 +20,18 @@ test("acepta transferencia con envío", () => {
   assert.deepEqual(resolvePaymentMethod("transferencia", "standard"), { ok: true, method: "transferencia" });
 });
 
-test("acepta efectivo retirando en el local", () => {
-  assert.deepEqual(resolvePaymentMethod("efectivo", "pickup"), { ok: true, method: "efectivo" });
+test("en la tienda, retirar en el local es con seña: el efectivo sin seña no se ofrece", () => {
+  assert.deepEqual(resolvePaymentMethod("sena", "pickup"), { ok: true, method: "sena" });
+  assert.equal(resolvePaymentMethod("efectivo", "pickup").ok, false);
+});
+
+test("rechaza la seña con envío", () => {
+  assert.equal(resolvePaymentMethod("sena", "standard").ok, false);
+});
+
+test("el panel puede cargar un pedido en efectivo retirando en el local", () => {
+  assert.deepEqual(resolvePaymentMethod("efectivo", "pickup", { manual: true }), { ok: true, method: "efectivo" });
+  assert.equal(resolvePaymentMethod("efectivo", "standard", { manual: true }).ok, false);
 });
 
 test("rechaza efectivo con envío", () => {

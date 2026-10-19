@@ -4,17 +4,18 @@ import { db } from "@/db";
 import { orderEvents, orders } from "@/db/schema";
 import { isAutomationOn } from "@/lib/automations";
 import { money } from "@/lib/format";
+import { amountDueOnline } from "@/lib/pricing";
 import { mailConfigured, sendMail, STORE_EMAIL } from "@/lib/mailer";
 import { url } from "@/lib/site";
 
 type OrderForEmail = Pick<
   typeof orders.$inferSelect,
   "code" | "customerName" | "email" | "deliveryMethod" | "total" | "trackingCode"
->;
+> & { paymentMethod?: string };
 
 /**
  * El email que recibe el cliente cuando su pedido pasa a `status`, o null si
- * ese estado no avisa ("Reserva creada" ya tiene su página de confirmación).
+ * ese estado no avisa ("Esperando el pago" ya tiene su página de confirmación).
  * `note` es la nota del cambio: distingue un pedido vencido de uno cancelado a mano.
  */
 export function orderStatusEmail(
@@ -30,6 +31,14 @@ export function orderStatusEmail(
 
   switch (status) {
     case "pago_confirmado":
+      if (order.paymentMethod === "sena") {
+        const deposit = amountDueOnline({ paymentMethod: "sena", total: order.total });
+        subject = `Reserva confirmada: ${order.code}`;
+        body = `Recibimos la seña de ${money(deposit)}. Tu código de reserva es ${order.code}. ${
+          order.total > deposit ? `El resto, ${money(order.total - deposit)}, lo pagás al retirar en el local.` : "No queda saldo por pagar."
+        } Te avisamos cuando esté listo para retirar.`;
+        break;
+      }
       subject = `Recibimos el pago de tu pedido ${order.code}`;
       body = `Ya se acreditó el pago de tu pedido ${order.code} por ${money(order.total)}. Ahora lo preparamos y te avisamos cuando esté ${pickup ? "listo para retirar" : "en camino"}.`;
       break;
@@ -55,7 +64,7 @@ export function orderStatusEmail(
     case "cancelado":
       subject = `Cancelamos tu pedido ${order.code}`;
       body = note.startsWith("Vencido")
-        ? `Pasaron 48 horas sin que recibiéramos el pago de tu pedido ${order.code}, así que lo cancelamos y liberamos los productos. Si todavía los querés, podés hacer un pedido nuevo en la tienda.`
+        ? `No recibimos el pago de tu orden ${order.code} ${expiredWithin(note)}, así que la cancelamos. Si todavía querés los productos, podés hacer un pedido nuevo en la tienda.`
         : `Cancelamos tu pedido ${order.code}. Si no esperabas este cambio o tenés alguna duda, respondé este email y lo vemos.`;
       break;
     default:
@@ -102,4 +111,10 @@ export async function notifyStatusChange(orderId: number, status: string, note =
       .values({ orderId, fromStatus: status, toStatus: status, note: "No se pudo mandar el email al cliente." })
       .catch(() => undefined);
   }
+}
+
+/** "Vencido: sin pago en 24 hs." → "en las 24 horas que tenía". */
+function expiredWithin(note: string): string {
+  const hours = /en (\d+) hs/.exec(note)?.[1];
+  return hours ? `en las ${hours} horas que tenía` : "a tiempo";
 }

@@ -14,7 +14,7 @@ export const AUTOMATIONS = {
   vencerPedidos: {
     label: "Vencer pedidos sin pago",
     description:
-      "Cancela los pedidos que siguen sin pago a las 48 horas y devuelve el stock y el cupón. Si lo apagás, quedan reservando stock hasta que los canceles a mano.",
+      "Cancela las órdenes que siguen sin pago a las 48 horas (24 horas si eran con seña) y devuelve el cupón. El stock de una orden sin pago vuelve a la venta a las 2 horas aunque esto esté apagado.",
     default: true,
   },
   avisarCliente: {

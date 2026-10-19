@@ -109,7 +109,7 @@ export async function POST(request: Request) {
         // `source_news=webhooks`: MP avisa solo por Webhooks (firmados), no
         // también por IPN, que llega sin firma y el webhook rechazaría.
         notification_url: publicUrl ? `${baseUrl}/api/webhooks/mercadopago?source_news=webhooks` : undefined,
-        // El link de pago vence con la reserva de stock (48 hs desde el pedido).
+        // El link de pago vence con la orden (48 hs desde que se creó).
         expires: true,
         expiration_date_to: new Date(
           new Date(order.createdAt).getTime() + PENDING_EXPIRY_HOURS * 60 * 60 * 1000,

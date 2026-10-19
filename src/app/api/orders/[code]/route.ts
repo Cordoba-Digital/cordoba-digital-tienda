@@ -29,6 +29,7 @@ export async function GET(request: Request, context: { params: Promise<{ code: s
     order: {
       code: order.code,
       status: order.status,
+      paymentMethod: order.paymentMethod,
       customerName: order.customerName,
       deliveryLabel: order.deliveryLabel,
       deliveryEta: order.deliveryEta,

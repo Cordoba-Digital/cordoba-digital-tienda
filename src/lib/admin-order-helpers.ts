@@ -58,13 +58,23 @@ export function nextStep(order: { status: string; paymentMethod: string; deliver
           asksTracking: false,
         };
       }
+      if (order.paymentMethod === "sena") {
+        return {
+          to: "pago_confirmado",
+          button: "Marcar seña acreditada",
+          hint: "Cuando veas la seña en la cuenta, marcala: la reserva queda confirmada. El resto se cobra al retirar.",
+          asksTracking: false,
+        };
+      }
       return {
         to: "pago_confirmado",
         button: "Marcar pago acreditado",
         hint:
           order.paymentMethod === "transferencia"
             ? "Cuando veas la transferencia en el banco, marcalo como pagado."
-            : "Cuando el cliente pague, marcalo como pagado.",
+            : order.paymentMethod === "usdt"
+              ? "Si llega el monto completo en USDT, el pedido pasa solo a pagado. Si llegó de menos, hablá con el cliente."
+              : "Cuando el cliente pague, marcalo como pagado.",
         asksTracking: false,
       };
     case "pago_confirmado":

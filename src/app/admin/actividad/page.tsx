@@ -20,6 +20,7 @@ const ENTITIES = [
   { id: "acceso", label: "Accesos" },
   { id: "cupon", label: "Cupones" },
   { id: "automatizacion", label: "Automatizaciones" },
+  { id: "medios_de_pago", label: "Medios de pago" },
   { id: "error", label: "Errores" },
 ];
 
@@ -50,6 +51,7 @@ function entityLink(row: ActivityRow): string | null {
   if (row.entityType === "automatizacion") return "/admin/automatizaciones";
   if (row.entityType === "error") return "/admin/errores";
   if (row.entityType === "inicio") return "/admin/inicio";
+  if (row.entityType === "medios_de_pago") return "/admin/medios-de-pago";
   return null;
 }
 

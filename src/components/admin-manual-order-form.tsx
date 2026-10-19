@@ -57,7 +57,9 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
   const [copied, setCopied] = useState(false);
 
   const payments = PAYMENT_METHODS.filter(
-    (p) => (CHECKOUT_PAYMENT_METHODS.includes(p.id) || p.id === "mercadopago") && isPaymentMethodOffered(p.id, delivery, { mercadoPago }),
+    (p) =>
+      (CHECKOUT_PAYMENT_METHODS.includes(p.id) || p.id === "mercadopago" || p.id === "efectivo") &&
+      isPaymentMethodOffered(p.id, delivery, { mercadoPago, manual: true }),
   );
   const paymentOk = payments.some((p) => p.id === payment);
 

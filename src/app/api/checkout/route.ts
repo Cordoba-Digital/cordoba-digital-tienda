@@ -1,9 +1,9 @@
-import { eq, inArray, sql } from "drizzle-orm";
+import { and, eq, gt, inArray, or, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orderItems, orders, products, type ShippingAddress } from "@/db/schema";
 import { computeTotals, MAX_QTY_PER_ITEM, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
-import { ensureOrderStockSchema, reserveOrderStock } from "@/lib/order-status";
+import { ensureOrderStockSchema, PENDING_EXPIRY_HOURS, releaseStaleStockHolds, reserveOrderStock } from "@/lib/order-status";
 import { claimCouponUse, CouponGoneError } from "@/lib/coupons";
 import { getCoupon } from "@/lib/queries";
 import { resolvePaymentMethod } from "@/lib/checkout-payment";
@@ -14,6 +14,10 @@ import { preciosAndreani } from "@/lib/shipping-andreani";
 import { andreaniConfigurado, AndreaniError, sucursales } from "@/lib/andreani";
 import { findOrderByCheckoutKey, isCheckoutKeyConflict, parseCheckoutKey } from "@/lib/checkout-idempotency";
 import { blockedMinutes, CHECKOUT_LIMIT, COUPON_LIMIT, ipFromHeaders, recordMiss, tooManyAttempts } from "@/lib/rate-limit";
+import { usdtAmountFor } from "@/lib/usdt-amount";
+import { getUsdtRate, type UsdtRate } from "@/lib/usdt-rate";
+import { ensureUsdtSchema } from "@/lib/usdt-schema";
+import { createUsdtPayment, getUsdtWallet } from "@/lib/usdt-server";
 
 export const dynamic = "force-dynamic";
 
@@ -59,6 +63,29 @@ function orderCode(): string {
 
 function text(value: unknown): string {
   return typeof value === "string" ? value.trim() : "";
+}
+
+/** Órdenes sin pago que puede tener abiertas un mismo email o teléfono. */
+const MAX_UNPAID_ORDERS = 2;
+
+async function countUnpaidOrders(email: string, phone: string): Promise<number> {
+  // Los últimos 8 dígitos: el mismo celular con o sin +54, 9 o 0.
+  const phoneTail = phone.replace(/\D/g, "").slice(-8);
+  const since = new Date(Date.now() - PENDING_EXPIRY_HOURS * 60 * 60 * 1000);
+  const [row] = await db
+    .select({ count: sql<number>`count(*)::int` })
+    .from(orders)
+    .where(
+      and(
+        eq(orders.status, "pendiente_pago"),
+        gt(orders.createdAt, since),
+        or(
+          eq(orders.email, email),
+          phoneTail.length === 8 ? sql`right(regexp_replace(${orders.phone}, '\\D', '', 'g'), 8) = ${phoneTail}` : undefined,
+        ),
+      ),
+    );
+  return row?.count ?? 0;
 }
 
 export async function POST(request: Request) {
@@ -122,7 +149,10 @@ export async function POST(request: Request) {
     };
   }
 
-  const payment = resolvePaymentMethod(body.payment?.method, method, { mercadoPago: mercadoPagoReady() });
+  const payment = resolvePaymentMethod(body.payment?.method, method, {
+    mercadoPago: mercadoPagoReady(),
+    usdt: body.payment?.method === "usdt" && !!(await getUsdtWallet()),
+  });
   const paymentId: PaymentMethodId = payment.ok ? payment.method : "transferencia";
   if (!payment.ok) errors.payment = payment.error;
   const installments = Math.max(1, Math.min(12, Number(body.payment?.installments ?? 1)));
@@ -138,6 +168,22 @@ export async function POST(request: Request) {
     const existing = await findOrderByCheckoutKey(checkoutKey, email);
     if (existing) return Response.json({ ok: true, code: existing.code, total: existing.total });
   }
+
+  // Sin pago no hay reserva, pero una orden igual guarda stock un rato: con
+  // un tope por cliente, nadie puede llenar la tienda de órdenes que no paga.
+  const unpaid = await countUnpaidOrders(email, phone);
+  if (unpaid >= MAX_UNPAID_ORDERS) {
+    return Response.json(
+      {
+        ok: false,
+        error: `Ya tenés ${unpaid} órdenes esperando el pago. Pagá alguna o esperá a que venza para hacer otra; si necesitás ayuda, escribinos por WhatsApp.`,
+      },
+      { status: 429 },
+    );
+  }
+  // El stock de las órdenes que no se pagaron en 2 hs vuelve a la venta antes
+  // de mirar si alcanza. Si falla, se compra igual con el stock como está.
+  await releaseStaleStockHolds().catch((error) => console.error("[checkout] no se pudo liberar stock vencido:", error));
 
   // El cupón se pide temprano y se espera tarde: es independiente de la
   // validación de productos y así las dos consultas viajan juntas.
@@ -230,6 +276,20 @@ export async function POST(request: Request) {
 
   const paymentLabel = PAYMENT_METHODS.find((p) => p.id === paymentId)?.label ?? "Transferencia";
 
+  // USDT: el monto exacto sale del total con la cotización que cargó la tienda
+  // y queda fijo en el pedido. Sin cotización no se puede cobrar en USDT.
+  let usdtQuote: { expectedAmount: string; rate: UsdtRate } | null = null;
+  if (paymentId === "usdt") {
+    const rate = await getUsdtRate();
+    if (!rate) {
+      return Response.json(
+        { ok: false, errors: { payment: "El pago con USDT no está disponible ahora. Elegí otro medio de pago." } },
+        { status: 400 },
+      );
+    }
+    usdtQuote = { expectedAmount: usdtAmountFor(totals.total, rate.rate), rate };
+  }
+
   let code = orderCode();
   for (let attempt = 0; attempt < 4; attempt += 1) {
     const [existing] = await db.select({ id: orders.id }).from(orders).where(eq(orders.code, code)).limit(1);
@@ -240,6 +300,7 @@ export async function POST(request: Request) {
   // Pedido, ítems y stock en una sola transacción: si algo falla, no queda un
   // pedido sin productos ni stock descontado de más.
   await ensureOrderStockSchema();
+  if (usdtQuote) await ensureUsdtSchema();
   const created = await db.transaction(async (tx) => {
     const [order] = await tx
       .insert(orders)
@@ -284,6 +345,7 @@ export async function POST(request: Request) {
     // Descuenta stock solo donde es una cantidad real y anota cuánto, para
     // devolverlo si el pedido se cancela o vence sin pago.
     await reserveOrderStock(tx, order.id);
+    if (usdtQuote) await createUsdtPayment(tx, order.id, usdtQuote);
 
     // El uso del cupón se cuenta acá, con el tope chequeado en el mismo UPDATE.
     // Si otro pedido se llevó el último uso entre la consulta de arriba y este

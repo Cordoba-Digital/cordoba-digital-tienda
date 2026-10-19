@@ -2,6 +2,7 @@ export type AdminIconName =
   | "panel"
   | "pedidos"
   | "pagos"
+  | "medios"
   | "usuarios"
   | "productos"
   | "nuevo"
@@ -31,6 +32,7 @@ export const ADMIN_ICON_PATHS: Record<AdminIconName, string> = {
   nuevo: "M12 8v8M8 12h8M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z",
   pedidos: "M5 7h14l-1 13H6L5 7Zm4 0V6a3 3 0 0 1 6 0v1M9 11a3 3 0 0 0 6 0",
   pagos: "M3 6h18v12H3zM3 10h18M7 15h3",
+  medios: "M3 10 12 4l9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18",
   cupones: "M4 7h16v3a2 2 0 0 0 0 4v3H4v-3a2 2 0 0 0 0-4V7Zm6 3 4 4m0-4h.01M10 14h.01",
   usuarios: "M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-6 9a6 6 0 0 1 12 0M16 3.5a4 4 0 0 1 0 7.5M21 20a6 6 0 0 0-3-5.2",
   productos: "M12 3 4 7v10l8 4 8-4V7l-8-4Zm0 0v18M4 7l8 4 8-4",
@@ -69,6 +71,7 @@ export const ADMIN_NAV_GROUPS: { title?: string; items: AdminNavItem[] }[] = [
     items: [
       { href: "/admin/pedidos", label: "Pedidos", icon: "pedidos" },
       { href: "/admin/pagos", label: "Pagos", icon: "pagos" },
+      { href: "/admin/medios-de-pago", label: "Medios de pago", icon: "medios" },
       { href: "/admin/arrepentimientos", label: "Arrepentimientos", icon: "arrepentimientos" },
       { href: "/admin/cupones", label: "Cupones", icon: "cupones" },
     ],

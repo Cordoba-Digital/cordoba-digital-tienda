@@ -12,11 +12,13 @@ import { trackBeginCheckout } from "@/lib/analytics";
 import { readCoupon, writeCoupon } from "@/lib/coupon-storage";
 import { money } from "@/lib/format";
 import { isPaymentMethodOffered } from "@/lib/checkout-payment";
-import { computeTotals, PAYMENT_METHODS, type CouponInfo, type PaymentMethodId } from "@/lib/pricing";
+import { amountDueOnline, computeTotals, PAYMENT_METHODS, SENA_PESOS, type CouponInfo, type PaymentMethodId } from "@/lib/pricing";
 import { validateDelivery, validatePersonalData } from "@/lib/checkout-validation";
 import { useShippingQuote, useSucursales } from "@/lib/shipping-quote";
 import type { DeliveryMethod, ShippingOption } from "@/lib/shipping";
 import type { TransferAccount } from "@/lib/transfer-account";
+import { formatUsdt, usdtAmountFor } from "@/lib/usdt-amount";
+import type { UsdtRate } from "@/lib/usdt-rate";
 
 type CheckoutIconProps = { className?: string };
 
@@ -125,6 +127,7 @@ const PAYMENT_ICONS = {
   transferencia: IconBank,
   usdt: IconUsdt,
   efectivo: IconCash,
+  sena: IconStore,
   mercadopago: IconCard,
 } as const;
 
@@ -334,8 +337,11 @@ const inputClass =
 export function CheckoutFlow({
   mercadoPago = false,
   transfer = null,
+  usdtRate = null,
 }: {
   mercadoPago?: boolean;
+  /** Cotización para USDT; llega solo si hay wallet cargada en el panel. Sin ella no se ofrece USDT. */
+  usdtRate?: UsdtRate | null;
   /** Cuenta para transferir (`transferAccount()`); sin configurar, los datos se piden por WhatsApp. */
   transfer?: TransferAccount | null;
 }) {
@@ -456,7 +462,7 @@ export function CheckoutFlow({
       return next;
     });
     if (method !== "pickup") {
-      setPayment((prev) => (prev === "efectivo" ? "transferencia" : prev));
+      setPayment((prev) => (prev === "sena" ? "transferencia" : prev));
     }
   };
 
@@ -902,7 +908,7 @@ export function CheckoutFlow({
           <CheckoutStep number={3} title="Pago" subtitle="El total es el mismo con cualquier medio." state={stepState(3)}>
             <div className="space-y-4">
               <div className="grid gap-3 sm:grid-cols-[repeat(auto-fit,minmax(15rem,1fr))]">
-                {PAYMENT_METHODS.filter((method) => isPaymentMethodOffered(method.id, deliveryMethod, { mercadoPago })).map(
+                {PAYMENT_METHODS.filter((method) => isPaymentMethodOffered(method.id, deliveryMethod, { mercadoPago, usdt: !!usdtRate })).map(
                   (method) => {
                     const PaymentIcon = PAYMENT_ICONS[method.id];
                     return (
@@ -936,8 +942,25 @@ export function CheckoutFlow({
                 )}
               </div>
 
-              {/* USDT queda oculto hasta que el negocio lo habilite. Mercado
-                  Pago aparece solo si el servidor tiene sus credenciales. */}
+              {/* USDT aparece solo con una wallet cargada en el panel. Mercado
+                  Pago, solo si el servidor tiene sus credenciales. */}
+
+              {payment === "usdt" && usdtRate ? (
+                <div className="space-y-2 rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
+                  <p className="font-bold text-ink-900">Pagás con USDT por red TRON (TRC20).</p>
+                  <p className="flex flex-wrap items-baseline justify-between gap-2 rounded-lg bg-surface px-3 py-2">
+                    <span>Total en USDT</span>
+                    <strong className="text-base text-ink-900">{formatUsdt(usdtAmountFor(totals.total, usdtRate.rate))} USDT</strong>
+                  </p>
+                  <p className="text-xs text-ink-500">Al confirmar, el monto queda fijo en tu pedido.</p>
+                  <ol className="list-decimal space-y-1 pl-4 text-xs">
+                    <li>Confirmá el pedido: te mostramos la wallet, su QR y el monto exacto.</li>
+                    <li>Enviá ese monto desde tu wallet o exchange. Si te cobran comisión, tiene que llegar el monto completo.</li>
+                    <li>Pegá el TXID de la transacción en la página del pedido. Cuando llega el monto completo, se confirma solo.</li>
+                  </ol>
+                  <p className="text-xs">Usá solo la red TRON (TRC20): un envío por otra red no llega y no se puede recuperar.</p>
+                </div>
+              ) : null}
 
               {payment === "mercadopago" ? (
                 <div className="rounded-xl bg-sky-50 p-4 text-sm text-sky-900">
@@ -955,9 +978,9 @@ export function CheckoutFlow({
                     <p className="font-bold text-ink-900">Datos para transferir</p>
                     <TransferDetails account={transfer} amount={totals.total} />
                     <ol className="list-decimal space-y-1 pl-4 text-xs">
-                      <li>Confirmá el pedido: te damos un código de reserva y te guardamos el stock 48 hs.</li>
+                      <li>Confirmá el pedido: te damos un número de orden y te guardamos el stock 2 hs.</li>
                       <li>Transferí el monto exacto desde tu banco o billetera virtual.</li>
-                      <li>Mandanos el comprobante por WhatsApp con tu código de reserva.</li>
+                      <li>Mandanos el comprobante por WhatsApp con tu número de orden.</li>
                     </ol>
                     <p className="text-xs">Cuando se acredita la transferencia, confirmamos el pedido y te avisamos.</p>
                   </div>
@@ -965,18 +988,27 @@ export function CheckoutFlow({
                   <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
                     <p className="font-bold text-ink-900">Al confirmar te pasamos el CBU o el alias por WhatsApp.</p>
                     <p className="mt-1 text-xs">
-                      Te guardamos el stock 48 hs. Cuando se acredita la transferencia, confirmamos el pedido.
+                      Te guardamos el stock 2 hs. Cuando se acredita la transferencia, confirmamos el pedido.
                     </p>
                   </div>
                 )
               ) : null}
 
-              {payment === "efectivo" ? (
-                <div className="rounded-xl bg-emerald-50 p-4 text-sm text-emerald-800">
-                  <p className="font-bold">Pagás al retirar en el local.</p>
-                  {/* Acá decía "Reservamos el producto por 48 horas hábiles a
-                      tu nombre". Es un compromiso operativo que no está en el
-                      sitio original y que el cliente tendría que confirmar. */}
+              {payment === "sena" ? (
+                <div className="space-y-3 rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
+                  <p className="font-bold text-ink-900">
+                    Seña de {money(amountDueOnline({ paymentMethod: "sena", total: totals.total }))}
+                    {totals.total > SENA_PESOS ? ` y ${money(totals.total - SENA_PESOS)} al retirar en el local` : ""}
+                  </p>
+                  {transfer ? <TransferDetails account={transfer} amount={amountDueOnline({ paymentMethod: "sena", total: totals.total })} /> : null}
+                  <ol className="list-decimal space-y-1 pl-4 text-xs">
+                    <li>Confirmá el pedido: te damos un número de orden y te guardamos el stock 2 hs.</li>
+                    <li>Transferí la seña {transfer ? "a esta cuenta" : "(te pasamos el CBU por WhatsApp)"} y mandanos el comprobante.</li>
+                    <li>Cuando se acredita, la reserva queda confirmada y te damos tu código de reserva.</li>
+                  </ol>
+                  <p className="text-xs font-semibold text-amber-800">
+                    Tenés 24 horas para enviar la seña. Si no llega, la orden se cancela.
+                  </p>
                 </div>
               ) : null}
             </div>

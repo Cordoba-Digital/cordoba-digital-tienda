@@ -23,6 +23,9 @@ import { andreaniConfigurado } from "@/lib/andreani";
 import { isAutomationOn } from "@/lib/automations";
 import { formatAgo, formatDateTime, money } from "@/lib/format";
 import { isCancelled, statusIndex, statusLabel } from "@/lib/pricing";
+import { tronscanTxUrl } from "@/lib/tron";
+import { usdtShortfall } from "@/lib/usdt-amount";
+import { syncUsdtPayment } from "@/lib/usdt-server";
 
 export const dynamic = "force-dynamic";
 
@@ -63,10 +66,11 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
   const result = await getAdminOrderDetail(decodeURIComponent(code));
   if (!result) notFound();
   const { order, items, events } = result;
-  const [notifiesCustomer, refunds, returns] = await Promise.all([
+  const [notifiesCustomer, refunds, returns, usdtPayment] = await Promise.all([
     isAutomationOn("avisarCliente"),
     listOrderRefunds(order.id),
     listOrderReturns(order.id),
+    order.paymentMethod === "usdt" ? syncUsdtPayment(order).catch(() => null) : null,
   ]);
   const returned = returnedByItem(returns);
 
@@ -335,6 +339,39 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
                   <Row label="Medio">{order.paymentLabel || order.paymentMethod}</Row>
                   {order.installments > 1 ? <Row label="Cuotas">{order.installments} de {money(Math.round(order.total / order.installments))}</Row> : null}
                   {order.mercadopagoPaymentId ? <Row label="Pago en Mercado Pago"><span className="font-mono text-xs">{order.mercadopagoPaymentId}</span></Row> : null}
+                  {order.paymentMethod === "usdt" && usdtPayment ? (
+                    <>
+                      <Row label="A pagar">
+                        {usdtPayment.expectedAmount} USDT
+                        <span className="block text-xs text-ink-500">Cotización ${Number(usdtPayment.rate).toLocaleString("es-AR")}</span>
+                      </Row>
+                      <Row label="TXID">
+                        {usdtPayment.txid ? (
+                          <a href={tronscanTxUrl(usdtPayment.txid)} target="_blank" rel="noreferrer" className="break-all font-mono text-xs hover:underline">
+                            {usdtPayment.txid}
+                          </a>
+                        ) : (
+                          <span className="text-ink-500">El cliente todavía no lo cargó</span>
+                        )}
+                      </Row>
+                      {usdtPayment.txid ? (
+                        <Row label="En la red">
+                          {usdtPayment.transfer ? (
+                            usdtShortfall(usdtPayment.transfer.amount, usdtPayment.expectedAmount) === "0" ? (
+                              <span className="font-semibold text-emerald-700">Llegaron {usdtPayment.transfer.amount} USDT</span>
+                            ) : (
+                              <span className="font-semibold text-red-600">
+                                Llegaron {usdtPayment.transfer.amount} USDT: faltan{" "}
+                                {usdtShortfall(usdtPayment.transfer.amount, usdtPayment.expectedAmount)}
+                              </span>
+                            )
+                          ) : (
+                            <span className="text-ink-500">Todavía no aparece en la wallet</span>
+                          )}
+                        </Row>
+                      ) : null}
+                    </>
+                  ) : null}
                 </dl>
                 {order.paymentMethod === "mercadopago" ? (
                   <Link href="/admin/pagos" className="mt-2 block text-xs font-semibold text-ink-500 hover:text-ink-900 hover:underline">

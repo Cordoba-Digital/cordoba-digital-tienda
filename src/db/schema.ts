@@ -12,6 +12,8 @@ import {
   uniqueIndex,
 } from "drizzle-orm/pg-core";
 
+import type { UsdtTransfer } from "@/lib/tron";
+
 export type Spec = { label: string; value: string };
 
 export const categories = pgTable(
@@ -288,6 +290,30 @@ export const orders = pgTable(
   ],
 );
 
+/**
+ * Pago en USDT (TRON) de un pedido. Nace con el pedido: el monto exacto en
+ * USDT sale del total en pesos con la cotización del dólar oficial de ese
+ * momento, que queda guardada. Después se suman el TXID que pega el cliente
+ * (único, así una misma transferencia no paga dos pedidos) y lo que se vio
+ * llegar en la red al verificarlo.
+ */
+export const usdtPayments = pgTable(
+  "usdt_payments",
+  {
+    orderId: integer("order_id").primaryKey(),
+    /** USDT a pagar, como texto decimal ("73.45"). */
+    expectedAmount: text("expected_amount").notNull(),
+    /** Pesos por dólar usados para calcularlo. */
+    rate: text("rate").notNull(),
+    rateAt: timestamp("rate_at", { withTimezone: true }).notNull(),
+    txid: text("txid"),
+    transfer: jsonb("transfer").$type<UsdtTransfer | null>(),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    verifiedAt: timestamp("verified_at", { withTimezone: true }),
+  },
+  (table) => [uniqueIndex("usdt_payments_txid_idx").on(table.txid)],
+);
+
 export const orderEvents = pgTable(
   "order_events",
   {
@@ -555,3 +581,13 @@ export type User = typeof users.$inferSelect;
 export type UserSession = typeof userSessions.$inferSelect;
 export type Coupon = typeof coupons.$inferSelect;
 export type ArrepentimientoRequest = typeof arrepentimientoRequests.$inferSelect;
+
+/**
+ * Órdenes sin pago cuyo stock ya se devolvió a la tienda (a las 2 hs). La orden
+ * sigue viva hasta que vence; si el pago llega después, el stock se vuelve a
+ * descontar. Tabla aparte, como `usdt_payments`, para no tocar `orders`.
+ */
+export const orderStockHolds = pgTable("order_stock_holds", {
+  orderId: integer("order_id").primaryKey(),
+  releasedAt: timestamp("released_at", { withTimezone: true }).notNull().defaultNow(),
+});

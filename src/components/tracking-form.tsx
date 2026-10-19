@@ -12,6 +12,7 @@ import { isCancelled, ORDER_STATUS_FLOW, statusIndex, statusLabel } from "@/lib/
 type TrackedOrder = {
   code: string;
   status: string;
+  paymentMethod: string;
   customerName: string;
   deliveryLabel: string;
   deliveryEta: string;
@@ -42,6 +43,7 @@ export function TrackingForm() {
         setOrder({
           code: data.order.code,
           status: data.order.status,
+          paymentMethod: data.order.paymentMethod ?? "",
           customerName: data.order.customerName,
           deliveryLabel: data.order.deliveryLabel,
           deliveryEta: data.order.deliveryEta,
@@ -110,7 +112,7 @@ export function TrackingForm() {
         <div className="card-surface animate-rise p-5">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-ink-100 pb-4">
             <div>
-              <p className="text-xs font-bold uppercase tracking-wide text-ink-500">{orderCodeLabel(order.status).noun} {order.code}</p>
+              <p className="text-xs font-bold uppercase tracking-wide text-ink-500">{orderCodeLabel(order.status, order.paymentMethod).noun} {order.code}</p>
               <p className="text-lg font-extrabold text-ink-900">{statusLabel(order.status)}</p>
               <p className="text-xs text-ink-500">
                 {order.deliveryLabel} · {order.deliveryEta}

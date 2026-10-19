@@ -30,6 +30,8 @@ export async function resetDb(): Promise<void> {
   );
   await db.execute(sql`do $$ begin if to_regclass('rate_limit_misses') is not null then truncate table rate_limit_misses; end if; end $$`);
   await db.execute(sql`do $$ begin if to_regclass('store_settings') is not null then truncate table store_settings; end if; end $$`);
+  await db.execute(sql`do $$ begin if to_regclass('usdt_payments') is not null then truncate table usdt_payments; end if; end $$`);
+  await db.execute(sql`do $$ begin if to_regclass('order_stock_holds') is not null then truncate table order_stock_holds; end if; end $$`);
   await db.execute(sql`do $$ begin if to_regclass('error_events') is not null then truncate table error_events; end if; end $$`);
   await db.execute(sql`do $$ begin if to_regclass('product_photo_checks') is not null then truncate table product_photo_checks; end if; end $$`);
   await db.execute(sql`do $$ begin if to_regclass('photo_suggestion_decisions') is not null then truncate table photo_suggestion_decisions; end if; end $$`);
