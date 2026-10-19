@@ -1,6 +1,6 @@
 import { money } from "@/lib/format";
 import { couponDiscountFor } from "@/lib/pricing";
-import { getCoupon } from "@/lib/queries";
+import { getCoupon } from "@/lib/coupons";
 import { blockedMinutes, COUPON_LIMIT, ipFromHeaders, recordMiss, tooManyAttempts } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
