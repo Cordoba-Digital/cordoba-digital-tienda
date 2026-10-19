@@ -1697,5 +1697,782 @@
       "https://s7d1.scene7.com/is/image/canon/3637C001_powershot-g7-x-mark-iii-black_4?fmt=webp-alpha&wid=1600&hei=1600",
       "https://s7d1.scene7.com/is/image/canon/3637C001_powershot-g7-x-mark-iii-black_5?fmt=webp-alpha&wid=1600&hei=1600"
     ]
+  },
+  {
+    "slug": "monopatin-electrico-daihatsu-v201",
+    "image": "https://acdn-us.mitiendanube.com/stores/006/195/838/products/e-commerce-v201-3b94dd218df8fe6aa917848999815929-1024-1024.webp",
+    "source": "https://daihatsu.com.ar/productos/monopatin-electrico-v201-800w-rodado-10-negro-87fvd/",
+    "confidence": "alta",
+    "note": "Foto de 1024×1280 px (la actual tiene 500 px). Foto de la tienda oficial Daihatsu Electronics, V201 800W negro; 1024 px es el máximo de su CDN."
+  },
+  {
+    "slug": "notebook-dell-i7-1355u-16gb-ssd-512gb-156-fhd-touchscreen",
+    "image": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/inspiron-notebooks/15-3530-intel/media-gallery/black/notebook-inspiron-15-3530-nt-plastic-black-gallery-2.psd?fmt=png-alpha&pscan=auto&scl=1&hei=1066&wid=1600&qlt=100,1&resMode=sharp2&size=1600,1066&chrss=full",
+    "source": "https://www.dell.com/en-us/shop/dell-laptops/new-inspiron-15-laptop/spd/inspiron-15-3530-laptop/useichbts3530gmhc",
+    "confidence": "media",
+    "note": "Foto de 1600×1066 px (la actual tiene 500 px). Supongo Inspiron 15 3530 (i7-1355U, FHD táctil) en negro; chequeá modelo y color (también existe plateado). Tamaño armado a mano cambiando wid/hei en la URL de Dell."
+  },
+  {
+    "slug": "notebook-lenovo-ideapad-ryzen-5-40-8gb-256gb-ssd-15-6%e2%80%b3-fhd-w11-abyss-blue",
+    "image": "https://p1-ofp.static.pub/medias/25565228742_IdeaPadSlim3AbyssBlueIMG_202301091223371678986331727.png?width=1600&height=1600",
+    "source": "https://www.lenovo.com/us/en/p/laptops/ideapad/ideapad-300/ideapad-slim-3-gen-8-15-inch-amd/82xm000dus",
+    "confidence": "media",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). IdeaPad Slim 3 15\" AMD (15ABR8, Ryzen 5 7530U) en Abyss Blue; el nombre no dice el modelo exacto, chequeá que no sea un IdeaPad 1. Tamaño pedido con width/height."
+  },
+  {
+    "slug": "dron-dji-mini-5-pro-rc2-bundle-4-baterias",
+    "image": "https://se-cdn.djiits.com/tpc/uploads/carousel/image/1b9fa06636d869be1500e9bea095996d@ultra.jpg?format=webp",
+    "source": "https://store.dji.com/uk/product/dji-mini-5-pro-fly-more-combo-dji-rc2?set_region=GB",
+    "confidence": "media",
+    "note": "Foto de 1280×1280 px (la actual tiene 500 px). Foto del Fly More Combo (DJI RC 2) de la tienda DJI, que trae 3 baterías; el bundle de 4 baterías no existe oficial, chequeá qué incluye."
+  },
+  {
+    "slug": "samsung-galaxy-z-flip-8-5g-512gb-12gb",
+    "image": "https://shop.samsung.com/latin/pub/media/catalog/product/cache/a69170b4a4f0666a52473c2224ba9220/b/8/b8_closedback_set-cut-all-name.png",
+    "source": "https://shop.samsung.com/latin/mi/galaxy-z-flip8-256gb.html",
+    "confidence": "media",
+    "note": "Foto de 700×700 px (la actual tiene 500 px). Galaxy Z Flip8 oficial de Samsung Store Latin, pero es la foto con todos los colores juntos; si se vende un color puntual, conviene otra."
+  },
+  {
+    "slug": "samsung-galaxy-z-flip-8-5g-256gb-12gb",
+    "image": "https://shop.samsung.com/latin/pub/media/catalog/product/cache/a69170b4a4f0666a52473c2224ba9220/b/8/b8_closedback_set-cut-all-name.png",
+    "source": "https://shop.samsung.com/latin/mi/galaxy-z-flip8-256gb.html",
+    "confidence": "media",
+    "note": "Foto de 700×700 px (la actual tiene 500 px). Galaxy Z Flip8 oficial de Samsung Store Latin, pero es la foto con todos los colores juntos; si se vende un color puntual, conviene otra."
+  },
+  {
+    "slug": "samsung-galaxy-z-fold-8-ultra-5g-512gb-12gb",
+    "image": "https://shop.samsung.com/latin/pub/media/catalog/product/cache/a69170b4a4f0666a52473c2224ba9220/q/8/q8_set-cut-all-name_5.png",
+    "source": "https://shop.samsung.com/latin/car/galaxy-z-fold8-ultra-512gb.html",
+    "confidence": "media",
+    "note": "Foto de 700×700 px (la actual tiene 500 px). Galaxy Z Fold8 Ultra 512GB oficial de Samsung Store Latin, foto con todos los colores juntos; revisá el tamaño real."
+  },
+  {
+    "slug": "notebook-lenovov14-i7-13620h-16gb-ssd-512gb-ssd-14-fhd-w11",
+    "image": "https://p2-ofp.static.pub//fes/cms/2024/05/17/u9ghbpq50hdf09y1jypbawqcpzpznw558343.png?width=1600&height=1600",
+    "source": "https://www.lenovo.com/fr/fr/p/laptops/lenovo/v-series/lenovo-v14-gen-4-(14-inch-intel)/len101l0031",
+    "confidence": "media",
+    "note": "Foto de 1600×1600 px (la actual tiene 500 px). Foto genérica de la V14 Gen 4 Intel en Business Black; el i7-13620H es la versión G4 IAH (mismo chasis), chequeá color. Tamaño pedido con width/height."
+  },
+  {
+    "slug": "moto-g86-power-5g-256gb-8gb",
+    "image": "https://p3-ofp.static.pub//fes/cms/2026/01/11/4wvy8rukdiuwjqr608tmzy88zlv83k831084.png",
+    "source": "https://www.motorola.com/ve/es/p/phones/moto-g/86-power-5g/pmipmhs42m7",
+    "confidence": "media",
+    "note": "Foto de 1000×1000 px (la actual tiene 500 px). Render 1 de la página oficial del moto g86 power 5G (Motorola Venezuela); no dice de qué color es (azul, verde o cereza), chequealo."
+  },
+  {
+    "slug": "monopatin-electrico-daihatsu-v400",
+    "image": "https://acdn-us.mitiendanube.com/stores/006/195/838/products/e-commerce-v400-0e27886600e23eec3017849001491599-1024-1024.webp",
+    "source": "https://daihatsu.com.ar/productos/monopatin-electrico-v400-1000w-rodado-10-negro-17rml/",
+    "confidence": "alta",
+    "note": "Foto de 1024×1280 px (la actual tiene 500 px). Foto de la tienda oficial Daihatsu Electronics, V400 1000W negro; 1024 px es el máximo de su CDN."
+  },
+  {
+    "slug": "lente-sigma-35mm-f-1-4-dg-art-hsm-p-nikon",
+    "image": "https://www.sigma-global.com/lenses/a012_35_14_product_img01.png",
+    "source": "https://www.sigma-global.com/en/lenses/a012_35_14/",
+    "confidence": "media",
+    "note": "Foto de 1000×1000 px (la actual tiene 501 px). 35mm F1.4 DG HSM Art oficial de Sigma, pero la foto no aclara la montura; puede ser la de Canon, chequeá el encastre.",
+    "extras": [
+      "https://www.sigma-global.com/lenses/a012_35_14_product_img02.png",
+      "https://www.sigma-global.com/lenses/a012_35_14_product_img03.png"
+    ]
+  },
+  {
+    "slug": "nikon-linea-z-20-f1-8-s",
+    "image": "https://images.cdn.us-central1.gcp.commercetools.com/f7c8f2bb-aff1-4581-a826-1ad2527be222/Front-20093-NIKKOR-Z-yRvIQau7.png",
+    "source": "https://www.nikonusa.com/p/nikkor-z-20mm-f18-s/20093",
+    "confidence": "alta",
+    "note": "Foto de 700×595 px (la actual tiene 508 px). NIKKOR Z 20mm f/1.8 S, foto frontal de Nikon USA; extras de Nikon Argentina.",
+    "extras": [
+      "https://www.nikon.com.ar/uploads/objetivos/large/20250424-113609_2.png"
+    ]
+  },
+  {
+    "slug": "xiaomi-redmi-note-14-5g-256gb-8gb",
+    "image": "https://i02.appmifile.com/98_operator_sg/31/12/2024/ad40037176bc694a2b4dc321a2bf3e00.png",
+    "source": "https://www.mi.com/global/product/redmi-note-14-5g/specs/",
+    "confidence": "media",
+    "note": "Foto de 1200×600 px (la actual tiene 512 px). Es apaisada: fijate que muestre el producto y no un banner. Redmi Note 14 5G, imagen de la página de specs de Xiaomi Global; chequeá que sea el render del equipo y de qué color."
+  },
+  {
+    "slug": "xiaomi-redmi-note-14-5g-256gb-8gb-2",
+    "image": "https://i02.appmifile.com/98_operator_sg/31/12/2024/ad40037176bc694a2b4dc321a2bf3e00.png",
+    "source": "https://www.mi.com/global/product/redmi-note-14-5g/specs/",
+    "confidence": "media",
+    "note": "Foto de 1200×600 px (la actual tiene 512 px). Es apaisada: fijate que muestre el producto y no un banner. Redmi Note 14 5G (producto duplicado), imagen de la página de specs de Xiaomi Global; chequeá que sea el render del equipo y de qué color."
+  },
+  {
+    "slug": "horno-electrico-neba-52l-con-anafe-negro",
+    "image": "https://www.neba.com.ar/images/productos/horno-electrico/horno-electrico-52lts-3631negro.jpg",
+    "source": "https://www.neba.com.ar/hornos-52lts.html",
+    "confidence": "alta",
+    "note": "Foto de 1231×950 px (la actual tiene 515 px). Horno Neba 52 L modelo 3631 con hot plate, negro, del sitio oficial; revisá el tamaño real."
+  },
+  {
+    "slug": "xiaomi-redmi-note-15-256gb-8gb",
+    "image": "https://i02.appmifile.com/150_operator_sg/17/12/2025/d000ba27b1503fbf4ce97f4ecfda314a.png",
+    "source": "https://www.mi.com/global/product/redmi-note-15/specs/",
+    "confidence": "media",
+    "note": "Foto de 1200×600 px (la actual tiene 519 px). Es apaisada: fijate que muestre el producto y no un banner. Redmi Note 15 (4G), imagen de la página de specs de Xiaomi Global; chequeá que sea el render del equipo y de qué color."
+  },
+  {
+    "slug": "xiaomi-redmi-note-15-5g-256gb-8gb",
+    "image": "https://i02.appmifile.com/44_operator_sg/17/12/2025/22b1834a956a8ead431b7ea6a5dde37d.png",
+    "source": "https://www.mi.com/global/product/redmi-note-15-5g/specs/",
+    "confidence": "media",
+    "note": "Foto de 1200×600 px (la actual tiene 519 px). Es apaisada: fijate que muestre el producto y no un banner. Redmi Note 15 5G, imagen de la página de specs de Xiaomi Global; chequeá que sea el render del equipo y de qué color."
+  },
+  {
+    "slug": "xiaomi-redmi-note-15-5g-512gb-8gb",
+    "image": "https://i02.appmifile.com/44_operator_sg/17/12/2025/22b1834a956a8ead431b7ea6a5dde37d.png",
+    "source": "https://www.mi.com/global/product/redmi-note-15-5g/specs/",
+    "confidence": "media",
+    "note": "Foto de 1200×600 px (la actual tiene 519 px). Es apaisada: fijate que muestre el producto y no un banner. Redmi Note 15 5G, imagen de la página de specs de Xiaomi Global; chequeá que sea el render del equipo y de qué color."
+  },
+  {
+    "slug": "ups-apc-online-smart-srt-5000va-230v",
+    "image": "https://download.se.com/files?p_Doc_Ref=APC-LEAN-9HCL5E_01&p_File_Type=rendition_1500_jpg",
+    "source": "https://www.se.com/il/en/product/SRT5KXLI/apc-smartups-srt-5000va-230v/",
+    "confidence": "alta",
+    "note": "Foto de 1500×1500 px (la actual tiene 520 px). APC Smart-UPS SRT 5000VA 230V (SRT5KXLI) de Schneider Electric; pedí 1500 px cambiando la rendition, igual que el og:image del sitio.",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=SPD_LEAN-9HDKLZ_B_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SPD_LEAN-9HCK7S_A_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SPD_LEAN-9HCL5E_FS_V&p_File_Type=rendition_1500_jpg"
+    ]
+  },
+  {
+    "slug": "ups-apc-online-easy-srv-3000va-230v-expand-2cajas",
+    "image": "https://download.se.com/files?p_Doc_Ref=SRV2_3KIL_FL_V&p_File_Type=rendition_1500_jpg",
+    "source": "https://www.se.com/ar/es/product/SRV3KIL-AR/apc-easy-ups-online-srv-3000va-230v-con-bater%C3%ADa-de-tiempo-de-ejecuci%C3%B3n-extendida-argentina/",
+    "confidence": "alta",
+    "note": "Foto de 1500×1500 px (la actual tiene 520 px). APC Easy UPS SRV 3000VA con pack de baterías (SRV3KIL-AR) de Schneider Argentina; 1500 px cambiando la rendition. El último extra es el pack de baterías.",
+    "extras": [
+      "https://download.se.com/files?p_Doc_Ref=SRV2_3KIL_FS_V&p_File_Type=rendition_1500_jpg",
+      "https://download.se.com/files?p_Doc_Ref=SRV_72BP9A_B_V&p_File_Type=rendition_1500_jpg"
+    ]
+  },
+  {
+    "slug": "sigma-100-400-f5-6-3-dg-hsm-contem-sony",
+    "image": "https://www.sigma-global.com/lenses/c020_100_400_5_63_product_img02.png",
+    "source": "https://www.sigma-global.com/en/lenses/c020_100_400_5_63/",
+    "confidence": "media",
+    "note": "Foto de 1000×1000 px (la actual tiene 520 px). Para Sony E el oficial es el 100-400 F5-6.3 DG DN OS Contemporary (el DG HSM no sale en Sony); chequeá que sea ese y la montura de la foto.",
+    "extras": [
+      "https://www.sigma-global.com/lenses/c020_100_400_5_63_product_img03.png",
+      "https://www.sigma-global.com/lenses/c020_100_400_5_63_product_img04.png"
+    ]
+  },
+  {
+    "slug": "ups-trv-850a-neo-4-tomas",
+    "image": "https://acdn-us.mitiendanube.com/stores/005/889/261/products/neo-ml_frente-neo-chica-34433fd666a19a330417454373469005-1024-1024.webp",
+    "source": "https://tienda.trv.com.ar/productos/ups-neo-850a/",
+    "confidence": "alta",
+    "note": "Foto de 1024×1024 px (la actual tiene 528 px). Tienda oficial TRV, NEO 850A con 4 tomas; 1024 px es el máximo del CDN.",
+    "extras": [
+      "https://acdn-us.mitiendanube.com/stores/005/889/261/products/neo-ml_650a-850a_trasera-f69898df6c4911e27117454373522593-1024-1024.webp"
+    ]
+  },
+  {
+    "slug": "ups-trv-650a-neo-4-tomas",
+    "image": "https://acdn-us.mitiendanube.com/stores/005/889/261/products/neo-ml_frente-neo-chica-c83a699b5e330b230e17454372926648-1024-1024.webp",
+    "source": "https://tienda.trv.com.ar/productos/ups-neo-650a/",
+    "confidence": "alta",
+    "note": "Foto de 1024×1024 px (la actual tiene 528 px). Tienda oficial TRV, NEO 650A con 4 tomas; 1024 px es el máximo del CDN.",
+    "extras": [
+      "https://acdn-us.mitiendanube.com/stores/005/889/261/products/neo-ml_650a-850a_trasera-38cfa4cc51327b8f5817454373025317-1024-1024.webp"
+    ]
+  },
+  {
+    "slug": "ups-trv-neo1200-5t-c-soft-y-usb",
+    "image": "https://acdn-us.mitiendanube.com/stores/005/889/261/products/neo-1200-7532de0fa4b19f6d8517458503591365-1024-1024.webp",
+    "source": "https://tienda.trv.com.ar/productos/ups-neo-1200/",
+    "confidence": "media",
+    "note": "Foto de 1024×819 px (la actual tiene 528 px). NEO 1200 con USB y software, pero la tienda oficial dice 4 tomas y el nombre dice 5; revisá cuántas tomas trae.",
+    "extras": [
+      "https://acdn-us.mitiendanube.com/stores/005/889/261/products/ml-neogrande_frente-104536ed677bed079617458503703447-1024-1024.webp",
+      "https://acdn-us.mitiendanube.com/stores/005/889/261/products/ml-neogrande_trasera-afe74e782777444dfa17458503775461-1024-1024.webp"
+    ]
+  },
+  {
+    "slug": "ups-trv-neo-1500-5t-c-soft-y-usb",
+    "image": "https://acdn-us.mitiendanube.com/stores/005/889/261/products/ml-neogrande_frente-fb241771129b436b7017455253362910-1024-1024.webp",
+    "source": "https://tienda.trv.com.ar/productos/ups-neo-1500/",
+    "confidence": "media",
+    "note": "Foto de 1024×1024 px (la actual tiene 528 px). Foto de la carcasa NEO grande (compartida con 1200/2000); la tienda oficial dice 4 tomas y el nombre dice 5, revisalo.",
+    "extras": [
+      "https://acdn-us.mitiendanube.com/stores/005/889/261/products/ml-neogrande_trasera-ea898a793a84205f1017455253418627-1024-1024.webp"
+    ]
+  },
+  {
+    "slug": "ups-trv-neo-2000-4t-c-soft-y-usb",
+    "image": "https://acdn-us.mitiendanube.com/stores/005/889/261/products/ml-neogrande_frente-a4f63331f5d644dc0b17455252757013-1024-1024.webp",
+    "source": "https://tienda.trv.com.ar/productos/ups-neo-2000/",
+    "confidence": "alta",
+    "note": "Foto de 1024×1024 px (la actual tiene 528 px). Tienda oficial TRV, NEO 2000 con 4 tomas y USB; la carcasa es la misma que la de la 1500.",
+    "extras": [
+      "https://acdn-us.mitiendanube.com/stores/005/889/261/products/ml-neogrande_trasera-5c6ee05050f2ae14ab17455252831391-1024-1024.webp"
+    ]
+  },
+  {
+    "slug": "camara-de-seguridad-ip-wifi-tenda-cp3-full-hd",
+    "image": "https://static.tenda.com.cn/tdeweb/public/images/product2/816.png?x-oss-process=image%2Fresize%2Cw_1600",
+    "source": "https://www.tendacn.com/product/overview/CP3v22",
+    "confidence": "media",
+    "note": "Foto de 800×900 px (la actual tiene 530 px). Imagen de cabecera de la ficha oficial del CP3 V2.2 1080P (ancho pedido a 1600 por parámetro); chequeá que sea la cámara sola y no un banner."
+  },
+  {
+    "slug": "samsung-galaxy-a37-5g-128gb-6gb",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/latin_en/sm-a376bzwkgto/gallery/latin-en-galaxy-a37-5g-sm-a376-sm-a376bzwkgto-552226089?$1164_776_PNG$",
+    "source": "https://www.samsung.com/latin_en/smartphones/galaxy-a/galaxy-a37-5g-awesome-white-256gb-sm-a376bzwkgto/",
+    "confidence": "media",
+    "note": "Foto de 1164×776 px (la actual tiene 530 px). Galaxy A37 5G de frente en Awesome White (la página es de 256 GB, la foto es igual); el nombre no trae color, confirmá que el stock sea blanco."
+  },
+  {
+    "slug": "canon-t100-4000d-18-55mm",
+    "image": "https://cdn.media.amplience.net/i/canon/eos-4000d-bk-ef-s18-55-iii-left-side_b9502aa864464bdfbb27f72dcf6c48de?w=1600&fmt=jpg&qlt=90",
+    "source": "https://www.canon-europe.com/cameras/eos-4000d/",
+    "confidence": "alta",
+    "note": "Foto de 1600×1067 px (la actual tiene 534 px). EOS 4000D (= Rebel T100) negra con EF-S 18-55 III, vista lateral; tamaño pedido por parámetro.",
+    "extras": [
+      "https://cdn.media.amplience.net/i/canon/eos-4000d-bk-ef-s18-55-iii-right-side_0ed2f741b99c42489bd77216b8a93a08?w=1200&fmt=jpg&qlt=90",
+      "https://cdn.media.amplience.net/i/canon/eos-4000d-bk-ef-s18-55-iii-top_c9024d444d16469b92b7f96e547eea25?w=1200&fmt=jpg&qlt=90"
+    ]
+  },
+  {
+    "slug": "parlante-jbl-boombox-4",
+    "image": "https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwe154c3b4/LS_JBL_BOOMBOX_4_HERO_BLACK_0019_x4.png?sw=1600&sh=1600",
+    "source": "https://www.jbl.com/bluetooth-speakers/BOOMBOX-4.html",
+    "confidence": "media",
+    "note": "Foto de 1600×1600 px (la actual tiene 535 px). Boombox 4 en negro (el nombre no trae color); la galería oficial solo muestra blanco, por eso sin extras. Tamaño pedido por parámetro."
+  },
+  {
+    "slug": "calefactor-electrico-liliana-tecnohot-2200w",
+    "image": "https://lilianaar.vtexassets.com/arquivos/ids/158305-1600-1600?v=638829380041230000&width=1600&height=1600&aspect=true",
+    "source": "https://www.liliana.com.ar/calefactor-electrico-tecnohot/p",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 548 px). Tecnohot de la tienda oficial Liliana (SKU CCTCV100); la página no dice los watts. Tamaño pedido por parámetro, el original puede ser de 800.",
+    "extras": [
+      "https://lilianaar.vtexassets.com/arquivos/ids/158306-1600-1600?v=638870633013800000&width=1600&height=1600&aspect=true",
+      "https://lilianaar.vtexassets.com/arquivos/ids/158307-1600-1600?v=638870633015930000&width=1600&height=1600&aspect=true"
+    ]
+  },
+  {
+    "slug": "lente-canon-rfs-7-8-f4-stm-dual-caja-blanca-2",
+    "image": "https://cdn.media.amplience.net/i/canon/rf-s-7.8mm-f4-stm-dual_hero_49d455393539434aa78428a3aebb8081?w=1600&fmt=jpg&qlt=90",
+    "source": "https://www.canon-europe.com/lenses/rf-s-7-8mm-f4-stm/",
+    "confidence": "media",
+    "note": "Foto de 1600×1068 px (la actual tiene 549 px). Es la imagen hero de la ficha oficial, no de la galería; chequeá que sea el lente solo sobre fondo liso."
+  },
+  {
+    "slug": "monopatin-xiaomi-electric-scooter-5-pro-black",
+    "image": "https://i02.appmifile.com/772_operator_sg/23/12/2024/334f919295b5977b30f73eca3f761abe.jpg",
+    "source": "https://www.mi.com/global/product/xiaomi-electric-scooter-5-pro/specs/",
+    "confidence": "media",
+    "note": "Foto de 800×360 px (la actual tiene 550 px). Es apaisada: fijate que muestre el producto y no un banner. Foto de la ficha oficial del Scooter 5 Pro; la página no nombra el color, chequeá que sea el negro."
+  },
+  {
+    "slug": "xiaomi-redmi-17-256gb-6gb",
+    "image": "https://i02.appmifile.com/396_operator_sg/22/07/2026/2215d12b7d0dc2ad986d9643c570ad36.png",
+    "source": "https://www.mi.com/global/product/redmi-17/specs/",
+    "confidence": "media",
+    "note": "Foto de 1000×630 px (la actual tiene 550 px). Foto de la ficha oficial del Redmi 17 (4G); no dice el color, chequeá que coincida con el stock."
+  },
+  {
+    "slug": "xiaomi-redmi-17-128gb-4gb",
+    "image": "https://i02.appmifile.com/396_operator_sg/22/07/2026/2215d12b7d0dc2ad986d9643c570ad36.png",
+    "source": "https://www.mi.com/global/product/redmi-17/specs/",
+    "confidence": "media",
+    "note": "Foto de 1000×630 px (la actual tiene 550 px). Misma foto de la ficha oficial del Redmi 17 (4G); no dice el color, chequeá que coincida con el stock."
+  },
+  {
+    "slug": "xiaomi-redmi-17-256gb-4gb",
+    "image": "https://i02.appmifile.com/396_operator_sg/22/07/2026/2215d12b7d0dc2ad986d9643c570ad36.png",
+    "source": "https://www.mi.com/global/product/redmi-17/specs/",
+    "confidence": "media",
+    "note": "Foto de 1000×630 px (la actual tiene 550 px). Misma foto de la ficha oficial del Redmi 17 (4G); no dice el color, chequeá que coincida con el stock."
+  },
+  {
+    "slug": "lente-canon-rf-50mm-f-1-8-stm",
+    "image": "https://cdn.media.amplience.net/i/canon/rf50mm-f1.8-stm-front-slant-product-gallery-01_cec38d1bf93942c987503d6ea10c1406?w=1600&fmt=jpg&qlt=90",
+    "source": "https://www.canon-europe.com/lenses/rf-50mm-f1-8-stm/",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 552 px). Galería oficial de Canon Europa; tamaño pedido por parámetro.",
+    "extras": [
+      "https://cdn.media.amplience.net/i/canon/rf50mm-f1.8-stm-side-product-gallery-03_10504f99ce634bc38ba2e35b728dfa1a?w=1200&fmt=jpg&qlt=90",
+      "https://cdn.media.amplience.net/i/canon/rf50mm-f1.8-stm-slant-product-gallery-04_f69edc7d0de0470789d0417b4b6404fb?w=1200&fmt=jpg&qlt=90",
+      "https://cdn.media.amplience.net/i/canon/rf50mm-f1.8-stm-switch-product-gallery-06_190ae3a2992f4927b25c258176b8222e?w=1200&fmt=jpg&qlt=90",
+      "https://cdn.media.amplience.net/i/canon/rf50mm-f1.8-stm-front-slant-with-hood-product-gallery-02_a4c7f301fb704c378b5fd73f2c7a7f96?w=1200&fmt=jpg&qlt=90"
+    ]
+  },
+  {
+    "slug": "lente-canon-rf-100-400mm-f-56-8-is-usm",
+    "image": "https://cdn.media.amplience.net/i/canon/rf-100-400mm-f5.6-8-is-usm-frt_1x1_ca31aace1dc44cfb946dbeea76cc6c1d?w=1600&fmt=jpg&qlt=90",
+    "source": "https://www.canon-europe.com/lenses/rf-100-400-f5-6-8-is-usm/",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 552 px). Galería oficial de Canon Europa; tamaño pedido por parámetro.",
+    "extras": [
+      "https://cdn.media.amplience.net/i/canon/rf-100-400mm-f5.6-8-is-usm-side-extended_gallery_02_9b391130f4874f15a6bf46a09fe11041?w=1200&fmt=jpg&qlt=90",
+      "https://cdn.media.amplience.net/i/canon/rf-100-400mm-f5.6-8-is-usm-slant-with-cap_gallery_05_468fc143617e4070b8f8582ccfbb6a02?w=1200&fmt=jpg&qlt=90"
+    ]
+  },
+  {
+    "slug": "lente-canon-rf-100-500mm-f-4-5-7-1l-is-usm",
+    "image": "https://cdn.media.amplience.net/i/canon/rf-100-500mm-f4.5-7.1l-is-usm-fsl_1a57a08ea85942f596f9f12e0c1a2328?w=1600&fmt=jpg&qlt=90",
+    "source": "https://www.canon-europe.com/lenses/rf-100-500mm-f-4-5-7-1-l-is-usm/",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 552 px). Galería oficial de Canon Europa; tamaño pedido por parámetro.",
+    "extras": [
+      "https://cdn.media.amplience.net/i/canon/rf-100-500mm-f4.5-7.1l-is-usm-side-frt_f51ad256498048bcb5d796fe14904daf?w=1200&fmt=jpg&qlt=90",
+      "https://cdn.media.amplience.net/i/canon/rf-100-500mm-f4.5-7.1l-is-usm-switch-frt_74ed3c0ccde94e43a2a8c7bee4492509?w=1200&fmt=jpg&qlt=90"
+    ]
+  },
+  {
+    "slug": "canon-rf-28m-f-2-8",
+    "image": "https://cdn.media.amplience.net/i/canon/rf-28mm-f2.8-stm-fsl_gallery_02_f8edf0d9b580411ba575e98b13e940fb?w=1600&fmt=jpg&qlt=90",
+    "source": "https://www.canon-europe.com/lenses/rf-28mm-f2-8-stm/",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 552 px). RF 28mm F2.8 STM (pancake), galería oficial de Canon Europa; tamaño pedido por parámetro.",
+    "extras": [
+      "https://cdn.media.amplience.net/i/canon/rf-28mm-f2.8-stm-frt_gallery_01_c01482909bee41faa66b21770efc3e60?w=1200&fmt=jpg&qlt=90",
+      "https://cdn.media.amplience.net/i/canon/rf-28mm-f2.8-stm-fra_gallery_03_80efa2b3f6924eba8f740f3d81346fc9?w=1200&fmt=jpg&qlt=90",
+      "https://cdn.media.amplience.net/i/canon/rf-28mm-f2.8-stm-switch-bck_gallery_05_15be6a8112ca43fbb91dea80c77d6327?w=1200&fmt=jpg&qlt=90"
+    ]
+  },
+  {
+    "slug": "sony-fe-28-70mm-f-3-5-5-6-lens-2",
+    "image": "https://www.sony.jp/products/picture/SEL2870.jpg",
+    "source": "https://www.sony.jp/ichigan/products/SEL2870/",
+    "confidence": "alta",
+    "note": "Foto de 740×555 px (la actual tiene 554 px). SEL2870 FE 28-70 F3.5-5.6 OSS de Sony Japón; no sé el tamaño, verificá que supere al actual."
+  },
+  {
+    "slug": "macbook-air-m5-15-24gb-1tb-midnight",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/macbook-air-specs-select-202601-15inch-midnight?wid=1600&fmt=jpeg&qlt=95&.v=1767641218158",
+    "source": "https://www.apple.com/shop/buy-mac/macbook-air/15-inch-midnight-m5-chip-10-core-cpu-10-core-gpu-24gb-memory-1tb-storage",
+    "confidence": "alta",
+    "note": "Foto de 1600×1025 px (la actual tiene 554 px). MacBook Air 15 M5 color Midnight, imagen del configurador de Apple; ancho pedido a 1600 por parámetro."
+  },
+  {
+    "slug": "lente-canon-rf-s-55-210mm-f-5-7",
+    "image": "https://cdn.media.amplience.net/i/canon/rf-s-55-210mm-f5-7.1-is-stm-frt_gallery_01_4706508619a74e59891b827ee4c29bfc?w=1600&fmt=jpg&bg=rgb(255,255,255)",
+    "source": "https://canon-europe.com/lenses/rf-s-55-210mm-f5-7-1-is-stm",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 554 px). Canon RF-S 55-210mm F5-7.1 IS STM, galería oficial Canon Europa; el parámetro de 1600 px (w, fmt, bg) lo agregué yo según el CDN Amplience.",
+    "extras": [
+      "https://cdn.media.amplience.net/i/canon/rf-s-55-210mm-f5-7.1-is-stm-fra_gallery_02_9009b24368bf43f3971f905985727317?w=1600&fmt=jpg&bg=rgb(255,255,255)",
+      "https://cdn.media.amplience.net/i/canon/rf-s-55-210mm-f5-7.1-is-stm-fsl_gallery_04_fdf99cbebd444ce7afb2360940f0b5a2?w=1600&fmt=jpg&bg=rgb(255,255,255)",
+      "https://cdn.media.amplience.net/i/canon/rf-s-55-210mm-f5-7.1-is-stm-extended-frt_gallery_06_15ce1f33a565483e8c5c5bb5faae7ed9?w=1600&fmt=jpg&bg=rgb(255,255,255)"
+    ]
+  },
+  {
+    "slug": "ventilador-turbo-liliana-3-aspas-35w-10-cabezal-reclinable",
+    "image": "https://lilianaar.vteximg.com.br/arquivos/ids/158438/VTF10P_01.jpg?v=638829382249970000",
+    "source": "https://www.liliana.com.ar/turboventilador-10-reclinable-pisopared/p",
+    "confidence": "alta",
+    "note": "Foto de 1000×1018 px (la actual tiene 558 px). Liliana VTF10P: turbo 10\" 35 W reclinable piso/pared, tienda oficial Liliana; chequeá que la foto supere los 1000 px.",
+    "extras": [
+      "https://lilianaar.vteximg.com.br/arquivos/ids/158439/VTF10P_02.jpg?v=638870758319730000"
+    ]
+  },
+  {
+    "slug": "ventilador-turbo-liliana-5-aspas-20-90w",
+    "image": "https://lilianaar.vteximg.com.br/arquivos/ids/158358/VTF20P_01.jpg?v=638829380705400000",
+    "source": "https://www.liliana.com.ar/turboventilador-20-reclinable-pisopared/p",
+    "confidence": "alta",
+    "note": "Foto de 1000×1018 px (la actual tiene 558 px). Liliana VTF20P: turbo 20\" 5 aspas 90 W reclinable piso/pared, de la tienda oficial Liliana (VTEX); chequeá que la foto supere los 1000 px.",
+    "extras": [
+      "https://lilianaar.vteximg.com.br/arquivos/ids/158359/VTF20P_02.jpg?v=638870768386300000",
+      "https://lilianaar.vteximg.com.br/arquivos/ids/158360/VTF20P_03.jpg?v=638870768387330000",
+      "https://lilianaar.vteximg.com.br/arquivos/ids/158361/VTF20P_04.jpg?v=638870768387430000"
+    ]
+  },
+  {
+    "slug": "ventilador-de-pie-liliana-parrilla-cromada-digital-20",
+    "image": "https://lilianaar.vteximg.com.br/arquivos/ids/160470/VPD20MR_01.png?v=639244905651830000",
+    "source": "https://www.liliana.com.ar/ventilador-de-pie-digital-liliana-vpd20mr-20--control-remoto-display-digital-90w/p",
+    "confidence": "alta",
+    "note": "Foto de 1000×1018 px (la actual tiene 558 px). Liliana VPD20MR: de pie 20\" parrilla cromada, display digital y control remoto, tienda oficial Liliana.",
+    "extras": [
+      "https://lilianaar.vteximg.com.br/arquivos/ids/160471/VPD20MR_02.png?v=639244905651900000",
+      "https://lilianaar.vteximg.com.br/arquivos/ids/160472/VPD20MR_03.png?v=639244905651930000",
+      "https://lilianaar.vteximg.com.br/arquivos/ids/160473/VPD20MR_04.png?v=639244905651970000"
+    ]
+  },
+  {
+    "slug": "ventilador-turbo-liliana-5-aspas-20-90w-2",
+    "image": "https://lilianaar.vteximg.com.br/arquivos/ids/158358/VTF20P_01.jpg?v=638829380705400000",
+    "source": "https://www.liliana.com.ar/turboventilador-20-reclinable-pisopared/p",
+    "confidence": "alta",
+    "note": "Foto de 1000×1018 px (la actual tiene 558 px). Liliana VTF20P: turbo 20\" 5 aspas 90 W reclinable piso/pared, de la tienda oficial Liliana (VTEX); chequeá que la foto supere los 1000 px.",
+    "extras": [
+      "https://lilianaar.vteximg.com.br/arquivos/ids/158359/VTF20P_02.jpg?v=638870768386300000",
+      "https://lilianaar.vteximg.com.br/arquivos/ids/158360/VTF20P_03.jpg?v=638870768387330000",
+      "https://lilianaar.vteximg.com.br/arquivos/ids/158361/VTF20P_04.jpg?v=638870768387430000"
+    ]
+  },
+  {
+    "slug": "ventilador-de-pie-liliana-orbital-18",
+    "image": "https://lilianaar.vteximg.com.br/arquivos/ids/158452/VPRN18_01.jpg?v=638829382480070000",
+    "source": "https://www.liliana.com.ar/ventilador-de-pie-18-orbital/p",
+    "confidence": "alta",
+    "note": "Foto de 1000×1018 px (la actual tiene 558 px). Liliana VPRN18: de pie 18\" orbital 75 W, tienda oficial Liliana; chequeá que la foto supere los 1000 px."
+  },
+  {
+    "slug": "router-4p-tp-link-archer-c24-ac750",
+    "image": "https://static.tp-link.com/Archer-C24_UN_1.0_01_large_1594970251730k.jpg",
+    "source": "https://www.tp-link.com/ae/home-networking/wifi-router/archer-c24/",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 560 px). Archer C24 AC750, galería oficial TP-Link (fotos de la versión 1.0, igual de afuera que la v2).",
+    "extras": [
+      "https://static.tp-link.com/Archer-C24_UN_1.0_02_large_1588213361980c.jpg",
+      "https://static.tp-link.com/Archer-C24_UN_1.0_03_large_1588213374422u.jpg",
+      "https://static.tp-link.com/Archer-C24_UN_1.0_04_large_1594970262995l.jpg"
+    ]
+  },
+  {
+    "slug": "disco-ssd-netac-960gb-sata-iii-2-5-6gb-s",
+    "image": "https://www.netac.com/uploads/20260331/4ccb6707907c176fda62b040c856de05.jpg",
+    "source": "https://www.netac.com/en/industrialssd/indm2ngff/152.html",
+    "confidence": "media",
+    "note": "Foto de 800×800 px (la actual tiene 560 px). Netac SA500 (tiene versión 960GB); el nombre no dice el modelo, puede ser N535S: chequeá modelo y que la etiqueta de la foto no muestre otra capacidad.",
+    "extras": [
+      "https://www.netac.com/uploads/20260331/527958b7479dcfaba505863b0a1d2537.jpg",
+      "https://www.netac.com/uploads/20260331/2cbf62b6433fc83e469ddc835f9f52ae.jpg"
+    ]
+  },
+  {
+    "slug": "canon-eos-r50-v-kit-14-30mm",
+    "image": "https://s7d1.scene7.com/is/image/canon/6895C012_R50_V_kit_primary?wid=1600&hei=1600&fmt=jpg",
+    "source": "https://www.usa.canon.com/shop/p/eos-r50-v-camera-rf-s-14-30mm-f4-6-3-is-stm-pz-lens-kit",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 584 px). EOS R50 V con RF-S 14-30mm (6895C012), tienda oficial Canon USA; el tamaño 1600 px (wid, hei, fmt) lo agregué yo según el CDN Scene7. Mirá que los extras sean del producto y no de uso.",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/6895C012_R50_V_kit_2?wid=1600&hei=1600&fmt=jpg",
+      "https://s7d1.scene7.com/is/image/canon/6895C012_R50_V_kit_3?wid=1600&hei=1600&fmt=jpg",
+      "https://s7d1.scene7.com/is/image/canon/6895C012_R50_V_kit_4?wid=1600&hei=1600&fmt=jpg"
+    ]
+  },
+  {
+    "slug": "tamron-70-300-f4-5-6-3-di-iii-rxd-nikon-linea-z",
+    "image": "https://tamron-americas.com/wp-content/uploads/2024/09/a047z_sideview_20220729-1.jpg",
+    "source": "https://tamron-americas.com/product/70-300mm-f-4-5-6-3-di-iii-rxd/",
+    "confidence": "alta",
+    "note": "Foto de 1800×1200 px (la actual tiene 584 px). Tamron 70-300 A047Z, versión Nikon Z (el archivo dice a047z), sitio oficial Tamron Americas.",
+    "extras": [
+      "https://tamron-americas.com/wp-content/uploads/2024/09/a047z_topside_20220729-1.jpg",
+      "https://tamron-americas.com/wp-content/uploads/2024/09/a047z_mount_20220729-1.jpg"
+    ]
+  },
+  {
+    "slug": "camara-ip-cloud-tp-link-tapo-c320ws-2k-qhd-color-2",
+    "image": "https://static.tp-link.com/upload/image-line/TapoC320WS_EU_1.0_01_large_20210806074340b.png",
+    "source": "https://www.tp-link.com/uk/home-networking/cloud-camera/tapo-c320ws/v1/",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 590 px). Tapo C320WS blanca, galería oficial TP-Link (v1 EU); es la misma cámara que la otra fila C320WS.",
+    "extras": [
+      "https://static.tp-link.com/upload/image-line/TapoC320WS_EU_1.0_02_large_20210806074355l.png",
+      "https://static.tp-link.com/upload/image-line/TapoC320WS_EU_1.0_03_large_20210806074412o.jpg"
+    ]
+  },
+  {
+    "slug": "tp-link-tapo-camara-ip-wifi-c310-ext",
+    "image": "https://static.tp-link.com/1_large_1599194402144d.jpg",
+    "source": "https://www.tp-link.com/uk/home-networking/cloud-camera/tapo-c310/v1/",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 590 px). Tapo C310 exterior blanca, galería oficial TP-Link (v1 EU).",
+    "extras": [
+      "https://static.tp-link.com/2_large_1599194417653h.jpg",
+      "https://static.tp-link.com/3_large_1599194429663j.jpg",
+      "https://static.tp-link.com/4_large_1599194441148v.jpg"
+    ]
+  },
+  {
+    "slug": "tp-link-tapo-camara-ip-wifi-c320ws-ext",
+    "image": "https://static.tp-link.com/upload/image-line/TapoC320WS_EU_1.0_01_large_20210806074340b.png",
+    "source": "https://www.tp-link.com/uk/home-networking/cloud-camera/tapo-c320ws/v1/",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 590 px). Tapo C320WS blanca, galería oficial TP-Link (v1 EU); es la misma cámara que la otra fila C320WS.",
+    "extras": [
+      "https://static.tp-link.com/upload/image-line/TapoC320WS_EU_1.0_02_large_20210806074355l.png",
+      "https://static.tp-link.com/upload/image-line/TapoC320WS_EU_1.0_03_large_20210806074412o.jpg"
+    ]
+  },
+  {
+    "slug": "tp-link-wifi-router-300-n-tl-wr840n",
+    "image": "https://static.tp-link.com/TL-WR840N_UN_6.20_01_large_1533102945398q.jpg",
+    "source": "https://www.tp-link.com/ae/home-networking/wifi-router/tl-wr840n/",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 590 px). TL-WR840N, fotos oficiales de la versión 6.20 (la que se vende hoy); chequeá que el equipo en stock sea igual por fuera.",
+    "extras": [
+      "https://static.tp-link.com/TL-WR840N_UN_6.20_02_large_1533103248788w.jpg",
+      "https://static.tp-link.com/TL-WR840N_UN_6.20_03_large_1533103266290f.jpg",
+      "https://static.tp-link.com/TL-WR840N_UN_6.20_04_large_1533103317416a.jpg"
+    ]
+  },
+  {
+    "slug": "handy-baofeng-bf9700",
+    "image": "https://www.baofengradio.com/cdn/shop/files/BF-9700-7W-UHF-IP67-Waterproof-Radio-Baofeng-4102.jpg?v=1696352250&width=1600",
+    "source": "https://www.baofengradio.com/products/bf-9700",
+    "confidence": "alta",
+    "note": "Foto de 1200×1200 px (la actual tiene 600 px). Baofeng BF-9700, tienda oficial Baofeng; bajé el width a 1600 en la URL (Shopify).",
+    "extras": [
+      "https://www.baofengradio.com/cdn/shop/files/BF-9700-7W-UHF-IP67-Waterproof-Radio-Baofeng-7469.jpg?v=1696352321&width=1600",
+      "https://www.baofengradio.com/cdn/shop/files/BF-9700-7W-UHF-IP67-Waterproof-Radio-Baofeng-2717.jpg?v=1696352325&width=1600",
+      "https://www.baofengradio.com/cdn/shop/files/BF-9700-7W-UHF-IP67-Waterproof-Radio-Baofeng-5088.jpg?v=1696352328&width=1600",
+      "https://www.baofengradio.com/cdn/shop/files/BF-9700-7W-UHF-IP67-Waterproof-Radio-Baofeng-9925.jpg?v=1696352827&width=1600"
+    ]
+  },
+  {
+    "slug": "lente-canon-rf-15-30mm-f-4-5-5-6-is-stm",
+    "image": "https://cdn.media.amplience.net/i/canon/rf-15-30mm-f4.5-6.3-is-stm-frt_1x1_8a408f0cddef49b6826843ab5197b8fb?w=1600&fmt=jpg&qlt=90",
+    "source": "https://www.canon.co.uk/lenses/rf-15-30mm-f4-5-6-3-is-stm/",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 600 px). Es la RF 15-30mm F4.5-6.3 IS STM (el slug dice 5.6, pero es el mismo lente). Tamaño pedido a mano con ?w= del CDN Amplience de Canon.",
+    "extras": [
+      "https://cdn.media.amplience.net/i/canon/rf-15-30mm-f4.5-6.3-is-stm-side_gallery_01_2eed6fe84e6843689688f5bb8d1264c8?w=1200&fmt=jpg&qlt=90",
+      "https://cdn.media.amplience.net/i/canon/rf-15-30mm-f4.5-6.3-is-stm-slant_gallery_03_405729206a7744fa9e1c0176421e0378?w=1200&fmt=jpg&qlt=90",
+      "https://cdn.media.amplience.net/i/canon/rf-15-30mm-f4.5-6.3-is-stm-switch_gallery_04_24ab0d5a0b8842428d2a2e8eebcee3cf?w=1200&fmt=jpg&qlt=90",
+      "https://cdn.media.amplience.net/i/canon/rf-15-30mm-f4.5-6.3-is-stm-front-slant-with-hood_gallery_05_5eadce4f929d4071a4213575cba972bc?w=1200&fmt=jpg&qlt=90"
+    ]
+  },
+  {
+    "slug": "taladro-de-impacto-gamma-10mm-650w-kit-maletin",
+    "image": "https://www.gammaherramientas.com.ar/web/wp-content/uploads/2024/09/G1905KAR_Web.jpg",
+    "source": "https://www.gammaherramientas.com.ar/producto/taladro-de-impacto-650-w-en-kit/",
+    "confidence": "media",
+    "note": "Foto de 1024×1024 px (la actual tiene 600 px). Gamma G1905KAR (impacto 650 W, mecha hasta 10 mm, con maletín). Ojo que el G1901KAR también es 650 W 10 mm en kit: comparar con la foto actual."
+  },
+  {
+    "slug": "canon-eos-r100-kit-18-45mm",
+    "image": "https://cdn.media.amplience.net/i/canon/eos-r100-frt_range_82fb27b9ade0445f8d500916679ef0d6?w=1600&fmt=jpg&qlt=90",
+    "source": "https://www.canon-europe.com/cameras/eos-r100/",
+    "confidence": "media",
+    "note": "Foto de 1600×1600 px (la actual tiene 600 px). EOS R100 de la página del kit con RF-S 18-45mm; chequear que la foto muestre ese lente montado (las vistas extra pueden tenerlo o no). Tamaño pedido a mano con ?w= del CDN.",
+    "extras": [
+      "https://cdn.media.amplience.net/i/canon/eos-r100-bck_gallery_06_0e52f13d510f4d7989c73d96de0a350d?w=1200&fmt=jpg&qlt=90",
+      "https://cdn.media.amplience.net/i/canon/eos-r100-top_gallery_05_47ea05d7a5fc4807ba9fe5e165a24395?w=1200&fmt=jpg&qlt=90",
+      "https://cdn.media.amplience.net/i/canon/eos-r100-left_gallery_02_ed7a1490d8b0407eba5bf78ef90a2ced?w=1200&fmt=jpg&qlt=90",
+      "https://cdn.media.amplience.net/i/canon/eos-r100-fsl_gallery_04_a2e5c34c86f84452a0e9908ea91b6018?w=1200&fmt=jpg&qlt=90"
+    ]
+  },
+  {
+    "slug": "aire-acondicionado-inverter-5500w",
+    "image": "https://www.hisense.com.ar/wp-content/uploads/2024/05/AS18UR4SXSCD00PX4N-18K-Blanco.jpg",
+    "source": "https://www.hisense.com.ar/productos/aire-acondicionado/aire-acondicionado-inverter-white-as18ur4sxd00px4n/",
+    "confidence": "media",
+    "note": "Foto de 1200×1200 px (la actual tiene 600 px). Hisense inverter 5500 W frío/calor blanco (AS18UR4SXSCD00PX4N); también existe en negro (AS18UR4SXSCA00BKN): chequear el color que vendemos.",
+    "extras": [
+      "https://www.hisense.com.ar/wp-content/uploads/2024/05/Inverter_W_-Front1.webp",
+      "https://www.hisense.com.ar/wp-content/uploads/2024/05/Inverter_W_-Left1.webp",
+      "https://www.hisense.com.ar/wp-content/uploads/2024/05/Inverter_W_-Right1.webp",
+      "https://www.hisense.com.ar/wp-content/uploads/2024/05/Inverter_W_-Front2.webp"
+    ]
+  },
+  {
+    "slug": "lente-sigma-85mm-f-1-4-dg-hsm-art-p-sony",
+    "image": "https://www.sigma-global.com/lenses/a016_85_14_product_img01.png",
+    "source": "https://www.sigma-global.com/en/lenses/a016_85_14/",
+    "confidence": "media",
+    "note": "Foto de 1000×1000 px (la actual tiene 600 px). Sigma oficial 85mm F1.4 DG HSM Art (discontinuado); la foto es genérica y puede mostrar montura Canon/Nikon, la versión Sony E es más larga: chequeá.",
+    "extras": [
+      "https://www.sigma-global.com/lenses/a016_85_14_product_img02.png",
+      "https://www.sigma-global.com/lenses/a016_85_14_product_img03.png"
+    ]
+  },
+  {
+    "slug": "mouse-optico-logitech-m100",
+    "image": "https://resource.logitech.com/w_1600,c_limit,q_auto,f_auto,dpr_1.0/content/dam/logitech/en/products/mice/m100/gallery/m100-charcoal-gallery-1.png",
+    "source": "https://logitech.com/en-ca/shop/p/m100-usb-mouse",
+    "confidence": "alta",
+    "note": "Foto de 1600×1374 px (la actual tiene 600 px). M100 gris (charcoal) de Logitech; cambié a mano la transformación del CDN por w_1600,c_limit (no agranda si el original es menor).",
+    "extras": [
+      "https://resource.logitech.com/w_1600,c_limit,q_auto,f_auto,dpr_1.0/content/dam/logitech/en/products/mice/m100/gallery/m100-charcoal-gallery-2.png",
+      "https://resource.logitech.com/w_1600,c_limit,q_auto,f_auto,dpr_1.0/content/dam/logitech/en/products/mice/m100/gallery/m100-charcoal-gallery-3.png",
+      "https://resource.logitech.com/w_1600,c_limit,q_auto,f_auto,dpr_1.0/content/dam/logitech/en/products/mice/m100/gallery/m100-charcoal-gallery-4.png"
+    ]
+  },
+  {
+    "slug": "lente-sigma-35mm-f1-4-dg-hsm-art",
+    "image": "https://www.sigma-global.com/lenses/a012_35_14_product_img01.png",
+    "source": "https://www.sigma-global.com/en/lenses/a012_35_14/",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 600 px). Sigma oficial 35mm F1.4 DG HSM Art (A012, el de réflex, no el DG DN); la foto no indica montura.",
+    "extras": [
+      "https://www.sigma-global.com/lenses/a012_35_14_product_img02.png",
+      "https://www.sigma-global.com/lenses/a012_35_14_product_img03.png"
+    ]
+  },
+  {
+    "slug": "lente-canon-rf-100-400mm-f5-6-8-is-usm",
+    "image": "https://s7d1.scene7.com/is/image/canon/5050C002_rf100-400mm-f56-8-is-usm_primary?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/rf100-400mm-f5-6-8-is-usm",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 600 px). RF100-400mm F5.6-8 IS USM (5050C002) de Canon USA; el wid/hei 1600 lo agregué yo al URL de la galería.",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/5050C002_rf100-400mm-f56-8-is-usm_2?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/5050C002_rf100-400mm-f56-8-is-usm_3?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/5050C002_rf100-400mm-f56-8-is-usm_4?fmt=webp-alpha&wid=1600&hei=1600"
+    ]
+  },
+  {
+    "slug": "lente-sigma-p-canon-85mm-f1-4-dc-hsm-art",
+    "image": "https://www.sigma-global.com/lenses/a016_85_14_product_img01.png",
+    "source": "https://www.sigma-global.com/en/lenses/a016_85_14/",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 600 px). Sigma oficial 85mm F1.4 DG HSM Art (el nombre dice DC pero es DG); foto genérica sin montura indicada.",
+    "extras": [
+      "https://www.sigma-global.com/lenses/a016_85_14_product_img02.png",
+      "https://www.sigma-global.com/lenses/a016_85_14_product_img03.png"
+    ]
+  },
+  {
+    "slug": "sony-alpha-7cr-body",
+    "image": "https://sony.scene7.com/is/image/sonyglobalsolutions/Primary_image-20?$S7Product$&fmt=png-alpha&wid=1600&hei=1600",
+    "source": "https://www.sony.co.th/en/interchangeable-lens-cameras/products/ilce-7cr",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 600 px). Og:image de Sony Tailandia para ILCE-7CR; viene en plata y en negro, fijate que el color coincida con el que vendés. Tamaño 1600 agregado por mí."
+  },
+  {
+    "slug": "camara-sony-cinema-line-fx3-body",
+    "image": "https://sony.scene7.com/is/image/sonyglobalsolutions/01_Primary_image?$S7Product$&fmt=png-alpha&wid=1600&hei=1600",
+    "source": "https://www.sony.com.tw/en/interchangeable-lens-cameras/products/ilme-fx3",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 600 px). Og:image de Sony Taiwán para la ILME-FX3 (cuerpo); tamaño 1600 agregado por mí. Ojo que ahora existe la FX3A, casi igual."
+  },
+  {
+    "slug": "sony-alpha-a7-iii-28-70mm",
+    "image": "https://sony.scene7.com/is/image/sonyglobalsolutions/Primary_Image-2?$S7Product$&fmt=png-alpha&wid=1600&hei=1600",
+    "source": "https://www.sony.co.uk/electronics/interchangeable-lens-cameras/ilce-7m3-body-kit",
+    "confidence": "media",
+    "note": "Foto de 1600×1600 px (la actual tiene 600 px). Og:image de Sony UK de la Alpha 7 III; no confirma que muestre el kit con 28-70mm, puede ser solo cuerpo. Tamaño 1600 agregado por mí."
+  },
+  {
+    "slug": "auriculares-estereo-verbatim-con-microfono",
+    "image": "https://www.verbatim.com/files/products/stereo-earphones/99774-99774-1.jpg",
+    "source": "https://www.verbatim.com/es/earphones/products/99774-stereo-earphones-with-microphone",
+    "confidence": "media",
+    "note": "Foto de 1280×1280 px (la actual tiene 600 px). Asumí el Verbatim 99774 (intraurales con micrófono); también existe el headset 70721, comparalo con la foto actual."
+  },
+  {
+    "slug": "auricular-headset-verbatim-con-mic-y-control-remoto-en-linea",
+    "image": "https://www.verbatim.com/files/products/headsets/70723-70732-1.jpg",
+    "source": "https://www.verbatim.com/en/earphones/products/70723-stereo-headset-with-microphone-and-in-line-remote",
+    "confidence": "media",
+    "note": "Foto de 1280×1280 px (la actual tiene 600 px). Verbatim 70723 Stereo Headset con mic y control en línea; la página no dice el color y existe la versión mono 70722: chequeá."
+  },
+  {
+    "slug": "router-4p-tenda-f3",
+    "image": "https://static.tenda.com.cn/tdeweb/UserFiles/Image/Product/2015527/201552711259526.jpg",
+    "source": "https://www.tendacn.com/product/f3",
+    "confidence": "alta",
+    "note": "Foto de 1000×1000 px (la actual tiene 600 px). Og:image oficial del Tenda F3 N300; es una foto vieja (2015), puede no ser más grande que la actual."
+  },
+  {
+    "slug": "gopro-hero-12-black-enduro-bateria",
+    "image": "https://static.gopro.com/assets/blta2b8522e5372af40/blt3e1d69abee0b4203/6659dac7d036b23b240097f8/01-pdp-h12b-gallery-v2-1920.jpg",
+    "source": "https://gopro.com/en/us/shop/cameras/hero12-black/CHDHX-121-master.html",
+    "confidence": "alta",
+    "note": "Foto de 3000×1688 px (la actual tiene 600 px). Es apaisada: fijate que muestre el producto y no un banner. HERO12 Black de GoPro (incluye batería Enduro); saqué los parámetros del URL para bajar el original de 1920.",
+    "extras": [
+      "https://static.gopro.com/assets/blta2b8522e5372af40/blt86b2d5c67d4f1ed5/64d0e286369276296caf7a71/02-pdp-h12b-gallery-1920.png",
+      "https://static.gopro.com/assets/blta2b8522e5372af40/blt01664566eff419e4/64d0e286b376ed5522efcb63/03-pdp-h12b-gallery-1920.png"
+    ]
+  },
+  {
+    "slug": "go-pro-enduro-battery-x-2",
+    "image": "https://static.gopro.com/assets/blta2b8522e5372af40/blt84fe4466efa0d909/6465d9c102278775182d88cf/pdp-enduro-2pack-image01-1920-2x.png",
+    "source": "https://gopro.com/en/us/shop/mounts-accessories/enduro-extended-cold-weather-battery-2-pack/ADBAT-211.html",
+    "confidence": "media",
+    "note": "Foto de 3000×1688 px (la actual tiene 600 px). Es apaisada: fijate que muestre el producto y no un banner. Pack de 2 Enduro para HERO9 a HERO12 (ADBAT-211); si es el pack nuevo para HERO13 (AEBAT-201) la foto no sirve."
+  },
+  {
+    "slug": "go-pro-light-mod-modulo-de-foco",
+    "image": "https://static.gopro.com/assets/blta2b8522e5372af40/bltcddf18a7b2b09457/6464b6381514068e52f30d68/pdp-lightmod-image02-1920-2x.png",
+    "source": "https://gopro.com/en/rs/shop/mounts-accessories/light-mod/ALTSC-001-master.html",
+    "confidence": "alta",
+    "note": "Foto de 3000×1688 px (la actual tiene 600 px). Es apaisada: fijate que muestre el producto y no un banner. Light Mod ALTSC-001 de GoPro, foto del módulo solo; saqué los parámetros del URL.",
+    "extras": [
+      "https://static.gopro.com/assets/blta2b8522e5372af40/blt47697f6e5cc744ac/6464b6389c40aaa83d07535a/pdp-lightmod-image03-1920-2x.png",
+      "https://static.gopro.com/assets/blta2b8522e5372af40/blt2166b393b0bb6088/6464b63842f57a35ad41232b/pdp-lightmod-image04-1920-2x.png"
+    ]
+  },
+  {
+    "slug": "huawei-wifi-ax2-kv",
+    "image": "https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp/routers/ax2/specs/specs-img.png",
+    "source": "https://consumer.huawei.com/en/routers/ax2/specs/",
+    "confidence": "alta",
+    "note": "Foto de 1620×840 px (la actual tiene 600 px). Es apaisada: fijate que muestre el producto y no un banner. Foto de la página de especificaciones del HUAWEI WiFi AX2 (blanco); no pude ver el tamaño, chequeá que no sea chica."
+  },
+  {
+    "slug": "samsung-galaxy-a06-64gb-4gb",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/africa_pt/sm-a065fzkdafb/gallery/africa-pt-galaxy-a06-sm-a065-sm-a065fzkdafb-543484541?$ORIGIN_PNG$",
+    "source": "https://www.samsung.com/africa_pt/smartphones/galaxy-a/galaxy-a06-black-64gb-sm-a065fzkdafb",
+    "confidence": "alta",
+    "note": "Foto de 1920×1280 px (la actual tiene 600 px). Galaxy A06 64GB negro, frente (Samsung África, SM-A065F, mismo equipo que el M); cambié el preset a $ORIGIN_PNG$. Fijate el color."
+  },
+  {
+    "slug": "canon-eos-r5-mark-ii-body",
+    "image": "https://s7d1.scene7.com/is/image/canon/6536C002_Primary?fmt=webp-alpha&wid=1600&hei=1600",
+    "source": "https://www.usa.canon.com/shop/p/eos-r5-mark-ii",
+    "confidence": "alta",
+    "note": "Foto de 1600×1600 px (la actual tiene 600 px). EOS R5 Mark II solo cuerpo (6536C002) de Canon USA; tamaño 1600 agregado por mí. Las extras no tienen descripción, revisá que no muestren lente.",
+    "extras": [
+      "https://s7d1.scene7.com/is/image/canon/6536C002_2?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/6536C002_3?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/6536C002_4?fmt=webp-alpha&wid=1600&hei=1600",
+      "https://s7d1.scene7.com/is/image/canon/6536C002_5?fmt=webp-alpha&wid=1600&hei=1600"
+    ]
+  },
+  {
+    "slug": "reloj-smartband-xiaomi-buds-9",
+    "image": "https://i02.appmifile.com/828_operatorx_operatorx_opx/26/09/2024/e4477095ab705aced7ac8236670d4fde.png",
+    "source": "https://www.mi.com/global/product/xiaomi-smart-band-9/",
+    "confidence": "media",
+    "note": "Foto de 1600×1600 px (la actual tiene 600 px). Asumí Xiaomi Smart Band 9 (el nombre dice Buds 9); es el og:image de mi.com, color sin especificar: chequeá que sea foto de producto y el color."
+  },
+  {
+    "slug": "airpods-pro-2",
+    "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-airpodspro-usbc-2024?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=NXVzNnZ4ZXp0MHAyVndrdHZXbFYySUJOYzN0cHFuYlBISTdlQXVJQldpSmY3N0tLb1FmTGNNSGFlOE1lSXlmZ3VUb3VPa2FUZVhQMFhDQnVBMWhwQXdTUEllblZ5aUJzeHRFOUVuNEdYRGs",
+    "source": "https://www.apple.com/shop/product/ftjv3ll/a/Refurbished-AirPods-Pro-2-with-MagSafe-Charging-Case-USB-%E2%80%8DC",
+    "confidence": "media",
+    "note": "Foto de 2000×2000 px (la actual tiene 600 px). Apple ya no vende las Pro 2 nuevas; es la foto oficial de las reacondicionadas USB-C (iguales a la vista). Si vendés la versión Lightning, no sirve.",
+    "extras": [
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-airpodspro-usbc-2024_AV1?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=NXVzNnZ4ZXp0MHAyVndrdHZXbFYySDJZRktWSVF1dHNLTC9CcURyS2s5ZEtwN2h4YUMyeHZMT2xlOEdaK0JmMS85S3R4M0M3WGhIQVNOK3lBdUI5K1MwRnFUQlhyL21NWUpYM2prU2E1M1YxWnZFQ2ozaVJXS3R0eUNrSXRjUEo",
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-airpodspro-usbc-2024_AV2?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=NXVzNnZ4ZXp0MHAyVndrdHZXbFYyRlV5ZTZiYkhveWIwajhqL0l2Q0JpNUtwN2h4YUMyeHZMT2xlOEdaK0JmMS85S3R4M0M3WGhIQVNOK3lBdUI5K1pxbTdybStzbDdIQlRvaTJObGxHTkpqc3Q2bE9IU3c0VC9VWFhBNmcwM1c",
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-airpodspro-usbc-2024_AV3?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=NXVzNnZ4ZXp0MHAyVndrdHZXbFYySjBRTG1vL0d6MUN6Z2xNb2dCUTl0MUtwN2h4YUMyeHZMT2xlOEdaK0JmMS85S3R4M0M3WGhIQVNOK3lBdUI5K2RqWWNNd2JJMHlldTdTRUNyZ2VLZFpScUlPVWprbUpBaEFzSlFPM0dUcXg",
+      "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-airpodspro-usbc-2024_AV4?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=NXVzNnZ4ZXp0MHAyVndrdHZXbFYyQTlGN0UzZ2xNN3pObkJEZDh5M3FFSktwN2h4YUMyeHZMT2xlOEdaK0JmMS85S3R4M0M3WGhIQVNOK3lBdUI5K1g5eHJkU2VLakUvWnFrTzZMVkUydE9halh6azV4SW5seGVvRVQxRkpuS2E"
+    ]
+  },
+  {
+    "slug": "mf-brother-dcp-t230-27-11ppm-sist-continuo",
+    "image": "https://www.brother.com.ar/-/media/brother/product-catalog-media/images/2025/10/30/14/39/dcp-t230-front-spanish.jpg",
+    "source": "https://www.brother.com.ar/products/dcpt230",
+    "confidence": "alta",
+    "note": "Foto de 2000×2000 px (la actual tiene 600 px). DCP-T230 de Brother Argentina, vista de frente con panel en español.",
+    "extras": [
+      "https://www.brother.com.ar/-/media/brother/product-catalog-media/images/2025/10/30/14/38/dcp-t230-right-spanish.jpg",
+      "https://www.brother.com.ar/-/media/brother/product-catalog-media/images/2025/10/30/14/38/dcp-t230-left-spanish.jpg"
+    ]
+  },
+  {
+    "slug": "mf-brother-mfc-j6955dw-30ppm-wifi-fax-a3",
+    "image": "https://www.brother.com.ar/-/media/brother/product-catalog-media/images/2025/02/14/18/39/multifuncional_a3_jao_tinta_colorida_corporativa_mfcj6955dw_00.png",
+    "source": "https://www.brother.com.ar/products/mfcj6955dw",
+    "confidence": "alta",
+    "note": "Foto de 846×846 px (la actual tiene 600 px). MFC-J6955DW de Brother Argentina, primera foto de la galería.",
+    "extras": [
+      "https://www.brother.com.ar/-/media/brother/product-catalog-media/images/2025/02/14/18/39/multifuncional_a3_jao_tinta_colorida_corporativa_mfcj6955dw_01.png",
+      "https://www.brother.com.ar/-/media/brother/product-catalog-media/images/2025/02/14/18/40/multifuncional_a3_jao_tinta_colorida_corporativa_mfcj6955dw_02.png"
+    ]
+  },
+  {
+    "slug": "camara-ip-4mp-ezviz-h3c-color-2-8mm-exterior",
+    "image": "https://mfs.ezvizlife.com/c44d8f4868ccee8ef1335628dbf34f19.jpg",
+    "source": "https://www.ezviz.com/la/product/h3c+2k%E2%81%BA/57545",
+    "confidence": "media",
+    "note": "Foto de 1200×600 px (la actual tiene 600 px). Es apaisada: fijate que muestre el producto y no un banner. H3c 2K+ (4MP, visión nocturna color, lente 2.8 o 4mm) de EZVIZ Latam; es la única imagen con alt del producto, no pude confirmar que sea packshot ni su tamaño."
   }
 ]
