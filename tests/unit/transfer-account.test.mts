@@ -56,30 +56,30 @@ test("un número de banco es un CBU", () => {
 
 test("el panel acepta un CVU válido y rechaza uno con un dígito mal", async () => {
   const { isValidCbu } = await import("../../src/lib/transfer-account");
-  assert.equal(isValidCbu("0000267900000000883645"), true);
+  assert.equal(isValidCbu("0000003100000123456784"), true);
   assert.equal(isValidCbu("2850590940090418135201"), true);
-  assert.equal(isValidCbu("0000267900000000883646"), false);
-  assert.equal(isValidCbu("0000267910000000883645"), false);
-  assert.equal(isValidCbu("000026790000000088364"), false);
+  assert.equal(isValidCbu("0000003100000123456785"), false);
+  assert.equal(isValidCbu("0000003110000123456784"), false);
+  assert.equal(isValidCbu("000000310000012345678"), false);
 });
 
 test("el panel limpia los datos y arma el CUIT con guiones", async () => {
   const { validateTransferInput } = await import("../../src/lib/transfer-account");
   const result = validateTransferInput({
-    number: " 0000267900000000883645 ",
+    number: " 0000003100000123456784 ",
     alias: " Mi.Alias ",
     holder: "  Juana   Pérez ",
     cuit: "27-12345678-9",
   });
   assert.deepEqual(result, {
     ok: true,
-    value: { number: "0000267900000000883645", alias: "mi.alias", holder: "Juana Pérez", cuit: "27-12345678-9" },
+    value: { number: "0000003100000123456784", alias: "mi.alias", holder: "Juana Pérez", cuit: "27-12345678-9" },
   });
 });
 
 test("el panel rechaza alias, titular o CUIT inválidos", async () => {
   const { validateTransferInput } = await import("../../src/lib/transfer-account");
-  const base = { number: "0000267900000000883645", alias: "mi.alias", holder: "Juana Pérez", cuit: "" };
+  const base = { number: "0000003100000123456784", alias: "mi.alias", holder: "Juana Pérez", cuit: "" };
   assert.equal(validateTransferInput(base).ok, true);
   assert.equal(validateTransferInput({ ...base, number: "123" }).ok, false);
   assert.equal(validateTransferInput({ ...base, alias: "abc" }).ok, false);

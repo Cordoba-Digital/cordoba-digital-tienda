@@ -26,7 +26,7 @@ const { getTransferAccount } = await import("../../src/lib/transfer-account-serv
 const BASE = "http://localhost:3000";
 const enviados = captureMailForTests();
 
-const cuenta = { number: "0000267900000000883645", alias: "mi.alias", holder: "Juana Pérez", cuit: "" };
+const cuenta = { number: "0000003100000123456784", alias: "mi.alias", holder: "Juana Pérez", cuit: "" };
 
 async function cookie(email: string): Promise<string> {
   return `admin_session=${encodeURIComponent((await createAdminSessionValue(email))!)}`;
@@ -96,7 +96,7 @@ test("sin sesión no se puede leer ni cambiar", async () => {
 });
 
 test("un CVU con un dígito mal se rechaza y no cambia nada", async () => {
-  const res = await guardar(put({ ...cuenta, number: "0000267900000000883646" }, await cookie("duenio@example.com")));
+  const res = await guardar(put({ ...cuenta, number: "0000003100000123456785" }, await cookie("duenio@example.com")));
   assert.equal(res.status, 400);
   assert.equal((await getTransferAccount())?.alias, "cuenta.vercel");
 });
