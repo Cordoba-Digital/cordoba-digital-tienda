@@ -130,7 +130,12 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   let guides: GuideTeaser[] = guideRes.status === "fulfilled" ? guideRes.value : [];
 
   return (
-    <html lang="es-AR" className={jakarta.variable}>
+    // `data-scroll-behavior` le avisa a Next que el `scroll-behavior: smooth`
+    // de globals.css es nuestro: lo apaga mientras cambia de página. Sin esto
+    // el salto al tope arrancaba como animación, Next lo leía a mitad de
+    // camino y bajaba hasta el contenido, que quedaba tapado por el header
+    // (la ficha abría cortada al tocar un producto desde un listado).
+    <html lang="es-AR" className={jakarta.variable} data-scroll-behavior="smooth">
       <head>
         {/* Las fotos del catálogo viven en el WordPress original: el
             preconnect ahorra el handshake en la primera imagen (LCP). */}
