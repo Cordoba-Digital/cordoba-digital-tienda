@@ -1,4 +1,4 @@
-import { and, eq, lt, sql } from "drizzle-orm";
+import { and, eq, inArray, lt, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orderEvents, orderItems, orders, orderStockHolds, products } from "@/db/schema";
@@ -13,6 +13,13 @@ import { ensureUsdtSchema } from "@/lib/usdt-schema";
 export const PENDING_EXPIRY_HOURS = 48;
 /** La seña se espera menos: la reserva es para retirar en el local. */
 export const SENA_EXPIRY_HOURS = 24;
+/**
+ * Con la seña acreditada, horas que el local guarda el producto para que lo
+ * retiren y paguen el resto (Ronan, 19/10). Pasado ese plazo la reserva vence.
+ */
+export const PICKUP_HOURS = 48;
+/** Nota del evento de una reserva vencida; el email al cliente la reconoce. */
+export const UNCLAIMED_NOTE = `Reserva vencida: no se retiró en ${PICKUP_HOURS} hs desde la seña.`;
 /**
  * Horas que una orden sin pago le guarda el stock. Después el stock vuelve a la
  * venta (la orden sigue viva hasta vencer) y, si el pago llega, se descuenta de
@@ -209,6 +216,33 @@ export async function expireStalePendingOrders(): Promise<number> {
       if (applied) expired += 1;
     }
     if (stale.length < 200) break;
+  }
+  return expired + (await expireUnclaimedReservations());
+}
+
+/**
+ * Cancela las reservas con seña acreditada que nadie retiró en `PICKUP_HOURS`
+ * desde que se acreditó la seña, y devuelve el producto a la venta. La seña
+ * no se devuelve sola: queda la nota en el pedido para resolverla con el
+ * cliente. Lo llama `expireStalePendingOrders`, con el mismo interruptor.
+ */
+async function expireUnclaimedReservations(): Promise<number> {
+  const cutoff = new Date(Date.now() - PICKUP_HOURS * 60 * 60 * 1000).toISOString();
+  const stale = await db
+    .select({ id: orders.id, status: orders.status })
+    .from(orders)
+    .where(
+      and(
+        eq(orders.paymentMethod, "sena"),
+        inArray(orders.status, ["pago_confirmado", "preparando"]),
+        // Cuándo se acreditó la seña: el último paso a "Pago acreditado".
+        sql`(select max(e.created_at) from order_events e where e.order_id = ${orders.id} and e.to_status = 'pago_confirmado' and e.from_status <> e.to_status) < ${cutoff}::timestamptz`,
+      ),
+    )
+    .limit(500);
+  let expired = 0;
+  for (const order of stale) {
+    if (await applyOrderStatus(order.id, { from: order.status, to: CANCELLED_STATUS.id, note: UNCLAIMED_NOTE })) expired += 1;
   }
   return expired;
 }
