@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { QuantityStepper } from "@/components/cart-drawer";
 import { InstallmentsDetail } from "@/components/installments-provider";
+import { UsdLine } from "@/components/usd-price";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Stars } from "@/components/ui";
@@ -302,6 +303,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
           </div>
         ) : null}
         <p className="mt-0.5 text-[2.25rem] font-extrabold leading-tight tracking-tight text-ink-900">{money(product.price)}</p>
+        <UsdLine price={product.price} className="text-[15px] font-bold text-ink-500" />
         {product.stock > 0 ? (
           /* Antes decía "¡Últimas N unidades!" cuando había 5 o menos. Se sacó
              porque el campo no sirve para eso: 2.369 de 2.589 productos tienen

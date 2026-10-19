@@ -30,6 +30,16 @@ export function usdtAmountFor(totalPesos: number, rate: number): string {
   return `${whole}.${fraction}`;
 }
 
+/**
+ * Dólares enteros para mostrar debajo de un precio en pesos ("USD 960"), o
+ * null sin cotización. Para arriba, igual que el cobro: el número que ve el
+ * cliente nunca es menor que lo que después paga en USDT.
+ */
+export function usdFor(pricePesos: number, rate: number | null): number | null {
+  if (!rate || !(rate > 0) || !(pricePesos > 0)) return null;
+  return Math.ceil(Number(usdtAmountFor(pricePesos, rate)));
+}
+
 /** Lo que falta para llegar al monto esperado ("0" si llegó completo o de más). */
 export function usdtShortfall(received: string, expected: string): string {
   const got = toMicroUsdt(received);

@@ -10,9 +10,11 @@ import { SiteHeader } from "@/components/site-header";
 import { StoreProvider } from "@/components/store-provider";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { StoreChrome } from "@/components/store-chrome";
+import { UsdRateProvider } from "@/components/usd-price";
 import { WhatsAppFab } from "@/components/whatsapp-fab";
 import { getTopBarVisible } from "@/lib/home-layout-server";
 import { getInstallmentPlans } from "@/lib/installments-server";
+import { getUsdtRate } from "@/lib/usdt-rate";
 import { getCategoryTree, getGuides, type CategoryTreeNode, type GuideTeaser } from "@/lib/queries";
 import "./globals.css";
 
@@ -91,15 +93,18 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   // en TODAS las páginas. Cada uno conserva su fallback por separado con
   // `allSettled`: si la base no responde, la página igual se dibuja. Las
   // cuotas ya devuelven una lista vacía si Mercado Pago falla.
-  const [treeRes, guideRes, plansRes, topBarRes] = await Promise.allSettled([
+  const [treeRes, guideRes, plansRes, topBarRes, usdRes] = await Promise.allSettled([
     getCategoryTree(),
     getGuides(),
     getInstallmentPlans(),
     getTopBarVisible(),
+    getUsdtRate(),
   ]);
   // La barra de avisos se apaga desde Panel → Inicio; ante la duda se muestra.
   const topBar = topBarRes.status === "fulfilled" ? topBarRes.value : true;
   const installmentPlans = plansRes.status === "fulfilled" ? plansRes.value : [];
+  // Sin cotización cargada (o si la base falla) no se muestra el precio en USD.
+  const usdRate = usdRes.status === "fulfilled" ? (usdRes.value?.rate ?? null) : null;
   let categories: (NavNode & { tagline: string })[] = [];
   try {
     if (treeRes.status !== "fulfilled") throw new Error("sin árbol");
@@ -138,21 +143,23 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(organizationAndWebsite()) }} />
         <StoreProvider>
           <InstallmentsProvider plans={installmentPlans}>
-            <SmoothScroll />
-            <StoreChrome>
-              <SiteHeader categories={categories} topBar={topBar} />
-            </StoreChrome>
-            <main className="min-h-[60vh]">{children}</main>
-            <StoreChrome>
-              <SiteFooter
-                categories={categories.map((c) => ({ name: c.name, path: c.path, count: c.count }))}
-                cuit={process.env.STORE_CUIT?.trim() ?? ""}
-                guides={guides}
-              />
-              <CartDrawer />
-              <WhatsAppFab />
-            </StoreChrome>
-            <Toaster />
+            <UsdRateProvider rate={usdRate}>
+              <SmoothScroll />
+              <StoreChrome>
+                <SiteHeader categories={categories} topBar={topBar} />
+              </StoreChrome>
+              <main className="min-h-[60vh]">{children}</main>
+              <StoreChrome>
+                <SiteFooter
+                  categories={categories.map((c) => ({ name: c.name, path: c.path, count: c.count }))}
+                  cuit={process.env.STORE_CUIT?.trim() ?? ""}
+                  guides={guides}
+                />
+                <CartDrawer />
+                <WhatsAppFab />
+              </StoreChrome>
+              <Toaster />
+            </UsdRateProvider>
           </InstallmentsProvider>
         </StoreProvider>
         {GA_MEASUREMENT_ID ? (

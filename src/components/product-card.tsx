@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 import { InstallmentsLine } from "@/components/installments-provider";
+import { UsdLine } from "@/components/usd-price";
 import { ProductImg, ProductPlaceholder } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { Stars } from "@/components/ui";
@@ -164,6 +165,7 @@ export function ProductCard({ product, badge }: { product: ProductView; badge?: 
               <p className="text-[11px] text-ink-400 line-through sm:text-xs">{money(product.compareAtPrice)}</p>
             ) : null}
             <p className="text-[15px] font-extrabold tracking-tight leading-none text-ink-900 sm:text-[17px]">{money(product.price)}</p>
+            <UsdLine price={product.price} className="mt-0.5 text-[11px] font-semibold leading-tight text-ink-500 sm:text-xs" />
             {outOfStock ? null : <InstallmentsLine price={product.price} className="mt-1 text-[11px] font-semibold leading-tight text-emerald-700 sm:text-[11.5px]" />}
           </div>
           {inCart > 0 ? (

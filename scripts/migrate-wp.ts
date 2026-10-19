@@ -343,7 +343,7 @@ function mapProduct(
 
 // ─── CLI ─────────────────────────────────────────────────────────────
 
-type Flags = { dryRun: boolean; prune: boolean; limit: number | null };
+type Flags = { dryRun: boolean; prune: boolean; soloNuevos: boolean; limit: number | null };
 
 function parseFlags(argv: string[]): Flags {
   const limitArg = argv.find((a) => a.startsWith("--limit="));
@@ -351,6 +351,7 @@ function parseFlags(argv: string[]): Flags {
   return {
     dryRun: argv.includes("--dry-run"),
     prune: argv.includes("--prune"),
+    soloNuevos: argv.includes("--solo-nuevos"),
     limit: Number.isFinite(limit) && limit > 0 ? Math.floor(limit) : null,
   };
 }
@@ -835,6 +836,11 @@ async function main(): Promise<void> {
   }
   console.log("");
 
+  if (flags.soloNuevos) {
+    await importNewOnly(flags, mappedProducts);
+    return;
+  }
+
   // ─── Escritura ──────────────────────────────────────────────────────
   if (flags.dryRun) {
     console.log("[migrate-wp] --dry-run: no se escribió nada en la DB.");
@@ -881,6 +887,62 @@ async function main(): Promise<void> {
   }
 }
 
+/**
+ * `--solo-nuevos`: da de alta solo los productos de WooCommerce cuyo slug no
+ * está en la base (los que el cliente sigue cargando en la web vieja). No toca
+ * categorías ni productos existentes, que ya pueden tener fichas, fotos y
+ * subcategorías propias. Lee la base también en `--dry-run` para saber cuáles
+ * faltan, pero solo escribe sin ese flag.
+ */
+async function importNewOnly(flags: Flags, mappedProducts: MappedProduct[]): Promise<void> {
+  if (flags.prune) {
+    console.error("[migrate-wp] --solo-nuevos no se combina con --prune.");
+    process.exit(1);
+  }
+  if (!process.env.DATABASE_URL) {
+    console.error("[migrate-wp] --solo-nuevos necesita DATABASE_URL (lee la base para saber qué falta).");
+    process.exit(1);
+  }
+  const { db, pool } = await import("@/db");
+
+  try {
+    const existing = new Set((await db.select({ slug: products.slug }).from(products)).map((r) => r.slug));
+    const nuevos = mappedProducts.filter((p) => !existing.has(p.slug));
+
+    const catRows = await db
+      .select({ id: categories.id, slug: categories.slug, wpId: categories.wpId })
+      .from(categories)
+      .where(isNotNull(categories.wpId));
+    const wpIdToOurId = new Map(catRows.map((r) => [r.wpId as number, r.id]));
+    const slugByOurId = new Map(catRows.map((r) => [r.id, r.slug]));
+
+    console.log(`[migrate-wp] --solo-nuevos: ${nuevos.length} producto(s) de WooCommerce que no están en la base`);
+    for (const p of nuevos) {
+      const cats = p.catWpIds.map((id) => slugByOurId.get(wpIdToOurId.get(id) ?? -1) ?? `¿wp ${id}?`);
+      const lista = p.compareAtPrice == null ? "" : ` (antes ${money(p.compareAtPrice)})`;
+      console.log(
+        `  + ${p.slug}  ${money(p.price)}${lista}  stock ${p.stock}  fotos ${p.images.length}  categorías: ${cats.join(", ") || "ninguna"}`,
+      );
+    }
+
+    if (flags.dryRun || nuevos.length === 0) {
+      if (flags.dryRun) console.log("[migrate-wp] --dry-run: no se escribió nada en la DB.");
+      return;
+    }
+
+    const prodTally: ErrorTally = { ok: 0, failed: 0, messages: [] };
+    await writeProducts(db, nuevos, prodTally);
+    report("productos nuevos", prodTally);
+
+    const bridgeTally: ErrorTally = { ok: 0, failed: 0, messages: [] };
+    await writeBridge(db, nuevos, wpIdToOurId, bridgeTally);
+    report("links product_categories", bridgeTally);
+    console.log("[migrate-wp] Las fotos quedan apuntando al WordPress: copiarlas con `npm run images:migrate -- --yes`.");
+  } finally {
+    await pool.end();
+  }
+}
+
 function report(label: string, tally: ErrorTally): void {
   console.log(
     `[migrate-wp] ${label}: ${tally.ok.toLocaleString("es-AR")} ok, ${tally.failed.toLocaleString("es-AR")} errores.`,
@@ -890,6 +952,10 @@ function report(label: string, tally: ErrorTally): void {
 
 main().catch(async (error) => {
   console.error(`[migrate-wp] FATAL: ${(error as Error).message}`);
+  // Drizzle envuelve el error de Postgres ("Failed query: …"): la causa real
+  // (conexión rechazada, contraseña, SSL, host) viene en `cause`.
+  const cause = (error as { cause?: unknown }).cause;
+  if (cause) console.error(`[migrate-wp] causa: ${cause instanceof Error ? cause.message : String(cause)}`);
   try {
     const { pool } = await import("@/db");
     await pool.end();
