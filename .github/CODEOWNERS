@@ -4,6 +4,8 @@
 /src/app/api/admin/         @konnaleft
 /src/lib/checkout-*.ts      @konnaleft
 /src/lib/pricing.ts         @konnaleft
+/src/lib/coupons.ts         @konnaleft
+/src/app/api/coupon/        @konnaleft
 /src/lib/mercadopago.ts     @konnaleft
 /src/lib/order-status.ts    @konnaleft
 /src/lib/admin-auth.ts      @konnaleft

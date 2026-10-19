@@ -3,8 +3,7 @@ import type { AnyPgColumn } from "drizzle-orm/pg-core";
 import { cache } from "react";
 
 import { db } from "@/db";
-import { categories, coupons, guides, orderItems, orders, productCategories, products, reviews } from "@/db/schema";
-import { couponProblem, ensureCouponSchema } from "@/lib/coupons";
+import { categories, guides, orderItems, orders, productCategories, products, reviews } from "@/db/schema";
 import {
   ancestorsOf,
   buildCategoryTree,
@@ -629,19 +628,6 @@ export async function getVerifiedRatingStats(slug: string) {
   // rating * 10, igual que `products.rating`.
   const rating = count ? Math.round((sum / count) * 10) : 0;
   return { count, rating, distribution };
-}
-
-/** El cupón si hoy se puede usar: activo, sin vencer y con usos disponibles. */
-export async function getCoupon(code: string) {
-  const normalized = code.trim().toUpperCase();
-  await ensureCouponSchema();
-  const [coupon] = await db.select().from(coupons).where(eq(coupons.code, normalized)).limit(1);
-  if (!coupon || couponProblem(coupon)) return null;
-  return coupon;
-}
-
-export async function getActiveCoupons() {
-  return db.select().from(coupons).where(eq(coupons.active, true));
 }
 
 export async function getOrderByCode(code: string, email?: string) {

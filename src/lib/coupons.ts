@@ -38,6 +38,15 @@ export function couponProblem(coupon: Pick<Coupon, "active" | "expiresAt" | "max
   return null;
 }
 
+/** El cupón si hoy se puede usar: activo, sin vencer y con usos disponibles. */
+export async function getCoupon(code: string): Promise<Coupon | null> {
+  const normalized = code.trim().toUpperCase();
+  await ensureCouponSchema();
+  const [coupon] = await db.select().from(coupons).where(eq(coupons.code, normalized)).limit(1);
+  if (!coupon || couponProblem(coupon)) return null;
+  return coupon;
+}
+
 /**
  * Cuenta un uso del cupón dentro de la transacción del pedido. El chequeo y la
  * suma van en el mismo UPDATE: si dos clientes usan el último cupón a la vez,
