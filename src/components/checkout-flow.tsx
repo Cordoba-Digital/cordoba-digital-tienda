@@ -777,9 +777,6 @@ export function CheckoutFlow({
                 <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-600">
                   <p className="font-bold text-ink-900">27 de Abril 180, Córdoba Capital</p>
                   <p className="mt-1 text-xs">Lunes a viernes de 14:00 a 18:30 · Sábados de 12:00 a 14:30</p>
-                  <p className="mt-2 text-xs">
-                    Te avisamos por WhatsApp cuando esté listo. Llevá tu DNI y el número de pedido.
-                  </p>
                 </div>
               ) : (
                 <>
