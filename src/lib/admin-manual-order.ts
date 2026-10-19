@@ -86,7 +86,7 @@ export async function createManualOrder(input: ManualOrderInput): Promise<Manual
     address = { ...fields, extra: text(delivery.extra), zip };
   }
 
-  const payment = resolvePaymentMethod(input.payment?.method, method, { mercadoPago: mercadoPagoReady() });
+  const payment = resolvePaymentMethod(input.payment?.method, method, { mercadoPago: mercadoPagoReady(), manual: true });
   if (!payment.ok) errors.payment = payment.error;
   if (Object.keys(errors).length || !payment.ok) return { ok: false, status: 400, errors };
   const paymentId: PaymentMethodId = payment.method;

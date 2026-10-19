@@ -58,6 +58,14 @@ export function nextStep(order: { status: string; paymentMethod: string; deliver
           asksTracking: false,
         };
       }
+      if (order.paymentMethod === "sena") {
+        return {
+          to: "pago_confirmado",
+          button: "Marcar seña acreditada",
+          hint: "Cuando veas la seña en la cuenta, marcala: la reserva queda confirmada. El resto se cobra al retirar.",
+          asksTracking: false,
+        };
+      }
       return {
         to: "pago_confirmado",
         button: "Marcar pago acreditado",

@@ -112,7 +112,7 @@ test("un cupón pausado no descuenta", async () => {
 
 test("retiro en el local no cobra envío ni pide domicilio", async () => {
   await seedProduct("celu", 100_000, 10);
-  const res = await checkout({ items: [{ slug: "celu", quantity: 1 }], delivery: { method: "pickup" }, payment: { method: "efectivo" } });
+  const res = await checkout({ items: [{ slug: "celu", quantity: 1 }], delivery: { method: "pickup" }, payment: { method: "sena" } });
   assert.equal(res.status, 200, JSON.stringify(res.body));
   const { order } = await pedido(res.body.code as string);
   assert.equal(order.shippingCost, 0);
@@ -205,8 +205,10 @@ test("sin clave, o con otra clave, cada envío es un pedido nuevo", async () => 
   await seedProduct("tele", 100_000, 10);
   await checkout({ items: [{ slug: "tele", quantity: 1 }] });
   await checkout({ items: [{ slug: "tele", quantity: 1 }] });
-  await checkout({ items: [{ slug: "tele", quantity: 1 }], checkoutKey: "11111111-1111-4111-8111-111111111111" });
-  await checkout({ items: [{ slug: "tele", quantity: 1 }], checkoutKey: "22222222-2222-4222-8222-222222222222" });
+  // Otro cliente para las dos últimas: un mismo cliente tiene tope de 2 órdenes sin pago.
+  const otro = { ...comprador, email: "otro@example.com", phone: "351 444-0000" };
+  await checkout({ items: [{ slug: "tele", quantity: 1 }], checkoutKey: "11111111-1111-4111-8111-111111111111", customer: otro });
+  await checkout({ items: [{ slug: "tele", quantity: 1 }], checkoutKey: "22222222-2222-4222-8222-222222222222", customer: otro });
   assert.equal((await db.select().from(schema.orders)).length, 4);
 });
 

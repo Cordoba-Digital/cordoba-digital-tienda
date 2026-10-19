@@ -39,6 +39,7 @@ test("en camino con y sin código de seguimiento, y listo para retirar si es ret
 test("un pedido vencido explica las 48 horas; uno cancelado a mano, no", () => {
   assert.match(orderStatusEmail(pedido, "cancelado", "Vencido: sin pago en 48 hs.")!.text, /48 horas/);
   assert.doesNotMatch(orderStatusEmail(pedido, "cancelado", "Lo pidió el cliente")!.text, /48 horas/);
+  assert.match(orderStatusEmail(pedido, "cancelado", "Vencido: sin pago en 24 hs.")!.text, /24 horas/);
 });
 
 test("pedido recibido no manda email", () => {

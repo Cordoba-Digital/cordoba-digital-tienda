@@ -10,7 +10,19 @@
  * construyendo y cubre tarjeta de crédito, débito y dinero en cuenta, que es
  * justamente lo que el original no tiene online.
  */
-export type PaymentMethodId = "transferencia" | "usdt" | "efectivo" | "mercadopago";
+export type PaymentMethodId = "transferencia" | "usdt" | "efectivo" | "sena" | "mercadopago";
+
+/**
+ * Seña para retirar en el local: se paga por transferencia y confirma la
+ * reserva; el resto se paga al retirar. Si el pedido cuesta menos, se paga el
+ * total. Decisión de Ronan (19/10).
+ */
+export const SENA_PESOS = 10_000;
+
+/** Lo que el cliente tiene que pagar online ahora: la seña o el total. */
+export function amountDueOnline(order: { paymentMethod: string; total: number }): number {
+  return order.paymentMethod === "sena" ? Math.min(SENA_PESOS, order.total) : order.total;
+}
 
 /**
  * Tope de unidades por producto en un pedido: 5. Vale para la ficha, el
@@ -50,6 +62,13 @@ export const PAYMENT_METHODS: PaymentMethod[] = [
     short: "Efectivo en el local",
     description: "Reservás online y pagás al retirar en 27 de Abril 180.",
     icon: "💵",
+  },
+  {
+    id: "sena",
+    label: "Seña de $10.000 y resto en el local",
+    short: "Seña y resto en el local",
+    description: "Reservás con $10.000 por transferencia y pagás el resto al retirar en 27 de Abril 180.",
+    icon: "🏷️",
   },
   {
     id: "mercadopago",
@@ -128,7 +147,7 @@ export function computeTotals(input: {
 }
 
 export const ORDER_STATUS_FLOW = [
-  { id: "pendiente_pago", label: "Reserva creada", description: "Te reservamos el stock 48 hs mientras se acredita el pago." },
+  { id: "pendiente_pago", label: "Esperando el pago", description: "Te guardamos el stock 2 hs mientras llega el pago." },
   { id: "pago_confirmado", label: "Pago acreditado", description: "Verificamos el pago y emitimos la factura." },
   { id: "preparando", label: "Preparando el pedido", description: "Controlamos y embalamos tu producto." },
   { id: "enviado", label: "En camino / Listo para retirar", description: "Te enviamos el código de seguimiento." },
@@ -155,5 +174,5 @@ export function statusIndex(status: string): number {
 }
 
 export function statusLabel(status: string): string {
-  return ADMIN_ORDER_STATUSES.find((s) => s.id === status)?.label ?? "Reserva creada";
+  return ADMIN_ORDER_STATUSES.find((s) => s.id === status)?.label ?? "Esperando el pago";
 }

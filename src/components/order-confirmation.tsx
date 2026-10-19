@@ -12,7 +12,7 @@ import { UsdtPaymentPanel, type UsdtPaymentInfo } from "@/components/usdt-paymen
 import { trackPurchase } from "@/lib/analytics";
 import { money } from "@/lib/format";
 import { orderBanner, orderCodeLabel } from "@/lib/order-banner";
-import { isCancelled, ORDER_STATUS_FLOW, statusIndex } from "@/lib/pricing";
+import { amountDueOnline, isCancelled, ORDER_STATUS_FLOW, statusIndex } from "@/lib/pricing";
 import type { TransferAccount } from "@/lib/transfer-account";
 
 export type OrderSummary = {
@@ -98,12 +98,14 @@ export function OrderConfirmation({
     });
   }, [isNew, order]);
 
-  const needsPayment = order.paymentMethod === "transferencia" && order.status === "pendiente_pago";
+  const isSena = order.paymentMethod === "sena";
+  const needsPayment = (order.paymentMethod === "transferencia" || isSena) && order.status === "pendiente_pago";
+  const dueNow = amountDueOnline(order);
   const banner = orderBanner(order);
-  const codeLabel = orderCodeLabel(order.status);
+  const codeLabel = orderCodeLabel(order.status, order.paymentMethod);
   const awaitingMercadoPago = order.paymentMethod === "mercadopago" && order.status === "pendiente_pago";
   // Mientras falta el pago no va aviso arriba: lo que falta ya lo dicen el
-  // estado ("Reserva creada") y la tarjeta de cómo pagar, y el aviso ámbar
+  // estado ("Esperando el pago") y la tarjeta de cómo pagar, y el aviso ámbar
   // empujaba todo para abajo. El aviso queda para el pedido ya confirmado.
   const showBanner = isNew && banner.tone === "confirmado";
   const CodeHeading = showBanner ? "p" : "h1";
@@ -154,8 +156,8 @@ export function OrderConfirmation({
             <h2 className="mb-5 text-lg font-extrabold text-ink-900">Estado del pedido</h2>
             {isCancelled(order.status) ? (
               <p className="rounded-xl bg-ink-50 px-4 py-3 text-sm font-semibold text-ink-700">
-                Este pedido está cancelado: venció la reserva de 48 hs sin pago o lo cancelamos a pedido. Si ya
-                pagaste o querés retomarlo, escribinos por WhatsApp con el número de pedido.
+                Este pedido está cancelado: no llegó el pago a tiempo o lo cancelamos a pedido. Si ya pagaste o
+                querés retomarlo, escribinos por WhatsApp con el número.
               </p>
             ) : (
               <ol>
@@ -185,7 +187,7 @@ export function OrderConfirmation({
                       </div>
                       <div className={`min-w-0 pt-1 ${last ? "" : "pb-6"}`}>
                         <p className={`flex flex-wrap items-center gap-2 text-sm font-bold ${done ? "text-ink-900" : "text-ink-500"}`}>
-                          {stage.label}
+                          {isSena && stage.id === "pago_confirmado" ? "Seña acreditada: reserva confirmada" : stage.label}
                           {isCurrent ? (
                             <span className="rounded-full bg-brand-50 px-2 py-0.5 text-xs font-bold text-brand-700">
                               Estado actual
@@ -214,22 +216,28 @@ export function OrderConfirmation({
                   <Landmark className="h-5 w-5" />
                 </span>
                 <div className="min-w-0">
-                  <h2 className="text-lg font-extrabold text-ink-900">Cómo completar tu pago</h2>
+                  <h2 className="text-lg font-extrabold text-ink-900">{isSena ? "Cómo confirmar tu reserva" : "Cómo completar tu pago"}</h2>
                   {transfer ? (
                     <p className="mt-0.5 text-sm text-ink-600">
-                      Transferí <strong>{money(order.total)}</strong> a esta cuenta y mandanos el comprobante.
+                      Transferí <strong>{money(dueNow)}</strong> {isSena ? "de seña " : ""}a esta cuenta y mandanos el comprobante.
                     </p>
                   ) : (
                     <p className="mt-0.5 text-sm text-ink-600">
-                      Escribinos por WhatsApp con tu código de reserva y te pasamos los datos para transferir{" "}
-                      <strong>{money(order.total)}</strong>.
+                      Escribinos por WhatsApp con tu número de orden y te pasamos los datos para transferir{" "}
+                      <strong>{money(dueNow)}</strong>.
                     </p>
                   )}
+                  {isSena ? (
+                    <p className="mt-1 text-sm text-ink-600">
+                      Con la seña acreditada, la reserva queda confirmada. El resto, <strong>{money(order.total - dueNow)}</strong>,
+                      lo pagás al retirar en el local.
+                    </p>
+                  ) : null}
                 </div>
               </div>
               {transfer ? (
                 <div className="mt-4">
-                  <TransferDetails account={transfer} amount={order.total} />
+                  <TransferDetails account={transfer} amount={dueNow} />
                 </div>
               ) : null}
               <a

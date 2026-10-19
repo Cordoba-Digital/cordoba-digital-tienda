@@ -581,3 +581,13 @@ export type User = typeof users.$inferSelect;
 export type UserSession = typeof userSessions.$inferSelect;
 export type Coupon = typeof coupons.$inferSelect;
 export type ArrepentimientoRequest = typeof arrepentimientoRequests.$inferSelect;
+
+/**
+ * Órdenes sin pago cuyo stock ya se devolvió a la tienda (a las 2 hs). La orden
+ * sigue viva hasta que vence; si el pago llega después, el stock se vuelve a
+ * descontar. Tabla aparte, como `usdt_payments`, para no tocar `orders`.
+ */
+export const orderStockHolds = pgTable("order_stock_holds", {
+  orderId: integer("order_id").primaryKey(),
+  releasedAt: timestamp("released_at", { withTimezone: true }).notNull().defaultNow(),
+});

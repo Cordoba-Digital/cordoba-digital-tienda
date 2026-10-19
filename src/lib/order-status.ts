@@ -1,15 +1,28 @@
 import { and, eq, lt, sql } from "drizzle-orm";
 
 import { db } from "@/db";
-import { orderEvents, orderItems, orders, products } from "@/db/schema";
+import { orderEvents, orderItems, orders, orderStockHolds, products } from "@/db/schema";
 import { isAutomationOn } from "@/lib/automations";
 import { ensureCouponSchema, releaseCouponUse, restoreCouponUse } from "@/lib/coupons";
 import { notifyStatusChange } from "@/lib/order-emails";
 import { CANCELLED_STATUS, isCancelled, statusIndex } from "@/lib/pricing";
+import { ensureStockHoldSchema } from "@/lib/stock-hold-schema";
 import { ensureUsdtSchema } from "@/lib/usdt-schema";
 
-/** Horas que un pedido puede quedar sin pago antes de vencer (lo que promete la tienda). */
+/** Horas que una orden puede quedar sin pago antes de vencer (lo que promete la tienda). */
 export const PENDING_EXPIRY_HOURS = 48;
+/** La seña se espera menos: la reserva es para retirar en el local. */
+export const SENA_EXPIRY_HOURS = 24;
+/**
+ * Horas que una orden sin pago le guarda el stock. Después el stock vuelve a la
+ * venta (la orden sigue viva hasta vencer) y, si el pago llega, se descuenta de
+ * nuevo. Así nadie puede dejar productos sin stock con órdenes que no paga.
+ */
+export const STOCK_HOLD_HOURS = 2;
+
+export function pendingExpiryHours(paymentMethod: string): number {
+  return paymentMethod === "sena" ? SENA_EXPIRY_HOURS : PENDING_EXPIRY_HOURS;
+}
 
 type Tx = Parameters<Parameters<typeof db.transaction>[0]>[0];
 
@@ -57,6 +70,19 @@ export async function reserveOrderStock(tx: Tx, orderId: number): Promise<void> 
   }
 }
 
+/**
+ * Productos del pedido que no alcanzan para descontarlo de nuevo. El stock 1
+ * del catálogo migrado es "hay", no una cantidad, así que no cuenta como falta.
+ */
+async function stockShortages(tx: Tx, orderId: number): Promise<string[]> {
+  const rows = await tx
+    .select({ name: orderItems.name, quantity: orderItems.quantity, stock: products.stock })
+    .from(orderItems)
+    .innerJoin(products, eq(products.slug, orderItems.productSlug))
+    .where(eq(orderItems.orderId, orderId));
+  return rows.filter((row) => row.stock === 0 || (row.stock > 1 && row.stock < row.quantity)).map((row) => row.name);
+}
+
 /** Devuelve a la tienda lo que el pedido había descontado. */
 async function releaseOrderStock(tx: Tx, orderId: number): Promise<void> {
   const items = await tx.select().from(orderItems).where(eq(orderItems.orderId, orderId));
@@ -97,7 +123,7 @@ export async function applyOrderStatus(
   orderId: number,
   input: { from: string; to: string; note?: string; extra?: Partial<typeof orders.$inferInsert> },
 ): Promise<boolean> {
-  await Promise.all([ensureOrderStockSchema(), ensureCouponSchema()]);
+  await Promise.all([ensureOrderStockSchema(), ensureCouponSchema(), ensureStockHoldSchema()]);
   const changed = input.from !== input.to;
   const applied = await db.transaction(async (tx) => {
     // Solo aplica si el pedido sigue en `from`. Si dos avisos llegan juntos (el
@@ -112,16 +138,29 @@ export async function applyOrderStatus(
       .returning({ id: orders.id, couponCode: orders.couponCode });
     if (!updated.length) return false;
     const couponCode = updated[0].couponCode;
+    let note = input.note ?? "";
+    // Una orden sin pago que ya devolvió el stock a las 2 hs: al cancelarla no
+    // se devuelve otra vez, y al pagarla se vuelve a descontar.
+    const released = changed
+      ? (await tx.delete(orderStockHolds).where(eq(orderStockHolds.orderId, orderId)).returning({ id: orderStockHolds.orderId })).length > 0
+      : false;
     if (changed && isCancelled(input.to)) {
-      await releaseOrderStock(tx, orderId);
+      if (!released) await releaseOrderStock(tx, orderId);
       if (couponCode) await releaseCouponUse(tx, couponCode);
+    }
+    if (released && !isCancelled(input.to)) {
+      const short = await stockShortages(tx, orderId);
+      await reserveOrderStock(tx, orderId);
+      if (short.length) {
+        note = [note, `Ojo: el pago llegó después de liberar el stock y falta stock de ${short.join(", ")}.`].filter(Boolean).join(" ");
+      }
     }
     if (changed && isCancelled(input.from)) {
       await reserveOrderStock(tx, orderId);
       if (couponCode) await restoreCouponUse(tx, couponCode);
     }
-    if (changed || input.note) {
-      await tx.insert(orderEvents).values({ orderId, fromStatus: input.from, toStatus: input.to, note: input.note ?? "" });
+    if (changed || note) {
+      await tx.insert(orderEvents).values({ orderId, fromStatus: input.from, toStatus: input.to, note });
     }
     return true;
   });
@@ -132,27 +171,30 @@ export async function applyOrderStatus(
 }
 
 /**
- * Cancela los pedidos que siguen en "Reserva creada" pasadas las horas de
+ * Cancela los pedidos que siguen en "Esperando el pago" pasadas las horas de
  * reserva y devuelve su stock. Corre desde el cron diario y al abrir el panel,
  * así no depende de que el cron esté activo. No hace nada si el interruptor
  * "Vencer pedidos sin pago" está apagado. Devuelve cuántos venció.
  */
 export async function expireStalePendingOrders(): Promise<number> {
+  await releaseStaleStockHolds();
   if (!(await isAutomationOn("vencerPedidos"))) return 0;
   await ensureUsdtSchema();
-  const cutoff = new Date(Date.now() - PENDING_EXPIRY_HOURS * 60 * 60 * 1000);
+  const hoursAgo = (hours: number) => new Date(Date.now() - hours * 60 * 60 * 1000);
+  const cutoff = hoursAgo(PENDING_EXPIRY_HOURS);
+  const senaCutoff = hoursAgo(SENA_EXPIRY_HOURS);
   // De a tandas de 200 hasta que no quede ninguno: con un tope fijo, una ola
   // de pedidos falsos dejaría stock reservado por días. El máximo de tandas
   // corta el bucle si algún pedido no se pudiera cancelar.
   let expired = 0;
   for (let round = 0; round < 25; round += 1) {
     const stale = await db
-      .select({ id: orders.id })
+      .select({ id: orders.id, paymentMethod: orders.paymentMethod })
       .from(orders)
       .where(
         and(
           eq(orders.status, "pendiente_pago"),
-          lt(orders.createdAt, cutoff),
+          sql`${orders.createdAt} < case when ${orders.paymentMethod} = 'sena' then ${senaCutoff.toISOString()}::timestamptz else ${cutoff.toISOString()}::timestamptz end`,
           // Un pago en USDT con TXID cargado no vence solo: lo decide César.
           sql`not exists (select 1 from usdt_payments where usdt_payments.order_id = ${orders.id} and usdt_payments.txid is not null)`,
         ),
@@ -162,7 +204,7 @@ export async function expireStalePendingOrders(): Promise<number> {
       const applied = await applyOrderStatus(order.id, {
         from: "pendiente_pago",
         to: CANCELLED_STATUS.id,
-        note: `Vencido: sin pago en ${PENDING_EXPIRY_HOURS} hs.`,
+        note: `Vencido: sin pago en ${pendingExpiryHours(order.paymentMethod)} hs.`,
       });
       if (applied) expired += 1;
     }
@@ -172,23 +214,76 @@ export async function expireStalePendingOrders(): Promise<number> {
 }
 
 /**
+ * Devuelve a la venta el stock de las órdenes que siguen sin pago pasadas
+ * `STOCK_HOLD_HOURS`. La orden no se cancela: si el pago llega, `applyOrderStatus`
+ * descuenta el stock de nuevo. Una orden en USDT con TXID cargado no se toca
+ * (el pago ya salió y se está verificando). Corre al comprar, desde el cron y
+ * al abrir el panel; no depende del interruptor de vencimiento. Devuelve cuántas liberó.
+ */
+export async function releaseStaleStockHolds(): Promise<number> {
+  await Promise.all([ensureOrderStockSchema(), ensureStockHoldSchema(), ensureUsdtSchema()]);
+  const cutoff = new Date(Date.now() - STOCK_HOLD_HOURS * 60 * 60 * 1000);
+  let released = 0;
+  for (let round = 0; round < 25; round += 1) {
+    const stale = await db
+      .select({ id: orders.id })
+      .from(orders)
+      .where(
+        and(
+          eq(orders.status, "pendiente_pago"),
+          lt(orders.createdAt, cutoff),
+          sql`not exists (select 1 from order_stock_holds where order_stock_holds.order_id = ${orders.id})`,
+          sql`not exists (select 1 from usdt_payments where usdt_payments.order_id = ${orders.id} and usdt_payments.txid is not null)`,
+        ),
+      )
+      .limit(200);
+    for (const order of stale) {
+      const done = await db.transaction(async (tx) => {
+        // La fila del pedido bloquea un cambio de estado simultáneo (un pago que llega justo).
+        const [locked] = await tx
+          .select({ status: orders.status })
+          .from(orders)
+          .where(eq(orders.id, order.id))
+          .for("update");
+        if (locked?.status !== "pendiente_pago") return false;
+        const inserted = await tx.insert(orderStockHolds).values({ orderId: order.id }).onConflictDoNothing().returning({ id: orderStockHolds.orderId });
+        if (!inserted.length) return false;
+        await releaseOrderStock(tx, order.id);
+        await tx.insert(orderEvents).values({
+          orderId: order.id,
+          fromStatus: "pendiente_pago",
+          toStatus: "pendiente_pago",
+          note: `Sin pago en ${STOCK_HOLD_HOURS} hs: el stock volvió a la venta. Si paga, se descuenta de nuevo.`,
+        });
+        return true;
+      });
+      if (done) released += 1;
+    }
+    if (stale.length < 200) break;
+  }
+  return released;
+}
+
+/**
  * Borra todos los pedidos (y con ellos los pagos, que salen de los pedidos).
  * Antes devuelve a la tienda el stock, las ventas y los usos de cupón que
  * descontaron los que no estaban cancelados, así el catálogo queda como si
  * nunca hubieran existido.
  */
 export async function deleteAllOrders(): Promise<number> {
-  await Promise.all([ensureOrderStockSchema(), ensureCouponSchema()]);
+  await Promise.all([ensureOrderStockSchema(), ensureCouponSchema(), ensureStockHoldSchema()]);
   return db.transaction(async (tx) => {
+    const holds = new Set((await tx.select({ id: orderStockHolds.orderId }).from(orderStockHolds)).map((row) => row.id));
     const all = await tx
       .select({ id: orders.id, status: orders.status, couponCode: orders.couponCode })
       .from(orders)
       .for("update");
     for (const order of all) {
       if (isCancelled(order.status)) continue;
-      await releaseOrderStock(tx, order.id);
+      if (!holds.has(order.id)) await releaseOrderStock(tx, order.id);
       if (order.couponCode) await releaseCouponUse(tx, order.couponCode);
     }
+    await tx.delete(orderStockHolds);
     await tx.delete(orderEvents);
     await tx.delete(orderItems);
     await tx.delete(orders);

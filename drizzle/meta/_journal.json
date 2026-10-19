@@ -85,6 +85,13 @@
       "when": 1792434633365,
       "tag": "0011_pagos_usdt",
       "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1792438427977,
+      "tag": "0012_reserva_stock_2hs",
+      "breakpoints": true
     }
   ]
 }

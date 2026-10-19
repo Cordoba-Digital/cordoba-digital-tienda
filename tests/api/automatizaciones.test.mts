@@ -94,7 +94,7 @@ test("rechaza interruptores que no existen y valores que no son sí o no", async
   assert.equal((await db.select().from(schema.storeSettings)).length, 0);
 });
 
-test("con vencer apagado el pedido viejo sigue reservado; al prenderlo vence, y queda en Actividad", async () => {
+test("con vencer apagado el pedido viejo sigue abierto; al prenderlo vence, y queda en Actividad", async () => {
   const pedido = await comprar();
   await envejecer(pedido.id);
 
@@ -169,7 +169,7 @@ test("el pedido vencido le avisa al cliente por qué se canceló", async () => {
   assert.equal(await expireStalePendingOrders(), 1);
   assert.equal(enviados.length, 1);
   assert.equal(enviados[0].subject, `Cancelamos tu pedido ${pedido.code}`);
-  assert.match(enviados[0].text, /48 horas sin que recibiéramos el pago/);
+  assert.match(enviados[0].text, /No recibimos el pago de tu orden .* en las 48 horas/);
 });
 
 test("vence todos los pedidos viejos aunque sean más que una tanda", async () => {

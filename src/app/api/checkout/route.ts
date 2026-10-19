@@ -1,9 +1,9 @@
-import { eq, inArray, sql } from "drizzle-orm";
+import { and, eq, gt, inArray, or, sql } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orderItems, orders, products, type ShippingAddress } from "@/db/schema";
 import { computeTotals, MAX_QTY_PER_ITEM, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
-import { ensureOrderStockSchema, reserveOrderStock } from "@/lib/order-status";
+import { ensureOrderStockSchema, PENDING_EXPIRY_HOURS, releaseStaleStockHolds, reserveOrderStock } from "@/lib/order-status";
 import { claimCouponUse, CouponGoneError } from "@/lib/coupons";
 import { getCoupon } from "@/lib/queries";
 import { resolvePaymentMethod } from "@/lib/checkout-payment";
@@ -63,6 +63,29 @@ function orderCode(): string {
 
 function text(value: unknown): string {
   return typeof value === "string" ? value.trim() : "";
+}
+
+/** Órdenes sin pago que puede tener abiertas un mismo email o teléfono. */
+const MAX_UNPAID_ORDERS = 2;
+
+async function countUnpaidOrders(email: string, phone: string): Promise<number> {
+  // Los últimos 8 dígitos: el mismo celular con o sin +54, 9 o 0.
+  const phoneTail = phone.replace(/\D/g, "").slice(-8);
+  const since = new Date(Date.now() - PENDING_EXPIRY_HOURS * 60 * 60 * 1000);
+  const [row] = await db
+    .select({ count: sql<number>`count(*)::int` })
+    .from(orders)
+    .where(
+      and(
+        eq(orders.status, "pendiente_pago"),
+        gt(orders.createdAt, since),
+        or(
+          eq(orders.email, email),
+          phoneTail.length === 8 ? sql`right(regexp_replace(${orders.phone}, '\\D', '', 'g'), 8) = ${phoneTail}` : undefined,
+        ),
+      ),
+    );
+  return row?.count ?? 0;
 }
 
 export async function POST(request: Request) {
@@ -145,6 +168,22 @@ export async function POST(request: Request) {
     const existing = await findOrderByCheckoutKey(checkoutKey, email);
     if (existing) return Response.json({ ok: true, code: existing.code, total: existing.total });
   }
+
+  // Sin pago no hay reserva, pero una orden igual guarda stock un rato: con
+  // un tope por cliente, nadie puede llenar la tienda de órdenes que no paga.
+  const unpaid = await countUnpaidOrders(email, phone);
+  if (unpaid >= MAX_UNPAID_ORDERS) {
+    return Response.json(
+      {
+        ok: false,
+        error: `Ya tenés ${unpaid} órdenes esperando el pago. Pagá alguna o esperá a que venza para hacer otra; si necesitás ayuda, escribinos por WhatsApp.`,
+      },
+      { status: 429 },
+    );
+  }
+  // El stock de las órdenes que no se pagaron en 2 hs vuelve a la venta antes
+  // de mirar si alcanza. Si falla, se compra igual con el stock como está.
+  await releaseStaleStockHolds().catch((error) => console.error("[checkout] no se pudo liberar stock vencido:", error));
 
   // El cupón se pide temprano y se espera tarde: es independiente de la
   // validación de productos y así las dos consultas viajan juntas.

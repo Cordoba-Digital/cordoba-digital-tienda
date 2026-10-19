@@ -100,10 +100,10 @@ test("un cliente compra desde la ficha y el pedido queda en la base", async () =
 
   await page.waitForURL(/\/pedido\/CD-[A-Z2-9]{6}\?nuevo=1$/);
   // Transferencia sin pagar: no está confirmado hasta que la plata se acredita.
-  // El código va como reserva y abajo, cómo pagarla; sin "gracias".
+  // Sin el pago acreditado es una orden: el número sirve de referencia para transferir; sin "gracias".
   const code = new URL(page.url()).pathname.split("/").pop()!;
   await page.getByRole("heading", { level: 1, name: code }).waitFor();
-  await page.getByText("Código de reserva", { exact: true }).waitFor();
+  await page.getByText("Número de orden", { exact: true }).waitFor();
   await page.getByRole("heading", { name: "Cómo completar tu pago" }).waitFor();
   assert.equal(await page.getByText(/Gracias/).count(), 0);
 
