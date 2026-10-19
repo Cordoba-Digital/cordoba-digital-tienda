@@ -15,6 +15,7 @@ import { WhatsAppFab } from "@/components/whatsapp-fab";
 import { getTopBarVisible } from "@/lib/home-layout-server";
 import { getInstallmentPlans } from "@/lib/installments-server";
 import { getUsdtRate } from "@/lib/usdt-rate";
+import { getUsdtWallet } from "@/lib/usdt-server";
 import { getCategoryTree, getGuides, type CategoryTreeNode, type GuideTeaser } from "@/lib/queries";
 import "./globals.css";
 
@@ -93,18 +94,21 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   // en TODAS las páginas. Cada uno conserva su fallback por separado con
   // `allSettled`: si la base no responde, la página igual se dibuja. Las
   // cuotas ya devuelven una lista vacía si Mercado Pago falla.
-  const [treeRes, guideRes, plansRes, topBarRes, usdRes] = await Promise.allSettled([
+  const [treeRes, guideRes, plansRes, topBarRes, usdRes, walletRes] = await Promise.allSettled([
     getCategoryTree(),
     getGuides(),
     getInstallmentPlans(),
     getTopBarVisible(),
     getUsdtRate(),
+    getUsdtWallet(),
   ]);
   // La barra de avisos se apaga desde Panel → Inicio; ante la duda se muestra.
   const topBar = topBarRes.status === "fulfilled" ? topBarRes.value : true;
   const installmentPlans = plansRes.status === "fulfilled" ? plansRes.value : [];
   // Sin cotización cargada (o si la base falla) no se muestra el precio en USD.
   const usdRate = usdRes.status === "fulfilled" ? (usdRes.value?.rate ?? null) : null;
+  // USDT se cobra solo con wallet y cotización cargadas, igual que en el checkout.
+  const usdtActive = Boolean(usdRate && walletRes.status === "fulfilled" && walletRes.value);
   let categories: (NavNode & { tagline: string })[] = [];
   try {
     if (treeRes.status !== "fulfilled") throw new Error("sin árbol");
@@ -159,6 +163,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
                   categories={categories.map((c) => ({ name: c.name, path: c.path, count: c.count }))}
                   cuit={process.env.STORE_CUIT?.trim() ?? ""}
                   guides={guides}
+                  usdt={usdtActive}
                 />
                 <CartDrawer />
                 <WhatsAppFab />

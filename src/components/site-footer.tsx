@@ -18,11 +18,14 @@ export async function SiteFooter({
   categories = CATEGORY_LINKS,
   cuit = "",
   guides = [],
+  usdt = false,
 }: {
   categories?: { name: string; path: string; count: number }[];
   /** CUIT real del cliente. Si viene vacío no se imprime ninguno. */
   cuit?: string;
   guides?: GuideTeaser[];
+  /** Hay wallet y cotización USDT cargadas en el panel: se ofrece en el checkout. */
+  usdt?: boolean;
 }) {
   return (
     <footer className="mt-20 mesh-warm border-t border-brand-100 text-ink-600">
@@ -176,7 +179,11 @@ export async function SiteFooter({
           </p>
           {/* Sin procesador de tarjetas: solo los medios que de verdad se aceptan. */}
           <div className="flex flex-wrap items-center justify-center gap-2">
-            {["Transferencia desde cualquier banco o billetera virtual", "Efectivo en el local"].map((m) => (
+            {[
+              "Transferencia desde cualquier banco o billetera virtual",
+              ...(usdt ? ["USDT (red TRON)"] : []),
+              "Efectivo en el local",
+            ].map((m) => (
               <span key={m} className="rounded-md border border-brand-100 bg-white px-2.5 py-1 text-[11px] font-semibold text-ink-600">
                 {m}
               </span>
