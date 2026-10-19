@@ -172,3 +172,31 @@ test("la seña vence a las 24 hs; la transferencia, a las 48", async () => {
   assert.ok((await notas(sena.id)).includes("Vencido: sin pago en 24 hs."));
   assert.deepEqual(await producto(), { stock: 5, soldCount: 0 }, "el stock de las dos volvió una sola vez");
 });
+
+test("con la seña acreditada, la reserva vence si no la retiran en 48 hs", async () => {
+  const sena = await orden((await comprar({ delivery: { method: "pickup" }, payment: { method: "sena" } })).body.code);
+  assert.ok(await applyOrderStatus(sena.id, { from: "pendiente_pago", to: "pago_confirmado" }));
+  assert.deepEqual(await producto(), { stock: 4, soldCount: 1 });
+
+  // La seña se acreditó hace 47 hs: todavía está a tiempo.
+  await db.execute(sql`update order_events set created_at = now() - interval '47 hours' where order_id = ${sena.id} and to_status = 'pago_confirmado'`);
+  assert.equal(await expireStalePendingOrders(), 0);
+  assert.equal((await orden(sena.code)).status, "pago_confirmado");
+
+  await db.execute(sql`update order_events set created_at = now() - interval '49 hours' where order_id = ${sena.id} and to_status = 'pago_confirmado'`);
+  assert.equal(await expireStalePendingOrders(), 1);
+  assert.equal((await orden(sena.code)).status, "cancelado");
+  assert.ok((await notas(sena.id)).includes("Reserva vencida: no se retiró en 48 hs desde la seña."));
+  assert.deepEqual(await producto(), { stock: 5, soldCount: 0 }, "el producto vuelve a la venta");
+});
+
+test("la reserva retirada o pagada en transferencia no vence por las 48 hs de retiro", async () => {
+  const sena = await orden((await comprar({ delivery: { method: "pickup" }, payment: { method: "sena" } })).body.code);
+  const transferencia = await orden((await comprar()).body.code);
+  for (const o of [sena, transferencia]) assert.ok(await applyOrderStatus(o.id, { from: "pendiente_pago", to: "pago_confirmado" }));
+  assert.ok(await applyOrderStatus(sena.id, { from: "pago_confirmado", to: "entregado" }));
+  await db.execute(sql`update order_events set created_at = now() - interval '72 hours'`);
+  assert.equal(await expireStalePendingOrders(), 0);
+  assert.equal((await orden(sena.code)).status, "entregado");
+  assert.equal((await orden(transferencia.code)).status, "pago_confirmado");
+});

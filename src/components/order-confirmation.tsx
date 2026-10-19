@@ -230,7 +230,7 @@ export function OrderConfirmation({
                   {isSena ? (
                     <p className="mt-1 text-sm text-ink-600">
                       Con la seña acreditada, la reserva queda confirmada. El resto, <strong>{money(order.total - dueNow)}</strong>,
-                      lo pagás al retirar en el local.
+                      lo pagás al retirar en el local dentro de las 48 hs desde la seña. Si no pasás, la reserva vence.
                     </p>
                   ) : null}
                 </div>

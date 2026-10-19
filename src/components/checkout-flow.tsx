@@ -1005,6 +1005,7 @@ export function CheckoutFlow({
                     <li>Confirmá el pedido: te damos un número de orden y te guardamos el stock 2 hs.</li>
                     <li>Transferí la seña {transfer ? "a esta cuenta" : "(te pasamos el CBU por WhatsApp)"} y mandanos el comprobante.</li>
                     <li>Cuando se acredita, la reserva queda confirmada y te damos tu código de reserva.</li>
+                    <li>Retirás y pagás el resto en el local dentro de las 48 hs. Si no pasás, la reserva vence.</li>
                   </ol>
                   <p className="text-xs font-semibold text-amber-800">
                     Tenés 24 horas para enviar la seña. Si no llega, la orden se cancela.
