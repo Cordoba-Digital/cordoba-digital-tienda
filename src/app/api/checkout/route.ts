@@ -14,7 +14,10 @@ import { preciosAndreani } from "@/lib/shipping-andreani";
 import { andreaniConfigurado, AndreaniError, sucursales } from "@/lib/andreani";
 import { findOrderByCheckoutKey, isCheckoutKeyConflict, parseCheckoutKey } from "@/lib/checkout-idempotency";
 import { blockedMinutes, CHECKOUT_LIMIT, COUPON_LIMIT, ipFromHeaders, recordMiss, tooManyAttempts } from "@/lib/rate-limit";
-import { getUsdtWallet } from "@/lib/usdt-server";
+import { usdtAmountFor } from "@/lib/usdt-amount";
+import { getUsdtRate, type UsdtRate } from "@/lib/usdt-rate";
+import { ensureUsdtSchema } from "@/lib/usdt-schema";
+import { createUsdtPayment, getUsdtWallet } from "@/lib/usdt-server";
 
 export const dynamic = "force-dynamic";
 
@@ -234,6 +237,20 @@ export async function POST(request: Request) {
 
   const paymentLabel = PAYMENT_METHODS.find((p) => p.id === paymentId)?.label ?? "Transferencia";
 
+  // USDT: el monto exacto sale del total con el dólar oficial de este momento
+  // y queda fijo en el pedido. Sin cotización no se puede cobrar en USDT.
+  let usdtQuote: { expectedAmount: string; rate: UsdtRate } | null = null;
+  if (paymentId === "usdt") {
+    const rate = await getUsdtRate();
+    if (!rate) {
+      return Response.json(
+        { ok: false, errors: { payment: "No pudimos traer la cotización del dólar. Probá en unos minutos o elegí otro medio de pago." } },
+        { status: 503 },
+      );
+    }
+    usdtQuote = { expectedAmount: usdtAmountFor(totals.total, rate.rate), rate };
+  }
+
   let code = orderCode();
   for (let attempt = 0; attempt < 4; attempt += 1) {
     const [existing] = await db.select({ id: orders.id }).from(orders).where(eq(orders.code, code)).limit(1);
@@ -244,6 +261,7 @@ export async function POST(request: Request) {
   // Pedido, ítems y stock en una sola transacción: si algo falla, no queda un
   // pedido sin productos ni stock descontado de más.
   await ensureOrderStockSchema();
+  if (usdtQuote) await ensureUsdtSchema();
   const created = await db.transaction(async (tx) => {
     const [order] = await tx
       .insert(orders)
@@ -288,6 +306,7 @@ export async function POST(request: Request) {
     // Descuenta stock solo donde es una cantidad real y anota cuánto, para
     // devolverlo si el pedido se cancela o vence sin pago.
     await reserveOrderStock(tx, order.id);
+    if (usdtQuote) await createUsdtPayment(tx, order.id, usdtQuote);
 
     // El uso del cupón se cuenta acá, con el tope chequeado en el mismo UPDATE.
     // Si otro pedido se llevó el último uso entre la consulta de arriba y este

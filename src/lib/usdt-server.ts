@@ -1,10 +1,14 @@
-import { eq, sql } from "drizzle-orm";
+import { and, eq, isNull } from "drizzle-orm";
 
 import { db } from "@/db";
 import { orderEvents, storeSettings, usdtPayments } from "@/db/schema";
 import { ensureSettingsSchema } from "@/lib/automations";
 import { mailConfigured, sendMail, STORE_EMAIL } from "@/lib/mailer";
+import { applyOrderStatus } from "@/lib/order-status";
 import { findUsdtTransfer, isTronAddress, tronscanTxUrl, type UsdtTransfer } from "@/lib/tron";
+import { usdtShortfall } from "@/lib/usdt-amount";
+import type { UsdtRate } from "@/lib/usdt-rate";
+import { ensureUsdtSchema } from "@/lib/usdt-schema";
 
 /**
  * Wallet de USDT (red TRON) editable desde Admin → Medios de pago. Como la
@@ -51,40 +55,40 @@ export async function saveUsdtWallet(wallet: string, actor: string): Promise<str
   return before;
 }
 
-/**
- * Crea `usdt_payments` si falta, así el despliegue no depende de correr la
- * migración a mano (igual que `ensureOrderStockSchema`). Idempotente.
- */
-let schemaReady: Promise<void> | null = null;
-export function ensureUsdtSchema(): Promise<void> {
-  if (!schemaReady) {
-    schemaReady = (async () => {
-      await db.execute(sql`create table if not exists usdt_payments (
-        order_id integer primary key not null,
-        txid text not null,
-        transfer jsonb,
-        created_at timestamp with time zone default now() not null,
-        verified_at timestamp with time zone
-      )`);
-      await db.execute(sql`create unique index if not exists usdt_payments_txid_idx on usdt_payments using btree (txid)`);
-    })().catch((error) => {
-      schemaReady = null;
-      throw error;
-    });
-  }
-  return schemaReady;
-}
+export type UsdtPayment = {
+  expectedAmount: string;
+  rate: string;
+  rateAt: Date;
+  txid: string | null;
+  transfer: UsdtTransfer | null;
+  verifiedAt: Date | null;
+};
 
-export type UsdtPayment = { txid: string; transfer: UsdtTransfer | null; verifiedAt: Date | null };
+const COLUMNS = {
+  expectedAmount: usdtPayments.expectedAmount,
+  rate: usdtPayments.rate,
+  rateAt: usdtPayments.rateAt,
+  txid: usdtPayments.txid,
+  transfer: usdtPayments.transfer,
+  verifiedAt: usdtPayments.verifiedAt,
+};
 
 export async function getUsdtPayment(orderId: number): Promise<UsdtPayment | null> {
   await ensureUsdtSchema();
-  const [row] = await db
-    .select({ txid: usdtPayments.txid, transfer: usdtPayments.transfer, verifiedAt: usdtPayments.verifiedAt })
-    .from(usdtPayments)
-    .where(eq(usdtPayments.orderId, orderId))
-    .limit(1);
+  const [row] = await db.select(COLUMNS).from(usdtPayments).where(eq(usdtPayments.orderId, orderId)).limit(1);
   return row ?? null;
+}
+
+type Tx = Parameters<Parameters<typeof db.transaction>[0]>[0];
+
+/** Lo llama el checkout dentro de la transacción del pedido: fija el monto en USDT con la cotización de ese momento. */
+export async function createUsdtPayment(tx: Tx, orderId: number, quote: { expectedAmount: string; rate: UsdtRate }): Promise<void> {
+  await tx.insert(usdtPayments).values({
+    orderId,
+    expectedAmount: quote.expectedAmount,
+    rate: String(quote.rate.rate),
+    rateAt: new Date(quote.rate.updatedAt),
+  });
 }
 
 type OrderRef = { id: number; code: string; status: string; total: number; createdAt: Date };
@@ -97,12 +101,10 @@ export type SubmitResult = { ok: true; payment: UsdtPayment } | { ok: false; err
  * otro pedido se rechaza.
  */
 export async function submitUsdtTxid(order: OrderRef, txid: string): Promise<SubmitResult> {
-  await ensureUsdtSchema();
   const current = await getUsdtPayment(order.id);
-  if (current?.verifiedAt) {
-    return { ok: false, error: "Este pedido ya tiene un pago verificado.", status: 409 };
-  }
-  if (current?.txid === txid) return { ok: true, payment: current };
+  if (!current) return { ok: false, error: "Este pedido no tiene un monto en USDT calculado. Escribinos por WhatsApp.", status: 409 };
+  if (current.verifiedAt) return { ok: false, error: "Este pedido ya tiene un pago verificado.", status: 409 };
+  if (current.txid === txid) return { ok: true, payment: current };
   const [taken] = await db
     .select({ orderId: usdtPayments.orderId })
     .from(usdtPayments)
@@ -112,10 +114,7 @@ export async function submitUsdtTxid(order: OrderRef, txid: string): Promise<Sub
     return { ok: false, error: "Ese TXID ya se usó en otro pedido.", status: 409 };
   }
   try {
-    await db
-      .insert(usdtPayments)
-      .values({ orderId: order.id, txid })
-      .onConflictDoUpdate({ target: usdtPayments.orderId, set: { txid, transfer: null, createdAt: new Date() } });
+    await db.update(usdtPayments).set({ txid, transfer: null }).where(eq(usdtPayments.orderId, order.id));
   } catch {
     // Carrera con otro pedido que cargó el mismo TXID al mismo tiempo.
     return { ok: false, error: "Ese TXID ya se usó en otro pedido.", status: 409 };
@@ -126,19 +125,22 @@ export async function submitUsdtTxid(order: OrderRef, txid: string): Promise<Sub
     toStatus: order.status,
     note: `El cliente cargó el TXID de USDT ${txid}.`,
   });
-  return { ok: true, payment: { txid, transfer: null, verifiedAt: null } };
+  return { ok: true, payment: { ...current, txid, transfer: null } };
 }
 
 /**
  * Si el pedido tiene un TXID sin verificar, lo busca en la red. Cuando aparece
- * en la wallet de la tienda, lo guarda, lo anota en el pedido y avisa a la
- * casilla de la tienda para que César lo apruebe. No cambia el estado del
- * pedido: eso sigue siendo a mano. Si TronGrid no responde, deja todo como
- * estaba y se reintenta en la próxima visita.
+ * en la wallet de la tienda lo guarda y:
+ * - si llegó el monto completo, el pedido pasa solo a "Pago acreditado" (el
+ *   cliente recibe el aviso como con cualquier pago);
+ * - si llegó menos, queda pendiente con una nota de cuánto falta y la tienda
+ *   recibe un mail para revisarlo.
+ * Si TronGrid no responde, deja todo como estaba y se reintenta en la próxima
+ * visita.
  */
 export async function syncUsdtPayment(order: OrderRef, fetchImpl?: typeof fetch): Promise<UsdtPayment | null> {
   const payment = await getUsdtPayment(order.id);
-  if (!payment || payment.verifiedAt || order.status !== "pendiente_pago") return payment;
+  if (!payment?.txid || payment.verifiedAt || order.status !== "pendiente_pago") return payment;
   const wallet = await getUsdtWallet();
   if (!wallet) return payment;
   let transfer: UsdtTransfer | null;
@@ -154,30 +156,50 @@ export async function syncUsdtPayment(order: OrderRef, fetchImpl?: typeof fetch)
   const [updated] = await db
     .update(usdtPayments)
     .set({ transfer, verifiedAt })
-    .where(sql`${usdtPayments.orderId} = ${order.id} and ${usdtPayments.txid} = ${payment.txid} and ${usdtPayments.verifiedAt} is null`)
+    .where(and(eq(usdtPayments.orderId, order.id), eq(usdtPayments.txid, payment.txid), isNull(usdtPayments.verifiedAt)))
     .returning({ orderId: usdtPayments.orderId });
   // Otra visita lo verificó primero: ya anotó y avisó ella.
   if (!updated) return getUsdtPayment(order.id);
 
-  await db.insert(orderEvents).values({
-    orderId: order.id,
-    fromStatus: order.status,
-    toStatus: order.status,
-    note: `Llegaron ${transfer.amount} USDT a la wallet (TXID ${payment.txid}). Falta aprobarlo.`,
-  });
-  if (mailConfigured()) {
-    await sendMail({
-      to: STORE_EMAIL,
-      subject: `Llegó un pago en USDT del pedido ${order.code}`,
-      text: [
-        `Entraron ${transfer.amount} USDT a la wallet de la tienda por el pedido ${order.code}.`,
-        `Total del pedido: $${order.total.toLocaleString("es-AR")}.`,
-        "",
-        `Transacción: ${tronscanTxUrl(payment.txid)}`,
-        "",
-        "Si el monto está bien, entrá al pedido en el panel y marcalo como pagado.",
-      ].join("\n"),
-    }).catch((error) => console.error("[usdt] no se pudo mandar el aviso:", error));
+  const missing = usdtShortfall(transfer.amount, payment.expectedAmount);
+  const link = tronscanTxUrl(payment.txid);
+  if (missing === "0") {
+    await applyOrderStatus(order.id, {
+      from: "pendiente_pago",
+      to: "pago_confirmado",
+      note: `Pago en USDT verificado en la red: llegaron ${transfer.amount} USDT de ${payment.expectedAmount} (TXID ${payment.txid}).`,
+    });
+    if (mailConfigured()) {
+      await sendMail({
+        to: STORE_EMAIL,
+        subject: `Pago en USDT acreditado: pedido ${order.code}`,
+        text: [
+          `Llegaron ${transfer.amount} USDT a la wallet de la tienda por el pedido ${order.code} (se esperaban ${payment.expectedAmount}).`,
+          "El pedido pasó solo a Pago acreditado. Toca prepararlo.",
+          "",
+          `Transacción: ${link}`,
+        ].join("\n"),
+      }).catch((error) => console.error("[usdt] no se pudo mandar el aviso:", error));
+    }
+  } else {
+    await db.insert(orderEvents).values({
+      orderId: order.id,
+      fromStatus: order.status,
+      toStatus: order.status,
+      note: `Llegaron ${transfer.amount} USDT de ${payment.expectedAmount}: faltan ${missing} USDT (TXID ${payment.txid}).`,
+    });
+    if (mailConfigured()) {
+      await sendMail({
+        to: STORE_EMAIL,
+        subject: `Pago en USDT incompleto: pedido ${order.code}`,
+        text: [
+          `Llegaron ${transfer.amount} USDT por el pedido ${order.code}, pero se esperaban ${payment.expectedAmount}: faltan ${missing} USDT.`,
+          "El pedido sigue pendiente. Revisalo en el panel y hablá con el cliente.",
+          "",
+          `Transacción: ${link}`,
+        ].join("\n"),
+      }).catch((error) => console.error("[usdt] no se pudo mandar el aviso:", error));
+    }
   }
-  return { txid: payment.txid, transfer, verifiedAt };
+  return { ...payment, transfer, verifiedAt };
 }

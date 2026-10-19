@@ -291,16 +291,22 @@ export const orders = pgTable(
 );
 
 /**
- * Pago en USDT (TRON) de un pedido: el TXID que carga el cliente en la página
- * del pedido y lo que se encontró en la red al verificarlo (null mientras no
- * aparece). El TXID es único, así una misma transferencia no paga dos pedidos.
- * César lo aprueba a mano marcando el pedido como pagado.
+ * Pago en USDT (TRON) de un pedido. Nace con el pedido: el monto exacto en
+ * USDT sale del total en pesos con la cotización del dólar oficial de ese
+ * momento, que queda guardada. Después se suman el TXID que pega el cliente
+ * (único, así una misma transferencia no paga dos pedidos) y lo que se vio
+ * llegar en la red al verificarlo.
  */
 export const usdtPayments = pgTable(
   "usdt_payments",
   {
     orderId: integer("order_id").primaryKey(),
-    txid: text("txid").notNull(),
+    /** USDT a pagar, como texto decimal ("73.45"). */
+    expectedAmount: text("expected_amount").notNull(),
+    /** Pesos por dólar usados para calcularlo. */
+    rate: text("rate").notNull(),
+    rateAt: timestamp("rate_at", { withTimezone: true }).notNull(),
+    txid: text("txid"),
     transfer: jsonb("transfer").$type<UsdtTransfer | null>(),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
     verifiedAt: timestamp("verified_at", { withTimezone: true }),

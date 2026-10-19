@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 
 import { OrderConfirmation, type OrderSummary } from "@/components/order-confirmation";
+import type { UsdtPaymentInfo } from "@/components/usdt-payment";
 import { reconcileMpPayment } from "@/lib/checkout-mp-sync";
 import { formatDateTime } from "@/lib/format";
 import { getOrderByCode } from "@/lib/queries";
@@ -126,10 +127,19 @@ export default async function OrderPage({
 
   // USDT: si el cliente ya cargó el TXID y todavía no se vio en la red, se
   // vuelve a buscar en cada visita (TronGrid tarda unos segundos en confirmarlo).
-  let usdt = null;
+  let usdt: UsdtPaymentInfo | null = null;
   if (order.paymentMethod === "usdt") {
     const [wallet, payment] = await Promise.all([getUsdtWallet(), syncUsdtPayment(order).catch(() => null)]);
-    usdt = { wallet, txid: payment?.txid ?? null, amount: payment?.transfer?.amount ?? null };
+    usdt = payment
+      ? {
+          wallet,
+          expectedAmount: payment.expectedAmount,
+          rate: Number(payment.rate),
+          rateAt: payment.rateAt.toISOString(),
+          txid: payment.txid,
+          received: payment.transfer?.amount ?? null,
+        }
+      : null;
   }
 
   return (

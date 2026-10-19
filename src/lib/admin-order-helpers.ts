@@ -65,7 +65,7 @@ export function nextStep(order: { status: string; paymentMethod: string; deliver
           order.paymentMethod === "transferencia"
             ? "Cuando veas la transferencia en el banco, marcalo como pagado."
             : order.paymentMethod === "usdt"
-              ? "Cuando el pago en USDT figure verificado abajo y el monto esté bien, marcalo como pagado."
+              ? "Si llega el monto completo en USDT, el pedido pasa solo a pagado. Si llegó de menos, hablá con el cliente."
               : "Cuando el cliente pague, marcalo como pagado.",
         asksTracking: false,
       };

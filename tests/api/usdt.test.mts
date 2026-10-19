@@ -1,7 +1,8 @@
 /**
  * USDT por red TRON: la wallet se carga desde Medios de pago (solo dueños), el
- * checkout ofrece USDT solo con wallet, el cliente pega el TXID en su pedido,
- * se verifica contra TronGrid y la tienda recibe el aviso para aprobarlo.
+ * checkout ofrece USDT solo con wallet y fija el monto exacto con el dólar
+ * oficial, el cliente pega el TXID en su pedido y, si en la red llegó el monto
+ * completo, el pedido pasa solo a pagado.
  *
  * Uso: npm run test:api (necesita Postgres local migrado en DATABASE_URL)
  */
@@ -24,6 +25,8 @@ const { addAdminAccess } = await import("../../src/lib/admin-access");
 const { captureMailForTests } = await import("../../src/lib/mailer");
 const { expireStalePendingOrders } = await import("../../src/lib/order-status");
 const { USDT_TRC20_CONTRACT } = await import("../../src/lib/tron");
+const { usdtAmountFor } = await import("../../src/lib/usdt-amount");
+const { resetUsdtRateCache } = await import("../../src/lib/usdt-rate");
 
 const BASE = "http://localhost:3000";
 // Dirección pública (el contrato de USDT), no la wallet de la tienda: el repo es público.
@@ -55,11 +58,18 @@ function txid(code: string, value: string) {
   return cargarTxid(post(`/api/orders/${code}/usdt`, { txid: value }), { params: Promise.resolve({ code }) });
 }
 
-/** TronGrid falso: la transferencia aparece en la wallet cuando `llego` es true. */
-let llego = false;
-function tronGridFalso() {
+const DOLAR = 1_475;
+/** USDT que aparecen en la wallet (null: todavía no llegó nada). */
+let llego: string | null = null;
+let cotizacionCaida = false;
+function redFalsa() {
   globalThis.fetch = (async (url: string | URL | Request) => {
-    assert.match(String(url), /^https:\/\/api\.trongrid\.io\//);
+    const href = String(url);
+    if (href.startsWith("https://dolarapi.com/")) {
+      if (cotizacionCaida) return new Response("", { status: 502 });
+      return new Response(JSON.stringify({ moneda: "USD", casa: "oficial", compra: 1_425, venta: DOLAR, fechaActualizacion: new Date().toISOString() }));
+    }
+    assert.match(href, /^https:\/\/api\.trongrid\.io\//);
     const data = llego
       ? [
           {
@@ -67,7 +77,7 @@ function tronGridFalso() {
             from: "TCliente",
             to: WALLET,
             type: "Transfer",
-            value: "120500000",
+            value: String(Math.round(Number(llego) * 1_000_000)),
             block_timestamp: Date.now(),
             token_info: { address: USDT_TRC20_CONTRACT, decimals: 6 },
           },
@@ -77,13 +87,21 @@ function tronGridFalso() {
   }) as typeof fetch;
 }
 
+async function pedidoPorCodigo(code: string) {
+  const [order] = await db.select().from(schema.orders).where(eq(schema.orders.code, code));
+  const [pago] = await db.select().from(schema.usdtPayments).where(eq(schema.usdtPayments.orderId, order.id));
+  return { order, pago };
+}
+
 beforeEach(async () => {
   await resetDb();
   await db.execute(sql`truncate table admin_audit`).catch(() => undefined);
   await seedProduct("celu", 100_000, 10);
   enviados.length = 0;
-  llego = false;
-  tronGridFalso();
+  llego = null;
+  cotizacionCaida = false;
+  resetUsdtRateCache();
+  redFalsa();
 });
 afterEach(() => {
   globalThis.fetch = realFetch;
@@ -110,12 +128,37 @@ test("solo un dueño carga la wallet, se valida y queda en Actividad con aviso",
   assert.match(enviados[0].text ?? "", new RegExp(WALLET));
 });
 
-test("el cliente paga con USDT, carga el TXID y cuando aparece en la red le llega el aviso a la tienda", async () => {
+test("el pedido fija el monto exacto en USDT con el dólar oficial", async () => {
   await guardarWallet(putWallet(WALLET, await cookie("duenio@example.com")));
-  enviados.length = 0;
   const compra = await comprarConUsdt();
   assert.equal(compra.status, 200, JSON.stringify(compra.body));
-  const code = compra.body.code as string;
+  const { order, pago } = await pedidoPorCodigo(compra.body.code as string);
+  assert.equal(pago.expectedAmount, usdtAmountFor(order.total, DOLAR));
+  assert.equal(pago.rate, String(DOLAR));
+  assert.equal(pago.txid, null);
+});
+
+test("sin cotización no se cobra en USDT; si la API se cae, se usa la última guardada", async () => {
+  await guardarWallet(putWallet(WALLET, await cookie("duenio@example.com")));
+  cotizacionCaida = true;
+  const sinNada = await comprarConUsdt();
+  assert.equal(sinNada.status, 503);
+  assert.match(JSON.stringify(sinNada.body), /cotización/);
+
+  cotizacionCaida = false;
+  assert.equal((await comprarConUsdt()).status, 200); // guarda la cotización
+  resetUsdtRateCache();
+  cotizacionCaida = true;
+  const conGuardada = await comprarConUsdt();
+  assert.equal(conGuardada.status, 200, JSON.stringify(conGuardada.body));
+  assert.equal((await pedidoPorCodigo(conGuardada.body.code as string)).pago.rate, String(DOLAR));
+});
+
+test("si llega el monto completo, el pedido pasa solo a pagado y avisa a la tienda", async () => {
+  await guardarWallet(putWallet(WALLET, await cookie("duenio@example.com")));
+  enviados.length = 0;
+  const code = (await comprarConUsdt()).body.code as string;
+  const esperado = (await pedidoPorCodigo(code)).pago.expectedAmount;
 
   assert.equal((await txid(code, "no-es-un-txid")).status, 400);
 
@@ -123,27 +166,33 @@ test("el cliente paga con USDT, carga el TXID y cuando aparece en la red le lleg
   let res = await txid(code, TXID.toUpperCase());
   assert.equal(res.status, 200);
   assert.deepEqual(await res.json(), { ok: true, verified: false, amount: null });
-  assert.equal(enviados.length, 0);
+  assert.equal(enviados.filter((m) => m.to === "consultas@cordobadigital.net").length, 0);
 
-  // Aparece en la red: se verifica, se anota y llega un solo aviso.
-  llego = true;
+  llego = esperado;
   res = await txid(code, TXID);
-  assert.deepEqual(await res.json(), { ok: true, verified: true, amount: "120.5" });
-  const [pago] = await db.select().from(schema.usdtPayments);
-  assert.equal(pago.txid, TXID);
-  assert.equal(pago.transfer?.amount, "120.5");
+  assert.deepEqual(await res.json(), { ok: true, verified: true, amount: String(Number(esperado)) });
+  const { order, pago } = await pedidoPorCodigo(code);
+  assert.equal(order.status, "pago_confirmado");
   assert.ok(pago.verifiedAt);
-  assert.equal(enviados.length, 1);
-  assert.match(enviados[0].subject ?? "", new RegExp(code));
+  assert.ok(enviados.some((m) => /acreditado/.test(m.subject ?? "") && new RegExp(code).test(m.subject ?? "")));
 
-  // El pedido no se marca pagado solo: lo aprueba César.
-  const [order] = await db.select().from(schema.orders).where(eq(schema.orders.code, code));
-  assert.equal(order.status, "pendiente_pago");
-  const notas = await db.select({ note: schema.orderEvents.note }).from(schema.orderEvents).where(eq(schema.orderEvents.orderId, order.id));
-  assert.ok(notas.some((n) => /120\.5 USDT/.test(n.note)));
-
-  // Ya verificado, no se puede cambiar el TXID.
+  // Ya pagado, no acepta otro TXID.
   assert.equal((await txid(code, "d".repeat(64))).status, 409);
+});
+
+test("si llega de menos, queda pendiente con lo que falta y avisa a la tienda", async () => {
+  await guardarWallet(putWallet(WALLET, await cookie("duenio@example.com")));
+  enviados.length = 0;
+  const code = (await comprarConUsdt()).body.code as string;
+  const esperado = (await pedidoPorCodigo(code)).pago.expectedAmount;
+  llego = (Number(esperado) - 1).toFixed(2);
+  await txid(code, TXID);
+  const { order, pago } = await pedidoPorCodigo(code);
+  assert.equal(order.status, "pendiente_pago");
+  assert.ok(pago.verifiedAt);
+  const notas = await db.select({ note: schema.orderEvents.note }).from(schema.orderEvents).where(eq(schema.orderEvents.orderId, order.id));
+  assert.ok(notas.some((n) => /faltan 1 USDT/.test(n.note)), JSON.stringify(notas));
+  assert.ok(enviados.some((m) => /incompleto/.test(m.subject ?? "")));
 });
 
 test("un TXID no paga dos pedidos", async () => {

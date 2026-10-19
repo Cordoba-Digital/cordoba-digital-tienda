@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { CheckoutFlow } from "@/components/checkout-flow";
 import { mercadoPagoReady } from "@/lib/mercadopago";
 import { getTransferAccount } from "@/lib/transfer-account-server";
+import { getUsdtRate } from "@/lib/usdt-rate";
 import { getUsdtWallet } from "@/lib/usdt-server";
 
 export const dynamic = "force-dynamic";
@@ -18,5 +19,7 @@ export const metadata: Metadata = {
 
 export default async function CheckoutPage() {
   const [transfer, usdtWallet] = await Promise.all([getTransferAccount(), getUsdtWallet()]);
-  return <CheckoutFlow mercadoPago={mercadoPagoReady()} transfer={transfer} usdt={!!usdtWallet} />;
+  // USDT se ofrece solo con wallet y con cotización del día para calcular el monto.
+  const usdtRate = usdtWallet ? await getUsdtRate() : null;
+  return <CheckoutFlow mercadoPago={mercadoPagoReady()} transfer={transfer} usdtRate={usdtRate} />;
 }

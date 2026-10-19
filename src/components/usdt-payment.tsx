@@ -1,25 +1,33 @@
 "use client";
 
-import { CircleCheck, Coins, MessageCircle } from "lucide-react";
+import { CircleAlert, Coins, MessageCircle } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 import { QrCode } from "@/components/qr-code";
 import { CopyButton } from "@/components/transfer-details";
 import { money } from "@/lib/format";
+import { formatUsdt, usdtShortfall } from "@/lib/usdt-amount";
 
 export type UsdtPaymentInfo = {
   /** Wallet de la tienda; null si USDT se apagó después del pedido. */
   wallet: string | null;
+  /** USDT a enviar, fijado al crear el pedido ("73.45"). */
+  expectedAmount: string;
+  /** Dólar oficial (venta) con el que se calculó, y de cuándo era. */
+  rate: number;
+  rateAt: string;
   txid: string | null;
   /** USDT que se vieron llegar en la red, cuando ya se verificó. */
-  amount: string | null;
+  received: string | null;
 };
+
+const rateDateFormat = new Intl.DateTimeFormat("es-AR", { timeZone: "America/Argentina/Cordoba", day: "2-digit", month: "2-digit", year: "numeric" });
 
 /**
  * Cómo pagar un pedido con USDT: la wallet con su QR, la red y el campo para
- * pegar el TXID. Con el TXID, el servidor busca la transacción en la red y le
- * avisa a la tienda; el pedido se confirma cuando César lo aprueba.
+ * pegar el TXID. Con el TXID, el servidor busca la transacción en la red; si
+ * llegó el monto completo, el pedido se confirma solo.
  */
 export function UsdtPaymentPanel({ code, total, info }: { code: string; total: number; info: UsdtPaymentInfo }) {
   const router = useRouter();
@@ -61,8 +69,8 @@ export function UsdtPaymentPanel({ code, total, info }: { code: string; total: n
         <div className="min-w-0">
           <h2 className="text-lg font-extrabold text-ink-900">Cómo completar tu pago</h2>
           <p className="mt-0.5 text-sm text-ink-600">
-            Enviá el equivalente en USDT a <strong>{money(total)}</strong> por red TRON (TRC20). El monto en USDT y la comisión de la
-            red corren por tu cuenta.
+            Enviá <strong>{formatUsdt(info.expectedAmount)} USDT</strong> por red TRON (TRC20). Es el total de {money(total)} con el
+            dólar oficial (venta) de {money(Math.round(info.rate))} del {rateDateFormat.format(new Date(info.rateAt))}.
           </p>
         </div>
       </div>
@@ -71,6 +79,13 @@ export function UsdtPaymentPanel({ code, total, info }: { code: string; total: n
         <div className="mt-4 flex flex-col items-center gap-4 rounded-xl border border-ink-100 bg-surface p-4 sm:flex-row sm:items-start">
           <QrCode value={info.wallet} label="QR de la wallet para pagar con USDT" />
           <dl className="w-full min-w-0 space-y-2 text-sm">
+            <div>
+              <dt className="text-ink-500">Monto exacto</dt>
+              <dd className="flex items-center justify-between gap-2 text-base font-extrabold text-ink-900">
+                {formatUsdt(info.expectedAmount)} USDT
+                <CopyButton value={info.expectedAmount} />
+              </dd>
+            </div>
             <div>
               <dt className="text-ink-500">Red</dt>
               <dd className="font-extrabold text-ink-900">TRON (TRC20)</dd>
@@ -83,7 +98,8 @@ export function UsdtPaymentPanel({ code, total, info }: { code: string; total: n
               </dd>
             </div>
             <p className="rounded-lg bg-amber-100/70 p-2 text-xs font-semibold text-amber-900">
-              Solo USDT por red TRON. Un envío por otra red o de otra moneda no llega y no se puede recuperar.
+              Solo USDT por red TRON. Un envío por otra red o de otra moneda no llega y no se puede recuperar. Si tu
+              exchange cobra comisión, sumala: tiene que llegar el monto completo.
             </p>
           </dl>
         </div>
@@ -99,11 +115,13 @@ export function UsdtPaymentPanel({ code, total, info }: { code: string; total: n
         </a>
       )}
 
-      {info.amount ? (
-        <p className="mt-4 flex items-start gap-2 rounded-xl bg-emerald-50 p-3 text-sm text-emerald-900">
-          <CircleCheck className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+      {info.received ? (
+        <p className="mt-4 flex items-start gap-2 rounded-xl bg-red-50 p-3 text-sm text-red-900">
+          <CircleAlert className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
           <span>
-            Vimos llegar <strong>{info.amount} USDT</strong> a la wallet. Lo revisamos, confirmamos el pedido y te avisamos.
+            Llegaron <strong>{formatUsdt(info.received)} USDT</strong> de {formatUsdt(info.expectedAmount)}. Faltan{" "}
+            <strong>{formatUsdt(usdtShortfall(info.received, info.expectedAmount))} USDT</strong>: escribinos por WhatsApp con tu
+            código y lo resolvemos.
           </span>
         </p>
       ) : info.wallet ? (
@@ -111,7 +129,8 @@ export function UsdtPaymentPanel({ code, total, info }: { code: string; total: n
           {info.txid && !editing ? (
             <div className="text-sm text-ink-700">
               <p>
-                Recibimos tu TXID. Lo estamos buscando en la red: cuando aparezca, revisamos el pago y confirmamos el pedido.
+                Recibimos tu TXID. Lo estamos buscando en la red: cuando aparezca el monto completo, el pedido se confirma solo.
+                Recargá esta página en unos minutos.
               </p>
               <p className="mt-1 break-all font-mono text-xs text-ink-500">{info.txid}</p>
               <button type="button" onClick={() => setEditing(true)} className="mt-2 text-xs font-bold text-brand-700 hover:underline">

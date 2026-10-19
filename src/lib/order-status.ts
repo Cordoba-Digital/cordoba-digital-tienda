@@ -6,7 +6,7 @@ import { isAutomationOn } from "@/lib/automations";
 import { ensureCouponSchema, releaseCouponUse, restoreCouponUse } from "@/lib/coupons";
 import { notifyStatusChange } from "@/lib/order-emails";
 import { CANCELLED_STATUS, isCancelled, statusIndex } from "@/lib/pricing";
-import { ensureUsdtSchema } from "@/lib/usdt-server";
+import { ensureUsdtSchema } from "@/lib/usdt-schema";
 
 /** Horas que un pedido puede quedar sin pago antes de vencer (lo que promete la tienda). */
 export const PENDING_EXPIRY_HOURS = 48;
@@ -154,7 +154,7 @@ export async function expireStalePendingOrders(): Promise<number> {
           eq(orders.status, "pendiente_pago"),
           lt(orders.createdAt, cutoff),
           // Un pago en USDT con TXID cargado no vence solo: lo decide César.
-          sql`not exists (select 1 from usdt_payments where usdt_payments.order_id = ${orders.id})`,
+          sql`not exists (select 1 from usdt_payments where usdt_payments.order_id = ${orders.id} and usdt_payments.txid is not null)`,
         ),
       )
       .limit(200);

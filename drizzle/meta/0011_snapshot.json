@@ -1,5 +1,5 @@
 {
-  "id": "99ef40c6-160e-4b2e-9ec7-d247b61b7afc",
+  "id": "0ef5fc90-a1ec-4c3b-97be-c0fe1ae98320",
   "prevId": "94395356-d868-4feb-9e94-793aadeff519",
   "version": "7",
   "dialect": "postgresql",
@@ -2000,11 +2000,29 @@
           "primaryKey": true,
           "notNull": true
         },
+        "expected_amount": {
+          "name": "expected_amount",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "rate": {
+          "name": "rate",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "rate_at": {
+          "name": "rate_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
         "txid": {
           "name": "txid",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": false
         },
         "transfer": {
           "name": "transfer",

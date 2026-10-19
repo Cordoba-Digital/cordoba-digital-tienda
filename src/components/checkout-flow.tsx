@@ -17,6 +17,8 @@ import { validateDelivery, validatePersonalData } from "@/lib/checkout-validatio
 import { useShippingQuote, useSucursales } from "@/lib/shipping-quote";
 import type { DeliveryMethod, ShippingOption } from "@/lib/shipping";
 import type { TransferAccount } from "@/lib/transfer-account";
+import { formatUsdt, usdtAmountFor } from "@/lib/usdt-amount";
+import type { UsdtRate } from "@/lib/usdt-rate";
 
 type CheckoutIconProps = { className?: string };
 
@@ -328,17 +330,29 @@ function StepContinue({ label, onClick }: { label: string; onClick: () => void }
   );
 }
 
+const rateDateFormat = new Intl.DateTimeFormat("es-AR", {
+  timeZone: "America/Argentina/Cordoba",
+  day: "2-digit",
+  month: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  hourCycle: "h23",
+});
+function rateDate(iso: string): string {
+  return rateDateFormat.format(new Date(iso));
+}
+
 const inputClass =
   "h-11 w-full rounded-xl border border-ink-200 bg-surface px-3.5 text-sm text-ink-900 outline-none transition placeholder:text-ink-500 focus:border-brand-400 focus:ring-4 focus:ring-brand-100";
 
 export function CheckoutFlow({
   mercadoPago = false,
   transfer = null,
-  usdt = false,
+  usdtRate = null,
 }: {
   mercadoPago?: boolean;
-  /** Hay wallet de USDT (red TRON) cargada en el panel: se ofrece USDT. */
-  usdt?: boolean;
+  /** Cotización para USDT; llega solo si hay wallet cargada en el panel. Sin ella no se ofrece USDT. */
+  usdtRate?: UsdtRate | null;
   /** Cuenta para transferir (`transferAccount()`); sin configurar, los datos se piden por WhatsApp. */
   transfer?: TransferAccount | null;
 }) {
@@ -908,7 +922,7 @@ export function CheckoutFlow({
           <CheckoutStep number={3} title="Pago" subtitle="El total es el mismo con cualquier medio." state={stepState(3)}>
             <div className="space-y-4">
               <div className="grid gap-3 sm:grid-cols-[repeat(auto-fit,minmax(15rem,1fr))]">
-                {PAYMENT_METHODS.filter((method) => isPaymentMethodOffered(method.id, deliveryMethod, { mercadoPago, usdt })).map(
+                {PAYMENT_METHODS.filter((method) => isPaymentMethodOffered(method.id, deliveryMethod, { mercadoPago, usdt: !!usdtRate })).map(
                   (method) => {
                     const PaymentIcon = PAYMENT_ICONS[method.id];
                     return (
@@ -945,21 +959,23 @@ export function CheckoutFlow({
               {/* USDT aparece solo con una wallet cargada en el panel. Mercado
                   Pago, solo si el servidor tiene sus credenciales. */}
 
-              {payment === "usdt" ? (
+              {payment === "usdt" && usdtRate ? (
                 <div className="space-y-2 rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
                   <p className="font-bold text-ink-900">Pagás con USDT por red TRON (TRC20).</p>
-                  <ol className="list-decimal space-y-1 pl-4 text-xs">
-                    <li>Confirmá el pedido: te mostramos la wallet y su QR.</li>
-                    <li>
-                      Enviá desde tu wallet o exchange el equivalente en USDT a <strong>{money(totals.total)}</strong>. El monto en
-                      USDT y la comisión de la red corren por tu cuenta.
-                    </li>
-                    <li>Pegá el TXID de la transacción en la página del pedido.</li>
-                  </ol>
-                  <p className="text-xs">
-                    Usá solo la red TRON (TRC20): un envío por otra red no llega y no se puede recuperar. Cuando verificamos el pago,
-                    confirmamos el pedido y te avisamos.
+                  <p className="flex flex-wrap items-baseline justify-between gap-2 rounded-lg bg-surface px-3 py-2">
+                    <span>Total en USDT</span>
+                    <strong className="text-base text-ink-900">{formatUsdt(usdtAmountFor(totals.total, usdtRate.rate))} USDT</strong>
                   </p>
+                  <p className="text-xs text-ink-500">
+                    Con el dólar oficial (venta) de {money(Math.round(usdtRate.rate))}, actualizado el {rateDate(usdtRate.updatedAt)}. Al
+                    confirmar, el monto queda fijo en tu pedido.
+                  </p>
+                  <ol className="list-decimal space-y-1 pl-4 text-xs">
+                    <li>Confirmá el pedido: te mostramos la wallet, su QR y el monto exacto.</li>
+                    <li>Enviá ese monto desde tu wallet o exchange. Si te cobran comisión, tiene que llegar el monto completo.</li>
+                    <li>Pegá el TXID de la transacción en la página del pedido. Cuando llega el monto completo, se confirma solo.</li>
+                  </ol>
+                  <p className="text-xs">Usá solo la red TRON (TRC20): un envío por otra red no llega y no se puede recuperar.</p>
                 </div>
               ) : null}
 
