@@ -1,3 +1,5 @@
+import { SENA_PESOS, STOCK_HOLD_HOURS } from "@/lib/payment-rules";
+
 /**
  * Medios de pago. Los tres primeros son exactamente los que ofrece el sitio
  * original, leídos del checkout real (no inventados):
@@ -10,19 +12,10 @@
  * construyendo y cubre tarjeta de crédito, débito y dinero en cuenta, que es
  * justamente lo que el original no tiene online.
  */
+/** "$10.000", como lo escribe el resto de la tienda en los textos de la seña. */
+const SENA_LABEL = `$${SENA_PESOS.toLocaleString("es-AR")}`;
+
 export type PaymentMethodId = "transferencia" | "usdt" | "efectivo" | "sena" | "mercadopago";
-
-/**
- * Seña para retirar en el local: se paga por transferencia y confirma la
- * reserva; el resto se paga al retirar. Si el pedido cuesta menos, se paga el
- * total. Decisión de Ronan (19/10).
- */
-export const SENA_PESOS = 10_000;
-
-/** Lo que el cliente tiene que pagar online ahora: la seña o el total. */
-export function amountDueOnline(order: { paymentMethod: string; total: number }): number {
-  return order.paymentMethod === "sena" ? Math.min(SENA_PESOS, order.total) : order.total;
-}
 
 /**
  * Tope de unidades por producto en un pedido: 5. Vale para la ficha, el
@@ -65,9 +58,9 @@ export const PAYMENT_METHODS: PaymentMethod[] = [
   },
   {
     id: "sena",
-    label: "Seña de $10.000 y resto en el local",
+    label: `Seña de ${SENA_LABEL} y resto en el local`,
     short: "Seña y resto en el local",
-    description: "Reservás con $10.000 por transferencia y pagás el resto al retirar en 27 de Abril 180.",
+    description: `Reservás con ${SENA_LABEL} por transferencia y pagás el resto al retirar en 27 de Abril 180.`,
     icon: "🏷️",
   },
   {
@@ -147,7 +140,7 @@ export function computeTotals(input: {
 }
 
 export const ORDER_STATUS_FLOW = [
-  { id: "pendiente_pago", label: "Esperando el pago", description: "Te guardamos el stock 2 hs mientras llega el pago." },
+  { id: "pendiente_pago", label: "Esperando el pago", description: `Te guardamos el stock ${STOCK_HOLD_HOURS} hs mientras llega el pago.` },
   { id: "pago_confirmado", label: "Pago acreditado", description: "Verificamos el pago y emitimos la factura." },
   { id: "preparando", label: "Preparando el pedido", description: "Controlamos y embalamos tu producto." },
   { id: "enviado", label: "En camino / Listo para retirar", description: "Te enviamos el código de seguimiento." },

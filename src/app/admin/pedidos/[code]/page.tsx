@@ -16,7 +16,8 @@ import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { allowedStatuses, nextStep, statusSteps, whatsappHref } from "@/lib/admin-order-helpers";
 import { getAdminOrderDetail } from "@/lib/admin-orders";
 import { isOwnerEmail } from "@/lib/admin-access";
-import { listOrderRefunds, orderWasPaid } from "@/lib/admin-refunds";
+import { listOrderRefunds } from "@/lib/admin-refunds";
+import { wasEverPaid } from "@/lib/payment-rules";
 import { listOrderReturns, returnedByItem } from "@/lib/admin-returns";
 import { readAdminSession } from "@/lib/admin-session";
 import { andreaniConfigurado } from "@/lib/andreani";
@@ -81,7 +82,7 @@ export default async function AdminOrderDetailPage({ params }: { params: Promise
   const wa = whatsappHref(order.phone, `Hola ${firstName}! Te escribimos de Córdoba Digital por tu pedido ${order.code}.`);
   const units = items.reduce((sum, item) => sum + item.quantity, 0);
   const address = order.address;
-  const paid = orderWasPaid(order.status, events.map((e) => e.toStatus));
+  const paid = wasEverPaid(order.status, events.map((e) => e.toStatus));
   const canReturn = order.status === "enviado" || order.status === "entregado";
   // Lo mismo que deciden los componentes para no mostrarse, así la fila sabe qué tarjeta queda última.
   const conAndreani = order.deliveryMethod !== "pickup";

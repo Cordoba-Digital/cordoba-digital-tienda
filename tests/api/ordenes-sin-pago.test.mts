@@ -19,7 +19,7 @@ import { comprador, db, domicilio, pool, post, resetDb, schema, seedProduct } fr
 delete process.env.MP_ACCESS_TOKEN;
 const { POST } = await import("../../src/app/api/checkout/route");
 const { applyOrderStatus, expireStalePendingOrders, releaseStaleStockHolds } = await import("../../src/lib/order-status");
-const { amountDueOnline, SENA_PESOS } = await import("../../src/lib/pricing");
+const { amountDueOnline, SENA_PESOS } = await import("../../src/lib/payment-rules");
 
 async function comprar(body: Record<string, unknown> = {}) {
   const res = await POST(

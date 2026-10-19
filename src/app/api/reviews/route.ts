@@ -3,6 +3,7 @@ import { and, eq, sql } from "drizzle-orm";
 import { db } from "@/db";
 import { orderItems, orders, products, reviews } from "@/db/schema";
 import { blockedMinutes, ipFromHeaders, recordMiss, REVIEW_LIMIT, tooManyAttempts } from "@/lib/rate-limit";
+import { isPaidStatus } from "@/lib/payment-rules";
 import { refreshStorePages } from "@/lib/store-cache";
 
 export const dynamic = "force-dynamic";
@@ -13,7 +14,6 @@ export const dynamic = "force-dynamic";
  * cualquiera podía publicar sin pedido y la reseña sumaba al promedio y al
  * AggregateRating del JSON-LD (Google lo considera reseñas autogeneradas).
  */
-const PAID_STATUSES = new Set(["pago_confirmado", "preparando", "enviado", "entregado"]);
 
 /**
  * Crea `order_id` y sus índices si faltan, así el despliegue no depende de
@@ -91,7 +91,7 @@ export async function POST(request: Request) {
   if (!item) {
     return Response.json({ ok: false, error: "Ese pedido no incluye este producto." }, { status: 403 });
   }
-  if (!PAID_STATUSES.has(order.status)) {
+  if (!isPaidStatus(order.status)) {
     return Response.json({ ok: false, error: "Vas a poder opinar cuando se acredite el pago del pedido." }, { status: 403 });
   }
 
