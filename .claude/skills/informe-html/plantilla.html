@@ -1,0 +1,129 @@
+<title>Título del informe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Plantilla de informes de Córdoba Digital: una columna de lectura, tabla resumen arriba, hallazgos en tarjetas. Ver SKILL.md. */
+:root {
+  --bg: #f6f7f5;
+  --paper: #ffffff;
+  --ink: #1b2420;
+  --muted: #5a6661;
+  --line: #d9dfdb;
+  --accent: #0f6b55;
+  --accent-soft: #e2f0eb;
+  --strong: #0f6b55;
+  --explore: #9a6400;
+  --explore-soft: #fbf0d9;
+  --spec: #5b6470;
+  --spec-soft: #eceff2;
+  --warn: #a8321f;
+  --warn-soft: #fbe6e1;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121715; --paper: #1a201e; --ink: #e5ebe8; --muted: #9aa7a1; --line: #2e3734;
+  --accent: #5fc8a7; --accent-soft: #183129; --strong: #5fc8a7; --explore: #e3b25a; --explore-soft: #33291a;
+  --spec: #a9b2bd; --spec-soft: #262c32; --warn: #f08a76; --warn-soft: #3a211c; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #121715; --paper: #1a201e; --ink: #e5ebe8; --muted: #9aa7a1; --line: #2e3734;
+  --accent: #5fc8a7; --accent-soft: #183129; --strong: #5fc8a7; --explore: #e3b25a; --explore-soft: #33291a;
+  --spec: #a9b2bd; --spec-soft: #262c32; --warn: #f08a76; --warn-soft: #3a211c; color-scheme: dark; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; }
+.wrap { max-width: 980px; margin: 0 auto; padding-block: 40px 80px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 40px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h1 { font-size: clamp(30px, 5vw, 44px); font-weight: 800; }
+h2 { font-size: 24px; font-weight: 800; }
+h3 { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+p { margin: 0; max-width: 68ch; }
+code, .mono { font-family: var(--mono); font-size: 0.82em; }
+header { display: grid; gap: 14px; }
+.meta { font-family: var(--mono); font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.lede { font-size: 19px; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; color: var(--muted); font-family: var(--display); }
+.legend span { display: inline-flex; align-items: center; gap: 8px; }
+.toc { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; overflow-x: auto; }
+.toc table { width: 100%; border-collapse: collapse; font-family: var(--display); font-size: 15px; min-width: 560px; }
+.toc th, .toc td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.toc th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 700; }
+.toc tr:last-child td { border-bottom: 0; }
+.toc a { color: var(--ink); text-decoration: none; font-weight: 700; }
+.toc a:hover, .toc a:focus-visible { color: var(--accent); text-decoration: underline; }
+.badge { display: inline-block; font-family: var(--display); font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 99px; white-space: nowrap; }
+.b-strong { background: var(--accent-soft); color: var(--strong); }
+.b-explore { background: var(--explore-soft); color: var(--explore); }
+.b-spec { background: var(--spec-soft); color: var(--spec); }
+.b-dep { background: transparent; color: var(--muted); border: 1px solid var(--line); font-weight: 500; }
+.b-own { background: var(--warn-soft); color: var(--warn); }
+article { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 26px clamp(16px, 3vw, 30px); display: grid; gap: 18px; scroll-margin-top: 16px; }
+.head { display: grid; gap: 10px; }
+.num { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+.badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.files { font-family: var(--mono); font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.ba { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.ba > div { min-width: 0; border: 1px solid var(--line); border-radius: 4px; padding: 14px; overflow-x: auto; display: grid; gap: 8px; align-content: start; }
+.ba .lbl { font-family: var(--display); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); }
+.ba .after { border-color: var(--accent); }
+.ba .after .lbl { color: var(--accent); }
+pre.mermaid { margin: 0; background: transparent; font-size: 13px; }
+.pair { display: grid; gap: 6px; }
+.pair b { font-family: var(--display); font-size: 14px; }
+ul { margin: 0; padding-left: 20px; display: grid; gap: 4px; max-width: 70ch; }
+.wins { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; }
+.wins li { font-family: var(--display); font-size: 13px; padding: 4px 10px; border-radius: 4px; background: var(--accent-soft); color: var(--strong); }
+.callout { border-left: 3px solid var(--warn); background: var(--warn-soft); padding: 10px 14px; font-size: 15px; border-radius: 0 4px 4px 0; }
+.callout.info { border-color: var(--explore); background: var(--explore-soft); }
+section.block { display: grid; gap: 16px; }
+.findings { display: grid; gap: 10px; }
+.finding { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.finding .where { font-family: var(--mono); font-size: 12.5px; color: var(--muted); overflow-wrap: anywhere; }
+.top { background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 6px; padding: 26px clamp(16px, 3vw, 30px); display: grid; gap: 14px; }
+.ok { columns: 2 280px; column-gap: 28px; font-size: 15px; }
+.ok li { break-inside: avoid; margin-bottom: 6px; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+
+<div class="wrap">
+<header>
+  <div class="meta"><span>cordoba-digital-tienda · master abc1234</span><span>DD/MM/AAAA</span><span>Qué se miró y con qué</span></div>
+  <h1>Título del informe</h1>
+  <p class="lede">La respuesta en dos o tres oraciones: qué se encontró y qué conviene hacer.</p>
+  <div class="legend">
+    <span><span class="badge b-strong">Hecho</span> ya está resuelto o en un PR</span>
+    <span><span class="badge b-explore">Pendiente</span> vale la pena, todavía sin hacer</span>
+    <span><span class="badge b-spec">No vale</span> se nota poco para lo que cuesta</span>
+    <span><span class="badge b-own">Ronan</span> necesita aprobación por CODEOWNERS</span>
+  </div>
+</header>
+
+<section class="top">
+  <h2>Resumen</h2>
+  <div class="toc">
+  <table>
+    <thead><tr><th>#</th><th>Qué</th><th>Qué cambia para el cliente</th></tr></thead>
+    <tbody>
+      <tr><td class="mono"><a href="#uno">1</a></td><td>Primer hallazgo</td><td>Lo que se nota</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Cómo se verificó: tests, build, e2e.</p>
+</section>
+
+<section class="block">
+  <h2>Sección</h2>
+  <div class="findings">
+    <div class="finding" id="uno"><b>Hallazgo en pocas palabras</b> <span class="badge b-strong">Hecho</span><p>Qué pasa hoy, qué se cambió o qué se propone, y cuánto se nota.</p><span class="where">archivo.ts:123</span></div>
+  </div>
+  <p class="callout info">Algo que apareció fuera de alcance.</p>
+</section>
+
+<section class="block">
+  <h2>Ya estaba bien</h2>
+  <ul class="ok">
+    <li>Lo que no hay que tocar.</li>
+  </ul>
+</section>
+</div>
