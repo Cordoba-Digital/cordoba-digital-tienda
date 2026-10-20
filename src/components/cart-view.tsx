@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 import { QuantityStepper } from "@/components/cart-drawer";
+import { CartSkeleton } from "@/components/cart-skeleton";
 import { ProductCard } from "@/components/product-card";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
@@ -72,7 +73,9 @@ export function CartView({ suggestions }: { suggestions: ProductView[] }) {
   const savings = Math.max(0, listSubtotal - subtotal);
   const estimatedTotal = Math.max(0, subtotal - discount);
 
-  if (hydrated && items.length === 0) {
+  if (!hydrated) return <CartSkeleton title="Tu carrito" />;
+
+  if (items.length === 0) {
     return (
       <div className="container-xl py-16">
         <div className="card-surface mx-auto flex max-w-xl flex-col items-center gap-3 px-8 py-16 text-center">
