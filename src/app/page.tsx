@@ -20,11 +20,12 @@ import { CategoryRow } from "@/components/category-row";
 import { Icon } from "@/components/category-icon";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { HomeHero } from "@/components/home-hero";
+import { HomeBanners, HomeCategoryGrid, HomeCategoryRows } from "@/components/home-more";
 import { HomeCategoryTabs, HomeExplore, HomeRecentlyViewed } from "@/components/home-sections";
 import { HomeTiles } from "@/components/home-tiles";
 import { ProductRow } from "@/components/product-card";
 import { SectionHeading } from "@/components/ui";
-import { discountPercent } from "@/lib/format";
+import { discountPercent, money } from "@/lib/format";
 import { getGoogleReviews } from "@/lib/google-reviews";
 import { visibleHomeBlocks, type HomeBlockId } from "@/lib/home-layout";
 import type { HeroSlideId } from "@/lib/hero-picks";
@@ -35,12 +36,14 @@ import { renderPerRequestIfNoDatabase } from "@/lib/store-cache";
 import { jsonLdString, storeJsonLd } from "@/lib/structured-data";
 import {
   getBestSellers,
+  getBudgetPicks,
   getCategoryShowcase,
   getCategoryTiles,
   getCategoryTree,
   getDealProducts,
   getFeaturedProducts,
   getGuides,
+  getMoreCategoryRows,
   getProductCount,
   listProducts,
 } from "@/lib/queries";
@@ -103,8 +106,9 @@ export default async function HomePage() {
   const layout = await getHomeLayout();
   const visible = visibleHomeBlocks(layout);
   // Los bloques nuevos piden datos aparte: si están ocultos, no se consultan.
-  const wantsTiles = visible.includes("vitrinas") || visible.includes("vitrinas-2");
-  const [featured, deals, bestSellers, categories, googleReviews, productCount, guides, showcase, explore, tiles, topBar] = await Promise.all([
+  const wantsTiles = visible.includes("vitrinas") || visible.includes("vitrinas-2") || visible.includes("categorias-grilla");
+  const wantsMoreRows = visible.includes("banners") || visible.includes("filas-categoria") || visible.includes("filas-categoria-2");
+  const [featured, deals, bestSellers, categories, googleReviews, productCount, guides, showcase, explore, tiles, topBar, moreRows, budget] = await Promise.all([
     getFeaturedProducts(24),
     getDealProducts(8),
     getBestSellers(8),
@@ -114,12 +118,19 @@ export default async function HomePage() {
     getGuides(),
     visible.includes("por-categoria") ? getCategoryShowcase() : Promise.resolve([]),
     visible.includes("explorar") ? listProducts({ inStock: true, perPage: 10 }) : Promise.resolve(null),
-    wantsTiles ? getCategoryTiles(6) : Promise.resolve([]),
+    // Doce: las seis primeras van a las vitrinas y todas a la grilla del final.
+    wantsTiles ? getCategoryTiles(12) : Promise.resolve([]),
     getTopBarVisible(),
+    wantsMoreRows ? getMoreCategoryRows() : Promise.resolve([]),
+    visible.includes("precio") ? getBudgetPicks() : Promise.resolve({ max: 0, items: [] }),
   ]);
   const tileViews = tiles.map((tile) => ({ ...tile, products: tile.products.map(toCardView) }));
   // Con una sola vitrina visible, esa usa las tres categorías principales.
   const secondTiles = visible.includes("vitrinas") ? tileViews.slice(3, 6) : tileViews.slice(0, 3);
+  // Las categorías que no salen en pestañas ni vitrinas: dos filas, otras dos
+  // y los dos banners. Con pocas categorías, los banners reusan las primeras.
+  const moreViews = moreRows.map((row) => ({ ...row, products: row.products.map(toCardView) }));
+  const bannerViews = moreViews.length >= 6 ? moreViews.slice(4, 6) : moreViews.slice(0, 2);
 
   const ratingValue = googleReviews.rating?.toFixed(1) ?? null;
   const reviewCount = googleReviews.count;
@@ -352,6 +363,21 @@ export default async function HomePage() {
           </section>
       </>
     ),
+    banners: () => <HomeBanners banners={bannerViews} />,
+    "filas-categoria": () => <HomeCategoryRows rows={moreViews.slice(0, 2)} label="Más categorías" />,
+    "filas-categoria-2": () => <HomeCategoryRows rows={moreViews.slice(2, 4)} label="Otras categorías" />,
+    "categorias-grilla": () => <HomeCategoryGrid tiles={tileViews} />,
+    precio: () =>
+      budget.items.length >= 4 ? (
+        <section className="container-xl py-4 sm:py-6">
+          <SectionHeading
+            eyebrow="Para todos los bolsillos"
+            title={`Por menos de ${money(budget.max)}`}
+            action={{ href: `/productos?max=${budget.max}&stock=1`, label: "Ver todos" }}
+          />
+          <ProductRow products={budget.items.map(toCardView)} label={`los productos de menos de ${money(budget.max)}`} />
+        </section>
+      ) : null,
     vitrinas: () => <HomeTiles tiles={tileViews.slice(0, 3)} label="Categorías destacadas" />,
     "vitrinas-2": () => <HomeTiles tiles={secondTiles} mirror label="Más categorías" />,
     "mas-vendidos": () => (

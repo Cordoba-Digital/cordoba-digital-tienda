@@ -15,16 +15,23 @@ export const HOME_BLOCKS = [
   { id: "ofertas", label: "Ofertas", description: "Los productos con precio rebajado y stock, de mayor a menor descuento." },
   { id: "vitrinas", label: "Vitrinas de categorías", description: "Tres tarjetas grandes con foto que llevan a las categorías principales." },
   { id: "mas-vendidos", label: "Más vendidos", description: "Los 8 productos que más salen, con Top 1, 2 y 3." },
+  // La home larga, al estilo de Mercado Libre: filas de productos de las
+  // categorías que no salen arriba, cortadas con banners y vitrinas.
+  { id: "banners", label: "Banners de categorías", description: "Dos banners anchos, uno oscuro y uno claro, con fotos de dos categorías." },
+  { id: "filas-categoria", label: "Más categorías (1)", description: "Dos filas de productos de categorías que no aparecen más arriba." },
   { id: "vitrinas-2", label: "Más vitrinas", description: "Otras tres categorías con foto, para cortar entre filas de productos." },
   { id: "por-categoria", label: "Explorá por categoría", description: "Pestañas con las categorías con más productos y una fila de cada una." },
-  { id: "pagos-retiro", label: "Comprá tranquilo", description: "Franja corta con pagos, retiro en el local y atención por WhatsApp." },
+  { id: "precio", label: "Por menos de…", description: "Productos con stock hasta un precio redondo que sale del catálogo, rebajados primero." },
+  { id: "filas-categoria-2", label: "Más categorías (2)", description: "Otras dos filas de productos de categorías que no aparecen más arriba." },
   { id: "destacados", label: "Destacados", description: "Productos marcados como destacados que no aparecen arriba." },
-  // Desde acá, ocultos de entrada: alargaban la home y repetían lo que ya dicen
-  // el header, la franja de "Comprá tranquilo" o el pie. Se prenden desde el panel.
+  { id: "categorias-grilla", label: "Todas las categorías", description: "Grilla con una foto de cada categoría, cerca del final." },
+  { id: "explorar", label: "Seguí explorando", description: "Grilla con más productos y un botón para cargar más." },
+  { id: "pagos-retiro", label: "Comprá tranquilo", description: "Franja corta con pagos, retiro en el local y atención por WhatsApp." },
+  // Desde acá, ocultos de entrada: repiten lo que ya dicen el header, la franja
+  // de "Comprá tranquilo" o el pie. Se prenden desde el panel.
   { id: "accesos", label: "Accesos rápidos", description: "Atajos a ofertas, más vendidos, envíos, retiro y pagos.", hidden: true },
   { id: "local", label: "El local", description: "Foto del local, dirección, horarios y WhatsApp.", hidden: true },
   { id: "guias", label: "Guías de compra", description: "Las tres primeras guías publicadas.", hidden: true },
-  { id: "explorar", label: "Seguí explorando", description: "Grilla con más productos y un botón para cargar más.", hidden: true },
   { id: "preguntas", label: "Preguntas frecuentes", description: "Las preguntas de siempre sobre envíos, garantía y pagos.", hidden: true },
 ] as const satisfies readonly { id: string; label: string; description: string; fixed?: boolean; hidden?: boolean }[];
 
@@ -44,8 +51,9 @@ function visibleByDefault(block: (typeof HOME_BLOCKS)[number]): boolean {
 }
 
 /**
- * El orden recomendado: productos y vitrinas intercalados, como Tiendamia, y
- * una sola franja informativa. Lo que alarga la home queda oculto de entrada.
+ * El orden recomendado: una home larga como la de Mercado Libre, con filas de
+ * productos, vitrinas y banners intercalados, la grilla de categorías y la
+ * grilla que carga más al final, y una sola franja informativa de cierre.
  */
 export function defaultHomeLayout(): HomeLayoutItem[] {
   return HOME_BLOCKS.map((block) => ({ id: block.id, visible: visibleByDefault(block) }));

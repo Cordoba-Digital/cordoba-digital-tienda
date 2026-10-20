@@ -45,6 +45,18 @@ export function discountPercent(price: PesosARS, compareAt?: number | null): num
 }
 
 /**
+ * Sube un precio al siguiente tope redondo (1, 1,5, 2, 2,5, 3, 5 o 7,5 por una
+ * potencia de 10): 99.999 da 100.000 y 35.378 da 50.000. Sirve para títulos
+ * como "Por menos de $100.000", que con un número exacto no se leen.
+ */
+export function roundPriceCap(price: PesosARS): PesosARS {
+  if (!Number.isFinite(price) || price <= 0) return 0;
+  const power = 10 ** Math.floor(Math.log10(price));
+  const step = [1, 1.5, 2, 2.5, 3, 5, 7.5, 10].find((s) => s * power >= price) ?? 10;
+  return Math.round(step * power);
+}
+
+/**
  * NO hay planes de cuotas en esta tienda, y no se inventan.
  *
  * Antes esta tabla decía "3 cuotas sin interés", "6 cuotas sin interés",

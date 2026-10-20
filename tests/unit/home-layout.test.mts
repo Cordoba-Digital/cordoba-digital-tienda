@@ -12,7 +12,7 @@ import { defaultHomeLayout, HOME_BLOCKS, parseHomeLayout, parseTopBar, visibleHo
 
 const TODOS = HOME_BLOCKS.map((b) => b.id);
 
-test("sin nada guardado la home intercala productos y vitrinas, y lo que la alargaba arranca oculto", () => {
+test("sin nada guardado la home es larga: filas, banners y vitrinas intercalados, y la franja informativa al final", () => {
   assert.deepEqual(visibleHomeBlocks(defaultHomeLayout()), [
     "portada",
     "vistos",
@@ -20,10 +20,16 @@ test("sin nada guardado la home intercala productos y vitrinas, y lo que la alar
     "ofertas",
     "vitrinas",
     "mas-vendidos",
+    "banners",
+    "filas-categoria",
     "vitrinas-2",
     "por-categoria",
-    "pagos-retiro",
+    "precio",
+    "filas-categoria-2",
     "destacados",
+    "categorias-grilla",
+    "explorar",
+    "pagos-retiro",
   ]);
   assert.equal(defaultHomeLayout().length, TODOS.length);
   assert.deepEqual(parseHomeLayout(null), defaultHomeLayout());
@@ -63,8 +69,8 @@ test("con un orden viejo guardado, los bloques nuevos entran después de su veci
     (id) => ({ id, visible: id !== "local" }),
   );
   const layout = parseHomeLayout(viejo);
-  // Lo que ya estaba guardado visible sigue visible ("explorar" no estaba y
-  // arranca oculto); las vitrinas nuevas entran entre las filas de productos.
+  // Lo que ya estaba guardado visible sigue visible; los bloques nuevos entran
+  // visibles después de su vecino del orden recomendado.
   assert.deepEqual(visibleHomeBlocks(layout), [
     "portada",
     "vistos",
@@ -74,9 +80,15 @@ test("con un orden viejo guardado, los bloques nuevos entran después de su veci
     "vitrinas",
     "pagos-retiro",
     "mas-vendidos",
+    "banners",
+    "filas-categoria",
     "vitrinas-2",
     "por-categoria",
+    "precio",
+    "filas-categoria-2",
     "destacados",
+    "categorias-grilla",
+    "explorar",
     "guias",
     "preguntas",
   ]);
@@ -90,4 +102,15 @@ test("la barra de avisos se muestra salvo que esté guardada como oculta", () =>
   assert.equal(parseTopBar({ visible: true }), true);
   assert.equal(parseTopBar({ visible: "false" }), true);
   assert.equal(parseTopBar({ visible: false }), false);
+});
+
+test("con la home de antes guardada (explorar oculto), los bloques nuevos aparecen solos y lo oculto sigue oculto", () => {
+  const antes = ["vistos", "categorias", "ofertas", "vitrinas", "mas-vendidos", "vitrinas-2", "por-categoria", "pagos-retiro", "destacados", "accesos", "local", "guias", "explorar", "preguntas"].map(
+    (id) => ({ id, visible: !["accesos", "local", "guias", "explorar", "preguntas"].includes(id) }),
+  );
+  const visibles = visibleHomeBlocks(parseHomeLayout(antes));
+  for (const id of ["banners", "filas-categoria", "precio", "filas-categoria-2", "categorias-grilla"]) assert.ok(visibles.includes(id as never), id);
+  assert.ok(!visibles.includes("explorar"));
+  assert.ok(visibles.indexOf("banners") > visibles.indexOf("mas-vendidos"));
+  assert.ok(visibles.indexOf("categorias-grilla") > visibles.indexOf("destacados"));
 });

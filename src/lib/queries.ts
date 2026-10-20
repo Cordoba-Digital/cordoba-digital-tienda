@@ -18,6 +18,7 @@ import {
 } from "@/lib/category-tree";
 import { esMarcaDeRelleno } from "@/lib/brand-from-name";
 import { normalizeSearch, stem, suggestCategories, understandQuery, type QueryUnderstanding } from "@/lib/query-understanding";
+import { roundPriceCap } from "@/lib/format";
 import { ttlCache } from "@/lib/ttl-cache";
 
 export type ProductFilters = {
@@ -504,6 +505,41 @@ export async function getCategoryTiles(max = 6) {
     }),
   );
   return rows.filter((row) => row.products.length > 0).slice(0, max);
+}
+
+/**
+ * Filas extra de la home ("Más para ver en…"): las categorías raíz que siguen
+ * a las `skip` con más productos, que ya salen en las pestañas y las vitrinas.
+ * Así la home muestra más del catálogo sin repetir lo de arriba.
+ */
+export async function getMoreCategoryRows(skip = 6, max = 6, perRow = 10, minProducts = 4) {
+  const roots = (await getCategoryTree())
+    .filter((c) => c.count >= minProducts)
+    .sort((a, b) => b.count - a.count)
+    .slice(skip, skip + max + 2);
+  const rows = await Promise.all(
+    roots.map(async (c) => {
+      const { items, total } = await listProducts({ categoryId: c.id, inStock: true, perPage: perRow });
+      return { name: c.name, path: c.path, count: total, tagline: c.tagline, products: items };
+    }),
+  );
+  return rows.filter((row) => row.products.length >= minProducts).slice(0, max);
+}
+
+/**
+ * "Por menos de $X": productos con stock hasta un tope redondo que sale del
+ * catálogo (el 30 % más barato), con los rebajados primero. Si cambian los
+ * precios, el tope se acomoda solo.
+ */
+export async function getBudgetPicks(limit = 12) {
+  const [row] = await db
+    .select({ cap: sql<number | null>`percentile_cont(0.3) within group (order by ${products.price})` })
+    .from(products)
+    .where(and(gte(products.stock, 1), sql`${products.price} > 0`));
+  const max = roundPriceCap(Number(row?.cap ?? 0));
+  if (!max) return { max: 0, items: [] };
+  const { items } = await listProducts({ inStock: true, max, sort: "descuento", perPage: limit });
+  return { max, items };
 }
 
 /** Por slug, con `cache()` de React: `generateMetadata` y la página llaman a
