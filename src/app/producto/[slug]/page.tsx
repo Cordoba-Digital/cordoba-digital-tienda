@@ -16,6 +16,7 @@ import { discountPercent, formatDate, money } from "@/lib/format";
 import { toCardView } from "@/lib/product-view";
 import {
   getProductBreadcrumbs,
+  getPrebuiltProductSlugs,
   getProductBySlug,
   getRelatedProducts,
   getReviewsForProduct,
@@ -33,9 +34,24 @@ import { sanitizeHtml } from "@/lib/sanitize-html";
  */
 export const revalidate = 300;
 
-/** Sin fichas armadas en el build: cada una se genera en la primera visita. */
-export function generateStaticParams(): { slug: string }[] {
-  return [];
+/** Cuántas fichas salen armadas del build. El resto se arma en la primera visita. */
+const FICHAS_EN_BUILD = 120;
+
+/**
+ * Las fichas más vendidas salen armadas del build, así la primera visita
+ * después de un deploy no espera a la base. Si la base no contesta (el CI
+ * buildea con una de mentira) no se arma ninguna y el build sigue.
+ */
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  if (process.env.NEXT_PHASE !== "phase-production-build") return [];
+  try {
+    const slugs = await getPrebuiltProductSlugs(FICHAS_EN_BUILD);
+    return slugs.map((slug) => ({ slug }));
+  } catch (error) {
+    const cause = error instanceof Error && error.cause instanceof Error ? error.cause : error;
+    console.warn("[build] sin fichas prearmadas, la base no contestó:", cause instanceof Error ? cause.message : cause);
+    return [];
+  }
 }
 
 /**
