@@ -449,6 +449,21 @@ export async function getBestSellers(limit = 8) {
   return db.select().from(products).where(gte(products.stock, 1)).orderBy(desc(products.createdAt), desc(products.id)).limit(limit);
 }
 
+/**
+ * Slugs de las fichas que se arman en el build: las de más reseñas con stock
+ * (el mismo criterio que `getBestSellers`) y, detrás, las más nuevas. Los slugs
+ * con `%` que dejó el migrador quedan afuera: esos se arman en la primera visita.
+ */
+export async function getPrebuiltProductSlugs(limit: number): Promise<string[]> {
+  const rows = await db
+    .select({ slug: products.slug })
+    .from(products)
+    .where(and(gte(products.stock, 1), sql`strpos(${products.slug}, '%') = 0`))
+    .orderBy(desc(products.reviewCount), desc(products.createdAt), desc(products.id))
+    .limit(limit);
+  return rows.map((row) => row.slug);
+}
+
 export async function getNewArrivals(limit = 8) {
   return db.select().from(products).orderBy(desc(products.createdAt), desc(products.id)).limit(limit);
 }
