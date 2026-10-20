@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 import { CATEGORY_MERGES, mergedCategoryRedirect } from "./src/lib/category-merges";
 
+/** Store de Vercel Blob donde están las fotos de producto (ver docs/IMAGENES.md). */
+const BLOB_HOST = "6weoa5xmoylnh9pt.public.blob.vercel-storage.com";
+
 /** Dominio público de las fotos en Cloudflare R2 (ver src/lib/r2.ts). */
 const r2Host = (() => {
   try {
@@ -120,11 +123,11 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "cordobadigital.net",
       },
-      {
-        protocol: "https",
-        hostname: "*.public.blob.vercel-storage.com",
-      },
-      { protocol: "https", hostname: "*.r2.dev" },
+      // Solo nuestras fotos: con un comodín (`*.public.blob.vercel-storage.com`,
+      // `*.r2.dev`) cualquiera podía pasar imágenes de su propio bucket por el
+      // optimizador y gastar la cuota del plan. Si se cambia de store de Blob,
+      // hay que actualizar este host (es el de las URLs de las fotos).
+      { protocol: "https", hostname: BLOB_HOST },
       ...(r2Host ? [{ protocol: "https" as const, hostname: r2Host }] : []),
     ],
   },

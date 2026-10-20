@@ -7,11 +7,14 @@ import { useState } from "react";
 import { QrCode } from "@/components/qr-code";
 import { CopyButton } from "@/components/transfer-details";
 import { money } from "@/lib/format";
+import type { QrSvg } from "@/lib/qr-svg";
 import { formatUsdt, usdtShortfall } from "@/lib/usdt-amount";
 
 export type UsdtPaymentInfo = {
   /** Wallet de la tienda; null si USDT se apagó después del pedido. */
   wallet: string | null;
+  /** QR de la wallet, armado en el servidor; null sin wallet. */
+  walletQr: QrSvg | null;
   /** USDT a enviar, fijado al crear el pedido ("73.45"). */
   expectedAmount: string;
   /** Cotización de la tienda con la que se calculó, y de cuándo era. */
@@ -73,9 +76,9 @@ export function UsdtPaymentPanel({ code, total, info }: { code: string; total: n
         </div>
       </div>
 
-      {info.wallet ? (
+      {info.wallet && info.walletQr ? (
         <div className="mt-4 flex flex-col items-center gap-4 rounded-xl border border-ink-100 bg-surface p-4 sm:flex-row sm:items-start">
-          <QrCode value={info.wallet} label="QR de la wallet para pagar con USDT" />
+          <QrCode qr={info.walletQr} label="QR de la wallet para pagar con USDT" />
           <dl className="w-full min-w-0 space-y-2 text-sm">
             <div>
               <dt className="text-ink-500">Monto exacto</dt>

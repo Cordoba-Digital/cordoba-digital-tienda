@@ -13,7 +13,7 @@ import assert from "node:assert/strict";
 import { type ChildProcess, spawn } from "node:child_process";
 import { after, before, test } from "node:test";
 
-import { eq } from "drizzle-orm";
+import { eq, sql } from "drizzle-orm";
 import { type Browser, chromium } from "playwright";
 
 import { db, pool, resetDb, schema, seedProduct } from "../api/db.mts";
@@ -207,6 +207,38 @@ test("desde una tarjeta se guarda el favorito y se suma al carrito", async () =>
   await page.getByLabel("Cantidad en el carrito: 2").waitFor();
   assert.deepEqual(erroresDePagina, []);
   await page.close();
+});
+
+test("un pedido con USDT muestra el QR de la wallet, armado en el servidor", async () => {
+  // Dirección pública (el contrato de USDT), no la wallet de la tienda.
+  const wallet = "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t";
+  await db.execute(sql`insert into store_settings (key, value) values ('medios_pago.usdt', ${JSON.stringify({ wallet })}::jsonb), ('cotizacion.usdt_tienda', '{"rate": 1500}'::jsonb) on conflict (key) do update set value = excluded.value`);
+  try {
+    const res = await fetch(`${BASE}/api/checkout`, {
+      method: "POST",
+      headers: { "content-type": "application/json", origin: BASE },
+      body: JSON.stringify({
+        items: [{ slug: "auriculares-prueba", quantity: 1 }],
+        customer: { firstName: "Beto", lastName: "Gómez", email: "beto@example.com", phone: "351 555 9876", docId: "20123456" },
+        delivery: { method: "standard", zip: "5000", street: "Colón", number: "100", city: "Córdoba", province: "Córdoba" },
+        payment: { method: "usdt" },
+      }),
+    });
+    const body = (await res.json()) as { ok: boolean; code?: string };
+    assert.equal(res.status, 200, JSON.stringify(body));
+
+    const page = await browser.newPage();
+    const erroresDePagina: string[] = [];
+    page.on("pageerror", (e) => erroresDePagina.push(e.message));
+    await page.goto(`${BASE}/pedido/${body.code}`);
+    const qr = page.getByRole("img", { name: "QR de la wallet para pagar con USDT" });
+    await qr.waitFor();
+    assert.ok(((await qr.locator("path").getAttribute("d")) ?? "").startsWith("M4 4h1v1h-1z"));
+    assert.deepEqual(erroresDePagina, []);
+    await page.close();
+  } finally {
+    await db.execute(sql`delete from store_settings where key in ('medios_pago.usdt', 'cotizacion.usdt_tienda')`);
+  }
 });
 
 test("la tienda y el panel mandan sus headers de seguridad, sin valores repetidos", async () => {
