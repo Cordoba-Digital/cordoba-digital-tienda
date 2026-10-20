@@ -8,7 +8,6 @@ import { InstallmentsProvider } from "@/components/installments-provider";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StoreProvider } from "@/components/store-provider";
-import { SmoothScroll } from "@/components/smooth-scroll";
 import { StoreChrome } from "@/components/store-chrome";
 import { UsdRateProvider } from "@/components/usd-price";
 import { WhatsAppFab } from "@/components/whatsapp-fab";
@@ -153,7 +152,6 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <StoreProvider>
           <InstallmentsProvider plans={installmentPlans}>
             <UsdRateProvider rate={usdRate}>
-              <SmoothScroll />
               <StoreChrome>
                 <SiteHeader categories={categories} topBar={topBar} />
               </StoreChrome>

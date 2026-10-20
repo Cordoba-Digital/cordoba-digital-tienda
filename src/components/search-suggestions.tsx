@@ -78,7 +78,6 @@ export function SearchSuggestions({
       id={id}
       role="listbox"
       className="absolute left-0 right-0 top-[52px] z-50 max-h-[70vh] animate-pop overflow-y-auto overscroll-contain rounded-2xl border border-ink-100 bg-surface shadow-2xl shadow-black/10"
-      data-lenis-prevent
     >
       {shortcuts.length ? (
         <div className="border-b border-ink-50 py-1">

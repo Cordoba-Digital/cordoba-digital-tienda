@@ -315,7 +315,7 @@ function CatalogPanel({
         ref={listRef}
         aria-label="Áreas del catálogo"
         onKeyDown={handleListKeyDown}
-        className="scroll-fino max-h-[70vh] overflow-y-auto overscroll-contain data-lenis-prevent border-r border-ink-100 py-2 pl-2 pr-1"
+        className="scroll-fino max-h-[70vh] overflow-y-auto overscroll-contain border-r border-ink-100 py-2 pl-2 pr-1"
       >
         {categories.map((root) => {
           const isSelected = root.slug === selected.slug;
@@ -356,7 +356,7 @@ function CatalogPanel({
         lo deja estirado por el contenido y el `overflow-y-auto` de abajo no
         llega a cortar: el area con 20 hijos se saldria del panel.
       */}
-      <div className="scroll-fino flex min-h-0 flex-col overflow-y-auto overscroll-contain data-lenis-prevent p-4">
+      <div className="scroll-fino flex min-h-0 flex-col overflow-y-auto overscroll-contain p-4">
         <div className="mb-3 flex items-start gap-3 border-b border-ink-100 pb-3">
           <span className="text-xl leading-none" aria-hidden>
             <CategoryIcon name={selected.name} className="h-6 w-6 text-brand-700" />
