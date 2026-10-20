@@ -305,34 +305,35 @@ async function subtreeOf(categoryId: number): Promise<{ ids: number[]; slugs: st
   return { ids: nodes.map((n) => n.id), slugs: nodes.map((n) => n.slug) };
 }
 
+// Proyección explícita a columnas de tarjeta: el `select()` entero traía
+// `descriptionHtml`, `specs` y SEO por cada una de las 24 filas, peso que
+// viaja DB→server aunque la tarjeta solo usa `toView` (ver `CardRow`).
+// La usan el catálogo y las recomendaciones de la ficha.
+const cardColumns = {
+  slug: products.slug,
+  name: products.name,
+  brand: products.brand,
+  categorySlug: products.categorySlug,
+  shortDescription: products.shortDescription,
+  price: products.price,
+  compareAtPrice: products.compareAtPrice,
+  stock: products.stock,
+  rating: products.rating,
+  reviewCount: products.reviewCount,
+  soldCount: products.soldCount,
+  images: products.images,
+  imageSrcSets: products.imageSrcSets,
+  badge: products.badge,
+  freeShipping: products.freeShipping,
+  highlights: products.highlights,
+};
+
 export async function listProducts(filters: ProductFilters) {
   const page = Math.max(1, filters.page ?? 1);
   const perPage = filters.perPage ?? 12;
   const subtree =
     filters.categoryId != null && filters.category == null ? await subtreeOf(filters.categoryId) : undefined;
   const where = buildWhere(filters, subtree);
-
-  // Proyección explícita a columnas de tarjeta: el `select()` entero traía
-  // `descriptionHtml`, `specs` y SEO por cada una de las 24 filas, peso que
-  // viaja DB→server aunque la tarjeta solo usa `toView` (ver `CardRow`).
-  const cardColumns = {
-    slug: products.slug,
-    name: products.name,
-    brand: products.brand,
-    categorySlug: products.categorySlug,
-    shortDescription: products.shortDescription,
-    price: products.price,
-    compareAtPrice: products.compareAtPrice,
-    stock: products.stock,
-    rating: products.rating,
-    reviewCount: products.reviewCount,
-    soldCount: products.soldCount,
-    images: products.images,
-    imageSrcSets: products.imageSrcSets,
-    badge: products.badge,
-    freeShipping: products.freeShipping,
-    highlights: products.highlights,
-  };
 
   // Items y conteo en paralelo: son dos round-trips independientes con el
   // mismo `where`, y esta consulta corre en /productos, /categoria y
@@ -576,7 +577,7 @@ export async function getRelatedProducts(
   // número suelto en el ORDER BY como "la columna 0" y la consulta falla.
   const mismaMarca = esMarcaDeRelleno(product.brand) ? [] : [desc(sql`(${products.brand} = ${product.brand})::int`)];
   return db
-    .select()
+    .select(cardColumns)
     .from(products)
     .where(and(eq(products.categorySlug, product.categorySlug), ne(products.slug, product.slug)))
     .orderBy(

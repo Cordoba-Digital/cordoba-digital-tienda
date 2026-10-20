@@ -67,3 +67,20 @@ export function toView(product: CardRow): ProductView {
     highlights: product.highlights ?? [],
   };
 }
+
+/**
+ * Lo que necesita una `ProductCard` y nada más: las dos primeras fotos (la
+ * segunda es la del hover) y sin descripción ni destacados. Las grillas mandan
+ * decenas de tarjetas al navegador; con `toView` viajaba la galería entera de
+ * cada producto en el HTML y otra vez en el payload de React.
+ */
+export function toCardView(product: CardRow): ProductView {
+  const view = toView(product);
+  return {
+    ...view,
+    shortDescription: "",
+    images: view.images.slice(0, 2),
+    imageSrcSets: view.imageSrcSets.slice(0, 2),
+    highlights: [],
+  };
+}

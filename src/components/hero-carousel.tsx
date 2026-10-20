@@ -45,8 +45,10 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
   const [pos, setPos] = useState(loop ? 1 : 0);
   const [animate, setAnimate] = useState(true);
   // Tras el salto, el aviso real ya se ve en su estado final: sin esto
-  // repetiría la entrada que ya hizo la copia y parpadearía.
-  const [skipEnter, setSkipEnter] = useState(false);
+  // repetiría la entrada que ya hizo la copia y parpadearía. Arranca en
+  // `true`: el primer slide se ve de entrada, sin el fundido desde opacidad 0,
+  // que demoraba el LCP (el navegador no cuenta un elemento invisible).
+  const [skipEnter, setSkipEnter] = useState(true);
   const jumping = useRef(false);
   const index = loop ? (pos - 1 + count) % count : 0;
   const [paused, setPaused] = useState(false);
@@ -334,7 +336,7 @@ export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
                             src={producto.image}
                             srcSet={producto.srcSet}
                             alt={producto.name}
-                            sizes="(max-width: 1024px) 100vw, 40vw"
+                            sizes="(max-width: 639px) 136px, (max-width: 1023px) 100vw, 40vw"
                             width={800}
                             height={500}
                             priority={i === 0 && !clone}

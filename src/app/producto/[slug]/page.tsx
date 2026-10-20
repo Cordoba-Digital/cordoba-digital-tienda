@@ -13,7 +13,7 @@ import {
 } from "@/components/product-detail";
 import { Pill, Stars } from "@/components/ui";
 import { discountPercent, formatDate, money } from "@/lib/format";
-import { toView } from "@/lib/product-view";
+import { toCardView } from "@/lib/product-view";
 import {
   getProductBreadcrumbs,
   getProductBySlug,
@@ -396,7 +396,7 @@ export default async function ProductPage({ params }: { params: Params }) {
         <section className="mt-14">
           <h2 className="mb-5 text-xl font-extrabold tracking-tight text-ink-900">También te puede interesar</h2>
           {/* Carrusel a mano: no avanza solo. Flechas en escritorio, deslizar en el celular. */}
-          <ProductRow products={related.map(toView)} label="las recomendaciones" />
+          <ProductRow products={related.map(toCardView)} label="las recomendaciones" />
         </section>
       ) : null}
 
