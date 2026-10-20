@@ -65,20 +65,62 @@ const CART_KEY = "cd_cart_v1";
 const FAV_KEY = "cd_fav_v1";
 const RECENT_KEY = "cd_recent_v1";
 
-function readJSON<T>(key: string, fallback: T): T {
-  if (typeof window === "undefined") return fallback;
+function readJSON(key: string): unknown {
+  if (typeof window === "undefined") return null;
   try {
     const raw = window.localStorage.getItem(key);
-    if (!raw) return fallback;
-    const parsed = JSON.parse(raw) as T;
-    // Si el contenido existe pero no tiene la forma esperada (p. ej. un
-    // string donde va un array), vale el fallback: sin esto un dato
-    // corrupto rompe el carrito en vez de empezar vacío.
-    if (Array.isArray(fallback) && !Array.isArray(parsed)) return fallback;
-    return parsed;
+    return raw ? JSON.parse(raw) : null;
   } catch {
-    return fallback;
+    return null;
   }
+}
+
+/**
+ * Escribe sin romper la tienda: con el almacenamiento bloqueado (Chrome con
+ * "bloquear todas las cookies") o lleno, `setItem` tira, y un error dentro de
+ * un efecto del provider, que está en el layout, tiraba abajo todo el sitio.
+ */
+function writeJSON(key: string, value: unknown): void {
+  try {
+    window.localStorage.setItem(key, JSON.stringify(value));
+  } catch {
+    /* sin almacenamiento el carrito vive hasta recargar */
+  }
+}
+
+function readStrings(key: string): string[] {
+  const parsed = readJSON(key);
+  return Array.isArray(parsed) ? parsed.filter((v): v is string => typeof v === "string") : [];
+}
+
+/**
+ * El carrito guardado, ítem por ítem: uno sin precio o sin cantidad válida
+ * se descarta, en vez de dejar el subtotal en NaN. Un dato corrupto hace
+ * empezar con el carrito vacío, no romperlo.
+ */
+function readCart(): CartItem[] {
+  const parsed = readJSON(CART_KEY);
+  if (!Array.isArray(parsed)) return [];
+  const isInt = (v: unknown): v is number => typeof v === "number" && Number.isFinite(v);
+  return parsed.flatMap((raw): CartItem[] => {
+    const item = raw as Partial<CartItem> | null;
+    if (!item || typeof item.slug !== "string" || !item.slug || typeof item.name !== "string") return [];
+    if (!isInt(item.price) || item.price < 0 || !isInt(item.quantity) || item.quantity <= 0 || !isInt(item.stock)) return [];
+    return [
+      {
+        slug: item.slug,
+        name: item.name,
+        brand: typeof item.brand === "string" ? item.brand : "",
+        image: typeof item.image === "string" ? item.image : "",
+        imageSrcSet: Array.isArray(item.imageSrcSet) ? item.imageSrcSet.filter((v): v is string => typeof v === "string") : undefined,
+        price: item.price,
+        compareAtPrice: isInt(item.compareAtPrice) ? item.compareAtPrice : null,
+        stock: item.stock,
+        quantity: item.quantity,
+        freeShipping: item.freeShipping === true,
+      },
+    ];
+  });
 }
 
 // El `stock` migrado es disponibilidad, no cantidad (1 = hay, 0 = no hay,
@@ -103,9 +145,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const id = window.setTimeout(() => {
-      setItems(readJSON<CartItem[]>(CART_KEY, []));
-      setFavorites(readJSON<string[]>(FAV_KEY, []));
-      setRecentlyViewed(readJSON<string[]>(RECENT_KEY, []));
+      setItems(readCart());
+      setFavorites(readStrings(FAV_KEY));
+      setRecentlyViewed(readStrings(RECENT_KEY));
       setHydrated(true);
     }, 0);
     return () => window.clearTimeout(id);
@@ -113,17 +155,17 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (!hydrated) return;
-    window.localStorage.setItem(CART_KEY, JSON.stringify(items));
+    writeJSON(CART_KEY, items);
   }, [items, hydrated]);
 
   useEffect(() => {
     if (!hydrated) return;
-    window.localStorage.setItem(FAV_KEY, JSON.stringify(favorites));
+    writeJSON(FAV_KEY, favorites);
   }, [favorites, hydrated]);
 
   useEffect(() => {
     if (!hydrated) return;
-    window.localStorage.setItem(RECENT_KEY, JSON.stringify(recentlyViewed));
+    writeJSON(RECENT_KEY, recentlyViewed);
   }, [recentlyViewed, hydrated]);
 
   useEffect(() => {

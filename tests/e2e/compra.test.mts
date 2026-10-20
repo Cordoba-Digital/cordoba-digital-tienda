@@ -126,6 +126,39 @@ test("un cliente compra desde la ficha y el pedido queda en la base", async () =
   assert.deepEqual(erroresDePagina, []);
 });
 
+test("el carrito no muestra $0 antes de leerse y sobrevive a un almacenamiento roto", async () => {
+  // El HTML del servidor no sabe qué hay en el carrito: muestra el esqueleto,
+  // no la página armada con $0 que después saltaba a los ítems reales.
+  const html = await (await fetch(`${BASE}/carrito`)).text();
+  assert.match(html, /Cargando tu carrito/);
+
+  const page = await browser.newPage();
+  const erroresDePagina: string[] = [];
+  page.on("pageerror", (e) => erroresDePagina.push(e.message));
+  // Un ítem guardado sin precio (dato viejo o corrupto) y un almacenamiento que
+  // no deja escribir, como Chrome con "bloquear todas las cookies".
+  await page.addInitScript(() => {
+    window.localStorage.setItem(
+      "cd_cart_v1",
+      JSON.stringify([
+        { slug: "roto", name: "Sin precio", quantity: 1, stock: 1 },
+        { slug: "auriculares-prueba", name: "Producto auriculares-prueba", brand: "", image: "", price: 250000, compareAtPrice: null, stock: 5, quantity: 1, freeShipping: false },
+      ]),
+    );
+    Storage.prototype.setItem = () => {
+      throw new DOMException("bloqueado", "SecurityError");
+    };
+  });
+
+  await page.goto(`${BASE}/carrito`);
+  await page.getByRole("heading", { name: "Tu carrito", exact: true }).waitFor();
+  await page.getByRole("link", { name: "Ir a finalizar la compra →" }).waitFor();
+  assert.equal(await page.getByText("Sin precio").count(), 0);
+  assert.equal(await page.getByText("NaN").count(), 0);
+  assert.deepEqual(erroresDePagina, []);
+  await page.close();
+});
+
 test("la tienda y el panel mandan sus headers de seguridad, sin valores repetidos", async () => {
   const tienda = await fetch(`${BASE}/producto/auriculares-prueba`);
   assert.equal(tienda.headers.get("strict-transport-security"), "max-age=63072000");

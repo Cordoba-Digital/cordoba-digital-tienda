@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
+import { CartSkeleton } from "@/components/cart-skeleton";
 import { ProductImg } from "@/components/product-img";
 import { useStore } from "@/components/store-provider";
 import { TransferDetails } from "@/components/transfer-details";
@@ -378,7 +379,14 @@ export function CheckoutFlow({
       try {
         const saved = window.localStorage.getItem("cd_checkout_v1");
         if (saved) {
-          const restored = { ...EMPTY_FORM, ...(JSON.parse(saved) as Partial<FormState>) };
+          // Solo los campos conocidos y con texto: un valor que no es string
+          // rompía el formulario (el CP se usa con `.replace`).
+          const parsed = JSON.parse(saved) as Record<string, unknown> | null;
+          const restored = { ...EMPTY_FORM };
+          for (const key of Object.keys(EMPTY_FORM) as (keyof FormState)[]) {
+            const value = parsed?.[key];
+            if (typeof value === "string") restored[key] = value;
+          }
           setForm(restored);
           // Quien ya compró desde este navegador arranca con sus datos listos.
           if (Object.keys(validatePersonalData(restored)).length === 0) {
@@ -416,7 +424,11 @@ export function CheckoutFlow({
     if (!hydrated) return;
     window.clearTimeout(persistTimer.current);
     persistTimer.current = window.setTimeout(() => {
-      window.localStorage.setItem("cd_checkout_v1", JSON.stringify({ ...form, notes: "" }));
+      try {
+        window.localStorage.setItem("cd_checkout_v1", JSON.stringify({ ...form, notes: "" }));
+      } catch {
+        /* sin almacenamiento el formulario no se recuerda */
+      }
     }, 400);
     return () => window.clearTimeout(persistTimer.current);
   }, [form, hydrated]);
@@ -677,7 +689,11 @@ export function CheckoutFlow({
           .filter(Boolean)
           .join(" · ");
 
-  if (hydrated && items.length === 0) {
+  // Hasta leer el carrito y los datos guardados no se dibuja el formulario:
+  // así no salta de "$0" a los ítems ni se pliega el paso 1 a la vista.
+  if (!hydrated) return <CartSkeleton title="Finalizá tu compra" />;
+
+  if (items.length === 0) {
     return (
       <div className="container-xl py-16">
         <div className="card-surface mx-auto flex max-w-lg flex-col items-center gap-3 px-8 py-14 text-center">
