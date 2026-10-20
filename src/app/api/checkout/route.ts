@@ -137,17 +137,19 @@ export async function POST(request: Request) {
     return Response.json({ ok: false, errors }, { status: 400 });
   }
 
+  // Las dos lecturas no dependen una de otra: van juntas a la base.
+  const checkoutKey = parseCheckoutKey(body.checkoutKey);
+  const [existing, unpaid] = await Promise.all([
+    checkoutKey ? findOrderByCheckoutKey(checkoutKey, email) : null,
+    countUnpaidOrders(email, phone),
+  ]);
+
   // El mismo intento ya creó un pedido (la respuesta se perdió o llegó un
   // doble toque): se devuelve ese, sin reservar stock ni usar el cupón de nuevo.
-  const checkoutKey = parseCheckoutKey(body.checkoutKey);
-  if (checkoutKey) {
-    const existing = await findOrderByCheckoutKey(checkoutKey, email);
-    if (existing) return Response.json({ ok: true, code: existing.code, total: existing.total });
-  }
+  if (existing) return Response.json({ ok: true, code: existing.code, total: existing.total });
 
   // Sin pago no hay reserva, pero una orden igual guarda stock un rato: con
   // un tope por cliente, nadie puede llenar la tienda de órdenes que no paga.
-  const unpaid = await countUnpaidOrders(email, phone);
   if (unpaid >= MAX_UNPAID_ORDERS) {
     return Response.json(
       {

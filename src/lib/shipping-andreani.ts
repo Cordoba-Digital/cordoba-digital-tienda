@@ -1,7 +1,7 @@
 import { inArray } from "drizzle-orm";
 
 import { db } from "@/db";
-import { products } from "@/db/schema";
+import { products, type Product } from "@/db/schema";
 import { andreaniConfigurado, AndreaniError, cotizacionEnCache, cotizar, type ProductoCotizacion } from "@/lib/andreani";
 import { medidasDeEnvio } from "@/lib/andreani-paquete";
 import { ANDREANI_LIMIT, blockedMinutes, recordMiss } from "@/lib/rate-limit";
@@ -9,25 +9,31 @@ import type { PreciosAndreani } from "@/lib/shipping";
 
 export type ItemCarrito = { slug: string; quantity: number };
 
+/** Lo que hace falta de cada producto para cotizar. */
+export type FilaEnvio = Pick<Product, "slug" | "price" | "weight" | "dimensions">;
+
 /** Tope de unidades por cotización, igual que el del checkout. */
 const MAX_UNIDADES = 99;
 
 /**
  * Productos del carrito listos para cotizar, o null si alguno no tiene medidas
  * cargadas (en ese caso no se puede pedir precio a Andreani y se usa la
- * tarifa fija por zona).
+ * tarifa fija por zona). Con `filas`, usa esas en vez de volver a la base: el
+ * checkout ya las leyó para el precio.
  */
-export async function productosParaAndreani(items: ItemCarrito[]): Promise<ProductoCotizacion[] | null> {
+export async function productosParaAndreani(items: ItemCarrito[], filas?: FilaEnvio[]): Promise<ProductoCotizacion[] | null> {
   const limpios = items
     .filter((i) => typeof i?.slug === "string" && i.slug)
     .map((i) => ({ slug: i.slug, quantity: Math.max(1, Math.min(MAX_UNIDADES, Math.floor(Number(i.quantity) || 1))) }));
   if (!limpios.length) return null;
 
-  const filas = await db
-    .select({ slug: products.slug, price: products.price, weight: products.weight, dimensions: products.dimensions })
-    .from(products)
-    .where(inArray(products.slug, limpios.map((i) => i.slug)));
-  const porSlug = new Map(filas.map((f) => [f.slug, f]));
+  const leidas =
+    filas ??
+    (await db
+      .select({ slug: products.slug, price: products.price, weight: products.weight, dimensions: products.dimensions })
+      .from(products)
+      .where(inArray(products.slug, limpios.map((i) => i.slug))));
+  const porSlug = new Map(leidas.map((f) => [f.slug, f]));
 
   const resultado: ProductoCotizacion[] = [];
   for (const item of limpios) {
@@ -66,10 +72,10 @@ export async function consultaAndreaniPermitida(ip: string): Promise<boolean> {
  * credencial, productos sin medidas o Andreani caído). Nunca tira: el checkout
  * sigue funcionando con la tarifa fija.
  */
-export async function preciosAndreani(cp: string, items: ItemCarrito[], ip?: string): Promise<PreciosAndreani> {
+export async function preciosAndreani(cp: string, items: ItemCarrito[], ip?: string, filas?: FilaEnvio[]): Promise<PreciosAndreani> {
   if (!andreaniConfigurado() || cp.length !== 4) return {};
   try {
-    const productos = await productosParaAndreani(items);
+    const productos = await productosParaAndreani(items, filas);
     if (!productos) return {};
     // Con IP (la ruta pública de cotización) se limita cuántas llamadas nuevas
     // a Andreani puede generar cada visitante. Lo que ya está en caché no cuenta.
