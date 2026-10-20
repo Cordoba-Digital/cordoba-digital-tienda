@@ -563,7 +563,7 @@ export function AdminProductForm({
                   aria-label="Buscar categoría secundaria"
                   className={`${inputCls} mb-2`}
                 />
-                <div className="max-h-48 space-y-0.5 overflow-y-auto rounded-lg border border-ink-100 p-1" data-lenis-prevent>
+                <div className="max-h-48 space-y-0.5 overflow-y-auto rounded-lg border border-ink-100 p-1">
                   {filteredCategories
                     .filter((c) => c.slug !== categorySlug)
                     .map((c) => (

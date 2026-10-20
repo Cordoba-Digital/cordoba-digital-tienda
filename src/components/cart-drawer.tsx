@@ -118,7 +118,7 @@ export function CartDrawer() {
           </div>
         ) : (
           <>
-            <div data-lenis-prevent className="flex-1 space-y-3 overflow-y-auto overscroll-contain px-5 py-4">
+            <div className="flex-1 space-y-3 overflow-y-auto overscroll-contain px-5 py-4">
               {items.map((item) => (
                 <div key={item.slug} className="relative flex gap-3 rounded-xl border border-ink-100 p-3">
                   {lastAdded?.slug === item.slug ? (

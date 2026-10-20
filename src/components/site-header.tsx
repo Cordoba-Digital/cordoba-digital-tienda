@@ -420,7 +420,7 @@ export function SiteHeader({ categories, topBar = true }: { categories: Category
                 </svg>
               </button>
             </div>
-            <div className="flex-1 overflow-y-auto overscroll-contain px-3 pb-5 pt-3" data-lenis-prevent>
+            <div className="flex-1 overflow-y-auto overscroll-contain px-3 pb-5 pt-3">
               <p className="px-3 pb-1 text-[11px] font-bold uppercase tracking-[0.16em] text-ink-400">Categorías</p>
               <div className="space-y-0.5">
                 {categories.map((c, index) => {

@@ -379,7 +379,7 @@ export function FiltersPanel({
                 <Icon name="x" className="h-5 w-5" />
               </button>
             </div>
-            <div className="overflow-y-auto overscroll-contain data-lenis-prevent px-5 py-5">{body}</div>
+            <div className="overflow-y-auto overscroll-contain px-5 py-5">{body}</div>
             <div className="border-t border-ink-100 p-4">
               <button
                 type="button"
