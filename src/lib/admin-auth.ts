@@ -22,8 +22,18 @@ const REMEMBER_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 /** Una sesión recordada se renueva como mucho una vez por día. */
 const RENEW_AFTER_MS = 24 * 60 * 60 * 1000;
 
+/**
+ * Firma de las cookies del admin. En producción sale solo de
+ * `ADMIN_SESSION_SECRET`: si firmara con `ADMIN_PASSWORD`, quien tenga una
+ * cookie válida podría adivinar la contraseña probando claves offline, sin el
+ * límite de intentos del login. En local y en los tests se acepta la
+ * contraseña como respaldo para no tener que cargar dos variables.
+ */
 function sessionSecret(): string {
-  return process.env.ADMIN_SESSION_SECRET?.trim() || process.env.ADMIN_PASSWORD?.trim() || "";
+  const secret = process.env.ADMIN_SESSION_SECRET?.trim();
+  if (secret) return secret;
+  if (process.env.VERCEL_ENV === "production") return "";
+  return process.env.ADMIN_PASSWORD?.trim() || "";
 }
 
 /** Dueños del panel (`ADMIN_EMAILS`, separados por coma). Los demás admins están en Accesos. */
