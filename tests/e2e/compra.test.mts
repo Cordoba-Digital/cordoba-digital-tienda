@@ -126,6 +126,36 @@ test("un cliente compra desde la ficha y el pedido queda en la base", async () =
   assert.deepEqual(erroresDePagina, []);
 });
 
+test("si el CP cambia mientras se cotiza el envío, el spinner no queda girando", async () => {
+  const page = await browser.newPage();
+  // La cotización tarda: así el CP se puede corregir con la consulta en vuelo.
+  await page.route("**/api/shipping", async (route) => {
+    await new Promise((r) => setTimeout(r, 1500));
+    await route.continue().catch(() => {});
+  });
+
+  await page.goto(`${BASE}/producto/auriculares-prueba`);
+  await page.getByRole("button", { name: "Comprar ahora", exact: true }).first().click();
+  await page.waitForURL(`${BASE}/carrito`);
+  await page.getByRole("link", { name: "Ir a finalizar la compra →" }).click();
+  await page.waitForURL(`${BASE}/checkout`);
+  await page.getByLabel("Nombre", { exact: true }).fill("Ana");
+  await page.getByLabel("Apellidos", { exact: true }).fill("Pérez");
+  await page.getByLabel(/^Email/).fill("ana@example.com");
+  await page.getByLabel("Teléfono / WhatsApp").fill("351 555 1234");
+  await page.getByLabel("DNI o CUIT").fill("30123456");
+  await page.getByRole("button", { name: /Continuar a la entrega/ }).click();
+  await page.getByRole("button", { name: /Envío a domicilio/ }).click();
+
+  const cp = page.getByLabel("Código postal");
+  await cp.fill("5000");
+  await page.getByText("Calculando envíos...").waitFor();
+  await cp.press("Backspace");
+  await page.getByText("Ingresá tu CP para ver costos y plazos.").waitFor({ timeout: 3000 });
+  assert.equal(await page.getByText("Calculando envíos...").count(), 0);
+  await page.close();
+});
+
 test("la tienda y el panel mandan sus headers de seguridad, sin valores repetidos", async () => {
   const tienda = await fetch(`${BASE}/producto/auriculares-prueba`);
   assert.equal(tienda.headers.get("strict-transport-security"), "max-age=63072000");

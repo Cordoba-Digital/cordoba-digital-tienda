@@ -11,11 +11,12 @@ export type ShippingQuote = {
 
 type QuoteItem = { slug: string; quantity: number };
 
-export async function fetchShippingQuote(args: { zip: string; subtotal: number; items?: QuoteItem[] }): Promise<ShippingQuote> {
+export async function fetchShippingQuote(args: { zip: string; items?: QuoteItem[]; signal?: AbortSignal }): Promise<ShippingQuote> {
   const res = await fetch("/api/shipping", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ zip: args.zip.replace(/\D/g, "").slice(0, 4), subtotal: args.subtotal, items: args.items ?? [] }),
+    body: JSON.stringify({ zip: args.zip.replace(/\D/g, "").slice(0, 4), items: args.items ?? [] }),
+    signal: args.signal,
   });
   const data = await res.json();
   if (!res.ok || !data.ok) {
@@ -24,7 +25,12 @@ export async function fetchShippingQuote(args: { zip: string; subtotal: number; 
   return { zone: data.zone, options: data.options };
 }
 
-export function useShippingQuote(args: { zip: string; subtotal: number; items: QuoteItem[] }) {
+/**
+ * Cotiza el envío para el CP y los ítems del carrito. Si el CP o los ítems
+ * cambian mientras una consulta está en vuelo, esa consulta se aborta: no
+ * pisa el resultado nuevo ni le suma una llamada a Andreani al límite por IP.
+ */
+export function useShippingQuote(args: { zip: string; items: QuoteItem[] }) {
   const [options, setOptions] = useState<ShippingOption[]>([]);
   const [zone, setZone] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -34,43 +40,42 @@ export function useShippingQuote(args: { zip: string; subtotal: number; items: Q
 
   useEffect(() => {
     const zip = args.zip.replace(/\D/g, "").slice(0, 4);
-    let cancelled = false;
-    if (zip.length !== 4) {
-      const id = window.setTimeout(() => {
-        if (cancelled) return;
-        setOptions([]);
-        setZone(null);
+    const controller = new AbortController();
+    const id = window.setTimeout(
+      async () => {
+        // CP incompleto: sin opciones y sin "Calculando envíos...". Antes, si
+        // se borraba un dígito con una consulta en vuelo, el spinner quedaba
+        // girando porque nadie apagaba `loading`.
+        if (zip.length !== 4) {
+          setOptions([]);
+          setZone(null);
+          setError(null);
+          setLoading(false);
+          return;
+        }
+        setLoading(true);
         setError(null);
-      }, 0);
-      return () => {
-        cancelled = true;
-        window.clearTimeout(id);
-      };
-    }
-
-    const id = window.setTimeout(async () => {
-      setLoading(true);
-      setError(null);
-      try {
-        const quote = await fetchShippingQuote({ zip, subtotal: args.subtotal, items: JSON.parse(itemsKey) as QuoteItem[] });
-        if (cancelled) return;
-        setOptions(quote.options);
-        setZone(quote.zone);
-      } catch (error) {
-        if (cancelled) return;
-        setOptions([]);
-        setZone(null);
-        setError(error instanceof Error ? error.message : "No pudimos calcular el envío.");
-      } finally {
-        if (!cancelled) setLoading(false);
-      }
-    }, 350);
+        try {
+          const quote = await fetchShippingQuote({ zip, items: JSON.parse(itemsKey) as QuoteItem[], signal: controller.signal });
+          setOptions(quote.options);
+          setZone(quote.zone);
+        } catch (error) {
+          if (controller.signal.aborted) return;
+          setOptions([]);
+          setZone(null);
+          setError(error instanceof Error ? error.message : "No pudimos calcular el envío.");
+        } finally {
+          if (!controller.signal.aborted) setLoading(false);
+        }
+      },
+      zip.length === 4 ? 350 : 0,
+    );
 
     return () => {
-      cancelled = true;
+      controller.abort();
       window.clearTimeout(id);
     };
-  }, [args.zip, args.subtotal, itemsKey]);
+  }, [args.zip, itemsKey]);
 
   return { options, zone, loading, error };
 }
@@ -84,25 +89,28 @@ export function useSucursales(zip: string) {
 
   useEffect(() => {
     const cp = zip.replace(/\D/g, "").slice(0, 4);
-    let cancelled = false;
+    const controller = new AbortController();
     const id = window.setTimeout(async () => {
       if (cp.length !== 4) {
+        // Sin esto, el select quedaba en "Buscando sucursales..." si el CP
+        // cambiaba con una consulta en vuelo.
         setSucursales([]);
+        setLoading(false);
         return;
       }
       setLoading(true);
       try {
-        const res = await fetch(`/api/shipping/sucursales?cp=${cp}`);
+        const res = await fetch(`/api/shipping/sucursales?cp=${cp}`, { signal: controller.signal });
         const data = (await res.json().catch(() => ({}))) as { ok?: boolean; sucursales?: SucursalOpcion[] };
-        if (!cancelled) setSucursales(res.ok && data.ok ? (data.sucursales ?? []) : []);
+        setSucursales(res.ok && data.ok ? (data.sucursales ?? []) : []);
       } catch {
-        if (!cancelled) setSucursales([]);
+        if (!controller.signal.aborted) setSucursales([]);
       } finally {
-        if (!cancelled) setLoading(false);
+        if (!controller.signal.aborted) setLoading(false);
       }
-    }, 350);
+    }, cp.length === 4 ? 350 : 0);
     return () => {
-      cancelled = true;
+      controller.abort();
       window.clearTimeout(id);
     };
   }, [zip]);
