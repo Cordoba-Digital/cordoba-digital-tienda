@@ -1,4 +1,5 @@
 import { eq } from "drizzle-orm";
+import { cache } from "react";
 
 import { db } from "@/db";
 import { storeSettings } from "@/db/schema";
@@ -40,9 +41,10 @@ export async function saveHomeLayout(layout: HomeLayoutItem[], actor: string): P
 
 /**
  * Si se muestra la barra de avisos de arriba del header. Ante cualquier error
- * de la base se muestra, que es como estuvo siempre.
+ * de la base se muestra, que es como estuvo siempre. Con `cache()`: el layout
+ * y la home la piden en el mismo render y alcanza con una consulta.
  */
-export async function getTopBarVisible(): Promise<boolean> {
+export const getTopBarVisible = cache(async function getTopBarVisible(): Promise<boolean> {
   try {
     const [row] = await db.select().from(storeSettings).where(eq(storeSettings.key, TOP_BAR_KEY)).limit(1);
     return parseTopBar(row?.value);
@@ -50,7 +52,7 @@ export async function getTopBarVisible(): Promise<boolean> {
     console.warn("[header] sin ajuste de la barra de avisos, la muestro:", error instanceof Error ? error.message : error);
     return true;
   }
-}
+});
 
 export async function saveTopBarVisible(visible: boolean, actor: string): Promise<void> {
   const now = new Date();

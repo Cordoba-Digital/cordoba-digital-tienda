@@ -127,7 +127,7 @@ export function ProductGallery({
             src={list[active]}
             srcSet={srcSetOf(active)}
             alt={active === 0 ? name : `${name} - foto ${active + 1}`}
-            sizes="(max-width: 1024px) 100vw, 700px"
+            sizes="(max-width: 640px) calc(100vw - 56px), 544px"
             width={800}
             height={800}
             priority
