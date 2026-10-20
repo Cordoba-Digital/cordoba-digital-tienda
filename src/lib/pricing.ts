@@ -25,6 +25,15 @@ export type PaymentMethodId = "transferencia" | "usdt" | "efectivo" | "sena" | "
  */
 export const MAX_QTY_PER_ITEM = 5;
 
+/**
+ * Cuántas unidades de un producto entran en un pedido. El catálogo migrado
+ * guarda `stock` como disponibilidad (1 = hay, 0 = no hay), así que solo un
+ * stock mayor a 1 es una cantidad real que recorta el tope.
+ */
+export function maxQuantityFor(stock: number): number {
+  return stock > 1 ? Math.min(stock, MAX_QTY_PER_ITEM) : stock === 0 ? 0 : MAX_QTY_PER_ITEM;
+}
+
 export type PaymentMethod = {
   id: PaymentMethodId;
   label: string;

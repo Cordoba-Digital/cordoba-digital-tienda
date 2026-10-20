@@ -7,7 +7,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { computeTotals, couponDiscountFor, type CouponInfo } from "../../src/lib/pricing";
+import { computeTotals, couponDiscountFor, MAX_QTY_PER_ITEM, maxQuantityFor, type CouponInfo } from "../../src/lib/pricing";
 
 const porcentaje = (value: number, minSubtotal = 0): CouponInfo => ({ code: "P", kind: "percent", value, minSubtotal, description: "" });
 const fijo = (value: number, minSubtotal = 0): CouponInfo => ({ code: "F", kind: "fixed", value, minSubtotal, description: "" });
@@ -55,4 +55,11 @@ test("el monto por cuota es informativo y redondeado", () => {
 test("un cupón más grande que el subtotal no deja el total negativo", () => {
   const t = computeTotals({ subtotal: 5_000, coupon: fijo(9_000), shippingCost: 3_000, paymentMethod: "transferencia", installments: 1 });
   assert.equal(t.total, 3_000);
+});
+
+test("el tope de unidades: stock 1 es disponibilidad, solo una cantidad real recorta", () => {
+  assert.equal(maxQuantityFor(0), 0);
+  assert.equal(maxQuantityFor(1), MAX_QTY_PER_ITEM);
+  assert.equal(maxQuantityFor(3), 3);
+  assert.equal(maxQuantityFor(50), MAX_QTY_PER_ITEM);
 });
