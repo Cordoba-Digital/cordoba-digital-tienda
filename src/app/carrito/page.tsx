@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { CartView } from "@/components/cart-view";
-import { toView } from "@/lib/product-view";
+import { toCardView } from "@/lib/product-view";
 import { getBestSellers } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
@@ -14,6 +14,6 @@ export const metadata: Metadata = {
 };
 
 export default async function CartPage() {
-  const suggestions = await getBestSellers(6);
-  return <CartView suggestions={suggestions.map(toView)} />;
+  const suggestions = await getBestSellers(4);
+  return <CartView suggestions={suggestions.map(toCardView)} />;
 }

@@ -30,7 +30,7 @@ import { visibleHomeBlocks, type HomeBlockId } from "@/lib/home-layout";
 import type { HeroSlideId } from "@/lib/hero-picks";
 import { getHeroPicks } from "@/lib/hero-picks-server";
 import { getHomeLayout, getTopBarVisible } from "@/lib/home-layout-server";
-import { toView } from "@/lib/product-view";
+import { toCardView, toView } from "@/lib/product-view";
 import { renderPerRequestIfNoDatabase } from "@/lib/store-cache";
 import { jsonLdString, storeJsonLd } from "@/lib/structured-data";
 import {
@@ -117,7 +117,7 @@ export default async function HomePage() {
     wantsTiles ? getCategoryTiles(6) : Promise.resolve([]),
     getTopBarVisible(),
   ]);
-  const tileViews = tiles.map((tile) => ({ ...tile, products: tile.products.map(toView) }));
+  const tileViews = tiles.map((tile) => ({ ...tile, products: tile.products.map(toCardView) }));
   // Con una sola vitrina visible, esa usa las tres categorías principales.
   const secondTiles = visible.includes("vitrinas") ? tileViews.slice(3, 6) : tileViews.slice(0, 3);
 
@@ -296,7 +296,7 @@ export default async function HomePage() {
                 </Link>
               </div>
               <div className="mt-3 sm:mt-6">
-                <ProductRow products={deals.map(toView)} label="las ofertas" />
+                <ProductRow products={deals.map(toCardView)} label="las ofertas" />
               </div>
             </div>
           </section>
@@ -363,7 +363,7 @@ export default async function HomePage() {
               action={{ href: "/productos?orden=vendidos", label: "Ver ranking" }}
             />
             <ProductRow
-              products={bestSellers.slice(0, 8).map(toView)}
+              products={bestSellers.slice(0, 8).map(toCardView)}
               label="los más vendidos"
               badges={bestSellers.slice(0, 8).map((_, i) => (i < 3 ? `Top ${i + 1}` : undefined))}
             />
@@ -373,11 +373,11 @@ export default async function HomePage() {
     "por-categoria": () =>
       showcase.length ? (
         <HomeCategoryTabs
-          tabs={showcase.map((tab) => ({ name: tab.name, path: tab.path, count: tab.count, products: tab.products.map(toView) }))}
+          tabs={showcase.map((tab) => ({ name: tab.name, path: tab.path, count: tab.count, products: tab.products.map(toCardView) }))}
         />
       ) : null,
     explorar: () =>
-      explore ? <HomeExplore initial={explore.items.map(toView)} total={explore.total} hasMore={explore.pages > 1} /> : null,
+      explore ? <HomeExplore initial={explore.items.map(toCardView)} total={explore.total} hasMore={explore.pages > 1} /> : null,
     local: () => (
       <>
           <section id="local" className="container-xl grid gap-3 py-6 sm:gap-4 sm:py-12 lg:grid-cols-2">
@@ -390,6 +390,8 @@ export default async function HomePage() {
                 alt="Fachada del local de Córdoba Digital en 27 de Abril 180, Córdoba Capital"
                 width={1400}
                 height={882}
+                loading="lazy"
+                decoding="async"
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/5" />
@@ -487,7 +489,7 @@ export default async function HomePage() {
                 title="Destacados de la semana"
                 action={{ href: "/productos", label: "Ver catálogo" }}
               />
-              <ProductRow products={featuredPicks.map(toView)} label="los destacados" />
+              <ProductRow products={featuredPicks.map(toCardView)} label="los destacados" />
             </section>
           ) : null}
       </>

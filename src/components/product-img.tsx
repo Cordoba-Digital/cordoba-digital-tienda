@@ -107,8 +107,11 @@ export function ProductImg({
       alt={alt}
       width={width}
       height={height}
+      // La foto principal (LCP) se pide con prioridad alta y se pinta apenas
+      // llega; `next/image` haría lo mismo, pero acá el <img> se arma a mano.
       loading={priority ? "eager" : "lazy"}
-      decoding="async"
+      fetchPriority={priority ? "high" : undefined}
+      decoding={priority ? undefined : "async"}
       referrerPolicy="no-referrer"
       className={className}
       style={style}

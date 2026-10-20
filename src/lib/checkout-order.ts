@@ -105,9 +105,10 @@ export async function priceOrder(input: {
 
   // El precio de Andreani se vuelve a pedir acá con los productos validados:
   // no se confía en el monto que mostró el navegador. La cotización queda en
-  // caché unos minutos, así que coincide con lo que vio el cliente.
+  // caché unos minutos, así que coincide con lo que vio el cliente. Las filas
+  // ya leídas van con el pedido: peso y medidas salen de la misma consulta.
   const { method, zip } = input.delivery;
-  const andreani = method === "pickup" ? {} : await preciosAndreani(zip, lines);
+  const andreani = method === "pickup" ? {} : await preciosAndreani(zip, lines, undefined, rows);
   const shipping = findShippingOption(method === "pickup" ? "5000" : zip, method, andreani);
   if (!shipping) {
     return { ok: false, status: 400, errors: { zip: web ? "No podemos enviar a ese código postal." : "No hay envío a ese código postal." } };

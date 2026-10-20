@@ -54,6 +54,8 @@ export default async function OrderPage({
   if (await blockedMinutes(ORDER_LOOKUP_LIMIT, ip).catch(() => 0)) notFound();
   let result = await getOrderByCode(decodeURIComponent(code)).catch(() => null);
   if (!result) await recordMiss(ORDER_LOOKUP_LIMIT, ip).catch(() => undefined);
+  // La cuenta para transferir se lee mientras se concilia el pago (no tira).
+  const transfer = result ? getTransferAccount() : Promise.resolve(null);
 
   // Mercado Pago vuelve acá con `payment_id`. Si el pedido sigue pendiente (el
   // webhook todavía no llegó o no llega), se concilia en el momento contra la
@@ -147,7 +149,7 @@ export default async function OrderPage({
       order={summary}
       isNew={isNew}
       paymentReturn={pago}
-      transfer={await getTransferAccount()}
+      transfer={await transfer}
       usdt={usdt}
     />
   );

@@ -25,7 +25,7 @@ export async function POST(request: Request) {
   const client = mercadoPagoReady() ? mpClient() : null;
   if (!client) {
     // El mensaje va al cliente final: nunca el nombre de una variable de
-    // entorno. El detalle técnico queda en `detail` para los logs.
+    // entorno. El detalle técnico queda solo en el log.
     console.warn("[mp] Mercado Pago apagado (faltan MP_ACCESS_TOKEN o MP_WEBHOOK_SECRET): no se crea el cobro.");
     return Response.json(
       {
@@ -33,8 +33,6 @@ export async function POST(request: Request) {
         error:
           "El pago con Mercado Pago no está disponible. " +
           "Podés completar el pedido por transferencia o efectivo.",
-        missingCredentials: true,
-        detail: "Mercado Pago apagado: faltan MP_ACCESS_TOKEN o MP_WEBHOOK_SECRET",
       },
       { status: 503 },
     );

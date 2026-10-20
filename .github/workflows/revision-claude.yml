@@ -33,11 +33,11 @@ jobs:
       - name: Falta ANTHROPIC_API_KEY
         if: env.TIENE_CLAVE != 'true'
         run: echo "::notice::Sin ANTHROPIC_API_KEY no corre la revisión de Claude."
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         if: env.TIENE_CLAVE == 'true'
         with:
           fetch-depth: 1
-      - uses: anthropics/claude-code-action@v1
+      - uses: anthropics/claude-code-action@db77d4d3c98f3f6380e7cd45ffba2342a3dbde3c # v1
         if: env.TIENE_CLAVE == 'true'
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}

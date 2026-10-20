@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
+import { AdminEraseCustomerForm } from "@/components/admin-erase-customer-form";
 import { Pill } from "@/components/ui";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
@@ -125,6 +126,7 @@ export default async function AdminUsersPage({ searchParams }: { searchParams: S
           )}
         </div>
       )}
+      <AdminEraseCustomerForm />
     </div>
   );
 }
