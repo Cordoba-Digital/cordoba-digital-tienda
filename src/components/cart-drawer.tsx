@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 import { ProductImg } from "@/components/product-img";
-import { useStore } from "@/components/store-provider";
+import { useStoreSelector } from "@/components/store-provider";
 import { money } from "@/lib/format";
 import { MAX_QTY_PER_ITEM } from "@/lib/pricing";
 
@@ -52,7 +52,16 @@ export function QuantityStepper({
 }
 
 export function CartDrawer() {
-  const { cartOpen, closeCart, items, setQuantity, removeItem, subtotal, listSubtotal, count, lastAdded } = useStore();
+  // Sin los avisos: que aparezca o se vaya uno no redibuja el panel.
+  const cartOpen = useStoreSelector((s) => s.cartOpen);
+  const closeCart = useStoreSelector((s) => s.closeCart);
+  const items = useStoreSelector((s) => s.items);
+  const setQuantity = useStoreSelector((s) => s.setQuantity);
+  const removeItem = useStoreSelector((s) => s.removeItem);
+  const subtotal = useStoreSelector((s) => s.subtotal);
+  const listSubtotal = useStoreSelector((s) => s.listSubtotal);
+  const count = useStoreSelector((s) => s.count);
+  const lastAdded = useStoreSelector((s) => s.lastAdded);
   const savings = Math.max(0, listSubtotal - subtotal);
 
   // El panel queda siempre montado para poder animar la entrada y la salida.
@@ -209,7 +218,8 @@ export function CartDrawer() {
 }
 
 export function Toaster() {
-  const { toasts, cartOpen } = useStore();
+  const toasts = useStoreSelector((s) => s.toasts);
+  const cartOpen = useStoreSelector((s) => s.cartOpen);
   // Con el carrito abierto los avisos quedarían encima del pie del panel
   // (en mobile ocupa todo el ancho), así que se ocultan hasta cerrarlo.
   if (!toasts.length || cartOpen) return null;

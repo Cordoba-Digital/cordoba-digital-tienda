@@ -189,6 +189,26 @@ test("si el CP cambia mientras se cotiza el envío, el spinner no queda girando"
   await page.close();
 });
 
+test("desde una tarjeta se guarda el favorito y se suma al carrito", async () => {
+  const page = await browser.newPage();
+  const erroresDePagina: string[] = [];
+  page.on("pageerror", (e) => erroresDePagina.push(e.message));
+  await page.goto(`${BASE}/productos`);
+
+  // Cada tarjeta lee su parte del store: el corazón, el contador del header y
+  // la cantidad tienen que seguir al día.
+  await page.getByRole("button", { name: "Guardar en favoritos" }).first().click();
+  await page.getByRole("button", { name: "Quitar de favoritos" }).first().waitFor();
+  await page.getByRole("link", { name: "Favoritos" }).getByText("1", { exact: true }).waitFor();
+
+  await page.getByRole("button", { name: "Agregar al carrito" }).first().click();
+  await page.getByLabel("Cantidad en el carrito: 1").waitFor();
+  await page.getByRole("button", { name: "Sumar uno" }).first().click();
+  await page.getByLabel("Cantidad en el carrito: 2").waitFor();
+  assert.deepEqual(erroresDePagina, []);
+  await page.close();
+});
+
 test("un pedido con USDT muestra el QR de la wallet, armado en el servidor", async () => {
   // Dirección pública (el contrato de USDT), no la wallet de la tienda.
   const wallet = "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t";

@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, Truck } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { ProductImg } from "@/components/product-img";
-import { useStore } from "@/components/store-provider";
+import { useStoreSelector } from "@/components/store-provider";
 import { discountPercent, money } from "@/lib/format";
 
 export type HeroSlide = {
@@ -35,7 +35,7 @@ const INTERVAL_MS = 3000;
 const SLIDE_MS = 300;
 
 export function HeroCarousel({ slides }: { slides: HeroSlide[] }) {
-  const { addItem } = useStore();
+  const addItem = useStoreSelector((s) => s.addItem);
   const count = slides.length;
   // Loop continuo: la pista lleva una copia del último aviso al principio y
   // una del primero al final. `pos` es la posición en esa pista (1 = primer

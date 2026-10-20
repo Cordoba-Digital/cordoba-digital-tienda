@@ -5,9 +5,11 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
+  useSyncExternalStore,
   type ReactNode,
 } from "react";
 
@@ -60,6 +62,15 @@ type StoreState = {
 };
 
 const StoreContext = createContext<StoreState | null>(null);
+
+/**
+ * El mismo estado, pero para leer una parte con `useStoreSelector`: quien lo
+ * usa se vuelve a dibujar solo cuando cambia lo que eligió. Con `useStore`,
+ * cualquier aviso, abrir el carrito o tocar un favorito redibujaba todas las
+ * tarjetas de producto de la página.
+ */
+type StoreSnapshot = { get: () => StoreState; subscribe: (listener: () => void) => () => void };
+const SnapshotContext = createContext<StoreSnapshot | null>(null);
 
 const CART_KEY = "cd_cart_v1";
 const FAV_KEY = "cd_fav_v1";
@@ -256,6 +267,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const clearRecent = useCallback(() => setRecentlyViewed([]), []);
+  const openCart = useCallback(() => setCartOpen(true), []);
+  const closeCart = useCallback(() => setCartOpen(false), []);
 
   const value = useMemo<StoreState>(() => {
     const subtotal = items.reduce((acc, i) => acc + i.price * i.quantity, 0);
@@ -276,8 +289,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       isFavorite: (slug: string) => favorites.includes(slug),
       pushRecent,
       clearRecent,
-      openCart: () => setCartOpen(true),
-      closeCart: () => setCartOpen(false),
+      openCart,
+      closeCart,
       pushToast,
       subtotal,
       listSubtotal,
@@ -298,10 +311,45 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     toggleFavorite,
     pushRecent,
     clearRecent,
+    openCart,
+    closeCart,
     pushToast,
   ]);
 
-  return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
+  // El estado vigente queda en una ref y se avisa a los suscriptos después de
+  // cada commit; `useSyncExternalStore` los redibuja solo si su parte cambió.
+  const current = useRef(value);
+  const listeners = useRef(new Set<() => void>());
+  const [snapshot] = useState<StoreSnapshot>(() => ({
+    get: () => current.current,
+    subscribe: (listener) => {
+      listeners.current.add(listener);
+      return () => listeners.current.delete(listener);
+    },
+  }));
+  useLayoutEffect(() => {
+    current.current = value;
+    for (const listener of listeners.current) listener();
+  }, [value]);
+
+  return (
+    <StoreContext.Provider value={value}>
+      <SnapshotContext.Provider value={snapshot}>{children}</SnapshotContext.Provider>
+    </StoreContext.Provider>
+  );
+}
+
+/**
+ * Una parte del store. El selector tiene que devolver algo que no cambie si el
+ * dato no cambió: un número, un booleano o una acción (son estables). Por
+ * ejemplo `useStoreSelector((s) => s.addItem)` o
+ * `useStoreSelector((s) => s.hydrated && s.favorites.includes(slug))`.
+ */
+export function useStoreSelector<T>(selector: (state: StoreState) => T): T {
+  const snapshot = useContext(SnapshotContext);
+  if (!snapshot) throw new Error("useStoreSelector debe usarse dentro de StoreProvider");
+  const read = () => selector(snapshot.get());
+  return useSyncExternalStore(snapshot.subscribe, read, read);
 }
 
 export function useStore(): StoreState {

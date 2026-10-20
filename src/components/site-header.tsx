@@ -14,7 +14,7 @@ import {
   type SearchShortcut,
   type SearchSuggestion,
 } from "@/components/search-suggestions";
-import { useStore } from "@/components/store-provider";
+import { useStoreSelector } from "@/components/store-provider";
 
 type CategoryLink = CategoryNavRoot;
 
@@ -26,7 +26,10 @@ const ANNOUNCEMENTS = [
 ];
 
 export function SiteHeader({ categories, topBar = true }: { categories: CategoryLink[]; topBar?: boolean }) {
-  const { count, openCart, favorites, hydrated } = useStore();
+  const count = useStoreSelector((s) => s.count);
+  const openCart = useStoreSelector((s) => s.openCart);
+  const favoritesCount = useStoreSelector((s) => s.favorites.length);
+  const hydrated = useStoreSelector((s) => s.hydrated);
   const router = useRouter();
   const pathname = usePathname();
   const [term, setTerm] = useState("");
@@ -278,9 +281,9 @@ export function SiteHeader({ categories, topBar = true }: { categories: Category
                   <path d="M12 21s-7.5-4.6-9.5-9A5.5 5.5 0 0112 5.5 5.5 5.5 0 0121.5 12c-2 4.4-9.5 9-9.5 9z" />
                 </svg>
               </span>
-              {hydrated && favorites.length > 0 ? (
+              {hydrated && favoritesCount > 0 ? (
                 <span className="absolute right-1 top-1 grid h-4 min-w-4 place-items-center rounded-full bg-rose-600 px-1 text-[10px] font-bold text-white">
-                  {favorites.length}
+                  {favoritesCount}
                 </span>
               ) : null}
             </Link>

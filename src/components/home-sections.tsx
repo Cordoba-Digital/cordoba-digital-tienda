@@ -5,7 +5,7 @@ import { useEffect, useId, useState } from "react";
 import { ArrowRight, History } from "lucide-react";
 
 import { ProductCard, ProductRow } from "@/components/product-card";
-import { useStore } from "@/components/store-provider";
+import { useStoreSelector } from "@/components/store-provider";
 import { Spinner } from "@/components/ui";
 import type { ProductView } from "@/lib/product-view";
 
@@ -21,7 +21,9 @@ import type { ProductView } from "@/lib/product-view";
  * dibuja nada, así que no suma ruido.
  */
 export function HomeRecentlyViewed() {
-  const { recentlyViewed, hydrated, clearRecent } = useStore();
+  const recentlyViewed = useStoreSelector((s) => s.recentlyViewed);
+  const hydrated = useStoreSelector((s) => s.hydrated);
+  const clearRecent = useStoreSelector((s) => s.clearRecent);
   const [products, setProducts] = useState<ProductView[]>([]);
   const key = recentlyViewed.join(",");
 
