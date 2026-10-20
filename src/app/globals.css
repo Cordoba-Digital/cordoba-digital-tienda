@@ -434,10 +434,24 @@ body {
 @utility card-surface {
   background-color: var(--color-surface);
   border-radius: var(--radio-tarjeta, 1.75rem);
-  box-shadow:
+  box-shadow: var(
+    --sombra-tarjeta,
     0 0 0 1px rgba(87, 79, 69, 0.16),
     0 1px 2px -1px rgba(20, 22, 28, 0.06),
-    0 4px 12px -4px rgba(20, 22, 28, 0.06);
+    0 4px 12px -4px rgba(20, 22, 28, 0.06)
+  );
+}
+
+/*
+ * Checkout: las tarjetas se despegan más del papel (contorno un poco más
+ * marcado y una sombra más profunda abajo) para que el formulario y el resumen
+ * se lean como el contenido principal. El fondo de la tienda no cambia.
+ */
+@utility checkout-contraste {
+  --sombra-tarjeta:
+    0 0 0 1px rgba(87, 79, 69, 0.3),
+    0 1px 3px -1px rgba(20, 22, 28, 0.1),
+    0 12px 32px -14px rgba(20, 22, 28, 0.22);
 }
 
 @utility mesh-dark {

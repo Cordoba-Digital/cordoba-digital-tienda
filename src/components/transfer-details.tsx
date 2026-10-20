@@ -19,7 +19,7 @@ export function CopyButton({ value, label }: { value: string; label?: string }) 
           /* ignore */
         }
       }}
-      className="shrink-0 whitespace-nowrap rounded-lg border border-ink-200 bg-surface px-2.5 py-1 text-[11px] font-bold text-ink-600 transition hover:border-brand-300 hover:text-brand-700"
+      className="shrink-0 whitespace-nowrap rounded-lg border border-ink-300 bg-surface px-2.5 py-1 text-xs font-bold text-ink-700 transition hover:border-brand-300 hover:text-brand-700"
     >
       {copied ? "¡Copiado!" : (label ?? "Copiar")}
     </button>
@@ -33,11 +33,11 @@ export function CopyButton({ value, label }: { value: string; label?: string }) 
  */
 export function TransferDetails({ account, amount }: { account: TransferAccount; amount: number }) {
   return (
-    <div className="@container rounded-xl border border-ink-100 bg-surface p-4">
-      <p className="text-xs font-bold uppercase tracking-wide text-ink-500">Transferencia bancaria</p>
+    <div className="@container rounded-xl border border-ink-200 bg-surface p-4">
+      <p className="text-xs font-bold uppercase tracking-wide text-ink-600">Transferencia bancaria</p>
       <dl className="mt-2 space-y-1.5 text-sm">
         <div className="flex flex-col gap-0.5 @sm:flex-row @sm:items-center @sm:justify-between @sm:gap-2">
-          <dt className="text-ink-500">Monto</dt>
+          <dt className="text-ink-600">Monto</dt>
           <dd className="flex items-center justify-between gap-2 font-extrabold text-ink-900">
             {money(amount)}
             <CopyButton value={String(amount)} />
@@ -45,7 +45,7 @@ export function TransferDetails({ account, amount }: { account: TransferAccount;
         </div>
         {account.number ? (
           <div className="flex flex-col gap-0.5 @sm:flex-row @sm:items-center @sm:justify-between @sm:gap-2">
-            <dt className="text-ink-500">{account.numberLabel}</dt>
+            <dt className="text-ink-600">{account.numberLabel}</dt>
             <dd className="flex items-center justify-between gap-2 font-semibold text-ink-900">
               <span className="min-w-0 break-all text-xs tabular-nums @sm:text-sm">{account.number}</span>
               <CopyButton value={account.number} />
@@ -54,7 +54,7 @@ export function TransferDetails({ account, amount }: { account: TransferAccount;
         ) : null}
         {account.alias ? (
           <div className="flex flex-col gap-0.5 @sm:flex-row @sm:items-center @sm:justify-between @sm:gap-2">
-            <dt className="text-ink-500">Alias</dt>
+            <dt className="text-ink-600">Alias</dt>
             <dd className="flex items-center justify-between gap-2 font-semibold text-ink-900">
               <span className="min-w-0 break-all">{account.alias}</span>
               <CopyButton value={account.alias} />
@@ -62,12 +62,12 @@ export function TransferDetails({ account, amount }: { account: TransferAccount;
           </div>
         ) : null}
         <div className="flex flex-col gap-0.5 @sm:flex-row @sm:items-center @sm:justify-between @sm:gap-2">
-          <dt className="text-ink-500">Titular</dt>
+          <dt className="text-ink-600">Titular</dt>
           <dd className="font-semibold text-ink-900 @sm:text-right">{account.holder}</dd>
         </div>
         {account.cuit ? (
           <div className="flex flex-col gap-0.5 @sm:flex-row @sm:items-center @sm:justify-between @sm:gap-2">
-            <dt className="text-ink-500">CUIT</dt>
+            <dt className="text-ink-600">CUIT</dt>
             <dd className="font-semibold text-ink-900">{account.cuit}</dd>
           </div>
         ) : null}

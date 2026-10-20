@@ -204,10 +204,10 @@ function Field({
 }) {
   return (
     <label className={`block ${className}`} data-error={error ? "true" : undefined}>
-      <span className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-ink-500">{label}</span>
+      <span className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-ink-700">{label}</span>
       {children}
       {error ? <span role="alert" className="mt-1 block text-xs font-semibold text-rose-600">{error}</span> : null}
-      {!error && hint ? <span className="mt-1 block text-[11px] text-ink-500">{hint}</span> : null}
+      {!error && hint ? <span className="mt-1 block text-xs text-ink-600">{hint}</span> : null}
     </label>
   );
 }
@@ -273,7 +273,7 @@ function CheckoutStep({
         <span
           aria-hidden
           className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-extrabold transition-colors duration-300 ${
-            done ? "bg-emerald-600 text-white" : open ? "bg-brand-500 text-deep" : "bg-ink-100 text-ink-500"
+            done ? "bg-emerald-600 text-white" : open ? "bg-brand-500 text-deep" : "bg-ink-100 text-ink-600"
           }`}
         >
           {done ? <IconCheck /> : number}
@@ -281,11 +281,11 @@ function CheckoutStep({
         <div className="min-w-0 flex-1">
           <h2
             id={`paso-${number}-titulo`}
-            className={`text-xl font-extrabold leading-8 tracking-tight ${state === "pending" ? "text-ink-500" : "text-ink-900"}`}
+            className={`text-xl font-extrabold leading-8 tracking-tight ${state === "pending" ? "text-ink-600" : "text-ink-900"}`}
           >
             {title}
           </h2>
-          <p className={`text-xs text-ink-500 ${state === "done" ? "truncate" : ""}`}>
+          <p className={`text-sm text-ink-600 ${state === "done" ? "truncate" : ""}`}>
             {state === "done" && summary ? summary : subtitle}
           </p>
         </div>
@@ -334,7 +334,7 @@ function StepContinue({ label, onClick }: { label: string; onClick: () => void }
 }
 
 const inputClass =
-  "h-11 w-full rounded-xl border border-ink-200 bg-surface px-3.5 text-sm text-ink-900 outline-none transition placeholder:text-ink-500 focus:border-brand-400 focus:ring-4 focus:ring-brand-100";
+  "h-11 w-full rounded-xl border border-ink-300 bg-surface px-3.5 text-sm text-ink-900 outline-none transition placeholder:text-ink-400 focus:border-brand-400 focus:ring-4 focus:ring-brand-100";
 
 export function CheckoutFlow({
   mercadoPago = false,
@@ -699,7 +699,7 @@ export function CheckoutFlow({
         <div className="card-surface mx-auto flex max-w-lg flex-col items-center gap-3 px-8 py-14 text-center">
           <IconReceipt className="h-12 w-12 shrink-0 text-brand-700" />
           <h1 className="text-xl font-extrabold text-ink-900">No hay productos para pagar</h1>
-          <p className="text-sm text-ink-500">Agregá productos al carrito y volvé para finalizar tu compra.</p>
+          <p className="text-sm text-ink-600">Agregá productos al carrito y volvé para finalizar tu compra.</p>
           <Link href="/productos" className="mt-2 rounded-xl bg-brand-700 px-5 py-3 text-sm font-bold text-white">
             Ir al catálogo
           </Link>
@@ -709,17 +709,17 @@ export function CheckoutFlow({
   }
 
   return (
-    <div className="container-xl py-8">
+    <div className="checkout-contraste container-xl py-8">
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-2xl font-extrabold tracking-tight text-ink-900 md:text-3xl">Finalizá tu compra</h1>
-          <div className="mt-1 flex flex-wrap items-center gap-4 text-xs font-medium text-ink-500">
+          <div className="mt-1.5 flex flex-wrap items-center gap-4 text-[13px] font-medium text-ink-600">
             <span className="flex items-center gap-1.5"><IconShield className="h-4 w-4 shrink-0 text-emerald-600" /> Compra protegida</span>
             <span className="flex items-center gap-1.5"><IconLock className="h-4 w-4 shrink-0 text-emerald-600" /> Datos cifrados</span>
             <span className="hidden sm:inline">Sin necesidad de crear cuenta</span>
           </div>
         </div>
-        <Link href="/carrito" className="text-sm font-semibold text-ink-500 hover:text-brand-700">
+        <Link href="/carrito" className="text-sm font-semibold text-ink-700 hover:text-brand-700">
           ← Volver al carrito
         </Link>
       </div>
@@ -780,28 +780,28 @@ export function CheckoutFlow({
                   onClick={() => chooseDelivery("standard")}
                   aria-pressed={deliveryMethod !== "pickup"}
                   className={`rounded-2xl border p-4 text-left transition ${
-                    deliveryMethod !== "pickup" ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-100 bg-surface hover:bg-ink-50"
+                    deliveryMethod !== "pickup" ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-200 bg-surface hover:border-ink-300 hover:bg-ink-50"
                   }`}
                 >
                   <p className="flex items-center gap-2 text-sm font-extrabold text-ink-900"><IconTruck /> Envío a domicilio</p>
-                  <p className="mt-1 text-xs text-ink-500">A todo el país con seguimiento online</p>
+                  <p className="mt-1 text-[13px] text-ink-600">A todo el país con seguimiento online</p>
                 </button>
                 <button
                   type="button"
                   onClick={() => chooseDelivery("pickup")}
                   aria-pressed={deliveryMethod === "pickup"}
                   className={`rounded-2xl border p-4 text-left transition ${
-                    deliveryMethod === "pickup" ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-100 bg-surface hover:bg-ink-50"
+                    deliveryMethod === "pickup" ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-200 bg-surface hover:border-ink-300 hover:bg-ink-50"
                   }`}
                 >
                   <p className="flex items-center gap-2 text-sm font-extrabold text-ink-900"><IconStore /> Retiro en el local</p>
-                  <p className="mt-1 text-xs text-emerald-700">Gratis · 27 de Abril 180, Córdoba Capital</p>
+                  <p className="mt-1 text-[13px] font-medium text-emerald-700">Gratis · 27 de Abril 180, Córdoba Capital</p>
                 </button>
               </div>
               {deliveryMethod === "pickup" ? (
-                <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-600">
+                <div className="rounded-xl border border-ink-200 bg-ink-50 p-4 text-sm text-ink-700">
                   <p className="font-bold text-ink-900">27 de Abril 180, Córdoba Capital</p>
-                  <p className="mt-1 text-xs">Lunes a viernes de 14:00 a 18:30 · Sábados de 12:00 a 14:30</p>
+                  <p className="mt-1 text-[13px]">Lunes a viernes de 14:00 a 18:30 · Sábados de 12:00 a 14:30</p>
                 </div>
               ) : (
                 <>
@@ -816,7 +816,7 @@ export function CheckoutFlow({
                         placeholder="5000"
                       />
                     </Field>
-                    <div className="flex items-end pb-1 text-xs text-ink-500">
+                    <div className="flex items-end pb-1 text-[13px] text-ink-600">
                       {zipLoading ? (
                         <span className="flex items-center gap-2">
                           <Spinner className="h-4 w-4" /> Calculando envíos...
@@ -841,12 +841,12 @@ export function CheckoutFlow({
                             className={`flex w-full items-start justify-between gap-3 rounded-2xl border p-4 text-left transition ${
                               deliveryMethod === option.id
                                 ? "border-brand-500 bg-brand-50/40 ring-1 ring-brand-500/20"
-                                : "border-ink-100 bg-surface hover:bg-ink-50"
+                                : "border-ink-200 bg-surface hover:border-ink-300 hover:bg-ink-50"
                             }`}
                           >
                             <span>
                               <span className="block text-sm font-bold text-ink-900">{option.label}</span>
-                              <span className="block text-xs text-ink-500">{option.description}</span>
+                              <span className="block text-[13px] text-ink-600">{option.description}</span>
                               <span className="mt-0.5 block text-xs font-semibold text-emerald-700">{option.eta}</span>
                             </span>
                             <span className={`text-sm font-extrabold ${option.free ? "text-emerald-700" : "text-ink-900"}`}>
@@ -917,7 +917,7 @@ export function CheckoutFlow({
                   onChange={set("notes")}
                   rows={2}
                   placeholder="Ej: entregar después de las 14 hs, dejar en portería..."
-                  className="w-full rounded-xl border border-ink-200 p-3 text-sm outline-none focus:border-brand-400"
+                  className="w-full rounded-xl border border-ink-300 bg-surface p-3 text-sm text-ink-900 outline-none transition placeholder:text-ink-400 focus:border-brand-400 focus:ring-4 focus:ring-brand-100"
                 />
               </Field>
             </div>
@@ -938,22 +938,22 @@ export function CheckoutFlow({
                       aria-pressed={payment === method.id}
                       {...(method.id === "mercadopago" ? { "data-mp-checkout-cta": "checkout-pro" } : {})}
                       className={`flex w-full items-start gap-3 rounded-2xl border p-4 text-left transition ${
-                        payment === method.id ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-100 bg-surface hover:bg-ink-50"
+                        payment === method.id ? "border-brand-500 bg-brand-50/50 ring-1 ring-brand-500/20" : "border-ink-200 bg-surface hover:border-ink-300 hover:bg-ink-50"
                       }`}
                     >
-                      <span className={`mt-0.5 rounded-lg p-2 ${payment === method.id ? "bg-brand-100 text-brand-700" : "bg-ink-50 text-ink-400"}`}>
+                      <span className={`mt-0.5 rounded-lg p-2 ${payment === method.id ? "bg-brand-100 text-brand-700" : "bg-ink-100 text-ink-600"}`}>
                         <PaymentIcon className="h-5 w-5 shrink-0" />
                       </span>
                       <span className="min-w-0 flex-1">
                         <span className="flex items-center justify-between gap-2 text-sm font-extrabold text-ink-900">
                           {method.short}
                           {method.perk ? (
-                            <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
+                            <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[11px] font-bold text-emerald-700">
                               {method.perk}
                             </span>
                           ) : null}
                         </span>
-                        <span className="mt-0.5 block text-xs leading-snug text-ink-500">{method.description}</span>
+                        <span className="mt-1 block text-[13px] leading-snug text-ink-600">{method.description}</span>
                       </span>
                     </button>
                     );
@@ -965,26 +965,26 @@ export function CheckoutFlow({
                   Pago, solo si el servidor tiene sus credenciales. */}
 
               {payment === "usdt" && usdtRate ? (
-                <div className="space-y-2 rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
+                <div className="space-y-2 rounded-xl border border-ink-200 bg-ink-50 p-4 text-sm text-ink-800">
                   <p className="font-bold text-ink-900">Pagás con USDT por red TRON (TRC20).</p>
                   <p className="flex flex-wrap items-baseline justify-between gap-2 rounded-lg bg-surface px-3 py-2">
                     <span>Total en USDT</span>
                     <strong className="text-base text-ink-900">{formatUsdt(usdtAmountFor(totals.total, usdtRate.rate))} USDT</strong>
                   </p>
-                  <p className="text-xs text-ink-500">Al confirmar, el monto queda fijo en tu pedido.</p>
-                  <ol className="list-decimal space-y-1 pl-4 text-xs">
+                  <p className="text-[13px] text-ink-700">Al confirmar, el monto queda fijo en tu pedido.</p>
+                  <ol className="list-decimal space-y-1.5 pl-4 text-[13px] leading-snug">
                     <li>Confirmá el pedido: te mostramos la wallet, su QR y el monto exacto.</li>
                     <li>Enviá ese monto desde tu wallet o exchange. Si te cobran comisión, tiene que llegar el monto completo.</li>
                     <li>Pegá el TXID de la transacción en la página del pedido. Cuando llega el monto completo, se confirma solo.</li>
                   </ol>
-                  <p className="text-xs">Usá solo la red TRON (TRC20): un envío por otra red no llega y no se puede recuperar.</p>
+                  <p className="text-[13px]">Usá solo la red TRON (TRC20): un envío por otra red no llega y no se puede recuperar.</p>
                 </div>
               ) : null}
 
               {payment === "mercadopago" ? (
-                <div className="rounded-xl bg-sky-50 p-4 text-sm text-sky-900">
+                <div className="rounded-xl border border-sky-200 bg-sky-50 p-4 text-sm text-sky-900">
                   <p className="font-bold">Al confirmar te llevamos a Mercado Pago para pagar.</p>
-                  <p className="mt-1 text-xs">
+                  <p className="mt-1 text-[13px]">
                     Tarjeta de crédito, débito o dinero en cuenta. Las cuotas las elegís ahí. Cuando el pago se
                     acredita, el pedido pasa a &quot;Pago acreditado&quot; solo.
                   </p>
@@ -993,20 +993,20 @@ export function CheckoutFlow({
 
               {payment === "transferencia" ? (
                 transfer ? (
-                  <div className="space-y-3 rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
+                  <div className="space-y-3 rounded-xl border border-ink-200 bg-ink-50 p-4 text-sm text-ink-800">
                     <p className="font-bold text-ink-900">Datos para transferir</p>
                     <TransferDetails account={transfer} amount={totals.total} />
-                    <ol className="list-decimal space-y-1 pl-4 text-xs">
+                    <ol className="list-decimal space-y-1.5 pl-4 text-[13px] leading-snug">
                       <li>Confirmá el pedido: te damos un número de orden y te guardamos el stock {STOCK_HOLD_HOURS} hs.</li>
                       <li>Transferí el monto exacto desde tu banco o billetera virtual.</li>
                       <li>Mandanos el comprobante por WhatsApp con tu número de orden.</li>
                     </ol>
-                    <p className="text-xs">Cuando se acredita la transferencia, confirmamos el pedido y te avisamos.</p>
+                    <p className="text-[13px]">Cuando se acredita la transferencia, confirmamos el pedido y te avisamos.</p>
                   </div>
                 ) : (
-                  <div className="rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
+                  <div className="rounded-xl border border-ink-200 bg-ink-50 p-4 text-sm text-ink-800">
                     <p className="font-bold text-ink-900">Al confirmar te pasamos el CBU o el alias por WhatsApp.</p>
-                    <p className="mt-1 text-xs">
+                    <p className="mt-1 text-[13px]">
                       Te guardamos el stock {STOCK_HOLD_HOURS} hs. Cuando se acredita la transferencia, confirmamos el pedido.
                     </p>
                   </div>
@@ -1014,19 +1014,19 @@ export function CheckoutFlow({
               ) : null}
 
               {payment === "sena" ? (
-                <div className="space-y-3 rounded-xl bg-ink-50 p-4 text-sm text-ink-700">
+                <div className="space-y-3 rounded-xl border border-ink-200 bg-ink-50 p-4 text-sm text-ink-800">
                   <p className="font-bold text-ink-900">
                     Seña de {money(amountDueOnline(senaOrder))}
                     {amountDueAtPickup(senaOrder) > 0 ? ` y ${money(amountDueAtPickup(senaOrder))} al retirar en el local` : ""}
                   </p>
                   {transfer ? <TransferDetails account={transfer} amount={amountDueOnline(senaOrder)} /> : null}
-                  <ol className="list-decimal space-y-1 pl-4 text-xs">
+                  <ol className="list-decimal space-y-1.5 pl-4 text-[13px] leading-snug">
                     <li>Confirmá el pedido: te damos un número de orden y te guardamos el stock {STOCK_HOLD_HOURS} hs.</li>
                     <li>Transferí la seña {transfer ? "a esta cuenta" : "(te pasamos el CBU por WhatsApp)"} y mandanos el comprobante.</li>
                     <li>Cuando se acredita, la reserva queda confirmada y te damos tu código de reserva.</li>
                     <li>Retirás y pagás el resto en el local dentro de las {PICKUP_HOURS} hs. Si no pasás, la reserva vence.</li>
                   </ol>
-                  <p className="text-xs font-semibold text-amber-800">
+                  <p className="text-[13px] font-semibold text-amber-800">
                     Tenés {SENA_EXPIRY_HOURS} horas para enviar la seña. Si no llega, la orden se cancela.
                   </p>
                 </div>
@@ -1039,7 +1039,7 @@ export function CheckoutFlow({
           <div className="card-surface space-y-4 p-6">
             <h2 className="flex items-baseline justify-between text-xl font-extrabold tracking-tight text-ink-900">
               Tu pedido
-              <span className="text-xs font-semibold text-ink-500">
+              <span className="text-[13px] font-semibold text-ink-600">
                 {unidades} {unidades === 1 ? "producto" : "productos"}
               </span>
             </h2>
@@ -1056,9 +1056,9 @@ export function CheckoutFlow({
                     className="h-12 w-12 rounded-lg object-cover"
                   />
                   <div className="min-w-0 flex-1">
-                    <p className="line-clamp-1 text-xs font-semibold text-ink-800">{item.name}</p>
+                    <p className="line-clamp-2 text-sm font-semibold leading-snug text-ink-900">{item.name}</p>
                     <div className="mt-1">
-                      <div className="inline-flex items-center gap-2 rounded-lg border border-ink-100 bg-ink-50 px-1 text-[11px] text-ink-500">
+                      <div className="inline-flex items-center gap-2 rounded-lg border border-ink-200 bg-ink-50 px-1 text-xs text-ink-700">
                         <button
                           type="button"
                           aria-label="Quitar una unidad"
@@ -1079,7 +1079,7 @@ export function CheckoutFlow({
                       </div>
                     </div>
                   </div>
-                  <span className="text-xs font-bold text-ink-900">{money(item.price * item.quantity)}</span>
+                  <span className="text-sm font-bold text-ink-900">{money(item.price * item.quantity)}</span>
                 </div>
               ))}
             </div>
@@ -1104,17 +1104,17 @@ export function CheckoutFlow({
                   value={couponCode}
                   onChange={(e) => setCouponCode(e.target.value.toUpperCase())}
                   placeholder="Cupón de descuento"
-                  className="h-9 flex-1 rounded-lg border border-ink-200 px-2.5 text-xs uppercase outline-none focus:border-brand-400"
+                  className="h-10 min-w-0 flex-1 rounded-lg border border-ink-300 bg-surface px-3 text-sm uppercase text-ink-900 outline-none placeholder:text-ink-400 focus:border-brand-400 focus:ring-4 focus:ring-brand-100"
                 />
-                <button type="submit" className="rounded-lg bg-brand-700 px-3 text-xs font-bold text-white">
+                <button type="submit" className="rounded-lg bg-brand-700 px-4 text-sm font-bold text-white">
                   Aplicar
                 </button>
               </form>
             )}
-            {couponError ? <p className="text-[11px] font-semibold text-rose-600">{couponError}</p> : null}
+            {couponError ? <p className="text-xs font-semibold text-rose-600">{couponError}</p> : null}
 
-            <dl className="space-y-2 border-t border-ink-100 pt-3 text-sm">
-              <div className="flex justify-between text-ink-600">
+            <dl className="space-y-2 border-t border-ink-200 pt-3 text-sm">
+              <div className="flex justify-between text-ink-700">
                 <dt>Subtotal</dt>
                 <dd>{money(totals.subtotal)}</dd>
               </div>
@@ -1126,7 +1126,7 @@ export function CheckoutFlow({
               ) : null}
               {/* `paymentAdjustment` queda siempre en 0: el total no cambia por
                   medio de pago ni por cantidad de cuotas. Ver computeTotals. */}
-              <div className="flex justify-between text-ink-600">
+              <div className="flex justify-between text-ink-700">
                 <dt>Envío</dt>
                 <dd className={selectedOption?.free ? "font-semibold text-emerald-700" : ""}>
                   {selectedOption ? (selectedOption.free ? "Gratis" : money(selectedOption.cost)) : "A calcular"}
@@ -1134,8 +1134,8 @@ export function CheckoutFlow({
               </div>
             </dl>
 
-            <div className="flex items-end justify-between border-t border-ink-100 pt-3">
-              <span className="text-sm font-semibold text-ink-600">Total</span>
+            <div className="flex items-end justify-between border-t border-ink-200 pt-3">
+              <span className="text-sm font-bold text-ink-800">Total</span>
               <div className="text-right">
                 <span className="block text-2xl font-black text-ink-900">{money(totals.total)}</span>
               </div>
@@ -1147,7 +1147,7 @@ export function CheckoutFlow({
               </p>
             ) : null}
 
-            <label className="flex items-start gap-2.5 text-xs text-ink-600" data-error={errors.terms ? "terms" : undefined}>
+            <label className="flex items-start gap-2.5 text-[13px] leading-snug text-ink-700" data-error={errors.terms ? "terms" : undefined}>
               <input
                 type="checkbox"
                 checked={terms}
@@ -1174,10 +1174,10 @@ export function CheckoutFlow({
               Confirmar pedido · {money(totals.total)}
             </button>
             {openStep !== 3 ? (
-              <p className="text-center text-[11px] text-ink-500">Completá tus datos y la entrega para elegir cómo pagar.</p>
+              <p className="text-center text-xs text-ink-600">Completá tus datos y la entrega para elegir cómo pagar.</p>
             ) : null}
 
-            <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 border-t border-ink-100 pt-4 text-[11px] text-ink-500">
+            <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 border-t border-ink-200 pt-4 text-xs text-ink-600">
               <li className="flex items-center gap-1.5"><IconLock className="h-4 w-4 shrink-0 text-brand-700" /> Pago seguro</li>
               <li className="flex items-center gap-1.5"><IconShield className="h-4 w-4 shrink-0 text-brand-700" /> 6 meses de garantía</li>
               <li className="flex items-center gap-1.5"><IconStore className="h-4 w-4 shrink-0 text-brand-700" /> Servicio técnico propio</li>
