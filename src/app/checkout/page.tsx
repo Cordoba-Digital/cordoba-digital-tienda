@@ -18,8 +18,9 @@ export const metadata: Metadata = {
 };
 
 export default async function CheckoutPage() {
-  const [transfer, usdtWallet] = await Promise.all([getTransferAccount(), getUsdtWallet()]);
+  // Las tres lecturas van juntas; ninguna tira (ante un error devuelven null).
+  const [transfer, usdtWallet, rate] = await Promise.all([getTransferAccount(), getUsdtWallet(), getUsdtRate()]);
   // USDT se ofrece solo con wallet y con la cotización de la tienda cargada.
-  const usdtRate = usdtWallet ? await getUsdtRate() : null;
+  const usdtRate = usdtWallet ? rate : null;
   return <CheckoutFlow mercadoPago={mercadoPagoReady()} transfer={transfer} usdtRate={usdtRate} />;
 }
