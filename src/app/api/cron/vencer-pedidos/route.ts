@@ -1,13 +1,15 @@
 import { sincronizarEnvios } from "@/lib/admin-andreani";
 import { andreaniConfigurado } from "@/lib/andreani";
 import { syncPendingMpOrders } from "@/lib/checkout-mp-sync";
+import { purgeExpiredContactData } from "@/lib/data-retention";
 import { expireStalePendingOrders } from "@/lib/order-status";
 
 export const dynamic = "force-dynamic";
 
 /**
  * Cron diario de Vercel (`vercel.json`): cancela los pedidos que siguen sin
- * pago pasadas las horas de reserva y devuelve su stock. Vercel manda
+ * pago pasadas las horas de reserva y devuelve su stock, y borra los datos de
+ * contacto vencidos (ver `data-retention.ts`). Vercel manda
  * `Authorization: Bearer $CRON_SECRET`; sin esa variable el endpoint no corre
  * (el panel igual vence los pedidos cada vez que se abre).
  */
@@ -30,5 +32,9 @@ export async function GET(request: Request) {
       error: error instanceof Error ? error.message : "error inesperado",
     }));
   }
-  return Response.json({ ok: true, expired, mercadoPago, andreani });
+  // Teléfono, DNI y dirección de pedidos cerrados hace más de dos años.
+  const datosVencidos = await purgeExpiredContactData().catch((error: unknown) => ({
+    error: error instanceof Error ? error.message : "error inesperado",
+  }));
+  return Response.json({ ok: true, expired, mercadoPago, andreani, datosVencidos });
 }
