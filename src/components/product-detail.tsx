@@ -7,7 +7,7 @@ import { QuantityStepper } from "@/components/cart-drawer";
 import { InstallmentsDetail } from "@/components/installments-provider";
 import { UsdLine } from "@/components/usd-price";
 import { ProductImg } from "@/components/product-img";
-import { useStore } from "@/components/store-provider";
+import { useStoreSelector } from "@/components/store-provider";
 import { Stars } from "@/components/ui";
 import { trackViewItem } from "@/lib/analytics";
 import { discountPercent, money } from "@/lib/format";
@@ -231,10 +231,13 @@ export type BuyBoxProduct = {
 
 export function BuyBox({ product }: { product: BuyBoxProduct }) {
   const router = useRouter();
-  const { addItem, toggleFavorite, isFavorite, hydrated, pushRecent } = useStore();
+  const addItem = useStoreSelector((s) => s.addItem);
+  const toggleFavorite = useStoreSelector((s) => s.toggleFavorite);
+  const pushRecent = useStoreSelector((s) => s.pushRecent);
+  const hydrated = useStoreSelector((s) => s.hydrated);
+  const fav = useStoreSelector((s) => s.hydrated && s.favorites.includes(product.slug));
   const [quantity, setQuantity] = useState(1);
   const off = discountPercent(product.price, product.compareAtPrice);
-  const fav = hydrated && isFavorite(product.slug);
 
   // Después de leer el navegador: antes, la lectura (vacía) pisaba este
   // producto y "vistos recientemente" nunca guardaba nada.
@@ -425,7 +428,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
 
 export function MobileBuyBar({ product }: { product: BuyBoxProduct }) {
   const router = useRouter();
-  const { addItem } = useStore();
+  const addItem = useStoreSelector((s) => s.addItem);
 
   const payload = {
     slug: product.slug,

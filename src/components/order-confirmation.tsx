@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { ProductImg } from "@/components/product-img";
-import { useStore } from "@/components/store-provider";
+import { useStoreSelector } from "@/components/store-provider";
 import { TransferDetails } from "@/components/transfer-details";
 import { UsdtPaymentPanel, type UsdtPaymentInfo } from "@/components/usdt-payment";
 import { trackPurchase } from "@/lib/analytics";
@@ -66,7 +66,7 @@ export function OrderConfirmation({
   /** `?pago=` con el que vuelve Mercado Pago (exito, pendiente, fallo) o `error` si no se pudo iniciar. */
   paymentReturn?: string;
 }) {
-  const { clearCart } = useStore();
+  const clearCart = useStoreSelector((s) => s.clearCart);
   const current = statusIndex(order.status);
 
   useEffect(() => {

@@ -7,19 +7,24 @@ import Link from "next/link";
 import { InstallmentsLine } from "@/components/installments-provider";
 import { UsdLine } from "@/components/usd-price";
 import { ProductImg, ProductPlaceholder } from "@/components/product-img";
-import { useStore } from "@/components/store-provider";
+import { useStoreSelector } from "@/components/store-provider";
 import { Stars } from "@/components/ui";
 import { discountPercent, money } from "@/lib/format";
 import { MAX_QTY_PER_ITEM } from "@/lib/pricing";
 import type { ProductView } from "@/lib/product-view";
 
 export function ProductCard({ product, badge }: { product: ProductView; badge?: string }) {
-  const { toggleFavorite, isFavorite, hydrated, addItem, items, setQuantity, removeItem } = useStore();
+  // Cada tarjeta lee solo lo suyo: tocar un favorito o agregar otro producto
+  // no redibuja las demás tarjetas de la página.
+  const toggleFavorite = useStoreSelector((s) => s.toggleFavorite);
+  const addItem = useStoreSelector((s) => s.addItem);
+  const setQuantity = useStoreSelector((s) => s.setQuantity);
+  const removeItem = useStoreSelector((s) => s.removeItem);
+  const fav = useStoreSelector((s) => s.hydrated && s.favorites.includes(product.slug));
+  const inCart = useStoreSelector((s) => (s.hydrated ? (s.items.find((i) => i.slug === product.slug)?.quantity ?? 0) : 0));
   const off = discountPercent(product.price, product.compareAtPrice);
-  const fav = hydrated && isFavorite(product.slug);
   const outOfStock = product.stock === 0;
   const hoverSrc = product.images[1] && product.images[1] !== product.image ? product.images[1] : null;
-  const inCart = hydrated ? (items.find((i) => i.slug === product.slug)?.quantity ?? 0) : 0;
   const maxQty = product.stock > 1 ? Math.min(product.stock, MAX_QTY_PER_ITEM) : MAX_QTY_PER_ITEM;
   // Aviso breve sobre la foto al agregar desde la tarjeta: el panel lateral ya
   // no se abre, así que la confirmación tiene que estar acá.
