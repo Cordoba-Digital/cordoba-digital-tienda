@@ -43,9 +43,15 @@ export async function PUT(request: Request) {
     action: "inicio_editado",
     entityType: "inicio",
     entityId: "home",
-    summary: `Ordenó la home: ${order.join(", ")}${hidden.length ? `. Ocultos: ${hidden.join(", ")}` : ""}${
-      topBar !== topBarBefore ? `. Barra de avisos: ${topBar ? "visible" : "oculta"}` : ""
-    }`,
+    // El resumen se corta en 300 caracteres y la lista de bloques ya los pasa:
+    // la barra y los ocultos van primero para que no se pierdan.
+    summary: [
+      topBar !== topBarBefore ? `Barra de avisos: ${topBar ? "visible" : "oculta"}` : "",
+      hidden.length ? `Ocultos: ${hidden.join(", ")}` : "",
+      `Ordenó la home: ${order.join(", ")}`,
+    ]
+      .filter(Boolean)
+      .join(". "),
   });
   return Response.json({ ok: true, blocks: layout, topBar });
 }
