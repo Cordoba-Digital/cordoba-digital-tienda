@@ -422,7 +422,7 @@ export function CheckoutFlow({
   }, [form, hydrated]);
 
   // Quote shipping whenever the ZIP or subtotal changes.
-  const { options, zone, loading: zipLoading } = useShippingQuote({ zip: form.zip, subtotal, items });
+  const { options, zone, loading: zipLoading } = useShippingQuote({ zip: form.zip, items });
   // Sucursales de Andreani para "a sucursal". Si la consulta no trae ninguna
   // (sin conexión con Andreani), el local confirma la sucursal después.
   const { sucursales, loading: sucursalesLoading } = useSucursales(deliveryMethod === "express" ? form.zip : "");
