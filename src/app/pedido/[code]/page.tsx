@@ -8,6 +8,7 @@ import { reconcileMpPayment } from "@/lib/checkout-mp-sync";
 import { formatDateTime } from "@/lib/format";
 import { getOrderByCode } from "@/lib/queries";
 import { blockedMinutes, ipFromHeaders, ORDER_LOOKUP_LIMIT, recordMiss } from "@/lib/rate-limit";
+import { qrSvg } from "@/lib/qr-svg";
 import { getTransferAccount } from "@/lib/transfer-account-server";
 import { getUsdtWallet, syncUsdtPayment } from "@/lib/usdt-server";
 
@@ -135,6 +136,7 @@ export default async function OrderPage({
     usdt = payment
       ? {
           wallet,
+          walletQr: wallet ? qrSvg(wallet) : null,
           expectedAmount: payment.expectedAmount,
           rate: Number(payment.rate),
           rateAt: payment.rateAt.toISOString(),
