@@ -1,7 +1,7 @@
-import nodemailer from "nodemailer";
-
 import { db } from "@/db";
 import { arrepentimientoRequests } from "@/db/schema";
+import { customerMail, storeMail, tramiteCode } from "@/lib/arrepentimiento";
+import { sendMail, STORE_EMAIL } from "@/lib/mailer";
 import { blockedMinutes, FORM_LIMIT, ipFromHeaders, recordMiss, tooManyAttempts } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
@@ -49,47 +49,24 @@ export async function POST(request: Request) {
   const [record] = await db
     .insert(arrepentimientoRequests)
     .values({ nombre, email, numeroPedido, telefono, fechaCompra, producto, comentarios })
-    .returning({ id: arrepentimientoRequests.id });
+    .returning();
   await recordMiss(FORM_LIMIT, ip);
 
-  let emailSent = false;
-  let emailError: string | null = null;
-
-  try {
-    if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {
-      const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST,
-        port: Number(process.env.SMTP_PORT ?? 587),
-        secure: Number(process.env.SMTP_PORT ?? 587) === 465,
-        auth: {
-          user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASS,
-        },
-      });
-      await transporter.sendMail({
-        from: process.env.EMAIL_FROM ?? '"Córdoba Digital" <no-reply@cordobadigital.net>',
-        to: "consultas@cordobadigital.net",
-        subject: `Botón de arrepentimiento - ${nombre}`,
-        text: [
-          `Nombre: ${nombre}`,
-          `Email: ${email}`,
-          `Pedido: ${numeroPedido || "No indicado"}`,
-          `Teléfono: ${telefono}`,
-          `Fecha de compra: ${fechaCompra}`,
-          `Producto: ${producto}`,
-          `Comentarios: ${comentarios || "Sin comentarios"}`,
-        ].join("\n"),
-      });
-      emailSent = true;
-    } else {
-      emailError = "SMTP no configurado.";
+  // Primero el del cliente: es el que pide la norma. Si uno falla, el otro
+  // igual sale; la solicitud ya quedó guardada y se ve en el panel.
+  const [customer, store] = await Promise.allSettled([sendMail(customerMail(record)), sendMail(storeMail(record, STORE_EMAIL))]);
+  for (const result of [customer, store]) {
+    // El detalle del SMTP queda en los logs: puede nombrar el servidor o el
+    // usuario de la casilla, y al cliente no le sirve.
+    if (result.status === "rejected") {
+      console.error("[arrepentimiento] email no enviado:", result.reason instanceof Error ? result.reason.message : result.reason);
     }
-  } catch (error) {
-    emailError = error instanceof Error ? error.message : "No se pudo enviar el email.";
   }
-
-  // El detalle del SMTP queda en los logs: puede nombrar el servidor o el
-  // usuario de la casilla, y al cliente no le sirve.
-  if (emailError) console.error("[arrepentimiento] email no enviado:", emailError);
-  return Response.json({ ok: true, saved: true, emailSent, id: record.id });
+  return Response.json({
+    ok: true,
+    saved: true,
+    code: tramiteCode(record.id),
+    emailSent: customer.status === "fulfilled",
+    id: record.id,
+  });
 }

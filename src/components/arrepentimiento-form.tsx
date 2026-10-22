@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-type Status = { type: "idle" | "loading" | "success" | "error"; message?: string };
+type Status = { type: "idle" | "loading" | "success" | "error"; message?: string; code?: string };
 
 export function ArrepentimientoForm() {
   const [status, setStatus] = useState<Status>({ type: "idle" });
@@ -11,7 +11,9 @@ export function ArrepentimientoForm() {
     event.preventDefault();
     setStatus({ type: "loading" });
 
-    const form = new FormData(event.currentTarget);
+    // Después del `await` React ya soltó `currentTarget`: se guarda antes.
+    const formElement = event.currentTarget;
+    const form = new FormData(formElement);
     const body = {
       nombre: String(form.get("nombre") ?? ""),
       email: String(form.get("email") ?? ""),
@@ -30,14 +32,18 @@ export function ArrepentimientoForm() {
       });
       const data = await res.json();
       if (!res.ok || !data.ok) {
-        setStatus({ type: "error", message: data.error ?? "Revisá los datos e intentá de nuevo." });
+        const firstError = data.errors ? Object.values(data.errors as Record<string, string>)[0] : null;
+        setStatus({ type: "error", message: firstError ?? data.error ?? "Revisá los datos e intentá de nuevo." });
         return;
       }
       setStatus({
         type: "success",
-        message: data.emailSent ? "Solicitud registrada y enviada por email." : "Solicitud registrada. Te contactaremos a la brevedad.",
+        code: data.code,
+        message: data.emailSent
+          ? "Te mandamos este código por email. Te vamos a contactar dentro de las 24 horas hábiles."
+          : "Guardá este código. Te vamos a contactar dentro de las 24 horas hábiles.",
       });
-      event.currentTarget.reset();
+      formElement.reset();
     } catch {
       setStatus({ type: "error", message: "No pudimos enviar la solicitud. Probá de nuevo." });
     }
@@ -74,7 +80,17 @@ export function ArrepentimientoForm() {
         <textarea name="comentarios" rows={4} className="mt-1 w-full rounded-xl border border-ink-200 bg-surface px-3 py-2" />
       </label>
 
-      {status.message ? <p className={status.type === "success" ? "text-emerald-700" : "text-rose-600"}>{status.message}</p> : null}
+      {status.type === "success" && status.code ? (
+        <div role="status" className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-emerald-800">
+          <p className="font-bold">Recibimos tu solicitud.</p>
+          <p className="mt-1">
+            Código de trámite: <strong className="font-mono text-lg">{status.code}</strong>
+          </p>
+          <p className="mt-1 text-sm">{status.message}</p>
+        </div>
+      ) : status.message ? (
+        <p role="alert" className={status.type === "success" ? "text-emerald-700" : "text-rose-600"}>{status.message}</p>
+      ) : null}
 
       <button type="submit" disabled={status.type === "loading"} className="rounded-xl bg-brand-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-400 disabled:opacity-60">
         {status.type === "loading" ? "Enviando..." : "Enviar Solicitud de Arrepentimiento"}

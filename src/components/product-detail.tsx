@@ -12,6 +12,7 @@ import { Stars } from "@/components/ui";
 import { trackViewItem } from "@/lib/analytics";
 import { discountPercent, money } from "@/lib/format";
 import { MAX_QTY_PER_ITEM } from "@/lib/pricing";
+import { offerStockCount, unitsLabel } from "@/lib/stock-label";
 
 export function ProductGallery({
   images,
@@ -238,6 +239,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
   const fav = useStoreSelector((s) => s.hydrated && s.favorites.includes(product.slug));
   const [quantity, setQuantity] = useState(1);
   const off = discountPercent(product.price, product.compareAtPrice);
+  const offerUnits = offerStockCount(product);
 
   // Después de leer el navegador: antes, la lectura (vacía) pisaba este
   // producto y "vistos recientemente" nunca guardaba nada.
@@ -312,10 +314,12 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
              porque el campo no sirve para eso: 2.369 de 2.589 productos tienen
              stock = 1 y ninguno tiene entre 2 y 5, así que el aviso salía en el
              91% de las fichas. El `stock` del sitio original funciona como
-             disponible/no disponible, no como un conteo real de depósito. */
+             disponible/no disponible, no como un conteo real de depósito. En
+             las ofertas con la cantidad real cargada se muestra el número
+             (ver `stock-label.ts`). */
           <p className="mt-1.5 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-[13px] font-bold text-emerald-700">
             <span className="h-2 w-2 rounded-full bg-current" aria-hidden />
-            Stock disponible para envío inmediato
+            {offerUnits ? `${unitsLabel(offerUnits)} para envío inmediato` : "Stock disponible para envío inmediato"}
           </p>
         ) : (
           <p className="mt-1.5 text-sm font-semibold text-rose-600">Sin stock — consultanos por reposición</p>
