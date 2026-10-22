@@ -35,6 +35,31 @@ const STORE_HEADERS = [
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
 ];
 
+/**
+ * Páginas del WordPress sin una igual en la tienda nueva, sacadas del
+ * `page-sitemap.xml` del sitio viejo. Las que existen con la misma dirección
+ * (quienes-somos, politica-de-garantia, carrito, checkout, etc.) no necesitan
+ * nada. Sin esto, desde el cambio de dominio darían 404 y Google las sacaría
+ * del índice en vez de pasarle su posición a la página nueva.
+ */
+export const PAGINAS_WP: [string, string][] = [
+  ["/contacto", "/ayuda"],
+  ["/terminos-condiciones", "/ayuda"],
+  ["/formulario-de-sugerencias-y-reclamos", "/ayuda"],
+  ["/formas-de-pago-mercadopago-todopago-tarjetas-de-credito", "/ayuda#pagos"],
+  ["/condiciones-de-garantia", "/politica-de-garantia"],
+  ["/blog", "/guias"],
+  // Portada del blog: sale en el post-sitemap pero no es una nota.
+  ["/actualidad-digital", "/guias"],
+  ["/finalizar-compra", "/checkout"],
+  ["/cart", "/carrito"],
+  ["/my-account", "/mi-cuenta"],
+  ["/compare", "/productos"],
+  // Borradores de Elementor que quedaron publicados.
+  ["/home-v3-full-color-background", "/"],
+  ["/elementor-172394", "/"],
+];
+
 const nextConfig: NextConfig = {
   // Las URLs del catálogo migrado desde WooCommerce. Son 301 porque el
   // contenido ya no existe en las rutas viejas: la equivalencia es 1:1
@@ -53,6 +78,16 @@ const nextConfig: NextConfig = {
     });
     return [
       ...fusionadas,
+      ...PAGINAS_WP.map(([source, destination]) => ({ source, destination, permanent: true })),
+      // Las páginas 2, 3… de los listados de WooCommerce. Van antes que la
+      // regla general de categorías, que las mandaría a una subcategoría "page".
+      {
+        source: "/categoria-producto/:ruta*/page/:n(\\d+)",
+        destination: "/categoria/:ruta*?pagina=:n",
+        permanent: true,
+      },
+      { source: "/marca/:marca/page/:n(\\d+)", destination: "/productos?marca=:marca&pagina=:n", permanent: true },
+      { source: "/tienda/page/:n(\\d+)", destination: "/productos?pagina=:n", permanent: true },
       {
         // /categoria-producto/computacion/notebooks-cordoba/asus
         // -> /categoria/computacion/notebooks-cordoba/asus

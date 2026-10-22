@@ -10,6 +10,8 @@ import { after, beforeEach, test } from "node:test";
 import { db, pool, post, resetDb, schema } from "./db.mts";
 
 delete process.env.SMTP_HOST;
+const { captureMailForTests } = await import("../../src/lib/mailer");
+const outbox = captureMailForTests();
 const arrepentimiento = await import("../../src/app/api/arrepentimiento/route");
 const newsletter = await import("../../src/app/api/newsletter/route");
 const { FORM_LIMIT, NEWSLETTER_LIMIT } = await import("../../src/lib/rate-limit");
@@ -22,7 +24,10 @@ const solicitud = {
   producto: "Notebook",
 };
 
-beforeEach(resetDb);
+beforeEach(async () => {
+  await resetDb();
+  outbox.length = 0;
+});
 after(() => pool.end());
 
 test("arrepentimiento recorta los textos largos y limita los envíos por IP", async () => {
@@ -37,6 +42,23 @@ test("arrepentimiento recorta los textos largos y limita los envíos por IP", as
   }
   assert.equal((await arrepentimiento.POST(post("/api/arrepentimiento", solicitud, ip))).status, 429);
   assert.equal((await db.select().from(schema.arrepentimientoRequests)).length, FORM_LIMIT.max);
+});
+
+test("arrepentimiento le manda al cliente el código de trámite en el momento", async () => {
+  const res = await arrepentimiento.POST(post("/api/arrepentimiento", { ...solicitud, email: "Ana@Example.com", numeroPedido: "CD-123" }));
+  const data = await res.json();
+  assert.equal(res.status, 200);
+  assert.equal(data.code, "ARR-00001");
+  assert.equal(data.emailSent, true);
+
+  const alCliente = outbox.find((m) => m.to === "ana@example.com");
+  assert.ok(alCliente, "no salió el email al cliente");
+  assert.match(alCliente.subject, /ARR-00001/);
+  assert.match(alCliente.text, /Código de trámite: ARR-00001/);
+  assert.match(alCliente.text, /CD-123/);
+  const aLaTienda = outbox.find((m) => m.to === "consultas@cordobadigital.net");
+  assert.ok(aLaTienda, "no salió el aviso a la tienda");
+  assert.match(aLaTienda.text, /ARR-00001/);
 });
 
 test("arrepentimiento con campos que no son texto responde 400, no 500", async () => {

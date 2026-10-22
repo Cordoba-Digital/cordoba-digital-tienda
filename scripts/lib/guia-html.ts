@@ -213,7 +213,41 @@ export function sanearGuia(html: string): string {
   salida.push(escaparTexto(html.slice(ultimo)));
   cerrarHasta(0);
 
-  return limpiarEspacios(reescribirUrlsSueltas(reescribirEnlaces(salida.join(""))));
+  return sacarEmojisPerdidos(limpiarEspacios(reescribirUrlsSueltas(reescribirEnlaces(salida.join("")))));
+}
+
+/**
+ * Los emojis de 4 bytes (📱, 🔥, 💡…) no entraron en la base del WordPress y
+ * quedaron como un `?` suelto: "? Mejor cámara". En el sitio viejo se ven así
+ * también. Un signo de pregunta de verdad va pegado a la palabra ("¿Cuál?"),
+ * así que uno al comienzo de un título, párrafo o línea, o con espacio a los
+ * dos lados, es un emoji perdido y se saca.
+ */
+export function sacarEmojisPerdidos(texto: string): string {
+  return texto
+    .replace(/(^|<(?:h[1-6]|p|li|td|th)>|<br \/>)[ \t]*\?[ \t]+/g, "$1")
+    .replace(/[ \t]\?(?=[ \t]|$)/g, "");
+}
+
+/**
+ * Descripción de una nota que no trae una escrita en el preámbulo: las
+ * primeras oraciones enteras del excerpt de WordPress, hasta `max` caracteres
+ * (lo que Google muestra). El excerpt viene cortado en cualquier lado y
+ * termina en "[…]", así que tal cual no sirve.
+ */
+export function resumen(texto: string, max = 160): string {
+  const limpio = texto.replace(/\s*\[…\]\s*$/, "").trim();
+  if (limpio.length <= max) return limpio;
+  let salida = "";
+  for (const oracion of limpio.split(/(?<=[.!?…])\s+/)) {
+    const siguiente = salida ? `${salida} ${oracion}` : oracion;
+    if (siguiente.length > max) break;
+    salida = siguiente;
+  }
+  if (salida) return salida;
+  // Una sola oración más larga que el máximo: se corta en la última palabra entera.
+  const corte = limpio.slice(0, max - 1);
+  return `${corte.slice(0, corte.lastIndexOf(" ")).replace(/[\s,;:]+$/, "")}…`;
 }
 
 /** Colapsa la basura que queda al borrar etiquetas. */

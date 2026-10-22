@@ -25,12 +25,12 @@ export default function ArrepentimientoPage() {
             <ul className="mt-2 list-disc pl-5">
               <li>El producto debe estar sin uso, con sus etiquetas y en su embalaje original.</li>
               <li>Una vez enviada esta solicitud, nos pondremos en contacto en un plazo máximo de 24 horas hábiles para coordinar la devolución.</li>
-              <li>Te enviaremos un <strong>código de identificación de trámite</strong> a tu correo electrónico de forma inmediata.</li>
+              <li>Al enviarla, ves en pantalla tu <strong>código de identificación de trámite</strong> y te lo mandamos a tu correo electrónico en el momento.</li>
             </ul>
           </blockquote>
           <p>
             1. Completá el formulario debajo.<br />
-            2. Recibirás un <strong>Código de Gestión</strong> automático en tu mail.<br />
+            2. Recibís un <strong>código de trámite</strong> en pantalla y en tu mail.<br />
             3. Nos contactaremos para coordinar el retiro del equipo en nuestro local de <strong>27 de Abril 180</strong> o el envío por correo.
           </p>
           <ArrepentimientoForm />

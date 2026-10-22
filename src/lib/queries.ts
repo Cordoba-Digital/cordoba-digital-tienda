@@ -19,6 +19,7 @@ import {
 import { esMarcaDeRelleno } from "@/lib/brand-from-name";
 import { normalizeSearch, stem, suggestCategories, understandQuery, type QueryUnderstanding } from "@/lib/query-understanding";
 import { roundPriceCap } from "@/lib/format";
+import { slugCandidates } from "@/lib/slug-candidates";
 import { ttlCache } from "@/lib/ttl-cache";
 
 export type ProductFilters = {
@@ -240,25 +241,37 @@ export type GuideTeaser = {
   slug: string;
   title: string;
   subtitle: string;
+  /** Lugar en la columna del pie; 0 = nota del blog que no va en el pie. */
+  footerOrder: number;
 };
 
 /**
- * Guías de compra, en el orden en que las lista el pie del sitio original.
+ * Primero las guías del pie, en su orden, y después las notas del blog, de la
+ * más nueva a la más vieja.
+ */
+const GUIDE_ORDER = [asc(sql`${guides.footerOrder} = 0`), asc(guides.footerOrder), desc(guides.publishedAt)];
+
+/**
+ * Guías de compra y notas del blog (ver `GUIDE_ORDER`).
  *
  * Solo trae lo liviano: el cuerpo son miles de palabras y el pie se renderiza en
  * todas las páginas, así que no puede ir el artículo entero.
  */
 export const getGuides = cache(async (): Promise<GuideTeaser[]> => {
   const rows = await db
-    .select({ slug: guides.slug, title: guides.title, subtitle: guides.subtitle })
+    .select({ slug: guides.slug, title: guides.title, subtitle: guides.subtitle, footerOrder: guides.footerOrder })
     .from(guides)
-    .orderBy(asc(guides.footerOrder), asc(guides.id));
+    .orderBy(...GUIDE_ORDER);
   return rows;
 });
 
-/** Una guía por slug, o null si no existe. La página 404 con eso. */
+/**
+ * Una guía por slug, o null si no existe. La página 404 con eso. Dos notas del
+ * WordPress arrancan con un emoji y su slug está guardado percent-encoded: por
+ * eso se buscan todas las formas del slug (ver `slugCandidates`).
+ */
 export const getGuideBySlug = cache(async (slug: string) => {
-  const [row] = await db.select().from(guides).where(eq(guides.slug, slug)).limit(1);
+  const [row] = await db.select().from(guides).where(inArray(guides.slug, slugCandidates(slug))).limit(1);
   return row ?? null;
 });
 
@@ -291,10 +304,11 @@ export const getGuideCards = cache(async (): Promise<GuideCard[]> => {
       description: guides.description,
       wordCount: guides.wordCount,
       updatedAt: guides.updatedAt,
+      footerOrder: guides.footerOrder,
       meta: guides.meta,
     })
     .from(guides)
-    .orderBy(asc(guides.footerOrder), asc(guides.id));
+    .orderBy(...GUIDE_ORDER);
 });
 
 /** Ids + slugs de la categoría y todo su subárbol, para filtrar productos. */
