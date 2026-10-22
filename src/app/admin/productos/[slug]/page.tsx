@@ -42,7 +42,15 @@ export default async function EditAdminProductPage({
             {product.origin === "wp" ? " · Migrado de WordPress: al guardar queda como editado a mano." : null}
           </p>
         </div>
-        <AdminProductArchiveButton slug={product.slug} mode="archive" />
+        <div className="flex flex-wrap items-center gap-2">
+          <Link
+            href={`/admin/ofertas-programadas?producto=${encodeURIComponent(product.slug)}`}
+            className="border border-ink-300 px-3 py-2 text-xs font-bold text-ink-700 hover:border-ink-500"
+          >
+            Programar oferta
+          </Link>
+          <AdminProductArchiveButton slug={product.slug} mode="archive" />
+        </div>
       </div>
 
       {justCreated ? (

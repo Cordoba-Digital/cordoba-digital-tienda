@@ -5,7 +5,8 @@ import { orderEvents, orderItems, orders, orderStockHolds, products } from "@/db
 import { isAutomationOn } from "@/lib/automations";
 import { ensureCouponSchema, releaseCouponUse, restoreCouponUse } from "@/lib/coupons";
 import { notifyStatusChange } from "@/lib/order-emails";
-import { CANCELLED_STATUS, isCancelled, statusIndex } from "@/lib/pricing";
+import { countedStockSlugs } from "@/lib/price-schedules";
+import { CANCELLED_STATUS, isCancelled, isCountedStock, statusIndex } from "@/lib/pricing";
 import { ensureStockHoldSchema } from "@/lib/stock-hold-schema";
 import { ensureUsdtSchema } from "@/lib/usdt-schema";
 import {
@@ -44,10 +45,12 @@ export function ensureOrderStockSchema(): Promise<void> {
  * El catálogo migrado guarda `stock` como disponibilidad (1 = hay, 0 = no hay)
  * porque la API pública de WooCommerce no da cantidades: si descontáramos
  * siempre, la primera venta dejaría el producto agotado para siempre. Solo se
- * descuenta cuando el stock es una cantidad real (> 1).
+ * descuenta cuando el stock es una cantidad real (> 1, o 1 en un producto con
+ * oferta programada: ver `countedStockSlugs`).
  */
 export async function reserveOrderStock(tx: Tx, orderId: number): Promise<void> {
   const items = await tx.select().from(orderItems).where(eq(orderItems.orderId, orderId));
+  const counted = await countedStockSlugs(items.map((i) => i.productSlug), tx);
   for (const item of items) {
     const [product] = await tx
       .select({ stock: products.stock })
@@ -55,7 +58,8 @@ export async function reserveOrderStock(tx: Tx, orderId: number): Promise<void> 
       .where(eq(products.slug, item.productSlug))
       .for("update")
       .limit(1);
-    const reserved = product && product.stock > 1 ? Math.min(item.quantity, product.stock) : 0;
+    const reserved =
+      product && isCountedStock(product.stock, counted.has(item.productSlug)) ? Math.min(item.quantity, product.stock) : 0;
     await tx
       .update(products)
       .set({ stock: sql`${products.stock} - ${reserved}`, soldCount: sql`${products.soldCount} + ${item.quantity}` })
@@ -70,11 +74,14 @@ export async function reserveOrderStock(tx: Tx, orderId: number): Promise<void> 
  */
 async function stockShortages(tx: Tx, orderId: number): Promise<string[]> {
   const rows = await tx
-    .select({ name: orderItems.name, quantity: orderItems.quantity, stock: products.stock })
+    .select({ name: orderItems.name, slug: orderItems.productSlug, quantity: orderItems.quantity, stock: products.stock })
     .from(orderItems)
     .innerJoin(products, eq(products.slug, orderItems.productSlug))
     .where(eq(orderItems.orderId, orderId));
-  return rows.filter((row) => row.stock === 0 || (row.stock > 1 && row.stock < row.quantity)).map((row) => row.name);
+  const counted = await countedStockSlugs(rows.map((r) => r.slug), tx);
+  return rows
+    .filter((row) => row.stock === 0 || (isCountedStock(row.stock, counted.has(row.slug)) && row.stock < row.quantity))
+    .map((row) => row.name);
 }
 
 /** Devuelve a la tienda lo que el pedido había descontado. */

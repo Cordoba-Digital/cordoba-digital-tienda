@@ -4,6 +4,8 @@ import { db } from "@/db";
 import { orders, type ShippingAddress } from "@/db/schema";
 import type { PaymentMethodId } from "@/lib/pricing";
 import { releaseStaleStockHolds } from "@/lib/order-status";
+import { applyDuePriceSchedules } from "@/lib/price-schedules";
+import { refreshStorePages } from "@/lib/store-cache";
 import { PENDING_EXPIRY_HOURS } from "@/lib/payment-rules";
 import { CouponGoneError, getCoupon } from "@/lib/coupons";
 import { insertOrder, mergeOrderLines, priceOrder } from "@/lib/checkout-order";
@@ -162,6 +164,11 @@ export async function POST(request: Request) {
   // El stock de las órdenes que no se pagaron en 2 hs vuelve a la venta antes
   // de mirar si alcanza. Si falla, se compra igual con el stock como está.
   await releaseStaleStockHolds().catch((error) => console.error("[checkout] no se pudo liberar stock vencido:", error));
+  // Ofertas programadas: el precio que se cobra es el de esta hora, aunque
+  // nadie haya pasado por la tienda desde que empezó o terminó la oferta.
+  await applyDuePriceSchedules()
+    .then(({ changed }) => changed.length && refreshStorePages(changed))
+    .catch((error) => console.error("[checkout] no se pudieron aplicar las ofertas programadas:", error));
 
   // Un cupón que no existe se ignora (el pedido sale sin descuento), pero
   // cuenta como intento fallido igual que en /api/coupon: si no, el total que

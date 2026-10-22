@@ -11,7 +11,7 @@ import { useStoreSelector } from "@/components/store-provider";
 import { Stars } from "@/components/ui";
 import { trackViewItem } from "@/lib/analytics";
 import { discountPercent, money } from "@/lib/format";
-import { MAX_QTY_PER_ITEM } from "@/lib/pricing";
+import { maxQuantityFor } from "@/lib/pricing";
 import { offerStockCount, unitsLabel } from "@/lib/stock-label";
 
 export function ProductGallery({
@@ -222,6 +222,8 @@ export type BuyBoxProduct = {
   price: number;
   compareAtPrice: number | null;
   stock: number;
+  /** Stock real aunque sea 1: el producto tiene una oferta programada. */
+  stockCounted?: boolean;
   freeShipping: boolean;
   warrantyMonths: number;
   sku: string;
@@ -345,12 +347,12 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
 
       <div className="flex items-center justify-between text-sm font-semibold text-ink-700">
         <span>Cantidad</span>
-        {/* Tope: 10 unidades, o el `stock` cuando la cantidad es real
-            (> 1) y menor. Con `stock` 1 la cantidad es desconocida (solo
-            "hay stock"), así que rige el tope general. */}
+        {/* Tope general, o el `stock` cuando la cantidad es real y menor. Con
+            `stock` 1 la cantidad es desconocida (solo "hay stock"), salvo en
+            productos con oferta programada (ver `maxQuantityFor`). */}
         <QuantityStepper
           value={quantity}
-          max={product.stock > 1 ? Math.min(product.stock, MAX_QTY_PER_ITEM) : MAX_QTY_PER_ITEM}
+          max={maxQuantityFor(product.stock, product.stockCounted)}
           onChange={setQuantity}
         />
       </div>

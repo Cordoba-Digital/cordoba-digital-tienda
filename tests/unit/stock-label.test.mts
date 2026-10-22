@@ -13,6 +13,12 @@ test("muestra la cantidad solo en ofertas con stock cargado de verdad", () => {
   assert.equal(offerStockCount({ stock: 7, price: 900, compareAtPrice: 900 }), null);
 });
 
+test("con oferta programada el stock es real aunque sea 1", () => {
+  assert.equal(offerStockCount({ stock: 1, price: 900, compareAtPrice: 1000, stockCounted: true }), 1);
+  assert.equal(offerStockCount({ stock: 1, price: 900, compareAtPrice: null, stockCounted: true }), 1);
+  assert.equal(offerStockCount({ stock: 0, price: 900, compareAtPrice: 1000, stockCounted: true }), null);
+});
+
 test("el texto concuerda en número", () => {
   assert.equal(unitsLabel(1), "1 unidad disponible");
   assert.equal(unitsLabel(12), "12 unidades disponibles");

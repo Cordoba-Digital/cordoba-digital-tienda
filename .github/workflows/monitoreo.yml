@@ -52,6 +52,12 @@ jobs:
           echo "estado=caida" >> "$GITHUB_OUTPUT"
           echo "codigo=$codigo" >> "$GITHUB_OUTPUT"
 
+      - name: Ofertas programadas
+        # De paso empieza o termina las ofertas programadas cuya hora llegó, por
+        # si nadie tiene la tienda abierta (ver src/lib/price-schedules.ts).
+        if: env.URL_TIENDA != ''
+        run: curl -s -X POST --max-time 20 "${URL_TIENDA%/}/api/ofertas/tick" || true
+
       - name: Abrir el aviso
         if: steps.chequeo.outputs.estado == 'caida'
         run: |

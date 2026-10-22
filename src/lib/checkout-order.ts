@@ -5,6 +5,7 @@ import { orderEvents, orderItems, orders, products, type Coupon, type ShippingAd
 import { claimCouponUse, CouponGoneError } from "@/lib/coupons";
 import { newOrderCode } from "@/lib/order-code";
 import { ensureOrderStockSchema, reserveOrderStock } from "@/lib/order-status";
+import { countedStockSlugs } from "@/lib/price-schedules";
 import { computeTotals, maxQuantityFor, PAYMENT_METHODS, type CouponInfo, type PaymentMethodId, type Totals } from "@/lib/pricing";
 import { findShippingOption, type DeliveryMethod, type ShippingOption } from "@/lib/shipping";
 import { preciosAndreani } from "@/lib/shipping-andreani";
@@ -76,9 +77,11 @@ export async function priceOrder(input: {
   coupon?: Promise<Coupon | null> | null;
 }): Promise<PricedOrder | OrderProblem> {
   const web = input.source === "web";
-  const [rows, coupon] = await Promise.all([
-    db.select().from(products).where(inArray(products.slug, input.lines.map((l) => l.slug))),
+  const slugs = input.lines.map((l) => l.slug);
+  const [rows, coupon, counted] = await Promise.all([
+    db.select().from(products).where(inArray(products.slug, slugs)),
     input.coupon ?? null,
+    countedStockSlugs(slugs),
   ]);
   const bySlug = new Map(rows.map((r) => [r.slug, r]));
 
@@ -86,7 +89,7 @@ export async function priceOrder(input: {
   for (const line of input.lines) {
     const product = bySlug.get(line.slug);
     if (!product) return { ok: false, status: 409, error: `El producto ${line.slug} ya no está disponible.` };
-    const cap = maxQuantityFor(product.stock);
+    const cap = maxQuantityFor(product.stock, counted.has(product.slug));
     if (cap === 0) {
       return { ok: false, status: 409, error: web ? `Nos quedamos sin stock de ${product.name}.` : `No hay stock de ${product.name}.` };
     }

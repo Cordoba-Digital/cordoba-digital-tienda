@@ -6,6 +6,7 @@ import { CartDrawer, Toaster } from "@/components/cart-drawer";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { InstallmentsProvider } from "@/components/installments-provider";
 import { SiteFooter } from "@/components/site-footer";
+import { PriceScheduleTicker } from "@/components/price-schedule-ticker";
 import { SiteHeader } from "@/components/site-header";
 import { StoreProvider } from "@/components/store-provider";
 import { StoreChrome } from "@/components/store-chrome";
@@ -165,6 +166,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
                 />
                 <CartDrawer />
                 <WhatsAppFab />
+                <PriceScheduleTicker />
               </StoreChrome>
               <Toaster />
             </UsdRateProvider>
