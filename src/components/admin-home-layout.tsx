@@ -80,7 +80,8 @@ export function AdminHomeLayout({ initial, initialTopBar }: { initial: HomeLayou
           <p className={`text-sm font-semibold ${topBar ? "text-ink-900" : "text-ink-400 line-through"}`}>Barra de avisos</p>
           <p className="text-xs text-ink-500">
             La franja naranja de arriba del header, con los mensajes de pagos, envíos, retiro y garantía. Se ve en todas las páginas.
-            Si la ocultás, en el celular esos mensajes pasan a la portada.
+            Si la ocultás, en el celular esos mensajes pasan a la portada. La franja queda igual con el link al botón de
+            arrepentimiento, que por ley tiene que estar a la vista.
           </p>
         </div>
         <label className="flex cursor-pointer items-center gap-2 text-xs font-bold text-ink-700">

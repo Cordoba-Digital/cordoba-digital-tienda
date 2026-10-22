@@ -12,6 +12,7 @@ import { Stars } from "@/components/ui";
 import { discountPercent, money } from "@/lib/format";
 import { MAX_QTY_PER_ITEM } from "@/lib/pricing";
 import type { ProductView } from "@/lib/product-view";
+import { offerStockCount, unitsLabel } from "@/lib/stock-label";
 
 export function ProductCard({ product, badge }: { product: ProductView; badge?: string }) {
   // Cada tarjeta lee solo lo suyo: tocar un favorito o agregar otro producto
@@ -24,6 +25,7 @@ export function ProductCard({ product, badge }: { product: ProductView; badge?: 
   const inCart = useStoreSelector((s) => (s.hydrated ? (s.items.find((i) => i.slug === product.slug)?.quantity ?? 0) : 0));
   const off = discountPercent(product.price, product.compareAtPrice);
   const outOfStock = product.stock === 0;
+  const offerUnits = offerStockCount(product);
   const hoverSrc = product.images[1] && product.images[1] !== product.image ? product.images[1] : null;
   const maxQty = product.stock > 1 ? Math.min(product.stock, MAX_QTY_PER_ITEM) : MAX_QTY_PER_ITEM;
   // Aviso breve sobre la foto al agregar desde la tarjeta: el panel lateral ya
@@ -171,6 +173,7 @@ export function ProductCard({ product, badge }: { product: ProductView; badge?: 
             ) : null}
             <p className="text-[15px] font-extrabold tracking-tight leading-none text-ink-900 sm:text-[17px]">{money(product.price)}</p>
             <UsdLine price={product.price} className="mt-0.5 text-[11px] font-semibold leading-tight text-ink-500 sm:text-xs" />
+            {offerUnits ? <p className="mt-1 text-[11px] font-bold leading-tight text-rose-600 sm:text-xs">{unitsLabel(offerUnits)}</p> : null}
             {outOfStock ? null : <InstallmentsLine price={product.price} className="mt-1 text-[11px] font-semibold leading-tight text-emerald-700 sm:text-[11.5px]" />}
           </div>
           {inCart > 0 ? (

@@ -175,16 +175,23 @@ export function SiteHeader({ categories, topBar = true }: { categories: Category
 
   return (
     <header className="sticky top-0 z-50">
-      {/* Barra de avisos: se apaga desde Panel → Inicio. */}
-      {topBar ? (
-        <div className="bg-brand-700 py-1 text-center text-[11px] font-medium text-white sm:py-1.5 sm:text-[12px]">
-          <div className="container-xl flex items-center justify-center gap-2 overflow-hidden">
-            <span key={announcement} className="animate-rise">
+      {/* Barra de avisos: los avisos se apagan desde Panel → Inicio, el link al
+          botón de arrepentimiento no. La Resolución 424/2020 lo pide visible y
+          de acceso directo desde la primera pantalla, no solo en el pie. */}
+      <div className="bg-brand-700 py-1 text-[11px] font-medium text-white sm:py-1.5 sm:text-[12px]">
+        <div className="container-xl flex items-center gap-3 overflow-hidden">
+          {topBar ? (
+            <span key={announcement} className="min-w-0 flex-1 animate-rise text-left sm:text-center">
               {ANNOUNCEMENTS[announcement]}
             </span>
-          </div>
+          ) : (
+            <span className="flex-1" />
+          )}
+          <Link href="/arrepentimiento" className="shrink-0 font-semibold underline underline-offset-2 hover:no-underline">
+            Botón de arrepentimiento
+          </Link>
         </div>
-      ) : null}
+      </div>
 
       <div className="border-b border-ink-100 bg-surface/95 backdrop-blur-md">
         <div className="container-xl flex h-14 items-center gap-2 sm:h-16 sm:gap-3 md:h-[72px] md:gap-5">
@@ -534,6 +541,9 @@ export function SiteHeader({ categories, topBar = true }: { categories: Category
                 </Link>
                 <Link href="/ayuda" className="block rounded-xl px-3 py-2.5 hover:bg-ink-50">
                   💬 Centro de ayuda
+                </Link>
+                <Link href="/arrepentimiento" className="block rounded-xl px-3 py-2.5 hover:bg-ink-50">
+                  ↩️ Botón de arrepentimiento
                 </Link>
               </div>
               <a

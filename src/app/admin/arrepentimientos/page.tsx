@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { AdminCopyButton } from "@/components/admin-copy-button";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { ARREPENTIMIENTO_DIAS, listArrepentimientos } from "@/lib/admin-arrepentimientos";
+import { customerMail, tramiteCode } from "@/lib/arrepentimiento";
 import { whatsappHref } from "@/lib/admin-order-helpers";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { formatAgo, formatDateTime } from "@/lib/format";
@@ -20,6 +21,11 @@ const DAY = 24 * 60 * 60 * 1000;
 function fechaAR(value: string): string {
   const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value.trim());
   return m ? `${m[3]}/${m[2]}/${m[1]}` : value;
+}
+
+function mailtoHref(r: Parameters<typeof customerMail>[0]): string {
+  const mail = customerMail(r);
+  return `mailto:${encodeURIComponent(mail.to)}?subject=${encodeURIComponent(mail.subject)}&body=${encodeURIComponent(mail.text)}`;
 }
 
 export default async function AdminArrepentimientosPage({ searchParams }: { searchParams: SearchParams }) {
@@ -63,7 +69,10 @@ export default async function AdminArrepentimientosPage({ searchParams }: { sear
               <li key={r.id} className="admin-card p-4 sm:p-5">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div className="min-w-0">
-                    <p className="text-base font-black text-ink-900">{r.nombre}</p>
+                    <p className="flex flex-wrap items-center gap-2 text-base font-black text-ink-900">
+                      {r.nombre}
+                      <span className="font-mono text-xs font-bold text-ink-500">{tramiteCode(r.id)}</span>
+                    </p>
                     <p className="mt-0.5 text-sm text-ink-700">{r.producto}</p>
                   </div>
                   <div className="text-right text-xs text-ink-500">
@@ -119,16 +128,23 @@ export default async function AdminArrepentimientosPage({ searchParams }: { sear
                   <p className="mt-3 whitespace-pre-line border-l-2 border-ink-200 pl-3 text-sm text-ink-700">{r.comentarios}</p>
                 ) : null}
 
+                <div className="mt-4 flex flex-wrap gap-2">
                 {wa ? (
                   <a
                     href={wa}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 inline-block bg-brand-700 px-4 py-2 text-sm font-bold text-white hover:bg-brand-800"
+                    className="inline-block bg-brand-700 px-4 py-2 text-sm font-bold text-white hover:bg-brand-800"
                   >
                     Escribirle por WhatsApp
                   </a>
                 ) : null}
+                {/* El código se le manda solo al enviar el formulario. Si el email no
+                    salió (falla del correo), esto lo deja listo para mandarlo a mano. */}
+                <a href={mailtoHref(r)} className="inline-block border border-ink-200 px-4 py-2 text-sm font-bold text-ink-700 hover:bg-ink-50">
+                  Reenviar el código por email
+                </a>
+                </div>
               </li>
             );
           })}
