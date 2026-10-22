@@ -3,6 +3,8 @@ import { andreaniConfigurado } from "@/lib/andreani";
 import { syncPendingMpOrders } from "@/lib/checkout-mp-sync";
 import { purgeExpiredContactData } from "@/lib/data-retention";
 import { expireStalePendingOrders } from "@/lib/order-status";
+import { applyDuePriceSchedules } from "@/lib/price-schedules";
+import { refreshStorePages } from "@/lib/store-cache";
 
 export const dynamic = "force-dynamic";
 
@@ -24,6 +26,13 @@ export async function GET(request: Request) {
     error: error instanceof Error ? error.message : "error inesperado",
   }));
   const expired = await expireStalePendingOrders();
+  // Respaldo de las ofertas programadas, por si nadie pasó por la tienda.
+  const ofertas = await applyDuePriceSchedules()
+    .then(({ changed }) => {
+      if (changed.length) refreshStorePages(changed);
+      return { cambiadas: changed.length };
+    })
+    .catch((error: unknown) => ({ error: error instanceof Error ? error.message : "error inesperado" }));
   // De paso trae de Andreani los números de seguimiento y estados nuevos. El
   // panel también lo hace a pedido con "Actualizar seguimiento".
   let andreani: { revisados: number; actualizados: number } | { error: string } | null = null;
@@ -36,5 +45,5 @@ export async function GET(request: Request) {
   const datosVencidos = await purgeExpiredContactData().catch((error: unknown) => ({
     error: error instanceof Error ? error.message : "error inesperado",
   }));
-  return Response.json({ ok: true, expired, mercadoPago, andreani, datosVencidos });
+  return Response.json({ ok: true, expired, mercadoPago, andreani, datosVencidos, ofertas });
 }

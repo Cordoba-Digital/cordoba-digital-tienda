@@ -19,6 +19,7 @@ const ENTITIES = [
   { id: "sesion", label: "Ingresos" },
   { id: "acceso", label: "Accesos" },
   { id: "cupon", label: "Cupones" },
+  { id: "oferta", label: "Ofertas programadas" },
   { id: "automatizacion", label: "Automatizaciones" },
   { id: "medios_de_pago", label: "Medios de pago" },
   { id: "error", label: "Errores" },
@@ -48,6 +49,7 @@ function entityLink(row: ActivityRow): string | null {
   if (row.entityType === "usuario") return `/admin/usuarios/${encodeURIComponent(row.entityId)}`;
   if (row.entityType === "acceso") return "/admin/accesos";
   if (row.entityType === "cupon") return "/admin/cupones";
+  if (row.entityType === "oferta") return "/admin/ofertas-programadas";
   if (row.entityType === "automatizacion") return "/admin/automatizaciones";
   if (row.entityType === "error") return "/admin/errores";
   if (row.entityType === "inicio") return "/admin/inicio";

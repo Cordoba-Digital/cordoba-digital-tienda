@@ -591,3 +591,39 @@ export const orderStockHolds = pgTable("order_stock_holds", {
   orderId: integer("order_id").primaryKey(),
   releasedAt: timestamp("released_at", { withTimezone: true }).notNull().defaultNow(),
 });
+
+/**
+ * Ofertas programadas (Panel → Ofertas programadas): un precio que empieza y
+ * termina a una hora exacta. Al empezar se guarda el precio y el "antes" que
+ * tenía el producto y se pone el de oferta; al terminar se vuelven a poner, si
+ * nadie cambió el precio a mano en el medio. Ver `price-schedules.ts`.
+ *
+ * `status`: programada → activa → terminada, o cancelada.
+ */
+export const priceSchedules = pgTable(
+  "price_schedules",
+  {
+    id: serial("id").primaryKey(),
+    productSlug: text("product_slug").notNull(),
+    offerPrice: integer("offer_price").notNull(),
+    startsAt: timestamp("starts_at", { withTimezone: true }).notNull(),
+    endsAt: timestamp("ends_at", { withTimezone: true }).notNull(),
+    status: text("status").notNull().default("programada"),
+    /** Precio y "antes" del producto justo antes de empezar la oferta. */
+    prevPrice: integer("prev_price"),
+    prevCompareAt: integer("prev_compare_at"),
+    appliedAt: timestamp("applied_at", { withTimezone: true }),
+    endedAt: timestamp("ended_at", { withTimezone: true }),
+    /** Qué pasó al terminar, para el panel ("precio cambiado a mano", "producto archivado"). */
+    note: text("note").notNull().default(""),
+    createdBy: text("created_by").notNull().default(""),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (table) => [
+    index("price_schedules_status_starts_idx").on(table.status, table.startsAt),
+    index("price_schedules_status_ends_idx").on(table.status, table.endsAt),
+    index("price_schedules_product_idx").on(table.productSlug),
+  ],
+);
+
+export type PriceSchedule = typeof priceSchedules.$inferSelect;

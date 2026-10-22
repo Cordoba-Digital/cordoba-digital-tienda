@@ -92,6 +92,13 @@
       "when": 1792438427977,
       "tag": "0012_reserva_stock_2hs",
       "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1792702154717,
+      "tag": "0013_ofertas_programadas",
+      "breakpoints": true
     }
   ]
 }
