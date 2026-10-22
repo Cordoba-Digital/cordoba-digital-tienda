@@ -63,6 +63,7 @@ export async function GET(): Promise<Response> {
     "## Comprar y postventa",
     "",
     `- [Centro de ayuda](${url("/ayuda")}): envíos, medios de pago, garantía y cambios.`,
+    `- [Política de envíos](${url("/politica-de-envios")}): plazos, costos y seguimiento con Andreani.`,
     `- [Política de garantía](${url("/politica-de-garantia")})`,
     `- [Cambios y devoluciones](${url("/cambio-devoluciones")})`,
     `- [Seguimiento de pedidos](${url("/seguimiento")})`,

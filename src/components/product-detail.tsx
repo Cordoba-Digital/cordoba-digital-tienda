@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
@@ -413,7 +414,10 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
           </svg>
           <p>
             <b className="block text-sm text-ink-900">Envíos a todo el país por Andreani</b>
-            A domicilio o a sucursal. El costo lo ves en el checkout con tu código postal.
+            A domicilio o a sucursal. El costo lo ves en el checkout con tu código postal.{" "}
+            <Link href="/politica-de-envios" className="font-semibold text-brand-700 underline">
+              Plazos y costos
+            </Link>
           </p>
         </div>
         <div className="flex items-start gap-3 text-[13px] leading-snug text-ink-500">

@@ -118,7 +118,7 @@ export async function SiteFooter({
               </Link>
             </li>
             <li>
-              <Link href="/ayuda" className="text-ink-600 transition hover:text-brand-700">
+              <Link href="/politica-de-envios" className="text-ink-600 transition hover:text-brand-700">
                 Envíos y plazos de entrega
               </Link>
             </li>
@@ -145,6 +145,7 @@ export async function SiteFooter({
           <ul className="space-y-2.5 text-sm">
             <li><Link href="/quienes-somos" className="text-ink-600 transition hover:text-brand-700">¿Quiénes Somos?</Link></li>
             <li><Link href="/por-que-elegirnos" className="text-ink-600 transition hover:text-brand-700">¿Por qué elegirnos?</Link></li>
+            <li><Link href="/politica-de-envios" className="text-ink-600 transition hover:text-brand-700">Política de Envíos</Link></li>
             <li><Link href="/politica-de-garantia" className="text-ink-600 transition hover:text-brand-700">Política de Garantía</Link></li>
             <li><Link href="/cambio-devoluciones" className="text-ink-600 transition hover:text-brand-700">Cambios y Devoluciones</Link></li>
             <li><Link href="/politica-privacidad" className="text-ink-600 transition hover:text-brand-700">Políticas de Privacidad</Link></li>
