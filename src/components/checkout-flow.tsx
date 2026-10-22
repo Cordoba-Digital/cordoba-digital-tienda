@@ -798,6 +798,13 @@ export function CheckoutFlow({
                   <p className="mt-1 text-[13px] font-medium text-emerald-700">Gratis · 27 de Abril 180, Córdoba Capital</p>
                 </button>
               </div>
+              <p className="text-xs text-ink-600">
+                Plazos de despacho y entrega en nuestra{" "}
+                <Link href="/politica-de-envios" target="_blank" className="font-semibold text-brand-700 underline">
+                  política de envíos
+                </Link>
+                .
+              </p>
               {deliveryMethod === "pickup" ? (
                 <div className="rounded-xl border border-ink-200 bg-ink-50 p-4 text-sm text-ink-700">
                   <p className="font-bold text-ink-900">27 de Abril 180, Córdoba Capital</p>
