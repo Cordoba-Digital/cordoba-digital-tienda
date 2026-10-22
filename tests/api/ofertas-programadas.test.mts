@@ -174,3 +174,18 @@ test("con oferta programada, el stock 1 es una unidad real: se vende una sola ve
   await comprar("migrado", 1);
   assert.equal(await stock("migrado"), 1);
 });
+
+test("sin la tabla de ofertas (base sin migrar) el checkout funciona igual", async () => {
+  await seedProduct("notebook", 1_000_000, 3);
+  await pool.query("alter table price_schedules rename to price_schedules_tmp");
+  try {
+    const res = await checkout.POST(
+      post("/api/checkout", { customer: comprador, delivery: domicilio, payment: { method: "transferencia" }, items: [{ slug: "notebook", quantity: 1 }] }),
+    );
+    assert.equal(res.status, 200, JSON.stringify(await res.clone().json()));
+    const [item] = await db.select().from(schema.orderItems);
+    assert.equal(item.stockReserved, 1);
+  } finally {
+    await pool.query("alter table price_schedules_tmp rename to price_schedules");
+  }
+});

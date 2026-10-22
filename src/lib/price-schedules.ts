@@ -147,14 +147,19 @@ export async function applyDuePriceSchedules(now = new Date()): Promise<{ change
  * oferta programada o en curso. Para el evento, César carga ahí la cantidad
  * real, así que el 1 no es el "hay" del catálogo migrado: se muestra y se
  * descuenta como cualquier cantidad.
+ *
+ * Dentro de una transacción va en un savepoint: si la tabla no existe, el
+ * error abortaría la transacción entera y el pedido fallaría.
  */
-export async function countedStockSlugs(slugs: string[], executor: Pick<typeof db, "selectDistinct"> = db): Promise<Set<string>> {
+export async function countedStockSlugs(slugs: string[], tx?: Tx): Promise<Set<string>> {
   if (!slugs.length) return new Set();
-  try {
-    const rows = await executor
+  const query = (executor: Pick<typeof db, "selectDistinct">) =>
+    executor
       .selectDistinct({ slug: priceSchedules.productSlug })
       .from(priceSchedules)
       .where(and(inArray(priceSchedules.productSlug, slugs), inArray(priceSchedules.status, ["programada", "activa"])));
+  try {
+    const rows = tx ? await tx.transaction((savepoint) => query(savepoint)) : await query(db);
     return new Set(rows.map((r) => r.slug));
   } catch (error) {
     if (missingTable(error)) return new Set();
