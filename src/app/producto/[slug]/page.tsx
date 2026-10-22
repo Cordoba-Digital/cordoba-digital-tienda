@@ -23,6 +23,7 @@ import {
   getVerifiedRatingStats,
 } from "@/lib/queries";
 import { url as siteUrl } from "@/lib/site";
+import { slugCandidates } from "@/lib/slug-candidates";
 import { breadcrumbJsonLd, jsonLdString, ORG_ID, returnPolicy } from "@/lib/structured-data";
 import { sanitizeHtml } from "@/lib/sanitize-html";
 
@@ -70,15 +71,6 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
 
 type Params = Promise<{ slug: string }>;
 
-/** `decodeURIComponent` tira URIError con `%` sueltos (`foo%bar`). */
-function safeDecode(value: string): string {
-  try {
-    return decodeURIComponent(value);
-  } catch {
-    return value;
-  }
-}
-
 /** `priceValidUntil` del Offer: `updatedAt + 30 días` en `YYYY-MM-DD`. Null si el dato no es una fecha válida. */
 function toPriceValidUntil(updatedAt: unknown): string | null {
   const date = updatedAt instanceof Date ? updatedAt : new Date(updatedAt as string | number);
@@ -86,39 +78,7 @@ function toPriceValidUntil(updatedAt: unknown): string | null {
   return new Date(date.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
 }
 
-/**
- * Resuelve el slug de la URL contra el catalogo.
- *
- * El migrador de WooCommerce dejo 23 slugs con secuencias percent-encoded
- * pegadas dentro del texto: `...samsung-55%e2%80%b3-uhd-4k-q65c` en vez de
- * `...samsung-55-uhd-4k-q65c`. Esos productos son inalcanzables con un lookup
- * directo, y antes del fix de 404 eso terminaba en 23 paginas con 200 y el
- * texto "Producto no encontrado": soft-404s que el sitemap publica y Google
- * indexa como si fueran fichas.
- *
- * Peor: para una misma URL, Next pasa el slug CRUDO a `generateMetadata` y el
- * DECODIFICADO al componente de pagina (comprobado en produccion), asi que no
- * alcanza con mirar uno de los dos. Por eso se prueban las cuatro formas en que
- * puede estar la misma fila —crudo, decodificado, y cada uno re-codificado con
- * el hexadecimal en mayusculas y en minusculas— y se toma la primera que
- * exista. Todas son transformaciones deterministas de la misma cadena: un slug
- * que no existe sigue sin encontrar nada y responde 404.
- */
-function slugCandidates(slug: string): string[] {
-  const seen = new Set<string>([slug]);
-  const add = (value: string) => {
-    if (value && value !== slug) seen.add(value);
-  };
-  const decoded = safeDecode(slug);
-  add(decoded);
-  for (const base of [slug, decoded]) {
-    const encoded = encodeURIComponent(base);
-    add(encoded);
-    add(encoded.replace(/%[0-9A-F]{2}/g, (m) => m.toLowerCase()));
-  }
-  return [...seen];
-}
-
+/** Resuelve el slug de la URL contra el catalogo (ver `slugCandidates`). */
 async function findProduct(slug: string) {
   for (const candidate of slugCandidates(slug)) {
     const product = await getProductBySlug(candidate);

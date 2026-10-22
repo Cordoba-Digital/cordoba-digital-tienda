@@ -1,19 +1,22 @@
 /**
- * Migra las guías de compra del blog de WordPress a la base de la tienda.
+ * Migra las notas del blog de WordPress a la base de la tienda.
  *
- * Son los cinco artículos que el pie del sitio original enlaza bajo "Guía de
- * compras". Se migran con el MISMO slug, o sea la misma URL, para que el SEO que
- * ya tienen no se pierda cuando el cliente apague el hosting viejo.
+ * Trae todas las notas publicadas. Las cinco que el pie del sitio original
+ * enlaza bajo "Guía de compras" van con su lugar en el pie; las demás quedan
+ * con `footerOrder` 0 y se ven en `/guias`. Todas se migran con el MISMO slug,
+ * o sea la misma URL, para que el SEO que ya tienen no se pierda cuando el
+ * cliente apague el hosting viejo.
  *
- * El HTML pasa por `scripts/lib/guia-html.mjs`, que:
+ * El HTML pasa por `scripts/lib/guia-html.ts`, que:
  *   - saca el documento HTML completo que cada artículo tiene pegado adentro
  *     del campo de contenido (con su `<style>` y su `<meta charset>`);
  *   - deja solo una lista blanca de etiquetas, sin atributos salvo `href`;
  *   - reescribe los enlaces de categoría de WooCommerce a las rutas de la tienda.
+ * Las fotos de las notas no pasan: `<img>` no está en la lista blanca.
  *
  * Uso:
- *   npm run migrar:guias -- --dry-run   # solo informa, no escribe
- *   npm run migrar:guias               # escribe (o actualiza)
+ *   npm run migrar:guias -- --dry-run   # solo informa, no escribe (también sin flags)
+ *   npm run migrar:guias -- --apply     # escribe (o actualiza)
  */
 import "dotenv/config";
 
@@ -27,7 +30,7 @@ const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 
 /**
- * Los cinco, en el mismo orden en que los lista el pie del sitio original.
+ * Las cinco del pie, en el mismo orden en que las lista el sitio original.
  * `footerOrder` arranca en 1 y ese número es el que ordena la columna.
  */
 const GUIAS = [
@@ -50,14 +53,20 @@ type WpPost = {
   modified: string;
 };
 
-async function fetchPost(slug: string): Promise<WpPost | null> {
-  const res = await fetch(
-    `${BASE}/wp-json/wp/v2/posts?slug=${encodeURIComponent(slug)}&_fields=id,slug,title,excerpt,content,date,modified`,
-    { headers: { "user-agent": UA }, signal: AbortSignal.timeout(60_000) },
-  );
-  if (!res.ok) throw new Error(`HTTP ${res.status} al pedir ${slug}`);
-  const items = (await res.json()) as WpPost[];
-  return items[0] ?? null;
+/** Todas las notas publicadas, de a 100 por página. */
+async function fetchPosts(): Promise<WpPost[]> {
+  const posts: WpPost[] = [];
+  for (let page = 1; ; page += 1) {
+    const res = await fetch(
+      `${BASE}/wp-json/wp/v2/posts?per_page=100&page=${page}&_fields=id,slug,title,excerpt,content,date,modified`,
+      { headers: { "user-agent": UA }, signal: AbortSignal.timeout(60_000) },
+    );
+    if (!res.ok) throw new Error(`HTTP ${res.status} al pedir la página ${page} de notas`);
+    const items = (await res.json()) as WpPost[];
+    posts.push(...items);
+    const pages = Number(res.headers.get("x-wp-totalpages") ?? "1");
+    if (!items.length || page >= pages) return posts;
+  }
 }
 
 /** Quita el HTML del título y del resumen: acá van como texto plano. */
@@ -85,15 +94,14 @@ async function main() {
   let creados = 0;
   let actualizados = 0;
   let sinCambio = 0;
-  const faltantes: string[] = [];
+  const bloqueadas: string[] = [];
 
-  for (const guia of GUIAS) {
-    const post = await fetchPost(guia.slug);
-    if (!post) {
-      console.log(`  [falta] ${guia.slug}: no está en WordPress`);
-      faltantes.push(guia.slug);
-      continue;
-    }
+  const posts = await fetchPosts();
+  const faltantes = GUIAS.filter((g) => !posts.some((p) => p.slug === g.slug)).map((g) => g.slug);
+  console.log(`[guias] ${posts.length} notas publicadas en WordPress\n`);
+
+  for (const post of posts) {
+    const guia = { slug: post.slug, order: GUIAS.find((g) => g.slug === post.slug)?.order ?? 0 };
 
     const saneado = sanearGuia(post.content.rendered);
     const { meta, cuerpo } = separarPreambulo(saneado);
@@ -116,8 +124,9 @@ async function main() {
       /categoria-producto/i.test(cuerpo);
 
     if (peligroso) {
-      console.error(`  [ABORTA] ${guia.slug}: el HTML saneado todavía tiene algo ejecutable o una URL vieja.`);
-      process.exit(1);
+      console.error(`  [NO SE MIGRA] ${guia.slug}: el HTML saneado todavía tiene algo ejecutable o una URL vieja.`);
+      bloqueadas.push(guia.slug);
+      continue;
     }
 
     const previa = porSlug.get(guia.slug);
@@ -160,8 +169,8 @@ async function main() {
     );
   }
 
-  // Cualquier guía en la base que ya no esté en la lista de WordPress.
-  const huerfanas = existentes.filter((g) => !GUIAS.some((x) => x.slug === g.slug));
+  // Cualquier guía en la base que ya no esté publicada en WordPress.
+  const huerfanas = existentes.filter((g) => !posts.some((p) => p.slug === g.slug));
   if (huerfanas.length) {
     console.log(`\n  en la base pero ya no están en la lista: ${huerfanas.map((g) => g.slug).join(", ")}`);
     console.log("  (no se borran: se avisa para que la decisión sea del cliente)");
@@ -173,10 +182,13 @@ async function main() {
       (dryRun ? " (dry run)" : "") +
       `  ·  total en la base: ${total.rows[0]?.n ?? 0}`,
   );
-  if (faltantes.length) {
-    console.error(`[guias] FALTAN en WordPress: ${faltantes.join(", ")}`);
-    process.exit(1);
+  if (bloqueadas.length) {
+    console.error(`[guias] NO SE MIGRARON (revisar el saneador): ${bloqueadas.join(", ")}`);
   }
+  if (faltantes.length) {
+    console.error(`[guias] FALTAN en WordPress las del pie: ${faltantes.join(", ")}`);
+  }
+  if (bloqueadas.length || faltantes.length) process.exit(1);
   if (dryRun) console.log("[guias] dry run: no se escribió nada. Usá --apply para escribir.");
 }
 

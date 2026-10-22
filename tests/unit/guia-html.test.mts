@@ -219,3 +219,19 @@ test("reescribe una URL de categoría anidada escrita como texto", () => {
   const salida = sanearGuia(entrada);
   assert.ok(salida.includes("/categoria/computacion/notebooks-cordoba/apple-notebooks"), `salida: ${salida}`);
 });
+
+test("una nota común del blog entra sin fotos ni bloques de WordPress, y con los enlaces de la tienda", () => {
+  const entrada =
+    "<p>El <strong>NFC</strong> sirve para pagar.</p>\n" +
+    '<figure class="wp-block-image"><img src="https://www.cordobadigital.net/wp-content/uploads/2026/01/nfc.jpg" alt="NFC"/></figure>\n' +
+    '<h2 class="wp-block-heading" id="como">¿Cómo se usa?</h2>\n' +
+    '<div class="wp-block-buttons"><a class="wp-block-button__link" href="https://www.cordobadigital.net/categoria-producto/celulares/">Ver celulares</a></div>\n' +
+    '<p>Mirá <a href="https://www.cordobadigital.net/producto/samsung-a36/">el A36</a> o <a href="https://www.cordobadigital.net/wp-content/uploads/x.pdf">el PDF</a>.</p>';
+  const salida = sanearGuia(entrada);
+  assert.ok(!/<img|<figure|<div|wp-content|categoria-producto|class=/.test(salida), salida);
+  assert.ok(salida.includes('<a href="/categoria/celulares" rel="noopener">Ver celulares</a>'));
+  assert.ok(salida.includes('<a href="/producto/samsung-a36" rel="noopener">el A36</a>'));
+  assert.ok(salida.includes('<a href="#" rel="noopener">el PDF</a>'));
+  // Sin preámbulo de guía: el cuerpo queda entero.
+  assert.equal(separarPreambulo(salida).cuerpo, salida);
+});
