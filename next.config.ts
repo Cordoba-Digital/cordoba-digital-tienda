@@ -49,6 +49,8 @@ export const PAGINAS_WP: [string, string][] = [
   ["/formas-de-pago-mercadopago-todopago-tarjetas-de-credito", "/ayuda#pagos"],
   ["/condiciones-de-garantia", "/politica-de-garantia"],
   ["/blog", "/guias"],
+  // Portada del blog: sale en el post-sitemap pero no es una nota.
+  ["/actualidad-digital", "/guias"],
   ["/finalizar-compra", "/checkout"],
   ["/cart", "/carrito"],
   ["/my-account", "/mi-cuenta"],

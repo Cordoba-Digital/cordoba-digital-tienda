@@ -11,7 +11,15 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { aTextoPlano, contarPalabras, primerSubtitulo, sanearGuia, separarPreambulo } from "../../scripts/lib/guia-html";
+import {
+  aTextoPlano,
+  contarPalabras,
+  primerSubtitulo,
+  resumen,
+  sacarEmojisPerdidos,
+  sanearGuia,
+  separarPreambulo,
+} from "../../scripts/lib/guia-html";
 
 test("conserva la estructura de títulos y párrafos", () => {
   const salida = sanearGuia("<h2>Uno</h2><p>Texto <strong>grueso</strong>.</p><h3>Sub</h3><ul><li>Uno</li></ul>");
@@ -234,4 +242,42 @@ test("una nota común del blog entra sin fotos ni bloques de WordPress, y con lo
   assert.ok(salida.includes('<a href="#" rel="noopener">el PDF</a>'));
   // Sin preámbulo de guía: el cuerpo queda entero.
   assert.equal(separarPreambulo(salida).cuerpo, salida);
+});
+
+test("saca los ? que dejaron los emojis perdidos en WordPress y deja los signos de pregunta", () => {
+  const entrada =
+    "<h2>? Mejores celulares en Argentina (2026)</h2>\n" +
+    "<p>Xiaomi Redmi Note (línea actual)<br />? Ideal si querés rendimiento sin pagar de más</p>\n" +
+    "<p><strong>¿Conviene Samsung</strong>? Sí, especialmente la línea A.</p>\n" +
+    "<h3>¿Qué necesitás para usarla?</h3>";
+  assert.equal(
+    sanearGuia(entrada),
+    "<h2>Mejores celulares en Argentina (2026)</h2>\n" +
+      "<p>Xiaomi Redmi Note (línea actual)<br />Ideal si querés rendimiento sin pagar de más</p>\n" +
+      "<p><strong>¿Conviene Samsung</strong>? Sí, especialmente la línea A.</p>\n" +
+      "<h3>¿Qué necesitás para usarla?</h3>",
+  );
+  assert.equal(
+    sacarEmojisPerdidos("? ¿Qué celular conviene comprar en Argentina en 2026?"),
+    "¿Qué celular conviene comprar en Argentina en 2026?",
+  );
+  assert.equal(sacarEmojisPerdidos("o duración. ? Mejores celulares"), "o duración. Mejores celulares");
+});
+
+test("el resumen de una nota sin preámbulo son las primeras oraciones enteras del excerpt", () => {
+  const excerpt = aTextoPlano(
+    "<p>NFC significa Near Field Communication. Permite que el celular se comunique con otros dispositivos " +
+      "a muy corta distancia. Se utiliza para: Hoy es una función muy recomendable incluso en celulares de " +
+      "gama media. Cómo saber si un celular tiene NFC Para saber si nuestro teléfono [&hellip;]</p>\n",
+  );
+  assert.equal(
+    resumen(excerpt),
+    "NFC significa Near Field Communication. Permite que el celular se comunique con otros dispositivos a muy corta distancia.",
+  );
+  assert.equal(resumen(aTextoPlano("<p>Una nota corta. [&hellip;]</p>")), "Una nota corta.");
+
+  const larga = `Una sola oración ${"muy ".repeat(60)}larga sin ningún punto`;
+  const cortada = resumen(larga);
+  assert.ok(cortada.length <= 160, cortada);
+  assert.ok(cortada.endsWith("muy…"), cortada);
 });

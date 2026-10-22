@@ -23,7 +23,14 @@ import "dotenv/config";
 import { eq, sql } from "drizzle-orm";
 
 import { guides } from "@/db/schema";
-import { contarPalabras, sanearGuia, separarPreambulo } from "./lib/guia-html";
+import {
+  aTextoPlano,
+  contarPalabras,
+  resumen,
+  sacarEmojisPerdidos,
+  sanearGuia,
+  separarPreambulo,
+} from "./lib/guia-html";
 
 const BASE = (process.env.WC_STORE_URL ?? "https://www.cordobadigital.net").replace(/\/+$/, "");
 const UA =
@@ -69,25 +76,13 @@ async function fetchPosts(): Promise<WpPost[]> {
   }
 }
 
-/** Quita el HTML del título y del resumen: acá van como texto plano. */
-function aTexto(html: string): string {
-  return html
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&nbsp;/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number.parseInt(d, 10)))
-    .replace(/&#x([0-9a-fA-F]+);/g, (_, h) => String.fromCodePoint(Number.parseInt(h, 16)))
-    .replace(/[ \t]+/g, " ")
-    .trim();
-}
-
 async function main() {
   const { db } = await import("@/db");
 
   console.log(`[guias] ${dryRun ? "DRY RUN · no se escribe nada" : "ESCRIBIENDO"} · ${BASE}\n`);
 
   const existentes = await db
-    .select({ slug: guides.slug, words: guides.wordCount, updated: guides.updatedAt })
+    .select({ slug: guides.slug, title: guides.title, description: guides.description, body: guides.body })
     .from(guides);
   const porSlug = new Map(existentes.map((g) => [g.slug, g]));
 
@@ -105,12 +100,14 @@ async function main() {
 
     const saneado = sanearGuia(post.content.rendered);
     const { meta, cuerpo } = separarPreambulo(saneado);
-    const title = aTexto(post.title.rendered);
-    // El subtítulo y el resumen salen del preámbulo que escribieron los autores,
-    // no del excerpt de WordPress: el excerpt es el comienzo entero del artículo
-    // y no sirve como descripción.
+    const title = sacarEmojisPerdidos(aTextoPlano(post.title.rendered));
+    // El subtítulo y el resumen salen del preámbulo que escribieron los autores.
+    // Las notas sin preámbulo usan el excerpt de WordPress, que es el comienzo
+    // del artículo cortado en cualquier lado: se queda con las oraciones enteras.
     const subtitle = meta.subtitulo;
-    const description = (meta.descripcion || aTexto(post.excerpt.rendered)).slice(0, 300);
+    const description = meta.descripcion
+      ? meta.descripcion.slice(0, 300)
+      : resumen(sacarEmojisPerdidos(aTextoPlano(post.excerpt.rendered)));
     const words = contarPalabras(cuerpo);
 
     // Guarda de seguridad: si el saneador dejara pasar algo peligroso, se corta
@@ -130,7 +127,9 @@ async function main() {
     }
 
     const previa = porSlug.get(guia.slug);
-    if (previa && previa.words === words) {
+    // Se compara el contenido y no solo la cantidad de palabras: una corrección
+    // del saneador o del resumen tiene que llegar a las notas ya migradas.
+    if (previa && previa.title === title && previa.description === description && previa.body === cuerpo) {
       sinCambio += 1;
       console.log(`  = ${guia.slug}  ${words} palabras (sin cambios)`);
       continue;
