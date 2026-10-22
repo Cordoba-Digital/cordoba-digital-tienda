@@ -9,7 +9,9 @@ const CATEGORY_LINKS: { name: string; path: string; count: number }[] = [];
  *
  * En el sitio original esta columna existe y enlaza cinco artículos de blog. Las
  * guías viven en la base (tabla `guides`, migradas con `npm run migrar:guias`) y
- * conservan el slug del sitio viejo, así que la URL es la misma.
+ * conservan el slug del sitio viejo, así que la URL es la misma. Las demás
+ * notas del blog viven en la misma tabla con `footerOrder` 0 y no van acá: se
+ * llega a ellas desde `/guias`.
  *
  * Si la base no responde, el pie se dibuja sin la columna en vez de romperse:
  * el pie está en todas las páginas y no puede depender de la base.
@@ -27,6 +29,7 @@ export async function SiteFooter({
   /** Hay wallet y cotización USDT cargadas en el panel: se ofrece en el checkout. */
   usdt?: boolean;
 }) {
+  const delPie = guides.filter((guide) => guide.footerOrder > 0);
   return (
     <footer className="mt-20 mesh-warm border-t border-brand-100 text-ink-600">
       <div className="container-xl grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
@@ -149,7 +152,7 @@ export async function SiteFooter({
           </ul>
         </div>
 
-        {guides.length ? (
+        {delPie.length ? (
           <div>
             <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-ink-900">
               {/* El título de la columna abre el índice, que no existe en el sitio
@@ -159,7 +162,7 @@ export async function SiteFooter({
               </Link>
             </h3>
             <ul className="space-y-2.5 text-sm">
-              {guides.map((guide) => (
+              {delPie.map((guide) => (
                 <li key={guide.slug}>
                   <Link href={`/${guide.slug}`} className="text-ink-600 transition hover:text-brand-700">
                     {guide.title}

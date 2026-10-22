@@ -61,6 +61,9 @@ export default async function GuidePage({ params }: { params: Promise<{ guia: st
 
   const meta = article.meta ?? {};
   const otras = todas.filter((g) => g.slug !== article.slug);
+  // Con las notas del blog son más de 40: se sugieren las primeras (las del
+  // pie y después las más nuevas) y el resto queda en el índice.
+  const sugeridas = otras.slice(0, 6);
 
   return (
     <article className="container-xl py-8">
@@ -154,7 +157,7 @@ export default async function GuidePage({ params }: { params: Promise<{ guia: st
             </Link>
           </div>
           <ul className="mt-4 space-y-2.5">
-            {otras.map((otra) => (
+            {sugeridas.map((otra) => (
               <li key={otra.slug}>
                 <Link
                   href={`/${otra.slug}`}
