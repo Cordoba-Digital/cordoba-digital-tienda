@@ -9,6 +9,14 @@ import { breadcrumbJsonLd, jsonLdString, ORG_ID } from "@/lib/structured-data";
 
 export const dynamic = "force-dynamic";
 
+/** Letras y números de un texto o HTML: para comparar sin etiquetas, entidades ni puntuación. */
+function soloLetras(texto: string): string {
+  return texto
+    .replace(/<[^>]+>|&#?\w+;/g, "")
+    .replace(/[^\p{L}\p{N}]/gu, "")
+    .toLowerCase();
+}
+
 /**
  * Guías de compra.
  *
@@ -64,6 +72,9 @@ export default async function GuidePage({ params }: { params: Promise<{ guia: st
   // Con las notas del blog son más de 40: se sugieren las primeras (las del
   // pie y después las más nuevas) y el resto queda en el índice.
   const sugeridas = otras.slice(0, 6);
+  // Las notas del blog no traen un resumen escrito: el suyo es el comienzo
+  // del artículo, y mostrarlo arriba repetiría las mismas frases.
+  const resumenRepetido = soloLetras(article.body).startsWith(soloLetras(article.description).slice(0, 40));
 
   return (
     <article className="container-xl py-8">
@@ -119,7 +130,7 @@ export default async function GuidePage({ params }: { params: Promise<{ guia: st
           <p className="mt-3 text-base font-semibold leading-snug text-ink-600">{article.subtitle}</p>
         ) : null}
 
-        {article.description ? (
+        {article.description && !resumenRepetido ? (
           <p className="mt-3 text-sm leading-relaxed text-ink-500">{article.description}</p>
         ) : null}
 
