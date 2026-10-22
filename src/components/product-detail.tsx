@@ -13,6 +13,7 @@ import { trackViewItem } from "@/lib/analytics";
 import { discountPercent, money } from "@/lib/format";
 import { maxQuantityFor } from "@/lib/pricing";
 import { offerStockCount, unitsLabel } from "@/lib/stock-label";
+import { productWhatsAppMessage, setWhatsAppProduct, whatsappLink } from "@/lib/whatsapp";
 
 export function ProductGallery({
   images,
@@ -259,6 +260,12 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
     });
   }, [product.slug, product.name, product.brand, product.price]);
 
+  // El botón flotante de WhatsApp usa el mismo mensaje que "Consultar".
+  useEffect(() => {
+    setWhatsAppProduct(product.name);
+    return () => setWhatsAppProduct(null);
+  }, [product.name]);
+
   const payload = {
     slug: product.slug,
     name: product.name,
@@ -388,7 +395,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
             {fav ? "♥ En favoritos" : "♡ Guardar"}
           </button>
           <a
-            href={`https://wa.me/5493516777774?text=${encodeURIComponent(`Hola! Quiero consultar por ${product.name}`)}`}
+            href={whatsappLink(productWhatsAppMessage(product.name))}
             target="_blank"
             rel="noreferrer"
             className="grid h-11 place-items-center rounded-xl border border-ink-200 text-sm font-bold text-ink-700 transition hover:border-ink-400"

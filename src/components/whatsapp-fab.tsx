@@ -1,6 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
+
+import {
+  fabWhatsAppMessage,
+  getWhatsAppProduct,
+  subscribeWhatsAppProduct,
+  whatsappLink,
+} from "@/lib/whatsapp";
 
 /**
  * Botón flotante de WhatsApp.
@@ -19,9 +26,13 @@ import { useEffect, useState } from "react";
  * texto blanco y el control de contraste lo rechaza (pide 4,5:1). `#0F8040` es
  * de la misma familia de verde y da 5,02:1, así que la píldora sigue leyéndose
  * como WhatsApp y el texto se puede leer.
+ *
+ * En una ficha de producto el mensaje es el mismo que el del botón "Consultar"
+ * ("Hola! Quiero consultar por <producto>"); en el resto, el genérico.
  */
 export function WhatsAppFab() {
   const [visible, setVisible] = useState(false);
+  const product = useSyncExternalStore(subscribeWhatsAppProduct, getWhatsAppProduct, () => null);
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 260);
@@ -33,7 +44,7 @@ export function WhatsAppFab() {
   return (
     <div className="fixed bottom-5 right-4 z-[55] flex max-w-[calc(100vw-2rem)] items-center gap-2">
       <a
-        href="https://wa.me/5493516777774?text=Hola%20C%C3%B3rdoba%20Digital!%20Tengo%20una%20consulta"
+        href={whatsappLink(fabWhatsAppMessage(product))}
         target="_blank"
         rel="noreferrer"
         aria-label="Escribinos por WhatsApp"
