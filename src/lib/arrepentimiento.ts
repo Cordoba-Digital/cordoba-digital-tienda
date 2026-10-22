@@ -23,6 +23,16 @@ export type SolicitudArrepentimiento = {
   createdAt: Date;
 };
 
+/**
+ * Texto que escribió quien llenó el formulario, para el email que sale a la
+ * dirección que puso: corto y sin links, así el formulario no sirve para
+ * mandar spam desde la casilla de la tienda.
+ */
+function plain(value: string, max: number): string {
+  const text = value.replace(/\s+/g, " ").replace(/(https?:\/\/|www\.)\S*/gi, "[link]").trim();
+  return text.length > max ? `${text.slice(0, max - 1)}…` : text;
+}
+
 /** Email al cliente con el código de trámite, en el momento en que manda el formulario. */
 export function customerMail(s: SolicitudArrepentimiento): OutgoingMail {
   const code = tramiteCode(s.id);
@@ -30,14 +40,14 @@ export function customerMail(s: SolicitudArrepentimiento): OutgoingMail {
     to: s.email,
     subject: `Recibimos tu solicitud de arrepentimiento (trámite ${code})`,
     text: [
-      `Hola ${s.nombre.split(" ")[0]}:`,
+      `Hola ${plain(s.nombre.split(" ")[0], 40)}:`,
       "",
       "Recibimos tu solicitud de arrepentimiento de compra.",
       "",
       `Código de trámite: ${code}`,
       `Fecha de la solicitud: ${formatDateTime(s.createdAt)}`,
-      `Producto: ${s.producto}`,
-      `Pedido: ${s.numeroPedido || "no lo indicaste"}`,
+      `Producto: ${plain(s.producto, 120)}`,
+      `Pedido: ${plain(s.numeroPedido, 40) || "no lo indicaste"}`,
       "",
       "Guardá este código: identifica tu trámite. Te vamos a contactar dentro de las 24 horas hábiles para coordinar la devolución.",
       "",
