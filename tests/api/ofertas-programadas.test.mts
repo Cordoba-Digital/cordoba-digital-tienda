@@ -148,3 +148,29 @@ test("el tick aplica lo vencido y dice cuándo es el próximo cambio", async () 
   assert.equal(body.next, termina.toISOString());
   assert.equal((await nextPriceChangeAt())?.toISOString(), termina.toISOString());
 });
+
+test("con oferta programada, el stock 1 es una unidad real: se vende una sola vez", async () => {
+  await seedProduct("ultimo", 300_000, 1);
+  await seedProduct("migrado", 300_000, 1);
+  await programar("ultimo", 250_000, "2027-01-01T00:00", "2027-01-02T00:00");
+  const comprar = async (slug: string, quantity: number) => {
+    const res = await checkout.POST(
+      post("/api/checkout", { customer: comprador, delivery: domicilio, payment: { method: "transferencia" }, items: [{ slug, quantity }] }),
+    );
+    return { status: res.status, body: (await res.json()) as { code?: string } };
+  };
+  const stock = async (slug: string) =>
+    (await db.select({ stock: schema.products.stock }).from(schema.products).where(eq(schema.products.slug, slug)))[0].stock;
+
+  const primera = await comprar("ultimo", 3);
+  assert.equal(primera.status, 200);
+  const [item] = await db.select().from(schema.orderItems);
+  assert.equal(item.quantity, 1, "recorta a la unidad que hay");
+  assert.equal(item.stockReserved, 1);
+  assert.equal(await stock("ultimo"), 0);
+  assert.equal((await comprar("ultimo", 1)).status, 409);
+
+  // Sin oferta programada, el 1 sigue siendo el "hay" del catálogo migrado.
+  await comprar("migrado", 1);
+  assert.equal(await stock("migrado"), 1);
+});

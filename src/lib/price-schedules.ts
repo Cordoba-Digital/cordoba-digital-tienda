@@ -142,6 +142,26 @@ export async function applyDuePriceSchedules(now = new Date()): Promise<{ change
   }
 }
 
+/**
+ * Productos cuyo `stock` es una cantidad real aunque sea 1: los que tienen una
+ * oferta programada o en curso. Para el evento, César carga ahí la cantidad
+ * real, así que el 1 no es el "hay" del catálogo migrado: se muestra y se
+ * descuenta como cualquier cantidad.
+ */
+export async function countedStockSlugs(slugs: string[], executor: Pick<typeof db, "selectDistinct"> = db): Promise<Set<string>> {
+  if (!slugs.length) return new Set();
+  try {
+    const rows = await executor
+      .selectDistinct({ slug: priceSchedules.productSlug })
+      .from(priceSchedules)
+      .where(and(inArray(priceSchedules.productSlug, slugs), inArray(priceSchedules.status, ["programada", "activa"])));
+    return new Set(rows.map((r) => r.slug));
+  } catch (error) {
+    if (missingTable(error)) return new Set();
+    throw error;
+  }
+}
+
 /** Próximo momento en que algo empieza o termina, para que el navegador vuelva a preguntar justo ahí. */
 export async function nextPriceChangeAt(): Promise<Date | null> {
   try {

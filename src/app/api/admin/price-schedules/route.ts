@@ -28,7 +28,8 @@ export async function POST(request: Request) {
     summary: `Programó ${schedule.productSlug} a ${money(schedule.offerPrice)} del ${formatDateTime(schedule.startsAt)} al ${formatDateTime(schedule.endsAt)}`,
   });
   // Si el inicio ya pasó, empieza ahora mismo.
+  // La ficha muestra la cantidad real de los productos con oferta programada.
   const { changed } = await applyDuePriceSchedules();
-  if (changed.length) refreshStorePages(changed);
+  refreshStorePages([schedule.productSlug, ...changed]);
   return Response.json({ ok: true, schedule });
 }

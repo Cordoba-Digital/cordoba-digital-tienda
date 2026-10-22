@@ -28,10 +28,18 @@ export const MAX_QTY_PER_ITEM = 5;
 /**
  * Cuántas unidades de un producto entran en un pedido. El catálogo migrado
  * guarda `stock` como disponibilidad (1 = hay, 0 = no hay), así que solo un
- * stock mayor a 1 es una cantidad real que recorta el tope.
+ * stock mayor a 1 es una cantidad real que recorta el tope. `counted`: el
+ * stock es una cantidad real aunque sea 1 (productos con oferta programada,
+ * ver `countedStockSlugs`).
  */
-export function maxQuantityFor(stock: number): number {
-  return stock > 1 ? Math.min(stock, MAX_QTY_PER_ITEM) : stock === 0 ? 0 : MAX_QTY_PER_ITEM;
+export function maxQuantityFor(stock: number, counted = false): number {
+  if (stock <= 0) return 0;
+  return stock > 1 || counted ? Math.min(stock, MAX_QTY_PER_ITEM) : MAX_QTY_PER_ITEM;
+}
+
+/** El stock es una cantidad que se descuenta al vender. */
+export function isCountedStock(stock: number, counted = false): boolean {
+  return stock > 1 || (counted && stock >= 1);
 }
 
 export type PaymentMethod = {

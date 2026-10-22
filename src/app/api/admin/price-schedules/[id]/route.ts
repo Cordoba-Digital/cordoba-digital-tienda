@@ -15,7 +15,7 @@ export async function DELETE(request: Request, context: { params: Promise<{ id: 
   if (!Number.isInteger(id) || id <= 0) return Response.json({ ok: false, error: "Oferta inexistente." }, { status: 404 });
   const result = await cancelPriceSchedule(id);
   if (!result) return Response.json({ ok: false, error: "Oferta inexistente." }, { status: 404 });
-  if (result.restored) refreshStorePages([result.slug]);
+  refreshStorePages([result.slug]);
   await logAdminAction(await actorFromRequest(request), {
     action: "baja",
     entityType: "oferta",

@@ -13,6 +13,7 @@ import {
 } from "@/components/product-detail";
 import { Pill, Stars } from "@/components/ui";
 import { discountPercent, formatDate, money } from "@/lib/format";
+import { countedStockSlugs } from "@/lib/price-schedules";
 import { toCardView } from "@/lib/product-view";
 import {
   getProductBreadcrumbs,
@@ -124,11 +125,12 @@ export default async function ProductPage({ params }: { params: Params }) {
   const product = await findProduct(slug);
   if (!product) notFound();
 
-  const [related, productReviews, breadcrumbs, ratingStats] = await Promise.all([
+  const [related, productReviews, breadcrumbs, ratingStats, counted] = await Promise.all([
     getRelatedProducts(product),
     getReviewsForProduct(product.slug),
     getProductBreadcrumbs(product.slug),
     getVerifiedRatingStats(product.slug),
+    countedStockSlugs([product.slug]),
   ]);
 
   const buyBoxProduct = {
@@ -139,6 +141,7 @@ export default async function ProductPage({ params }: { params: Params }) {
     price: product.price,
     compareAtPrice: product.compareAtPrice ?? null,
     stock: product.stock,
+    stockCounted: counted.has(product.slug),
     freeShipping: product.freeShipping,
     warrantyMonths: product.warrantyMonths,
     sku: product.sku,
