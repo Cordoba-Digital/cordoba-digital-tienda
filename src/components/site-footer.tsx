@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { getGuides, type GuideTeaser } from "@/lib/queries";
-import { DATA_FISCAL_IMG, DEFENSA_CONSUMIDOR_TEXTO, DEFENSA_CONSUMIDOR_URL, type StoreLegal } from "@/lib/store-legal";
+import { DATA_FISCAL_IMG, DEFENSA_CONSUMIDOR_TEXTO, DEFENSA_CONSUMIDOR_URL } from "@/lib/store-legal";
 
 const CATEGORY_LINKS: { name: string; path: string; count: number }[] = [];
 
@@ -19,13 +19,17 @@ const CATEGORY_LINKS: { name: string; path: string; count: number }[] = [];
  */
 export async function SiteFooter({
   categories = CATEGORY_LINKS,
-  legal = { razonSocial: "", cuit: "", dataFiscalUrl: "" },
+  dataFiscalUrl = "",
   guides = [],
   usdt = false,
 }: {
   categories?: { name: string; path: string; count: number }[];
-  /** Razón social, CUIT y Data Fiscal reales (`store-legal.ts`). Lo vacío no se imprime. */
-  legal?: StoreLegal;
+  /**
+   * Link de Data Fiscal de ARCA (`store-legal.ts`); vacío no se imprime. La razón
+   * social y el CUIT no van en el pie (decisión de Ronan, 23/10, como Mercado
+   * Libre y Frávega): están en Términos y condiciones.
+   */
+  dataFiscalUrl?: string;
   guides?: GuideTeaser[];
   /** Hay wallet y cotización USDT cargadas en el panel: se ofrece en el checkout. */
   usdt?: boolean;
@@ -151,7 +155,6 @@ export async function SiteFooter({
             <li><Link href="/cambio-devoluciones" className="text-ink-600 transition hover:text-brand-700">Cambios y Devoluciones</Link></li>
             <li><Link href="/politica-privacidad" className="text-ink-600 transition hover:text-brand-700">Políticas de Privacidad</Link></li>
             <li><Link href="/terminos-y-condiciones" className="text-ink-600 transition hover:text-brand-700">Términos y Condiciones</Link></li>
-            <li><Link href="/arrepentimiento" className="text-ink-600 transition hover:text-brand-700">Botón de Arrepentimiento</Link></li>
           </ul>
         </div>
 
@@ -180,19 +183,20 @@ export async function SiteFooter({
       <div className="border-t border-brand-100">
         <div className="container-xl flex flex-col items-center justify-between gap-4 py-6 text-xs text-ink-500 md:flex-row">
           <div className="flex flex-col items-center gap-2 text-center md:items-start md:text-left">
-            <p>
-              © {new Date().getFullYear()} Córdoba Digital
-              {legal.razonSocial ? ` · ${legal.razonSocial}` : ""}
-              {legal.cuit ? ` · CUIT ${legal.cuit}` : ""} · Todos los derechos reservados.
-            </p>
-            {/* Res. 274/2021: el enlace a la Ventanilla Única Federal, con este texto, en todas las páginas. */}
-            <a href={DEFENSA_CONSUMIDOR_URL} target="_blank" rel="noreferrer" className="font-semibold text-ink-600 underline transition hover:text-brand-700">
-              {DEFENSA_CONSUMIDOR_TEXTO}
-            </a>
+            <p>© {new Date().getFullYear()} Córdoba Digital · Todos los derechos reservados.</p>
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 md:justify-start">
+              <Link href="/arrepentimiento" className="font-semibold text-ink-600 underline transition hover:text-brand-700">
+                Botón de arrepentimiento
+              </Link>
+              {/* Res. 274/2021: el enlace a la Ventanilla Única Federal, con este texto, en todas las páginas. */}
+              <a href={DEFENSA_CONSUMIDOR_URL} target="_blank" rel="noreferrer" className="font-semibold text-ink-600 underline transition hover:text-brand-700">
+                {DEFENSA_CONSUMIDOR_TEXTO}
+              </a>
+            </div>
           </div>
-          {legal.dataFiscalUrl ? (
+          {dataFiscalUrl ? (
             // RG 3377/2012 (ARCA): el logo de Data Fiscal con el link que da ARCA para este sitio.
-            <a href={legal.dataFiscalUrl} target="_F960AFIPInfo" rel="noreferrer" className="shrink-0">
+            <a href={dataFiscalUrl} target="_F960AFIPInfo" rel="noreferrer" className="shrink-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={DATA_FISCAL_IMG} alt="Data Fiscal (ARCA)" width={53} height={72} loading="lazy" className="h-14 w-auto" />
             </a>

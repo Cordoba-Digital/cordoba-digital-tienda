@@ -161,7 +161,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
               <StoreChrome>
                 <SiteFooter
                   categories={categories.map((c) => ({ name: c.name, path: c.path, count: c.count }))}
-                  legal={storeLegal()}
+                  dataFiscalUrl={storeLegal().dataFiscalUrl}
                   guides={guides}
                   usdt={usdtActive}
                 />

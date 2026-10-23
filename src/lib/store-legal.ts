@@ -1,7 +1,7 @@
 /**
- * Datos legales del comercio que se muestran en el pie y en Términos y
- * condiciones. Salen de variables de entorno (como `STORE_CUIT`), así se cargan
- * en Vercel sin tocar el código; mientras estén vacías no se imprime nada.
+ * Datos legales del comercio. Razón social y CUIT van solo en Términos y
+ * condiciones; Data Fiscal, en el pie. Salen de variables de entorno, así se
+ * cargan en Vercel sin tocar el código; mientras estén vacías no se imprime nada.
  *
  * - `STORE_RAZON_SOCIAL`: nombre del titular ante ARCA (persona o sociedad).
  * - `STORE_CUIT`: 11 números, con o sin guiones.

@@ -176,8 +176,10 @@ export function SiteHeader({ categories, topBar = true }: { categories: Category
   return (
     <header className="sticky top-0 z-50">
       {/* Barra de avisos: los avisos se apagan desde Panel → Inicio, el link al
-          botón de arrepentimiento no. La Resolución 424/2020 lo pide visible y
-          de acceso directo desde la primera pantalla, no solo en el pie. */}
+          botón de arrepentimiento no. La Disposición 954/2025 lo pide "a simple
+          vista, en lugar destacado y en el primer acceso", así que no puede
+          quedar solo en el pie. Va discreto (decisión de Ronan, 23/10): mismo
+          tono que el resto de la franja, sin subrayado. */}
       <div className="bg-brand-700 py-1 text-[11px] font-medium text-white sm:py-1.5 sm:text-[12px]">
         <div className="container-xl flex items-center gap-3 overflow-hidden">
           {topBar ? (
@@ -187,7 +189,7 @@ export function SiteHeader({ categories, topBar = true }: { categories: Category
           ) : (
             <span className="flex-1" />
           )}
-          <Link href="/arrepentimiento" className="shrink-0 font-semibold underline underline-offset-2 hover:no-underline">
+          <Link href="/arrepentimiento" className="shrink-0 text-white/80 underline-offset-2 transition hover:text-white hover:underline">
             Botón de arrepentimiento
           </Link>
         </div>
