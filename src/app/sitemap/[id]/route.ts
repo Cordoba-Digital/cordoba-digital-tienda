@@ -31,6 +31,7 @@ const STATIC_ENTRIES: Entry[] = [
   { loc: `${BASE}/guias`, changefreq: "weekly", priority: "0.6" },
   { loc: `${BASE}/ayuda`, changefreq: "monthly", priority: "0.5" },
   { loc: `${BASE}/politica-de-envios`, changefreq: "monthly", priority: "0.4" },
+  { loc: `${BASE}/terminos-y-condiciones`, changefreq: "monthly", priority: "0.3" },
   { loc: `${BASE}/seguimiento`, changefreq: "monthly", priority: "0.4" },
 ];
 

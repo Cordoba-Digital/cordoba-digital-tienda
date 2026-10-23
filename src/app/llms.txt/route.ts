@@ -66,6 +66,7 @@ export async function GET(): Promise<Response> {
     `- [Política de envíos](${url("/politica-de-envios")}): plazos, costos y seguimiento con Andreani.`,
     `- [Política de garantía](${url("/politica-de-garantia")})`,
     `- [Cambios y devoluciones](${url("/cambio-devoluciones")})`,
+    `- [Términos y condiciones](${url("/terminos-y-condiciones")}): precios, stock, medios de pago, seña y arrepentimiento.`,
     `- [Seguimiento de pedidos](${url("/seguimiento")})`,
     "",
     "## Empresa",

@@ -44,7 +44,7 @@ const STORE_HEADERS = [
  */
 export const PAGINAS_WP: [string, string][] = [
   ["/contacto", "/ayuda"],
-  ["/terminos-condiciones", "/ayuda"],
+  ["/terminos-condiciones", "/terminos-y-condiciones"],
   ["/formulario-de-sugerencias-y-reclamos", "/ayuda"],
   ["/formas-de-pago-mercadopago-todopago-tarjetas-de-credito", "/ayuda#pagos"],
   ["/condiciones-de-garantia", "/politica-de-garantia"],

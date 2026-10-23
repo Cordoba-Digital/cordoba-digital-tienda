@@ -6,6 +6,7 @@ import { CartDrawer, Toaster } from "@/components/cart-drawer";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { InstallmentsProvider } from "@/components/installments-provider";
 import { SiteFooter } from "@/components/site-footer";
+import { storeLegal } from "@/lib/store-legal";
 import { PriceScheduleTicker } from "@/components/price-schedule-ticker";
 import { SiteHeader } from "@/components/site-header";
 import { StoreProvider } from "@/components/store-provider";
@@ -160,7 +161,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
               <StoreChrome>
                 <SiteFooter
                   categories={categories.map((c) => ({ name: c.name, path: c.path, count: c.count }))}
-                  cuit={process.env.STORE_CUIT?.trim() ?? ""}
+                  legal={storeLegal()}
                   guides={guides}
                   usdt={usdtActive}
                 />
