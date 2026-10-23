@@ -11,7 +11,8 @@ import { normalizeZip, type DeliveryMethod } from "@/lib/shipping";
  *
  * Nace por el mismo camino que el checkout de la tienda (`checkout-order.ts`):
  * el precio, el stock y el envío salen de la base y de Andreani, nunca de lo
- * que manda el navegador, y el pedido nace "pendiente de pago" con el stock reservado. El cliente paga
+ * que manda el navegador, y el pedido nace "pendiente de pago" con el stock guardado
+ * `STOCK_HOLD_HOURS` horas, como en la tienda. El cliente paga
  * desde la página del pedido (`/pedido/CODIGO`) con el medio elegido, así el
  * cobro y la acreditación son los de siempre. Lo único distinto: no lleva
  * cupón ni límite de intentos (lo carga alguien con sesión del panel).

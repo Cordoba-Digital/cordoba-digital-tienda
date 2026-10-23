@@ -7,6 +7,7 @@ import { AdminPageHeader, adminChip } from "@/components/admin-ui";
 import { ADMIN_COOKIE } from "@/lib/admin-auth";
 import { verifyAdminSessionValue } from "@/lib/admin-session";
 import { mercadoPagoReady } from "@/lib/mercadopago";
+import { PENDING_EXPIRY_HOURS, SENA_EXPIRY_HOURS, STOCK_HOLD_HOURS } from "@/lib/payment-rules";
 
 export const dynamic = "force-dynamic";
 
@@ -25,7 +26,7 @@ export default async function AdminNewOrderPage() {
           </Link>
         }
         title="Pedido manual"
-        description="Para ventas por WhatsApp, teléfono o en el local. El pedido queda pendiente de pago con el stock reservado y le mandás el link al cliente. Si ya cobraste en el local, marcá «Ya lo cobré y se lo llevó» y queda como venta terminada."
+        description={`Para ventas por WhatsApp, teléfono o en el local. El pedido queda pendiente de pago y le mandás el link al cliente: el stock se le guarda ${STOCK_HOLD_HOURS} horas y, si no paga en ${PENDING_EXPIRY_HOURS} (${SENA_EXPIRY_HOURS} con seña), se cancela solo. Si ya cobraste en el local, marcá «Ya lo cobré y se lo llevó» y queda como venta terminada.`}
         actions={
           <Link href="/admin/pedidos" className={adminChip}>
             Volver a pedidos
