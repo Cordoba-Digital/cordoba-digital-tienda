@@ -8,6 +8,7 @@ import { adminBtn, adminChip } from "@/components/admin-ui";
 import { whatsappHref } from "@/lib/admin-order-helpers";
 import { CHECKOUT_PAYMENT_METHODS, isPaymentMethodOffered } from "@/lib/checkout-payment";
 import { money } from "@/lib/format";
+import { STOCK_HOLD_HOURS } from "@/lib/payment-rules";
 import { maxQuantityFor, PAYMENT_METHODS, type PaymentMethodId } from "@/lib/pricing";
 
 type Found = { slug: string; name: string; sku: string; price: number; stock: number; image: string };
@@ -180,7 +181,8 @@ export function AdminManualOrderForm({ mercadoPago }: { mercadoPago: boolean }) 
         <div className="flex flex-col gap-1">
           <h2 className="text-lg font-semibold text-adm-fg">Pedido {created.code} cargado</h2>
           <p className="text-sm text-adm-muted">
-            Total {money(created.total)}. Quedó pendiente de pago con el stock reservado. Mandale el link al cliente: ahí ve el detalle y paga con el medio elegido.
+            Total {money(created.total)}. Quedó pendiente de pago: el stock se le guarda {STOCK_HOLD_HOURS} horas y después vuelve a
+            la venta. Mandale el link al cliente: ahí ve el detalle y paga con el medio elegido.
           </p>
         </div>
         <div className="flex items-center gap-2 rounded-xl border border-adm-fg/10 bg-adm-fg/[0.03] p-2 pl-3">
