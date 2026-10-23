@@ -160,3 +160,53 @@ ${items.join("\n")}
 </rss>
 `;
 }
+
+/**
+ * Inventario local (fichas locales gratuitas y anuncios de inventario local).
+ *
+ * Es una fuente aparte de `/products.xml`: por cada producto dice cuánto hay en
+ * el local de 27 de Abril 180. El `g:id` tiene que ser el mismo del feed
+ * principal y `g:store_code` el código de tienda del Perfil de Empresa de
+ * Google; si no coinciden, Merchant Center sigue marcando "Faltan datos de
+ * inventario local".
+ *
+ * Referencia: https://support.google.com/merchants/answer/14819809
+ */
+
+/** Código de tienda del Perfil de Empresa. Se cambia con `MERCHANT_STORE_CODE`. */
+export const STORE_CODE = (process.env.MERCHANT_STORE_CODE ?? "").trim() || "CBA1";
+
+/** Columnas mínimas de `products` que necesita el inventario local. */
+export type LocalInventoryProduct = Pick<FeedProduct, "slug" | "stock">;
+
+export function renderLocalItem(product: LocalInventoryProduct, storeCode = STORE_CODE): string {
+  const quantity = Math.max(0, Math.trunc(product.stock));
+  return [
+    "    <item>",
+    tag("g:id", product.slug),
+    tag("g:store_code", storeCode),
+    tag("g:availability", quantity > 0 ? "in stock" : "out of stock"),
+    tag("g:quantity", String(quantity)),
+    // Se compra en la web y se retira en el local: el checkout lo promete
+    // "listo en 2 horas hábiles", así que es retiro en el día.
+    quantity > 0 ? tag("g:pickup_method", "buy") : null,
+    quantity > 0 ? tag("g:pickup_sla", "same day") : null,
+    "    </item>",
+  ]
+    .filter((line): line is string => line != null)
+    .join("\n");
+}
+
+export function renderLocalFeed(items: string[], updated: Date): string {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>Córdoba Digital · inventario del local</title>
+    <link>${escapeXml(url("/"))}</link>
+    <description>Stock del local de Córdoba Digital para fichas locales de Google</description>
+    <lastBuildDate>${updated.toUTCString()}</lastBuildDate>
+${items.join("\n")}
+  </channel>
+</rss>
+`;
+}
