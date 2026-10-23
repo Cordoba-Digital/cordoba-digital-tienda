@@ -175,25 +175,19 @@ export function SiteHeader({ categories, topBar = true }: { categories: Category
 
   return (
     <header className="sticky top-0 z-50">
-      {/* Barra de avisos: los avisos se apagan desde Panel → Inicio, el link al
-          botón de arrepentimiento no. La Disposición 954/2025 lo pide "a simple
-          vista, en lugar destacado y en el primer acceso", así que no puede
-          quedar solo en el pie. Va discreto (decisión de Ronan, 23/10): mismo
-          tono que el resto de la franja, sin subrayado. */}
-      <div className="bg-brand-700 py-1 text-[11px] font-medium text-white sm:py-1.5 sm:text-[12px]">
-        <div className="container-xl flex items-center gap-3 overflow-hidden">
-          {topBar ? (
+      {/* Barra de avisos, se apaga desde Panel → Inicio. El link al botón de
+          arrepentimiento va solo en el pie y en el menú (decisión de Ronan,
+          23/10, como Mercado Libre y Frávega), aunque la Disposición 954/2025
+          lo pide "a simple vista, en lugar destacado y en el primer acceso". */}
+      {topBar ? (
+        <div className="bg-brand-700 py-1 text-[11px] font-medium text-white sm:py-1.5 sm:text-[12px]">
+          <div className="container-xl flex items-center gap-3 overflow-hidden">
             <span key={announcement} className="min-w-0 flex-1 animate-rise text-left sm:text-center">
               {ANNOUNCEMENTS[announcement]}
             </span>
-          ) : (
-            <span className="flex-1" />
-          )}
-          <Link href="/arrepentimiento" className="shrink-0 text-white/80 underline-offset-2 transition hover:text-white hover:underline">
-            Botón de arrepentimiento
-          </Link>
+          </div>
         </div>
-      </div>
+      ) : null}
 
       <div className="border-b border-ink-100 bg-surface/95 backdrop-blur-md">
         <div className="container-xl flex h-14 items-center gap-2 sm:h-16 sm:gap-3 md:h-[72px] md:gap-5">
