@@ -10,6 +10,7 @@ import { jsonLdString } from "@/lib/structured-data";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ayuda" },
   title: "Centro de ayuda",
   description:
     "Plazos de envío, medios de pago, garantía y devoluciones de Córdoba Digital. Todo claro antes de comprar.",

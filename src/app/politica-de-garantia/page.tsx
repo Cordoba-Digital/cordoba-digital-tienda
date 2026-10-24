@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/politica-de-garantia" },
   title: "Política de Garantía",
   description:
     "Protegés tu inversión: todos los productos nuevos tienen 6 meses de garantía legal y soporte técnico directo.",

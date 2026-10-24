@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ArrepentimientoForm } from "@/components/arrepentimiento-form";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/arrepentimiento" },
   title: "Botón de Arrepentimiento",
   description:
     "Solicitud de revocación de compra en Córdoba Digital: derecho a arrepentirse dentro de los 10 días corridos.",

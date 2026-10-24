@@ -4,6 +4,7 @@ import Link from "next/link";
 const EMAIL = "consultas@cordobadigital.net";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/politica-de-envios" },
   title: "Política de Envíos",
   description:
     "Enviamos a todo el país por Andreani: despacho en el día si confirmás antes de las 16 hs y entrega en 1 a 4 días hábiles.",

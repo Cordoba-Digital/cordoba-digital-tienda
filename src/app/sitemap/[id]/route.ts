@@ -33,6 +33,12 @@ const STATIC_ENTRIES: Entry[] = [
   { loc: `${BASE}/politica-de-envios`, changefreq: "monthly", priority: "0.4" },
   { loc: `${BASE}/terminos-y-condiciones`, changefreq: "monthly", priority: "0.3" },
   { loc: `${BASE}/seguimiento`, changefreq: "monthly", priority: "0.4" },
+  // Páginas institucionales y de políticas: se llegaba solo por el pie.
+  { loc: `${BASE}/quienes-somos`, changefreq: "yearly", priority: "0.4" },
+  { loc: `${BASE}/por-que-elegirnos`, changefreq: "yearly", priority: "0.4" },
+  { loc: `${BASE}/politica-de-garantia`, changefreq: "yearly", priority: "0.3" },
+  { loc: `${BASE}/cambio-devoluciones`, changefreq: "yearly", priority: "0.3" },
+  { loc: `${BASE}/politica-privacidad`, changefreq: "yearly", priority: "0.2" },
 ];
 
 function renderEntry({ loc, lastmod, changefreq, priority }: Entry): string {
