@@ -96,7 +96,8 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       { source: "/marca/:marca", destination: "/productos?marca=:marca", permanent: true },
-      { source: "/etiqueta-producto/:tag", destination: "/productos?q=:tag", permanent: true },
+      // `/etiqueta-producto/:tag` no va acá: lo resuelve src/app/etiqueta-producto/[tag]/route.ts,
+      // que manda a la ficha o a una búsqueda sin "cordoba" ni guiones.
       { source: "/tienda", destination: "/productos", permanent: true },
     ];
   },
