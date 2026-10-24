@@ -29,6 +29,10 @@ import {
  *
  * En una ficha de producto el mensaje es el mismo que el del botón "Consultar"
  * ("Hola! Quiero consultar por <producto>"); en el resto, el genérico.
+ *
+ * En la ficha, debajo de `lg` está la barra fija de compra (`MobileBuyBar`,
+ * 69 px de alto). Ahí el botón sube por encima de la barra en vez de taparle
+ * la punta a "Comprar ahora".
  */
 export function WhatsAppFab() {
   const [visible, setVisible] = useState(false);
@@ -42,7 +46,7 @@ export function WhatsAppFab() {
   }, []);
 
   return (
-    <div className="fixed bottom-5 right-4 z-[55] flex max-w-[calc(100vw-2rem)] items-center gap-2">
+    <div className={`fixed right-4 z-[55] flex ${product ? "bottom-[5.5rem] lg:bottom-5" : "bottom-5"} max-w-[calc(100vw-2rem)] items-center gap-2`}>
       <a
         href={whatsappLink(fabWhatsAppMessage(product))}
         target="_blank"
