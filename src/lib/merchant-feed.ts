@@ -8,6 +8,7 @@
  * Referencia de atributos: https://support.google.com/merchants/answer/7052112
  */
 
+import { esMarcaDeRelleno } from "@/lib/brand-from-name";
 import { resolveMedia } from "@/lib/media";
 import { url } from "@/lib/site";
 
@@ -79,8 +80,12 @@ function absoluteImage(raw: string): string {
   return resolved.startsWith("http") ? resolved : url(resolved);
 }
 
-/** Estado de la ficha (texto libre en español) a los tres valores de Google. */
-function feedCondition(condition: string): "new" | "refurbished" | "used" {
+/**
+ * Estado de la ficha (texto libre en español) a los tres valores de Google.
+ * El JSON-LD de la ficha usa esta misma regla (ver `itemConditionSchema`):
+ * Merchant Center compara los dos y marca las diferencias.
+ */
+export function feedCondition(condition: string): "new" | "refurbished" | "used" {
   const value = condition.trim().toLowerCase();
   if (!value || value === "nuevo") return "new";
   if (value.includes("reacondicionado") || value.includes("refurb")) return "refurbished";
@@ -111,7 +116,8 @@ export function renderItem(product: FeedProduct, productType: string): string {
   // Con precio tachado: `price` lleva el de lista y `sale_price` el que se cobra,
   // igual que la ficha. Sin descuento real, solo `price`.
   const onSale = product.compareAtPrice != null && product.compareAtPrice > product.price;
-  const hasBrand = product.brand.trim() !== "" && product.brand !== "General";
+  // La misma regla que el JSON-LD de la ficha (ver `brandSchema`).
+  const hasBrand = !esMarcaDeRelleno(product.brand);
 
   const lines = [
     "    <item>",
