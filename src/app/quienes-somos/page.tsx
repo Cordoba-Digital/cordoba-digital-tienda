@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/quienes-somos" },
   title: "¿Quiénes somos?",
   description:
     "Córdoba Digital: especialistas en tecnología desde 2007, con local físico, soporte post-venta y envíos a todo el país.",

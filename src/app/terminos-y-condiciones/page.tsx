@@ -11,6 +11,7 @@ const LINK = "font-semibold text-brand-700 underline";
 const H2 = "pt-2 text-lg font-extrabold text-ink-900";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/terminos-y-condiciones" },
   title: "Términos y condiciones",
   description:
     "Condiciones de compra en Córdoba Digital: precios, stock, medios de pago, seña para retirar, envíos, garantía y botón de arrepentimiento.",

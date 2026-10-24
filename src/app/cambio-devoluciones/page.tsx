@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/cambio-devoluciones" },
   title: "Cambios y Devoluciones",
   description:
     "Queremos que estés 100% conforme: cambios y devoluciones simples, con 10 días para arrepentimiento en ventas online.",

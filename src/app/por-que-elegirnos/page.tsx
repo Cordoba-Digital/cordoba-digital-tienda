@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/por-que-elegirnos" },
   title: "¿Por qué elegirnos?",
   description:
     "Conocé por qué Córdoba Digital combina tienda física, stock real, especialistas Xiaomi y garantía local con envíos a todo el país.",

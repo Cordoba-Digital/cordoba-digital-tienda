@@ -6,6 +6,7 @@ import { TrackingForm } from "@/components/tracking-form";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/seguimiento" },
   title: "Seguí tu pedido",
   description: "Consultá el estado de tu compra con el código de pedido y tu email.",
 };

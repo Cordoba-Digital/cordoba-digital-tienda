@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/politica-privacidad" },
   title: "Políticas de Privacidad",
   description:
     "Cómo recolectamos, protegemos y utilizamos tus datos personales en Córdoba Digital.",
