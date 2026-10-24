@@ -48,7 +48,7 @@ function renderEntry({ loc, lastmod, changefreq, priority }: Entry): string {
     .join("\n");
 }
 
-/** Estaticas + las 128 categorias del arbol (son las mismas en todos los submapas). */
+/** Estaticas + las 128 categorias del arbol + las guias (solo en el submapa 0). */
 async function baseEntries(): Promise<Entry[]> {
   const entries: Entry[] = [...STATIC_ENTRIES];
   // Categorías y guías en paralelo: independientes entre sí.
@@ -91,9 +91,9 @@ async function productCount(): Promise<number> {
  * `id` es unico y monotono, asi que la particion es estable entre requests y la
  * union de los submapas es el catalogo exacto, una vez cada uno.
  */
-async function productSlice(id: number): Promise<{ slug: string; createdAt: Date }[]> {
+async function productSlice(id: number): Promise<{ slug: string; updatedAt: Date }[]> {
   return db
-    .select({ slug: products.slug, createdAt: products.createdAt })
+    .select({ slug: products.slug, updatedAt: products.updatedAt })
     .from(products)
     .orderBy(asc(products.id))
     .limit(PRODUCTS_PER_SITEMAP)
@@ -124,7 +124,9 @@ export async function GET(
 
   const entries: Entry[] = [];
   try {
-    const [total, bases] = await Promise.all([productCount(), baseEntries()]);
+    // Estáticas, categorías y guías van solo en el primer submapa: antes se
+    // repetían en los tres y Google recibía cada una tres veces.
+    const [total, bases] = await Promise.all([productCount(), id === 0 ? baseEntries() : Promise.resolve([])]);
 
     if (id >= Math.max(1, Math.ceil(total / PRODUCTS_PER_SITEMAP))) return notFound();
 
@@ -134,14 +136,17 @@ export async function GET(
     for (const product of page) {
       entries.push({
         loc: `${BASE}/producto/${product.slug}`,
-        lastmod: new Date(product.createdAt).toISOString(),
+        // La última modificación (precio, stock, fotos), no el alta: con la
+        // fecha de alta las 2.600 fichas decían 28/09/2026 para siempre y
+        // Google no tenía cómo saber cuáles cambiaron.
+        lastmod: new Date(product.updatedAt).toISOString(),
         priority: "0.8",
       });
     }
   } catch {
     // Si la base falla no rompen los submapas: se devuelven solo las estaticas.
     entries.length = 0;
-    entries.push(...STATIC_ENTRIES);
+    if (id === 0) entries.push(...STATIC_ENTRIES);
   }
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>
