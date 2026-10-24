@@ -373,7 +373,7 @@ export function BuyBox({ product }: { product: BuyBoxProduct }) {
             addItem(payload, quantity, { silent: true, open: false });
             router.push("/carrito");
           }}
-          className="h-12 w-full rounded-xl bg-brand-500 text-[15px] font-extrabold text-deep transition hover:bg-brand-400 disabled:opacity-40"
+          className="h-12 w-full rounded-xl bg-cta text-[15px] font-extrabold text-white transition hover:bg-brand-700 disabled:opacity-40"
         >
           Comprar ahora
         </button>
@@ -459,7 +459,7 @@ export function MobileBuyBar({ product }: { product: BuyBoxProduct }) {
   };
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-ink-100 bg-surface/95 px-4 py-3 pr-[5.5rem] shadow-[0_-8px_24px_-16px_rgba(10,18,38,0.5)] backdrop-blur lg:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-ink-100 bg-surface/95 px-4 py-3 shadow-[0_-8px_24px_-16px_rgba(10,18,38,0.5)] backdrop-blur lg:hidden">
       <div className="flex items-center gap-3">
         <div className="min-w-0">
           <p className="text-lg font-black leading-none text-ink-900">{money(product.price)}</p>
@@ -485,7 +485,7 @@ export function MobileBuyBar({ product }: { product: BuyBoxProduct }) {
               addItem(payload, 1, { silent: true, open: false });
               router.push("/carrito");
             }}
-            className="rounded-xl bg-brand-500 px-5 py-3 text-sm font-extrabold text-deep disabled:opacity-40"
+            className="whitespace-nowrap rounded-xl bg-cta px-5 py-3 text-sm font-extrabold text-white transition hover:bg-brand-700 disabled:opacity-40"
           >
             Comprar ahora
           </button>
