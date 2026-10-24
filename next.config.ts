@@ -60,6 +60,19 @@ export const PAGINAS_WP: [string, string][] = [
   ["/elementor-172394", "/"],
 ];
 
+/**
+ * Categorías con direcciones de una estructura vieja del WordPress que Google
+ * todavía muestra (Search Console, últimos 3 meses al 24/10/2026): el prefijo
+ * `inicio/` y tres que cambiaron de lugar. Sin esto caían en la regla general
+ * y daban 404 (`/categoria/inicio/computacion`).
+ */
+export const CATEGORIAS_VIEJAS: [string, string][] = [
+  ["/categoria-producto/inicio", "/"],
+  ["/categoria-producto/inicio/celulares", "/categoria/celulares-cordoba"],
+  ["/categoria-producto/audio-y-video/filmadoras-videocamaras", "/categoria/camaras-digitales/filmadoras-videocamaras"],
+  ["/categoria-producto/impresoras-cordoba/toner-cartuchos", "/categoria/impresoras-cordoba"],
+];
+
 const nextConfig: NextConfig = {
   // Las URLs del catálogo migrado desde WooCommerce. Son 301 porque el
   // contenido ya no existe en las rutas viejas: la equivalencia es 1:1
@@ -79,6 +92,15 @@ const nextConfig: NextConfig = {
     return [
       ...fusionadas,
       ...PAGINAS_WP.map(([source, destination]) => ({ source, destination, permanent: true })),
+      // Estructura vieja con `inicio/` (ver CATEGORIAS_VIEJAS): van antes que las
+      // reglas generales de categorías, que las mandarían a /categoria/inicio/...
+      ...CATEGORIAS_VIEJAS.map(([source, destination]) => ({ source, destination, permanent: true })),
+      {
+        source: "/categoria-producto/inicio/:ruta+/page/:n(\\d+)",
+        destination: "/categoria/:ruta+?pagina=:n",
+        permanent: true,
+      },
+      { source: "/categoria-producto/inicio/:ruta+", destination: "/categoria/:ruta+", permanent: true },
       // Las páginas 2, 3… de los listados de WooCommerce. Van antes que la
       // regla general de categorías, que las mandaría a una subcategoría "page".
       {

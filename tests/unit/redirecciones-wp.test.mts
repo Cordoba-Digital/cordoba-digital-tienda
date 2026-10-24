@@ -31,3 +31,23 @@ test("las páginas de los listados van antes que la regla general de categorías
   assert.ok(paginada < general);
   assert.ok(lista.every((r) => r.permanent === true));
 });
+
+test("las categorías viejas con inicio/ van antes que las reglas generales de categorías", async () => {
+  const { CATEGORIAS_VIEJAS } = await import("../../next.config");
+  const lista = await config.redirects!();
+  const indice = (source: string) => lista.findIndex((r) => r.source === source);
+  const general = indice("/categoria-producto/:ruta*");
+  const paginada = indice("/categoria-producto/:ruta*/page/:n(\\d+)");
+  for (const source of [
+    "/categoria-producto/inicio/:ruta+",
+    "/categoria-producto/inicio/:ruta+/page/:n(\\d+)",
+    ...CATEGORIAS_VIEJAS.map(([s]) => s),
+  ]) {
+    const i = indice(source);
+    assert.ok(i >= 0, `${source} no está`);
+    assert.ok(i < general && i < paginada, `${source} queda después de la regla general`);
+  }
+  // Las exactas van antes que la genérica de inicio/, que las taparía.
+  assert.ok(indice("/categoria-producto/inicio/celulares") < indice("/categoria-producto/inicio/:ruta+"));
+  for (const [, destino] of CATEGORIAS_VIEJAS) assert.match(destino, /^\/(categoria\/.+)?$/);
+});
