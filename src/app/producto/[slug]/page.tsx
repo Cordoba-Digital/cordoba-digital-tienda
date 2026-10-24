@@ -25,7 +25,14 @@ import {
 } from "@/lib/queries";
 import { url as siteUrl } from "@/lib/site";
 import { slugCandidates } from "@/lib/slug-candidates";
-import { breadcrumbJsonLd, jsonLdString, ORG_ID, returnPolicy } from "@/lib/structured-data";
+import {
+  brandSchema,
+  breadcrumbJsonLd,
+  itemConditionSchema,
+  jsonLdString,
+  ORG_ID,
+  returnPolicy,
+} from "@/lib/structured-data";
 import { sanitizeHtml } from "@/lib/sanitize-html";
 
 /**
@@ -182,6 +189,7 @@ export default async function ProductPage({ params }: { params: Params }) {
     .map((row) => ({ "@type": "PropertyValue", name: row.label, value: row.value }));
 
   const priceValidUntil = toPriceValidUntil(product.updatedAt);
+  const brand = brandSchema(product.brand);
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -192,9 +200,14 @@ export default async function ProductPage({ params }: { params: Params }) {
     image: product.images.map((img) => (img.startsWith("/") ? siteUrl(img) : img)),
     description: product.shortDescription,
     sku: product.sku,
-    brand: { "@type": "Brand", name: product.brand },
+    // Sin marca de relleno ("General"): el feed de Merchant Center tampoco la manda.
+    ...(brand ? { brand } : {}),
     ...(additionalProperty.length ? { additionalProperty } : {}),
-    offers: {
+  };
+  // Sin precio cargado no hay oferta: un `price: 0` se lee como "gratis", y el
+  // feed de Merchant Center ya saltea esos productos.
+  if (product.price > 0) {
+    jsonLd.offers = {
       "@type": "Offer",
       priceCurrency: "ARS",
       // Precios en pesos enteros (ver `lib/format.ts`): sin dividir entre 100.
@@ -203,17 +216,15 @@ export default async function ProductPage({ params }: { params: Params }) {
       // comparadores de IA leían precios 100x menores ($33.000 en vez de $3.299.999).
       price: product.price,
       availability: product.stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-      itemCondition:
-        condition.toLowerCase() === "nuevo"
-          ? "https://schema.org/NewCondition"
-          : "https://schema.org/UsedCondition",
+      // Misma regla que el feed: "Reacondicionado" es reacondicionado, no usado.
+      itemCondition: itemConditionSchema(condition),
       ...(priceValidUntil ? { priceValidUntil } : {}),
       url: siteUrl(`/producto/${product.slug}`),
       seller: { "@id": ORG_ID },
       areaServed: "AR",
       hasMerchantReturnPolicy: returnPolicy(),
-    },
-  };
+    };
+  }
   if (hasRatings) {
     jsonLd.aggregateRating = {
       "@type": "AggregateRating",

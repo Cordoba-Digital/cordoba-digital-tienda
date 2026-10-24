@@ -17,6 +17,7 @@ import {
   type CategoryRow,
 } from "@/lib/category-tree";
 import { esMarcaDeRelleno } from "@/lib/brand-from-name";
+import { marcasDelFiltro } from "@/lib/brand-filter";
 import { normalizeSearch, stem, suggestCategories, understandQuery, type QueryUnderstanding } from "@/lib/query-understanding";
 import { roundPriceCap } from "@/lib/format";
 import { slugCandidates } from "@/lib/slug-candidates";
@@ -102,7 +103,9 @@ function buildWhere(filters: ProductFilters, subtree?: { ids: number[]; slugs: s
     const combined = viaBridge && viaPrimary ? or(viaBridge, viaPrimary) : (viaBridge ?? viaPrimary);
     if (combined) clauses.push(combined);
   }
-  if (filters.brands?.length) clauses.push(inArray(products.brand, filters.brands));
+  // Sin distinguir mayúsculas: `/marca/apple` del WordPress llega como `apple` (ver brand-filter.ts).
+  const marcas = marcasDelFiltro(filters.brands ?? []);
+  if (marcas.length) clauses.push(sql`lower(${products.brand}) in ${marcas}`);
   if (typeof filters.min === "number") clauses.push(gte(products.price, filters.min));
   if (typeof filters.max === "number") clauses.push(lte(products.price, filters.max));
   if (filters.onlyOffers) clauses.push(sql`${products.compareAtPrice} is not null and ${products.compareAtPrice} > ${products.price}`);

@@ -11,6 +11,8 @@
  * JSON-LD para el panel de negocio y un dato falso ahí es peor que ninguno.
  */
 
+import { esMarcaDeRelleno } from "@/lib/brand-from-name";
+import { feedCondition } from "@/lib/merchant-feed";
 import { SITE_URL, url } from "@/lib/site";
 
 export const ORG_ID = `${SITE_URL}/#organization`;
@@ -128,6 +130,26 @@ export function returnPolicy() {
     returnMethod: ["https://schema.org/ReturnInStore", "https://schema.org/ReturnByMail"],
     merchantReturnLink: url("/cambio-devoluciones"),
   };
+}
+
+/**
+ * `itemCondition` del `Offer`, con la misma regla que el feed de Merchant
+ * Center (`feedCondition`). Antes todo lo que no era "Nuevo" salía como usado,
+ * y un "Reacondicionado" quedaba usado en la ficha y reacondicionado en el feed.
+ */
+export function itemConditionSchema(condition: string): string {
+  const valor = feedCondition(condition);
+  if (valor === "new") return "https://schema.org/NewCondition";
+  if (valor === "refurbished") return "https://schema.org/RefurbishedCondition";
+  return "https://schema.org/UsedCondition";
+}
+
+/**
+ * `brand` del `Product`, o `null` para las marcas de relleno ("General",
+ * "Genérico"…): una marca falsa es peor que ninguna, y el feed ya la omite.
+ */
+export function brandSchema(brand: string): { "@type": "Brand"; name: string } | null {
+  return esMarcaDeRelleno(brand) ? null : { "@type": "Brand", name: brand.trim() };
 }
 
 /** Miga de pan con URLs absolutas (Google ignora el `item` relativo en algunos casos). */
