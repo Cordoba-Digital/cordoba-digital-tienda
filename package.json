@@ -72,5 +72,11 @@
     "tailwindcss": "4.1.17",
     "tsx": "^4.23.15",
     "typescript": "5.9.3"
+  },
+  "overrides": {
+    "undici": "^6.29.1",
+    "@vercel/cli-config": {
+      "zod": "^4.6.6"
+    }
   }
 }
